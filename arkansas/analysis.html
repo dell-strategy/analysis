@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State of Arkansas | Dell Tech SLG Intelligence Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --dell-blue: #0076CE;
+            --dell-dark: #00447C;
+            --dell-light: #E0F0FA;
+        }
+        .text-dell { color: var(--dell-blue); }
+        .bg-dell { background-color: var(--dell-blue); }
+        .bg-dell-dark { background-color: var(--dell-dark); }
+        .border-dell { border-color: var(--dell-blue); }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 400px; }
+        }
+        
+        .nav-link.active {
+            background-color: #eff6ff;
+            color: var(--dell-blue);
+            border-right: 4px solid var(--dell-blue);
+            font-weight: 600;
+        }
+
+        .tab-btn.active {
+            border-bottom: 3px solid var(--dell-blue);
+            color: var(--dell-dark);
+            font-weight: 700;
+            background-color: white;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .guide-box {
+            background: linear-gradient(to right, #eff6ff, #ffffff);
+            border-left: 4px solid var(--dell-blue);
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex h-screen overflow-hidden">
+
+    <!-- Chosen Palette: Corporate Slate & Dell Blue Accent -->
+    <!-- Application Structure Plan: Dashboard layout with a persistent navigation sidebar for quick scanning. Added thematic "Guide Boxes" to introduce each section's context explicitly. Integrated functional filtering in the stakeholder table and tabbed browsing for initiatives to encourage active, non-linear exploration of the data rather than passive scrolling. -->
+    <!-- Visualization & Content Choices: Report Info -> Financial Data | Goal -> Display Budget Range without hallucinating split | Viz Method -> Bar Chart (Chart.js) | Interaction -> Tooltips on hover | Justification -> The prompt strictly forbids hallucinated data. Since exact O&M vs CapEx splits are hidden, a bar chart mapping the minimum and maximum budget bounds ($680M-$700M) is the most honest and useful representation for scoping Total Addressable Market. | Library/Method -> Chart.js (NO SVG, NO Mermaid). -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col h-full hidden md:flex flex-shrink-0 z-10 shadow-sm">
+        <div class="p-6 border-b border-gray-200 bg-gray-50">
+            <div class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-1">Target Entity</div>
+            <h1 class="text-xl font-extrabold text-gray-900 leading-tight">State of <br><span class="text-dell">Arkansas</span></h1>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4" id="sidebarNav">
+            <a href="#summary" class="nav-link block px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors active">&#128203; Executive Summary</a>
+            <a href="#power" class="nav-link block px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors">&#9878;&#65039; Power Structure</a>
+            <a href="#governance" class="nav-link block px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors">&#9881;&#65039; IT Governance</a>
+            <a href="#financials" class="nav-link block px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors">&#128176; Financials & Budget</a>
+            <a href="#initiatives" class="nav-link block px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors">&#127919; Strategic Initiatives</a>
+            <a href="#procurement" class="nav-link block px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors">&#128722; Procurement & Landscape</a>
+            <a href="#opportunities" class="nav-link block px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors text-dell font-bold border-t border-gray-100 mt-2">&#128640; Dell Opportunities</a>
+        </nav>
+        <div class="p-4 border-t border-gray-200 flex flex-col gap-3">
+            <a href="https://dmonkey1001.github.io/slg-strategies/arkansas/analysis.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-dell text-white py-2 px-4 rounded-md text-sm font-bold hover:bg-dell-dark transition-colors shadow-sm">
+                &#128196; View Full Report (PDF)
+            </a>
+            <div class="text-xs text-gray-400 text-center">
+                Prepared for: Dell Tech SLG
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 overflow-y-auto scroll-smooth relative" id="mainContent">
+        <div class="max-w-5xl mx-auto px-6 py-10 pb-24">
+
+            <!-- Mobile Header & PDF Link -->
+            <div class="md:hidden mb-8 border-b border-gray-200 pb-6">
+                <div class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-1">Target Entity</div>
+                <h1 class="text-3xl font-extrabold text-gray-900 leading-tight mb-4">State of <span class="text-dell">Arkansas</span></h1>
+                <a href="https://dmonkey1001.github.io/slg-strategies/arkansas/analysis.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-dell text-white py-2 px-4 rounded-md text-sm font-bold hover:bg-dell-dark transition-colors shadow-sm w-full">
+                    &#128196; View Full Report (PDF)
+                </a>
+            </div>
+
+            <!-- Hero Image Header -->
+            <div class="mb-10 rounded-2xl overflow-hidden shadow-sm h-56 md:h-72 relative group border border-gray-200">
+                <img src="./arkansas-capitol.png" alt="Arkansas State Capitol" 
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1620917669809-1af0497965de?q=80&w=2000&auto=format&fit=crop';"
+                     class="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[var(--dell-dark)]/90 via-[var(--dell-dark)]/20 to-transparent flex items-end">
+                    <div class="p-6 md:p-8 w-full">
+                        <div class="flex justify-between items-end w-full">
+                            <div>
+                                <span class="text-blue-200 text-xs font-bold tracking-widest uppercase mb-1 block drop-shadow-md">Enterprise Market Intelligence</span>
+                                <h2 class="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg">State of Arkansas</h2>
+                            </div>
+                            <div class="hidden md:block">
+                                <span class="bg-white/20 backdrop-blur-md text-white border border-white/30 py-1.5 px-3 rounded-md text-xs font-bold tracking-wider">CONFIDENTIAL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 1: Executive Summary -->
+            <section id="summary" class="mb-16 pt-2">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Executive Summary & Macro Landscape</h2>
+                <div class="guide-box p-4 rounded-r-lg mb-6 text-sm text-gray-700 shadow-sm border border-blue-100">
+                    <p class="mb-2"><strong class="text-dell-dark">&#128269; Context:</strong> Arkansas is executing "Arkansas Forward," a sweeping efficiency program aimed at $300M in savings. Governor Sanders has also ended remote work, forcing a massive architectural pivot back to on-prem operations.</p>
+                    <p><strong class="text-dell-dark">&#128433;&#65039; Interaction:</strong> Review the core mandate cards below. Connect these themes to your sales pitch to ensure relevance to the administration's primary drivers.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Political & Economic Climate</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Under Governor Sarah Huckabee Sanders, Arkansas is aggressively executing a mandated enterprise consolidation to eliminate bureaucratic bloat. The state is leveraging a McKinsey diagnostic identifying $65M-$130M in IT cost-savings achievable via centralization. Notably, the Governor has issued an executive order terminating remote work for state employees, creating an immediate, urgent need to refresh endpoint infrastructure, campus networking, and physical security. Massive federal infusions (BEAD, SLCGP) are accelerating these modernization goals.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white border-t-4 border-dell rounded-b-xl shadow-sm p-5 hover:shadow-md transition-all transform hover:-translate-y-1">
+                        <div class="text-2xl mb-2">&#128187;</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Efficiency & Consolidation</h4>
+                        <p class="text-sm text-gray-600">The "Arkansas Forward" mandate to aggressively eliminate duplicative software and centralize IT governance to capture up to $130M in annual IT savings.</p>
+                    </div>
+                    <div class="bg-white border-t-4 border-dell rounded-b-xl shadow-sm p-5 hover:shadow-md transition-all transform hover:-translate-y-1">
+                        <div class="text-2xl mb-2">&#128274;</div>
+                        <h4 class="font-bold text-gray-900 mb-2">Unified Risk Management</h4>
+                        <p class="text-sm text-gray-600">Establishing a unified front against threats with a centralized Cyber Office, Zero Trust architecture, and strict adherence to NIST 800-53 Rev 5 and GovRAMP.</p>
+                    </div>
+                    <div class="bg-white border-t-4 border-dell rounded-b-xl shadow-sm p-5 hover:shadow-md transition-all transform hover:-translate-y-1">
+                        <div class="text-2xl mb-2">&#127973;</div>
+                        <h4 class="font-bold text-gray-900 mb-2">HHS Modernization</h4>
+                        <p class="text-sm text-gray-600">DHS commands the largest budget ($10.2B) and is under intense pressure to retire technical debt, modernize EMRs, and deploy rural telehealth.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-gray-200 my-10">
+
+            <!-- Section 2: Power Structure -->
+            <section id="power" class="mb-16 pt-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Power Structure & Key Stakeholders</h2>
+                <div class="guide-box p-4 rounded-r-lg mb-6 text-sm text-gray-700 shadow-sm border border-blue-100">
+                    <p class="mb-2"><strong class="text-dell-dark">&#128269; Context:</strong> A map of critical decision-makers across the centralized executive branch and newly formed DSAS. CTO Jay Harton and CISO Gary Vance are the vital technical gatekeepers.</p>
+                    <p><strong class="text-dell-dark">&#128433;&#65039; Interaction:</strong> Use the dropdown filter below to isolate individuals who act as "Financial Purchasers" versus those who are "Technical Influencers".</p>
+                </div>
+
+                <!-- Interactive Filter Control -->
+                <div class="mb-4 flex items-center justify-end">
+                    <label for="influenceFilter" class="mr-3 text-sm font-bold text-gray-700">Filter by Influence:</label>
+                    <select id="influenceFilter" class="border border-gray-300 rounded-md py-2 px-3 text-sm focus:outline-none focus:border-dell focus:ring-1 focus:ring-dell bg-white shadow-sm cursor-pointer">
+                        <option value="all">All Stakeholders</option>
+                        <option value="financial">Financial Purchaser / Policy</option>
+                        <option value="technical">Technical Influencer</option>
+                        <option value="legislative">Legislative / Appropriations</option>
+                    </select>
+                </div>
+
+                <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-gray-200">
+                    <table class="w-full text-left border-collapse" id="stakeholderTable">
+                        <thead>
+                            <tr class="bg-gray-100 text-gray-700 text-sm uppercase tracking-wider">
+                                <th class="py-4 px-6 font-bold border-b border-gray-200">Name</th>
+                                <th class="py-4 px-6 font-bold border-b border-gray-200">Title / Role</th>
+                                <th class="py-4 px-6 font-bold border-b border-gray-200">Sphere of Influence</th>
+                                <th class="py-4 px-6 font-bold border-b border-gray-200">Recent Stances / Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 text-sm divide-y divide-gray-100 transition-all duration-300">
+                            <tr class="hover:bg-blue-50 transition-colors" data-influence="financial">
+                                <td class="py-4 px-6 font-bold text-gray-900">Sarah Huckabee Sanders</td>
+                                <td class="py-4 px-6">Governor</td>
+                                <td class="py-4 px-6"><span class="inline-block bg-green-100 text-green-800 py-1 px-2 rounded-md text-xs font-bold leading-snug">Financial Purchaser</span></td>
+                                <td class="py-4 px-6">Authored "Arkansas Forward". Mandates severe reduction of tech debt and centralization. Ordered cessation of remote work.</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors" data-influence="technical">
+                                <td class="py-4 px-6 font-bold text-gray-900">Jay Harton</td>
+                                <td class="py-4 px-6">Chief Technology Officer (CTO) & Dir. of OST</td>
+                                <td class="py-4 px-6"><span class="inline-block bg-purple-100 text-purple-800 py-1 px-2 rounded-md text-xs font-bold leading-snug">Technical Influencer</span></td>
+                                <td class="py-4 px-6">Leads IT consolidation. Advocates "right-sizing" via private cloud before public cloud migration. Pushing ServiceNow.</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors" data-influence="technical">
+                                <td class="py-4 px-6 font-bold text-gray-900">Gary Vance</td>
+                                <td class="py-4 px-6">Chief Information Security Officer (CISO)</td>
+                                <td class="py-4 px-6"><span class="inline-block bg-purple-100 text-purple-800 py-1 px-2 rounded-md text-xs font-bold leading-snug">Technical / Compliance</span></td>
+                                <td class="py-4 px-6">Drives strict compliance with NIST 800-53 and GovRAMP. Intense focus on Zero Trust architecture and endpoint protection.</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors" data-influence="financial">
+                                <td class="py-4 px-6 font-bold text-gray-900">Leslie Fisken</td>
+                                <td class="py-4 px-6">Secretary, Dept. of Shared Admin. Services (DSAS)</td>
+                                <td class="py-4 px-6"><span class="inline-block bg-blue-100 text-blue-800 py-1 px-2 rounded-md text-xs font-bold leading-snug">Financial / Policy</span></td>
+                                <td class="py-4 px-6">Oversees the newly rebranded DSAS. Prioritizes state employee experience and inter-agency shared services.</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors" data-influence="financial">
+                                <td class="py-4 px-6 font-bold text-gray-900">Kristi Putnam</td>
+                                <td class="py-4 px-6">Secretary, Dept. of Human Services (DHS)</td>
+                                <td class="py-4 px-6"><span class="inline-block bg-green-100 text-green-800 py-1 px-2 rounded-md text-xs font-bold leading-snug">Financial Purchaser</span></td>
+                                <td class="py-4 px-6">Manages massive $10.2B budget. Demanding rapid IT modernization after historical project failures (e.g. ARfocus).</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors" data-influence="financial">
+                                <td class="py-4 px-6 font-bold text-gray-900">Hugh McDonald</td>
+                                <td class="py-4 px-6">Secretary, Dept. of Commerce</td>
+                                <td class="py-4 px-6"><span class="inline-block bg-green-100 text-green-800 py-1 px-2 rounded-md text-xs font-bold leading-snug">Financial Purchaser</span></td>
+                                <td class="py-4 px-6">Oversaw successful 25-year UI mainframe migration to cloud. Advocates for specialized IT staff retention.</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors" data-influence="legislative">
+                                <td class="py-4 px-6 font-bold text-gray-900">Sen. Mark Johnson / Rep. Stephen Meeks</td>
+                                <td class="py-4 px-6">Co-Chairs, Joint Committee on Adv. Communications</td>
+                                <td class="py-4 px-6"><span class="inline-block bg-yellow-100 text-yellow-800 py-1 px-2 rounded-md text-xs font-bold leading-snug">Legislative / Appropriations</span></td>
+                                <td class="py-4 px-6">Stringent oversight on IT project ROI. Hold the keys to funding continuity for broadband and data centers.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <hr class="border-gray-200 my-10">
+
+            <!-- Section 3: Governance -->
+            <section id="governance" class="mb-16 pt-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">IT Governance & Service Delivery Model</h2>
+                <div class="guide-box p-4 rounded-r-lg mb-6 text-sm text-gray-700 shadow-sm border border-blue-100">
+                    <p class="mb-2"><strong class="text-dell-dark">&#128269; Context:</strong> Arkansas has shifted from a federated model to an aggressively consolidated one under DSAS/OST. Navigating their chargeback system and procurement gatekeepers is mandatory.</p>
+                    <p><strong class="text-dell-dark">&#128433;&#65039; Interaction:</strong> Review the "Primary Friction Points" alert box. These represent direct pain points where Dell solutions (e.g., APEX or VxRail) can solve bureaucratic gridlock by offering predictable economics.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl mr-3 text-dell">&#9881;&#65039;</span>
+                            <h3 class="text-xl font-bold text-gray-900">Operating Model: Aggressive Consolidation</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+                            Following the McKinsey diagnostic, Executive Orders 25-10 and 25-15 mandated the end of siloed IT. The central IT authority, formally DIS, was elevated and renamed the <strong>Department of Shared Administrative Services (DSAS), Office of State Technology (OST)</strong>.
+                        </p>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            OST is now legally mandated to enforce centralized procurement, eliminate duplicative applications, and manage statewide technology projects. An enterprise IT Governance Team ensures no project advances without aligning with strict state architectural standards.
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-xl shadow-sm border border-red-200 hover:shadow-md transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl mr-3 text-red-500">&#9888;&#65039;</span>
+                            <h3 class="text-xl font-bold text-red-900">Primary Friction Points</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2 mt-0.5">&#10148;</span>
+                                <span class="text-sm text-red-900"><strong class="block mb-1">DIAMONDS Chargebacks:</strong> OST acts as a cost-recovery agency, billing agencies via the DIAMONDS system. Fluctuating mandated chargeback rates create severe budget friction for agency CIOs seeking predictable costs.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2 mt-0.5">&#10148;</span>
+                                <span class="text-sm text-red-900"><strong class="block mb-1">Procurement Bottlenecks:</strong> Any IT procurement over $100,000 must endure a mandatory 10-day "State Technology Cost Analysis" by DFA to ensure it doesn't deviate from OST's Shared Technical Architecture.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-gray-200 my-10">
+
+            <!-- Section 4: Financials -->
+            <section id="financials" class="mb-16 pt-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Financials & Budget Breakdown</h2>
+                <div class="guide-box p-4 rounded-r-lg mb-6 text-sm text-gray-700 shadow-sm border border-blue-100">
+                    <p class="mb-2"><strong class="text-dell-dark">&#128269; Context:</strong> The state spends up to $700M annually, but the McKinsey report revealed a massive 65% underfunding of infrastructure compared to peers. This is a massive "rip-and-replace" opportunity.</p>
+                    <p><strong class="text-dell-dark">&#128433;&#65039; Interaction:</strong> <span class="bg-blue-100 px-2 py-0.5 rounded text-blue-800 font-bold">Hover</span> over the bars to view the total estimated budget. Note the data warning regarding O&M vs CapEx, and review the active grants.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center mb-6 pb-4 border-b border-gray-100">
+                        <div>
+                            <span class="block text-sm text-gray-500 font-bold uppercase tracking-wider mb-1">Fiscal Year boundaries</span>
+                            <span class="text-xl font-bold text-gray-900 bg-gray-100 px-3 py-1 rounded">July 1 - June 30</span>
+                        </div>
+                        <div class="mt-4 md:mt-0 text-right">
+                            <span class="block text-sm text-gray-500 font-bold uppercase tracking-wider mb-1">Est. Total Annual IT Spend</span>
+                            <span class="text-3xl font-extrabold text-dell">~$680M - $700M</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                        <!-- Chart Container -->
+                        <div class="chart-container bg-gray-50 rounded-lg p-4 border border-gray-100 flex flex-col justify-center">
+                            <canvas id="budgetChart"></canvas>
+                            <p class="text-xs text-center text-gray-600 mt-4 font-bold bg-yellow-100 p-2 rounded">Opportunity: Infrastructure spend is currently 65% below peer benchmarks.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="font-bold text-xl mb-3 text-gray-800">Data Availability & Structure</h3>
+                            <p class="text-sm text-gray-700 mb-4 bg-gray-100 p-4 rounded-md border-l-4 border-gray-400 leading-relaxed">
+                                <strong>&#9888;&#65039; Data Unavailable:</strong> The exact mathematical split between recurring operational spend (O&M) and net-new project capital (CapEx) is obscured within agency-level appropriations. We do know 80% of spend goes to vendor apps. The chart plots the verified total $680M-$700M boundary.
+                            </p>
+                            
+                            <h4 class="font-bold text-gray-900 mb-3 mt-6 border-b border-gray-200 pb-2">Active Grants & Alternative Funding</h4>
+                            <div class="space-y-3">
+                                <div class="bg-white border border-green-200 p-3 rounded-lg shadow-sm hover:border-green-400 transition-colors">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="font-bold text-green-800 text-sm">SLCGP Cybersecurity Grant</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600">Drawing from a $91.75M national pool. Mandates "Whole of State" Zero Trust defense.</p>
+                                </div>
+                                <div class="bg-white border border-blue-200 p-3 rounded-lg shadow-sm hover:border-blue-400 transition-colors">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="font-bold text-blue-800 text-sm">BEAD / ARPA Infrastructure</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600">Over $1B targeted at broadband, generating pull-through for edge computing.</p>
+                                </div>
+                                <div class="bg-white border border-purple-200 p-3 rounded-lg shadow-sm hover:border-purple-400 transition-colors">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="font-bold text-purple-800 text-sm">HHS & Transpo Grants</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600">$13.3M for Health Data infra. Over $105M for ARDOT expressway infrastructure.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-gray-200 my-10">
+
+            <!-- Section 5: Initiatives -->
+            <section id="initiatives" class="mb-16 pt-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Strategic Initiatives & Projects</h2>
+                <div class="guide-box p-4 rounded-r-lg mb-6 text-sm text-gray-700 shadow-sm border border-blue-100">
+                    <p class="mb-2"><strong class="text-dell-dark">&#128269; Context:</strong> Details the top three actively funded modernization efforts. Map your Dell portfolio directly to these specific mandates to accelerate deal momentum.</p>
+                    <p><strong class="text-dell-dark">&#128433;&#65039; Interaction:</strong> <span class="bg-blue-100 px-2 py-0.5 rounded text-blue-800 font-bold">Click</span> the tabs below to cycle through the top projects.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <!-- Tabs Navigation -->
+                    <div class="flex flex-col md:flex-row border-b border-gray-200 bg-gray-100" id="initiativeTabs">
+                        <button class="flex-1 py-4 px-4 text-center text-sm font-bold text-gray-500 hover:text-dell hover:bg-white transition-colors tab-btn active" data-target="init-1">1. Enterprise IT Consolidation & STS</button>
+                        <button class="flex-1 py-4 px-4 text-center text-sm font-bold text-gray-500 hover:text-dell hover:bg-white transition-colors tab-btn border-t md:border-t-0 md:border-l border-gray-200" data-target="init-2">2. Legacy Mainframe Retirement</button>
+                        <button class="flex-1 py-4 px-4 text-center text-sm font-bold text-gray-500 hover:text-dell hover:bg-white transition-colors tab-btn border-t md:border-t-0 md:border-l border-gray-200" data-target="init-3">3. Unified Cyber & Zero Trust</button>
+                    </div>
+
+                    <!-- Tabs Content -->
+                    <div class="p-6">
+                        <!-- Init 1 -->
+                        <div id="init-1" class="tab-content block animate-[fadeIn_0.3s_ease-in-out]">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-5">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2 md:mb-0">Enterprise IT Consolidation & Shared Tech Services</h3>
+                                <span class="bg-green-100 text-green-800 py-1 px-4 rounded-full text-xs font-bold uppercase tracking-wider self-start md:self-auto shadow-sm">High Priority Funding</span>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+                                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm">
+                                    <span class="block text-xs text-gray-500 font-bold uppercase mb-2">&#128221; Executive Mandate</span>
+                                    <span class="text-sm font-semibold text-gray-900">Generate $130M savings via centralization</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm">
+                                    <span class="block text-xs text-gray-500 font-bold uppercase mb-2">&#127970; Owning Agency</span>
+                                    <span class="text-sm font-semibold text-gray-900">DSAS / OST (CTO Jay Harton)</span>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 shadow-sm">
+                                    <span class="block text-xs text-blue-600 font-bold uppercase mb-2">&#128187; Underlying IT Need</span>
+                                    <span class="text-sm font-bold text-dell-dark">Private Cloud HCI, DC Consolidation, ServiceNow</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed bg-white border border-gray-100 p-4 rounded-lg">
+                                CTO Jay Harton is aggressively building out "Shared Technology Services" (STS) across two Little Rock data centers and a Lowell DR site. The strategy requires "right-sizing" workloads in a private cloud before public cloud migration to avoid runaway egress costs. Includes a massive rollout of ServiceNow to manage DIAMONDS billing.
+                            </p>
+                        </div>
+
+                        <!-- Init 2 -->
+                        <div id="init-2" class="tab-content hidden animate-[fadeIn_0.3s_ease-in-out]">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-5">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2 md:mb-0">Legacy Mainframe Retirement & App Modernization</h3>
+                                <span class="bg-yellow-100 text-yellow-800 py-1 px-4 rounded-full text-xs font-bold uppercase tracking-wider self-start md:self-auto shadow-sm">Ongoing Priority</span>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+                                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm">
+                                    <span class="block text-xs text-gray-500 font-bold uppercase mb-2">&#128221; Executive Mandate</span>
+                                    <span class="text-sm font-semibold text-gray-900">Systematically retire massive technical debt</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm">
+                                    <span class="block text-xs text-gray-500 font-bold uppercase mb-2">&#127970; Owning Agency</span>
+                                    <span class="text-sm font-semibold text-gray-900">DHS & Dept of Commerce (ACOM)</span>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 shadow-sm">
+                                    <span class="block text-xs text-blue-600 font-bold uppercase mb-2">&#128187; Underlying IT Need</span>
+                                    <span class="text-sm font-bold text-dell-dark">Data Migration, Scalable Storage, EMR Upgrades</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed bg-white border border-gray-100 p-4 rounded-lg">
+                                The Dept of Commerce successfully migrated a 25-year-old UI mainframe, putting intense pressure on DHS to follow suit. DHS recently suffered a high-profile failure canceling a $12M child welfare upgrade (ARfocus) and is desperate for reliable modernization, leveraging a $13.3M grant for rural health data infra.
+                            </p>
+                        </div>
+
+                        <!-- Init 3 -->
+                        <div id="init-3" class="tab-content hidden animate-[fadeIn_0.3s_ease-in-out]">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-5">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2 md:mb-0">Unified Cyber Governance & Zero Trust Architecture</h3>
+                                <span class="bg-red-100 text-red-800 py-1 px-4 rounded-full text-xs font-bold uppercase tracking-wider self-start md:self-auto shadow-sm">Critical Priority</span>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+                                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm">
+                                    <span class="block text-xs text-gray-500 font-bold uppercase mb-2">&#128221; Executive Mandate</span>
+                                    <span class="text-sm font-semibold text-gray-900">Absolute Cyber Resilience (EO 25-10)</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm">
+                                    <span class="block text-xs text-gray-500 font-bold uppercase mb-2">&#127970; Owning Agency</span>
+                                    <span class="text-sm font-semibold text-gray-900">State Cybersecurity Office (SCSO/CISO Vance)</span>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 shadow-sm">
+                                    <span class="block text-xs text-blue-600 font-bold uppercase mb-2">&#128187; Underlying IT Need</span>
+                                    <span class="text-sm font-bold text-dell-dark">Endpoint Security, MDR, NIST 800-53 Rev 5</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed bg-white border border-gray-100 p-4 rounded-lg">
+                                Driven by SLCGP funding, the SCSO mandates strict GovRAMP and NIST 800-53 Rev 5 compliance. The urgency is massively amplified by Governor Sanders ending remote work—thousands of state endpoints are returning to localized networks requiring immediate audits, refresh, and Zero Trust validation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-gray-200 my-10">
+
+            <!-- Section 6: Procurement -->
+            <section id="procurement" class="mb-16 pt-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Procurement, Vendor Landscape, & Compliance</h2>
+                <div class="guide-box p-4 rounded-r-lg mb-6 text-sm text-gray-700 shadow-sm border border-blue-100">
+                    <p class="mb-2"><strong class="text-dell-dark">&#128269; Context:</strong> Breaks down the competitive battlefield, purchasing vehicles, and regulatory guardrails. Ensure Dell solutions are positioned securely within these frameworks.</p>
+                    <p><strong class="text-dell-dark">&#128433;&#65039; Interaction:</strong> Use the "Battlefield" column to identify immediate competitor displacement opportunities (e.g., aging Pure/NetApp). Check proposals against "Compliance" to avoid blockers.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-center w-12 h-12 bg-blue-50 text-dell rounded-lg mb-4 text-2xl">&#128722;</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3 border-b border-gray-100 pb-2">Procurement Vehicles</h3>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li><span class="font-bold text-dell block mb-0.5">ARBuy:</span> Official state eProcurement system. Must be leveraged for full visibility.</li>
+                            <li><span class="font-bold text-dell block mb-0.5">NASPO ValuePoint:</span> Expires <strong>June 30, 2026</strong>. Lowest friction path for compute/storage.</li>
+                            <li><span class="font-bold text-dell block mb-0.5">Sourcewell / OMNIA:</span> Alternative cooperatives utilized for specialized IT services.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-700 rounded-lg mb-4 text-2xl">&#9876;&#65039;</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3 border-b border-gray-100 pb-2">The Battlefield</h3>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li><span class="font-bold text-gray-900 block mb-0.5">Compute/Endpoint:</span> Dell, HP, HPE, Lenovo. End of remote work triggers immediate refresh needs.</li>
+                            <li><span class="font-bold text-gray-900 block mb-0.5">Storage:</span> Pure Storage, NetApp, IBM. Expiring NASPO (June 2026) makes these vulnerable.</li>
+                            <li><span class="font-bold text-gray-900 block mb-0.5">Network/Software:</span> Cisco, Palo Alto, Microsoft, ServiceNow (won recent ITSM battle).</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-center w-12 h-12 bg-red-50 text-red-600 rounded-lg mb-4 text-2xl">&#128203;</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3 border-b border-gray-100 pb-2">Compliance Drivers</h3>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li><span class="font-bold text-red-700 block mb-0.5">GovRAMP:</span> Formerly StateRAMP. Mandatory for cloud/hybrid CSPs. Utilizes CJIS overlay.</li>
+                            <li><span class="font-bold text-red-700 block mb-0.5">NIST 800-53 Rev 5:</span> Foundational framework formally mandated by CISO Gary Vance.</li>
+                            <li><span class="font-bold text-red-700 block mb-0.5">HIPAA:</span> Uncompromising strict compliance required for DHS Medicaid/Health initiatives.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-gray-200 my-10">
+
+            <!-- Section 7: Opportunities -->
+            <section id="opportunities" class="mb-16 pt-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Actionable Dell Opportunities</h2>
+                <div class="guide-box p-4 rounded-r-lg mb-6 text-sm text-gray-700 shadow-sm border border-blue-100">
+                    <p class="mb-2"><strong class="text-dell-dark">&#128269; Context:</strong> Synthesizes the $130M cost-saving mandate, the 65% infrastructure deficit, and the end of remote work into precise sales motions.</p>
+                    <p><strong class="text-dell-dark">&#128433;&#65039; Interaction:</strong> <span class="bg-blue-100 px-2 py-0.5 rounded text-blue-800 font-bold">Click</span> the rows below to expand the intelligence brief for each specific sales motion.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Accordion 1 -->
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden group">
+                        <button class="w-full px-6 py-5 text-left font-bold text-lg text-gray-900 bg-gray-50 hover:bg-white flex justify-between items-center focus:outline-none border-l-4 border-transparent group-hover:border-dell transition-all" onclick="toggleAccordion('opp1')">
+                            <span>1. Funded Alignment: Infrastructure Deficit & Return to Office</span>
+                            <span class="text-2xl text-dell font-bold transition-transform duration-300 transform" id="icon-opp1">+</span>
+                        </button>
+                        <div id="opp1" class="accordion-content bg-white px-6">
+                            <div class="py-5 text-gray-700 text-sm border-t border-gray-100 mt-2">
+                                <p class="mb-3"><strong>The Play:</strong> The McKinsey report exposed a 65% infrastructure underfunding vs peers. Concurrently, Gov. Sanders' EO ended remote work, forcing thousands back to the office.</p>
+                                <p class="mb-4"><strong>Portfolio Fit:</strong> Position <strong>Dell PowerEdge & PowerStore</strong> for CTO Harton's fully funded Shared Tech Services (STS) private cloud buildout. Simultaneously, push <strong>Dell CSG (Latitude/OptiPlex)</strong> to satisfy the immediate massive endpoint refresh required by the return-to-office mandate.</p>
+                                <div class="bg-gradient-to-r from-blue-50 to-white p-4 border-l-4 border-dell rounded-r-md">
+                                    <strong class="text-dell-dark block mb-1 uppercase tracking-wider text-xs">Recommended Action</strong>
+                                    Engage OST with dense, scalable infrastructure specs for the Lowell DR site. Engage agency directors regarding their immediate on-prem endpoint/docking station deficits.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 2 -->
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden group">
+                        <button class="w-full px-6 py-5 text-left font-bold text-lg text-gray-900 bg-gray-50 hover:bg-white flex justify-between items-center focus:outline-none border-l-4 border-transparent group-hover:border-dell transition-all" onclick="toggleAccordion('opp2')">
+                            <span>2. Whitespace Advisory: AI Data Hubs & Rural Edge Computing</span>
+                            <span class="text-2xl text-dell font-bold transition-transform duration-300 transform" id="icon-opp2">+</span>
+                        </button>
+                        <div id="opp2" class="accordion-content bg-white px-6">
+                            <div class="py-5 text-gray-700 text-sm border-t border-gray-100 mt-2">
+                                <p class="mb-3"><strong>The Play:</strong> ARDOT secured $105M+ for expressways, and Health secured $13.3M for rural EMRs. Meanwhile, the state is building an "Arkansas Data Hub" for AI readiness.</p>
+                                <p class="mb-4"><strong>Portfolio Fit:</strong> Position <strong>PowerEdge XR (Ruggedized) / Edge Gateways</strong> at ARDOT intersections. Position <strong>VxRail</strong> for rural health clinics requiring secure HIPAA pipelines. Lead with <strong>PowerScale (Isilon)</strong> as the foundational AI Data Lake to corral unstructured data before any GenAI deployment.</p>
+                                <div class="bg-gradient-to-r from-blue-50 to-white p-4 border-l-4 border-dell rounded-r-md">
+                                    <strong class="text-dell-dark block mb-1 uppercase tracking-wider text-xs">Recommended Action</strong>
+                                    Offer OST/DHS Dell Advisory workshops on unstructured data readiness to secure trusted-advisor status over standard box-pushers.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 3 -->
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden group">
+                        <button class="w-full px-6 py-5 text-left font-bold text-lg text-gray-900 bg-gray-50 hover:bg-white flex justify-between items-center focus:outline-none border-l-4 border-transparent group-hover:border-dell transition-all" onclick="toggleAccordion('opp3')">
+                            <span>3. Competitive Displacement: SAN Replacements & APEX Repatriation</span>
+                            <span class="text-2xl text-dell font-bold transition-transform duration-300 transform" id="icon-opp3">+</span>
+                        </button>
+                        <div id="opp3" class="accordion-content bg-white px-6">
+                            <div class="py-5 text-gray-700 text-sm border-t border-gray-100 mt-2">
+                                <p class="mb-3"><strong>The Play:</strong> Pure Storage and NetApp NASPO contracts expire June 2026. CTO Harton is hesitant about unpredictable public cloud egress fees, preferring a private cloud first approach.</p>
+                                <p class="mb-4"><strong>Portfolio Fit:</strong> Displace legacy arrays with <strong>PowerStore + PowerProtect Cyber Recovery</strong> to satisfy CISO Vance's NIST 800-53 mandates. Position <strong>Dell APEX</strong> to give agencies a cloud-like consumption model (solving DIAMONDS chargeback friction) while keeping hardware securely on-prem.</p>
+                                <div class="bg-gradient-to-r from-blue-50 to-white p-4 border-l-4 border-dell rounded-r-md">
+                                    <strong class="text-dell-dark block mb-1 uppercase tracking-wider text-xs">Recommended Action</strong>
+                                    Initiate targeted TCO assessments now. Compare 5-year APEX costs vs Public Cloud egress + DIAMONDS fees to prove ROI well before the June 2026 NASPO expiration.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Spy Logic for Sidebar Navigation
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('#sidebarNav a');
+            const mainContent = document.getElementById('mainContent');
+
+            mainContent.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    // Offset for better trigger point
+                    if (mainContent.scrollTop >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Tab Interaction Logic for Initiatives
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Reset all tabs
+                    tabs.forEach(t => {
+                        t.classList.remove('active', 'text-dell');
+                        t.classList.add('text-gray-500');
+                    });
+                    // Hide all content
+                    contents.forEach(c => {
+                        c.classList.remove('block');
+                        c.classList.add('hidden');
+                    });
+
+                    // Activate clicked tab
+                    tab.classList.add('active', 'text-dell');
+                    tab.classList.remove('text-gray-500');
+                    // Show target content
+                    const target = document.getElementById(tab.getAttribute('data-target'));
+                    target.classList.remove('hidden');
+                    target.classList.add('block');
+                });
+            });
+
+            // Table Filtering Logic
+            const filterSelect = document.getElementById('influenceFilter');
+            filterSelect.addEventListener('change', function() {
+                const filterValue = this.value;
+                const rows = document.querySelectorAll('#stakeholderTable tbody tr');
+                
+                rows.forEach(row => {
+                    if (filterValue === 'all' || row.getAttribute('data-influence') === filterValue) {
+                        row.style.display = '';
+                        row.classList.add('animate-[fadeIn_0.3s_ease-in-out]');
+                    } else {
+                        row.style.display = 'none';
+                        row.classList.remove('animate-[fadeIn_0.3s_ease-in-out]');
+                    }
+                });
+            });
+
+            // Chart.js Implementation for Budget Data
+            const ctx = document.getElementById('budgetChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Minimum Estimate', 'Maximum Estimate'],
+                    datasets: [{
+                        label: 'Estimated IT Budget Range (Millions USD)',
+                        data: [680, 700], 
+                        backgroundColor: [
+                            '#cbd5e1', // Slate for min
+                            '#0076CE'  // Dell Blue for max
+                        ],
+                        borderWidth: 0,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false 
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ' $' + context.raw + ' Million USD';
+                                }
+                            },
+                            backgroundColor: 'rgba(0, 68, 124, 0.95)',
+                            titleFont: { size: 14, family: "'Inter', sans-serif" },
+                            bodyFont: { size: 14, fontStyle: 'bold' },
+                            padding: 12,
+                            cornerRadius: 6,
+                            displayColors: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 800,
+                            title: {
+                                display: true,
+                                text: 'Total Addressable Budget ($ Millions)',
+                                font: { weight: 'bold', size: 13, family: "'Inter', sans-serif" },
+                                color: '#475569'
+                            },
+                            grid: { color: '#e2e8f0' },
+                            ticks: { color: '#64748b' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { 
+                                font: { weight: 'bold', size: 13 },
+                                color: '#334155'
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+        });
+
+        // Accordion Interaction Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (content.style.maxHeight) {
+                // Close
+                content.style.maxHeight = null;
+                icon.style.transform = "rotate(0deg)";
+                icon.textContent = '+';
+                content.classList.remove('pb-5');
+            } else {
+                // Open
+                content.style.maxHeight = content.scrollHeight + 30 + "px";
+                icon.style.transform = "rotate(45deg)";
+                icon.textContent = '+'; 
+                content.classList.add('pb-5');
+            }
+        }
+    </script>
+    <style>
+        /* Add minimal custom keyframe for JS display toggles */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</body>
+</html>

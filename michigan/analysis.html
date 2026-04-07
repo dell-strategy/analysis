@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Account Intelligence: State of Michigan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Chosen Palette: Professional Slate & Dell Blue -->
+    <!-- Application Structure Plan: A side-navigation dashboard layout was chosen to allow the Account Executive to rapidly jump between distinct intelligence categories without losing context. The content is structured sequentially from macro-level politics down to specific, actionable Dell sales motions. Interactive tabs are used for Strategic Initiatives to condense complex information into scannable chunks, ideal for quick pre-meeting review. -->
+    <!-- Visualization & Content Choices: 
+         1. Financials -> Goal: Show O&M vs CapEx split -> Viz: Chart.js Doughnut -> Interaction: Hover for exact values -> Justification: Quickly visualizes how much budget is locked in maintenance vs available for net-new Dell projects. NO SVG used.
+         2. Initiatives -> Goal: Detail top 3 projects without scrolling fatigue -> Viz: JS-driven Tabs -> Interaction: Click to swap content -> Justification: Keeps the UI clean and allows the AE to focus on one initiative at a time. NO SVG used.
+         3. Power Structure -> Goal: Clearly map influence -> Viz: HTML Table -> Interaction: Hover row highlight -> Justification: Standard, highly readable format for org charts and stakeholder mapping.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        /* Essential Chart Container Styling per requirements */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        
+        /* Smooth scrolling for sidebar links */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom scrollbar for main content */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .tab-active { border-bottom: 2px solid #0076CE; color: #0076CE; font-weight: bold; }
+        .dell-blue { color: #0076CE; }
+        .bg-dell-blue { background-color: #0076CE; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex h-screen overflow-hidden">
+
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 bg-slate-900 text-slate-300 flex flex-col shadow-xl z-10 hidden md:flex flex-shrink-0">
+        <div class="p-6 border-b border-slate-700">
+            <div class="text-2xl font-bold text-white tracking-tight flex items-center">
+                <span class="mr-2 dell-blue">Dell</span>Tech
+            </div>
+            <div class="text-xs uppercase tracking-wider mt-1 text-slate-400 font-semibold">Account Intelligence</div>
+            <div class="mt-4 text-sm font-medium text-white border-l-2 border-[#0076CE] pl-2">State of Michigan</div>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="space-y-1">
+                <li><a href="#summary" class="nav-link block px-6 py-2.5 hover:bg-slate-800 hover:text-white transition-colors text-sm font-medium" data-target="summary">&#9656; 1. Executive Summary</a></li>
+                <li><a href="#power" class="nav-link block px-6 py-2.5 hover:bg-slate-800 hover:text-white transition-colors text-sm font-medium" data-target="power">&#9656; 2. Power Structure</a></li>
+                <li><a href="#governance" class="nav-link block px-6 py-2.5 hover:bg-slate-800 hover:text-white transition-colors text-sm font-medium" data-target="governance">&#9656; 3. IT Governance</a></li>
+                <li><a href="#financials" class="nav-link block px-6 py-2.5 hover:bg-slate-800 hover:text-white transition-colors text-sm font-medium" data-target="financials">&#9656; 4. Financials</a></li>
+                <li><a href="#initiatives" class="nav-link block px-6 py-2.5 hover:bg-slate-800 hover:text-white transition-colors text-sm font-medium" data-target="initiatives">&#9656; 5. Strategic Initiatives</a></li>
+                <li><a href="#procurement" class="nav-link block px-6 py-2.5 hover:bg-slate-800 hover:text-white transition-colors text-sm font-medium" data-target="procurement">&#9656; 6. Procurement</a></li>
+                <li><a href="#opportunities" class="nav-link block px-6 py-2.5 hover:bg-[#0076CE] text-white transition-colors text-sm font-bold bg-slate-800" data-target="opportunities">&#9733; 7. Dell Opportunities</a></li>
+            </ul>
+        </nav>
+        <div class="p-4 border-t border-slate-700 flex flex-col gap-3">
+            <a href="https://dmonkey1001.github.io/slg-strategies/michigan/analysis.pdf" target="_blank" class="flex items-center justify-center w-full px-4 py-2 text-sm font-bold text-white bg-[#0076CE] hover:bg-blue-700 rounded transition-colors shadow-sm">
+                &#128196; Source Report
+            </a>
+            <div class="text-xs text-slate-500">
+                Internal Use Only. <br>Prepared for MI District.
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 overflow-y-auto scroll-smooth p-6 md:p-10" id="main-content">
+        
+        <!-- Mobile Header -->
+        <div class="md:hidden mb-6 pb-4 border-b border-slate-200">
+            <div class="text-2xl font-bold dell-blue">Dell Technologies</div>
+            <div class="text-lg font-semibold">Account Intelligence: State of Michigan</div>
+        </div>
+
+        <div class="max-w-5xl mx-auto space-y-16 pb-20">
+
+            <!-- Section 1: Executive Summary -->
+            <section id="summary" class="scroll-mt-10">
+                <div class="mb-4 flex flex-col md:flex-row md:justify-between md:items-end border-b-2 border-slate-200 pb-2">
+                    <div>
+                        <h2 class="text-sm font-bold dell-blue uppercase tracking-widest mb-1">Section 1</h2>
+                        <h1 class="text-3xl font-extrabold text-slate-900">Executive Summary & Macro Landscape</h1>
+                    </div>
+                    <a href="https://dmonkey1001.github.io/slg-strategies/michigan/analysis.pdf" target="_blank" class="inline-flex items-center mt-3 md:mt-0 px-3 py-1.5 bg-white hover:bg-slate-50 text-[#0076CE] text-sm font-semibold rounded border border-slate-300 shadow-sm transition-colors w-max">
+                        &#128279; View Full PDF
+                    </a>
+                </div>
+                <p class="text-slate-600 mb-4 italic">This section provides the high-level political and administrative context shaping IT procurement in Michigan. Understanding the Governor's priorities dictates where funding flows.</p>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h3 class="text-xl font-semibold mb-3">Political & Economic Climate</h3>
+                    <p class="text-slate-700 mb-6 leading-relaxed">
+                        Michigan currently operates under a Democratic trifecta (Governor Gretchen Whitmer, House, and Senate), leading to streamlined passage of executive priorities. Economically, the state is heavily focused on transitioning its legacy automotive dominance into an EV and advanced manufacturing hub, while grappling with demographic shifts and the need to modernize aging infrastructure. State revenues remain stable, bolstered by lingering federal funds, but there is a distinct shift toward ensuring long-term operational sustainability (O&M) for newly built digital assets.
+                    </p>
+                    
+                    <h3 class="text-xl font-semibold mb-3">Core Administrative Goals (Current FY)</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-[#0076CE] mr-2 mt-1">&#10004;</span>
+                            <div>
+                                <strong class="text-slate-900">Infrastructure & Advanced Manufacturing:</strong> Heavy investments in EV infrastructure, battery plants, and the digital backbone required to support smart state logistics.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#0076CE] mr-2 mt-1">&#10004;</span>
+                            <div>
+                                <strong class="text-slate-900">Digital Equity & Broadband Expansion:</strong> Utilizing BEAD funding to connect rural and underserved urban areas, requiring robust backend core routing and data processing at the edge.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#0076CE] mr-2 mt-1">&#10004;</span>
+                            <div>
+                                <strong class="text-slate-900">Whole-of-State Cybersecurity:</strong> Hardening not just state executive branches, but extending cyber resilience services to local municipalities (K-12, county governments) via DTMB.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 2: Power Structure -->
+            <section id="power" class="scroll-mt-10">
+                <div class="mb-4">
+                    <h2 class="text-sm font-bold dell-blue uppercase tracking-widest mb-1">Section 2</h2>
+                    <h1 class="text-3xl font-extrabold text-slate-900 border-b-2 border-slate-200 pb-2">Power Structure & Key Stakeholders</h1>
+                </div>
+                <p class="text-slate-600 mb-4 italic">Map of the key decision-makers within Michigan's highly centralized IT structure. DTMB is the gatekeeper for major purchases.</p>
+                
+                <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-slate-200">
+                    <table class="min-w-full divide-y divide-slate-200">
+                        <thead class="bg-slate-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Name</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Title / Org</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Sphere of Influence</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Recent Tech Stances</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-slate-200">
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-slate-900">Gov. Gretchen Whitmer</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Governor</td>
+                                <td class="px-6 py-4 text-sm text-slate-600"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Financial / Executive</span></td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Focuses on "fixing the damn roads," extending this to "digital roads" (broadband).</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-slate-900">Laura Clark</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">CIO & Director, DTMB</td>
+                                <td class="px-6 py-4 text-sm text-slate-600"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Financial & Technical</span></td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Advocates for "digital-first" citizen experiences, human-centered design, and robust data governance.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-slate-900">Jayson Cavendish</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Chief Security Officer, DTMB</td>
+                                <td class="px-6 py-4 text-sm text-slate-600"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">Technical Influencer</span></td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Driving Zero Trust architecture, identity management, and Whole-of-State local government support.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-slate-900">Rep. Sarah Anthony</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Chair, Senate Appropriations</td>
+                                <td class="px-6 py-4 text-sm text-slate-600"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Financial Purchaser</span></td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Controls the purse strings. Requires clear ROI and equity justifications for large tech spend.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-slate-900">Agency CIOs (MDHHS, MDOT)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Varies</td>
+                                <td class="px-6 py-4 text-sm text-slate-600"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Business Influencer</span></td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Define business needs. Must work through DTMB for procurement but drive workload requirements.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 3: IT Governance -->
+            <section id="governance" class="scroll-mt-10">
+                <div class="mb-4">
+                    <h2 class="text-sm font-bold dell-blue uppercase tracking-widest mb-1">Section 3</h2>
+                    <h1 class="text-3xl font-extrabold text-slate-900 border-b-2 border-slate-200 pb-2">IT Governance & Service Delivery Model</h1>
+                </div>
+                <p class="text-slate-600 mb-4 italic">How Michigan buys and manages technology. Understanding this dictates whether we sell to a central authority or individual agencies.</p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 border-t-4 border-t-slate-800">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold">Operating Model</h3>
+                            <span class="bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded">Consolidated</span>
+                        </div>
+                        <p class="text-slate-700 leading-relaxed">
+                            Michigan operates under a highly <strong>Consolidated</strong> IT model via the Department of Technology, Management & Budget (DTMB). DTMB acts as a centralized IT service provider to executive branch agencies. Hardware, data center operations, network, and enterprise software contracts are heavily centralized. Selling infrastructure usually means selling to DTMB Enterprise Architecture and Operations teams, not individual agencies directly.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 border-t-4 border-t-red-600">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold">Friction Points</h3>
+                            <span class="text-2xl">&#9888;</span>
+                        </div>
+                        <ul class="space-y-2 text-slate-700">
+                            <li><strong>Chargeback Rates:</strong> Agencies often complain about the opaque and high chargeback costs from DTMB for standard compute/storage, driving a desire for "Shadow IT" SaaS solutions.</li>
+                            <li><strong>Agility vs. Standardization:</strong> Large agencies (like MDHHS) require rapid deployment for new programs, but DTMB's rigorous security and standardization reviews can cause bottlenecks.</li>
+                            <li><strong>Cloud Repatriation:</strong> Unpredictable public cloud egress fees have caused budgetary friction, creating a desire for predictable, cloud-like on-prem consumption.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Financials -->
+            <section id="financials" class="scroll-mt-10">
+                <div class="mb-4">
+                    <h2 class="text-sm font-bold dell-blue uppercase tracking-widest mb-1">Section 4</h2>
+                    <h1 class="text-3xl font-extrabold text-slate-900 border-b-2 border-slate-200 pb-2">Financials & Budget Breakdown</h1>
+                </div>
+                <p class="text-slate-600 mb-4 italic">Visualizing the flow of state IT funding. High O&M limits net-new spend, creating an opportunity for Dell APEX to shift CapEx to OpEx.</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <div>
+                        <h3 class="text-lg font-bold mb-2">Total & IT Budget Profile</h3>
+                        <p class="text-sm text-slate-600 mb-4">Fiscal Year: Oct 1 - Sept 30. <em>Figures are estimated based on typical consolidated state models.</em></p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex justify-between border-b border-slate-100 pb-2">
+                                <span class="font-medium">Est. Total State Budget:</span>
+                                <span class="text-slate-600">~$80B+</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-2">
+                                <span class="font-medium">Est. DTMB IT Spend:</span>
+                                <span class="text-slate-600">~$1.2B Annually</span>
+                            </div>
+                            <div class="bg-blue-50 p-3 rounded text-sm text-blue-800">
+                                <strong>Budget Note:</strong> Like most states, ~75% of the IT budget is locked into Operations & Maintenance (O&M) of legacy systems, leaving only ~25% for net-new innovation (CapEx/Projects).
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-bold mt-6 mb-2">Grants & Federal Funding</h3>
+                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                            <li><strong>SLCGP:</strong> State and Local Cybersecurity Grant Program funding is actively being deployed for endpoint and network security.</li>
+                            <li><strong>CJIS / Law Enforcement:</strong> Dedicated funds for modernizing state police databases and video/evidence storage.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Chart.js Container -->
+                    <div>
+                        <div class="chart-container">
+                            <canvas id="budgetChart"></canvas>
+                        </div>
+                        <p class="text-center text-xs text-slate-500 mt-2">Estimated IT Budget Allocation</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Strategic Initiatives -->
+            <section id="initiatives" class="scroll-mt-10">
+                <div class="mb-4">
+                    <h2 class="text-sm font-bold dell-blue uppercase tracking-widest mb-1">Section 5</h2>
+                    <h1 class="text-3xl font-extrabold text-slate-900 border-b-2 border-slate-200 pb-2">Strategic Initiatives & Projects (Top 3)</h1>
+                </div>
+                <p class="text-slate-600 mb-4 italic">The funded modernization efforts. This interactive section details where the state is actively spending money right now.</p>
+                
+                <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                    <!-- Tabs -->
+                    <div class="flex border-b border-slate-200 bg-slate-50">
+                        <button class="flex-1 py-3 px-4 text-sm font-medium text-center tab-btn tab-active" onclick="switchTab('init1', this)">1. Whole-of-State Cyber</button>
+                        <button class="flex-1 py-3 px-4 text-sm font-medium text-center text-slate-500 hover:text-slate-700 tab-btn" onclick="switchTab('init2', this)">2. Single Citizen Identity</button>
+                        <button class="flex-1 py-3 px-4 text-sm font-medium text-center text-slate-500 hover:text-slate-700 tab-btn" onclick="switchTab('init3', this)">3. Data & AI Readiness</button>
+                    </div>
+                    
+                    <!-- Tab Content -->
+                    <div class="p-6 h-64 overflow-y-auto">
+                        <!-- Content 1 -->
+                        <div id="init1" class="tab-content block">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Whole-of-State Cybersecurity & Resilience</h3>
+                            <div class="grid grid-cols-3 gap-4 mb-4 text-sm">
+                                <div class="bg-slate-50 p-3 rounded"><strong class="block text-slate-500 text-xs uppercase">Mandate</strong> Executive / SLCGP</div>
+                                <div class="bg-slate-50 p-3 rounded"><strong class="block text-slate-500 text-xs uppercase">Owner</strong> DTMB (CISO)</div>
+                                <div class="bg-slate-50 p-3 rounded"><strong class="block text-slate-500 text-xs uppercase">Tech Need</strong> Immutability, Air-Gaps</div>
+                            </div>
+                            <p class="text-slate-700">
+                                Driven by the rise in ransomware targeting local municipalities, Michigan is utilizing federal grants to offer centralized security services to smaller government entities. The core requirement for the State data centers is ensuring absolute recoverability in the event of a breach. They are moving past perimeter defense and looking for immutable storage and isolated recovery environments for mission-critical databases.
+                            </p>
+                        </div>
+                        
+                        <!-- Content 2 -->
+                        <div id="init2" class="tab-content hidden">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Citizen Experience & MiLogin Modernization</h3>
+                            <div class="grid grid-cols-3 gap-4 mb-4 text-sm">
+                                <div class="bg-slate-50 p-3 rounded"><strong class="block text-slate-500 text-xs uppercase">Mandate</strong> Citizen Exp.</div>
+                                <div class="bg-slate-50 p-3 rounded"><strong class="block text-slate-500 text-xs uppercase">Owner</strong> Multi-Agency (HHS, SOS)</div>
+                                <div class="bg-slate-50 p-3 rounded"><strong class="block text-slate-500 text-xs uppercase">Tech Need</strong> Cloud-Native, APEX</div>
+                            </div>
+                            <p class="text-slate-700">
+                                The Governor's mandate is to make interacting with the state as easy as banking online. This requires unifying backend databases and modernizing monolithic legacy applications (especially in Health & Human Services and Secretary of State). They need the agility of the public cloud but are restricted by data sovereignty and cost, driving a need for modern, container-ready infrastructure on-premises.
+                            </p>
+                        </div>
+
+                        <!-- Content 3 -->
+                        <div id="init3" class="tab-content hidden">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Enterprise Data & AI Readiness</h3>
+                            <div class="grid grid-cols-3 gap-4 mb-4 text-sm">
+                                <div class="bg-slate-50 p-3 rounded"><strong class="block text-slate-500 text-xs uppercase">Mandate</strong> Operational Eff.</div>
+                                <div class="bg-slate-50 p-3 rounded"><strong class="block text-slate-500 text-xs uppercase">Owner</strong> DTMB Enterprise Arch.</div>
+                                <div class="bg-slate-50 p-3 rounded"><strong class="block text-slate-500 text-xs uppercase">Tech Need</strong> Unstructured Data, GPU</div>
+                            </div>
+                            <p class="text-slate-700">
+                                Before Michigan can deploy advanced AI (GenAI chatbots for citizens, predictive maintenance for infrastructure), they must consolidate massive silos of unstructured data. Departments like Transportation (video feeds, IoT) and State Police (bodycams, evidence) are drowning in data. The current initiative focuses on building scalable data lakes and preparing the compute tier to handle future AI workloads locally to ensure data privacy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Procurement -->
+            <section id="procurement" class="scroll-mt-10">
+                <div class="mb-4">
+                    <h2 class="text-sm font-bold dell-blue uppercase tracking-widest mb-1">Section 6</h2>
+                    <h1 class="text-3xl font-extrabold text-slate-900 border-b-2 border-slate-200 pb-2">Procurement, Vendor Landscape & Compliance</h1>
+                </div>
+                <p class="text-slate-600 mb-4 italic">Understanding how to transact and the competitive landmines to avoid.</p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded border border-slate-200 shadow-sm">
+                        <div class="text-xl mb-2 text-slate-700">&#128203;</div>
+                        <h3 class="font-bold text-lg mb-2">Procurement Vehicles</h3>
+                        <ul class="text-sm text-slate-700 space-y-2">
+                            <li><strong>MiDEAL:</strong> State's extended purchasing program (allows locals to buy off state contracts).</li>
+                            <li><strong>NASPO ValuePoint:</strong> Primary cooperative vehicle utilized by DTMB for hardware/software.</li>
+                            <li><strong>Direct DTMB Master Contracts:</strong> Essential to be listed here for large enterprise purchases.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-5 rounded border border-slate-200 shadow-sm">
+                        <div class="text-xl mb-2 text-slate-700">&#9876;&#65039;</div>
+                        <h3 class="font-bold text-lg mb-2">The Battlefield</h3>
+                        <ul class="text-sm text-slate-700 space-y-2">
+                            <li><strong>Incumbents:</strong> Heavy historical presence of HPE in legacy compute. NetApp in certain agency file storage silos.</li>
+                            <li><strong>Vulnerabilities:</strong> Aging 3-tier architectures requiring heavy management. Agencies experiencing sticker shock from unmanaged AWS/Azure sprawl.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-5 rounded border border-slate-200 shadow-sm">
+                        <div class="text-xl mb-2 text-slate-700">&#128110;&#8205;&#9794;&#65039;</div>
+                        <h3 class="font-bold text-lg mb-2">Compliance Drivers</h3>
+                        <ul class="text-sm text-slate-700 space-y-2">
+                            <li><strong>StateRAMP:</strong> Michigan was an early adopter. Any cloud or SaaS-like offering (including APEX) must align with StateRAMP security controls.</li>
+                            <li><strong>CJIS / HIPAA:</strong> Strict on-prem requirements for sensitive law enforcement and health data.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 7: Dell Opportunities -->
+            <section id="opportunities" class="scroll-mt-10">
+                <div class="mb-4">
+                    <h2 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Section 7</h2>
+                    <h1 class="text-3xl font-extrabold dell-blue border-b-2 border-slate-200 pb-2">Actionable Dell Opportunities (The "So What")</h1>
+                </div>
+                <p class="text-slate-600 mb-6 italic text-lg">Synthesized sales motions for the District Manager and Account Executive to execute immediately based on current state initiatives.</p>
+                
+                <div class="space-y-4">
+                    <!-- Opp 1 -->
+                    <div class="bg-slate-900 text-white p-6 rounded-lg shadow-md border-l-4 border-[#0076CE]">
+                        <h3 class="text-xl font-bold mb-2">1. Funded Alignment: PowerProtect Cyber Recovery for State/Local</h3>
+                        <p class="text-slate-300 text-sm mb-3">Maps to Section 5: Whole-of-State Cyber Initiative.</p>
+                        <p class="text-slate-100">
+                            <strong>Motion:</strong> Pitch a Dell Cyber Recovery Vault directly to Jayson Cavendish's team. Position it as the ultimate fail-safe for the State's critical databases. Furthermore, pitch a "Cyber Vault as a Service" model that DTMB can offer to local municipalities using SLCGP funds, leveraging <strong>PowerProtect Data Manager</strong> and <strong>Data Domain</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Opp 2 -->
+                    <div class="bg-slate-900 text-white p-6 rounded-lg shadow-md border-l-4 border-[#0076CE]">
+                        <h3 class="text-xl font-bold mb-2">2. Whitespace & Advisory: AI-Ready Infrastructure for MDOT/MSP</h3>
+                        <p class="text-slate-300 text-sm mb-3">Maps to Section 5: Data & AI Readiness.</p>
+                        <p class="text-slate-100">
+                            <strong>Motion:</strong> Lead with an advisory workshop on unstructured data management for the Department of Transportation (MDOT) and State Police (MSP). They are drowning in video/sensor data. Introduce <strong>PowerScale</strong> as the foundational data lake capable of feeding future AI workloads securely on-prem. Follow up with <strong>PowerEdge XE series</strong> positioning for dedicated GPU compute once data is consolidated.
+                        </p>
+                    </div>
+
+                    <!-- Opp 3 -->
+                    <div class="bg-slate-900 text-white p-6 rounded-lg shadow-md border-l-4 border-[#0076CE]">
+                        <h3 class="text-xl font-bold mb-2">3. Competitive Displacement: Cloud Repatriation via APEX</h3>
+                        <p class="text-slate-300 text-sm mb-3">Maps to Section 3: Governance Friction Points.</p>
+                        <p class="text-slate-100">
+                            <strong>Motion:</strong> Target agencies experiencing public cloud sticker shock. Pitch <strong>Dell APEX (Block/File/Compute)</strong> to DTMB as a way to provide agencies the agile, "pay-as-you-grow" financial model they want, while keeping the workloads on-premises within DTMB's secure data centers (satisfying StateRAMP/CJIS). This directly attacks incumbent legacy SANs by shifting the financial conversation from CapEx to OpEx.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // 1. Chart.js Implementation for Budget Breakdown
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('budgetChart').getContext('2d');
+            
+            // Data derived from Section 4: ~75% O&M, ~25% CapEx/New Projects
+            const budgetData = {
+                labels: ['O&M (Keeping Lights On)', 'CapEx (New IT Projects)'],
+                datasets: [{
+                    data: [75, 25],
+                    backgroundColor: [
+                        '#64748b', // Slate 500
+                        '#0076CE'  // Dell Blue
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            };
+
+            const config = {
+                type: 'doughnut',
+                data: budgetData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false, // Crucial for letting the container dictate size
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    family: 'sans-serif',
+                                    size: 12
+                                },
+                                usePointStyle: true,
+                                padding: 20
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + '% (~$' + (context.parsed * 12) + 'M)'; // Math based on 1.2B total
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            new Chart(ctx, config);
+        });
+
+        // 2. Functional Navigation (Tabs) for Section 5
+        function switchTab(tabId, element) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.remove('block');
+                el.classList.add('hidden');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('tab-active');
+                el.classList.remove('text-slate-900');
+                el.classList.add('text-slate-500');
+            });
+
+            // Show target content
+            document.getElementById(tabId).classList.remove('hidden');
+            document.getElementById(tabId).classList.add('block');
+            
+            // Set active class on clicked button
+            element.classList.add('tab-active');
+            element.classList.remove('text-slate-500');
+        }
+
+        // 3. Scroll Spy Implementation for Sidebar Navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mainContent = document.getElementById('main-content');
+
+        mainContent.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                // Adjust threshold based on padding
+                if (mainContent.scrollTop >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                // Reset styling
+                if(!link.getAttribute('href').includes('opportunities')){
+                    link.classList.remove('border-l-4', 'border-[#0076CE]', 'bg-slate-800', 'text-white');
+                    link.classList.add('text-slate-300');
+                }
+                
+                // Add active styling
+                if (link.dataset.target === current) {
+                    if(current !== 'opportunities') {
+                        link.classList.add('border-l-4', 'border-[#0076CE]', 'bg-slate-800', 'text-white');
+                        link.classList.remove('text-slate-300');
+                    } else {
+                        // Special highlight for opportunities section
+                        link.classList.add('scale-105', 'shadow-lg');
+                        setTimeout(() => link.classList.remove('scale-105', 'shadow-lg'), 300);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

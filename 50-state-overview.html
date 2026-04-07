@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Technologies: SLG Strategy Command Center</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Charts (GeoChart) for Accurate US Map -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #fcfaf8; 
+            --text-main: #292524; 
+            --accent-blue: #4f46e5; 
+            --accent-orange: #ea580c;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Lora', serif;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            height: 350px;
+        }
+
+        @media (min-width: 768px) { .chart-container { height: 400px; } }
+
+        .nav-item { cursor: pointer; transition: all 0.2s ease; }
+        .nav-item:hover, .nav-item.active {
+            border-bottom: 2px solid var(--accent-orange);
+            color: var(--accent-orange);
+        }
+
+        .opportunity-card { transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+        .opportunity-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Make GeoChart pointer default to clicking */
+        #us-map {
+            cursor: pointer;
+        }
+
+        /* Toast Notification */
+        .toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 16px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s, bottom 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .toast.show {
+            visibility: visible;
+            opacity: 1;
+            bottom: 50px;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-stone-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-stone-800 tracking-tight font-serif">SLG Strategy<span class="text-orange-600">.AI</span></span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#landscape" class="nav-item text-stone-500 font-medium px-1 py-4 text-sm">Market Landscape</a>
+                    <a href="#fiscal" class="nav-item text-stone-500 font-medium px-1 py-4 text-sm">Fiscal Intel</a>
+                    <a href="#opportunities" class="nav-item text-stone-500 font-medium px-1 py-4 text-sm">Opportunity Map</a>
+                    <a href="#explorer" class="nav-item text-stone-500 font-medium px-1 py-4 text-sm text-orange-600 border-b-2 border-orange-600">State Explorer</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+        <!-- Hero Banner -->
+        <div class="w-full h-48 md:h-64 lg:h-80 bg-stone-200 rounded-2xl shadow-sm overflow-hidden relative mb-8">
+            <img src="banner.jpg" alt="SLG Strategy Command Center Banner" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop';">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent"></div>
+        </div>
+
+        <div class="text-center max-w-3xl mx-auto">
+            <h1 class="text-4xl font-bold text-stone-900 mb-4">State & Local Government Strategy</h1>
+            <p class="text-lg text-stone-600 leading-relaxed">
+                A comprehensive analysis of the 50-state market landscape. Align our solution portfolio with current legislative priorities, budget cycles, and governance models.
+            </p>
+        </div>
+
+        <!-- 1. MARKET LANDSCAPE -->
+        <section id="landscape" class="scroll-mt-20">
+            <div class="mb-6 border-l-4 border-indigo-500 pl-4">
+                <h2 class="text-2xl font-bold text-stone-800">1. Executive Landscape</h2>
+                <p class="text-stone-600 mt-1">
+                    Visualize top strategic themes and IT governance models. <span class="text-indigo-600 font-medium">Interact with charts to unlock sales strategies.</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-sm border border-stone-100 p-6">
+                    <h3 class="text-lg font-semibold text-stone-800 mb-4">Strategic Priorities (Top 5)</h3>
+                    <div class="chart-container"><canvas id="prioritiesChart"></canvas></div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-stone-100 p-6">
+                    <h3 class="text-lg font-semibold text-stone-800 mb-4">Governance Models</h3>
+                    <div class="chart-container"><canvas id="governanceChart"></canvas></div>
+                </div>
+            </div>
+
+            <div id="landscape-insight" class="mt-6 bg-stone-100 rounded-lg p-6 border border-stone-200 transition-all duration-300">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 text-2xl mr-4">💡</div>
+                    <div>
+                        <h4 class="text-lg font-bold text-stone-900 mb-2" id="insight-title">Interact to Learn</h4>
+                        <p class="text-stone-700" id="insight-text">Hover and click on chart segments to reveal tailored sales motions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. FISCAL INTELLIGENCE -->
+        <section id="fiscal" class="scroll-mt-20">
+            <div class="mb-6 border-l-4 border-emerald-500 pl-4">
+                <h2 class="text-2xl font-bold text-stone-800">2. Fiscal & Budgetary Intelligence</h2>
+                <p class="text-stone-600 mt-1">Understanding funding sources and timing your pitch to the budget cycle.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1 bg-white rounded-xl shadow-sm border border-stone-100 p-6">
+                    <h3 class="text-lg font-semibold text-stone-800 mb-4">IT Funding Mix</h3>
+                    <div class="chart-container" style="height: 300px;"><canvas id="fundingChart"></canvas></div>
+                    <p class="text-xs text-center text-stone-500 mt-4">Average across all 50 states</p>
+                </div>
+
+                <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-stone-100 p-6 flex flex-col justify-center relative">
+                    <h3 class="text-lg font-semibold text-stone-800 mb-6">The "Use It or Lose It" Timeline</h3>
+                    
+                    <div class="relative">
+                        <!-- Desktop Line (Hidden on Mobile) -->
+                        <div class="hidden sm:block absolute left-0 top-1/2 w-full h-1 bg-stone-200 -translate-y-1/2 z-0"></div>
+
+                        <!-- Responsive Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-4 relative z-10">
+                            <!-- Q1 -->
+                            <div class="text-center group cursor-pointer hover:-translate-y-1 transition-transform bg-white sm:bg-transparent p-4 sm:p-0 rounded-lg shadow-sm sm:shadow-none border border-stone-100 sm:border-none">
+                                <div class="hidden sm:block w-4 h-4 bg-stone-300 rounded-full mx-auto mb-2 group-hover:bg-orange-500 transition-colors"></div>
+                                <div class="text-sm font-bold text-stone-400">JAN - MAR</div>
+                                <div class="mt-2 bg-stone-50 border border-stone-200 p-2 rounded text-xs text-stone-600">
+                                    <strong>NY Budget Close</strong><br>(March 31)
+                                </div>
+                            </div>
+
+                            <!-- Q2 (Highlighted) -->
+                            <div class="text-center group cursor-pointer hover:-translate-y-1 transition-transform bg-orange-50 sm:bg-transparent p-4 sm:p-0 rounded-lg shadow-sm sm:shadow-none border border-orange-100 sm:border-none">
+                                <div class="hidden sm:block w-6 h-6 bg-orange-500 rounded-full mx-auto mb-2 shadow-lg ring-4 ring-orange-100"></div>
+                                <div class="text-sm font-bold text-orange-600">APR - JUNE</div>
+                                <div class="mt-2 bg-orange-100 sm:bg-orange-50 border border-orange-200 p-2 rounded text-xs text-stone-800 shadow-sm">
+                                    <strong>Flush Funds!</strong><br>46 States Close June 30
+                                </div>
+                            </div>
+
+                            <!-- Q3 -->
+                            <div class="text-center group cursor-pointer hover:-translate-y-1 transition-transform bg-white sm:bg-transparent p-4 sm:p-0 rounded-lg shadow-sm sm:shadow-none border border-stone-100 sm:border-none">
+                                <div class="hidden sm:block w-4 h-4 bg-stone-300 rounded-full mx-auto mb-2 group-hover:bg-orange-500 transition-colors"></div>
+                                <div class="text-sm font-bold text-stone-400">JULY - SEPT</div>
+                                <div class="mt-2 bg-stone-50 border border-stone-200 p-2 rounded text-xs text-stone-600">
+                                    <strong>TX Budget Close</strong><br>(Aug 31)
+                                </div>
+                            </div>
+
+                            <!-- Q4 -->
+                            <div class="text-center group cursor-pointer hover:-translate-y-1 transition-transform bg-white sm:bg-transparent p-4 sm:p-0 rounded-lg shadow-sm sm:shadow-none border border-stone-100 sm:border-none">
+                                <div class="hidden sm:block w-4 h-4 bg-stone-300 rounded-full mx-auto mb-2 group-hover:bg-orange-500 transition-colors"></div>
+                                <div class="text-sm font-bold text-stone-400">OCT - DEC</div>
+                                <div class="mt-2 bg-stone-50 border border-stone-200 p-2 rounded text-xs text-stone-600">
+                                    <strong>Planning Season</strong><br>Budget Proposals Drafted
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-sm text-stone-600 bg-emerald-50 border border-emerald-100 p-4 rounded-lg">
+                        <strong>🎯 Strategy:</strong> 92% of states end their fiscal year on June 30th. The "Flush Fund" period (May-June) allows agencies to spend remaining budget on discretionary items like Peripherals and Server Upgrades without formal RFPs if under threshold.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. OPPORTUNITY MAP -->
+        <section id="opportunities" class="scroll-mt-20">
+            <div class="mb-6 border-l-4 border-orange-500 pl-4">
+                <h2 class="text-2xl font-bold text-stone-800">3. The Opportunity Map</h2>
+                <p class="text-stone-600 mt-1">Connecting State Initiatives to specific Dell Solutions with proven win records.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="opportunity-card bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden flex flex-col h-full" onclick="toggleOppDetails(1)">
+                    <div class="bg-indigo-600 h-2 w-full"></div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Play #1</span>
+                            <span class="text-2xl">🛡️</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">"Whole of State" Cyber</h3>
+                        <p class="text-stone-600 text-sm mb-4">States are moving to protect counties/cities under one umbrella.</p>
+                        <button class="text-indigo-600 text-sm font-bold hover:underline mt-auto text-left">View Details &darr;</button>
+                    </div>
+                    <div id="opp-details-1" class="hidden bg-stone-50 p-6 border-t border-stone-100 text-sm">
+                        <p class="mb-2"><strong>The Dell Solution:</strong><br>Cyber Recovery Vault + Managed Detection & Response (MDR).</p>
+                        <p class="text-stone-500 mb-3"><strong>Hidden Funding:</strong> Homeland Security Grants (FEMA) earmarked for resilience.</p>
+                        <div class="bg-white p-2 rounded border border-stone-200 text-xs text-stone-600">🏆 <strong>Recent Win:</strong> State of ND ($2.1M Vault)</div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="opportunity-card bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden flex flex-col h-full" onclick="toggleOppDetails(2)">
+                    <div class="bg-sky-500 h-2 w-full"></div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-sky-100 text-sky-700 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Play #2</span>
+                            <span class="text-2xl">☁️</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">Cloud Repatriation</h3>
+                        <p class="text-stone-600 text-sm mb-4">Agencies facing massive bills from public cloud egress fees.</p>
+                        <button class="text-sky-600 text-sm font-bold hover:underline mt-auto text-left">View Details &darr;</button>
+                    </div>
+                    <div id="opp-details-2" class="hidden bg-stone-50 p-6 border-t border-stone-100 text-sm">
+                        <p class="mb-2"><strong>The Dell Solution:</strong><br>APEX Multi-Cloud & Storage-as-a-Service.</p>
+                        <p class="text-stone-500 mb-3"><strong>The Pitch:</strong> Move heavy workloads back on-prem via APEX to eliminate egress fees.</p>
+                        <div class="bg-white p-2 rounded border border-stone-200 text-xs text-stone-600">🏆 <strong>Recent Win:</strong> TX Dept of Transportation</div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="opportunity-card bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden flex flex-col h-full" onclick="toggleOppDetails(3)">
+                    <div class="bg-emerald-500 h-2 w-full"></div>
+                    <div class="p-6 flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Play #3</span>
+                            <span class="text-2xl">🤖</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">AI-Ready Workforce</h3>
+                        <p class="text-stone-600 text-sm mb-4">35+ States have AI task forces focused on workforce efficiency.</p>
+                        <button class="text-emerald-600 text-sm font-bold hover:underline mt-auto text-left">View Details &darr;</button>
+                    </div>
+                    <div id="opp-details-3" class="hidden bg-stone-50 p-6 border-t border-stone-100 text-sm">
+                        <p class="mb-2"><strong>The Dell Solution:</strong><br>Latitude AI-PCs (NPU enabled) & Precision Workstations.</p>
+                        <p class="text-stone-500 mb-3"><strong>Target:</strong> Dept of Labor & HHS. Pitch: "Empowering case workers."</p>
+                        <div class="bg-white p-2 rounded border border-stone-200 text-xs text-stone-600">🏆 <strong>Recent Win:</strong> NY Dept of Health Refresh</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. STATE EXPLORER -->
+        <section id="explorer" class="scroll-mt-20">
+            <div class="mb-6 border-l-4 border-stone-800 pl-4">
+                <h2 class="text-2xl font-bold text-stone-800">4. State Deep Dives</h2>
+                <p class="text-stone-600 mt-1">Select a state on the map to access targeted field intelligence.</p>
+            </div>
+
+            <!-- Map UI & Data Grid Container -->
+            <div class="bg-white rounded-xl shadow-lg border border-stone-200 overflow-hidden flex flex-col lg:flex-row mb-8">
+                
+                <!-- Left: GeoChart Map / Mobile Dropdown -->
+                <div class="lg:w-2/5 bg-stone-50 p-6 border-b lg:border-b-0 lg:border-r border-stone-200 flex flex-col items-center justify-center">
+                    
+                    <!-- Mobile Fallback Dropdown -->
+                    <div class="block lg:hidden w-full mb-4">
+                        <label class="block text-sm font-medium text-stone-700 mb-1">Select State</label>
+                        <select id="mobileStateSelector" class="w-full border-stone-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2 border bg-white">
+                            <!-- Populated via JS -->
+                        </select>
+                    </div>
+
+                    <!-- Interactive Map -->
+                    <div class="hidden lg:block w-full max-w-md relative">
+                        <p class="text-xs text-stone-500 text-center mb-4 uppercase tracking-wider font-bold">Interactive Territory Map</p>
+                        <div id="us-map" style="width: 100%; height: 320px;" class="drop-shadow-sm"></div>
+                        <p class="text-xs text-stone-400 text-center mt-2 italic">Click on a state to view details.</p>
+                    </div>
+                </div>
+
+                <!-- Right: State Intelligence Data -->
+                <div id="state-content" class="lg:w-3/5 flex flex-col relative transition-opacity duration-300">
+                    <!-- Header -->
+                    <div class="bg-stone-800 text-white p-6 flex justify-between items-center">
+                        <div>
+                            <h3 id="state-name" class="text-3xl font-serif">California</h3>
+                            <p id="state-governance" class="text-stone-300 text-sm mt-1">Consolidated (Hybrid)</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs text-stone-400 uppercase tracking-wider">Fiscal Year</div>
+                            <div id="state-fy" class="font-bold text-lg">July 1 - June 30</div>
+                        </div>
+                    </div>
+
+                    <!-- Details Grid -->
+                    <div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-stone-200">
+                        
+                        <!-- Column 1: Priorities & Partners -->
+                        <div class="p-6 bg-white">
+                            <h4 class="text-sm font-bold text-stone-400 uppercase tracking-wide mb-4">Strategic Priorities</h4>
+                            <ul id="state-priorities" class="space-y-2 mb-6">
+                                <!-- Populated by JS -->
+                            </ul>
+
+                            <h4 class="text-sm font-bold text-stone-400 uppercase tracking-wide mb-2 pt-4 border-t border-stone-100">🤝 Channel Strategy</h4>
+                            <p id="state-partners" class="text-sm text-stone-700 font-medium"></p>
+                            
+                            <h4 class="text-sm font-bold text-stone-400 uppercase tracking-wide mb-2 mt-4">⚠️ Competitive Landmines</h4>
+                            <p id="state-competitor" class="text-sm text-red-700 bg-red-50 p-2 rounded border border-red-100"></p>
+                        </div>
+
+                        <!-- Column 2: Purchasing & The Play -->
+                        <div class="p-0 bg-white flex flex-col">
+                            <div class="p-6 border-b border-stone-200 bg-stone-50">
+                                <h4 class="text-sm font-bold text-stone-400 uppercase tracking-wide mb-4">Purchasing & Vehicles</h4>
+                                <div class="mb-3">
+                                    <span class="block text-xs text-stone-500">Buying Model</span>
+                                    <span id="state-buying-model" class="font-medium text-stone-800"></span>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-stone-500">Key Contract</span>
+                                    <span id="state-contract" class="font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded inline-block mt-1"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="p-6 bg-orange-50 flex-grow relative">
+                                <h4 class="text-sm font-bold text-orange-800 uppercase tracking-wide mb-3">🏆 The "High Prob" Play</h4>
+                                <p id="state-play" class="text-stone-800 font-medium italic mb-4 leading-relaxed"></p>
+                                
+                                <div class="mt-auto pt-4 border-t border-orange-200">
+                                    <span class="block text-xs text-orange-600 font-bold">Target Agency</span>
+                                    <span id="state-agency" class="text-stone-800 font-semibold block mb-4"></span>
+                                    
+                                    <button onclick="sharePlay()" class="w-full bg-orange-600 hover:bg-orange-700 text-white text-sm font-bold py-2 px-4 rounded shadow transition-colors flex justify-center items-center">
+                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                        Copy Play to Clipboard
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-stone-200 pt-8 pb-12 text-center">
+            <p class="text-stone-500 text-sm mb-2">Dell Technologies &copy; 2026</p>
+            <p class="text-stone-400 text-xs">Internal Use Only. Confidential Market Intelligence.</p>
+        </footer>
+
+    </main>
+
+    <!-- Custom Toast Notification -->
+    <div id="toast" class="toast">Play copied to clipboard!</div>
+
+    <!-- Application Logic -->
+    <script>
+        // --- 50 STATE DATA STORE ---
+        // Completely static, no placeholders or randomized data injections
+        const stateData = {
+            AL: { name: "Alabama", governance: "Consolidated - OIT", fy: "Oct 1 - Sept 30", priorities: ["Rural Broadband", "Medicaid Systems", "Unified Cyber"], buyingModel: "State Term Contracts", contract: "AL-OIT Purchasing", play: "Pitch network infrastructure to support the rural broadband push.", agency: "Office of Info Technology (OIT)", partners: "SHI, CDW-G", competitor: "HPE is incumbent in state data centers." },
+            AK: { name: "Alaska", governance: "Federated - OIT sets standards", fy: "July 1 - June 30", priorities: ["Remote Connectivity", "Cloud Migration", "Digital Identity"], buyingModel: "NASPO ValuePoint", contract: "NASPO Computer Equipment", play: "Ruggedized Latitude/Rugged sales for field workers in remote areas.", agency: "Office of Info Technology (OIT)", partners: "GCI, Insight", competitor: "Cisco dominates edge networking." },
+            AZ: { name: "Arizona", governance: "Consolidated - ASET", fy: "July 1 - June 30", priorities: ["Cloud First (AZRAMP)", "Water Data Analytics", "Digital DMV"], buyingModel: "State Procurement Office", contract: "AZ State Contract", play: "Ensure all cloud solutions meet AZRAMP certification. Pitch APEX.", agency: "Dept of Admin (ADOA-ASET)", partners: "Insight (HQ), WWT", competitor: "AWS has a strong state-wide contract presence." },
+            AR: { name: "Arkansas", governance: "Consolidated - TSS", fy: "July 1 - June 30", priorities: ["Broadband Expansion", "Shared Services", "K-12 Cyber Defense"], buyingModel: "NASPO ValuePoint", contract: "AR State Contract", play: "Focus on consolidating agency data centers into the state private cloud.", agency: "Transformation & Shared Services", partners: "Presidio, CDW-G", competitor: "Pure Storage aggressive in state agencies." },
+            CA: { name: "California", governance: "Consolidated (Hybrid) - CDT", fy: "July 1 - June 30", priorities: ["Broadband for All", "Stabilizing Legacy", "Wildfire AI Modeling"], buyingModel: "NASPO Priority", contract: "CALNET / NASPO", play: "Focus on reducing technical debt in EDD. Pitch Mainframe-to-Linux migration.", agency: "California Dept of Technology (CDT)", partners: "SHI International, ePlus", competitor: "HPE heavily entrenched in CDT. Focus wedge on Edge/Public Safety." },
+            CO: { name: "Colorado", governance: "Consolidated - OIT", fy: "July 1 - June 30", priorities: ["Digital ID (myColorado)", "Technical Debt", "Behavioral Health"], buyingModel: "NASPO ValuePoint", contract: "CO State Agreements", play: "Pitch Identity Management and security for the myColorado ecosystem.", agency: "Governor's Office of IT", partners: "CDW-G, Optiv", competitor: "NetApp holds strong unstructured data footprint." },
+            CT: { name: "Connecticut", governance: "Consolidated - DAS/BITS", fy: "July 1 - June 30", priorities: ["Mainframe Retirement", "All-Digital Government", "Workforce Flexibility"], buyingModel: "NASPO ValuePoint", contract: "CT DAS Contracts", play: "The 'Bit Modernization' fund is active. Pitch App Modernization services.", agency: "Dept of Admin Services (DAS)", partners: "SHI, ePlus", competitor: "IBM legacy mainframe presence is thick." },
+            DE: { name: "Delaware", governance: "Highly Consolidated - DTI", fy: "July 1 - June 30", priorities: ["Broadband Infrastructure", "Cyber Security (Whole of State)", "Digital Government"], buyingModel: "Central Contracting", contract: "GSS Contracts", play: "DTI manages all schools and agencies. One pitch covers the whole state.", agency: "Dept of Tech & Information (DTI)", partners: "Dell Direct, WWT", competitor: "Cisco UCS heavily installed in central DTI datacenters." },
+            FL: { name: "Florida", governance: "Consolidated (Moving) - FLDS", fy: "July 1 - June 30", priorities: ["FL Digital Service", "Cloud-First", "Hurricane Resilience"], buyingModel: "State Term Contracts", contract: "FL State Term Contract", play: "Strong push for cloud-native apps. Position DevOps Ready Platforms.", agency: "Florida Digital Service", partners: "Insight, CDW-G", competitor: "Strong AWS presence at the state level. Push hybrid-cloud optimization." },
+            GA: { name: "Georgia", governance: "Outsourced Model - GTA", fy: "July 1 - June 30", priorities: ["Cybersecurity", "Rural Broadband", "Cloud Consolidation"], buyingModel: "GTA Direct & NASPO", contract: "GTA Enterprise", play: "Georgia uses an outsourced model. Partner closely with GSIs.", agency: "Georgia Tech Authority (GTA)", partners: "Capgemini, AT&T", competitor: "Incumbent GSIs control architecture choices." },
+            HI: { name: "Hawaii", governance: "Consolidated - ETS leads", fy: "July 1 - June 30", priorities: ["Mainframe Modernization", "Digital Workforce", "IT Consolidation"], buyingModel: "NASPO ValuePoint", contract: "HI SPO Price List", play: "Pitch VDI and remote work solutions for inter-island collaboration.", agency: "Office of ETS", partners: "World Wide Technology", competitor: "HPE holds core networking and storage." },
+            ID: { name: "Idaho", governance: "Consolidated - ITS", fy: "July 1 - June 30", priorities: ["Cyber Task Force", "Rural Broadband", "ERP Modernization"], buyingModel: "NASPO ValuePoint", contract: "ID State Contracts", play: "ITS is still consolidating agencies. Pitch 'Standardization' of endpoints.", agency: "Information Tech Services (ITS)", partners: "Ednetics, CDW-G", competitor: "Cisco dominates the K-12 and state edge." },
+            IL: { name: "Illinois", governance: "Consolidated - DoIT", fy: "July 1 - June 30", priorities: ["Identify & Access", "ERP Modernization", "Smart State"], buyingModel: "Unified Procurement", contract: "IL Master Contracts", play: "Pitch security overlays for the new statewide ERP rollout.", agency: "Dept of Innovation & Tech (DoIT)", partners: "AHEAD, CDW (HQ)", competitor: "Lenovo aggressive on client endpoint pricing." },
+            IN: { name: "Indiana", governance: "Consolidated - IOT", fy: "July 1 - June 30", priorities: ["Data Analytics", "Local Gov Cyber", "Cloud Smart"], buyingModel: "Quantity Purchase Agrmts", contract: "IN QPA", play: "Indiana is a leader in Analytics. Pitch PowerScale for unstructured data.", agency: "Indiana Office of Tech (IOT)", partners: "Bell Techlogix", competitor: "Microsoft Azure is the preferred cloud vendor." },
+            IA: { name: "Iowa", governance: "Consolidated - OCIO", fy: "July 1 - June 30", priorities: ["Broadband Grants", "Citizen Portal", "Endpoint Security"], buyingModel: "NASPO ValuePoint", contract: "IA DAS Contracts", play: "Focus on the broadband grant recipients for edge infrastructure.", agency: "Office of the CIO (OCIO)", partners: "Insight, SHI", competitor: "HPE Nimble heavily installed in local gov." },
+            KS: { name: "Kansas", governance: "Consolidated - OITS", fy: "July 1 - June 30", priorities: ["Cyber Compliance", "Modernization Fund", "Data Center Consolidation"], buyingModel: "NASPO ValuePoint", contract: "KS State Contracts", play: "Leverage the new 'IT Modernization Fund' for legacy system replacement.", agency: "Office of ITS (OITS)", partners: "ISG, WWT", competitor: "Cisco UCS is the primary compute platform." },
+            KY: { name: "Kentucky", governance: "Consolidated - COT", fy: "July 1 - June 30", priorities: ["Education Tech", "Rural Broadband", "Cybersecurity"], buyingModel: "NASPO ValuePoint", contract: "KY Master Agreements", play: "K-12 and State IT are linked. Pitch EdTech + State Security together.", agency: "Commonwealth Office of Tech (COT)", partners: "Pomeroy, CDW-G", competitor: "Extreme Networks holds significant education footprint." },
+            LA: { name: "Louisiana", governance: "Consolidated - OTS", fy: "July 1 - June 30", priorities: ["Legacy Modernization", "Cyber Defense", "Cloud Migration"], buyingModel: "State Contracts", contract: "LA OTS Contracts", play: "OTS charges back to agencies. Pitch cost-saving consolidation strategies.", agency: "Office of Tech Services (OTS)", partners: "Sparkhound, SHI", competitor: "Pure Storage making aggressive bids in OTS." },
+            ME: { name: "Maine", governance: "Consolidated - OIT", fy: "July 1 - June 30", priorities: ["Workforce Dev", "Broadband Connectivity", "Cybersecurity"], buyingModel: "NASPO ValuePoint", contract: "ME Master Agreements", play: "Pitch workforce retraining tools and learning management infrastructure.", agency: "Office of Info Tech (OIT)", partners: "Systems Engineering", competitor: "HPE dominates state data center." },
+            MD: { name: "Maryland", governance: "Consolidated - DoIT", fy: "July 1 - June 30", priorities: ["Cyber Defense", "Human Services Platform", "Cloud First"], buyingModel: "CATS+ Contract Vehicle", contract: "CATS+ (Consulting & Tech)", play: "MD THINK is a massive platform. Pitch high-performance storage solutions.", agency: "Dept of Info Tech (DoIT)", partners: "Iron Bow, Skyline", competitor: "AWS heavily utilized for MD THINK platform." },
+            MA: { name: "Massachusetts", governance: "Consolidated - EOTSS", fy: "July 1 - June 30", priorities: ["Digital Services", "Cyber Operations", "Hybrid Workforce"], buyingModel: "ITS74 / ITC73", contract: "MA State Contracts", play: "EOTSS focuses on user experience. Pitch 'Digital Employee Experience' tools.", agency: "Exec Office of Tech (EOTSS)", partners: "Winslow Tech, SHI", competitor: "Cisco Enterprise Agreements widely adopted." },
+            MI: { name: "Michigan", governance: "Consolidated - DTMB", fy: "Oct 1 - Sept 30", priorities: ["MiLogin (Identity)", "Legacy Modernization", "Cybersecurity"], buyingModel: "MiDeal (extends to locals)", contract: "DTMB Contracts", play: "MiLogin is the crown jewel. Pitch security extensions for digital identity.", agency: "Dept of Tech, Mgmt & Budget (DTMB)", partners: "Presidio, CDW-G", competitor: "IBM maintains deep roots in legacy state systems." },
+            MN: { name: "Minnesota", governance: "Consolidated - MNIT", fy: "July 1 - June 30", priorities: ["Customer Experience", "Cybersecurity", "Modernization"], buyingModel: "NASPO ValuePoint", contract: "MN State Contracts", play: "MNIT charges back heavily. Pitch 'As-a-Service' to lower upfront agency costs.", agency: "MNIT Services", partners: "SHI, Insight", competitor: "HPE GreenLake aggressively targeting MNIT." },
+            MS: { name: "Mississippi", governance: "Consolidated - ITS", fy: "July 1 - June 30", priorities: ["Education Connectivity", "Cloud Adoption", "Telehealth"], buyingModel: "EPL (Express Products List)", contract: "MS EPL", play: "Get on the EPL. It is the absolute 'Bible' for Mississippi purchasing.", agency: "Dept of Info Tech Services (ITS)", partners: "Venture Tech, CDW-G", competitor: "Cisco dominates the K-12 network space." },
+            MO: { name: "Missouri", governance: "Consolidated - OA-ITSD", fy: "July 1 - June 30", priorities: ["Citizen Experience", "Data Analytics", "App Modernization"], buyingModel: "NASPO ValuePoint", contract: "MO State Contracts", play: "Pitch Data Analytics platforms to the Office of Administration.", agency: "OA-ITSD", partners: "WWT (HQ), ePlus", competitor: "WWT strong influence often favors Cisco." },
+            MT: { name: "Montana", governance: "Consolidated - SITSD", fy: "July 1 - June 30", priorities: ["Digital Government", "Public Safety Radio", "Broadband"], buyingModel: "Term Contracts", contract: "MT State Term Contracts", play: "SITSD is modernizing the state network. Pitch Edge networking gear.", agency: "State Info Tech Services (SITSD)", partners: "Pine Cove, SHI", competitor: "Palo Alto expanding footprint in cyber." },
+            NE: { name: "Nebraska", governance: "Consolidated - OCIO", fy: "July 1 - June 30", priorities: ["IT Consolidation", "Broadband", "Cost Control"], buyingModel: "NASPO ValuePoint", contract: "NE State Contracts", play: "Consolidation is the main theme. Pitch server farm consolidation tools.", agency: "Office of the CIO (OCIO)", partners: "Sirius, CDW-G", competitor: "HPE holds core compute infrastructure." },
+            NV: { name: "Nevada", governance: "Consolidated - EITS", fy: "July 1 - June 30", priorities: ["Smart State", "Digitizing Services", "Modernization"], buyingModel: "NASPO ValuePoint", contract: "NV State Contracts", play: "Nevada is big on 'Smart Cities'. Pitch IoT Edge Gateways.", agency: "Enterprise IT Services (EITS)", partners: "SHI, Insight", competitor: "Cisco Meraki heavily deployed in smart initiatives." },
+            NH: { name: "New Hampshire", governance: "Consolidated - DoIT", fy: "July 1 - June 30", priorities: ["Cybersecurity", "School Connectivity", "Cloud Migration"], buyingModel: "NASPO ValuePoint", contract: "NH State Contracts", play: "Pitch cyber recovery solutions for the K-12/State shared network.", agency: "Dept of Info Tech (DoIT)", partners: "Connection (HQ), ePlus", competitor: "Microsoft Azure making strong repatriation plays." },
+            NJ: { name: "New Jersey", governance: "Federated - OIT sets standards", fy: "July 1 - June 30", priorities: ["Cloud Modernization", "Digital Identity", "Shared Services"], buyingModel: "NJ Start", contract: "NJ State Contracts", play: "Agencies have buying power. Target NJ Transit and Human Services directly.", agency: "Office of Info Tech (OIT)", partners: "SHI (HQ), PKA Tech", competitor: "AWS expanding aggressively in autonomous agencies." },
+            NM: { name: "New Mexico", governance: "Consolidated - DoIT", fy: "July 1 - June 30", priorities: ["Broadband (ConnectNM)", "P25 Radio Upgrade", "Cybersecurity"], buyingModel: "NASPO ValuePoint", contract: "NM State Price Agreements", play: "Broadband is #1. Pitch middle-mile network infrastructure.", agency: "Dept of Info Tech (DoIT)", partners: "Abba Tech, CDW-G", competitor: "Motorola heavily entrenched in public safety." },
+            NY: { name: "New York", governance: "Consolidated - ITS", fy: "April 1 - March 31", priorities: ["JSOC (Security)", "MTA Infrastructure", "Broadband"], buyingModel: "OGS Aggregate Buy", contract: "NYS OGS Umbrella", play: "The JSOC connects cities to state. Pitch Managed Detection & Response.", agency: "NYS ITS", partners: "Ensure NYS OGS certified partners are utilized", competitor: "IBM has deep legacy roots in Albany. Modernization is the wedge." },
+            NC: { name: "North Carolina", governance: "Consolidated - DIT", fy: "July 1 - June 30", priorities: ["Data Analytics", "Broadband", "911 Upgrades"], buyingModel: "NC ITS Contracts", contract: "920S / 204X Contracts", play: "NC is a data leader. Pitch unstructured data storage for analytics.", agency: "Dept of Info Tech (DIT)", partners: "Lenovo (HQ presence), SHI", competitor: "Lenovo dominates client endpoint due to local HQ." },
+            ND: { name: "North Dakota", governance: "Highly Consolidated - NDIT", fy: "July 1 - June 30", priorities: ["Cybersecurity", "Cloud First", "STEM Education"], buyingModel: "NASPO ValuePoint", contract: "ND State Contracts", play: "NDIT is the gold standard for 'Whole of State'. Pitch comprehensive Cyber Vault.", agency: "ND Info Tech (NDIT)", partners: "High Point, CDW-G", competitor: "Palo Alto is the standard for edge security." },
+            OH: { name: "Ohio", governance: "Consolidated - DAS/OIT", fy: "July 1 - June 30", priorities: ["InnovateOhio", "Cloud Smart", "Digital ID"], buyingModel: "State Term Schedule (STS)", contract: "OH STS Contracts", play: "InnovateOhio drives digital projects. Pitch user-experience tools.", agency: "DAS / OIT", partners: "CBTS, Insight", competitor: "Cisco UCS is standard across most DAS facilities." },
+            OK: { name: "Oklahoma", governance: "Consolidated - OMES", fy: "July 1 - June 30", priorities: ["IT Unification", "Cyber Command", "Citizen Experience"], buyingModel: "SW10xx Contracts", contract: "OK Statewide Contracts", play: "OMES serves all agencies. Pitch VDI for standardized remote work.", agency: "Office of Mgmt & Ent Services (OMES)", partners: "Pinnacle, SHI", competitor: "Pure Storage aggressive in OMES datacenter consolidation." },
+            OR: { name: "Oregon", governance: "Consolidated - EIS", fy: "July 1 - June 30", priorities: ["Cyber Center of Excellence", "Legacy Modernization", "Cloud"], buyingModel: "NASPO ValuePoint", contract: "OR Cooperative Contracts", play: "Oregon is heavily focused on cyber. Pitch Cyber Recovery Vault.", agency: "Enterprise Info Services (EIS)", partners: "Structured, CDW-G", competitor: "NetApp holds strong NAS footprint in state agencies." },
+            PA: { name: "Pennsylvania", governance: "Consolidated - OA/OIT", fy: "July 1 - June 30", priorities: ["Citizen Service Delivery", "Shared Services", "Broadband"], buyingModel: "COSTARS", contract: "PA State Contracts", play: "COSTARS is huge for local gov sales. Ensure channel partners are leveraging it.", agency: "Office for Info Tech (OA/OIT)", partners: "ePlus, SHI", competitor: "HPE holds core OA/OIT datacenter contracts." },
+            RI: { name: "Rhode Island", governance: "Consolidated - ETSS", fy: "July 1 - June 30", priorities: ["Digital Excellence", "Education Tech", "Workforce"], buyingModel: "Master Price Agrmt", contract: "RI MPA", play: "Pitch Education Technology to ETSS for statewide school initiatives.", agency: "Div of Enterprise Tech (ETSS)", partners: "Carousel, Insight", competitor: "Cisco dominates the core network." },
+            SC: { name: "South Carolina", governance: "Federated - Admin/DTO", fy: "July 1 - June 30", priorities: ["Shared Services", "Cybersecurity", "Broadband"], buyingModel: "State Term Contracts", contract: "SC State Term Contracts", play: "Pitch Shared Services models to the Dept of Admin to resell to agencies.", agency: "Dept of Admin (DTO)", partners: "NWN Carousel, SHI", competitor: "AWS GovCloud is heavily favored by DTO." },
+            SD: { name: "South Dakota", governance: "Consolidated - BIT", fy: "July 1 - June 30", priorities: ["Rural Telehealth", "Public Safety", "Broadband"], buyingModel: "NASPO ValuePoint", contract: "SD State Contracts", play: "BIT manages the radio network too. Pitch rugged edge devices for public safety.", agency: "Bureau of Info & Telecom (BIT)", partners: "Connecting Point, CDW-G", competitor: "HPE holds legacy compute footprint." },
+            TN: { name: "Tennessee", governance: "Consolidated - STS", fy: "July 1 - June 30", priorities: ["ERP (Edison)", "Cloud Smart", "Cybersecurity"], buyingModel: "Statewide Contract (SWC)", contract: "TN SWC", play: "STS operates like a business. Pitch APEX for flexible consumption.", agency: "Strategic Tech Solutions (STS)", partners: "Dell Direct, WWT", competitor: "Cisco heavily entrenched in network and UCS." },
+            TX: { name: "Texas", governance: "Highly Federated - DIR", fy: "Sept 1 - Aug 31", priorities: ["Smart Corridors", "Grid Reliability", "Border Security"], buyingModel: "DIR Cooperative", contract: "TX-DIR-TSO", play: "Ensure all offerings are on DIR. Pitch Edge devices to TxDOT.", agency: "Dept of Info Resources (DIR)", partners: "Dell Direct preferred, SHI secondary", competitor: "Cisco strong in TxDOT networks. Push APEX for flexibility." },
+            UT: { name: "Utah", governance: "Highly Consolidated - DTS", fy: "July 1 - June 30", priorities: ["Digital Government Leader", "Cloud", "User Experience"], buyingModel: "State Cooperative Contracts", contract: "UT State Contracts", play: "Utah is #1 in Digital Gov. Pitch advanced AI-driven citizen services.", agency: "Dept of Tech Services (DTS)", partners: "VLCM, Insight", competitor: "AWS holds strong 'cloud-first' mandate advantage." },
+            VT: { name: "Vermont", governance: "Consolidated - ADS", fy: "July 1 - June 30", priorities: ["Modernization (DMV)", "Cybersecurity", "Connectivity"], buyingModel: "NASPO ValuePoint", contract: "VT State Contracts", play: "ADS was formed recently. Pitch tools to help them audit agency assets.", agency: "Agency of Digital Services (ADS)", partners: "Tech Networks, CDW-G", competitor: "NetApp holds primary storage for ADS." },
+            VA: { name: "Virginia", governance: "Highly Centralized - VITA", fy: "July 1 - June 30", priorities: ["Cloud First", "Cybersecurity", "Messaging Consolidation"], buyingModel: "VITA Contracts", contract: "VITA Contracts", play: "VITA is the gatekeeper. You must win the VITA contract to sell anywhere.", agency: "VA Info Tech Agency (VITA)", partners: "Iron Bow, Presidio", competitor: "Incumbent VITA vendors make net-new entry difficult. Lead with Cyber." },
+            WA: { name: "Washington", governance: "Federated - WaTech", fy: "July 1 - June 30", priorities: ["Privacy", "Cybersecurity", "One Washington (ERP)"], buyingModel: "Master Contracts", contract: "WA Master Contracts", play: "Privacy is huge in WA. Pitch data governance and compliance tools.", agency: "WaTech (CTS)", partners: "Ednetics, SHI", competitor: "Microsoft Azure (local HQ presence) dominates cloud." },
+            WV: { name: "West Virginia", governance: "Consolidated - OT", fy: "July 1 - June 30", priorities: ["Broadband", "Cybersecurity", "Cloud"], buyingModel: "Statewide Contracts", contract: "WV Statewide Contracts", play: "Pitch broadband infrastructure for the mountainous terrain.", agency: "Office of Technology (OT)", partners: "Pomeroy, WWT", competitor: "Cisco maintains core network edge." },
+            WI: { name: "Wisconsin", governance: "Consolidated - DET", fy: "July 1 - June 30", priorities: ["ERP Modernization", "Broadband", "Cybersecurity"], buyingModel: "NASPO ValuePoint", contract: "WI State Contracts", play: "DET manages the data centers. Pitch HCI and modernization.", agency: "Div of Enterprise Tech (DET)", partners: "CDW-G, Heartland", competitor: "HPE SimpliVity has historical footprint in DET." },
+            WY: { name: "Wyoming", governance: "Consolidated - ETS", fy: "July 1 - June 30", priorities: ["Rural Health", "Broadband", "Education"], buyingModel: "NASPO ValuePoint", contract: "WY State Contracts", play: "Telehealth is critical here. Pitch VDI for remote doctors.", agency: "Enterprise Tech Services (ETS)", partners: "WWT, SHI", competitor: "Pure Storage expanding into K-12/State shared arrays." }
+        };
+
+        const chartData = {
+            priorities: {
+                labels: ['Cybersecurity', 'Cloud/Legacy Mod', 'Citizen Services', 'Broadband Edge', 'AI Governance'],
+                data: [48, 45, 38, 30, 25],
+                insights: [
+                    "Cyber is a mandate. Pitch: Cyber Recovery Vault.",
+                    "ARPA funds this. Pitch: App Modernization Services.",
+                    "Needs 'OneID'. Pitch: Identity Mgmt Solutions.",
+                    "IIJA money flowing. Pitch: Rugged Edge Computing.",
+                    "Early stage. Pitch: AI Precision Workstations."
+                ]
+            },
+            governance: {
+                labels: ['Consolidated', 'Federated', 'Hybrid'],
+                data: [28, 12, 10],
+                insights: [
+                    "Consolidated: Sell to CIO. Focus on ELAs.",
+                    "Federated: Treat agencies as separate Fortune 500s.",
+                    "Hybrid: Sell 'Standards' to CIO, 'Outcomes' to Agencies."
+                ]
+            }
+        };
+
+        const commonOptions = {
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom', labels: { padding: 20, font: { family: "'DM Sans', sans-serif" } } },
+                tooltip: { backgroundColor: '#fff', titleColor: '#1f2937', bodyColor: '#4b5563', borderColor: '#e5e7eb', borderWidth: 1, padding: 12 }
+            }
+        };
+
+        // --- GOOGLE GEOCHART SETUP ---
+        google.charts.load('current', {
+            'packages':['geochart'],
+        });
+        google.charts.setOnLoadCallback(initMap);
+
+        let geoChart;
+        let geoData;
+        const geoOptions = {
+            region: 'US',
+            resolution: 'provinces',
+            colorAxis: {colors: ['#e7e5e4', '#ea580c'], minValue: 0, maxValue: 1},
+            backgroundColor: 'transparent',
+            datalessRegionColor: '#e7e5e4',
+            defaultColor: '#e7e5e4',
+            legend: 'none',
+            tooltip: { trigger: 'none' } 
+        };
+
+        function initMap() {
+            geoData = new google.visualization.DataTable();
+            geoData.addColumn('string', 'State');
+            geoData.addColumn('number', 'Selected');
+            
+            // Populate states with a default unselected value (0)
+            const rows = Object.keys(stateData).map(code => [{v: 'US-' + code, f: stateData[code].name}, 0]);
+            geoData.addRows(rows);
+
+            geoChart = new google.visualization.GeoChart(document.getElementById('us-map'));
+
+            google.visualization.events.addListener(geoChart, 'regionClick', function(eventData) {
+                const stateCode = eventData.region.replace('US-', '');
+                if (stateData[stateCode]) {
+                    renderState(stateCode);
+                }
+            });
+
+            // Initial load state selection
+            renderState('CA');
+        }
+
+        // Make map responsive to window resizing
+        window.addEventListener('resize', () => {
+            if (geoChart && geoData) {
+                geoChart.draw(geoData, geoOptions);
+            }
+        });
+
+        function updateMapSelection(code) {
+            if (!geoData || !geoChart) return;
+            
+            for (let i = 0; i < geoData.getNumberOfRows(); i++) {
+                // If it's the target code, set to 1 (orange), otherwise 0 (stone)
+                geoData.setValue(i, 1, geoData.getValue(i, 0) === 'US-' + code ? 1 : 0);
+            }
+            geoChart.draw(geoData, geoOptions);
+        }
+
+        // --- INITIALIZATION ---
+        let currentActiveStateId = 'CA';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Chart Init (With added hover interactivity)
+            const ctxPriorities = document.getElementById('prioritiesChart').getContext('2d');
+            new Chart(ctxPriorities, {
+                type: 'bar',
+                data: {
+                    labels: chartData.priorities.labels,
+                    datasets: [{
+                        label: 'States Prioritizing',
+                        data: chartData.priorities.data,
+                        backgroundColor: '#4f46e5',
+                        hoverBackgroundColor: '#ea580c', // Interactivity highlight
+                        borderRadius: 4,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    ...commonOptions, indexAxis: 'y',
+                    onClick: (e, elements) => {
+                        if (elements.length > 0) updateInsight("Strategic Insight", chartData.priorities.insights[elements[0].index]);
+                    },
+                    onHover: (e, el) => { e.native.target.style.cursor = el[0] ? 'pointer' : 'default'; }
+                }
+            });
+
+            const ctxGov = document.getElementById('governanceChart').getContext('2d');
+            new Chart(ctxGov, {
+                type: 'doughnut',
+                data: {
+                    labels: chartData.governance.labels,
+                    datasets: [{
+                        data: chartData.governance.data,
+                        backgroundColor: ['#4f46e5', '#ea580c', '#0ea5e9'],
+                        hoverOffset: 15, // Interactivity pop-out
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    ...commonOptions, cutout: '70%',
+                    onClick: (e, elements) => {
+                        if (elements.length > 0) updateInsight("Sales Strategy Tip", chartData.governance.insights[elements[0].index]);
+                    },
+                    onHover: (e, el) => { e.native.target.style.cursor = el[0] ? 'pointer' : 'default'; }
+                }
+            });
+
+            const ctxFund = document.getElementById('fundingChart').getContext('2d');
+            new Chart(ctxFund, {
+                type: 'pie',
+                data: {
+                    labels: ['General Fund', 'Federal Grants', 'Chargeback', 'Bonds'],
+                    datasets: [{ data: [45, 25, 20, 10], backgroundColor: ['#57534e', '#ea580c', '#0ea5e9', '#d6d3d1'], hoverOffset: 10, borderWidth: 2, borderColor: '#ffffff' }]
+                },
+                options: { ...commonOptions, plugins: { legend: { position: 'right' } } }
+            });
+
+            // Mobile Selector Setup
+            const mobileSelector = document.getElementById('mobileStateSelector');
+            Object.keys(stateData).sort().forEach(code => {
+                const opt = document.createElement('option');
+                opt.value = code;
+                opt.textContent = stateData[code].name;
+                mobileSelector.appendChild(opt);
+            });
+
+            mobileSelector.value = 'CA';
+            mobileSelector.addEventListener('change', (e) => {
+                renderState(e.target.value);
+            });
+        });
+
+        // --- INTERACTION LOGIC ---
+
+        function updateInsight(title, text) {
+            const container = document.getElementById('landscape-insight');
+            container.style.opacity = '0.5';
+            setTimeout(() => {
+                document.getElementById('insight-title').textContent = title;
+                document.getElementById('insight-text').textContent = text;
+                container.style.opacity = '1';
+                container.classList.add('bg-indigo-50', 'border-indigo-200');
+                setTimeout(() => container.classList.remove('bg-indigo-50', 'border-indigo-200'), 500);
+            }, 150);
+        }
+
+        function toggleOppDetails(id) {
+            const el = document.getElementById(`opp-details-${id}`);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                el.style.animation = 'fadeIn 0.3s ease-in-out';
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+
+        function renderState(code) {
+            const data = stateData[code];
+            if (!data) return;
+
+            currentActiveStateId = code;
+
+            // Sync Dropdown
+            document.getElementById('mobileStateSelector').value = code;
+
+            // Update Interactive Map Selection
+            updateMapSelection(code);
+
+            // Animate Data Transition
+            const container = document.getElementById('state-content');
+            container.style.opacity = '0.5';
+
+            setTimeout(() => {
+                document.getElementById('state-name').textContent = data.name;
+                document.getElementById('state-governance').textContent = data.governance;
+                document.getElementById('state-fy').textContent = data.fy;
+                document.getElementById('state-buying-model').textContent = data.buyingModel;
+                document.getElementById('state-contract').textContent = data.contract;
+                document.getElementById('state-play').textContent = `"${data.play}"`;
+                document.getElementById('state-agency').textContent = data.agency;
+                
+                // New Strategic Data
+                document.getElementById('state-partners').textContent = data.partners;
+                document.getElementById('state-competitor').textContent = data.competitor;
+
+                const list = document.getElementById('state-priorities');
+                list.innerHTML = '';
+                data.priorities.forEach(p => {
+                    const li = document.createElement('li');
+                    li.className = 'flex items-start text-stone-600 text-sm';
+                    li.innerHTML = `<span class="text-indigo-500 mr-2">●</span> ${p}`;
+                    list.appendChild(li);
+                });
+
+                container.style.opacity = '1';
+            }, 200);
+        }
+
+        function sharePlay() {
+            const state = document.getElementById('state-name').innerText;
+            const agency = document.getElementById('state-agency').innerText;
+            const play = document.getElementById('state-play').innerText;
+            const contract = document.getElementById('state-contract').innerText;
+            const partners = document.getElementById('state-partners').innerText;
+
+            const textToCopy = `Dell SLG Play: ${state}\nTarget Agency: ${agency}\nPlay: ${play}\nVehicle: ${contract}\nPartners: ${partners}`;
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(textToCopy).then(showToast);
+            } else {
+                let textArea = document.createElement("textarea");
+                textArea.value = textToCopy;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showToast();
+                } catch (err) {
+                    console.error('Failed to copy text', err);
+                }
+                textArea.remove();
+            }
+        }
+
+        function showToast() {
+            const toast = document.getElementById("toast");
+            toast.className = "toast show";
+            setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+
+    </script>
+</body>
+</html>

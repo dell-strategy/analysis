@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennessee Market Intelligence | Dell Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .nav-btn.active {
+            border-bottom-width: 4px;
+            border-color: #2563eb;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+
+    <!-- Chosen Palette: Warm Neutrals with Corporate Blue Accents -->
+    <!-- Application Structure Plan: The SPA is structured as a tabbed 'Sales Intelligence Dashboard'. This architecture is optimal for an Account Executive who needs quick, non-linear access to distinct categories of information (Leadership, Budget, Tech Initiatives) before a meeting. It prevents information overload by chunking the deep-dive analysis into digestible, task-oriented views while maintaining context. -->
+    <!-- Visualization & Content Choices: 
+         1. Financials -> Compare O&M vs Capital -> Bar Chart (Chart.js) -> Clear visual distinction of spend types.
+         2. Power Structure -> Organize Key Players -> Interactive Grid Cards -> Easy scannability of names/roles.
+         3. Initiatives -> Inform on Top Projects -> Accordion UI -> Keeps initial view clean while allowing deep-dives into mandates and IT requirements. 
+         Library/Method: Tailwind CSS for layout, Vanilla JS for tab/accordion logic, Chart.js (Canvas) for data viz.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="py-4 border-b border-stone-200 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+                <div>
+                    <h1 class="text-2xl font-bold text-stone-900 tracking-tight">&#x1F4BC; Target Entity: State of Tennessee</h1>
+                    <p class="text-sm text-stone-500 mt-1">Dell Technologies SLG Market Analysis & Strategy</p>
+                </div>
+                <div class="flex items-center space-x-3 self-start sm:self-auto">
+                    <span class="hidden md:inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">CONFIDENTIAL</span>
+                    <a href="https://dmonkey1001.github.io/slg-strategies/tennessee/analysis.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-blue-500 transition-colors">
+                        &#x1F4C4; View Source Report
+                    </a>
+                </div>
+            </div>
+            <nav class="flex overflow-x-auto py-2 -mb-px" aria-label="Tabs" id="main-nav">
+                <button onclick="switchTab('exec-summary')" class="nav-btn active whitespace-nowrap px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 border-b-4 border-transparent">Macro & Exec Summary</button>
+                <button onclick="switchTab('power-structure')" class="nav-btn whitespace-nowrap px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 border-b-4 border-transparent">Power Structure</button>
+                <button onclick="switchTab('financials')" class="nav-btn whitespace-nowrap px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 border-b-4 border-transparent">IT Financials & Gov</button>
+                <button onclick="switchTab('initiatives')" class="nav-btn whitespace-nowrap px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 border-b-4 border-transparent">Strategic Initiatives</button>
+                <button onclick="switchTab('dell-action')" class="nav-btn whitespace-nowrap px-4 py-2 text-sm font-medium text-stone-600 hover:text-stone-900 border-b-4 border-transparent">Actionable Opps</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <section id="exec-summary" class="tab-pane fade-in block">
+            <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 sm:p-8">
+                <h2 class="text-xl font-bold text-stone-900 mb-4">&#x1F4CA; Executive Summary & Macro Landscape</h2>
+                <p class="text-stone-600 mb-6 leading-relaxed">
+                    This section provides the foundational context for the State of Tennessee account. Understanding the broader political and economic climate is crucial for aligning Dell's technology messaging with the Governor's overarching priorities. The state operates with a strong fiscal surplus, prioritizing modernization that drives citizen services without expanding recurring bureaucratic costs.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold text-stone-800 mb-3 border-b border-stone-100 pb-2">Political & Economic Climate</h3>
+                        <p class="text-stone-600 leading-relaxed mb-4">
+                            Led by Governor Bill Lee (R), Tennessee maintains a conservative fiscal approach characterized by balanced budgets, significant rainy-day fund reserves, and an aversion to long-term debt for operational expenses. The economic climate is robust, driven by corporate relocations and automotive manufacturing growth. Technology investments are heavily scrutinized for ROI, favoring solutions that consolidate sprawl and improve citizen-facing digital experiences.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-stone-800 mb-3 border-b border-stone-100 pb-2">Core Administrative Goals (FY24/25)</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2 mt-1">&#x25B6;</span>
+                                <div>
+                                    <strong class="block text-stone-900">1. Economic & Rural Development</strong>
+                                    <span class="text-sm text-stone-600">Expanding broadband access and infrastructure to support remote work and attract enterprise investments to rural counties.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2 mt-1">&#x25B6;</span>
+                                <div>
+                                    <strong class="block text-stone-900">2. Government Efficiency & Modernization</strong>
+                                    <span class="text-sm text-stone-600">Retiring technical debt, moving away from customized legacy mainframes, and adopting commercial off-the-shelf (COTS) and cloud-ready architectures.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2 mt-1">&#x25B6;</span>
+                                <div>
+                                    <strong class="block text-stone-900">3. Public Safety & Cyber Resilience</strong>
+                                    <span class="text-sm text-stone-600">Strengthening the security posture of state agencies and local municipalities against ransomware, leveraging SLCGP funds.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="power-structure" class="tab-pane hidden">
+            <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 sm:p-8">
+                <h2 class="text-xl font-bold text-stone-900 mb-4">&#x1F91D; Power Structure & Key Stakeholders</h2>
+                <p class="text-stone-600 mb-6 leading-relaxed">
+                    Navigating SLG procurement requires understanding both who writes the check and who sets the technical standards. This section maps the key decision-makers across executive and IT leadership in Tennessee. Use this matrix to tailor your engagement strategy—focusing ROI discussions on Financial Purchasers and architectural advantages on Technical Influencers.
+                </p>
+
+                <div class="overflow-x-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="stakeholder-grid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="financials" class="tab-pane hidden">
+            <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 sm:p-8 mb-8">
+                <h2 class="text-xl font-bold text-stone-900 mb-4">&#x1F4B0; Financials, Budget Breakdown & Governance</h2>
+                <p class="text-stone-600 mb-8 leading-relaxed">
+                    This view visualizes how Tennessee allocates its IT funding and dictates its operational model. Knowing the ratio of recurring Operations & Maintenance (O&M) versus capital project spend highlights the available budget for net-new Dell solutions. The governance model dictates whether you sell to the central IT authority or individual agency directors.
+                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-lg font-semibold text-stone-800 mb-4 text-center">Estimated IT Budget Allocation (FY24)</h3>
+                        <div class="chart-container">
+                            <canvas id="budgetChart"></canvas>
+                        </div>
+                        <p class="text-xs text-stone-500 text-center mt-4">*Based on available public appropriations data. Total State Budget: ~$52B.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-stone-800 mb-4 border-b border-stone-100 pb-2">IT Governance & Service Delivery</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-medium text-stone-900">Operating Model: <span class="text-blue-700 font-bold">Hybrid / Centralizing</span></h4>
+                            <p class="text-sm text-stone-600 mt-2">
+                                Tennessee operates under a hybrid model led by Strategic Technology Solutions (STS) under the Dept. of Finance & Administration. While STS mandates infrastructure, network, and security standards centrally, individual large agencies (like TDOT, TennCare) retain significant control over their application layers and specific hardware needs aligned to federal programs.
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-medium text-stone-900 text-amber-600">&#x26A0; Friction Points & Chargebacks</h4>
+                            <p class="text-sm text-stone-600 mt-2">
+                                STS utilizes a chargeback model where agencies pay for central IT services. Friction often occurs when agencies feel STS-provided infrastructure (like state private cloud) is more expensive or less agile than hyperscaler options. <em>Opportunity: APEX can provide cloud-like agility on-prem with predictable billing to ease chargeback tension.</em>
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-medium text-stone-900 text-green-700">&#x1F4B5; Grants & Alternative Funding</h4>
+                            <ul class="text-sm text-stone-600 mt-2 space-y-1 list-disc pl-5">
+                                <li><strong>SLCGP:</strong> Utilizing federal cyber grants to push endpoint security and backup/recovery mandates down to local counties.</li>
+                                <li><strong>BEAD / Infrastructure:</strong> Massive influx of federal dollars flowing through the Dept. of Economic & Community Development for broadband mapping and edge expansion.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="initiatives" class="tab-pane hidden">
+            <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 sm:p-8">
+                <h2 class="text-xl font-bold text-stone-900 mb-4">&#x1F680; Top 3 Strategic Modernization Initiatives</h2>
+                <p class="text-stone-600 mb-6 leading-relaxed">
+                    These are the capitalized, funded projects currently moving through the state's procurement lifecycle. Understanding the executive mandate behind these projects is critical; technology features must be mapped back to these core objectives. Click on an initiative to view the specific agency owners and underlying IT requirements.
+                </p>
+
+                <div class="space-y-4" id="initiatives-container">
+                </div>
+            </div>
+        </section>
+
+        <section id="dell-action" class="tab-pane hidden">
+            <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6 sm:p-8">
+                <h2 class="text-xl font-bold text-stone-900 mb-4">&#x1F3AF; Procurement Landscape & Actionable Dell Opportunities</h2>
+                <p class="text-stone-600 mb-6 leading-relaxed">
+                    This final section synthesizes the market intelligence into actionable sales motions. It outlines how the state buys technology and identifies specific whitespace and displacement opportunities where Dell's portfolio provides a distinct competitive advantage based on Tennessee's current architecture and pain points.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-stone-100 p-5 rounded-lg border border-stone-200">
+                        <h3 class="font-bold text-stone-800 mb-2">Primary Procurement</h3>
+                        <ul class="text-sm text-stone-600 space-y-1">
+                            <li>&#x2022; NASPO ValuePoint</li>
+                            <li>&#x2022; State Term Contracts (Edison)</li>
+                            <li>&#x2022; OMNIA Partners</li>
+                        </ul>
+                    </div>
+                    <div class="bg-stone-100 p-5 rounded-lg border border-stone-200">
+                        <h3 class="font-bold text-stone-800 mb-2">The Battlefield</h3>
+                        <ul class="text-sm text-stone-600 space-y-1">
+                            <li>&#x2022; Heavy AWS presence (Cloud)</li>
+                            <li>&#x2022; Entrenched Cisco network/compute</li>
+                            <li>&#x2022; Aging Dell/EMC SANs requiring refresh</li>
+                        </ul>
+                    </div>
+                    <div class="bg-stone-100 p-5 rounded-lg border border-stone-200">
+                        <h3 class="font-bold text-stone-800 mb-2">Compliance Drivers</h3>
+                        <ul class="text-sm text-stone-600 space-y-1">
+                            <li>&#x2022; CJIS (TBI Data)</li>
+                            <li>&#x2022; HIPAA (TennCare/DOH)</li>
+                            <li>&#x2022; Emerging AI Governance Acts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="border-l-4 border-blue-600 pl-5 py-2">
+                        <h3 class="text-lg font-bold text-stone-900">Funded Alignment: <span class="text-blue-700">Enterprise Data Center & Edge</span></h3>
+                        <p class="text-stone-600 mt-2">
+                            Map to the "Rural Broadband" and "Legacy ERP" initiatives. Position <strong>PowerEdge</strong> and <strong>PowerStore</strong> as the foundational infrastructure for the state's hybrid cloud strategy. As they rethink expensive public cloud deployments for consistent ERP workloads, introduce <strong>Dell APEX</strong> to provide Opex flexibility without giving up data sovereignty.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-amber-500 pl-5 py-2">
+                        <h3 class="text-lg font-bold text-stone-900">Whitespace & Advisory: <span class="text-amber-700">AI Readiness & Unstructured Data Sprawl</span></h3>
+                        <p class="text-stone-600 mt-2">
+                            Agencies like TennCare and Transportation are exploring AI but lack a governed data foundation. Dell must lead with advisory services. Introduce <strong>PowerScale</strong> as the solution to their unstructured data sprawl, framing it not just as storage, but as the mandatory first step for secure, compliant, on-prem AI model training against state data.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-green-600 pl-5 py-2">
+                        <h3 class="text-lg font-bold text-stone-900">Competitive Displacement: <span class="text-green-700">Cyber Recovery Vaulting</span></h3>
+                        <p class="text-stone-600 mt-2">
+                            Capitalize on the "Public Safety & Cyber" mandate. Existing backup solutions are vulnerable. Execute a displacement motion against legacy software vendors by proposing an isolated, air-gapped <strong>PowerProtect Cyber Recovery</strong> vault. Leverage the current CISO's focus on Zero Trust and the availability of SLCGP grant funding to finance the project.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const stakeholders = [
+            { name: "Bill Lee", title: "Governor", type: "Elected Leadership", influence: "Financial Purchaser", stance: "Fiscal conservatism, ROI focus, driving rural tech expansion." },
+            { name: "Jim Bryson", title: "Comm., Dept of Finance & Admin", type: "Executive Leadership", influence: "Financial Purchaser", stance: "Oversees STS. Highly focused on cost reduction and efficient chargeback models." },
+            { name: "Stephanie Dedmon", title: "Chief Information Officer (CIO)", type: "IT Leadership", influence: "Tech & Financial", stance: "Driving enterprise architecture, cloud-first strategy, and shared services adoption." },
+            { name: "Curtis Clan", title: "Chief Information Security Officer", type: "IT Leadership", influence: "Technical Influencer", stance: "Advocating for Zero Trust architecture, strict compliance, and decentralized cyber tooling." },
+            { name: "Stephen Smith", title: "Director, TennCare", type: "Agency Leadership", influence: "Major Financial", stance: "Controls massive HHS budget. Prioritizes data analytics, HIPAA compliance, and agile development." },
+            { name: "Brad Lifford", title: "CIO, Dept. of Transportation", type: "Agency Leadership", influence: "Tech & Financial", stance: "Focus on edge computing, sensor data (IoT) management, and infrastructure modernization." }
+        ];
+
+        const initiativesData = [
+            {
+                id: 1,
+                title: "Legacy ERP & Mainframe Modernization",
+                mandate: "Government Efficiency & Citizen Experience",
+                agency: "Finance & Administration (STS) / Human Resources",
+                requirement: "Data center consolidation, complex data migration services, highly available on-prem or hybrid compute (PowerEdge/APEX) to replace rigid mainframe workflows."
+            },
+            {
+                id: 2,
+                title: "Statewide Cybersecurity & Zero Trust Rollout",
+                mandate: "Public Safety & Cyber Resilience",
+                agency: "STS (Enterprise-wide) / Dept of Safety",
+                requirement: "Immutable backups, air-gapped recovery vaults (PowerProtect), robust endpoint security, and network segmentation to secure edge endpoints in rural municipalities."
+            },
+            {
+                id: 3,
+                title: "HHS Data Analytics & AI Readiness",
+                mandate: "Improved Health Outcomes & Fraud Reduction",
+                agency: "TennCare (Medicaid) / Dept of Health",
+                requirement: "Massive scale-out NAS for unstructured health data (PowerScale), AI-ready infrastructure for localized model training, strict HIPAA-compliant storage."
+            }
+        ];
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.add('hidden');
+                pane.classList.remove('fade-in');
+            });
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            
+            const activePane = document.getElementById(tabId);
+            activePane.classList.remove('hidden');
+            
+            setTimeout(() => {
+                activePane.classList.add('fade-in');
+            }, 10);
+
+            event.target.classList.add('active');
+            
+            if(tabId === 'financials') {
+                initCharts();
+            }
+        }
+
+        function renderStakeholders() {
+            const grid = document.getElementById('stakeholder-grid');
+            let html = '';
+            stakeholders.forEach(person => {
+                const badgeColor = person.influence.includes('Financial') ? 'bg-green-100 text-green-800' : 'bg-purple-100 text-purple-800';
+                html += `
+                    <div class="bg-stone-50 rounded-lg p-5 border border-stone-200 hover:shadow-md transition-shadow">
+                        <div class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">${person.type}</div>
+                        <h3 class="text-lg font-bold text-stone-900">${person.name}</h3>
+                        <p class="text-sm text-stone-600 mb-3">${person.title}</p>
+                        <span class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${badgeColor} mb-4">
+                            ${person.influence}
+                        </span>
+                        <div class="text-sm">
+                            <strong class="text-stone-700">Public Stance:</strong><br/>
+                            <span class="text-stone-600">${person.stance}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            grid.innerHTML = html;
+        }
+
+        function renderInitiatives() {
+            const container = document.getElementById('initiatives-container');
+            let html = '';
+            initiativesData.forEach((init, index) => {
+                html += `
+                    <div class="border border-stone-200 rounded-lg bg-stone-50 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-stone-100 transition-colors" onclick="toggleAccordion(${index})">
+                            <span class="font-bold text-lg text-blue-800">${init.id}. ${init.title}</span>
+                            <span class="text-stone-400 text-xl transform transition-transform" id="icon-${index}">&#x25BC;</span>
+                        </button>
+                        <div class="accordion-content bg-white border-t border-stone-200" id="content-${index}">
+                            <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div>
+                                    <h4 class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">Executive Mandate</h4>
+                                    <p class="text-sm text-stone-800 font-medium">${init.mandate}</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">Target Agency / Owner</h4>
+                                    <p class="text-sm text-stone-800 font-medium">${init.agency}</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">IT Requirement (Dell Angle)</h4>
+                                    <p class="text-sm text-stone-800">${init.requirement}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+                document.querySelectorAll('[id^="icon-"]').forEach(el => el.style.transform = 'rotate(0deg)');
+                
+                content.classList.add('open');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        let chartRendered = false;
+        function initCharts() {
+            if(chartRendered) return;
+            
+            const ctxBudget = document.getElementById('budgetChart').getContext('2d');
+            
+            new Chart(ctxBudget, {
+                type: 'bar',
+                data: {
+                    labels: ['O&M (Recurring)', 'Capital/Project (Net New)'],
+                    datasets: [{
+                        label: 'Estimated IT Spend ($ Millions)',
+                        data: [260, 90],
+                        backgroundColor: [
+                            'rgba(120, 113, 108, 0.7)', 
+                            'rgba(37, 99, 235, 0.8)'    
+                        ],
+                        borderColor: [
+                            'rgba(120, 113, 108, 1)',
+                            'rgba(37, 99, 235, 1)'
+                        ],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return '$' + context.parsed.y + 'M Estimated';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Millions (USD)' },
+                            grid: { color: '#f5f5f4' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    const label = this.getLabelForValue(value);
+                                    if (typeof label === 'string' && label.length > 16) {
+                                        return label.match(/.{1,16}(\s|$)/g);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            chartRendered = true;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderStakeholders();
+            renderInitiatives();
+        });
+
+    </script>
+</body>
+</html>

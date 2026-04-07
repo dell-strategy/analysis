@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Technologies | NYC Strategic Account Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 350px; }
+        }
+        
+        /* Tab transitions */
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+        
+        /* Split view transitions */
+        .fade-in-content { animation: fadeIn 0.3s ease-out forwards; }
+        
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(8px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        .dell-blue { color: #0076CE; }
+        .bg-dell-blue { background-color: #0076CE; }
+        .border-dell-blue { border-color: #0076CE; }
+        .hover-bg-dell-blue:hover { background-color: #0076CE; color: white; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 min-h-screen flex flex-col">
+
+    <!-- Chosen Palette: Warm Neutrals with Dell Blue Accents (stone-50 background, stone-800 text, #0076CE primary action color) -->
+    <!-- Application Structure Plan: The SPA uses a dashboard-style tabbed navigation to prevent cognitive overload. It has been upgraded to include robust ARIA accessibility. The "Opportunities" section utilizes a modern split-screen pattern (list on left, detail fading in on right) to behave like a true application rather than a static document. -->
+    <!-- Visualization & Content Choices: 1. Budget Breakdown -> Goal: Compare -> Viz: Bar Chart -> Interaction: YoY % change calculated dynamically in tooltip. 2. Procurement Goal -> Goal: Proportions -> Viz: Donut Chart -> Justification: Highlights the 30% M/WBE mandate. 3. Fiscal Timeline -> Goal: Inform -> Viz: CSS Flex blocks -> Justification: Instantly visualizes the Q4 purchasing peak without heavy libraries. NO SVG or Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <header class="bg-white shadow-sm border-b border-stone-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-between items-center py-3 sm:h-16">
+                <div class="flex-shrink-0 flex items-center font-bold text-lg sm:text-xl tracking-tight mb-2 sm:mb-0 w-full sm:w-auto">
+                    <span class="dell-blue text-2xl mr-2">&#9680;</span> Dell Technologies | SLG Intelligence
+                </div>
+                <div class="flex items-center space-x-4 w-full sm:w-auto justify-between sm:justify-end">
+                    <div class="text-xs sm:text-sm font-semibold text-stone-500 uppercase tracking-wider">
+                        Target: NYC
+                    </div>
+                    <a href="https://dmonkey1001.github.io/slg-strategies/new-york/new-york-city/analysis.pdf" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm bg-dell-blue text-white px-3 py-1.5 rounded-md hover:bg-blue-700 transition-colors flex items-center shadow-sm font-medium focus:ring-2 focus:ring-offset-1 focus:ring-dell-blue">
+                        <span class="mr-1.5">&#128196;</span> Full PDF
+                    </a>
+                </div>
+            </div>
+            <nav class="flex space-x-6 pb-2 overflow-x-auto" role="tablist" aria-label="Dashboard Sections" id="nav-tabs">
+                <button role="tab" aria-selected="true" aria-controls="exec-summary" id="tab-exec" data-target="exec-summary" class="tab-btn border-dell-blue text-dell-blue border-b-2 py-2 px-1 text-sm font-medium whitespace-nowrap transition-colors outline-none focus-visible:ring-2 focus-visible:ring-dell-blue focus-visible:ring-offset-2">Macro & Summary</button>
+                <button role="tab" aria-selected="false" aria-controls="power-structure" id="tab-power" data-target="power-structure" class="tab-btn border-transparent text-stone-500 hover:text-stone-700 hover:border-stone-300 border-b-2 py-2 px-1 text-sm font-medium whitespace-nowrap transition-colors outline-none focus-visible:ring-2 focus-visible:ring-dell-blue focus-visible:ring-offset-2">Power Structure</button>
+                <button role="tab" aria-selected="false" aria-controls="financials" id="tab-fin" data-target="financials" class="tab-btn border-transparent text-stone-500 hover:text-stone-700 hover:border-stone-300 border-b-2 py-2 px-1 text-sm font-medium whitespace-nowrap transition-colors outline-none focus-visible:ring-2 focus-visible:ring-dell-blue focus-visible:ring-offset-2">Financials & Gov</button>
+                <button role="tab" aria-selected="false" aria-controls="dell-opportunities" id="tab-opps" data-target="dell-opportunities" class="tab-btn border-transparent text-stone-500 hover:text-stone-700 hover:border-stone-300 border-b-2 py-2 px-1 text-sm font-medium whitespace-nowrap transition-colors outline-none focus-visible:ring-2 focus-visible:ring-dell-blue focus-visible:ring-offset-2">Dell Opportunities</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+        <!-- SECTION 1: EXEC SUMMARY -->
+        <section id="exec-summary" role="tabpanel" aria-labelledby="tab-exec" class="tab-content active">
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-stone-900 mb-2">Executive Summary & Macro Landscape</h1>
+                <p class="text-stone-600 text-lg leading-relaxed max-w-4xl">
+                    This section provides a high-level overview of NYC's political climate and core administrative goals. Aligning infrastructure pitches (like APEX or PowerEdge) with the Mayor's public-facing promises is critical.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white rounded-lg shadow-sm border border-stone-200 p-6">
+                    <div class="text-3xl mb-3" aria-hidden="true">&#127961;&#65039;</div>
+                    <h3 class="font-bold text-lg mb-2">Political Climate</h3>
+                    <p class="text-stone-600 text-sm">Under Mayor Eric Adams, the administration focuses on operational efficiency, public safety, and leveraging tech to solve systemic issues. There is immense pressure to consolidate disjointed IT systems across 100+ agencies.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm border border-stone-200 p-6">
+                    <div class="text-3xl mb-3" aria-hidden="true">&#128200;</div>
+                    <h3 class="font-bold text-lg mb-2">Economic Climate</h3>
+                    <p class="text-stone-600 text-sm">Facing budget constraints from migrant crises and post-pandemic commercial real estate lulls, NYC is heavily scrutinizing net-new IT spend. ROI and "do more with less" (cloud cost optimization, storage efficiency) are paramount.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm border border-stone-200 p-6 border-l-4 border-l-dell-blue">
+                    <div class="text-3xl mb-3" aria-hidden="true">&#127919;</div>
+                    <h3 class="font-bold text-lg mb-2">Top FY Goals</h3>
+                    <ul class="list-disc pl-5 text-stone-600 text-sm space-y-1">
+                        <li><strong>Public Safety & Cyber:</strong> Centralizing threat intelligence.</li>
+                        <li><strong>Citizen Experience:</strong> Expanding "MyCity" single sign-on portal.</li>
+                        <li><strong>Digital Equity & AI:</strong> Ethical AI deployment and broadband.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-stone-100 rounded-lg p-6 border border-stone-200">
+                <h2 class="text-xl font-bold mb-4">IT Governance & Service Delivery Model</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h4 class="font-semibold text-dell-blue mb-1">Operating Model: Moving to Consolidated</h4>
+                        <p class="text-sm text-stone-700 mb-4">Historically federated, the creation of the <strong>Office of Technology and Innovation (OTI)</strong> unified DoITT, Cyber Command, and 311. However, massive agencies (NYPD, DOE) still maintain shadow IT and independent infrastructure.</p>
+                        
+                        <h4 class="font-semibold text-dell-blue mb-1">Friction Points</h4>
+                        <p class="text-sm text-stone-700">Agencies resist OTI mandate due to chargeback models and perceived slowness. <strong>Opportunity:</strong> Dell can position APEX custom cloud to give OTI central billing control while giving agencies self-service agility.</p>
+                    </div>
+                    <div class="bg-white border border-stone-300 p-6 rounded-lg shadow-inner text-center">
+                        <div class="font-bold text-stone-800 mb-4">Governance Transformation</div>
+                        <div class="flex flex-col sm:flex-row justify-center items-center text-sm font-semibold text-stone-600 space-y-2 sm:space-y-0">
+                            <span class="bg-stone-200 px-4 py-2 rounded-md w-full sm:w-auto">Federated (Legacy)</span>
+                            <span class="mx-3 text-2xl text-stone-400 rotate-90 sm:rotate-0" aria-hidden="true">&#10140;</span>
+                            <span class="bg-blue-50 text-dell-blue px-4 py-2 rounded-md border border-blue-200 w-full sm:w-auto ring-2 ring-dell-blue ring-opacity-50">Consolidated (OTI)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: POWER STRUCTURE -->
+        <section id="power-structure" role="tabpanel" aria-labelledby="tab-power" class="tab-content">
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-stone-900 mb-2">Power Structure & Key Stakeholders</h1>
+                <p class="text-stone-600 text-lg leading-relaxed max-w-4xl">
+                    This interactive matrix identifies decision-makers within NYC government. Use the dropdown to filter by influence type (Technical vs. Financial) to target your Dell outreach.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm border border-stone-200 overflow-hidden">
+                <div class="p-4 border-b border-stone-200 bg-stone-50 flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-2 sm:space-y-0">
+                    <h3 class="font-bold text-stone-800">Stakeholder Matrix</h3>
+                    <div class="flex items-center w-full sm:w-auto">
+                        <label for="influence-filter" class="mr-3 text-sm font-medium text-stone-700 whitespace-nowrap">Filter by Influence:</label>
+                        <select id="influence-filter" class="w-full sm:w-auto text-sm border-stone-300 rounded-md shadow-sm focus:ring-dell-blue focus:border-dell-blue p-2 border bg-white">
+                            <option value="all">All Influencers</option>
+                            <option value="financial">Financial Purchasers</option>
+                            <option value="technical">Technical Influencers</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-stone-200">
+                        <thead class="bg-stone-100">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Name & Title</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Category</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Sphere of Influence</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Recent Tech Stance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stakeholder-tbody" class="bg-white divide-y divide-stone-200 text-sm">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: FINANCIALS -->
+        <section id="financials" role="tabpanel" aria-labelledby="tab-fin" class="tab-content">
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-stone-900 mb-2">Financials, Budget & Procurement</h1>
+                <p class="text-stone-600 text-lg leading-relaxed max-w-4xl">
+                    Visualizing financial boundaries and procurement vehicles is vital for sales timing. This outlines the OTI budget split, fiscal deadlines, and critical compliance mandates.
+                </p>
+            </div>
+
+            <!-- Timeline Visual (HTML/CSS) -->
+            <div class="bg-white rounded-lg shadow-sm border border-stone-200 p-6 mb-8">
+                <h3 class="font-bold text-lg mb-3">NYC Fiscal Year Spending Timeline</h3>
+                <div class="flex h-10 w-full rounded-md overflow-hidden text-xs sm:text-sm font-medium shadow-inner">
+                    <div class="bg-stone-200 text-stone-600 w-1/4 flex items-center justify-center border-r border-stone-300">Jul-Sep (Q1)</div>
+                    <div class="bg-stone-200 text-stone-600 w-1/4 flex items-center justify-center border-r border-stone-300">Oct-Dec (Q2)</div>
+                    <div class="bg-stone-300 text-stone-700 w-1/4 flex items-center justify-center border-r border-stone-400">Jan-Mar (Q3)</div>
+                    <div class="bg-dell-blue text-white w-1/4 flex items-center justify-center font-bold relative group">
+                        Apr-Jun (Q4)
+                        <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-stone-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Budget flush peak</div>
+                    </div>
+                </div>
+                <p class="text-xs text-stone-500 mt-2 text-right">Major spend cycles peak heavily in Q4 to exhaust capital budgets before June 30th.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white rounded-lg shadow-sm border border-stone-200 p-6 flex flex-col">
+                    <h3 class="font-bold text-lg mb-4 text-center">NYC OTI Budget Breakdown</h3>
+                    <div class="flex-grow flex items-center justify-center w-full">
+                        <div class="chart-container">
+                            <canvas id="budgetChart" aria-label="Bar chart showing OTI Operating vs Capital budgets"></canvas>
+                        </div>
+                    </div>
+                    <p class="text-xs text-stone-500 mt-4 text-center">Hover for YoY %. OTI consolidates central IT; total City Budget is ~$112B.</p>
+                </div>
+
+                <div class="flex flex-col space-y-6">
+                    <div class="bg-white rounded-lg shadow-sm border border-stone-200 p-6">
+                        <h3 class="font-bold text-lg mb-4 text-center border-b pb-2">M/WBE Procurement Mandate</h3>
+                        <div class="flex items-center justify-center mb-4">
+                            <div class="w-full max-w-[200px] h-[200px]">
+                                <canvas id="mwbeChart" aria-label="Donut chart showing 30% MWBE goal"></canvas>
+                            </div>
+                        </div>
+                        <p class="text-sm text-stone-700 text-center">NYC has a strict <strong>30% participation goal</strong> for Minority/Women-owned Business Enterprises. Dell must leverage diverse channel partners via PASSPort.</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border border-stone-200 p-6">
+                        <h3 class="font-bold text-lg mb-3 border-b pb-2">Procurement Intel</h3>
+                        <ul class="space-y-3 text-sm text-stone-700">
+                            <li><span class="font-bold text-stone-900">Vehicles:</span> OGS (NYS Contracts), NASPO ValuePoint, GSA Schedule 70 (for grants).</li>
+                            <li><span class="font-bold text-stone-900">Grants:</span> Accessing IIJA (Broadband) & SLCGP (Cyber). UASI grants fund NYPD.</li>
+                            <li><span class="font-bold text-stone-900">The Battlefield:</span> Heavy AWS push re-evaluated due to egress costs. Entrenched Cisco networking. Massive legacy storage arrays (NetApp/Pure) ripe for Dell PowerStore displacement.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: DELL OPPORTUNITIES (SPLIT SCREEN VIEW) -->
+        <section id="dell-opportunities" role="tabpanel" aria-labelledby="tab-opps" class="tab-content">
+            <div class="mb-6">
+                <h1 class="text-3xl font-bold text-stone-900 mb-2">Actionable Dell Opportunities</h1>
+                <p class="text-stone-600 text-lg leading-relaxed max-w-4xl">
+                    Select a strategic NYC initiative from the list below to reveal detailed mandates, funded alignments, and competitive displacement strategies mapped to the Dell Technologies portfolio.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                <!-- Navigation List -->
+                <div class="md:col-span-4 space-y-2" id="opp-list">
+                    <!-- Populated by JS -->
+                </div>
+                
+                <!-- Detail Panel -->
+                <div class="md:col-span-8 bg-white p-6 md:p-8 border border-stone-200 rounded-lg shadow-sm min-h-[350px] relative" id="opp-detail-container">
+                    <div id="opp-detail-content" class="fade-in-content">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-800 text-stone-400 py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+            <p>Generated for Dell Technologies Internal Use. Data aggregated from public NYC.gov records, NASCIO, and IT strategic plans.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- DATA STATE ---
+        const stakeholders = [
+            { name: "Eric Adams", title: "Mayor, NYC", category: "Elected", catColor: "bg-green-100 text-green-800", influence: "financial", infText: "Financial Purchaser / Veto", stance: "Pro-AI, heavily focused on tech for public safety (drones, robotics)." },
+            { name: "Matthew Fraser", title: "CTO, Office of Tech & Innovation", category: "IT Leadership", catColor: "bg-blue-100 text-blue-800", influence: "technical", infText: "Technical Influencer & Purchaser", stance: "Driving mass consolidation. Wants 'One NYC' architecture. Prioritizes cloud optimization over pure public cloud." },
+            { name: "Kelly Moan", title: "CISO, NYC Cyber Command", category: "IT Leadership", catColor: "bg-blue-100 text-blue-800", influence: "technical", infText: "Technical Influencer (Security)", stance: "Zero Trust mandate. Expanding endpoint monitoring across all 100+ agencies." },
+            { name: "Brad Lander", title: "Comptroller", category: "Elected", catColor: "bg-green-100 text-green-800", influence: "financial", infText: "Financial / Audit Oversight", stance: "Scrutinizing automated decision systems (AI) and cloud spending bloat." },
+            { name: "Colin Ahern", title: "NYS Chief Cyber Officer", category: "State Influence", catColor: "bg-purple-100 text-purple-800", influence: "technical", infText: "Technical / Grant Controller", stance: "Controls flow of SLCGP federal grants impacting NYC local cyber spend." }
+        ];
+
+        const opportunities = [
+            {
+                id: 'mycity',
+                title: 'MyCity Portal & Citizen Experience',
+                icon: '&#128187;', // Computer
+                mandate: "Mayor Adams' flagship project to create a single citizen portal for benefits, business services, and municipal payments. Owned by OTI and Department of Social Services (DSS). Underlying IT need: Massive data integration, high availability, and secure hybrid cloud hosting.",
+                alignment: "Position <strong>Dell APEX Custom Cloud</strong>. NYC wants cloud agility but is wary of public cloud lock-in for sensitive citizen PII. APEX provides an OPEX-like consumption model on-premise.",
+                displacement: "Target legacy Oracle/HPE databases at DSS. Pitch <strong>PowerStore</strong> for high-performance, deduplicated citizen data storage to modernize the backend of MyCity."
+            },
+            {
+                id: 'cyber',
+                title: 'Cyber Command Consolidation',
+                icon: '&#128274;', // Lock
+                mandate: "OTI is mandated to absorb cyber defense for all city agencies under a unified Zero Trust framework. High priority on ransomware resilience and immutable backups after recent municipal breaches nationwide. Funded heavily by federal SLCGP grants.",
+                alignment: "Lead with <strong>Dell PowerProtect Cyber Recovery</strong>. NYC Cyber Command needs an isolated, immutable air-gapped vault. This is a Tier 1 funded priority.",
+                displacement: "Agencies currently have fragmented endpoint security. Offer Dell advisory services for <strong>Edge Security</strong> and supply chain hardware integrity (Dell SafeBIOS) on all net-new Client Solutions fleet refreshes."
+            },
+            {
+                id: 'ai',
+                title: 'AI Action Plan & Infrastructure',
+                icon: '&#129472;', // Robot
+                mandate: "NYC launched a comprehensive AI Action plan. Agencies like NYPD, DOT, and DEP are piloting AI. The underlying IT requirement is massive unstructured data management, GPU-dense compute, and strict AI governance/data privacy frameworks.",
+                alignment: "Pitch <strong>Dell AI-Ready Infrastructure</strong> (PowerEdge XE servers with NVIDIA GPUs) and <strong>PowerScale</strong> for unstructured data lakes. Position Dell Precision workstations for local agency data science teams.",
+                displacement: "NYC cannot put sensitive citizen data into public LLMs. Lead an advisory workshop on 'Private AI' / RAG architectures using Dell Validated Designs, ensuring data remains on-premise."
+            }
+        ];
+
+        // --- GLOBAL VARIABLES ---
+        let budgetChartInstance = null;
+        let mwbeChartInstance = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- TAB LOGIC ---
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Reset all tabs
+                    tabs.forEach(t => {
+                        t.classList.remove('border-dell-blue', 'text-dell-blue');
+                        t.classList.add('border-transparent', 'text-stone-500');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    
+                    // Activate clicked tab
+                    tab.classList.remove('border-transparent', 'text-stone-500');
+                    tab.classList.add('border-dell-blue', 'text-dell-blue');
+                    tab.setAttribute('aria-selected', 'true');
+
+                    const target = tab.getAttribute('data-target');
+                    
+                    // Show correct content panel
+                    contents.forEach(c => {
+                        c.classList.remove('active');
+                        if(c.id === target) {
+                            c.classList.add('active');
+                        }
+                    });
+
+                    // Handle Chart Initialization & Resizing
+                    if (target === 'financials') {
+                        if (!budgetChartInstance) {
+                            initCharts();
+                        } else {
+                            // Fix resizing distortion issue
+                            budgetChartInstance.resize();
+                            mwbeChartInstance.resize();
+                        }
+                    }
+                });
+            });
+
+            // --- RENDER STAKEHOLDERS ---
+            const tbody = document.getElementById('stakeholder-tbody');
+            const filterSelect = document.getElementById('influence-filter');
+
+            function renderStakeholders(filterValue = 'all') {
+                tbody.innerHTML = '';
+                stakeholders.forEach(person => {
+                    if (filterValue === 'all' || filterValue === person.influence) {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td class="px-6 py-4 whitespace-nowrap font-semibold text-stone-900">${person.name}<br><span class="text-stone-500 text-xs font-normal">${person.title}</span></td>
+                            <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${person.catColor}">${person.category}</span></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-stone-700">${person.infText}</td>
+                            <td class="px-6 py-4 text-stone-600 min-w-[250px] whitespace-normal">${person.stance}</td>
+                        `;
+                        tbody.appendChild(tr);
+                    }
+                });
+            }
+            renderStakeholders();
+            filterSelect.addEventListener('change', (e) => renderStakeholders(e.target.value));
+
+            // --- RENDER OPPORTUNITIES (SPLIT VIEW) ---
+            const oppList = document.getElementById('opp-list');
+            const oppDetail = document.getElementById('opp-detail-content');
+
+            function renderOpportunityDetail(opp) {
+                // Remove and re-add class to re-trigger CSS animation
+                oppDetail.classList.remove('fade-in-content');
+                void oppDetail.offsetWidth; // trigger reflow
+                oppDetail.classList.add('fade-in-content');
+
+                oppDetail.innerHTML = `
+                    <div class="flex items-center mb-6 border-b border-stone-200 pb-4">
+                        <div class="text-4xl mr-4 bg-stone-100 p-3 rounded-lg" aria-hidden="true">${opp.icon}</div>
+                        <h3 class="text-2xl font-bold text-stone-900">${opp.title}</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-sm uppercase tracking-wider font-bold text-stone-500 mb-2">The NYC Mandate</h4>
+                            <p class="text-stone-700 leading-relaxed">${opp.mandate}</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-5 rounded-lg border border-blue-100">
+                            <h4 class="font-bold text-dell-blue flex items-center mb-3"><span class="mr-2" aria-hidden="true">&#9680;</span> Funded Alignment</h4>
+                            <p class="text-stone-800 text-sm leading-relaxed mb-4">${opp.alignment}</p>
+                            
+                            <h4 class="font-bold text-dell-blue flex items-center mb-3"><span class="mr-2" aria-hidden="true">&#9876;&#65039;</span> Displacement & Advisory</h4>
+                            <p class="text-stone-800 text-sm leading-relaxed">${opp.displacement}</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            function initOpportunities() {
+                opportunities.forEach((opp, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = `w-full text-left px-4 py-4 rounded-md border transition-all duration-200 font-semibold text-sm ${index === 0 ? 'bg-dell-blue text-white border-dell-blue shadow-md' : 'bg-white text-stone-700 border-stone-200 hover:border-dell-blue hover:text-dell-blue'}`;
+                    btn.innerHTML = `<span class="mr-2" aria-hidden="true">${opp.icon}</span> ${opp.title}`;
+                    
+                    btn.addEventListener('click', () => {
+                        // Update active state on buttons
+                        document.querySelectorAll('#opp-list button').forEach(b => {
+                            b.className = 'w-full text-left px-4 py-4 rounded-md border transition-all duration-200 font-semibold text-sm bg-white text-stone-700 border-stone-200 hover:border-dell-blue hover:text-dell-blue';
+                        });
+                        btn.className = 'w-full text-left px-4 py-4 rounded-md border transition-all duration-200 font-semibold text-sm bg-dell-blue text-white border-dell-blue shadow-md';
+                        
+                        renderOpportunityDetail(opp);
+                    });
+                    
+                    oppList.appendChild(btn);
+                });
+                // Render the first one by default
+                renderOpportunityDetail(opportunities[0]);
+            }
+            initOpportunities();
+
+            // --- CHART.JS VISUALIZATIONS ---
+            function initCharts() {
+                Chart.defaults.font.family = "'Inter', sans-serif";
+                Chart.defaults.color = '#57534e'; // stone-600
+
+                // 1. Budget Bar Chart
+                const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+                const budgetData = {
+                    labels: ['FY23 Actual', 'FY24 Adopted', 'FY25 Proposed'],
+                    datasets: [
+                        { label: 'O&M (Operating)', data: [680, 715, 750], backgroundColor: '#0076CE', stack: 'Stack 0' },
+                        { label: 'Capital (Projects)', data: [150, 185, 210], backgroundColor: '#00A3E0', stack: 'Stack 0' }
+                    ]
+                };
+
+                budgetChartInstance = new Chart(budgetCtx, {
+                    type: 'bar',
+                    data: budgetData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: { mode: 'index', intersect: false },
+                        plugins: {
+                            legend: { position: 'bottom' },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.dataset.label || '';
+                                        let val = context.parsed.y;
+                                        let text = `${label}: $${val}M`;
+                                        
+                                        // Calculate YoY percentage change if not the first year
+                                        if (context.dataIndex > 0) {
+                                            let prevVal = context.dataset.data[context.dataIndex - 1];
+                                            let pct = (((val - prevVal) / prevVal) * 100).toFixed(1);
+                                            let sign = pct > 0 ? '+' : '';
+                                            text += ` (${sign}${pct}% YoY)`;
+                                        }
+                                        return text;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: { stacked: true, grid: { display: false } },
+                            y: { 
+                                stacked: true, 
+                                title: { display: true, text: 'Budget ($ Millions)' },
+                                ticks: { callback: function(value) { return '$' + value + 'M'; } }
+                            }
+                        }
+                    }
+                });
+
+                // 2. M/WBE Donut Chart
+                const mwbeCtx = document.getElementById('mwbeChart').getContext('2d');
+                mwbeChartInstance = new Chart(mwbeCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['M/WBE Goal', 'Standard Procurement'],
+                        datasets: [{
+                            data: [30, 70],
+                            backgroundColor: ['#0076CE', '#e7e5e4'], // Dell Blue & stone-200
+                            borderWidth: 0,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '75%',
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.label}: ${context.parsed}%`;
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    plugins: [{
+                        id: 'textCenter',
+                        beforeDraw: function(chart) {
+                            var width = chart.width, height = chart.height, ctx = chart.ctx;
+                            ctx.restore();
+                            var fontSize = (height / 80).toFixed(2);
+                            ctx.font = "bold " + fontSize + "em Inter";
+                            ctx.textBaseline = "middle";
+                            ctx.fillStyle = "#1c1917"; // stone-900
+                            var text = "30%",
+                                textX = Math.round((width - ctx.measureText(text).width) / 2),
+                                textY = height / 2;
+                            ctx.fillText(text, textX, textY);
+                            ctx.save();
+                        }
+                    }]
+                });
+            }
+        });
+    </script>
+</body>
+</html>

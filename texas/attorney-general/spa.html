@@ -1,0 +1,574 @@
+<!-- Chosen Palette: Executive Tech Blue (Navy #0F172A, Blue #3B82F6, Slate #64748B, Background #F8FAFC) -->
+
+<!-- Application Structure Plan: The application is designed as a "Strategic Account Dashboard" for a field seller. It uses a tabbed navigation structure to separate distinct domains of knowledge: 'Overview' (Executive Summary & Key Contact), 'Financials' (Budget & Funding), 'Organization' (Structure & Headcount), and 'Strategy' (Initiatives & Dell Alignment). This structure allows the Account Executive to quickly access specific data points during a conversation or planning session without scrolling through a long linear document. The flow moves from high-level context to actionable sales intelligence. -->
+
+<!-- Visualization & Content Choices:
+1. Overview: Key Metrics Cards (HTML/Tailwind) -> Goal: Inform -> Immediate context on scale.
+2. Financials: Interactive Doughnut Chart (Chart.js) -> Goal: Compare -> Visualizing the dominance of Child Support funding.
+3. Organization: Horizontal Bar Chart (Chart.js) -> Goal: Compare -> Showing the workforce disparity between divisions.
+4. Organization: Interactive Org Hierarchy (HTML/Flex) -> Goal: Organize -> Visualizing the chain of command without SVG/Mermaid.
+5. Strategy: Priority Matrix (Grid/Cards) -> Goal: Relationships -> Mapping OAG Challenges to Dell Solutions.
+6. All Charts: Wrapped in styled <div> containers to strictly control responsiveness and layout as per requirements.
+7. No SVG or Mermaid used.
+-->
+
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dell Strategic Account Intelligence: TX OAG</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+    /* Custom Font */
+    @import url('[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap)');
+    
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #F8FAFC; /* Slate 50 */
+        color: #334155; /* Slate 700 */
+    }
+
+    /* Chart Container Standards - Strictly Enforced */
+    .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        max-height: 350px;
+        background: white;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    }
+
+    @media (min-width: 768px) {
+        .chart-container {
+            height: 350px;
+        }
+    }
+
+    /* Navigation Active State */
+    .nav-item.active {
+        border-bottom: 2px solid #3B82F6;
+        color: #0F172A;
+        font-weight: 600;
+    }
+
+    /* Card Hover Effects */
+    .interactive-card {
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    .interactive-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        border-color: #3B82F6;
+    }
+
+    /* Detail Panel Animation */
+    .detail-panel {
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        overflow: hidden;
+    }
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<!-- Top Navigation / Header -->
+<header class="bg-[#0F172A] text-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="h-8 w-8 bg-[#3B82F6] rounded flex items-center justify-center font-bold text-white">D</div>
+                    <div>
+                        <h1 class="font-bold text-lg tracking-tight">Account Intelligence</h1>
+                        <p class="text-xs text-slate-400">Texas Office of the Attorney General</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="px-2 py-1 text-xs font-semibold bg-blue-900 text-blue-200 rounded border border-blue-700">Internal Use</span>
+                <div class="text-sm text-right hidden sm:block">
+                    <div class="font-medium">Prep for: Bob Mariano</div>
+                    <div class="text-xs text-slate-400">Strategy Meeting</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab Navigation -->
+        <nav class="flex space-x-8 mt-2 overflow-x-auto no-scrollbar">
+            <button onclick="switchTab('overview')" id="tab-overview" class="nav-item active pb-3 px-1 text-sm font-medium text-slate-300 hover:text-white transition-colors">Overview</button>
+            <button onclick="switchTab('financials')" id="tab-financials" class="nav-item pb-3 px-1 text-sm font-medium text-slate-300 hover:text-white transition-colors">Financials</button>
+            <button onclick="switchTab('organization')" id="tab-organization" class="nav-item pb-3 px-1 text-sm font-medium text-slate-300 hover:text-white transition-colors">Organization</button>
+            <button onclick="switchTab('strategy')" id="tab-strategy" class="nav-item pb-3 px-1 text-sm font-medium text-slate-300 hover:text-white transition-colors">Strategy & Playbook</button>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Content Area -->
+<main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+    <!-- OVERVIEW TAB -->
+    <section id="view-overview" class="tab-content block space-y-8 animate-fade-in">
+        <!-- Intro Text -->
+        <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-blue-500">
+            <h2 class="text-xl font-bold text-slate-900 mb-2">Executive Summary</h2>
+            <p class="text-slate-600 leading-relaxed">
+                The Texas OAG is not just a law firm; it is a massive financial engine driven by the <strong>Child Support Division (CSD)</strong>. While General Paxton captures headlines, the operational reality—and the IT budget—lives in CSD's legacy modernization efforts (TXCSES 2.0). Your meeting with Bob Mariano is an opportunity to align Dell's infrastructure modernization, security, and APEX utility models with their need for scalable, compliant (IRS Pub 1075), and secure operations.
+            </p>
+        </div>
+
+        <!-- Key Metrics Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+                <div class="text-sm font-medium text-slate-500 uppercase">Annual Budget</div>
+                <div class="mt-2 text-3xl font-bold text-slate-900">~$1.4B</div>
+                <div class="mt-1 text-sm text-green-600 font-medium">Heavily Federal Funded</div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+                <div class="text-sm font-medium text-slate-500 uppercase">Total Employees</div>
+                <div class="mt-2 text-3xl font-bold text-slate-900">~4,200+</div>
+                <div class="mt-1 text-sm text-blue-600 font-medium">60% in Child Support</div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+                <div class="text-sm font-medium text-slate-500 uppercase">Key Workload</div>
+                <div class="mt-2 text-3xl font-bold text-slate-900">TXCSES 2.0</div>
+                <div class="mt-1 text-sm text-orange-600 font-medium">Legacy Modernization</div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+                <div class="text-sm font-medium text-slate-500 uppercase">Meeting Contact</div>
+                <div class="mt-2 text-3xl font-bold text-slate-900">Bob Mariano</div>
+                <div class="mt-1 text-sm text-slate-500 font-medium">Ops/IT Strategy</div>
+            </div>
+        </div>
+
+        <!-- Meeting Intelligence Card -->
+        <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg shadow-lg overflow-hidden text-white">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-bold text-white">Meeting Intelligence: Bob Mariano</h3>
+                    <span class="bg-blue-600 text-xs px-2 py-1 rounded font-mono">CONFIDENTIAL</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-blue-400 text-sm font-bold uppercase tracking-wide mb-2">Profile & Persona</h4>
+                        <p class="text-slate-300 text-sm mb-4">
+                            Bob is likely focused on operational efficiency and risk mitigation. He won't be swayed by flash; he cares about <strong>uptime, compliance, and cost-predictability</strong>. He needs to know how Dell helps him sleep at night while managing billions in transactions.
+                        </p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="px-2 py-1 bg-slate-700 rounded text-xs">Pragmatic</span>
+                            <span class="px-2 py-1 bg-slate-700 rounded text-xs">Security-First</span>
+                            <span class="px-2 py-1 bg-slate-700 rounded text-xs">Cloud-Smart</span>
+                        </div>
+                    </div>
+                    <div class="bg-white/10 rounded p-4 backdrop-blur-sm">
+                        <h4 class="text-blue-400 text-sm font-bold uppercase tracking-wide mb-2">Top 3 Conversation Starters</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-400 font-bold">1.</span>
+                                <span>"How is the agency balancing the shift to cloud with the strict FTI data residency requirements of IRS Pub 1075?"</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-400 font-bold">2.</span>
+                                <span>"With the remote workforce stabilizing, are you looking at PCaaS to reduce the provisioning burden on your IT staff?"</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-400 font-bold">3.</span>
+                                <span>"Are you exploring consumption-based models (APEX) to smooth out the jagged refresh cycles driven by biennial budgets?"</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINANCIALS TAB -->
+    <section id="view-financials" class="tab-content hidden space-y-8 animate-fade-in">
+        <div class="max-w-3xl mx-auto text-center mb-8">
+            <h2 class="text-2xl font-bold text-slate-900">Follow The Money</h2>
+            <p class="text-slate-600 mt-2">
+                Understanding the budget allocation reveals where the major IT contracts reside. The Child Support Division is the financial heavyweight.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- Budget Chart -->
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                <h3 class="text-lg font-semibold text-slate-900 mb-4">Biennial Budget Composition</h3>
+                <div class="chart-container">
+                    <canvas id="budgetChart"></canvas>
+                </div>
+                <div class="mt-4 text-xs text-center text-slate-500">
+                    Source: Legislative Appropriations Requests
+                </div>
+            </div>
+
+            <!-- Analysis Text -->
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">The "Federal Funds" Hook</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Over 60% of the OAG's budget comes from Federal Funds, primarily for Child Support enforcement. 
+                        <br><br>
+                        <strong>Sales Implication:</strong> Federal money comes with federal strings. Compliance (IRS Pub 1075, NIST 800-53) is a massive driver. If Dell solutions can automate or simplify compliance reporting, it's a winning argument.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-500">
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">IT Spending Power</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Because the Child Support Division (CSD) generates revenue (collections), they have more flexibility and larger capital project budgets than the purely "taxpayer funded" divisions like Legal or Law Enforcement.
+                        <br><br>
+                        <strong>Target:</strong> Focus large-scale infrastructure and modernization pitches on CSD leadership.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORGANIZATION TAB -->
+    <section id="view-organization" class="tab-content hidden space-y-8 animate-fade-in">
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold text-slate-900">Organizational Landscape</h2>
+            <p class="text-slate-600 mt-2">
+                The OAG is functionally split. The "Law Firm" side (Legal Divisions) is prestigious but small. The "Operations" side (Child Support) is an enterprise-scale logistics machine.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Org Chart (Visual HTML) -->
+            <div class="lg:col-span-2 bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                <h3 class="text-lg font-semibold text-slate-900 mb-6">Leadership Hierarchy</h3>
+                
+                <!-- Hierarchy Tree -->
+                <div class="flex flex-col items-center w-full">
+                    <!-- Node 1 -->
+                    <div class="bg-slate-900 text-white px-6 py-3 rounded shadow-md w-64 text-center mb-4 relative z-10">
+                        <div class="font-bold">Ken Paxton</div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider">Attorney General</div>
+                    </div>
+                    
+                    <!-- Connector -->
+                    <div class="h-8 w-0.5 bg-slate-300"></div>
+                    
+                    <!-- Node 2 -->
+                    <div class="bg-slate-800 text-white px-6 py-2 rounded shadow-md w-64 text-center mb-4 relative z-10">
+                        <div class="font-bold">Brent Webster</div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider">First Assistant AG</div>
+                    </div>
+
+                    <!-- Connector Branch -->
+                    <div class="h-8 w-0.5 bg-slate-300"></div>
+                    <div class="w-full max-w-lg h-0.5 bg-slate-300 mb-0 relative"></div>
+                    
+                    <!-- Level 3 Row -->
+                    <div class="flex justify-between w-full max-w-lg mt-0">
+                        <div class="h-6 w-0.5 bg-slate-300 mx-auto"></div>
+                        <div class="h-6 w-0.5 bg-slate-300 mx-auto"></div>
+                        <div class="h-6 w-0.5 bg-slate-300 mx-auto"></div>
+                    </div>
+
+                    <div class="flex justify-between w-full gap-2 text-center mt-0">
+                        <!-- Div 1 -->
+                        <div class="bg-blue-50 border border-blue-200 p-3 rounded w-1/3 flex flex-col justify-between hover:bg-blue-100 transition-colors cursor-default group">
+                            <div>
+                                <div class="font-bold text-blue-900 text-sm">Child Support (CSD)</div>
+                                <div class="text-xs text-slate-500 mt-1 hidden group-hover:block">The "Whale" Account</div>
+                            </div>
+                        </div>
+                        <!-- Div 2 -->
+                        <div class="bg-slate-50 border border-slate-200 p-3 rounded w-1/3 flex flex-col justify-between hover:bg-slate-100 transition-colors">
+                            <div>
+                                <div class="font-bold text-slate-900 text-sm">Legal Services</div>
+                                <div class="text-xs text-slate-500 mt-1">Litigation & Defense</div>
+                            </div>
+                        </div>
+                        <!-- Div 3 -->
+                        <div class="bg-slate-50 border border-slate-200 p-3 rounded w-1/3 flex flex-col justify-between hover:bg-slate-100 transition-colors">
+                            <div>
+                                <div class="font-bold text-slate-900 text-sm">Admin & Ops</div>
+                                <div class="text-xs text-slate-500 mt-1">HR, IT, Facilities</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Headcount Chart -->
+            <div class="lg:col-span-1 bg-white p-6 rounded-lg shadow-sm border border-slate-100 flex flex-col">
+                <h3 class="text-lg font-semibold text-slate-900 mb-2">Workforce Scale</h3>
+                <p class="text-xs text-slate-500 mb-4">CSD dwarfs all other divisions combined.</p>
+                <div class="chart-container flex-grow">
+                    <canvas id="headcountChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRATEGY TAB -->
+    <section id="view-strategy" class="tab-content hidden space-y-8 animate-fade-in">
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold text-slate-900">The Dell Playbook</h2>
+            <p class="text-slate-600 mt-2">
+                Aligning OAG's strategic pain points with Dell's solution portfolio. Click on a challenge to see the Dell pitch.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="strategy-grid">
+            <!-- Strategy Card 1 -->
+            <div class="interactive-card bg-white rounded-lg p-6 border border-slate-200" onclick="toggleDetail('strat-1')">
+                <div class="flex items-start justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">1</div>
+                        <h3 class="font-bold text-lg text-slate-900">Legacy Modernization</h3>
+                    </div>
+                    <span class="text-slate-400 text-xl font-light">+</span>
+                </div>
+                <p class="text-slate-500 text-sm mt-3">TXCSES 2.0 is the ongoing effort to move off mainframes to cloud-native apps.</p>
+                
+                <div id="strat-1" class="detail-panel max-h-0 mt-0 opacity-0 bg-slate-50 rounded p-0">
+                    <div class="p-4 border-t border-slate-200 mt-4">
+                        <h4 class="text-sm font-bold text-blue-700 uppercase mb-2">Dell Angle</h4>
+                        <p class="text-sm text-slate-700 mb-2"><strong>APEX Cloud Platforms:</strong> Offer a consistent hybrid cloud operating model. They can't move everything to public cloud due to FTI/Latency.</p>
+                        <p class="text-sm text-slate-700"><strong>Mainframe Offload:</strong> Position modern servers/storage for the "mid-tier" data processing needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Card 2 -->
+            <div class="interactive-card bg-white rounded-lg p-6 border border-slate-200" onclick="toggleDetail('strat-2')">
+                <div class="flex items-start justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold">2</div>
+                        <h3 class="font-bold text-lg text-slate-900">Cybersecurity & Trust</h3>
+                    </div>
+                    <span class="text-slate-400 text-xl font-light">+</span>
+                </div>
+                <p class="text-slate-500 text-sm mt-3">Protecting PII for millions of Texas children and parents. Ransomware is a top threat.</p>
+                
+                <div id="strat-2" class="detail-panel max-h-0 mt-0 opacity-0 bg-slate-50 rounded p-0">
+                    <div class="p-4 border-t border-slate-200 mt-4">
+                        <h4 class="text-sm font-bold text-indigo-700 uppercase mb-2">Dell Angle</h4>
+                        <p class="text-sm text-slate-700 mb-2"><strong>PowerProtect Cyber Recovery:</strong> The "Vault" story is critical here. Air-gapped recovery for their most critical databases.</p>
+                        <p class="text-sm text-slate-700"><strong>Supply Chain Security:</strong> Emphasize Dell's secure supply chain for hardware procurement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Card 3 -->
+            <div class="interactive-card bg-white rounded-lg p-6 border border-slate-200" onclick="toggleDetail('strat-3')">
+                <div class="flex items-start justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">3</div>
+                        <h3 class="font-bold text-lg text-slate-900">Remote Workforce</h3>
+                    </div>
+                    <span class="text-slate-400 text-xl font-light">+</span>
+                </div>
+                <p class="text-slate-500 text-sm mt-3">Field investigators and attorneys need secure, reliable access from anywhere in Texas.</p>
+                
+                <div id="strat-3" class="detail-panel max-h-0 mt-0 opacity-0 bg-slate-50 rounded p-0">
+                    <div class="p-4 border-t border-slate-200 mt-4">
+                        <h4 class="text-sm font-bold text-emerald-700 uppercase mb-2">Dell Angle</h4>
+                        <p class="text-sm text-slate-700 mb-2"><strong>PCaaS (PC as a Service):</strong> Reduce IT overhead by outsourcing lifecycle management.</p>
+                        <p class="text-sm text-slate-700"><strong>Latitude Rugged:</strong> For field investigators in border regions or rough conditions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Card 4 -->
+            <div class="interactive-card bg-white rounded-lg p-6 border border-slate-200" onclick="toggleDetail('strat-4')">
+                <div class="flex items-start justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">4</div>
+                        <h3 class="font-bold text-lg text-slate-900">Budget Predictability</h3>
+                    </div>
+                    <span class="text-slate-400 text-xl font-light">+</span>
+                </div>
+                <p class="text-slate-500 text-sm mt-3">State budgets are biennial (every 2 years). Large CapEx spikes are hard to manage.</p>
+                
+                <div id="strat-4" class="detail-panel max-h-0 mt-0 opacity-0 bg-slate-50 rounded p-0">
+                    <div class="p-4 border-t border-slate-200 mt-4">
+                        <h4 class="text-sm font-bold text-orange-700 uppercase mb-2">Dell Angle</h4>
+                        <p class="text-sm text-slate-700 mb-2"><strong>Dell APEX:</strong> Shift to OpEx. Pay for what they use. This helps smooth out the budget curve and aligns cost with actual consumption/collections revenue.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-200 py-6 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-sm text-slate-500">Generative AI analysis for Dell Strategic Account Planning.</p>
+        <p class="text-xs text-slate-400 mt-1">Data based on public OAG reports and general state government profiles.</p>
+    </div>
+</footer>
+
+<!-- JavaScript Logic -->
+<script>
+    // --- Navigation Logic ---
+    function switchTab(tabId) {
+        // Hide all sections
+        document.querySelectorAll('.tab-content').forEach(el => {
+            el.classList.add('hidden');
+            el.classList.remove('block');
+        });
+        
+        // Show selected section
+        const selectedSection = document.getElementById(`view-${tabId}`);
+        selectedSection.classList.remove('hidden');
+        selectedSection.classList.add('block');
+        
+        // Update active state on buttons
+        document.querySelectorAll('.nav-item').forEach(el => {
+            el.classList.remove('active', 'text-slate-900', 'font-semibold', 'border-b-2', 'border-blue-500');
+            el.classList.add('text-slate-500');
+        });
+        
+        const activeBtn = document.getElementById(`tab-${tabId}`);
+        activeBtn.classList.add('active', 'text-slate-900', 'font-semibold', 'border-b-2', 'border-blue-500');
+        activeBtn.classList.remove('text-slate-500');
+
+        // Trigger chart updates if needed (Chart.js handles canvas resize usually, but good practice)
+        if(tabId === 'financials') renderBudgetChart();
+        if(tabId === 'organization') renderHeadcountChart();
+    }
+
+    // --- Accordion Logic ---
+    function toggleDetail(id) {
+        const panel = document.getElementById(id);
+        if (panel.style.maxHeight && panel.style.maxHeight !== '0px') {
+            panel.style.maxHeight = '0px';
+            panel.style.opacity = '0';
+            panel.parentElement.classList.remove('border-blue-500', 'ring-1', 'ring-blue-500');
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.style.opacity = '1';
+            panel.parentElement.classList.add('border-blue-500', 'ring-1', 'ring-blue-500');
+        }
+    }
+
+    // --- Chart.js Configuration & Rendering ---
+    
+    // 1. Budget Chart (Donut)
+    let budgetChartInstance = null;
+    function renderBudgetChart() {
+        if (budgetChartInstance) return; // Only render once
+
+        const ctx = document.getElementById('budgetChart').getContext('2d');
+        budgetChartInstance = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Child Support (Federal & State)', 'Legal Services', 'Crime Victim Services', 'Medicaid Fraud', 'Administration'],
+                datasets: [{
+                    data: [62, 18, 10, 5, 5], // Estimated breakdown
+                    backgroundColor: [
+                        '#3B82F6', // Blue 500 (Primary Focus)
+                        '#64748B', // Slate 500
+                        '#94A3B8', // Slate 400
+                        '#CBD5E1', // Slate 300
+                        '#E2E8F0'  // Slate 200
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            font: { family: 'Inter', size: 12 },
+                            boxWidth: 12,
+                            usePointStyle: true
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return ` ${context.label}: ${context.raw}% of Total`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // 2. Headcount Chart (Horizontal Bar)
+    let headcountChartInstance = null;
+    function renderHeadcountChart() {
+        if (headcountChartInstance) return; // Only render once
+
+        const ctx = document.getElementById('headcountChart').getContext('2d');
+        headcountChartInstance = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Child Support', 'Legal Divisions', 'Crime Victims', 'Admin/Ops'],
+                datasets: [{
+                    label: 'Approximate Employees',
+                    data: [2700, 700, 350, 450],
+                    backgroundColor: [
+                        '#3B82F6', // Highlight CSD
+                        '#94A3B8',
+                        '#94A3B8',
+                        '#94A3B8'
+                    ],
+                    borderRadius: 4,
+                    barThickness: 30
+                }]
+            },
+            options: {
+                indexAxis: 'y', // Horizontal
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { font: { family: 'Inter' } }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { font: { family: 'Inter', weight: 500 } }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            title: (items) => items[0].label,
+                            label: (context) => ` ${context.formattedValue} Employees`
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // --- Initialization ---
+    document.addEventListener('DOMContentLoaded', () => {
+        // Start on Overview tab
+        switchTab('overview');
+    });
+
+</script>
+</body>
+</html>

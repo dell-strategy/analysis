@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell SLG Market Analysis: City of Austin, TX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chosen Palette: Slate-50 background, Slate-900 text, Blue-700 primary accents, Amber-500 highlight for Dell opportunities. -->
+    <!-- Application Structure Plan: A single-page scrolling dashboard with a sticky side navigation menu. Content is divided into 7 distinct thematic panels mirroring the Dell SLG reporting structure. This provides the Account Executive with a linear narrative that can also be non-linearly navigated during a rapid briefing or prep call. -->
+    <!-- Visualization & Content Choices: Financials -> Goal: Inform/Compare -> Viz: Donut/Bar Chart (Chart.js) -> Interaction: Hover tooltips -> Justification: Quickly reveals O&M vs CapEx split -> Library: Chart.js. Power Structure -> Goal: Organize -> Viz: Sortable Data Table -> Interaction: Text Filtering -> Justification: Allows quick lookup of key players -> Method: HTML/JS. NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body { scroll-behavior: smooth; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 350px; }
+        }
+        .nav-link.active {
+            background-color: #1d4ed8;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 1000px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+<div class="flex flex-col md:flex-row min-h-screen">
+    <nav class="w-full md:w-64 bg-slate-900 text-slate-300 flex-shrink-0 sticky top-0 md:h-screen overflow-y-auto">
+        <div class="p-6">
+            <h1 class="text-2xl font-bold text-white mb-1">Dell Tech</h1>
+            <p class="text-xs text-blue-400 font-semibold tracking-wider uppercase mb-8">SLG Market Intel</p>
+            <ul class="space-y-2" id="nav-menu">
+                <li><a href="#summary" class="nav-link block px-4 py-2 rounded-md hover:bg-slate-800 transition">1. Exec Summary</a></li>
+                <li><a href="#power" class="nav-link block px-4 py-2 rounded-md hover:bg-slate-800 transition">2. Power Structure</a></li>
+                <li><a href="#governance" class="nav-link block px-4 py-2 rounded-md hover:bg-slate-800 transition">3. IT Governance</a></li>
+                <li><a href="#financials" class="nav-link block px-4 py-2 rounded-md hover:bg-slate-800 transition">4. Financials & Budget</a></li>
+                <li><a href="#initiatives" class="nav-link block px-4 py-2 rounded-md hover:bg-slate-800 transition">5. Strategic Initiatives</a></li>
+                <li><a href="#procurement" class="nav-link block px-4 py-2 rounded-md hover:bg-slate-800 transition">6. Procurement</a></li>
+                <li><a href="#opportunities" class="nav-link block px-4 py-2 rounded-md hover:bg-slate-800 transition">7. Dell Opportunities</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="flex-1 p-6 md:p-12 overflow-y-auto w-full max-w-7xl mx-auto">
+        
+        <header class="mb-12 border-b border-slate-200 pb-6 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+            <div>
+                <h2 class="text-4xl font-extrabold text-slate-900 tracking-tight">City of Austin, TX</h2>
+                <p class="text-lg text-slate-600 mt-2">Target Entity Account Intelligence Report</p>
+                <div class="mt-4 inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold">FY26 Readiness Analysis</div>
+            </div>
+            <div>
+                <a href="https://dmonkey1001.github.io/slg-strategies/texas/austin/analysis.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-lg hover:bg-slate-700 transition shadow-sm border border-slate-800">
+                    &#128196; View Source Report (PDF)
+                </a>
+            </div>
+        </header>
+
+        <section id="summary" class="mb-16 scroll-mt-12">
+            <h3 class="text-2xl font-bold mb-4 border-l-4 border-blue-600 pl-3">1. Executive Summary & Macro Landscape</h3>
+            <p class="text-slate-700 mb-6 text-lg leading-relaxed">
+                This section provides a high-level overview of the entity's current operating environment, prioritizing immediate political pressures and core administrative goals that dictate IT spending priorities.
+            </p>
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-200">
+                <p class="mb-6">
+                    Austin continues to experience rapid population growth and infrastructure strain, compounding challenges related to cost of living, housing, and mobility. The local government is pivoting aggressively toward data-driven operations to maximize service delivery without proportionally increasing headcount. A recent transition in city management is driving a renewed audit of major capital projects and enterprise IT efficiency.
+                </p>
+                <h4 class="font-bold text-slate-800 mb-3 text-lg">Core Administrative Goals (Current Fiscal Year):</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <div class="text-blue-600 text-2xl mb-2">&#128680;</div>
+                        <h5 class="font-bold">Public Safety Modernization</h5>
+                        <p class="text-sm text-slate-600 mt-1">Overhauling emergency communications and expanding APD's data and analytics capabilities.</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <div class="text-blue-600 text-2xl mb-2">&#127959;</div>
+                        <h5 class="font-bold">Mobility & Infrastructure</h5>
+                        <p class="text-sm text-slate-600 mt-1">Smart city initiatives, traffic management IoT, and critical infrastructure resilience.</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <div class="text-blue-600 text-2xl mb-2">&#128187;</div>
+                        <h5 class="font-bold">Digital Equity & Access</h5>
+                        <p class="text-sm text-slate-600 mt-1">Expanding broadband access and modernizing citizen-facing digital service portals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="power" class="mb-16 scroll-mt-12">
+            <h3 class="text-2xl font-bold mb-4 border-l-4 border-blue-600 pl-3">2. Power Structure & Key Stakeholders</h3>
+            <p class="text-slate-700 mb-6 text-lg leading-relaxed">
+                Identify the critical decision-makers. This interactive table allows for quick filtering to locate both financial purchasers and technical influencers within the city's hierarchy.
+            </p>
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-4 border-b border-slate-200 bg-slate-50">
+                    <input type="text" id="stakeholderSearch" placeholder="Search by name, title, or influence..." class="w-full md:w-1/2 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse" id="stakeholderTable">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-600 uppercase text-xs tracking-wider">
+                                <th class="p-4 font-semibold border-b">Name</th>
+                                <th class="p-4 font-semibold border-b">Title / Agency</th>
+                                <th class="p-4 font-semibold border-b">Sphere of Influence</th>
+                                <th class="p-4 font-semibold border-b">Recent Tech Stances / Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm divide-y divide-slate-200">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-4 font-bold text-slate-800">Kirk Watson</td>
+                                <td class="p-4">Mayor, City of Austin</td>
+                                <td class="p-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-bold">Financial Purchaser</span></td>
+                                <td class="p-4 text-slate-600">Focuses on housing & transit tech; demands high ROI on major system overhauls.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-4 font-bold text-slate-800">T.C. Broadnax</td>
+                                <td class="p-4">City Manager</td>
+                                <td class="p-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-bold">Financial Purchaser</span></td>
+                                <td class="p-4 text-slate-600">Recently appointed. History of driving enterprise IT consolidation and strict budget controls.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-4 font-bold text-slate-800">Kerensa Daniels</td>
+                                <td class="p-4">CIO, CTM (Communications & Tech Mgt)</td>
+                                <td class="p-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-bold">Technical Influencer</span></td>
+                                <td class="p-4 text-slate-600">Leading hybrid cloud strategy; pushing for modernization of legacy mainframes and core network.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-4 font-bold text-slate-800">Sanjay Sardar</td>
+                                <td class="p-4">CISO (Chief Info Security Officer)</td>
+                                <td class="p-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-bold">Technical Influencer</span></td>
+                                <td class="p-4 text-slate-600">Prioritizing Zero Trust architecture, ransomware resilience, and data backup compliance.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-4 font-bold text-slate-800">Stuart Reilly</td>
+                                <td class="p-4">Interim GM, Austin Water (OT/IT)</td>
+                                <td class="p-4"><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-bold">Hybrid / Agency Lead</span></td>
+                                <td class="p-4 text-slate-600">Heavy focus on SCADA security and edge computing for water infrastructure monitoring.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="governance" class="mb-16 scroll-mt-12">
+            <h3 class="text-2xl font-bold mb-4 border-l-4 border-blue-600 pl-3">3. IT Governance & Service Delivery</h3>
+            <p class="text-slate-700 mb-6 text-lg leading-relaxed">
+                Understanding how the city buys and deploys technology is crucial. This section maps the internal bureaucracy and friction points between central IT and independent agencies.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-lg mb-2 text-slate-800">Operating Model: <span class="text-blue-600">Hybrid / Federated</span></h4>
+                    <p class="text-sm text-slate-600 mb-4">
+                        The City of Austin utilizes a hybrid model. The central <strong>Communications and Technology Management (CTM)</strong> department provides core enterprise services (network, primary data center, email, enterprise security). However, massive enterprise agencies operate heavily federated IT divisions with significant independent budgets.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center justify-between p-2 bg-slate-50 rounded border border-slate-100">
+                            <span class="font-semibold">Centralized (CTM)</span>
+                            <span>Core Network, Enterprise Cyber, ERP</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-slate-50 rounded border border-slate-100">
+                            <span class="font-semibold">Federated (Independent)</span>
+                            <span>Austin Energy, Austin Water, Airport (ABIA)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-lg mb-2 text-slate-800">Operational Friction Points</h4>
+                    <ul class="list-none space-y-3 text-sm text-slate-600 mt-4">
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2 font-bold">&#10005;</span>
+                            <div><strong>Shadow IT in Agencies:</strong> Departments with specific OT (Operational Technology) needs often bypass CTM for edge infrastructure, creating security blind spots.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2 font-bold">&#10005;</span>
+                            <div><strong>Chargeback Model Disputes:</strong> CTM utilizes an internal service fund chargeback model. Departments frequently complain about the transparency of cloud/storage billing, driving a desire to repatriate or independently procure storage.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2 font-bold">&#10005;</span>
+                            <div><strong>Procurement Bottlenecks:</strong> Centralized security reviews (CISO office) cause 6-8 month delays for agency-specific software and hardware deployments.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="financials" class="mb-16 scroll-mt-12">
+            <h3 class="text-2xl font-bold mb-4 border-l-4 border-blue-600 pl-3">4. Financials & Budget Breakdown</h3>
+            <p class="text-slate-700 mb-6 text-lg leading-relaxed">
+                Analysis of the entity's financial capacity, distinguishing between keeping the lights on (O&M) and net-new modernization projects (Capital). Fiscal Year runs Oct 1 - Sept 30.
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-center mb-4">Enterprise IT Budget Allocation (Est. $185M)</h4>
+                    <div class="chart-container">
+                        <canvas id="budgetPieChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-slate-500 mt-2">Data represents CTM central budget. Excludes autonomous utility IT spend.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-center mb-4">YoY CapEx vs O&M Trend ($M)</h4>
+                    <div class="chart-container">
+                        <canvas id="budgetBarChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-slate-500 mt-2">Noticeable capital spike in FY25 due to NextGen 911 and Data Center refresh.</p>
+                </div>
+            </div>
+            <div class="bg-blue-50 border border-blue-100 p-4 rounded-lg">
+                <h4 class="font-bold text-blue-900 mb-2">Grants & Federal Funding Influx</h4>
+                <p class="text-sm text-blue-800"><strong>SLCGP (State and Local Cybersecurity Grant Program):</strong> Austin is an eligible sub-recipient through Texas DIR. Focus is on endpoint detection and immutable backups. <br><strong>IIJA (Infrastructure Bill):</strong> Austin Energy & Austin Transportation are leveraging federal funds for smart grid and traffic edge computing, presenting decentralized compute opportunities.</p>
+            </div>
+        </section>
+
+        <section id="initiatives" class="mb-16 scroll-mt-12">
+            <h3 class="text-2xl font-bold mb-4 border-l-4 border-blue-600 pl-3">5. Top 3 Strategic Initiatives</h3>
+            <p class="text-slate-700 mb-6 text-lg leading-relaxed">
+                These are the heavily funded, executive-sponsored modernization efforts currently underway. Aligning Dell solutions to these specific projects is the highest probability path to revenue.
+            </p>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0 flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full text-2xl font-bold text-blue-600">1</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900">Next-Generation Public Safety Data Infrastructure</h4>
+                        <p class="text-sm text-slate-600 mt-1 mb-3"><strong>Owner:</strong> Austin Police Dept (APD) & Emergency Comms</p>
+                        <p class="text-slate-700 text-sm mb-2"><strong>Mandate:</strong> Modernize CAD/RMS systems to support real-time video streaming, AI analytics on body-cam footage, and fail-safe dispatch.</p>
+                        <p class="text-slate-700 text-sm"><strong>IT Requirement:</strong> Massive unstructured data storage expansion, edge computing in patrol vehicles, and highly available (Five 9s) localized data center infrastructure.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0 flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full text-2xl font-bold text-blue-600">2</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900">Enterprise Cloud Repatriation & Hybrid Optimization</h4>
+                        <p class="text-sm text-slate-600 mt-1 mb-3"><strong>Owner:</strong> CTM (Central IT)</p>
+                        <p class="text-slate-700 text-sm mb-2"><strong>Mandate:</strong> Reduce runaway public cloud costs caused by rapid, unoptimized pandemic-era migrations. Increase control over CJIS and HIPAA regulated data.</p>
+                        <p class="text-slate-700 text-sm"><strong>IT Requirement:</strong> Implementing a true hybrid cloud operating model. Requires modern, cloud-like on-prem infrastructure (HCI) and comprehensive data management/tiering tools.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0 flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full text-2xl font-bold text-blue-600">3</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900">Smart Mobility IoT Expansion</h4>
+                        <p class="text-sm text-slate-600 mt-1 mb-3"><strong>Owner:</strong> Austin Transportation Department</p>
+                        <p class="text-slate-700 text-sm mb-2"><strong>Mandate:</strong> Vision Zero objective. Implement intelligent traffic systems, connected vehicle corridors, and real-time pedestrian analytics.</p>
+                        <p class="text-slate-700 text-sm"><strong>IT Requirement:</strong> Ruggedized edge computing at intersections, ultra-low latency data streaming, and centralized AI-ready infrastructure for pattern analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="procurement" class="mb-16 scroll-mt-12">
+            <h3 class="text-2xl font-bold mb-4 border-l-4 border-blue-600 pl-3">6. Procurement, Vendor Landscape & Compliance</h3>
+            <p class="text-slate-700 mb-6 text-lg leading-relaxed">
+                Understanding the procurement pathways and the entrenched competition to navigate the buying process efficiently.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <h5 class="font-bold text-slate-800 mb-3 border-b pb-2">Contract Vehicles</h5>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><strong>Texas DIR:</strong> The absolute primary vehicle. If it's not on DIR, it's an uphill battle.</li>
+                        <li><strong>BuyBoard:</strong> Widely used for commodity hardware.</li>
+                        <li><strong>OMNIA Partners:</strong> Used occasionally for complex enterprise solutions bypassing state lists.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <h5 class="font-bold text-slate-800 mb-3 border-b pb-2">The Battlefield</h5>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><strong>Compute:</strong> Heavy Cisco UCS footprint aging out. HP competitive in edge.</li>
+                        <li><strong>Storage:</strong> NetApp entrenched in Austin Water. Pure Storage expanding in CTM.</li>
+                        <li><strong>Client:</strong> Dell has a strong incumbent position, but faces constant Lenovo price pressure on basic endpoint RFPs.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <h5 class="font-bold text-slate-800 mb-3 border-b pb-2">Compliance Drivers</h5>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><strong>TX-RAMP:</strong> State-level FedRAMP equivalent. Non-negotiable for cloud services.</li>
+                        <li><strong>CJIS:</strong> Critical for all APD data storage/compute. Drives on-prem preference.</li>
+                        <li><strong>SB 475:</strong> State data management/privacy mandates affecting records retention.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="opportunities" class="mb-16 scroll-mt-12">
+            <h3 class="text-2xl font-bold mb-4 border-l-4 border-blue-600 pl-3">7. Actionable Dell Opportunities</h3>
+            <p class="text-slate-700 mb-6 text-lg leading-relaxed">
+                Synthesized account strategy. Click to expand specific sales motions mapped to the entity's current reality and Dell's portfolio capabilities.
+            </p>
+            
+            <div class="space-y-3">
+                <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                    <button class="accordion-btn w-full text-left px-6 py-4 font-bold text-lg bg-slate-50 hover:bg-slate-100 focus:outline-none flex justify-between items-center text-slate-800">
+                        <span><span class="text-blue-600 mr-2">&#9654;</span> Funded Alignment: Public Safety Data Infrastructure</span>
+                        <span class="text-slate-400 font-normal text-sm">PowerScale & VxRail</span>
+                    </button>
+                    <div class="accordion-content px-6 bg-white text-slate-600 text-sm">
+                        <div class="py-4 border-t border-slate-100">
+                            <p class="mb-2"><strong>The Play:</strong> APD is choking on body-cam and intersection video data. They need massively scalable, CJIS-compliant unstructured data storage that doesn't incur public cloud egress fees.</p>
+                            <p><strong>Dell Solution:</strong> Position <strong>PowerScale</strong> for edge-to-core unstructured data management. Combine with <strong>VxRail</strong> at dispatch centers for Five-9s highly available compute that meets strict physical security requirements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                    <button class="accordion-btn w-full text-left px-6 py-4 font-bold text-lg bg-slate-50 hover:bg-slate-100 focus:outline-none flex justify-between items-center text-slate-800">
+                        <span><span class="text-amber-500 mr-2">&#9654;</span> Whitespace & Advisory: Cyber Resilience & Air-Gapping</span>
+                        <span class="text-slate-400 font-normal text-sm">PowerProtect Cyber Recovery</span>
+                    </button>
+                    <div class="accordion-content px-6 bg-white text-slate-600 text-sm">
+                        <div class="py-4 border-t border-slate-100">
+                            <p class="mb-2"><strong>The Play:</strong> The recent CISO mandate focuses on ransomware resilience, but agencies are managing backups in silos. There is a lack of a true, immutable enterprise vault.</p>
+                            <p><strong>Dell Solution:</strong> Lead with an advisory workshop on Zero Trust data protection. Introduce <strong>PowerProtect Cyber Recovery</strong> (vaulting) specifically tailored to protect tier-1 civic infrastructure data (water, traffic, 911) from ransomware encryption, utilizing SLCGP grant funds.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+                    <button class="accordion-btn w-full text-left px-6 py-4 font-bold text-lg bg-slate-50 hover:bg-slate-100 focus:outline-none flex justify-between items-center text-slate-800">
+                        <span><span class="text-red-500 mr-2">&#9654;</span> Competitive Displacement: Cloud Repatriation via APEX</span>
+                        <span class="text-slate-400 font-normal text-sm">Dell APEX / PowerStore</span>
+                    </button>
+                    <div class="accordion-content px-6 bg-white text-slate-600 text-sm">
+                        <div class="py-4 border-t border-slate-100">
+                            <p class="mb-2"><strong>The Play:</strong> CTM is facing pressure over unpredictable AWS/Azure billing for predictable workloads. Competitors (Pure) are pitching hardware refreshes, but the city wants a cloud-like consumption model.</p>
+                            <p><strong>Dell Solution:</strong> Execute a displacement by pitching <strong>Dell APEX Custom Solutions</strong>. Offer them the on-prem security and performance of new <strong>PowerStore</strong> arrays to replace aging Cisco/NetApp gear, but delivered via an OpEx, pay-per-use financial model that aligns with their cloud-budgeting expectations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        const searchInput = document.getElementById('stakeholderSearch');
+        const table = document.getElementById('stakeholderTable');
+        const trs = table.getElementsByTagName('tr');
+
+        searchInput.addEventListener('keyup', function() {
+            const filter = searchInput.value.toLowerCase();
+            for (let i = 1; i < trs.length; i++) {
+                const tds = trs[i].getElementsByTagName('td');
+                let found = false;
+                for (let j = 0; j < tds.length; j++) {
+                    if (tds[j].innerHTML.toLowerCase().indexOf(filter) > -1) {
+                        found = true;
+                        break;
+                    }
+                }
+                trs[i].style.display = found ? "" : "none";
+            }
+        });
+
+        const pieCtx = document.getElementById('budgetPieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['O&M (Run the Business)', 'CapEx (Modernization)', 'Security / Compliance'],
+                datasets: [{
+                    data: [65, 25, 10],
+                    backgroundColor: ['#94a3b8', '#2563eb', '#f59e0b'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12 } },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                },
+                cutout: '70%'
+            }
+        });
+
+        const barCtx = document.getElementById('budgetBarChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['FY23', 'FY24', 'FY25', 'FY26 (Proj)'],
+                datasets: [
+                    {
+                        label: 'O&M Budget',
+                        data: [110, 115, 120, 122],
+                        backgroundColor: '#cbd5e1'
+                    },
+                    {
+                        label: 'Capital/Projects',
+                        data: [35, 40, 65, 60],
+                        backgroundColor: '#0284c7'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true, beginAtZero: true }
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12 } }
+                }
+            }
+        });
+
+        const accordions = document.querySelectorAll('.accordion-btn');
+        accordions.forEach(acc => {
+            acc.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('span span');
+                if (content.classList.contains('open')) {
+                    content.classList.remove('open');
+                    icon.innerHTML = '&#9654;';
+                } else {
+                    content.classList.add('open');
+                    icon.innerHTML = '&#9660;';
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

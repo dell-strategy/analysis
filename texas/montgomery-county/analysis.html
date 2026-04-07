@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Chosen Palette: Slate & Enterprise Blue (Background: #f8fafc, Text: #0f172a, Accent: #2563eb, Success: #16a34a, Warning: #d97706) -->
+<!-- Application Structure Plan: A tabbed, dashboard-style Single Page Application (SPA). The architecture follows a logical sales prep workflow: High-level overview -> Key People -> Budgets -> Funded Projects -> Dell Solutions. To improve flow, direct cross-linking connects funded projects immediately to their corresponding Dell sales plays. The navigation uses a responsive flex-wrap design to ensure usability on mobile devices without horizontal scrolling. -->
+<!-- Visualization & Content Choices: 
+  1. Macro Landscape: Goal: Inform. Method: CSS-drawn data icons & KPI cards. Interaction: Hover effects. Justification: Fast loading, strictly non-SVG enterprise aesthetic.
+  2. Power Structure: Goal: Organize/Relationships. Method: Interactive Grid. Interaction: Click to reveal 'tech stance'. Justification: Condenses dense persona data into a scannable format.
+  3. Financials: Goal: Compare/Inform. Method: Horizontal Bar Chart & Interactive Doughnut Chart (Chart.js). Interaction: Data toggle (Percent vs Dollars) & Tooltips. Justification: Visualizes macro scale (Total vs IT) and micro allocation (O&M vs CapEx), critical for sizing deals.
+  4. Initiatives: Goal: Compare. Method: Bar Chart (Chart.js). Interaction: 'View Dell Alignment' deep links. Justification: Visually sizes the top 3 projects and immediately routes the user to actionable sales plays.
+  Library/Method: Tailwind for layout, Vanilla JS for interaction/tabs/routing, Chart.js for data viz.
+-->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montgomery County, TX - IT Market Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; color: #0f172a; }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+            padding: 1rem;
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container { height: 350px; }
+        }
+
+        .view-section { display: none; opacity: 0; }
+        .view-section.active-view { display: block; animation: fadeIn 0.4s forwards; }
+
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(8px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        .reveal-content { display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; }
+        .reveal-card.open .reveal-content { display: block; animation: fadeIn 0.3s; }
+        .reveal-card { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .reveal-card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        
+        .highlight-pulse { animation: pulseRing 2s cubic-bezier(0.4, 0, 0.6, 1); }
+        @keyframes pulseRing {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="bg-slate-900 text-white shadow-md z-10 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center flex-wrap gap-4">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight">Montgomery County, TX</h1>
+                <p class="text-sm text-slate-400 mt-1 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 inline-block"></span>
+                    Dell Technologies | SLG Market Analysis
+                </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <a href="https://dmonkey1001.github.io/slg-strategies/texas/montgomery-county/analysis.pdf" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1.5 rounded text-sm font-semibold tracking-wide transition-colors flex items-center gap-2 border border-slate-600 hover:border-slate-400" title="Open Source Report PDF">
+                    📄 Source PDF
+                </a>
+                <div class="bg-blue-600/20 border border-blue-500 text-blue-100 px-3 py-1.5 rounded text-sm font-semibold tracking-wide">
+                    TARGET ENTITY PROFILE
+                </div>
+            </div>
+        </div>
+        
+        <nav class="bg-slate-800 px-4 sm:px-6 lg:px-8 border-b border-slate-700">
+            <div class="max-w-7xl mx-auto flex flex-wrap gap-2 py-3" id="main-nav">
+                <button onclick="switchTab('overview')" class="tab-btn active bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors" data-target="overview">
+                    Macro Overview
+                </button>
+                <button onclick="switchTab('leadership')" class="tab-btn px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-700 hover:text-white rounded-full transition-colors" data-target="leadership">
+                    Power Structure
+                </button>
+                <button onclick="switchTab('financials')" class="tab-btn px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-700 hover:text-white rounded-full transition-colors" data-target="financials">
+                    Budget & Procurement
+                </button>
+                <button onclick="switchTab('initiatives')" class="tab-btn px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-700 hover:text-white rounded-full transition-colors" data-target="initiatives">
+                    Strategic Initiatives
+                </button>
+                <button onclick="switchTab('dell-action')" class="tab-btn px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-700 hover:text-white rounded-full transition-colors border border-slate-600 hover:border-blue-400" data-target="dell-action">
+                    Dell Action Plan
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+        <section id="overview" class="view-section active-view">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">Executive Summary & Macro Landscape</h2>
+                <p class="text-slate-600 border-l-4 border-blue-500 pl-4 bg-white p-4 rounded shadow-sm text-sm md:text-base">
+                    High-level briefing on the current state of Montgomery County. Rapid demographic growth from the Houston metro area is straining existing county infrastructure, driving a strong need for scalable IT solutions under a fiscally conservative administration.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <div class="mb-4 flex items-end gap-1 h-8">
+                        <div class="w-2.5 h-3 bg-blue-300 rounded-t-sm"></div>
+                        <div class="w-2.5 h-5 bg-blue-500 rounded-t-sm"></div>
+                        <div class="w-2.5 h-8 bg-blue-700 rounded-t-sm"></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800">Hyper-Growth Entity</h3>
+                    <p class="text-sm text-slate-500 mt-2 leading-relaxed">Population approaching 700,000. Suburban expansion is maximizing current data center capabilities and forcing a modernization of citizen service portals.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <div class="mb-4 flex flex-col items-start gap-1 w-8 h-8 justify-end">
+                        <div class="w-8 h-1.5 bg-slate-700 rounded-t-sm"></div>
+                        <div class="flex gap-1.5 px-1">
+                            <div class="w-1.5 h-4 bg-slate-500"></div>
+                            <div class="w-1.5 h-4 bg-slate-500"></div>
+                            <div class="w-1.5 h-4 bg-slate-500"></div>
+                        </div>
+                        <div class="w-10 h-1 bg-slate-800 -ml-1 rounded-sm"></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800">Conservative Governance</h3>
+                    <p class="text-sm text-slate-500 mt-2 leading-relaxed">Fiscally conservative Commissioners Court. High emphasis on multi-year ROI, CAPEX predictability, and keeping property taxes low.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <div class="mb-4 flex gap-1.5 items-center h-8">
+                        <div class="w-3 h-3 rounded-full bg-slate-400"></div>
+                        <div class="w-4 h-0.5 bg-slate-300"></div>
+                        <div class="w-5 h-5 rounded-full bg-blue-600 shadow-sm border-2 border-white"></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800">Agency Autonomy</h3>
+                    <p class="text-sm text-slate-500 mt-2 leading-relaxed">Agencies (especially Law Enforcement) operate with high autonomy, often controlling their own substantial IT budgets alongside Central IT.</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Top 3 Administrative Goals (Current FY)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-blue-50 p-5 rounded-lg border border-blue-100">
+                    <div class="text-blue-700 font-bold text-xl mb-2">01.</div>
+                    <h4 class="font-bold text-slate-800 mb-1">Public Safety Scaling</h4>
+                    <p class="text-slate-600 text-sm">Expanding Sheriff's Office capabilities, including pervasive body-worn cameras and real-time crime center build-outs.</p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
+                    <div class="text-slate-500 font-bold text-xl mb-2">02.</div>
+                    <h4 class="font-bold text-slate-800 mb-1">Digital Citizen Experience</h4>
+                    <p class="text-slate-600 text-sm">Overhauling legacy portals for taxes and permits to reduce in-person foot traffic.</p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
+                    <div class="text-slate-500 font-bold text-xl mb-2">03.</div>
+                    <h4 class="font-bold text-slate-800 mb-1">Cyber Resilience</h4>
+                    <p class="text-slate-600 text-sm">Hardening critical infrastructure against ransomware threats, driven by recent regional attacks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership" class="view-section">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">Power Structure & IT Governance</h2>
+                <p class="text-slate-600 border-l-4 border-blue-500 pl-4 bg-white p-4 rounded shadow-sm text-sm md:text-base">
+                    Understanding the division between financial purchasers and technical influencers. Click on individual stakeholder cards to reveal their specific stances on technology procurement.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                <div class="reveal-card bg-white border border-slate-200 rounded-lg p-5" onclick="toggleCard(this)">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 font-bold border border-slate-300">MK</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">Mark Keough</h4>
+                                <p class="text-sm font-medium text-slate-500">County Judge</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold border border-amber-200">Financial Purchaser</span>
+                    </div>
+                    <div class="reveal-content text-sm text-slate-600">
+                        <strong class="text-slate-800 block mb-1">Tech Stance:</strong> Highly focused on budget efficiency. Recently blocked a massive cloud migration proposal due to unpredictable OPEX costs. Prefers capitalized on-premise investments if they show a clear 3-5 year ROI.
+                    </div>
+                </div>
+
+                <div class="reveal-card bg-white border border-slate-200 rounded-lg p-5" onclick="toggleCard(this)">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold border border-blue-200">BW</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">Bobby Williams</h4>
+                                <p class="text-sm font-medium text-slate-500">Director of IT</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold border border-blue-200">Technical Influencer</span>
+                    </div>
+                    <div class="reveal-content text-sm text-slate-600">
+                        <strong class="text-slate-800 block mb-1">Tech Stance:</strong> Pushing hard for data center consolidation and standardized cybersecurity frameworks. Actively trying to rein in "shadow IT" from other departments. A strong proponent of Hyper-Converged Infrastructure (HCI).
+                    </div>
+                </div>
+
+                <div class="reveal-card bg-white border border-slate-200 rounded-lg p-5" onclick="toggleCard(this)">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 font-bold border border-slate-300">RH</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">Rand Henderson</h4>
+                                <p class="text-sm font-medium text-slate-500">County Sheriff</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-bold border border-purple-200">Financial/Influencer</span>
+                    </div>
+                    <div class="reveal-content text-sm text-slate-600">
+                        <strong class="text-slate-800 block mb-1">Tech Stance:</strong> Controls the largest departmental budget. Fully focused on body-cams, digital evidence management, and mobile dispatch. Often procures IT equipment independently of Central IT if grants are involved.
+                    </div>
+                </div>
+
+                <div class="reveal-card bg-white border border-slate-200 rounded-lg p-5" onclick="toggleCard(this)">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 font-bold border border-slate-300">CC</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">Commissioners Court</h4>
+                                <p class="text-sm font-medium text-slate-500">Precincts 1-4</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold border border-amber-200">Financial Purchaser</span>
+                    </div>
+                    <div class="reveal-content text-sm text-slate-600">
+                        <strong class="text-slate-800 block mb-1">Tech Stance:</strong> Require majority vote for all IT contracts over $50k. Heavily scrutinize sole-source justifications and strongly favor leveraging State cooperative contracts (DIR) to ensure competitive pricing.
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-4">
+                    <h3 class="text-xl font-bold text-slate-800">IT Governance Model</h3>
+                    <span class="px-3 py-1 bg-slate-800 text-white rounded text-sm font-bold tracking-wide">HYBRID</span>
+                </div>
+                <p class="text-sm text-slate-600 mb-6">Central IT provides core networking, email, and ERP. Large agencies manage specific mission-critical apps locally.</p>
+                
+                <h4 class="font-bold text-red-700 text-sm uppercase tracking-wide mb-3 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-red-600 rounded-full inline-block"></span> Operational Friction Points
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-white p-4 rounded border border-red-100 shadow-sm">
+                        <strong class="block text-sm text-slate-800 mb-1">Chargeback Disputes</strong>
+                        <p class="text-xs text-slate-600">Agencies resist paying Central IT for increased storage limits, leading to departmental data silos and unmanaged NAS arrays.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded border border-red-100 shadow-sm">
+                        <strong class="block text-sm text-slate-800 mb-1">Security Posture</strong>
+                        <p class="text-xs text-slate-600">Central IT mandates Zero Trust, but legacy agency applications cannot support modern authentication.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded border border-red-100 shadow-sm">
+                        <strong class="block text-sm text-slate-800 mb-1">Procurement Speed</strong>
+                        <p class="text-xs text-slate-600">Central IT requires a 60-day architectural review for departmental purchases, causing agencies to attempt bypasses.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="financials" class="view-section">
+             <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">Financials & Budget Breakdown</h2>
+                <p class="text-slate-600 border-l-4 border-blue-500 pl-4 bg-white p-4 rounded shadow-sm text-sm md:text-base">
+                    Montgomery County operates on an Oct 1 - Sept 30 Fiscal Year. Understanding the scale of IT spend relative to the total budget, and the split between Operational Maintenance (O&M) and Capital Expenditures (CapEx).
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <div class="chart-container flex flex-col">
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wide mb-2 text-center">Macro Budget Context (FY25)</h3>
+                    <div class="flex-grow relative w-full h-full">
+                        <canvas id="macroBarChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-container flex flex-col">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wide">IT Allocation ($22.5M)</h3>
+                        <button id="togglePieMode" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2 py-1 rounded border border-slate-300 transition-colors">
+                            View as Dollars ($)
+                        </button>
+                    </div>
+                    <div class="flex-grow relative w-full h-full">
+                        <canvas id="budgetPieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200 shadow-sm">
+                    <h4 class="font-bold text-emerald-900 border-b border-emerald-200 pb-2 mb-3">External Grant Funding Available</h4>
+                    <ul class="text-sm text-emerald-800 space-y-3">
+                        <li class="flex gap-2"><span class="font-bold text-emerald-600">◆</span> <div><strong>SLCGP ($850k):</strong> Allocated for endpoint security and immutable backups.</div></li>
+                        <li class="flex gap-2"><span class="font-bold text-emerald-600">◆</span> <div><strong>ARPA Residual ($1.2M):</strong> Targeted for broadband/digital equity portal expansion.</div></li>
+                        <li class="flex gap-2"><span class="font-bold text-emerald-600">◆</span> <div><strong>DOJ JAG (Variable):</strong> Used aggressively by Sheriff for tactical tech and data storage.</div></li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3">Procurement & Competitors</h4>
+                    <div class="space-y-4 text-sm text-slate-600">
+                        <div>
+                            <strong class="text-slate-800 block mb-1">Preferred Vehicles:</strong>
+                            <span class="inline-block bg-slate-100 px-2 py-1 rounded text-xs mr-1 border border-slate-200">DIR (Texas)</span>
+                            <span class="inline-block bg-slate-100 px-2 py-1 rounded text-xs mr-1 border border-slate-200">BuyBoard</span>
+                            <span class="inline-block bg-slate-100 px-2 py-1 rounded text-xs border border-slate-200">OMNIA</span>
+                        </div>
+                        <div>
+                            <strong class="text-slate-800 block mb-1">Incumbent Footprint:</strong>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>Compute: Heavy legacy HPE footprint (Gen 9/10). Aging out.</li>
+                                <li>Storage: Pure Storage (Core IT) + Synology Sprawl (Departments).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong class="text-red-700 block mb-1">Compliance Mandates:</strong> CJIS (Criminal Justice) & StateRAMP.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="initiatives" class="view-section">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">Top 3 Strategic Initiatives (Funded)</h2>
+                <p class="text-slate-600 border-l-4 border-blue-500 pl-4 bg-white p-4 rounded shadow-sm text-sm md:text-base">
+                    Active modernization efforts representing major purchasing events. Review the estimated CapEx scale below, then explore the specific initiatives and their corresponding Dell sales plays.
+                </p>
+            </div>
+
+            <div class="mb-8 chart-container" style="max-height: 250px; height: 250px;">
+                <canvas id="initiativesChart"></canvas>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-white border-l-4 border-blue-600 shadow-sm rounded-r-lg p-5 hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-3">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1 block">Initiative 01</span>
+                            <h3 class="text-xl font-bold text-slate-800">Smart Public Safety & Digital Evidence</h3>
+                        </div>
+                        <button onclick="switchTab('dell-action', 'motion-1')" class="bg-blue-50 hover:bg-blue-100 text-blue-700 px-4 py-2 rounded text-sm font-semibold transition-colors whitespace-nowrap border border-blue-200">
+                            View Dell Solution ➔
+                        </button>
+                    </div>
+                    <div class="text-sm text-slate-600 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div><strong class="block text-slate-800">Owning Agency:</strong> Sheriff's Office</div>
+                        <div class="md:col-span-2"><strong class="block text-slate-800">IT Need:</strong> Massive influx of unstructured video data requiring CJIS-compliant, scalable storage.</div>
+                    </div>
+                </div>
+
+                <div class="bg-white border-l-4 border-slate-600 shadow-sm rounded-r-lg p-5 hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-3">
+                        <div>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 block">Initiative 02</span>
+                            <h3 class="text-xl font-bold text-slate-800">County Data Center Consolidation</h3>
+                        </div>
+                        <button onclick="switchTab('dell-action', 'motion-2')" class="bg-slate-50 hover:bg-slate-100 text-slate-700 px-4 py-2 rounded text-sm font-semibold transition-colors whitespace-nowrap border border-slate-200">
+                            View Dell Solution ➔
+                        </button>
+                    </div>
+                    <div class="text-sm text-slate-600 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div><strong class="block text-slate-800">Owning Agency:</strong> Central IT</div>
+                        <div class="md:col-span-2"><strong class="block text-slate-800">IT Need:</strong> High-density compute, simplified hypervisor management to replace aging HPE infrastructure.</div>
+                    </div>
+                </div>
+
+                <div class="bg-white border-l-4 border-slate-400 shadow-sm rounded-r-lg p-5 hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-3">
+                        <div>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 block">Initiative 03</span>
+                            <h3 class="text-xl font-bold text-slate-800">Ransomware Resilience Strategy</h3>
+                        </div>
+                        <button onclick="switchTab('dell-action', 'motion-3')" class="bg-slate-50 hover:bg-slate-100 text-slate-700 px-4 py-2 rounded text-sm font-semibold transition-colors whitespace-nowrap border border-slate-200">
+                            View Dell Solution ➔
+                        </button>
+                    </div>
+                    <div class="text-sm text-slate-600 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div><strong class="block text-slate-800">Owning Agency:</strong> Risk Management</div>
+                        <div class="md:col-span-2"><strong class="block text-slate-800">IT Need:</strong> Air-gapped / immutable backup architecture and rapid recovery appliances.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dell-action" class="view-section">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-blue-800 mb-2">Actionable Dell Opportunities</h2>
+                <p class="text-slate-600 border-l-4 border-blue-500 pl-4 bg-white p-4 rounded shadow-sm text-sm md:text-base">
+                    Specific sales motions mapped directly to Montgomery County's funded initiatives and operational friction points. Use these to structure initial outreach and meeting agendas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                
+                <div id="motion-1" class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col">
+                    <div class="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded mb-3 w-max">Funded Alignment</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Storage for Public Safety</h3>
+                    <p class="text-sm text-slate-500 mb-4 pb-4 border-b border-slate-100">Aligns with Initiative: Smart Public Safety ($3.5M)</p>
+                    <div class="text-sm text-slate-700 space-y-3 flex-grow">
+                        <p><strong>The Pitch:</strong> The Sheriff's office is drowning in video data and buying isolated NAS devices, violating Central IT policy.</p>
+                        <p><strong>The Solution:</strong> Lead with <strong>Dell PowerScale (Isilon)</strong>. It provides massive unstructured data scalability that satisfies Central IT's management requirements and the Sheriff's CJIS compliance needs.</p>
+                        <ul class="list-disc pl-4 bg-blue-50 p-3 rounded mt-2">
+                            <li class="mb-1"><strong>Action:</strong> Set a joint meeting with Sheriff Henderson and IT Director Williams.</li>
+                            <li><strong>Leverage:</strong> Mention DIR contract availability immediately to simplify procurement.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="motion-2" class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col">
+                    <div class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded mb-3 w-max">Competitive Displacement</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">HPE Server Refresh</h3>
+                    <p class="text-sm text-slate-500 mb-4 pb-4 border-b border-slate-100">Aligns with Initiative: Data Center Consolidation ($1.8M)</p>
+                    <div class="text-sm text-slate-700 space-y-3 flex-grow">
+                        <p><strong>The Pitch:</strong> The county's core infrastructure relies on aging HPE Gen 9/10 servers. Central IT wants to consolidate into HCI, presenting a clear vulnerability for HPE.</p>
+                        <p><strong>The Solution:</strong> Execute a rip-and-replace strategy using <strong>Dell VxRail</strong> or <strong>PowerEdge with vSAN</strong>.</p>
+                        <ul class="list-disc pl-4 bg-amber-50 p-3 rounded mt-2">
+                            <li class="mb-1"><strong>Action:</strong> Run a Live Optics assessment on their current HPE environment.</li>
+                            <li><strong>Leverage:</strong> Show Judge Keough the OPEX savings (power/cooling) to appeal to his fiscal conservatism.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="motion-3" class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col">
+                    <div class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-1 rounded mb-3 w-max">Whitespace & Advisory</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Cyber Resilience</h3>
+                    <p class="text-sm text-slate-500 mb-4 pb-4 border-b border-slate-100">Aligns with Initiative: Ransomware Resilience ($900k)</p>
+                    <div class="text-sm text-slate-700 space-y-3 flex-grow">
+                        <p><strong>The Pitch:</strong> They possess basic backups but lack true immutability and rapid recovery guarantees required by modern cyber insurance.</p>
+                        <p><strong>The Solution:</strong> Position <strong>Dell PowerProtect Cyber Recovery (Vault)</strong>.</p>
+                        <ul class="list-disc pl-4 bg-emerald-50 p-3 rounded mt-2">
+                            <li class="mb-1"><strong>Action:</strong> Bring in a Dell Cyber Resilience specialist for an advisory workshop.</li>
+                            <li><strong>Leverage:</strong> Frame it as a Risk Management solution eligible for the remaining SLCGP grant funds.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col">
+                    <div class="inline-block bg-slate-200 text-slate-800 text-xs font-bold px-2 py-1 rounded mb-3 w-max">Strategic Positioning</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">APEX & The "Cloud" Rejection</h3>
+                    <p class="text-sm text-slate-500 mb-4 pb-4 border-b border-slate-200">Overcoming Judge Keough's Cloud Objections</p>
+                    <div class="text-sm text-slate-700 space-y-3 flex-grow">
+                        <p><strong>The Pitch:</strong> Judge Keough blocked public cloud migration due to unpredictable OPEX, but IT still demands cloud-like agility.</p>
+                        <p><strong>The Solution:</strong> Position <strong>Dell APEX (Data Center Utility)</strong> as the "on-premise cloud".</p>
+                        <ul class="list-disc pl-4 bg-white border border-slate-200 p-3 rounded mt-2">
+                            <li><strong>Action:</strong> Present APEX as offering IT the consumption model they want, while giving the Judge the physical control and predictable cost ceilings he demands.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Store chart instances globally for updating
+        window.appCharts = {
+            macro: null,
+            pie: null,
+            initiatives: null,
+            pieModeIsPercent: true
+        };
+
+        // Navigation Logic
+        function switchTab(targetId, highlightId = null) {
+            // Update Navigation UI
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('text-slate-300', 'hover:bg-slate-700');
+            });
+            
+            const activeBtn = document.querySelector(`.tab-btn[data-target="${targetId}"]`);
+            if(activeBtn) {
+                activeBtn.classList.remove('text-slate-300', 'hover:bg-slate-700');
+                activeBtn.classList.add('bg-blue-600', 'text-white');
+            }
+
+            // Update Views safely
+            document.querySelectorAll('.view-section').forEach(section => {
+                section.style.display = 'none';
+                section.classList.remove('active-view');
+            });
+
+            const targetSection = document.getElementById(targetId);
+            if(targetSection) {
+                targetSection.style.display = 'block';
+                // Force reflow to restart animation
+                void targetSection.offsetWidth;
+                targetSection.classList.add('active-view');
+            }
+
+            // Handle Chart Resizing when container becomes visible
+            if (targetId === 'financials') {
+                if (window.appCharts.macro) window.appCharts.macro.resize();
+                if (window.appCharts.pie) window.appCharts.pie.resize();
+            }
+            if (targetId === 'initiatives') {
+                if (window.appCharts.initiatives) window.appCharts.initiatives.resize();
+            }
+
+            // Handle Deep Link Highlighting
+            if (highlightId) {
+                setTimeout(() => {
+                    const el = document.getElementById(highlightId);
+                    if (el) {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        el.classList.add('highlight-pulse');
+                        setTimeout(() => el.classList.remove('highlight-pulse'), 2000);
+                    }
+                }, 100); // slight delay to allow display:block to settle
+            }
+        }
+
+        // Interactive Card Logic
+        function toggleCard(element) {
+            element.classList.toggle('open');
+            if(element.classList.contains('open')) {
+                element.classList.add('border-blue-400', 'bg-slate-50');
+            } else {
+                element.classList.remove('border-blue-400', 'bg-slate-50');
+            }
+        }
+
+        // Initialize Charts on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            Chart.defaults.font.family = "'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+            Chart.defaults.color = '#64748b';
+
+            // 1. Macro Budget Chart (Horizontal Bar)
+            const macroCtx = document.getElementById('macroBarChart').getContext('2d');
+            window.appCharts.macro = new Chart(macroCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Total County Budget', 'IT Budget', 'Identified Grants'],
+                    datasets: [{
+                        label: 'Budget in Millions ($)',
+                        data: [412, 22.5, 2.05],
+                        backgroundColor: ['#e2e8f0', '#3b82f6', '#10b981'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => `$${ctx.parsed.x}M`
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { type: 'logarithmic', title: { display: true, text: 'Logarithmic Scale ($M)' } }
+                    }
+                }
+            });
+
+            // 2. IT Budget Pie Chart
+            const pieCtx = document.getElementById('budgetPieChart').getContext('2d');
+            const pieDataPercent = [72, 28];
+            const pieDataDollars = [16.2, 6.3]; // 72% of 22.5, 28% of 22.5
+
+            window.appCharts.pie = new Chart(pieCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['O&M (Run the Business)', 'CapEx (Net-New Projects)'],
+                    datasets: [{
+                        data: pieDataPercent,
+                        backgroundColor: ['#94a3b8', '#2563eb'],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12 } },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => {
+                                    return window.appCharts.pieModeIsPercent 
+                                        ? ` ${ctx.label}: ${ctx.parsed}%` 
+                                        : ` ${ctx.label}: $${ctx.parsed}M`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '65%'
+                }
+            });
+
+            // Toggle Logic for Pie Chart
+            document.getElementById('togglePieMode').addEventListener('click', function() {
+                window.appCharts.pieModeIsPercent = !window.appCharts.pieModeIsPercent;
+                
+                if (window.appCharts.pieModeIsPercent) {
+                    this.textContent = 'View as Dollars ($)';
+                    window.appCharts.pie.data.datasets[0].data = pieDataPercent;
+                } else {
+                    this.textContent = 'View as Percent (%)';
+                    window.appCharts.pie.data.datasets[0].data = pieDataDollars;
+                }
+                window.appCharts.pie.update();
+            });
+
+            // 3. Initiatives CapEx Chart
+            const initCtx = document.getElementById('initiativesChart').getContext('2d');
+            window.appCharts.initiatives = new Chart(initCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Public Safety / Digital Evid.', 'Data Center Consolidation', 'Ransomware Resilience'],
+                    datasets: [{
+                        label: 'Estimated CapEx ($M)',
+                        data: [3.5, 1.8, 0.9],
+                        backgroundColor: ['#2563eb', '#64748b', '#94a3b8'],
+                        borderRadius: 4,
+                        barThickness: 40
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => `$${ctx.parsed.y}M Estimated`
+                            }
+                        }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, title: { display: true, text: 'Millions ($)' } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

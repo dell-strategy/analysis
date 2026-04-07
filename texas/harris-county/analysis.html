@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harris County, TX - Dell Technologies Strategic Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafaf9; /* stone-50 */
+            color: #292524; /* stone-800 */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .nav-active {
+            background-color: #e7e5e4; /* stone-200 */
+            color: #0076CE; /* Dell Blue */
+            font-weight: 600;
+            border-left: 4px solid #0076CE;
+        }
+        .nav-item {
+            border-left: 4px solid transparent;
+            transition: all 0.2s ease;
+        }
+        .nav-item:hover {
+            background-color: #f5f5f4; /* stone-100 */
+        }
+        .opportunity-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .opportunity-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-top: 3px solid #0076CE;
+        }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden antialiased">
+
+    <!-- Chosen Palette: Warm Neutrals (Stone/Beige) with Dell Blue (#0076CE) Accents -->
+    <!-- Application Structure Plan: A dashboard-style layout with a persistent sidebar for navigation. The content is broken down into thematic sections (Executive Summary, Power Structure, Financials, Tech Reality, Dell Opportunities) to allow the Dell AE to easily jump to relevant intelligence. This structure prevents overwhelming the user with a massive text document and uses interactive elements (charts, toggleable opportunity cards) to make the data consumable and actionable for sales strategy. -->
+    <!-- Visualization & Content Choices: 
+         1. Budget Breakdown -> Goal: Compare US vs Total Budget -> Viz: Doughnut Chart (Chart.js) -> Shows the massive scale of the county vs centralized IT.
+         2. IT Spend -> Goal: Inform O&M vs CapEx -> Viz: Stacked Bar Chart (Chart.js) -> Highlights how much budget is locked in maintenance vs available for Dell net-new projects.
+         3. Power Structure -> Goal: Organize -> Viz: HTML/CSS Grid Cards -> Clearly delineates financial sign-off from technical evaluation without relying on complex SVGs. 
+         4. Dell Opportunities -> Goal: Filter/Interact -> Viz: Clickable Grid with JS filtering -> Allows the AE to filter whitespace opportunities by Dell product line (Storage, Compute, APEX, etc.). -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <aside class="w-64 bg-white border-r border-stone-200 flex flex-col h-full z-10 flex-shrink-0 shadow-sm hidden md:flex">
+        <div class="p-6 border-b border-stone-200">
+            <h1 class="text-xl font-bold tracking-tight text-stone-900">Account Intel</h1>
+            <p class="text-xs text-stone-500 uppercase tracking-wider mt-1 font-semibold">Harris County, TX</p>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4 space-y-1">
+            <button onclick="navigate('exec-summary')" id="nav-exec-summary" class="nav-item nav-active w-full text-left px-6 py-3 text-sm font-medium text-stone-700">Executive Summary</button>
+            <button onclick="navigate('power-structure')" id="nav-power-structure" class="nav-item w-full text-left px-6 py-3 text-sm font-medium text-stone-700">Power Structure & Gov</button>
+            <button onclick="navigate('financials')" id="nav-financials" class="nav-item w-full text-left px-6 py-3 text-sm font-medium text-stone-700">Financials & Budgets</button>
+            <button onclick="navigate('tech-reality')" id="nav-tech-reality" class="nav-item w-full text-left px-6 py-3 text-sm font-medium text-stone-700">IT Landscape & Procurement</button>
+            <button onclick="navigate('dell-opportunities')" id="nav-dell-opportunities" class="nav-item w-full text-left px-6 py-3 text-sm font-medium text-stone-700">Dell Action Plan</button>
+        </nav>
+        <div class="p-4 border-t border-stone-200 text-xs text-stone-400">
+            Internal Dell Technologies Use Only. <br>Prepared for SLG District.
+        </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <header class="md:hidden bg-white border-b border-stone-200 p-4 flex justify-between items-center fixed w-full z-20">
+        <div>
+            <h1 class="text-lg font-bold">Harris County, TX</h1>
+            <p class="text-xs text-stone-500">Dell Technologies Intel</p>
+        </div>
+        <select onchange="navigate(this.value)" class="bg-stone-100 border border-stone-300 text-sm rounded-md p-2">
+            <option value="exec-summary">Executive Summary</option>
+            <option value="power-structure">Power Structure</option>
+            <option value="financials">Financials</option>
+            <option value="tech-reality">Tech Landscape</option>
+            <option value="dell-opportunities">Dell Opportunities</option>
+        </select>
+    </header>
+
+    <main class="flex-1 h-full overflow-y-auto bg-stone-50 pt-20 md:pt-0 relative scroll-smooth">
+        
+        <!-- EXECUTIVE SUMMARY -->
+        <section id="exec-summary" class="section-content p-6 md:p-12 max-w-5xl mx-auto block">
+            <div class="mb-8">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold uppercase rounded-full tracking-wide mb-3">Macro Landscape</span>
+                <h2 class="text-3xl font-bold text-stone-900 mb-4">Executive Summary & Account Posture</h2>
+                <p class="text-stone-600 leading-relaxed text-lg">
+                    This section provides a high-level overview of Harris County's current political and economic climate. It is designed to give Account Executives immediate context regarding the county's overarching administrative goals, demographic pressures, and primary strategic drivers for the current fiscal year. Understanding these macro elements is crucial for positioning Dell's solutions as strategic enablers rather than simple IT commodities.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm border-t-4 border-t-stone-400">
+                    <div class="text-3xl mb-2">&#127963;</div>
+                    <h3 class="font-bold text-lg mb-2">The Entity</h3>
+                    <p class="text-sm text-stone-600">3rd most populous county in the US (4.7M+ residents). Encompasses Houston. Massive geographical footprint requiring highly resilient and distributed infrastructure.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm border-t-4 border-t-blue-500">
+                    <div class="text-3xl mb-2">&#128181;</div>
+                    <h3 class="font-bold text-lg mb-2">Economic Climate</h3>
+                    <p class="text-sm text-stone-600">Strong tax base, but facing pressure from inflation and the winding down of ARPA funds. Shifting focus from emergency COVID spending to long-term operational efficiency.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm border-t-4 border-t-stone-400">
+                    <div class="text-3xl mb-2">&#128737;</div>
+                    <h3 class="font-bold text-lg mb-2">Political Climate</h3>
+                    <p class="text-sm text-stone-600">Led by a progressive Commissioners Court focusing heavily on digital equity, criminal justice reform, and severe weather (flood) resilience and continuity of operations.</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold mb-4 border-b border-stone-200 pb-2">Core Administrative Goals (FY Current)</h3>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-lg border border-stone-200 flex items-start gap-4">
+                    <div class="bg-stone-100 p-2 rounded text-stone-600 font-bold">&#10148;</div>
+                    <div>
+                        <h4 class="font-bold">Justice Administration Modernization</h4>
+                        <p class="text-sm text-stone-600">Massive backlog in the court system and high data generation from law enforcement (body cams). Requires massive, secure, and compliant unstructured data storage (Dell PowerScale opportunity).</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-stone-200 flex items-start gap-4">
+                    <div class="bg-stone-100 p-2 rounded text-stone-600 font-bold">&#10148;</div>
+                    <div>
+                        <h4 class="font-bold">Disaster Resilience & Continuity</h4>
+                        <p class="text-sm text-stone-600">Following recent hurricanes and winter storms, there is a strict mandate for highly available data centers and robust disaster recovery/cyber recovery vaults (Dell PowerProtect/Cyber Recovery Vault).</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-stone-200 flex items-start gap-4">
+                    <div class="bg-stone-100 p-2 rounded text-stone-600 font-bold">&#10148;</div>
+                    <div>
+                        <h4 class="font-bold">Digital Equity & Broadband</h4>
+                        <p class="text-sm text-stone-600">Expanding connectivity to underserved precincts. Drives need for edge computing and modern, manageable endpoints for field workers (Dell Client/Edge solutions).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POWER STRUCTURE -->
+        <section id="power-structure" class="section-content p-6 md:p-12 max-w-5xl mx-auto hidden">
+            <div class="mb-8">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold uppercase rounded-full tracking-wide mb-3">Stakeholders & Governance</span>
+                <h2 class="text-3xl font-bold text-stone-900 mb-4">Power Structure & IT Governance</h2>
+                <p class="text-stone-600 leading-relaxed text-lg">
+                    This section maps the decision-making hierarchy within Harris County. It explicitly differentiates between the elected officials who control the purse strings (Commissioners Court) and the technical leaders who dictate architecture (Universal Services and Agency CIOs). It also details the IT governance model, highlighting friction points in how technology is procured across different county departments.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <!-- Elected Power -->
+                <div class="bg-white rounded-xl border border-stone-200 p-6 shadow-sm">
+                    <h3 class="font-bold text-lg mb-4 text-stone-800 flex items-center gap-2">
+                        <span>&#128176;</span> Financial & Signatory Power
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="p-4 bg-stone-50 rounded border border-stone-100">
+                            <p class="text-xs text-stone-500 uppercase tracking-wider font-bold">County Judge</p>
+                            <p class="font-bold text-lg text-stone-900">Judge Lina Hidalgo</p>
+                            <p class="text-sm text-stone-600 mt-1">Presides over Commissioners Court. Key driver of transparency, digital equity, and modernization initiatives. Ultimate sign-off on major capital expenditures.</p>
+                        </li>
+                        <li class="p-4 bg-stone-50 rounded border border-stone-100">
+                            <p class="text-xs text-stone-500 uppercase tracking-wider font-bold">Commissioners Court</p>
+                            <p class="font-bold text-stone-900">4 Precinct Commissioners</p>
+                            <p class="text-sm text-stone-600 mt-1">They hold the budget authority. Any IT project over $50k typically requires court approval. Tech pitches must align with their precinct constituents' needs (safety, roads, flood control).</p>
+                        </li>
+                        <li class="p-4 bg-stone-50 rounded border border-stone-100">
+                            <p class="text-xs text-stone-500 uppercase tracking-wider font-bold">County Auditor</p>
+                            <p class="font-bold text-stone-900">Errika Williams</p>
+                            <p class="text-sm text-stone-600 mt-1">Strict oversight on procurement compliance and grant funding utilization.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tech Power -->
+                <div class="bg-white rounded-xl border border-stone-200 p-6 shadow-sm">
+                    <h3 class="font-bold text-lg mb-4 text-stone-800 flex items-center gap-2">
+                        <span>&#128187;</span> Technical Influence
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="p-4 bg-blue-50 rounded border border-blue-100">
+                            <p class="text-xs text-blue-600 uppercase tracking-wider font-bold">CIO / Exec. Director, Universal Services</p>
+                            <p class="font-bold text-lg text-stone-900">Sindhu Menon</p>
+                            <p class="text-sm text-stone-600 mt-1">Central IT authority. Pushing for cloud-smart strategies, cybersecurity consolidation, and enterprise-wide architectures. Key Dell relationship target.</p>
+                        </li>
+                        <li class="p-4 bg-stone-50 rounded border border-stone-100">
+                            <p class="text-xs text-stone-500 uppercase tracking-wider font-bold">Agency-Level IT Directors</p>
+                            <p class="font-bold text-stone-900">Sheriff's Office, District Attorney, Toll Road Authority</p>
+                            <p class="text-sm text-stone-600 mt-1">These "Heavyweight" agencies have their own massive budgets and often operate semi-autonomously. They hold massive technical influence over their specific domains (e.g., Law Enforcement tech).</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold mb-4">IT Governance & Service Delivery Model</h3>
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="px-3 py-1 bg-stone-800 text-white font-bold rounded">HYBRID MODEL</div>
+                    <p class="text-sm font-semibold text-stone-600">Transitioning from Federated to Consolidated</p>
+                </div>
+                <p class="text-stone-700 text-sm mb-4">
+                    Harris County operates in a <strong>Hybrid/Federated</strong> IT model. <em>Universal Services (US)</em> acts as the central IT provider managing core network, enterprise data centers, ERP, and baseline cybersecurity. However, large elected officials (Sheriff, Clerk, DA) operate independently.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="border-l-4 border-red-400 pl-4 py-2">
+                        <h4 class="font-bold text-sm text-stone-900">Friction Point: Chargebacks</h4>
+                        <p class="text-xs text-stone-600 mt-1">Universal Services charges agencies back for compute/storage. This often drives agencies to procure their own "shadow IT" or rogue cloud instances to avoid centralized fees.</p>
+                    </div>
+                    <div class="border-l-4 border-green-500 pl-4 py-2">
+                        <h4 class="font-bold text-sm text-stone-900">Dell Advantage</h4>
+                        <p class="text-xs text-stone-600 mt-1">Position <strong>Dell APEX</strong> to Universal Services as a way to offer cloud-like, consumption-based internal pricing to agencies, keeping data on-premise but solving the chargeback friction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINANCIALS -->
+        <section id="financials" class="section-content p-6 md:p-12 max-w-5xl mx-auto hidden">
+            <div class="mb-8">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold uppercase rounded-full tracking-wide mb-3">Budgets & Funding</span>
+                <h2 class="text-3xl font-bold text-stone-900 mb-4">Financials & IT Budget Breakdown</h2>
+                <p class="text-stone-600 leading-relaxed text-lg">
+                    This section analyzes the fiscal reality of the county. It visualizes the total county budget relative to the centralized IT (Universal Services) budget, and breaks down IT spend into recurring Operations & Maintenance (O&M) versus Capital Expenditures (CapEx). It also identifies alternative funding vehicles like federal grants that Dell can help the county leverage.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm">
+                    <h3 class="font-bold text-center text-stone-800 mb-4">Total County vs. Universal Services IT Budget</h3>
+                    <div class="chart-container">
+                        <canvas id="budgetDoughnut"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-stone-500 mt-4">Note: Millions of dollars. "Other Dept IT" represents fragmented shadow IT spend outside of centralized control.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col">
+                    <h3 class="font-bold text-center text-stone-800 mb-4">Universal Services: O&M vs. Capital/Projects</h3>
+                    <div class="chart-container flex-grow">
+                        <canvas id="opexCapexBar"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-stone-500 mt-4">Trend: The county is attempting to shift heavy CapEx hardware refreshes to predictable OpEx models (Strong APEX positioning).</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold mb-4">Grants & Federal Funding (Net-New Opportunities)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-5 rounded-lg border border-stone-200">
+                    <div class="font-bold text-stone-800 mb-2 flex items-center gap-2"><span>&#128274;</span> SLCGP (Cybersecurity Grant)</div>
+                    <p class="text-sm text-stone-600">Harris County is a prime candidate for State and Local Cybersecurity Grant Program funds. <br><strong>Dell Play:</strong> Attach PowerProtect Cyber Recovery, Endpoint Security (CrowdStrike/Secureworks via Dell), and zero-trust infrastructure assessments.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-stone-200">
+                    <div class="font-bold text-stone-800 mb-2 flex items-center gap-2"><span>&#128246;</span> IIJA (Infrastructure Bill)</div>
+                    <p class="text-sm text-stone-600">Funding allocated for broadband expansion and smart infrastructure. <br><strong>Dell Play:</strong> Rugged mobility for field workers, Edge gateways for smart traffic/flood sensors, and central compute to process edge telemetry.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH REALITY & PROCUREMENT -->
+        <section id="tech-reality" class="section-content p-6 md:p-12 max-w-5xl mx-auto hidden">
+            <div class="mb-8">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold uppercase rounded-full tracking-wide mb-3">Operational Reality</span>
+                <h2 class="text-3xl font-bold text-stone-900 mb-4">IT Landscape, Projects & Procurement</h2>
+                <p class="text-stone-600 leading-relaxed text-lg">
+                    This section covers how the county actually buys technology and what their current technical debt looks like. It details the active strategic initiatives at the agency level, the incumbent vendors Dell must displace, and the strict compliance mandates governing data architecture.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm mb-8">
+                <h3 class="font-bold text-lg mb-4 text-stone-800 border-b border-stone-100 pb-2">Major Agency Modernization Efforts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="font-bold text-sm text-blue-700">Law Enforcement (Sheriff/DA)</h4>
+                        <ul class="text-sm text-stone-600 mt-2 space-y-2">
+                            <li>&bull; Exponential growth in digital evidence (Body/Dash Cams).</li>
+                            <li>&bull; CJIS compliance is mandatory.</li>
+                            <li>&bull; <strong>Need:</strong> Massive unstructured data tiering.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-blue-700">Public Health & Human Services</h4>
+                        <ul class="text-sm text-stone-600 mt-2 space-y-2">
+                            <li>&bull; Modernizing patient records and telehealth.</li>
+                            <li>&bull; HIPAA compliance is mandatory.</li>
+                            <li>&bull; <strong>Need:</strong> VDI for mobile clinicians, secure structured storage.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-blue-700">Toll Road Authority (HCTRA)</h4>
+                        <ul class="text-sm text-stone-600 mt-2 space-y-2">
+                            <li>&bull; High-revenue agency; operates almost as a separate business.</li>
+                            <li>&bull; Shifting to all-electronic tolling, AI license plate reading.</li>
+                            <li>&bull; <strong>Need:</strong> Edge AI compute, low-latency storage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-stone-800">Procurement Vehicles</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center bg-stone-50 p-3 rounded border border-stone-200">
+                            <span class="font-semibold text-sm">Texas DIR Contracts</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Primary</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-stone-50 p-3 rounded border border-stone-200">
+                            <span class="font-semibold text-sm">OMNIA Partners</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Co-Op</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-stone-50 p-3 rounded border border-stone-200">
+                            <span class="font-semibold text-sm">BuyBoard</span>
+                            <span class="text-xs bg-stone-200 text-stone-700 px-2 py-1 rounded">Secondary</span>
+                        </li>
+                    </ul>
+                    <p class="text-xs text-stone-500 mt-3">Dell is fully covered on DIR. Push for streamlined procurement via DIR to avoid lengthy County RFP processes.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-stone-800">Incumbents & Tech Debt</h3>
+                    <div class="space-y-4">
+                        <div class="p-3 border-l-4 border-stone-400 bg-white shadow-sm">
+                            <p class="text-xs font-bold text-stone-500 uppercase">Compute & Storage</p>
+                            <p class="text-sm text-stone-800 mt-1">Mix of aging HPE servers and legacy NetApp filers in decentralized agency closets. Ripe for <strong>PowerStore/PowerEdge consolidation</strong> into the main DC.</p>
+                        </div>
+                        <div class="p-3 border-l-4 border-stone-400 bg-white shadow-sm">
+                            <p class="text-xs font-bold text-stone-500 uppercase">Cloud & Software</p>
+                            <p class="text-sm text-stone-800 mt-1">Heavy Microsoft/Azure footprint. Some public cloud shock (unpredictable egress fees) occurring. Ripe for <strong>APEX hybrid cloud repatriation</strong> conversations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DELL ACTION PLAN -->
+        <section id="dell-opportunities" class="section-content p-6 md:p-12 max-w-5xl mx-auto hidden">
+            <div class="mb-8">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold uppercase rounded-full tracking-wide mb-3">The "So What"</span>
+                <h2 class="text-3xl font-bold text-stone-900 mb-4">Actionable Dell Opportunities</h2>
+                <p class="text-stone-600 leading-relaxed text-lg">
+                    This interactive section synthesizes the preceding research into concrete sales motions. Use the filters below to align Dell's specific product portfolios with Harris County's identified vulnerabilities and funded initiatives. This is the blueprint for competitive displacement and pipeline generation.
+                </p>
+            </div>
+
+            <!-- Interactive Filters -->
+            <div class="flex flex-wrap gap-2 mb-6 border-b border-stone-200 pb-4">
+                <button onclick="filterOpps('all')" id="btn-all" class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-blue-600 text-white transition-colors">All Opportunities</button>
+                <button onclick="filterOpps('storage')" id="btn-storage" class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-stone-200 text-stone-700 hover:bg-stone-300 transition-colors">Storage & Data</button>
+                <button onclick="filterOpps('compute')" id="btn-compute" class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-stone-200 text-stone-700 hover:bg-stone-300 transition-colors">Compute & AI</button>
+                <button onclick="filterOpps('apex')" id="btn-apex" class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-stone-200 text-stone-700 hover:bg-stone-300 transition-colors">APEX / Multicloud</button>
+                <button onclick="filterOpps('client')" id="btn-client" class="filter-btn px-4 py-2 rounded-full text-sm font-semibold bg-stone-200 text-stone-700 hover:bg-stone-300 transition-colors">Client Solutions</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="opportunities-grid">
+                
+                <!-- PowerScale Card -->
+                <div class="opportunity-card opp-item storage bg-white rounded-xl border border-stone-200 p-6 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-lg text-stone-900">Unstructured Data Sprawl (PowerScale)</h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Storage</span>
+                    </div>
+                    <div class="text-sm text-stone-600 mb-4 flex-grow">
+                        <strong>The Vulnerability:</strong> The Sheriff's Office and DA are drowning in body camera footage and digital evidence. Currently utilizing fragmented, tier-1 storage which is highly inefficient.
+                        <br><br><strong>The Dell Play:</strong> Pitch PowerScale (Isilon) for massive, scalable unstructured data archiving. Emphasize CJIS compliance, tiering to cloud for cold data, and ransomware defense.
+                    </div>
+                    <div class="mt-auto border-t border-stone-100 pt-3">
+                        <span class="text-xs font-bold text-stone-400 uppercase">Target:</span>
+                        <span class="text-sm font-semibold text-stone-800 ml-2">Sheriff's IT Director, Universal Services</span>
+                    </div>
+                </div>
+
+                <!-- Cyber Recovery Card -->
+                <div class="opportunity-card opp-item storage bg-white rounded-xl border border-stone-200 p-6 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-lg text-stone-900">Air-Gapped Ransomware Defense (PowerProtect)</h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Storage / Security</span>
+                    </div>
+                    <div class="text-sm text-stone-600 mb-4 flex-grow">
+                        <strong>The Vulnerability:</strong> SLG entities in Texas are prime targets for ransomware. Traditional backups are online and vulnerable. County lacks a true isolated recovery environment.
+                        <br><br><strong>The Dell Play:</strong> Lead with Cyber Recovery Vault. Leverage SLCGP federal grant funding as the financial vehicle. Frame it as "Continuity of Government" rather than just IT backup.
+                    </div>
+                    <div class="mt-auto border-t border-stone-100 pt-3">
+                        <span class="text-xs font-bold text-stone-400 uppercase">Target:</span>
+                        <span class="text-sm font-semibold text-stone-800 ml-2">CISO, Universal Services</span>
+                    </div>
+                </div>
+
+                <!-- APEX Card -->
+                <div class="opportunity-card opp-item apex bg-white rounded-xl border border-stone-200 p-6 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-lg text-stone-900">Cloud Repatriation & Chargeback (APEX)</h3>
+                        <span class="bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded">APEX</span>
+                    </div>
+                    <div class="text-sm text-stone-600 mb-4 flex-grow">
+                        <strong>The Vulnerability:</strong> Universal Services struggles to charge back compute costs to agencies, causing agencies to bypass IT and use expensive public cloud (AWS/Azure).
+                        <br><br><strong>The Dell Play:</strong> Introduce Dell APEX Custom Solutions. Universal Services can keep data on-premise (avoiding egress fees and maintaining security) while offering a cloud-like consumption portal to agencies.
+                    </div>
+                    <div class="mt-auto border-t border-stone-100 pt-3">
+                        <span class="text-xs font-bold text-stone-400 uppercase">Target:</span>
+                        <span class="text-sm font-semibold text-stone-800 ml-2">CIO (Sindhu Menon)</span>
+                    </div>
+                </div>
+
+                <!-- AI / Edge Card -->
+                <div class="opportunity-card opp-item compute bg-white rounded-xl border border-stone-200 p-6 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-lg text-stone-900">Smart County & Toll AI (PowerEdge / Edge)</h3>
+                        <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Compute</span>
+                    </div>
+                    <div class="text-sm text-stone-600 mb-4 flex-grow">
+                        <strong>The Vulnerability:</strong> The Toll Road Authority (HCTRA) and Flood Control District are modernizing sensor networks but lack the edge compute to process data locally before sending it to the core.
+                        <br><br><strong>The Dell Play:</strong> Position Rugged Edge devices and AI-Ready PowerEdge servers with NVIDIA GPUs for real-time license plate reading and flood sensor telemetry analysis.
+                    </div>
+                    <div class="mt-auto border-t border-stone-100 pt-3">
+                        <span class="text-xs font-bold text-stone-400 uppercase">Target:</span>
+                        <span class="text-sm font-semibold text-stone-800 ml-2">HCTRA IT Director, Flood Control IT</span>
+                    </div>
+                </div>
+
+                <!-- Client Card -->
+                <div class="opportunity-card opp-item client bg-white rounded-xl border border-stone-200 p-6 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-bold text-lg text-stone-900">Hybrid Workforce & Field Mobility (CSG)</h3>
+                        <span class="bg-orange-100 text-orange-800 text-xs font-bold px-2 py-1 rounded">Client Solutions</span>
+                    </div>
+                    <div class="text-sm text-stone-600 mb-4 flex-grow">
+                        <strong>The Vulnerability:</strong> Aging fleet of desktops and non-standardized laptops across multiple agencies creates a massive support burden and endpoint security risk.
+                        <br><br><strong>The Dell Play:</strong> Standardize on Latitude for knowledge workers and Rugged tablets for Sheriff deputies/field inspectors. Attach Dell Optimizer (AI) and ProSupport Plus to reduce IT helpdesk load.
+                    </div>
+                    <div class="mt-auto border-t border-stone-100 pt-3">
+                        <span class="text-xs font-bold text-stone-400 uppercase">Target:</span>
+                        <span class="text-sm font-semibold text-stone-800 ml-2">Client Engineering Lead, Procurement</span>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+                <h3 class="font-bold text-blue-900 text-lg mb-2">Next Step for Account Team</h3>
+                <p class="text-blue-800 text-sm">Schedule a whiteboard session with Universal Services focused on <strong>"Infrastructure as a Service for County Agencies"</strong> leading with the APEX and PowerStore portfolio.</p>
+            </div>
+
+        </section>
+
+        <!-- Footer buffer -->
+        <div class="h-24"></div>
+    </main>
+
+    <script>
+        // --- Navigation Logic ---
+        function navigate(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section-content').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            
+            // Show target section
+            const target = document.getElementById(sectionId);
+            if(target) {
+                target.classList.remove('hidden');
+                target.classList.add('block');
+            }
+
+            // Update Sidebar UI (Desktop)
+            document.querySelectorAll('.nav-item').forEach(el => {
+                el.classList.remove('nav-active');
+            });
+            const activeNav = document.getElementById('nav-' + sectionId);
+            if(activeNav) {
+                activeNav.classList.add('nav-active');
+            }
+
+            // Mobile select update
+            const selectEl = document.querySelector('header select');
+            if(selectEl && selectEl.value !== sectionId) {
+                selectEl.value = sectionId;
+            }
+
+            // Scroll to top
+            document.querySelector('main').scrollTop = 0;
+
+            // Re-render charts if financials section is clicked to ensure correct sizing within display:block
+            if(sectionId === 'financials') {
+                renderCharts();
+            }
+        }
+
+        // --- Opportunity Filtering Logic ---
+        function filterOpps(category) {
+            // Update Buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('bg-stone-200', 'text-stone-700');
+            });
+            const activeBtn = document.getElementById('btn-' + category);
+            if(activeBtn) {
+                activeBtn.classList.remove('bg-stone-200', 'text-stone-700');
+                activeBtn.classList.add('bg-blue-600', 'text-white');
+            }
+
+            // Filter Cards
+            const items = document.querySelectorAll('.opp-item');
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'flex';
+                } else {
+                    if (item.classList.contains(category)) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // --- Chart.js Implementations ---
+        let doughnutChartInstance = null;
+        let barChartInstance = null;
+
+        function renderCharts() {
+            // Set default font
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.defaults.color = '#57534e'; // stone-500
+
+            // 1. Budget Doughnut Chart
+            const ctxDoughnut = document.getElementById('budgetDoughnut').getContext('2d');
+            if (doughnutChartInstance) doughnutChartInstance.destroy();
+            
+            doughnutChartInstance = new Chart(ctxDoughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Central IT (Univ. Services)', 'Other Dept IT (Decentralized)', 'Non-IT County Budget'],
+                    datasets: [{
+                        data: [120, 85, 2200], // Approximate Millions
+                        backgroundColor: [
+                            '#0076CE', // Dell Blue
+                            '#a8a29e', // stone-400
+                            '#e7e5e4'  // stone-200
+                        ],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) { label += ': '; }
+                                    if (context.parsed !== null) {
+                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumSignificantDigits: 3 }).format(context.parsed * 1000000);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '70%'
+                }
+            });
+
+            // 2. O&M vs CapEx Bar Chart
+            const ctxBar = document.getElementById('opexCapexBar').getContext('2d');
+            if (barChartInstance) barChartInstance.destroy();
+
+            barChartInstance = new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['FY 2022', 'FY 2023', 'FY 2024 (Est)'],
+                    datasets: [
+                        {
+                            label: 'Operations & Maintenance (O&M)',
+                            data: [75, 82, 90], // Millions
+                            backgroundColor: '#e7e5e4', // stone-200
+                        },
+                        {
+                            label: 'Capital Projects (CapEx / Net New)',
+                            data: [30, 28, 30], // Millions
+                            backgroundColor: '#0076CE', // Dell Blue
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            stacked: true,
+                            grid: { display: false }
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Budget ($ Millions)'
+                            },
+                            grid: {
+                                color: '#f5f5f4'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': $' + context.parsed.y + 'M';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize charts on load if the financials section is default, 
+        // otherwise wait for navigation to click it.
+        // We will pre-render them just in case.
+        document.addEventListener('DOMContentLoaded', () => {
+             // Force an initial render slightly delayed to ensure DOM is ready
+             setTimeout(renderCharts, 100);
+        });
+
+    </script>
+</body>
+</html>

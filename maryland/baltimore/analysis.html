@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baltimore SLG Market Analysis - Dell Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js for Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dellBlue: '#0076CE',
+                        dellDark: '#0B1B3D',
+                        dellGray: '#F5F6F7',
+                        dellDarkGray: '#444444'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar for a cleaner look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .nav-item.active {
+            background-color: #0076CE;
+            color: white;
+            border-left: 4px solid #0B1B3D;
+        }
+
+        .sort-icon::after {
+            content: '\f0dc';
+            font-family: 'FontAwesome';
+            margin-left: 5px;
+            color: #9ca3af;
+        }
+        .asc::after { content: '\f0de'; color: #0076CE; }
+        .desc::after { content: '\f0dd'; color: #0076CE; }
+
+        .opp-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .opp-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-dellGray text-gray-800 font-sans flex h-screen overflow-hidden">
+
+    <!-- Mobile Header -->
+    <div class="md:hidden fixed top-0 w-full bg-dellDark text-white p-4 flex justify-between items-center z-50 shadow-md">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-server text-dellBlue"></i>
+            <span class="font-bold text-lg">Dell SLG Dashboard</span>
+        </div>
+        <button id="mobileMenuBtn" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="bg-white w-64 h-full shadow-lg flex-shrink-0 absolute md:relative z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col pt-16 md:pt-0">
+        <div class="p-6 bg-dellDark text-white hidden md:block">
+            <div class="flex items-center space-x-3 mb-2">
+                <i class="fas fa-city text-2xl text-dellBlue"></i>
+                <h1 class="font-bold text-xl leading-tight">Baltimore City</h1>
+            </div>
+            <p class="text-xs text-gray-300 font-medium tracking-wide uppercase">SLG Market Analysis</p>
+        </div>
+        
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="space-y-1">
+                <li><a href="#" onclick="showSection('sec1')" class="nav-item active flex items-center px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"><i class="fas fa-chart-pie w-6"></i> Executive Summary</a></li>
+                <li><a href="#" onclick="showSection('sec2')" class="nav-item flex items-center px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"><i class="fas fa-users w-6"></i> Power Structure</a></li>
+                <li><a href="#" onclick="showSection('sec3')" class="nav-item flex items-center px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"><i class="fas fa-network-wired w-6"></i> IT Governance</a></li>
+                <li><a href="#" onclick="showSection('sec4')" class="nav-item flex items-center px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"><i class="fas fa-file-invoice-dollar w-6"></i> Financials & Budget</a></li>
+                <li><a href="#" onclick="showSection('sec5')" class="nav-item flex items-center px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"><i class="fas fa-rocket w-6"></i> Strategic Initiatives</a></li>
+                <li><a href="#" onclick="showSection('sec6')" class="nav-item flex items-center px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"><i class="fas fa-shield-alt w-6"></i> Procurement & Comp.</a></li>
+                <li><a href="#" onclick="showSection('sec7')" class="nav-item flex items-center px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100"><i class="fas fa-bullseye w-6"></i> Actionable Opportunities</a></li>
+            </ul>
+        </nav>
+
+        <div class="p-4 border-t border-gray-200">
+            <a href="https://dmonkey1001.github.io/slg-strategies/maryland/baltimore/analysis.pdf" target="_blank" class="w-full bg-dellDark text-white py-2 px-4 rounded flex items-center justify-center space-x-2 hover:bg-gray-800 transition shadow">
+                <i class="fas fa-file-pdf text-red-400"></i>
+                <span class="text-sm font-medium">Original Report PDF</span>
+            </a>
+            <p class="text-xs text-gray-400 text-center mt-2">Updated: April 2026</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto w-full pt-16 md:pt-0 bg-dellGray relative" id="mainContent">
+        
+        <!-- Section 1: Executive Summary -->
+        <section id="sec1" class="content-section p-6 md:p-10 max-w-7xl mx-auto block">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-dellDark border-b-2 border-dellBlue pb-2 inline-block mb-4">Executive Summary & Macro Landscape</h2>
+                <p class="text-gray-600 text-lg">Navigating urban revitalization, digital modernization, and macroeconomic headwinds.</p>
+            </div>
+
+            <!-- Metric Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 border-l-4 border-l-dellBlue">
+                    <p class="text-sm text-gray-500 uppercase font-semibold">Total Adopted Budget</p>
+                    <p class="text-3xl font-bold text-dellDark mt-1">$4.63B</p>
+                    <p class="text-xs text-gray-400 mt-2">FY 2026</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 border-l-4 border-l-blue-400">
+                    <p class="text-sm text-gray-500 uppercase font-semibold">Capital Budget (CIP)</p>
+                    <p class="text-3xl font-bold text-dellDark mt-1">$932M</p>
+                    <p class="text-xs text-gray-400 mt-2">FY 2026</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 border-l-4 border-l-purple-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold">IT Capital Request</p>
+                    <p class="text-3xl font-bold text-dellDark mt-1">$134.7M</p>
+                    <p class="text-xs text-gray-400 mt-2">FY27 - FY32 Cycle</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+                <h3 class="text-xl font-bold text-dellDark mb-4"><i class="fas fa-landmark text-dellBlue mr-2"></i> Current Administrative Priorities</h3>
+                <div class="space-y-4 text-gray-700">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center mt-1"><span class="text-dellBlue font-bold text-xs">1</span></div>
+                        <p class="ml-3"><strong class="text-dellDark">Public Safety & Violence Reduction:</strong> $1.2B allocated to public safety. Modernizing 911 CAD systems, 800 MHz radio, and CitiWatch surveillance (requires heavy unstructured data storage/video analytics).</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center mt-1"><span class="text-dellBlue font-bold text-xs">2</span></div>
+                        <p class="ml-3"><strong class="text-dellDark">Equitable Development:</strong> $6.9B "Downtown RISE" master plan. Demands modernized GIS, digital permitting, and integrated asset management for DPW/DOT.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center mt-1"><span class="text-dellBlue font-bold text-xs">3</span></div>
+                        <p class="ml-3"><strong class="text-dellDark">Digital Equity:</strong> $35M ARPA investment driving the FreeBmoreWiFi expansion, vast device procurement (Chromebooks), and endpoint management requirements.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-5">
+                <h4 class="font-bold text-dellBlue mb-2"><i class="fas fa-lightbulb mr-2"></i> The Dell Perspective</h4>
+                <p class="text-sm text-gray-700">Baltimore City represents a lucrative SLG market transitioning to consolidated governance, cloud-first, and zero-trust. Success requires navigating internal chargeback frictions and aligning pitches directly to public safety and digital equity mandates.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Power Structure -->
+        <section id="sec2" class="content-section p-6 md:p-10 max-w-7xl mx-auto hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-dellDark border-b-2 border-dellBlue pb-2 inline-block mb-4">Power Structure & Key Stakeholders</h2>
+                <p class="text-gray-600 text-lg">Tripartite structure: Executive vision, Legislative appropriation, and Central IT (BCIT) governance.</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow overflow-hidden border border-gray-200">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200" id="stakeholderTable">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100" onclick="sortTable(0)">Name & Title <span class="sort-icon"></span></th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100" onclick="sortTable(1)">Sphere of Influence <span class="sort-icon"></span></th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100" onclick="sortTable(2)">Public Stances / Focus <span class="sort-icon"></span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200 text-sm">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap"><div class="font-bold text-dellDark">Brandon M. Scott</div><div class="text-xs text-gray-500">Mayor</div></td>
+                                <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Financial Purchaser</span><br><span class="text-xs text-gray-500 mt-1">Executive Sponsor</span></td>
+                                <td class="px-6 py-4 text-gray-700">Champions data-driven governance, digital equity, and modernization of public safety. Treating violence as a public health issue.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap"><div class="font-bold text-dellDark">Danielle McCray</div><div class="text-xs text-gray-500">City Council, Budget Chair</div></td>
+                                <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Financial Purchaser</span><br><span class="text-xs text-gray-500 mt-1">Legislative Gatekeeper</span></td>
+                                <td class="px-6 py-4 text-gray-700">Focused on operational efficiency, staffing shortages, and continuity of civic services. Approves capital budgets.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap"><div class="font-bold text-dellDark">Faith P. Leach</div><div class="text-xs text-gray-500">City Administrator</div></td>
+                                <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Financial Purchaser</span><br><span class="text-xs text-gray-500 mt-1">Operational Exec</span></td>
+                                <td class="px-6 py-4 text-gray-700">Views technology as the engine for civic efficiency. Treats data as a vital corporate asset for transparency.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap"><div class="font-bold text-dellDark">T.J. Mayotte</div><div class="text-xs text-gray-500">CIO, BCIT</div></td>
+                                <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Technical Influencer</span><br><span class="text-xs text-gray-500 mt-1">Primary IT DM</span></td>
+                                <td class="px-6 py-4 text-gray-700">Manages $53M IT operating budget. Focused on high-impact transformations, zero-trust security, and digital equity.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap"><div class="font-bold text-dellDark">Kenya Asli</div><div class="text-xs text-gray-500">Dir. Broadband & Digital Equity</div></td>
+                                <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Technical Influencer</span><br><span class="text-xs text-gray-500 mt-1">Program Owner</span></td>
+                                <td class="px-6 py-4 text-gray-700">Manages $35M ARPA allocation. Focuses on FreeBmoreWiFi and distributing hardware (Chromebooks) to close the digital divide.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap"><div class="font-bold text-dellDark">Justin Elszasz</div><div class="text-xs text-gray-500">Chief Data Officer</div></td>
+                                <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Technical Influencer</span><br><span class="text-xs text-gray-500 mt-1">Analytics Lead</span></td>
+                                <td class="px-6 py-4 text-gray-700">Advocates for agile, human-centered design. Heavy emphasis on data analytics and performance metrics (CitiStat).</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap"><div class="font-bold text-dellDark">Permanent CISO</div><div class="text-xs text-gray-500">In Transition (Acting/MSP)</div></td>
+                                <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Technical Influencer</span><br><span class="text-xs text-gray-500 mt-1">Security Gatekeeper</span></td>
+                                <td class="px-6 py-4 text-gray-700">Enterprise focus remains strictly on Zero Trust architecture, CJIS compliance, and ransomware resilience.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 mt-3"><i class="fas fa-info-circle"></i> Click table headers to sort columns.</p>
+        </section>
+
+        <!-- Section 3: IT Governance -->
+        <section id="sec3" class="content-section p-6 md:p-10 max-w-7xl mx-auto hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-dellDark border-b-2 border-dellBlue pb-2 inline-block mb-4">IT Governance & Service Delivery</h2>
+                <p class="text-gray-600 text-lg">Transitioning from a federated model to a strict Consolidated/Shared Services model.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <!-- Model Box -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full text-dellBlue"><i class="fas fa-project-diagram text-xl"></i></div>
+                        <h3 class="text-xl font-bold text-dellDark">Cloud-First Mandate</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">BCIT is dismantling agency fiefdoms to establish enterprise standards. Driving a "cloud-first, cloud-only" posture to virtualize workloads out of vulnerable closets into centralized/SaaS platforms.</p>
+                    <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                        <p class="text-sm font-semibold text-gray-800">EPMO Established:</p>
+                        <p class="text-xs text-gray-600">Enterprise Portfolio Management Office now acts as the gatekeeper, eliminating redundant software and enforcing cyber standards.</p>
+                    </div>
+                </div>
+
+                <!-- Friction Box -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="bg-orange-100 p-3 rounded-full text-orange-600"><i class="fas fa-exclamation-triangle text-xl"></i></div>
+                        <h3 class="text-xl font-bold text-dellDark">Major Friction Points</h3>
+                    </div>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 p-4 bg-red-50/50 rounded-md border border-red-100">
+                            <i class="fas fa-times-circle text-red-500 mt-1 shrink-0"></i>
+                            <div class="flex-1">
+                                <strong class="text-dellDark block mb-1">ISF Chargebacks</strong>
+                                <p class="text-sm text-gray-700 mb-3">Agencies resent BCIT billing them for shared resources (storage, network).</p>
+                                <div class="bg-blue-50 text-dellBlue text-xs p-2.5 rounded border border-blue-100 flex items-start sm:items-center shadow-sm">
+                                    <i class="fas fa-lightbulb text-blue-500 mr-2 mt-0.5 sm:mt-0 shrink-0"></i>
+                                    <span><strong>Dell Play:</strong> Pitch TCO reduction (VxRail) to lower ISF rates.</span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start gap-3 p-4 bg-red-50/50 rounded-md border border-red-100">
+                            <i class="fas fa-times-circle text-red-500 mt-1 shrink-0"></i>
+                            <div class="flex-1">
+                                <strong class="text-dellDark block mb-1">OIG Oversight</strong>
+                                <p class="text-sm text-gray-700">High-profile IT failures ($4.8M website fiasco) lead to extreme risk aversion and elongated sales cycles.</p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start gap-3 p-4 bg-red-50/50 rounded-md border border-red-100">
+                            <i class="fas fa-times-circle text-red-500 mt-1 shrink-0"></i>
+                            <div class="flex-1">
+                                <strong class="text-dellDark block mb-1">Zero Trust Whiplash</strong>
+                                <p class="text-sm text-gray-700">A $1.5M Workday EFT fraud forced abrupt Zero Trust mandates, causing inter-agency workflow friction.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Financials & Budget -->
+        <section id="sec4" class="content-section p-6 md:p-10 max-w-7xl mx-auto hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-dellDark border-b-2 border-dellBlue pb-2 inline-block mb-4">Financials & Budget Breakdown</h2>
+                <p class="text-gray-600 text-lg">Understanding the flow of capital and critical grant influxes.</p>
+            </div>
+
+            <!-- Financials Top Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Operating Budget -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 border-b pb-2">Operating (O&M)</h3>
+                    <div class="text-4xl font-bold text-dellDark mb-2">$53M</div>
+                    <p class="text-sm text-gray-600 mb-4">Annual BCIT operating spend.</p>
+                    <ul class="text-xs text-gray-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-1"></i> Dedicated to "keeping the lights on"</li>
+                        <li><i class="fas fa-check text-green-500 mr-1"></i> Cloud hosting & software licensing</li>
+                        <li><i class="fas fa-exclamation-circle text-orange-400 mr-1"></i> Minimal flexibility for net-new transformations</li>
+                    </ul>
+                </div>
+
+                <!-- Capital Budget -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 border-b pb-2">Capital (CIP)</h3>
+                    <div class="text-4xl font-bold text-dellBlue mb-2">$11.33M</div>
+                    <p class="text-sm text-gray-600 mb-4">Direct IT Capital request for FY27.</p>
+                    <ul class="text-xs text-gray-500 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-1"></i> Funds major hardware acquisitions</li>
+                        <li><i class="fas fa-check text-green-500 mr-1"></i> Infrastructure replacements</li>
+                        <li><i class="fas fa-check text-green-500 mr-1"></i> Financed via PAYGO & GO Bonds</li>
+                    </ul>
+                </div>
+
+                <!-- Grant Influx -->
+                <div class="bg-dellDark text-white rounded-lg shadow-sm p-6 relative overflow-hidden">
+                    <i class="fas fa-hand-holding-usd absolute right-[-20px] bottom-[-20px] text-8xl text-white opacity-10"></i>
+                    <h3 class="text-lg font-bold mb-2 border-b border-gray-600 pb-2">Grant Influx Ecosystem</h3>
+                    <ul class="text-sm space-y-4 mt-4 relative z-10">
+                        <li>
+                            <strong class="text-blue-300">ARPA ($35M):</strong> Massive one-time broadband/digital equity influx. Funds 30k Chromebooks, WiFi, and $4M gap fill for Tax App.
+                        </li>
+                        <li>
+                            <strong class="text-blue-300">SLCGP:</strong> Utilizing federal cyber grants ($12M state allocation) to deploy Zero Trust and IAM following EFT fraud.
+                        </li>
+                        <li>
+                            <strong class="text-blue-300">Infra/Transit:</strong> $1B Light Rail modernization drives edge compute and IP network needs.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Financial Visual -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                <h3 class="text-xl font-bold text-dellDark mb-4">Overall City Budget Overview (FY 2026)</h3>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="relative w-full max-w-xs h-64">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                    <div class="text-gray-700 max-w-md">
+                        <p class="mb-4">The overarching $4.63 Billion adopted budget is heavily skewed towards operational expenditures (keeping the city running), while the Capital Improvement Program (CIP) dictates long-term infrastructure and technology buys.</p>
+                        <p class="text-sm text-gray-500 border-l-2 border-dellBlue pl-3"><strong>Sales Strategy:</strong> Frame Dell hardware purchases not just as one-off capital buys, but as critical enablers that reduce long-term operational costs (O&M) within the larger budget.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Strategic Initiatives -->
+        <section id="sec5" class="content-section p-6 md:p-10 max-w-7xl mx-auto hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-dellDark border-b-2 border-dellBlue pb-2 inline-block mb-4">Strategic Initiatives & Projects</h2>
+                <p class="text-gray-600 text-lg">Top modernization efforts dominating the FY27–FY32 CIP.</p>
+            </div>
+
+            <!-- Strategic Visual -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+                <h3 class="text-xl font-bold text-dellDark mb-4">Capital Allocation for Top 3 IT Projects</h3>
+                <div class="relative w-full h-64 md:h-80">
+                    <canvas id="initiativesChart"></canvas>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg border-l-4 border-l-purple-500 shadow-sm p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-xl font-bold text-dellDark">Tax App Modernization</h3>
+                        <p class="text-purple-600 font-semibold mt-1">PRJ003238</p>
+                        <div class="mt-4 bg-gray-50 p-3 rounded">
+                            <span class="block text-xs text-gray-500 uppercase">Est. Total Cost</span>
+                            <span class="text-2xl font-bold text-gray-800">$18.6M</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-sm text-gray-700 mb-3"><strong>Mandate:</strong> Enhance citizen experience and replace antiquated mainframe systems. Ensure strict integration with Workday to prevent fraud.</p>
+                        <p class="text-sm text-gray-700 mb-3"><strong>IT Requirement:</strong> Transition from costly on-prem to scalable SaaS or highly virtualized hybrid-cloud environment. Requires complex data migration and secure database backend.</p>
+                        <p class="text-xs bg-purple-100 text-purple-800 inline-block px-2 py-1 rounded">Agency: Dept. of Finance / BCIT</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg border-l-4 border-l-red-500 shadow-sm p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-xl font-bold text-dellDark">CAD Replacement</h3>
+                        <p class="text-red-500 font-semibold mt-1">PRJ003241</p>
+                        <div class="mt-4 bg-gray-50 p-3 rounded">
+                            <span class="block text-xs text-gray-500 uppercase">Capital Funding</span>
+                            <span class="text-2xl font-bold text-gray-800">$11.5M</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-sm text-gray-700 mb-3"><strong>Mandate:</strong> Deploy next-gen 911 dispatch. Must process real-time geospatial/telemetry data instantly.</p>
+                        <p class="text-sm text-gray-700 mb-3"><strong>IT Requirement:</strong> Mission-critical workload requiring <strong>absolute zero-downtime architecture</strong>. Active-active datacenters, ultra-low latency flash storage, and immutable backup vaults against ransomware.</p>
+                        <p class="text-xs bg-red-100 text-red-800 inline-block px-2 py-1 rounded">Agency: BPD, Fire, OEM / BCIT</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg border-l-4 border-l-blue-500 shadow-sm p-6 flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-xl font-bold text-dellDark">CitiWatch & Comms</h3>
+                        <p class="text-blue-500 font-semibold mt-1">PRJ003464, PRJ002680</p>
+                        <div class="mt-4 bg-gray-50 p-3 rounded">
+                            <span class="block text-xs text-gray-500 uppercase">Comms + Upgrades</span>
+                            <span class="text-2xl font-bold text-gray-800">$32.3M</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-sm text-gray-700 mb-3"><strong>Mandate:</strong> Continuous video surveillance (850+ HD cameras) for Violence Reduction Strategy.</p>
+                        <p class="text-sm text-gray-700 mb-3"><strong>IT Requirement:</strong> Architect scale-out NAS capable of ingesting/analyzing <strong>petabytes of unstructured video data</strong>. Current footprint is 1.89 PB primary / 3 PB backup.</p>
+                        <p class="text-xs bg-blue-100 text-blue-800 inline-block px-2 py-1 rounded">Agency: OEM / BCIT</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Procurement -->
+        <section id="sec6" class="content-section p-6 md:p-10 max-w-7xl mx-auto hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-dellDark border-b-2 border-dellBlue pb-2 inline-block mb-4">Procurement & Compliance</h2>
+                <p class="text-gray-600 text-lg">Navigating purchasing vehicles and rigid compliance mandates.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Vehicles -->
+                <div>
+                    <h3 class="text-xl font-bold text-dellDark mb-4 border-b pb-2">Preferred Procurement Vehicles</h3>
+                    <ul class="space-y-4">
+                        <li class="bg-white p-4 rounded border border-gray-200 shadow-sm">
+                            <span class="font-bold text-dellBlue block mb-1">State of MD Master Contracts</span>
+                            <span class="text-sm text-gray-600">CATS+ for professional services. BPO 060B2490022 for Hardware. Most critical avenue via PORFP.</span>
+                        </li>
+                        <li class="bg-white p-4 rounded border border-gray-200 shadow-sm">
+                            <span class="font-bold text-dellBlue block mb-1">National & Regional Co-ops</span>
+                            <span class="text-sm text-gray-600">OMNIA, NASPO ValuePoint (heavily used for client/endpoints). BRCPC for local municipal piggybacking.</span>
+                        </li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-dellDark mt-8 mb-4 border-b pb-2">Vendor Battlefield</h3>
+                    <div class="bg-white p-5 rounded border border-gray-200 shadow-sm text-sm space-y-3">
+                        <p><strong>Dell Technologies:</strong> Formidable tier-one footprint. PowerMax (CJIS/MAFIS), Unity, VxRail, Latitude Chromebooks.</p>
+                        <p><strong>HPE:</strong> Aggressive rip-and-replace campaigns nearby (Harford Co. displaced VxRail with vSAN nodes).</p>
+                        <p><strong>Nutanix:</strong> Emerging HCI threat on state master contracts.</p>
+                        <p><strong>Cisco & Motorola:</strong> Dominant in core networking and 800 MHz radio respectively.</p>
+                    </div>
+                </div>
+
+                <!-- Compliance -->
+                <div>
+                    <h3 class="text-xl font-bold text-dellDark mb-4 border-b pb-2">Regulatory & Compliance Drivers</h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-800 text-white p-5 rounded shadow-sm border-l-4 border-l-red-500">
+                            <h4 class="font-bold flex items-center"><i class="fas fa-lock mr-2 text-red-400"></i> Zero Trust & IAM</h4>
+                            <p class="text-sm text-gray-300 mt-2">After a $1.5M EFT fraud in Workday, state mandates strict Zero Trust Access within 18 months. Continuous MFA and StateRAMP equivalent required.</p>
+                        </div>
+                        <div class="bg-gray-800 text-white p-5 rounded shadow-sm border-l-4 border-l-blue-400">
+                            <h4 class="font-bold flex items-center"><i class="fas fa-shield-virus mr-2 text-blue-400"></i> CJIS Compliance</h4>
+                            <p class="text-sm text-gray-300 mt-2">For upcoming CAD replacement ($11.5M). Any compute/storage touching law enforcement must meet FBI CJIS standards (end-to-end encryption).</p>
+                        </div>
+                        <div class="bg-gray-800 text-white p-5 rounded shadow-sm border-l-4 border-l-purple-400">
+                            <h4 class="font-bold flex items-center"><i class="fas fa-robot mr-2 text-purple-400"></i> AI Governance</h4>
+                            <p class="text-sm text-gray-300 mt-2">MD AI Subcabinet requires algorithmic transparency, bias mitigation, and strict data sovereignty. Public LLMs are heavily restricted for civic data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Actionable Opportunities -->
+        <section id="sec7" class="content-section p-6 md:p-10 max-w-7xl mx-auto hidden pb-20">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-dellDark border-b-2 border-dellBlue pb-2 inline-block mb-4">Actionable Dell Opportunities</h2>
+                <p class="text-gray-600 text-lg">Strategic plays and alignment mapping for the Account Executive.</p>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8"><i class="fas fa-check-circle text-green-500 mr-2"></i> Funded Alignment</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Opp 1 -->
+                <div class="bg-white rounded border border-gray-200 shadow-sm opp-card flex flex-col">
+                    <div class="p-5 border-b border-gray-100 bg-gray-50 rounded-t">
+                        <h4 class="font-bold text-dellDark">CAD Replacement Resilience</h4>
+                    </div>
+                    <div class="p-5 flex-1">
+                        <p class="text-sm text-gray-700 font-semibold mb-2">Target: $11.5M (PRJ003241)</p>
+                        <p class="text-sm text-gray-600 mb-3">Pitch <strong>PowerStore</strong> all-flash arrays for sub-millisecond dispatch mapping latency.</p>
+                        <div class="bg-blue-50 text-dellBlue text-xs p-2 rounded font-medium border border-blue-100 mt-auto">
+                            <strong>Crucial Attach:</strong> PowerProtect Data Manager + Air-gapped Cyber Recovery Vault for immutable life-safety data.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opp 2 -->
+                <div class="bg-white rounded border border-gray-200 shadow-sm opp-card flex flex-col">
+                    <div class="p-5 border-b border-gray-100 bg-gray-50 rounded-t">
+                        <h4 class="font-bold text-dellDark">Tax App Modernization</h4>
+                    </div>
+                    <div class="p-5 flex-1">
+                        <p class="text-sm text-gray-700 font-semibold mb-2">Target: $18.6M (PRJ003238)</p>
+                        <p class="text-sm text-gray-600 mb-3">Pitch <strong>Dell APEX Flex on Demand</strong>. Give BCIT public cloud agility while maintaining on-prem data sovereignty for financial data.</p>
+                    </div>
+                </div>
+
+                <!-- Opp 3 -->
+                <div class="bg-white rounded border border-gray-200 shadow-sm opp-card flex flex-col">
+                    <div class="p-5 border-b border-gray-100 bg-gray-50 rounded-t">
+                        <h4 class="font-bold text-dellDark">Digital Equity Expansion</h4>
+                    </div>
+                    <div class="p-5 flex-1">
+                        <p class="text-sm text-gray-700 font-semibold mb-2">Target: $35M ARPA Funds</p>
+                        <p class="text-sm text-gray-600 mb-3">Leverage OMNIA/NASPO to deploy <strong>Latitude Chromebooks</strong> and <strong>OptiPlex Micro</strong> endpoints for 45 recreation centers and 8 senior centers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-800 mb-4 mt-10"><i class="fas fa-search-plus text-purple-500 mr-2"></i> Whitespace & Competitive Displacement</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Opp 4 -->
+                <div class="bg-white rounded border border-gray-200 shadow-sm opp-card border-l-4 border-l-purple-500 flex flex-col">
+                    <div class="p-5 border-b border-gray-100 bg-gray-50 rounded-tr">
+                        <h4 class="font-bold text-dellDark">CitiWatch Data Sprawl</h4>
+                    </div>
+                    <div class="p-5 flex-1">
+                        <p class="text-sm text-gray-700 font-semibold mb-2">Target: Unstructured Data (1.89+ PB)</p>
+                        <p class="text-sm text-gray-600 mb-3">Lead workshop on data lifecycle. Pitch <strong>PowerScale (Isilon)</strong> for video NAS, tiering cold data to <strong>ECS</strong> to drastically reduce archiving costs.</p>
+                    </div>
+                </div>
+
+                <!-- Opp 5 -->
+                <div class="bg-white rounded border border-gray-200 shadow-sm opp-card border-l-4 border-l-purple-500 flex flex-col">
+                    <div class="p-5 border-b border-gray-100 bg-gray-50 rounded-tr">
+                        <h4 class="font-bold text-dellDark">Sovereign AI Infrastructure</h4>
+                    </div>
+                    <div class="p-5 flex-1">
+                        <p class="text-sm text-gray-700 font-semibold mb-2">Target: CDO Justin Elszasz</p>
+                        <p class="text-sm text-gray-600 mb-3">Pitch <strong>Dell AI Factory with NVIDIA</strong> (PowerEdge XE). Build private, on-prem AI environments to comply with strict state AI anti-bias and data sovereignty laws.</p>
+                    </div>
+                </div>
+
+                <!-- Opp 6 -->
+                <div class="bg-white rounded border border-gray-200 shadow-sm opp-card border-l-4 border-l-orange-500 flex flex-col">
+                    <div class="p-5 border-b border-gray-100 bg-gray-50 rounded-tr">
+                        <h4 class="font-bold text-dellDark">Displace Cisco & Lower ISF</h4>
+                    </div>
+                    <div class="p-5 flex-1">
+                        <p class="text-sm text-gray-700 font-semibold mb-2">Target: $1.5M Switch Refresh & HPE</p>
+                        <p class="text-sm text-gray-600 mb-3">Bundle <strong>PowerSwitch</strong> with <strong>VxRail</strong> HCI. Prove to the CIO that VxRail density lowers power/cooling, allowing BCIT to lower hated ISF chargebacks to agencies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Navigation Logic
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            // Show target section
+            document.getElementById(sectionId).classList.remove('hidden');
+            document.getElementById(sectionId).classList.add('block');
+            
+            // Update active state in sidebar
+            document.querySelectorAll('.nav-item').forEach(el => {
+                el.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+
+            // Close mobile menu if open
+            const sidebar = document.getElementById('sidebar');
+            if(window.innerWidth < 768 && !sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.add('-translate-x-full');
+            }
+            
+            // Scroll to top
+            document.getElementById('mainContent').scrollTop = 0;
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('-translate-x-full');
+        });
+
+        // Table Sorting Logic
+        let sortDirections = [true, true, true]; // Track asc/desc for 3 columns
+
+        function sortTable(columnIndex) {
+            const table = document.getElementById("stakeholderTable");
+            const tbody = table.querySelector("tbody");
+            const rows = Array.from(tbody.querySelectorAll("tr"));
+            const headers = table.querySelectorAll("th");
+
+            // Toggle direction
+            const isAsc = sortDirections[columnIndex];
+            sortDirections[columnIndex] = !isAsc;
+
+            // Update Icons
+            headers.forEach(h => h.classList.remove('asc', 'desc'));
+            headers[columnIndex].classList.add(isAsc ? 'asc' : 'desc');
+
+            // Sort
+            rows.sort((a, b) => {
+                const aText = a.cells[columnIndex].textContent.trim().toLowerCase();
+                const bText = b.cells[columnIndex].textContent.trim().toLowerCase();
+
+                if (aText < bText) return isAsc ? -1 : 1;
+                if (aText > bText) return isAsc ? 1 : -1;
+                return 0;
+            });
+
+            // Re-append rows
+            tbody.innerHTML = "";
+            rows.forEach(row => tbody.appendChild(row));
+        }
+
+        // Initialize Chart.js Data Visualizations after window loads
+        window.onload = () => {
+            // 1. Overall Budget Donut Chart (Section 4)
+            const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+            new Chart(budgetCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Operating Budget (O&M)', 'Capital Budget (CIP)'],
+                    datasets: [{
+                        data: [3700, 932], // In millions based on 4.63B total
+                        backgroundColor: [
+                            '#0B1B3D', // dellDark
+                            '#0076CE'  // dellBlue
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': $' + context.raw + ' Million';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 2. Strategic Initiatives Bar Chart (Section 5)
+            const initiativesCtx = document.getElementById('initiativesChart').getContext('2d');
+            new Chart(initiativesCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['CitiWatch & Comms', 'Tax App Modernization', 'CAD Replacement'],
+                    datasets: [{
+                        label: 'Project Funding ($ Millions)',
+                        data: [32.3, 18.6, 11.5],
+                        backgroundColor: [
+                            '#3b82f6', // blue-500
+                            '#a855f7', // purple-500
+                            '#ef4444'  // red-500
+                        ],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '$ Millions'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>

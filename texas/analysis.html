@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas SLG Intelligence Dashboard | Dell Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .chart-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 800px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 350px; 
+            max-height: 400px; 
+        }
+        .chart-container-sm {
+            position: relative; 
+            width: 100%; 
+            max-width: 500px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 280px; 
+            max-height: 300px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 380px; }
+            .chart-container-sm { height: 320px; }
+        }
+        .spa-section { display: none; }
+        .spa-section.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-btn { transition: all 0.2s; }
+        .nav-btn.active { background-color: #f3f4f6; color: #0369a1; border-left: 4px solid #0369a1; font-weight: 600; }
+        .tab-btn.active { border-bottom: 3px solid #0369a1; color: #0369a1; font-weight: 600; }
+        .dell-gradient { background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%); }
+        .meter-fill { transition: width 1s ease-in-out; }
+    </style>
+</head>
+<body class="bg-stone-100 text-stone-800 antialiased overflow-x-hidden">
+
+    <!-- Chosen Palette: Warm Neutrals with Dell Blue Accents (Stone-100, Stone-800, Sky-700/800) -->
+    <!-- Application Structure Plan: The SPA uses a fixed sidebar navigation acting as a control panel for a main dashboard viewing area. This prevents scroll fatigue. To address whitespace on large screens, sections have been upgraded to multi-column grid layouts (lg and xl breakpoints) pairing text blocks with direct visual translations of that text (Radar charts, Polar area charts, and HTML meters). -->
+    <!-- Visualization & Content Choices: 
+         - Exec Summary: Added a Radar Chart (Inform/Organize) to map priority spread.
+         - Stakeholders: Added a Doughnut Chart (Compare) to show influence distribution next to the table.
+         - Financials: Maintained Bar Chart & Donut Chart (Inform/Compare) for budget scale.
+         - Initiatives: Added HTML-based progress bars (Inform/Compare) for Dell Fit/Budget scoring inside tabs.
+         - Procurement: Added Polar Area chart (Compare) for Incumbent footprints.
+         - NO SVG/Mermaid used. Visuals rely purely on CSS, HTML flex/grid, and Canvas. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+        
+        <nav class="w-full md:w-64 bg-white shadow-lg z-10 flex-shrink-0 border-r border-stone-200">
+            <div class="p-6 dell-gradient text-white">
+                <h1 class="text-xl font-bold leading-tight">State of Texas</h1>
+                <p class="text-xs text-sky-200 mt-1 uppercase tracking-wider font-semibold">Market Intel Dashboard</p>
+                <div class="mt-4 text-sm text-stone-200 space-y-1">
+                    <span class="block bg-black/20 px-2 py-1 rounded">&#128188; Target: SLED / Gov</span>
+                    <span class="block bg-black/20 px-2 py-1 rounded">&#128204; Region: South Central</span>
+                    <span class="block bg-black/20 px-2 py-1 rounded">&#128176; IT Spend: ~$4.5B</span>
+                </div>
+            </div>
+            <div class="flex flex-row md:flex-col overflow-x-auto md:overflow-x-hidden p-2 md:p-4 space-x-2 md:space-x-0 md:space-y-2" id="nav-menu">
+                <button onclick="navigate('exec-summary')" class="nav-btn active flex-shrink-0 w-auto md:w-full text-left px-4 py-3 rounded text-sm md:text-base text-stone-600 hover:bg-stone-50">&#128221; Exec Summary</button>
+                <button onclick="navigate('stakeholders')" class="nav-btn flex-shrink-0 w-auto md:w-full text-left px-4 py-3 rounded text-sm md:text-base text-stone-600 hover:bg-stone-50">&#128101; Power Structure</button>
+                <button onclick="navigate('gov-finance')" class="nav-btn flex-shrink-0 w-auto md:w-full text-left px-4 py-3 rounded text-sm md:text-base text-stone-600 hover:bg-stone-50">&#128202; Gov & Financials</button>
+                <button onclick="navigate('initiatives')" class="nav-btn flex-shrink-0 w-auto md:w-full text-left px-4 py-3 rounded text-sm md:text-base text-stone-600 hover:bg-stone-50">&#128640; Top Initiatives</button>
+                <button onclick="navigate('procurement')" class="nav-btn flex-shrink-0 w-auto md:w-full text-left px-4 py-3 rounded text-sm md:text-base text-stone-600 hover:bg-stone-50">&#128209; Procurement & Comp</button>
+                <button onclick="navigate('dell-action')" class="nav-btn flex-shrink-0 w-auto md:w-full text-left px-4 py-3 rounded text-sm md:text-base font-bold text-sky-800 hover:bg-sky-50">&#128165; Dell Action Plan</button>
+                
+                <div class="hidden md:block border-t border-stone-200 my-2"></div>
+                
+                <a href="https://dmonkey1001.github.io/slg-strategies/texas/analysis.pdf" target="_blank" rel="noopener noreferrer" title="Open Full PDF Report" class="flex-shrink-0 w-auto md:w-full text-left px-4 py-3 rounded text-sm md:text-base font-medium text-stone-700 bg-stone-100 hover:bg-stone-200 border border-stone-200 flex items-center justify-between transition-colors">
+                    <span>&#128196; Full PDF Report</span>
+                    <span class="text-xs text-stone-400 hidden md:inline">&#8599;</span>
+                </a>
+            </div>
+        </nav>
+
+        <main class="flex-1 p-4 md:p-8 overflow-y-auto">
+            
+            <!-- EXECUTIVE SUMMARY -->
+            <section id="exec-summary" class="spa-section active">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-stone-800 border-b-2 border-stone-200 pb-2">Executive Summary & Macro Landscape</h2>
+                    <p class="mt-4 text-stone-600 leading-relaxed text-lg max-w-4xl">
+                        A high-level overview of the Texas political and economic climate, establishing the broader context for IT investments. Align Dell's value proposition with these overarching administrative goals.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+                    <div class="xl:col-span-2 space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                            <h3 class="text-xl font-semibold text-stone-800 mb-4">&#127963; Political & Economic Climate</h3>
+                            <div class="flex flex-col sm:flex-row gap-6">
+                                <div class="flex-1 text-stone-600 space-y-3">
+                                    <p>Texas continues to experience massive economic growth, boasting one of the largest budget surpluses in state history (approx. $32.7B heading into the latest Legislature). The political climate is conservative, highly focused on fiscal responsibility, border security, grid resilience, and reducing property taxes.</p>
+                                    <p>IT investments are heavily scrutinized for ROI but are aggressively funded when tied to cybersecurity mandates (TX-RAMP), citizen services modernization, or critical infrastructure protection.</p>
+                                </div>
+                                <div class="sm:w-48 flex flex-col justify-center bg-stone-50 p-4 rounded-lg border border-stone-100 text-center">
+                                    <span class="text-3xl mb-1">&#128176;</span>
+                                    <span class="text-2xl font-bold text-sky-700">$32.7B</span>
+                                    <span class="text-xs text-stone-500 uppercase font-bold tracking-wide mt-1">Budget Surplus</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                            <h3 class="text-xl font-semibold text-stone-800 mb-4">&#127919; Core Administrative Goals (FY24-25)</h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <li class="bg-stone-50 p-4 rounded-lg border-l-4 border-sky-600">
+                                    <strong class="block text-stone-800 mb-1">1. Cybersecurity (TX-RAMP)</strong>
+                                    <span class="text-sm text-stone-600">Securing state agencies, local gov, and higher ed against threats. Strict vendor compliance required.</span>
+                                </li>
+                                <li class="bg-stone-50 p-4 rounded-lg border-l-4 border-sky-600">
+                                    <strong class="block text-stone-800 mb-1">2. App Modernization</strong>
+                                    <span class="text-sm text-stone-600">Aggressive push to move off mainframes to agile, hybrid-cloud environments (Texas by Texas).</span>
+                                </li>
+                                <li class="bg-stone-50 p-4 rounded-lg border-l-4 border-sky-600 md:col-span-2">
+                                    <strong class="block text-stone-800 mb-1">3. Broadband & Digital Equity</strong>
+                                    <span class="text-sm text-stone-600">Deploying federal BEAD funding and state grants to expand connectivity to rural and underserved populations.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 xl:col-span-1 flex flex-col">
+                        <h3 class="text-center font-semibold text-stone-800 mb-2">State Tech Priority Heatmap</h3>
+                        <p class="text-center text-xs text-stone-500 mb-4">Relative weighting of IT initiatives</p>
+                        <div class="chart-container-sm flex-1 flex items-center justify-center">
+                            <canvas id="priorityRadarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- POWER STRUCTURE & STAKEHOLDERS -->
+            <section id="stakeholders" class="spa-section">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-stone-800 border-b-2 border-stone-200 pb-2">Power Structure & Key Stakeholders</h2>
+                    <p class="mt-4 text-stone-600 leading-relaxed text-lg">
+                        Map the key decision-makers. Use the filter to isolate technical influencers from financial purchasers when planning targeted account mapping.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 xl:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 xl:col-span-1 flex flex-col">
+                        <h3 class="text-center font-semibold text-stone-800 mb-2">Decision Maker Split</h3>
+                        <p class="text-center text-xs text-stone-500 mb-4">Influence distribution by persona</p>
+                        <div class="chart-container-sm flex-1">
+                            <canvas id="influencePieChart"></canvas>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="font-bold text-sm text-stone-800 mb-2">Key Takeaway:</h4>
+                            <p class="text-xs text-stone-600">While Technical Influencers (CIOs/CISOs) dictate architecture, Financial Purchasers heavily scrutinize all net-new capital expenditures. Dual-pronged messaging is mandatory.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 xl:col-span-3">
+                        <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
+                            <h3 class="text-xl font-semibold text-stone-800">Stakeholder Matrix</h3>
+                            <select id="stakeholder-filter" class="mt-2 sm:mt-0 p-2 border border-stone-300 rounded text-stone-700 bg-stone-50 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                                <option value="all">View All Stakeholders</option>
+                                <option value="financial">Financial Purchasers</option>
+                                <option value="technical">Technical Influencers</option>
+                            </select>
+                        </div>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-stone-100 text-stone-600 text-sm uppercase tracking-wider">
+                                        <th class="p-4 border-b">Name</th>
+                                        <th class="p-4 border-b">Title & Agency</th>
+                                        <th class="p-4 border-b">Influence</th>
+                                        <th class="p-4 border-b">Recent Tech Stances</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="stakeholder-tbody" class="text-stone-700 text-sm">
+                                    <tr class="border-b hover:bg-stone-50 stakeholder-row" data-type="financial">
+                                        <td class="p-4 font-semibold whitespace-nowrap">Greg Abbott</td>
+                                        <td class="p-4">Governor, State of Texas</td>
+                                        <td class="p-4"><span class="inline-block px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-bold w-full text-center">Financial</span></td>
+                                        <td class="p-4">Mandated strict bans on TikTok on state devices; pushed heavy funding for grid security and broadband.</td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-stone-50 stakeholder-row" data-type="financial">
+                                        <td class="p-4 font-semibold whitespace-nowrap">Sen. Joan Huffman</td>
+                                        <td class="p-4">Chair, Senate Finance</td>
+                                        <td class="p-4"><span class="inline-block px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-bold w-full text-center">Financial</span></td>
+                                        <td class="p-4">Controls the purse strings; requires strict ROI justification for large multi-year IT capital expenditures.</td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-stone-50 stakeholder-row" data-type="technical">
+                                        <td class="p-4 font-semibold whitespace-nowrap">Tony Sauerhoff</td>
+                                        <td class="p-4">CIO & Exec Dir, DIR</td>
+                                        <td class="p-4"><span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold w-full text-center">Technical</span></td>
+                                        <td class="p-4">Champion for "Whole of State" cyber approach, AI taskforce leadership, and cloud-smart adoption.</td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-stone-50 stakeholder-row" data-type="technical">
+                                        <td class="p-4 font-semibold whitespace-nowrap">Nancy Rainosek</td>
+                                        <td class="p-4">CISO, DIR</td>
+                                        <td class="p-4"><span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold w-full text-center">Technical</span></td>
+                                        <td class="p-4">Architect of TX-RAMP; prioritizes zero trust architecture and state-sponsored cyber response capabilities.</td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-stone-50 stakeholder-row" data-type="technical">
+                                        <td class="p-4 font-semibold whitespace-nowrap">George Rios</td>
+                                        <td class="p-4">CIO, Health & Human Services</td>
+                                        <td class="p-4"><span class="inline-block px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-bold w-full text-center">Hybrid</span></td>
+                                        <td class="p-4">Oversees massive data lakes; focused on interoperability, data center consolidation, and compliance (HIPAA).</td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-stone-50 stakeholder-row" data-type="financial">
+                                        <td class="p-4 font-semibold whitespace-nowrap">Marc Williams</td>
+                                        <td class="p-4">Exec Director, TxDOT</td>
+                                        <td class="p-4"><span class="inline-block px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-bold w-full text-center">Financial</span></td>
+                                        <td class="p-4">Driving connected vehicle infrastructure, edge computing at remote sites, and massive data storage expansion.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GOVERNANCE & FINANCIALS -->
+            <section id="gov-finance" class="spa-section">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-stone-800 border-b-2 border-stone-200 pb-2">IT Governance & Financials</h2>
+                    <p class="mt-4 text-stone-600 leading-relaxed text-lg">
+                        Texas utilizes a federated model with centralized shared services. The charts below illustrate the estimated breakdown of the State IT budget, highlighting the massive capital available for net-new projects versus ongoing operations.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 lg:col-span-1">
+                        <h3 class="text-lg font-semibold text-stone-800 mb-3">&#9878; Operating Model</h3>
+                        <div class="inline-block px-3 py-1 bg-purple-100 text-purple-800 font-bold rounded mb-3 text-sm border border-purple-200">Federated / Shared Services Hybrid</div>
+                        <p class="text-sm text-stone-600">
+                            The Department of Information Resources (DIR) acts as the central IT authority. However, large agencies (HHS, TxDOT, DPS) maintain significant autonomy, holding their own budgets and CIOs.
+                        </p>
+                        <div class="mt-4 p-3 bg-rose-50 rounded border border-rose-100">
+                            <h4 class="font-bold text-rose-800 text-sm mb-1">&#9888; Friction Points</h4>
+                            <p class="text-xs text-stone-700">
+                                Agencies frequently experience friction with the DCS (Data Center Services) chargeback model. High costs for legacy hosting via the prime integrator push agencies to seek direct-to-vendor hybrid solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 lg:col-span-2">
+                        <h3 class="text-lg font-semibold text-stone-800 mb-4">&#128176; Major Funding & Grants</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 h-[calc(100%-2rem)]">
+                            <div class="bg-stone-50 rounded-lg p-4 border-l-4 border-sky-500 flex flex-col justify-center">
+                                <h4 class="font-bold text-stone-800 text-lg mb-1">SLCGP (Cybersecurity)</h4>
+                                <span class="text-xl font-black text-sky-700 mb-2">~$40M Allocated</span>
+                                <p class="text-sm text-stone-600">Driving heavy endpoint and network security refresh cycles at the municipal and county levels. State matching required.</p>
+                            </div>
+                            <div class="bg-stone-50 rounded-lg p-4 border-l-4 border-sky-500 flex flex-col justify-center">
+                                <h4 class="font-bold text-stone-800 text-lg mb-1">Tech Improvement Fund</h4>
+                                <span class="text-xl font-black text-sky-700 mb-2">Recurring State CapEx</span>
+                                <p class="text-sm text-stone-600">Dedicated state-level fund used to accelerate legacy system replacements, specifically targeting aging mainframes and hardware.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                        <h3 class="text-center font-semibold text-stone-800 mb-2">Texas Budget Overview (FY24-25)</h3>
+                        <p class="text-center text-xs text-stone-500 mb-4">Total Budget vs. Est. State IT Spend (Billions USD)</p>
+                        <div class="chart-container">
+                            <canvas id="budgetBarChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                        <h3 class="text-center font-semibold text-stone-800 mb-2">Estimated IT Spend Allocation</h3>
+                        <p class="text-center text-xs text-stone-500 mb-4">Operations & Maintenance (O&M) vs. Capital Projects</p>
+                        <div class="chart-container">
+                            <canvas id="spendPieChart"></canvas>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs text-stone-400"><em>Data estimations based on historical DIR reporting averages.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOP INITIATIVES -->
+            <section id="initiatives" class="spa-section">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-stone-800 border-b-2 border-stone-200 pb-2">Strategic Initiatives & Projects</h2>
+                    <p class="mt-4 text-stone-600 leading-relaxed text-lg">
+                        The top 3 funded IT modernization efforts. Review the specific executive mandates, target agencies, and the underlying technological requirements.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-stone-200 overflow-hidden">
+                    <div class="flex flex-wrap border-b border-stone-200 bg-stone-50">
+                        <button onclick="switchTab('init1')" id="tab-init1" class="tab-btn active px-6 py-4 text-sm md:text-base text-stone-600 focus:outline-none flex-1 font-medium whitespace-nowrap">1. Data Center Mod</button>
+                        <button onclick="switchTab('init2')" id="tab-init2" class="tab-btn px-6 py-4 text-sm md:text-base text-stone-600 focus:outline-none flex-1 font-medium whitespace-nowrap">2. AI & Cyber Resilience</button>
+                        <button onclick="switchTab('init3')" id="tab-init3" class="tab-btn px-6 py-4 text-sm md:text-base text-stone-600 focus:outline-none flex-1 font-medium whitespace-nowrap">3. Citizen Digital Exp</button>
+                    </div>
+
+                    <div class="p-6 md:p-8 min-h-[400px]">
+                        <!-- Init 1 -->
+                        <div id="content-init1" class="init-content block">
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold text-sky-800 mb-2">Next-Gen Data Center Consolidation</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                                        <div class="bg-stone-50 p-4 rounded border border-stone-200">
+                                            <h4 class="text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">Executive Mandate</h4>
+                                            <p class="text-stone-800 text-sm">Reduce physical footprint, eliminate technical debt from EOL hardware, and adopt a "Cloud-Smart" approach to mitigate DCS chargeback costs.</p>
+                                        </div>
+                                        <div class="bg-stone-50 p-4 rounded border border-stone-200">
+                                            <h4 class="text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">Target Agencies</h4>
+                                            <p class="text-stone-800 text-sm"><strong>HHS</strong> (Massive storage needs), <strong>OAG</strong> (Strict on-prem data reqs), <strong>TWC</strong> (Workforce Commission).</p>
+                                        </div>
+                                        <div class="bg-stone-50 p-4 rounded border border-stone-200 md:col-span-2">
+                                            <h4 class="text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">IT Requirement (The Ask)</h4>
+                                            <p class="text-stone-800 text-sm">High-performance HCI, unified unstructured data storage, seamless VMware to hybrid-cloud orchestration, and edge-to-core infrastructure.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xl:w-1/3 bg-white p-5 rounded border border-stone-200 shadow-inner">
+                                    <h4 class="font-bold text-stone-800 mb-4 border-b pb-2">Opportunity Matrix</h4>
+                                    
+                                    <div class="mb-4">
+                                        <div class="flex justify-between text-xs font-bold mb-1 text-stone-600"><span>Dell Portfolio Fit</span><span>9/10</span></div>
+                                        <div class="w-full bg-stone-200 rounded-full h-2.5">
+                                            <div class="bg-sky-600 h-2.5 rounded-full meter-fill" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="flex justify-between text-xs font-bold mb-1 text-stone-600"><span>Budget Availability</span><span>High</span></div>
+                                        <div class="w-full bg-stone-200 rounded-full h-2.5">
+                                            <div class="bg-green-500 h-2.5 rounded-full meter-fill" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <div class="flex justify-between text-xs font-bold mb-1 text-stone-600"><span>Sales Cycle Length</span><span>12-18 Mos</span></div>
+                                        <div class="w-full bg-stone-200 rounded-full h-2.5">
+                                            <div class="bg-orange-400 h-2.5 rounded-full meter-fill" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Init 2 -->
+                        <div id="content-init2" class="init-content hidden">
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold text-sky-800 mb-2">TX-RAMP & AI Governance Framework</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                                        <div class="bg-stone-50 p-4 rounded border border-stone-200">
+                                            <h4 class="text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">Executive Mandate</h4>
+                                            <p class="text-stone-800 text-sm">Secure state supply chain through TX-RAMP. Prepare data architectures for safe, governed GenAI integration per Governor's AI Taskforce.</p>
+                                        </div>
+                                        <div class="bg-stone-50 p-4 rounded border border-stone-200">
+                                            <h4 class="text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">Target Agencies</h4>
+                                            <p class="text-stone-800 text-sm"><strong>DIR</strong> (Setting standards), <strong>DPS</strong> (Public Safety/Threat hunting), <strong>Local Govs</strong> (Using SLCGP funds).</p>
+                                        </div>
+                                        <div class="bg-stone-50 p-4 rounded border border-stone-200 md:col-span-2">
+                                            <h4 class="text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">IT Requirement (The Ask)</h4>
+                                            <p class="text-stone-800 text-sm">Air-gapped cyber recovery vaults, AI-ready infrastructure (GPU-accelerated compute), zero-trust networking, and sovereign data lakes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xl:w-1/3 bg-white p-5 rounded border border-stone-200 shadow-inner">
+                                    <h4 class="font-bold text-stone-800 mb-4 border-b pb-2">Opportunity Matrix</h4>
+                                    
+                                    <div class="mb-4">
+                                        <div class="flex justify-between text-xs font-bold mb-1 text-stone-600"><span>Dell Portfolio Fit</span><span>10/10</span></div>
+                                        <div class="w-full bg-stone-200 rounded-full h-2.5">
+                                            <div class="bg-sky-600 h-2.5 rounded-full meter-fill" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="flex justify-between text-xs font-bold mb-1 text-stone-600"><span>Budget Availability</span><span>Very High</span></div>
+                                        <div class="w-full bg-stone-200 rounded-full h-2.5">
+                                            <div class="bg-green-500 h-2.5 rounded-full meter-fill" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <div class="flex justify-between text-xs font-bold mb-1 text-stone-600"><span>Sales Cycle Length</span><span>6-12 Mos</span></div>
+                                        <div class="w-full bg-stone-200 rounded-full h-2.5">
+                                            <div class="bg-orange-400 h-2.5 rounded-full meter-fill" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Init 3 -->
+                        <div id="content-init3" class="init-content hidden">
+                            <div class="flex flex-col xl:flex-row gap-8">
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold text-sky-800 mb-2">Texas by Texas (TxT) & Edge Expansion</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                                        <div class="bg-stone-50 p-4 rounded border border-stone-200">
+                                            <h4 class="text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">Executive Mandate</h4>
+                                            <p class="text-stone-800 text-sm">Create frictionless digital citizen experiences for all state interactions. Expand intelligent state services to the physical edge.</p>
+                                        </div>
+                                        <div class="bg-stone-50 p-4 rounded border border-stone-200">
+                                            <h4 class="text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">Target Agencies</h4>
+                                            <p class="text-stone-800 text-sm"><strong>TxDMV</strong> (Motor Vehicles), <strong>TDLR</strong> (Licensing), <strong>TxDOT</strong> (Transportation - IoT/Edge sensors).</p>
+                                        </div>
+                                        <div class="bg-stone-50 p-4 rounded border border-stone-200 md:col-span-2">
+                                            <h4 class="text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">IT Requirement (The Ask)</h4>
+                                            <p class="text-stone-800 text-sm">Ruggedized edge compute, distributed VDI environments, containerized application support, and massive scalable object storage.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xl:w-1/3 bg-white p-5 rounded border border-stone-200 shadow-inner">
+                                    <h4 class="font-bold text-stone-800 mb-4 border-b pb-2">Opportunity Matrix</h4>
+                                    
+                                    <div class="mb-4">
+                                        <div class="flex justify-between text-xs font-bold mb-1 text-stone-600"><span>Dell Portfolio Fit</span><span>8/10</span></div>
+                                        <div class="w-full bg-stone-200 rounded-full h-2.5">
+                                            <div class="bg-sky-600 h-2.5 rounded-full meter-fill" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="flex justify-between text-xs font-bold mb-1 text-stone-600"><span>Budget Availability</span><span>Medium</span></div>
+                                        <div class="w-full bg-stone-200 rounded-full h-2.5">
+                                            <div class="bg-green-500 h-2.5 rounded-full meter-fill" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <div class="flex justify-between text-xs font-bold mb-1 text-stone-600"><span>Sales Cycle Length</span><span>9-18 Mos</span></div>
+                                        <div class="w-full bg-stone-200 rounded-full h-2.5">
+                                            <div class="bg-orange-400 h-2.5 rounded-full meter-fill" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROCUREMENT & COMPLIANCE -->
+            <section id="procurement" class="spa-section">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-stone-800 border-b-2 border-stone-200 pb-2">Procurement, Vendor Landscape & Compliance</h2>
+                    <p class="mt-4 text-stone-600 leading-relaxed text-lg">
+                        Understanding how Texas buys is as critical as knowing what they need. This outlines contracting vehicles, the competitive battlefield, and strict compliance frameworks.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+                    <div class="xl:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">&#128220;</span>
+                                <h3 class="text-xl font-bold text-stone-800">Vehicles & Methods</h3>
+                            </div>
+                            <ul class="space-y-3 text-sm text-stone-600">
+                                <li class="p-2 bg-stone-50 rounded"><strong class="text-stone-800 block">DIR Cooperative Contracts:</strong> The absolute gold standard. Mandated for most IT commodity purchases.</li>
+                                <li class="p-2 bg-stone-50 rounded"><strong class="text-stone-800 block">TXMAS:</strong> Texas Multiple Award Schedule. Used for non-IT or specialized goods not on DIR.</li>
+                                <li class="p-2 bg-stone-50 rounded"><strong class="text-stone-800 block">Purchasing Method:</strong> Heavy reliance on VARs (Value Added Resellers) holding DIR contracts. Direct-to-OEM is rare.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">&#128274;</span>
+                                <h3 class="text-xl font-bold text-stone-800">Compliance Drivers</h3>
+                            </div>
+                            <ul class="space-y-3 text-sm text-stone-600">
+                                <li class="p-2 bg-rose-50 rounded border border-rose-100"><strong class="text-rose-800 block">TX-RAMP:</strong> State risk & authorization management. Absolute requirement for cloud/SaaS. Non-negotiable.</li>
+                                <li class="p-2 bg-stone-50 rounded"><strong class="text-stone-800 block">CJIS:</strong> Critical for DPS, OAG, and local law enforcement. Drives strict physical/logical security for storage.</li>
+                                <li class="p-2 bg-stone-50 rounded"><strong class="text-stone-800 block">TAC 202:</strong> Texas Administrative Code governing state information security standards.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 xl:col-span-1 flex flex-col">
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="text-2xl mr-2">&#9876;</span>
+                            <h3 class="text-center font-semibold text-stone-800">The Battlefield</h3>
+                        </div>
+                        <p class="text-center text-xs text-stone-500 mb-4">Estimated Incumbent Footprint (Data Center/Compute)</p>
+                        <div class="chart-container-sm flex-1">
+                            <canvas id="vendorPolarChart"></canvas>
+                        </div>
+                        <p class="text-xs text-stone-600 mt-4 text-center"><strong>Opportunity:</strong> Aging HPE/Cisco 3-tier architectures are highly vulnerable to HCI consolidation pitches.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DELL ACTION PLAN -->
+            <section id="dell-action" class="spa-section">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-stone-800 border-b-2 border-stone-200 pb-2">Actionable Dell Opportunities <span class="text-sky-600 text-xl font-normal ml-2">(The "So What")</span></h2>
+                    <p class="mt-4 text-stone-600 leading-relaxed text-lg">
+                        Based on the intelligence gathered, these are the three highest-probability sales motions for Dell Technologies. Review these before account planning sessions.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-8 border-sky-600 flex flex-col h-full hover:-translate-y-1 transition-transform">
+                        <div class="text-5xl text-sky-100 mb-2">&#128187;</div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">Funded Alignment:<br><span class="text-sky-700">AI-Ready & Edge</span></h3>
+                        <p class="text-sm text-stone-600 mb-4 flex-1">Map to <em>AI Governance</em> and <em>Edge Expansion</em>. Agencies are freezing standard compute refreshes to evaluate AI readiness.</p>
+                        <div class="bg-stone-50 p-4 rounded text-sm border border-stone-200">
+                            <strong class="text-stone-800 block mb-1">The Play:</strong> 
+                            Lead with Dell PowerEdge XE series (GPU optimized) for central data hubs (HHS, DPS) and ruggedized VxRail / PowerEdge XR for TxDOT's edge IoT. Position ObjectScale for sensor data.
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-8 border-purple-600 flex flex-col h-full hover:-translate-y-1 transition-transform">
+                        <div class="text-5xl text-purple-100 mb-2">&#128269;</div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">Whitespace & Advisory:<br><span class="text-purple-700">Cyber Vault & Data</span></h3>
+                        <p class="text-sm text-stone-600 mb-4 flex-1">Map to <em>SLCGP Funding</em> and <em>TX-RAMP</em>. While agencies buy firewalls, they lack true air-gapped recovery from ransomware.</p>
+                        <div class="bg-stone-50 p-4 rounded text-sm border border-stone-200">
+                            <strong class="text-stone-800 block mb-1">The Play:</strong> 
+                            Do not sell storage; sell <em>survival</em>. Pitch Dell PowerProtect Cyber Recovery to Tier 1 agencies. Address "shadow IT" data sprawl with DataIQ before they migrate to cloud.
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-8 border-rose-600 flex flex-col h-full hover:-translate-y-1 transition-transform">
+                        <div class="text-5xl text-rose-100 mb-2">&#128472;</div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-2">Competitive Displacement:<br><span class="text-rose-700">APEX vs. DCS / Cloud</span></h3>
+                        <p class="text-sm text-stone-600 mb-4 flex-1">Target <em>Friction Points</em> in the State DCS model. Agencies are frustrated by rigid integrator contracts and cloud egress fees.</p>
+                        <div class="bg-stone-50 p-4 rounded text-sm border border-stone-200">
+                            <strong class="text-stone-800 block mb-1">The Play:</strong> 
+                            Target mid-tier agencies unhappy with DCS or experiencing "cloud shock." Execute a financial displacement using Dell APEX (OpEx) while keeping infrastructure on-prem for TX-RAMP compliance.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // Global chart registry to manage resizing
+        const charts = {};
+
+        // Common Chart Options
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom', labels: { font: { family: "'Segoe UI', sans-serif" } } }
+            }
+        };
+
+        // Initialize all charts on load
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. Radar Chart (Exec Summary)
+            charts.priorityRadarChart = new Chart(document.getElementById('priorityRadarChart').getContext('2d'), {
+                type: 'radar',
+                data: {
+                    labels: ['Cybersecurity', 'Cloud Migration', 'Edge Computing', 'Legacy Replace', 'Citizen Exp (TxT)'],
+                    datasets: [{
+                        label: 'Priority Weighting (1-10)',
+                        data: [10, 7, 8, 9, 8],
+                        backgroundColor: 'rgba(3, 105, 161, 0.2)', // Sky-700
+                        borderColor: 'rgba(3, 105, 161, 1)',
+                        pointBackgroundColor: 'rgba(3, 105, 161, 1)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0,0,0,0.1)' },
+                            grid: { color: 'rgba(0,0,0,0.1)' },
+                            pointLabels: { font: { size: 11, family: "'Segoe UI', sans-serif" } },
+                            ticks: { display: false, min: 0, max: 10 }
+                        }
+                    }
+                }
+            });
+
+            // 2. Doughnut Chart (Stakeholders)
+            charts.influencePieChart = new Chart(document.getElementById('influencePieChart').getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Financial Buyers', 'Technical Influencers', 'Hybrid'],
+                    datasets: [{
+                        data: [45, 40, 15],
+                        backgroundColor: ['#bbf7d0', '#bfdbfe', '#e9d5ff'], // Green, Blue, Purple
+                        borderColor: ['#166534', '#1e3a8a', '#6b21a8'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    cutout: '60%',
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: { callbacks: { label: (ctx) => ` ${ctx.label}: ${ctx.raw}%` } }
+                    }
+                }
+            });
+
+            // 3. Bar Chart (Financials)
+            charts.budgetBarChart = new Chart(document.getElementById('budgetBarChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Total Biennial Budget', 'Estimated IT Spend'],
+                    datasets: [{
+                        label: 'Billions (USD)',
+                        data: [321.3, 4.5],
+                        backgroundColor: ['rgba(148, 163, 184, 0.8)', 'rgba(3, 105, 161, 0.8)'],
+                        borderColor: ['rgba(148, 163, 184, 1)', 'rgba(3, 105, 161, 1)'],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    scales: { y: { beginAtZero: true, title: { display: true, text: 'Billions ($)' } } },
+                    plugins: { tooltip: { callbacks: { label: (ctx) => `$${ctx.parsed.y} Billion` } } }
+                }
+            });
+
+            // 4. Pie Chart (Financials)
+            charts.spendPieChart = new Chart(document.getElementById('spendPieChart').getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['O&M (Keeping lights on)', 'Capital Projects (Net-New)'],
+                    datasets: [{
+                        data: [70, 30],
+                        backgroundColor: ['rgba(120, 113, 108, 0.8)', 'rgba(14, 165, 233, 0.8)'],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    cutout: '65%',
+                    plugins: { tooltip: { callbacks: { label: (ctx) => `${ctx.label}: ~${ctx.parsed}%` } } }
+                }
+            });
+
+            // 5. Polar Area Chart (Procurement)
+            charts.vendorPolarChart = new Chart(document.getElementById('vendorPolarChart').getContext('2d'), {
+                type: 'polarArea',
+                data: {
+                    labels: ['HPE (Legacy Compute)', 'Cisco (Network/UCS)', 'Public Cloud (AWS/Azure)', 'Dell (Current Base)', 'Others / Niche'],
+                    datasets: [{
+                        data: [35, 25, 20, 15, 5],
+                        backgroundColor: [
+                            'rgba(244, 63, 94, 0.6)',   // Rose (Target)
+                            'rgba(249, 115, 22, 0.6)',  // Orange (Target)
+                            'rgba(168, 85, 247, 0.6)',  // Purple (Cloud)
+                            'rgba(14, 165, 233, 0.6)',  // Sky (Dell)
+                            'rgba(156, 163, 175, 0.6)'   // Gray
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    scales: { r: { ticks: { display: false } } },
+                    plugins: { tooltip: { callbacks: { label: (ctx) => `${ctx.label}: ~${ctx.raw}% Est. Footprint` } } }
+                }
+            });
+        });
+
+        // --- Navigation Logic ---
+        function navigate(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.spa-section').forEach(el => {
+                el.classList.remove('active');
+            });
+            // Show target section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update nav buttons
+            document.querySelectorAll('.nav-btn').forEach(el => {
+                el.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+            
+            // Explicitly resize charts in the active view to fix hidden canvas sizing issues
+            setTimeout(() => {
+                if(sectionId === 'exec-summary') charts.priorityRadarChart.resize();
+                if(sectionId === 'stakeholders') charts.influencePieChart.resize();
+                if(sectionId === 'gov-finance') {
+                    charts.budgetBarChart.resize();
+                    charts.spendPieChart.resize();
+                }
+                if(sectionId === 'procurement') charts.vendorPolarChart.resize();
+            }, 50); // slight delay to ensure DOM is visible
+        }
+
+        // --- Table Filtering Logic ---
+        document.getElementById('stakeholder-filter').addEventListener('change', function(e) {
+            const filterValue = e.target.value;
+            const rows = document.querySelectorAll('.stakeholder-row');
+            
+            rows.forEach(row => {
+                if (filterValue === 'all' || row.getAttribute('data-type') === filterValue) {
+                    row.style.display = 'table-row';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // --- Tab Logic ---
+        function switchTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.init-content').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            // Show target tab content
+            document.getElementById('content-' + tabId).classList.remove('hidden');
+            document.getElementById('content-' + tabId).classList.add('block');
+            
+            // Update tab styles
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.getElementById('tab-' + tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>

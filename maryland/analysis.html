@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State of Maryland: Dell Technologies Account Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom scrollbar for content area */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 350px; }
+            .sidebar-fixed { width: 280px; flex-shrink: 0; }
+        }
+        
+        /* Smooth section transitions */
+        .content-section {
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased h-screen overflow-hidden flex flex-col md:flex-row">
+
+    <!-- Chosen Palette: Corporate Slate & Dell Blue (slate-50, slate-800, slate-900, blue-600, blue-800, emerald-600) -->
+    <!-- Application Structure Plan: A responsive dashboard layout featuring a persistent left sidebar (or top bar on mobile) serving as the main menu. The main body dynamically updates to display only the selected section's content. This provides a clean, focused reading experience, utilizes whitespace effectively for expanded data visualizations, and eliminates excessive scrolling. -->
+    <!-- Visualization & Content Choices: 
+         - Layout: Persistent Sidebar + Dynamic Body -> Goal: Focus user attention on one topic at a time while retaining global navigation.
+         - Stakeholders: HTML Grid Profile Cards + Filterable Table -> Goal: Map influence visually and systematically.
+         - Financials: Chart.js Doughnut (Scale) + Chart.js Bar (Trend) -> Goal: Show current scale AND historical trajectory with dedicated canvas space.
+         - Initiatives/Opportunities: Expanded Grid Cards + Chart.js Bar (Pipeline) -> Goal: Detail the "How" and "Why" of Dell's strategy with projected financial impact.
+         - CONFIRMING NO SVG/Mermaid used. Unicode utilized for iconography. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Persistent Navigation Menu (Sidebar on Desktop, Top Bar on Mobile) -->
+    <nav class="bg-slate-900 text-white flex flex-col md:h-screen sidebar-fixed z-20 shadow-xl overflow-y-auto">
+        
+        <!-- Header / Logo -->
+        <div class="p-6 border-b border-slate-800 flex items-center space-x-3 sticky top-0 bg-slate-900 z-10">
+            <span class="text-3xl bg-blue-600 rounded p-1.5 shadow-sm">💻</span>
+            <div>
+                <h1 class="font-bold text-lg tracking-wider leading-tight">DELL TECH</h1>
+                <p class="text-xs text-slate-400 font-medium tracking-widest uppercase">MD State Intel</p>
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="p-4 flex-grow flex md:flex-col gap-2 overflow-x-auto md:overflow-visible no-scrollbar pb-4 md:pb-0">
+            <button id="nav-summary" onclick="showSection('summary')" class="nav-item flex items-center space-x-3 p-3 rounded-lg text-left transition-all bg-blue-600 text-white border-l-4 border-blue-400 shadow-md min-w-[200px] md:min-w-0">
+                <span class="text-xl">📊</span>
+                <span class="font-semibold text-sm">1. Macro Landscape</span>
+            </button>
+
+            <button id="nav-power" onclick="showSection('power')" class="nav-item flex items-center space-x-3 p-3 rounded-lg text-left transition-all text-slate-300 hover:bg-slate-800 border-l-4 border-transparent min-w-[200px] md:min-w-0">
+                <span class="text-xl">👑</span>
+                <span class="font-semibold text-sm">2. Power Structure</span>
+            </button>
+
+            <button id="nav-budget" onclick="showSection('budget')" class="nav-item flex items-center space-x-3 p-3 rounded-lg text-left transition-all text-slate-300 hover:bg-slate-800 border-l-4 border-transparent min-w-[200px] md:min-w-0">
+                <span class="text-xl">💰</span>
+                <span class="font-semibold text-sm">3. Budget & IT Model</span>
+            </button>
+
+            <button id="nav-initiatives" onclick="showSection('initiatives')" class="nav-item flex items-center space-x-3 p-3 rounded-lg text-left transition-all text-slate-300 hover:bg-slate-800 border-l-4 border-transparent min-w-[200px] md:min-w-0">
+                <span class="text-xl">🎯</span>
+                <span class="font-semibold text-sm">4. Top Initiatives</span>
+            </button>
+
+            <div class="md:mt-8 pt-4 border-t border-slate-800 min-w-[200px] md:min-w-0">
+                <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mb-2 px-2">Account Strategy</p>
+                <button id="nav-action" onclick="showSection('action')" class="nav-item flex items-center space-x-3 p-3 rounded-lg text-left transition-all text-emerald-400 hover:bg-slate-800 border-l-4 border-transparent shadow-sm">
+                    <span class="text-xl">🚀</span>
+                    <span class="font-semibold text-sm">5. Dell Action Plan</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Links at bottom of sidebar -->
+        <div class="hidden md:block p-6 border-t border-slate-800 mt-auto">
+            <a href="https://dmonkey1001.github.io/slg-strategies/maryland/analysis.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-2 w-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white py-2 rounded-lg text-xs font-bold transition-colors border border-slate-700">
+                <span>📄</span>
+                <span>Source Report (PDF)</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative">
+        
+        <!-- Dynamic Header -->
+        <header class="bg-white shadow-sm border-b border-slate-200 px-6 py-4 flex justify-between items-center z-10 shrink-0">
+            <div>
+                <h2 id="section-title" class="text-2xl font-extrabold text-slate-800">1. Macro Landscape & Summary</h2>
+                <p id="section-subtitle" class="text-sm text-slate-500">Executive overview of entity goals and political climate.</p>
+            </div>
+            <div class="hidden lg:flex items-center space-x-3">
+                <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-bold border border-slate-200">Target: State of Maryland</span>
+                <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold border border-blue-200">Gov. Wes Moore (D)</span>
+                <div class="h-4 border-l border-slate-300 mx-1"></div>
+                <a href="https://dmonkey1001.github.io/slg-strategies/maryland/analysis.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-1.5 bg-slate-800 hover:bg-slate-700 text-white px-3 py-1.5 rounded-md text-sm font-semibold transition-colors shadow-sm">
+                    <span>📄</span>
+                    <span>View Source PDF</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Scrollable Body -->
+        <div class="flex-1 overflow-y-auto p-6 lg:p-10" id="main-scroll-area">
+            
+            <div class="max-w-6xl mx-auto">
+
+                <!-- ========================================== -->
+                <!-- SECTION 1: SUMMARY                         -->
+                <!-- ========================================== -->
+                <section id="sec-summary" class="content-section block space-y-8">
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="lg:col-span-2 space-y-6">
+                            <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+                                <h3 class="font-bold text-xl text-slate-800 mb-4 border-b pb-2">Executive Overview</h3>
+                                <p class="text-lg leading-relaxed text-slate-700 mb-4">
+                                    The State of Maryland, under Governor Wes Moore, is heavily focused on <strong class="text-slate-900">"leaving no one behind,"</strong> driving strong initiatives around economic competitiveness, digital equity, and modernization of citizen-facing services.
+                                </p>
+                                <p class="text-lg leading-relaxed text-slate-700">
+                                    The state operates with a robust budget but faces pressure to optimize operational spend while maximizing federal grant utilization, particularly in cybersecurity and infrastructure modernization.
+                                </p>
+                            </div>
+
+                            <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 shadow-inner">
+                                <h4 class="font-bold text-blue-900 mb-4 text-lg">Key Data Points</h4>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <p class="text-xs text-blue-600 uppercase font-bold tracking-wider">Population</p>
+                                        <p class="text-2xl font-extrabold text-blue-900">~6.1 Million</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-blue-600 uppercase font-bold tracking-wider">State GDP</p>
+                                        <p class="text-2xl font-extrabold text-blue-900">~$470 Billion</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-blue-600 uppercase font-bold tracking-wider">Total FY26 Budget</p>
+                                        <p class="text-2xl font-extrabold text-blue-900">$63.0 Billion</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-blue-600 uppercase font-bold tracking-wider">IT Workforce</p>
+                                        <p class="text-2xl font-extrabold text-blue-900">~1,800+ (Est)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h3 class="font-bold text-xl text-slate-800 mb-2">Core Administrative Goals</h3>
+                            
+                            <div class="bg-white p-5 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex items-center space-x-3 mb-2">
+                                    <span class="text-2xl">🌐</span>
+                                    <h4 class="font-bold text-slate-800">Digital Equity & Access</h4>
+                                </div>
+                                <p class="text-sm text-slate-600">Expanding broadband infrastructure and ensuring all digital state services meet strict UX and accessibility standards to serve all demographics equally.</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-lg border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex items-center space-x-3 mb-2">
+                                    <span class="text-2xl">🔐</span>
+                                    <h4 class="font-bold text-slate-800">Cybersecurity Resilience</h4>
+                                </div>
+                                <p class="text-sm text-slate-600">Fortifying state networks against ransomware and implementing Zero Trust architectures, heavily subsidized by federal SLCGP grants.</p>
+                            </div>
+
+                            <div class="bg-white p-5 rounded-lg border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex items-center space-x-3 mb-2">
+                                    <span class="text-2xl">🤖</span>
+                                    <h4 class="font-bold text-slate-800">Data-Driven AI Readiness</h4>
+                                </div>
+                                <p class="text-sm text-slate-600">Establishing executive task forces to prepare state data infrastructure (classification, storage, governance) for Generative AI applications.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- ========================================== -->
+                <!-- SECTION 2: POWER STRUCTURE                 -->
+                <!-- ========================================== -->
+                <section id="sec-power" class="content-section hidden space-y-8">
+                    
+                    <div class="bg-slate-800 text-white border border-slate-700 p-5 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-lg mb-1">🧭 Engagement Strategy</h3>
+                        <p class="text-slate-300 text-sm">Multi-threading is required in Maryland. <strong class="text-emerald-400">Financial Purchasers</strong> control the budget approvals and care about ROI/grants. <strong class="text-blue-400">Technical Influencers</strong> design the architectures that Dell must spec into.</p>
+                    </div>
+
+                    <!-- Influence Map -->
+                    <div>
+                        <h3 class="font-bold text-2xl text-slate-800 mb-4">Influence Hierarchy</h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                            
+                            <!-- Financial -->
+                            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                                <div class="flex items-center justify-between mb-6 border-b pb-2">
+                                    <h4 class="font-bold text-emerald-700 text-lg">Financial Purchasers</h4>
+                                    <span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded font-bold">Budget Holders</span>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-4 bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                        <div class="h-12 w-12 bg-emerald-600 text-white rounded-full flex justify-center items-center font-bold text-lg shrink-0">WM</div>
+                                        <div>
+                                            <p class="font-bold text-slate-900 text-lg">Gov. Wes Moore</p>
+                                            <p class="text-sm font-semibold text-slate-600 mb-1">Executive Mandate</p>
+                                            <p class="text-xs text-slate-500">Advocates heavily for "data-driven" policy and AI task forces. Needs visible ROI to justify spending.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-4 bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                        <div class="h-12 w-12 bg-emerald-600 text-white rounded-full flex justify-center items-center font-bold text-lg shrink-0">GG</div>
+                                        <div>
+                                            <p class="font-bold text-slate-900 text-lg">Sen. Guy Guzzone</p>
+                                            <p class="text-sm font-semibold text-slate-600 mb-1">Chair, Budget & Taxation Comm.</p>
+                                            <p class="text-xs text-slate-500">Gatekeeper for major capital expenditures. Must prove cost-savings or federal grant offsets for tech buys.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Technical -->
+                            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                                <div class="flex items-center justify-between mb-6 border-b pb-2">
+                                    <h4 class="font-bold text-blue-700 text-lg">Technical Influencers</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-bold">Architecture Leaders</span>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-4 bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                        <div class="h-12 w-12 bg-blue-600 text-white rounded-full flex justify-center items-center font-bold text-lg shrink-0">KS</div>
+                                        <div>
+                                            <p class="font-bold text-slate-900 text-lg">Katie Savage</p>
+                                            <p class="text-sm font-semibold text-slate-600 mb-1">Secretary of DoIT / CIO</p>
+                                            <p class="text-xs text-slate-500">Pushing for human-centered design, centralized cybersecurity, and strict AI governance over data silos.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-4 bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                        <div class="h-12 w-12 bg-blue-600 text-white rounded-full flex justify-center items-center font-bold text-lg shrink-0">GR</div>
+                                        <div>
+                                            <p class="font-bold text-slate-900 text-lg">Greg Rogers</p>
+                                            <p class="text-sm font-semibold text-slate-600 mb-1">Chief Information Security Officer</p>
+                                            <p class="text-xs text-slate-500">Focused entirely on executing the SLCGP grant program and moving toward Zero Trust.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Detailed Filterable Table -->
+                    <div>
+                        <h3 class="font-bold text-2xl text-slate-800 mb-4">Complete Stakeholder Matrix</h3>
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div class="bg-slate-100 p-4 border-b border-slate-200 flex space-x-2 overflow-x-auto no-scrollbar">
+                                <button class="filter-btn active bg-slate-800 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors shrink-0" data-filter="all">All Profiles</button>
+                                <button class="filter-btn bg-white text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-md text-sm font-medium border border-slate-300 transition-colors shrink-0" data-filter="elected">Financial/Elected</button>
+                                <button class="filter-btn bg-white text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-md text-sm font-medium border border-slate-300 transition-colors shrink-0" data-filter="it">IT Leadership</button>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr class="bg-slate-50 text-slate-500 text-xs uppercase tracking-wider">
+                                            <th class="p-4 border-b border-slate-200 font-bold">Name & Title</th>
+                                            <th class="p-4 border-b border-slate-200 font-bold">Sphere</th>
+                                            <th class="p-4 border-b border-slate-200 font-bold">Key Drivers & Public Stances</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="stakeholder-tbody" class="text-slate-700 text-sm">
+                                        <tr class="stakeholder-row elected hover:bg-blue-50 transition-colors" data-category="elected">
+                                            <td class="p-4 border-b border-slate-200 align-top">
+                                                <span class="font-bold block text-slate-900 text-base">Wes Moore</span>
+                                                <span class="text-xs text-slate-500">Governor</span>
+                                            </td>
+                                            <td class="p-4 border-b border-slate-200 align-top">
+                                                <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded text-xs font-bold">Financial</span>
+                                            </td>
+                                            <td class="p-4 border-b border-slate-200 align-top">Advocates heavily for "data-driven" policy, economic development, and AI integration task forces.</td>
+                                        </tr>
+                                        <tr class="stakeholder-row it hover:bg-blue-50 transition-colors" data-category="it">
+                                            <td class="p-4 border-b border-slate-200 align-top">
+                                                <span class="font-bold block text-slate-900 text-base">Katie Savage</span>
+                                                <span class="text-xs text-slate-500">Sec. of DoIT / State CIO</span>
+                                            </td>
+                                            <td class="p-4 border-b border-slate-200 align-top">
+                                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-bold">Technical</span>
+                                            </td>
+                                            <td class="p-4 border-b border-slate-200 align-top">Pushing for human-centered design, accessibility, centralized cybersecurity, and strict AI governance over data silos.</td>
+                                        </tr>
+                                        <tr class="stakeholder-row it hover:bg-blue-50 transition-colors" data-category="it">
+                                            <td class="p-4 border-b border-slate-200 align-top">
+                                                <span class="font-bold block text-slate-900 text-base">Greg Rogers</span>
+                                                <span class="text-xs text-slate-500">CISO</span>
+                                            </td>
+                                            <td class="p-4 border-b border-slate-200 align-top">
+                                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-bold">Technical</span>
+                                            </td>
+                                            <td class="p-4 border-b border-slate-200 align-top">Focused entirely on executing the SLCGP grant program, expanding endpoint protection, and moving toward Zero Trust.</td>
+                                        </tr>
+                                        <tr class="stakeholder-row elected hover:bg-blue-50 transition-colors" data-category="elected">
+                                            <td class="p-4 border-b border-slate-200 align-top">
+                                                <span class="font-bold block text-slate-900 text-base">Sen. Guy Guzzone</span>
+                                                <span class="text-xs text-slate-500">Chair, Budget Comm.</span>
+                                            </td>
+                                            <td class="p-4 border-b border-slate-200 align-top">
+                                                <span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded text-xs font-bold">Financial</span>
+                                            </td>
+                                            <td class="p-4 border-b border-slate-200 align-top">Gatekeeper for major capital expenditures. Scrutinizes DoIT budget requests deeply.</td>
+                                        </tr>
+                                        <tr class="stakeholder-row it hover:bg-blue-50 transition-colors" data-category="it">
+                                            <td class="p-4 border-b border-slate-200 align-top">
+                                                <span class="font-bold block text-slate-900 text-base">Lance Schine</span>
+                                                <span class="text-xs text-slate-500">Deputy Secretary, DoIT</span>
+                                            </td>
+                                            <td class="p-4 border-b border-slate-200 align-top">
+                                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-bold">Technical</span>
+                                            </td>
+                                            <td class="p-4 border-b border-slate-200 align-top">Focuses on enterprise architecture, cloud strategy, mitigating chargeback friction, and data center consolidation efforts.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- ========================================== -->
+                <!-- SECTION 3: BUDGET & MODEL                  -->
+                <!-- ========================================== -->
+                <section id="sec-budget" class="content-section hidden space-y-8">
+                    
+                    <!-- Governance Model -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                            <h3 class="font-bold text-2xl mb-4 text-slate-800 border-b pb-2">IT Operating Model</h3>
+                            <div class="mb-6">
+                                <span class="inline-block bg-slate-800 text-white px-3 py-1 rounded text-sm font-bold mb-3 tracking-widest uppercase">Hybrid Structure</span>
+                                <p class="text-slate-700 text-base leading-relaxed">
+                                    Maryland operates under a hybrid model. DoIT provides centralized enterprise infrastructure (network, central data center, core security). However, massive agencies (e.g., MDOT, MDH) still maintain significant federated application environments.
+                                </p>
+                            </div>
+                            
+                            <div class="bg-red-50 p-5 rounded-lg border-l-4 border-l-red-500">
+                                <h4 class="font-bold text-red-900 mb-2 flex items-center">
+                                    <span class="text-xl mr-2">⚠️</span> The APEX Opportunity (Friction Points)
+                                </h4>
+                                <p class="text-slate-700 text-sm leading-relaxed mb-3">
+                                    DoIT utilizes a <strong>chargeback model</strong> for enterprise services. High chargeback rates frequently cause friction. Large federated agencies attempt to build "shadow IT" or experience bill shock from hyperscaler egress fees.
+                                </p>
+                                <p class="text-sm font-bold text-blue-800">
+                                    Strategy: Position Dell APEX as the localized, OPEX alternative to bridge this gap, offering cloud-like consumption without public cloud egress fees or DoIT overhead.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Grants Context -->
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-center">
+                            <h3 class="font-bold text-2xl mb-4 text-slate-800 border-b pb-2">Federal Funding Influx</h3>
+                            <div class="space-y-4 text-slate-700">
+                                <div class="flex items-start space-x-4">
+                                    <span class="text-3xl">🏛️</span>
+                                    <div>
+                                        <p class="font-bold text-lg">Infrastructure Investment and Jobs Act (IIJA)</p>
+                                        <p class="text-sm">Massive broadband expansion grants affecting networking and edge infrastructure requirements state-wide.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4 pt-4 border-t border-slate-100">
+                                    <span class="text-3xl">🛡️</span>
+                                    <div>
+                                        <p class="font-bold text-lg">SLCGP Cybersecurity Grants</p>
+                                        <p class="text-sm">Estimated $5M+ active funding available to local and state entities for endpoint protection, immutable storage, and Zero Trust adoption.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Financial Charts -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Overall Scale Chart -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                            <h4 class="font-bold text-center text-slate-800 mb-6 text-lg">FY26 Target IT Spend vs Total Budget</h4>
+                            <div class="chart-container">
+                                <canvas id="budgetDoughnutChart"></canvas>
+                            </div>
+                        </div>
+                        <!-- Trend Chart -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                            <h4 class="font-bold text-center text-slate-800 mb-6 text-lg">Historical IT Budget Trend (Billions)</h4>
+                            <div class="chart-container">
+                                <canvas id="budgetBarChart"></canvas>
+                            </div>
+                            <div class="mt-4 text-xs text-slate-400 text-center italic">
+                                Note: Exact O&M vs Net-New granularity is Data Unavailable publicly.
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- ========================================== -->
+                <!-- SECTION 4: INITIATIVES                     -->
+                <!-- ========================================== -->
+                <section id="sec-initiatives" class="content-section hidden space-y-6">
+                    <p class="text-lg text-slate-700 mb-6 bg-blue-50 p-4 border border-blue-100 rounded-lg">
+                        These represent the highest-funded, most politically visible technology efforts in the state. Aligning Dell solutions to these requirements is paramount for large-scale procurement.
+                    </p>
+                    
+                    <!-- Init 1 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 flex flex-col md:flex-row gap-8 hover:border-blue-300 transition-colors">
+                        <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
+                            <div class="h-16 w-16 bg-slate-100 text-slate-700 rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-inner">🛡️</div>
+                            <h3 class="font-bold text-2xl text-slate-800 mb-2">Cyber Resilience</h3>
+                            <div class="inline-block bg-slate-800 text-white text-xs px-3 py-1.5 rounded-full font-bold shadow-sm">Owner: DoIT / CISO</div>
+                        </div>
+                        <div class="md:w-2/3 flex flex-col justify-center">
+                            <p class="text-base text-slate-700 mb-6"><strong class="text-slate-900 font-extrabold block mb-1">Executive Mandate:</strong> Protect citizen data and state intellectual property from ransomware attacks; comply strictly with federal cyber directives to secure SLCGP grant funding.</p>
+                            <div>
+                                <strong class="text-slate-800 text-sm block mb-3 uppercase tracking-wider">Required Technology Stack:</strong>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-blue-50 text-blue-700 border border-blue-200 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">Immutable Backup Solutions</span>
+                                    <span class="bg-blue-50 text-blue-700 border border-blue-200 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">Air-gapped Recovery Vaults</span>
+                                    <span class="bg-blue-50 text-blue-700 border border-blue-200 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">Zero Trust Network Arch</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Init 2 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 flex flex-col md:flex-row gap-8 hover:border-blue-300 transition-colors">
+                        <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
+                            <div class="h-16 w-16 bg-slate-100 text-slate-700 rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-inner">🧠</div>
+                            <h3 class="font-bold text-2xl text-slate-800 mb-2">AI Governance</h3>
+                            <div class="inline-block bg-slate-800 text-white text-xs px-3 py-1.5 rounded-full font-bold shadow-sm">Owner: State AI Subcabinet</div>
+                        </div>
+                        <div class="md:w-2/3 flex flex-col justify-center">
+                            <p class="text-base text-slate-700 mb-6"><strong class="text-slate-900 font-extrabold block mb-1">Executive Mandate:</strong> Execute Gov. Moore's executive order to explore, classify, and safely implement Generative AI to improve agency efficiency securely without compromising PII.</p>
+                            <div>
+                                <strong class="text-slate-800 text-sm block mb-3 uppercase tracking-wider">Required Technology Stack:</strong>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-purple-50 text-purple-700 border border-purple-200 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">Unstructured Data Consolidation</span>
+                                    <span class="bg-purple-50 text-purple-700 border border-purple-200 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">GPU-Accelerated Compute</span>
+                                    <span class="bg-purple-50 text-purple-700 border border-purple-200 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">On-Prem AI Inferencing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Init 3 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 flex flex-col md:flex-row gap-8 hover:border-blue-300 transition-colors">
+                        <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
+                            <div class="h-16 w-16 bg-slate-100 text-slate-700 rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-inner">📱</div>
+                            <h3 class="font-bold text-2xl text-slate-800 mb-2">Digital Portal Mod</h3>
+                            <div class="inline-block bg-slate-800 text-white text-xs px-3 py-1.5 rounded-full font-bold shadow-sm">Owner: MDH, DHS, DoIT</div>
+                        </div>
+                        <div class="md:w-2/3 flex flex-col justify-center">
+                            <p class="text-base text-slate-700 mb-6"><strong class="text-slate-900 font-extrabold block mb-1">Executive Mandate:</strong> Realize the "No one left behind" vision by making all critical state services highly available, mobile-first, and unified for the citizen experience.</p>
+                            <div>
+                                <strong class="text-slate-800 text-sm block mb-3 uppercase tracking-wider">Required Technology Stack:</strong>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">Cloud-Native App Platforms</span>
+                                    <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">High-Availability HCI</span>
+                                    <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">Agile DevOps Environments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- ========================================== -->
+                <!-- SECTION 5: ACTION PLAN                     -->
+                <!-- ========================================== -->
+                <section id="sec-action" class="content-section hidden space-y-8 pb-10">
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        
+                        <!-- Actions List -->
+                        <div class="lg:col-span-2 space-y-6">
+                            <!-- Action 1 -->
+                            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+                                <div class="bg-emerald-600 text-white p-6 md:w-1/3 flex flex-col justify-center shrink-0">
+                                    <span class="uppercase text-xs font-bold tracking-widest opacity-80 mb-2">Funded Alignment</span>
+                                    <h3 class="text-2xl font-bold leading-tight">Cyber Vault & PowerProtect</h3>
+                                    <div class="mt-4 pt-4 border-t border-emerald-500/50">
+                                        <p class="text-emerald-100 text-sm">Est. Value: <strong class="text-white text-lg block">$5M - $8M</strong></p>
+                                    </div>
+                                </div>
+                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                    <p class="text-slate-700 text-base mb-4"><strong class="text-slate-900 block mb-1">The Pitch:</strong> Tie Dell PowerProtect Data Manager and Cyber Recovery Vault directly to the state's SLCGP grant funding and the CISO's Zero Trust mandate.</p>
+                                    <p class="text-sm bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-blue-700">Next Action:</strong> Target Greg Rogers' team (CISO) and agency-level security directors. Position immutable architecture as the ultimate backstop against ransomware.</p>
+                                </div>
+                            </div>
+
+                            <!-- Action 2 -->
+                            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+                                <div class="bg-purple-600 text-white p-6 md:w-1/3 flex flex-col justify-center shrink-0">
+                                    <span class="uppercase text-xs font-bold tracking-widest opacity-80 mb-2">Whitespace Advisory</span>
+                                    <h3 class="text-2xl font-bold leading-tight">AI Data Lake & PowerScale</h3>
+                                    <div class="mt-4 pt-4 border-t border-purple-500/50">
+                                        <p class="text-purple-100 text-sm">Est. Value: <strong class="text-white text-lg block">$10M - $15M</strong></p>
+                                    </div>
+                                </div>
+                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                    <p class="text-slate-700 text-base mb-4"><strong class="text-slate-900 block mb-1">The Pitch:</strong> Governor Moore's AI Subcabinet cannot succeed without organized, classified data. Maryland's unstructured data sprawl is a massive blind spot.</p>
+                                    <p class="text-sm bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-blue-700">Next Action:</strong> Lead with Advisory Services for an unstructured data assessment. Position PowerScale as the foundational data lake capable of feeding future GenAI models securely on-prem (avoiding CJIS/HIPAA cloud risks).</p>
+                                </div>
+                            </div>
+
+                            <!-- Action 3 -->
+                            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+                                <div class="bg-red-600 text-white p-6 md:w-1/3 flex flex-col justify-center shrink-0">
+                                    <span class="uppercase text-xs font-bold tracking-widest opacity-80 mb-2">Competitive Displace</span>
+                                    <h3 class="text-2xl font-bold leading-tight">APEX Repatriation</h3>
+                                    <div class="mt-4 pt-4 border-t border-red-500/50">
+                                        <p class="text-red-100 text-sm">Est. Value: <strong class="text-white text-lg block">$12M+ ARR</strong></p>
+                                    </div>
+                                </div>
+                                <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                                    <p class="text-slate-700 text-base mb-4"><strong class="text-slate-900 block mb-1">The Pitch:</strong> Large federated agencies are frustrated by DoIT's chargeback models and public cloud egress fees, leading to expensive rogue cloud deployments.</p>
+                                    <p class="text-sm bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-blue-700">Next Action:</strong> Target CIOs at MDOT and MDH. Offer Dell APEX as a localized, OPEX-based cloud experience that satisfies their desire for control without huge Capital outlays, displacing aging competitor SANs.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Side Context / Pipeline Chart -->
+                        <div class="space-y-6">
+                            
+                            <div class="bg-slate-900 rounded-xl p-6 text-slate-100 shadow-lg border border-slate-700 relative overflow-hidden">
+                                <div class="absolute -right-10 -top-10 opacity-10 text-9xl">💰</div>
+                                <h4 class="font-bold text-lg mb-4 text-white relative z-10">Total Pipeline Potential</h4>
+                                <div class="text-5xl font-extrabold text-emerald-400 mb-2 relative z-10">$35M+</div>
+                                <p class="text-sm text-slate-400 relative z-10">Over the next 12-18 months based on identified strategic initiatives.</p>
+                                
+                                <div class="mt-8 pt-6 border-t border-slate-700 relative z-10">
+                                    <h5 class="text-sm font-bold text-slate-300 mb-4 uppercase tracking-wider">Projected Revenue Flow</h5>
+                                    <div class="h-48 w-full">
+                                        <canvas id="pipelineChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                                <h4 class="font-bold text-lg mb-3 text-slate-800 flex items-center"><span class="mr-2">📋</span> Procurement Reality</h4>
+                                <p class="text-sm text-slate-600 mb-3">Ensure all hardware proposals are pre-aligned with the <strong class="text-slate-900">DoIT Hardware Master Contract</strong> (via PORFP) or <strong class="text-slate-900">NASPO ValuePoint</strong> to bypass net-new RFP delays.</p>
+                                <p class="text-sm text-slate-600">Compliance mandates (<strong class="text-slate-900">StateRAMP, CJIS, HIPAA</strong>) must be explicitly addressed in the executive summary of any pitch.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+            
+            <!-- Footer inside scroll area -->
+            <footer class="mt-16 border-t border-slate-200 pt-8 pb-4 text-center text-xs text-slate-400">
+                <p>Internal Dell Technologies Intelligence Dashboard | For Authorized Account Teams Only</p>
+                <p class="mt-1">Built for Strategic Execution & Scannability</p>
+            </footer>
+
+        </div>
+    </main>
+
+    <script>
+        // --- Navigation Logic ---
+        const sectionMeta = {
+            'summary': { title: '1. Macro Landscape & Summary', subtitle: 'Executive overview of entity goals and political climate.' },
+            'power': { title: '2. Power Structure & Stakeholders', subtitle: 'Influence mapping and key decision-maker matrix.' },
+            'budget': { title: '3. Budget & IT Operating Model', subtitle: 'Financial scale, chargeback friction, and grant funding.' },
+            'initiatives': { title: '4. Top Strategic Initiatives', subtitle: 'Highest-funded modernization efforts mapped to IT requirements.' },
+            'action': { title: '5. Actionable Dell Opportunities', subtitle: 'Synthesized sales motions, whitespace, and pipeline estimation.' }
+        };
+
+        function showSection(id) {
+            // Update Header
+            document.getElementById('section-title').innerText = sectionMeta[id].title;
+            document.getElementById('section-subtitle').innerText = sectionMeta[id].subtitle;
+
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            
+            // Reset nav styling
+            document.querySelectorAll('.nav-item').forEach(el => {
+                // Remove active classes
+                el.classList.remove('bg-blue-600', 'text-white', 'border-blue-400', 'shadow-md');
+                // Add inactive classes
+                el.classList.add('text-slate-300', 'hover:bg-slate-800', 'border-transparent');
+                
+                // Specific handling for the Action Plan button text color when inactive
+                if(el.id === 'nav-action') {
+                    el.classList.remove('text-slate-300');
+                    el.classList.add('text-emerald-400');
+                }
+            });
+
+            // Show target section
+            document.getElementById('sec-' + id).classList.remove('hidden');
+            document.getElementById('sec-' + id).classList.add('block');
+
+            // Highlight target nav
+            const activeNav = document.getElementById('nav-' + id);
+            activeNav.classList.remove('text-slate-300', 'hover:bg-slate-800', 'border-transparent', 'text-emerald-400');
+            activeNav.classList.add('bg-blue-600', 'text-white', 'border-blue-400', 'shadow-md');
+
+            // Reset scroll position
+            document.getElementById('main-scroll-area').scrollTop = 0;
+
+            // Trigger specific rendering if needed (Chart.js needs to be visible to render properly)
+            if (id === 'budget') renderBudgetCharts();
+            if (id === 'action') renderActionChart();
+        }
+
+        // --- Table Filtering Logic (Power Structure) ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const rows = document.querySelectorAll('.stakeholder-row');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button styling
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-slate-800', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-700');
+                });
+                btn.classList.remove('bg-white', 'text-slate-700');
+                btn.classList.add('bg-slate-800', 'text-white');
+
+                // Filter logic
+                const filter = btn.getAttribute('data-filter');
+                rows.forEach(row => {
+                    if (filter === 'all' || row.getAttribute('data-category') === filter) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // --- Chart.js Rendering Logic ---
+        let isBudgetChartRendered = false;
+        let isActionChartRendered = false;
+
+        // Generic Chart settings
+        Chart.defaults.font.family = "'Inter', system-ui, -apple-system, sans-serif";
+        Chart.defaults.color = '#64748b'; // slate-500
+
+        function renderBudgetCharts() {
+            if (isBudgetChartRendered) return;
+
+            // 1. Doughnut Chart
+            const ctxDoughnut = document.getElementById('budgetDoughnutChart').getContext('2d');
+            new Chart(ctxDoughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['State IT Spend ($1.5B)', 'Remaining Budget ($61.5B)'],
+                    datasets: [{
+                        data: [1.5, 61.5],
+                        backgroundColor: ['#2563eb', '#e2e8f0'], // blue-600, slate-200
+                        hoverBackgroundColor: ['#1d4ed8', '#cbd5e1'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '75%',
+                    plugins: {
+                        legend: { position: 'bottom', labels: { padding: 20, font: { size: 13 } } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ' ' + context.label.split(' ')[0] + ': ' + context.parsed + ' Billion';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 2. Bar Chart (Trend)
+            const ctxBar = document.getElementById('budgetBarChart').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['FY24', 'FY25', 'FY26 (Est)'],
+                    datasets: [
+                        {
+                            label: 'Total IT Budget (Billions)',
+                            data: [1.25, 1.38, 1.50],
+                            backgroundColor: '#059669', // emerald-600
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { 
+                            beginAtZero: true,
+                            grid: { color: '#f1f5f9' },
+                            title: { display: true, text: 'Billions (USD)' }
+                        },
+                        x: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) { return '$' + context.parsed.y + ' Billion'; }
+                            }
+                        }
+                    }
+                }
+            });
+
+            isBudgetChartRendered = true;
+        }
+
+        function renderActionChart() {
+            if (isActionChartRendered) return;
+
+            const ctxPipe = document.getElementById('pipelineChart').getContext('2d');
+            new Chart(ctxPipe, {
+                type: 'bar',
+                data: {
+                    labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                    datasets: [
+                        {
+                            label: 'Cyber',
+                            data: [1, 5, 2, 0], // $8M
+                            backgroundColor: '#10b981', // emerald-500
+                            stack: 'Stack 0',
+                        },
+                        {
+                            label: 'AI Data',
+                            data: [0, 2, 8, 5], // $15M
+                            backgroundColor: '#a855f7', // purple-500
+                            stack: 'Stack 0',
+                        },
+                        {
+                            label: 'APEX',
+                            data: [3, 3, 3, 3], // $12M
+                            backgroundColor: '#ef4444', // red-500
+                            stack: 'Stack 0',
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            stacked: true,
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8' } // slate-400
+                        },
+                        y: {
+                            stacked: true,
+                            grid: { color: '#334155' }, // slate-700
+                            ticks: { 
+                                color: '#94a3b8',
+                                callback: function(value) { return '$' + value + 'M'; }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: { 
+                            position: 'top', 
+                            labels: { color: '#cbd5e1', boxWidth: 12 } // slate-300
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) { return context.dataset.label + ': $' + context.parsed.y + 'M'; }
+                            }
+                        }
+                    }
+                }
+            });
+
+            isActionChartRendered = true;
+        }
+
+        // Initialize default view on load
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('summary');
+        });
+
+    </script>
+</body>
+</html>

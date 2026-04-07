@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florida SLG Market Analysis - View Mode - Dell Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        /* Strict Chart Container Rules */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 360px; }
+        }
+
+        /* View Switching (Modal) Animations */
+        .view-section { 
+            display: none; 
+            opacity: 0; 
+        }
+        .view-section.active-view { 
+            display: block; 
+            animation: viewFadeIn 0.4s ease-out forwards; 
+        }
+        @keyframes viewFadeIn { 
+            from { opacity: 0; transform: translateY(15px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        /* Inner Tabs (Initiatives) */
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: tabFadeIn 0.3s ease-out forwards; }
+        @keyframes tabFadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Mobile Nav Transitions */
+        #mobile-nav.open { transform: translateX(0); }
+        #mobile-nav { transform: translateX(-100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Card Hover Effects */
+        .hover-card { transition: all 0.3s ease; }
+        .hover-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900 overflow-hidden flex h-screen w-full">
+
+    <!-- Chosen Palette: "Enterprise Arctic" - Slate-50/100 for backgrounds, #006BB6 (Dell Blue) for primary brand alignment, Amber/Emerald for distinct data/status differentiation. -->
+    
+    <!-- Application Structure Plan: 
+         Transformed into a View-Swapping Dashboard (Modal interaction model). 
+         Instead of scrolling, users click navigation links to dynamically inject the targeted intelligence section into the main viewing pane. 
+         This eliminates scroll-fatigue, isolates information for better focus during pre-call prep, and functions more like a native desktop application. 
+         Charts are initialized lazily only when the Financials view is opened to prevent Chart.js rendering bugs on hidden canvases.
+    -->
+    
+    <!-- Visualization & Content Choices:
+         1. Power Structure -> HTML Table -> Sortable headers -> Highlights technical vs financial buyers.
+         2. Financials -> Donut & Bar Chart (Chart.js) -> Lazy-loaded on view activation -> Breaks down O&M vs Capital.
+         3. Initiatives -> HTML Tabs -> Nested interactive content -> Details specific modernization projects.
+         4. Opportunities -> CSS Grid Cards -> Hover states -> Visual synthesis of the Dell pitch.
+    -->
+    
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-nav" class="fixed inset-0 bg-white/95 backdrop-blur-sm z-50 md:hidden flex flex-col p-6 shadow-2xl border-r border-slate-200 w-4/5 max-w-sm">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-xl font-extrabold text-blue-900 tracking-tight">Menu</h2>
+            <button onclick="toggleMobileNav()" class="p-2 bg-slate-100 rounded-full text-slate-600 hover:text-slate-900 focus:outline-none">
+                <span class="text-xl font-bold leading-none select-none">✕</span>
+            </button>
+        </div>
+        <nav class="space-y-2 flex-1 overflow-y-auto">
+            <a href="#" onclick="switchView('macro', event); toggleMobileNav()" data-target="macro" class="mobile-nav-link bg-blue-50 text-blue-700 block p-3 rounded-xl text-base font-semibold hover:bg-blue-50 hover:text-blue-700 transition-colors">1. Macro Landscape</a>
+            <a href="#" onclick="switchView('stakeholders', event); toggleMobileNav()" data-target="stakeholders" class="mobile-nav-link text-slate-700 block p-3 rounded-xl text-base font-semibold hover:bg-blue-50 hover:text-blue-700 transition-colors">2. Power Structure</a>
+            <a href="#" onclick="switchView('governance', event); toggleMobileNav()" data-target="governance" class="mobile-nav-link text-slate-700 block p-3 rounded-xl text-base font-semibold hover:bg-blue-50 hover:text-blue-700 transition-colors">3. IT Governance</a>
+            <a href="#" onclick="switchView('financials', event); toggleMobileNav()" data-target="financials" class="mobile-nav-link text-slate-700 block p-3 rounded-xl text-base font-semibold hover:bg-blue-50 hover:text-blue-700 transition-colors">4. Financials & Budget</a>
+            <a href="#" onclick="switchView('initiatives', event); toggleMobileNav()" data-target="initiatives" class="mobile-nav-link text-slate-700 block p-3 rounded-xl text-base font-semibold hover:bg-blue-50 hover:text-blue-700 transition-colors">5. Strategic Initiatives</a>
+            <a href="#" onclick="switchView('procurement', event); toggleMobileNav()" data-target="procurement" class="mobile-nav-link text-slate-700 block p-3 rounded-xl text-base font-semibold hover:bg-blue-50 hover:text-blue-700 transition-colors">6. Procurement & Vendors</a>
+            <a href="#" onclick="switchView('opportunities', event); toggleMobileNav()" data-target="opportunities" class="block p-3 mt-4 rounded-xl text-base font-bold text-white bg-blue-700 text-center shadow-md hover:bg-blue-800 transition-colors">7. Dell Opportunities</a>
+            
+            <a href="https://dmonkey1001.github.io/slg-strategies/florida/analysis.pdf" target="_blank" rel="noopener noreferrer" class="block p-3 mt-4 rounded-xl text-sm font-bold text-blue-900 bg-blue-100 text-center hover:bg-blue-200 transition-colors flex justify-center items-center gap-2">
+                <span>📄</span> View Full PDF Report
+            </a>
+        </nav>
+    </div>
+
+    <!-- Desktop Sidebar -->
+    <aside class="w-64 lg:w-72 bg-white border-r border-slate-200 hidden md:flex flex-col flex-shrink-0 z-30 shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
+        <div class="p-6 lg:p-8 border-b border-slate-100 bg-slate-50/50">
+            <div class="flex items-center gap-2 mb-2">
+                <div class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">SLG Intelligence</span>
+            </div>
+            <h1 class="text-2xl font-black text-slate-900 leading-tight">State of <br><span class="text-blue-700">Florida</span></h1>
+        </div>
+        <nav class="flex-1 overflow-y-auto p-4 lg:p-6" id="desktop-nav">
+            <ul class="space-y-1 relative">
+                <li class="relative z-10"><a href="#" onclick="switchView('macro', event)" data-target="macro" class="desktop-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-blue-800 bg-blue-50 transition-colors">1. Executive Summary</a></li>
+                <li class="relative z-10"><a href="#" onclick="switchView('stakeholders', event)" data-target="stakeholders" class="desktop-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50 hover:text-blue-700 transition-colors">2. Power Structure</a></li>
+                <li class="relative z-10"><a href="#" onclick="switchView('governance', event)" data-target="governance" class="desktop-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50 hover:text-blue-700 transition-colors">3. IT Governance</a></li>
+                <li class="relative z-10"><a href="#" onclick="switchView('financials', event)" data-target="financials" class="desktop-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50 hover:text-blue-700 transition-colors">4. Budget Analysis</a></li>
+                <li class="relative z-10"><a href="#" onclick="switchView('initiatives', event)" data-target="initiatives" class="desktop-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50 hover:text-blue-700 transition-colors">5. Strategic Initiatives</a></li>
+                <li class="relative z-10"><a href="#" onclick="switchView('procurement', event)" data-target="procurement" class="desktop-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50 hover:text-blue-700 transition-colors">6. Vendor Landscape</a></li>
+                <li class="relative z-10 pt-4"><a href="#" onclick="switchView('opportunities', event)" data-target="opportunities" class="block px-4 py-3 rounded-xl text-sm font-bold text-white bg-blue-700 shadow border border-blue-800 text-center hover:bg-blue-800 transition-colors">Actionable Opps</a></li>
+            </ul>
+        </nav>
+        <div class="p-6 border-t border-slate-100 bg-slate-50/50">
+            <a href="https://dmonkey1001.github.io/slg-strategies/florida/analysis.pdf" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-white border border-slate-200 text-slate-700 text-sm font-bold rounded-xl shadow-sm hover:bg-slate-50 hover:text-blue-700 transition-all hover-card">
+                <span>📄</span> Original PDF Report
+            </a>
+            <p class="text-[9px] text-slate-400 font-medium text-center mt-4 uppercase tracking-widest">Internal Use Only</p>
+        </div>
+    </aside>
+
+    <!-- Main Content Area (Flex Column) -->
+    <main class="flex-1 flex flex-col h-full relative" id="main-content">
+        
+        <!-- Persistent Header Area -->
+        <header class="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center z-20 shadow-sm flex-shrink-0">
+            <div class="flex flex-col">
+                <span class="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-blue-600">Dell Technologies Account Executive Briefing</span>
+                <div class="flex items-center gap-2">
+                    <h2 class="font-bold text-slate-900 text-sm md:text-lg">Market Deep-Dive: FL</h2>
+                    <span class="text-slate-300">/</span>
+                    <span id="current-view-title" class="font-semibold text-blue-800 text-sm md:text-base">Executive Summary</span>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button onclick="toggleMobileNav()" class="md:hidden flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-lg text-blue-700 font-bold text-sm hover:bg-slate-200">
+                <span>☰</span>
+            </button>
+        </header>
+
+        <!-- View Container (Scrollable) -->
+        <div class="flex-1 overflow-y-auto p-6 md:p-10 lg:p-16 relative" id="view-container">
+            <div class="max-w-5xl mx-auto pb-20">
+
+                <!-- 1. EXECUTIVE SUMMARY VIEW -->
+                <section id="macro" class="view-section active-view">
+                    <!-- Hero intro only visible on first view -->
+                    <div class="mb-12 bg-gradient-to-br from-blue-900 to-blue-800 rounded-3xl p-8 md:p-12 text-white shadow-lg relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">State of Florida</h2>
+                            <p class="text-blue-100 text-lg md:text-xl max-w-2xl leading-relaxed mb-8">
+                                A high-growth, federated tech market. Use this report to identify the intersection of political priorities and infrastructure gaps where Dell's APEX and Power lines can displace legacy footprints.
+                            </p>
+                            <a href="https://dmonkey1001.github.io/slg-strategies/florida/analysis.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-blue-900 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors shadow-sm">
+                                <span>📄</span> Download Source PDF
+                            </a>
+                        </div>
+                        <div class="absolute -right-10 -bottom-10 text-9xl opacity-5 select-none pointer-events-none">🌴</div>
+                    </div>
+
+                    <div class="mb-8 border-b border-slate-200 pb-4">
+                        <h3 class="text-3xl font-black text-slate-900 mb-2">Executive Summary</h3>
+                        <p class="text-slate-600 text-sm">This section provides the high-level operational context of the target entity. Use this summary to anchor your initial outreach messaging.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="lg:col-span-2 bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm hover-card flex flex-col justify-between">
+                            <p class="text-slate-700 leading-relaxed mb-8 text-lg">
+                                Florida operates with a strong executive branch focused on rapid citizen service delivery and economic development. The state is undergoing a massive shift led by the <strong>Florida Digital Service (FLDS)</strong> to implement enterprise-wide cybersecurity standards and mandate data interoperability across historically siloed agencies.
+                            </p>
+                            
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-widest text-xs">Top 3 Administrative IT Goals</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                        <div class="text-2xl mb-3">🛡️</div>
+                                        <h5 class="font-bold text-blue-900 mb-1">Cyber Standardization</h5>
+                                        <p class="text-xs text-slate-600">Implementing Zero Trust and unified threat response across all local and state endpoints.</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                        <div class="text-2xl mb-3">📱</div>
+                                        <h5 class="font-bold text-blue-900 mb-1">Citizen Experience</h5>
+                                        <p class="text-xs text-slate-600">Modernizing public portals via cloud and edge integrations.</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                        <div class="text-2xl mb-3">🗄️</div>
+                                        <h5 class="font-bold text-blue-900 mb-1">Data Interoperability</h5>
+                                        <p class="text-xs text-slate-600">Breaking down mainframe silos to enable cross-agency AI.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NEW VISUAL: Market Vital Signs Dashboard -->
+                        <div class="bg-slate-900 p-6 md:p-8 rounded-2xl shadow-lg flex flex-col relative overflow-hidden group">
+                            <div class="absolute -right-4 -top-4 text-7xl opacity-10 group-hover:scale-110 transition-transform duration-700 pointer-events-none select-none">📈</div>
+                            <h4 class="font-bold text-white mb-6 uppercase tracking-widest text-xs border-b border-slate-700 pb-2">Market Vital Signs</h4>
+                            
+                            <div class="space-y-6 flex-1">
+                                <div>
+                                    <div class="text-3xl font-black text-blue-400">$1.7B+</div>
+                                    <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Addressable IT Market</div>
+                                    <div class="w-full bg-slate-800 h-1.5 mt-2 rounded-full overflow-hidden"><div class="bg-blue-500 h-full w-3/4"></div></div>
+                                </div>
+                                
+                                <div>
+                                    <div class="text-3xl font-black text-emerald-400">32+</div>
+                                    <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Major Target Agencies</div>
+                                    <div class="w-full bg-slate-800 h-1.5 mt-2 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-1/2"></div></div>
+                                </div>
+
+                                <div>
+                                    <div class="text-3xl font-black text-amber-400">18 Months</div>
+                                    <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Avg. APEX Sales Cycle</div>
+                                    <div class="w-full bg-slate-800 h-1.5 mt-2 rounded-full overflow-hidden"><div class="bg-amber-500 h-full w-2/3"></div></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 pt-4 border-t border-slate-700">
+                                <div class="flex justify-between items-center text-xs">
+                                    <span class="text-slate-400">Cloud Posture:</span>
+                                    <span class="px-2 py-1 bg-slate-800 text-blue-300 font-bold rounded">Hybrid Shifting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. POWER STRUCTURE VIEW -->
+                <section id="stakeholders" class="view-section">
+                    <div class="mb-8 border-b border-slate-200 pb-4">
+                        <h3 class="text-3xl font-black text-slate-900 mb-2">Power Structure & Key Stakeholders</h3>
+                        <p class="text-slate-600 text-sm">Identify the true decision-makers. <span class="font-semibold text-blue-700">Click the table headers to sort</span> the data by Name, Role, or Influence. Use this to separate technical architects from financial purse-holders.</p>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden hover-card">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left whitespace-nowrap md:whitespace-normal" id="stakeholder-table">
+                                <thead>
+                                    <tr class="bg-slate-50 border-b border-slate-200 select-none">
+                                        <th class="p-5 text-xs font-black uppercase tracking-widest text-slate-500 cursor-pointer hover:bg-slate-100 transition-colors" onclick="sortTable(0, this)">Name <span class="sort-icon text-slate-300 ml-1">↕</span></th>
+                                        <th class="p-5 text-xs font-black uppercase tracking-widest text-slate-500 cursor-pointer hover:bg-slate-100 transition-colors" onclick="sortTable(1, this)">Title / Office <span class="sort-icon text-slate-300 ml-1">↕</span></th>
+                                        <th class="p-5 text-xs font-black uppercase tracking-widest text-slate-500 cursor-pointer hover:bg-slate-100 transition-colors" onclick="sortTable(2, this)">Sphere of Influence <span class="sort-icon text-slate-300 ml-1">↕</span></th>
+                                        <th class="p-5 text-xs font-black uppercase tracking-widest text-slate-500">Public Stance / Focus</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 text-sm">
+                                    <tr class="hover:bg-blue-50/50 transition-colors">
+                                        <td class="p-5 font-bold text-slate-900">Ron DeSantis</td>
+                                        <td class="p-5 text-slate-600">Governor</td>
+                                        <td class="p-5"><span class="px-2 py-1 bg-green-100 text-green-800 text-[10px] font-bold uppercase rounded border border-green-200">Financial / Exec</span></td>
+                                        <td class="p-5 text-slate-600 max-w-xs whitespace-normal">Prioritizes state sovereignty over data and rapid execution. Anti-ESG framework focus.</td>
+                                    </tr>
+                                    <tr class="hover:bg-blue-50/50 transition-colors">
+                                        <td class="p-5 font-bold text-slate-900">State CIO</td>
+                                        <td class="p-5 text-slate-600">FL Digital Service (FLDS)</td>
+                                        <td class="p-5"><span class="px-2 py-1 bg-blue-100 text-blue-800 text-[10px] font-bold uppercase rounded border border-blue-200">Technical Influencer</span></td>
+                                        <td class="p-5 text-slate-600 max-w-xs whitespace-normal">Driving enterprise architecture standards and multi-cloud management platforms.</td>
+                                    </tr>
+                                    <tr class="hover:bg-blue-50/50 transition-colors">
+                                        <td class="p-5 font-bold text-slate-900">State CISO</td>
+                                        <td class="p-5 text-slate-600">FL Digital Service (FLDS)</td>
+                                        <td class="p-5"><span class="px-2 py-1 bg-blue-100 text-blue-800 text-[10px] font-bold uppercase rounded border border-blue-200">Technical Influencer</span></td>
+                                        <td class="p-5 text-slate-600 max-w-xs whitespace-normal">Advocating for Zero Trust architecture, automated threat hunting, and strict recovery mandates.</td>
+                                    </tr>
+                                    <tr class="hover:bg-blue-50/50 transition-colors">
+                                        <td class="p-5 font-bold text-slate-900">Agency CIOs</td>
+                                        <td class="p-5 text-slate-600">FDLE, DCF, DOT</td>
+                                        <td class="p-5"><span class="px-2 py-1 bg-purple-100 text-purple-800 text-[10px] font-bold uppercase rounded border border-purple-200">Hybrid / Purchaser</span></td>
+                                        <td class="p-5 text-slate-600 max-w-xs whitespace-normal">Retain significant autonomy for mission-specific applications. Highly protective of departmental budgets.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. IT GOVERNANCE VIEW -->
+                <section id="governance" class="view-section">
+                    <div class="mb-8 border-b border-slate-200 pb-4">
+                        <h3 class="text-3xl font-black text-slate-900 mb-2">IT Governance & Service Delivery</h3>
+                        <p class="text-slate-600 text-sm">Understanding how Florida buys IT is critical. This section outlines the structural friction between central IT and independent agencies.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm hover-card flex flex-col">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-2xl">⚖️</span>
+                                <h4 class="font-bold text-slate-900">Operating Model: Federated</h4>
+                            </div>
+                            <p class="text-slate-700 text-sm leading-relaxed mb-6">
+                                Florida operates on a strongly <strong>Federated</strong> model. While FLDS sets security baselines and data rules, individual agencies (Transportation, Law Enforcement) control their own massive budgets and make autonomous execution decisions.
+                            </p>
+                            
+                            <!-- NEW VISUAL: Enhanced HTML/CSS Network Architecture Map -->
+                            <div class="flex-1 flex flex-col items-center justify-center bg-slate-50 p-6 rounded-xl border border-slate-200 relative mt-auto">
+                                <!-- Central Node -->
+                                <div class="w-full max-w-[200px] text-center py-3 bg-blue-800 text-white text-sm font-black uppercase tracking-widest rounded-lg shadow-md border-2 border-blue-900 z-10 relative">
+                                    FLDS<br><span class="text-[9px] text-blue-200 font-semibold block mt-1">Standards & Policy</span>
+                                </div>
+                                
+                                <!-- Connecting Lines (Vertical) -->
+                                <div class="h-8 w-1 bg-blue-300"></div>
+                                <div class="w-full max-w-[320px] h-1 bg-blue-300"></div>
+                                
+                                <!-- Satellite Nodes -->
+                                <div class="flex w-full max-w-[380px] justify-between gap-4 mt-0">
+                                    <div class="flex flex-col items-center flex-1">
+                                        <div class="h-6 w-1 bg-blue-300"></div>
+                                        <div class="w-full text-center py-4 bg-white text-slate-800 text-xs font-bold rounded-lg shadow-sm border border-slate-300 relative group cursor-help">
+                                            FDOT
+                                            <div class="absolute opacity-0 group-hover:opacity-100 transition-opacity -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded whitespace-nowrap">High Autonomy</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center flex-1">
+                                        <div class="h-6 w-1 bg-blue-300"></div>
+                                        <div class="w-full text-center py-4 bg-white text-slate-800 text-xs font-bold rounded-lg shadow-sm border border-slate-300 relative group cursor-help">
+                                            FDLE
+                                            <div class="absolute opacity-0 group-hover:opacity-100 transition-opacity -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded whitespace-nowrap">CJIS Regulated</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center flex-1">
+                                        <div class="h-6 w-1 bg-blue-300"></div>
+                                        <div class="w-full text-center py-4 bg-white text-slate-800 text-xs font-bold rounded-lg shadow-sm border border-slate-300 relative group cursor-help">
+                                            DHSMV
+                                            <div class="absolute opacity-0 group-hover:opacity-100 transition-opacity -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded whitespace-nowrap">Cloud First</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mt-6">Execution & Procurement Level</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm border-t-4 border-t-amber-500 hover-card">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-2xl">⚠️</span>
+                                <h4 class="font-bold text-slate-900">Key Friction Points</h4>
+                            </div>
+                            <ul class="space-y-4">
+                                <li class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                    <strong class="text-slate-900 text-sm block mb-1">Chargeback Complexity:</strong> 
+                                    <p class="text-xs text-slate-600">Agencies complain about opaque central data center costs, driving unsanctioned shadow IT and public cloud migrations.</p>
+                                </li>
+                                <li class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                    <strong class="text-slate-900 text-sm block mb-1">Mandate vs. Budget:</strong> 
+                                    <p class="text-xs text-slate-600">FLDS mandates strict security tools, but agencies must carve out their own operational budget to procure them, causing friction.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. FINANCIALS VIEW -->
+                <section id="financials" class="view-section">
+                    <div class="mb-8 border-b border-slate-200 pb-4">
+                        <h3 class="text-3xl font-black text-slate-900 mb-2">Financials & Budget Breakdown</h3>
+                        <p class="text-slate-600 text-sm">Hover over the charts to view exact budget distributions. Use the "Capital" spend data to qualify whitespace accounts for Dell infrastructure refresh campaigns.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center hover-card">
+                            <h4 class="font-bold text-slate-900 mb-1">Agency IT Spend Distribution</h4>
+                            <p class="text-[10px] uppercase font-bold text-slate-400 mb-6 tracking-widest">Projected Fiscal Year</p>
+                            <div class="chart-container w-full relative">
+                                <canvas id="budgetDonutChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center hover-card">
+                            <h4 class="font-bold text-slate-900 mb-1">O&M vs. Capital IT Investment</h4>
+                            <p class="text-[10px] uppercase font-bold text-slate-400 mb-6 tracking-widest">Maintenance vs. Net-New Tech</p>
+                            <div class="chart-container w-full relative">
+                                <canvas id="budgetBarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 md:p-8 relative overflow-hidden hover-card">
+                        <div class="absolute -right-10 -top-10 text-9xl opacity-5 text-blue-900 select-none pointer-events-none">💰</div>
+                        <h4 class="font-bold text-blue-900 mb-4 text-lg">Federal Grants & Funding Influx</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-5 rounded-xl shadow-sm border border-blue-100">
+                                <h5 class="font-bold text-slate-900 text-sm mb-1">SLCGP (Cybersecurity)</h5>
+                                <p class="text-xs text-slate-600 mb-3">Multi-million dollar drawdowns strictly for cyber resilience.</p>
+                                <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-[10px] font-bold rounded uppercase">Target: Cyber Vaults</span>
+                            </div>
+                            <div class="bg-white p-5 rounded-xl shadow-sm border border-blue-100">
+                                <h5 class="font-bold text-slate-900 text-sm mb-1">IIJA Broadband</h5>
+                                <p class="text-xs text-slate-600 mb-3">Infrastructure funds expanding edge networks statewide.</p>
+                                <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-[10px] font-bold rounded uppercase">Target: Edge Compute</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. STRATEGIC INITIATIVES VIEW -->
+                <section id="initiatives" class="view-section">
+                    <div class="mb-8 border-b border-slate-200 pb-4">
+                        <h3 class="text-3xl font-black text-slate-900 mb-2">Strategic Initiatives & Projects</h3>
+                        <p class="text-slate-600 text-sm">Explore the top 3 funded modernization efforts. <span class="font-semibold text-blue-700">Click the tabs below</span> to reveal the executive mandate, owning agency, and underlying IT requirements.</p>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden hover-card">
+                        <!-- Tab Navigation -->
+                        <div class="flex flex-col sm:flex-row border-b border-slate-200 bg-slate-50" role="tablist">
+                            <button class="tab-btn flex-1 py-4 px-4 text-xs font-black uppercase tracking-widest text-blue-700 border-b-2 border-blue-700 bg-white focus:outline-none transition-colors text-center" onclick="switchTab(event, 'init-1')" role="tab" aria-selected="true">1. Cyber Resilience</button>
+                            <button class="tab-btn flex-1 py-4 px-4 text-xs font-bold uppercase tracking-widest text-slate-500 border-b-2 border-transparent hover:text-blue-600 hover:bg-slate-100 focus:outline-none transition-colors text-center" onclick="switchTab(event, 'init-2')" role="tab" aria-selected="false">2. Citizen CX Portal</button>
+                            <button class="tab-btn flex-1 py-4 px-4 text-xs font-bold uppercase tracking-widest text-slate-500 border-b-2 border-transparent hover:text-blue-600 hover:bg-slate-100 focus:outline-none transition-colors text-center" onclick="switchTab(event, 'init-3')" role="tab" aria-selected="false">3. Law Enforcement Data</button>
+                        </div>
+
+                        <!-- Tab Contents -->
+                        <div class="p-6 md:p-10 min-h-[300px]">
+                            
+                            <!-- Tab 1 -->
+                            <div id="init-1" class="tab-content active" role="tabpanel">
+                                <h4 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3"><span class="text-3xl">🔒</span> Enterprise Cybersecurity Resilience</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div class="space-y-4">
+                                        <div><strong class="text-xs uppercase tracking-widest text-slate-400 block mb-1">Executive Mandate:</strong> <p class="text-slate-700 text-sm">Protect state critical infrastructure from ransomware and ensure rapid, guaranteed recovery of citizen services.</p></div>
+                                        <div><strong class="text-xs uppercase tracking-widest text-slate-400 block mb-1">Owning Agency:</strong> <p class="text-slate-700 text-sm font-semibold">FLDS + All Exec Agencies</p></div>
+                                    </div>
+                                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
+                                        <strong class="text-blue-900 text-sm block mb-2 font-bold">Underlying IT Requirement:</strong>
+                                        <p class="text-sm text-slate-700 leading-relaxed">Immutable backup architectures, air-gapped data vaults, Zero Trust network access. Agencies must rapidly move away from legacy tape and single-site replication.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab 2 -->
+                            <div id="init-2" class="tab-content" role="tabpanel">
+                                <h4 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3"><span class="text-3xl">☁️</span> Cloud-First Citizen Portal Modernization</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div class="space-y-4">
+                                        <div><strong class="text-xs uppercase tracking-widest text-slate-400 block mb-1">Executive Mandate:</strong> <p class="text-slate-700 text-sm">"Florida First" initiative to make government services (licenses, health benefits) accessible via responsive mobile interfaces.</p></div>
+                                        <div><strong class="text-xs uppercase tracking-widest text-slate-400 block mb-1">Owning Agency:</strong> <p class="text-slate-700 text-sm font-semibold">DHSMV & DCF</p></div>
+                                    </div>
+                                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
+                                        <strong class="text-blue-900 text-sm block mb-2 font-bold">Underlying IT Requirement:</strong>
+                                        <p class="text-sm text-slate-700 leading-relaxed">Mainframe refactoring, containerized applications, and notably, <strong>Hybrid-Cloud Repatriation</strong> as public cloud egress costs have spiraled out of control for large datasets.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab 3 -->
+                            <div id="init-3" class="tab-content" role="tabpanel">
+                                <h4 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3"><span class="text-3xl">🚓</span> Statewide Law Enforcement Analytics</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div class="space-y-4">
+                                        <div><strong class="text-xs uppercase tracking-widest text-slate-400 block mb-1">Executive Mandate:</strong> <p class="text-slate-700 text-sm">Enhance public safety by allowing real-time video/data sharing and predictive analytics across county lines.</p></div>
+                                        <div><strong class="text-xs uppercase tracking-widest text-slate-400 block mb-1">Owning Agency:</strong> <p class="text-slate-700 text-sm font-semibold">FL Dept. of Law Enforcement (FDLE)</p></div>
+                                    </div>
+                                    <div class="bg-blue-50/50 p-6 rounded-xl border border-blue-100">
+                                        <strong class="text-blue-900 text-sm block mb-2 font-bold">Underlying IT Requirement:</strong>
+                                        <p class="text-sm text-slate-700 leading-relaxed">Massive unstructured data storage (bodycams), strict CJIS-compliant environments (requires on-premise control), and AI-ready high-performance compute clusters at the edge.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. PROCUREMENT VIEW -->
+                <section id="procurement" class="view-section">
+                    <div class="mb-8 border-b border-slate-200 pb-4">
+                        <h3 class="text-3xl font-black text-slate-900 mb-2">Procurement & Vendor Landscape</h3>
+                        <p class="text-slate-600 text-sm">Review the preferred contract vehicles and current competitive landscape. Ensure Dell is quoted on authorized state contracts.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover-card">
+                            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-2xl mb-6">📝</div>
+                            <h4 class="font-bold text-slate-900 mb-4 text-lg">Primary Contract Vehicles</h4>
+                            <ul class="text-sm text-slate-700 space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-blue-600 font-bold mt-0.5">▪</span>
+                                    <div><strong>STC (State Term Contracts):</strong> The preferred vehicle for standardized hardware.</div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-blue-600 font-bold mt-0.5">▪</span>
+                                    <div><strong>NVP (NASPO ValuePoint):</strong> Heavily utilized for Computer Equipment and Enterprise Storage.</div>
+                                </li>
+                            </ul>
+                            <div class="mt-6 p-3 bg-emerald-50 text-emerald-800 text-xs font-bold rounded-lg border border-emerald-100 flex items-center gap-2">
+                                <span class="text-lg">✓</span> Dell is prime on all major FL vehicles.
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover-card">
+                            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-2xl mb-6">⚔️</div>
+                            <h4 class="font-bold text-slate-900 mb-4 text-lg">The Competitive Battlefield</h4>
+                            <ul class="text-sm text-slate-700 space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-500 font-bold mt-0.5">▪</span>
+                                    <div><strong>Cloud:</strong> Heavy AWS/Azure footprint. Rising cost complaints present an opening for APEX.</div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-500 font-bold mt-0.5">▪</span>
+                                    <div><strong>Storage:</strong> Aging NetApp and legacy Commvault environments exist in mid-tier agencies, ripe for replacement.</div>
+                                </li>
+                            </ul>
+                            <div class="mt-6 p-3 bg-amber-50 text-amber-800 text-xs font-bold rounded-lg border border-amber-100 flex items-center gap-2">
+                                <span class="text-lg">⚠</span> Compliance Driver: StateRAMP is now mandatory.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NEW VISUAL: CSS Grid Displacement Matrix -->
+                    <div class="bg-slate-900 p-8 rounded-2xl shadow-lg border border-slate-800">
+                        <h4 class="text-white font-bold mb-6 text-lg flex items-center gap-2"><span>🎯</span> Vendor Displacement Matrix</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-1 bg-slate-800 p-1 rounded-xl">
+                            
+                            <!-- Header Row -->
+                            <div class="hidden md:block bg-slate-800 p-3 text-xs font-black uppercase text-slate-400 tracking-widest text-center">Current Environment</div>
+                            <div class="hidden md:block bg-slate-800 p-3 text-xs font-black uppercase text-slate-400 tracking-widest text-center">Friction Point</div>
+                            <div class="hidden md:block bg-slate-800 p-3 text-xs font-black uppercase text-blue-400 tracking-widest text-center">Dell Solution</div>
+
+                            <!-- Row 1 -->
+                            <div class="bg-slate-900 p-5 md:rounded-l-lg flex flex-col justify-center">
+                                <div class="md:hidden text-[10px] text-slate-500 font-bold uppercase mb-1">Current Env:</div>
+                                <span class="font-bold text-white text-sm">Public Cloud (AWS/Azure)</span>
+                            </div>
+                            <div class="bg-slate-900 p-5 flex flex-col justify-center border-t border-slate-800 md:border-t-0 md:border-l md:border-r border-slate-800/50">
+                                <div class="md:hidden text-[10px] text-slate-500 font-bold uppercase mb-1">Friction Point:</div>
+                                <span class="text-red-400 text-sm font-semibold">Massive Data Egress Fees</span>
+                            </div>
+                            <div class="bg-slate-900 p-5 md:rounded-r-lg flex flex-col justify-center items-center border-t border-slate-800 md:border-t-0 relative overflow-hidden group">
+                                <div class="absolute inset-0 bg-blue-900/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                                <div class="md:hidden text-[10px] text-slate-500 font-bold uppercase mb-1 w-full">Dell Solution:</div>
+                                <span class="font-black text-blue-400 bg-blue-900/40 px-3 py-1.5 rounded relative z-10 w-full text-center shadow-inner">Dell APEX</span>
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="bg-slate-900 p-5 md:rounded-l-lg flex flex-col justify-center border-t border-slate-800">
+                                <div class="md:hidden text-[10px] text-slate-500 font-bold uppercase mb-1">Current Env:</div>
+                                <span class="font-bold text-white text-sm">Legacy SAN (NetApp)</span>
+                            </div>
+                            <div class="bg-slate-900 p-5 flex flex-col justify-center border-t border-slate-800 md:border-l md:border-r border-slate-800/50">
+                                <div class="md:hidden text-[10px] text-slate-500 font-bold uppercase mb-1">Friction Point:</div>
+                                <span class="text-red-400 text-sm font-semibold">Ransomware Vulnerability</span>
+                            </div>
+                            <div class="bg-slate-900 p-5 md:rounded-r-lg flex flex-col justify-center items-center border-t border-slate-800 relative overflow-hidden group">
+                                <div class="absolute inset-0 bg-blue-900/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                                <div class="md:hidden text-[10px] text-slate-500 font-bold uppercase mb-1 w-full">Dell Solution:</div>
+                                <span class="font-black text-blue-400 bg-blue-900/40 px-3 py-1.5 rounded relative z-10 w-full text-center shadow-inner text-sm whitespace-nowrap">Cyber Recovery Vault</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. ACTIONABLE OPPORTUNITIES VIEW -->
+                <section id="opportunities" class="view-section">
+                    <div class="mb-10 border-b border-slate-200 pb-4">
+                        <h3 class="text-4xl font-black text-blue-900 mb-2">Actionable Dell Opportunities</h3>
+                        <p class="text-slate-600 text-lg">The "So What". Synthesizing the data above into three targeted, actionable sales plays. Focus your outreach on these specific motions.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                        <div class="hover-card bg-gradient-to-br from-blue-900 to-blue-800 p-1 rounded-2xl shadow-lg relative group overflow-hidden">
+                            <div class="bg-white h-full w-full rounded-xl p-8 relative z-10 flex flex-col">
+                                <div class="flex justify-between items-start mb-6">
+                                    <span class="text-4xl">☁️</span>
+                                    <span class="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-black uppercase tracking-widest rounded">Funded Alignment</span>
+                                </div>
+                                <h4 class="text-xl font-extrabold text-slate-900 mb-3">Hybrid Cloud Repatriation via APEX</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    Connects to Initiative 2. Agencies are experiencing "cloud shock" from unpredictable egress fees. 
+                                </p>
+                                <div class="mt-auto pt-5 border-t border-slate-100">
+                                    <strong class="text-xs text-blue-800 uppercase block mb-2 font-black tracking-wider">The Motion:</strong>
+                                    <p class="text-sm text-slate-700 font-medium">Pitch Dell APEX Custom Solutions to deliver OpEx cloud consumption on-premise, ensuring data sovereignty and cost control.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hover-card bg-gradient-to-br from-emerald-600 to-teal-700 p-1 rounded-2xl shadow-lg relative group overflow-hidden">
+                            <div class="bg-white h-full w-full rounded-xl p-8 relative z-10 flex flex-col">
+                                <div class="flex justify-between items-start mb-6">
+                                    <span class="text-4xl">🤖</span>
+                                    <span class="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-black uppercase tracking-widest rounded">Advisory Led</span>
+                                </div>
+                                <h4 class="text-xl font-extrabold text-slate-900 mb-3">AI-Ready Architecture for FDLE</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    Connects to Initiative 3. Law enforcement lacks the infrastructure to run secure predictive AI models against local video data.
+                                </p>
+                                <div class="mt-auto pt-5 border-t border-slate-100">
+                                    <strong class="text-xs text-emerald-800 uppercase block mb-2 font-black tracking-wider">The Motion:</strong>
+                                    <p class="text-sm text-slate-700 font-medium">Pitch PowerEdge XE with GPUs + PowerScale storage to create a secure, on-prem AI data lake compliant with CJIS.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hover-card bg-gradient-to-br from-amber-500 to-orange-600 p-1 rounded-2xl shadow-lg relative group overflow-hidden">
+                            <div class="bg-white h-full w-full rounded-xl p-8 relative z-10 flex flex-col">
+                                <div class="flex justify-between items-start mb-6">
+                                    <span class="text-4xl">🛡️</span>
+                                    <span class="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-black uppercase tracking-widest rounded">Comp Displacement</span>
+                                </div>
+                                <h4 class="text-xl font-extrabold text-slate-900 mb-3">Cyber Vaulting for Ransomware</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    Connects to Initiative 1. Legacy competitor backups across mid-tier agencies are vulnerable to modern encryption attacks.
+                                </p>
+                                <div class="mt-auto pt-5 border-t border-slate-100">
+                                    <strong class="text-xs text-amber-800 uppercase block mb-2 font-black tracking-wider">The Motion:</strong>
+                                    <p class="text-sm text-slate-700 font-medium">Leverage SLCGP grants. Rip-and-replace aging SANs with PowerProtect Cyber Recovery air-gapped vaults.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // --- State Management ---
+        let chartsInitialized = false;
+
+        // --- 1. View Switching Logic (Modal/Tab Replacement) ---
+        function switchView(viewId, event) {
+            if (event) event.preventDefault();
+
+            // Hide all views
+            document.querySelectorAll('.view-section').forEach(sec => {
+                sec.classList.remove('active-view');
+            });
+
+            // Show target view
+            const targetView = document.getElementById(viewId);
+            if (targetView) {
+                targetView.classList.add('active-view');
+            }
+
+            // Update Desktop Nav Styles
+            const desktopLinks = document.querySelectorAll('.desktop-nav-link');
+            desktopLinks.forEach(link => {
+                link.classList.remove('text-blue-800', 'bg-blue-50');
+                link.classList.add('text-slate-600');
+                if (link.getAttribute('data-target') === viewId) {
+                    link.classList.remove('text-slate-600');
+                    link.classList.add('text-blue-800', 'bg-blue-50');
+                }
+            });
+
+            // Update Mobile Nav Styles
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileLinks.forEach(link => {
+                link.classList.remove('text-blue-700', 'bg-blue-50');
+                link.classList.add('text-slate-700');
+                if (link.getAttribute('data-target') === viewId) {
+                    link.classList.remove('text-slate-700');
+                    link.classList.add('text-blue-700', 'bg-blue-50');
+                }
+            });
+
+            // Special handling for the bottom "Actionable Opps" button highlighting
+            const oppsDesktopBtn = document.querySelector('a[data-target="opportunities"].text-white');
+            if (viewId === 'opportunities') {
+                oppsDesktopBtn.classList.add('ring-4', 'ring-blue-300');
+            } else {
+                oppsDesktopBtn.classList.remove('ring-4', 'ring-blue-300');
+            }
+
+            // Update header title based on selected view
+            const titles = {
+                'macro': 'Executive Summary',
+                'stakeholders': 'Power Structure',
+                'governance': 'IT Governance',
+                'financials': 'Financials & Budget',
+                'initiatives': 'Strategic Initiatives',
+                'procurement': 'Vendor Landscape',
+                'opportunities': 'Actionable Opps'
+            };
+            document.getElementById('current-view-title').innerText = titles[viewId];
+
+            // Scroll container to top
+            document.getElementById('view-container').scrollTop = 0;
+
+            // Lazy initialize charts to prevent Chart.js 0x0 canvas bugs when display: none
+            if (viewId === 'financials' && !chartsInitialized) {
+                initCharts();
+                chartsInitialized = true;
+            }
+        }
+
+        // --- 2. Mobile Navigation Logic ---
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobile-nav');
+            nav.classList.toggle('open');
+        }
+
+        // --- 3. Inner Tab Navigation Logic (for Initiatives) ---
+        function switchTab(evt, tabId) {
+            const contents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active");
+                contents[i].setAttribute('aria-hidden', 'true');
+            }
+            const btns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].className = btns[i].className.replace(" text-blue-700 border-blue-700 bg-white", " text-slate-500 border-transparent");
+                btns[i].classList.add("hover:text-blue-600", "hover:bg-slate-100");
+                btns[i].setAttribute('aria-selected', 'false');
+            }
+            
+            const targetContent = document.getElementById(tabId);
+            targetContent.classList.add("active");
+            targetContent.setAttribute('aria-hidden', 'false');
+            
+            evt.currentTarget.className = evt.currentTarget.className.replace(" text-slate-500 border-transparent", " text-blue-700 border-blue-700 bg-white");
+            evt.currentTarget.classList.remove("hover:text-blue-600", "hover:bg-slate-100");
+            evt.currentTarget.setAttribute('aria-selected', 'true');
+        }
+
+        // --- 4. Table Sorting Logic with Visual Indicators ---
+        let sortDirections = [false, false, false];
+        function sortTable(columnIndex, headerElement) {
+            const table = document.getElementById("stakeholder-table");
+            const tbody = table.tBodies[0];
+            const rows = Array.from(tbody.querySelectorAll("tr"));
+            
+            const allIcons = table.querySelectorAll("th .sort-icon");
+            allIcons.forEach(icon => {
+                icon.innerHTML = "↕";
+                icon.classList.remove("text-blue-600");
+                icon.classList.add("text-slate-300");
+            });
+
+            let dir = sortDirections[columnIndex] = !sortDirections[columnIndex];
+            
+            const activeIcon = headerElement.querySelector(".sort-icon");
+            activeIcon.innerHTML = dir ? "↑" : "↓";
+            activeIcon.classList.remove("text-slate-300");
+            activeIcon.classList.add("text-blue-600");
+
+            rows.sort((a, b) => {
+                const cellA = a.cells[columnIndex].innerText.trim().toLowerCase();
+                const cellB = b.cells[columnIndex].innerText.trim().toLowerCase();
+                if (cellA < cellB) return dir ? -1 : 1;
+                if (cellA > cellB) return dir ? 1 : -1;
+                return 0;
+            });
+
+            rows.forEach(row => tbody.appendChild(row));
+        }
+
+        // --- 5. Chart.js Initialization ---
+        function initCharts() {
+            const wrapTicks = function(value, context) {
+                const label = this.getLabelForValue(value);
+                if (!label) return label;
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > 15) {
+                        lines.push(currentLine.trim());
+                        currentLine = word + ' ';
+                    } else {
+                        currentLine += word + ' ';
+                    }
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            };
+
+            const ctxDonut = document.getElementById('budgetDonutChart').getContext('2d');
+            new Chart(ctxDonut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['HHS (Health & Human Svcs)', 'Education Dept', 'Transportation (FDOT)', 'Law Enforcement (FDLE)', 'General Gov / Other'],
+                    datasets: [{
+                        data: [40, 25, 15, 10, 10],
+                        backgroundColor: ['#006BB6', '#3b82f6', '#94a3b8', '#1e293b', '#cbd5e1'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff',
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { 
+                            position: 'right', 
+                            labels: { font: { family: 'Plus Jakarta Sans', size: 11, weight: '600' }, boxWidth: 12, padding: 15 }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                            titleFont: { family: 'Plus Jakarta Sans', size: 13 },
+                            bodyFont: { family: 'Plus Jakarta Sans', size: 12 },
+                            padding: 12,
+                            callbacks: { label: function(ctx) { return ` ${ctx.label}: ~${ctx.raw}% of IT Budget`; } }
+                        }
+                    },
+                    cutout: '65%'
+                }
+            });
+
+            const ctxBar = document.getElementById('budgetBarChart').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['Operations & Maintenance', 'Net-New Capital Projects'],
+                    datasets: [{
+                        label: 'Estimated IT Spend ($ Millions)',
+                        data: [1250, 520],
+                        backgroundColor: ['#cbd5e1', '#006BB6'],
+                        borderRadius: 6,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { 
+                            beginAtZero: true, 
+                            grid: { color: '#f1f5f9', drawBorder: false },
+                            ticks: { font: { family: 'Plus Jakarta Sans', size: 11 }, callback: (val) => '$' + val + 'M' }
+                        },
+                        x: { 
+                            grid: { display: false },
+                            ticks: { font: { family: 'Plus Jakarta Sans', size: 11, weight: '700' }, callback: wrapTicks }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                            padding: 12,
+                            callbacks: { label: function(ctx) { return ` Spend: $${ctx.raw} Million`; } }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell SLG Dashboard: City of Baton Rouge, LA</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dell: {
+                            blue: '#0076CE',
+                            dark: '#00447C',
+                            light: '#E2F3FC',
+                            gray: '#334155', /* slate-700 */
+                            bg: '#E2E8F0'    /* slate-200 - Darkened canvas to reduce glare */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Scrollbar for a premium look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; /* slate-100 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; /* slate-300 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; /* slate-400 */
+        }
+        
+        .nav-item.active {
+            background-color: #E2F3FC;
+            color: #0076CE;
+            border-right: 4px solid #0076CE;
+            font-weight: 600;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        th.sortable:hover {
+            background-color: #f1f5f9; /* slate-100 */
+        }
+    </style>
+</head>
+<body class="bg-dell-bg font-sans text-slate-800 h-screen flex overflow-hidden">
+
+    <!-- Mobile Header & Navigation Toggle -->
+    <header class="md:hidden bg-slate-50 shadow-sm border-b border-slate-200 fixed w-full z-50 flex items-center justify-between px-4 h-16">
+        <div class="flex items-center gap-2 text-dell-blue font-bold text-xl tracking-tight">
+            <i class="ph-fill ph-monitor-play"></i>
+            Dell Tech
+        </div>
+        <button id="mobile-menu-btn" class="text-slate-600 hover:text-dell-blue p-2">
+            <i class="ph ph-list text-2xl"></i>
+        </button>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="bg-slate-50 w-72 flex-shrink-0 border-r border-slate-200 flex flex-col transition-transform transform -translate-x-full md:translate-x-0 fixed md:relative z-40 h-full shadow-lg md:shadow-none top-0 pt-16 md:pt-0">
+        <div class="p-6 border-b border-slate-200 hidden md:block">
+            <div class="flex items-center gap-2 text-dell-blue font-bold text-2xl tracking-tight">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-dell-blue">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M7 12L10 15L17 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                SLG Insights
+            </div>
+            <p class="text-xs text-slate-500 mt-2 uppercase tracking-wider font-semibold">Account Dashboard</p>
+        </div>
+
+        <div class="p-4 border-b border-slate-200 bg-slate-100">
+            <h2 class="text-sm font-bold text-slate-800">City of Baton Rouge, LA</h2>
+            <div class="flex items-center gap-1 text-xs text-green-600 mt-1">
+                <i class="ph-fill ph-check-circle"></i> Data Updated: Q2 2026
+            </div>
+        </div>
+
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="space-y-1">
+                <li><button onclick="navTo('sec1')" class="nav-item active w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-dell-blue transition-colors flex items-center gap-3"><i class="ph ph-buildings text-lg"></i> 1. Executive Summary</button></li>
+                <li><button onclick="navTo('sec2')" class="nav-item w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-dell-blue transition-colors flex items-center gap-3"><i class="ph ph-users-three text-lg"></i> 2. Power Structure</button></li>
+                <li><button onclick="navTo('sec3')" class="nav-item w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-dell-blue transition-colors flex items-center gap-3"><i class="ph ph-tree-structure text-lg"></i> 3. IT Governance Model</button></li>
+                <li><button onclick="navTo('sec4')" class="nav-item w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-dell-blue transition-colors flex items-center gap-3"><i class="ph ph-chart-bar text-lg"></i> 4. Financials & Budget</button></li>
+                <li><button onclick="navTo('sec5')" class="nav-item w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-dell-blue transition-colors flex items-center gap-3"><i class="ph ph-target text-lg"></i> 5. Strategic Initiatives</button></li>
+                <li><button onclick="navTo('sec6')" class="nav-item w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-dell-blue transition-colors flex items-center gap-3"><i class="ph ph-file-text text-lg"></i> 6. Procurement & Vendor</button></li>
+                <li><button onclick="navTo('sec7')" class="nav-item w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-100 hover:text-dell-blue transition-colors flex items-center gap-3"><i class="ph ph-lightbulb text-lg"></i> 7. Dell Opportunities</button></li>
+            </ul>
+        </nav>
+
+        <div class="p-6 border-t border-slate-200">
+            <a href="https://dmonkey1001.github.io/slg-strategies/baton-rouge/analysis.pdf" target="_blank" class="w-full flex items-center justify-center gap-2 bg-slate-50 border border-slate-300 hover:border-dell-blue hover:text-dell-blue text-sm font-medium py-2 px-4 rounded transition-all shadow-sm">
+                <i class="ph ph-download-simple"></i> Download PDF Report
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 overflow-y-auto h-full bg-dell-bg relative pt-16 md:pt-0">
+        
+        <!-- Top Info Bar -->
+        <div class="bg-slate-50 px-8 py-5 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sticky top-0 z-30 shadow-sm">
+            <div>
+                <h1 class="text-2xl font-bold text-slate-900">Baton Rouge Account Intelligence</h1>
+                <p class="text-sm text-slate-500 mt-1">Strategic IT Landscape and Market Analysis — April 2026</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="text-right">
+                    <p class="text-xs text-slate-500 uppercase font-semibold">Total Budget</p>
+                    <p class="text-lg font-bold text-dell-blue">$1.1B</p>
+                </div>
+                <div class="h-8 w-px bg-slate-300"></div>
+                <div class="text-right">
+                    <p class="text-xs text-slate-500 uppercase font-semibold">IT Org Status</p>
+                    <p class="text-lg font-bold text-red-600">-33% Staff</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 md:p-8 max-w-6xl mx-auto pb-24">
+
+            <!-- Section 1: Executive Summary -->
+            <section id="sec1" class="content-section fade-in block">
+                <div class="mb-6 rounded-xl overflow-hidden shadow-sm relative h-64">
+                    <img src="./skyline.jpg" onerror="this.onerror=null; this.src='https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&w=2070&h=800&dpr=2';" alt="City Skyline" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-dell-dark/90 to-transparent flex items-center p-8">
+                        <div class="text-white max-w-lg">
+                            <h2 class="text-3xl font-bold mb-2">Executive Summary</h2>
+                            <p class="text-slate-200">Navigating severe fiscal constraints, political shifts, and a survival-driven pivot toward AI and automation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 md:p-8 rounded-xl shadow-sm border border-slate-200">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Macro Landscape</h3>
+                    <p class="text-slate-700 leading-relaxed mb-6">
+                        The City of Baton Rouge and the Parish of East Baton Rouge is navigating one of its most volatile periods. Entering FY 2026, the local government is defined by a seismic shift in leadership (Mayor-President Sid Edwards), unprecedented macroeconomic constraints driven by the municipal secession of St. George (costing ~$50M in revenue), and an aggressive pivot toward AI/automation to maintain baseline operations.
+                    </p>
+                    <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-8">
+                        <h4 class="font-bold text-red-800 flex items-center gap-2"><i class="ph-fill ph-warning"></i> Fiscal Triage Required</h4>
+                        <p class="text-sm text-red-700 mt-1">To balance the $1.1B budget without risking the AA2 bond rating, the administration executed a $15M cut to the General Fund, resulting in a staggering <strong>33% reduction in the civilian workforce (~420 positions eliminated).</strong></p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Three Strategic Pillars</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-slate-100 rounded-lg p-5 border border-slate-200">
+                            <div class="w-10 h-10 bg-blue-100 text-dell-blue rounded-full flex items-center justify-center mb-3 text-xl">
+                                <i class="ph-fill ph-shield-check"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">Public Safety Focus</h4>
+                            <p class="text-sm text-slate-600">Restoring law & order. Hired 100 new officers; instituted historic $7.5M pay raise. Heavy reliance on Real Time Crime Center (RTCC) while cutting expensive OpEx like ShotSpotter.</p>
+                        </div>
+                        <div class="bg-slate-100 rounded-lg p-5 border border-slate-200">
+                            <div class="w-10 h-10 bg-blue-100 text-dell-blue rounded-full flex items-center justify-center mb-3 text-xl">
+                                <i class="ph-fill ph-robot"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">AI & Automation</h4>
+                            <p class="text-sm text-slate-600">Mitigating the 33% staff deficit by actively pursuing AI automation for 311 citizen requests, code enforcement, and intelligent data routing.</p>
+                        </div>
+                        <div class="bg-slate-100 rounded-lg p-5 border border-slate-200">
+                            <div class="w-10 h-10 bg-blue-100 text-dell-blue rounded-full flex items-center justify-center mb-3 text-xl">
+                                <i class="ph-fill ph-chart-polar"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">Digital Transparency</h4>
+                            <p class="text-sm text-slate-600">Maintaining "Top 10 Digital City" status. Launched IT Capital Projects Dashboard to guarantee taxpayer transparency regarding infrastructure spend.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Power Structure -->
+            <section id="sec2" class="content-section fade-in hidden">
+                <div class="mb-6 flex justify-between items-end">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Power Structure & Key Stakeholders</h2>
+                        <p class="text-slate-500 mt-1">The technological and financial hierarchy has been thoroughly disrupted in the past 18 months.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-4 border-b border-slate-200 bg-slate-100 flex items-center justify-between">
+                        <div class="relative w-64">
+                            <i class="ph ph-magnifying-glass absolute left-3 top-2.5 text-slate-400"></i>
+                            <input type="text" id="stakeholderSearch" onkeyup="filterTable()" placeholder="Search stakeholders..." class="w-full pl-10 pr-4 py-2 border border-slate-300 rounded text-sm focus:outline-none focus:border-dell-blue bg-slate-50">
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 bg-slate-200 px-2 py-1 rounded">Click headers to sort</span>
+                    </div>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse" id="stakeholderTable">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-slate-200 text-sm font-semibold text-slate-700">
+                                    <th class="p-4 cursor-pointer sortable group whitespace-nowrap" onclick="sortTable(0)">
+                                        Name & Title <i class="ph ph-caret-up-down text-slate-400 group-hover:text-dell-blue ml-1"></i>
+                                    </th>
+                                    <th class="p-4 cursor-pointer sortable group whitespace-nowrap" onclick="sortTable(1)">
+                                        Sphere of Influence <i class="ph ph-caret-up-down text-slate-400 group-hover:text-dell-blue ml-1"></i>
+                                    </th>
+                                    <th class="p-4">Stances on Technology & Operations</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm divide-y divide-slate-200">
+                                <tr class="hover:bg-slate-100 transition-colors">
+                                    <td class="p-4 align-top">
+                                        <div class="font-bold text-slate-900">Sid Edwards</div>
+                                        <div class="text-xs text-slate-500">Mayor-President, City of Baton Rouge & EBR Parish</div>
+                                    </td>
+                                    <td class="p-4 align-top">
+                                        <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800">Financial Purchaser / Exec Sponsor</span>
+                                    </td>
+                                    <td class="p-4 align-top text-slate-600">
+                                        Champions community-first, law-and-order. Holds ultimate veto over $1.1B budget. Prioritizes frontline ops over admin bloat (willing to cut civilian staff by 33%).
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-100 transition-colors">
+                                    <td class="p-4 align-top">
+                                        <div class="font-bold text-slate-900">Rizwan Ahmed</div>
+                                        <div class="text-xs text-slate-500">CIO, Director of Information Services</div>
+                                    </td>
+                                    <td class="p-4 align-top">
+                                        <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-purple-100 text-purple-800">Tech Decision Maker</span>
+                                    </td>
+                                    <td class="p-4 align-top text-slate-600">
+                                        Replaced 30-year veteran Eric Romero in Jan 2026. Tasked with AI governance, infrastructure modernization. Prefers scalable, enterprise-grade architectures over bespoke solutions.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-100 transition-colors">
+                                    <td class="p-4 align-top">
+                                        <div class="font-bold text-slate-900">Dr. Christel Slaughter</div>
+                                        <div class="text-xs text-slate-500">Acting Chief Administrative Officer (CAO)</div>
+                                    </td>
+                                    <td class="p-4 align-top">
+                                        <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-slate-200 text-slate-800">Operational Gatekeeper</span>
+                                    </td>
+                                    <td class="p-4 align-top text-slate-600">
+                                        Manages day-to-day government operations. Brings 30+ years experience in organizational change and performance improvement.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-100 transition-colors">
+                                    <td class="p-4 align-top">
+                                        <div class="font-bold text-slate-900">Thomas S. Morse Jr.</div>
+                                        <div class="text-xs text-slate-500">Chief of Police, BRPD</div>
+                                    </td>
+                                    <td class="p-4 align-top">
+                                        <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-red-100 text-red-800">Business Owner / Influencer</span>
+                                    </td>
+                                    <td class="p-4 align-top text-slate-600">
+                                        Controls specialized grants. Heavily influences RTCC tech stack (Genetec, Axon, Motorola). Terminated ShotSpotter contract due to high recurring OpEx costs.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-100 transition-colors">
+                                    <td class="p-4 align-top">
+                                        <div class="font-bold text-slate-900">Emily Stephens</div>
+                                        <div class="text-xs text-slate-500">Budgeting Manager, Finance Department</div>
+                                    </td>
+                                    <td class="p-4 align-top">
+                                        <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800">Financial Gatekeeper</span>
+                                    </td>
+                                    <td class="p-4 align-top text-slate-600">
+                                        Enforces strict policy forbidding the use of one-time reserve monies for recurring operational expenses (O&M). Focused on protecting bond rating.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-100 transition-colors">
+                                    <td class="p-4 align-top">
+                                        <div class="font-bold text-slate-900">Warren Kron</div>
+                                        <div class="text-xs text-slate-500">GIS Manager, Info Services</div>
+                                    </td>
+                                    <td class="p-4 align-top">
+                                        <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-yellow-100 text-yellow-800">Technical Influencer</span>
+                                    </td>
+                                    <td class="p-4 align-top text-slate-600">
+                                        Major internal consumer of high-performance compute. Needs robust visualization infra and advanced mobile workstations for digital storytelling/dashboards.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Governance -->
+            <section id="sec3" class="content-section fade-in hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-slate-900">IT Governance & Service Delivery Model</h2>
+                    <p class="text-slate-500 mt-1">A Centralized model heavily strained by municipal secession.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 mb-6 flex flex-col md:flex-row gap-8 items-center">
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold text-dell-blue mb-2">Centralized, Consolidated, & Expanding</h3>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                            The Information Services (IS) department serves as the <strong>sole authority</strong> for enterprise architecture, managing network support, application dev, cybersecurity, and GIS for 4,000+ employees.
+                        </p>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            <strong>The St. George Complexity:</strong> Due to a recent Intergovernmental Agreement, Baton Rouge's central IT must now act as a Managed Service Provider (MSP) for the newly independent City of St. George. They run St. George's 311 systems, floodplain data, and tax routing. This mandates extreme multi-tenant data segmentation.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-1/3">
+                        <div class="bg-dell-light p-4 rounded-lg border border-blue-200 text-center">
+                            <i class="ph-fill ph-arrows-split text-4xl text-dell-blue mb-2"></i>
+                            <h4 class="font-bold text-slate-900 text-sm">1 Architecture, 2 Cities</h4>
+                            <p class="text-xs text-slate-600 mt-1">Requires rigorous cross-jurisdictional network routing and access control.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-bold text-slate-900 mb-4 mt-8">Operational Friction Points</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 p-5 rounded-lg border-l-4 border-orange-500 shadow-sm border-y border-r border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">1. The Automation Deficit</h4>
+                        <p class="text-xs text-slate-600">IS must support two cities with 33% fewer technicians. Massive bottleneck in Tier 1/2 support. Desperate need for predictive hardware analytics and self-healing protocols.</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-lg border-l-4 border-yellow-500 shadow-sm border-y border-r border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">2. Cross-Jurisdictional Chargebacks</h4>
+                        <p class="text-xs text-slate-600">Baton Rouge must recover shared infrastructure costs from St. George via Indirect Cost Allocation Plans (ICAP). Hardware must support granular telemetry and usage-based metering.</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-lg border-l-4 border-red-500 shadow-sm border-y border-r border-slate-200">
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">3. The CapEx vs. OpEx Paradox</h4>
+                        <p class="text-xs text-slate-600">Finance strictly forbids using reserve funds for recurring O&M. Public cloud SaaS/IaaS faces extreme scrutiny. High preference for capitalized, bonded on-prem infrastructure.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Financials -->
+            <section id="sec4" class="content-section fade-in hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-slate-900">Financials & Budget Breakdown</h2>
+                    <p class="text-slate-500 mt-1">FY 2026 presents an environment of strict austerity for O&M, but capitalized infrastructure thrives.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+                        <div class="absolute -right-6 -top-6 text-slate-200">
+                            <i class="ph-fill ph-coins text-9xl"></i>
+                        </div>
+                        <div class="relative z-10">
+                            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-1">Total Consolidated Budget</h3>
+                            <div class="text-4xl font-black text-slate-900 mb-2">$1.1B</div>
+                            <p class="text-sm text-slate-600">71% is restricted special funds (earmarked).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+                        <div class="absolute -right-6 -top-6 text-red-50/50">
+                            <i class="ph-fill ph-trend-down text-9xl"></i>
+                        </div>
+                        <div class="relative z-10">
+                            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-1">General Fund (Daily Ops)</h3>
+                            <div class="text-4xl font-black text-slate-900 mb-2">$332M</div>
+                            <p class="text-sm text-red-600 font-medium"><i class="ph-fill ph-warning-circle"></i> Slashed by $15M due to St. George secession.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-xl shadow-sm border border-slate-200 p-6 md:p-8">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6">Grants & Funding Influxes</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-green-100 text-green-600 rounded flex items-center justify-center flex-shrink-0">
+                                <i class="ph-fill ph-shield-check text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">State and Local Cybersecurity Grant Program (SLCGP)</h4>
+                                <p class="text-sm text-slate-600 mt-1">Louisiana allocated $1.63M (max $200k per local applicant). Requires 20% match. <strong>Must be used for net-new cyber resilience/zero-trust, NOT operational upgrades.</strong> Valid through June 2027.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded flex items-center justify-center flex-shrink-0">
+                                <i class="ph-fill ph-bank text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">State Capital Outlay</h4>
+                                <p class="text-sm text-slate-600 mt-1">Mayor Edwards lobbying for massive capital outlay for physical infrastructure (River Center, flood reduction). These projects embed substantial edge networking, IP surveillance, and IoT node requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Initiatives -->
+            <section id="sec5" class="content-section fade-in hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-slate-900">Strategic Initiatives & Projects</h2>
+                    <p class="text-slate-500 mt-1">The top 3 funded modernization efforts ripe for technology vendor insertion.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Initiative 1 -->
+                    <div class="bg-slate-50 rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+                        <div class="bg-dell-blue text-white p-6 md:w-1/3 flex flex-col justify-center">
+                            <span class="text-xs uppercase font-bold tracking-wider mb-2 opacity-80">Initiative 01</span>
+                            <h3 class="text-xl font-bold mb-2">AI-Driven Operational Automation</h3>
+                            <p class="text-sm opacity-90">Owned by: Info Services (CIO Rizwan Ahmed)</p>
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <p class="text-sm text-slate-700 mb-4"><strong>The Mandate:</strong> Bridge the massive operational gap of a 33% workforce reduction via AI task automation, intelligent 311 routing for two cities, and predictive code enforcement.</p>
+                            <div class="bg-slate-100 p-4 rounded border border-slate-200">
+                                <h4 class="text-xs font-bold text-slate-900 uppercase mb-1">Underlying IT Requirement</h4>
+                                <p class="text-sm text-slate-600">High-density, on-premises ML-optimized compute (GPUs). Secure data pipelines to comply with local governance, and unstructured storage to house historical civic datasets for model training. (Cannot rely on public cloud).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Initiative 2 -->
+                    <div class="bg-slate-50 rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+                        <div class="bg-slate-800 text-white p-6 md:w-1/3 flex flex-col justify-center">
+                            <span class="text-xs uppercase font-bold tracking-wider mb-2 text-slate-400">Initiative 02</span>
+                            <h3 class="text-xl font-bold mb-2">RTCC Consolidation & Edge Expansion</h3>
+                            <p class="text-sm text-slate-300">Owned by: BRPD (Chief Thomas Morse Jr.)</p>
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <p class="text-sm text-slate-700 mb-4"><strong>The Mandate:</strong> Make BR the safest mid-sized city. Aggressive intelligence-led policing utilizing Genetec, Axon, and Motorola, despite a recent $9M budget cut to the department (forcing the cancellation of ShotSpotter).</p>
+                            <div class="bg-slate-100 p-4 rounded border border-slate-200">
+                                <h4 class="text-xs font-bold text-slate-900 uppercase mb-1">Underlying IT Requirement</h4>
+                                <p class="text-sm text-slate-600">Urgent transition from expensive cloud VMS architectures to highly efficient Edge computing. Ruggedized edge servers at intersections to process ALPR locally, backed by massive CJIS-compliant unstructured storage at the core data center.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Initiative 3 -->
+                    <div class="bg-slate-50 rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row">
+                        <div class="bg-teal-700 text-white p-6 md:w-1/3 flex flex-col justify-center">
+                            <span class="text-xs uppercase font-bold tracking-wider mb-2 text-teal-200">Initiative 03</span>
+                            <h3 class="text-xl font-bold mb-2">Digital Transparency & GIS Expansion</h3>
+                            <p class="text-sm text-teal-100">Owned by: IS / GIS Division (Warren Kron)</p>
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <p class="text-sm text-slate-700 mb-4"><strong>The Mandate:</strong> Foster public trust amidst severe cuts by providing real-time visibility into taxpayer spending via the new "IT Capital Projects Dashboard" and massive ArcGIS mapping portals.</p>
+                            <div class="bg-slate-100 p-4 rounded border border-slate-200">
+                                <h4 class="text-xs font-bold text-slate-900 uppercase mb-1">Underlying IT Requirement</h4>
+                                <p class="text-sm text-slate-600">Tier-1 compute, high-availability virtualization clusters to ensure public dashboards never crash (especially during hurricanes). Advanced mobile workstations with dedicated GPUs for GIS analysts handling 3D rendering.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Procurement -->
+            <section id="sec6" class="content-section fade-in hidden">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-slate-900">Procurement, Vendor Landscape, & Compliance</h2>
+                    <p class="text-slate-500 mt-1">Navigating state contracts, incumbent threats, and strict mandates.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2"><i class="ph ph-shopping-cart text-dell-blue mr-2"></i> Primary Contract Vehicles</h3>
+                        <ul class="space-y-4">
+                            <li>
+                                <div class="font-bold text-sm text-slate-800">Louisiana State Contracts (LaPS)</div>
+                                <p class="text-xs text-slate-600">Preferred method. Pricing and terms pre-vetted by the state. Used for standard hardware/software.</p>
+                            </li>
+                            <li>
+                                <div class="font-bold text-sm text-slate-800">Cooperative Agreements (OMNIA/NASPO)</div>
+                                <p class="text-xs text-slate-600">Utilized for complex hardware, unified licensing, and hybrid cloud.</p>
+                            </li>
+                            <li>
+                                <div class="font-bold text-sm text-slate-800">GSA Schedule 8F (via Carahsoft)</div>
+                                <p class="text-xs text-slate-600">For complex software acquisitions and specialized cyber tools not on local schedules.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-red-200">
+                        <h3 class="text-lg font-bold text-red-700 mb-4 border-b border-red-100 pb-2"><i class="ph ph-swords mr-2"></i> The Battlefield & Incumbents</h3>
+                        <div class="mb-4">
+                            <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded font-bold mb-1">IMMINENT THREAT / OPPORTUNITY</span>
+                            <div class="font-bold text-sm text-slate-800">Endpoint Contracts Expired!</div>
+                            <p class="text-xs text-slate-600 mt-1">State contracts for Computer Equip/Peripherals for both <strong>Dell (4400028252)</strong> and <strong>HP (4400028088)</strong> officially expired on <strong>June 30, 2025</strong>. A massive competitive battlefield is currently active to capture the 2026 market share.</p>
+                        </div>
+                        <div>
+                            <div class="font-bold text-sm text-slate-800">Public Safety Ecosystem</div>
+                            <p class="text-xs text-slate-600 mt-1">Deeply entrenched with Genetec, Axon, and Motorola. Vulnerable to OpEx subscription fatigue.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-200 md:col-span-2">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2"><i class="ph ph-gavel text-dell-blue mr-2"></i> Compliance Drivers</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-slate-100 p-3 rounded border border-slate-200">
+                                <div class="font-bold text-sm text-slate-800">CJIS</div>
+                                <p class="text-xs text-slate-600 mt-1">Strict data encryption and access auditing for any compute touching the RTCC or BRPD data.</p>
+                            </div>
+                            <div class="bg-slate-100 p-3 rounded border border-slate-200">
+                                <div class="font-bold text-sm text-slate-800">AI Governance</div>
+                                <p class="text-xs text-slate-600 mt-1">Transparent data lineage and secure enclave computing to prevent algorithmic bias.</p>
+                            </div>
+                            <div class="bg-slate-100 p-3 rounded border border-slate-200">
+                                <div class="font-bold text-sm text-slate-800">ICAP (2 CFR 200)</div>
+                                <p class="text-xs text-slate-600 mt-1">Systems must support Indirect Cost Allocation metrics for cross-jurisdictional billing (St. George).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 7: Dell Opportunities -->
+            <section id="sec7" class="content-section fade-in hidden">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-slate-900">Actionable Dell Opportunities</h2>
+                    <p class="text-slate-500 mt-2 text-lg">High-probability sales motions tailored to Baton Rouge's fiscal reality.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    
+                    <!-- Dell Play 1 -->
+                    <div class="bg-slate-50 rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow group relative">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-dell-blue"></div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="bg-blue-100 text-dell-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Funded Alignment</div>
+                                <i class="ph-fill ph-cpu text-2xl text-slate-300 group-hover:text-dell-blue transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">The AI-Ready Workforce Multiplier</h3>
+                            <p class="text-sm text-slate-600 mb-4">The city cannot legally hire humans to fill 420 deleted positions; it MUST buy compute to automate those workflows. Align with CIO Rizwan Ahmed's specific AI mandate.</p>
+                            <div class="bg-slate-100 rounded p-4 border border-slate-200">
+                                <h4 class="text-sm font-bold text-dell-blue mb-1">The Dell Play:</h4>
+                                <p class="text-sm text-slate-700">Position <strong>Dell AI Factory with NVIDIA</strong> and <strong>PowerEdge XE servers</strong> as a foundational, <em>capitalized</em> infrastructure. Pitch as a "workforce continuity" CapEx investment to bypass the Finance Dept's anti-OpEx rules.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dell Play 2 -->
+                    <div class="bg-slate-50 rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow group relative">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-slate-800"></div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Whitespace Advisory</div>
+                                <i class="ph-fill ph-hard-drives text-2xl text-slate-300 group-hover:text-slate-800 transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Edge-to-Core Public Safety Strategy</h3>
+                            <p class="text-sm text-slate-600 mb-4">BRPD is generating unsustainable video data. The cancellation of ShotSpotter proves they are highly sensitive to ballooning cloud subscription/egress fees.</p>
+                            <div class="bg-slate-100 rounded p-4 border border-slate-200">
+                                <h4 class="text-sm font-bold text-slate-800 mb-1">The Dell Play:</h4>
+                                <p class="text-sm text-slate-700">Position <strong>Dell PowerScale</strong> as the vendor-agnostic, CJIS-compliant central repository. Introduce <strong>Dell NativeEdge</strong> and <strong>PowerEdge XR</strong> at intersections to process ALPR locally, slashing cloud dependency.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dell Play 3 -->
+                    <div class="bg-slate-50 rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow group relative">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-purple-500"></div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Competitive Displacement</div>
+                                <i class="ph-fill ph-cloud-arrow-down text-2xl text-slate-300 group-hover:text-purple-500 transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Repatriating Cloud Spend via APEX</h3>
+                            <p class="text-sm text-slate-600 mb-4">With a $15M budget cut, all recurring IT subscriptions are under hostile review. Pandemic-era public cloud environments are generating unpredictable monthly bills.</p>
+                            <div class="bg-slate-100 rounded p-4 border border-slate-200">
+                                <h4 class="text-sm font-bold text-purple-700 mb-1">The Dell Play:</h4>
+                                <p class="text-sm text-slate-700">Use Live Optics to audit AWS/Azure spend. Offer <strong>Dell APEX Custom Solutions</strong>. Highlight how APEX provides the granular telemetry needed for ICAP chargebacks to St. George, solving a massive legal friction point for the CIO.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dell Play 4 -->
+                    <div class="bg-slate-50 rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow group relative">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-green-500"></div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Funded Alignment</div>
+                                <i class="ph-fill ph-laptop text-2xl text-slate-300 group-hover:text-green-500 transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">2026 Endpoint Battlefield</h3>
+                            <p class="text-sm text-slate-600 mb-4">State endpoint contracts (Dell/HP) expired June 2025. Concurrently, the city is heavily expanding its GIS mapping and IT Capital Projects Dashboards.</p>
+                            <div class="bg-slate-100 rounded p-4 border border-slate-200">
+                                <h4 class="text-sm font-bold text-green-700 mb-1">The Dell Play:</h4>
+                                <p class="text-sm text-slate-700">Target the GIS Division with top-tier <strong>Dell Precision Workstations</strong> for 3D visualization. Position <strong>Latitude Rugged</strong> for Public Works/BRPD field teams managing the infrastructure upgrades.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dell Play 5 -->
+                    <div class="bg-slate-50 rounded-xl shadow-md border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow group lg:col-span-2 relative">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-teal-500"></div>
+                        <div class="p-6 flex flex-col md:flex-row gap-6 items-center">
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Whitespace Advisory (Grant Funded)</div>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">SLCGP Zero-Trust Architecture</h3>
+                                <p class="text-sm text-slate-600 mb-4">Louisiana has $1.6M in SLCGP funds that MUST be used for systemic cyber risk reduction, not standard ops.</p>
+                                <div class="bg-slate-100 rounded p-4 border border-slate-200">
+                                    <h4 class="text-sm font-bold text-teal-700 mb-1">The Dell Play:</h4>
+                                    <p class="text-sm text-slate-700">Position <strong>Dell PowerProtect Cyber Recovery</strong> to build an air-gapped vault. This perfectly aligns with federal stipulations, offering the city a subsidized path to secure its ERP and 311 databases against ransomware.</p>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/4 flex justify-center text-teal-200 group-hover:text-teal-500 transition-colors">
+                                <i class="ph-fill ph-lock-key text-8xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Footer / Copyright -->
+            <div class="mt-12 text-center text-xs text-slate-400">
+                <p>Internal Dell Technologies Sales Strategy Dashboard. Confidential & Proprietary.</p>
+            </div>
+            
+        </div>
+    </main>
+
+    <script>
+        // --- Navigation Logic ---
+        function navTo(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            
+            // Show target section
+            const target = document.getElementById(sectionId);
+            if(target) {
+                target.classList.remove('hidden');
+                target.classList.add('block');
+            }
+
+            // Update active state in sidebar
+            document.querySelectorAll('.nav-item').forEach(el => {
+                el.classList.remove('active');
+            });
+            // Find the button that was clicked and set it to active
+            event.currentTarget.classList.add('active');
+
+            // Scroll to top
+            document.querySelector('main').scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Close mobile menu if open
+            const sidebar = document.getElementById('sidebar');
+            if(!sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.add('-translate-x-full');
+            }
+        }
+
+        // --- Mobile Menu Toggle ---
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('-translate-x-full');
+        });
+
+        // --- Table Sorting Logic ---
+        let sortDirection = false;
+        function sortTable(columnIndex) {
+            const table = document.getElementById("stakeholderTable");
+            const tbody = table.tBodies[0];
+            const rows = Array.from(tbody.querySelectorAll("tr"));
+            
+            sortDirection = !sortDirection;
+
+            const sortedRows = rows.sort((a, b) => {
+                const aColText = a.cells[columnIndex].textContent.trim();
+                const bColText = b.cells[columnIndex].textContent.trim();
+
+                if (aColText < bColText) {
+                    return sortDirection ? -1 : 1;
+                }
+                if (aColText > bColText) {
+                    return sortDirection ? 1 : -1;
+                }
+                return 0;
+            });
+
+            // Remove existing rows
+            while (tbody.firstChild) {
+                tbody.removeChild(tbody.firstChild);
+            }
+
+            // Re-add sorted rows
+            tbody.append(...sortedRows);
+        }
+
+        // --- Table Filtering Logic ---
+        function filterTable() {
+            const input = document.getElementById("stakeholderSearch");
+            const filter = input.value.toLowerCase();
+            const table = document.getElementById("stakeholderTable");
+            const tr = table.tBodies[0].getElementsByTagName("tr");
+
+            for (let i = 0; i < tr.length; i++) {
+                // Search across all text in the row
+                const rowText = tr[i].textContent || tr[i].innerText;
+                if (rowText.toLowerCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

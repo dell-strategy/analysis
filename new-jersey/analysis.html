@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State of New Jersey | Dell Technologies Account Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 380px; }
+        }
+        .nav-btn.active {
+            background-color: #2563eb;
+            color: white;
+            border-left: 4px solid #60a5fa;
+        }
+        .view-section {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .view-section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        @media print {
+            aside { display: none !important; }
+            main { overflow: visible !important; height: auto !important; }
+            .view-section { display: block !important; opacity: 1 !important; margin-bottom: 2rem; page-break-inside: avoid; }
+            body { overflow: visible !important; height: auto !important; background: white; }
+            .print-hidden { display: none !important; }
+            .initiative-content { display: block !important; }
+            .toggle-icon { display: none !important; }
+            .shadow-sm, .shadow-md, .shadow-xl { box-shadow: none !important; border: 1px solid #cbd5e1 !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased h-screen flex overflow-hidden">
+
+    <!-- Chosen Palette: Corporate Slate and Dell Blue (Tailwind slate-50, slate-900, blue-600) to reflect a professional enterprise B2B sales environment. -->
+    <!-- Application Structure Plan: A tabbed SPA dashboard interface. Chosen because Dell Account Executives and District Managers need highly scannable, non-linear access to specific data points (e.g., jumping straight to "Financials" or "Actionable Opportunities" during pre-call planning) without scrolling through a dense, linear report. -->
+    <!-- Visualization & Content Choices: Budget Allocation -> Goal: Inform/Compare -> Doughnut Chart (Chart.js) -> Shows the ratio of O&M vs CapEx, highlighting the need for OPEX solutions like APEX. Stakeholder Matrix -> Goal: Organize -> Interactive HTML Table with JS filtering -> Allows reps to instantly filter by technical vs financial influencers. Confirming NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <aside class="w-20 md:w-64 bg-slate-900 text-slate-300 flex flex-col h-full shadow-xl z-10 transition-all duration-300">
+        <div class="p-4 md:p-6 bg-slate-950 flex items-center justify-center md:justify-start">
+            <span class="text-2xl md:text-3xl mr-0 md:mr-3 text-blue-500" aria-hidden="true">&#128187;</span>
+            <h1 class="font-bold text-white text-lg hidden md:block leading-tight">State of NJ<br><span class="text-xs text-blue-400 font-normal">Account Intelligence</span></h1>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4 flex flex-col">
+            <button class="nav-btn active w-full text-left px-4 md:px-6 py-4 hover:bg-slate-800 transition-colors flex items-center" data-target="view-macro">
+                <span class="text-xl md:mr-3" aria-hidden="true">&#127963;</span>
+                <span class="hidden md:block font-medium">Macro & Financials</span>
+            </button>
+            <button class="nav-btn w-full text-left px-4 md:px-6 py-4 hover:bg-slate-800 transition-colors flex items-center" data-target="view-power">
+                <span class="text-xl md:mr-3" aria-hidden="true">&#128101;</span>
+                <span class="hidden md:block font-medium">Power & Governance</span>
+            </button>
+            <button class="nav-btn w-full text-left px-4 md:px-6 py-4 hover:bg-slate-800 transition-colors flex items-center" data-target="view-landscape">
+                <span class="text-xl md:mr-3" aria-hidden="true">&#128202;</span>
+                <span class="hidden md:block font-medium">Initiatives & Landscape</span>
+            </button>
+            <button class="nav-btn w-full text-left px-4 md:px-6 py-4 hover:bg-slate-800 transition-colors flex items-center" data-target="view-action">
+                <span class="text-xl md:mr-3" aria-hidden="true">&#128640;</span>
+                <span class="hidden md:block font-medium text-blue-400">Dell Action Plan</span>
+            </button>
+            <div class="mt-auto px-4 md:px-6 py-4">
+                <a href="https://dmonkey1001.github.io/slg-strategies/new-jersey/analysis.pdf" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm transition-colors flex justify-center items-center mb-3">
+                    <span class="mr-2" aria-hidden="true">&#128196;</span>
+                    <span class="hidden md:inline">View Source PDF</span>
+                </a>
+                <button onclick="window.print()" class="w-full bg-slate-700 hover:bg-slate-600 text-white py-2 px-4 rounded text-sm transition-colors flex justify-center items-center">
+                    <span class="mr-2" aria-hidden="true">&#128424;</span>
+                    <span class="hidden md:inline">Print Report</span>
+                </button>
+            </div>
+        </nav>
+        <div class="p-4 text-xs text-slate-500 hidden md:block border-t border-slate-800">
+            Confidential - Internal Dell Use Only
+        </div>
+    </aside>
+
+    <main class="flex-1 h-full overflow-y-auto bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto p-6 md:p-10">
+
+            <div id="view-macro" class="view-section active">
+                <div class="mb-8 border-b border-slate-200 pb-4">
+                    <h2 class="text-3xl font-bold text-slate-900">Executive Summary & Macro Landscape</h2>
+                    <p class="text-slate-600 mt-2 text-lg">Understand the financial and political realities shaping New Jersey's IT spend to qualify deals effectively. This section provides the high-level budget breakdown and core state administration goals.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-center">
+                        <span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Total State Budget (FY24/25)</span>
+                        <span class="text-4xl font-extrabold text-slate-900 mt-2">$54.3B</span>
+                        <span class="text-sm text-green-600 mt-2"><span aria-hidden="true">&#9650;</span> Stable, but tightening</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-center border-l-4 border-l-blue-500">
+                        <span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Estimated IT Budget</span>
+                        <span class="text-4xl font-extrabold text-blue-700 mt-2">~$1.1B</span>
+                        <span class="text-sm text-slate-500 mt-2">Across all centralized & agency silos</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-center">
+                        <span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Available Grants (Cyber/Infra)</span>
+                        <span class="text-4xl font-extrabold text-emerald-600 mt-2">$107M+</span>
+                        <span class="text-sm text-slate-500 mt-2">SLCGP & IIJA Broadband Funding</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Top 3 Core Administrative Goals</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 text-xl" aria-hidden="true">&#10148;</span>
+                                <div>
+                                    <strong class="text-slate-900 block">Digital Equity & Broadband Expansion</strong>
+                                    <span class="text-slate-600 text-sm">Governor's mandate to close the digital divide, heavily reliant on federal IIJA funds.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 text-xl" aria-hidden="true">&#10148;</span>
+                                <div>
+                                    <strong class="text-slate-900 block">Citizen Experience Modernization (MyNJ)</strong>
+                                    <span class="text-slate-600 text-sm">Consolidating disjointed agency portals into a single, unified digital identity and services platform.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 text-xl" aria-hidden="true">&#10148;</span>
+                                <div>
+                                    <strong class="text-slate-900 block">Whole-of-State Cyber Resilience</strong>
+                                    <span class="text-slate-600 text-sm">Expanding NJCCIC's reach to protect local municipalities and schools, not just state agencies.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2 w-full text-left">IT Budget Breakdown (Est.)</h3>
+                        <p class="text-sm text-slate-500 mb-4 w-full text-left">High legacy footprint limits capital for net-new innovation.</p>
+                        <div class="chart-container">
+                            <canvas id="budgetChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-power" class="view-section">
+                <div class="mb-8 border-b border-slate-200 pb-4">
+                    <h2 class="text-3xl font-bold text-slate-900">Power Structure & IT Governance</h2>
+                    <p class="text-slate-600 mt-2 text-lg">Identify key decision-makers and understand the organizational friction points. State IT is a complex web of centralized mandates vs. decentralized agency budgets.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mb-8">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">IT Governance & Service Delivery Model</h3>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/3 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <span class="text-xs font-bold text-blue-600 uppercase">Operating Model</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-1">Federated moving to Hybrid</h4>
+                            <p class="text-sm text-slate-700 mt-2">NJOIT (Central IT) provides shared networks, data centers, and email. However, massive agencies (Human Services, Transportation) retain immense autonomous IT budgets and shadow IT silos.</p>
+                        </div>
+                        <div class="md:w-2/3 bg-orange-50 p-4 rounded-lg border border-orange-100">
+                            <span class="text-xs font-bold text-orange-600 uppercase">Primary Friction Point: Chargebacks</span>
+                            <h4 class="text-lg font-bold text-slate-900 mt-1">The Public Cloud Escape Hatch</h4>
+                            <p class="text-sm text-slate-700 mt-2">Agencies complain that NJOIT data center hosting and compute chargeback rates are too high. To avoid these internal costs, agencies frequently attempt to spin up workloads directly in AWS/Azure using departmental credit cards or decentralized purchasing, leading to unstructured data sprawl and security blind spots.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 flex justify-between items-center bg-slate-50 print-hidden">
+                        <h3 class="text-xl font-bold text-slate-800">Key Stakeholders Matrix</h3>
+                        <select id="stakeholderFilter" class="bg-white border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 shadow-sm">
+                            <option value="all">All Influencers</option>
+                            <option value="financial">Financial Purchasers</option>
+                            <option value="technical">Technical Influencers</option>
+                        </select>
+                    </div>
+                    <div class="p-6 border-b border-slate-200 hidden print:block bg-slate-50">
+                        <h3 class="text-xl font-bold text-slate-800">Key Stakeholders Matrix</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-slate-600">
+                            <thead class="text-xs text-slate-700 uppercase bg-slate-100">
+                                <tr>
+                                    <th scope="col" class="px-6 py-4">Name & Title</th>
+                                    <th scope="col" class="px-6 py-4">Sphere of Influence</th>
+                                    <th scope="col" class="px-6 py-4">Recent Stance / Priority</th>
+                                </tr>
+                            </thead>
+                            <tbody id="stakeholderTable">
+                                <tr class="bg-white border-b hover:bg-slate-50" data-type="financial">
+                                    <td class="px-6 py-4 font-medium text-slate-900">Phil Murphy<br><span class="text-xs text-slate-500 font-normal">Governor (Elected)</span></td>
+                                    <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded border border-green-400 inline-block whitespace-nowrap">Financial / Exec Sponsor</span></td>
+                                    <td class="px-6 py-4">Prioritizing UX for citizen services; highly vocal on leveraging federal grants for state infrastructure.</td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-slate-50" data-type="technical financial" id="person-rein">
+                                    <td class="px-6 py-4 font-medium text-slate-900 bg-blue-50">Christopher Rein<br><span class="text-xs text-slate-500 font-normal">CTO/CIO, NJOIT</span></td>
+                                    <td class="px-6 py-4 bg-blue-50"><span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded border border-purple-400 inline-block whitespace-nowrap">Technical & Financial</span></td>
+                                    <td class="px-6 py-4 bg-blue-50">Driving data center consolidation and "cloud-smart" (not cloud-first) policies. Focused on lowering NJOIT operating costs.</td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-slate-50" data-type="technical" id="person-geraghty">
+                                    <td class="px-6 py-4 font-medium text-slate-900 bg-blue-50">Michael Geraghty<br><span class="text-xs text-slate-500 font-normal">CISO, Dir. of NJCCIC</span></td>
+                                    <td class="px-6 py-4 bg-blue-50"><span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border border-blue-400 inline-block whitespace-nowrap">Technical Influencer</span></td>
+                                    <td class="px-6 py-4 bg-blue-50">Championing Zero Trust architecture and centralized threat intelligence. Vetoes projects without baked-in security.</td>
+                                </tr>
+                                <tr class="bg-white border-b hover:bg-slate-50" data-type="financial">
+                                    <td class="px-6 py-4 font-medium text-slate-900">Paul Sarlo<br><span class="text-xs text-slate-500 font-normal">Senate Budget Chair</span></td>
+                                    <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded border border-green-400 inline-block whitespace-nowrap">Financial Gatekeeper</span></td>
+                                    <td class="px-6 py-4">Strict scrutiny on IT project overruns. Demands clear ROI and operational cost reduction for net-new capital approvals.</td>
+                                </tr>
+                                <tr class="bg-white hover:bg-slate-50" data-type="technical">
+                                    <td class="px-6 py-4 font-medium text-slate-900">Agency CIOs<br><span class="text-xs text-slate-500 font-normal">(e.g., Dept of Human Services, DOT)</span></td>
+                                    <td class="px-6 py-4"><span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded border border-blue-400 inline-block whitespace-nowrap">Technical Buyers</span></td>
+                                    <td class="px-6 py-4">Seeking edge compute capabilities and AI readiness for unstructured data, often attempting to bypass central NJOIT infrastructure.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-landscape" class="view-section">
+                <div class="mb-8 border-b border-slate-200 pb-4">
+                    <h2 class="text-3xl font-bold text-slate-900">Strategic Initiatives & Vendor Landscape</h2>
+                    <p class="text-slate-600 mt-2 text-lg">Align Dell solutions to funded mandates. Understand the procurement vehicles required to transact and the entrenched competitors to displace.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="lg:col-span-2">
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Top 3 Funded Modernization Efforts</h3>
+                        <div class="space-y-4">
+                            
+                            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                                <button class="w-full flex justify-between items-center p-5 bg-slate-50 hover:bg-slate-100 transition-colors initiative-toggle">
+                                    <div class="text-left">
+                                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Initiative 1</span>
+                                        <h4 class="text-lg font-bold text-slate-900">MyNJ Portal & Resident Identity</h4>
+                                    </div>
+                                    <span class="text-slate-400 text-2xl toggle-icon" aria-hidden="true">&#43;</span>
+                                </button>
+                                <div class="p-5 border-t border-slate-200 hidden initiative-content bg-white">
+                                    <p class="text-sm text-slate-700 mb-3"><strong>Executive Mandate:</strong> Citizen Experience & Digital Government.</p>
+                                    <p class="text-sm text-slate-700 mb-3"><strong>Owning Agency:</strong> NJOIT working across all citizen-facing agencies (MVC, Labor, Human Services).</p>
+                                    <p class="text-sm text-slate-700 bg-blue-50 p-3 rounded border border-blue-100"><strong>IT Requirement:</strong> Scalable, highly available identity management, data integration platforms, and secure multi-cloud access.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                                <button class="w-full flex justify-between items-center p-5 bg-slate-50 hover:bg-slate-100 transition-colors initiative-toggle">
+                                    <div class="text-left">
+                                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Initiative 2</span>
+                                        <h4 class="text-lg font-bold text-slate-900">State Data Center Optimization</h4>
+                                    </div>
+                                    <span class="text-slate-400 text-2xl toggle-icon" aria-hidden="true">&#43;</span>
+                                </button>
+                                <div class="p-5 border-t border-slate-200 hidden initiative-content bg-white">
+                                    <p class="text-sm text-slate-700 mb-3"><strong>Executive Mandate:</strong> Cost Reduction & Modernization.</p>
+                                    <p class="text-sm text-slate-700 mb-3"><strong>Owning Agency:</strong> NJOIT.</p>
+                                    <p class="text-sm text-slate-700 bg-blue-50 p-3 rounded border border-blue-100"><strong>IT Requirement:</strong> Retiring aging 3-tier architecture. High requirement for Hyperconverged Infrastructure (HCI) and cloud-like consumption models (Storage-as-a-Service) to make NJOIT chargebacks competitive with AWS.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm" id="initiative-wos">
+                                <button class="w-full flex justify-between items-center p-5 bg-blue-50 hover:bg-blue-100 transition-colors initiative-toggle">
+                                    <div class="text-left">
+                                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Initiative 3</span>
+                                        <h4 class="text-lg font-bold text-slate-900">NJCCIC "Whole-of-State" Cyber Hub</h4>
+                                    </div>
+                                    <span class="text-slate-400 text-2xl toggle-icon" aria-hidden="true">&#43;</span>
+                                </button>
+                                <div class="p-5 border-t border-slate-200 hidden initiative-content bg-white">
+                                    <p class="text-sm text-slate-700 mb-3"><strong>Executive Mandate:</strong> Cyber Resilience & Homeland Security.</p>
+                                    <p class="text-sm text-slate-700 mb-3"><strong>Owning Agency:</strong> NJ Office of Homeland Security and Preparedness (NJCCIC).</p>
+                                    <p class="text-sm text-slate-700 bg-blue-50 p-3 rounded border border-blue-100"><strong>IT Requirement:</strong> AI-driven threat hunting capabilities, massive immutable data vaulting for ransomware recovery, and edge security for connected municipal endpoints.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                            <h3 class="text-lg font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2">Procurement & Compliance</h3>
+                            <ul class="text-sm text-slate-700 space-y-2 mb-4">
+                                <li><strong>Vehicles:</strong> NASPO ValuePoint (primary for hardware), NJSTART (eProcurement), OMNIA Partners, NJSBA (for K-12/local tie-ins).</li>
+                                <li><strong>Purchasing:</strong> Highly favors cooperative purchasing to bypass lengthy state RFP processes.</li>
+                            </ul>
+                            <h4 class="font-bold text-slate-800 text-sm">Regulatory Drivers:</h4>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded border border-slate-300">StateRAMP</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded border border-slate-300">CJIS</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded border border-slate-300">HIPAA</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2 py-1 rounded border border-slate-300">NJ AI Task Force Mandates</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-sm text-white print-hidden">
+                            <h3 class="text-lg font-bold mb-3 border-b border-slate-600 pb-2">The Battlefield (Incumbents)</h3>
+                            <ul class="text-sm space-y-3">
+                                <li><span class="text-blue-300 font-bold" aria-hidden="true">&#9642;</span> Networking: Heavy Cisco entrenchment statewide.</li>
+                                <li><span class="text-blue-300 font-bold" aria-hidden="true">&#9642;</span> Compute/Storage: Mixed environment (Dell, HPE). Aging SANs present in tier-2 agencies.</li>
+                                <li><span class="text-blue-300 font-bold" aria-hidden="true">&#9642;</span> Cloud: Significant AWS and Azure footprint due to agency "shadow IT" bypass of central services. Ripe for repatriation analysis.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-action" class="view-section">
+                <div class="mb-8 border-b border-slate-200 pb-4">
+                    <h2 class="text-3xl font-bold text-slate-900 text-blue-700">Actionable Dell Opportunities</h2>
+                    <p class="text-slate-600 mt-2 text-lg">Synthesized sales motions. Focus account planning on these three specific plays where Dell's portfolio solves immediate State of New Jersey friction points.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <div class="bg-white rounded-xl border-t-4 border-t-blue-600 shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <div class="text-3xl mb-4 text-blue-600" aria-hidden="true">&#128176;</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Funded Alignment</h3>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-wide mb-4 border-b border-slate-100 pb-2">Capitalizing on Mandates</p>
+                        <ul class="text-slate-700 text-sm space-y-3">
+                            <li><strong class="text-slate-900">APEX for NJOIT:</strong> Position Dell APEX Custom Solutions to CIO <a href="#" class="cross-link text-blue-600 hover:underline font-semibold" data-target-tab="view-power" data-target-id="person-rein">Christopher Rein</a>. It solves the NJOIT "chargeback" friction by allowing them to offer cloud-like OpEx consumption to agencies while keeping data on-premise, competing directly with AWS rogue spend.</li>
+                            <li><strong class="text-slate-900">PowerProtect & Cyber Recovery:</strong> Align with NJCCIC's <a href="#" class="cross-link text-blue-600 hover:underline font-semibold" data-target-tab="view-landscape" data-target-id="initiative-wos">"Whole-of-State" mandate</a>. Pitch immutable vaults and CyberSense for state and local government data protection using SLCGP grant funds.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl border-t-4 border-t-purple-500 shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <div class="text-3xl mb-4 text-purple-500" aria-hidden="true">&#128269;</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Whitespace & Advisory</h3>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-wide mb-4 border-b border-slate-100 pb-2">Identifying Blind Spots</p>
+                        <ul class="text-slate-700 text-sm space-y-3">
+                            <li><strong class="text-slate-900">AI-Ready Unstructured Data:</strong> Agencies (like Human Services/Transportation) are hoarding massive amounts of unstructured data with no AI governance strategy. Lead with Dell Advisory Services to assess unstructured data sprawl (PowerScale positioning) before they attempt costly AI pilot programs.</li>
+                            <li><strong class="text-slate-900">Edge Security:</strong> As digital equity expands broadband, the edge expands. Pitch Dell Edge Gateway and secure client solutions to secure municipal endpoints connecting back to state systems.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl border-t-4 border-t-orange-500 shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <div class="text-3xl mb-4 text-orange-500" aria-hidden="true">&#9889;</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Competitive Displacement</h3>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-wide mb-4 border-b border-slate-100 pb-2">Exploiting Vulnerabilities</p>
+                        <ul class="text-slate-700 text-sm space-y-3">
+                            <li><strong class="text-slate-900">Cloud Repatriation (AWS/Azure):</strong> Target tier-2 agency CIOs who bypassed NJOIT for public cloud and are now facing massive egress fees and budget overruns. Execute a TCO analysis to rip-and-replace public cloud workloads with on-prem VxRail or PowerStore.</li>
+                            <li><strong class="text-slate-900">Aging Competitor SANs:</strong> Target end-of-life HPE or legacy storage arrays in decentralized agency data centers. Offer a consolidation play into NJOIT's shared services using high-density Dell PowerStore.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const appState = {
+            activeView: 'view-macro',
+            stakeholderFilter: 'all'
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initNavigation();
+            initCharts();
+            initStakeholderFilter();
+            initAccordions();
+            initCrossLinks();
+        });
+
+        function initNavigation() {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const views = document.querySelectorAll('.view-section');
+
+            navButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetId = btn.getAttribute('data-target');
+                    appState.activeView = targetId;
+                    navButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    views.forEach(v => {
+                        v.classList.remove('active');
+                        if(v.id === targetId) {
+                            v.classList.add('active');
+                        }
+                    });
+                });
+            });
+        }
+
+        function initCharts() {
+            const ctx = document.getElementById('budgetChart').getContext('2d');
+            const chartColors = ['#0076CE', '#64748B', '#E2E8F0']; 
+
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Operations & Maintenance (O&M) - 78%', 
+                        'Net-New / Capital Investment - 22%'
+                    ],
+                    datasets: [{
+                        data: [78, 22],
+                        backgroundColor: chartColors,
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    family: "'Inter', sans-serif",
+                                    size: 12
+                                },
+                                color: '#334155',
+                                padding: 20
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + '% (Est.)';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '70%'
+                }
+            });
+        }
+
+        function initStakeholderFilter() {
+            const filterSelect = document.getElementById('stakeholderFilter');
+            const tableRows = document.querySelectorAll('#stakeholderTable tr');
+
+            filterSelect.addEventListener('change', (e) => {
+                const filterValue = e.target.value;
+                appState.stakeholderFilter = filterValue;
+
+                tableRows.forEach(row => {
+                    const type = row.getAttribute('data-type');
+                    if (filterValue === 'all' || type.includes(filterValue)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        function initAccordions() {
+            const toggles = document.querySelectorAll('.initiative-toggle');
+            
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('.toggle-icon');
+                    const isCurrentlyHidden = content.classList.contains('hidden');
+                    
+                    document.querySelectorAll('.initiative-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.toggle-icon').forEach(i => i.innerHTML = '&#43;');
+
+                    if (isCurrentlyHidden) {
+                        content.classList.remove('hidden');
+                        icon.innerHTML = '&#8722;';
+                    }
+                });
+            });
+        }
+
+        function initCrossLinks() {
+            const links = document.querySelectorAll('.cross-link');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetTab = link.getAttribute('data-target-tab');
+                    const targetId = link.getAttribute('data-target-id');
+                    
+                    const navBtn = document.querySelector(`.nav-btn[data-target="${targetTab}"]`);
+                    if(navBtn) navBtn.click();
+                    
+                    if (targetId) {
+                        setTimeout(() => {
+                            const targetElement = document.getElementById(targetId);
+                            if (targetElement) {
+                                targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                
+                                targetElement.style.transition = 'background-color 0.5s ease';
+                                const originalBg = targetElement.style.backgroundColor;
+                                targetElement.style.backgroundColor = '#eff6ff';
+                                setTimeout(() => {
+                                    targetElement.style.backgroundColor = originalBg;
+                                }, 1500);
+
+                                if (targetElement.classList.contains('bg-white') && targetElement.querySelector('.initiative-toggle')) {
+                                    const toggleBtn = targetElement.querySelector('.initiative-toggle');
+                                    const content = toggleBtn.nextElementSibling;
+                                    if (content.classList.contains('hidden')) {
+                                        toggleBtn.click();
+                                    }
+                                }
+                            }
+                        }, 100);
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

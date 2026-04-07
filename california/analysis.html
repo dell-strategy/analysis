@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell SLG Strategic Brief: State of California</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chosen Palette: Slate & Dell Blue (Slate 50 to 900 for structure, Blue 600/700 for actions and highlights, Teal/Amber for data viz). -->
+    <!-- Application Structure Plan: The SPA uses a dashboard-style layout with a persistent side navigation menu. This structure was chosen because a sales-focused strategic brief requires quick scanning and jumping between disparate topics. -->
+    <!-- Visualization & Content Choices: Dashboard views, Interactive Table, Tabbed Content. NO SVG. NO Mermaid JS used. -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        
+        .nav-item.active {
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .fade-in { animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 h-screen flex overflow-hidden">
+
+    <nav class="w-64 bg-slate-900 text-slate-300 flex-shrink-0 flex flex-col h-full shadow-xl z-20 transition-all duration-300 relative" id="sidebar">
+        <div class="p-6 bg-slate-950 border-b border-slate-800 flex justify-between items-center flex-shrink-0">
+            <div>
+                <h1 class="text-xl font-bold text-white tracking-tight">SLG Intel</h1>
+                <p class="text-xs text-blue-400 font-medium mt-1">STATE OF CALIFORNIA</p>
+            </div>
+            <button id="mobile-menu-close" class="md:hidden text-white text-2xl p-1">&#x2715;</button>
+        </div>
+        <div class="flex-1 overflow-y-auto py-4">
+            <ul class="space-y-1 px-3" id="nav-menu" role="tablist">
+                <li role="presentation"><button data-target="view-macro" role="tab" aria-selected="true" aria-controls="view-macro" class="nav-item active w-full text-left px-4 py-3 rounded-md transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-3"><span class="text-lg">&#x1F310;</span> Macro & Financials</button></li>
+                <li role="presentation"><button data-target="view-power" role="tab" aria-selected="false" aria-controls="view-power" class="nav-item w-full text-left px-4 py-3 rounded-md transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-3"><span class="text-lg">&#x1F464;</span> Power Structure</button></li>
+                <li role="presentation"><button data-target="view-ops" role="tab" aria-selected="false" aria-controls="view-ops" class="nav-item w-full text-left px-4 py-3 rounded-md transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-3"><span class="text-lg">&#x2699;</span> IT Ops & Procurement</button></li>
+                <li role="presentation"><button data-target="view-initiatives" role="tab" aria-selected="false" aria-controls="view-initiatives" class="nav-item w-full text-left px-4 py-3 rounded-md transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-3"><span class="text-lg">&#x1F680;</span> Strategic Initiatives</button></li>
+                <li role="presentation"><button data-target="view-action" role="tab" aria-selected="false" aria-controls="view-action" class="nav-item w-full text-left px-4 py-3 rounded-md transition-colors hover:bg-blue-600 hover:text-white flex items-center gap-3 text-blue-400"><span class="text-lg">&#x1F3AF;</span> Dell Action Plan</button></li>
+            </ul>
+        </div>
+        <div class="p-4 border-t border-slate-800 flex-shrink-0">
+            <a href="https://dmonkey1001.github.io/slg-strategies/california/analysis.pdf" target="_blank" class="flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300 mb-3 transition-colors">
+                <span class="text-base">&#x1F4C4;</span> View Full PDF Report
+            </a>
+            <div class="text-xs text-slate-500">
+                Internal Dell Technologies Use Only.<br>Updated: March 2026
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-1 flex flex-col h-full relative w-full overflow-hidden">
+        <header class="bg-white shadow-sm border-b border-slate-200 p-4 flex justify-between items-center z-10 flex-shrink-0">
+            <div class="flex items-center gap-3">
+                <button id="mobile-menu-open" class="md:hidden text-slate-600 text-2xl p-1">&#x2630;</button>
+                <h2 class="text-xl font-semibold text-slate-800" id="current-view-title">Macro Landscape & Financials</h2>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="https://dmonkey1001.github.io/slg-strategies/california/analysis.pdf" target="_blank" class="hidden md:flex items-center gap-2 text-sm font-medium text-blue-700 bg-blue-50 border border-blue-200 hover:bg-blue-100 px-3 py-1.5 rounded-md transition-colors">
+                    <span class="text-base">&#x1F4C4;</span> Full PDF Report
+                </a>
+                <div class="flex items-center gap-2 text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full">
+                    <span class="text-green-600">&#x25CF;</span> Target Status: Active
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 overflow-y-auto bg-slate-50 relative" id="main-content">
+
+            <!-- MACRO VIEW -->
+            <section id="view-macro" role="tabpanel" class="view-section fade-in block">
+                <div class="relative w-full h-48 md:h-64 mb-8">
+                    <img src="https://images.unsplash.com/photo-1650136865959-0762ea47e5eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="California Capitol" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 md:p-8 max-w-7xl mx-auto w-full">
+                        <h2 class="text-3xl font-bold text-white mb-2">Macro Landscape & Financials</h2>
+                        <p class="text-slate-300 text-sm md:text-base max-w-3xl">Grounding the strategy in California's $348.9B economic reality and stringent 7.95% operational cut mandate.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-8 max-w-7xl mx-auto px-4 md:px-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">State Revenue Outlook</div>
+                            <div class="text-2xl font-bold text-green-600">+$42.3 Billion</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Total Expenditures (26-27)</div>
+                            <div class="text-2xl font-bold text-slate-800">$348.9 Billion</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">State Employees</div>
+                            <div class="text-2xl font-bold text-slate-800">~300,000</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm border-l-4 border-l-red-500">
+                            <div class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-1">Mandated OpEx Cut</div>
+                            <div class="text-2xl font-bold text-red-600">-7.95% ($1.56B)</div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                            <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Executive Summary</h3>
+                            <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+                                California faces a macroeconomic dichotomy: a $42.3B improvement in revenue outlook paired with a $2.9B structural shortfall. The most consequential mandate is a strict <strong>7.95% reduction in state operations</strong>, removing $1.56B in 2026-27. IT leaders must execute massive modernizations while absorbing deep operational cuts, heavily accelerating the appetite for OpEx infrastructure to bypass CapEx constraints.
+                            </p>
+                            <h4 class="font-semibold text-slate-800 mb-2">Core Administrative IT Goals:</h4>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="flex items-start gap-2"><span class="text-blue-600 mt-0.5">&#x25B6;</span> <strong>Digital Equity:</strong> $550M extension for the Middle-Mile Broadband Initiative (MMBI).</li>
+                                <li class="flex items-start gap-2"><span class="text-blue-600 mt-0.5">&#x25B6;</span> <strong>Cyber & Zero Trust:</strong> $185M allocated for the Cal-Secure roadmap; strict SIMM 5355-B enforcement.</li>
+                                <li class="flex items-start gap-2"><span class="text-blue-600 mt-0.5">&#x25B6;</span> <strong>Public Sector AI:</strong> Deployment of "Poppy" (GenAI assistant) engineered for strict on-premises data sovereignty.</li>
+                                <li class="flex items-start gap-2"><span class="text-blue-600 mt-0.5">&#x25B6;</span> <strong>Legacy Deprecation:</strong> Replacing decades-old mainframes across DMV, FTB, and SCO.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-600 rounded-xl shadow-sm border border-blue-700 p-6 text-white flex flex-col justify-center">
+                            <h3 class="text-lg font-bold mb-4">Funding Influx</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="text-xs text-blue-200 font-semibold uppercase tracking-wider">MMBI Broadband (Ext)</div>
+                                    <div class="text-2xl font-bold">$550M</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-blue-200 font-semibold uppercase tracking-wider">SLCGP Cyber (Initial)</div>
+                                    <div class="text-2xl font-bold">$7.9M</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-blue-200 font-semibold uppercase tracking-wider">CSPS Total Project Cost</div>
+                                    <div class="text-2xl font-bold">$1.24B</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto px-4 md:px-8 pb-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-4 text-center">Procurement Dynamics</h3>
+                        <div class="chart-container">
+                            <canvas id="budgetDoughnutChart"></canvas>
+                        </div>
+                        <p class="text-xs text-slate-500 text-center mt-4">Note: The 7.95% operations cut is forcing agencies to convert traditional CapEx into predictable OpEx (APEX).</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-800 mb-4 text-center">Top Funded IT Projects (Current/Total)</h3>
+                        <div class="chart-container">
+                            <canvas id="agencyBarChart"></canvas>
+                        </div>
+                        <p class="text-xs text-slate-500 text-center mt-4">While unified IT budgets are obscured, these PAL projects command massive, ring-fenced capital.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- POWER STRUCTURE VIEW -->
+            <section id="view-power" role="tabpanel" class="view-section hidden fade-in">
+                <div class="relative w-full h-48 md:h-64 mb-8">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Meeting Room" class="w-full h-full object-cover" style="object-position: center 20%;">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 md:p-8 max-w-7xl mx-auto w-full">
+                        <h2 class="text-3xl font-bold text-white mb-2">Power Structure & Influencers</h2>
+                        <p class="text-slate-300 text-sm md:text-base max-w-3xl">Mapping the human element: Differentiate between executive sponsors, financial purchasers, and technical gatekeepers.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6 max-w-7xl mx-auto px-4 md:px-8 pb-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                        <div class="lg:col-span-3 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div class="p-4 border-b border-slate-200 bg-slate-50 flex justify-between items-center">
+                                <h3 class="font-bold text-slate-800">Stakeholder Matrix</h3>
+                                <div class="flex gap-2" role="group" aria-label="Filter stakeholders">
+                                    <button class="filter-btn active px-3 py-1 text-sm font-medium rounded transition-colors border bg-blue-100 text-blue-700 border-blue-200" data-filter="all" aria-pressed="true">All</button>
+                                    <button class="filter-btn px-3 py-1 text-sm font-medium rounded transition-colors border bg-white text-slate-600 border-slate-300 hover:bg-slate-50" data-filter="Elected" aria-pressed="false">Elected / Exec</button>
+                                    <button class="filter-btn px-3 py-1 text-sm font-medium rounded transition-colors border bg-white text-slate-600 border-slate-300 hover:bg-slate-50" data-filter="IT" aria-pressed="false">IT Leadership</button>
+                                </div>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse" id="stakeholder-table">
+                                    <thead>
+                                        <tr class="bg-slate-100 text-slate-600 text-sm uppercase tracking-wider">
+                                            <th class="p-4 border-b">Name</th>
+                                            <th class="p-4 border-b">Title</th>
+                                            <th class="p-4 border-b">Category</th>
+                                            <th class="p-4 border-b">Sphere of Influence</th>
+                                            <th class="p-4 border-b">Recent Tech Stance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="stakeholder-body" class="text-sm divide-y divide-slate-200">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1 space-y-6">
+                            <div class="bg-blue-50 border border-blue-200 p-5 rounded-xl shadow-sm">
+                                <h3 class="font-bold text-blue-900 mb-2 flex items-center gap-2"><span class="text-lg">&#x1F4D6;</span> Rules of Engagement</h3>
+                                <p class="text-sm text-blue-800 mb-3">When calling on CA state entities, observe the following hierarchy:</p>
+                                <ul class="text-sm text-blue-800 space-y-2 list-disc ml-4">
+                                    <li><strong>Navigate the PAL:</strong> CDT's Project Approval Lifecycle (PAL) is the ultimate gateway. Align pitches to Stages 1-4.</li>
+                                    <li><strong>Acknowledge the Cuts:</strong> Leverage the 7.95% operations cut to pitch OpEx over rigid CapEx hardware buys.</li>
+                                    <li><strong>Lead with Sovereignty:</strong> GenAI ("Poppy") and data privacy (CCPA 2026) demand strictly on-premises/sovereign architectures.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm">
+                                <h3 class="font-bold text-slate-800 mb-2">Legislative Context</h3>
+                                <div class="space-y-3 mt-3">
+                                    <p class="text-sm text-slate-700">New 2026 leadership (Sen. Cervantes, Asm. Wicks) enforces a highly disciplined fiscal approach. Massive IT requests must have verifiable ROI and bypass general fund bloat where possible.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OPS & PROCUREMENT VIEW -->
+            <section id="view-ops" role="tabpanel" class="view-section hidden fade-in">
+                <div class="relative w-full h-48 md:h-64 mb-8">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Server Room / Ops" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 md:p-8 max-w-7xl mx-auto w-full">
+                        <h2 class="text-3xl font-bold text-white mb-2">IT Ops & Procurement</h2>
+                        <p class="text-slate-300 text-sm md:text-base max-w-3xl">Navigating the Envision 2026 centralized governance model, CDT chargebacks, and crucial compliance drivers.</p>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 md:px-8 pb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 lg:col-span-2">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xl">&#x2696;</div>
+                                <h3 class="text-lg font-bold text-slate-800">IT Governance Model (Envision 2026)</h3>
+                            </div>
+                            <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+                                <span class="font-bold text-slate-900">Forced Centralization.</span> Historically federated, agencies are now corralled by CDT's Envision 2026 framework and the mandatory Project Approval Lifecycle (PAL). CalCloud was sunset in Dec 2023, forcing a shift to the California Managed Cloud (CAMC) or hybrid architectures.
+                            </p>
+                            <div class="mt-4 bg-orange-50 border-l-4 border-orange-400 p-3 rounded">
+                                <h4 class="text-sm font-bold text-orange-800 mb-2">Severe Financial Friction Points (The Dell Opportunity)</h4>
+                                <ul class="text-xs text-orange-900 space-y-1 list-disc ml-4">
+                                    <li><strong>4% TCRI:</strong> CDT implemented a 4% Targeted Cost Recovery Increase on services.</li>
+                                    <li><strong>CAMC Markup:</strong> 17% markup on top of public cloud vendor pass-through costs.</li>
+                                    <li><strong>Non-Standard Penalty:</strong> Agencies running legacy gear face a 20% (Yr 1) up to 50% (Yr 3) monthly surcharge per instance.</li>
+                                </ul>
+                                <p class="text-xs text-orange-900 mt-2 font-medium"><em>Agencies are squeezed by a 7.95% budget cut while CDT raises rates. Pitch APEX on-prem as the cost-predictable bypass to central administrative bloat.</em></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900 p-6 rounded-xl shadow-sm text-white">
+                            <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><span class="text-blue-400">&#x2714;</span> Key Compliance Drivers</h3>
+                            <ul class="space-y-3 text-sm text-slate-300">
+                                <li class="pb-2 border-b border-slate-700"><strong>CCPA & Delete Act (2026):</strong> Requires Drop platforms and strict 2028 cyber audits. Demands immutable storage snapshots.</li>
+                                <li class="pb-2 border-b border-slate-700"><strong>Cal-Secure:</strong> Mandates Zero Trust architecture (SIMM 5355-B) across all state endpoints.</li>
+                                <li class="pb-2 border-b border-slate-700"><strong>StateRAMP & Cloud Smart:</strong> Vendors must pass the rigorous CCSA assessment.</li>
+                                <li><strong>AI Transparency Act (AB 853):</strong> Operative Aug 2026, requires provenance data tracking.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Primary Procurement Vehicles</h3>
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li><strong>CMAS:</strong> Heavily used for commercial off-the-shelf (COTS) IT goods to bypass competitive bidding.</li>
+                                <li><strong>SLP (Software Licensing Program):</strong> Preferred for enterprise software/SaaS.</li>
+                                <li><strong>NASPO ValuePoint & OMNIA:</strong> Flexible mechanisms for complex cloud/hardware via resellers like SHI.</li>
+                                <li><strong>Challenge-Based:</strong> Envision 2026 shifts to requiring working PoCs in a sandbox prior to award.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">The Battlefield (Competitors)</h3>
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li><strong>Mainframe Ecosystem:</strong> Massive legacy footprint of IBM z15/z16 and AIX Power10. Being actively deprecated for x86 RedHat.</li>
+                                <li><strong>Storage Contenders:</strong> NetApp/IBM legacy SANs are under fire from Pure Storage, Vast Data, and Nexsan pushing high-density NVMe.</li>
+                                <li><strong>Public Cloud:</strong> AWS/Azure facing repatriation backlash due to unpredictable costs and the 17% CAMC markup.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                            <h3 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Incumbent Disruption Tactics</h3>
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li><strong>Pure / Vast Data Takedown:</strong> Directly leverage that Dell PowerScale uses up to <strong>72% less energy and 80% less rack space</strong> to run the same Nvidia AI infrastructure. Exceeds state sustainability goals.</li>
+                                <li><strong>Legacy Mainframe Shift:</strong> Capitalize on the punitive 50% non-standard surcharges by migrating IBM workloads to high-density Dell x86.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INITIATIVES VIEW -->
+            <section id="view-initiatives" role="tabpanel" class="view-section hidden fade-in">
+                <div class="relative w-full h-48 md:h-64 mb-8">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Corporate Architecture" class="w-full h-full object-cover" style="object-position: center 70%;">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 md:p-8 max-w-7xl mx-auto w-full">
+                        <h2 class="text-3xl font-bold text-white mb-2">Strategic IT Initiatives</h2>
+                        <p class="text-slate-300 text-sm md:text-base max-w-3xl">Deep dives into the state's highest-priority, heavily funded PAL modernization mandates.</p>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 md:px-8 pb-8">
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row overflow-hidden min-h-[400px]">
+                        <div class="w-full md:w-1/3 bg-slate-50 border-r border-slate-200 flex flex-col" id="init-tabs" role="tablist" aria-orientation="vertical">
+                            <button class="init-tab active p-5 text-left border-b border-slate-200 hover:bg-slate-100 transition-colors focus:outline-none bg-slate-100 border-l-4 border-blue-600" data-content="init-1" role="tab" aria-selected="true" aria-controls="init-1">
+                                <h4 class="font-bold text-slate-800">1. EDR2 Modernization</h4>
+                                <p class="text-xs text-slate-500 mt-1">Tax Revenue • FTB</p>
+                            </button>
+                            <button class="init-tab p-5 text-left border-b border-slate-200 hover:bg-slate-100 transition-colors focus:outline-none border-l-4 border-transparent" data-content="init-2" role="tab" aria-selected="false" aria-controls="init-2">
+                                <h4 class="font-bold text-slate-800">2. DXP & S2S Verification</h4>
+                                <p class="text-xs text-slate-500 mt-1">Citizen Exp • DMV</p>
+                            </button>
+                            <button class="init-tab p-5 text-left border-b border-slate-200 hover:bg-slate-100 transition-colors focus:outline-none border-l-4 border-transparent" data-content="init-3" role="tab" aria-selected="false" aria-controls="init-3">
+                                <h4 class="font-bold text-slate-800">3. State Payroll System (CSPS)</h4>
+                                <p class="text-xs text-slate-500 mt-1">HR Modernization • SCO / CalHR</p>
+                            </button>
+                        </div>
+                        
+                        <div class="w-full md:w-2/3 p-6 lg:p-8" id="init-content-area">
+                            <div id="init-1" role="tabpanel" class="init-content block fade-in">
+                                <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded uppercase tracking-wide">$60M (FY26-27)</span>
+                                <h2 class="text-2xl font-bold text-slate-800 mt-3 mb-2">Enterprise Data to Revenue 2 (EDR2)</h2>
+                                <p class="text-slate-600 text-sm mb-6 pb-4 border-b">A massive modernization mandate aimed at safeguarding >$4 billion/year in compliance revenue by replacing decades-old Audit, Legal, and Underpayment legacy systems.</p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h4 class="font-semibold text-slate-800 text-sm uppercase tracking-wider mb-1">Owning Agency</h4>
+                                            <p class="text-slate-700">Franchise Tax Board (FTB).</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-slate-800 text-sm uppercase tracking-wider mb-1">Underlying IT Requirement</h4>
+                                            <p class="text-slate-700">Requires massive unstructured/structured data migration and high-performance compute optimized for machine learning to identify tax fraud. Full implementation target is Dec 2026, requiring parallel legacy operation.</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                        <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2"><span class="text-blue-600">&#x1F4A1;</span> Dell's Right to Win</h4>
+                                        <ul class="text-sm text-slate-700 space-y-2">
+                                            <li><strong>PowerEdge AI Servers:</strong> Position GPU-dense compute to power FTB's predictive modeling workloads entirely on-premises, securing sensitive taxpayer data.</li>
+                                            <li><strong>Storage Resiliency:</strong> High-speed NVMe storage arrays to handle parallel data pipelines during the legacy transition phase.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="init-2" role="tabpanel" class="init-content hidden fade-in">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded uppercase tracking-wide">$150M+ (FY26-27)</span>
+                                <h2 class="text-2xl font-bold text-slate-800 mt-3 mb-2">Digital eXperience Platform (DXP) & S2S</h2>
+                                <p class="text-slate-600 text-sm mb-6 pb-4 border-b">Mandate to achieve REAL ID compliance and transform the citizen experience with a digital "MyDMV" portal, deprecating the legacy mainframe applications.</p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h4 class="font-semibold text-slate-800 text-sm uppercase tracking-wider mb-1">Owning Agency</h4>
+                                            <p class="text-slate-700">Department of Motor Vehicles (DMV).</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-slate-800 text-sm uppercase tracking-wider mb-1">Underlying IT Requirement</h4>
+                                            <p class="text-slate-700">Process 180M docs/year and manage 1B records. Requires scalable PaaS, immense unstructured storage, and OCR/AI for data extraction. <em>*The DL Phase solicitation was recently canceled due to high bids.</em></p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                        <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2"><span class="text-blue-600">&#x1F4A1;</span> Dell's Right to Win</h4>
+                                        <ul class="text-sm text-slate-700 space-y-2">
+                                            <li><strong>Modular Intervention:</strong> With the DL phase RFP canceled, Dell can consult on a modular architecture to save costs.</li>
+                                            <li><strong>PowerScale (Isilon):</strong> Unmatched capacity and tiering to handle the DMV's 180M+ unstructured document processing and OCR workflows.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="init-3" role="tabpanel" class="init-content hidden fade-in">
+                                <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded uppercase tracking-wide">Phase 1 Execution ($1.24B)</span>
+                                <h2 class="text-2xl font-bold text-slate-800 mt-3 mb-2">California State Payroll System (CSPS)</h2>
+                                <p class="text-slate-600 text-sm mb-6 pb-4 border-b">One of the state's largest and most scrutinized IT initiatives to modernize HR and payroll mechanisms for 300,000 state employees across federated agencies.</p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h4 class="font-semibold text-slate-800 text-sm uppercase tracking-wider mb-1">Owning Agency</h4>
+                                            <p class="text-slate-700">State Controller's Office (SCO) & CalHR. Integrator: CGI Technologies.</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-slate-800 text-sm uppercase tracking-wider mb-1">Underlying IT Requirement</h4>
+                                            <p class="text-slate-700">Database modernization, creation of secure data lakes for decades of historical records, and robust IAM architectures. Moving out of planning into execution in 2026.</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                        <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2"><span class="text-blue-600">&#x1F4A1;</span> Dell's Right to Win</h4>
+                                        <ul class="text-sm text-slate-700 space-y-2">
+                                            <li><strong>Partner Ecosystem:</strong> Align immediately with CGI Technologies (the integrator) to lock in the underlying infrastructure hardware.</li>
+                                            <li><strong>Data Lakehouse:</strong> Position Dell ObjectScale to build the highly resilient historical employee data lake.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ACTION PLAN VIEW -->
+            <section id="view-action" role="tabpanel" class="view-section hidden fade-in">
+                <div class="relative w-full h-48 md:h-64 mb-8">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Strategy Chess" class="w-full h-full object-cover" style="object-position: center 30%;">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 md:p-8 max-w-7xl mx-auto w-full">
+                        <h2 class="text-3xl font-bold text-white mb-2">Dell Action Plan</h2>
+                        <p class="text-slate-300 text-sm md:text-base max-w-3xl">Synthesizing intelligence into targeted sales motions and an actionable 30-60-90 day execution strategy.</p>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 md:px-8 pb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-xl shadow-md border-t-4 border-green-500 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="text-2xl text-green-500">&#x1F517;</span>
+                                <h3 class="text-xl font-bold text-slate-800">Funded Alignment</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-sm text-slate-600 border-b pb-3"><strong>Play: DMV DXP & Unstructured Data.</strong> With the DMV DXP phase recently canceled due to cost, lead with <strong>PowerScale (Isilon)</strong> for a modular, cost-effective intervention to handle their 180M documents and OCR workflows.</p>
+                                <p class="text-sm text-slate-600"><strong>Play: FTB EDR2 Predictive AI.</strong> The FTB has $60M this year to replace legacy systems. Align <strong>PowerEdge AI-ready servers</strong> (GPU-dense) to run their fraud-detection machine learning models strictly on-premises.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-md border-t-4 border-purple-500 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="text-2xl text-purple-500">&#x1F52D;</span>
+                                <h3 class="text-xl font-bold text-slate-800">Whitespace & Advisory</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-sm text-slate-600 border-b pb-3"><strong>Play: AI Governance ("Poppy").</strong> The state mandate dictates AI must run within network boundaries. Advise agencies on deploying <strong>Dell APEX</strong> to run localized GenAI securely, protecting sovereign data from public LLMs.</p>
+                                <p class="text-sm text-slate-600"><strong>Play: CCPA 2026 & Cyber Recovery.</strong> The new Delete Act enforces strict 2028 cyber audits. Position <strong>PowerProtect Cyber Recovery</strong> vaults as the only air-gapped failsafe guaranteeing the immutable snapshots required to pass.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-md border-t-4 border-red-500 p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="text-2xl text-red-500">&#x2694;</span>
+                                <h3 class="text-xl font-bold text-slate-800">Competitive Displacement</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-sm text-slate-600 border-b pb-3"><strong>Play: Cloud Repatriation via APEX.</strong> Target agencies hammered by the 7.95% operations cut and CDT's 17% CAMC markup. APEX delivers cloud-like OpEx consumption to bypass CapEx freezes while slashing TCO.</p>
+                                <p class="text-sm text-slate-600"><strong>Play: Displace Pure & Vast Data.</strong> Execute a <strong>PowerStore/PowerScale</strong> upgrade campaign using direct efficiency data: Dell uses up to 72% less energy and 80% less rack space for AI infrastructure, directly meeting CA climate goals.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-bold text-slate-800 mb-6 border-b pb-3 flex items-center gap-2"><span class="text-blue-600">&#x23F3;</span> Execution Strategy: 30-60-90 Day Plan</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="relative pl-6 border-l-2 border-slate-300">
+                                <div class="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-1"></div>
+                                <h4 class="font-bold text-slate-800">Days 1-30: Discovery</h4>
+                                <ul class="text-sm text-slate-600 mt-3 space-y-2 list-none">
+                                    <li class="flex items-start gap-2"><span class="text-slate-400 mt-0.5">&#x25B8;</span> Audit installed base for aging storage (Gen 6/7) in CalHHS.</li>
+                                    <li class="flex items-start gap-2"><span class="text-slate-400 mt-0.5">&#x25B8;</span> Map out target IT Directors underneath the state CISO focused on Zero Trust.</li>
+                                    <li class="flex items-start gap-2"><span class="text-slate-400 mt-0.5">&#x25B8;</span> Schedule introductory APEX briefing with CDT procurement division.</li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-6 border-l-2 border-slate-300">
+                                <div class="absolute w-4 h-4 bg-slate-400 rounded-full -left-[9px] top-1"></div>
+                                <h4 class="font-bold text-slate-800">Days 31-60: Positioning</h4>
+                                <ul class="text-sm text-slate-600 mt-3 space-y-2 list-none">
+                                    <li class="flex items-start gap-2"><span class="text-slate-400 mt-0.5">&#x25B8;</span> Deliver "AI Readiness" advisory workshop to GovOps.</li>
+                                    <li class="flex items-start gap-2"><span class="text-slate-400 mt-0.5">&#x25B8;</span> Present PowerProtect Cyber Recovery TCO model to Law Enforcement (DOJ).</li>
+                                    <li class="flex items-start gap-2"><span class="text-slate-400 mt-0.5">&#x25B8;</span> Validate CMAS/NASPO contract routing for end-of-year surplus budgets.</li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-6 border-l-2 border-slate-300">
+                                <div class="absolute w-4 h-4 bg-slate-400 rounded-full -left-[9px] top-1"></div>
+                                <h4 class="font-bold text-slate-800">Days 61-90: Execution</h4>
+                                <ul class="text-sm text-slate-600 mt-3 space-y-2 list-none">
+                                    <li class="flex items-start gap-2"><span class="text-slate-400 mt-0.5">&#x25B8;</span> Submit structured APEX proposal for cloud repatriation candidates.</li>
+                                    <li class="flex items-start gap-2"><span class="text-slate-400 mt-0.5">&#x25B8;</span> Lock in Middle-Mile edge routing POCs (Proof of Concepts) with Caltrans.</li>
+                                    <li class="flex items-start gap-2"><span class="text-slate-400 mt-0.5">&#x25B8;</span> Finalize Q3 pipeline generation against newly identified whitespace.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        const stateData = {
+            stakeholders: [
+                { name: "Gavin Newsom", title: "Governor", category: "Elected", influence: "Financial / Exec Sponsor", stance: "Aggressively champions responsible AI; promotes the $3.25B MMBI broadband buildout." },
+                { name: "Liana Bailey-Crimmins", title: "State CIO & Director, CDT", category: "IT", influence: "Primary Decision Maker", stance: "Advocates 'Cloud Smart', centralized IT via Envision 2026, and strict data sovereignty for AI." },
+                { name: "Sabrina Cervantes", title: "Chair, Senate Appropriations", category: "Elected", influence: "Financial Purchaser", stance: "Evaluates massive IT budgetary requests strictly through the lens of long-term operational savings." },
+                { name: "Buffy Wicks", title: "Chair, Assembly Appropriations", category: "Elected", influence: "Financial Purchaser", stance: "Key gatekeeper ensuring technology investments align with digital equity and workforce goals." },
+                { name: "Rebecca Bauer-Kahan", title: "Chair, Privacy/Consumer Protection", category: "Elected", influence: "Regulatory / Tech Influencer", stance: "Oversees CDT; highly focused on data privacy and enforcement of the CCPA/Delete Act." },
+                { name: "Ajay Gupta", title: "CDTO, Dept. of Motor Vehicles", category: "IT", influence: "Agency Implementer", stance: "Utilizing software robotics, AI, and IDP to deprecate legacy mainframes and handle 180M docs/yr." },
+                { name: "Shera Mui", title: "Deputy Dir. of Platform Services, CDT", category: "IT", influence: "Tech Influencer", stance: "Leads 'Poppy' AI assistant; insists on closed architecture to keep compliance data in gov control." },
+                { name: "Marcie Kahbody", title: "AIO, Transportation & CIO, Caltrans", category: "IT", influence: "Technical Influencer", stance: "Oversees enterprise IT and massive transit infrastructure networks." },
+                { name: "Kristin Montgomery", title: "AIO, Dept. of Corrections (CDCR)", category: "IT", influence: "Technical Influencer", stance: "Steers tech investments for massive correctional and rehab systems." },
+                { name: "Nadean Shavor", title: "CIO, Franchise Tax Board (FTB)", category: "IT", influence: "Technical / Financial", stance: "Directly oversees the IT infrastructure strategy for the $60M EDR2 project." },
+                { name: "Veronica Gilliard", title: "CIO, Department of Justice (DOJ)", category: "IT", influence: "Technical Influencer", stance: "Governs statewide criminal databases and DOJ modernization." }
+            ],
+            financials: {
+                budgetDoughnut: {
+                    labels: ['Rigid CapEx (Scrutinized)', 'Flexible OpEx / APEX'],
+                    data: [35, 65],
+                    colors: ['#64748b', '#2563eb']
+                },
+                projectBar: {
+                    labels: ['CSPS (SCO/HR)', 'MMBI (Broadband)', 'Cal-Secure (Cyber)', 'DXP (DMV)', 'EDR2 (FTB)'],
+                    data: [1240, 550, 185, 94.1, 60] 
+                }
+            }
+        };
+
+        const elements = {
+            navItems: document.querySelectorAll('.nav-item'),
+            viewSections: document.querySelectorAll('.view-section'),
+            viewTitle: document.getElementById('current-view-title'),
+            sidebar: document.getElementById('sidebar'),
+            mobileOpen: document.getElementById('mobile-menu-open'),
+            mobileClose: document.getElementById('mobile-menu-close'),
+            tableBody: document.getElementById('stakeholder-body'),
+            filterBtns: document.querySelectorAll('.filter-btn'),
+            initTabs: document.querySelectorAll('.init-tab'),
+            initContents: document.querySelectorAll('.init-content')
+        };
+
+        let charts = {};
+
+        function switchView(targetId, title) {
+            elements.navItems.forEach(item => {
+                if(item.dataset.target === targetId) {
+                    item.classList.add('active');
+                    item.setAttribute('aria-selected', 'true');
+                    if(targetId === 'view-action') {
+                        item.classList.remove('text-blue-400');
+                        item.classList.add('text-white');
+                    }
+                } else {
+                    item.classList.remove('active');
+                    item.setAttribute('aria-selected', 'false');
+                    if(item.dataset.target === 'view-action') {
+                        item.classList.add('text-blue-400');
+                        item.classList.remove('text-white');
+                    }
+                }
+            });
+
+            elements.viewSections.forEach(sec => {
+                if(sec.id === targetId) {
+                    sec.classList.remove('hidden', 'fade-in');
+                    void sec.offsetWidth; // Force a DOM reflow to re-trigger the CSS animation
+                    sec.classList.add('block', 'fade-in');
+                } else {
+                    sec.classList.remove('block');
+                    sec.classList.add('hidden');
+                }
+            });
+
+            elements.viewTitle.innerText = title;
+            
+            if(window.innerWidth < 768) {
+                elements.sidebar.classList.add('-translate-x-full');
+                elements.sidebar.classList.add('absolute');
+            }
+
+            if(targetId === 'view-macro') {
+                setTimeout(renderCharts, 100);
+            }
+        }
+
+        elements.navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                const btn = e.currentTarget;
+                const text = btn.innerText.replace(/[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2580-\u27BF]|\uD83E[\uDD10-\uDDFF]/g, '').trim();
+                switchView(btn.dataset.target, text);
+            });
+        });
+
+        elements.mobileOpen.addEventListener('click', () => {
+            elements.sidebar.classList.remove('-translate-x-full');
+            elements.sidebar.classList.add('absolute');
+            elements.sidebar.classList.add('h-full');
+        });
+        
+        elements.mobileClose.addEventListener('click', () => {
+            elements.sidebar.classList.add('-translate-x-full');
+        });
+
+        function renderTable(filter = 'all') {
+            elements.tableBody.innerHTML = '';
+            const filteredData = filter === 'all' ? stateData.stakeholders : stateData.stakeholders.filter(s => s.category === filter);
+            
+            if(filteredData.length === 0) {
+                elements.tableBody.innerHTML = '<tr><td colspan="5" class="p-4 text-center text-slate-500">No data available.</td></tr>';
+                return;
+            }
+
+            filteredData.forEach(person => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-slate-50 transition-colors';
+                const catColor = person.category === 'Elected' ? 'bg-amber-100 text-amber-800 border-amber-200' : 'bg-blue-100 text-blue-800 border-blue-200';
+                
+                tr.innerHTML = `
+                    <td class="p-4 border-b font-medium text-slate-800">${person.name}</td>
+                    <td class="p-4 border-b text-slate-600">${person.title}</td>
+                    <td class="p-4 border-b"><span class="px-2 py-1 text-xs font-bold rounded border ${catColor}">${person.category}</span></td>
+                    <td class="p-4 border-b text-slate-600">${person.influence}</td>
+                    <td class="p-4 border-b text-slate-600 text-sm italic">${person.stance}</td>
+                `;
+                elements.tableBody.appendChild(tr);
+            });
+        }
+
+        elements.filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                elements.filterBtns.forEach(b => {
+                    b.classList.remove('bg-blue-100', 'text-blue-700', 'border-blue-200');
+                    b.classList.add('bg-white', 'text-slate-600', 'border-slate-300', 'hover:bg-slate-50');
+                    b.setAttribute('aria-pressed', 'false');
+                });
+                const clicked = e.currentTarget;
+                clicked.classList.remove('bg-white', 'text-slate-600', 'border-slate-300', 'hover:bg-slate-50');
+                clicked.classList.add('bg-blue-100', 'text-blue-700', 'border-blue-200');
+                clicked.setAttribute('aria-pressed', 'true');
+                
+                renderTable(clicked.dataset.filter);
+            });
+        });
+
+        elements.initTabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                const targetId = e.currentTarget.dataset.content;
+                
+                elements.initTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-slate-100', 'border-l-4', 'border-blue-600');
+                    t.classList.add('border-l-4', 'border-transparent');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                e.currentTarget.classList.remove('border-transparent');
+                e.currentTarget.classList.add('active', 'bg-slate-100', 'border-l-4', 'border-blue-600');
+                e.currentTarget.setAttribute('aria-selected', 'true');
+
+                elements.initContents.forEach(content => {
+                    if(content.id === targetId) {
+                        content.classList.remove('hidden', 'fade-in');
+                        void content.offsetWidth; // Force a DOM reflow to re-trigger the CSS animation
+                        content.classList.add('block', 'fade-in');
+                    } else {
+                        content.classList.remove('block');
+                        content.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        function renderCharts() {
+            if(charts.doughnut) charts.doughnut.destroy();
+            if(charts.bar) charts.bar.destroy();
+
+            const commonOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { font: { family: 'Inter' } } },
+                    tooltip: {
+                        bodyFont: { family: 'Inter' },
+                        titleFont: { family: 'Inter' },
+                        padding: 10,
+                        cornerRadius: 8,
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) label += ': ';
+                                if (context.parsed.y !== null && context.chart.config.type === 'bar') {
+                                    let val = context.parsed.y;
+                                    if (val >= 1000) return label + '$' + (val / 1000).toFixed(1) + 'B';
+                                    return label + '$' + val + 'M';
+                                }
+                                return label + context.parsed + '%';
+                            }
+                        }
+                    }
+                }
+            };
+
+            const ctxDoughnut = document.getElementById('budgetDoughnutChart').getContext('2d');
+            charts.doughnut = new Chart(ctxDoughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: stateData.financials.budgetDoughnut.labels,
+                    datasets: [{
+                        data: stateData.financials.budgetDoughnut.data,
+                        backgroundColor: stateData.financials.budgetDoughnut.colors,
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    cutout: '70%'
+                }
+            });
+
+            const ctxBar = document.getElementById('agencyBarChart').getContext('2d');
+            charts.bar = new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: stateData.financials.projectBar.labels,
+                    datasets: [{
+                        label: 'Project Funding ($M)',
+                        data: stateData.financials.projectBar.data,
+                        backgroundColor: '#64748b',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { borderDash: [2, 4], color: '#e2e8f0' },
+                            ticks: { 
+                                callback: function(value) { 
+                                    if (value >= 1000) return '$' + (value / 1000).toFixed(1) + 'B';
+                                    return '$' + value + 'M'; 
+                                }, 
+                                font: {family: 'Inter'} 
+                            }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: {family: 'Inter'} }
+                        }
+                    }
+                }
+            });
+        }
+
+        function init() {
+            if(window.innerWidth < 768) {
+                elements.sidebar.classList.add('-translate-x-full');
+                elements.sidebar.classList.add('absolute');
+            }
+            renderTable();
+            renderCharts();
+            
+            elements.initTabs[0].classList.remove('border-transparent');
+            elements.initTabs[0].classList.add('bg-slate-100', 'border-l-4', 'border-blue-600');
+            elements.initTabs[0].setAttribute('aria-selected', 'true');
+        }
+
+        window.addEventListener('resize', () => {
+            if(window.innerWidth >= 768) {
+                elements.sidebar.classList.remove('-translate-x-full');
+                elements.sidebar.classList.remove('absolute');
+            } else {
+                elements.sidebar.classList.add('-translate-x-full');
+                elements.sidebar.classList.add('absolute');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', init);
+
+    </script>
+</body>
+</html>

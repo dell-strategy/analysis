@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Intelligence Brief: State of Louisiana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Chosen Palette: Corporate Slate & Dell Blue. Background: slate-50, Text: slate-800, Accents: blue-600 to blue-800. Minimalist, professional, authoritative. -->
+    
+    <!-- Application Structure Plan: A dashboard-style SPA prioritizing actionable sales intelligence. A sticky sidebar navigation (or top bar on mobile) enables quick jumping between key intelligence domains (Exec Summary, Power Structure, Financials, Initiatives, Dell Action Plan). This update introduces a heavy emphasis on data visualization (Radar, Bubble, Stacked Bar, and Doughnut charts) to make complex state data instantly understandable for account planning. -->
+    
+    <!-- Visualization & Content Choices: 
+         1. Maturity Index -> Goal: Inform on tech gaps -> Viz: Radar Chart -> Justification: Shows multiple dimensions of IT readiness at a glance.
+         2. Influence Matrix -> Goal: Organize power dynamics -> Viz: Bubble Chart -> Justification: Maps who to target based on budget control vs tech sway.
+         3. Budget Trends -> Goal: Compare YoY funding -> Viz: Stacked Bar Chart -> Justification: Highlights the temporary spike in federal grant money.
+         4. Initiative Status -> Goal: Inform on project health -> Viz: HTML Progress Bars -> Justification: Clean, non-SVG way to show % completion.
+         5. Deal Prioritization -> Goal: Actionable strategy -> Viz: Scatter Plot -> Justification: Helps AEs visualize where to spend their time (Effort vs Reward). 
+         (NO SVG/Mermaid used). -->
+    
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        
+        /* Strict Chart Container rules to prevent layout breaking/overflow */
+        .chart-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 100%; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 350px; 
+            max-height: 400px; 
+        }
+        .chart-container-large {
+            position: relative; 
+            width: 100%; 
+            height: 450px; 
+        }
+        
+        .nav-active {
+            background-color: #2563eb;
+            color: white;
+            font-weight: 600;
+            border-left: 4px solid #60a5fa;
+        }
+        
+        .opportunity-card { transition: transform 0.2s, box-shadow 0.2s; }
+        .opportunity-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        
+        .tab-content { display: none; opacity: 0; transition: opacity 0.3s ease-in-out; }
+        .tab-content.active { display: block; opacity: 1; }
+        
+        /* Custom Scrollbar for inner elements */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 h-screen flex flex-col md:flex-row overflow-hidden">
+
+    <!-- Navigation -->
+    <aside class="w-full md:w-64 bg-slate-900 text-slate-300 flex-shrink-0 flex flex-col md:h-full shadow-xl z-20">
+        <div class="p-4 md:p-6 border-b border-slate-700 flex justify-between items-center md:block">
+            <div>
+                <h1 class="text-xl font-bold text-white tracking-wide">DELL<span class="font-light text-blue-400">Tech</span></h1>
+                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold hidden md:block">SLG Intelligence Brief</p>
+                <p class="text-lg font-bold text-white mt-4 pl-2 hidden md:block">State of Louisiana</p>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <select id="mobile-nav" class="md:hidden bg-slate-800 text-white border border-slate-700 p-2 rounded w-48 text-sm" onchange="switchTab(this.value)">
+                <option value="exec-summary">Executive Briefing</option>
+                <option value="power-structure">Power Structure</option>
+                <option value="financials">Financials & Budgets</option>
+                <option value="initiatives">Top Initiatives</option>
+                <option value="action-plan">Dell Action Plan</option>
+            </select>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4 hidden md:block">
+            <ul class="space-y-1">
+                <li><button onclick="switchTab('exec-summary')" id="btn-exec-summary" class="nav-btn nav-active w-full text-left px-6 py-3 hover:bg-slate-800 transition-colors border-l-4 border-transparent">📄 Executive Briefing</button></li>
+                <li><button onclick="switchTab('power-structure')" id="btn-power-structure" class="nav-btn w-full text-left px-6 py-3 hover:bg-slate-800 transition-colors border-l-4 border-transparent">🏛️ Power Structure</button></li>
+                <li><button onclick="switchTab('financials')" id="btn-financials" class="nav-btn w-full text-left px-6 py-3 hover:bg-slate-800 transition-colors border-l-4 border-transparent">📊 Financials & Gov.</button></li>
+                <li><button onclick="switchTab('initiatives')" id="btn-initiatives" class="nav-btn w-full text-left px-6 py-3 hover:bg-slate-800 transition-colors border-l-4 border-transparent">🚀 Top Initiatives</button></li>
+                <li><button onclick="switchTab('action-plan')" id="btn-action-plan" class="nav-btn w-full text-left px-6 py-3 hover:bg-slate-800 transition-colors border-l-4 border-transparent">💼 Dell Action Plan</button></li>
+            </ul>
+        </nav>
+        <div class="px-6 pb-6 hidden md:block">
+            <a href="https://dmonkey1001.github.io/slg-strategies/louisiana/analysis.pdf" target="_blank" class="flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-semibold py-2 px-4 rounded transition-colors border border-slate-600">
+                <span class="mr-2">&#x1F4D4;</span> View Source PDF
+            </a>
+        </div>
+        <div class="p-4 border-t border-slate-700 text-xs text-slate-500 hidden md:block">
+            Internal Use Only. <br>Target Audience: AE & District Mgr.
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 overflow-y-auto p-4 md:p-8 relative scroll-smooth bg-slate-100">
+        
+        <!-- SECTION 1: Exec Summary -->
+        <section id="exec-summary" class="tab-content active max-w-6xl mx-auto">
+            <header class="mb-6 flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900">1. Executive Summary & Macro Landscape</h2>
+                    <p class="text-slate-500 mt-2 text-lg">High-level political, economic, and administrative overview of the State of Louisiana to orient your account strategy.</p>
+                </div>
+                <a href="https://dmonkey1001.github.io/slg-strategies/louisiana/analysis.pdf" target="_blank" class="inline-flex items-center justify-center bg-white border border-slate-300 shadow-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 font-semibold py-2 px-4 rounded-lg transition-colors whitespace-nowrap">
+                    <span class="mr-2">&#x1F4D4;</span> Full Analysis PDF
+                </a>
+            </header>
+            
+            <!-- KPI Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 text-center">
+                    <p class="text-xs text-slate-500 font-bold uppercase tracking-wide">Total IT Budget (Est)</p>
+                    <p class="text-2xl font-bold text-blue-700 mt-1">$550M+</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 text-center">
+                    <p class="text-xs text-slate-500 font-bold uppercase tracking-wide">Exec Agencies</p>
+                    <p class="text-2xl font-bold text-slate-800 mt-1">16</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 text-center">
+                    <p class="text-xs text-slate-500 font-bold uppercase tracking-wide">Data Centers (Primary)</p>
+                    <p class="text-2xl font-bold text-slate-800 mt-1">2</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 text-center">
+                    <p class="text-xs text-slate-500 font-bold uppercase tracking-wide">Cloud Posture</p>
+                    <p class="text-2xl font-bold text-purple-600 mt-1">Hybrid</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Political & Economic Climate</h3>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        Operating under Governor Jeff Landry (R), the administration has signaled a strong pivot toward operational efficiency, strict budgetary oversight, and modernizing legacy government services. The state is leveraging massive federal infrastructure influxes while balancing historical challenges in state tax revenues. There is a high appetite for technological consolidation that proves immediate ROI and bolsters state security posture.
+                    </p>
+                    <div class="bg-slate-50 p-4 rounded border border-slate-100">
+                        <h4 class="font-bold text-slate-800 text-sm mb-2">Top 3 Administrative IT Goals:</h4>
+                        <ol class="list-decimal pl-5 text-sm text-slate-600 space-y-1">
+                            <li><strong>Cybersecurity Resilience:</strong> Hardening state/local endpoints against ransomware (driven by SLCGP).</li>
+                            <li><strong>Digital Equity & Broadband:</strong> Deploying $1B+ in BEAD funding, demanding edge compute.</li>
+                            <li><strong>Legacy Modernization:</strong> Retiring mainframes in HHS (Health) and DMV for nimble platforms.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">State IT Maturity Index</h3>
+                    <p class="text-xs text-slate-500 mb-4">Dell internal assessment (Scale 1-10)</p>
+                    <div class="chart-container flex-1">
+                        <canvas id="maturityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Power Structure -->
+        <section id="power-structure" class="tab-content max-w-6xl mx-auto">
+            <header class="mb-6">
+                <h2 class="text-3xl font-bold text-slate-900">2. Power Structure & Key Stakeholders</h2>
+                <p class="text-slate-500 mt-2 text-lg">Identify the financial purchasers and technical influencers required to build consensus.</p>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <!-- Influence Matrix Visual -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Stakeholder Influence Matrix</h3>
+                    <p class="text-sm text-slate-500 mb-4">Maps Tech Influence vs. Budget Control. Bubble size = Overall Impact.</p>
+                    <div class="chart-container">
+                        <canvas id="influenceChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Strategic Summary -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-4">Engagement Strategy</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-2xl mr-3">&#x1F4B0;</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800">The Budget Holders</h4>
+                                <p class="text-sm text-slate-600">Governor Landry drives executive mandates (bypassing IT bottlenecks via Act 590), while Chair McFarland intensely scrutinizes the state general fund. Agency heads like Sec. Bourgeois (LED) hold unique financial power due to explicit OTS exemptions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-2xl mr-3">&#x1F6E1;</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800">The Technical Gatekeepers</h4>
+                                <p class="text-sm text-slate-600">CIO Evelina Broussard brings private-sector rigor and demands a "One Team" customer service approach from OTS. CISO Chase Hymel holds veto power over enterprise architecture regarding zero-trust and StateRAMP compliance.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-2xl mr-3">&#x1F3E2;</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800">The Agency Consumers</h4>
+                                <p class="text-sm text-slate-600">Leaders like Bryan Adams (OMV) and Rebecca Harris (DCFS) are executing massive modernization overhauls mandated directly by the Governor. Sell the *outcome* to them, then work with OTS on architecture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Table -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="bg-slate-100 p-4 border-b border-slate-200">
+                    <h3 class="font-bold text-slate-800">Key Stakeholder Directory</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[800px]">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-600 text-xs uppercase tracking-wide border-b border-slate-200">
+                                <th class="p-4 font-semibold w-1/4">Name & Title</th>
+                                <th class="p-4 font-semibold w-1/5">Archetype</th>
+                                <th class="p-4 font-semibold w-1/5">Influence Power</th>
+                                <th class="p-4 font-semibold">Tech Stance / Dell Angle</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-700 text-sm">
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-4"><p class="font-bold text-slate-900">Jeff Landry</p><p class="text-xs text-slate-500">Governor</p></td>
+                                <td class="p-4"><span class="bg-green-100 text-green-800 py-1 px-3 rounded text-xs font-bold">Financial Exec</span></td>
+                                <td class="p-4">
+                                    <div class="w-full bg-slate-200 rounded-full h-2 mt-1"><div class="bg-green-500 h-2 rounded-full" style="width: 95%"></div></div>
+                                    <p class="text-xs text-slate-500 mt-1">High (Exec Mandate)</p>
+                                </td>
+                                <td class="p-4 text-xs text-slate-600">Relentless champion of modernization. Signed Act 590 to bypass traditional IT bottlenecks. Replaced OMV mainframes via exec order.</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-4"><p class="font-bold text-slate-900">Evelina Broussard</p><p class="text-xs text-slate-500">State CIO (OTS)</p></td>
+                                <td class="p-4"><span class="bg-blue-100 text-blue-800 py-1 px-3 rounded text-xs font-bold">Tech / Fin Authority</span></td>
+                                <td class="p-4">
+                                    <div class="w-full bg-slate-200 rounded-full h-2 mt-1"><div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div></div>
+                                    <p class="text-xs text-slate-500 mt-1">High (IT Governance)</p>
+                                </td>
+                                <td class="p-4 text-xs text-slate-600">Brings 28 yrs private-sector experience (Atmos Energy). Focused on mending financial friction between OTS & agencies. Pitch APEX.</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-4"><p class="font-bold text-slate-900">Chase Hymel</p><p class="text-xs text-slate-500">State CISO (OTS)</p></td>
+                                <td class="p-4"><span class="bg-purple-100 text-purple-800 py-1 px-3 rounded text-xs font-bold">Tech Gatekeeper</span></td>
+                                <td class="p-4">
+                                    <div class="w-full bg-slate-200 rounded-full h-2 mt-1"><div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div></div>
+                                    <p class="text-xs text-slate-500 mt-1">High (Security Veto)</p>
+                                </td>
+                                <td class="p-4 text-xs text-slate-600">Zero-trust implementation, StateRAMP compliance. Pitch PowerProtect Cyber Recovery Vaults.</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-4"><p class="font-bold text-slate-900">Susan B. Bourgeois</p><p class="text-xs text-slate-500">Sec., LA Economic Dev.</p></td>
+                                <td class="p-4"><span class="bg-orange-100 text-orange-800 py-1 px-3 rounded text-xs font-bold">Financial Purchaser</span></td>
+                                <td class="p-4">
+                                    <div class="w-full bg-slate-200 rounded-full h-2 mt-1"><div class="bg-orange-400 h-2 rounded-full" style="width: 80%"></div></div>
+                                    <p class="text-xs text-slate-500 mt-1">High (OTS Exempt)</p>
+                                </td>
+                                <td class="p-4 text-xs text-slate-600">Secured legislative exemption from OTS to move at "speed of business." Architect of LA.IO. Focus on AI institutes and data centers.</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-4"><p class="font-bold text-slate-900">Jack McFarland</p><p class="text-xs text-slate-500">Chair, Approp. Committee</p></td>
+                                <td class="p-4"><span class="bg-green-100 text-green-800 py-1 px-3 rounded text-xs font-bold">Financial Purchaser</span></td>
+                                <td class="p-4">
+                                    <div class="w-full bg-slate-200 rounded-full h-2 mt-1"><div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div></div>
+                                    <p class="text-xs text-slate-500 mt-1">High (Budget Veto)</p>
+                                </td>
+                                <td class="p-4 text-xs text-slate-600">Presides over JLCB. Scrutinizes usage of state general fund and review of large-scale IT contracts. Requires absolute TCO proof.</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-4"><p class="font-bold text-slate-900">Bryan Adams</p><p class="text-xs text-slate-500">Commissioner, OMV</p></td>
+                                <td class="p-4"><span class="bg-orange-100 text-orange-800 py-1 px-3 rounded text-xs font-bold">Business Consumer</span></td>
+                                <td class="p-4">
+                                    <div class="w-full bg-slate-200 rounded-full h-2 mt-1"><div class="bg-orange-400 h-2 rounded-full" style="width: 70%"></div></div>
+                                    <p class="text-xs text-slate-500 mt-1">Medium (Req. Driver)</p>
+                                </td>
+                                <td class="p-4 text-xs text-slate-600">Tasked with replacing 50-year-old mainframe with cloud-native SaaS. Successfully navigated emergency procurement.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-4"><p class="font-bold text-slate-900">Rebecca Harris</p><p class="text-xs text-slate-500">Sec., Dept Children/Family</p></td>
+                                <td class="p-4"><span class="bg-orange-100 text-orange-800 py-1 px-3 rounded text-xs font-bold">Business Consumer</span></td>
+                                <td class="p-4">
+                                    <div class="w-full bg-slate-200 rounded-full h-2 mt-1"><div class="bg-orange-400 h-2 rounded-full" style="width: 70%"></div></div>
+                                    <p class="text-xs text-slate-500 mt-1">Medium (Req. Driver)</p>
+                                </td>
+                                <td class="p-4 text-xs text-slate-600">Spearheading massive new CCWIS system deployment. Needs scalable data infrastructure to replace silos.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Financials -->
+        <section id="financials" class="tab-content max-w-6xl mx-auto">
+            <header class="mb-6">
+                <h2 class="text-3xl font-bold text-slate-900">3. IT Governance & Financials</h2>
+                <p class="text-slate-500 mt-2 text-lg">Understanding the flow of funds to qualify sales pipelines and size the addressable market.</p>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                
+                <!-- Historical Funding Trend -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Historical IT Funding Trend</h3>
+                    <p class="text-sm text-slate-500 mb-4">Federal grants (ARPA, SLCGP) created a bubble; state funds must now sustain.</p>
+                    <div class="chart-container">
+                        <canvas id="fundingTrendChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Budget Split -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                     <h3 class="text-xl font-semibold text-slate-800 mb-2">FY24/25 IT Budget Split</h3>
+                     <p class="text-sm text-slate-500 mb-4">Total IT: ~$550M. High O&M indicates aging infrastructure debt.</p>
+                     <div class="chart-container">
+                        <canvas id="budgetSplitChart"></canvas>
+                     </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                    <h3 class="text-lg font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2">IT Operating Model</h3>
+                    <p class="text-blue-700 font-bold mb-2">Consolidated via Office of Technology Services (OTS)</p>
+                    <p class="text-sm text-slate-700 mb-4">OTS acts as the centralized MSP. However, noting recent executive action, agencies like LED (Sec. Bourgeois) have secured exemptions to bypass OTS bottlenecks. This creates a hybrid sales landscape.</p>
+                    
+                    <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Known Friction Points</h4>
+                    <div class="bg-red-50 p-3 rounded border border-red-100 mb-2">
+                        <p class="text-sm text-slate-800"><strong>Chargeback Complexity:</strong> Agencies complain about opaque pricing. CIO Broussard was explicitly hired to fix this deep-seated friction.</p>
+                    </div>
+                    <div class="bg-red-50 p-3 rounded border border-red-100">
+                        <p class="text-sm text-slate-800"><strong>Procurement Delays:</strong> Governor Landry signed Act 590 to bypass these delays, signaling urgency for modern, pre-approved purchasing.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                    <h3 class="text-lg font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2">Procurement & Compliance</h3>
+                    
+                    <div class="mb-4">
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Primary Vehicles</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 border border-slate-300 px-3 py-1 rounded-full text-xs font-semibold text-slate-700">NASPO ValuePoint</span>
+                            <span class="bg-slate-100 border border-slate-300 px-3 py-1 rounded-full text-xs font-semibold text-slate-700">OMNIA Partners</span>
+                            <span class="bg-slate-100 border border-slate-300 px-3 py-1 rounded-full text-xs font-semibold text-slate-700">LaGov Portal</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Compliance Drivers</h4>
+                        <ul class="text-sm text-slate-700 space-y-2">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">&#10004;</span> <strong>StateRAMP:</strong> Enforced tightly by CISO Chase Hymel.</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">&#10004;</span> <strong>CJIS:</strong> Strict mandates for Law Enforcement data (DPS&C).</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">&#10004;</span> <strong>HIPAA:</strong> Crucial for the massive Dept. of Health workloads.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Initiatives -->
+        <section id="initiatives" class="tab-content max-w-6xl mx-auto">
+             <header class="mb-6">
+                <h2 class="text-3xl font-bold text-slate-900">4. Top 3 Strategic Initiatives</h2>
+                <p class="text-slate-500 mt-2 text-lg">The highest-priority, funded modernization projects actively underway.</p>
+            </header>
+
+            <div class="space-y-4">
+                <!-- Initiative 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-800 p-5 text-white flex justify-between items-center cursor-pointer hover:bg-slate-700 transition" onclick="toggleAccordion('init1')">
+                        <div class="w-2/3">
+                            <span class="text-xs font-bold text-blue-300 uppercase tracking-wider">Dept. Children & Family Services (DCFS)</span>
+                            <h3 class="text-lg md:text-xl font-bold mt-1">CCWIS System Deployment</h3>
+                        </div>
+                        <div class="w-1/4 hidden md:block">
+                            <p class="text-xs text-slate-300 mb-1">Estimated Budget Consumed</p>
+                            <div class="w-full bg-slate-600 rounded-full h-2"><div class="bg-blue-400 h-2 rounded-full" style="width: 25%"></div></div>
+                        </div>
+                        <div class="text-2xl text-slate-400" id="icon-init1">&#x25BC;</div>
+                    </div>
+                    <div id="init1" class="p-6 bg-white block border-l-4 border-blue-500">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-2">Business Mandate</h4>
+                                <p class="text-sm text-slate-700">Sec. Rebecca Harris is leading a highly complex digital transformation to procure a new Comprehensive Child Welfare Information System (CCWIS), replacing heavily siloed, legacy architecture.</p>
+                                
+                                <h4 class="font-bold text-slate-800 mt-4 mb-2">Dell Opportunity alignment</h4>
+                                <ul class="text-sm text-slate-700 list-disc pl-5">
+                                    <li>AI-Ready PowerEdge for localized predictive analytics.</li>
+                                    <li>PowerScale for unstructured health/case data.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded border border-slate-200">
+                                <h4 class="font-bold text-slate-800 text-sm uppercase mb-3">Project Milestones</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center text-sm"><span class="text-green-500 mr-2">&#10004;</span> <span class="text-slate-500 line-through">Phase 1: Procurement Release</span></div>
+                                    <div class="flex items-center text-sm"><span class="text-blue-500 mr-2">&#9654;</span> <strong class="text-slate-800">Phase 2: Core Architecture Planning (Current)</strong></div>
+                                    <div class="flex items-center text-sm"><span class="text-slate-300 mr-2">&#9202;</span> <span class="text-slate-500">Phase 3: Data Migration</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Initiative 2 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-800 p-5 text-white flex justify-between items-center cursor-pointer hover:bg-slate-700 transition" onclick="toggleAccordion('init2')">
+                        <div class="w-2/3">
+                            <span class="text-xs font-bold text-blue-300 uppercase tracking-wider">Office of Technology Services (OTS)</span>
+                            <h3 class="text-lg md:text-xl font-bold mt-1">Statewide Data Center Consolidation</h3>
+                        </div>
+                        <div class="w-1/4 hidden md:block">
+                            <p class="text-xs text-slate-300 mb-1">Estimated Budget Consumed</p>
+                            <div class="w-full bg-slate-600 rounded-full h-2"><div class="bg-green-400 h-2 rounded-full" style="width: 70%"></div></div>
+                        </div>
+                        <div class="text-2xl text-slate-400" id="icon-init2">&#x25BC;</div>
+                    </div>
+                    <div id="init2" class="p-6 hidden bg-white border-l-4 border-green-500">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-2">Business Mandate</h4>
+                                <p class="text-sm text-slate-700">CIO Broussard is mandated to fix agency financial friction. The state needs an infrastructure model that allows them to burst to public cloud but keep sensitive data on-prem, consumed "as-a-service."</p>
+                                
+                                <h4 class="font-bold text-slate-800 mt-4 mb-2">Dell Opportunity alignment</h4>
+                                <ul class="text-sm text-slate-700 list-disc pl-5">
+                                    <li><strong>APEX Custom Solutions:</strong> Fix their chargeback issue.</li>
+                                    <li>PowerStore for public cloud repatriation targets.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded border border-slate-200">
+                                <h4 class="font-bold text-slate-800 text-sm uppercase mb-3">Target Environments</h4>
+                                <div class="space-y-2 text-sm text-slate-700">
+                                    <div class="flex justify-between"><span>On-Prem (Baton Rouge)</span> <strong>60%</strong></div>
+                                    <div class="w-full bg-slate-200 h-1 mb-2"><div class="bg-blue-600 h-1" style="width: 60%"></div></div>
+                                    <div class="flex justify-between"><span>Public Cloud (AWS)</span> <strong>30%</strong></div>
+                                    <div class="w-full bg-slate-200 h-1 mb-2"><div class="bg-orange-400 h-1" style="width: 30%"></div></div>
+                                    <div class="flex justify-between"><span>Edge Compute</span> <strong>10%</strong></div>
+                                    <div class="w-full bg-slate-200 h-1"><div class="bg-purple-500 h-1" style="width: 10%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Initiative 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-800 p-5 text-white flex justify-between items-center cursor-pointer hover:bg-slate-700 transition" onclick="toggleAccordion('init3')">
+                        <div class="w-2/3">
+                            <span class="text-xs font-bold text-blue-300 uppercase tracking-wider">Louisiana Economic Dev (LED)</span>
+                            <h3 class="text-lg md:text-xl font-bold mt-1">LA.IO Innovation & AI Institutes</h3>
+                        </div>
+                        <div class="w-1/4 hidden md:block">
+                            <p class="text-xs text-slate-300 mb-1">Estimated Budget Consumed</p>
+                            <div class="w-full bg-slate-600 rounded-full h-2"><div class="bg-orange-400 h-2 rounded-full" style="width: 15%"></div></div>
+                        </div>
+                        <div class="text-2xl text-slate-400" id="icon-init3">&#x25BC;</div>
+                    </div>
+                    <div id="init3" class="p-6 hidden bg-white border-l-4 border-orange-500">
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-2">Business Mandate</h4>
+                                <p class="text-sm text-slate-700">Sec. Bourgeois is driving aggressive economic overhaul via data center attraction and AI institute funding. Operating outside of standard OTS bottlenecks to move rapidly.</p>
+                                
+                                <h4 class="font-bold text-slate-800 mt-4 mb-2">Dell Opportunity alignment</h4>
+                                <ul class="text-sm text-slate-700 list-disc pl-5">
+                                    <li>High-performance Computing (HPC) environments.</li>
+                                    <li>AI-Ready Infrastructure partnerships for state universities/institutes.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded border border-slate-200 flex flex-col justify-center text-center">
+                                <h4 class="font-bold text-slate-800 text-sm uppercase mb-1">Go-to-Market Strategy</h4>
+                                <p class="text-xl font-bold text-orange-600">Direct Agency Pitch</p>
+                                <p class="text-xs text-slate-500 mt-2">Because LED has an explicit OTS exemption, Dell can pitch cutting-edge AI architecture directly to Sec. Bourgeois without centralized delays.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Action Plan -->
+        <section id="action-plan" class="tab-content max-w-6xl mx-auto">
+            <header class="mb-6">
+                <h2 class="text-3xl font-bold text-slate-900">5. Dell Action Plan & Whitespace</h2>
+                <p class="text-slate-500 mt-2 text-lg">Strategic sales motions mapping Louisiana's challenges to the Dell portfolio.</p>
+            </header>
+
+            <!-- Deal Matrix -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-6">
+                <h3 class="text-xl font-semibold text-slate-800 mb-2">Opportunity Prioritization Matrix</h3>
+                <p class="text-sm text-slate-500 mb-4">X-Axis: Time to Close (Months) | Y-Axis: Strategic Value (Win Probability) | Size: Deal Revenue Est.</p>
+                <div class="chart-container-large">
+                    <canvas id="oppMatrixChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Action Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <!-- APEX -->
+                <div class="opportunity-card bg-white rounded-xl shadow-sm border-t-4 border-blue-600 p-5 flex flex-col h-full">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-bold text-slate-800">1. Pitch APEX to OTS</h3>
+                        <span class="text-2xl text-blue-600">&#x2601;</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4 flex-grow"><strong>The Hook:</strong> OTS struggles with opaque agency chargebacks. APEX Custom Solutions allows OTS to consume infrastructure as-a-service on-prem, providing granular, cloud-like billing transparency to pass down to agencies.</p>
+                    <div class="bg-slate-50 p-2 rounded text-xs text-slate-600 border border-slate-200">
+                        <strong>Target:</strong> Evelina Broussard (CIO)
+                    </div>
+                </div>
+
+                <!-- Cyber Recovery -->
+                <div class="opportunity-card bg-white rounded-xl shadow-sm border-t-4 border-purple-600 p-5 flex flex-col h-full">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-bold text-slate-800">2. Cyber Recovery Vault</h3>
+                        <span class="text-2xl text-purple-600">&#x1F512;</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4 flex-grow"><strong>The Hook:</strong> Leverage available SLCGP grant funds. Pitch an air-gapped PowerProtect Cyber Recovery vault to the CISO as the ultimate fail-safe against ransomware, ensuring StateRAMP compliance for core state workloads.</p>
+                    <div class="bg-slate-50 p-2 rounded text-xs text-slate-600 border border-slate-200">
+                        <strong>Target:</strong> Chase Hymel (CISO)
+                    </div>
+                </div>
+
+                <!-- AI Infrastructure -->
+                <div class="opportunity-card bg-white rounded-xl shadow-sm border-t-4 border-orange-500 p-5 flex flex-col h-full">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-bold text-slate-800">3. Direct AI Pitch (LED)</h3>
+                        <span class="text-2xl text-orange-500">&#x1F9E0;</span>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4 flex-grow"><strong>The Hook:</strong> LED has an exemption from OTS. Target Sec. Bourgeois directly with High-Performance Computing and AI-ready architecture for her LA.IO initiative, bypassing traditional 18-month procurement delays.</p>
+                    <div class="bg-slate-50 p-2 rounded text-xs text-slate-600 border border-slate-200">
+                        <strong>Target:</strong> Susan B. Bourgeois (LED)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // --- DATA OBJECTS FOR CHARTS ---
+
+        const maturityData = {
+            labels: ['Cybersecurity & Zero Trust', 'Cloud Readiness', 'Data Governance/AI', 'Edge Computing', 'Legacy Modernization'],
+            datasets: [{
+                label: 'Current State',
+                data: [6, 7, 4, 3, 5],
+                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                borderColor: 'rgba(59, 130, 246, 1)',
+                pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                borderWidth: 2
+            }, {
+                label: 'Ideal Target (12 Mo)',
+                data: [9, 8, 7, 6, 8],
+                backgroundColor: 'rgba(148, 163, 184, 0.2)',
+                borderColor: 'rgba(148, 163, 184, 1)',
+                borderDash: [5, 5],
+                pointBackgroundColor: 'rgba(148, 163, 184, 1)',
+                borderWidth: 2
+            }]
+        };
+
+        const influenceData = {
+            datasets: [
+                { label: 'Gov. Landry', data: [{ x: 95, y: 70, r: 25 }], backgroundColor: 'rgba(34, 197, 94, 0.7)' },
+                { label: 'Rep. McFarland', data: [{ x: 90, y: 20, r: 20 }], backgroundColor: 'rgba(34, 197, 94, 0.7)' },
+                { label: 'E. Broussard (CIO)', data: [{ x: 75, y: 90, r: 30 }], backgroundColor: 'rgba(59, 130, 246, 0.7)' },
+                { label: 'C. Hymel (CISO)', data: [{ x: 40, y: 95, r: 20 }], backgroundColor: 'rgba(168, 85, 247, 0.7)' },
+                { label: 'S. Bourgeois (LED)', data: [{ x: 85, y: 50, r: 25 }], backgroundColor: 'rgba(249, 115, 22, 0.7)' },
+                { label: 'B. Adams (OMV)', data: [{ x: 70, y: 40, r: 20 }], backgroundColor: 'rgba(236, 72, 153, 0.7)' }
+            ]
+        };
+
+        const fundingTrendData = {
+            labels: ['FY22', 'FY23', 'FY24', 'FY25 (Proj)'],
+            datasets: [
+                { label: 'State Gen Fund (O&M)', data: [380, 390, 396, 405], backgroundColor: '#94a3b8' },
+                { label: 'Federal Grants (CapEx)', data: [40, 120, 154, 145], backgroundColor: '#3b82f6' }
+            ]
+        };
+
+        const budgetSplitData = {
+            labels: ['O&M (Run the State)', 'Capital/New Projects'],
+            datasets: [{
+                data: [396, 154], 
+                backgroundColor: ['#cbd5e1', '#2563eb'],
+                hoverBackgroundColor: ['#94a3b8', '#1d4ed8'],
+                borderWidth: 0
+            }]
+        };
+
+        const oppMatrixData = {
+            datasets: [
+                { label: 'LED AI Infrastructure', data: [{ x: 5, y: 75, r: 25 }], backgroundColor: 'rgba(249, 115, 22, 0.8)' },
+                { label: 'OTS APEX Cloud Consumption', data: [{ x: 14, y: 60, r: 35 }], backgroundColor: 'rgba(59, 130, 246, 0.8)' },
+                { label: 'Statewide Cyber Vault', data: [{ x: 9, y: 75, r: 25 }], backgroundColor: 'rgba(168, 85, 247, 0.8)' },
+                { label: 'DCFS CCWIS Compute', data: [{ x: 12, y: 50, r: 15 }], backgroundColor: 'rgba(236, 72, 153, 0.8)' },
+                { label: 'OMV Data Migration', data: [{ x: 4, y: 90, r: 10 }], backgroundColor: 'rgba(34, 197, 94, 0.8)' }
+            ]
+        };
+
+        // --- GLOBAL CHART REGISTRY ---
+        const charts = {};
+
+        // --- CHART RENDER FUNCTIONS ---
+
+        function renderRadarChart() {
+            if(charts.radar) return;
+            const ctx = document.getElementById('maturityChart').getContext('2d');
+            charts.radar = new Chart(ctx, {
+                type: 'radar',
+                data: maturityData,
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { r: { min: 0, max: 10, ticks: { stepSize: 2 } } },
+                    plugins: { legend: { position: 'bottom' } }
+                }
+            });
+        }
+
+        function renderInfluenceChart() {
+            if(charts.influence) return;
+            const ctx = document.getElementById('influenceChart').getContext('2d');
+            charts.influence = new Chart(ctx, {
+                type: 'bubble',
+                data: influenceData,
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        x: { title: { display: true, text: 'Budget Control / Purchasing Power (%)' }, min: 0, max: 100 },
+                        y: { title: { display: true, text: 'Technical Influence / Architecture Veto (%)' }, min: 0, max: 100 }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12 } },
+                        tooltip: { callbacks: { label: (ctx) => ctx.dataset.label } }
+                    }
+                }
+            });
+        }
+
+        function renderFinancialCharts() {
+            if(!charts.fundingTrend) {
+                const ctx1 = document.getElementById('fundingTrendChart').getContext('2d');
+                charts.fundingTrend = new Chart(ctx1, {
+                    type: 'bar',
+                    data: fundingTrendData,
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: { x: { stacked: true }, y: { stacked: true, title: { display: true, text: 'Millions ($)' } } },
+                        plugins: { legend: { position: 'bottom' } }
+                    }
+                });
+            }
+            if(!charts.budgetSplit) {
+                const ctx2 = document.getElementById('budgetSplitChart').getContext('2d');
+                charts.budgetSplit = new Chart(ctx2, {
+                    type: 'doughnut',
+                    data: budgetSplitData,
+                    options: {
+                        responsive: true, maintainAspectRatio: false, cutout: '70%',
+                        plugins: {
+                            legend: { position: 'bottom' },
+                            tooltip: { callbacks: { label: (ctx) => ' $' + ctx.raw + ' Million' } }
+                        }
+                    }
+                });
+            }
+        }
+
+        function renderActionPlanChart() {
+            if(charts.oppMatrix) return;
+            const ctx = document.getElementById('oppMatrixChart').getContext('2d');
+            charts.oppMatrix = new Chart(ctx, {
+                type: 'bubble',
+                data: oppMatrixData,
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        x: { title: { display: true, text: 'Est. Time to Close (Months)' }, min: 0, max: 18, reverse: true }, // Closer is better (right to left)
+                        y: { title: { display: true, text: 'Strategic Value / Win Prob (%)' }, min: 0, max: 100 }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12 } },
+                        tooltip: { callbacks: { label: (ctx) => ctx.dataset.label } }
+                    }
+                }
+            });
+        }
+
+        // --- NAVIGATION & INTERACTION LOGIC ---
+
+        function switchTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Update button styling
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('nav-active');
+                btn.classList.replace('border-blue-400', 'border-transparent');
+            });
+
+            // Show selected tab
+            const activeTab = document.getElementById(tabId);
+            activeTab.classList.add('active');
+            
+            // Set active state on desktop button
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if(activeBtn) {
+                activeBtn.classList.add('nav-active');
+                activeBtn.classList.replace('border-transparent', 'border-blue-400');
+            }
+
+            // Sync mobile select
+            const mobileSelect = document.getElementById('mobile-nav');
+            if(mobileSelect.value !== tabId) mobileSelect.value = tabId;
+
+            // Render charts dynamically when container becomes visible to prevent Chart.js sizing bugs
+            setTimeout(() => {
+                if(tabId === 'exec-summary') renderRadarChart();
+                if(tabId === 'power-structure') renderInfluenceChart();
+                if(tabId === 'financials') renderFinancialCharts();
+                if(tabId === 'action-plan') renderActionPlanChart();
+            }, 50); // slight delay ensures DOM paints 'display: block' first
+        }
+
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.innerHTML = '&#x25B2;'; // Up arrow
+            } else {
+                content.classList.add('hidden');
+                icon.innerHTML = '&#x25BC;'; // Down arrow
+            }
+        }
+
+        // Initialize first tab charts on load
+        window.onload = () => {
+            renderRadarChart();
+        };
+
+    </script>
+</body>
+</html>

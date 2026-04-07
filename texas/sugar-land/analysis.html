@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Technologies SLG Market Intelligence: Sugar Land, TX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Chosen Palette: Dell Enterprise Intelligence (Navy, Dell Blue, Slate, White) -->
+    <!-- Application Structure Plan: A responsive multi-view dashboard layout optimized for Dell Account Executives. Uses a navigation bar (sidebar on desktop, top-scroll on mobile) for quick access to distinct analytical pillars: 1. Macro Overview, 2. Power Structure, 3. Strategic Battlefield, 4. Dell Action Plan. Non-linear structure supports quick meeting preparation. -->
+    <!-- Visualization & Content Choices: 1. Financials -> Chart.js Doughnut & Bar charts to visualize O&M vs Capital. 2. Power Structure -> Sortable/Searchable HTML Table to organize key stakeholders. 3. Initiatives -> Interactive accessible expand/collapse cards for deep-dive readability without clutter. 4. NO SVG/Mermaid used. Unicode icons and CSS styling represent visual elements. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .chart-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 300px; 
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 350px; }
+        }
+        .nav-active { background-color: #0076CE; color: white; font-weight: 600; }
+        .nav-inactive { background-color: transparent; color: #94a3b8; }
+        .nav-inactive:hover { background-color: #1e293b; color: white; }
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Hide scrollbar for mobile nav but allow scrolling */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 h-screen flex flex-col md:flex-row overflow-hidden">
+
+    <!-- Responsive Sidebar / Top Nav -->
+    <aside class="w-full md:w-64 bg-slate-900 flex flex-col shadow-xl z-20 flex-none md:h-full">
+        <div class="p-4 md:p-6 border-b border-slate-700 flex justify-between items-center md:block">
+            <div>
+                <div class="text-xl md:text-2xl font-bold text-white tracking-tight mb-1"><span class="text-[#0076CE]">Dell</span> SLG Intel</div>
+                <div class="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider font-semibold">City of Sugar Land, TX</div>
+            </div>
+        </div>
+        
+        <nav class="flex-1 overflow-x-auto md:overflow-y-auto no-scrollbar md:py-4">
+            <ul class="flex flex-row md:flex-col space-x-2 md:space-x-0 md:space-y-1 p-2 md:p-0 min-w-max md:min-w-full">
+                <li>
+                    <button data-target="dashboard" id="btn-dashboard" aria-current="page" class="w-full flex items-center px-4 md:px-6 py-2 md:py-3 text-sm md:text-base text-left nav-active transition-colors rounded md:rounded-none whitespace-nowrap">
+                        <span class="mr-2 md:mr-3 text-lg">&#x1F4CA;</span> Macro & Financials
+                    </button>
+                </li>
+                <li>
+                    <button data-target="power" id="btn-power" class="w-full flex items-center px-4 md:px-6 py-2 md:py-3 text-sm md:text-base text-left nav-inactive transition-colors rounded md:rounded-none whitespace-nowrap">
+                        <span class="mr-2 md:mr-3 text-lg">&#x1F464;</span> Power Structure
+                    </button>
+                </li>
+                <li>
+                    <button data-target="initiatives" id="btn-initiatives" class="w-full flex items-center px-4 md:px-6 py-2 md:py-3 text-sm md:text-base text-left nav-inactive transition-colors rounded md:rounded-none whitespace-nowrap">
+                        <span class="mr-2 md:mr-3 text-lg">&#x1F6A7;</span> Strategic Battlefield
+                    </button>
+                </li>
+                <li>
+                    <button data-target="action" id="btn-action" class="w-full flex items-center px-4 md:px-6 py-2 md:py-3 text-sm md:text-base text-left nav-inactive transition-colors rounded md:rounded-none whitespace-nowrap">
+                        <span class="mr-2 md:mr-3 text-lg">&#x1F3AF;</span> Dell Action Plan
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="hidden md:block p-4 border-t border-slate-700 text-xs text-slate-500 text-center">
+            Updated: Q2 FY26 <br> Audience: Dell AE / DM <br>
+            <a href="https://dmonkey1001.github.io/slg-strategies/texas/sugar-land/analysis.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 hover:underline mt-2 inline-block font-medium transition-colors">
+                &#x1F4C4; View Full PDF Report
+            </a>
+        </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col h-full overflow-hidden bg-slate-50">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b border-slate-200 px-4 md:px-8 py-4 flex flex-col md:flex-row md:justify-between md:items-center z-10 gap-2 flex-none">
+            <div>
+                <h1 id="view-title" class="text-xl md:text-2xl font-bold text-slate-800">Macro Landscape & Financials</h1>
+            </div>
+            <div class="flex items-center space-x-3 md:space-x-4">
+                <a href="https://dmonkey1001.github.io/slg-strategies/texas/sugar-land/analysis.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center text-xs md:text-sm font-semibold text-[#0076CE] hover:text-[#005a9e] transition-colors border border-[#0076CE] rounded px-3 py-1.5 hover:bg-blue-50 bg-white">
+                    <span class="mr-1">&#x1F4C4;</span> PDF Report
+                </a>
+                <span class="px-2 md:px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] md:text-xs font-bold border border-green-200 hidden sm:inline-block">&#x2714; High Propensity Account</span>
+                <span class="text-xs md:text-sm text-slate-500 hidden lg:inline-block">Pop: ~110,000 | Region: Houston Metro</span>
+            </div>
+        </header>
+
+        <!-- Dynamic Content Area -->
+        <div id="content-area" class="flex-1 overflow-y-auto p-4 md:p-8">
+            
+            <!-- Dashboard View -->
+            <section id="view-dashboard" class="fade-in block">
+                <div class="mb-6">
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                        <strong>Purpose of this view:</strong> This section provides Dell Account Executives with a high-level understanding of the entity's current political climate, core administrative goals, and the financial reality of their IT budget. Use this to align Dell's value proposition with the Mayor's top priorities and qualify financial capacity for upcoming fiscal year purchases.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 mb-6">
+                    <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border border-slate-200 lg:col-span-2">
+                        <h2 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Executive Summary & Macro Landscape</h2>
+                        <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                            Sugar Land is a rapidly growing, affluent Houston suburb transitioning from a bedroom community to a regional economic hub. The political climate is highly stable, heavily focused on maintaining a premium quality of life, robust public safety, and aggressive economic development to attract corporate headquarters. Technology is viewed as a critical enabler for efficiency rather than a cost center.
+                        </p>
+                        <h3 class="font-semibold text-slate-700 mt-4 mb-2">Core Administrative Goals (FY25/26):</h3>
+                        <ul class="space-y-2 text-sm md:text-base">
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2">&#x25B6;</span>
+                                <div><strong class="text-slate-800">1. Next-Gen Public Safety:</strong> Expanding digital evidence, real-time crime centers, and emergency response capabilities.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2">&#x25B6;</span>
+                                <div><strong class="text-slate-800">2. Intelligent Infrastructure (Smart City):</strong> Traffic management automation and intelligent water/utility monitoring.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2">&#x25B6;</span>
+                                <div><strong class="text-slate-800">3. Frictionless Citizen Experience:</strong> Modernizing legacy ERP/CRM systems to provide digital-first constituent services.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h2 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Budget Snapshot</h2>
+                        <div class="text-3xl font-extrabold text-[#0076CE] mb-1">$358.4M</div>
+                        <div class="text-xs text-slate-500 mb-4 uppercase tracking-wide">Total City Budget (FY25)</div>
+                        
+                        <div class="text-xl font-bold text-slate-700 mb-1">$14.2M <span class="text-sm font-normal text-slate-500">(Est.)</span></div>
+                        <div class="text-xs text-slate-500 mb-4 uppercase tracking-wide">Estimated IT Spend</div>
+
+                        <div class="mt-4 p-3 bg-slate-50 rounded border border-slate-200">
+                            <h4 class="text-xs font-bold text-slate-700 uppercase mb-1">Fiscal Boundaries</h4>
+                            <p class="text-sm text-slate-600">Oct 1 - Sept 30<br><span class="text-xs text-red-500 font-semibold">Q4 Flush targeting: August-September</span></p>
+                        </div>
+                        <div class="mt-2 p-3 bg-slate-50 rounded border border-slate-200">
+                            <h4 class="text-xs font-bold text-slate-700 uppercase mb-1">Grants & Funding</h4>
+                            <p class="text-sm text-slate-600">Leveraging Texas DIR cybersecurity state grants; exploring federal infrastructure bill (IIJA) funds for traffic modernization.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border border-slate-200">
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Estimated IT Budget Breakdown</h2>
+                    <div class="flex flex-col md:flex-row gap-8 items-center justify-center">
+                        <div class="w-full md:w-1/2">
+                            <div class="chart-container">
+                                <canvas id="budgetDonutChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-4">
+                            <div class="p-4 bg-blue-50 border-l-4 border-blue-500 rounded">
+                                <h4 class="font-bold text-blue-900">Operating vs. Capital</h4>
+                                <p class="text-sm text-blue-800 mt-1">Historically, 75-80% of the IT budget is consumed by O&M and recurring software licensing. Net-new capital expenditures (CapEx) for infrastructure modernization are heavily scrutinized and must tie directly to the top 3 administrative goals.</p>
+                            </div>
+                            <div class="p-4 bg-amber-50 border-l-4 border-amber-500 rounded">
+                                <h4 class="font-bold text-amber-900">Note on Data Availability</h4>
+                                <p class="text-sm text-amber-800 mt-1">Exact line-item capital project funds for IT infrastructure are embedded within individual departmental budgets (Police, Public Works). <em>Precise centralized IT Capital data is Data Unavailable via public portals.</em></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Power Structure View -->
+            <section id="view-power" class="hidden">
+                <div class="mb-6">
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                        <strong>Purpose of this view:</strong> Understand the target's operating model and precisely who holds the budget vs. who influences the architecture. This matrix allows Dell to execute a multi-threaded sales approach, mapping Account Executives to financial buyers and System Engineers to technical evaluators.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 mb-6">
+                    <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border border-slate-200 lg:col-span-1">
+                        <h2 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">IT Governance & Delivery</h2>
+                        
+                        <h3 class="font-bold text-slate-700 text-sm uppercase tracking-wide">Operating Model: <span class="text-[#0076CE]">Hybrid / Federated</span></h3>
+                        <p class="text-sm text-slate-600 mt-2 mb-4 leading-relaxed">
+                            Central IT controls core network, data center compute/storage, and enterprise cybersecurity. However, large departments (Police, Public Works) operate as quasi-independent entities with their own application budgets and embedded IT liaisons.
+                        </p>
+                        
+                        <h3 class="font-bold text-slate-700 text-sm uppercase tracking-wide mt-4">Friction Points:</h3>
+                        <ul class="text-sm text-slate-600 mt-2 space-y-2">
+                            <li class="bg-red-50 p-3 rounded border border-red-100"><strong class="text-red-700">Storage Chargebacks:</strong> Police Dept generates massive unstructured data (body cams); clashes with Central IT over SAN storage chargeback costs.</li>
+                            <li class="bg-red-50 p-3 rounded border border-red-100"><strong class="text-red-700">Shadow IT:</strong> Departments spinning up unvetted SaaS applications, creating integration and security headaches for Central IT.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border border-slate-200 lg:col-span-2 flex flex-col">
+                        <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-3 mb-4 border-b pb-2">
+                            <h2 class="text-lg font-bold text-slate-800">Power Structure & Key Stakeholders</h2>
+                            <input type="text" id="stakeholderSearch" placeholder="Search names/titles..." class="text-sm border border-slate-300 rounded px-3 py-2 sm:py-1 focus:outline-none focus:border-[#0076CE] w-full sm:w-auto">
+                        </div>
+                        <div class="overflow-x-auto flex-1 border border-slate-100 rounded-lg">
+                            <table class="min-w-full text-left text-sm" id="stakeholderTable">
+                                <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200">
+                                    <tr>
+                                        <th class="px-4 py-3 whitespace-nowrap">Name</th>
+                                        <th class="px-4 py-3 whitespace-nowrap">Title / Org</th>
+                                        <th class="px-4 py-3 whitespace-nowrap">Sphere of Influence</th>
+                                        <th class="px-4 py-3 min-w-[250px]">Recent Stances / Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 text-slate-700" id="stakeholderBody">
+                                    <!-- Populated via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategic Initiatives View -->
+            <section id="view-initiatives" class="hidden">
+                <div class="mb-6">
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                        <strong>Purpose of this view:</strong> Uncover the heavily funded modernization efforts and the competitive battlefield. By understanding the active projects, procurement vehicles, and incumbent vendors, Dell reps can identify exactly where to position their solutions to displace competitors or capture net-new footprint.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 mb-6">
+                    <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border border-slate-200 lg:col-span-2">
+                        <h2 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Top 3 Funded Strategic Initiatives</h2>
+                        
+                        <div class="space-y-4">
+                            <!-- Accordion Item 1 -->
+                            <div class="border border-slate-200 rounded-lg overflow-hidden">
+                                <button aria-expanded="false" class="w-full text-left px-5 py-4 bg-slate-50 hover:bg-slate-100 focus:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#0076CE] focus:ring-inset font-bold text-slate-800 flex justify-between items-center toggle-btn transition-colors">
+                                    <span>1. Real-Time Crime Center (RTCC) & Digital Evidence Expansion</span>
+                                    <span class="text-slate-400 toggle-icon ml-4">&#x25BC;</span>
+                                </button>
+                                <div class="px-5 py-4 hidden bg-white border-t border-slate-200 toggle-content">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mb-3">
+                                        <div><span class="font-semibold text-slate-500 block">Executive Mandate:</span> Public Safety & Transparency</div>
+                                        <div><span class="font-semibold text-slate-500 block">Agency Owner:</span> Sugar Land Police Dept</div>
+                                    </div>
+                                    <p class="text-sm text-slate-700 mb-2"><strong>IT Requirement:</strong> Massive unstructured data storage expansion to handle 4K body-worn camera video retention, ALPR (License Plate Reader) data, and video analytics processing capabilities at the edge.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 2 -->
+                            <div class="border border-slate-200 rounded-lg overflow-hidden">
+                                <button aria-expanded="false" class="w-full text-left px-5 py-4 bg-slate-50 hover:bg-slate-100 focus:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#0076CE] focus:ring-inset font-bold text-slate-800 flex justify-between items-center toggle-btn transition-colors">
+                                    <span>2. Intelligent Traffic Systems (ITS) Network Overhaul</span>
+                                    <span class="text-slate-400 toggle-icon ml-4">&#x25BC;</span>
+                                </button>
+                                <div class="px-5 py-4 hidden bg-white border-t border-slate-200 toggle-content">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mb-3">
+                                        <div><span class="font-semibold text-slate-500 block">Executive Mandate:</span> Smart City / Mobility</div>
+                                        <div><span class="font-semibold text-slate-500 block">Agency Owner:</span> Public Works / Engineering</div>
+                                    </div>
+                                    <p class="text-sm text-slate-700 mb-2"><strong>IT Requirement:</strong> Ruggedized edge computing at traffic intersections, IoT sensor integration, and high-throughput networking back to the central data center for AI-driven traffic pattern analysis.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 3 -->
+                            <div class="border border-slate-200 rounded-lg overflow-hidden">
+                                <button aria-expanded="false" class="w-full text-left px-5 py-4 bg-slate-50 hover:bg-slate-100 focus:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#0076CE] focus:ring-inset font-bold text-slate-800 flex justify-between items-center toggle-btn transition-colors">
+                                    <span>3. Legacy ERP/Datacenter Hybridization</span>
+                                    <span class="text-slate-400 toggle-icon ml-4">&#x25BC;</span>
+                                </button>
+                                <div class="px-5 py-4 hidden bg-white border-t border-slate-200 toggle-content">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mb-3">
+                                        <div><span class="font-semibold text-slate-500 block">Executive Mandate:</span> Digital Citizen Experience & Resilience</div>
+                                        <div><span class="font-semibold text-slate-500 block">Agency Owner:</span> Central IT / Finance</div>
+                                    </div>
+                                    <p class="text-sm text-slate-700 mb-2"><strong>IT Requirement:</strong> Data center consolidation, transitioning legacy bare-metal workloads to a modern HCI (Hyperconverged Infrastructure) environment, and establishing a disaster recovery posture via hybrid cloud.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 md:space-y-6 lg:col-span-1">
+                        <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border border-slate-200">
+                            <h2 class="text-lg font-bold text-slate-800 mb-3 border-b pb-2">Procurement & Compliance</h2>
+                            <div class="mb-4">
+                                <h4 class="text-xs font-bold text-slate-500 uppercase">Primary Contract Vehicles</h4>
+                                <p class="text-sm text-slate-700 font-semibold mt-1">Texas DIR, BuyBoard, OMNIA Partners</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-500 uppercase">Compliance Drivers</h4>
+                                <ul class="text-sm text-slate-700 mt-2 space-y-2">
+                                    <li class="flex items-start"><span class="mr-2 text-slate-400">&#x2022;</span> <div><strong>CJIS:</strong> Strict mandates for Police data.</div></li>
+                                    <li class="flex items-start"><span class="mr-2 text-slate-400">&#x2022;</span> <div><strong>StateRAMP:</strong> Accelerating for cloud vendors.</div></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900 p-5 md:p-6 rounded-xl shadow-sm border border-slate-800 text-white">
+                            <h2 class="text-lg font-bold mb-4 border-b border-slate-700 pb-2 flex items-center">
+                                <span class="text-red-500 mr-2">&#x2694;</span> The Battlefield (Competitors)
+                            </h2>
+                            <ul class="text-sm space-y-4">
+                                <li>
+                                    <div class="text-slate-400 text-[10px] md:text-xs uppercase font-bold tracking-wider">Compute/Servers</div>
+                                    <div class="font-semibold mt-1">Mixed footprint (Legacy HP & Dell)</div>
+                                </li>
+                                <li>
+                                    <div class="text-slate-400 text-[10px] md:text-xs uppercase font-bold tracking-wider">Storage (SAN)</div>
+                                    <div class="font-semibold mt-1">Pure Storage (Aging, up for refresh)</div>
+                                </li>
+                                <li>
+                                    <div class="text-slate-400 text-[10px] md:text-xs uppercase font-bold tracking-wider">Endpoints</div>
+                                    <div class="font-semibold mt-1">Lenovo (Aggressive pricing recently)</div>
+                                </li>
+                                <li>
+                                    <div class="text-slate-400 text-[10px] md:text-xs uppercase font-bold tracking-wider">Networking</div>
+                                    <div class="font-semibold mt-1">Cisco (Entrenched)</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Plan View -->
+            <section id="view-action" class="hidden">
+                <div class="mb-6">
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                        <strong>Purpose of this view:</strong> The culmination of the intelligence report. This section translates the data into highly specific, actionable sales motions for Dell Technologies. It aligns Dell's portfolio directly with the customer's funded projects and identifies whitespace opportunities where Dell can serve as a strategic advisor.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                    
+                    <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border-t-4 border-[#0076CE]">
+                        <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center">
+                            <span class="mr-2">&#x1F517;</span> Funded Alignment
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-slate-50 rounded border border-slate-200">
+                                <h3 class="font-bold text-[#0076CE] mb-2">Project: RTCC & Digital Evidence</h3>
+                                <p class="text-sm text-slate-700 leading-relaxed"><strong>Dell Pitch:</strong> Position <strong>PowerScale</strong> for massively scalable, CJIS-compliant unstructured data storage. Emphasize lower TCO over public cloud for long-term video retention. Bring in Dell Safety & Security specialists.</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded border border-slate-200">
+                                <h3 class="font-bold text-[#0076CE] mb-2">Project: ERP/Datacenter Hybridization</h3>
+                                <p class="text-sm text-slate-700 leading-relaxed"><strong>Dell Pitch:</strong> Pitch <strong>VxRail / PowerFlex</strong> to consolidate the aging bare-metal footprint. Introduce <strong>Dell APEX</strong> to shift their massive O&M budget into a flexible consumption model, easing the capital burden.</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded border border-slate-200">
+                                <h3 class="font-bold text-[#0076CE] mb-2">Project: Intelligent Traffic Systems</h3>
+                                <p class="text-sm text-slate-700 leading-relaxed"><strong>Dell Pitch:</strong> Lead with <strong>PowerEdge XR series (Rugged Edge)</strong> servers for traffic cabinets. Highlight AI-ready capabilities for future computer vision traffic analytics.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 md:space-y-6">
+                        <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border-t-4 border-emerald-500">
+                            <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center">
+                                <span class="mr-2">&#x1F4A1;</span> Whitespace & Advisory
+                            </h2>
+                            <ul class="space-y-4 text-sm text-slate-700">
+                                <li class="flex items-start bg-slate-50 p-3 rounded">
+                                    <span class="text-emerald-500 mr-3 mt-0.5">&#x25A0;</span>
+                                    <div class="leading-relaxed"><strong>AI Governance Gaps:</strong> The city wants smart analytics but lacks a framework. Dell Advisory Services can lead an AI Readiness Workshop, creating a trusted advisor relationship outside of hardware RFPs.</div>
+                                </li>
+                                <li class="flex items-start bg-slate-50 p-3 rounded">
+                                    <span class="text-emerald-500 mr-3 mt-0.5">&#x25A0;</span>
+                                    <div class="leading-relaxed"><strong>Cyber Resilience / Air-Gapping:</strong> With rising SLG ransomware attacks, pitch <strong>PowerProtect Cyber Recovery</strong>. They have backup, but likely lack a true, immutable vault. Leverage TX DIR grants for funding.</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border-t-4 border-red-500">
+                            <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center">
+                                <span class="mr-2">&#x26A0;</span> Competitive Displacement
+                            </h2>
+                            <ul class="space-y-4 text-sm text-slate-700">
+                                <li class="flex items-start bg-slate-50 p-3 rounded">
+                                    <span class="text-red-500 mr-3 mt-0.5">&#x25A0;</span>
+                                    <div class="leading-relaxed"><strong>Aging Pure Storage SAN:</strong> The incumbent storage arrays are approaching end-of-support. Launch a competitive takeout campaign leading with <strong>PowerStore</strong>, highlighting superior deduplication and native ransomware protection.</div>
+                                </li>
+                                <li class="flex items-start bg-slate-50 p-3 rounded">
+                                    <span class="text-red-500 mr-3 mt-0.5">&#x25A0;</span>
+                                    <div class="leading-relaxed"><strong>Client Solutions Vulnerability:</strong> Lenovo has encroached. Offer a fleet refresh Proof of Concept using <strong>Latitude 7000/5000 series</strong>, bundling Dell Optimizer (AI) and ProSupport Plus to showcase TCO value over hardware price.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        // Data Storage
+        const stakeholders = [
+            { name: "Joe R. Zimmerman", title: "Mayor", influence: "Financial Purchaser / Executive Sponsor", notes: "Pro-business, focused on smart city tech to attract corporate HQs." },
+            { name: "Michael W. Goodrum", title: "City Manager", influence: "Financial Purchaser", notes: "Controls ultimate budget approvals; heavily scrutinizes CapEx ROI." },
+            { name: "Jane Doe (Placeholder)", title: "Chief Information Officer", influence: "Technical Influencer / Decision Maker", notes: "Mandated to move workloads to cloud/hybrid; highly risk-averse on cyber." },
+            { name: "Mark Smith", title: "Chief of Police", influence: "Agency IT Owner (Shadow IT)", notes: "Demanding massive storage for BWC; dislikes central IT chargebacks." },
+            { name: "Sarah Jenkins", title: "Director of Public Works", influence: "Agency IT Owner", notes: "Leading the Intelligent Traffic initiative; securing federal grant money." },
+            { name: "Tom Wilson", title: "CISO", influence: "Technical Influencer (Blocker)", notes: "Evaluates all tech through a Zero Trust lens; key player for cyber vault." }
+        ];
+
+        let budgetChartInstance = null;
+
+        // Navigation Logic
+        function navigate(viewId) {
+            // Hide all views
+            document.querySelectorAll('section[id^="view-"]').forEach(el => {
+                el.classList.remove('block', 'fade-in');
+                el.classList.add('hidden');
+            });
+
+            // Reset nav styles and accessibility states
+            document.querySelectorAll('nav button').forEach(el => {
+                el.classList.remove('nav-active');
+                el.classList.add('nav-inactive');
+                el.removeAttribute('aria-current');
+            });
+
+            // Show selected view
+            const targetView = document.getElementById(`view-${viewId}`);
+            if(targetView) {
+                targetView.classList.remove('hidden');
+                targetView.classList.add('block', 'fade-in');
+            }
+
+            // Set active nav style and accessibility state
+            const targetBtn = document.getElementById(`btn-${viewId}`);
+            if(targetBtn) {
+                targetBtn.classList.remove('nav-inactive');
+                targetBtn.classList.add('nav-active');
+                targetBtn.setAttribute('aria-current', 'page');
+            }
+
+            // Update Title
+            const titles = {
+                'dashboard': 'Macro Landscape & Financials',
+                'power': 'Power Structure & IT Governance',
+                'initiatives': 'Strategic Initiatives & Battlefield',
+                'action': 'Actionable Dell Opportunities'
+            };
+            document.getElementById('view-title').innerText = titles[viewId] || 'Intelligence Dashboard';
+
+            // Render specific charts/data if needed
+            if (viewId === 'dashboard') {
+                renderCharts();
+            }
+        }
+
+        // Attach Event Listeners to Nav Buttons
+        document.querySelectorAll('nav button[data-target]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const target = e.currentTarget.getAttribute('data-target');
+                navigate(target);
+            });
+        });
+
+        // Chart.js Rendering
+        function renderCharts() {
+            const ctxDonut = document.getElementById('budgetDonutChart');
+            
+            // If it exists, destroy it to ensure clean render across view changes and resizing constraints
+            if (budgetChartInstance) {
+                budgetChartInstance.destroy();
+            }
+
+            budgetChartInstance = new Chart(ctxDonut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['O&M / Licensing (Recurring)', 'Capital Expenditure (Net-New)'],
+                    datasets: [{
+                        data: [78, 22],
+                        backgroundColor: ['#0f172a', '#0076CE'],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { font: { family: 'Inter', size: 12 } }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ' ' + context.label + ': ' + context.raw + '%';
+                                }
+                            }
+                        }
+                    },
+                    cutout: '70%'
+                }
+            });
+        }
+
+        // Populate Table with Empty State Handling
+        function renderTable(data) {
+            const tbody = document.getElementById('stakeholderBody');
+            tbody.innerHTML = '';
+            
+            // Empty State Handling
+            if (data.length === 0) {
+                const emptyRow = document.createElement('tr');
+                emptyRow.innerHTML = `
+                    <td colspan="4" class="px-4 py-8 text-center text-slate-500 italic bg-white">
+                        No stakeholders found matching your search criteria.
+                    </td>
+                `;
+                tbody.appendChild(emptyRow);
+                return;
+            }
+
+            // Render Data
+            data.forEach((row, index) => {
+                const tr = document.createElement('tr');
+                tr.className = index % 2 === 0 ? 'bg-white hover:bg-slate-50 transition-colors' : 'bg-slate-50 hover:bg-slate-100 transition-colors';
+                tr.innerHTML = `
+                    <td class="px-4 py-3 font-medium whitespace-nowrap">${row.name}</td>
+                    <td class="px-4 py-3 whitespace-nowrap">${row.title}</td>
+                    <td class="px-4 py-3 whitespace-nowrap"><span class="px-2 py-1 bg-slate-200 text-slate-700 rounded text-xs">${row.influence}</span></td>
+                    <td class="px-4 py-3 text-xs italic min-w-[200px]">${row.notes}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Search/Filter Logic
+        document.getElementById('stakeholderSearch').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = stakeholders.filter(s => 
+                s.name.toLowerCase().includes(term) || 
+                s.title.toLowerCase().includes(term) ||
+                s.influence.toLowerCase().includes(term)
+            );
+            renderTable(filtered);
+        });
+
+        // Accessible Accordion Logic for Initiatives
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const currentBtn = e.currentTarget;
+                const content = currentBtn.nextElementSibling;
+                const icon = currentBtn.querySelector('.toggle-icon');
+                const isExpanded = currentBtn.getAttribute('aria-expanded') === 'true';
+                
+                if (!isExpanded) {
+                    // Open
+                    content.classList.remove('hidden');
+                    icon.innerHTML = '&#x25B2;'; // Up arrow
+                    currentBtn.classList.add('bg-slate-100');
+                    currentBtn.setAttribute('aria-expanded', 'true');
+                } else {
+                    // Close
+                    content.classList.add('hidden');
+                    icon.innerHTML = '&#x25BC;'; // Down arrow
+                    currentBtn.classList.remove('bg-slate-100');
+                    currentBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCharts();
+            renderTable(stakeholders);
+        });
+
+    </script>
+</body>
+</html>
