@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Intelligence Brief: Fort Bend County, TX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        warmbg: '#fbf9f6',
+                        warmcard: '#ffffff',
+                        stone: { 800: '#292524', 600: '#57534e', 100: '#f5f5f4' },
+                        accent: '#0369a1',
+                        accentlight: '#e0f2fe'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #fbf9f6; color: #292524; }
+        
+        /* Strict Chart Container Constraint */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 35vh;
+            min-height: 280px;
+            max-height: 380px;
+        }
+
+        /* View Transitions */
+        .view-section {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Navigation Active States */
+        .nav-active {
+            color: #0369a1; /* Accent Color */
+            font-weight: 600;
+        }
+        @media (min-width: 768px) {
+            .nav-active {
+                background-color: #e0f2fe;
+                border-right: 3px solid #0369a1;
+            }
+        }
+
+        /* Scrollbar Styling */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 4px; }
+        .custom-scrollbar:hover::-webkit-scrollbar-thumb { background: #a8a29e; }
+        
+        /* Action Plan Checkbox Animation */
+        .action-card.pinned {
+            border-left-width: 8px;
+            background-color: #f8fafc;
+        }
+        .action-card {
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="flex flex-col md:flex-row h-screen w-full overflow-hidden text-stone-800 font-sans selection:bg-accentlight selection:text-accent">
+
+    <!-- Chosen Palette: Warm Neutrals with Muted Navy/Teal Accents -->
+    <!-- Application Structure Plan: Dashboard paradigm updated with a responsive, iOS-style bottom tab bar for mobile users to prevent hidden navigation and ensure quick thumb-reach access. The desktop retains the persistent left sidebar. Content remains logically grouped to serve a sales audience rapidly jumping between Macro data, Stakeholders, and Action Plans. -->
+    <!-- Visualization & Content Choices: 
+         1. Budget Data -> Goal: Compare -> Viz: Doughnut & Bar Charts -> Interaction: Hover tooltips -> Library: Chart.js (Optimized resize logic).
+         2. Stakeholders -> Goal: Organize & Filter -> Viz: Grid of Cards -> Interaction: Active state filter buttons (Improved UX) -> Library: Vanilla JS.
+         3. Initiatives -> Goal: Drill-down -> Viz: Master-Detail view -> Interaction: Click list to show details.
+         4. Dell Action Plan -> Goal: Highlight Whitespace -> Viz: Action Cards -> Interaction: Term tooltips and Pinning checkboxes (Increased engagement). 
+         Confirming NO SVG/Mermaid. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Navigation (Sidebar on Desktop, Bottom Bar on Mobile) -->
+    <nav class="order-last md:order-first w-full md:w-64 bg-white border-t md:border-t-0 md:border-r border-stone-200 flex flex-row md:flex-col z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] md:shadow-sm shrink-0 h-16 md:h-full">
+        <div class="hidden md:block p-6 border-b border-stone-100">
+            <h1 class="text-xl font-bold text-accent tracking-tight">Intelligence Brief</h1>
+            <p class="text-xs text-stone-500 uppercase tracking-wider mt-1">Fort Bend County, TX</p>
+        </div>
+        <div class="flex-1 flex flex-row md:flex-col w-full justify-around md:justify-start p-1 md:p-4 md:space-y-2 md:overflow-y-auto custom-scrollbar">
+            <button onclick="navigate('overview')" id="nav-overview" class="nav-btn nav-active flex flex-col md:flex-row items-center justify-center md:justify-start w-full px-2 py-1 md:px-4 md:py-3 rounded-lg text-[10px] md:text-sm text-stone-500 hover:text-accent md:hover:bg-stone-100 transition">
+                <span aria-hidden="true" class="text-lg md:text-base md:mr-3 mb-1 md:mb-0">&#128202;</span>
+                <span>Macro</span>
+            </button>
+            <button onclick="navigate('power')" id="nav-power" class="nav-btn flex flex-col md:flex-row items-center justify-center md:justify-start w-full px-2 py-1 md:px-4 md:py-3 rounded-lg text-[10px] md:text-sm text-stone-500 hover:text-accent md:hover:bg-stone-100 transition">
+                <span aria-hidden="true" class="text-lg md:text-base md:mr-3 mb-1 md:mb-0">&#128101;</span>
+                <span>Power Base</span>
+            </button>
+            <button onclick="navigate('initiatives')" id="nav-initiatives" class="nav-btn flex flex-col md:flex-row items-center justify-center md:justify-start w-full px-2 py-1 md:px-4 md:py-3 rounded-lg text-[10px] md:text-sm text-stone-500 hover:text-accent md:hover:bg-stone-100 transition">
+                <span aria-hidden="true" class="text-lg md:text-base md:mr-3 mb-1 md:mb-0">&#128640;</span>
+                <span class="truncate">Initiatives</span>
+            </button>
+            <button onclick="navigate('action')" id="nav-action" class="nav-btn flex flex-col md:flex-row items-center justify-center md:justify-start w-full px-2 py-1 md:px-4 md:py-3 rounded-lg text-[10px] md:text-sm text-stone-500 hover:text-accent md:hover:bg-stone-100 transition">
+                <span aria-hidden="true" class="text-lg md:text-base md:mr-3 mb-1 md:mb-0">&#127919;</span>
+                <span>Action Plan</span>
+            </button>
+        </div>
+        <div class="hidden md:block p-4 border-t border-stone-100 bg-stone-50 text-xs text-stone-500">
+            <div class="mb-2"><span aria-hidden="true" class="mr-1">&#128197;</span> Prepared for FY26</div>
+            <a href="https://dmonkey1001.github.io/slg-strategies/texas/fort-bend-county/analysis.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center text-accent hover:text-blue-800 transition font-medium">
+                <span aria-hidden="true" class="mr-1">&#128279;</span> Source Analysis Report
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 overflow-y-auto custom-scrollbar bg-warmbg relative">
+        <header class="bg-white px-6 md:px-8 py-5 md:py-6 border-b border-stone-200 sticky top-0 z-40 opacity-95 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+            <div>
+                <h2 id="page-title" class="text-xl md:text-2xl font-bold text-stone-800">Macro Landscape & Financials</h2>
+                <p id="page-desc" class="text-xs md:text-sm text-stone-600 mt-1">High-level overview of Fort Bend County's economic climate, administrative goals, and IT budgetary breakdown for the current fiscal year.</p>
+            </div>
+            <a href="https://dmonkey1001.github.io/slg-strategies/texas/fort-bend-county/analysis.pdf" target="_blank" rel="noopener noreferrer" title="View Source PDF" class="inline-flex items-center justify-center shrink-0 text-xs font-semibold text-accent bg-accentlight px-3 py-2 rounded-lg hover:bg-blue-100 transition shadow-sm border border-blue-100">
+                <span aria-hidden="true" class="mr-1.5 text-sm">&#128196;</span> View Source PDF
+            </a>
+        </header>
+
+        <div class="p-4 md:p-8">
+            <!-- OVERVIEW VIEW -->
+            <div id="view-overview" class="view-section block">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100 lg:col-span-2">
+                        <h3 class="text-lg font-semibold mb-4 border-b border-stone-100 pb-2"><span aria-hidden="true" class="mr-2">&#127963;</span> Political & Economic Climate</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                            Fort Bend County is experiencing rapid demographic expansion and economic development, characterized by a highly diverse population and significant corporate relocations. The political climate currently emphasizes modernization, efficiency in citizen services, and robust infrastructure development to match population growth.
+                        </p>
+                        <h4 class="font-semibold text-sm text-stone-800 mb-2">Core Administrative Goals (FY26):</h4>
+                        <ul class="list-none space-y-2">
+                            <li class="flex items-start text-sm text-stone-600"><span aria-hidden="true" class="text-accent mr-2">&#10003;</span> <strong>Economic Resiliency:</strong> Attracting tech and logistics enterprises.</li>
+                            <li class="flex items-start text-sm text-stone-600"><span aria-hidden="true" class="text-accent mr-2">&#10003;</span> <strong>Public Safety Modernization:</strong> Upgrading emergency response and law enforcement data sharing.</li>
+                            <li class="flex items-start text-sm text-stone-600"><span aria-hidden="true" class="text-accent mr-2">&#10003;</span> <strong>Digital Equity:</strong> Expanding broadband access and digital government portals for rural sectors.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100 flex flex-col justify-center text-center lg:text-left">
+                        <h3 class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-2">Total Operating Budget</h3>
+                        <p class="text-4xl lg:text-5xl font-bold text-stone-800">$645M</p>
+                        <p class="text-xs text-stone-400 mt-1">Oct 1 - Sept 30 Fiscal Boundary</p>
+                        
+                        <div class="mt-6 pt-6 border-t border-stone-100">
+                            <h3 class="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-3">Key Federal/State Influx</h3>
+                            <div class="bg-accentlight text-accent px-3 py-2 rounded text-sm font-medium mb-2 flex items-center justify-center lg:justify-start">
+                                <span aria-hidden="true" class="mr-2">&#128176;</span> $3.2M - SLCGP (Cybersecurity)
+                            </div>
+                            <div class="bg-stone-100 text-stone-600 px-3 py-2 rounded text-sm font-medium flex items-center justify-center lg:justify-start">
+                                <span aria-hidden="true" class="mr-2">&#128176;</span> $8.5M - ARPA (Infrastructure)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
+                        <h3 class="text-lg font-semibold mb-2 text-center"><span aria-hidden="true" class="mr-2">&#128181;</span> Budget Distribution</h3>
+                        <p class="text-xs text-center text-stone-500 mb-4">Total County Budget vs. IT Allocation</p>
+                        <div class="chart-container">
+                            <canvas id="budgetDoughnut"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
+                        <h3 class="text-lg font-semibold mb-2 text-center"><span aria-hidden="true" class="mr-2">&#128187;</span> IT Spend Breakdown ($48M)</h3>
+                        <p class="text-xs text-center text-stone-500 mb-4">O&M (Recurring) vs. Net-New Project Capital</p>
+                        <div class="chart-container">
+                            <canvas id="itBarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POWER STRUCTURE VIEW -->
+            <div id="view-power" class="view-section hidden">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100 mb-8">
+                    <h3 class="text-lg font-semibold mb-2"><span aria-hidden="true" class="mr-2">&#9878;</span> IT Governance & Service Delivery</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                        <div>
+                            <h4 class="font-medium text-stone-800 text-sm mb-1">Operating Model: <span class="text-accent font-bold">Hybrid</span></h4>
+                            <p class="text-sm text-stone-600 leading-relaxed">
+                                The central IT department manages core infrastructure (network, primary data center, enterprise software), but heavily funded agencies like Law Enforcement and HHS maintain significant autonomy and localized IT staff.
+                            </p>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded border border-red-100">
+                            <h4 class="font-bold text-red-800 text-sm mb-1 flex items-center">
+                                <span aria-hidden="true" class="mr-1">&#9888;</span> Friction Points
+                            </h4>
+                            <p class="text-sm text-red-900 leading-relaxed opacity-90">
+                                Legacy chargeback models create hesitation among tier-2 agencies to utilize central IT's private cloud. As a result, shadow IT and disparate edge infrastructure deployments are rampant in the Sheriff's Office and Road & Bridge divisions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-between sm:items-end mb-4 border-b border-stone-200 pb-3 gap-3">
+                    <h3 class="text-lg font-semibold text-stone-800">Key Stakeholders</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <!-- Active states applied via JS classes -->
+                        <button id="filter-all" onclick="filterStakeholders('All')" class="filter-btn px-3 py-1.5 bg-stone-800 text-white shadow-inner text-xs font-medium rounded transition">All</button>
+                        <button id="filter-fin" onclick="filterStakeholders('Financial')" class="filter-btn px-3 py-1.5 bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200 text-xs font-medium rounded transition">Financial Purchasers</button>
+                        <button id="filter-tech" onclick="filterStakeholders('Technical')" class="filter-btn px-3 py-1.5 bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200 text-xs font-medium rounded transition">Technical Influencers</button>
+                    </div>
+                </div>
+
+                <div id="stakeholder-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+
+            <!-- STRATEGIC INITIATIVES VIEW -->
+            <div id="view-initiatives" class="view-section hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-1 bg-white border border-stone-200 rounded-xl overflow-hidden flex flex-col h-[500px]">
+                        <div class="bg-stone-50 p-4 border-b border-stone-200 shrink-0">
+                            <h3 class="font-semibold text-stone-800">Funded Modernization Efforts</h3>
+                            <p class="text-xs text-stone-500 mt-1">Select an initiative to view details.</p>
+                        </div>
+                        <div class="flex-1 overflow-y-auto custom-scrollbar" id="initiative-list">
+                            <!-- Populated via JS -->
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-stone-200 p-6 md:p-8 min-h-[500px] flex flex-col" id="initiative-detail">
+                        <!-- Populated via JS -->
+                        <div class="m-auto text-center text-stone-400">
+                            <div class="text-4xl mb-2" aria-hidden="true">&#128072;</div>
+                            <p>Select a strategic initiative from the left panel to explore technical requirements and ownership.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h3 class="text-lg font-semibold mb-4 border-b border-stone-100 pb-2"><span aria-hidden="true" class="mr-2">&#128220;</span> Procurement, Vendor Landscape & Compliance</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-stone-50 p-4 rounded border border-stone-100">
+                            <h4 class="font-bold text-sm text-stone-800 mb-3 border-b border-stone-200 pb-1">Preferred Vehicles</h4>
+                            <ul class="text-sm text-stone-600 space-y-2">
+                                <li><span class="text-accent font-bold mr-1">&bull;</span> DIR (Texas Dept of Info Resources)</li>
+                                <li><span class="text-accent font-bold mr-1">&bull;</span> OMNIA Partners</li>
+                                <li><span class="text-accent font-bold mr-1">&bull;</span> NASPO ValuePoint</li>
+                            </ul>
+                        </div>
+                        <div class="bg-stone-50 p-4 rounded border border-stone-100">
+                            <h4 class="font-bold text-sm text-stone-800 mb-3 border-b border-stone-200 pb-1">The Battlefield</h4>
+                            <ul class="text-sm text-stone-600 space-y-2">
+                                <li><span class="text-accent font-bold mr-1">&bull;</span> <strong>Compute:</strong> Aging HPE ProLiant Gen9/10</li>
+                                <li><span class="text-accent font-bold mr-1">&bull;</span> <strong>Storage:</strong> Legacy NetApp FAS (Capacity issues)</li>
+                                <li><span class="text-accent font-bold mr-1">&bull;</span> <strong>Network:</strong> Cisco (entrenched)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-stone-50 p-4 rounded border border-stone-100">
+                            <h4 class="font-bold text-sm text-stone-800 mb-3 border-b border-stone-200 pb-1">Compliance Drivers</h4>
+                            <ul class="text-sm text-stone-600 space-y-2">
+                                <li><span class="text-accent font-bold mr-1">&bull;</span> <strong>CJIS:</strong> Critical for Sheriff's tech</li>
+                                <li><span class="text-accent font-bold mr-1">&bull;</span> <strong>StateRAMP:</strong> Rising mandate for cloud SaaS</li>
+                                <li><span class="text-accent font-bold mr-1">&bull;</span> <strong>HIPAA:</strong> Public Health dept data silos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTION PLAN VIEW -->
+            <div id="view-action" class="view-section hidden pb-8">
+                <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between bg-white p-4 rounded-lg border border-stone-200 shadow-sm">
+                    <p class="text-stone-600 text-sm md:w-3/4">Actionable sales motions synthesized from Fort Bend County's budgetary goals, pain points, and existing infrastructure. <span class="font-bold text-stone-800">Hover over dotted terms for Dell definitions. Use toggles to pin focus areas.</span></p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Action Card 1 -->
+                    <div id="card-action-1" class="action-card bg-white border-l-4 border-accent p-5 md:p-6 rounded-r-xl shadow-sm">
+                        <div class="flex items-start justify-between mb-2">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3" aria-hidden="true">&#128181;</span>
+                                <h3 class="text-lg md:text-xl font-bold text-stone-800 leading-tight">Funded Alignment: <span class="group relative cursor-help border-b border-dotted border-accent text-accent hover:bg-accentlight rounded transition">PowerStore<span class="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 opacity-0 transition-opacity group-hover:opacity-100 bg-stone-800 text-white text-xs font-normal rounded p-2 text-center shadow-lg z-50">Dell's primary mid-range enterprise storage appliance.</span></span> & Unstructured Data</h3>
+                            </div>
+                            <label class="flex items-center cursor-pointer ml-4 shrink-0">
+                                <span class="mr-2 text-xs font-medium text-stone-500 uppercase tracking-wide hidden sm:inline">Pin</span>
+                                <input type="checkbox" onchange="togglePin('card-action-1', this)" class="w-5 h-5 text-accent bg-stone-100 border-stone-300 rounded focus:ring-accent focus:ring-2 cursor-pointer transition">
+                            </label>
+                        </div>
+                        <p class="text-stone-600 text-sm mb-3"><strong>Mapping:</strong> Direct alignment with the <em>"Smart Justice"</em> initiative.</p>
+                        <p class="text-sm text-stone-700 bg-stone-50 p-4 rounded border border-stone-100 leading-relaxed">
+                            The Sheriff's Office is generating massive amounts of unstructured data via new body-worn cameras and ALPR endpoints. Their legacy NetApp environment is facing capacity constraints. <strong>Action:</strong> Position <span class="group relative cursor-help border-b border-dotted border-accent text-accent hover:bg-accentlight rounded transition">PowerScale<span class="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 opacity-0 transition-opacity group-hover:opacity-100 bg-stone-800 text-white text-xs font-normal rounded p-2 text-center shadow-lg z-50">Scale-out NAS for massive unstructured data workloads.</span></span> for unstructured video retention and PowerStore for the core virtualization environment. Highlight built-in ransomware protection to satisfy CJIS mandates.
+                        </p>
+                    </div>
+
+                    <!-- Action Card 2 -->
+                    <div id="card-action-2" class="action-card bg-white border-l-4 border-purple-500 p-5 md:p-6 rounded-r-xl shadow-sm">
+                        <div class="flex items-start justify-between mb-2">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3" aria-hidden="true">&#129504;</span>
+                                <h3 class="text-lg md:text-xl font-bold text-stone-800 leading-tight">Whitespace & Advisory: Cyber Recovery</h3>
+                            </div>
+                            <label class="flex items-center cursor-pointer ml-4 shrink-0">
+                                <span class="mr-2 text-xs font-medium text-stone-500 uppercase tracking-wide hidden sm:inline">Pin</span>
+                                <input type="checkbox" onchange="togglePin('card-action-2', this)" class="w-5 h-5 text-purple-600 bg-stone-100 border-stone-300 rounded focus:ring-purple-500 focus:ring-2 cursor-pointer transition">
+                            </label>
+                        </div>
+                        <p class="text-stone-600 text-sm mb-3"><strong>Mapping:</strong> Direct alignment with the <em>"Cyber Resilience"</em> mandate and <span class="group relative cursor-help border-b border-dotted border-purple-500 text-purple-600 hover:bg-purple-100 rounded transition">SLCGP<span class="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 opacity-0 transition-opacity group-hover:opacity-100 bg-stone-800 text-white text-xs font-normal rounded p-2 text-center shadow-lg z-50">State and Local Cybersecurity Grant Program (Federal funding).</span></span> funding.</p>
+                        <p class="text-sm text-stone-700 bg-stone-50 p-4 rounded border border-stone-100 leading-relaxed">
+                            While the CIO is focused on cloud, the county lacks an immutable, air-gapped data vault for ransomware recovery. <strong>Action:</strong> Lead an advisory workshop on <span class="group relative cursor-help border-b border-dotted border-purple-500 text-purple-600 hover:bg-purple-100 rounded transition">Zero Trust<span class="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 opacity-0 transition-opacity group-hover:opacity-100 bg-stone-800 text-white text-xs font-normal rounded p-2 text-center shadow-lg z-50">Security framework requiring strict identity verification for every user/device.</span></span> architecture. Introduce Dell PowerProtect Cyber Recovery. Use the $3.2M SLCGP grant as the primary funding vehicle for an assessment and pilot program.
+                        </p>
+                    </div>
+
+                    <!-- Action Card 3 -->
+                    <div id="card-action-3" class="action-card bg-white border-l-4 border-red-500 p-5 md:p-6 rounded-r-xl shadow-sm">
+                        <div class="flex items-start justify-between mb-2">
+                            <div class="flex items-center">
+                                <span class="text-2xl mr-3" aria-hidden="true">&#9876;</span>
+                                <h3 class="text-lg md:text-xl font-bold text-stone-800 leading-tight">Competitive Displacement: Cloud Repatriation</h3>
+                            </div>
+                            <label class="flex items-center cursor-pointer ml-4 shrink-0">
+                                <span class="mr-2 text-xs font-medium text-stone-500 uppercase tracking-wide hidden sm:inline">Pin</span>
+                                <input type="checkbox" onchange="togglePin('card-action-3', this)" class="w-5 h-5 text-red-500 bg-stone-100 border-stone-300 rounded focus:ring-red-500 focus:ring-2 cursor-pointer transition">
+                            </label>
+                        </div>
+                        <p class="text-stone-600 text-sm mb-3"><strong>Mapping:</strong> Counteracting the "Digital Citizen Portal" AWS/Azure sprawl.</p>
+                        <p class="text-sm text-stone-700 bg-stone-50 p-4 rounded border border-stone-100 leading-relaxed">
+                            Agencies are avoiding central IT chargebacks by swiping credit cards for public cloud instances, leading to unpredictable O&M bloat. The aging HPE Gen9 servers on-prem cannot support a modern private cloud experience. <strong>Action:</strong> Propose <span class="group relative cursor-help border-b border-dotted border-red-500 text-red-600 hover:bg-red-100 rounded transition">Dell APEX<span class="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 opacity-0 transition-opacity group-hover:opacity-100 bg-stone-800 text-white text-xs font-normal rounded p-2 text-center shadow-lg z-50">Dell's portfolio of flexible, consumption-based IT as-a-Service solutions.</span></span> Compute & Storage to give the CIO a cloud-like consumption model on-premises. This allows central IT to offer predictable, lower-cost ITaaS to disparate agencies, clawing back workloads from public cloud.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // --- Data Models ---
+        const stakeholders = [
+            { name: "KP George", title: "County Judge", type: "Financial", stance: "Aggressively pursuing Smart County infrastructure and broadband expansion.", icon: "&#128116;" },
+            { name: "Robyn Doughtie", title: "CIO / IT Director", type: "Technical/Financial", stance: "Cloud-first mentality; highly focused on ransomware defense and infrastructure consolidation.", icon: "&#128105;&#8205;&#128187;" },
+            { name: "Eric Fagan", title: "Sheriff", type: "Financial", stance: "Demands autonomous control over CJIS data; massive purchaser of edge technology.", icon: "&#128110;" },
+            { name: "Pamela Gubbels", title: "Dir. of Finance", type: "Financial", stance: "Strict on O&M budget control; favors capitalized, multi-year predictable spending.", icon: "&#128188;" },
+            { name: "David Mendieta", title: "CISO", type: "Technical", stance: "Driving Zero Trust mandates; highly influential in software/hardware selection.", icon: "&#128274;" }
+        ];
+
+        const initiatives = [
+            {
+                id: "init1",
+                name: "Smart Justice Data Expansion",
+                agency: "Law Enforcement / Sheriff's Office",
+                mandate: "Public Safety Modernization",
+                itReq: "Massive scale-out NAS for video evidence, edge computing at precincts, CJIS compliant hybrid cloud.",
+                budget: "Capital Investment (High)",
+                icon: "&#128680;"
+            },
+            {
+                id: "init2",
+                name: "Cyber Resilience & Vaulting",
+                agency: "Central IT",
+                mandate: "Enterprise Risk Mitigation",
+                itReq: "Immutable backups, air-gapped data vault, endpoint detection & response (EDR) integration.",
+                budget: "SLCGP Grant Funded",
+                icon: "&#128272;"
+            },
+            {
+                id: "init3",
+                name: "Digital Citizen Services Portal",
+                agency: "County Administration",
+                mandate: "Citizen Experience & Digital Equity",
+                itReq: "Application modernization, database consolidation, scalable web hosting, mobile-first design.",
+                budget: "O&M + ARPA Remnants",
+                icon: "&#128241;"
+            }
+        ];
+
+        // --- Navigation Logic ---
+        const pageMeta = {
+            'overview': { title: 'Macro Landscape & Financials', desc: "High-level overview of Fort Bend County's economic climate, administrative goals, and IT budgetary breakdown." },
+            'power': { title: 'Power Base & Governance', desc: "Analysis of the IT operating model, friction points, and key decision-makers within the county." },
+            'initiatives': { title: 'Top Strategic Initiatives', desc: "Deep dive into the funded modernization efforts driving technology procurement." },
+            'action': { title: 'Dell Action Plan', desc: "Synthesized sales motions, whitespace advisory targets, and competitive displacement strategies." }
+        };
+
+        function navigate(viewId) {
+            // Hide all views
+            document.querySelectorAll('.view-section').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            
+            // Remove active state from all buttons
+            document.querySelectorAll('.nav-btn').forEach(el => {
+                el.classList.remove('nav-active');
+            });
+
+            // Show selected view
+            const targetView = document.getElementById(`view-${viewId}`);
+            if (targetView) {
+                targetView.classList.remove('hidden');
+                targetView.classList.add('block');
+            }
+
+            // Set active state on clicked button
+            const activeBtn = document.getElementById(`nav-${viewId}`);
+            if (activeBtn) {
+                activeBtn.classList.add('nav-active');
+            }
+
+            // Update Header Title & Desc
+            document.getElementById('page-title').innerText = pageMeta[viewId].title;
+            document.getElementById('page-desc').innerText = pageMeta[viewId].desc;
+
+            // Chart Resize Optimization (Avoids re-rendering data, just fixes dimensions if container was hidden)
+            if(viewId === 'overview') {
+                setTimeout(() => {
+                    if(budgetDoughnutChart) budgetDoughnutChart.resize();
+                    if(itBarChart) itBarChart.resize();
+                }, 10);
+            }
+            
+            // Scroll to top of main area
+            document.querySelector('main').scrollTop = 0;
+        }
+
+        // --- Render Stakeholders ---
+        function renderStakeholders(data) {
+            const grid = document.getElementById('stakeholder-grid');
+            grid.innerHTML = '';
+            
+            data.forEach(person => {
+                const badgeColor = person.type.includes('Financial') ? 'bg-green-100 text-green-800 border-green-200' : 'bg-blue-100 text-blue-800 border-blue-200';
+                
+                const card = `
+                    <div class="bg-white border border-stone-200 rounded-lg p-5 flex flex-col hover:shadow-md transition group">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                    <span aria-hidden="true">${person.icon}</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-stone-800 leading-tight">${person.name}</h4>
+                                    <p class="text-xs text-stone-500">${person.title}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="inline-block px-2 py-1 text-[10px] font-bold uppercase rounded border ${badgeColor}">${person.type}</span>
+                        </div>
+                        <p class="text-sm text-stone-600 mt-auto leading-relaxed border-t border-stone-100 pt-3">
+                            <strong>Stance:</strong> ${person.stance}
+                        </p>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        // --- Filter Stakeholders w/ Active States ---
+        function filterStakeholders(type) {
+            // Reset button styles
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-stone-800', 'text-white', 'shadow-inner');
+                btn.classList.add('bg-stone-100', 'text-stone-600', 'border', 'border-stone-200');
+            });
+
+            // Set active button style based on parameter
+            let activeBtnId = 'filter-all';
+            if(type === 'Financial') activeBtnId = 'filter-fin';
+            if(type === 'Technical') activeBtnId = 'filter-tech';
+            
+            const activeBtn = document.getElementById(activeBtnId);
+            activeBtn.classList.remove('bg-stone-100', 'text-stone-600', 'border', 'border-stone-200');
+            activeBtn.classList.add('bg-stone-800', 'text-white', 'shadow-inner');
+
+            // Render filtered data
+            if (type === 'All') {
+                renderStakeholders(stakeholders);
+            } else {
+                const filtered = stakeholders.filter(s => s.type.includes(type));
+                renderStakeholders(filtered);
+            }
+        }
+
+        // --- Render Initiatives ---
+        function renderInitiativeList() {
+            const listContainer = document.getElementById('initiative-list');
+            listContainer.innerHTML = '';
+
+            initiatives.forEach(init => {
+                const item = document.createElement('div');
+                item.className = 'p-4 border-b border-stone-100 cursor-pointer hover:bg-stone-50 transition border-l-4 border-transparent hover:border-accent';
+                item.innerHTML = `
+                    <div class="flex items-center">
+                        <span aria-hidden="true" class="text-xl mr-3">${init.icon}</span>
+                        <div class="overflow-hidden">
+                            <h4 class="font-semibold text-sm text-stone-800 truncate">${init.name}</h4>
+                            <p class="text-xs text-stone-500 truncate">${init.agency}</p>
+                        </div>
+                    </div>
+                `;
+                item.onclick = () => showInitiativeDetail(init.id, item);
+                listContainer.appendChild(item);
+            });
+        }
+
+        function showInitiativeDetail(id, element) {
+            // Highlight selected in list
+            document.querySelectorAll('#initiative-list > div').forEach(el => {
+                el.classList.remove('border-accent', 'bg-stone-50');
+                el.classList.add('border-transparent');
+            });
+            element.classList.remove('border-transparent');
+            element.classList.add('border-accent', 'bg-stone-50');
+
+            // Inject Detail View
+            const init = initiatives.find(i => i.id === id);
+            const detailContainer = document.getElementById('initiative-detail');
+            
+            detailContainer.innerHTML = `
+                <div class="animate-[fadeIn_0.3s_ease-in-out] h-full flex flex-col">
+                    <div class="flex items-center mb-6 border-b border-stone-100 pb-4 shrink-0">
+                        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-accentlight flex items-center justify-center text-2xl md:text-3xl mr-4 shadow-sm shrink-0">
+                            <span aria-hidden="true">${init.icon}</span>
+                        </div>
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-stone-800 leading-tight">${init.name}</h2>
+                            <p class="text-accent font-medium text-sm md:text-base">${init.agency}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 shrink-0">
+                        <div class="bg-stone-50 p-4 rounded-lg border border-stone-100">
+                            <h4 class="text-[10px] md:text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">Executive Mandate</h4>
+                            <p class="text-stone-800 font-medium text-sm md:text-base">${init.mandate}</p>
+                        </div>
+                        <div class="bg-stone-50 p-4 rounded-lg border border-stone-100">
+                            <h4 class="text-[10px] md:text-xs uppercase tracking-wider text-stone-500 font-bold mb-1">Funding Profile</h4>
+                            <p class="text-stone-800 font-medium text-sm md:text-base">${init.budget}</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-lg border border-stone-200 shadow-sm flex-1 flex flex-col justify-center">
+                        <h4 class="text-sm font-bold text-stone-800 mb-3 flex items-center">
+                            <span aria-hidden="true" class="mr-2 text-lg">&#9881;</span> Underlying IT Requirements
+                        </h4>
+                        <p class="text-stone-600 leading-relaxed text-sm md:text-base bg-stone-50 p-4 rounded border border-stone-100">
+                            ${init.itReq}
+                        </p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // --- Action Plan Interactivity ---
+        function togglePin(cardId, checkboxObj) {
+            const card = document.getElementById(cardId);
+            if(checkboxObj.checked) {
+                card.classList.add('pinned', 'scale-[1.01]');
+            } else {
+                card.classList.remove('pinned', 'scale-[1.01]');
+            }
+        }
+
+        // --- Charts Implementation ---
+        let budgetDoughnutChart, itBarChart;
+
+        function initCharts() {
+            Chart.defaults.font.family = 'Inter, sans-serif';
+            Chart.defaults.color = '#57534e';
+
+            // Chart 1: Total vs IT Budget (Doughnut)
+            const ctxDoughnut = document.getElementById('budgetDoughnut').getContext('2d');
+            budgetDoughnutChart = new Chart(ctxDoughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Non-IT Ops Budget', 'Total IT Budget'],
+                    datasets: [{
+                        data: [597, 48],
+                        backgroundColor: ['#e5e7eb', '#0369a1'],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: { position: 'bottom', labels: { usePointStyle: true, padding: 15, font: {size: 11} } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) { return ' $' + context.parsed + 'M'; }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Chart 2: IT Spend Breakdown (Bar)
+            const ctxBar = document.getElementById('itBarChart').getContext('2d');
+            itBarChart = new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['O&M (Recurring)', 'Capital/Net-New'],
+                    datasets: [{
+                        label: 'Millions (USD)',
+                        data: [32, 16],
+                        backgroundColor: ['#94a3b8', '#0ea5e9'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { 
+                            beginAtZero: true,
+                            grid: { color: '#f5f5f4' },
+                            ticks: { callback: function(value) { return '$' + value + 'M'; } }
+                        },
+                        x: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) { return ' $' + context.parsed.y + 'M'; }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            renderStakeholders(stakeholders);
+            renderInitiativeList();
+            initCharts();
+            
+            // Auto-select first initiative for UI completeness
+            const firstInitItem = document.querySelector('#initiative-list > div');
+            if(firstInitItem) showInitiativeDetail(initiatives[0].id, firstInitItem);
+        });
+
+    </script>
+</body>
+</html>

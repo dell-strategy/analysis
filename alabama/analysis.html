@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Executive Briefing: State of Alabama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8fafc; color: #0f172a; }
+        .chart-container { position: relative; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; height: 350px; max-height: 400px; }
+        @media (min-width: 768px) { .chart-container { height: 400px; } }
+        .view-section { display: none; animation: fadeIn 0.4s ease-in-out; }
+        .view-section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-btn.active { background-color: #eff6ff; border-right: 4px solid #2563eb; color: #1d4ed8; font-weight: 600; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+    <!-- Chosen Palette: Slate & Dell Blue (Slate-50 to Slate-900, Blue-600 accents) -->
+    <!-- Application Structure Plan: SPA dashboard layout for scannable, non-linear access to specific data points. Reorganized to accurately reflect the 7 sections of the provided source report. -->
+    <!-- Visualization & Content Choices: 
+         1. Macro: Text cards.
+         2. Power Structure: HTML Table for influence mapping. 
+         3. Financials: Chart.js Doughnut (Budget split) & Bar Chart. 
+         4. Initiatives: JS Accordions to hide/show deep details. 
+         CONFIRMING NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="flex h-screen overflow-hidden antialiased selection:bg-blue-200 selection:text-blue-900">
+
+    <aside class="w-64 bg-white border-r border-slate-200 flex flex-col h-full shadow-sm z-10 flex-shrink-0">
+        <div class="p-6 border-b border-slate-100">
+            <h1 class="text-2xl font-bold text-slate-800 tracking-tight">DELL <span class="text-blue-600 font-light">Technologies</span></h1>
+            <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">SLG Market Intelligence</p>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="space-y-1">
+                <li><button onclick="switchTab('exec-summary')" id="btn-exec-summary" class="nav-btn active w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-50 transition-colors">🏛️ 1. Exec Summary</button></li>
+                <li><button onclick="switchTab('power-structure')" id="btn-power-structure" class="nav-btn w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-50 transition-colors">👥 2. Power Structure</button></li>
+                <li><button onclick="switchTab('it-governance')" id="btn-it-governance" class="nav-btn w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-50 transition-colors">⚙️ 3. IT Governance</button></li>
+                <li><button onclick="switchTab('financials')" id="btn-financials" class="nav-btn w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-50 transition-colors">📊 4. Financials</button></li>
+                <li><button onclick="switchTab('initiatives')" id="btn-initiatives" class="nav-btn w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-50 transition-colors">🚀 5. Top Initiatives</button></li>
+                <li><button onclick="switchTab('procurement')" id="btn-procurement" class="nav-btn w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-50 transition-colors">🛡️ 6. Procurement</button></li>
+                <li><button onclick="switchTab('opportunities')" id="btn-opportunities" class="nav-btn w-full text-left px-6 py-3 text-sm text-slate-600 hover:bg-slate-50 transition-colors">🎯 7. Dell Opportunities</button></li>
+            </ul>
+        </nav>
+        <div class="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-400">
+            Target Entity: State of Alabama<br>
+            Prepared for: District Manager & AE<br>
+            Status: Highly Confidential<br>
+            <a href="https://dmonkey1001.github.io/slg-strategies/alabama/analysis.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline mt-3 inline-flex items-center font-semibold transition-colors">
+                View Source Analysis (PDF) <span class="ml-1 text-[10px]">↗</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto bg-slate-50 scroll-smooth relative">
+        
+        <!-- Image Banner -->
+        <div class="w-full h-40 md:h-48 relative overflow-hidden flex-shrink-0 bg-slate-800" style="background-image: url('alabama-banner.jpg'); background-size: cover; background-position: center 30%;">
+            <!-- Gradient overlay for text readability -->
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-slate-900/50"></div>
+            
+            <div class="relative z-10 h-full flex flex-col justify-center px-8">
+                <p class="text-blue-200 text-xs font-semibold uppercase tracking-widest mb-1 drop-shadow-md">Strategic Market Intelligence</p>
+                <h2 class="text-white text-3xl md:text-4xl font-bold tracking-wide drop-shadow-lg">State of Alabama</h2>
+            </div>
+            
+            <!-- Decorative AL text -->
+            <div class="absolute right-8 bottom-8 opacity-10 text-white text-9xl font-black translate-y-12 select-none pointer-events-none">AL</div>
+        </div>
+
+        <header class="bg-white border-b border-slate-200 px-8 py-6 sticky top-0 z-20 shadow-sm flex justify-between items-center">
+            <div>
+                <h2 id="section-title" class="text-2xl font-semibold text-slate-800">Executive Summary & Macro Landscape</h2>
+                <p id="section-subtitle" class="text-sm text-slate-500 mt-1">High-level overview of the entity's current political and economic climate.</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://dmonkey1001.github.io/slg-strategies/alabama/analysis.pdf" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded shadow-sm transition-colors">
+                    <span class="mr-2">📄</span> View Full PDF
+                </a>
+                <div class="text-3xl bg-blue-50 text-blue-600 px-4 py-2 rounded-lg font-bold border border-blue-100 hidden sm:block">
+                    AL
+                </div>
+            </div>
+        </header>
+
+        <div class="p-8 max-w-6xl mx-auto">
+
+            <section id="exec-summary" class="view-section active">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-6">
+                    <p class="text-lg text-slate-700 leading-relaxed mb-4">
+                        Under Gov. Kay Ivey (R), Alabama is experiencing rapid modernization and economic expansion ($69B capital investments, 100k jobs since 2017). Commercial projects like Eli Lilly’s $6B Huntsville plant highlight a need for high-compute infrastructure. While the legislature caps budget growth conservatively to prepare for post-COVID cliffs, the executive branch is pushing a centralized, highly secure digital infrastructure agenda.
+                    </p>
+                    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-4 border-b pb-2">Top Administrative Goals</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <div class="text-2xl mb-2">🛡️</div>
+                            <h4 class="font-bold text-slate-800">Public Safety & Cyber</h4>
+                            <p class="text-sm text-slate-600 mt-1">Following a 2025 cyber "near-miss," the state is aggressively standardizing cybersecurity across all agencies alongside traditional policing and justice system upgrades.</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <div class="text-2xl mb-2">🌐</div>
+                            <h4 class="font-bold text-slate-800">Digital Equity & Broadband</h4>
+                            <p class="text-sm text-slate-600 mt-1">Executing $460M in BEAD funding and the Alabama Fiber Network (AFN) to power workforce development and rural connectivity.</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                            <div class="text-2xl mb-2">🎓</div>
+                            <h4 class="font-bold text-slate-800">Education & Workforce</h4>
+                            <p class="text-sm text-slate-600 mt-1">Overhauling outcomes via the CHOOSE Act and aiming to add 500,000 highly skilled workers to the economy by 2025.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="power-structure" class="view-section">
+                <p class="text-slate-600 mb-6">Understanding the dynamic between elected financial purchasers (austere) and technical IT influencers (centralizing) is critical.</p>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-slate-100 border-b border-slate-200 text-slate-700">
+                                    <th class="p-4 font-semibold text-sm">Category</th>
+                                    <th class="p-4 font-semibold text-sm">Name & Title</th>
+                                    <th class="p-4 font-semibold text-sm">Sphere of Influence</th>
+                                    <th class="p-4 font-semibold text-sm w-1/3">Recent Public Stances on Technology</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-200">
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 text-sm font-medium text-slate-800 bg-slate-50/50">Elected Leadership</td>
+                                    <td class="p-4 text-sm"><span class="font-bold">Kay Ivey</span><br><span class="text-xs text-slate-500">Governor (R)</span></td>
+                                    <td class="p-4 text-sm"><span class="inline-block px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-semibold">Financial & Policy Approver</span></td>
+                                    <td class="p-4 text-sm text-slate-600">Issued EO 738 creating GenAI Task Force; established Tech Quality Assurance Board (TQAB) in Feb 2026.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 text-sm font-medium text-slate-800 bg-slate-50/50">Elected Leadership</td>
+                                    <td class="p-4 text-sm"><span class="font-bold">Rep. Rex Reynolds</span><br><span class="text-xs text-slate-500">Chair, House W&M General Fund</span></td>
+                                    <td class="p-4 text-sm"><span class="inline-block px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-semibold">Financial Purchaser</span></td>
+                                    <td class="p-4 text-sm text-slate-600">Advocates highly conservative, flat-growth budgeting (~1% growth target) to prepare for federal funding cliffs.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 text-sm font-medium text-slate-800 bg-slate-50/50">Elected Leadership</td>
+                                    <td class="p-4 text-sm"><span class="font-bold">Sen. Greg Albritton</span><br><span class="text-xs text-slate-500">Chair, Senate Finance & Tax</span></td>
+                                    <td class="p-4 text-sm"><span class="inline-block px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-semibold">Financial Purchaser</span></td>
+                                    <td class="p-4 text-sm text-slate-600">Drives stringent fiscal accountability; demands demonstrable ROI for capital IT requests.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 text-sm font-medium text-slate-800 bg-slate-50/50">IT Leadership</td>
+                                    <td class="p-4 text-sm"><span class="font-bold">Daniel Urquhart</span><br><span class="text-xs text-slate-500">Secretary of IT / State CIO</span></td>
+                                    <td class="p-4 text-sm"><span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-semibold">Tech Influencer & Approver</span></td>
+                                    <td class="p-4 text-sm text-slate-600">Promotes strict "whole-of-state" strategy; eliminating shadow IT after recent cyber threats. Demands standardization.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 text-sm font-medium text-slate-800 bg-slate-50/50">IT Leadership</td>
+                                    <td class="p-4 text-sm"><span class="font-bold">Chadwick Smith</span><br><span class="text-xs text-slate-500">State CISO</span></td>
+                                    <td class="p-4 text-sm"><span class="inline-block px-2 py-1 bg-red-100 text-red-800 rounded text-xs font-semibold">Security Veto Power</span></td>
+                                    <td class="p-4 text-sm text-slate-600">Spearheads NIST/GovRAMP compliance. Champions zero-trust and Threat Mgmt Center build-outs.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4 text-sm font-medium text-slate-800 bg-slate-50/50">Agency IT Leadership</td>
+                                    <td class="p-4 text-sm"><span class="font-bold">Mason L. Tanaka</span><br><span class="text-xs text-slate-500">CIO, Alabama Medicaid</span></td>
+                                    <td class="p-4 text-sm"><span class="inline-block px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs font-semibold">Tech Influencer & Purchaser</span></td>
+                                    <td class="p-4 text-sm text-slate-600">Leading the massive AMMP modernization. Advocates modular ecosystems and "crawl, walk, run" approach to AI.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="it-governance" class="view-section">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center">⚖️ Operating Model: Accelerating to Consolidated</h3>
+                        <p class="text-slate-600 mb-4">
+                            Historically federated, a 2025 near-miss cyber crisis (95-hour response) forced a violent acceleration toward centralization. <strong>Act 2025-369</strong> formally stripped agencies of autonomy, granting the Office of Information Technology (OIT) absolute statutory authority over architectures, cybersecurity, and AI via the TQAB.
+                        </p>
+                        <p class="text-slate-600 text-sm">
+                            OIT enforces compliance via <strong>IT Procurement Policy 230</strong>, requiring approval for all hardware, software, and services to suffocate "shadow IT" deployments.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm border-l-4 border-l-orange-500 p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center">⚠️ Friction Points & Chargeback</h3>
+                        <p class="text-slate-600 mb-4">
+                            OIT operates via an <strong>Internal Service Fund (ISF)</strong>. They charge agencies back for premium enterprise services.
+                        </p>
+                        <div class="bg-orange-50 p-4 rounded border border-orange-100">
+                            <p class="text-sm text-orange-800 font-semibold mb-2">The Vise (Sales Opportunity):</p>
+                            <p class="text-sm text-orange-700">
+                                The legislature caps agency operational budgets (OpEx) at ~1% growth, but OIT mandates expensive, secure infrastructure. Agencies lack the internal budgets to pay OIT chargebacks (facing sanctions if unpaid for 60 days). <strong>Dell APEX custom solutions can shift infrastructure from capital outlay to predictable OpEx, solving this structural friction point.</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="financials" class="view-section">
+                <p class="text-slate-600 mb-6">Alabama's fiscal year runs <strong>Oct 1 to Sept 30</strong>. Budgets are constitutionally bifurcated into the Education Trust Fund (ETF) and the State General Fund (SGF). No deficits are allowed.</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2 text-center">FY27 State Budgets vs Total Expenditures</h3>
+                        <p class="text-xs text-center text-slate-500 mb-4">(In Billions. Total Expenditures routinely exceed $43B)</p>
+                        <div class="chart-container">
+                            <canvas id="budgetPieChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-4">💳 Understanding IT Spend Objects</h3>
+                        <ul class="space-y-4 text-sm text-slate-600">
+                            <li class="p-3 bg-slate-50 border border-slate-100 rounded">
+                                <strong class="text-slate-800">Object 1200 (Capital Outlay):</strong> Net-new project investments, servers, and hardware >$5,000. Funds do not carry over, causing a <strong>massive Q3/Q4 procurement surge</strong> (April-Sept).
+                            </li>
+                            <li class="p-3 bg-slate-50 border border-slate-100 rounded">
+                                <strong class="text-slate-800">Object 0800 / 0900 (O&M):</strong> Recurring operational spend, software licenses, and OIT chargebacks. Highly restricted and capped by the legislature.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 rounded-xl shadow-sm border border-green-200 p-6">
+                    <h3 class="text-lg font-bold text-green-800 mb-3 flex items-center">💵 Grants & Federal Funding Influx</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2 font-bold">»</span>
+                            <div>
+                                <strong class="text-slate-800">Broadband (BEAD & CPF):</strong> $460M BEAD (approved by Trump Admin) + $176M CPF. Driving massive edge computing and the 3,500-mile Alabama Fiber Network buildout.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-600 mr-2 font-bold">»</span>
+                            <div>
+                                <strong class="text-slate-800">SLCGP (Cybersecurity):</strong> OIT serves as SAA. FY24 (Round 3) has $4.73M available. FY25 (Round 4) has $1.55M designated. Used for tabletop exercises and endpoint detection.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="initiatives" class="view-section">
+                <p class="text-slate-600 mb-6">The top 3 most heavily funded, multi-year technological transformation initiatives currently active in the state.</p>
+                
+                <div class="space-y-4">
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden cursor-pointer hover:shadow-md transition-shadow" onclick="toggleAccordion('init-1')">
+                        <div class="p-5 bg-slate-50 border-b border-slate-100 flex justify-between items-center">
+                            <h3 class="text-lg font-bold text-slate-800">1. Alabama Medicaid Enterprise Systems Mod (AMMP)</h3>
+                            <span class="text-slate-400" id="icon-init-1">▼</span>
+                        </div>
+                        <div id="init-1" class="p-5 hidden text-sm text-slate-700 bg-white">
+                            <p><strong>Executive Mandate:</strong> Deprecate the aging monolithic AMMIS system due to federal CMS mandates, utilizing 90/10 federal match.</p>
+                            <p class="mt-2"><strong>Owning Agency:</strong> Alabama Medicaid Agency (CIO Mason Tanaka).</p>
+                            <p class="mt-2 text-blue-700 font-semibold bg-blue-50 p-3 rounded mt-3"><strong>IT Requirement:</strong> Modular implementation of Enterprise Data Services (EDS) data warehouse. Requires infinite scalability, zero single points of failure, HIPAA compliance, and strict CONUS data residency. Target for high-availability enterprise servers and storage arrays.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden cursor-pointer hover:shadow-md transition-shadow" onclick="toggleAccordion('init-2')">
+                        <div class="p-5 bg-slate-50 border-b border-slate-100 flex justify-between items-center">
+                            <h3 class="text-lg font-bold text-slate-800">2. Message Switch System (MSS) Modernization</h3>
+                            <span class="text-slate-400" id="icon-init-2">▼</span>
+                        </div>
+                        <div id="init-2" class="p-5 hidden text-sm text-slate-700 bg-white">
+                            <p><strong>Executive Mandate:</strong> Replace legacy CPI-based systems to ensure mission-critical communication across federal/state/local law enforcement. RFP closed March 31, 2026.</p>
+                            <p class="mt-2"><strong>Owning Agency:</strong> Alabama Law Enforcement Agency (ALEA).</p>
+                            <p class="mt-2 text-blue-700 font-semibold bg-blue-50 p-3 rounded mt-3"><strong>IT Requirement:</strong> COTS fully managed MSS. Absolute requirement for active-active DR/COOP across geographically separated US sites. 24/7/365 uptime and stringent FBI CJIS security policy compliance.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden cursor-pointer hover:shadow-md transition-shadow" onclick="toggleAccordion('init-3')">
+                        <div class="p-5 bg-slate-50 border-b border-slate-100 flex justify-between items-center">
+                            <h3 class="text-lg font-bold text-slate-800">3. Statewide AI Governance & Cloud Readiness</h3>
+                            <span class="text-slate-400" id="icon-init-3">▼</span>
+                        </div>
+                        <div id="init-3" class="p-5 hidden text-sm text-slate-700 bg-white">
+                            <p><strong>Executive Mandate:</strong> Execute EO 738 and TQAB (Feb 2026) directives to deploy GenAI safely to mitigate workforce shortages.</p>
+                            <p class="mt-2"><strong>Owning Agency:</strong> OIT & Dept of Finance.</p>
+                            <p class="mt-2 text-blue-700 font-semibold bg-blue-50 p-3 rounded mt-3"><strong>IT Requirement:</strong> Establish highly secure, isolated "sandbox" cloud infrastructures for agency pilots. Requires NIST AI-RMF compliance, unstructured data sprawl management, and IAM modernization in MS GCC.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="procurement" class="view-section">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-4">🛒 Purchasing Vehicles</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start"><span class="mr-2 shrink-0">✔️</span> <div><strong>Primary Portals:</strong> Alabama Buys & Alabama Joint Purchasing (ALJP). Non-exempt purchases >= $15k require bidding.</div></li>
+                            <li class="flex items-start"><span class="mr-2 shrink-0">✔️</span> <div><strong>Cooperative Agreements:</strong> Heavy reliance on <strong>NASPO ValuePoint (SVAR)</strong>, OMNIA, NCPA, and PEPPM.</div></li>
+                            <li class="flex items-start"><span class="mr-2 shrink-0">✔️</span> <div><strong>Dell Footprint:</strong> Dell has a massive direct beachhead via the <strong>ALJP2022-081</strong> hardware agreement.</div></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-4">⚖️ Compliance Drivers</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start"><span class="mr-2 shrink-0">🔒</span> <div><strong>GovRAMP:</strong> (Formerly StateRAMP). Formally adopted early 2025. Mandatory ATO for cloud/vendors housing state data.</div></li>
+                            <li class="flex items-start"><span class="mr-2 shrink-0">🤖</span> <div><strong>NIST AI-RMF:</strong> Mandated by OIT Policy AI-GV-P1. Vendors must map AI solutions to this framework and prove citizen data is isolated.</div></li>
+                            <li class="flex items-start"><span class="mr-2 shrink-0">🚓</span> <div><strong>CJIS & HIPAA:</strong> Absolute strict adherence required for ALEA and Medicaid AMMP deployments.</div></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:col-span-2">
+                        <h3 class="text-lg font-bold text-slate-800 mb-4">⚔️ The Battlefield: Competitors & Vulnerabilities</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="border border-slate-100 bg-slate-50 p-4 rounded">
+                                <strong class="text-slate-800 block mb-2">Servers & Storage</strong>
+                                <p class="text-sm text-slate-600">The state uses Master Agreement <strong>MA230000004192</strong> for Hitachi, HPE, and Nutanix. Pure Storage, Commvault, and Veeam are entrenched via VARs like Mainline. Aging data centers present rip-and-replace opportunities.</p>
+                            </div>
+                            <div class="border border-slate-100 bg-slate-50 p-4 rounded">
+                                <strong class="text-slate-800 block mb-2">Security & Networking</strong>
+                                <p class="text-sm text-slate-600">Perimeter heavily dominated by Cisco, Palo Alto, SentinelOne, and Fortinet via state master agreements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="opportunities" class="view-section">
+                <div class="bg-gradient-to-r from-blue-900 to-blue-700 rounded-xl shadow-lg p-8 text-white mb-8">
+                    <h2 class="text-2xl font-bold mb-2">Actionable Dell Sales Motions</h2>
+                    <p class="text-blue-100 mb-6">Synthesized intelligence mapped to Dell Technologies portfolio priorities.</p>
+                    
+                    <div class="space-y-6">
+                        
+                        <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20">
+                            <h3 class="text-xl font-bold text-white mb-2 flex items-center">
+                                <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                                Funded Alignment: AMMP Data & ALEA DR
+                            </h3>
+                            <p class="text-blue-50 mb-3 text-sm leading-relaxed">
+                                <strong>Context:</strong> Medicaid is building a massive Enterprise Data Services (EDS) warehouse. ALEA requires an active-active, CJIS-compliant Message Switch System (MSS).<br>
+                                <strong>Dell Play:</strong> Align <strong>PowerEdge & PowerStore</strong> with the prime SI's bidding on AMMP for HIPAA/CONUS compliant infrastructure. Pitch <strong>Dell APEX and PowerProtect</strong> to ALEA to ensure sovereign hybrid-cloud disaster recovery that meets CJIS requirements without public cloud vulnerabilities.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20">
+                            <h3 class="text-xl font-bold text-white mb-2 flex items-center">
+                                <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                                Whitespace: AI Data Governance (TQAB Mandates)
+                            </h3>
+                            <p class="text-blue-50 mb-3 text-sm leading-relaxed">
+                                <strong>Context:</strong> The new Tech Quality Assurance Board (TQAB) requires agencies to use isolated "sandboxes" for GenAI pilots to prevent PII exposure, but agencies lack unstructured data management.<br>
+                                <strong>Dell Play:</strong> Lead with Advisory Services for unstructured data sprawl. Position <strong>PowerScale and Dell AI-Ready Infrastructure</strong> to build the secure, on-premise sandboxes OIT requires for NIST AI-RMF compliance.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20">
+                            <h3 class="text-xl font-bold text-white mb-2 flex items-center">
+                                <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+                                Displacement: Attack Chargeback Friction with APEX Economics
+                            </h3>
+                            <p class="text-blue-50 mb-3 text-sm leading-relaxed">
+                                <strong>Context:</strong> Agencies are trapped between legislative 1% OpEx budget caps and expensive OIT chargebacks. Legacy HPE/Nutanix hardware under MA230000004192 is aging.<br>
+                                <strong>Dell Play:</strong> Position <strong>Dell APEX Custom Solutions</strong> to shift infrastructure costs from restricted Object 1200 Capital Outlay to predictable Object 0800/0900 OpEx billing. This solves the agency budgetary vise, displaces hyperscaler egress costs, and rips out legacy competitor hardware.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        const viewMeta = {
+            'exec-summary': { title: 'Executive Summary & Macro Landscape', sub: "High-level overview of Alabama's current political and economic climate." },
+            'power-structure': { title: 'Power Structure & Key Stakeholders', sub: "Elected and IT leadership matrix and spheres of influence." },
+            'it-governance': { title: 'IT Governance & Service Delivery', sub: "Operating models, central IT vs. agency autonomy, and friction points." },
+            'financials': { title: 'Financials & Budget Breakdown', sub: "Fiscal cycles, budget distribution, and major federal funding influxes." },
+            'initiatives': { title: 'Strategic Initiatives & Projects', sub: "Top 3 funded modernization efforts aligned to technology needs." },
+            'procurement': { title: 'Procurement & Vendor Landscape', sub: "Contract vehicles, competitive footprints, and compliance drivers." },
+            'opportunities': { title: 'Actionable Dell Opportunities', sub: "Directly mapped portfolio strategies and competitive displacements." }
+        };
+
+        let budgetChartInstance = null;
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + tabId).classList.add('active');
+
+            document.getElementById('section-title').innerText = viewMeta[tabId].title;
+            document.getElementById('section-subtitle').innerText = viewMeta[tabId].sub;
+
+            document.querySelectorAll('.view-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+
+            if (tabId === 'financials') {
+                renderCharts();
+            }
+        }
+
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.innerText = '▲';
+            } else {
+                content.classList.add('hidden');
+                icon.innerText = '▼';
+            }
+        }
+
+        function renderCharts() {
+            const pieCtx = document.getElementById('budgetPieChart').getContext('2d');
+            if (budgetChartInstance) budgetChartInstance.destroy();
+            
+            // Total State Expenditures ~ $43B
+            // ETF = 10.5, SGF = 3.74, Federal/Other = 43 - 14.24 = 28.76
+            budgetChartInstance = new Chart(pieCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Education Trust (ETF)', 'State General Fund (SGF)', 'Federal / Other'],
+                    datasets: [{
+                        data: [10.5, 3.74, 28.76], 
+                        backgroundColor: ['#38bdf8', '#2563eb', '#cbd5e1'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': $' + context.raw + ' Billion';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

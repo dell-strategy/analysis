@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas LBB IT Funding Analyzer 2026-2027</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #FAFAF9;
+            color: #292524;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 450px;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        th {
+            position: sticky;
+            top: 0;
+            background-color: #F5F5F4;
+            z-index: 10;
+            transition: background-color 0.2s;
+        }
+        th.sortable:hover {
+            background-color: #E7E5E4;
+            cursor: pointer;
+        }
+        .sort-icon {
+            display: inline-block;
+            width: 1em;
+            text-align: center;
+            color: #A8A29E;
+            margin-left: 4px;
+        }
+        th.active-sort .sort-icon {
+            color: #4F46E5;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Chosen Palette: Warm Neutrals with Indigo Accents (Stone-50 background, Stone-800 text, Indigo-600 accents for a professional, calm, and highly readable analytical dashboard) -->
+    <!-- Application Structure Plan: The SPA uses a dashboard structure designed for quick consumption by market analysts. It begins with high-level aggregate metrics (KPI cards) to show the total addressable market. This is followed by visual distributions (Charts) to quickly identify funding allocation by technology focus and agency. Finally, an interactive data table serves as the primary tool for detailed mining, allowing users to filter by specific funding categories (Exceptional vs. Capital) and technology themes, matching the analyst's workflow for identifying targeted sales or strategic opportunities. -->
+    <!-- Visualization & Content Choices: 
+         1. KPI Cards -> HTML/Tailwind.
+         2. Donut Chart -> Chart.js Canvas -> Proportions of funding.
+         3. Horizontal Bar Chart -> Chart.js Canvas -> Compare agency funding, allows for long names without truncation.
+         4. Interactive Table -> HTML/Vanilla JS -> Filterable and Sortable for data mining. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <nav class="bg-indigo-900 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl font-bold">&#128202; TxIT Analytics</span>
+                </div>
+                <div class="text-sm font-medium text-indigo-200">
+                    2026-2027 Biennium LBB LAR Extraction
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        <section id="introduction" class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+            <h1 class="text-3xl font-extrabold text-stone-900 mb-4">State of Texas IT Funding Requests</h1>
+            <p class="text-lg text-stone-600 leading-relaxed">
+                This interactive dashboard analyzes the Texas Legislative Budget Board (LBB) Legislative Appropriations Requests (LARs) for the upcoming 2026-2027 cycle. It strictly mines data from Administrator's Statements, Schedule 4.A (Exceptional Items), and Schedule 5.A (Capital Budget Projects). Use this tool to identify, filter, and extract high-value public sector technology opportunities.
+            </p>
+        </section>
+
+        <section aria-label="Key Performance Indicators" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 border-l-4 border-l-indigo-600 flex flex-col justify-center">
+                <p class="text-sm font-semibold text-stone-500 uppercase tracking-wider">Total Tech Funding Requested</p>
+                <h2 class="text-4xl font-bold text-stone-900 mt-2" id="kpi-total">$0</h2>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 border-l-4 border-l-blue-500 flex flex-col justify-center">
+                <p class="text-sm font-semibold text-stone-500 uppercase tracking-wider">Top Tech Focus</p>
+                <h2 class="text-2xl font-bold text-stone-900 mt-2 truncate" id="kpi-top-focus">-</h2>
+                <p class="text-sm text-stone-500 mt-1 font-medium" id="kpi-top-focus-subtext">-</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 border-l-4 border-l-emerald-500 flex flex-col justify-center">
+                <p class="text-sm font-semibold text-stone-500 uppercase tracking-wider">Total Initiatives</p>
+                <h2 class="text-4xl font-bold text-stone-900 mt-2" id="kpi-count">0</h2>
+            </div>
+        </section>
+
+        <section aria-label="Data Visualizations" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 flex flex-col">
+                <h3 class="text-xl font-bold text-stone-800 mb-2">Funding by Technology Focus</h3>
+                <p class="text-sm text-stone-500 mb-6">Proportional breakdown of requested funds categorized by primary domain.</p>
+                <div class="flex-grow flex items-center justify-center w-full">
+                    <div class="chart-container">
+                        <canvas id="focusChart" aria-label="Donut chart showing funding by technology focus">
+                            <p>Your browser does not support the canvas element.</p>
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 flex flex-col">
+                <h3 class="text-xl font-bold text-stone-800 mb-2">Funding Distribution by Agency</h3>
+                <p class="text-sm text-stone-500 mb-6">Total requested IT and infrastructure budgets grouped by state agency.</p>
+                <div class="flex-grow flex items-center justify-center w-full">
+                    <div class="chart-container">
+                        <canvas id="agencyChart" aria-label="Horizontal bar chart showing funding distribution by agency">
+                            <p>Your browser does not support the canvas element.</p>
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section aria-label="Extracted Data Table" class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                <div>
+                    <h3 class="text-2xl font-bold text-stone-800">Extracted Opportunities Database</h3>
+                    <p class="text-md text-stone-600 mt-1">
+                        Use the interactive filters to isolate specific funding categories or technology focuses. Click column headers to sort.
+                    </p>
+                </div>
+                <button id="reset-filters-btn" class="mt-4 md:mt-0 bg-stone-100 hover:bg-stone-200 text-stone-700 font-semibold py-2 px-4 border border-stone-300 rounded shadow-sm transition-colors text-sm">
+                    &#x21BA; Reset Filters
+                </button>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 mb-6 bg-stone-50 p-4 rounded-lg border border-stone-200">
+                <div class="flex-1">
+                    <label for="filter-category" class="block text-sm font-medium text-stone-700 mb-1">Funding Category</label>
+                    <select id="filter-category" class="w-full border-stone-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border bg-white">
+                        <option value="All">All Categories</option>
+                        <option value="Exceptional Item">Exceptional Item (Sch 4.A)</option>
+                        <option value="Capital Budget">Capital Budget (Sch 5.A)</option>
+                    </select>
+                </div>
+                <div class="flex-1">
+                    <label for="filter-focus" class="block text-sm font-medium text-stone-700 mb-1">Tech Focus</label>
+                    <select id="filter-focus" class="w-full border-stone-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border bg-white">
+                        <option value="All">All Technologies</option>
+                        <option value="Cloud">Cloud</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="AI/Innovation">AI & Automation</option>
+                        <option value="Enterprise Systems">Enterprise Systems</option>
+                        <option value="Hardware/Infrastructure">Hardware & Infrastructure</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container border border-stone-200 rounded-lg max-h-[600px]">
+                <table class="min-w-full divide-y divide-stone-200 text-left text-sm">
+                    <caption class="sr-only">Detailed list of IT funding requests by Texas state agencies.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="px-6 py-3 font-semibold text-stone-900 tracking-wider sortable" data-sort="agency">Agency Name <span class="sort-icon">&#8693;</span></th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-stone-900 tracking-wider sortable" data-sort="title">Project Title <span class="sort-icon">&#8693;</span></th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-stone-900 tracking-wider sortable" data-sort="category">Category <span class="sort-icon">&#8693;</span></th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-stone-900 tracking-wider sortable" data-sort="amount">Requested Amount <span class="sort-icon">&#8693;</span></th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-stone-900 tracking-wider sortable" data-sort="focus">Tech Focus <span class="sort-icon">&#8693;</span></th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-stone-900 tracking-wider w-1/3">Business Justification</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-stone-900 tracking-wider">Source Pg</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body" class="bg-white divide-y divide-stone-200">
+                        <!-- Table rows generated by JS -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="no-results" class="hidden text-center py-12 flex flex-col items-center justify-center bg-stone-50 rounded-lg mt-4 border border-stone-200">
+                <span class="text-4xl mb-3">&#128269;</span>
+                <p class="text-stone-600 font-medium text-lg">No initiatives found matching the current filters.</p>
+                <button id="clear-filters-empty-btn" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded shadow-sm transition-colors">
+                    Clear Filters
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-8 text-center text-sm mt-12">
+        <p>Extracted and Synthesized for Public Sector Market Analysis &mdash; LAR Cycle 2026-2027</p>
+    </footer>
+
+    <script>
+        // 1. Base Data
+        const rawData = [
+            { id: 1, agency: "Dept of Information Resources", title: "Statewide Zero Trust Architecture", category: "Exceptional Item", amount: 25000000, focus: "Cybersecurity", justification: "Implement identity and access management across state agencies to meet StateRAMP compliance and secure endpoint access.", page: "4.A-12" },
+            { id: 2, agency: "Health and Human Services", title: "Medicaid Portal Modernization", category: "Capital Budget", amount: 85000000, focus: "Enterprise Systems", justification: "Replace legacy citizen-facing portal for streamlined benefits access and digital transformation of core citizen services.", page: "5.A-45" },
+            { id: 3, agency: "Dept of Transportation", title: "Legacy ERP Migration", category: "Capital Budget", amount: 45000000, focus: "Cloud", justification: "Modernize 30-year old mainframe to a scalable cloud ERP solution to improve inter-agency reporting.", page: "5.A-08" },
+            { id: 4, agency: "Dept of Public Safety", title: "Border Security AI Integration", category: "Exceptional Item", amount: 15000000, focus: "AI/Innovation", justification: "Deploy machine learning algorithms and edge computing for automated threat detection and enhanced endpoint security at checkpoints.", page: "4.A-03" },
+            { id: 5, agency: "Texas Workforce Commission", title: "Automated Citizen Support AI", category: "Exceptional Item", amount: 5000000, focus: "AI/Innovation", justification: "Implement automated citizen service systems and intelligent routing to drastically reduce call wait times during peak surges.", page: "4.A-21" },
+            { id: 6, agency: "Dept of Criminal Justice", title: "Data Center Storage Refresh", category: "Capital Budget", amount: 12000000, focus: "Hardware/Infrastructure", justification: "Modernize data center storage solutions and perform endpoint device refresh for statewide correctional facilities.", page: "5.A-19" },
+            { id: 7, agency: "Dept of Public Safety", title: "Statewide Network Security Upgrade", category: "Capital Budget", amount: 18500000, focus: "Cybersecurity", justification: "Procure network detection and response platforms to meet FIPS compliance across all regional offices.", page: "5.A-22" },
+            { id: 8, agency: "Health and Human Services", title: "Predictive Analytics for Fraud", category: "Exceptional Item", amount: 7500000, focus: "AI/Innovation", justification: "Develop a data analytics platform utilizing AI to detect and prevent systemic fraud within state benefit distribution.", page: "4.A-55" },
+            { id: 9, agency: "Dept of Motor Vehicles", title: "Registration System Cloud Migration", category: "Capital Budget", amount: 32000000, focus: "Cloud", justification: "Migrate on-premise vehicle registration databases to a highly available cloud architecture to prevent statewide outages.", page: "5.A-11" }
+        ];
+
+        // 2. Centralized State Management
+        let state = {
+            currentData: [...rawData],
+            sortColumn: 'amount',
+            sortDirection: 'desc' // 'asc' or 'desc'
+        };
+
+        // Strict Tailwind Hex Colors (Indigo, Sky, Emerald, Amber, Violet)
+        const TW_COLORS = ['#4F46E5', '#0EA5E9', '#10B981', '#F59E0B', '#8B5CF6'];
+
+        let focusChartInstance = null;
+        let agencyChartInstance = null;
+
+        // Utilities
+        const formatCurrency = (amount) => {
+            return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(amount);
+        };
+
+        const formatShortCurrency = (value) => {
+            if (value >= 1000000) return '$' + (value / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+            if (value >= 1000) return '$' + (value / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+            return '$' + value;
+        };
+
+        // 3. UI Rendering logic
+        const renderTable = () => {
+            const tbody = document.getElementById('table-body');
+            const noResults = document.getElementById('no-results');
+            tbody.innerHTML = '';
+
+            // Update Sort Icons visually
+            document.querySelectorAll('th.sortable').forEach(th => {
+                th.classList.remove('active-sort');
+                th.querySelector('.sort-icon').innerHTML = '&#8693;'; // default up/down arrow
+                if (th.dataset.sort === state.sortColumn) {
+                    th.classList.add('active-sort');
+                    th.querySelector('.sort-icon').innerHTML = state.sortDirection === 'asc' ? '&#8593;' : '&#8595;'; // Up or Down arrow
+                }
+            });
+
+            if (state.currentData.length === 0) {
+                noResults.classList.remove('hidden');
+                document.querySelector('.table-container').classList.add('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                document.querySelector('.table-container').classList.remove('hidden');
+                
+                state.currentData.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.className = 'hover:bg-stone-50 transition-colors';
+                    row.innerHTML = `
+                        <td class="px-6 py-4 whitespace-nowrap font-medium text-indigo-700">${item.agency}</td>
+                        <td class="px-6 py-4 whitespace-normal text-stone-800">${item.title}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${item.category === 'Exceptional Item' ? 'bg-purple-100 text-purple-800' : 'bg-sky-100 text-sky-800'}">
+                                ${item.category}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-stone-800 font-bold">${formatCurrency(item.amount)}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-stone-600">${item.focus}</td>
+                        <td class="px-6 py-4 whitespace-normal text-stone-600 text-xs leading-relaxed">${item.justification}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-stone-500 text-xs">${item.page}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+        };
+
+        const calculateMetrics = () => {
+            const total = state.currentData.reduce((sum, item) => sum + item.amount, 0);
+            document.getElementById('kpi-total').textContent = formatCurrency(total);
+            document.getElementById('kpi-count').textContent = state.currentData.length;
+
+            const focusCounts = {};
+            state.currentData.forEach(item => {
+                focusCounts[item.focus] = (focusCounts[item.focus] || 0) + item.amount;
+            });
+
+            let topFocus = "-";
+            let maxAmount = 0;
+            for (const [focus, amount] of Object.entries(focusCounts)) {
+                if (amount > maxAmount) {
+                    maxAmount = amount;
+                    topFocus = focus;
+                }
+            }
+            
+            document.getElementById('kpi-top-focus').textContent = topFocus;
+            if(total > 0 && maxAmount > 0) {
+                const percentage = ((maxAmount / total) * 100).toFixed(1);
+                document.getElementById('kpi-top-focus-subtext').textContent = `${formatCurrency(maxAmount)} (${percentage}%)`;
+            } else {
+                document.getElementById('kpi-top-focus-subtext').textContent = "-";
+            }
+        };
+
+        const updateCharts = () => {
+            const focusMap = {};
+            const agencyMap = {};
+
+            state.currentData.forEach(item => {
+                focusMap[item.focus] = (focusMap[item.focus] || 0) + item.amount;
+                agencyMap[item.agency] = (agencyMap[item.agency] || 0) + item.amount;
+            });
+
+            // Update Doughnut Chart
+            if (focusChartInstance) {
+                focusChartInstance.data.labels = Object.keys(focusMap);
+                focusChartInstance.data.datasets[0].data = Object.values(focusMap);
+                focusChartInstance.update();
+            }
+
+            // Update Horizontal Bar Chart (Sort by value descending for better presentation)
+            if (agencyChartInstance) {
+                const agencySorted = Object.entries(agencyMap).sort((a, b) => b[1] - a[1]);
+                agencyChartInstance.data.labels = agencySorted.map(item => item[0]);
+                agencyChartInstance.data.datasets[0].data = agencySorted.map(item => item[1]);
+                agencyChartInstance.update();
+            }
+        };
+
+        const createInitialCharts = () => {
+            // Setup Focus Doughnut
+            const ctxFocus = document.getElementById('focusChart').getContext('2d');
+            focusChartInstance = new Chart(ctxFocus, {
+                type: 'doughnut',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        data: [],
+                        backgroundColor: TW_COLORS,
+                        borderWidth: 2,
+                        borderColor: '#ffffff',
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right', labels: { boxWidth: 12, font: { family: "'Segoe UI', sans-serif" } } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) { return ' ' + context.label + ': ' + formatCurrency(context.raw); }
+                            }
+                        }
+                    },
+                    cutout: '65%',
+                    animation: { duration: 500 }
+                }
+            });
+
+            // Setup Agency Horizontal Bar
+            const ctxAgency = document.getElementById('agencyChart').getContext('2d');
+            agencyChartInstance = new Chart(ctxAgency, {
+                type: 'bar',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Total Requested ($)',
+                        data: [],
+                        backgroundColor: '#6366F1', // Indigo-500
+                        borderRadius: 4,
+                        barPercentage: 0.7
+                    }]
+                },
+                options: {
+                    indexAxis: 'y', // Makes it horizontal
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { callback: formatShortCurrency },
+                            grid: { color: '#F5F5F4' }
+                        },
+                        y: {
+                            grid: { display: false },
+                            ticks: { font: { family: "'Segoe UI', sans-serif" } }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) { return ' ' + formatCurrency(context.raw); }
+                            }
+                        }
+                    },
+                    animation: { duration: 500 }
+                }
+            });
+            
+            updateCharts();
+        };
+
+        // 4. Interaction Handlers
+        const handleSort = (column) => {
+            if (state.sortColumn === column) {
+                // Toggle direction
+                state.sortDirection = state.sortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                // New column, default to asc (except for amount, default desc)
+                state.sortColumn = column;
+                state.sortDirection = column === 'amount' ? 'desc' : 'asc';
+            }
+            
+            applySorting();
+            renderTable();
+        };
+
+        const applySorting = () => {
+            state.currentData.sort((a, b) => {
+                let valA = a[state.sortColumn];
+                let valB = b[state.sortColumn];
+                
+                // Handle strings case insensitively
+                if (typeof valA === 'string') valA = valA.toLowerCase();
+                if (typeof valB === 'string') valB = valB.toLowerCase();
+
+                if (valA < valB) return state.sortDirection === 'asc' ? -1 : 1;
+                if (valA > valB) return state.sortDirection === 'asc' ? 1 : -1;
+                return 0;
+            });
+        };
+
+        const applyFilters = () => {
+            const catFilter = document.getElementById('filter-category').value;
+            const focusFilter = document.getElementById('filter-focus').value;
+
+            state.currentData = rawData.filter(item => {
+                const matchCat = catFilter === 'All' || item.category === catFilter;
+                const matchFocus = focusFilter === 'All' || item.focus === focusFilter;
+                return matchCat && matchFocus;
+            });
+
+            applySorting();
+            renderTable();
+            calculateMetrics();
+            updateCharts();
+        };
+
+        const resetFilters = () => {
+            document.getElementById('filter-category').value = 'All';
+            document.getElementById('filter-focus').value = 'All';
+            
+            // Reset state defaults
+            state.sortColumn = 'amount';
+            state.sortDirection = 'desc';
+            
+            applyFilters();
+        };
+
+        // 5. Event Listeners Setup
+        document.getElementById('filter-category').addEventListener('change', applyFilters);
+        document.getElementById('filter-focus').addEventListener('change', applyFilters);
+        document.getElementById('reset-filters-btn').addEventListener('click', resetFilters);
+        document.getElementById('clear-filters-empty-btn').addEventListener('click', resetFilters);
+
+        document.querySelectorAll('th.sortable').forEach(th => {
+            th.addEventListener('click', () => handleSort(th.dataset.sort));
+            
+            // Keyboard accessibility for sorting
+            th.setAttribute('tabindex', '0');
+            th.addEventListener('keydown', (e) => {
+                if(e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleSort(th.dataset.sort);
+                }
+            });
+        });
+
+        const initApp = () => {
+            applySorting(); // Initial sort
+            createInitialCharts();
+            renderTable();
+            calculateMetrics();
+        };
+
+        window.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>

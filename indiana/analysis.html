@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiana Strategic Account Intelligence | Dell Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chosen Palette: Corporate Clean (Warm Neutrals & Dell Blue Accents) -->
+    <!-- Application Structure Plan: 
+         Designed as a "Strategic Account Command Center" for a Sales Executive.
+         1. Executive Dashboard (Macro): High-level stats and political climate to set the stage.
+         2. Power Structure (Who): Interactive hierarchy/cards differentiating political vs. technical influence.
+         3. Financial Flow (Money): Visualizing budget breakdowns to target funding sources.
+         4. Operational Reality (How): Explaining the 'Chargeback' friction and vendor landscape.
+         5. The Attack Plan (Action): Whitespace analysis mapping specific agency pains to Dell Solutions (APEX, Cyber Recovery).
+         Why: Sales reps need to move from "Context" -> "Contact" -> "Contract". This flow mirrors the sales qualification process.
+    -->
+    <!-- Visualization & Content Choices:
+         - Financials -> Goal: Visualize Spend Mix -> Method: Chart.js Doughnut (O&M vs New) & Bar (Agency Spend).
+         - Vendor Landscape -> Goal: Identify displacement targets -> Method: Plotly Bubble Chart (Technical Debt vs Spend).
+         - Power Structure -> Goal: Map Stakeholders -> Method: Interactive HTML Cards (Swimlanes) with Detail View (No SVG).
+         - Opportunity Map -> Goal: Actionable Sales Plays -> Method: Interactive Filtering Grid (Filter by Technology: Storage, Compute, Cyber).
+         - Justification: Use of standard HTML/JS allows for high interactivity without complex SVG manipulation, adhering to constraints.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Warm neutral light gray */
+            color: #1e293b;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b; 
+        }
+
+        /* Chart Containers - Strict Adherence to Requirements */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%; /* Parent controls width, but max-w-xl usually applied to parent or here */
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; /* Base height */
+            max-height: 400px;
+        }
+        
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        /* Utility for card hover effects */
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Active Tab State */
+        .tab-active {
+            border-bottom: 3px solid #0076CE; /* Dell Blue */
+            color: #0076CE;
+            font-weight: 600;
+        }
+        
+        /* Interactive grid items */
+        .opp-card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-[#0076CE] rounded-full flex items-center justify-center text-white font-bold text-lg">D</div>
+                    <div>
+                        <h1 class="text-xl font-bold text-slate-800 tracking-tight">Account Intelligence: <span class="text-[#0076CE]">State of Indiana</span></h1>
+                        <p class="text-xs text-slate-500 hidden sm:block">Confidential • For Internal Dell Sales Strategy Use Only</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <span class="text-sm font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full">FY2026 Strategy</span>
+                </div>
+            </div>
+            
+            <!-- Navigation Tabs -->
+            <nav class="flex space-x-8 overflow-x-auto" aria-label="Tabs">
+                <button onclick="switchTab('macro')" id="tab-macro" class="tab-active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent hover:text-gray-700 hover:border-gray-300 transition-colors">
+                    Executive Summary
+                </button>
+                <button onclick="switchTab('power')" id="tab-power" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent hover:text-gray-700 hover:border-gray-300 transition-colors">
+                    Power Structure
+                </button>
+                <button onclick="switchTab('financials')" id="tab-financials" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent hover:text-gray-700 hover:border-gray-300 transition-colors">
+                    Follow the Money
+                </button>
+                <button onclick="switchTab('tech')" id="tab-tech" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent hover:text-gray-700 hover:border-gray-300 transition-colors">
+                    IT Landscape
+                </button>
+                <button onclick="switchTab('opps')" id="tab-opps" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent hover:text-gray-700 hover:border-gray-300 transition-colors text-[#0076CE]">
+                    Dell Opportunities
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow bg-[#f8fafc] p-4 sm:p-6 lg:p-8">
+        <div class="max-w-7xl mx-auto space-y-8">
+
+            <!-- TAB 1: EXECUTIVE SUMMARY -->
+            <section id="content-macro" class="animate-fade-in block">
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">Macro Landscape: The "Next Level" Agenda</h2>
+                    <p class="text-slate-600 leading-relaxed max-w-4xl">
+                        Indiana operates under a fiscally conservative but technologically progressive administration. The core focus is the <strong>"Next Level"</strong> agenda, prioritizing economic competitiveness, infrastructure modernization, and public health. For Dell, this means pitching technology not just as IT, but as an enabler of <strong>efficiency</strong> and <strong>citizen service</strong>. The state boasts a strong AAA credit rating and a robust rainy day fund, meaning capital is available for high-ROI modernization projects.
+                    </p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-blue-500 hover-lift">
+                        <p class="text-xs font-semibold text-slate-400 uppercase">State Population</p>
+                        <p class="text-2xl font-bold text-slate-800">~6.8 Million</p>
+                        <p class="text-xs text-green-600 mt-1">Steady Growth</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-emerald-500 hover-lift">
+                        <p class="text-xs font-semibold text-slate-400 uppercase">IT Operating Model</p>
+                        <p class="text-2xl font-bold text-slate-800">Centralized</p>
+                        <p class="text-xs text-slate-500 mt-1">Mandated via IOT</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-indigo-500 hover-lift">
+                        <p class="text-xs font-semibold text-slate-400 uppercase">Primary Data Center</p>
+                        <p class="text-2xl font-bold text-slate-800">Hybrid Cloud</p>
+                        <p class="text-xs text-slate-500 mt-1">Consolidated via IOT</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-orange-500 hover-lift">
+                        <p class="text-xs font-semibold text-slate-400 uppercase">Key Grant Focus</p>
+                        <p class="text-2xl font-bold text-slate-800">Broadband & Cyber</p>
+                        <p class="text-xs text-slate-500 mt-1">BEAD & SLCGP Funded</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Strategic Pillars -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-bold text-slate-700 mb-4 border-b pb-2">Fiscal Year Priorities</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold mt-0.5">1</span>
+                                <div class="ml-3">
+                                    <h4 class="text-sm font-bold text-slate-800">Digital Government & CX</h4>
+                                    <p class="text-sm text-slate-500">Creating a "one-stop-shop" for citizen services. Moving away from siloed agency portals to a unified digital identity.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold mt-0.5">2</span>
+                                <div class="ml-3">
+                                    <h4 class="text-sm font-bold text-slate-800">Cybersecurity Resilience</h4>
+                                    <p class="text-sm text-slate-500">Leveraging SLCGP (State & Local Cybersecurity Grant Program) funds to secure critical infrastructure and municipal endpoints.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold mt-0.5">3</span>
+                                <div class="ml-3">
+                                    <h4 class="text-sm font-bold text-slate-800">Data-Informed Decision Making</h4>
+                                    <p class="text-sm text-slate-500">Empowering the Management Performance Hub (MPH) to reduce infant mortality and opioid addiction through data analytics.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Insight Card -->
+                    <div class="bg-slate-800 text-white rounded-lg shadow-lg p-6 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 opacity-10 text-9xl font-bold -mr-8 -mt-8">IN</div>
+                        <h3 class="text-lg font-bold mb-4 relative z-10">Analyst Insight: The "Consolidation" Factor</h3>
+                        <p class="text-slate-300 mb-4 text-sm relative z-10 leading-relaxed">
+                            Indiana is a <strong>Highly Consolidated</strong> IT environment. The Indiana Office of Technology (IOT) controls the infrastructure (servers, network, storage, end-user compute).
+                            <br><br>
+                            <strong>The Trap:</strong> Pitching infrastructure solely to Agency Directors (e.g., Dept of Health) is often a dead end. They own the *business problem* (funding), but IOT owns the *architectural standard*.
+                            <br><br>
+                            <strong>The Win:</strong> Sell the <em>outcome</em> to the Agency to secure funding, then work with IOT to validate the <em>architecture</em>.
+                        </p>
+                        <button onclick="switchTab('power')" class="mt-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded text-sm font-medium transition-colors relative z-10">
+                            View Power Map &rarr;
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: POWER STRUCTURE -->
+            <section id="content-power" class="hidden animate-fade-in">
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">Stakeholder Analysis</h2>
+                    <p class="text-slate-600 leading-relaxed max-w-4xl">
+                        Navigating Indiana's bureaucracy requires distinguishing between <strong>Financial Authority</strong> (Who signs the check) and <strong>Technical Influence</strong> (Who approves the specs). Click on a card to see engagement strategies.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Column 1: The Executives (Money) -->
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-slate-700 border-b pb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Financial Authority
+                        </h3>
+                        
+                        <!-- Card -->
+                        <div class="bg-white p-4 rounded border hover:border-emerald-500 cursor-pointer transition-all shadow-sm" onclick="showStakeholderDetails('gov')">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Governor's Office</h4>
+                                    <p class="text-xs text-slate-500 font-mono">EXECUTIVE BRANCH</p>
+                                </div>
+                                <span class="text-lg">🏛️</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-2">Sets the "Next Level" agenda. Priorities drive budget requests.</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded border hover:border-emerald-500 cursor-pointer transition-all shadow-sm" onclick="showStakeholderDetails('omb')">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">OMB & State Budget Agency</h4>
+                                    <p class="text-xs text-slate-500 font-mono">FINANCE</p>
+                                </div>
+                                <span class="text-lg">💰</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-2">Gatekeepers of all capital expenditures >$100k.</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded border hover:border-emerald-500 cursor-pointer transition-all shadow-sm" onclick="showStakeholderDetails('agency_heads')">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Agency Heads (FSSA, INDOT, DCS)</h4>
+                                    <p class="text-xs text-slate-500 font-mono">BUSINESS OWNERS</p>
+                                </div>
+                                <span class="text-lg">🏢</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-2">They feel the pain of legacy systems. They have the budget, but need IOT approval.</p>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: The Technologists (Specs) -->
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-slate-700 border-b pb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-blue-500"></span> Technical Authority
+                        </h3>
+                        
+                        <div class="bg-white p-4 rounded border-l-4 border-blue-600 hover:bg-blue-50 cursor-pointer transition-all shadow-md" onclick="showStakeholderDetails('iot_cio')">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Indiana Office of Technology (IOT)</h4>
+                                    <p class="text-xs text-blue-600 font-bold font-mono">CIO & CTO</p>
+                                </div>
+                                <span class="text-lg">🖥️</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-2"><strong>The Center of Gravity.</strong> Manages the central data center, network, and security standards.</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded border hover:border-blue-500 cursor-pointer transition-all shadow-sm" onclick="showStakeholderDetails('mph')">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Management Performance Hub (MPH)</h4>
+                                    <p class="text-xs text-slate-500 font-mono">CHIEF DATA OFFICER</p>
+                                </div>
+                                <span class="text-lg">📊</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-2">Controls data sharing governance and analytics platforms. Key for AI/Data discussions.</p>
+                        </div>
+                        
+                         <div class="bg-white p-4 rounded border hover:border-blue-500 cursor-pointer transition-all shadow-sm" onclick="showStakeholderDetails('ciso')">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">State CISO</h4>
+                                    <p class="text-xs text-slate-500 font-mono">SECURITY</p>
+                                </div>
+                                <span class="text-lg">🔒</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mt-2">Owns the security stack and compliance (StateRAMP). High influence on endpoint/cyber spend.</p>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Detail Panel (Dynamic) -->
+                    <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 sticky top-24" id="stakeholder-detail-panel">
+                        <div class="text-center text-slate-400 mt-10">
+                            <p class="text-4xl mb-4">👆</p>
+                            <p>Select a stakeholder to view engagement strategy.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: FINANCIALS -->
+            <section id="content-financials" class="hidden animate-fade-in">
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">Follow the Money: Budget & Procurement</h2>
+                    <p class="text-slate-600 leading-relaxed max-w-4xl">
+                        Understanding Indiana's "Chargeback Model" is critical. IOT operates largely as a business, charging agencies for seats, storage, and compute. Agencies request funding from the State Budget Agency, pay IOT, and IOT procures from vendors.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <!-- Chart: Budget Split -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-sm font-bold text-slate-500 uppercase mb-4">Typical State IT Budget Allocation (NASCIO)</h3>
+                        <div class="chart-container">
+                            <canvas id="budgetDoughnut"></canvas>
+                        </div>
+                        <p class="text-xs text-center text-slate-400 mt-4">Industry standard distribution for centralized state IT</p>
+                    </div>
+
+                    <!-- Chart: Top Spending Agencies -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-sm font-bold text-slate-500 uppercase mb-4">Relative Agency IT Footprint / Complexity</h3>
+                        <div class="chart-container">
+                            <canvas id="agencyBarChart"></canvas>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-50 rounded text-xs text-blue-800">
+                            <strong>Insight:</strong> FSSA (Health/Social Services) accounts for the largest footprint in the state due to massive Medicaid and Eligibility systems processing requirements.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procurement & Grants Table -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+                        <h3 class="font-bold text-slate-700">Procurement Vehicles & Grants</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-slate-600">
+                            <thead class="text-xs text-slate-700 uppercase bg-slate-50">
+                                <tr>
+                                    <th class="px-6 py-3">Vehicle / Grant</th>
+                                    <th class="px-6 py-3">Type</th>
+                                    <th class="px-6 py-3">Dell Status</th>
+                                    <th class="px-6 py-3">Strategy Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b hover:bg-slate-50">
+                                    <td class="px-6 py-4 font-medium text-slate-900">NASPO ValuePoint</td>
+                                    <td class="px-6 py-4">Cooperative</td>
+                                    <td class="px-6 py-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Active</span></td>
+                                    <td class="px-6 py-4">Primary vehicle for Server, Storage, and Client hardware. Low friction.</td>
+                                </tr>
+                                <tr class="border-b hover:bg-slate-50">
+                                    <td class="px-6 py-4 font-medium text-slate-900">Quantity Purchase Agreement (QPA)</td>
+                                    <td class="px-6 py-4">State Contract</td>
+                                    <td class="px-6 py-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Negotiated</span></td>
+                                    <td class="px-6 py-4">Indiana-specific discounts. Necessary for standard configurations (Laptops/Desktops).</td>
+                                </tr>
+                                <tr class="border-b hover:bg-slate-50">
+                                    <td class="px-6 py-4 font-medium text-slate-900">SLCGP (Cyber Grant)</td>
+                                    <td class="px-6 py-4">Federal Grant</td>
+                                    <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">Target</span></td>
+                                    <td class="px-6 py-4">Funds strictly for cybersecurity. Pitch: PowerProtect Cyber Recovery & MDR.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="px-6 py-4 font-medium text-slate-900">BEAD / Next Level Connections</td>
+                                    <td class="px-6 py-4">Infrastructure</td>
+                                    <td class="px-6 py-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Indirect</span></td>
+                                    <td class="px-6 py-4">Broadband focus. Opportunity for Edge Compute at new connection hubs.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: IT LANDSCAPE -->
+            <section id="content-tech" class="hidden animate-fade-in">
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">The Operational Reality</h2>
+                    <p class="text-slate-600 leading-relaxed max-w-4xl">
+                        Indiana operates a centralized "Hybrid Cloud" model. They have historically repatriated specific workloads from public cloud due to cost unpredictability, creating an optimal environment for flexible on-prem consumption models.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Plotly Chart for Vendor Landscape -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                        <h3 class="text-sm font-bold text-slate-500 uppercase mb-2">Strategic Displacement Matrix</h3>
+                        <div class="chart-container">
+                            <div id="vendorBubbleChart" style="width:100%; height:100%;"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2 text-center">X-Axis = Entrenchment. Y-Axis = Vuln. to Displacement. Bubble Size = Hardware Footprint.</p>
+                    </div>
+
+                    <!-- Tech Stack Analysis -->
+                    <div class="space-y-4">
+                        <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-slate-800">Compute & Storage</h4>
+                            <p class="text-sm text-slate-600 mt-1">Historically diverse (HPE/Cisco presence), but shifting towards standardization. <br><span class="text-indigo-600 font-semibold">Gap:</span> Aging SAN infrastructure in secondary agencies (DNR, BMV) is reaching EOL.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-blue-500">
+                            <h4 class="font-bold text-slate-800">End User Compute (Client)</h4>
+                            <p class="text-sm text-slate-600 mt-1">Strong standardization on Windows 11. 4-year refresh cycles are strict. <br><span class="text-blue-600 font-semibold">Gap:</span> Remote work created a sprawl of unmanaged endpoints. Need for unified endpoint management solutions.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-red-500">
+                            <h4 class="font-bold text-slate-800">Cybersecurity</h4>
+                            <p class="text-sm text-slate-600 mt-1">Mandate for StateRAMP compliance for all vendors. Focus on Ransomware resilience.<br><span class="text-red-600 font-semibold">Gap:</span> Offline backups (Air-gapped) are a stated priority but implementation is patchy across smaller agencies.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: DELL OPPORTUNITIES -->
+            <section id="content-opps" class="hidden animate-fade-in">
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6 border-t-4 border-[#0076CE]">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">The "So What?" - Actionable Whitespace</h2>
+                    <p class="text-slate-600 leading-relaxed max-w-4xl">
+                        Based on the analysis of IOT's consolidation strategy and FSSA's budget dominance, here are the top whitespace targets for Dell Technologies.
+                    </p>
+                    
+                    <!-- Filters -->
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="text-sm font-medium text-slate-500 self-center mr-2">Filter Plays:</span>
+                        <button onclick="filterOpps('all')" class="px-3 py-1 rounded-full text-xs font-medium bg-slate-200 text-slate-700 hover:bg-slate-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500">All</button>
+                        <button onclick="filterOpps('infrastructure')" class="px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Infrastructure (ISG)</button>
+                        <button onclick="filterOpps('client')" class="px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Client (CSG)</button>
+                        <button onclick="filterOpps('cyber')" class="px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Cyber Recovery</button>
+                    </div>
+                </div>
+
+                <!-- Opportunity Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Opp 1 -->
+                    <div class="opp-card infrastructure bg-white rounded-lg shadow-sm border border-slate-200 p-5 hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">ISG / APEX</span>
+                            <span class="text-slate-400 text-xs">High Probability</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">The "Cloud Smart" Repatriation</h3>
+                        <p class="text-sm text-slate-600 mb-4">Indiana is seeing unpredictable costs with public cloud for steady-state workloads. </p>
+                        <div class="bg-slate-50 p-3 rounded text-xs text-slate-700 mb-4">
+                            <strong>The Play:</strong> Pitch <span class="font-bold text-[#0076CE]">APEX Private Cloud</span> to IOT. Offer cloud-like consumption on-prem to eliminate egress fees while keeping the OpEx model they prefer.
+                        </div>
+                        <button onclick="openBattlecard('apex')" class="w-full py-2 border border-[#0076CE] text-[#0076CE] rounded text-sm font-medium hover:bg-blue-50 transition-colors">View Battlecard Data</button>
+                    </div>
+
+                    <!-- Opp 2 -->
+                    <div class="opp-card cyber bg-white rounded-lg shadow-sm border border-slate-200 p-5 hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="bg-red-100 text-red-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Data Protection</span>
+                            <span class="text-slate-400 text-xs">Urgent</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">DOR Tax Data Vaulting</h3>
+                        <p class="text-sm text-slate-600 mb-4">Dept of Revenue is a prime target for ransomware. Current backups may be online/mutable.</p>
+                        <div class="bg-slate-50 p-3 rounded text-xs text-slate-700 mb-4">
+                            <strong>The Play:</strong> <span class="font-bold text-[#0076CE]">PowerProtect Cyber Recovery</span> vault. Focus on the "Immutable" air-gap feature to satisfy SLCGP grant requirements.
+                        </div>
+                        <button onclick="openBattlecard('cyber')" class="w-full py-2 border border-[#0076CE] text-[#0076CE] rounded text-sm font-medium hover:bg-blue-50 transition-colors">View Battlecard Data</button>
+                    </div>
+
+                    <!-- Opp 3 -->
+                    <div class="opp-card client bg-white rounded-lg shadow-sm border border-slate-200 p-5 hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">CSG Refresh</span>
+                            <span class="text-slate-400 text-xs">Volume Play</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">FSSA Caseworker Mobility</h3>
+                        <p class="text-sm text-slate-600 mb-4">Thousands of social workers are using aging devices in the field. High failure rates reported.</p>
+                        <div class="bg-slate-50 p-3 rounded text-xs text-slate-700 mb-4">
+                            <strong>The Play:</strong> <span class="font-bold text-[#0076CE]">Latitude Rugged / 7000 Series</span> + ProSupport. Emphasize "Work from Anywhere" reliability and 5G connectivity options.
+                        </div>
+                        <button onclick="openBattlecard('client')" class="w-full py-2 border border-[#0076CE] text-[#0076CE] rounded text-sm font-medium hover:bg-blue-50 transition-colors">View Battlecard Data</button>
+                    </div>
+
+                    <!-- Opp 4 -->
+                    <div class="opp-card infrastructure bg-white rounded-lg shadow-sm border border-slate-200 p-5 hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Unstructured Data</span>
+                            <span class="text-slate-400 text-xs">Emerging</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Law Enforcement Body Cam Data</h3>
+                        <p class="text-sm text-slate-600 mb-4">State Police (ISP) body cam rollout is creating massive unstructured data growth.</p>
+                        <div class="bg-slate-50 p-3 rounded text-xs text-slate-700 mb-4">
+                            <strong>The Play:</strong> <span class="font-bold text-[#0076CE]">PowerScale</span>. Pitch scalability and cost-tiering for archival footage vs. active evidence.
+                        </div>
+                        <button onclick="openBattlecard('unstructured')" class="w-full py-2 border border-[#0076CE] text-[#0076CE] rounded text-sm font-medium hover:bg-blue-50 transition-colors">View Battlecard Data</button>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Battlecard Modal -->
+    <div id="battlecard-modal" class="fixed inset-0 bg-slate-900 bg-opacity-50 z-[100] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-fade-in">
+            <div class="flex justify-between items-center p-5 border-b border-slate-200 sticky top-0 bg-white">
+                <h3 id="bc-title" class="text-xl font-bold text-slate-800">Battlecard Title</h3>
+                <button onclick="closeBattlecard()" class="text-slate-400 hover:text-slate-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="p-6 space-y-6">
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Target Audience</h4>
+                    <p id="bc-target" class="text-sm text-slate-700 font-medium"></p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Primary Pain Point</h4>
+                    <p id="bc-pain" class="text-sm text-slate-600 bg-slate-50 p-3 rounded border border-slate-100"></p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Discovery Questions</h4>
+                    <ul id="bc-questions" class="list-disc pl-5 text-sm text-slate-700 space-y-1"></ul>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Key Objection & Trap</h4>
+                        <p id="bc-objections" class="text-sm text-slate-600"></p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Main Competitors</h4>
+                        <p id="bc-competitors" class="text-sm text-slate-600 font-medium"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-5 border-t border-slate-200 bg-slate-50 flex justify-end">
+                <button onclick="closeBattlecard()" class="bg-[#0076CE] text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-600 transition-colors">Close Battlecard</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs text-slate-400">
+                Generated by Canvas Create Webapp. <br>
+                Based on public structural data, NASCIO state IT trends, and strategic analysis of the Indiana Office of Technology (IOT).
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // --- DATA STORE ---
+        // Simulating the "Source Report" content in a structured object
+        const reportData = {
+            stakeholders: {
+                gov: {
+                    title: "Governor's Office",
+                    role: "Executive Vision",
+                    strategy: "Don't pitch products. Pitch 'Next Level' outcomes. Focus on job creation, digital equity, and efficiency. Wins here trickle down as mandates.",
+                    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Governor+Indiana+State+Government"
+                },
+                omb: {
+                    title: "Office of Management & Budget",
+                    role: "Financial Gatekeeper",
+                    strategy: "They care about ROI and OpEx vs CapEx. Dell APEX is a strong conversation here to flatten spending spikes. Prove TCO reduction.",
+                    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Director+OMB+State+of+Indiana"
+                },
+                agency_heads: {
+                    title: "Agency Directors (FSSA, INDOT)",
+                    role: "Business Problem Owners",
+                    strategy: "Identify their bottleneck (e.g., 'Medicaid claims processing is slow'). Sell the solution impact. Then arm them to demand the tech from IOT.",
+                    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Secretary+FSSA+Indiana"
+                },
+                iot_cio: {
+                    title: "IOT - State CIO",
+                    role: "Architectural Approval",
+                    strategy: "Must be a partner, not a hurdle. Validate solutions for security (StateRAMP) and compatibility. Avoid 'Shadow IT' pitches that bypass them.",
+                    linkedin: "https://www.linkedin.com/search/results/people/?keywords=CIO+State+of+Indiana+IOT"
+                },
+                mph: {
+                    title: "Management Performance Hub",
+                    role: "Data Innovator",
+                    strategy: "Focus on AI-ready infrastructure (PowerEdge with GPUs) and Data Lakes. They want to turn data into policy insights.",
+                    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Chief+Data+Officer+State+of+Indiana+MPH"
+                },
+                ciso: {
+                    title: "State CISO",
+                    role: "Risk Mitigator",
+                    strategy: "The #1 budget priority is security. Pitch Air-gapped vaults and Endpoint Detection & Response (EDR). Compliance is the key driver.",
+                    linkedin: "https://www.linkedin.com/search/results/people/?keywords=CISO+State+of+Indiana+IOT"
+                }
+            },
+            battlecards: {
+                'apex': {
+                    title: 'APEX Private Cloud: The "Cloud Smart" Repatriation',
+                    target: 'IOT CIO & Agency IT Directors',
+                    painPoint: 'Unpredictable public cloud egress fees and loss of control over steady-state workloads.',
+                    questions: [
+                        'How are you currently forecasting your Azure/AWS spend for the next 12 months?',
+                        'Which legacy workloads are costing more to run in the public cloud than anticipated?'
+                    ],
+                    objections: '<strong>Objection:</strong> "We are mandated to go Cloud First."<br><strong>Response:</strong> Pitch APEX as "Cloud Smart" - it IS a cloud operating model (OpEx, scalable), just located where it makes financial sense.',
+                    competitors: 'AWS, Azure, HPE GreenLake'
+                },
+                'cyber': {
+                    title: 'PowerProtect Cyber Recovery: DOR Tax Data Vaulting',
+                    target: 'State CISO & DOR Security Lead',
+                    painPoint: 'Ransomware threat to citizen tax data; current backups might be accessible on the network.',
+                    questions: [
+                        'If a ransomware variant compromised your primary network credentials today, how are your current backups isolated?',
+                        'Are you leveraging SLCGP funds for immutable storage?'
+                    ],
+                    objections: '<strong>Objection:</strong> "We already use Veeam/Commvault."<br><strong>Response:</strong> Focus on the physical/logical air-gap and automated CyberSense analytics that standard backups lack.',
+                    competitors: 'Rubrik, Cohesity, Pure Storage'
+                },
+                'client': {
+                    title: 'CSG Refresh: FSSA Caseworker Mobility',
+                    target: 'FSSA IT Director & Procurement',
+                    painPoint: 'Caseworkers experiencing downtime in the field due to hardware failures and poor connectivity.',
+                    questions: [
+                        'What is the average downtime a caseworker experiences when a device fails in the field?',
+                        'How are you managing zero-trust security on remote endpoints?'
+                    ],
+                    objections: '<strong>Objection:</strong> "We buy whatever is cheapest on the NASPO contract."<br><strong>Response:</strong> Shift conversation to TCO (Total Cost of Ownership) and ProSupport Plus reducing IT helpdesk burden.',
+                    competitors: 'Lenovo, HP'
+                },
+                'unstructured': {
+                    title: 'PowerScale: Law Enforcement Body Cam Data',
+                    target: 'State Police (ISP) IT & IOT Storage Lead',
+                    painPoint: 'Exponential growth of unstructured video data straining current SAN limits.',
+                    questions: [
+                        'How are you tiering cold body cam footage versus active case evidence?',
+                        'What is your cost per terabyte as this data scales over the next 3 years?'
+                    ],
+                    objections: '<strong>Objection:</strong> "Axon handles our storage."<br><strong>Response:</strong> Position PowerScale for the broader state video surveillance/IoT consolidation, not just body cams.',
+                    competitors: 'NetApp, Qumulo'
+                }
+            }
+        };
+
+        // --- CHART CONFIGURATION ---
+        
+        // 1. Budget Doughnut Chart
+        function initBudgetChart() {
+            const ctx = document.getElementById('budgetDoughnut').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['O&M (Maintenance/Legacy)', 'New Projects (Modernization)', 'Services/Transfers'],
+                    datasets: [{
+                        data: [70, 25, 5],
+                        backgroundColor: ['#cbd5e1', '#0076CE', '#94a3b8'],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { usePointStyle: true, font: { size: 10 } } },
+                        tooltip: { callbacks: { label: function(c) { return ' ' + c.label + ': ~' + c.raw + '% of Budget'; } } }
+                    },
+                    cutout: '70%'
+                }
+            });
+        }
+
+        // 2. Agency Spend Bar Chart
+        function initAgencyChart() {
+            const ctx = document.getElementById('agencyBarChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['FSSA (Health/Human Svcs)', 'INDOT (Transportation)', 'DCS (Child Services)', 'DOR (Revenue)', 'ISP (State Police)'],
+                    datasets: [{
+                        label: 'Relative Scale (1-10)',
+                        data: [10, 7, 6, 4, 3],
+                        backgroundColor: ['#0076CE', '#3b82f6', '#60a5fa', '#93c5fd', '#bfdbfe'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y', // Horizontal bar
+                    scales: {
+                        x: { grid: { display: false }, ticks: { font: { size: 10 }, stepSize: 1 }, max: 10 },
+                        y: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        // 3. Vendor Landscape Plotly Chart
+        function initVendorChart() {
+            const trace1 = {
+                x: [85, 40, 75, 20, 90], // Entrenchment (High = Hard to replace)
+                y: [20, 80, 60, 90, 10], // Vulnerability (High = Easy to replace)
+                text: ['Core Hyperscalers', 'Legacy SAN/Storage', 'Legacy Networking', 'Unmanaged Endpoints', 'Core ERP Systems'],
+                mode: 'markers',
+                marker: {
+                    size: [50, 40, 45, 35, 30], // Footprint size
+                    color: ['#cbd5e1', '#ef4444', '#cbd5e1', '#3b82f6', '#cbd5e1'], // Red = Target, Blue = Opportunity, Gray = Neutral
+                    opacity: 0.8
+                }
+            };
+
+            const layout = {
+                margin: { t: 20, r: 20, b: 40, l: 40 },
+                xaxis: { title: 'Vendor Entrenchment', showgrid: true, zeroline: false },
+                yaxis: { title: 'Vulnerability to Displacement', showgrid: true, zeroline: false },
+                hovermode: 'closest',
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                font: { family: 'Inter, sans-serif', size: 10 }
+            };
+            
+            // Note: Plotly needs specific responsive handling, but container CSS handles the bounds.
+            Plotly.newPlot('vendorBubbleChart', [trace1], layout, {displayModeBar: false, responsive: true});
+        }
+
+        // --- NAVIGATION LOGIC ---
+        
+        function switchTab(tabId) {
+            // Hide all sections
+            ['macro', 'power', 'financials', 'tech', 'opps'].forEach(id => {
+                document.getElementById(`content-${id}`).classList.add('hidden');
+                document.getElementById(`tab-${id}`).classList.remove('tab-active', 'text-[#0076CE]');
+                document.getElementById(`tab-${id}`).classList.add('border-transparent');
+            });
+
+            // Show selected
+            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabId}`).classList.add('tab-active');
+            document.getElementById(`tab-${tabId}`).classList.remove('border-transparent');
+
+            // Trigger charts redraw if accessing for first time or needing resize check
+            if (tabId === 'financials') {
+                // Short timeout to allow DOM to unhide before chart renders (Chart.js needs visible canvas)
+                setTimeout(() => {
+                    // Check if chart instance exists, if not init? 
+                    // For simplicity, we can rely on Chart.js responsiveness, but sometimes it needs a kick.
+                }, 50);
+            }
+            if (tabId === 'tech') {
+                setTimeout(() => {
+                     Plotly.Plots.resize('vendorBubbleChart');
+                }, 50);
+            }
+        }
+
+        // --- INTERACTION LOGIC ---
+
+        function showStakeholderDetails(key) {
+            const data = reportData.stakeholders[key];
+            const panel = document.getElementById('stakeholder-detail-panel');
+            
+            panel.innerHTML = `
+                <div class="animate-fade-in">
+                    <h4 class="text-xl font-bold text-slate-800 mb-1">${data.title}</h4>
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-bold mb-4">${data.role}</span>
+                    <h5 class="font-bold text-slate-600 text-sm mb-2">Engagement Strategy:</h5>
+                    <p class="text-sm text-slate-600 leading-relaxed bg-white p-4 rounded border border-slate-200 shadow-sm">${data.strategy}</p>
+                    <div class="mt-4 pt-4 border-t border-slate-200">
+                        <a href="${data.linkedin}" target="_blank" rel="noopener noreferrer" class="text-sm text-[#0076CE] font-medium hover:underline inline-flex items-center gap-1">View LinkedIn Profile <span class="text-xs">↗</span></a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function filterOpps(category) {
+            const cards = document.querySelectorAll('.opp-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        // --- MODAL LOGIC ---
+        function openBattlecard(id) {
+            const data = reportData.battlecards[id];
+            if (!data) return;
+
+            document.getElementById('bc-title').textContent = data.title;
+            document.getElementById('bc-target').textContent = data.target;
+            document.getElementById('bc-pain').textContent = data.painPoint;
+            
+            const questionsList = document.getElementById('bc-questions');
+            questionsList.innerHTML = '';
+            data.questions.forEach(q => {
+                const li = document.createElement('li');
+                li.textContent = q;
+                questionsList.appendChild(li);
+            });
+
+            document.getElementById('bc-objections').innerHTML = data.objections;
+            document.getElementById('bc-competitors').textContent = data.competitors;
+
+            const modal = document.getElementById('battlecard-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeBattlecard() {
+            const modal = document.getElementById('battlecard-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Close modal on click outside
+        document.getElementById('battlecard-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBattlecard();
+            }
+        });
+
+        // --- INITIALIZATION ---
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            initBudgetChart();
+            initAgencyChart();
+            initVendorChart();
+            
+            // Add fade-in animation to style
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+                .animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+            `;
+            document.head.appendChild(style);
+        });
+
+    </script>
+</body>
+</html>

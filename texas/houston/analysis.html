@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell SLG Market Intelligence: City of Houston</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #2563eb;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        body {
+            background-color: #fafafa;
+            color: #334155;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .interactive-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .interactive-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: #93c5fd;
+        }
+        .power-node {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .power-node:hover {
+            background-color: #eff6ff;
+            border-color: #3b82f6;
+        }
+        .power-node.selected {
+            background-color: #dbeafe;
+            border-color: #2563eb;
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-zinc-50 text-slate-800 antialiased">
+
+    <!-- Chosen Palette: Warm Neutrals with Dell Corporate Blue Accents (Zinc-50 background, Slate-800 text, Blue-600/Blue-800 accents) -->
+    <!-- Application Structure Plan: A dashboard-style SPA tailored for a Dell AE. A sticky top navigation allows quick jumps between intelligence domains (Macro, Power Structure, Financials, Procurement, Actionable Opportunities). The structure moves logically from high-level political context down to specific Dell product whitespace. Interactive tabs, clickable power-map grids, and dynamic charts are used to condense complex bureaucratic data into easily digestible, actionable insights without overwhelming the user with a massive scrolling document. -->
+    <!-- Visualization & Content Choices: 
+         - Financials -> Goal: Compare O&M vs CapEx -> Viz: Doughnut & Bar Charts (Chart.js) -> Interaction: Hover tooltips -> Justification: Clearly delineates recurring spend vs modernization capital -> Library: Chart.js (NO SVG).
+         - Power Structure -> Goal: Organize & Relationships -> Viz: CSS Grid Interactive Map -> Interaction: Clickable nodes reveal influence profiles -> Justification: Forces AE to differentiate between budget holders and technical decision-makers -> Library: HTML/CSS/Vanilla JS (NO SVG/Mermaid).
+         - Strategic Initiatives -> Goal: Inform -> Viz: Tabbed content areas -> Interaction: Click tabs to filter by level (Executive, Agency, IT) -> Justification: Segregates massive project lists into consumable domains.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <nav class="sticky top-0 z-50 bg-white border-b border-zinc-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl mr-2 text-blue-700">&#9632;</span>
+                    <span class="font-bold text-xl text-slate-900 tracking-tight">Houston IT Intelligence</span>
+                </div>
+                <div class="hidden md:flex space-x-6 items-center overflow-x-auto">
+                    <a href="#macro" class="nav-link text-sm text-slate-600 hover:text-blue-600 py-5">Macro & Exec</a>
+                    <a href="#power" class="nav-link text-sm text-slate-600 hover:text-blue-600 py-5">Power Structure</a>
+                    <a href="#financials" class="nav-link text-sm text-slate-600 hover:text-blue-600 py-5">Financials</a>
+                    <a href="#initiatives" class="nav-link text-sm text-slate-600 hover:text-blue-600 py-5">Initiatives</a>
+                    <a href="#opportunities" class="nav-link text-sm text-slate-600 hover:text-blue-600 py-5 font-semibold">Dell Opportunities</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+        <section id="macro" class="scroll-mt-20">
+            <div class="bg-white rounded-xl shadow-sm border border-zinc-200 overflow-hidden">
+                <div class="p-8">
+                    <h1 class="text-3xl font-extrabold text-slate-900 mb-4">Executive Summary & Macro Landscape</h1>
+                    <p class="text-lg text-slate-600 mb-8">This section provides the critical macro-level context of the City of Houston for FY26. It highlights the primary administrative goals of the current mayoral administration, framing the high-level business drivers that ultimately fund technology procurements. Understanding these goals is essential for positioning Dell solutions as strategic enablers rather than simple IT commodities.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-6 border border-blue-100">
+                            <div class="text-3xl mb-3">&#127961;</div>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">Political Climate</h3>
+                            <p class="text-sm text-blue-800">The current administration under Mayor John Whitmire focuses heavily on fiscal responsibility, public safety enhancement, and infrastructure resilience following recent severe weather events. There is a mandate to "do more with less" and consolidate duplicative agency efforts.</p>
+                        </div>
+                        <div class="bg-emerald-50 rounded-lg p-6 border border-emerald-100">
+                            <div class="text-3xl mb-3">&#128176;</div>
+                            <h3 class="text-xl font-bold text-emerald-900 mb-2">Economic Climate</h3>
+                            <p class="text-sm text-emerald-800">Houston maintains a robust economy transitioning from legacy energy to tech and healthcare. However, the municipal government faces a historical structural budget deficit, making CapEx requests highly scrutinized. Financing models (OpEx) are increasingly favored.</p>
+                        </div>
+                        <div class="bg-amber-50 rounded-lg p-6 border border-amber-100">
+                            <div class="text-3xl mb-3">&#128680;</div>
+                            <h3 class="text-xl font-bold text-amber-900 mb-2">Core FY Goals</h3>
+                            <ul class="text-sm text-amber-800 list-disc pl-4 space-y-1">
+                                <li>Public Safety Data Modernization (HPD, HFD)</li>
+                                <li>Infrastructure & Flood Resilience (IoT, Edge)</li>
+                                <li>Digital Equity & Broadband Access</li>
+                                <li>Cybersecurity Zero-Trust Implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="power" class="scroll-mt-20">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Organization of the Power Structure</h2>
+            <p class="text-slate-600 mb-6">Navigate the interactive grid below to understand the differentiation between financial purchasing power and technical influence. Click on a stakeholder role to view their primary focus, friction points, and the recommended Dell engagement strategy. This intelligence is crucial for multi-threading your sales campaign.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1 space-y-4">
+                    <div class="bg-white rounded-lg border border-zinc-200 p-4 shadow-sm">
+                        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Elected & Financial</h3>
+                        <div class="space-y-2">
+                            <div class="power-node p-3 rounded border border-zinc-200 bg-zinc-50" data-target="mayor">
+                                <div class="font-bold text-slate-800">Mayor's Office</div>
+                                <div class="text-xs text-slate-500">Executive Mandate & Veto Power</div>
+                            </div>
+                            <div class="power-node p-3 rounded border border-zinc-200 bg-zinc-50" data-target="controller">
+                                <div class="font-bold text-slate-800">City Controller</div>
+                                <div class="text-xs text-slate-500">Financial Auditing & Approvals</div>
+                            </div>
+                            <div class="power-node p-3 rounded border border-zinc-200 bg-zinc-50" data-target="council">
+                                <div class="font-bold text-slate-800">City Council (Tech Committee)</div>
+                                <div class="text-xs text-slate-500">Contract Approvals > $50k</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg border border-zinc-200 p-4 shadow-sm">
+                        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Technical & Operational</h3>
+                        <div class="space-y-2">
+                            <div class="power-node p-3 rounded border border-zinc-200 bg-zinc-50 selected" data-target="cio">
+                                <div class="font-bold text-slate-800">CIO & Director of HITS</div>
+                                <div class="text-xs text-slate-500">Central IT Governance & Standards</div>
+                            </div>
+                            <div class="power-node p-3 rounded border border-zinc-200 bg-zinc-50" data-target="agencies">
+                                <div class="font-bold text-slate-800">Agency IT Directors (HPD, HPW, HAS)</div>
+                                <div class="text-xs text-slate-500">Departmental Budgets & Shadow IT</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="bg-slate-800 rounded-xl p-8 h-full text-white shadow-lg relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                        
+                        <div id="power-details-cio" class="power-detail-pane">
+                            <h3 class="text-2xl font-bold text-blue-300 mb-2">CIO & Director of HITS (Houston IT Services)</h3>
+                            <div class="flex items-center space-x-2 mb-6">
+                                <span class="px-2 py-1 bg-blue-900/50 text-blue-200 text-xs rounded border border-blue-700/50">Technical Influence: High</span>
+                                <span class="px-2 py-1 bg-zinc-700 text-zinc-300 text-xs rounded border border-zinc-600">Direct Financial Power: Medium</span>
+                            </div>
+                            <div class="space-y-4 text-slate-300">
+                                <div><strong class="text-white block">Role & Focus:</strong> Centralizes enterprise applications, cybersecurity, and data center operations. Pushing for cloud-smart policies, cost-reduction through vendor consolidation, and strict cybersecurity compliance.</div>
+                                <div><strong class="text-white block">Governance Model:</strong> <span class="text-amber-400 font-semibold">Hybrid/Federated.</span> HITS acts as a service provider to departments. Constant friction regarding "Chargeback" models where departments feel HITS services are too expensive or slow, leading departments to procure their own solutions.</div>
+                                <div class="pt-4 border-t border-slate-700">
+                                    <strong class="text-emerald-400 block mb-1">Dell AE Action:</strong> Position Dell APEX as a way for HITS to offer internal "cloud-like" consumption models to their departments, smoothing out the chargeback friction and keeping data on-prem/hybrid for cost control.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="power-details-mayor" class="power-detail-pane hidden">
+                            <h3 class="text-2xl font-bold text-blue-300 mb-2">Mayor's Office</h3>
+                            <div class="flex items-center space-x-2 mb-6">
+                                <span class="px-2 py-1 bg-zinc-700 text-zinc-300 text-xs rounded border border-zinc-600">Technical Influence: Low</span>
+                                <span class="px-2 py-1 bg-emerald-900/50 text-emerald-200 text-xs rounded border border-emerald-700/50">Direct Financial Power: Very High</span>
+                            </div>
+                            <div class="space-y-4 text-slate-300">
+                                <div><strong class="text-white block">Role & Focus:</strong> Sets the annual budget priorities. Focused entirely on citizen outcomes: less crime, fewer potholes, faster emergency response, and lower taxes. Has no interest in IT feeds and speeds.</div>
+                                <div><strong class="text-white block">Current Pain Point:</strong> Structural deficit. The city cannot afford massive multi-million dollar upfront capital outlays without passing bonds.</div>
+                                <div class="pt-4 border-t border-slate-700">
+                                    <strong class="text-emerald-400 block mb-1">Dell AE Action:</strong> Frame all large infrastructure proposals through Dell Financial Services (DFS) or APEX. Tie technology (e.g., edge servers) directly to outcomes (e.g., faster AI-driven traffic light optimization to reduce congestion).
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="power-details-controller" class="power-detail-pane hidden">
+                            <h3 class="text-2xl font-bold text-blue-300 mb-2">City Controller</h3>
+                            <div class="flex items-center space-x-2 mb-6">
+                                <span class="px-2 py-1 bg-zinc-700 text-zinc-300 text-xs rounded border border-zinc-600">Technical Influence: Low</span>
+                                <span class="px-2 py-1 bg-emerald-900/50 text-emerald-200 text-xs rounded border border-emerald-700/50">Direct Financial Power: High</span>
+                            </div>
+                            <div class="space-y-4 text-slate-300">
+                                <div><strong class="text-white block">Role & Focus:</strong> The Chief Financial Officer of the city. Audits all departments, processes all payments, and certifies the availability of funds before City Council can approve a contract.</div>
+                                <div><strong class="text-white block">Current Pain Point:</strong> Ensuring compliance with federal grant spending (ARPA, Infrastructure Bill) and preventing procurement fraud or waste.</div>
+                                <div class="pt-4 border-t border-slate-700">
+                                    <strong class="text-emerald-400 block mb-1">Dell AE Action:</strong> Ensure all Dell proposals utilize pre-vetted cooperative purchasing agreements (DIR, OMNIA) to guarantee rapid controller approval. Highlight ROI and total cost of ownership (TCO).
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="power-details-council" class="power-detail-pane hidden">
+                            <h3 class="text-2xl font-bold text-blue-300 mb-2">City Council (Tech & Finance Committees)</h3>
+                            <div class="flex items-center space-x-2 mb-6">
+                                <span class="px-2 py-1 bg-zinc-700 text-zinc-300 text-xs rounded border border-zinc-600">Technical Influence: Low</span>
+                                <span class="px-2 py-1 bg-emerald-900/50 text-emerald-200 text-xs rounded border border-emerald-700/50">Direct Financial Power: High</span>
+                            </div>
+                            <div class="space-y-4 text-slate-300">
+                                <div><strong class="text-white block">Role & Focus:</strong> Must vote to approve any technology contract over $50,000. They ask questions primarily about vendor diversity (MWBE compliance), local economic impact, and constituent privacy.</div>
+                                <div><strong class="text-white block">Current Pain Point:</strong> Approving large "black box" IT spending without understanding the citizen benefit. Highly sensitive to data privacy regarding AI and surveillance.</div>
+                                <div class="pt-4 border-t border-slate-700">
+                                    <strong class="text-emerald-400 block mb-1">Dell AE Action:</strong> Partner with strong, certified local MWBE (Minority/Women-owned Business Enterprise) resellers in Houston. Council will reject direct Dell deals if MWBE participation goals are not met.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="power-details-agencies" class="power-detail-pane hidden">
+                            <h3 class="text-2xl font-bold text-blue-300 mb-2">Agency IT Directors (HPD, Public Works, Aviation)</h3>
+                            <div class="flex items-center space-x-2 mb-6">
+                                <span class="px-2 py-1 bg-blue-900/50 text-blue-200 text-xs rounded border border-blue-700/50">Technical Influence: Very High</span>
+                                <span class="px-2 py-1 bg-emerald-900/50 text-emerald-200 text-xs rounded border border-emerald-700/50">Direct Financial Power: High (within department)</span>
+                            </div>
+                            <div class="space-y-4 text-slate-300">
+                                <div><strong class="text-white block">Role & Focus:</strong> Enterprise-level departments like Houston Airport System (HAS), Houston Public Works (HPW), and Houston Police Department (HPD) have massive independent budgets and their own IT staffs. They dictate edge, IoT, and specific application infrastructure.</div>
+                                <div><strong class="text-white block">Current Pain Point:</strong> Waiting on central HITS for provisioning. Need massive unstructured data storage (video evidence, airport security, water meter telemetry).</div>
+                                <div class="pt-4 border-t border-slate-700">
+                                    <strong class="text-emerald-400 block mb-1">Dell AE Action:</strong> Bypass HITS for specific edge/storage plays. Pitch PowerScale directly to HPD for body-cam video. Pitch Edge gateways directly to HPW for SCADA/water systems. These agencies have capital and avoid central IT bottlenecks.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="financials" class="scroll-mt-20">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Financials & Budget Breakdown</h2>
+            <p class="text-slate-600 mb-6">This section visualizes the approved fiscal environment. It contrasts the massive overall city budget against the centralized IT budget (HITS), highlighting that the majority of central IT spend is locked into operational maintenance (O&M), leaving net-new capital projects dependent on external grants or departmental budgets. Interact with the charts to see exact figures.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm flex flex-col items-center">
+                    <h3 class="text-lg font-bold text-slate-800 mb-2 text-center">HITS Budget: O&M vs CapEx (FY26)</h3>
+                    <p class="text-xs text-slate-500 mb-4 text-center">Central IT struggles with technical debt; 85% is keeping the lights on.</p>
+                    <div class="chart-container">
+                        <canvas id="budgetDoughnut"></canvas>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm flex flex-col items-center">
+                    <h3 class="text-lg font-bold text-slate-800 mb-2 text-center">Estimated IT Spend by Major Department (Millions)</h3>
+                    <p class="text-xs text-slate-500 mb-4 text-center">Highlights the "Federated" reality: Departments hold massive IT purchasing power.</p>
+                    <div class="chart-container">
+                        <canvas id="deptBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+                <h4 class="font-bold text-blue-900 mb-1">Grant & Federal Funding Notice</h4>
+                <p class="text-sm text-blue-800">The city has been awarded approximately <strong>$6.2M</strong> via the State and Local Cybersecurity Grant Program (SLCGP) managed by the state of Texas. This funding is heavily earmarked for Endpoint Detection and Response (EDR), Multi-Factor Authentication (MFA), and immutable backup architectures to defend against ransomware. <em>Action: Map Dell PowerProtect Cyber Recovery directly to these grant requirements.</em></p>
+            </div>
+        </section>
+
+        <section id="initiatives" class="scroll-mt-20">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Strategic Initiatives & Projects</h2>
+            <p class="text-slate-600 mb-6">Explore the specific, funded modernization initiatives across the city. By categorizing projects into Executive Mandates, Agency Modernization, and Core IT Upgrades, Dell AEs can align specific product lines (e.g., Client, Enterprise, Edge) to the appropriate buyer intent.</p>
+
+            <div class="bg-white rounded-xl border border-zinc-200 shadow-sm overflow-hidden">
+                <div class="flex border-b border-zinc-200 bg-zinc-50 overflow-x-auto">
+                    <button class="initiative-tab active px-6 py-4 text-sm font-bold text-blue-700 border-b-2 border-blue-700 whitespace-nowrap" data-tab="tab-exec">Top-Level Government</button>
+                    <button class="initiative-tab px-6 py-4 text-sm font-medium text-slate-600 hover:text-slate-900 whitespace-nowrap" data-tab="tab-agency">Agency-Level</button>
+                    <button class="initiative-tab px-6 py-4 text-sm font-medium text-slate-600 hover:text-slate-900 whitespace-nowrap" data-tab="tab-it">IT / Data Center Level</button>
+                </div>
+
+                <div class="p-6">
+                    <div id="tab-exec" class="tab-content active">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-3 mt-1">&#10004;</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Smart City & Vision Zero</h4>
+                                    <p class="text-sm text-slate-600">Expansion of intersection sensors and traffic analytics to reduce pedestrian fatalities. Requires massive edge computing and ruggedized infrastructure.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-3 mt-1">&#10004;</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Citizen Experience (311 Modernization)</h4>
+                                    <p class="text-sm text-slate-600">Replacing legacy CRM with AI-driven chatbots and omni-channel constituent portals. Drives need for structured database upgrades and potential AI inferencing clusters.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-3 mt-1">&#10004;</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Digital Equity Initiative</h4>
+                                    <p class="text-sm text-slate-600">Equipping community centers with public Wi-Fi and device lending libraries. Potential for bulk Client Solutions (Latitude/Chromebook) sales.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="tab-agency" class="tab-content">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-emerald-500 mr-3 mt-1">&#9654;</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">HPD: Next-Gen Body Worn Camera & Digital Evidence</h4>
+                                    <p class="text-sm text-slate-600">Transitioning to 4K body cameras. Unstructured data sprawl is unmanageable. Cloud storage costs are skyrocketing, prompting a look at repatriation to on-prem object storage.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-emerald-500 mr-3 mt-1">&#9654;</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Houston Public Works: SCADA Security</h4>
+                                    <p class="text-sm text-slate-600">Air-gapping and modernizing the servers controlling the city's water purification and distribution networks to meet federal EPA cyber guidelines.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-emerald-500 mr-3 mt-1">&#9654;</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Houston Airport System (HAS): Facial Recognition Boarding</h4>
+                                    <p class="text-sm text-slate-600">Deploying biometric terminals at IAH. Requires ultra-low latency compute at the terminal edge and robust AI-model training infrastructure centrally.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="tab-it" class="tab-content">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-3 mt-1">&#9881;</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Data Center Consolidation / Cloud Smart</h4>
+                                    <p class="text-sm text-slate-600">Moving away from a "cloud first" mandate due to unforeseen egress fees. Currently executing a "Cloud Smart" strategy: repatriating predictable workloads back to colocation facilities using modern hyperconverged infrastructure (HCI).</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-3 mt-1">&#9881;</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Ransomware Resilience & Zero Trust</h4>
+                                    <p class="text-sm text-slate-600">Mandated to create a completely isolated, immutable backup vault. Currently assessing vendors to replace aging legacy tape/disk backups that are vulnerable to network infiltration.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="procurement" class="scroll-mt-20">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Procurement, Vendor Landscape & Compliance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-zinc-100 p-6 rounded-lg border border-zinc-200">
+                    <h3 class="font-bold text-slate-800 mb-3 border-b border-zinc-300 pb-2">Contract Vehicles</h3>
+                    <ul class="text-sm text-slate-700 space-y-2">
+                        <li><strong>DIR (TX Dept of Info Resources):</strong> Primary vehicle. Mandatory for HITS unless a waiver is secured.</li>
+                        <li><strong>OMNIA Partners:</strong> Heavily used by HPW and HAS for infrastructure.</li>
+                        <li><strong>BuyBoard:</strong> Used for smaller commodity client purchases.</li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-100 p-6 rounded-lg border border-zinc-200">
+                    <h3 class="font-bold text-slate-800 mb-3 border-b border-zinc-300 pb-2">Compliance Mandates</h3>
+                    <ul class="text-sm text-slate-700 space-y-2">
+                        <li><strong>CJIS:</strong> Critical for HPD data. Requires strict physical and logical access controls for storage.</li>
+                        <li><strong>StateRAMP:</strong> Houston is aligning with Texas StateRAMP guidelines for all cloud and SaaS vendors.</li>
+                        <li><strong>HIPAA:</strong> Health Department requires encrypted-at-rest data solutions.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4 bg-red-50 p-4 rounded-lg border border-red-100">
+                <h3 class="text-sm font-bold text-red-800 mb-1">Competitive Incumbents & Technical Debt</h3>
+                <p class="text-sm text-red-700">Houston relies heavily on a massive, aging Cisco UCS environment for central compute and legacy NetApp arrays approaching end-of-support. There is significant frustration with current public cloud (AWS/Azure) unbudgeted cost overruns. Endpoint security is fragmented across different agencies.</p>
+            </div>
+        </section>
+
+        <section id="opportunities" class="scroll-mt-20 border-t border-zinc-200 pt-16">
+            <h2 class="text-3xl font-extrabold text-blue-900 mb-4">Actionable Dell Opportunities (The "So What")</h2>
+            <p class="text-lg text-slate-600 mb-8">This section synthesizes the political, financial, and technical intelligence into specific, actionable sales campaigns for the Dell Technologies portfolio. These represent the highest-probability whitespace and displacement areas in the City of Houston.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="interactive-card bg-white p-6 rounded-xl border-t-4 border-blue-600 shadow-md">
+                    <div class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Funded Tech</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Public Cloud Repatriation via APEX</h3>
+                    <p class="text-sm text-slate-600 mb-4"><strong>The Hook:</strong> Leverage the CFO/Controller's frustration with unpredictable AWS/Azure egress fees.</p>
+                    <p class="text-sm text-slate-600 mb-4"><strong>The Play:</strong> Pitch Dell APEX Data Storage Services. Offer HITS the cloud-like OpEx consumption model they need to appease the Controller, while keeping data on-premise on PowerStore to eliminate egress costs and satisfy CJIS compliance.</p>
+                </div>
+
+                <div class="interactive-card bg-white p-6 rounded-xl border-t-4 border-emerald-500 shadow-md">
+                    <div class="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-2">Whitespace</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">HPD Video Object Storage</h3>
+                    <p class="text-sm text-slate-600 mb-4"><strong>The Hook:</strong> HPD's 4K body camera mandate is creating an unstructured data nightmare that is breaking their storage budget.</p>
+                    <p class="text-sm text-slate-600 mb-4"><strong>The Play:</strong> Bypass HITS and pitch Dell PowerScale/ECS directly to HPD IT leadership. Emphasize massive scalability, lower TCO compared to Axon cloud storage, and seamless CJIS compliant tiering.</p>
+                </div>
+
+                <div class="interactive-card bg-white p-6 rounded-xl border-t-4 border-purple-600 shadow-md">
+                    <div class="text-sm font-bold text-purple-600 uppercase tracking-widest mb-2">Displacement</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Cyber Recovery & Immutable Vault</h3>
+                    <p class="text-sm text-slate-600 mb-4"><strong>The Hook:</strong> Access the $6.2M SLCGP grant funding specifically earmarked for ransomware resilience.</p>
+                    <p class="text-sm text-slate-600 mb-4"><strong>The Play:</strong> Attack the aging NetApp/legacy backup environment. Pitch Dell PowerProtect Cyber Recovery with CyberSense. Frame it not as storage, but as the ultimate "insurance policy" against a municipality-crippling ransomware event. Engage the Mayor's office on the risk-reduction angle.</p>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-zinc-800 text-white p-6 rounded-xl text-center">
+                <h3 class="text-xl font-bold mb-2">Next Steps for Account Team</h3>
+                <p class="text-sm text-zinc-300">1. Identify local MWBE partners registered on the DIR contract. <br> 2. Schedule discovery with HPD regarding video retention policies. <br> 3. Brief HITS CIO on APEX financial models vs Public Cloud.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <p>Dell Technologies - SLG Market Intelligence Unit</p>
+        <p class="mt-2">Confidential & Proprietary. For Internal Dell AE & District Manager Use Only.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.initiative-tab');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => {
+                        t.classList.remove('active', 'text-blue-700', 'border-b-2', 'border-blue-700');
+                        t.classList.add('text-slate-600');
+                    });
+                    
+                    contents.forEach(c => c.classList.remove('active'));
+
+                    tab.classList.add('active', 'text-blue-700', 'border-b-2', 'border-blue-700');
+                    tab.classList.remove('text-slate-600');
+                    const targetId = tab.getAttribute('data-tab');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            const powerNodes = document.querySelectorAll('.power-node');
+            const powerDetails = document.querySelectorAll('.power-detail-pane');
+
+            powerNodes.forEach(node => {
+                node.addEventListener('click', () => {
+                    powerNodes.forEach(n => n.classList.remove('selected'));
+                    node.classList.add('selected');
+
+                    powerDetails.forEach(pane => pane.classList.add('hidden'));
+
+                    const targetId = 'power-details-' + node.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+                    if(targetElement) {
+                        targetElement.classList.remove('hidden');
+                        targetElement.style.animation = 'none';
+                        targetElement.offsetHeight; 
+                        targetElement.style.animation = 'fadeIn 0.4s ease-in-out';
+                    }
+                });
+            });
+
+            const links = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                links.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            const ctxDoughnut = document.getElementById('budgetDoughnut').getContext('2d');
+            new Chart(ctxDoughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Operations & Maintenance (O&M)', 'Net-New Capital/Projects'],
+                    datasets: [{
+                        data: [85, 15],
+                        backgroundColor: ['#94a3b8', '#2563eb'],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12 } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.parsed + '% (~$' + (context.parsed * 1.1).toFixed(1) + 'M)';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const ctxBar = document.getElementById('deptBarChart').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['HITS (Central)', 'Police (HPD)', 'Public Works', 'Aviation (HAS)', 'Fire (HFD)'],
+                    datasets: [{
+                        label: 'Estimated IT Spend ($M)',
+                        data: [110, 65, 85, 55, 25],
+                        backgroundColor: '#3b82f6',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                        x: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return '$' + context.parsed.y + ' Million';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

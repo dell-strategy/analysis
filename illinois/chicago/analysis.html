@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Technologies Executive Brief: City of Chicago</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Chosen Palette: Dell Executive (Corporate Blue #0076CE, Slate Gray for neutrality, Amber/Green/Purple accents for status and targeting) -->
+    
+    <!-- Application Structure Plan: A single-page application (SPA) using a strict tabbed view approach. Only one primary section is visible at a time to maximize screen real estate. This updated version incorporates hyper-local Chicago data (O'Hare 21, CPD Consent Decree) directly into the UX flow, ensuring the Account Executive consumes actionable, specific intelligence rather than generic SLG advice. -->
+    
+    <!-- Visualization & Content Choices: 
+        1. Power Structure -> Goal: Organize/Relationships -> Viz: Interactive HTML/CSS Grid (2x2 Matrix) + Specific Persona Cards -> Justification: Maps buying power vs technical influence and provides direct targets -> Method: Tailwind CSS Grid.
+        2. Financials -> Goal: Compare -> Viz: Doughnut (Overall Budget) & Stacked Bar Charts (IT Spend) -> Interaction: Hover for exact figures -> Justification: Highlights the disparity between central IT budgets and massive "shadow IT" agency budgets -> Method: Chart.js (NO SVG).
+        3. Initiatives -> Goal: Organize -> Viz: Vertical Tabbed Interface -> Justification: Categorizes dense strategic data into readable chunks mapping directly to Dell portfolios and named Chicago projects. 
+    -->
+    
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0076CE; }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        /* Fade in animation for view switching */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .matrix-cell:hover .matrix-content { background-color: #f8fafc; transform: scale(1.02); }
+        .matrix-cell.target:hover .matrix-content { background-color: #eff6ff; border-color: #0076CE; }
+
+        /* Custom active state for main nav */
+        .nav-link.active {
+            background-color: white;
+            color: #0076CE;
+            font-weight: 700;
+            border-bottom: 3px solid #0076CE;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased leading-relaxed h-screen flex flex-col overflow-hidden">
+
+    <!-- Application Shell Navigation -->
+    <nav class="w-full bg-[#0076CE] text-white shadow-md z-50 shrink-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between h-auto md:h-16 items-center">
+                <div class="flex-shrink-0 font-bold text-xl tracking-wider flex items-center gap-2 py-4 md:py-0">
+                    <span class="text-2xl">💻</span> DELL <span class="text-blue-200 font-light hidden sm:inline">| SLG Intelligence: Chicago</span>
+                </div>
+                <!-- Main Tab Navigation -->
+                <div class="flex space-x-1 md:space-x-2 text-sm font-medium w-full md:w-auto overflow-x-auto no-scrollbar">
+                    <button class="nav-link active px-4 py-3 md:py-5 hover:bg-blue-600 transition-colors whitespace-nowrap" data-target="view-macro">1. Macro Context</button>
+                    <button class="nav-link px-4 py-3 md:py-5 hover:bg-blue-600 transition-colors whitespace-nowrap" data-target="view-power">2. Power Matrix</button>
+                    <button class="nav-link px-4 py-3 md:py-5 hover:bg-blue-600 transition-colors whitespace-nowrap" data-target="view-financials">3. Financials & Funding</button>
+                    <button class="nav-link px-4 py-3 md:py-5 hover:bg-blue-600 transition-colors whitespace-nowrap" data-target="view-initiatives">4. Named Initiatives</button>
+                    <button class="nav-link px-4 py-3 md:py-5 hover:bg-blue-600 transition-colors whitespace-nowrap text-amber-300 font-bold" data-target="view-opportunities">5. Action Plan</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area (Scrollable within the shell) -->
+    <main class="flex-1 overflow-y-auto w-full pb-12 bg-slate-50 relative p-4 sm:p-6 lg:p-8">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- HEADER (Persistent across views) -->
+            <header class="mb-8 border-b border-slate-200 pb-6 shrink-0">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">City of Chicago: Account Intelligence Brief</h1>
+                <p class="text-lg md:text-xl text-slate-600">Strategic Analysis & Whitespace Identification for Account Executives</p>
+                <div class="mt-4 flex flex-wrap gap-4 text-xs font-semibold text-slate-600 uppercase tracking-wide">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full border border-blue-200">📍 Target: Tier 1 Metro SLG</span>
+                    <span class="bg-slate-200 px-3 py-1 rounded-full border border-slate-300">📅 Fiscal Year: 2025/2026 Focus</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full border border-green-200">Est. IT Addressable: ~$310M</span>
+                </div>
+            </header>
+
+            <!-- ========================================== -->
+            <!-- VIEW 1: MACRO CONTEXT                      -->
+            <!-- ========================================== -->
+            <section id="view-macro" class="app-view fade-in">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="bg-white rounded-xl shadow-sm p-8 border border-slate-100">
+                            <h2 class="text-2xl font-bold text-slate-800 mb-4 flex items-center border-b pb-2">
+                                <span class="text-2xl mr-3">🏛️</span> The Current Climate & Priorities
+                            </h2>
+                            <p class="mb-4 text-slate-700 leading-relaxed">
+                                Under the current mayoral administration, Chicago is navigating a projected ~$982M structural budget deficit while attempting to execute a progressive agenda heavily focused on neighborhood equity and public safety reform. The core challenge for the IT organization (BIA) is balancing required legacy infrastructure modernization against these high-visibility digital initiatives within a constrained General Corporate Fund.
+                            </p>
+                            <p class="text-sm font-semibold text-[#0076CE] bg-blue-50 p-4 rounded border-l-4 border-[#0076CE]">
+                                Pitch Angle: Technology must not be positioned as overhead. Every Dell APEX or PowerStore pitch must map to "Operational Cost-Reduction" or compliance with federal mandates (like the CPD Consent Decree).
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="bg-white p-5 rounded-xl border-t-4 border-[#0076CE] shadow-sm hover:shadow-md transition-shadow">
+                                <div class="text-3xl mb-3">🚓</div>
+                                <h4 class="font-bold text-slate-800 mb-2">Federal Consent Decree</h4>
+                                <p class="text-sm text-slate-600">The Chicago Police Department is legally mandated to improve data collection, officer transparency, and records management. Massive driver for scalable data storage.</p>
+                            </div>
+                            <div class="bg-white p-5 rounded-xl border-t-4 border-[#0076CE] shadow-sm hover:shadow-md transition-shadow">
+                                <div class="text-3xl mb-3">✈️</div>
+                                <h4 class="font-bold text-slate-800 mb-2">O'Hare 21 Modernization</h4>
+                                <p class="text-sm text-slate-600">An $8.5 billion terminal expansion. This self-funded enterprise project requires massive investments in edge computing, IoT security, and high-availability databases.</p>
+                            </div>
+                            <div class="bg-white p-5 rounded-xl border-t-4 border-[#0076CE] shadow-sm hover:shadow-md transition-shadow">
+                                <div class="text-3xl mb-3">⚙️</div>
+                                <h4 class="font-bold text-slate-800 mb-2">311 & Operational Efficiency</h4>
+                                <p class="text-sm text-slate-600">Consolidating disparate city systems, shifting legacy apps from the general fund to secure hybrid-cloud, and leveraging AI for citizen portal triage.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Stats -->
+                    <div class="lg:col-span-1 space-y-6">
+                        <div class="bg-slate-800 text-white rounded-xl shadow-sm p-6">
+                            <h3 class="font-bold text-lg mb-4 text-blue-200 uppercase tracking-wider text-sm border-b border-slate-600 pb-2">Key Economic Indicators</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-slate-400 text-xs uppercase">Projected FY25/26 Deficit</p>
+                                    <p class="text-2xl font-bold text-red-400">~$982 Million</p>
+                                </div>
+                                <div>
+                                    <p class="text-slate-400 text-xs uppercase">Total City Budget</p>
+                                    <p class="text-2xl font-bold">~$16.6 Billion</p>
+                                </div>
+                                <div>
+                                    <p class="text-slate-400 text-xs uppercase">General Obligation Bond Rating</p>
+                                    <p class="text-lg font-bold text-green-400">Baa3 (Moody's) / BBB+ (S&P)</p>
+                                </div>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-slate-600 text-xs text-slate-300">
+                                <strong class="text-white">Implication:</strong> Capital is severely tight in the general fund. Procurement requires massive ROI justification. Enterprise funds (Aviation/Water) and Federal Grants are the safest, fastest paths to revenue.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- VIEW 2: POWER MATRIX                       -->
+            <!-- ========================================== -->
+            <section id="view-power" class="app-view hidden fade-in">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Interactive Matrix -->
+                    <div class="bg-white rounded-xl shadow-sm p-8 border border-slate-100 flex flex-col justify-center relative">
+                        <h2 class="text-2xl font-bold text-slate-800 mb-2">The Buying Matrix</h2>
+                        <p class="mb-8 text-slate-600 text-sm">Navigate Chicago's federated structure: Technical validation vs. Financial authorization.</p>
+                        
+                        <div class="relative bg-slate-50 p-6 rounded-lg border border-slate-200">
+                            <div class="absolute -left-6 top-1/2 transform -translate-y-1/2 -rotate-90 text-xs font-bold text-slate-400 tracking-widest uppercase">Technical Influence</div>
+                            <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 text-xs font-bold text-slate-400 tracking-widest uppercase">Financial Purchasing Power</div>
+
+                            <div class="grid grid-cols-2 grid-rows-2 gap-4 h-96 pl-6 pb-6">
+                                <!-- Q1: High Tech, Low Finance -->
+                                <div class="matrix-cell relative group">
+                                    <div class="matrix-content h-full border-2 border-slate-200 rounded p-4 flex flex-col justify-center items-center text-center transition-all bg-white cursor-help">
+                                        <span class="text-base font-bold text-slate-700">Bureau of Innovation & Technology (BIA)</span>
+                                        <span class="text-[10px] font-bold text-slate-400 mt-2 uppercase tracking-wide">High Tech / Low Fin</span>
+                                    </div>
+                                    <div class="absolute inset-0 bg-slate-800 text-white p-4 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10 flex flex-col justify-center text-sm pointer-events-none">
+                                        <strong class="text-blue-300 mb-1 border-b border-slate-600 pb-1">Role: Enterprise Architects</strong>
+                                        They set the city-wide hardware standards but lack massive capital due to the general fund deficit. Pitch them centralized management, security, and Dell Validated Designs.
+                                    </div>
+                                </div>
+
+                                <!-- Q2: High Tech, High Finance (Target) -->
+                                <div class="matrix-cell target relative group">
+                                    <div class="matrix-content h-full border-2 border-blue-300 bg-blue-50 rounded p-4 flex flex-col justify-center items-center text-center transition-all cursor-crosshair shadow-sm">
+                                        <span class="text-3xl mb-2 drop-shadow">🎯</span>
+                                        <span class="text-base font-extrabold text-[#0076CE]">Major Agency IT Leads<br>(CDA, CPD, Water)</span>
+                                        <span class="text-[10px] font-bold text-blue-400 mt-2 uppercase tracking-wide">High Tech / High Fin</span>
+                                    </div>
+                                    <div class="absolute inset-0 bg-[#0076CE] text-white p-4 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10 flex flex-col justify-center text-sm pointer-events-none shadow-lg shadow-blue-500/50">
+                                        <strong class="text-blue-100 mb-1 border-b border-blue-400 pb-1">Role: Primary Target Buyers</strong>
+                                        They dictate architecture for massive departmental projects and hold Enterprise/Grant funds. Target with end-to-end data/AI solutions.
+                                    </div>
+                                </div>
+
+                                <!-- Q3: Low Tech, Low Finance -->
+                                <div class="matrix-cell relative group">
+                                    <div class="matrix-content h-full border-2 border-slate-200 rounded p-4 flex flex-col justify-center items-center text-center transition-all bg-white cursor-help">
+                                        <span class="text-base font-bold text-slate-500">Tier 3 City Agencies<br>(Libraries, Parks)</span>
+                                        <span class="text-[10px] font-bold text-slate-400 mt-2 uppercase tracking-wide">Low Tech / Low Fin</span>
+                                    </div>
+                                    <div class="absolute inset-0 bg-slate-800 text-white p-4 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10 flex flex-col justify-center text-sm pointer-events-none">
+                                        <strong class="text-blue-300 mb-1 border-b border-slate-600 pb-1">Role: End Consumers</strong>
+                                        Reliant entirely on BIA shared services. Limited direct data center sales. Focus here is strictly Client Solutions Group (CSG) device refreshes.
+                                    </div>
+                                </div>
+
+                                <!-- Q4: Low Tech, High Finance -->
+                                <div class="matrix-cell relative group">
+                                    <div class="matrix-content h-full border-2 border-slate-200 rounded p-4 flex flex-col justify-center items-center text-center transition-all bg-white cursor-help">
+                                        <span class="text-base font-bold text-slate-700">Budget Director &<br>City Council Finance</span>
+                                        <span class="text-[10px] font-bold text-slate-400 mt-2 uppercase tracking-wide">Low Tech / High Fin</span>
+                                    </div>
+                                    <div class="absolute inset-0 bg-slate-800 text-white p-4 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10 flex flex-col justify-center text-sm pointer-events-none">
+                                        <strong class="text-blue-300 mb-1 border-b border-slate-600 pb-1">Role: Final Sign-off</strong>
+                                        Do not pitch tech specs. Pitch ROI, risk mitigation (Cyber Recovery), job creation, and utilizing OMNIA/NASPO contracts to speed procurement.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Target Persona Details -->
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 h-full">
+                            <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center border-b pb-2">
+                                <span class="text-xl mr-2">👤</span> Key Buyer Personas to Penetrate
+                            </h3>
+                            
+                            <div class="space-y-4">
+                                <!-- Persona 1 -->
+                                <div class="bg-slate-50 p-4 rounded border-l-4 border-[#0076CE]">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div>
+                                            <h4 class="font-bold text-slate-800 text-lg">Nick Lucius, Commissioner & CIO</h4>
+                                            <p class="text-xs text-slate-500 font-mono">Bureau of Innovation & Technology (BIA)</p>
+                                        </div>
+                                        <span class="bg-slate-200 text-slate-700 text-[10px] px-2 py-1 rounded font-bold">Standardization Focus</span>
+                                    </div>
+                                    <p class="text-sm text-slate-700"><strong>Pain Point:</strong> Unpredictable cloud egress fees straining the general IT budget; ransomware threats targeting vulnerable disparate agencies.</p>
+                                    <p class="text-sm text-slate-700 mt-1"><strong>Dell Pitch:</strong> APEX to bring predictable cloud consumption back on-prem; Dell Cyber Recovery Vault for city-wide ransomware resilience (funded via SLCGP).</p>
+                                </div>
+
+                                <!-- Persona 2 -->
+                                <div class="bg-slate-50 p-4 rounded border-l-4 border-amber-500">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div>
+                                            <h4 class="font-bold text-slate-800 text-lg">Diego Galarza, Chief Information Officer</h4>
+                                            <p class="text-xs text-slate-500 font-mono">Chicago Dept. of Aviation (CDA) - O'Hare/Midway</p>
+                                        </div>
+                                        <span class="bg-amber-100 text-amber-800 text-[10px] px-2 py-1 rounded font-bold">Massive Enterprise Budget</span>
+                                    </div>
+                                    <p class="text-sm text-slate-700"><strong>Pain Point:</strong> Delivering the $8.5B O'Hare 21 modernization requires zero-downtime infrastructure for biometric boarding and facility IoT.</p>
+                                    <p class="text-sm text-slate-700 mt-1"><strong>Dell Pitch:</strong> VxRail and NativeEdge for ruggedized airport IoT; PowerStore for highly available core databases supporting real-time flight ops.</p>
+                                </div>
+
+                                <!-- Persona 3 -->
+                                <div class="bg-slate-50 p-4 rounded border-l-4 border-emerald-500">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div>
+                                            <h4 class="font-bold text-slate-800 text-lg">Sabra Ebersole, Chief Data Officer</h4>
+                                            <p class="text-xs text-slate-500 font-mono">Chicago Police Dept (CPD) / OEMC</p>
+                                        </div>
+                                        <span class="bg-emerald-100 text-emerald-800 text-[10px] px-2 py-1 rounded font-bold">Grant Rich / Compliance Driven</span>
+                                    </div>
+                                    <p class="text-sm text-slate-700"><strong>Pain Point:</strong> Federal Consent Decree mandates massive expansion of body-cam retention. Strict CJIS compliance limits hyperscaler usage.</p>
+                                    <p class="text-sm text-slate-700 mt-1"><strong>Dell Pitch:</strong> PowerScale (Isilon) for massive unstructured video data lakes; PowerEdge XE for on-prem AI video analytics.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- VIEW 3: FINANCIALS & FUNDING               -->
+            <!-- ========================================== -->
+            <section id="view-financials" class="app-view hidden fade-in">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <!-- Chart 1: Total Budget -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 flex flex-col">
+                        <h2 class="text-xl font-bold text-slate-800 mb-2 border-b pb-2 flex items-center">
+                            <span class="text-xl mr-2">📊</span> Total City Appropriations Makeup
+                        </h2>
+                        <p class="text-xs text-slate-500 mb-4">The General Fund is facing a $900M+ deficit. Enterprise Funds and Grants are the reliable pools of capital.</p>
+                        <div class="chart-container flex-1">
+                            <canvas id="budgetPieChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Chart 2: IT Spend Breakdown -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 flex flex-col">
+                        <h2 class="text-xl font-bold text-slate-800 mb-2 border-b pb-2 flex items-center">
+                            <span class="text-xl mr-2">📈</span> Estimated IT Spend: Central vs Agency
+                        </h2>
+                        <p class="text-xs text-slate-500 mb-4">BIA manages base operations; Agencies like Aviation and Police drive major net-new infrastructure purchases.</p>
+                        <div class="chart-container flex-1">
+                            <canvas id="spendBarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Federal Grants & Procurement Table -->
+                <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center border-b pb-2">
+                        <span class="text-xl mr-2">📝</span> Key Funding Streams & Procurement Dynamics
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-2">
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full text-left text-sm whitespace-nowrap">
+                                    <thead class="uppercase tracking-wider border-b-2 border-slate-200 text-slate-500 bg-slate-50">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-3 font-bold">Initiative/Funding</th>
+                                            <th scope="col" class="px-6 py-3 font-bold">Target Dept</th>
+                                            <th scope="col" class="px-6 py-3 font-bold">Financial Scale</th>
+                                            <th scope="col" class="px-6 py-3 font-bold">Dell Alignment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100">
+                                        <tr class="hover:bg-slate-50 transition-colors">
+                                            <th class="px-6 py-4 font-bold text-slate-700">O'Hare 21 (Enterprise)</th>
+                                            <td class="px-6 py-4">Aviation (CDA)</td>
+                                            <td class="px-6 py-4 font-mono text-green-600">$8.5B Total Project</td>
+                                            <td class="px-6 py-4">VxRail, NativeEdge, PowerStore</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50 transition-colors">
+                                            <th class="px-6 py-4 font-bold text-slate-700">CPD Consent Decree</th>
+                                            <td class="px-6 py-4">Police / OEMC</td>
+                                            <td class="px-6 py-4 font-mono text-green-600">Mandated Annual</td>
+                                            <td class="px-6 py-4">PowerScale (Isilon) Video Storage</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50 transition-colors">
+                                            <th class="px-6 py-4 font-bold text-slate-700">SLCGP (Cyber Grant)</th>
+                                            <td class="px-6 py-4">BIA / Enterprise</td>
+                                            <td class="px-6 py-4 font-mono text-amber-500">~$7.5M+ IL Grant</td>
+                                            <td class="px-6 py-4">Cyber Recovery Vaults</td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50 transition-colors">
+                                            <th class="px-6 py-4 font-bold text-slate-700">IIJA (Infrastructure)</th>
+                                            <td class="px-6 py-4">Water / Transit</td>
+                                            <td class="px-6 py-4 font-mono text-green-600">Federal Allotments</td>
+                                            <td class="px-6 py-4">Rugged Edge, PowerEdge</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-slate-800 text-white p-5 rounded-lg h-full flex flex-col justify-center">
+                            <h3 class="text-blue-300 font-bold uppercase tracking-wider text-sm mb-3 border-b border-slate-600 pb-2">Procurement Mandates</h3>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-2">✓</span>
+                                    <span><strong>NASPO ValuePoint / OMNIA:</strong> Mandatory strategy. Bypassing lengthy City Council approval via cooperative contracts is required for hardware over $1M.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-2">✓</span>
+                                    <span><strong>MBE/WBE Requirements:</strong> Chicago rigorously enforces Minority/Women Business Enterprise quotas (usually 25%+). Partnering with specific local diversity VARs is required to win.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-400 mr-2">✓</span>
+                                    <span><strong>Data Sovereignty:</strong> Pushback against public cloud exists due to CJIS (Police) and HIPAA (Health) data location concerns. Strong on-prem/hybrid narrative needed.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- VIEW 4: INITIATIVES                        -->
+            <!-- ========================================== -->
+            <section id="view-initiatives" class="app-view hidden fade-in">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col lg:flex-row h-auto lg:h-[600px] overflow-hidden">
+                    
+                    <!-- Vertical Tabs -->
+                    <div class="w-full lg:w-1/3 bg-slate-50 border-r border-slate-200 flex flex-col">
+                        <div class="p-6 border-b border-slate-200 bg-white">
+                            <h2 class="text-xl font-bold text-slate-800 flex items-center">
+                                <span class="text-xl mr-2">🎯</span> Named Initiatives
+                            </h2>
+                            <p class="text-xs text-slate-500 mt-1">Map Dell's portfolio directly to these funded municipal projects.</p>
+                        </div>
+                        <div class="flex-1 overflow-y-auto">
+                            <button class="w-full text-left p-6 border-b border-slate-200 hover:bg-white transition-colors focus:outline-none init-tab-btn active bg-white border-l-4 border-l-[#0076CE]" data-target="init-exec">
+                                <h3 class="font-bold text-slate-800 text-lg">Agency Modernization</h3>
+                                <p class="text-xs text-slate-500 mt-1">CDA (Aviation) & CPD</p>
+                            </button>
+                            <button class="w-full text-left p-6 border-b border-slate-200 hover:bg-white transition-colors focus:outline-none init-tab-btn border-l-4 border-l-transparent text-slate-500 hover:text-slate-800" data-target="init-agency">
+                                <h3 class="font-bold text-lg">Enterprise Core IT</h3>
+                                <p class="text-xs mt-1">BIA & Citywide Resiliency</p>
+                            </button>
+                            <button class="w-full text-left p-6 border-b border-slate-200 hover:bg-white transition-colors focus:outline-none init-tab-btn border-l-4 border-l-transparent text-slate-500 hover:text-slate-800" data-target="init-it">
+                                <h3 class="font-bold text-lg">Mayoral Directives</h3>
+                                <p class="text-xs mt-1">Equity & Smart City</p>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tab Content Area -->
+                    <div class="w-full lg:w-2/3 p-8 overflow-y-auto bg-white relative">
+                        
+                        <!-- Agency Content -->
+                        <div id="init-exec" class="init-content block fade-in space-y-8">
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#0076CE] mb-2">O'Hare 21 & Terminal Modernization (CDA)</h3>
+                                <p class="text-slate-700 mb-4">A historic $8.5B transformation of O'Hare's terminal footprint. Beyond concrete, it requires a massive overhaul of the IT backbone to support biometric boarding, automated baggage tracking, and seamless passenger Wi-Fi experiences.</p>
+                                <div class="bg-blue-50 p-4 rounded border border-blue-100">
+                                    <strong class="text-blue-800 block mb-2 uppercase text-xs tracking-wider">Dell Solution Mapping</strong>
+                                    <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                        <li><strong>Dell NativeEdge & VxRail:</strong> Centralized management platform for distributed IoT edge devices across miles of new terminal space, ensuring 99.999% uptime for localized compute.</li>
+                                        <li><strong>PowerStore:</strong> High-performance, low-latency storage required for the massive databases underpinning real-time flight operations and passenger processing.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr class="border-slate-100">
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#0076CE] mb-2">Federal Consent Decree Data Compliance (CPD)</h3>
+                                <p class="text-slate-700 mb-4">The Chicago Police Department is under a federal mandate to improve transparency. This necessitates a massive expansion of high-definition body-cam and dash-cam data storage, with strict chain-of-custody and CJIS requirements.</p>
+                                <div class="bg-blue-50 p-4 rounded border border-blue-100">
+                                    <strong class="text-blue-800 block mb-2 uppercase text-xs tracking-wider">Dell Solution Mapping</strong>
+                                    <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                        <li><strong>Dell PowerScale (Isilon):</strong> The industry standard for unstructured video storage. Easily scales to petabytes to handle video retention requirements without breaking compliance.</li>
+                                        <li><strong>PowerEdge XE (AI-Ready):</strong> GPU-accelerated servers specifically designed to run on-prem AI workloads (like video redaction) without sending sensitive data to the public cloud.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BIA / Enterprise Content -->
+                        <div id="init-agency" class="init-content hidden fade-in space-y-8">
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#0076CE] mb-2">Cloud Repatriation & "Cloud Smart"</h3>
+                                <p class="text-slate-700 mb-4">BIA is experiencing unexpected hyper-scaler egress fees and complex management. They are initiating a strategy to pull predictable, steady-state workloads back on-premise to save the general fund money.</p>
+                                <div class="bg-blue-50 p-4 rounded border border-blue-100">
+                                    <strong class="text-blue-800 block mb-2 uppercase text-xs tracking-wider">Dell Solution Mapping</strong>
+                                    <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                        <li><strong>Dell APEX Custom Solutions:</strong> Pitch the "Cloud Experience On-Prem." BIA gets predictable OpEx billing, elasticity, and self-service, while eliminating hyperscaler egress fees.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr class="border-slate-100">
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#0076CE] mb-2">Municipal Ransomware Resilience (SLCGP)</h3>
+                                <p class="text-slate-700 mb-4">Escalating municipal ransomware threats have forced the city to leverage State and Local Cybersecurity Grant Program (SLCGP) funds to mandate immutable backups across all departments.</p>
+                                <div class="bg-blue-50 p-4 rounded border border-blue-100">
+                                    <strong class="text-blue-800 block mb-2 uppercase text-xs tracking-wider">Dell Solution Mapping</strong>
+                                    <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                        <li><strong>Dell PowerProtect Cyber Recovery:</strong> An isolated, air-gapped data vault. Essential pitch for SLCGP cybersecurity grant funding.</li>
+                                        <li><strong>CyberSense:</strong> AI-driven analytics that scan the backup vault to detect corruption and ensure the city has a clean copy of data to recover from.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Exec Content -->
+                        <div id="init-it" class="init-content hidden fade-in space-y-8">
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#0076CE] mb-2">"Chicago Connected" & Digital Equity</h3>
+                                <p class="text-slate-700 mb-4">A massive mayoral push to expand high-speed broadband access and provide devices to students in historically underserved South and West side wards to close the digital divide.</p>
+                                <div class="bg-blue-50 p-4 rounded border border-blue-100">
+                                    <strong class="text-blue-800 block mb-2 uppercase text-xs tracking-wider">Dell Solution Mapping</strong>
+                                    <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                        <li><strong>Client Solutions Group (CSG):</strong> Bulk procurement of Chromebooks and Latitude devices.</li>
+                                        <li><strong>Dell PCaaS:</strong> PC as a Service to help the city manage device lifecycle and refresh schedules without large capital outlays.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr class="border-slate-100">
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#0076CE] mb-2">Smart City Intersection & Traffic Expansion</h3>
+                                <p class="text-slate-700 mb-4">Deployment of connected sensors across intersections for real-time traffic management, gunshot detection integration, and environmental monitoring.</p>
+                                <div class="bg-blue-50 p-4 rounded border border-blue-100">
+                                    <strong class="text-blue-800 block mb-2 uppercase text-xs tracking-wider">Dell Solution Mapping</strong>
+                                    <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                        <li><strong>Dell Edge Gateways:</strong> Ruggedized, temperature-resistant compute nodes that can be mounted at traffic intersections to process data locally.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- VIEW 5: ACTION PLAN (OPPORTUNITIES)        -->
+            <!-- ========================================== -->
+            <section id="view-opportunities" class="app-view hidden fade-in">
+                <div class="bg-gradient-to-br from-[#0076CE] to-blue-900 text-white rounded-xl shadow-lg p-8 mb-8">
+                    <h2 class="text-3xl font-extrabold mb-2">Account Team Execution Plan</h2>
+                    <p class="text-blue-100 text-lg">Synthesized tactical next steps for Q1/Q2 pipeline generation based on funded Chicago initiatives.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <!-- Action Card 1 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                        <div class="bg-emerald-500 p-4 flex items-center justify-between">
+                            <h3 class="font-bold text-white text-lg">Defend & Expand (CPD)</h3>
+                            <span class="text-white text-2xl">🛡️</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Protect existing footprint while expanding into high-growth data sets driven by legal mandates.</p>
+                            <ul class="space-y-3 text-sm text-slate-700 border-t border-slate-100 pt-4">
+                                <li><strong>Target:</strong> CPD IT Director / CDO</li>
+                                <li><strong>Action:</strong> Audit current Isilon capacity. The Consent Decree video retention mandates are expanding. Pitch PowerScale upgrades and AI-ready server nodes for local video redaction.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Action Card 2 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                        <div class="bg-amber-500 p-4 flex items-center justify-between">
+                            <h3 class="font-bold text-white text-lg">O'Hare 21 Land Grab</h3>
+                            <span class="text-white text-2xl">✈️</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Insert Dell into the multi-billion dollar terminal architecture early.</p>
+                            <ul class="space-y-3 text-sm text-slate-700 border-t border-slate-100 pt-4">
+                                <li><strong>Target:</strong> CDA CIO & Primary Systems Integrators</li>
+                                <li><strong>Action:</strong> Pitch Dell NativeEdge and VxRail as the standard blueprint for all new terminal edge compute and biometric processing. Bypass BIA entirely for this enterprise fund.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Action Card 3 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                        <div class="bg-purple-500 p-4 flex items-center justify-between">
+                            <h3 class="font-bold text-white text-lg">BIA Cost Optimization</h3>
+                            <span class="text-white text-2xl">📉</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Solve the Commissioner's $982M deficit pressure with predictable cloud alternatives.</p>
+                            <ul class="space-y-3 text-sm text-slate-700 border-t border-slate-100 pt-4">
+                                <li><strong>Target:</strong> Commissioner of BIA</li>
+                                <li><strong>Action:</strong> Request a briefing on "Cloud Repatriation ROI". Present a formal APEX TCO analysis showing how shifting AWS/Azure workloads to APEX on-prem reduces OpEx overhead.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 30-60-90 Checklist -->
+                <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-200">
+                    <h3 class="font-bold text-slate-800 text-lg mb-4 border-b pb-2">Immediate Execution Checklist</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-50 p-4 rounded border-l-2 border-slate-300">
+                            <h4 class="font-bold text-slate-700 mb-2 border-b border-slate-200 pb-1 text-sm uppercase">First 30 Days</h4>
+                            <ul class="text-sm text-slate-600 space-y-2">
+                                <li><input type="checkbox" class="mr-2"> Identify top 3 Diverse/MBE partners holding City contracts (Crucial for O'Hare 21).</li>
+                                <li><input type="checkbox" class="mr-2"> Secure discovery meeting with CPD regarding Consent Decree data lifecycle needs.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded border-l-2 border-slate-300">
+                            <h4 class="font-bold text-slate-700 mb-2 border-b border-slate-200 pb-1 text-sm uppercase">Days 30-60</h4>
+                            <ul class="text-sm text-slate-600 space-y-2">
+                                <li><input type="checkbox" class="mr-2"> Run LiveOptics payload on Tier 2 agency storage environments to find cloud repatriation candidates.</li>
+                                <li><input type="checkbox" class="mr-2"> Pitch Cyber Recovery Vault concept to BIA CISO utilizing available SLCGP grant funds.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded border-l-2 border-slate-300">
+                            <h4 class="font-bold text-slate-700 mb-2 border-b border-slate-200 pb-1 text-sm uppercase">Days 60-90</h4>
+                            <ul class="text-sm text-slate-600 space-y-2">
+                                <li><input type="checkbox" class="mr-2"> Present formal APEX TCO analysis to BIA Commissioner.</li>
+                                <li><input type="checkbox" class="mr-2"> Align technical validators inside CDA (Aviation) for formal RFP shaping on O'Hare edge compute.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- App Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- VIEW SWITCHING LOGIC (SPA Navigation) ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const views = document.querySelectorAll('.app-view');
+            let chartsInitialized = false;
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const targetId = e.target.getAttribute('data-target');
+                    
+                    // Reset nav styling
+                    navLinks.forEach(btn => {
+                        btn.classList.remove('active', 'bg-white', 'text-[#0076CE]');
+                        btn.style.borderBottom = 'none';
+                        if(btn.dataset.target === 'view-opportunities') {
+                            btn.classList.add('text-amber-300'); // restore custom color
+                        } else {
+                            btn.classList.add('text-white');
+                        }
+                    });
+
+                    // Set active nav styling
+                    e.target.classList.add('active');
+                    e.target.classList.remove('text-white', 'text-amber-300');
+
+                    // Hide all views, show target
+                    views.forEach(view => {
+                        if (view.id === targetId) {
+                            view.classList.remove('hidden');
+                            
+                            // Initialize charts only when Financials tab is opened to prevent canvas sizing bugs
+                            if (targetId === 'view-financials' && !chartsInitialized) {
+                                initCharts();
+                                chartsInitialized = true;
+                            } else if (targetId === 'view-financials' && chartsInitialized) {
+                                // optional: resize charts if window changed while hidden
+                                Chart.instances.forEach(chart => chart.resize());
+                            }
+
+                        } else {
+                            view.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // --- INITIATIVES TAB LOGIC ---
+            const initBtns = document.querySelectorAll('.init-tab-btn');
+            const initContents = document.querySelectorAll('.init-content');
+
+            initBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Reset styling
+                    initBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-white', 'border-l-[#0076CE]');
+                        b.classList.add('border-l-transparent', 'text-slate-500');
+                        b.querySelector('h3').classList.remove('text-slate-800');
+                    });
+                    initContents.forEach(c => c.classList.add('hidden'));
+
+                    // Set active
+                    btn.classList.add('active', 'bg-white', 'border-l-[#0076CE]');
+                    btn.classList.remove('border-l-transparent', 'text-slate-500');
+                    btn.querySelector('h3').classList.add('text-slate-800');
+                    
+                    const targetId = btn.getAttribute('data-target');
+                    document.getElementById(targetId).classList.remove('hidden');
+                });
+            });
+
+            // --- CHART.JS INITIALIZATION ---
+            function initCharts() {
+                // Chart 1: Budget Doughnut
+                const pieCtx = document.getElementById('budgetPieChart').getContext('2d');
+                new Chart(pieCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Enterprise Funds (Aviation/Water)', 'General Corporate Fund', 'Federal/State Grants', 'Other Special Funds'],
+                        datasets: [{
+                            data: [38, 28, 20, 14],
+                            backgroundColor: ['#0076CE', '#64748b', '#10b981', '#f59e0b'],
+                            borderWidth: 2,
+                            borderColor: '#ffffff'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '60%',
+                        plugins: {
+                            legend: { position: 'right' },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return ' ' + context.label + ': ~' + context.parsed + '%';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Chart 2: Stacked Bar
+                const spendCtx = document.getElementById('spendBarChart').getContext('2d');
+                new Chart(spendCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['BIA (Central)', 'Aviation (CDA)', 'Police (CPD)', 'Water Mgmt', 'Other Tier 2'],
+                        datasets: [
+                            {
+                                label: 'O&M / Recurring ($M)',
+                                data: [110, 35, 45, 20, 35],
+                                backgroundColor: '#94a3b8',
+                            },
+                            {
+                                label: 'Net-New Capital/Projects ($M)',
+                                data: [15, 95, 60, 35, 10],
+                                backgroundColor: '#0076CE',
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom' },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.dataset.label + ': $' + context.parsed.y + 'M';
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: { stacked: true, grid: { display: false } },
+                            y: { 
+                                stacked: true,
+                                title: { display: true, text: 'Estimated Spend (Millions USD)' },
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

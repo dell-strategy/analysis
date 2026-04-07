@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Technologies: Government Consultant Expectations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warmbg: '#FDFBF7',
+                        warmcard: '#FFFFFF',
+                        warmtext: '#2C3539',
+                        warmaccent: '#C85A32',
+                        coolaccent: '#4A6D7C',
+                        warmborder: '#E8E4D9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #2C3539;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .chart-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 300px; 
+            max-height: 400px; 
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 350px; }
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #D3CFC1; border-radius: 3px; }
+
+        .nav-item { transition: all 0.2s ease; border-left: 3px solid transparent; }
+        .nav-item:hover { background-color: #F4F1E8; }
+        .nav-item.active { 
+            background-color: #FFFFFF; 
+            border-left-color: #C85A32; 
+            color: #C85A32; 
+            font-weight: 600; 
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03); 
+        }
+
+        .tab-btn { transition: all 0.2s; border-bottom: 2px solid transparent; }
+        .tab-btn.active { border-bottom-color: #C85A32; color: #C85A32; font-weight: 600; }
+
+        .fade-in { animation: fadeIn 0.4s ease-in forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden font-sans">
+
+    <!-- Chosen Palette: Warm Neutrals with Rust and Slate Blue Accents -->
+    <!-- Application Structure Plan: A dashboard-style SPA tailored for corporate internal use. It uses a persistent left navigation to segment the prescriptive guidelines (Overview, Priorities, Deliverables, Metrics, Compliance) into modular views. This structure was chosen because policy reports are often dense; segmenting into task-oriented views allows Dell management and consultants to quickly jump to relevant expectations (e.g., "What are my weekly deliverables?") without endless scrolling. -->
+    <!-- Visualization & Content Choices: 
+         - Overview: Clean text blocks for mandate setting.
+         - Priorities (Pillars): Grid layout for easy scannability of focus areas.
+         - Deliverables: Tabbed interface (Goal: Organize) to separate cadence (Weekly/Monthly/Ad-Hoc) reducing cognitive overload.
+         - Metrics: Chart.js Bar Chart (Goal: Compare) to show target vs baseline output, and Doughnut Chart (Goal: Inform) to show strict time allocation rules. Canvas rendering, responsive, interactive tooltips.
+         - Confirming NO SVG/Mermaid used. Unicode icons and standard HTML/CSS structure employed for visuals. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <nav class="w-64 bg-[#EFECE4] border-r border-warmborder flex-col justify-between hidden md:flex z-10 shrink-0">
+        <div>
+            <div class="p-6 pb-4">
+                <h1 class="text-xl font-bold text-warmtext tracking-tight">Dell Technologies</h1>
+                <p class="text-xs text-coolaccent mt-1 uppercase tracking-wider font-semibold">Consultant Mandate</p>
+            </div>
+            <div class="mt-4 flex flex-col px-3 space-y-1">
+                <button onclick="appState.navigate('overview')" id="nav-overview" class="nav-item active flex items-center px-4 py-3 rounded-md text-sm text-left text-gray-700 w-full">
+                    <span class="mr-3 text-lg">🏛️</span> Executive Mandate
+                </button>
+                <button onclick="appState.navigate('priorities')" id="nav-priorities" class="nav-item flex items-center px-4 py-3 rounded-md text-sm text-left text-gray-700 w-full">
+                    <span class="mr-3 text-lg">🎯</span> Strategic Priorities
+                </button>
+                <button onclick="appState.navigate('deliverables')" id="nav-deliverables" class="nav-item flex items-center px-4 py-3 rounded-md text-sm text-left text-gray-700 w-full">
+                    <span class="mr-3 text-lg">📋</span> Prescriptive Output
+                </button>
+                <button onclick="appState.navigate('metrics')" id="nav-metrics" class="nav-item flex items-center px-4 py-3 rounded-md text-sm text-left text-gray-700 w-full">
+                    <span class="mr-3 text-lg">📊</span> Performance KPIs
+                </button>
+                <button onclick="appState.navigate('compliance')" id="nav-compliance" class="nav-item flex items-center px-4 py-3 rounded-md text-sm text-left text-gray-700 w-full">
+                    <span class="mr-3 text-lg">⚖️</span> Compliance Rules
+                </button>
+            </div>
+        </div>
+        <div class="p-6 text-xs text-gray-500 font-medium">
+            Internal Document<br>Effective: FY26 Q1
+        </div>
+    </nav>
+
+    <div class="md:hidden fixed top-0 w-full bg-[#EFECE4] border-b border-warmborder p-4 flex justify-between items-center z-20 shadow-sm">
+        <h1 class="text-base font-bold text-warmtext">Dell Govt Affairs</h1>
+        <select onchange="appState.navigate(this.value)" id="mobile-nav" class="bg-white border border-warmborder rounded p-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-warmaccent">
+            <option value="overview">Executive Mandate</option>
+            <option value="priorities">Strategic Priorities</option>
+            <option value="deliverables">Prescriptive Output</option>
+            <option value="metrics">Performance KPIs</option>
+            <option value="compliance">Compliance Rules</option>
+        </select>
+    </div>
+
+    <main class="flex-1 overflow-y-auto pt-20 md:pt-0 pb-16 px-6 md:px-12 lg:px-24 relative bg-warmbg">
+        
+        <section id="view-overview" class="content-view py-12 max-w-3xl mx-auto fade-in">
+            <header class="mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-warmtext mb-4 tracking-tight">Executive Mandate</h2>
+                <div class="h-1 w-16 bg-warmaccent rounded"></div>
+            </header>
+            
+            <p class="text-lg text-gray-600 leading-relaxed mb-8 border-l-4 border-warmborder pl-4">
+                <strong>Section Context:</strong> This introductory view establishes the foundational philosophy of Dell's government relations strategy. It clearly defines the shift from passive monitoring to active, measurable policy execution for all external consultants.
+            </p>
+
+            <div class="bg-warmcard rounded-lg shadow-sm border border-warmborder p-8 mb-8">
+                <p class="mb-5 text-gray-700 leading-relaxed text-lg">
+                    Dell Technologies retains external government consultants and lobbyists to secure our operational environment, drive public sector revenue, and shape emerging technology policy globally.
+                </p>
+                <p class="mb-5 text-gray-700 leading-relaxed text-lg">
+                    This document serves as the absolute, <strong>prescriptive baseline</strong> for our expectations. We do not pay for passive monitoring, networking without targeted outcomes, or generalized political summaries. We require proactive intervention, precise intelligence gathering, and measurable return on investment (ROI).
+                </p>
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    Consultants are evaluated solely on policy mitigated, procurement opportunities captured, and strategic relationships formalized that directly benefit Dell's business units.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+                <div class="bg-[#F8F9FA] rounded-lg p-6 border-t-4 border-coolaccent shadow-sm">
+                    <div class="text-2xl mb-3">🎯</div>
+                    <h3 class="font-bold text-lg mb-2 text-warmtext">Action-Oriented</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Transition from advisory roles to targeted execution. Identify risks before they are public, and present mitigation strategies simultaneously.</p>
+                </div>
+                <div class="bg-[#F8F9FA] rounded-lg p-6 border-t-4 border-warmaccent shadow-sm">
+                    <div class="text-2xl mb-3">📡</div>
+                    <h3 class="font-bold text-lg mb-2 text-warmtext">Proprietary Intel</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Do not report on news available in the press. We require forward-looking intelligence: unfiled draft language and internal agency shifts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-priorities" class="content-view py-12 max-w-5xl mx-auto hidden">
+            <header class="mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-warmtext mb-4 tracking-tight">Strategic Priorities</h2>
+                <div class="h-1 w-16 bg-warmaccent rounded"></div>
+            </header>
+
+            <p class="text-lg text-gray-600 leading-relaxed mb-10 border-l-4 border-warmborder pl-4">
+                <strong>Section Context:</strong> Outlines the four core policy pillars where Dell demands consultant focus. Interacting with the "Consultant Directive" button on each card reveals the specific, actionable expectations tied to that policy area, ensuring efforts align with corporate strategy.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-warmcard p-8 rounded-lg border border-warmborder shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded bg-[#EDF2F7] text-coolaccent flex items-center justify-center text-2xl mr-4">💻</div>
+                        <h3 class="text-xl font-bold text-warmtext">Public Sector Procurement</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6 leading-relaxed h-16">Securing government IT modernization contracts, shaping RFP requirements early, and defending existing infrastructure footprints against competitors.</p>
+                    <button onclick="appState.toggleDetail('detail-procurement')" class="text-sm font-semibold text-warmaccent hover:text-orange-800 transition">View Consultant Directive +</button>
+                    <div id="detail-procurement" class="mt-4 p-4 bg-[#FDFBF7] border border-warmborder rounded text-sm text-gray-700 hidden">
+                        <strong>Mandate:</strong> Identify funding streams 12-18 months prior to RFP release. Draft technical specification recommendations favorable to Dell architecture for agency CIOs.
+                    </div>
+                </div>
+
+                <div class="bg-warmcard p-8 rounded-lg border border-warmborder shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded bg-[#FFF5F5] text-red-600 flex items-center justify-center text-2xl mr-4">🛡️</div>
+                        <h3 class="text-xl font-bold text-warmtext">Cybersecurity & Privacy</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6 leading-relaxed h-16">Navigating patchwork data privacy laws and ensuring federal/state cybersecurity mandates are technologically feasible and globally harmonized.</p>
+                    <button onclick="appState.toggleDetail('detail-cyber')" class="text-sm font-semibold text-warmaccent hover:text-orange-800 transition">View Consultant Directive +</button>
+                    <div id="detail-cyber" class="mt-4 p-4 bg-[#FDFBF7] border border-warmborder rounded text-sm text-gray-700 hidden">
+                        <strong>Mandate:</strong> Prevent unworkable compliance mandates. Actively insert "safe harbor" provisions for compliant hardware/software providers in all drafting phases.
+                    </div>
+                </div>
+
+                <div class="bg-warmcard p-8 rounded-lg border border-warmborder shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded bg-[#F0FFF4] text-green-700 flex items-center justify-center text-2xl mr-4">🤖</div>
+                        <h3 class="text-xl font-bold text-warmtext">AI & Emerging Tech</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6 leading-relaxed h-16">Ensuring AI regulations focus on end-use applications and risk, rather than stifling foundational hardware, compute infrastructure, and open-source innovation.</p>
+                    <button onclick="appState.toggleDetail('detail-ai')" class="text-sm font-semibold text-warmaccent hover:text-orange-800 transition">View Consultant Directive +</button>
+                    <div id="detail-ai" class="mt-4 p-4 bg-[#FDFBF7] border border-warmborder rounded text-sm text-gray-700 hidden">
+                        <strong>Mandate:</strong> Educate lawmakers on the distinction between AI software/models and the supporting hardware infrastructure. Block hardware-level regulatory chokepoints.
+                    </div>
+                </div>
+
+                <div class="bg-warmcard p-8 rounded-lg border border-warmborder shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded bg-[#FFFFF0] text-yellow-600 flex items-center justify-center text-2xl mr-4">🌐</div>
+                        <h3 class="text-xl font-bold text-warmtext">Supply Chain & Trade</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6 leading-relaxed h-16">Advocating for policies that fortify global tech supply chains, utilizing funding mechanisms, and mitigating the operational impact of tariffs.</p>
+                    <button onclick="appState.toggleDetail('detail-supply')" class="text-sm font-semibold text-warmaccent hover:text-orange-800 transition">View Consultant Directive +</button>
+                    <div id="detail-supply" class="mt-4 p-4 bg-[#FDFBF7] border border-warmborder rounded text-sm text-gray-700 hidden">
+                        <strong>Mandate:</strong> Maintain direct, weekly dialogue with Commerce Department officials. Provide Dell with early warning on export control adjustments before publication.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-deliverables" class="content-view py-12 max-w-4xl mx-auto hidden">
+            <header class="mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-warmtext mb-4 tracking-tight">Prescriptive Output</h2>
+                <div class="h-1 w-16 bg-warmaccent rounded"></div>
+            </header>
+
+            <p class="text-lg text-gray-600 leading-relaxed mb-8 border-l-4 border-warmborder pl-4">
+                <strong>Section Context:</strong> Replaces ambiguous "staying in touch" with concrete, measurable deliverables. Users can click through the frequency tabs to view the strict reporting and output requirements expected on a weekly, monthly, and ad-hoc basis.
+            </p>
+
+            <div class="bg-warmcard rounded-lg border border-warmborder shadow-sm overflow-hidden">
+                <div class="flex border-b border-warmborder bg-[#F8F9FA]">
+                    <button onclick="appState.switchTab('weekly')" id="tab-weekly" class="tab-btn active flex-1 py-4 text-sm font-medium text-gray-600 hover:text-warmtext">Weekly Cadence</button>
+                    <button onclick="appState.switchTab('monthly')" id="tab-monthly" class="tab-btn flex-1 py-4 text-sm font-medium text-gray-600 hover:text-warmtext">Monthly Review</button>
+                    <button onclick="appState.switchTab('adhoc')" id="tab-adhoc" class="tab-btn flex-1 py-4 text-sm font-medium text-gray-600 hover:text-warmtext">Ad-Hoc / Crisis</button>
+                </div>
+
+                <div class="p-8 min-h-[300px]">
+                    <div id="content-weekly" class="tab-content fade-in">
+                        <h3 class="text-xl font-bold text-warmtext mb-6 flex items-center"><span class="text-2xl mr-3">🗓️</span> Weekly Requirements</h3>
+                        <ul class="space-y-5">
+                            <li class="flex items-start">
+                                <span class="text-warmaccent font-bold mr-3 mt-1">01</span>
+                                <div>
+                                    <strong class="block text-gray-800 mb-1">Legislative Tracking Matrix</strong>
+                                    <p class="text-sm text-gray-600">Updated spreadsheet of all bills flagged by Dell, including exact current status, next scheduled committee action, and Dell's probability assessment of passage.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-warmaccent font-bold mr-3 mt-1">02</span>
+                                <div>
+                                    <strong class="block text-gray-800 mb-1">"Forward-Looking" Intelligence Memo</strong>
+                                    <p class="text-sm text-gray-600">A strict 1-page bulleted list of rumors, unfiled amendments, and agency budget shifts that are <em>not yet public knowledge</em>.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-warmaccent font-bold mr-3 mt-1">03</span>
+                                <div>
+                                    <strong class="block text-gray-800 mb-1">Strategic Sync Call (15-30 mins)</strong>
+                                    <p class="text-sm text-gray-600">Not a reading of the news. Strictly focused on actionable decisions needed from Dell internally to support the consultant's ongoing execution.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="content-monthly" class="tab-content hidden">
+                        <h3 class="text-xl font-bold text-warmtext mb-6 flex items-center"><span class="text-2xl mr-3">📅</span> Monthly Requirements</h3>
+                        <ul class="space-y-5">
+                            <li class="flex items-start">
+                                <span class="text-coolaccent font-bold mr-3 mt-1">01</span>
+                                <div>
+                                    <strong class="block text-gray-800 mb-1">Stakeholder Mapping & Introductions</strong>
+                                    <p class="text-sm text-gray-600">Delivery and execution of at least 2 highly targeted, substantive introductions between Dell Subject Matter Experts and key committee staff or agency deputies.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-coolaccent font-bold mr-3 mt-1">02</span>
+                                <div>
+                                    <strong class="block text-gray-800 mb-1">Draft Language Submission</strong>
+                                    <p class="text-sm text-gray-600">Proactive drafting of bill amendments, testimony text, or RFI responses for Dell's review. Consultants are expected to hold the pen first.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-coolaccent font-bold mr-3 mt-1">03</span>
+                                <div>
+                                    <strong class="block text-gray-800 mb-1">Procurement Pipeline Review</strong>
+                                    <p class="text-sm text-gray-600">Identification of at least 1 new, unreleased public sector IT project/budget allocation where Dell can shape the narrative and specifications early.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="content-adhoc" class="tab-content hidden">
+                        <h3 class="text-xl font-bold text-warmtext mb-6 flex items-center"><span class="text-2xl mr-3">⚡</span> Urgent & Ad-Hoc Requirements</h3>
+                        <ul class="space-y-5">
+                            <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-3 mt-1">01</span>
+                                <div>
+                                    <strong class="block text-gray-800 mb-1">Rapid Response Plan (24hr SLA)</strong>
+                                    <p class="text-sm text-gray-600">Immediate threat assessment and mitigation action plan required within 24 hours of a hostile legislation introduction or competitive procurement threat.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 font-bold mr-3 mt-1">02</span>
+                                <div>
+                                    <strong class="block text-gray-800 mb-1">Executive Hearing Preparation</strong>
+                                    <p class="text-sm text-gray-600">Creation of full briefing books, anticipated Q&A documents, and scheduling of mock hearings for any Dell executives testifying before government bodies.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-metrics" class="content-view py-12 max-w-5xl mx-auto hidden">
+            <header class="mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-warmtext mb-4 tracking-tight">Performance KPIs</h2>
+                <div class="h-1 w-16 bg-warmaccent rounded"></div>
+            </header>
+
+            <p class="text-lg text-gray-600 leading-relaxed mb-10 border-l-4 border-warmborder pl-4">
+                <strong>Section Context:</strong> Visualizes the stringent quantitative standards Dell applies to consultant performance. The charts contrast Dell's high-output targets against industry averages and dictate the exact proportion of time consultants must spend on high-value execution versus administrative tasks.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-warmcard p-6 rounded-lg border border-warmborder shadow-sm flex flex-col">
+                    <h3 class="font-bold text-lg text-center text-warmtext mb-1">Quarterly Output Targets</h3>
+                    <p class="text-xs text-gray-500 mb-6 text-center uppercase tracking-wide">Dell Requirement vs. Industry Baseline</p>
+                    <div class="flex-grow w-full">
+                        <div class="chart-container">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-[#F8F9FA] p-4 rounded text-sm text-gray-700 border border-gray-100">
+                        <strong>Insight:</strong> Dell demands significantly higher direct policy intervention (amendments drafted) and procurement intelligence than standard retainer agreements.
+                    </div>
+                </div>
+
+                <div class="bg-warmcard p-6 rounded-lg border border-warmborder shadow-sm flex flex-col">
+                    <h3 class="font-bold text-lg text-center text-warmtext mb-1">Billable Time Allocation</h3>
+                    <p class="text-xs text-gray-500 mb-6 text-center uppercase tracking-wide">Mandated Activity Distribution</p>
+                    <div class="flex-grow w-full">
+                        <div class="chart-container">
+                            <canvas id="doughnutChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-[#F8F9FA] p-4 rounded text-sm text-gray-700 border border-gray-100">
+                        <strong>Insight:</strong> 70% of billable hours must be dedicated to active dialogue with policymakers or drafting actionable policy strategies. Administrative reporting is capped at 10%.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-compliance" class="content-view py-12 max-w-3xl mx-auto hidden">
+            <header class="mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-warmtext mb-4 tracking-tight">Compliance Rules</h2>
+                <div class="h-1 w-16 bg-warmaccent rounded"></div>
+            </header>
+
+            <p class="text-lg text-gray-600 leading-relaxed mb-8 border-l-4 border-warmborder pl-4">
+                <strong>Section Context:</strong> Outlines the non-negotiable legal, ethical, and corporate guardrails. Consultants act as an extension of the Dell brand, requiring absolute adherence to global anti-corruption and lobbying disclosure laws.
+            </p>
+
+            <div class="bg-[#FFF5F5] border-l-4 border-red-600 rounded-r-lg p-6 mb-8 shadow-sm">
+                <h3 class="text-red-800 font-bold text-xl flex items-center mb-3">
+                    <span class="mr-3">⚠️</span> Zero Tolerance Policy
+                </h3>
+                <p class="text-red-900 text-sm leading-relaxed">
+                    Consultants operating on behalf of Dell Technologies must strictly adhere to the U.S. Foreign Corrupt Practices Act (FCPA), the UK Bribery Act, and all applicable local/federal lobbying disclosure laws. Any violation or failure to report will result in immediate termination for cause.
+                </p>
+            </div>
+
+            <div class="bg-warmcard rounded-lg border border-warmborder shadow-sm">
+                <div class="p-6 border-b border-warmborder">
+                    <h4 class="font-bold text-warmtext text-lg mb-2 flex items-center"><span class="text-coolaccent mr-2">1.</span> Gift and Entertainment Ban</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">Absolutely no gifts, meals, entertainment, or travel may be provided to any government official or staff member utilizing Dell funds without explicit, prior written approval from the Dell Global Ethics & Compliance Office.</p>
+                </div>
+                <div class="p-6 border-b border-warmborder">
+                    <h4 class="font-bold text-warmtext text-lg mb-2 flex items-center"><span class="text-coolaccent mr-2">2.</span> Conflict of Interest Disclosure</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">Consultants must maintain an active disclosure of all other clients in the technology sector. Taking on representation for direct competitors (e.g., HP, Lenovo, Cisco) must be cleared through Dell Govt Affairs leadership prior to engagement.</p>
+                </div>
+                <div class="p-6">
+                    <h4 class="font-bold text-warmtext text-lg mb-2 flex items-center"><span class="text-coolaccent mr-2">3.</span> Registration and Reporting</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">Consultants are solely responsible for filing all necessary lobbying registrations accurately and on time. Dell Accounts Payable will freeze all invoice payments if consultant registrations are found to be lapsed or deficient.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 flex justify-center">
+                <button id="btn-ack" onclick="appState.acknowledge()" class="bg-warmtext hover:bg-black text-white px-8 py-4 rounded-lg font-semibold text-sm transition-colors shadow-md w-full md:w-auto">
+                    Acknowledge & Accept Guidelines
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const appState = {
+            currentView: 'overview',
+            chartsRendered: false,
+            
+            navigate: function(viewId) {
+                document.querySelectorAll('.content-view').forEach(el => {
+                    el.classList.add('hidden');
+                    el.classList.remove('fade-in');
+                });
+                document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+                
+                const targetView = document.getElementById('view-' + viewId);
+                targetView.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    targetView.classList.add('fade-in');
+                }, 10);
+
+                const navItem = document.getElementById('nav-' + viewId);
+                if(navItem) navItem.classList.add('active');
+                document.getElementById('mobile-nav').value = viewId;
+
+                if (viewId === 'metrics' && !this.chartsRendered) {
+                    this.renderCharts();
+                    this.chartsRendered = true;
+                }
+
+                document.querySelector('main').scrollTop = 0;
+            },
+
+            toggleDetail: function(id) {
+                const el = document.getElementById(id);
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                    el.classList.add('fade-in');
+                } else {
+                    el.classList.add('hidden');
+                    el.classList.remove('fade-in');
+                }
+            },
+
+            switchTab: function(tabId) {
+                document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(el => {
+                    el.classList.add('hidden');
+                    el.classList.remove('fade-in');
+                });
+
+                document.getElementById('tab-' + tabId).classList.add('active');
+                const content = document.getElementById('content-' + tabId);
+                content.classList.remove('hidden');
+                setTimeout(() => { content.classList.add('fade-in'); }, 10);
+            },
+
+            acknowledge: function() {
+                const btn = document.getElementById('btn-ack');
+                btn.innerHTML = '✓ Guidelines Acknowledged';
+                btn.classList.remove('bg-warmtext', 'hover:bg-black');
+                btn.classList.add('bg-green-700', 'hover:bg-green-800');
+                btn.disabled = true;
+            },
+
+            renderCharts: function() {
+                const barCtx = document.getElementById('barChart').getContext('2d');
+                new Chart(barCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['SME Intros', 'Amendments Drafted', 'Early RFP Intel', 'Briefing Books'],
+                        datasets: [
+                            {
+                                label: 'Dell Expectation',
+                                data: [8, 4, 3, 2],
+                                backgroundColor: '#4A6D7C',
+                                borderRadius: 4
+                            },
+                            {
+                                label: 'Industry Avg',
+                                data: [3, 1, 1, 1],
+                                backgroundColor: '#E8E4D9',
+                                borderRadius: 4
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom', labels: { font: { family: 'Inter' } } },
+                            tooltip: {
+                                backgroundColor: '#2C3539',
+                                titleFont: { family: 'Inter' },
+                                bodyFont: { family: 'Inter' },
+                                callbacks: { label: (ctx) => ` ${ctx.dataset.label}: ${ctx.raw} per Quarter` }
+                            }
+                        },
+                        scales: {
+                            y: { beginAtZero: true, grid: { color: '#F0F0F0' }, ticks: { stepSize: 2 } },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+
+                const doughnutCtx = document.getElementById('doughnutChart').getContext('2d');
+                new Chart(doughnutCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            'Direct Policymaker Dialogue', 
+                            'Policy Drafting & Strategy', 
+                            'Procurement Intelligence', 
+                            'Admin & Reporting'
+                        ],
+                        datasets: [{
+                            data: [40, 30, 20, 10],
+                            backgroundColor: ['#C85A32', '#4A6D7C', '#2C3539', '#E8E4D9'],
+                            borderWidth: 0,
+                            hoverOffset: 5
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '65%',
+                        plugins: {
+                            legend: { 
+                                position: 'right',
+                                labels: { font: { family: 'Inter', size: 12 }, boxWidth: 15, padding: 20 }
+                            },
+                            tooltip: {
+                                backgroundColor: '#2C3539',
+                                titleFont: { family: 'Inter' },
+                                bodyFont: { family: 'Inter' },
+                                callbacks: { label: (ctx) => ` ${ctx.label}: ${ctx.raw}% of time` }
+                            }
+                        }
+                    }
+                });
+            }
+        };
+    </script>
+</body>
+</html>

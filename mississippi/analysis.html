@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Technologies | Mississippi Market Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dell: {
+                            blue: '#0076CE',
+                            dark: '#000000',
+                            gray: '#F5F6F7',
+                            light: '#EBF2FA'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-item.active {
+            background-color: #EBF2FA;
+            color: #0076CE;
+            border-right: 4px solid #0076CE;
+            font-weight: 600;
+        }
+        .banner-bg {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen flex overflow-hidden text-gray-800">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-xl flex flex-col h-full z-10 relative">
+        <div class="p-6 border-b border-gray-100 flex items-center justify-center">
+            <!-- Dell Logo -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg" alt="Dell Technologies" class="h-10">
+        </div>
+        
+        <div class="p-4 bg-dell-blue text-white text-sm font-semibold tracking-wide">
+            STATE OF MISSISSIPPI
+            <div class="text-xs font-normal text-blue-200 mt-1">SLG Strategy Dashboard</div>
+        </div>
+
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="space-y-1">
+                <li>
+                    <button onclick="switchTab('overview')" class="nav-item active w-full flex items-center px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors text-left">
+                        <i class="fa-solid fa-chart-line w-6 text-center mr-2"></i> Executive Overview
+                    </button>
+                </li>
+                <li>
+                    <button onclick="switchTab('stakeholders')" class="nav-item w-full flex items-center px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors text-left">
+                        <i class="fa-solid fa-users w-6 text-center mr-2"></i> Power Map
+                    </button>
+                </li>
+                <li>
+                    <button onclick="switchTab('initiatives')" class="nav-item w-full flex items-center px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors text-left">
+                        <i class="fa-solid fa-rocket w-6 text-center mr-2"></i> Strategic Initiatives
+                    </button>
+                </li>
+                <li>
+                    <button onclick="switchTab('procurement')" class="nav-item w-full flex items-center px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors text-left">
+                        <i class="fa-solid fa-file-contract w-6 text-center mr-2"></i> Budget & Procurement
+                    </button>
+                </li>
+                <li>
+                    <button onclick="switchTab('sales-plays')" class="nav-item w-full flex items-center px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors text-left">
+                        <i class="fa-solid fa-bullseye w-6 text-center mr-2"></i> Dell Sales Plays
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <a href="https://dmonkey1001.github.io/slg-strategies/mississippi/analysis.pdf" target="_blank" class="flex items-center justify-center w-full bg-white border border-gray-300 rounded-md py-2 px-4 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-dell-blue transition-colors shadow-sm">
+                <i class="fa-regular fa-file-pdf mr-2 text-red-500"></i> View Full Report
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-full overflow-hidden bg-gray-50">
+        
+        <!-- Top Header -->
+        <header class="bg-white border-b border-gray-200 px-8 py-5 flex justify-between items-center z-0 shadow-sm">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-900" id="page-title">Executive Overview</h1>
+                <p class="text-sm text-gray-500 mt-1">Enterprise Technology and Market Analysis</p>
+            </div>
+            <div class="flex items-center text-sm text-gray-500 bg-gray-100 px-3 py-1.5 rounded-full">
+                <i class="fa-regular fa-calendar mr-2"></i> Updated: April 2026
+            </div>
+        </header>
+
+        <!-- Scrollable Content Area -->
+        <div class="flex-1 overflow-y-auto p-8">
+            
+            <!-- OVERVIEW TAB -->
+            <div id="overview" class="tab-content active max-w-6xl mx-auto">
+                <!-- Overview Banner -->
+                <div class="w-full h-40 rounded-xl mb-8 relative overflow-hidden bg-dell-blue shadow-md">
+                    <div class="absolute inset-0 opacity-40 mix-blend-multiply banner-bg" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-dell-blue via-dell-blue to-transparent opacity-90"></div>
+                    <div class="relative h-full flex flex-col justify-center px-8 z-10">
+                        <div class="flex items-center text-white mb-2">
+                            <i class="fa-solid fa-chart-line text-2xl mr-3"></i>
+                            <h2 class="text-3xl font-bold">Executive Overview</h2>
+                        </div>
+                        <p class="text-blue-100 max-w-2xl text-sm md:text-base">Macro landscape and central pillars of IT investment for the State of Mississippi.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 border-l-4 border-l-dell-blue">
+                        <div class="text-sm font-semibold text-gray-500 uppercase">FY25 State Budget</div>
+                        <div class="text-3xl font-bold text-gray-900 my-2">$31.65B</div>
+                        <div class="text-sm text-gray-600">Includes massive ARPA & SLCGP funding.</div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 border-l-4 border-l-green-500">
+                        <div class="text-sm font-semibold text-gray-500 uppercase">Rural Health Grant</div>
+                        <div class="text-3xl font-bold text-gray-900 my-2">$206M</div>
+                        <div class="text-sm text-gray-600">CMS grant driving telehealth & edge tech.</div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-100 border-l-4 border-l-purple-500">
+                        <div class="text-sm font-semibold text-gray-500 uppercase">Current Strategy</div>
+                        <div class="text-xl font-bold text-gray-900 my-2 mt-3">"Cloud-Right" Hybrid</div>
+                        <div class="text-sm text-gray-600">PDC & CPDC expansion over full public cloud.</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-8 mb-8">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">Macro Landscape</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Mississippi is aggressively transitioning from a decentralized, agency-siloed model toward a unified, enterprise-wide service delivery architecture. Guided by Gov. Tate Reeves and ITS, the state is heavily centralizing procurement to combat ransomware threats and replace decade-old legacy software.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        For enterprise technology providers like Dell Technologies, Mississippi presents an incredibly lucrative battlefield. The state's <strong>"cloud-right" strategy</strong> does not equate to a wholesale public cloud migration; they are investing heavily in on-premises private cloud capabilities within their Primary Data Center (PDC) and Co-Processing Data Center (CPDC).
+                    </p>
+                </div>
+
+                <h3 class="text-lg font-bold text-gray-900 mb-4">The 4 Central Pillars of IT Investment</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 text-dell-blue flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Public Safety & Cyber Resilience</h4>
+                        <p class="text-sm text-gray-600">Expanding the Capitol Complex fiber network and fortifying the enterprise perimeter against ransomware.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-tower-cell"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Digital Equity & Rural Healthcare</h4>
+                        <p class="text-sm text-gray-600">$206M CMS grant targeting telehealth infrastructure, interoperable EHRs, and remote patient monitoring.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Legacy Systems Modernization</h4>
+                        <p class="text-sm text-gray-600">Replacing 25-year-old case management systems (MDHS/Medicaid) to meet federal data interoperability standards.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">AI & Digital Governance</h4>
+                        <p class="text-sm text-gray-600">Creation of the AIR Task Force and strict AI Acceptable Use policies requiring on-prem/sovereign architectures.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAKEHOLDERS TAB -->
+            <div id="stakeholders" class="tab-content max-w-6xl mx-auto">
+                <!-- Stakeholders Banner -->
+                <div class="w-full h-40 rounded-xl mb-8 relative overflow-hidden bg-dell-blue shadow-md">
+                    <div class="absolute inset-0 opacity-40 mix-blend-multiply banner-bg" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-dell-blue via-dell-blue to-transparent opacity-90"></div>
+                    <div class="relative h-full flex flex-col justify-center px-8 z-10">
+                        <div class="flex items-center text-white mb-2">
+                            <i class="fa-solid fa-users text-2xl mr-3"></i>
+                            <h2 class="text-3xl font-bold">Key Power Players</h2>
+                        </div>
+                        <p class="text-blue-100 max-w-2xl text-sm md:text-base">The triad of Elected Leadership, IT Leadership, and Agency Consumer Leadership driving decisions.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name & Title</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sphere of Influence</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stance / Focus</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <!-- Row 1 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center text-dell-blue font-bold">TR</div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">Tate Reeves</div>
+                                            <div class="text-xs text-gray-500">Governor, State of MS</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Executive Leadership</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-600 w-1/2">
+                                    Issued Executive Order 1584 for statewide AI governance. Secured the $206M CMS grant to transform rural healthcare infrastructure.
+                                </td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold">CO</div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">Dr. Craig P. Orgeron</div>
+                                            <div class="text-xs text-gray-500">Exec. Director & State CIO, ITS</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">Central IT Authority</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-600 w-1/2">
+                                    Vocally advocates for ending agency silos. Pushing aggressively for enterprise-level contracts and shared platforms.
+                                </td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold">JW</div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">Jay White</div>
+                                            <div class="text-xs text-gray-500">Chief Information Security Officer, ITS</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">Central IT Authority</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-600 w-1/2">
+                                    Manages Enterprise Security Program for state data centers. Focuses on centralized security over fragmented tools.
+                                </td>
+                            </tr>
+                            <!-- Row 4 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-700 font-bold">BH</div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">W. Briggs Hopson III</div>
+                                            <div class="text-xs text-gray-500">Chairman, Senate Approp.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Financial Approver</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-600 w-1/2">
+                                    Navigating a highly constrained state budget; heavily pressures IT consolidation for cost-savings.
+                                </td>
+                            </tr>
+                            <!-- Row 5 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center text-dell-blue font-bold">BW</div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">Bart Williams & Jill Ford</div>
+                                            <div class="text-xs text-gray-500">Tech Committee Chairs</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">Legislative IT Policy</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-600 w-1/2">
+                                    Co-Chairs of the Artificial Intelligence Regulation (AIR) Task Force. Balances privacy with economic investment.
+                                </td>
+                            </tr>
+                            <!-- Row 6 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">AS</div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">Andrea Sanders</div>
+                                            <div class="text-xs text-gray-500">Commissioner, Child Protection Services</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">Agency Purchaser</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-600 w-1/2">
+                                    Highly critical of state's slow IT procurements. Needs immediate operational relief from 25-year-old systems.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-6 bg-blue-50 border-l-4 border-dell-blue p-4 rounded-r-lg">
+                    <h4 class="text-dell-blue font-bold mb-1">Dell Navigation Strategy</h4>
+                    <p class="text-sm text-gray-700">
+                        While the technical sale must be validated by CIO Orgeron and CISO White to ensure architectural compliance, the emotional/programmatic sale must be won at the agency level (e.g., Sanders, Tindell), promising accelerated deployment via pre-competed vehicles.
+                    </p>
+                </div>
+            </div>
+
+            <!-- INITIATIVES TAB -->
+            <div id="initiatives" class="tab-content max-w-6xl mx-auto">
+                <!-- Initiatives Banner -->
+                <div class="w-full h-40 rounded-xl mb-8 relative overflow-hidden bg-dell-blue shadow-md">
+                    <div class="absolute inset-0 opacity-40 mix-blend-multiply banner-bg" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-dell-blue via-dell-blue to-transparent opacity-90"></div>
+                    <div class="relative h-full flex flex-col justify-center px-8 z-10">
+                        <div class="flex items-center text-white mb-2">
+                            <i class="fa-solid fa-rocket text-2xl mr-3"></i>
+                            <h2 class="text-3xl font-bold">Top Funded Strategic Initiatives</h2>
+                        </div>
+                        <p class="text-blue-100 max-w-2xl text-sm md:text-base">Major state projects currently executing with committed funding and urgent timelines.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col md:flex-row">
+                        <div class="bg-dell-blue text-white p-6 md:w-1/3 flex flex-col justify-center">
+                            <h3 class="text-xl font-bold mb-2">Project SUCCESS</h3>
+                            <div class="text-blue-200 text-sm font-semibold mb-1">AGENCY: MDHS & Medicaid</div>
+                            <div class="text-white text-2xl font-bold mt-2">$195.3M <span class="text-sm font-normal text-blue-200">Contract</span></div>
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <p class="text-gray-700 mb-4">Replacing five distinct legacy IT systems handling SNAP, TANF, Child Care, and Child Support with a unified Operational Data Store (ODS). Integration awarded to Deloitte.</p>
+                            <h4 class="font-bold text-gray-900 text-sm uppercase tracking-wider mb-2">IT Requirements</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                                <li>Massive data conversion/migration from legacy mainframes.</li>
+                                <li>Strict physical and logical separation of production and test data.</li>
+                                <li>Highly scalable block/object storage for a historical data "skeleton structure".</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col md:flex-row">
+                        <div class="bg-green-600 text-white p-6 md:w-1/3 flex flex-col justify-center">
+                            <h3 class="text-xl font-bold mb-2">Rural Health Transformation</h3>
+                            <div class="text-green-200 text-sm font-semibold mb-1">AGENCY: Medicaid & MSDH</div>
+                            <div class="text-white text-2xl font-bold mt-2">$206M <span class="text-sm font-normal text-green-200">CMS Grant</span></div>
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <p class="text-gray-700 mb-4">Gov. Reeves's mandate to ensure digital equity and close care gaps across rural populations. Includes the HTAM and TAPS programs.</p>
+                            <h4 class="font-bold text-gray-900 text-sm uppercase tracking-wider mb-2">IT Requirements</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                                <li>90% of rural providers must upgrade to interoperable EHR systems by Year 5.</li>
+                                <li>40% mandated increase in telehealth visits.</li>
+                                <li>Widespread deployment of high-res displays, ruggedized edge computing, and remote patient monitoring (RPM).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col md:flex-row">
+                        <div class="bg-gray-800 text-white p-6 md:w-1/3 flex flex-col justify-center">
+                            <h3 class="text-xl font-bold mb-2">MSWIN P25 Upgrade</h3>
+                            <div class="text-gray-300 text-sm font-semibold mb-1">AGENCY: MWCC & DPS</div>
+                            <div class="text-white text-2xl font-bold mt-2">$150M <span class="text-sm font-normal text-gray-400">Budget Req.</span></div>
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <p class="text-gray-700 mb-4">Avert catastrophic failure of the state's 99.999% availability Land Mobile Radio network. Legacy components hit end-of-life cliff in 2032.</p>
+                            <h4 class="font-bold text-gray-900 text-sm uppercase tracking-wider mb-2">IT Requirements</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                                <li>Immediate $28M required to update microwave network components.</li>
+                                <li>Highly ruggedized on-premises compute clusters at remote radio transmission sites.</li>
+                                <li>Impenetrable disaster recovery architectures for zero downtime.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROCUREMENT TAB -->
+            <div id="procurement" class="tab-content max-w-6xl mx-auto">
+                <!-- Procurement Banner -->
+                <div class="w-full h-40 rounded-xl mb-8 relative overflow-hidden bg-dell-blue shadow-md">
+                    <div class="absolute inset-0 opacity-40 mix-blend-multiply banner-bg" style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-dell-blue via-dell-blue to-transparent opacity-90"></div>
+                    <div class="relative h-full flex flex-col justify-center px-8 z-10">
+                        <div class="flex items-center text-white mb-2">
+                            <i class="fa-solid fa-file-contract text-2xl mr-3"></i>
+                            <h2 class="text-3xl font-bold">Budget & Procurement</h2>
+                        </div>
+                        <p class="text-blue-100 max-w-2xl text-sm md:text-base">Understanding the financial models and purchasing vehicles governing state IT.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <!-- Financial Model -->
+                    <div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-4">IT Governance & Financial Model</h2>
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                            <h3 class="text-lg font-bold text-dell-blue mb-2">The "Hub and Spoke" Model</h3>
+                            <p class="text-sm text-gray-700 mb-4">Mississippi uses a chargeback financial model established by SB 2779. This is a major friction point for agencies.</p>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-blue-50 p-3 rounded border-l-2 border-blue-400">
+                                    <strong class="text-blue-900 block text-sm">The Hub (ITS Core Services):</strong>
+                                    <span class="text-xs text-gray-700">ITS receives direct General Fund appropriations ($26.7M) to build foundational enterprise infrastructure.</span>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded border-l-2 border-gray-400">
+                                    <strong class="text-gray-900 block text-sm">The Spoke (Agency Consumption):</strong>
+                                    <span class="text-xs text-gray-700">Agencies consume ITS shared services (data center compute, storage, DR) and are charged back via the ITS Revolving Fund.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Procurement Vehicles -->
+                    <div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-4">Procurement Vehicles</h2>
+                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                            <div class="mb-4">
+                                <h3 class="text-md font-bold text-gray-900 flex items-center">
+                                    <i class="fa-solid fa-file-contract text-dell-blue mr-2"></i> IT Hardware EPL 3760
+                                </h3>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    The primary vehicle for enterprise infrastructure. Utilizes a Manufacturer-Sponsored Reseller Group model. <strong>Purchasing limit extended to $500,000</strong> for enterprise IT hardware without ITS Board approval. <span class="font-bold text-dell-blue">Dell is a dominant incumbent here.</span>
+                                </p>
+                            </div>
+                            <hr class="border-gray-100 my-4">
+                            <div class="mb-4">
+                                <h3 class="text-md font-bold text-gray-900 flex items-center">
+                                    <i class="fa-solid fa-gavel text-dell-blue mr-2"></i> The CP-1 Process
+                                </h3>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    For projects exceeding EPL thresholds or requiring complex integrations. Demands full RFP and ITS Board presentation. Highly delayed—agencies hate it.
+                                </p>
+                            </div>
+                            <hr class="border-gray-100 my-4">
+                            <div>
+                                <h3 class="text-md font-bold text-gray-900 flex items-center">
+                                    <i class="fa-solid fa-scale-balanced text-dell-blue mr-2"></i> Compliance Mandates
+                                </h3>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-gray-100 text-xs font-semibold rounded text-gray-700">StateRAMP</span>
+                                    <span class="px-2 py-1 bg-gray-100 text-xs font-semibold rounded text-gray-700">AI Acceptable Use</span>
+                                    <span class="px-2 py-1 bg-gray-100 text-xs font-semibold rounded text-gray-700">CCOE Act</span>
+                                    <span class="px-2 py-1 bg-gray-100 text-xs font-semibold rounded text-gray-700">CJIS / HIPAA / FNS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SALES PLAYS TAB -->
+            <div id="sales-plays" class="tab-content max-w-6xl mx-auto">
+                <!-- Sales Plays Banner -->
+                <div class="w-full h-40 rounded-xl mb-8 relative overflow-hidden bg-dell-blue shadow-md">
+                    <div class="absolute inset-0 opacity-40 mix-blend-multiply banner-bg" style="background-image: url('https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-dell-blue via-dell-blue to-transparent opacity-90"></div>
+                    <div class="relative h-full flex flex-col justify-center px-8 z-10">
+                        <div class="flex items-center text-white mb-2">
+                            <i class="fa-solid fa-bullseye text-2xl mr-3"></i>
+                            <h2 class="text-3xl font-bold">Actionable Dell Opportunities</h2>
+                        </div>
+                        <p class="text-blue-100 max-w-2xl text-sm md:text-base">Targeted sales motions based on Mississippi's funded mandates and operational friction points.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    
+                    <!-- Play 1 -->
+                    <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden relative">
+                        <div class="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">FUNDED ALIGNMENT</div>
+                        <div class="p-6 border-l-4 border-dell-blue">
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">1. MDHS SUCCESS Data Consolidation & CPDC Expansion</h3>
+                            <div class="text-sm text-gray-500 mb-4"><i class="fa-solid fa-bullseye mr-1"></i> Target: ITS Leadership & Deloitte</div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">The Situation</h4>
+                                    <p class="text-sm text-gray-600">The $195M project mandates massive data conversion and absolute segregation of production/test data. Simultaneously, ITS needs DR expansion at the CPDC.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-dell-blue uppercase tracking-wide mb-2">The Dell Pitch</h4>
+                                    <p class="text-sm text-gray-800 font-medium">Position <span class="bg-blue-50 px-1 rounded text-dell-blue">PowerStore</span> and <span class="bg-blue-50 px-1 rounded text-dell-blue">PowerEdge</span> as the high-performance foundational architecture. Pitch <span class="bg-blue-50 px-1 rounded text-dell-blue">Dell APEX</span> to shift the CPDC expansion from a massive CAPEX to a predictable OPEX, aligning perfectly with the state's chargeback model.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Play 2 -->
+                    <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden relative">
+                        <div class="absolute top-0 right-0 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">WHITESPACE & ADVISORY</div>
+                        <div class="p-6 border-l-4 border-purple-500">
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">2. Sovereign AI and On-Premises GenAI Governance</h3>
+                            <div class="text-sm text-gray-500 mb-4"><i class="fa-solid fa-bullseye mr-1"></i> Target: Rep. Jill Ford, AIR Task Force, ITS CISO</div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">The Situation</h4>
+                                    <p class="text-sm text-gray-600">Mississippi has extremely strict AI Acceptable Use Policies protecting state data from public LLMs, and is pioneering state-level AI regulation.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-purple-600 uppercase tracking-wide mb-2">The Dell Pitch</h4>
+                                    <p class="text-sm text-gray-800 font-medium">Advise leaders on <span class="bg-purple-50 px-1 rounded text-purple-700">Private, Sovereign AI Infrastructure</span> hosted in the Primary Data Center or MSU HPC. Guarantee advanced AI innovation without violating CJIS, HIPAA, or the state's new regulations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Play 3 -->
+                    <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden relative">
+                        <div class="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">FUNDED ALIGNMENT</div>
+                        <div class="p-6 border-l-4 border-green-500">
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">3. Rural Health Edge & Client Modernization</h3>
+                            <div class="text-sm text-gray-500 mb-4"><i class="fa-solid fa-bullseye mr-1"></i> Target: Div. of Medicaid & State Dept of Health</div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">The Situation</h4>
+                                    <p class="text-sm text-gray-600">The $206M CMS grant dictates a 40% increase in telehealth capacity and edge tech deployment across remote environments over 5 years.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-green-600 uppercase tracking-wide mb-2">The Dell Pitch</h4>
+                                    <p class="text-sm text-gray-800 font-medium">Massive pipeline for <span class="bg-green-50 px-1 rounded text-green-700">Dell Client Solutions</span> (ruggedized Latitude tablets, OptiPlex endpoints, diagnostic displays) and <span class="bg-green-50 px-1 rounded text-green-700">PowerEdge XR</span> Edge Servers for remote rural clinics maintaining the HIE without stable broadband.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Play 4 -->
+                    <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden relative">
+                        <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">COMPETITIVE DISPLACEMENT</div>
+                        <div class="p-6 border-l-4 border-orange-500">
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">4. Cloud Repatriation & Legacy Rip-and-Replace</h3>
+                            <div class="text-sm text-gray-500 mb-4"><i class="fa-solid fa-bullseye mr-1"></i> Target: Agency Commissioners (e.g., CPS)</div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">The Situation</h4>
+                                    <p class="text-sm text-gray-600">Agencies are frustrated by multi-year procurement delays for big CP-1 systems, operating vulnerable "server closet" infrastructure.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-orange-600 uppercase tracking-wide mb-2">The Dell Pitch</h4>
+                                    <p class="text-sm text-gray-800 font-medium">Leverage <span class="bg-orange-50 px-1 rounded text-orange-700">IT Hardware EPL 3760</span> (where Dell is incumbent) to execute swift, sub-$500k tactical hardware refreshes. Bypass the RFP delays completely and consolidate workloads into the ITS private cloud to lower agency TCO.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Play 5 -->
+                    <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden relative">
+                        <div class="absolute top-0 right-0 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">WHITESPACE & ADVISORY</div>
+                        <div class="p-6 border-l-4 border-gray-800">
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">5. MDOC Advanced Data Analytics Pilot</h3>
+                            <div class="text-sm text-gray-500 mb-4"><i class="fa-solid fa-bullseye mr-1"></i> Target: Dept. of Corrections (MDOC) Leadership</div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-700 uppercase tracking-wide mb-2">The Situation</h4>
+                                    <p class="text-sm text-gray-600">Legislature authorized a pilot (HB 1747) utilizing advanced data analytics to predict and mitigate prison safety risks due to severe staffing shortages.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-2">The Dell Pitch</h4>
+                                    <p class="text-sm text-gray-800 font-medium">Position <span class="bg-gray-100 px-1 rounded text-gray-900">Edge Computing & AI-Ready Infrastructure</span> as the foundational architecture for this predictive intelligence, acting as a force multiplier for correctional staff.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Navigation Script -->
+    <script>
+        function switchTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active state from all nav items
+            document.querySelectorAll('.nav-item').forEach(nav => {
+                nav.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+            
+            // Add active state to clicked button
+            event.currentTarget.classList.add('active');
+
+            // Update Header Title based on selection
+            const titles = {
+                'overview': 'Executive Overview',
+                'stakeholders': 'Power Map & Key Stakeholders',
+                'initiatives': 'Top Strategic Initiatives',
+                'procurement': 'Budget & Procurement Strategies',
+                'sales-plays': 'Actionable Dell Sales Plays'
+            };
+            document.getElementById('page-title').innerText = titles[tabId] || 'Market Analysis';
+        }
+    </script>
+</body>
+</html>

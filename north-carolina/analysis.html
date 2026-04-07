@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC Market Intelligence | Dell Technologies Strategic Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom Styles & Overrides */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f4; /* stone-100 - Warm Neutral */
+            color: #1c1917; /* stone-900 */
+        }
+
+        /* Chart Container Strict Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Prevent excessive width */
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        /* Navigation Active State */
+        .nav-item.active {
+            background-color: #e7e5e4; /* stone-200 */
+            border-left: 4px solid #0f766e; /* teal-700 */
+            font-weight: 600;
+        }
+
+        /* Card Hover Effects */
+        .interactive-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .interactive-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+        }
+
+        /* Org Chart Connector Lines (CSS Only, No SVG) */
+        .org-tree ul {
+            padding-top: 20px; position: relative;
+            transition: all 0.5s;
+        }
+        .org-tree li {
+            float: left; text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+        }
+        /* Vertical lines */
+        .org-tree li::before, .org-tree li::after {
+            content: '';
+            position: absolute; top: 0; right: 50%;
+            border-top: 2px solid #a8a29e;
+            width: 50%; height: 20px;
+        }
+        .org-tree li::after {
+            right: auto; left: 50%;
+            border-left: 2px solid #a8a29e;
+        }
+        .org-tree li:only-child::after, .org-tree li:only-child::before {
+            display: none;
+        }
+        .org-tree li:only-child { padding-top: 0;}
+        .org-tree li:first-child::before, .org-tree li:last-child::after {
+            border: 0 none;
+        }
+        .org-tree li:last-child::before{
+            border-right: 2px solid #a8a29e;
+            border-radius: 0 5px 0 0;
+        }
+        .org-tree li:first-child::after{
+            border-radius: 5px 0 0 0;
+        }
+        .org-tree ul ul::before{
+            content: '';
+            position: absolute; top: 0; left: 50%;
+            border-left: 2px solid #a8a29e;
+            width: 0; height: 20px;
+        }
+        
+        /* Hide scrollbar for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutrals (Stone) with Professional Teal/Navy Accents -->
+    <!-- Application Structure Plan: 
+         - Dashboard Layout: Sidebar navigation for clear module separation.
+         - Modules:
+            1. Executive Overview: High-level metrics and key takeaways.
+            2. Power Map: Visualizes the unique "Consolidated" nature of NC IT.
+            3. Fiscal Intel: Visualizes budget cycles and funding splits.
+            4. Strategic Priorities: Interactive cards detailing political focus.
+            5. Opportunity Map: The "Action" center, filtering initiatives to sales plays.
+         - Flow: User starts with context (Overview/Power Map), moves to constraints (Fiscal/Contracts), ends with Action (Opportunities).
+    -->
+    <!-- Visualization & Content Choices:
+         - Power Map: HTML/CSS Tree structure. Goal: Show centralization. Interaction: Hover for bio/spend. NO SVG.
+         - Budget: Chart.js Doughnut & Bar. Goal: Show where the money is. Interaction: Toggle datasets.
+         - Priorities: Flex Cards. Goal: Summarize textual intel. Interaction: Click to expand details.
+         - Opportunity Map: Filterable Grid. Goal: Connect Initiatives to Dell Products. Interaction: Dropdown filters.
+         - Confirming NO SVG/Mermaid. 
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="h-screen flex overflow-hidden text-stone-800">
+
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 bg-white border-r border-stone-200 flex flex-col shadow-sm z-10 hidden md:flex">
+        <div class="p-6 border-b border-stone-100">
+            <h1 class="text-xl font-bold text-teal-800 tracking-tight">NC Market Intel</h1>
+            <p class="text-xs text-stone-500 mt-1 uppercase tracking-wider">Dell Strategic Planning</p>
+        </div>
+        
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="space-y-1">
+                <li>
+                    <button onclick="navigate('dashboard')" class="nav-item active w-full text-left px-6 py-3 text-sm font-medium hover:bg-stone-50 transition-colors flex items-center gap-3">
+                        <span>📊</span> Executive Overview
+                    </button>
+                </li>
+                <li>
+                    <button onclick="navigate('political')" class="nav-item w-full text-left px-6 py-3 text-sm font-medium hover:bg-stone-50 transition-colors flex items-center gap-3">
+                        <span>🏛️</span> Political Landscape
+                    </button>
+                </li>
+                <li>
+                    <button onclick="navigate('governance')" class="nav-item w-full text-left px-6 py-3 text-sm font-medium hover:bg-stone-50 transition-colors flex items-center gap-3">
+                        <span>🧩</span> IT Power Map
+                    </button>
+                </li>
+                <li>
+                    <button onclick="navigate('fiscal')" class="nav-item w-full text-left px-6 py-3 text-sm font-medium hover:bg-stone-50 transition-colors flex items-center gap-3">
+                        <span>💰</span> Fiscal & Budget
+                    </button>
+                </li>
+                <li>
+                    <button onclick="navigate('procurement')" class="nav-item w-full text-left px-6 py-3 text-sm font-medium hover:bg-stone-50 transition-colors flex items-center gap-3">
+                        <span>📝</span> Contracts & Vehicles
+                    </button>
+                </li>
+                <li>
+                    <button onclick="navigate('opportunities')" class="nav-item w-full text-left px-6 py-3 text-sm font-medium hover:bg-stone-50 transition-colors flex items-center gap-3">
+                        <span>🎯</span> Opportunity Map
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="p-4 border-t border-stone-100 bg-stone-50">
+            <div class="text-xs font-semibold text-stone-400 uppercase">Current Fiscal Phase</div>
+            <div class="text-sm font-bold text-teal-700 mt-1">Q3 Execution</div>
+            <div class="w-full bg-stone-200 rounded-full h-1.5 mt-2">
+                <div class="bg-teal-600 h-1.5 rounded-full" style="width: 75%"></div>
+            </div>
+            <p class="text-xs text-stone-500 mt-1 text-right">FY Ends June 30</p>
+        </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <div class="md:hidden fixed w-full bg-white border-b z-20 px-4 py-3 flex justify-between items-center">
+        <span class="font-bold text-teal-800">NC Market Intel</span>
+        <button onclick="toggleMobileMenu()" class="text-stone-600">☰</button>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 overflow-y-auto bg-stone-100/50 p-4 md:p-8 pt-16 md:pt-8 relative">
+        
+        <!-- Section: Executive Dashboard -->
+        <section id="dashboard" class="view-section space-y-6">
+            <div class="flex justify-between items-end">
+                <div>
+                    <h2 class="text-3xl font-bold text-stone-800">North Carolina State Analysis</h2>
+                    <p class="text-stone-500 mt-2 max-w-2xl">High-level synthesis of political drivers, IT governance, and sales opportunities for the current Fiscal Year.</p>
+                </div>
+                <div class="hidden lg:block text-right">
+                    <div class="text-sm text-stone-400">Analysis Date</div>
+                    <div class="font-medium text-stone-700">February 2026</div>
+                </div>
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-stone-200">
+                    <div class="flex items-center justify-between">
+                        <div class="text-stone-500 text-sm font-medium uppercase">IT Model</div>
+                        <span class="text-2xl">🏢</span>
+                    </div>
+                    <div class="mt-2 text-2xl font-bold text-stone-800">Consolidated</div>
+                    <div class="text-xs text-stone-500 mt-1">Cabinet Agencies via NCDIT</div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-stone-200">
+                    <div class="flex items-center justify-between">
+                        <div class="text-stone-500 text-sm font-medium uppercase">Est. IT Spend</div>
+                        <span class="text-2xl">💵</span>
+                    </div>
+                    <div class="mt-2 text-2xl font-bold text-stone-800">~$1.4B</div>
+                    <div class="text-xs text-stone-500 mt-1">Total Addressable Market</div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-stone-200">
+                    <div class="flex items-center justify-between">
+                        <div class="text-stone-500 text-sm font-medium uppercase">Top Priority</div>
+                        <span class="text-2xl">📡</span>
+                    </div>
+                    <div class="mt-2 text-2xl font-bold text-stone-800">Broadband</div>
+                    <div class="text-xs text-stone-500 mt-1">"Digital Divide" & GREAT Grants</div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-stone-200">
+                    <div class="flex items-center justify-between">
+                        <div class="text-stone-500 text-sm font-medium uppercase">Fiscal Year</div>
+                        <span class="text-2xl">📅</span>
+                    </div>
+                    <div class="mt-2 text-2xl font-bold text-stone-800">July 1 - June 30</div>
+                    <div class="text-xs text-red-500 mt-1 font-semibold">Budget Flush: May/June</div>
+                </div>
+            </div>
+
+            <!-- Dashboard Charts Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Spend Distribution -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h3 class="font-bold text-lg mb-4 text-stone-800">Projected IT Spend Distribution</h3>
+                    <p class="text-sm text-stone-500 mb-4">Breakdown of estimated IT expenditure by major technology category based on historical state data.</p>
+                    <div class="chart-container">
+                        <canvas id="dashboardSpendChart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Quick Wins List -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 flex flex-col">
+                    <h3 class="font-bold text-lg mb-4 text-stone-800">⚡ "High Velocity" Targets</h3>
+                    <p class="text-sm text-stone-500 mb-4">Immediate actionable opportunities based on current grant cycles and contract expirations.</p>
+                    <div class="flex-1 space-y-3 overflow-y-auto pr-2 custom-scrollbar">
+                        <div class="p-3 bg-teal-50 rounded-lg border border-teal-100 cursor-pointer hover:bg-teal-100 transition-colors" onclick="navigate('opportunities')">
+                            <div class="flex justify-between items-start">
+                                <span class="font-bold text-teal-900 text-sm">NC Community Colleges</span>
+                                <span class="text-xs bg-white text-teal-700 px-2 py-0.5 rounded border border-teal-200">Cyber</span>
+                            </div>
+                            <p class="text-xs text-teal-800 mt-1">Urgent need for endpoint protection upgrades following recent peer audits.</p>
+                        </div>
+                        <div class="p-3 bg-stone-50 rounded-lg border border-stone-200 cursor-pointer hover:bg-stone-100 transition-colors" onclick="navigate('opportunities')">
+                            <div class="flex justify-between items-start">
+                                <span class="font-bold text-stone-800 text-sm">Dept of Public Safety (DPS)</span>
+                                <span class="text-xs bg-white text-stone-600 px-2 py-0.5 rounded border border-stone-200">Storage</span>
+                            </div>
+                            <p class="text-xs text-stone-600 mt-1">Body cam data retention requirements expanding; on-prem storage refresh due.</p>
+                        </div>
+                        <div class="p-3 bg-blue-50 rounded-lg border border-blue-100 cursor-pointer hover:bg-blue-100 transition-colors" onclick="navigate('opportunities')">
+                            <div class="flex justify-between items-start">
+                                <span class="font-bold text-blue-900 text-sm">K-12 Digital Learning</span>
+                                <span class="text-xs bg-white text-blue-700 px-2 py-0.5 rounded border border-blue-200">Client</span>
+                            </div>
+                            <p class="text-xs text-blue-800 mt-1">Device refresh cycle (Chromebook/Latitude) for Tier 1 counties utilizing final ARPA funds.</p>
+                        </div>
+                    </div>
+                    <button onclick="navigate('opportunities')" class="mt-4 w-full py-2 text-sm text-teal-700 font-semibold border border-teal-200 rounded hover:bg-teal-50 transition-colors">
+                        View All Opportunities &rarr;
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Political Landscape -->
+        <section id="political" class="view-section hidden space-y-6">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-stone-800">Political & Executive Landscape</h2>
+                <p class="text-stone-500 mt-1">Understanding the key decision-makers and the strategic "North Star" directives shaping IT investment.</p>
+            </div>
+
+            <!-- Leadership Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div class="bg-white p-5 rounded-lg border-t-4 border-teal-600 shadow-sm">
+                    <div class="text-xs font-bold text-stone-400 uppercase tracking-wide">The Executive</div>
+                    <div class="font-bold text-xl mt-1">Governor Roy Cooper</div>
+                    <p class="text-sm text-stone-600 mt-2">Prioritizes "Digital Equity" and workforce development. Strong supporter of centralized IT governance to improve efficiency.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border-t-4 border-blue-600 shadow-sm">
+                    <div class="text-xs font-bold text-stone-400 uppercase tracking-wide">The Technology Lead</div>
+                    <div class="font-bold text-xl mt-1">State CIO (NCDIT)</div>
+                    <p class="text-sm text-stone-600 mt-2">Cabinet-level position. Focuses on "Whole-of-State" cybersecurity and cloud migration (NC Cloud). Controls most agency spend.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border-t-4 border-indigo-600 shadow-sm">
+                    <div class="text-xs font-bold text-stone-400 uppercase tracking-wide">The Fiscal Lead</div>
+                    <div class="font-bold text-xl mt-1">State Budget Director</div>
+                    <p class="text-sm text-stone-600 mt-2">Oversees OSBM. Focuses on sustainability of IT projects post-federal stimulus. Strict ROI requirements.</p>
+                </div>
+            </div>
+
+            <!-- Strategic Priorities Interactive -->
+            <h3 class="font-bold text-lg text-stone-800 border-b border-stone-200 pb-2">Strategic Themes (State of the State)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div onclick="updateDetail('broadband')" class="interactive-card bg-white p-6 rounded-xl border border-stone-200 cursor-pointer group">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-600 text-xl">📡</div>
+                        <h4 class="font-bold text-stone-800 group-hover:text-teal-700 transition-colors">Closing the Digital Divide</h4>
+                    </div>
+                    <p class="text-sm text-stone-500 line-clamp-2">The absolute #1 priority. Leveraging over $1B in federal funds (BEAD, ARPA) to expand high-speed internet access to rural counties.</p>
+                </div>
+
+                <div onclick="updateDetail('cyber')" class="interactive-card bg-white p-6 rounded-xl border border-stone-200 cursor-pointer group">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 text-xl">🛡️</div>
+                        <h4 class="font-bold text-stone-800 group-hover:text-red-700 transition-colors">"Whole-of-State" Cybersecurity</h4>
+                    </div>
+                    <p class="text-sm text-stone-500 line-clamp-2">Moving beyond state agencies to protect local gov and education. Joint Cyber Task Force creation and mandatory reporting.</p>
+                </div>
+
+                <div onclick="updateDetail('modern')" class="interactive-card bg-white p-6 rounded-xl border border-stone-200 cursor-pointer group">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xl">☁️</div>
+                        <h4 class="font-bold text-stone-800 group-hover:text-blue-700 transition-colors">Legacy Modernization & Cloud</h4>
+                    </div>
+                    <p class="text-sm text-stone-500 line-clamp-2">Focus on retiring mainframes and moving to a "Cloud Smart" broker model. NCDIT acts as the service broker for agencies.</p>
+                </div>
+
+                <div onclick="updateDetail('workforce')" class="interactive-card bg-white p-6 rounded-xl border border-stone-200 cursor-pointer group">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 text-xl">🎓</div>
+                        <h4 class="font-bold text-stone-800 group-hover:text-amber-700 transition-colors">Talent & Workforce Development</h4>
+                    </div>
+                    <p class="text-sm text-stone-500 line-clamp-2">Using IT to upskill the state workforce. Heavy investment in Community Colleges and digital literacy programs.</p>
+                </div>
+            </div>
+
+            <!-- Dynamic Detail Panel for Priorities -->
+            <div id="priority-detail" class="bg-stone-800 text-white p-6 rounded-xl mt-4 transition-all duration-300">
+                <div class="flex items-start gap-4">
+                    <div class="text-3xl">💡</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-teal-300">Dell Angle: Select a priority above</h4>
+                        <p class="text-stone-300 text-sm mt-2">Click on a strategic theme card above to see the specific Dell sales play and legislative context.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: IT Governance (Power Map) -->
+        <section id="governance" class="view-section hidden space-y-6">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-stone-800">IT Organizational Structure</h2>
+                <p class="text-stone-500 mt-1">Visualizing the flow of authority. NC is a <strong>Highly Centralized</strong> state regarding IT governance.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-stone-200 overflow-x-auto">
+                <div class="min-w-[600px]">
+                    <div class="org-tree flex justify-center">
+                        <ul>
+                            <li>
+                                <div class="bg-stone-800 text-white px-6 py-3 rounded shadow-md border-b-4 border-teal-500 font-bold w-48 mx-auto">
+                                    Governor<br><span class="text-xs font-normal text-stone-300">Executive Branch</span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="bg-teal-700 text-white px-6 py-4 rounded shadow-lg font-bold w-56 mx-auto relative group cursor-help">
+                                            NCDIT<br><span class="text-xs font-normal text-teal-100">Dept. of Info Tech (Cabinet)</span>
+                                            <div class="absolute -top-2 -right-2 bg-yellow-400 text-stone-900 text-xs font-bold px-2 py-1 rounded-full shadow">👑 CIO</div>
+                                            
+                                            <!-- Tooltip -->
+                                            <div class="absolute z-10 w-64 p-3 bg-stone-900 text-left text-white text-xs rounded shadow-xl -bottom-24 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                                                <strong>Key Power:</strong> Has statutory authority over all Cabinet Agency IT procurement and standards. Must approve spend >$25k.
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <div class="bg-white border border-stone-300 px-4 py-2 rounded shadow text-sm w-32 mx-auto mt-4 text-stone-600">
+                                                    Infrastructure & Ops
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="bg-white border border-stone-300 px-4 py-2 rounded shadow text-sm w-32 mx-auto mt-4 text-stone-600">
+                                                    Data & Analytics
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="bg-white border-2 border-red-200 px-4 py-2 rounded shadow text-sm w-32 mx-auto mt-4 font-bold text-stone-700">
+                                                    CISO (Cyber)
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4 mt-12 border-t border-dashed border-stone-300 pt-8">
+                        <div class="col-span-3 text-center text-sm font-bold text-stone-400 uppercase tracking-widest mb-4">Consolidated Agencies (Served by NCDIT)</div>
+                        <div class="bg-stone-50 p-3 rounded text-center text-sm font-medium border border-stone-200">Dept of Health (DHHS)</div>
+                        <div class="bg-stone-50 p-3 rounded text-center text-sm font-medium border border-stone-200">Public Safety (DPS)</div>
+                        <div class="bg-stone-50 p-3 rounded text-center text-sm font-medium border border-stone-200">Transportation (DOT)</div>
+                        <div class="bg-stone-50 p-3 rounded text-center text-sm font-medium border border-stone-200">Revenue (DOR)</div>
+                        <div class="bg-stone-50 p-3 rounded text-center text-sm font-medium border border-stone-200">Environmental Quality</div>
+                        <div class="bg-stone-50 p-3 rounded text-center text-sm font-medium border border-stone-200">Administration (DOA)</div>
+                    </div>
+                    
+                    <div class="mt-8 bg-amber-50 border border-amber-200 p-4 rounded-lg flex gap-4 items-start">
+                        <div class="text-2xl">⚠️</div>
+                        <div>
+                            <h4 class="font-bold text-amber-800 text-sm">Sales Strategy Note:</h4>
+                            <p class="text-xs text-amber-800 mt-1">While agencies like DHHS and DOT are "consolidated," they retain "Business Relationship Managers" (BRMs) who define the *functional requirements*. Pitch the **Business Outcome** to the Agency BRM, but pitch the **Technical Compliance/Standard** to NCDIT.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Fiscal & Budget -->
+        <section id="fiscal" class="view-section hidden space-y-6">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-stone-800">Fiscal Intelligence</h2>
+                <p class="text-stone-500 mt-1">Analyzing the money flow. NC operates on a Biennial budget, with the Fiscal Year running July 1 - June 30.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Funding Sources Chart -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h3 class="font-bold text-lg mb-4 text-stone-800">IT Funding Composition</h3>
+                    <p class="text-sm text-stone-500 mb-4">Significant reliance on one-time federal funds (ARPA/IIJA) for modernization projects vs. State General Fund for O&M.</p>
+                    <div class="chart-container">
+                        <canvas id="fundingChart"></canvas>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2 justify-center">
+                        <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">General Fund: Operational</span>
+                        <span class="text-xs px-2 py-1 bg-teal-100 text-teal-800 rounded">Federal (ARPA/IIJA): Transformational</span>
+                        <span class="text-xs px-2 py-1 bg-orange-100 text-orange-800 rounded">Chargeback: NCDIT Services</span>
+                    </div>
+                </div>
+
+                <!-- Budget Cycle Timeline -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <!-- <h3 class="font-bold text-lg mb-4 text-stone-800">The Budget Cycle (FY24-25)</h3> -->
+                    <div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-stone-300 before:to-transparent">
+                        
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-stone-300 group-[.is-active]:bg-teal-500 group-[.is-active]:text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow">
+                                🍂
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded border border-stone-200 bg-white shadow-sm">
+                                <div class="flex items-center justify-between space-x-2 mb-1">
+                                    <div class="font-bold text-stone-700">Aug - Oct</div>
+                                </div>
+                                <div class="text-stone-500 text-sm">Agency Budget Preparation. Agencies submit requests to OSBM. <br><strong>Dell Action:</strong> Plant seeds for next year's budget.</div>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-teal-500 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow">
+                                ❄️
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded border border-stone-200 bg-white shadow-sm ring-2 ring-teal-500">
+                                <div class="flex items-center justify-between space-x-2 mb-1">
+                                    <div class="font-bold text-stone-700">Jan - April</div>
+                                </div>
+                                <div class="text-stone-500 text-sm">Governor's Budget & Legislative Session. Debates on priorities. <br><strong>Dell Action:</strong> Align solutions with Governor's stated priorities.</div>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-stone-300 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 shadow">
+                                ☀️
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded border border-stone-200 bg-white shadow-sm">
+                                <div class="flex items-center justify-between space-x-2 mb-1">
+                                    <div class="font-bold text-stone-700">May - June</div>
+                                </div>
+                                <div class="text-stone-500 text-sm">"Budget Flush" & Final Approval. Spend remaining departmental funds. <br><strong>Dell Action:</strong> Close transactional deals (Client/Peripherals).</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Procurement -->
+        <section id="procurement" class="view-section hidden space-y-6">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-stone-800">Procurement & Contracting</h2>
+                <p class="text-stone-500 mt-1">Understanding the purchasing vehicles. NC is a "mandatory use" state for many Term Contracts.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Vehicle 1 -->
+                <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-teal-100 text-teal-800 text-xs font-bold px-2 py-1 rounded-bl">Primary Vehicle</div>
+                    <h3 class="font-bold text-lg text-stone-800">204A - Microcomputers</h3>
+                    <div class="mt-4 space-y-2 text-sm text-stone-600">
+                        <p><span class="font-semibold text-stone-900">Scope:</span> Desktops, Laptops, Tablets, Peripherals.</p>
+                        <p><span class="font-semibold text-stone-900">Type:</span> Mandatory State Term Contract.</p>
+                        <p><span class="font-semibold text-stone-900">Dell Status:</span> Prime Vendor.</p>
+                    </div>
+                    <div class="mt-4 p-3 bg-stone-50 rounded text-xs text-stone-500">
+                        Use for all standard client refresh cycles. Pre-negotiated pricing.
+                    </div>
+                </div>
+
+                <!-- Vehicle 2 -->
+                <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded-bl">Infrastructure</div>
+                    <h3 class="font-bold text-lg text-stone-800">208X - IT Infrastructure</h3>
+                    <div class="mt-4 space-y-2 text-sm text-stone-600">
+                        <p><span class="font-semibold text-stone-900">Scope:</span> Servers, Storage, Networking.</p>
+                        <p><span class="font-semibold text-stone-900">Type:</span> Convenience Contract.</p>
+                        <p><span class="font-semibold text-stone-900">Dell Status:</span> Prime Vendor.</p>
+                    </div>
+                    <div class="mt-4 p-3 bg-stone-50 rounded text-xs text-stone-500">
+                        Critical for data center modernization pitches.
+                    </div>
+                </div>
+
+                <!-- Vehicle 3 -->
+                <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded-bl">Cooperative</div>
+                    <h3 class="font-bold text-lg text-stone-800">NASPO ValuePoint</h3>
+                    <div class="mt-4 space-y-2 text-sm text-stone-600">
+                        <p><span class="font-semibold text-stone-900">Scope:</span> Cloud (SaaS/IaaS), Wireless.</p>
+                        <p><span class="font-semibold text-stone-900">Type:</span> Participating Addendum.</p>
+                        <p><span class="font-semibold text-stone-900">Utility:</span> High.</p>
+                    </div>
+                    <div class="mt-4 p-3 bg-stone-50 rounded text-xs text-stone-500">
+                        Used when specific NC contracts don't cover the solution (e.g., complex cloud services).
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thresholds Table -->
+            <div class="bg-white rounded-xl border border-stone-200 overflow-hidden mt-6">
+                <table class="w-full text-left text-sm">
+                    <thead class="bg-stone-100 text-stone-700">
+                        <tr>
+                            <th class="p-4 font-bold">Spend Threshold</th>
+                            <th class="p-4 font-bold">Methodality</th>
+                            <th class="p-4 font-bold">Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-stone-100">
+                        <tr>
+                            <td class="p-4">< $25,000</td>
+                            <td class="p-4">Discretionary / P-Card</td>
+                            <td class="p-4 text-stone-500">Agency decision. Speed is key. Quote and close.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4">$25k - $100k</td>
+                            <td class="p-4">Informal Quotes (IFB)</td>
+                            <td class="p-4 text-stone-500">Requires 3 quotes. Leverage contract pricing to win.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4">> $100,000</td>
+                            <td class="p-4">Formal RFP</td>
+                            <td class="p-4 text-stone-500">Posted on IPS (Interactive Purchasing System). Long cycle. Shape the RFI.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section: Opportunity Map (The Engine) -->
+        <section id="opportunities" class="view-section hidden space-y-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-stone-800">The Opportunity Map</h2>
+                    <p class="text-stone-500 mt-1">Connecting Initiatives to Dell Solutions. Filter to find your play.</p>
+                </div>
+                <div class="flex bg-white rounded-lg border border-stone-300 p-1 shadow-sm">
+                    <select id="oppFilter" onchange="filterOpportunities()" class="bg-transparent text-sm font-semibold text-stone-700 focus:outline-none px-2 py-1 cursor-pointer">
+                        <option value="all">All Solutions</option>
+                        <option value="cyber">Cyber Recovery & Security</option>
+                        <option value="cloud">Multi-Cloud / APEX</option>
+                        <option value="workforce">Client & Workforce Transformation</option>
+                        <option value="infra">Modern Infrastructure</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="oppGrid" class="grid grid-cols-1 gap-4">
+                <!-- JS will populate this -->
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // --- Data Sources ---
+        
+        // Strategic Priorities Data
+        const priorityDetails = {
+            broadband: {
+                title: "Closing the Digital Divide (GREAT Grants)",
+                dellAngle: "High Probability: Fiber build-outs need backbone infrastructure. While Dell doesn't lay fiber, the ISPs and Counties winning these grants need scalable edge compute and networking gear to manage the traffic. Pitch **Edge Gateways** and **Ruggedized Servers**.",
+                agency: "NCDIT Broadband Office"
+            },
+            cyber: {
+                title: "Whole-of-State Cybersecurity",
+                dellAngle: "High Probability: The State is mandating protection for Local Govs. Pitch **PowerProtect Cyber Recovery** as the ultimate vault for ransomware resilience. Use the 'Joint Cyber Task Force' mandate to justify a standardized backup architecture.",
+                agency: "NCDIT / Emergency Mgmt"
+            },
+            modern: {
+                title: "Cloud Smart & Modernization",
+                dellAngle: "Medium Probability: NCDIT wants to be a broker. Pitch **APEX** as the bridge. Agencies don't want to lose control to public cloud; APEX Console gives them the cloud experience on-prem (Data Sovereignty is a key selling point here).",
+                agency: "All Cabinet Agencies"
+            },
+            workforce: {
+                title: "Workforce Development",
+                dellAngle: "High Probability: Community Colleges are getting budget boosts. Pitch **Precision Workstations** for technical training labs (CAD, Coding, AI) and **Latitude** for hybrid learning programs.",
+                agency: "Community College System"
+            }
+        };
+
+        // Opportunity Data
+        const opportunities = [
+            {
+                id: 1,
+                title: "NC Education Cyber Shield",
+                category: "cyber",
+                client: "Dept of Public Instruction (DPI) & Community Colleges",
+                desc: "Recent legislation pushes for a unified cyber posture across education. Schools are vulnerable targets.",
+                play: "Pitch Managed Detection & Response (MDR) or PowerProtect Cyber Recovery Vaults utilizing 208X contract.",
+                probability: "High",
+                badgeColor: "bg-red-100 text-red-800"
+            },
+            {
+                id: 2,
+                title: "HHS Data Analytics Platform",
+                category: "cloud",
+                client: "DHHS (Dept of Health & Human Services)",
+                desc: "Medicaid Transformation generated massive data lakes. Current on-prem legacy storage is hitting IOPS limits.",
+                play: "Propose PowerStore with APEX subscription to handle bursty analytics workloads without CapEx spikes.",
+                probability: "Medium",
+                badgeColor: "bg-blue-100 text-blue-800"
+            },
+            {
+                id: 3,
+                title: "Statewide Hybrid Work Refresh",
+                category: "workforce",
+                client: "Dept of Administration / NCDIT",
+                desc: "State government has codified teleworking. Many laptops deployed in 2020 (Pandemic) are hitting EOL.",
+                play: "Volume refresh of Latitude 5000/7000 series via Contract 204A. Bundle with ProSupport Plus.",
+                probability: "High",
+                badgeColor: "bg-amber-100 text-amber-800"
+            },
+            {
+                id: 4,
+                title: "Transportation 'Smart Corridors'",
+                category: "infra",
+                client: "NCDOT",
+                desc: "Initiative to add IoT sensors to key interstates for traffic mgmt.",
+                play: "Dell Edge Gateways and VxRail for edge compute nodes at traffic management centers.",
+                probability: "Medium",
+                badgeColor: "bg-teal-100 text-teal-800"
+            },
+            {
+                id: 5,
+                title: "Unstructured Data Archival",
+                category: "infra",
+                client: "Dept of Natural & Cultural Resources",
+                desc: "Digitization of historical archives is creating petabytes of image/video data.",
+                play: "PowerScale (Isilon) for scalable, cost-effective file storage.",
+                probability: "Low",
+                badgeColor: "bg-stone-100 text-stone-800"
+            }
+        ];
+
+        // --- Core Functions ---
+
+        function navigate(viewId) {
+            // Hide all sections
+            document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
+            // Show selected section
+            document.getElementById(viewId).classList.remove('hidden');
+            
+            // Update Sidebar Active State
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+            // Find the button calling this function (approximate) or select by text
+            const navButtons = document.querySelectorAll('.nav-item');
+            // Reset logic for visual active state
+            navButtons.forEach(btn => {
+                if(btn.getAttribute('onclick').includes(viewId)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Mobile menu close
+            const mobileMenu = document.querySelector('aside');
+            if (!mobileMenu.classList.contains('hidden') && window.innerWidth < 768) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.querySelector('aside');
+            menu.classList.toggle('hidden');
+        }
+
+        function updateDetail(priorityKey) {
+            const data = priorityDetails[priorityKey];
+            const detailPanel = document.getElementById('priority-detail');
+            
+            detailPanel.innerHTML = `
+                <div class="flex items-start gap-4 animate-fade-in">
+                    <div class="text-3xl bg-stone-700 p-2 rounded-lg">🎯</div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-lg text-teal-300">${data.title}</h4>
+                            <span class="text-xs bg-stone-600 px-2 py-1 rounded text-stone-300 border border-stone-500">${data.agency}</span>
+                        </div>
+                        <p class="text-white mt-2 text-sm leading-relaxed">${data.dellAngle}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderOpportunities(filter = 'all') {
+            const grid = document.getElementById('oppGrid');
+            grid.innerHTML = ''; // Clear
+
+            const filtered = filter === 'all' 
+                ? opportunities 
+                : opportunities.filter(o => o.category === filter);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="text-center text-stone-400 py-10">No opportunities found for this category.</div>';
+                return;
+            }
+
+            filtered.forEach(opp => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-4";
+                card.innerHTML = `
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <span class="${opp.badgeColor} text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">${opp.category}</span>
+                            <span class="text-xs text-stone-400 font-semibold">${opp.client}</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-stone-800">${opp.title}</h3>
+                        <p class="text-sm text-stone-500 mt-2">${opp.desc}</p>
+                    </div>
+                    <div class="md:w-1/3 bg-stone-50 p-4 rounded-lg border border-stone-100">
+                        <div class="text-xs font-bold text-stone-400 uppercase">Sales Play</div>
+                        <p class="text-sm text-stone-800 font-medium mt-1">${opp.play}</p>
+                        <div class="mt-3 flex items-center gap-2">
+                            <div class="text-xs font-bold text-stone-400">Probability:</div>
+                            <div class="text-xs font-bold ${opp.probability === 'High' ? 'text-teal-600' : (opp.probability === 'Medium' ? 'text-amber-600' : 'text-stone-500')}">${opp.probability}</div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterOpportunities() {
+            const val = document.getElementById('oppFilter').value;
+            renderOpportunities(val);
+        }
+
+        // --- Charts Initialization ---
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Render Initial Opportunities
+            renderOpportunities();
+
+            // Dashboard Spend Chart
+            const ctx1 = document.getElementById('dashboardSpendChart').getContext('2d');
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['Infrastructure (Server/Storage)', 'End User Compute', 'Software/SaaS', 'Services', 'Security'],
+                    datasets: [{
+                        label: 'Estimated Spend (Millions)',
+                        data: [350, 420, 300, 200, 130],
+                        backgroundColor: [
+                            '#0f766e', // teal-700
+                            '#0ea5e9', // sky-500
+                            '#6366f1', // indigo-500
+                            '#d6d3d1', // stone-300
+                            '#ef4444'  // red-500
+                        ],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, grid: { display: false } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+
+            // Funding Doughnut Chart
+            const ctx2 = document.getElementById('fundingChart').getContext('2d');
+            new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    labels: ['State General Fund', 'Federal (ARPA/IIJA)', 'Agency Receipts', 'Highway Fund'],
+                    datasets: [{
+                        data: [45, 30, 15, 10],
+                        backgroundColor: [
+                            '#1e293b', // slate-800
+                            '#14b8a6', // teal-500
+                            '#f59e0b', // amber-500
+                            '#78716c'  // stone-500
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right' }
+                    }
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Tech | City of Charlotte Account Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dell: {
+                            blue: '#0076CE',
+                            dark: '#0A0A0A',
+                            slate: '#1E293B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            /* Firefox scrollbar support */
+            scrollbar-width: thin; 
+            scrollbar-color: #cbd5e1 transparent;
+        }
+        
+        /* Custom Scrollbar for Webkit sidebar and tables */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .dell-gradient {
+            background: linear-gradient(135deg, #0076CE 0%, #00447C 100%);
+        }
+
+        /* Sortable Table Styles */
+        th.sortable { cursor: pointer; user-select: none; transition: background 0.2s; }
+        th.sortable:hover { background-color: #f1f5f9; }
+        
+        /* Interactive Cards */
+        .opp-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .opp-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); border-color: #0076CE;}
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 flex h-screen overflow-hidden">
+
+    <!-- Mobile Header -->
+    <div class="md:hidden fixed top-0 left-0 w-full bg-dell-dark text-white p-4 flex justify-between items-center z-50">
+        <div class="flex items-center gap-2">
+            <i class="fa-solid fa-laptop-code text-dell-blue text-xl"></i>
+            <span class="font-bold">Dell | SLG</span>
+        </div>
+        <button id="mobileMenuBtn" class="text-white focus:outline-none" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="bg-dell-dark text-slate-300 w-72 flex-shrink-0 h-full flex flex-col transition-transform duration-300 absolute md:relative z-40 -translate-x-full md:translate-x-0">
+        <div class="p-6 border-b border-slate-800 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-dell-blue flex items-center justify-center text-white font-bold text-xl">
+                D
+            </div>
+            <div>
+                <h1 class="text-white font-bold text-lg leading-tight">Account Dashboard</h1>
+                <p class="text-xs text-slate-400">City of Charlotte, NC</p>
+            </div>
+        </div>
+
+        <nav class="flex-1 overflow-y-auto py-4 px-3 space-y-1" id="nav-links">
+            <a href="#exec-summary" class="nav-link block px-4 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-colors flex items-center gap-3 text-sm font-medium bg-slate-800 text-white">
+                <i class="fa-solid fa-chart-pie w-5"></i> Macro Landscape
+            </a>
+            <a href="#stakeholders" class="nav-link block px-4 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-colors flex items-center gap-3 text-sm font-medium">
+                <i class="fa-solid fa-users w-5"></i> Stakeholders
+            </a>
+            <a href="#governance" class="nav-link block px-4 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-colors flex items-center gap-3 text-sm font-medium">
+                <i class="fa-solid fa-sitemap w-5"></i> IT Governance
+            </a>
+            <a href="#financials" class="nav-link block px-4 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-colors flex items-center gap-3 text-sm font-medium">
+                <i class="fa-solid fa-coins w-5"></i> Financials & Budget
+            </a>
+            <a href="#initiatives" class="nav-link block px-4 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-colors flex items-center gap-3 text-sm font-medium">
+                <i class="fa-solid fa-rocket w-5"></i> Strategic Initiatives
+            </a>
+            <a href="#procurement" class="nav-link block px-4 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-colors flex items-center gap-3 text-sm font-medium">
+                <i class="fa-solid fa-file-contract w-5"></i> Procurement & Rivals
+            </a>
+            <a href="#opportunities" class="nav-link block px-4 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-colors flex items-center gap-3 text-sm font-medium text-dell-blue">
+                <i class="fa-solid fa-bullseye w-5"></i> Dell Opportunities
+            </a>
+        </nav>
+
+        <div class="p-4 border-t border-slate-800">
+            <a href="https://dmonkey1001.github.io/slg-strategies/north-carolina/charlotte/analysis.pdf" target="_blank" class="w-full py-2.5 px-4 bg-slate-800 hover:bg-slate-700 text-white rounded flex items-center justify-center gap-2 text-sm font-medium transition-colors border border-slate-600">
+                <i class="fa-solid fa-file-pdf text-red-400"></i> View Source PDF
+            </a>
+            <p class="text-[10px] text-center text-slate-500 mt-3">Updated: April 6, 2026</p>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 overflow-y-auto h-full scroll-smooth pt-16 md:pt-0" id="main-scroll">
+        
+        <!-- Hero Section -->
+        <div class="relative bg-dell-dark text-white overflow-hidden">
+            <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507810670121-b08efd787765?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-color: #0A0A0A;"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-dell-dark via-dell-dark/90 to-transparent"></div>
+            <div class="relative max-w-6xl mx-auto px-6 py-12 md:py-20 z-10">
+                <div class="inline-block px-3 py-1 bg-dell-blue/20 text-dell-blue border border-dell-blue/30 rounded-full text-xs font-bold tracking-wider mb-4 uppercase">Target Account Strategy</div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">City of Charlotte, NC</h1>
+                <p class="text-xl text-slate-300 max-w-2xl leading-relaxed">Navigating the "Golden Era" of corporate expansion, $3.65B FY26 budget allocations, and the executive push toward a paperless, AI-ready municipality.</p>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 py-8 space-y-16">
+
+            <!-- 1. Executive Summary & KPIs -->
+            <section id="exec-summary" class="scroll-mt-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-chart-pie text-dell-blue text-2xl"></i>
+                    <h2 class="text-2xl font-bold">Macro Landscape & KPI Summary</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                    <div class="glass-card p-5 rounded-xl border-l-4 border-l-dell-blue">
+                        <p class="text-sm text-slate-500 font-medium uppercase">Total FY26 Budget</p>
+                        <h3 class="text-3xl font-bold text-slate-800 mt-1">$3.65B</h3>
+                        <p class="text-xs text-slate-500 mt-2"><i class="fa-solid fa-check text-green-500 mr-1"></i> Structurally Balanced</p>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl border-l-4 border-l-green-500">
+                        <p class="text-sm text-slate-500 font-medium uppercase">Recent Capital Injection</p>
+                        <h3 class="text-3xl font-bold text-slate-800 mt-1">$424M</h3>
+                        <p class="text-xs text-slate-500 mt-2">Driven by 15 project announcements</p>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl border-l-4 border-l-purple-500">
+                        <p class="text-sm text-slate-500 font-medium uppercase">Transportation Bond</p>
+                        <h3 class="text-3xl font-bold text-slate-800 mt-1">$300M</h3>
+                        <p class="text-xs text-slate-500 mt-2">Largest in city history</p>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl border-l-4 border-l-red-500">
+                        <p class="text-sm text-slate-500 font-medium uppercase">911 Center Expansion</p>
+                        <h3 class="text-3xl font-bold text-slate-800 mt-1">$7.0M</h3>
+                        <p class="text-xs text-slate-500 mt-2">Drives massive unstructured data</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-slate-600 leading-relaxed text-sm">
+                    <p class="mb-4">Charlotte is experiencing explosive population growth and aggressive corporate recruitment. The city is forced to modernize legacy systems rapidly to accommodate an expanding tax base and complex data telemetry.</p>
+                    <p><strong>Sales Context:</strong> The administration heavily favors capitalized IT modernization, bond-funded infrastructure, and ROI-driven efficiencies due to a zero-tax-increase mandate for FY26. Operational expenses (OpEx) are highly constrained, meaning major hardware deployments must be structured as multi-year capital investments or consumption-based models (like APEX).</p>
+                </div>
+            </section>
+
+            <!-- 2. Power Structure & Stakeholders -->
+            <section id="stakeholders" class="scroll-mt-6">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-users text-dell-blue text-2xl"></i>
+                        <h2 class="text-2xl font-bold">Key Stakeholders & Power Structure</h2>
+                    </div>
+                    <div class="text-sm text-slate-500 bg-white px-3 py-1 rounded border border-slate-200">
+                        <i class="fa-solid fa-info-circle mr-1"></i> Click headers to sort
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm" id="stakeholderTable">
+                            <thead class="bg-slate-50 border-b border-slate-200 text-slate-700">
+                                <tr>
+                                    <th class="px-6 py-4 font-semibold sortable" data-sort="name" aria-sort="none">
+                                        Name & Title <i class="fa-solid fa-sort ml-1 text-slate-400"></i>
+                                    </th>
+                                    <th class="px-6 py-4 font-semibold sortable w-1/4" data-sort="influence" aria-sort="none">
+                                        Sphere of Influence <i class="fa-solid fa-sort ml-1 text-slate-400"></i>
+                                    </th>
+                                    <th class="px-6 py-4 font-semibold w-1/2">
+                                        Public Stances on Technology & Operations
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100" id="stakeholderBody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. IT Governance -->
+            <section id="governance" class="scroll-mt-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-sitemap text-dell-blue text-2xl"></i>
+                    <h2 class="text-2xl font-bold">Governance & Service Delivery</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-building text-dell-blue"></i> Consolidated Model (Project UNITE)
+                        </h3>
+                        <p class="text-sm text-slate-600 mb-4">Centralized under Innovation & Technology (I&T) to improve efficiency and enforce security. However, massive entities like Charlotte Water ($651M) and Aviation (CLT) maintain internal IT liaisons for specialized tech (SCADA, AVL).</p>
+                        <ul class="text-sm text-slate-600 space-y-2">
+                            <li><i class="fa-solid fa-arrow-right text-dell-blue mr-2"></i> Central I&T: Handles network, core compute, security.</li>
+                            <li><i class="fa-solid fa-arrow-right text-dell-blue mr-2"></i> Edge Agencies: Handle localized applications.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-bolt text-red-500"></i> Chargeback Friction
+                        </h3>
+                        <p class="text-sm text-slate-600">The city utilizes complex Internal Service Funds (ISF). Central I&T charges departments based on usage metrics. Large enterprise projects (like Workday) force departments to surrender operational budgets.</p>
+                        <div class="mt-4 p-3 bg-red-50 border border-red-100 rounded text-xs text-red-800">
+                            <strong>Sales Warning:</strong> Central I&T sales must consider end-user agency backlash against non-transparent chargebacks.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Financials -->
+            <section id="financials" class="scroll-mt-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-coins text-dell-blue text-2xl"></i>
+                    <h2 class="text-2xl font-bold">Budget Breakdown & Funding Vehicles</h2>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="bg-slate-50 px-6 py-4 border-b border-slate-200">
+                            <h3 class="font-bold text-slate-800">Key Enterprise Funds (FY26 Adopted)</h3>
+                        </div>
+                        <table class="w-full text-left text-sm">
+                            <thead class="text-slate-500 border-b border-slate-100">
+                                <tr>
+                                    <th class="px-6 py-3">Fund Category / Department</th>
+                                    <th class="px-6 py-3 text-right">FY26 Budget</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 font-medium">
+                                <tr>
+                                    <td class="px-6 py-3 flex items-center gap-2"><i class="fa-solid fa-plane text-slate-400"></i> Aviation (Charlotte Douglas)</td>
+                                    <td class="px-6 py-3 text-right text-slate-800">$991,738,515</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-3 flex items-center gap-2"><i class="fa-solid fa-building-columns text-slate-400"></i> General Fund (Net)</td>
+                                    <td class="px-6 py-3 text-right text-slate-800">$869,455,331</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-3 flex items-center gap-2"><i class="fa-solid fa-water text-slate-400"></i> Charlotte Water</td>
+                                    <td class="px-6 py-3 text-right text-slate-800">$828,774,644</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-3 flex items-center gap-2"><i class="fa-solid fa-bus text-slate-400"></i> Transit (CATS)</td>
+                                    <td class="px-6 py-3 text-right text-slate-800">$331,394,755</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-5 text-white shadow-md relative overflow-hidden">
+                            <i class="fa-solid fa-shield-halved absolute -bottom-4 -right-4 text-7xl text-white/10"></i>
+                            <h3 class="font-bold text-lg mb-2">SLCGP Federal Grant</h3>
+                            <p class="text-xs text-slate-300 mb-3">State & Local Cybersecurity Grant Program requires 80% pass-through to local entities. Apps close Nov 2025.</p>
+                            <span class="inline-block px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded border border-green-500/30">Target: Zero-Trust & Backup</span>
+                        </div>
+                        <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+                            <h3 class="font-bold text-slate-800 text-sm mb-2">OpEx Constraints</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">Lack of FY26 tax increase + heavy employee compensation hikes = severely constrained recurring OpEx. Pitch capital leases or bond-aligned projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Strategic Initiatives -->
+            <section id="initiatives" class="scroll-mt-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-rocket text-dell-blue text-2xl"></i>
+                    <h2 class="text-2xl font-bold">Top 3 Strategic IT Initiatives</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Initiative 1 -->
+                    <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-xl mb-3">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">AI Strategic Roadmap</h3>
+                            <p class="text-xs font-semibold text-slate-500 uppercase mt-1">2025-2028 Phase</p>
+                        </div>
+                        <div class="md:w-3/4 border-t md:border-t-0 md:border-l border-slate-100 pt-4 md:pt-0 md:pl-6 text-sm text-slate-600">
+                            <p class="mb-2"><strong>Owners:</strong> CIO Markell Storay & CDAO Charlitta Hatch</p>
+                            <p class="mb-3">Executing a "Crawl-Walk-Run" approach. Currently building data lakes and testing AI Readiness to deploy 311 voice-to-text and real-time financial fraud detection.</p>
+                            <div class="flex gap-2">
+                                <span class="px-2 py-1 bg-slate-100 rounded text-xs">GPUs Required</span>
+                                <span class="px-2 py-1 bg-slate-100 rounded text-xs">Data Lakes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Initiative 2 -->
+                    <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl mb-3">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Public Safety Telemetry</h3>
+                            <p class="text-xs font-semibold text-slate-500 uppercase mt-1">CMPD & CDOT</p>
+                        </div>
+                        <div class="md:w-3/4 border-t md:border-t-0 md:border-l border-slate-100 pt-4 md:pt-0 md:pl-6 text-sm text-slate-600">
+                            <p class="mb-2"><strong>Owners:</strong> Chief Estella Patterson</p>
+                            <p class="mb-3">Aggressive expansion of 911 centers ($7M), Real Time Crime Center (RTCC), Body-Worn Cameras, and AVL hardware. Generating massive, compounding unstructured video/sensor data.</p>
+                            <div class="flex gap-2">
+                                <span class="px-2 py-1 bg-slate-100 rounded text-xs">Scale-out NAS</span>
+                                <span class="px-2 py-1 bg-slate-100 rounded text-xs">CJIS Compliance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Initiative 3 -->
+                    <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-xl mb-3">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Workday ERP Rescue</h3>
+                            <p class="text-xs font-semibold text-slate-500 uppercase mt-1">Central I&T</p>
+                        </div>
+                        <div class="md:w-3/4 border-t md:border-t-0 md:border-l border-slate-100 pt-4 md:pt-0 md:pl-6 text-sm text-slate-600">
+                            <p class="mb-2"><strong>Context:</strong> $13.25M allocated in FY26 to save failing migration.</p>
+                            <p class="mb-3">Critical API integration failures forced a program reset. Severe mandate to establish bulletproof cloud resiliency, redundancy across data centers, and DR protocols for tier-1 financial apps without violating green-energy data center pushback.</p>
+                            <div class="flex gap-2">
+                                <span class="px-2 py-1 bg-slate-100 rounded text-xs">Hybrid Cloud</span>
+                                <span class="px-2 py-1 bg-slate-100 rounded text-xs">Disaster Recovery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Procurement & Rivals -->
+            <section id="procurement" class="scroll-mt-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-file-contract text-dell-blue text-2xl"></i>
+                    <h2 class="text-2xl font-bold">Procurement & Competitor Battlefield</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Vehicles -->
+                    <div class="md:col-span-1 space-y-4">
+                        <h3 class="font-bold text-slate-800 border-b pb-2">Primary Vehicles</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex gap-3 items-start">
+                                <i class="fa-solid fa-check-circle text-green-500 mt-0.5"></i>
+                                <div>
+                                    <strong class="block text-slate-800">NC 204X Contract</strong>
+                                    <span class="text-slate-500 text-xs">Mandatory statewide IT hardware/software contract.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <i class="fa-solid fa-check-circle text-green-500 mt-0.5"></i>
+                                <div>
+                                    <strong class="block text-slate-800">OMNIA / NASPO</strong>
+                                    <span class="text-slate-500 text-xs">Charlotte acts as Lead Public Agency for OMNIA. Use to bypass RFPs.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <i class="fa-solid fa-check-circle text-green-500 mt-0.5"></i>
+                                <div>
+                                    <strong class="block text-slate-800">Charlotte Bonfire</strong>
+                                    <span class="text-slate-500 text-xs">Centralized digital portal for active solicitations.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Competitors Table -->
+                    <div class="md:col-span-2 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-slate-50 border-b border-slate-200">
+                                <tr>
+                                    <th class="px-4 py-3 font-semibold text-slate-700">Segment</th>
+                                    <th class="px-4 py-3 font-semibold text-slate-700">Rivals</th>
+                                    <th class="px-4 py-3 font-semibold text-slate-700">Battlefield Intel</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-slate-800">Storage</td>
+                                    <td class="px-4 py-3 text-red-600 font-medium">Pure Storage<br>NetApp</td>
+                                    <td class="px-4 py-3 text-slate-600 text-xs">Pure expanding aggressively on "simplicity" message. Removed IE as reseller. NetApp entrenched but vulnerable.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-slate-800">Networking</td>
+                                    <td class="px-4 py-3 text-slate-600 font-medium">Cisco<br>Arista</td>
+                                    <td class="px-4 py-3 text-slate-600 text-xs">Cisco heavily entrenched but facing channel volatility (IE removed, DNS added).</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-slate-800">Compute / Virt</td>
+                                    <td class="px-4 py-3 text-slate-600 font-medium">HPE<br>VMware (Broadcom)</td>
+                                    <td class="px-4 py-3 text-slate-600 text-xs"><strong>Massive disruption.</strong> CA Inc removed Dell as VMware reseller on 204X. Repatriation/hypervisor displacement is a prime target.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Dell Opportunities -->
+            <section id="opportunities" class="scroll-mt-6 pb-20">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-bullseye text-dell-blue text-2xl"></i>
+                    <h2 class="text-2xl font-bold">Actionable Dell Sales Plays</h2>
+                </div>
+
+                <!-- Opportunity Tabs/Filters -->
+                <div class="flex gap-2 mb-6 overflow-x-auto py-2 px-1 -mx-1" id="filter-container">
+                    <button data-filter="all" class="filter-btn px-4 py-2 bg-slate-800 text-white rounded-full text-sm font-medium whitespace-nowrap focus:outline-none ring-2 ring-slate-800 ring-offset-2">All Plays</button>
+                    <button data-filter="funded" class="filter-btn px-4 py-2 bg-white text-slate-600 border border-slate-200 rounded-full text-sm font-medium hover:bg-slate-50 whitespace-nowrap focus:outline-none">Funded Alignment</button>
+                    <button data-filter="whitespace" class="filter-btn px-4 py-2 bg-white text-slate-600 border border-slate-200 rounded-full text-sm font-medium hover:bg-slate-50 whitespace-nowrap focus:outline-none">Whitespace / Advisory</button>
+                    <button data-filter="displacement" class="filter-btn px-4 py-2 bg-white text-slate-600 border border-slate-200 rounded-full text-sm font-medium hover:bg-slate-50 whitespace-nowrap focus:outline-none">Displacements</button>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="opportunities-grid">
+                    
+                    <!-- Card 1: PowerScale -->
+                    <div class="opp-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col relative group cursor-pointer" data-category="funded">
+                        <a href="#powerscale-details" class="absolute inset-0 z-10" aria-label="View Details for PowerScale for CMPD Data Sprawl"></a>
+                        <div class="h-2 w-full bg-dell-blue"></div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-[10px] font-bold text-dell-blue uppercase tracking-wide mb-2">Funded Alignment</span>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3 leading-tight group-hover:text-dell-blue transition-colors">PowerScale for CMPD Data Sprawl</h3>
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Map Isilon/PowerScale to the $7M 911 expansion and citywide AVL/VMS network. Highlight native CJIS compliance and scale-out architecture for body-worn camera retention.</p>
+                            <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                                <span class="text-slate-500"><i class="fa-solid fa-user-tie mr-1"></i> Target: Estella Patterson</span>
+                                <span class="font-bold text-slate-800 border px-2 py-1 rounded bg-slate-50 relative z-20">Storage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: AI Infrastructure -->
+                    <div class="opp-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col relative group cursor-pointer" data-category="funded">
+                        <a href="#ai-infra-details" class="absolute inset-0 z-10" aria-label="View Details for AI-Ready Infra"></a>
+                        <div class="h-2 w-full bg-purple-500"></div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-[10px] font-bold text-purple-600 uppercase tracking-wide mb-2">Funded Alignment</span>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3 leading-tight group-hover:text-dell-blue transition-colors">AI-Ready Infra (PowerEdge XE & PowerStore)</h3>
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Position GPU-dense clusters for the 'Walk' phase of the 2025-2028 AI Roadmap to power 311 voice-to-text and financial fraud models locally.</p>
+                            <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                                <span class="text-slate-500"><i class="fa-solid fa-user-tie mr-1"></i> Target: CDAO Hatch</span>
+                                <span class="font-bold text-slate-800 border px-2 py-1 rounded bg-slate-50 relative z-20">Compute/Storage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: APEX / Workday -->
+                    <div class="opp-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col relative group cursor-pointer" data-category="funded">
+                        <a href="#apex-workday-details" class="absolute inset-0 z-10" aria-label="View Details for APEX for Workday Resiliency"></a>
+                        <div class="h-2 w-full bg-dell-blue"></div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-[10px] font-bold text-dell-blue uppercase tracking-wide mb-2">Funded Alignment</span>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3 leading-tight group-hover:text-dell-blue transition-colors">APEX for Workday Resiliency</h3>
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Use consumption-based hybrid cloud to rescue the Workday integration. Provides disaster recovery for tier-1 apps while smoothing out OpEx chargeback friction.</p>
+                            <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                                <span class="text-slate-500"><i class="fa-solid fa-user-tie mr-1"></i> Target: CIO Storay</span>
+                                <span class="font-bold text-slate-800 border px-2 py-1 rounded bg-slate-50 relative z-20">APEX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Advisory -->
+                    <div class="opp-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col relative group cursor-pointer" data-category="whitespace">
+                        <a href="#advisory-details" class="absolute inset-0 z-10" aria-label="View Details for Data Governance & AI Readiness"></a>
+                        <div class="h-2 w-full bg-amber-500"></div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-[10px] font-bold text-amber-600 uppercase tracking-wide mb-2">Whitespace Advisory</span>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3 leading-tight group-hover:text-dell-blue transition-colors">Data Governance & AI Readiness</h3>
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Lead with vendor-agnostic consulting to architect foundational data lakes. Build trusted-advisor status before hardware RFPs hit the Bonfire hub.</p>
+                            <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                                <span class="text-slate-500"><i class="fa-solid fa-user-tie mr-1"></i> Target: CDAO Hatch</span>
+                                <span class="font-bold text-slate-800 border px-2 py-1 rounded bg-slate-50 relative z-20">Services</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Edge CLT -->
+                    <div class="opp-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col relative group cursor-pointer" data-category="whitespace">
+                        <a href="#edge-details" class="absolute inset-0 z-10" aria-label="View Details for Rugged Edge at Airport"></a>
+                        <div class="h-2 w-full bg-amber-500"></div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-[10px] font-bold text-amber-600 uppercase tracking-wide mb-2">Whitespace Expansion</span>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3 leading-tight group-hover:text-dell-blue transition-colors">Rugged Edge at Airport (CLT)</h3>
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Target the $2.5B+ "Destination CLT" expansion. Position ruggedized edge gateways for IoT baggage handling and the UNC Charlotte AIR "living lab".</p>
+                            <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                                <span class="text-slate-500"><i class="fa-solid fa-user-tie mr-1"></i> Target: Jack Christine</span>
+                                <span class="font-bold text-slate-800 border px-2 py-1 rounded bg-slate-50 relative z-20">Edge/IoT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: VMware Repo -->
+                    <div class="opp-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col relative group cursor-pointer" data-category="displacement">
+                        <a href="#vmware-details" class="absolute inset-0 z-10" aria-label="View Details for VMware/Broadcom Repatriation"></a>
+                        <div class="h-2 w-full bg-red-500"></div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-[10px] font-bold text-red-600 uppercase tracking-wide mb-2">Competitive Displacement</span>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3 leading-tight group-hover:text-dell-blue transition-colors">VMware/Broadcom Repatriation</h3>
+                            <p class="text-sm text-slate-600 mb-4 flex-1">Capitalize on 204X contract channel chaos. Offer VxRail or APEX Cloud platforms to lock in predictable costs against Broadcom's aggressive licensing inflation.</p>
+                            <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+                                <span class="text-slate-500"><i class="fa-solid fa-user-tie mr-1"></i> Target: Central I&T</span>
+                                <span class="font-bold text-slate-800 border px-2 py-1 rounded bg-slate-50 relative z-20">VxRail / HCI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        // --- 1. Data & Table Logic (Power Structure) ---
+        const stakeholders = [
+            { name: "Vi Lyles", title: "Mayor, City of Charlotte", influence: "Financial (Bond & Budget)", stance: "Champions equitable infrastructure, affordable housing, and mobility. Ensures tech serves sustainability." },
+            { name: "Markell Storay", title: "CIO & Director of I&T", influence: "Enterprise IT Purchaser", stance: "Appointed Dec 2024. USAF vet. Favors 'crawl, walk, run' AI. Prioritizes security and practical utility over hype." },
+            { name: "Estella Patterson", title: "Chief of Police (CMPD)", influence: "Public Safety Purchaser", stance: "Prioritizes reducing violent crime via tech: Real Time Crime Centers, Body Cameras, and LPR networks." },
+            { name: "Jack Christine", title: "Chief Infrastructure Officer (CLT)", influence: "Aviation Edge Autonomy", stance: "Oversees $2.5B+ expansion. Champions UNC Charlotte 'living lab' for IoT and edge aviation tech." },
+            { name: "Randy Moulton", title: "Deputy CTO & CISO", influence: "Security Governance", stance: "US Navy vet. Balances GenAI innovation with strict risk management against cyber threats." },
+            { name: "Charlitta Hatch", title: "Chief Data & Analytics Officer", influence: "AI Architecture", stance: "Ensures datasets are 'AI-ready'. Mitigates algorithmic bias through strict compliance protocols." },
+            { name: "Reenie Askew", title: "Assistant City Manager", influence: "Strategic Oversight", stance: "Former CIO. Bridges City Manager office and IT execution. Controls the Shared Services Governance." }
+        ];
+
+        let currentSort = { column: null, direction: 'asc' };
+
+        function renderTable() {
+            const tbody = document.getElementById('stakeholderBody');
+            tbody.innerHTML = '';
+            
+            stakeholders.forEach(person => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-slate-50 transition-colors';
+                tr.innerHTML = `
+                    <td class="px-6 py-4">
+                        <div class="font-bold text-slate-800">${person.name}</div>
+                        <div class="text-xs text-slate-500">${person.title}</div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">
+                            ${person.influence}
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-slate-600 leading-relaxed">
+                        ${person.stance}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function sortTable(column) {
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.column = column;
+                currentSort.direction = 'asc';
+            }
+
+            stakeholders.sort((a, b) => {
+                let valA = a[column].toLowerCase();
+                let valB = b[column].toLowerCase();
+                
+                if (valA < valB) return currentSort.direction === 'asc' ? -1 : 1;
+                if (valA > valB) return currentSort.direction === 'asc' ? 1 : -1;
+                return 0;
+            });
+
+            // Update header icons and ARIA attributes
+            document.querySelectorAll('th.sortable').forEach(th => {
+                th.setAttribute('aria-sort', 'none');
+                th.querySelector('i').className = 'fa-solid fa-sort ml-1 text-slate-400';
+            });
+            const activeHeader = document.querySelector(`th[data-sort="${column}"]`);
+            if (activeHeader) {
+                activeHeader.setAttribute('aria-sort', currentSort.direction === 'asc' ? 'ascending' : 'descending');
+                activeHeader.querySelector('i').className = `fa-solid fa-sort-${currentSort.direction === 'asc' ? 'up' : 'down'} ml-1 text-dell-blue`;
+            }
+
+            renderTable();
+        }
+
+        document.querySelectorAll('th.sortable').forEach(th => {
+            th.addEventListener('click', () => sortTable(th.dataset.sort));
+            // Keyboard accessibility for sorting
+            th.addEventListener('keydown', (e) => {
+                if(e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    sortTable(th.dataset.sort);
+                }
+            });
+            th.setAttribute('tabindex', '0'); // Make headers focusable
+        });
+
+        // Initial render
+        renderTable();
+
+        // --- 2. Mobile Sidebar Toggle ---
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const sidebar = document.getElementById('sidebar');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('-translate-x-full');
+        });
+
+        // Close sidebar when clicking a link on mobile
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    sidebar.classList.add('-translate-x-full');
+                }
+            });
+        });
+
+        // --- 3. Scrollspy (Active state mapping) ---
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+        const mainContainer = document.getElementById("main-scroll");
+
+        const observerOptions = {
+            root: mainContainer,
+            rootMargin: "0px 0px -50% 0px",
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute("id");
+                    navLinks.forEach(link => {
+                        link.classList.remove("bg-slate-800", "text-white");
+                        link.classList.remove("text-dell-blue");
+                        
+                        if (link.getAttribute("href") === `#${id}`) {
+                            link.classList.add("bg-slate-800", "text-white");
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(sec => observer.observe(sec));
+
+        // --- 4. Card Filtering Logic ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const oppCards = document.querySelectorAll('.opp-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button styles
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-slate-800', 'text-white', 'ring-2', 'ring-slate-800', 'ring-offset-2');
+                    b.classList.add('bg-white', 'text-slate-600');
+                });
+                btn.classList.remove('bg-white', 'text-slate-600');
+                btn.classList.add('bg-slate-800', 'text-white', 'ring-2', 'ring-slate-800', 'ring-offset-2');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Filter cards
+                oppCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

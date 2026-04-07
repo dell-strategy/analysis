@@ -1,0 +1,607 @@
+<!-- Chosen Palette: Dell Corporate Blue & Warm Neutrals. Primary: #0076CE, Background: #F9FAFB, Text: #1F2937. Designed for professional clarity and executive presentation. -->
+
+<!-- Application Structure Plan:
+    1. **Executive Dashboard (Home):** A high-level view defining the "Program" concept using a composition chart and navigation to key tools.
+    2. **Lifecycle Engine:** An interactive, vertical process flow representing the 5 Phases. Users click phases to reveal specific Actions. This transforms the static list into a navigational guide.
+    3. **Deliverables Matrix:** A filterable grid view separating Internal vs. External outputs. This helps the user understand *who* sees *what*.
+    4. **Readiness Audit Tool:** A functional interactive checklist based on the report's summary. Users check boxes to update a real-time "Readiness Score" gauge. This gamifies the "Definition of Done."
+    Rationale: The structure moves from Concept -> Process -> Assets -> Validation, mirroring the workflow of building a strategy.
+-->
+
+<!-- Visualization & Content Choices:
+    1. **Program Anatomy Chart (Doughnut):**
+       - Goal: Visualise that a "Program" is a mix of Strategy, Tech, Sales, and Marketing, not just one thing.
+       - Interaction: Tooltip hover.
+       - Library: Chart.js.
+    2. **Readiness Gauge (Half-Doughnut):**
+       - Goal: Provide immediate feedback on the "Program Readiness" checklist.
+       - Interaction: Updates dynamically as users toggle checkboxes.
+       - Library: Chart.js.
+    3. **Interactive Phase Timeline:**
+       - Goal: Present the 5 Phases without wall-of-text.
+       - Interaction: Click to expand details (Accordion/Tab style).
+       - Method: HTML/Tailwind/JS DOM manipulation.
+    4. **Deliverable Cards:**
+       - Goal: Distinctly categorize outputs.
+       - Interaction: Filter buttons (All/Internal/External).
+       - Method: HTML Grid + JS Filtering.
+-->
+
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell SLG Program Architect</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Fonts: Roboto for Tech/Corporate feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F9FAFB; /* Gray 50 */
+            color: #1F2937; /* Gray 900 */
+        }
+
+        /* Chart Container Styling - Strict Adherence */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        /* Interactive Elements */
+        .nav-item {
+            transition: all 0.2s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-item:hover {
+            color: #0076CE;
+            background-color: #F3F4F6;
+        }
+        .nav-item.active {
+            color: #0076CE;
+            border-bottom-color: #0076CE;
+            background-color: #EFF6FF;
+        }
+
+        .phase-card {
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .phase-card:hover {
+            border-color: #0076CE;
+            transform: translateX(4px);
+        }
+        .phase-card.active {
+            border-left: 4px solid #0076CE;
+            background-color: #EFF6FF;
+        }
+
+        .deliverable-card {
+            transition: transform 0.2s;
+        }
+        .deliverable-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl mr-2">🏛️</span>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900 tracking-tight">SLG Program Architect</h1>
+                        <p class="text-xs text-gray-500 uppercase">Strategy & Marketing Framework</p>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-1">
+                    <button onclick="navigateTo('overview')" id="nav-overview" class="nav-item active px-4 py-2 rounded-t-md text-sm font-medium text-gray-600">Definition</button>
+                    <button onclick="navigateTo('lifecycle')" id="nav-lifecycle" class="nav-item px-4 py-2 rounded-t-md text-sm font-medium text-gray-600">Phases & Actions</button>
+                    <button onclick="navigateTo('deliverables')" id="nav-deliverables" class="nav-item px-4 py-2 rounded-t-md text-sm font-medium text-gray-600">Deliverables</button>
+                    <button onclick="navigateTo('audit')" id="nav-audit" class="nav-item px-4 py-2 rounded-t-md text-sm font-medium text-gray-600">Readiness Audit</button>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-gray-500">☰</button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <button onclick="navigateTo('overview')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50">Definition</button>
+            <button onclick="navigateTo('lifecycle')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50">Phases & Actions</button>
+            <button onclick="navigateTo('deliverables')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50">Deliverables</button>
+            <button onclick="navigateTo('audit')" class="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50">Readiness Audit</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+        <!-- SECTION 1: OVERVIEW & DEFINITION -->
+        <section id="view-overview" class="fade-in space-y-8">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">What is a "Program"?</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            In the context of Dell SLG Strategy, a Program (or Sales Play) is not just a product launch. It is a <span class="text-[#0076CE] font-bold">coordinated, cross-functional initiative</span> designed to capture a specific, time-bound market opportunity.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <span class="text-green-500 font-bold mr-3 text-xl">✓</span>
+                                <div>
+                                    <strong class="text-gray-900">End-to-End Alignment</strong>
+                                    <p class="text-sm text-gray-500">Connects Strategy, Product, Marketing, and Sales Execution.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-500 font-bold mr-3 text-xl">✓</span>
+                                <div>
+                                    <strong class="text-gray-900">Solution Bundling</strong>
+                                    <p class="text-sm text-gray-500">Hardware + Software + Partners + Funding Mechanisms.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-500 font-bold mr-3 text-xl">✓</span>
+                                <div>
+                                    <strong class="text-gray-900">Targeted Narrative</strong>
+                                    <p class="text-sm text-gray-500">Addresses a specific vertical problem (e.g., Rural Health) rather than a spec sheet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Visualization: Program Anatomy -->
+                    <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center">
+                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">The Anatomy of a Program</h3>
+                        <div class="chart-container">
+                            <canvas id="anatomyChart"></canvas>
+                        </div>
+                        <p class="text-center text-xs text-gray-400 mt-2">A balanced program requires input from all 4 pillars.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contextual Example Banner -->
+            <div class="bg-blue-50 border-l-4 border-[#0076CE] p-6 rounded-r-xl">
+                <h3 class="text-[#0076CE] font-bold text-lg mb-1">Real-World Example: "Rural Health Transformation"</h3>
+                <p class="text-gray-700">
+                    This isn't just selling servers. It is a Program because it bundles <strong>Apex + Edge Gateways</strong>, maps them to <strong>BEAD Funding</strong>, and equips sellers to pitch "Digital Health Hubs" to State Health Directors.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: LIFECYCLE ENGINE -->
+        <section id="view-lifecycle" class="hidden fade-in">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">Program Lifecycle Engine</h2>
+                <p class="text-gray-600 mt-2">Execute these five phases to bring a concept from strategy to closed revenue. Click a phase to view required actions.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Left: Interactive Phase List -->
+                <div class="space-y-2 lg:col-span-1" id="phase-list-container">
+                    <!-- Injected via JS -->
+                </div>
+
+                <!-- Right: Details Panel -->
+                <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-200 p-6 relative min-h-[400px]">
+                    <div id="phase-details-content">
+                        <!-- Default State -->
+                        <div class="flex flex-col items-center justify-center h-full text-center text-gray-400">
+                            <span class="text-4xl mb-4">👆</span>
+                            <p>Select a Phase on the left to view specific actions and stakeholders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: DELIVERABLES LIBRARY -->
+        <section id="view-deliverables" class="hidden fade-in">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900">Deliverables Matrix</h2>
+                    <p class="text-gray-600 mt-1">Required assets to consider a program "Field Ready".</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex bg-white rounded-lg shadow-sm border border-gray-200 p-1">
+                    <button onclick="filterDeliverables('all')" class="filter-btn px-4 py-1.5 text-sm font-medium rounded-md bg-[#0076CE] text-white" data-filter="all">All Assets</button>
+                    <button onclick="filterDeliverables('internal')" class="filter-btn px-4 py-1.5 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50" data-filter="internal">Internal (Enablement)</button>
+                    <button onclick="filterDeliverables('external')" class="filter-btn px-4 py-1.5 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50" data-filter="external">External (Customer)</button>
+                </div>
+            </div>
+
+            <!-- Grid of Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="deliverables-grid">
+                <!-- Injected via JS -->
+            </div>
+        </section>
+
+        <!-- SECTION 4: READINESS AUDIT -->
+        <section id="view-audit" class="hidden fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Checklist -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Go-No-Go Audit</h2>
+                    <p class="text-gray-600 mb-6 text-sm">Before launching to the SLG sales floor, verify the program components. Check the boxes to calculate readiness.</p>
+                    
+                    <div class="space-y-4" id="audit-checklist">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Score Visualization -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 w-full max-w-md">
+                        <h3 class="text-lg font-bold text-gray-900 text-center mb-2">Readiness Score</h3>
+                        <div class="chart-container">
+                            <canvas id="readinessChart"></canvas>
+                        </div>
+                        <div class="text-center mt-4">
+                            <span id="score-text" class="text-4xl font-bold text-gray-300">0%</span>
+                            <p id="score-message" class="text-sm text-gray-500 mt-2">Complete the checklist to validate.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Box -->
+                    <div id="launch-action" class="mt-6 hidden w-full max-w-md bg-green-50 border border-green-200 rounded-lg p-4 text-center">
+                        <h4 class="text-green-800 font-bold text-lg">🚀 Ready for Launch</h4>
+                        <p class="text-green-700 text-sm">All core components are defined. Proceed to Phase 5: Execution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JS Logic -->
+    <script>
+        // --- DATA MODELS ---
+
+        const phases = [
+            {
+                id: 1,
+                title: "Phase 1: Intelligence & Strategy",
+                icon: "🧠",
+                desc: "Define the opportunity and funding.",
+                actions: [
+                    "Identify market trigger (Legislation, Grant, Tech Shift).",
+                    "Define TAM and specific target audience (e.g., State DOTs).",
+                    "Map Funding Streams (IIJA, ARPA, Surplus)."
+                ]
+            },
+            {
+                id: 2,
+                title: "Phase 2: Solution & Packaging",
+                icon: "📦",
+                desc: "Map portfolio to customer problem.",
+                actions: [
+                    "Move from SKUs to Solutions.",
+                    "Identify ISV/SI partners to fill gaps.",
+                    "Develop Technical Reference Architectures."
+                ]
+            },
+            {
+                id: 3,
+                title: "Phase 3: Sales Enablement",
+                icon: "🛠️",
+                desc: "Equip the field to sell.",
+                actions: [
+                    "Translate tech specs into business value narratives.",
+                    "Train AEs/SEs on discovery questions.",
+                    "Explain procurement/funding complexities."
+                ]
+            },
+            {
+                id: 4,
+                title: "Phase 4: Marketing & Demand",
+                icon: "📢",
+                desc: "Create air cover and leads.",
+                actions: [
+                    "Develop thought leadership assets.",
+                    "Execute multi-channel campaigns (Email, LinkedIn).",
+                    "Host targeted field events/briefings."
+                ]
+            },
+            {
+                id: 5,
+                title: "Phase 5: Execution & Tracking",
+                icon: "📈",
+                desc: "Launch and optimize.",
+                actions: [
+                    "Launch with clear Call to Action.",
+                    "Track pipeline via SFDC Campaign Tags.",
+                    "Gather closed-loop feedback from sellers."
+                ]
+            }
+        ];
+
+        const deliverables = [
+            { type: 'internal', title: 'Strategy Brief', icon: '📄', desc: '2-pager for leadership on Why/What/Who.' },
+            { type: 'internal', title: 'Target Account List', icon: '🎯', desc: 'Data-driven list of top accounts (e.g., top BEAD recipients).' },
+            { type: 'internal', title: 'Battlecard', icon: '⚔️', desc: 'Quick reference: Elevator pitch, objection handling, competitors.' },
+            { type: 'internal', title: 'First Call Deck', icon: '🖥️', desc: 'Standardized slide deck focusing on problem & strategy.' },
+            { type: 'internal', title: 'Bill of Materials', icon: '🏗️', desc: 'Technical blueprint/Ref Arch for SEs.' },
+            { type: 'internal', title: 'Funding Guide', icon: '💰', desc: 'Cheat sheet on grants and contract vehicles.' },
+            { type: 'external', title: 'Solution Brief', icon: '📘', desc: 'High-level thought leadership explaining Dell\'s POV.' },
+            { type: 'external', title: 'Landing Page', icon: '🌐', desc: 'Central hub for campaign assets.' },
+            { type: 'external', title: 'Demand Gen Assets', icon: '📧', desc: 'Email copy, social tiles, webinar scripts.' },
+            { type: 'external', title: 'Case Studies', icon: '⭐', desc: 'Success stories proving capability.' }
+        ];
+
+        const auditItems = [
+            "Do we know exactly WHO we are targeting?",
+            "Do we know HOW they will fund it?",
+            "Do we have a complete solution (Dell + Partners)?",
+            "Do sellers have a First Call Deck & Battlecard?",
+            "Are marketing air-cover campaigns ready?",
+            "Is there a Salesforce campaign tag defined?"
+        ];
+
+        // --- APP STATE ---
+        let currentSection = 'overview';
+        let readinessScore = 0;
+        let anatomyChartInstance = null;
+        let readinessChartInstance = null;
+
+        // --- NAVIGATION LOGIC ---
+        function navigateTo(sectionId) {
+            // Hide all sections
+            ['overview', 'lifecycle', 'deliverables', 'audit'].forEach(id => {
+                document.getElementById(`view-${id}`).classList.add('hidden');
+                document.getElementById(`nav-${id}`).classList.remove('active', 'text-[#0076CE]', 'border-b-[#0076CE]', 'bg-[#EFF6FF]');
+                document.getElementById(`nav-${id}`).classList.add('text-gray-600');
+            });
+
+            // Show target
+            document.getElementById(`view-${sectionId}`).classList.remove('hidden');
+            document.getElementById(`nav-${sectionId}`).classList.add('active', 'text-[#0076CE]', 'border-b-[#0076CE]', 'bg-[#EFF6FF]');
+            document.getElementById(`nav-${sectionId}`).classList.remove('text-gray-600');
+
+            // Mobile menu handling
+            document.getElementById('mobile-menu').classList.add('hidden');
+
+            currentSection = sectionId;
+
+            // Trigger specific renders if needed
+            if (sectionId === 'lifecycle') renderLifecycle();
+            if (sectionId === 'deliverables') renderDeliverables();
+            if (sectionId === 'audit') initAudit();
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // --- LIFECYCLE LOGIC ---
+        function renderLifecycle() {
+            const container = document.getElementById('phase-list-container');
+            // Only render if empty to preserve state
+            if (container.children.length > 0) return;
+
+            container.innerHTML = phases.map((phase, index) => `
+                <div onclick="selectPhase(${index})" id="phase-card-${index}" class="phase-card cursor-pointer bg-white p-4 rounded-lg shadow-sm border-l-4 border-transparent hover:bg-gray-50 mb-3">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 h-10 w-10 flex items-center justify-center bg-blue-50 text-xl rounded-full mr-4">
+                            ${phase.icon}
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">${phase.title}</h4>
+                            <p class="text-xs text-gray-500">${phase.desc}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Select first by default
+            selectPhase(0);
+        }
+
+        function selectPhase(index) {
+            // Update UI Styling
+            document.querySelectorAll('.phase-card').forEach(el => {
+                el.classList.remove('active', 'border-[#0076CE]', 'bg-[#EFF6FF]');
+                el.classList.add('border-transparent');
+            });
+            const card = document.getElementById(`phase-card-${index}`);
+            card.classList.add('active', 'border-[#0076CE]', 'bg-[#EFF6FF]');
+            card.classList.remove('border-transparent');
+
+            // Render Details
+            const phase = phases[index];
+            const detailsHtml = `
+                <div class="fade-in h-full flex flex-col">
+                    <div class="border-b border-gray-100 pb-4 mb-4">
+                        <span class="text-xs font-bold text-[#0076CE] uppercase tracking-wide">Step ${phase.id} of 5</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mt-1 flex items-center gap-2">
+                            ${phase.icon} ${phase.title}
+                        </h3>
+                    </div>
+                    
+                    <h4 class="font-semibold text-gray-700 mb-3">Required Strategic Actions:</h4>
+                    <ul class="space-y-3">
+                        ${phase.actions.map(action => `
+                            <li class="flex items-start p-2 rounded hover:bg-gray-50">
+                                <span class="text-[#0076CE] mr-3 mt-1">•</span>
+                                <span class="text-gray-600 text-base">${action}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+
+                    <div class="mt-auto pt-6 border-t border-gray-100">
+                        <p class="text-sm text-gray-400 italic">"Successful execution of this phase is a prerequisite for ${index === 4 ? 'program closure' : 'the next phase'}."</p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('phase-details-content').innerHTML = detailsHtml;
+        }
+
+        // --- DELIVERABLES LOGIC ---
+        function renderDeliverables() {
+            const grid = document.getElementById('deliverables-grid');
+            if (grid.children.length > 0) return;
+            filterDeliverables('all');
+        }
+
+        function filterDeliverables(filter) {
+            const grid = document.getElementById('deliverables-grid');
+            const btns = document.querySelectorAll('.filter-btn');
+            
+            // Update Buttons
+            btns.forEach(btn => {
+                if(btn.dataset.filter === filter) {
+                    btn.classList.add('bg-[#0076CE]', 'text-white');
+                    btn.classList.remove('text-gray-600', 'hover:bg-gray-50');
+                } else {
+                    btn.classList.remove('bg-[#0076CE]', 'text-white');
+                    btn.classList.add('text-gray-600', 'hover:bg-gray-50');
+                }
+            });
+
+            // Filter Data
+            const items = filter === 'all' ? deliverables : deliverables.filter(d => d.type === filter);
+
+            // Render
+            grid.innerHTML = items.map(item => `
+                <div class="deliverable-card bg-white p-5 rounded-lg border border-gray-200 shadow-sm relative overflow-hidden fade-in">
+                    <div class="absolute top-0 right-0 p-2 opacity-10 text-6xl pointer-events-none">${item.icon}</div>
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl">${item.icon}</span>
+                            <span class="text-xs font-bold px-2 py-1 rounded ${item.type === 'internal' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800'} uppercase">
+                                ${item.type}
+                            </span>
+                        </div>
+                        <h4 class="font-bold text-gray-900 text-lg mb-2">${item.title}</h4>
+                        <p class="text-sm text-gray-600">${item.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- AUDIT LOGIC ---
+        function initAudit() {
+            const container = document.getElementById('audit-checklist');
+            if (container.children.length > 0) return;
+
+            container.innerHTML = auditItems.map((item, index) => `
+                <div class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                    <input type="checkbox" id="check-${index}" onchange="updateScore()" class="w-5 h-5 text-[#0076CE] border-gray-300 rounded focus:ring-[#0076CE] cursor-pointer">
+                    <label for="check-${index}" class="ml-3 text-gray-700 cursor-pointer select-none">${item}</label>
+                </div>
+            `).join('');
+
+            // Init Chart if not exists
+            if (!readinessChartInstance) {
+                const ctx = document.getElementById('readinessChart').getContext('2d');
+                readinessChartInstance = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Ready', 'Pending'],
+                        datasets: [{
+                            data: [0, 100],
+                            backgroundColor: ['#10B981', '#E5E7EB'],
+                            borderWidth: 0,
+                            cutout: '75%',
+                            circumference: 180,
+                            rotation: 270
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, tooltip: { enabled: false } },
+                        animation: { animateRotate: true, animateScale: false }
+                    }
+                });
+            }
+        }
+
+        function updateScore() {
+            const total = auditItems.length;
+            const checked = document.querySelectorAll('#audit-checklist input:checked').length;
+            const percentage = Math.round((checked / total) * 100);
+
+            // Update Chart
+            readinessChartInstance.data.datasets[0].data = [percentage, 100 - percentage];
+            readinessChartInstance.update();
+
+            // Update Text
+            const scoreText = document.getElementById('score-text');
+            const scoreMsg = document.getElementById('score-message');
+            const actionBox = document.getElementById('launch-action');
+
+            scoreText.innerText = `${percentage}%`;
+            scoreText.className = percentage === 100 ? 'text-4xl font-bold text-green-600' : 'text-4xl font-bold text-[#0076CE]';
+
+            if (percentage === 0) scoreMsg.innerText = "Start checking items.";
+            else if (percentage < 100) scoreMsg.innerText = "Keep going! Not field ready yet.";
+            else scoreMsg.innerText = "All systems go!";
+
+            if (percentage === 100) {
+                actionBox.classList.remove('hidden');
+                actionBox.classList.add('fade-in');
+            } else {
+                actionBox.classList.add('hidden');
+            }
+        }
+
+        // --- CHARTS INITIALIZATION (Overview) ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Anatomy Chart
+            const ctx1 = document.getElementById('anatomyChart').getContext('2d');
+            anatomyChartInstance = new Chart(ctx1, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Strategy', 'Enablement', 'Execution', 'Technology'],
+                    datasets: [{
+                        data: [25, 25, 25, 25],
+                        backgroundColor: ['#0076CE', '#0672CB', '#444444', '#1F2937'], // Dell Blue shades + Grays
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8 } }
+                    }
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

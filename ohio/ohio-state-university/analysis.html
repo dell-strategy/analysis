@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohio State University - Dell Account Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Chosen Palette: Dynamic Slate Base with Thematic Accents (Blue, Emerald, Indigo, Rose, Amber) -->
+    <!-- Application Structure Plan: A centralized, highly visual intelligence dashboard. Uses a responsive navigation menu. The UI incorporates photographic banners, thematic color coding, interactive CRM simulation buttons, and smooth entrance animations. The financial section strictly utilizes data from the official FY26 Financial Plan Book, eliminating all placeholder/extrapolated data. -->
+    <!-- Visualization & Content Choices: 
+         - Banners: Unsplash images with solid color fallbacks and Tailwind gradient overlays.
+         - Exec Summary: Key Metric HTML Grid Cards.
+         - Stakeholders: Dynamic HTML Table with JS filtering.
+         - Financials: Chart.js Doughnut Chart visualizing exact FY26 revenue streams ($11.45B total) within a constrained container.
+         - Animations/Interactions: Custom CSS keyframes for transitions, JS for mobile menu toggling, and a JS Toast notification system.
+         NO SVG/Mermaid used. Unicode characters used for iconography. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        
+        /* Custom Animations */
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeSlideUp 0.4s ease-out forwards; }
+
+        /* Required Chart Container Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 380px; max-width: 600px; }
+        }
+
+        /* Navigation Elements */
+        .nav-btn { transition: all 0.2s ease-in-out; border-left: 4px solid transparent; }
+        .nav-btn.active { background-color: #f1f5f9; border-left-color: #2563eb; font-weight: 700; color: #0f172a; }
+        .nav-btn:hover:not(.active) { background-color: #f8fafc; border-left-color: #cbd5e1; }
+        
+        /* UI Components */
+        .glass-card { background: rgba(255, 255, 255, 0.95); border: 1px solid #e2e8f0; backdrop-filter: blur(8px); }
+        .banner-overlay { background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 100%); }
+        
+        /* Image Fallbacks */
+        .bg-fallback-blue { background-color: #1e3a8a; }
+        .bg-fallback-purple { background-color: #581c87; }
+        .bg-fallback-amber { background-color: #b45309; }
+        .bg-fallback-emerald { background-color: #047857; }
+        .bg-fallback-rose { background-color: #be123c; }
+        .bg-fallback-teal { background-color: #0f766e; }
+        .bg-fallback-indigo { background-color: #4338ca; }
+
+        /* Utilities */
+        .hide { display: none !important; }
+        
+        /* Toast Notification */
+        #toast.show { transform: translateY(0); opacity: 1; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 h-screen flex flex-col md:flex-row overflow-hidden">
+
+    <!-- Mobile Header -->
+    <div class="md:hidden bg-slate-900 text-white p-4 flex justify-between items-center z-30 relative shadow-md shrink-0">
+        <div class="flex flex-col">
+            <span class="font-black text-blue-400 tracking-tight">Dell Technologies</span>
+            <span class="text-[10px] uppercase tracking-widest text-slate-400">Account Intelligence</span>
+        </div>
+        <button id="mobile-menu-btn" class="text-2xl p-2 hover:bg-slate-800 rounded transition-colors">&#9776;</button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-300 ease-in-out w-72 bg-white border-r border-slate-200 flex flex-col shadow-2xl md:shadow-lg z-40 shrink-0 h-full">
+        <div class="hidden md:block p-6 border-b border-slate-100 bg-slate-50 relative overflow-hidden shrink-0">
+            <div class="absolute top-0 right-0 w-16 h-16 bg-blue-100 rounded-full -mr-8 -mt-8 opacity-50"></div>
+            <h1 class="text-2xl font-black tracking-tight text-blue-700 relative z-10">Dell Technologies</h1>
+            <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mt-1 relative z-10">Account Intelligence</p>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-2" id="main-nav">
+            <button data-target="view-summary" class="nav-btn active w-full text-left px-6 py-4 text-sm text-slate-600 border-b border-slate-50">&#128200; Executive Summary</button>
+            <button data-target="view-stakeholders" class="nav-btn w-full text-left px-6 py-4 text-sm text-slate-600 border-b border-slate-50">&#128101; Power Structure</button>
+            <button data-target="view-governance" class="nav-btn w-full text-left px-6 py-4 text-sm text-slate-600 border-b border-slate-50">&#9873; IT Governance Model</button>
+            <button data-target="view-financials" class="nav-btn w-full text-left px-6 py-4 text-sm text-slate-600 border-b border-slate-50">&#128176; Financials & Budgets</button>
+            <button data-target="view-initiatives" class="nav-btn w-full text-left px-6 py-4 text-sm text-slate-600 border-b border-slate-50">&#128640; Strategic Initiatives</button>
+            <button data-target="view-procurement" class="nav-btn w-full text-left px-6 py-4 text-sm text-slate-600 border-b border-slate-50">&#128220; Procurement & Vendors</button>
+            <button data-target="view-opportunities" class="nav-btn w-full text-left px-6 py-4 text-sm text-slate-600 font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border-l-indigo-600">&#127919; Dell Opportunities</button>
+        </nav>
+        <div class="p-5 border-t border-slate-200 text-xs text-slate-500 bg-slate-50 shrink-0">
+            <div class="mb-3">
+                <span class="font-bold text-slate-700">Target:</span> The Ohio State University<br>
+                <span class="font-bold text-slate-700">Updated:</span> April 2, 2026
+            </div>
+            <a href="https://dmonkey1001.github.io/slg-strategies/ohio/ohio-state-university/analysis.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 w-full justify-center bg-blue-600 text-white hover:bg-blue-700 rounded-md shadow-sm font-bold transition-all transform hover:-translate-y-0.5">
+                <span>&#128196;</span> View Source PDF
+            </a>
+        </div>
+    </aside>
+
+    <!-- Overlay for mobile -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-slate-900 bg-opacity-50 z-30 hidden md:hidden transition-opacity"></div>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 overflow-y-auto relative bg-slate-100/50 p-4 md:p-6 lg:p-10" id="main-content">
+        
+        <!-- View: Executive Summary -->
+        <section id="view-summary" class="view-section max-w-6xl mx-auto block animate-fade-in">
+            <div class="relative h-48 md:h-56 rounded-2xl overflow-hidden mb-6 md:mb-8 shadow-lg bg-fallback-blue">
+                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80" alt="University Campus" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80">
+                <div class="absolute inset-0 banner-overlay"></div>
+                <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                    <span class="text-blue-300 font-bold tracking-widest text-[10px] md:text-xs uppercase mb-2">Macro Landscape</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg">Executive Summary</h2>
+                </div>
+            </div>
+            
+            <p class="text-slate-700 mb-8 leading-relaxed max-w-4xl text-base md:text-lg">
+                <span class="font-bold text-blue-700">Context:</span> This section provides a macro-level snapshot of The Ohio State University, establishing the baseline environment for strategic account planning. It outlines the university's fundamental operational posture, demographic momentum, and top-tier objectives for FY26.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-8" id="summary-cards">
+                <!-- Populated by JS -->
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-lg md:text-xl font-black text-slate-800 mb-5 flex items-center gap-3">
+                    <span class="p-2 bg-blue-100 rounded-lg text-blue-600">&#127942;</span> Top Institutional Goals (FY26)
+                </h3>
+                <ul class="space-y-4" id="summary-goals">
+                    <!-- Populated by JS -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- View: Power Structure -->
+        <section id="view-stakeholders" class="view-section max-w-6xl mx-auto hide">
+            <div class="relative h-48 md:h-56 rounded-2xl overflow-hidden mb-8 shadow-lg bg-fallback-purple">
+                <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1200&q=80" alt="Boardroom" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80">
+                <div class="absolute inset-0 banner-overlay" style="background: linear-gradient(to right, rgba(88, 28, 135, 0.9), rgba(88, 28, 135, 0.4));"></div>
+                <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                    <span class="text-fuchsia-300 font-bold tracking-widest text-[10px] md:text-xs uppercase mb-2">Account Mapping</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg">Power Structure & Stakeholders</h2>
+                </div>
+            </div>
+
+            <p class="text-slate-700 mb-6 leading-relaxed max-w-4xl text-base md:text-lg">
+                <span class="font-bold text-fuchsia-700">Context:</span> Navigate the complex buying centers at OSU. This interactive table separates economic buyers from technical evaluators, highlighting their specific areas of oversight.
+            </p>
+
+            <div class="mb-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200 inline-flex w-full sm:w-auto">
+                <label for="influence-filter" class="text-sm font-bold text-slate-700 flex items-center gap-2">&#128269; Filter by Influence:</label>
+                <select id="influence-filter" class="border-2 border-slate-200 rounded-lg px-4 py-2 text-sm bg-slate-50 font-semibold text-slate-800 focus:outline-none focus:border-fuchsia-500 focus:ring-1 focus:ring-fuchsia-500 transition-colors w-full sm:w-auto">
+                    <option value="All">All Roles / Departments</option>
+                    <option value="Purchaser">Financial Purchasers</option>
+                    <option value="Influencer">Technical Influencers</option>
+                    <option value="Approver">Approvers / Mandates</option>
+                </select>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[600px]" id="stakeholder-table">
+                    <thead>
+                        <tr class="bg-slate-50 text-slate-600 text-sm border-b-2 border-slate-200">
+                            <th class="px-6 py-5 font-black uppercase tracking-wider w-1/3">Name & Title</th>
+                            <th class="px-6 py-5 font-black uppercase tracking-wider w-1/4">Sphere of Influence</th>
+                            <th class="px-6 py-5 font-black uppercase tracking-wider">Strategic Stance / Vision</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-slate-700 divide-y divide-slate-100" id="stakeholder-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- View: IT Governance -->
+        <section id="view-governance" class="view-section max-w-6xl mx-auto hide">
+            <div class="relative h-48 md:h-56 rounded-2xl overflow-hidden mb-8 shadow-lg bg-fallback-amber">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Tech Network" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80">
+                <div class="absolute inset-0 banner-overlay" style="background: linear-gradient(to right, rgba(180, 83, 9, 0.9), rgba(180, 83, 9, 0.4));"></div>
+                <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                    <span class="text-amber-300 font-bold tracking-widest text-[10px] md:text-xs uppercase mb-2">Operations</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg">IT Governance Model</h2>
+                </div>
+            </div>
+
+            <p class="text-slate-700 mb-8 leading-relaxed max-w-4xl text-base md:text-lg">
+                <span class="font-bold text-amber-600">Context:</span> Understanding how technology is procured, managed, and deployed across the university. OSU operates a hybrid model, requiring both centralized and departmental sales motions.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 border-t-4 border-t-amber-500 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="p-3 bg-amber-100 text-amber-600 rounded-xl text-2xl">&#9881;</span>
+                        <h3 class="text-xl md:text-2xl font-black text-slate-800">Managed Hybrid Delivery</h3>
+                    </div>
+                    <div class="text-slate-600 text-sm md:text-base leading-relaxed space-y-4" id="gov-model-desc">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 border-t-4 border-t-rose-500 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="p-3 bg-rose-100 text-rose-600 rounded-xl text-2xl">&#9888;</span>
+                        <h3 class="text-xl md:text-2xl font-black text-slate-800">Operational Friction Points</h3>
+                    </div>
+                    <p class="text-xs md:text-sm font-semibold text-slate-500 mb-5 uppercase tracking-wider">Areas primed for Dell intervention:</p>
+                    <ul class="space-y-4" id="gov-friction-list">
+                        <!-- Populated by JS -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- View: Financials -->
+        <section id="view-financials" class="view-section max-w-6xl mx-auto hide">
+            <div class="relative h-48 md:h-56 rounded-2xl overflow-hidden mb-8 shadow-lg bg-fallback-emerald">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Financial Ledger" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80">
+                <div class="absolute inset-0 banner-overlay" style="background: linear-gradient(to right, rgba(4, 120, 87, 0.9), rgba(4, 120, 87, 0.4));"></div>
+                <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                    <span class="text-emerald-300 font-bold tracking-widest text-[10px] md:text-xs uppercase mb-2">Economics</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg">Financials & Budgets</h2>
+                </div>
+            </div>
+
+            <p class="text-slate-700 mb-8 leading-relaxed max-w-4xl text-base md:text-lg">
+                <span class="font-bold text-emerald-700">Context:</span> Fiscal health, buying cycles, and primary funding streams. Understanding the exact source of the massive <strong>$11.45B</strong> revenue stream dictates where Dell should focus large-scale infrastructure proposals (e.g., Clinical vs. Academic/Grants).
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 mb-10">
+                <div class="lg:col-span-1 space-y-5" id="financial-stats">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="lg:col-span-2 bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center justify-center relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-emerald-50 rounded-full opacity-50 pointer-events-none"></div>
+                    <h3 class="text-lg md:text-xl font-black text-slate-800 w-full text-center relative z-10">FY26 Exact Revenue Sources ($11.45B Total)</h3>
+                    <p class="text-xs md:text-sm font-semibold text-slate-500 mb-6 text-center relative z-10">Healthcare and external funding dominate the actual operational footprint.</p>
+                    
+                    <div class="chart-container relative z-10">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-lg md:text-xl font-black text-slate-800 mb-6 flex items-center gap-3">
+                    <span class="p-2 bg-emerald-100 rounded-lg text-emerald-600">&#128176;</span> Major Tech Funding Streams
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5" id="funding-streams">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- View: Strategic Initiatives -->
+        <section id="view-initiatives" class="view-section max-w-6xl mx-auto hide">
+            <div class="relative h-48 md:h-56 rounded-2xl overflow-hidden mb-8 shadow-lg bg-fallback-rose">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" alt="Tech Lab" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80">
+                <div class="absolute inset-0 banner-overlay" style="background: linear-gradient(to right, rgba(190, 18, 60, 0.9), rgba(190, 18, 60, 0.4));"></div>
+                <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                    <span class="text-rose-300 font-bold tracking-widest text-[10px] md:text-xs uppercase mb-2">Priorities</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg">Strategic Initiatives</h2>
+                </div>
+            </div>
+
+            <p class="text-slate-700 mb-8 leading-relaxed max-w-4xl text-base md:text-lg">
+                <span class="font-bold text-rose-700">Context:</span> The top funded modernization efforts currently underway. Aligning Dell's solutions to these specific, capitalized requirements generates immediate pipeline.
+            </p>
+
+            <div class="space-y-6" id="initiatives-list">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- View: Procurement -->
+        <section id="view-procurement" class="view-section max-w-6xl mx-auto hide">
+            <div class="relative h-48 md:h-56 rounded-2xl overflow-hidden mb-8 shadow-lg bg-fallback-teal">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" alt="Contracts" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80">
+                <div class="absolute inset-0 banner-overlay" style="background: linear-gradient(to right, rgba(15, 118, 110, 0.9), rgba(15, 118, 110, 0.4));"></div>
+                <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                    <span class="text-teal-300 font-bold tracking-widest text-[10px] md:text-xs uppercase mb-2">Contracts & Competitors</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg">Procurement & Vendors</h2>
+                </div>
+            </div>
+
+            <p class="text-slate-700 mb-8 leading-relaxed max-w-4xl text-base md:text-lg">
+                <span class="font-bold text-teal-700">Context:</span> How they buy, who they currently buy from, and the compliance rules governing transactions. Understanding this landscape is key to unseating entrenched competitors.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 border-t-4 border-t-teal-500">
+                    <h3 class="text-lg md:text-xl font-black text-slate-800 mb-5 pb-3 border-b-2 border-slate-100 flex items-center gap-2"><span class="text-teal-600">&#128221;</span> Vehicles</h3>
+                    <ul class="space-y-4" id="procurement-vehicles"></ul>
+                </div>
+                <div class="bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm border-t-4 border-t-rose-500">
+                    <h3 class="text-lg md:text-xl font-black text-white mb-5 pb-3 border-b-2 border-slate-700 flex items-center gap-2"><span class="text-rose-500">&#9876;</span> Battlefield</h3>
+                    <ul class="space-y-4 text-slate-300" id="procurement-battlefield"></ul>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 border-t-4 border-t-indigo-500">
+                    <h3 class="text-lg md:text-xl font-black text-slate-800 mb-5 pb-3 border-b-2 border-slate-100 flex items-center gap-2"><span class="text-indigo-600">&#128274;</span> Compliance</h3>
+                    <ul class="space-y-4" id="procurement-compliance"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- View: Dell Opportunities -->
+        <section id="view-opportunities" class="view-section max-w-6xl mx-auto hide">
+            <div class="relative h-48 md:h-56 rounded-2xl overflow-hidden mb-8 shadow-lg bg-fallback-indigo">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" alt="Server Infrastructure" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80">
+                <div class="absolute inset-0 banner-overlay" style="background: linear-gradient(to right, rgba(67, 56, 202, 0.95), rgba(67, 56, 202, 0.5));"></div>
+                <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                    <span class="text-indigo-300 font-bold tracking-widest text-[10px] md:text-xs uppercase mb-2">Tactical Execution</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg flex items-center gap-3">
+                        <span class="bg-white text-indigo-700 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shadow-lg text-xl md:text-2xl">&#127919;</span> 
+                        Actionable Opportunities
+                    </h2>
+                </div>
+            </div>
+
+            <p class="text-slate-700 mb-8 leading-relaxed max-w-4xl text-base md:text-lg">
+                <span class="font-bold text-indigo-700">Context:</span> Synthesized attack plans mapping Dell's specific portfolio solutions to OSU's stated needs and vulnerabilities. These three pillars represent immediate, strategic angles for the Dell Account Team to pursue.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8" id="opportunities-list">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast Notification System -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-24 opacity-0 transition-all duration-300 z-50 flex items-center gap-3 border-l-4 border-emerald-500 max-w-sm pointer-events-none">
+        <span class="text-emerald-400 text-xl">&#10004;</span> 
+        <div>
+            <p class="font-bold text-sm">Action Successful</p>
+            <p class="text-xs text-slate-300 mt-0.5">Opportunity mapped to Salesforce CRM.</p>
+        </div>
+    </div>
+
+    <script>
+        // --- DATA LAYER ---
+        // Updated to use strict exact figures from the provided "11.a FY26 Financial Plan Book.pdf"
+        // --- DATA LAYER ---
+        // Updated to use strict exact figures from the provided "11.a FY26 Financial Plan Book.pdf"
+        const reportData = {
+            summary: {
+                status: "Public, Land-Grant R1",
+                enrollment: "9,500+ New First-Year Students",
+                leadership: "Pres. Ravi V. Bellamkonda",
+                vision: "Education for Citizenship 2035",
+                goals: [
+                    "Rapid expansion of Artificial Intelligence (AI) fluency, driven by the AI(X) Hub and hiring 100 new AI faculty.",
+                    "Execute the University Continuous Improvement (UCI) program to optimize operational efficiency and digital workflows.",
+                    "Modernize foundational IT infra: cloud-managed Wi-Fi 7, overhaul legacy storage, and enhance Workday ERP.",
+                    "Clinical expansion and healthcare modernization at the Wexner Medical Center."
+                ]
+            },
+            stakeholders: [
+                { name: "Ravi V. Bellamkonda", title: "President", influence: "Exec Mandate / Approver", stance: "Championed 'Education for Citizenship 2035'. Advocates AI fluency, research expansion, and utilizing technology to elevate OSU." },
+                { name: "Trevor Brown", title: "Interim Executive VP & Provost", influence: "Academic Mandate / Approver", stance: "Oversees core academic enterprise. Drives the UCI program to optimize digital processes and remove operational barriers." },
+                { name: "Michael Papadakis", title: "Senior VP & CFO", influence: "Financial Purchaser", stance: "Oversees unified budget. Focused on operational excellence, resource stewardship, and innovative funding." },
+                { name: "Tomislav B. Mitevski", title: "Chair, Finance & Investment", influence: "Financial Approver", stance: "Directs committee scrutinizing/approving major financial outflows and IT operating budgets." },
+                { name: "Juan Jose Perez", title: "Chair, Master Planning", influence: "Infrastructure Approver", stance: "Oversees physical footprint: data center expansions, smart campus infrastructure." },
+                { name: "Rob Lowden", title: "VP & Chief Information Officer", influence: "Technical Purchaser", stance: "Advocates 'brilliant basics', AI fluency, intelligent infrastructure. Unifying distributed IT." },
+                { name: "Rich Nagle", title: "Chief Information Security Officer", influence: "Technical Influencer", stance: "Enforces enterprise cybersecurity posture, NIST/HIPAA/FERPA compliance, risk management." },
+                { name: "Tom Bentley", title: "CIO, Wexner Medical Center", influence: "Technical Purchaser", stance: "Manages clinical IT operations, healthcare informatics, and EMR system." },
+                { name: "Richard Silveria", title: "CFO, Wexner Medical Center", influence: "Financial Purchaser", stance: "Manages financial operations and capital allocations for the medical center." },
+                { name: "Ginger Breon", title: "AVP Enterprise Support", influence: "Technical Purchaser", stance: "Bridges enterprise IT and research computing. Manages resources for RCAC." },
+                { name: "Jason Haskins", title: "Senior Director, MITS", influence: "Technical Influencer", stance: "Oversees fiscal health of MITS, managing chargebacks and operational models." },
+                { name: "Ayanna Howard", title: "Dean, College of Engineering", influence: "Academic Influencer", stance: "Oversees college heavily invested in AI, robotics, and advanced computing." },
+                { name: "Tammy Cimorell", title: "IT Director, College of Engineering", influence: "Technical Purchaser", stance: "Represents engineering on ITPC, focusing on specialized compute/storage." },
+                { name: "Whitney Greicius", title: "IT Leader, College of Medicine", influence: "Technical Purchaser", stance: "Represents College of Medicine on ITPC. Manages academic medical research IT." }
+            ],
+            governance: {
+                modelDesc: "<p><strong>Office of Technology and Digital Innovation (OTDI):</strong> Central nervous system led by CIO Rob Lowden. Provides Workday ERP, cybersecurity, campus networking.</p><p><strong>Federated Units:</strong> Massive colleges and Wexner Medical Center maintain distributed IT departments.</p><p><strong>Managed IT Services (MITS):</strong> Formal framework allowing colleges to subscribe to OTDI services via chargebacks.</p><p><strong>Councils:</strong> IT Partnership Council (ITPC), Research Cyberinfrastructure & Advanced Computing (RCAC), Workday Support Group.</p>",
+                friction: [
+                    "<strong>Chargeback Dynamics:</strong> MITS operates on a full-cost recovery basis, directly billing internal customers. This creates friction over cost allocation.",
+                    "<strong>Rigid Data Storage Caps:</strong> Legacy storage (SAN/Isilon) billed per gigabyte created friction for researchers. OTDI is shifting to a flexible 'soft-limit' approach due to UCI feedback."
+                ]
+            },
+            financials: {
+                chartLabels: ['Health System & OSUP', 'Tuition & Fees', 'Grants & Contracts', 'State Appropriations', 'Auxiliaries, Gifts & Other'],
+                chartData: [6.54, 1.53, 1.21, 0.56, 1.61], 
+                itBudget: "Dispersed (No Central Line Item)",
+                cycle: "Fiscal Year ends June 30. Complex 'roll-forward' in late June halts POs. Massive IT capital spend spike occurs April-early June, followed by aggressive summer deployment.",
+                streams: [
+                    { title: "Health System Revenue", desc: "Generates $6.54B (including OSUP). Drives critical zero-downtime clinical IT spend." },
+                    { title: "Tuition & Fees ($1.53B)", desc: "Unrestricted funds for core student tech, networking, and learning systems." },
+                    { title: "Grants & Contracts ($1.21B)", desc: "NSF, DoD, NIH funds driving HPC, AI clusters, and secure enclaves." },
+                    { title: "State Appropriations ($0.56B)", desc: "State Share of Instruction (SSI) providing baseline operational liquidity." }
+                ]
+            },
+            initiatives: [
+                {
+                    title: "1. The AI(X) Hub & Fluency Program",
+                    mandate: "Every student graduates fluent in AI. Hire 100 new AI tenure-track faculty.",
+                    owner: "Enterprise for Research, Innovation and Knowledge (ERIK) & College of Engineering.",
+                    tech: "High-performance computing (HPC) clusters, GPU accelerators. Expanding Ohio Supercomputer Center (OSC) partnerships (e.g., 'Cardinal' cluster with Dell/NVIDIA H100s).",
+                    color: "border-l-indigo-500", iconBg: "bg-indigo-100", iconColor: "text-indigo-600"
+                },
+                {
+                    title: "2. Enterprise Storage Transformation",
+                    mandate: "Contain exorbitant cloud storage sprawl caused by Microsoft licensing changes and enforce fiscal stewardship.",
+                    owner: "OTDI, Storage Strategy Working Group, RCAC Data Storage Working Group (DSWG).",
+                    tech: "Moving to tiered storage strategy, 'soft-limits'. Requires data classification tools, unstructured data management, and modernized on-premise block/file arrays for repatriation.",
+                    color: "border-l-blue-500", iconBg: "bg-blue-100", iconColor: "text-blue-600"
+                },
+                {
+                    title: "3. Campus Wi-Fi 7 Modernization",
+                    mandate: "Ensure digital equity and prepare physical campus for connected technologies.",
+                    owner: "OTDI Infrastructure and Networks.",
+                    tech: "Sunsetting legacy 'osuwireless' for 'eduroam'. Deploying thousands of Wi-Fi 7 APs. AI-driven, cloud-based network management for predictive maintenance.",
+                    color: "border-l-teal-500", iconBg: "bg-teal-100", iconColor: "text-teal-600"
+                }
+            ],
+            procurement: {
+                vehicles: [
+                    "IUC-PG (Inter-University Council Purchasing Group)", 
+                    "Midwestern Higher Education Compact (MHEC)", 
+                    "OMNIA Partners", 
+                    "Workday 'Buckeye Buy' / Ariba Discovery",
+                    "Software Preapproval Process (SPP) via Workday"
+                ],
+                battlefield: [
+                    "<strong class='text-white'>Compute/HPC:</strong> Dell heavily entrenched (OSC Cardinal cluster).", 
+                    "<strong class='text-white'>Networking:</strong> Massive battlefield to displace legacy controllers for Wi-Fi 7 transition.", 
+                    "<strong class='text-white'>Storage:</strong> NetApp and Dell EMC Isilon (aging environments, active chargebacks; ripe for consolidation).",
+                    "<strong class='text-white'>Apps:</strong> Workday (ERP), Microsoft (Cloud storage pricing causing friction)."
+                ],
+                compliance: [
+                    "<strong>ADA Title II:</strong> Full effect April 24, 2026. Driving digital accessibility remediation.", 
+                    "<strong>HIPAA:</strong> Wexner Medical Center PHI protection.", 
+                    "<strong>FERPA:</strong> Student data access controls.", 
+                    "<strong>NIST 800-171/53:</strong> Federal research security, Technology Control Plans (TCPs).",
+                    "<strong>AI Governance:</strong> Strict guidelines for public (S1) and internal (S2) data tools."
+                ]
+            },
+            opportunities: [
+                {
+                    type: "Funded Alignment",
+                    title: "Propelling the AI(X) Hub",
+                    icon: "&#129302;",
+                    color: "border-t-emerald-500", bgHover: "hover:border-emerald-500", btn: "hover:bg-emerald-600 text-emerald-800",
+                    desc: "Map <strong>Dell PowerEdge XE9680 servers and Direct Liquid Cooling (DLC)</strong> directly to the RCAC's HPC Working Group. As 100 new AI faculty arrive, position Dell AI-Ready Enterprise architecture as the pre-approved baseline for startup packages to secure recurring hardware footprints."
+                },
+                {
+                    type: "Whitespace & Advisory",
+                    title: "Storage Strategy Intervention",
+                    icon: "&#128194;",
+                    color: "border-t-blue-500", bgHover: "hover:border-blue-500", btn: "hover:bg-blue-600 text-blue-800",
+                    desc: "Microsoft pricing shifts have triggered an enterprise storage transformation. Lead with <strong>Advisory Services and APEX Custom Solutions</strong>. Show the DSWG how <strong>PowerScale</strong> handles unstructured data sprawl, while APEX shifts rigid CapEx chargebacks to a flexible OpEx model."
+                },
+                {
+                    type: "Competitive Displacement",
+                    title: "Rip-and-Replace Legacy SAN",
+                    icon: "&#9889;",
+                    color: "border-t-rose-500", bgHover: "hover:border-rose-500", btn: "hover:bg-rose-600 text-rose-800",
+                    desc: "MITS relies on aging NetApp/Isilon environments billed back at premium rates. Pitch next-gen <strong>PowerStore</strong> (block) and <strong>PowerScale</strong> to consolidate. Demonstrate superior deduplication and integrated <strong>PowerProtect</strong> ransomware defense to dominate the upcoming refresh cycle."
+                }
+            ]
+        };
+
+        let budgetChartInstance = null;
+
+        // --- CORE LOGIC ---
+        function initApp() {
+            setupNavigation();
+            setupMobileMenu();
+            renderExecutiveSummary();
+            renderStakeholders();
+            renderGovernance();
+            renderFinancials();
+            renderInitiatives();
+            renderProcurement();
+            renderOpportunities();
+            
+            document.getElementById('influence-filter').addEventListener('change', filterStakeholders);
+        }
+
+        // Mobile Menu Logic
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('mobile-overlay');
+
+            function toggleMenu() {
+                const isOpen = !sidebar.classList.contains('-translate-x-full');
+                if (isOpen) {
+                    sidebar.classList.add('-translate-x-full');
+                    overlay.classList.add('hidden');
+                } else {
+                    sidebar.classList.remove('-translate-x-full');
+                    overlay.classList.remove('hidden');
+                }
+            }
+
+            btn.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+        }
+
+        // Handle Sidebar Navigation
+        function setupNavigation() {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    // Update active state
+                    navButtons.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    
+                    // Hide all sections
+                    document.querySelectorAll('.view-section').forEach(sec => {
+                        sec.classList.remove('block');
+                        sec.classList.remove('animate-fade-in');
+                        sec.classList.add('hide');
+                    });
+                    
+                    // Show target section with animation
+                    const targetId = e.target.getAttribute('data-target');
+                    const targetEl = document.getElementById(targetId);
+                    targetEl.classList.remove('hide');
+                    targetEl.classList.add('block');
+                    
+                    // Force reflow to restart animation
+                    void targetEl.offsetWidth; 
+                    targetEl.classList.add('animate-fade-in');
+
+                    // Render chart only when visible
+                    if (targetId === 'view-financials') {
+                        drawChart();
+                    }
+
+                    // Auto-close mobile menu if open
+                    if (window.innerWidth < 768) {
+                        document.getElementById('sidebar').classList.add('-translate-x-full');
+                        document.getElementById('mobile-overlay').classList.add('hidden');
+                    }
+                });
+            });
+        }
+
+        // Render Functions
+        function renderExecutiveSummary() {
+            const grid = document.getElementById('summary-cards');
+            const data = [
+                { label: "Institutional Status", val: reportData.summary.status, icon: "&#127970;" },
+                { label: "Enrollment Momentum", val: reportData.summary.enrollment, icon: "&#128200;" },
+                { label: "University Leadership", val: reportData.summary.leadership, icon: "&#128100;" },
+                { label: "Strategic Vision", val: reportData.summary.vision, icon: "&#128065;" }
+            ];
+            
+            grid.innerHTML = data.map(d => `
+                <div class="bg-white p-5 md:p-6 border border-slate-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 opacity-10 text-6xl group-hover:scale-110 transition-transform">${d.icon}</div>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">${d.label}</p>
+                    <p class="mt-2 text-slate-800 font-bold text-base md:text-lg leading-tight relative z-10">${d.val}</p>
+                </div>
+            `).join('');
+
+            document.getElementById('summary-goals').innerHTML = reportData.summary.goals.map(g => `
+                <li class="flex items-start text-slate-700 text-sm md:text-base bg-slate-50 p-3 md:p-4 rounded-xl border border-slate-100">
+                    <span class="text-blue-500 mr-3 md:mr-4 mt-0.5 md:mt-1 text-base md:text-lg shrink-0">&#10148;</span>
+                    <span class="font-medium">${g}</span>
+                </li>
+            `).join('');
+        }
+
+        function renderStakeholders() {
+            populateTable(reportData.stakeholders);
+        }
+
+        function populateTable(data) {
+            const tbody = document.getElementById('stakeholder-body');
+            tbody.innerHTML = data.map(s => {
+                let badgeClass = s.influence.includes('Financial Purchaser') ? 'bg-emerald-100 text-emerald-800 border-emerald-200' : 
+                                 s.influence.includes('Technical Purchaser') ? 'bg-blue-100 text-blue-800 border-blue-200' : 
+                                 s.influence.includes('Technical Influencer') ? 'bg-indigo-100 text-indigo-800 border-indigo-200' : 
+                                 'bg-amber-100 text-amber-800 border-amber-200';
+                return `
+                <tr class="hover:bg-slate-50 transition-colors group">
+                    <td class="px-4 md:px-6 py-4 md:py-5">
+                        <p class="font-black text-slate-900 text-sm md:text-base group-hover:text-fuchsia-700 transition-colors">${s.name}</p>
+                        <p class="text-[11px] md:text-xs font-semibold text-slate-500 mt-1">${s.title}</p>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 md:py-5 align-middle">
+                        <span class="px-2 md:px-3 py-1 md:py-1.5 rounded-lg border text-[9px] md:text-[10px] uppercase tracking-wider font-bold inline-block ${badgeClass}">${s.influence}</span>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 md:py-5 text-slate-600 text-xs md:text-sm leading-relaxed font-medium min-w-[250px]">${s.stance}</td>
+                </tr>
+            `}).join('');
+        }
+
+        function filterStakeholders(e) {
+            const filterVal = e.target.value;
+            if (filterVal === 'All') {
+                populateTable(reportData.stakeholders);
+            } else {
+                populateTable(reportData.stakeholders.filter(s => s.influence.includes(filterVal)));
+            }
+        }
+
+        function renderGovernance() {
+            document.getElementById('gov-model-desc').innerHTML = reportData.governance.modelDesc;
+            document.getElementById('gov-friction-list').innerHTML = reportData.governance.friction.map(f => `
+                <li class="flex items-start text-slate-700 text-sm bg-rose-50 p-3 md:p-4 rounded-xl border border-rose-100">
+                    <span class="text-rose-500 mr-2 md:mr-3 mt-0.5 md:mt-1 text-base md:text-lg shrink-0">&#10007;</span>
+                    <span class="font-medium">${f}</span>
+                </li>
+            `).join('');
+        }
+
+        function renderFinancials() {
+            const stats = document.getElementById('financial-stats');
+            stats.innerHTML = `
+                <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-slate-800">
+                    <p class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Enterprise IT Budget</p>
+                    <p class="text-xl md:text-2xl font-black text-slate-900 mt-2">${reportData.financials.itBudget}</p>
+                    <div class="mt-3 text-[11px] md:text-xs font-medium text-slate-600 bg-slate-50 p-3 rounded border border-slate-100">
+                        <p class="mb-1"><strong>Actionable FY26 Plan Line Items:</strong></p>
+                        <ul class="list-disc pl-4 space-y-1 text-slate-500">
+                            <li>Student Information Systems Project: <strong>$5.4M</strong></li>
+                            <li>OTDI-Workday Success Plan: <strong>$332k</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-emerald-600">
+                    <p class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Fiscal Cycle / Deadlines</p>
+                    <p class="text-xs md:text-sm font-semibold text-slate-800 mt-3 leading-relaxed">${reportData.financials.cycle}</p>
+                </div>
+            `;
+
+            document.getElementById('funding-streams').innerHTML = reportData.financials.streams.map(s => `
+                <div class="bg-slate-50 p-4 md:p-5 rounded-xl border border-slate-200 hover:border-emerald-400 transition-colors">
+                    <h4 class="font-black text-slate-800 text-sm mb-2">${s.title}</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">${s.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        function drawChart() {
+            if (budgetChartInstance) {
+                budgetChartInstance.destroy();
+            }
+            const ctx = document.getElementById('budgetChart').getContext('2d');
+            
+            // Replaced 2-bar chart with a detailed Doughnut chart utilizing the exact data from the financial plan
+            budgetChartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: reportData.financials.chartLabels,
+                    datasets: [{
+                        data: reportData.financials.chartData,
+                        backgroundColor: [
+                            '#047857', // Emerald 700 (Health)
+                            '#0ea5e9', // Sky 500 (Tuition)
+                            '#8b5cf6', // Violet 500 (Grants)
+                            '#f59e0b', // Amber 500 (State)
+                            '#94a3b8'  // Slate 400 (Other)
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#ffffff',
+                        hoverOffset: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '65%',
+                    plugins: {
+                        legend: { 
+                            position: window.innerWidth < 768 ? 'bottom' : 'right',
+                            labels: {
+                                padding: 20,
+                                font: { family: "'Segoe UI', sans-serif", size: 12, weight: 'bold' },
+                                color: '#475569',
+                                usePointStyle: true,
+                                boxWidth: 8
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                            titleFont: { size: 13, family: "'Segoe UI', sans-serif" },
+                            bodyFont: { size: 14, family: "'Segoe UI', sans-serif", weight: 'bold' },
+                            padding: 12,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) { 
+                                    const value = context.parsed;
+                                    const total = 11.45;
+                                    const percentage = Math.round((value / total) * 100);
+                                    return ` $${value}B (${percentage}%)`; 
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderInitiatives() {
+            document.getElementById('initiatives-list').innerHTML = reportData.initiatives.map(i => `
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 border-l-8 ${i.color} hover:shadow-md transition-shadow relative overflow-hidden">
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 mb-5 relative z-10">${i.title}</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> Executive Mandate
+                            </p>
+                            <p class="text-sm font-semibold text-slate-700 leading-relaxed">${i.mandate}</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> Owning Entity
+                            </p>
+                            <p class="text-sm font-semibold text-slate-700 leading-relaxed">${i.owner}</p>
+                        </div>
+                        <div class="${i.iconBg} p-3 md:p-4 rounded-xl border border-white/50">
+                            <p class="text-[10px] font-bold ${i.iconColor} uppercase tracking-widest mb-2">IT Requirement</p>
+                            <p class="text-xs md:text-sm font-bold text-slate-800 leading-relaxed">${i.tech}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderProcurement() {
+            const listClasses = "text-sm text-slate-700 flex items-start gap-3 font-medium leading-relaxed mb-3";
+            const darkListClasses = "text-sm text-slate-300 flex items-start gap-3 font-medium leading-relaxed mb-3";
+            const bullet = `<span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0"></span>`;
+            const darkBullet = `<span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-600 shrink-0"></span>`;
+
+            document.getElementById('procurement-vehicles').innerHTML = reportData.procurement.vehicles.map(v => `<li class="${listClasses}">${bullet}<span>${v}</span></li>`).join('');
+            document.getElementById('procurement-battlefield').innerHTML = reportData.procurement.battlefield.map(v => `<li class="${darkListClasses}">${darkBullet}<span>${v}</span></li>`).join('');
+            document.getElementById('procurement-compliance').innerHTML = reportData.procurement.compliance.map(v => `<li class="${listClasses}">${bullet}<span>${v}</span></li>`).join('');
+        }
+
+        function renderOpportunities() {
+            document.getElementById('opportunities-list').innerHTML = reportData.opportunities.map((o, index) => `
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 border-t-8 ${o.color} flex flex-col h-full transform transition duration-300 hover:-translate-y-2 hover:shadow-xl group">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="px-3 py-1 bg-slate-100 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-widest border border-slate-200">${o.type}</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900 mb-4 flex items-center gap-3">
+                        <span class="text-2xl md:text-3xl">${o.icon}</span> <span class="group-hover:text-indigo-700 transition-colors">${o.title}</span>
+                    </h3>
+                    <p class="text-sm font-medium text-slate-600 flex-grow leading-relaxed mb-8">${o.desc}</p>
+                    <button onclick="triggerToast()" class="mt-auto w-full py-3 bg-slate-50 ${o.btn} hover:text-white text-sm font-black uppercase tracking-wider rounded-xl transition-all duration-300 border border-slate-200 shadow-sm group-hover:border-transparent active:scale-95">
+                        Map to Account Plan
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // Action Simulation Logic
+        let toastTimeout;
+        window.triggerToast = function() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500);
+        }
+
+        // Initialize application on load
+        window.onload = initApp;
+    </script>
+</body>
+</html>

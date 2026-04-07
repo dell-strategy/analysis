@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Sales Intel: State of New York</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dellblue: '#0076CE',
+                        dellnavy: '#00447C',
+                        graybg: '#F3F4F6',
+                        cardbg: '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #F3F4F6; color: #1F2937; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        .tab-btn.active {
+            border-bottom: 4px solid #0076CE;
+            color: #0076CE;
+            font-weight: bold;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        /* Custom scrollbar for tables */
+        .table-wrapper::-webkit-scrollbar { width: 6px; height: 6px; }
+        .table-wrapper::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-graybg min-h-screen flex flex-col">
+
+    <!-- Chosen Palette: Dell Corporate (Navy, Bright Blue, Slate Gray, Clean White) -->
+    <!-- Application Structure Plan: A tabbed dashboard interface. Chosen because sales executives need quick, non-linear access to specific intel (e.g., jumping straight to 'Opportunities' before a meeting, or checking 'Stakeholders' while on a call). The dashboard groups complex report data into logical, bite-sized sections (Macro, Power Structure, Initiatives, Dell Action Plan) to prevent cognitive overload. -->
+    <!-- Visualization & Content Choices: 
+         - Budget/Financials -> Goal: Inform/Compare -> Doughnut Chart (Chart.js) -> Hover for exact figures -> Shows scale of addressable market.
+         - Stakeholders -> Goal: Organize/Filter -> Interactive HTML Table -> Filter by influence type -> Quickly identify decision makers vs influencers.
+         - Opportunities -> Goal: Inform/Action -> Highlight Cards with RAG (Red/Amber/Green) status -> Clickable context -> Directly ties research to Dell portfolio.
+         All visualizations use HTML/CSS or Canvas (Chart.js). NO SVG/Mermaid. 
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Top Navigation / Header -->
+    <header class="bg-dellnavy text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="text-3xl">&#x1F4BB;</span>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-tight">Sales Intelligence Brief</h1>
+                    <p class="text-sm text-blue-200">Target Entity: State of New York | FY24-25</p>
+                </div>
+            </div>
+            <div class="text-right hidden sm:block">
+                <p class="text-sm font-semibold">Audience: Dell AE / District Manager</p>
+                <p class="text-xs text-blue-200 mb-2">Confidential Internal Use</p>
+                <a href="https://dmonkey1001.github.io/slg-strategies/new-york/analysis.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1 bg-white text-dellnavy text-xs font-bold rounded shadow-sm hover:bg-gray-100 transition-colors">
+                    &#x1F4C4; View Source Report
+                </a>
+            </div>
+        </div>
+        
+        <!-- Tabs -->
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-2 overflow-x-auto">
+            <div class="flex space-x-8 whitespace-nowrap">
+                <button onclick="switchTab('exec-summary')" id="btn-exec-summary" class="tab-btn active pb-3 text-sm font-medium hover:text-blue-200 transition-colors">Executive Summary & Finance</button>
+                <button onclick="switchTab('stakeholders')" id="btn-stakeholders" class="tab-btn pb-3 text-sm font-medium text-gray-300 hover:text-white transition-colors">Power Structure</button>
+                <button onclick="switchTab('governance')" id="btn-governance" class="tab-btn pb-3 text-sm font-medium text-gray-300 hover:text-white transition-colors">Gov & Procurement</button>
+                <button onclick="switchTab('initiatives')" id="btn-initiatives" class="tab-btn pb-3 text-sm font-medium text-gray-300 hover:text-white transition-colors">Top Initiatives</button>
+                <button onclick="switchTab('opportunities')" id="btn-opportunities" class="tab-btn pb-3 text-sm font-medium text-gray-300 hover:text-white transition-colors">Dell Opportunities</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+        <!-- TAB 1: Exec Summary & Finance -->
+        <section id="exec-summary" class="tab-content active">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-gray-800 border-b-2 border-dellblue inline-block pb-1 mb-2">Macro Landscape & Financials</h2>
+                <p class="text-gray-600">Overview of the political climate, core administrative goals, and available funding streams shaping IT procurement in NYS.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-cardbg rounded-lg shadow p-5 border-t-4 border-dellblue">
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Current Climate</h3>
+                    <p class="mt-2 text-sm text-gray-700">Gov. Hochul's administration is heavily focused on economic revitalization, AI leadership (Empire AI), and fortifying critical infrastructure against cyber threats following recent high-profile breaches.</p>
+                </div>
+                <div class="bg-cardbg rounded-lg shadow p-5 border-t-4 border-dellblue">
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Top 3 Admin Goals</h3>
+                    <ul class="mt-2 text-sm text-gray-700 list-disc pl-5 space-y-1">
+                        <li><strong>AI Innovation:</strong> Establishing NY as a premier hub for AI research.</li>
+                        <li><strong>Cyber Resilience:</strong> Centralizing SOC capabilities across all counties.</li>
+                        <li><strong>Digital Equity:</strong> Broadband expansion & citizen-facing digital services (NYS Wallet).</li>
+                    </ul>
+                </div>
+                <div class="bg-cardbg rounded-lg shadow p-5 border-t-4 border-green-500">
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Major Funding / Grants</h3>
+                    <ul class="mt-2 text-sm text-gray-700 space-y-2">
+                        <li><span class="font-bold text-green-700">&#x1F4B5; SLCGP:</span> $34M+ federal cyber grant flowing to state/local.</li>
+                        <li><span class="font-bold text-green-700">&#x1F4B5; Empire AI:</span> $275M state investment + $125M private for AI compute.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-cardbg rounded-lg shadow p-6">
+                <h3 class="text-lg font-bold text-gray-800 mb-4">Budget Breakdown (FY25 Enacted)</h3>
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <div class="w-full lg:w-1/2 chart-container">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                    <div class="w-full lg:w-1/2 mt-6 lg:mt-0 lg:pl-10">
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gray-50 rounded border border-gray-200">
+                                <p class="text-xs text-gray-500 uppercase">Total State Budget</p>
+                                <p class="text-2xl font-bold text-gray-800">$237 Billion</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded border border-gray-200">
+                                <p class="text-xs text-gray-500 uppercase">Est. Statewide IT Spend</p>
+                                <p class="text-2xl font-bold text-dellblue">~$3.0 - $3.5 Billion</p>
+                                <p class="text-xs text-gray-500 italic mt-1">*Data Estimate. Exact centralized vs federated O&M split is obscured across agencies.*</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded border border-gray-200">
+                                <p class="text-xs text-gray-500 uppercase">CapEx vs OpEx Note</p>
+                                <p class="text-sm text-gray-700">Heavy shift towards OpEx/Cloud consumption models, but massive capital influx specifically for Empire AI infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: Power Structure -->
+        <section id="stakeholders" class="tab-content">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-gray-800 border-b-2 border-dellblue inline-block pb-1 mb-2">Power Structure & Key Stakeholders</h2>
+                <p class="text-gray-600">Identify and navigate the decision-makers. Filter by influence to target your messaging appropriately.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 bg-cardbg rounded-lg shadow overflow-hidden">
+                    <div class="p-4 border-b border-gray-200 flex justify-between items-center bg-gray-50">
+                        <h3 class="font-bold text-gray-700">Stakeholder Matrix</h3>
+                        <select id="influenceFilter" onchange="filterStakeholders()" class="block w-48 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-dellblue focus:border-dellblue sm:text-sm rounded-md shadow-sm">
+                            <option value="All">All Spheres</option>
+                            <option value="Financial Purchaser">Financial Purchaser</option>
+                            <option value="Technical Influencer">Technical Influencer</option>
+                            <option value="Policy/Appropriations">Policy/Appropriations</option>
+                        </select>
+                    </div>
+                    <div class="table-wrapper overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200" id="stakeholderTable">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title / Org</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sphere of Influence</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Recent Stances / Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200" id="stakeholderBody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- New Influence Chart -->
+                <div class="lg:col-span-1 bg-cardbg rounded-lg shadow p-6 border-t-4 border-purple-500 flex flex-col">
+                    <h3 class="font-bold text-gray-800 mb-2">Influence Distribution</h3>
+                    <p class="text-xs text-gray-500 mb-4">Breakdown of tracked key contacts by primary decision-making sphere.</p>
+                    <div class="chart-container flex-grow" style="height: 250px;">
+                        <canvas id="influenceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: Governance & Procurement -->
+        <section id="governance" class="tab-content">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-gray-800 border-b-2 border-dellblue inline-block pb-1 mb-2">IT Governance & Vendor Landscape</h2>
+                <p class="text-gray-600">Understanding how NYS buys and who we are competing against.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Governance -->
+                <div class="bg-cardbg rounded-lg shadow p-6 border-l-4 border-dellblue">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">&#x2696; Operating Model: Hybrid/Federated</h3>
+                    <p class="text-sm text-gray-700 mb-4">NYS Office of Information Technology Services (ITS) acts as a centralized provider for infrastructure, networking, and security. However, large agencies (DOH, DMV, Labor) retain significant autonomy over application layers and specific hardware needs.</p>
+                    
+                    <h4 class="font-semibold text-gray-800 text-sm mt-4 mb-2 border-b pb-1">Operational Friction Points</h4>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li class="flex items-start"><span class="mr-2 text-red-500">&#x26A0;</span> <strong>Chargeback Model:</strong> Agencies often complain about opaque chargebacks from ITS, driving "shadow IT" purchases where agencies try to procure solutions via alternative budgets.</li>
+                        <li class="flex items-start"><span class="mr-2 text-red-500">&#x26A0;</span> <strong>Procurement Speed:</strong> Centralized ITS reviews delay agency modernization timelines, creating a desire for pre-vetted, "as-a-service" solutions that bypass CapEx delays.</li>
+                    </ul>
+                </div>
+
+                <!-- Procurement & Compliance -->
+                <div class="bg-cardbg rounded-lg shadow p-6 border-l-4 border-dellnavy">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">&#x1F6E1; Compliance & Vehicles</h3>
+                    
+                    <div class="mb-4">
+                        <span class="inline-block bg-blue-100 text-dellnavy text-xs px-2 py-1 rounded font-bold mr-2 mb-2">OGS Centralized Contracts</span>
+                        <span class="inline-block bg-blue-100 text-dellnavy text-xs px-2 py-1 rounded font-bold mr-2 mb-2">NASPO ValuePoint</span>
+                        <span class="inline-block bg-blue-100 text-dellnavy text-xs px-2 py-1 rounded font-bold mr-2 mb-2">MWBE Mandates (30%)</span>
+                    </div>
+
+                    <h4 class="font-semibold text-gray-800 text-sm mt-4 mb-2 border-b pb-1">Key Regulatory Drivers</h4>
+                    <ul class="text-sm text-gray-700 space-y-1 mb-4">
+                        <li><strong>CJIS & HIPAA:</strong> Strict data sovereignty requirements favor on-prem or sovereign cloud.</li>
+                        <li><strong>Executive Order 18:</strong> Mandates strict cyber hygiene, pushing endpoint security.</li>
+                    </ul>
+
+                    <h4 class="font-semibold text-gray-800 text-sm mt-4 mb-2 border-b pb-1 text-red-700">The Battlefield (Incumbents)</h4>
+                    <p class="text-sm text-gray-700">Massive legacy footprints from <strong>IBM</strong> (Mainframes/Services) and <strong>Cisco</strong> (Networking). <strong>AWS & Azure</strong> hold dominant public cloud contracts, but repatriation murmurs exist due to cost overruns at ITS.</p>
+                </div>
+                
+                <!-- New Procurement Lifecycle Card -->
+                <div class="bg-cardbg rounded-lg shadow p-6 border-l-4 border-green-500 flex flex-col">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">&#x23F1; Tech Refresh Targets</h3>
+                    <p class="text-sm text-gray-700 mb-4">Typical modernization triggers within NYS agencies:</p>
+                    <ul class="text-sm space-y-3 flex-grow">
+                        <li class="p-3 bg-gray-50 rounded border border-gray-100">
+                            <span class="block font-bold text-gray-800">Storage Arrays (SAN/NAS)</span>
+                            <span class="block text-gray-600 text-xs mt-1">5-7 Years (Targeting legacy EMC & NetApp footprints)</span>
+                        </li>
+                        <li class="p-3 bg-gray-50 rounded border border-gray-100">
+                            <span class="block font-bold text-gray-800">Compute / HCI</span>
+                            <span class="block text-gray-600 text-xs mt-1">3-5 Years (Targeting Cisco UCS & aging VMware clusters)</span>
+                        </li>
+                        <li class="p-3 bg-gray-50 rounded border border-gray-100">
+                            <span class="block font-bold text-gray-800">Client / Endpoints</span>
+                            <span class="block text-gray-600 text-xs mt-1">3-4 Years (Heavy focus on mobile workforce & secure edge)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: Top Initiatives -->
+        <section id="initiatives" class="tab-content">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-gray-800 border-b-2 border-dellblue inline-block pb-1 mb-2">Funded Strategic Initiatives (Top 3)</h2>
+                <p class="text-gray-600">Major capitalized projects driving technology acquisition this fiscal year.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 space-y-4" id="initiativesContainer">
+                    <!-- Populated by JS -->
+                </div>
+                
+                <!-- New Heatmap Chart -->
+                <div class="lg:col-span-1 bg-cardbg rounded-lg shadow p-6 border-t-4 border-blue-500 flex flex-col">
+                    <h3 class="font-bold text-gray-800 mb-2">IT Requirement Heatmap</h3>
+                    <p class="text-xs text-gray-500 mb-4">Relative demand across tech pillars based on current funded initiatives.</p>
+                    <div class="chart-container flex-grow" style="height: 300px;">
+                        <canvas id="pillarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: Dell Opportunities -->
+        <section id="opportunities" class="tab-content">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-gray-800 border-b-2 border-dellblue inline-block pb-1 mb-2">Actionable Dell Opportunities</h2>
+                <p class="text-gray-600">Synthesized whitespace and displacement strategies based on current NYS friction points and initiatives.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6" id="opportunitiesContainer">
+                    <!-- Populated by JS -->
+                </div>
+                
+                <!-- New Spend Chart -->
+                <div class="lg:col-span-1 bg-cardbg rounded-lg shadow p-6 border-t-4 border-green-500 flex flex-col">
+                    <h3 class="font-bold text-gray-800 mb-2">Est. Addressable Spend</h3>
+                    <p class="text-xs text-gray-500 mb-4">Projected CapEx/OpEx allocation available for Dell penetration in the next 18 months.</p>
+                    <div class="chart-container flex-grow" style="height: 300px;">
+                        <canvas id="spendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // --- Data Storage ---
+
+        const stakeholders = [
+            { name: "Kathy Hochul", title: "Governor, State of NY", influence: "Policy/Appropriations", notes: "Executive mandate driver. Focuses heavily on AI (Empire AI) and economy." },
+            { name: "Dru Rai", title: "CIO, NYS ITS", influence: "Financial Purchaser", notes: "Centralizing IT. Under pressure to reduce public cloud spend and improve agency service delivery." },
+            { name: "Colin Ahern", title: "Chief Cyber Officer", influence: "Technical Influencer", notes: "Driving J-SOC initiative. Hyper-focused on ransomware resilience and zero trust architecture." },
+            { name: "Sen. Kristen Gonzalez", title: "Chair, Internet & Tech", influence: "Policy/Appropriations", notes: "Legislative oversight. Focuses on data privacy, broadband equity, and AI governance." },
+            { name: "Dr. James McDonald", title: "Commissioner, Dept of Health", influence: "Financial Purchaser", notes: "Massive agency budget. Managing massive unstructured healthcare data; pushing edge compute at local health depts." }
+        ];
+
+        const initiatives = [
+            {
+                title: "Empire AI Consortium",
+                mandate: "Economic Development & Academic Leadership",
+                agency: "SUNY/CUNY System & Executive Chamber",
+                itReq: "Massive AI-Ready Compute (GPU Clusters), High-Performance Storage, Power/Cooling infrastructure.",
+                icon: "&#x1F9E0;"
+            },
+            {
+                title: "Statewide Joint Security Operations Center (J-SOC)",
+                mandate: "Cyber Resilience & Local Gov Support",
+                agency: "Division of Homeland Security (DHSES) / ITS",
+                itReq: "Air-gapped data vaults, automated threat detection, edge security for county-level integration.",
+                icon: "&#x1F6E1;"
+            },
+            {
+                title: "Citizen ONE (NYS Wallet)",
+                mandate: "Citizen Experience Modernization",
+                agency: "DMV & ITS",
+                itReq: "App modernization, containerization, secure mobile endpoints, API gateways.",
+                icon: "&#x1F4F1;"
+            }
+        ];
+
+        const opportunities = [
+            {
+                type: "Funded Alignment",
+                title: "Empire AI Infrastructure Build-out",
+                desc: "Map directly to <strong>Dell PowerEdge XE series (GPU optimized)</strong> and <strong>PowerScale</strong> for unstructured AI training data. SUNY/CUNY relationships are critical here.",
+                color: "border-green-500",
+                bg: "bg-green-50"
+            },
+            {
+                type: "Whitespace & Advisory",
+                title: "Unstructured Data Sprawl at DOH",
+                desc: "Dept of Health is drowning in genomic and telehealth data. Lead with Advisory Services to assess data footprint, followed by <strong>ECS/Object Storage</strong> pitches to reduce primary SAN costs.",
+                color: "border-blue-500",
+                bg: "bg-blue-50"
+            },
+            {
+                type: "Competitive Displacement",
+                title: "Public Cloud Repatriation via APEX",
+                desc: "ITS is facing budget overruns with AWS/Azure for predictable, baseline workloads. Position <strong>Dell APEX</strong> to offer cloud-like consumption on-prem, eliminating egress fees and simplifying ITS chargebacks to agencies.",
+                color: "border-red-500",
+                bg: "bg-red-50"
+            },
+            {
+                type: "Funded Alignment",
+                title: "Ransomware Vaults for J-SOC",
+                desc: "Capitalize on SLCGP federal grants. Position <strong>Dell PowerProtect Cyber Recovery</strong> as the state standard for immutable, air-gapped backups to protect local municipalities connecting to the J-SOC.",
+                color: "border-green-500",
+                bg: "bg-green-50"
+            }
+        ];
+
+        // --- Core Interaction & Rendering Logic ---
+
+        function switchTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('active', 'text-white', 'border-dellblue');
+                el.classList.add('text-gray-300');
+            });
+
+            // Show selected content
+            document.getElementById(tabId).classList.add('active');
+            // Update selected button styling
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('active', 'border-dellblue');
+            activeBtn.classList.remove('text-gray-300');
+            activeBtn.style.color = '#0076CE';
+
+            // Re-render charts when their tab is visible to ensure proper sizing
+            if(tabId === 'exec-summary' && window.myBudgetChart) window.myBudgetChart.resize();
+            if(tabId === 'stakeholders' && window.myInfluenceChart) window.myInfluenceChart.resize();
+            if(tabId === 'initiatives' && window.myPillarChart) window.myPillarChart.resize();
+            if(tabId === 'opportunities' && window.mySpendChart) window.mySpendChart.resize();
+        }
+
+        function renderStakeholders(data) {
+            const tbody = document.getElementById('stakeholderBody');
+            tbody.innerHTML = '';
+            data.forEach(person => {
+                let badgeClass = "bg-gray-100 text-gray-800";
+                if(person.influence.includes("Financial")) badgeClass = "bg-green-100 text-green-800";
+                if(person.influence.includes("Technical")) badgeClass = "bg-blue-100 text-blue-800";
+                if(person.influence.includes("Policy")) badgeClass = "bg-purple-100 text-purple-800";
+
+                const tr = `
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${person.name}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${person.title}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${badgeClass}">${person.influence}</span>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-500">${person.notes}</td>
+                    </tr>
+                `;
+                tbody.innerHTML += tr;
+            });
+        }
+
+        function filterStakeholders() {
+            const filterValue = document.getElementById('influenceFilter').value;
+            if (filterValue === "All") {
+                renderStakeholders(stakeholders);
+            } else {
+                const filtered = stakeholders.filter(p => p.influence === filterValue);
+                renderStakeholders(filtered);
+            }
+        }
+
+        function renderInitiatives() {
+            const container = document.getElementById('initiativesContainer');
+            initiatives.forEach((init, index) => {
+                const html = `
+                    <div class="bg-white rounded-lg shadow border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="p-5 flex items-start">
+                            <div class="flex-shrink-0 text-3xl mr-4">${init.icon}</div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-dellnavy mb-1">#${index + 1}: ${init.title}</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <p class="text-xs text-gray-500 uppercase font-bold">Executive Mandate</p>
+                                        <p class="text-sm text-gray-800 mt-1">${init.mandate}</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <p class="text-xs text-gray-500 uppercase font-bold">Primary Agency</p>
+                                        <p class="text-sm text-gray-800 mt-1">${init.agency}</p>
+                                    </div>
+                                    <div class="bg-dellnavy text-white p-3 rounded">
+                                        <p class="text-xs text-blue-200 uppercase font-bold">Underlying IT Requirement</p>
+                                        <p class="text-sm mt-1 font-medium">${init.itReq}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += html;
+            });
+        }
+
+        function renderOpportunities() {
+            const container = document.getElementById('opportunitiesContainer');
+            opportunities.forEach(opp => {
+                const html = `
+                    <div class="bg-white rounded-lg shadow p-6 border-t-4 ${opp.color} hover:shadow-lg transition-shadow relative overflow-hidden">
+                        <div class="absolute top-0 right-0 px-3 py-1 text-xs font-bold uppercase ${opp.bg} rounded-bl-lg text-gray-700">
+                            ${opp.type}
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mt-2 mb-3">${opp.title}</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">${opp.desc}</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <button class="text-sm text-dellblue font-bold hover:underline">Log in SFDC &#x2192;</button>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += html;
+            });
+        }
+
+        function initChart() {
+            const ctx = document.getElementById('budgetChart').getContext('2d');
+            
+            // Register plugin for text in center
+            const centerTextPlugin = {
+                id: 'centerText',
+                beforeDraw: function(chart) {
+                    if (chart.config.type !== 'doughnut') return;
+                    var width = chart.width,
+                        height = chart.height,
+                        ctx = chart.ctx;
+
+                    ctx.restore();
+                    var fontSize = (height / 160).toFixed(2);
+                    ctx.font = "bold " + fontSize + "em sans-serif";
+                    ctx.textBaseline = "middle";
+                    ctx.fillStyle = "#00447C";
+
+                    var text = "$237B",
+                        textX = Math.round((width - ctx.measureText(text).width) / 2),
+                        textY = height / 2;
+
+                    ctx.fillText(text, textX, textY);
+                    
+                    var subtitleFontSize = (height / 250).toFixed(2);
+                    ctx.font = subtitleFontSize + "em sans-serif";
+                    ctx.fillStyle = "#6B7280";
+                    var subtitle = "Total FY25";
+                    var subX = Math.round((width - ctx.measureText(subtitle).width) / 2);
+                    ctx.fillText(subtitle, subX, textY + 25);
+                    ctx.save();
+                }
+            };
+
+            window.myBudgetChart = new Chart(ctx, {
+                type: 'doughnut',
+                plugins: [centerTextPlugin],
+                data: {
+                    labels: ['General State Operations', 'Local Assistance Grants', 'Capital Projects (Inc. IT/Empire AI)', 'Debt Service'],
+                    datasets: [{
+                        data: [25, 160, 40, 12], // Approximate proportions
+                        backgroundColor: [
+                            '#0076CE', // Dell Blue
+                            '#9CA3AF', // Gray
+                            '#10B981', // Green for Capital
+                            '#D1D5DB'  // Light Gray
+                        ],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: { size: 11 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) { label += ': '; }
+                                    if (context.parsed !== null) {
+                                        label += '~$' + context.parsed + ' Billion';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initExtraCharts() {
+            // Influence Chart (Doughnut)
+            const ctxInf = document.getElementById('influenceChart').getContext('2d');
+            window.myInfluenceChart = new Chart(ctxInf, {
+                type: 'pie',
+                data: {
+                    labels: ['Financial Purchasers', 'Technical Influencers', 'Policy/Appropriations'],
+                    datasets: [{
+                        data: [2, 1, 2], // Derived from stakeholder array
+                        backgroundColor: ['#10B981', '#3B82F6', '#8B5CF6'],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } }
+                }
+            });
+
+            // Pillar Chart (Radar)
+            const ctxPil = document.getElementById('pillarChart').getContext('2d');
+            window.myPillarChart = new Chart(ctxPil, {
+                type: 'radar',
+                data: {
+                    labels: ['AI Compute', 'Data / Storage', 'Cybersecurity', 'Edge / Endpoints', 'Cloud / APEX'],
+                    datasets: [{
+                        label: 'Demand Intensity',
+                        data: [9, 8, 9, 6, 7],
+                        backgroundColor: 'rgba(0, 118, 206, 0.2)',
+                        borderColor: '#0076CE',
+                        pointBackgroundColor: '#0076CE',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#0076CE'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { display: true },
+                            suggestedMin: 0,
+                            suggestedMax: 10,
+                            ticks: { display: false }
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            // Spend Chart (Bar)
+            const ctxSpend = document.getElementById('spendChart').getContext('2d');
+            window.mySpendChart = new Chart(ctxSpend, {
+                type: 'bar',
+                data: {
+                    labels: ['Empire AI', 'Data Repat.', 'J-SOC Cyber', 'App Mod'],
+                    datasets: [{
+                        label: 'Est. Spend ($M)',
+                        data: [275, 45, 34, 60],
+                        backgroundColor: ['#0076CE', '#00447C', '#10B981', '#6B7280'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { 
+                        y: { 
+                            beginAtZero: true,
+                            grid: { color: '#E5E7EB' }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', () => {
+            renderStakeholders(stakeholders);
+            renderInitiatives();
+            renderOpportunities();
+            initChart();
+            initExtraCharts();
+            
+            // Set initial button colors
+            document.querySelectorAll('.tab-btn:not(.active)').forEach(btn => {
+                btn.classList.add('text-gray-300');
+            });
+            document.getElementById('btn-exec-summary').style.color = '#0076CE';
+        });
+
+    </script>
+</body>
+</html>

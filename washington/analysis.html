@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Technologies | WA State Sales Playbook V5</title>
+    
+    <!-- Chosen Palette: Modern Enterprise (Slate 50, Dell Blue 600, Amber for Alerts, Emerald for Growth) -->
+    <!-- Application Structure Plan: A dashboard-centric SPA optimized for field sales. Sequences from macro political climate down to localized, actionable sales plays. The architecture fills the user's viewport with data-rich visualizations (timelines, dual charts, visual gauges) to minimize dead space and maximize the density of actionable intelligence per screen. -->
+    <!-- Visualization & Content Choices: 
+         1. Macro -> Goal: Inform -> Method: 2x2 Grid + HTML Timeline -> Interaction: Hover states -> Justification: Balances stats with chronological context without using SVG.
+         2. Battlefield -> Goal: Relationships/Compare -> Method: Matrix Table + Chart.js Doughnut -> Interaction: Tooltips/Hover -> Justification: Pairs qualitative threat levels with quantitative market share estimates.
+         3. Agency Wallets -> Goal: Compare -> Method: Dual Chart.js (Bar + Doughnut) -> Interaction: Currency tooltips -> Justification: Shows both "Who" has the money and "What" they spend it on.
+         4. Regional Map -> Goal: Organize -> Method: HTML5 Canvas + Stat Cards -> Interaction: Clickable regions -> Justification: Maps physical geography and quantifies the physical footprint.
+         5. Action Plan -> Goal: Action -> Method: 2x2 Grid with HTML Progress Bars -> Interaction: One-click CRM export -> Justification: Fills the screen symmetrically while adding visual BANT/Probability metrics.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .chart-container-large { height: 350px; max-height: 400px; }
+        .chart-container-medium { height: 280px; max-height: 300px; }
+        
+        .nav-btn { transition: all 0.2s ease-in-out; border-bottom: 3px solid transparent; }
+        .nav-btn.active { border-bottom-color: #2563eb; color: #1e3a8a; font-weight: 700; background: #eff6ff; }
+        .section-view { display: none; animation: slideIn 0.3s ease-out forwards; opacity: 0; }
+        .section-view.active { display: block; }
+        
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .u-icon { font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif; }
+        
+        .competitor-high { background-color: #fee2e2; color: #991b1b; }
+        .competitor-med { background-color: #fef3c7; color: #92400e; }
+        .competitor-low { background-color: #d1fae5; color: #065f46; }
+
+        #map-canvas { 
+            cursor: crosshair; 
+            background: #f8fafc;
+            border-radius: 12px;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .copy-toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #1e293b;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: none;
+            z-index: 100;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Timeline specific CSS */
+        .timeline-node { width: 16px; height: 16px; border-radius: 50%; background-color: #2563eb; border: 4px solid #bfdbfe; z-index: 10; position: relative; }
+        .timeline-line { position: absolute; top: 8px; left: 0; width: 100%; height: 2px; background-color: #e2e8f0; z-index: 0; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden">
+
+    <div id="copy-toast" class="copy-toast font-bold flex items-center"><span class="u-icon mr-2">&#x2705;</span> Play copied to clipboard!</div>
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-black text-blue-700 tracking-tight">DELL <span class="text-slate-400 font-light ml-1">WA PLAYBOOK</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Market Intel V4.0</span>
+                    <div class="h-4 w-px bg-slate-200"></div>
+                    <!-- Source Report Link -->
+                    <a href="https://dmonkey1001.github.io/slg-strategies/washington/analysis.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-slate-600 hover:text-blue-700 flex items-center transition-colors bg-slate-100 hover:bg-blue-50 border border-slate-200 hover:border-blue-200 px-3 py-1.5 rounded shadow-sm">
+                        <span class="u-icon mr-1.5 text-sm">&#x1F4D1;</span> View Source PDF
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none md:hidden z-10"></div>
+                <nav class="flex space-x-2 overflow-x-auto no-scrollbar relative pb-0" id="nav-container">
+                    <button class="nav-btn active px-4 py-3 text-sm text-slate-600 hover:bg-slate-50 whitespace-nowrap" data-target="v-macro">Executive Summary</button>
+                    <button class="nav-btn px-4 py-3 text-sm text-slate-600 hover:bg-slate-50 whitespace-nowrap" data-target="v-battlefield">The Battlefield</button>
+                    <button class="nav-btn px-4 py-3 text-sm text-slate-600 hover:bg-slate-50 whitespace-nowrap" data-target="v-finance">Agency Wallets</button>
+                    <button class="nav-btn px-4 py-3 text-sm text-slate-600 hover:bg-slate-50 whitespace-nowrap" data-target="v-map">Regional Intel</button>
+                    <button class="nav-btn px-4 py-3 text-sm text-slate-600 hover:bg-slate-50 font-bold text-blue-600 whitespace-nowrap" data-target="v-action">Dell Execution</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- VIEW 1: MACRO -->
+        <section id="v-macro" class="section-view active">
+            <div class="mb-6 flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                <div>
+                    <h1 class="text-3xl font-bold text-slate-900 mb-2">Executive Summary & Macro Trends</h1>
+                    <p class="text-slate-600 text-lg max-w-4xl">This section distills the overarching political and economic environment of Washington State. Review the core drivers, upcoming modernization milestones, and strategist insights to align your narrative with the Governor's priorities before engaging C-level public sector stakeholders.</p>
+                </div>
+                <a href="https://dmonkey1001.github.io/slg-strategies/washington/analysis.pdf" target="_blank" rel="noopener noreferrer" class="md:hidden inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-colors border border-blue-200">
+                    <span class="u-icon mr-2">&#x1F4D1;</span> Read Full Analysis PDF
+                </a>
+            </div>
+
+            <!-- 2x2 Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm transition hover:shadow-md">
+                    <div class="text-xs font-bold text-blue-600 mb-2 uppercase tracking-tighter">Political Driver</div>
+                    <div class="text-lg font-bold text-slate-900">Trifecta Alignment</div>
+                    <p class="text-sm text-slate-500 mt-2">Environment & Equity mandates are strictly driving all state agency cloud and hardware choices.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm transition hover:shadow-md">
+                    <div class="text-xs font-bold text-emerald-600 mb-2 uppercase tracking-tighter">Tech Mandate</div>
+                    <div class="text-lg font-bold text-slate-900">Cloud Smart 2.0</div>
+                    <p class="text-sm text-slate-500 mt-2">WaTech is actively shifting from 'Cloud First' to a nuanced 'Hybrid/Data-Sovereign' approach.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm transition hover:shadow-md">
+                    <div class="text-xs font-bold text-amber-600 mb-2 uppercase tracking-tighter">Budget Risk</div>
+                    <div class="text-lg font-bold text-slate-900">One WA Legacy</div>
+                    <p class="text-sm text-slate-500 mt-2">Severe ERP cost overruns are creating immense pressure for infrastructure ROI savings elsewhere.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm transition hover:shadow-md">
+                    <div class="text-xs font-bold text-purple-600 mb-2 uppercase tracking-tighter">Big Opportunity</div>
+                    <div class="text-lg font-bold text-slate-900">Cyber Resilience</div>
+                    <p class="text-sm text-slate-500 mt-2">$18.5M federal SLCGP grant is currently fueling a 'Whole-of-State' defense architecture.</p>
+                </div>
+            </div>
+
+            <!-- HTML Timeline Visualization -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mb-6">
+                <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-6">IT Modernization Milestones (FY24-FY25)</h3>
+                <div class="relative w-full pb-4">
+                    <div class="timeline-line"></div>
+                    <div class="flex justify-between relative">
+                        <!-- Node 1 -->
+                        <div class="flex flex-col items-center group w-1/4">
+                            <div class="timeline-node group-hover:bg-blue-800 transition-colors"></div>
+                            <div class="mt-3 text-center px-2">
+                                <div class="text-xs font-bold text-slate-800">Q2 FY24</div>
+                                <div class="text-xs text-slate-500 mt-1">SLCGP Cyber Grant Allocations Finalized</div>
+                            </div>
+                        </div>
+                        <!-- Node 2 -->
+                        <div class="flex flex-col items-center group w-1/4">
+                            <div class="timeline-node border-emerald-200 bg-emerald-500 group-hover:bg-emerald-700 transition-colors"></div>
+                            <div class="mt-3 text-center px-2">
+                                <div class="text-xs font-bold text-slate-800">Q4 FY24</div>
+                                <div class="text-xs text-slate-500 mt-1">WaTech Zero-Trust Mandate Deadline</div>
+                            </div>
+                        </div>
+                        <!-- Node 3 -->
+                        <div class="flex flex-col items-center group w-1/4">
+                            <div class="timeline-node border-amber-200 bg-amber-500 group-hover:bg-amber-700 transition-colors"></div>
+                            <div class="mt-3 text-center px-2">
+                                <div class="text-xs font-bold text-slate-800">Q1 FY25</div>
+                                <div class="text-xs text-slate-500 mt-1">One WA ERP Phase 2 Data Migration</div>
+                            </div>
+                        </div>
+                        <!-- Node 4 -->
+                        <div class="flex flex-col items-center group w-1/4">
+                            <div class="timeline-node border-purple-200 bg-purple-500 group-hover:bg-purple-700 transition-colors"></div>
+                            <div class="mt-3 text-center px-2">
+                                <div class="text-xs font-bold text-slate-800">Q3 FY25</div>
+                                <div class="text-xs text-slate-500 mt-1">Resident Portal AI Beta Launch</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-900 text-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-bold mb-2 italic flex items-center"><span class="u-icon mr-2 text-2xl">&#x1F4A1;</span> Strategist Insight: The "Shadow IT" Pivot</h2>
+                    <p class="text-blue-100 leading-relaxed text-lg">Large decentralized agencies (DSHS, WSDOT) are actively seeking alternatives to WaTech's centralized, opaque cloud billing. They want local operational control combined with OpEx consumption models. <strong>This structural friction is the Dell APEX sweet spot.</strong></p>
+                </div>
+                <div class="mt-6 md:mt-0 text-center bg-blue-800 p-6 rounded-xl border border-blue-700 shadow-inner w-full md:w-auto">
+                    <div class="text-4xl font-black text-blue-300 tracking-tighter">$1.6B</div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-blue-200 mt-1">Annual WA IT Spend</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 2: BATTLEFIELD -->
+        <section id="v-battlefield" class="section-view">
+            <div class="mb-6">
+                <h1 class="text-3xl font-bold text-slate-900 mb-2">Competitor Matrix & Power Brokers</h1>
+                <p class="text-slate-600 text-lg max-w-4xl">This matrix maps incumbent competitor presence across technology pillars alongside overall estimated market share. Use this view to quickly locate vendor vulnerabilities (Red/Amber) and tailor displacement pitches to the appropriate power broker.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                <!-- Table (Takes up 2/3) -->
+                <div class="lg:col-span-2 bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col">
+                    <div class="p-4 bg-slate-50 border-b border-slate-200">
+                        <h3 class="font-bold text-slate-800">Infrastructure Threat Matrix</h3>
+                    </div>
+                    <div class="overflow-x-auto flex-grow">
+                        <table class="w-full text-left text-sm whitespace-nowrap md:whitespace-normal">
+                            <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                                <tr>
+                                    <th class="p-4 uppercase tracking-wider text-xs">Tech Pillar</th>
+                                    <th class="p-4 uppercase tracking-wider text-xs">Incumbent Threat</th>
+                                    <th class="p-4 uppercase tracking-wider text-xs text-blue-700">Dell Displacement Angle</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="p-4 font-bold text-slate-800">Compute/HCI</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded competitor-med font-bold text-xs uppercase tracking-wide">HPE / Nutanix</span></td>
+                                    <td class="p-4 text-blue-600 font-semibold italic">VxRail Consolidation</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="p-4 font-bold text-slate-800">Storage / SAN</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded competitor-high font-bold text-xs uppercase tracking-wide">NetApp / Pure</span></td>
+                                    <td class="p-4 text-blue-600 font-semibold italic">PowerStore / PowerScale AI</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="p-4 font-bold text-slate-800">Networking</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded competitor-high font-bold text-xs uppercase tracking-wide">Cisco Systems</span></td>
+                                    <td class="p-4 text-blue-600 font-semibold italic">Open Networking ROI</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="p-4 font-bold text-slate-800">Public Cloud</td>
+                                    <td class="p-4"><span class="px-3 py-1 rounded competitor-med font-bold text-xs uppercase tracking-wide">Azure / AWS</span></td>
+                                    <td class="p-4 text-blue-600 font-semibold italic">APEX Hybrid Repatriation</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Doughnut Chart (Takes up 1/3) -->
+                <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex flex-col items-center justify-center">
+                    <h3 class="font-bold text-slate-800 mb-2 w-full text-center">Est. Market Footprint</h3>
+                    <div class="chart-container chart-container-medium w-full">
+                        <canvas id="marketShareChart"></canvas>
+                    </div>
+                    <p class="text-[10px] text-slate-400 text-center mt-2 italic">Based on active state master contracts</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-white to-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-8xl opacity-5 u-icon">&#x1F4B0;</div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-lg flex items-center"><span class="u-icon mr-2 text-xl">&#x1F464;</span> The Purchaser: Gov. Office</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Highly focused on "Climate IT". To win financial approval at the executive level, lead with energy-efficient infrastructure metrics and the lifecycle sustainability of recycling programs.</p>
+                </div>
+                <div class="bg-gradient-to-br from-white to-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-8xl opacity-5 u-icon">&#x1F6E1;&#xFE0F;</div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-lg flex items-center"><span class="u-icon mr-2 text-xl">&#x1F6E1;&#xFE0F;</span> The Influencer: State CISO</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">A strict Zero-Trust architecture advocate. Technical validation requires proving immutable backup solutions and air-gapped recovery to comply with recent ransomware audits.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 3: FINANCE -->
+        <section id="v-finance" class="section-view">
+            <div class="mb-6">
+                <h1 class="text-3xl font-bold text-slate-900 mb-2">Agency Wallet Distribution</h1>
+                <p class="text-slate-600 text-lg max-w-4xl">This section breaks down where the state's IT budget resides and how it is allocated. Note that massive modernization opportunities exist outside of the central IT authority (WaTech) within large federated agencies.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                <!-- Bar Chart (2/3 width) -->
+                <div class="lg:col-span-2 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-slate-800 mb-4">Top Agency IT Budgets (Est. FY24)</h3>
+                    <div class="chart-container chart-container-large">
+                        <canvas id="agencyBudgetChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Spend Category Chart (1/3 width) -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col">
+                    <h3 class="font-bold text-slate-800 mb-4 text-center">Spend by Category</h3>
+                    <div class="chart-container chart-container-medium flex-grow">
+                        <canvas id="spendCategoryChart"></canvas>
+                    </div>
+                    <div class="mt-4 bg-slate-50 p-3 rounded border border-slate-100 text-xs text-slate-600">
+                        <strong>Insight:</strong> Heavy service spend indicates a reliance on external SI/Consulting. Position Dell Advisory Services to capture this wallet share.
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-xl">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="text-emerald-900 font-black text-lg">DSHS Focus</div>
+                        <span class="u-icon text-2xl text-emerald-600">&#x1F3E5;</span>
+                    </div>
+                    <div class="text-sm text-emerald-800 font-medium">Largest independent wallet. Desperately needs mainframe modernization for massive citizen systems.</div>
+                </div>
+                <div class="bg-blue-50 border border-blue-200 p-5 rounded-xl">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="text-blue-900 font-black text-lg">WSDOT Focus</div>
+                        <span class="u-icon text-2xl text-blue-600">&#x1F6E3;&#xFE0F;</span>
+                    </div>
+                    <div class="text-sm text-blue-800 font-medium">Primary Edge computing opportunity. Processing massive influxes of unstructured sensor/IoT data.</div>
+                </div>
+                <div class="bg-amber-50 border border-amber-200 p-5 rounded-xl">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="text-amber-900 font-black text-lg">WaTech Focus</div>
+                        <span class="u-icon text-2xl text-amber-600">&#x1F3DB;&#xFE0F;</span>
+                    </div>
+                    <div class="text-sm text-amber-800 font-medium">Enterprise backbone. Controls master networking and data lake contracts. Highly price-sensitive.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 4: MAP -->
+        <section id="v-map" class="section-view">
+            <div class="mb-6">
+                <h1 class="text-3xl font-bold text-slate-900 mb-2">Geographic IT Topology</h1>
+                <p class="text-slate-600 text-lg max-w-4xl">Washington's unique geography physically dictates connectivity, latency, and disaster recovery strategies. Interact with the map markers to reveal localized infrastructure intelligence.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-4">
+                <div class="lg:col-span-2 bg-white rounded-xl border border-slate-200 shadow-sm h-[400px] lg:h-[500px] relative overflow-hidden">
+                    <canvas id="map-canvas"></canvas>
+                    <div class="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded shadow text-xs font-bold text-slate-500 uppercase tracking-widest border border-slate-200 pointer-events-none">Interactive Model</div>
+                </div>
+                <div class="space-y-4">
+                    <div id="map-detail-card" class="bg-slate-800 text-white p-6 rounded-xl shadow-xl h-full transition-colors duration-300 flex flex-col border border-slate-700">
+                        <div class="u-icon text-4xl mb-4 opacity-50" id="map-icon">&#x1F5FA;&#xFE0F;</div>
+                        <h3 id="map-title" class="text-2xl font-bold mb-4 text-blue-300">Click a Region</h3>
+                        <div id="map-content" class="text-slate-300 text-sm leading-relaxed flex-grow">
+                            Select a blue marker on the geographic model to analyze the regional data center ecosystem and view the corresponding sales strategy.
+                        </div>
+                        <div id="map-play" class="mt-6 bg-slate-900/50 p-4 rounded-lg border border-slate-600 hidden">
+                            <div class="text-[10px] font-black uppercase text-emerald-400 mb-1 tracking-wider">Target Play</div>
+                            <div id="map-play-text" class="text-sm text-white font-medium leading-relaxed"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infrastructure Stat Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center shadow-sm">
+                    <div class="text-3xl mr-3 u-icon">&#x1F3E2;</div>
+                    <div>
+                        <div class="text-2xl font-black text-slate-800">3</div>
+                        <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">Primary State DCs</div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center shadow-sm">
+                    <div class="text-3xl mr-3 u-icon">&#x1F4E1;</div>
+                    <div>
+                        <div class="text-2xl font-black text-slate-800">14+</div>
+                        <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">Major Edge Nodes</div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center shadow-sm">
+                    <div class="text-3xl mr-3 u-icon">&#x1F512;</div>
+                    <div>
+                        <div class="text-2xl font-black text-slate-800">100%</div>
+                        <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">CJIS Compliant Required</div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center shadow-sm">
+                    <div class="text-3xl mr-3 u-icon">&#x26A1;</div>
+                    <div>
+                        <div class="text-2xl font-black text-slate-800">99.9%</div>
+                        <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">Uptime SLA Mandate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 5: ACTION -->
+        <section id="v-action" class="section-view">
+            <div class="mb-6 flex flex-col md:flex-row md:items-end justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold text-slate-900 mb-2">Execution: Dell CRM Plays</h1>
+                    <p class="text-slate-600 text-lg max-w-3xl">Highly qualified, structured sales motions based on intelligence. Pre-formatted for immediate CRM entry.</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-right">
+                    <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">Total Addressable Pipeline</div>
+                    <div class="text-2xl font-black text-blue-700">$10M - $15M+</div>
+                </div>
+            </div>
+
+            <!-- 2x2 Grid for Plays -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                
+                <!-- Play 1 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition-shadow flex flex-col">
+                    <div class="flex justify-between items-start mb-4 border-b border-slate-100 pb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-black px-3 py-1.5 rounded uppercase tracking-wider">Play #1: Hybrid APEX</span>
+                        <button onclick="copyPlay('play-1')" class="text-xs bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white px-3 py-1.5 rounded font-bold transition-colors flex items-center">
+                            <span class="u-icon mr-1.5">&#x1F4CB;</span> Copy Play
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight">Agency Cloud Repatriation</h3>
+                    <div class="text-sm text-slate-600 mb-4 flex-grow" id="play-1-text">Target: DSHS & WSDOT IT Leadership. Value Prop: Circumvent opaque central cloud chargebacks by deploying APEX Compute-as-a-Service locally. Reduces uncontrollable Azure/AWS OpEx sprawl by up to 30% while ensuring strict HIPAA compliance.</div>
+                    
+                    <!-- Meta & Probability -->
+                    <div class="mb-4">
+                        <div class="flex justify-between text-xs font-bold mb-1"><span class="text-slate-500">Win Probability</span><span class="text-emerald-600">65%</span></div>
+                        <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-emerald-500 h-2 rounded-full" style="width: 65%"></div></div>
+                    </div>
+                    
+                    <div class="flex gap-2 mb-3">
+                        <span class="bg-slate-50 text-slate-600 text-[10px] font-black px-2 py-1 rounded border border-slate-200 uppercase tracking-widest">Est: $2M-$4M</span>
+                        <span class="bg-slate-50 text-slate-600 text-[10px] font-black px-2 py-1 rounded border border-slate-200 uppercase tracking-widest">Target: Q3/Q4</span>
+                    </div>
+                    <div class="bg-blue-50/50 p-3 rounded-xl border border-blue-100">
+                        <div class="text-[10px] font-black text-blue-400 mb-1 uppercase tracking-widest">BoM Focus</div>
+                        <div class="text-xs font-bold text-blue-900">Dell APEX Custom, VxRail Nodes</div>
+                    </div>
+                </div>
+
+                <!-- Play 2 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition-shadow flex flex-col">
+                    <div class="flex justify-between items-start mb-4 border-b border-slate-100 pb-4">
+                        <span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1.5 rounded uppercase tracking-wider">Play #2: Cyber Defense</span>
+                        <button onclick="copyPlay('play-2')" class="text-xs bg-slate-100 text-slate-600 hover:bg-emerald-600 hover:text-white px-3 py-1.5 rounded font-bold transition-colors flex items-center">
+                            <span class="u-icon mr-1.5">&#x1F4CB;</span> Copy Play
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight">The Immutable Vault Mandate</h3>
+                    <div class="text-sm text-slate-600 mb-4 flex-grow" id="play-2-text">Target: Agency CISOs & WaTech Security. Value Prop: Capitalize on recent SLCGP federal grant allocations to establish air-gapped PowerProtect Cyber Recovery Vaults. Position Dell as the premier architect for Sheltered Harbor compliance.</div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between text-xs font-bold mb-1"><span class="text-slate-500">Win Probability</span><span class="text-blue-600">80%</span></div>
+                        <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div></div>
+                    </div>
+
+                    <div class="flex gap-2 mb-3">
+                        <span class="bg-slate-50 text-slate-600 text-[10px] font-black px-2 py-1 rounded border border-slate-200 uppercase tracking-widest">Est: $1.5M+</span>
+                        <span class="bg-slate-50 text-slate-600 text-[10px] font-black px-2 py-1 rounded border border-slate-200 uppercase tracking-widest">Target: Immediate</span>
+                    </div>
+                    <div class="bg-emerald-50/50 p-3 rounded-xl border border-emerald-100">
+                        <div class="text-[10px] font-black text-emerald-500 mb-1 uppercase tracking-widest">BoM Focus</div>
+                        <div class="text-xs font-bold text-emerald-900">PowerProtect DD, Cyber Recovery Software</div>
+                    </div>
+                </div>
+
+                <!-- Play 3 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition-shadow flex flex-col">
+                    <div class="flex justify-between items-start mb-4 border-b border-slate-100 pb-4">
+                        <span class="bg-amber-100 text-amber-800 text-xs font-black px-3 py-1.5 rounded uppercase tracking-wider">Play #3: AI Readiness</span>
+                        <button onclick="copyPlay('play-3')" class="text-xs bg-slate-100 text-slate-600 hover:bg-amber-600 hover:text-white px-3 py-1.5 rounded font-bold transition-colors flex items-center">
+                            <span class="u-icon mr-1.5">&#x1F4CB;</span> Copy Play
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight">Unstructured Data AI Prep</h3>
+                    <div class="text-sm text-slate-600 mb-4 flex-grow" id="play-3-text">Target: WaTech Data Architects. Value Prop: Displace aging NetApp filers with a unified PowerScale data lake. This architecture is a mandatory prerequisite for the Governor's 'Resident Portal', enabling secure, cross-agency AI querying.</div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between text-xs font-bold mb-1"><span class="text-slate-500">Win Probability</span><span class="text-amber-600">45%</span></div>
+                        <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-amber-400 h-2 rounded-full" style="width: 45%"></div></div>
+                    </div>
+
+                    <div class="flex gap-2 mb-3">
+                        <span class="bg-slate-50 text-slate-600 text-[10px] font-black px-2 py-1 rounded border border-slate-200 uppercase tracking-widest">Est: $3M-$6M</span>
+                        <span class="bg-slate-50 text-slate-600 text-[10px] font-black px-2 py-1 rounded border border-slate-200 uppercase tracking-widest">Target: Q1 FY25</span>
+                    </div>
+                    <div class="bg-amber-50/50 p-3 rounded-xl border border-amber-100">
+                        <div class="text-[10px] font-black text-amber-500 mb-1 uppercase tracking-widest">BoM Focus</div>
+                        <div class="text-xs font-bold text-amber-900">PowerScale (All-Flash), ECS Object Storage</div>
+                    </div>
+                </div>
+
+                 <!-- Play 4 (New) -->
+                 <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition-shadow flex flex-col">
+                    <div class="flex justify-between items-start mb-4 border-b border-slate-100 pb-4">
+                        <span class="bg-purple-100 text-purple-800 text-xs font-black px-3 py-1.5 rounded uppercase tracking-wider">Play #4: Edge IoT</span>
+                        <button onclick="copyPlay('play-4')" class="text-xs bg-slate-100 text-slate-600 hover:bg-purple-600 hover:text-white px-3 py-1.5 rounded font-bold transition-colors flex items-center">
+                            <span class="u-icon mr-1.5">&#x1F4CB;</span> Copy Play
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight">WSDOT Edge Processing</h3>
+                    <div class="text-sm text-slate-600 mb-4 flex-grow" id="play-4-text">Target: WSDOT Infrastructure Leads. Value Prop: Traffic sensor networks are overwhelming central bandwidth. Deploy ruggedized Dell Edge servers at remote substations to process IoT telemetry locally, only sending necessary anomalies back to WaTech.</div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between text-xs font-bold mb-1"><span class="text-slate-500">Win Probability</span><span class="text-purple-600">55%</span></div>
+                        <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full" style="width: 55%"></div></div>
+                    </div>
+
+                    <div class="flex gap-2 mb-3">
+                        <span class="bg-slate-50 text-slate-600 text-[10px] font-black px-2 py-1 rounded border border-slate-200 uppercase tracking-widest">Est: $800k-$1.2M</span>
+                        <span class="bg-slate-50 text-slate-600 text-[10px] font-black px-2 py-1 rounded border border-slate-200 uppercase tracking-widest">Target: Q2 FY25</span>
+                    </div>
+                    <div class="bg-purple-50/50 p-3 rounded-xl border border-purple-100">
+                        <div class="text-[10px] font-black text-purple-500 mb-1 uppercase tracking-widest">BoM Focus</div>
+                        <div class="text-xs font-bold text-purple-900">PowerEdge XR Rugged, NativeEdge Software</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Tab Navigation
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.section-view').forEach(s => s.classList.remove('active'));
+                
+                btn.classList.add('active');
+                const target = btn.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+
+                // Render specific charts based on tab with slight delay for animation
+                if(target === 'v-battlefield') setTimeout(renderBattlefieldCharts, 300);
+                if(target === 'v-finance') setTimeout(renderFinanceCharts, 300);
+                if(target === 'v-map') setTimeout(renderMap, 50);
+            });
+        });
+
+        // Global Chart Instances
+        let marketChartInst = null;
+        let budgetChartInst = null;
+        let categoryChartInst = null;
+
+        // Chart Configurations
+        const chartDefaults = {
+            plugins: {
+                legend: { position: 'bottom', labels: { font: { family: "'Inter', sans-serif", size: 11 } } },
+                tooltip: { backgroundColor: '#1e293b', titleFont: { size: 13 }, bodyFont: { size: 13, weight: 'bold' }, padding: 10 }
+            }
+        };
+
+        function renderBattlefieldCharts() {
+            if(marketChartInst) marketChartInst.destroy();
+            const ctx = document.getElementById('marketShareChart').getContext('2d');
+            marketChartInst = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['AWS (Cloud)', 'Azure (Cloud/O365)', 'On-Prem Legacy', 'Dell/EMC (Target)'],
+                    datasets: [{
+                        data: [35, 30, 25, 10],
+                        backgroundColor: ['#f59e0b', '#3b82f6', '#94a3b8', '#10b981'],
+                        borderWidth: 2, borderColor: '#ffffff'
+                    }]
+                },
+                options: { ...chartDefaults, responsive: true, maintainAspectRatio: false, cutout: '65%' }
+            });
+        }
+
+        function renderFinanceCharts() {
+            // Bar Chart
+            if(budgetChartInst) budgetChartInst.destroy();
+            const ctx1 = document.getElementById('agencyBudgetChart').getContext('2d');
+            budgetChartInst = new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['Social Services (DSHS)', 'Transportation (WSDOT)', 'Health Care (HCA)', 'IT Central (WaTech)', 'Admin (OFM)', 'Public Safety (WSP)'],
+                    datasets: [{
+                        label: 'Annual IT Budget',
+                        data: [450, 220, 185, 140, 95, 75],
+                        backgroundColor: '#2563eb', borderRadius: 4, hoverBackgroundColor: '#1e3a8a'
+                    }]
+                },
+                options: {
+                    indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: { ...chartDefaults.plugins.tooltip, callbacks: { label: (c) => '$' + c.parsed.x + ' Million' } }
+                    },
+                    scales: {
+                        x: { grid: { display: false }, ticks: { color: '#64748b', callback: (v) => '$' + v + 'M' } },
+                        y: { grid: { display: false }, ticks: { color: '#0f172a', font: { weight: '600', size: 11 } } }
+                    }
+                }
+            });
+
+            // Doughnut Chart
+            if(categoryChartInst) categoryChartInst.destroy();
+            const ctx2 = document.getElementById('spendCategoryChart').getContext('2d');
+            categoryChartInst = new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Services / Consulting', 'Software / Licensing', 'Hardware / Infra'],
+                    datasets: [{
+                        data: [45, 35, 20],
+                        backgroundColor: ['#6366f1', '#ec4899', '#14b8a6'],
+                        borderWidth: 2, borderColor: '#ffffff'
+                    }]
+                },
+                options: { 
+                    ...chartDefaults, responsive: true, maintainAspectRatio: false, cutout: '50%',
+                    plugins: {
+                        ...chartDefaults.plugins,
+                        tooltip: { callbacks: { label: (c) => c.parsed + '%' } }
+                    }
+                }
+            });
+        }
+
+        // Map Logic
+        const mapData = [
+            { id: 1, name: "Olympia", base_x: 120, base_y: 350, icon: "&#x1F3DB;&#xFE0F;", title: "State Capitol & HQ", content: "Core Data Center operations. Focus on efficiency and existing infrastructure ROI.", play: "Enterprise License Agreements (ELA) and PowerStore Core Modernization." },
+            { id: 2, name: "Seattle", base_x: 160, base_y: 160, icon: "&#x1F3D9;&#xFE0F;", title: "Innovation Hub", content: "Location for advanced research (UW) and dense public health data. Very high 'Cloud Smart' adoption.", play: "APEX Hybrid Cloud repatriation pilots focusing on predictable OpEx costs." },
+            { id: 3, name: "Spokane", base_x: 420, base_y: 200, icon: "&#x1F4E1;", title: "Eastern DR & Edge", content: "Crucial geographic hub for Disaster Recovery (DR) and remote Agricultural tech.", play: "Establish PowerProtect Cyber Recovery Vaults specifically for geographic redundancy." }
+        ];
+
+        let mapResizeListener = null;
+
+        function renderMap() {
+            const canvas = document.getElementById('map-canvas');
+            const ctx = canvas.getContext('2d');
+            const container = canvas.parentElement;
+
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientHeight;
+
+            const baseWidth = 500;
+            const baseHeight = 500;
+            const scale = Math.min(canvas.width / baseWidth, canvas.height / baseHeight) * 0.9;
+            const offsetX = (canvas.width - baseWidth * scale) / 2;
+            const offsetY = (canvas.height - baseHeight * scale) / 2;
+
+            function drawWA() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.save();
+                ctx.translate(offsetX, offsetY);
+                ctx.scale(scale, scale);
+
+                ctx.beginPath();
+                ctx.moveTo(50, 50); ctx.lineTo(480, 50); ctx.lineTo(480, 400); 
+                ctx.lineTo(250, 400); ctx.lineTo(250, 450); ctx.lineTo(50, 450); 
+                ctx.lineTo(30, 200); ctx.closePath();
+                
+                ctx.fillStyle = '#f1f5f9'; ctx.fill();
+                ctx.strokeStyle = '#cbd5e1'; ctx.lineWidth = 3 / scale; ctx.stroke();
+                ctx.restore();
+
+                mapData.forEach(p => {
+                    const actualX = offsetX + p.base_x * scale;
+                    const actualY = offsetY + p.base_y * scale;
+
+                    ctx.beginPath(); ctx.arc(actualX, actualY, 12, 0, Math.PI * 2);
+                    ctx.fillStyle = '#2563eb'; ctx.fill();
+                    ctx.strokeStyle = 'white'; ctx.lineWidth = 4; ctx.stroke();
+                    
+                    ctx.font = 'bold 14px sans-serif'; ctx.fillStyle = '#1e293b';
+                    ctx.fillText(p.name, actualX + 18, actualY + 5);
+                });
+            }
+
+            drawWA();
+
+            canvas.onclick = (e) => {
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+
+                mapData.forEach(p => {
+                    const actualX = offsetX + p.base_x * scale;
+                    const actualY = offsetY + p.base_y * scale;
+                    const dist = Math.sqrt((mouseX - actualX)**2 + (mouseY - actualY)**2);
+                    
+                    if(dist < 25) {
+                        updateMapCard(p);
+                        drawWA();
+                        ctx.beginPath(); ctx.arc(actualX, actualY, 18, 0, Math.PI * 2);
+                        ctx.strokeStyle = 'rgba(37, 99, 235, 0.4)'; ctx.lineWidth = 6; ctx.stroke();
+                    }
+                });
+            };
+
+            if(mapResizeListener) window.removeEventListener('resize', mapResizeListener);
+            mapResizeListener = () => { if(document.getElementById('v-map').classList.contains('active')) renderMap(); };
+            window.addEventListener('resize', mapResizeListener);
+        }
+
+        function updateMapCard(point) {
+            const card = document.getElementById('map-detail-card');
+            const elements = {
+                title: document.getElementById('map-title'), content: document.getElementById('map-content'),
+                playBox: document.getElementById('map-play'), playText: document.getElementById('map-play-text'),
+                icon: document.getElementById('map-icon')
+            };
+
+            card.classList.replace('bg-slate-800', 'bg-blue-900');
+            elements.icon.innerHTML = point.icon; elements.icon.classList.remove('opacity-50');
+            elements.title.innerText = point.title; elements.title.classList.replace('text-blue-300', 'text-white');
+            elements.content.innerText = point.content; elements.content.classList.replace('text-slate-300', 'text-blue-50');
+            elements.playBox.classList.remove('hidden', 'bg-slate-900/50', 'border-slate-600');
+            elements.playBox.classList.add('bg-blue-950', 'border-blue-800');
+            elements.playText.innerText = point.play;
+        }
+
+        // Copy Utility
+        function copyPlay(id) {
+            const text = document.getElementById(id + '-text').innerText;
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy); dummy.value = text; dummy.select();
+            document.execCommand('copy'); document.body.removeChild(dummy);
+
+            const toast = document.getElementById('copy-toast');
+            toast.style.display = 'flex'; toast.style.animation = 'slideIn 0.3s ease-out';
+            setTimeout(() => { 
+                toast.style.opacity = '0'; toast.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => { toast.style.display = 'none'; toast.style.opacity = '1'; }, 300);
+            }, 2500);
+        }
+
+        // Init
+        window.onload = () => {
+            // No charts to render on default macro tab, just setup listeners.
+        };
+    </script>
+</body>
+</html>

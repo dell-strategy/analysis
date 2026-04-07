@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State of Minnesota: Strategic Analysis & Dell Opportunity Map</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles & Theme -->
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; color: #1f2937; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Chart Container Utilities */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: 300px;
+            max-height: 350px;
+            margin: 0 auto;
+        }
+
+        /* Card Hover Effects */
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+
+        /* Navigation Active State */
+        .nav-item.active { background-color: #e5e7eb; color: #0f4c81; border-left: 4px solid #0f4c81; font-weight: 600; }
+        .nav-item { border-left: 4px solid transparent; }
+
+        /* Animations */
+        .animate-fade-in { animation: fadeIn 0.4s ease-in-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden">
+
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 bg-white shadow-xl flex flex-col z-20 h-full hidden md:flex">
+        <div class="p-6 border-b border-gray-200">
+            <h1 class="text-xl font-bold text-gray-800 tracking-tight">MN State Strategy</h1>
+            <p class="text-xs text-gray-500 mt-1">Dell Technologies Account Brief</p>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="space-y-1">
+                <li><button onclick="showSection('exec-summary')" class="nav-item active w-full text-left px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors">Executive Summary</button></li>
+                <li><button onclick="showSection('power-structure')" class="nav-item w-full text-left px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors">Power & Stakeholders</button></li>
+                <li><button onclick="showSection('financials')" class="nav-item w-full text-left px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors">Financials & Budget</button></li>
+                <li><button onclick="showSection('governance')" class="nav-item w-full text-left px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors">Governance & Ops</button></li>
+                <li><button onclick="showSection('initiatives')" class="nav-item w-full text-left px-6 py-3 text-sm text-gray-600 hover:bg-gray-50 transition-colors">Strategic Initiatives</button></li>
+                <li><button onclick="showSection('opportunities')" class="nav-item w-full text-left px-6 py-3 text-sm font-bold text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors">Dell Action Plan</button></li>
+            </ul>
+        </nav>
+        <div class="p-4 border-t border-gray-200 bg-gray-50">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-full bg-blue-800 text-white flex items-center justify-center font-bold text-xs">SA</div>
+                <div>
+                    <p class="text-sm font-semibold text-gray-700">Senior Analyst</p>
+                    <p class="text-xs text-gray-500">Market Intelligence Team</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Nav Header -->
+    <div class="md:hidden fixed w-full bg-white shadow-md z-30 p-4 flex justify-between items-center">
+        <span class="font-bold text-lg">MN Strategy Brief</span>
+        <button onclick="toggleMobileNav()" class="text-gray-600 focus:outline-none">
+            <span class="text-2xl">&#9776;</span>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-nav" class="fixed inset-0 bg-gray-900 bg-opacity-90 z-40 hidden flex flex-col justify-center items-center text-white space-y-6 md:hidden">
+        <button onclick="showSection('exec-summary')" class="text-xl hover:text-blue-400">Executive Summary</button>
+        <button onclick="showSection('power-structure')" class="text-xl hover:text-blue-400">Power & Stakeholders</button>
+        <button onclick="showSection('financials')" class="text-xl hover:text-blue-400">Financials & Budget</button>
+        <button onclick="showSection('governance')" class="text-xl hover:text-blue-400">Governance & Ops</button>
+        <button onclick="showSection('initiatives')" class="text-xl hover:text-blue-400">Strategic Initiatives</button>
+        <button onclick="showSection('opportunities')" class="text-xl font-bold text-blue-400">Dell Action Plan</button>
+        <button onclick="toggleMobileNav()" class="mt-8 text-gray-400 border border-gray-600 px-6 py-2 rounded-full">Close Menu</button>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-1 overflow-y-auto h-full pt-16 md:pt-0">
+        
+        <!-- Header Section -->
+        <div class="bg-white border-b border-gray-200 p-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900">State of Minnesota</h2>
+                        <p class="text-gray-500 mt-2">Deep-Dive Market Analysis & Strategic Whitespace Report</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-right">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wide">Fiscal Year 2024-25</span>
+                        <p class="text-sm text-gray-400 mt-1">Last Updated: Current</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto p-6 space-y-12 pb-24">
+
+            <!-- Section 1: Executive Summary -->
+            <section id="exec-summary" class="content-section animate-fade-in">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                    <div class="col-span-1 lg:col-span-2">
+                        <h3 class="text-2xl font-bold text-gray-800 flex items-center mb-4">
+                            <span class="w-1 h-8 bg-blue-600 mr-3 rounded-full"></span>
+                            Executive Summary & Macro Landscape
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Minnesota's current political climate is defined by a "Trifecta" (DFL control of House, Senate, and Governor's office), leading to rapid legislative movement on progressive initiatives. The state boasts a robust budget surplus, though warnings of future tightening exist. The administration is prioritizing digital equity, modernizing legacy systems (technical debt reduction), and improving citizen experience ("One Minnesota").
+                        </p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            For Dell Technologies, this represents a pivotal moment. The state is actively looking to move away from CapEx-heavy legacy ownership models where workforce shortages make maintenance impossible, leaning heavily toward OpEx, managed services, and hybrid cloud architectures.
+                        </p>
+                    </div>
+                    <div class="col-span-1 bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm">
+                        <h4 class="font-bold text-gray-800 border-b border-gray-200 pb-2 mb-4">State at a Glance</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between"><span class="text-gray-500">Population:</span> <span class="font-semibold text-gray-800">~5.7 Million</span></li>
+                            <li class="flex justify-between"><span class="text-gray-500">Biennial Budget:</span> <span class="font-semibold text-gray-800">$72 Billion</span></li>
+                            <li class="flex justify-between"><span class="text-gray-500">IT Workforce:</span> <span class="font-semibold text-gray-800">~2,500 FTEs</span></li>
+                            <li class="flex justify-between"><span class="text-gray-500">Political Control:</span> <span class="font-semibold text-blue-600">DFL Trifecta</span></li>
+                            <li class="flex justify-between"><span class="text-gray-500">Credit Rating:</span> <span class="font-semibold text-green-600">AAA (Fitch/Muni)</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 border-l-4 border-l-blue-600">
+                        <div class="text-sm font-semibold text-gray-400 uppercase">Primary Goal</div>
+                        <div class="text-lg font-bold text-gray-800 mt-1">"One Minnesota"</div>
+                        <p class="text-sm text-gray-600 mt-2">Unified digital citizen experience and reducing friction in accessing state services.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 border-l-4 border-l-teal-500">
+                        <div class="text-sm font-semibold text-gray-400 uppercase">Fiscal Status</div>
+                        <div class="text-lg font-bold text-gray-800 mt-1">Historic Surplus</div>
+                        <p class="text-sm text-gray-600 mt-2">Allows for significant one-time investments in infrastructure and cybersecurity modernization.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 border-l-4 border-l-orange-500">
+                        <div class="text-sm font-semibold text-gray-400 uppercase">Key Friction</div>
+                        <div class="text-lg font-bold text-gray-800 mt-1">Workforce Shortage</div>
+                        <p class="text-sm text-gray-600 mt-2">Severe struggle to hire IT talent, driving demand for managed services and automation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Power Structure -->
+            <section id="power-structure" class="content-section hidden animate-fade-in bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                            <span class="w-1 h-6 bg-purple-600 mr-3 rounded-full"></span>
+                            Power Structure & Key Stakeholders
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-2">Distinguishing between Financial Authority (Check Signers) and Technical Authority (Influencers).</p>
+                    </div>
+                    
+                    <!-- Toggle Switch -->
+                    <div class="bg-gray-100 p-1 rounded-lg flex mt-4 md:mt-0">
+                        <button id="btn-financial" onclick="toggleStakeholders('financial')" class="px-4 py-2 text-sm font-semibold rounded-md shadow-sm bg-white text-gray-800 transition-all">Financial Power</button>
+                        <button id="btn-technical" onclick="toggleStakeholders('technical')" class="px-4 py-2 text-sm font-semibold rounded-md text-gray-500 hover:text-gray-800 transition-all">Technical Influence</button>
+                    </div>
+                </div>
+
+                <!-- Financial View -->
+                <div id="view-financial" class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-gray-700 border-b pb-2">Elected Leadership & Committees</h4>
+                        <div class="p-4 bg-gray-50 rounded border border-gray-200">
+                            <div class="font-bold text-gray-900">Gov. Tim Walz (DFL)</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wide mt-1">The Mandate Setter</div>
+                            <p class="text-sm mt-2 text-gray-700">Sets the biennial budget priorities. Focuses on Education, Infrastructure, and Equity. Drives the "One Minnesota" vision.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded border border-gray-200">
+                            <div class="font-bold text-gray-900">Legislative Finance Committees</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wide mt-1">The Purse Strings</div>
+                            <p class="text-sm mt-2 text-gray-700"><strong>House Ways & Means / Senate Finance:</strong> They must approve line-item IT capital projects and bonding bills.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded border border-gray-200">
+                            <div class="font-bold text-gray-900">State & Local Gov Committees</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wide mt-1">The Policy Makers</div>
+                            <p class="text-sm mt-2 text-gray-700">Oversees MNIT's structural mandate, cybersecurity statutes, and data privacy regulations.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+                            <h4 class="font-bold text-blue-800 mb-3">Analysis for Dell</h4>
+                            <p class="text-sm text-blue-900 mb-3">Elected officials do not care about "specs." They care about <strong>outcomes</strong>. Pitch modernization as "Cost Savings," "Cyber Safety for Citizens," and "Faster Service Delivery."</p>
+                            <ul class="text-sm space-y-2 text-blue-800 list-disc pl-4">
+                                <li><strong>Key Meeting:</strong> Focus on Agency Commissioners who report to the Governor.</li>
+                                <li><strong>Fiscal Trigger:</strong> Biennial budget sessions (Odd years are budget setting, Even years are bonding/capital).</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                            <h4 class="font-bold text-gray-800 mb-2">Funding Mechanics</h4>
+                            <p class="text-sm text-gray-600">While MNIT procures the technology, the <strong>Agencies</strong> request the funding from the legislature via the Governor's budget. Your sales motion must start with the Agency Commissioner to ensure the project gets into the budget request.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical View (Hidden by Default) -->
+                <div id="view-technical" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-gray-700 border-b pb-2">IT Leadership (MNIT)</h4>
+                        <div class="p-4 bg-gray-50 rounded border border-gray-200">
+                            <div class="font-bold text-gray-900">Tarek Tomes</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wide mt-1">Commissioner & State CIO (MNIT)</div>
+                            <p class="text-sm mt-2 text-gray-700">Controls the architecture standards. Central authority for security, identity, and cloud strategy.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded border border-gray-200">
+                            <div class="font-bold text-gray-900">Agency-Based CIOs (CBTOs)</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wide mt-1">Chief Business Tech Officers</div>
+                            <p class="text-sm mt-2 text-gray-700">Embedded in agencies (DHS, MnDOT, Revenue). They understand the specific business pain points, define technical requirements, and drive demand up to central MNIT.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded border border-gray-200">
+                            <div class="font-bold text-gray-900">Enterprise Architecture Board</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wide mt-1">The Gatekeepers</div>
+                            <p class="text-sm mt-2 text-gray-700">Reviews all net-new project requests to ensure they align with the state's "Cloud Smart" and consolidation strategies. <em>(Must pass this board for APEX/Hardware approvals).</em></p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-purple-50 p-6 rounded-lg border border-purple-100">
+                            <h4 class="font-bold text-purple-800 mb-3">Analysis for Dell</h4>
+                            <p class="text-sm text-purple-900 mb-3">MNIT is a "consolidated" organization, meaning agency IT staff legally report to the central CIO. However, budgets often remain with the agency.</p>
+                            <ul class="text-sm space-y-2 text-purple-800 list-disc pl-4">
+                                <li><strong>The Gap:</strong> MNIT sets standards, but Agency Commissioners hold the budget. You must bridge this gap by selling the business value to the Agency, and the technical validity to MNIT.</li>
+                                <li><strong>Key Target:</strong> Win the CBTOs (Agency CIOs). They are your champions to the central MNIT authority.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Financials -->
+            <section id="financials" class="content-section hidden animate-fade-in">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                        <span class="w-1 h-6 bg-teal-500 mr-3 rounded-full"></span>
+                        Financials & Budget Breakdown
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-2">Understanding the flow of the ~$72B Biennial Budget and where IT dollars land.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Chart 1: O&M vs Capital -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="text-sm font-bold text-gray-500 uppercase mb-4 text-center">IT Budget Composition</h4>
+                        <div class="chart-container">
+                            <canvas id="budgetPieChart"></canvas>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs text-gray-500 italic">High "Run" costs limiting "Transform" agility. Ripe for APEX.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chart 2: Top Spending Agencies -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="text-sm font-bold text-gray-500 uppercase mb-4 text-center">Top IT Spenders by Agency</h4>
+                        <div class="chart-container">
+                            <canvas id="agencyBarChart"></canvas>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs text-gray-500 italic">DHS (Human Services) dominates spend due to massive case management systems.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chart 3: Funding Sources -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="text-sm font-bold text-gray-500 uppercase mb-4 text-center">IT Funding Sources</h4>
+                        <div class="chart-container">
+                            <canvas id="fundingSourceChart"></canvas>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p class="text-xs text-gray-500 italic">Heavy reliance on State General Fund, but Federal Grants are spiking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vendor Landscape & Technical Debt -->
+                <div class="mt-8 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <h4 class="font-bold text-gray-800 mb-6 border-b pb-2">Incumbent Landscape & Technical Debt</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-700 flex items-center mb-2"><span class="text-red-500 mr-2">⚠️</span> Compute & Storage</h5>
+                            <p class="text-sm text-gray-600">Aging SAN infrastructure across tier-2 agencies. High footprint of legacy VMware environments facing renewal uncertainty. <strong>Opportunity:</strong> PowerStore tech refresh and VxRail consolidation.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-700 flex items-center mb-2"><span class="text-blue-500 mr-2">☁️</span> Cloud Strategy</h5>
+                            <p class="text-sm text-gray-600">Initial rush to hyperscalers (AWS/Azure) has resulted in cost overruns and complex egress fees for data-heavy agencies. <strong>Opportunity:</strong> Dell APEX as a predictable hybrid-cloud alternative for steady-state workloads.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-700 flex items-center mb-2"><span class="text-green-500 mr-2">🛡️</span> Data Protection</h5>
+                            <p class="text-sm text-gray-600">Fragmented backup solutions across decentralized agency offices. Lack of immutable storage for ransomware protection. <strong>Opportunity:</strong> Statewide PowerProtect Cyber Recovery vault initiative.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Governance & Ops -->
+            <section id="governance" class="content-section hidden animate-fade-in">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                        <span class="w-1 h-6 bg-indigo-500 mr-3 rounded-full"></span>
+                        IT Governance & Procurement
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-2">The Operational Reality: How they buy and the friction of the "MNIT" model.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Operating Model -->
+                    <div class="col-span-1 md:col-span-2 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-gray-800 mb-4">The MNIT Consolidated Model</h4>
+                        
+                        <!-- Simple Process Viz -->
+                        <div class="flex flex-col md:flex-row items-stretch justify-between gap-2 text-center text-sm">
+                            <div class="bg-gray-50 border border-gray-300 p-4 rounded flex-1 flex flex-col justify-center">
+                                <span class="font-bold block mb-1">Agency (DHS/DOT)</span>
+                                <span class="text-xs text-gray-500">Defines Business Need & Provides Budget</span>
+                            </div>
+                            <div class="flex flex-col justify-center items-center">
+                                <span class="text-2xl text-gray-300 transform md:-rotate-90">▼</span>
+                            </div>
+                            <div class="bg-indigo-50 border border-indigo-200 p-4 rounded flex-1 flex flex-col justify-center">
+                                <span class="font-bold text-indigo-800 block mb-1">MNIT Services</span>
+                                <span class="text-xs text-indigo-600">Central IT approves architecture, security, and procures.</span>
+                            </div>
+                            <div class="flex flex-col justify-center items-center">
+                                <span class="text-2xl text-gray-300 transform md:-rotate-90">▼</span>
+                            </div>
+                            <div class="bg-green-50 border border-green-200 p-4 rounded flex-1 flex flex-col justify-center">
+                                <span class="font-bold text-green-800 block mb-1">Vendor (Dell)</span>
+                                <span class="text-xs text-green-600">Contract executed via Central Procurement.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5 bg-red-50 p-3 rounded border border-red-100">
+                            <p class="text-xs text-red-800"><strong>Friction Point:</strong> "Chargeback Model." Agencies often complain MNIT rates are too high, leading to "Shadow IT" or reluctance to upgrade. Dell APEX (OpEx) models can help smooth these spikes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Procurement Vehicles -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-gray-800 mb-4">Buying Vehicles</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded mr-2">NASPO</span>
+                                <div>
+                                    <span class="block text-sm font-bold">NASPO ValuePoint</span>
+                                    <span class="text-xs text-gray-500">Primary vehicle for Hardware/Cloud. MN is often a lead state.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded mr-2">Joint</span>
+                                <div>
+                                    <span class="block text-sm font-bold">Cooperative Purchasing</span>
+                                    <span class="text-xs text-gray-500">Heavy usage of OMNIA / Sourcewell for faster turnarounds.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mr-2">Compliance</span>
+                                <div>
+                                    <span class="block text-sm font-bold">StateRAMP / CJIS / IRS 1075</span>
+                                    <span class="text-xs text-gray-500">Critical emerging requirements for all cloud/SaaS/Infrastructure offerings.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Strategic Initiatives -->
+            <section id="initiatives" class="content-section hidden animate-fade-in">
+                 <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center">
+                        <span class="w-1 h-6 bg-pink-500 mr-3 rounded-full"></span>
+                        Strategic Initiatives
+                    </h3>
+                    <p class="text-sm text-gray-600 mt-2">Where the state is actively trying to move the needle.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white p-4 rounded shadow-sm border-t-4 border-pink-500">
+                        <h5 class="font-bold text-gray-800">Cloud Smart</h5>
+                        <p class="text-xs text-gray-500 mt-1">Moving away from "Cloud First" to "Cloud Smart." Evaluating workloads for repatriation or hybrid fits (Dell Apex opportunity).</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow-sm border-t-4 border-blue-500">
+                        <h5 class="font-bold text-gray-800">Cyber Resilience</h5>
+                        <p class="text-xs text-gray-500 mt-1">Whole-of-state approach. Protecting counties and schools, not just state agencies. Identity management focus.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow-sm border-t-4 border-green-500">
+                        <h5 class="font-bold text-gray-800">Digital Equity</h5>
+                        <p class="text-xs text-gray-500 mt-1">Broadband expansion (BEAD funding) and device accessibility for underserved populations.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow-sm border-t-4 border-purple-500">
+                        <h5 class="font-bold text-gray-800">Data Modernization</h5>
+                        <p class="text-xs text-gray-500 mt-1">Unlocking data silos between HHS, Corrections, and Education to create a comprehensive citizen view.</p>
+                    </div>
+                </div>
+
+                <!-- Agency Deep Dives -->
+                <div class="mt-8">
+                    <h4 class="font-bold text-gray-800 mb-4">High-Impact Agency Modernization Efforts</h4>
+                    <div class="space-y-4">
+                        <!-- DHS -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                <div>
+                                    <h5 class="font-bold text-blue-900 text-lg">Dept. of Human Services (DHS)</h5>
+                                    <p class="text-sm text-gray-600 mt-1">System Modernization & Case Management Overhaul</p>
+                                </div>
+                                <div class="mt-2 md:mt-0 bg-blue-50 text-blue-700 px-3 py-1 rounded text-xs font-bold border border-blue-200">
+                                    Largest IT Spender
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-3 border-t pt-3">DHS is undertaking a massive, multi-year effort to replace legacy mainframe-based eligibility systems (MEDS/MAXIS). This requires massive data migration, secure staging environments, and high-compute hybrid infrastructure capable of handling HIPAA/PII data securely.</p>
+                        </div>
+
+                        <!-- MnDOT -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                <div>
+                                    <h5 class="font-bold text-orange-900 text-lg">Dept. of Transportation (MnDOT)</h5>
+                                    <p class="text-sm text-gray-600 mt-1">Connected Corridors & Edge Infrastructure</p>
+                                </div>
+                                <div class="mt-2 md:mt-0 bg-orange-50 text-orange-700 px-3 py-1 rounded text-xs font-bold border border-orange-200">
+                                    IIJA Grant Funded
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-3 border-t pt-3">Leveraging Federal Infrastructure bills, MnDOT is expanding IoT sensors along highways, smart snowplow telemetry, and traffic camera analysis. This generates petabytes of unstructured data requiring edge compute (VxRail/XR servers) and scalable Isilon/PowerScale storage.</p>
+                        </div>
+
+                        <!-- Public Safety -->
+                        <div class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                <div>
+                                    <h5 class="font-bold text-red-900 text-lg">Dept. of Public Safety (DPS)</h5>
+                                    <p class="text-sm text-gray-600 mt-1">NextGen 911 & Body Worn Camera Retention</p>
+                                </div>
+                                <div class="mt-2 md:mt-0 bg-red-50 text-red-700 px-3 py-1 rounded text-xs font-bold border border-red-200">
+                                    High Data Velocity
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-3 border-t pt-3">Mandates for state patrol body cameras are driving explosive storage needs. Strict CJIS compliance requires isolated, highly secure on-prem or sovereign cloud storage. Massive opportunity for Unstructured Data Solutions (UDS).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Opportunities (The "So What") -->
+            <section id="opportunities" class="content-section hidden animate-fade-in mb-12">
+                <div class="bg-gray-900 rounded-xl p-8 text-white shadow-2xl">
+                    <div class="flex flex-col md:flex-row justify-between items-end border-b border-gray-700 pb-6 mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white flex items-center">
+                                <span class="text-blue-400 mr-2">⚡</span> Dell Opportunity Hunter
+                            </h3>
+                            <p class="text-gray-400 text-sm mt-2 max-w-xl">Actionable intelligence synthesized from budget analysis and strategic gaps. Select a filter to view specific sales motions.</p>
+                        </div>
+                        
+                        <!-- Interactive Filters -->
+                        <div class="flex space-x-2 mt-4 md:mt-0">
+                            <button onclick="filterOpportunities('all', event)" class="opp-filter active px-4 py-2 text-xs font-bold uppercase rounded-full border bg-blue-600 border-none transition-colors">All</button>
+                            <button onclick="filterOpportunities('funded', event)" class="opp-filter px-4 py-2 text-xs font-bold uppercase rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">Funded Projects</button>
+                            <button onclick="filterOpportunities('whitespace', event)" class="opp-filter px-4 py-2 text-xs font-bold uppercase rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">Whitespace</button>
+                            <button onclick="filterOpportunities('displace', event)" class="opp-filter px-4 py-2 text-xs font-bold uppercase rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">Displacement</button>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Grid -->
+                    <div id="opp-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Content injected via JS -->
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- State Management ---
+        const state = {
+            activeSection: 'exec-summary',
+            oppFilter: 'all',
+            stakeholderView: 'financial',
+            chartsInitialized: false
+        };
+
+        // --- Data: Opportunities ---
+        const opportunities = [
+            {
+                id: 1,
+                type: 'funded',
+                title: 'HHS Systems Modernization',
+                desc: 'Department of Human Services has multi-year funding to replace legacy mainframe case management systems.',
+                product: 'PowerStore, VxRail, Data Protection',
+                badge: 'High Value'
+            },
+            {
+                id: 2,
+                type: 'whitespace',
+                title: 'Cyber Recovery Vault',
+                desc: 'State has general backup, but lacks an isolated "Cyber Recovery Vault" strategy for ransomware resilience, specifically for county data.',
+                product: 'PowerProtect Cyber Recovery',
+                badge: 'Strategic Gap'
+            },
+            {
+                id: 3,
+                type: 'displace',
+                title: 'Public Cloud Repatriation',
+                desc: 'MNIT is evaluating costs of early "Cloud First" moves. Some workloads are too expensive in AWS/Azure.',
+                product: 'APEX / Hybrid Cloud',
+                badge: 'Cost Savings'
+            },
+            {
+                id: 4,
+                type: 'funded',
+                title: 'Digital Equity/Remote Work',
+                desc: 'Continued funding for hybrid workforce devices and secure endpoints for state employees.',
+                product: 'Latitude, Workspace ONE',
+                badge: 'Volume Run rate'
+            },
+            {
+                id: 5,
+                type: 'whitespace',
+                title: 'AI Governance Infrastructure',
+                desc: 'State is forming AI policy but lacks the on-prem GPU infrastructure to test LLMs securely without data leakage.',
+                product: 'PowerEdge XE / AI Ready',
+                badge: 'Innovation'
+            },
+            {
+                id: 6,
+                type: 'displace',
+                title: 'Aging Storage Arrays (Corrections)',
+                desc: 'Department of Corrections video retention (body cam) storage is reaching capacity and EOL.',
+                product: 'PowerScale / Unstructured',
+                badge: 'Tech Refresh'
+            },
+            {
+                id: 7,
+                type: 'whitespace',
+                title: 'Edge Analytics for MnDOT',
+                desc: 'Snowplow routing, traffic camera analysis, and IoT sensor processing at the edge.',
+                product: 'Dell NativeEdge / PowerEdge XR',
+                badge: 'IoT / Edge'
+            },
+            {
+                id: 8,
+                type: 'funded',
+                title: 'Statewide Cybersecurity Operations',
+                desc: 'SLCGP grant funded expansion of SOC capabilities, sharing resources with local counties/cities.',
+                product: 'Secureworks / Dell MDR',
+                badge: 'Security'
+            },
+            {
+                id: 9,
+                type: 'displace',
+                title: 'Fragmented Agency Backups',
+                desc: 'Consolidating disjointed, agency-specific legacy backup targets into a centralized MNIT immutable vault.',
+                product: 'PowerProtect Data Manager',
+                badge: 'Consolidation'
+            }
+        ];
+
+        // --- Core Interactions ---
+
+        function showSection(id) {
+            state.activeSection = id;
+            
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(sec => {
+                sec.classList.add('hidden');
+            });
+
+            // Show target section
+            const targetSection = document.getElementById(id);
+            if(targetSection) {
+                targetSection.classList.remove('hidden');
+            }
+
+            // Initialize charts ONLY when the financials section is revealed for the first time
+            if (id === 'financials' && !state.chartsInitialized) {
+                initCharts();
+                state.chartsInitialized = true;
+            }
+
+            // Update Active Nav Styles
+            document.querySelectorAll('.nav-item').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            const buttons = document.querySelectorAll(`button[onclick="showSection('${id}')"]`);
+            buttons.forEach(btn => {
+                if(btn.classList.contains('nav-item')) {
+                    btn.classList.add('active'); 
+                }
+            });
+
+            // Close mobile menu if open
+            const mobileNav = document.getElementById('mobile-nav');
+            if(!mobileNav.classList.contains('hidden')) {
+                toggleMobileNav();
+            }
+            
+            // Scroll to top of main content area to reset view
+            document.getElementById('main-content').scrollTop = 0;
+        }
+
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobile-nav');
+            nav.classList.toggle('hidden');
+        }
+
+        function toggleStakeholders(view) {
+            const finView = document.getElementById('view-financial');
+            const techView = document.getElementById('view-technical');
+            const btnFin = document.getElementById('btn-financial');
+            const btnTech = document.getElementById('btn-technical');
+
+            if (view === 'financial') {
+                finView.classList.remove('hidden');
+                techView.classList.add('hidden');
+                
+                btnFin.classList.add('bg-white', 'text-gray-800', 'shadow-sm');
+                btnFin.classList.remove('text-gray-500');
+                
+                btnTech.classList.add('text-gray-500');
+                btnTech.classList.remove('bg-white', 'text-gray-800', 'shadow-sm');
+            } else {
+                finView.classList.add('hidden');
+                techView.classList.remove('hidden');
+
+                btnTech.classList.add('bg-white', 'text-gray-800', 'shadow-sm');
+                btnTech.classList.remove('text-gray-500');
+
+                btnFin.classList.add('text-gray-500');
+                btnFin.classList.remove('bg-white', 'text-gray-800', 'shadow-sm');
+            }
+        }
+
+        function renderOpportunities() {
+            const grid = document.getElementById('opp-grid');
+            grid.innerHTML = '';
+
+            const filtered = state.oppFilter === 'all' 
+                ? opportunities 
+                : opportunities.filter(o => o.type === state.oppFilter);
+
+            filtered.forEach(opp => {
+                // Color coding
+                let borderColor = 'border-gray-600';
+                let badgeColor = 'bg-gray-700';
+                if (opp.type === 'funded') { borderColor = 'border-green-500'; badgeColor = 'bg-green-600'; }
+                if (opp.type === 'whitespace') { borderColor = 'border-blue-500'; badgeColor = 'bg-blue-600'; }
+                if (opp.type === 'displace') { borderColor = 'border-orange-500'; badgeColor = 'bg-orange-600'; }
+
+                const card = document.createElement('div');
+                card.className = `bg-gray-800 p-5 rounded-lg border-l-4 ${borderColor} card-hover animate-fade-in`;
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="${badgeColor} text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">${opp.badge}</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">${opp.title}</h4>
+                    <p class="text-sm text-gray-400 mb-4">${opp.desc}</p>
+                    <div class="mt-auto pt-3 border-t border-gray-700">
+                        <span class="text-xs text-gray-500 uppercase font-semibold">Dell Solution:</span>
+                        <span class="text-xs text-blue-300 font-bold block">${opp.product}</span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterOpportunities(type, event) {
+            state.oppFilter = type;
+            
+            // Update buttons visually
+            document.querySelectorAll('.opp-filter').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'border-none');
+                btn.classList.add('border-gray-600', 'bg-transparent');
+            });
+            
+            if (event) {
+                event.currentTarget.classList.add('bg-blue-600', 'border-none');
+                event.currentTarget.classList.remove('border-gray-600', 'bg-transparent');
+            }
+
+            renderOpportunities();
+        }
+
+        // --- Charts Initialization ---
+        function initCharts() {
+            // 1. Budget Pie Chart
+            const pieCanvas = document.getElementById('budgetPieChart');
+            if(pieCanvas) {
+                const ctxPie = pieCanvas.getContext('2d');
+                new Chart(ctxPie, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['O&M (Maintenance)', 'New Projects / Capital'],
+                        datasets: [{
+                            data: [78, 22], // Estimated split based on typical state gov
+                            backgroundColor: ['#cbd5e1', '#2a9d8f'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom' },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.label + ': ' + context.raw + '%';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // 2. Agency Spend Bar Chart
+            const barCanvas = document.getElementById('agencyBarChart');
+            if(barCanvas) {
+                const ctxBar = barCanvas.getContext('2d');
+                new Chart(ctxBar, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Human Services', 'Transportation', 'Public Safety', 'Revenue', 'Education'],
+                        datasets: [{
+                            label: 'Estimated IT Allocation (Millions)',
+                            data: [450, 210, 180, 120, 95], // Realistic relative sizing
+                            backgroundColor: '#0f4c81',
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y', // Horizontal Bar
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            x: { grid: { display: false } },
+                            y: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+
+            // 3. Funding Sources Chart
+            const fundingCanvas = document.getElementById('fundingSourceChart');
+            if(fundingCanvas) {
+                const ctxFunding = fundingCanvas.getContext('2d');
+                new Chart(ctxFunding, {
+                    type: 'polarArea',
+                    data: {
+                        labels: ['State General Fund', 'Federal Grants', 'Special/Dedicated Revenue', 'Internal Service Funds'],
+                        datasets: [{
+                            label: 'Funding Mix',
+                            data: [50, 25, 10, 15],
+                            backgroundColor: [
+                                'rgba(15, 76, 129, 0.7)',
+                                'rgba(42, 157, 143, 0.7)',
+                                'rgba(231, 111, 81, 0.7)',
+                                'rgba(244, 162, 97, 0.7)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom', labels: { boxWidth: 10, font: {size: 10} } }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Initialize on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderOpportunities(); // Initialize grid
+            // Ensure only the first section is shown on load just in case
+            showSection('exec-summary');
+        });
+
+    </script>
+</body>
+</html>
