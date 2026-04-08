@@ -1,76 +1,76 @@
 STATES
 
 arizona
-https://dmonkey1001.github.io/slg-strategies/arizona/analysis.html
-https://dmonkey1001.github.io/slg-strategies/arizona/analysis.pdf
+https://dell-strategy.github.io/analysis/arizona/analysis.html
+https://dell-strategy.github.io/analysis/arizona/analysis.pdf
 
 arkansas
-https://dmonkey1001.github.io/slg-strategies/arkansas/analysis.html
-https://dmonkey1001.github.io/slg-strategies/arkansas/analysis.pdf
+https://dell-strategy.github.io/analysis/arkansas/analysis.html
+https://dell-strategy.github.io/analysis/arkansas/analysis.pdf
 
 california
-https://dmonkey1001.github.io/slg-strategies/california/analysis.html
-https://dmonkey1001.github.io/slg-strategies/california/analysis.pdf
+https://dell-strategy.github.io/analysis/california/analysis.html
+https://dell-strategy.github.io/analysis/california/analysis.pdf
 
 florida
-https://dmonkey1001.github.io/slg-strategies/florida/analysis.html
-https://dmonkey1001.github.io/slg-strategies/florida/analysis.pdf
+https://dell-strategy.github.io/analysis/florida/analysis.html
+https://dell-strategy.github.io/analysis/florida/analysis.pdf
 
 georgia
-https://dmonkey1001.github.io/slg-strategies/georgia/analysis.html
-https://dmonkey1001.github.io/slg-strategies/georgia/analysis.pdf
+https://dell-strategy.github.io/analysis/georgia/analysis.html
+https://dell-strategy.github.io/analysis/georgia/analysis.pdf
 
 illinois
-https://dmonkey1001.github.io/slg-strategies/illinois/analysis.html
-https://dmonkey1001.github.io/slg-strategies/illinois/analysis.pdf
+https://dell-strategy.github.io/analysis/illinois/analysis.html
+https://dell-strategy.github.io/analysis/illinois/analysis.pdf
 
 indiana
-https://dmonkey1001.github.io/slg-strategies/indiana/analysis.html
-https://dmonkey1001.github.io/slg-strategies/indiana/analysis.pdf
+https://dell-strategy.github.io/analysis/indiana/analysis.html
+https://dell-strategy.github.io/analysis/indiana/analysis.pdf
 
 louisiana
-https://dmonkey1001.github.io/slg-strategies/louisiana/analysis.html
-https://dmonkey1001.github.io/slg-strategies/louisiana/analysis.pdf
+https://dell-strategy.github.io/analysis/louisiana/analysis.html
+https://dell-strategy.github.io/analysis/louisiana/analysis.pdf
 
 maryland
-https://dmonkey1001.github.io/slg-strategies/maryland/analysis.html
-https://dmonkey1001.github.io/slg-strategies/maryland/analysis.pdf
+https://dell-strategy.github.io/analysis/maryland/analysis.html
+https://dell-strategy.github.io/analysis/maryland/analysis.pdf
 
 michigan
-https://dmonkey1001.github.io/slg-strategies/michigan/analysis.html
-https://dmonkey1001.github.io/slg-strategies/michigan/analysis.pdf
+https://dell-strategy.github.io/analysis/michigan/analysis.html
+https://dell-strategy.github.io/analysis/michigan/analysis.pdf
 
 minnisota
-https://dmonkey1001.github.io/slg-strategies/minnisota/analysis.html
-https://dmonkey1001.github.io/slg-strategies/minnisota/analysis.pdf
+https://dell-strategy.github.io/analysis/minnisota/analysis.html
+https://dell-strategy.github.io/analysis/minnisota/analysis.pdf
 
 new jersey
-https://dmonkey1001.github.io/slg-strategies/new-jersey/analysis.html
-https://dmonkey1001.github.io/slg-strategies/new-jersey/analysis.pdf
+https://dell-strategy.github.io/analysis/new-jersey/analysis.html
+https://dell-strategy.github.io/analysis/new-jersey/analysis.pdf
 
 new york
-https://dmonkey1001.github.io/slg-strategies/new-york/analysis.html
-https://dmonkey1001.github.io/slg-strategies/new-york/analysis.pdf
+https://dell-strategy.github.io/analysis/new-york/analysis.html
+https://dell-strategy.github.io/analysis/new-york/analysis.pdf
 
 north carolina
-https://dmonkey1001.github.io/slg-strategies/north-carolina/analysis.html
-https://dmonkey1001.github.io/slg-strategies/north-carolina/analysis.pdf
+https://dell-strategy.github.io/analysis/north-carolina/analysis.html
+https://dell-strategy.github.io/analysis/north-carolina/analysis.pdf
 
 oklahoma
-https://dmonkey1001.github.io/slg-strategies/oklahoma/analysis.html
-https://dmonkey1001.github.io/slg-strategies/oklahoma/analysis.pdf
+https://dell-strategy.github.io/analysis/oklahoma/analysis.html
+https://dell-strategy.github.io/analysis/oklahoma/analysis.pdf
 
 tennessee
-https://dmonkey1001.github.io/slg-strategies/tennessee/analysis.html
-https://dmonkey1001.github.io/slg-strategies/tennessee/analysis.pdf
+https://dell-strategy.github.io/analysis/tennessee/analysis.html
+https://dell-strategy.github.io/analysis/tennessee/analysis.pdf
 
 texas
-https://dmonkey1001.github.io/slg-strategies/texas/analysis.html
-https://dmonkey1001.github.io/slg-strategies/texas/analysis.pdf
+https://dell-strategy.github.io/analysis/texas/analysis.html
+https://dell-strategy.github.io/analysis/texas/analysis.pdf
 
 
 CITIES
 
 chicago, illinois
-https://dmonkey1001.github.io/slg-strategies/illinois/chicago/analysis.html
-https://dmonkey1001.github.io/slg-strategies/illinois/chicago/analysis.pdf
+https://dell-strategy.github.io/analysis/illinois/chicago/analysis.html
+https://dell-strategy.github.io/analysis/illinois/chicago/analysis.pdf
