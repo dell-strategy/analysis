@@ -1,0 +1,156 @@
+{
+  "code": "NY",
+  "name": "New York",
+  "slug": "new-york",
+  "region": "Northeast",
+  "updated": "2026-06-15",
+  "tagline": "A record $268.5B budget, a state-built AI supercomputer (Empire AI) running NVIDIA Blackwell, and a maturing cyber-shared-services model — New York is investing in AI infrastructure at public-university scale.",
+
+  "snapshot": [
+    { "label": "FY2027 Enacted Budget", "value": "$268.5B" },
+    { "label": "Primary IT Vehicle", "value": "OGS Centralized Contracts" },
+    { "label": "Flagship AI Asset", "value": "Empire AI" },
+    { "label": "Frontier AI Law", "value": "RAISE Act" }
+  ],
+
+  "execSummary": {
+    "summary": "New York enters its FY2027 fiscal year (April 1, 2026 – March 31, 2027) with a record $268.5B enacted budget and a technology agenda anchored by AI infrastructure. The marquee asset for any infrastructure seller is Empire AI — a more than $500M public/private consortium standing up one of the nation's most powerful academic AI supercomputers at SUNY's University at Buffalo. Its 'Beta' phase, funded with $40M in 2025, runs NVIDIA Blackwell (DGX GB200 / SuperPOD) and the permanent center is slated for completion in 2026. Centralized buying runs through the NYS Office of General Services (OGS) and the Office of Information Technology Services (ITS), the consolidated state IT agency under CIO Dru Rai. On security, New York's Joint Security Operations Center (JSOC) and a $30M+ county shared-services program (free EDR to 50+ counties and five cities) define the cyber motion. The RAISE Act — frontier-AI transparency rules effective Jan 1, 2027 — is the headline AI policy. For Dell, the strongest pull is AI/HPC infrastructure tied to SUNY/CUNY and Empire AI, plus endpoint and lifecycle refresh across a record state budget; Dell already holds an OGS IT Umbrella centralized contract.",
+    "opportunities": [
+      "Empire AI and SUNY/CUNY research-computing buildout — the single largest AI-infrastructure pull in the state (GPU compute, PowerEdge, networking, storage, services).",
+      "Endpoint, client, and lifecycle refresh across executive agencies on a record $268.5B budget, purchased through OGS centralized contracts where Dell already holds an IT Umbrella award.",
+      "Cyber infrastructure tied to ITS/JSOC and the county shared-services (EDR) program — secure compute and managed-service attach for state and local entities.",
+      "Governed, on-prem / private-cloud AI for agencies as New York operationalizes AI policy ahead of the RAISE Act."
+    ],
+    "stats": [
+      { "value": "$268.5B", "label": "FY2027 Enacted Budget", "note": "Signed May 2026; record high, 57 days late", "ref": 1 },
+      { "value": "$500M+", "label": "Empire AI funding", "note": "Public + private; UB / SUNY-led consortium", "ref": 3 },
+      { "value": "$40M", "label": "Empire AI Beta", "note": "NVIDIA Blackwell DGX GB200 / SuperPOD", "ref": 4 },
+      { "value": "$30M", "label": "County cyber shared services", "note": "Free EDR to 50+ counties, 5 cities", "ref": 7 }
+    ]
+  },
+
+  "budget": {
+    "intro": "New York budgets annually; its fiscal year runs April 1 to March 31. The FY2027 budget (April 1, 2026 – March 31, 2027) was enacted at $268.5B — a record high, signed in late May 2026 after a 57-day delay, the latest budget in 16 years. There is no single consolidated 'state IT budget' line; technology spend is distributed across agencies, the consolidated ITS agency, and named initiatives such as Empire AI, ConnectALL broadband, and county cyber shared services.",
+    "stats": [
+      { "value": "$268.5B", "label": "FY2027 enacted", "note": "Record high; signed May 2026", "ref": 1 },
+      { "value": "$254B", "label": "FY2026 enacted", "note": "Prior fiscal year", "ref": 2 },
+      { "value": "April–March", "label": "Fiscal year", "note": "Annual cycle, not biennial", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "Empire AI (state capital)", "amount": 340, "display": "up to $340M", "note": "State capital toward $500M+ total program" },
+      { "label": "ConnectALL broadband (BEAD)", "amount": 664, "display": "~$664M", "note": "Federal BEAD allocation administered by NY" },
+      { "label": "County cyber shared services", "amount": 30, "display": "$30M", "note": "Free EDR to counties and major cities" }
+    ],
+    "notes": [
+      "Empire AI's $500M+ total blends state capital (up to ~$340M), SUNY operating funds, and private/philanthropic backing — confirm which pool funds a given purchase.",
+      "ConnectALL broadband dollars are largely federal (BEAD); deployment projects begin in 2026 and run up to four years."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Empire AI",
+      "status": "Operational (Beta) / center completing 2026",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "HPC", "SUNY"],
+      "summary": "A $500M+ public/private consortium (SUNY, CUNY, Columbia, Cornell, NYU, RPI, Flatiron, Rochester, RIT, Icahn/Mount Sinai) building one of the nation's most powerful academic AI supercomputers at UB. The 'Beta' phase ($40M, 2025) runs NVIDIA Blackwell DGX GB200 / SuperPOD — ~11x training and ~40x inference uplift — with the permanent center on schedule for 2026 and SUNY-campus access expanding in 2026. The strongest AI-infrastructure pull in the state.",
+      "ref": 4
+    },
+    {
+      "name": "ITS Consolidation & State AI Leadership",
+      "status": "Active",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 60,
+      "tags": ["IT Consolidation", "AI", "Agencies"],
+      "summary": "The Office of Information Technology Services (ITS) is New York's consolidated executive-branch IT agency under CIO/Director Dru Rai. In Jan 2026 ITS named its second-ever Chief AI Officer (Eleonore Fournier-Tombs) and a new Chief Digital Officer, signaling sustained focus on governed AI and digital modernization across agencies — an opening for private/on-prem AI on sensitive workloads.",
+      "ref": 6
+    },
+    {
+      "name": "Cyber Shared Services & JSOC",
+      "status": "Scaling",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 60,
+      "tags": ["Cybersecurity", "Local Government", "Shared Services"],
+      "summary": "New York's Joint Security Operations Center (JSOC) provides a statewide threat-intelligence and incident-response hub, with state and NYC personnel co-located. A $30M+ shared-services program offers free endpoint detection and response (EDR) to most counties and five major cities; 50+ counties and all five cities have adopted it. Secure compute and managed-service attach opportunities at both state and local tiers.",
+      "ref": 7
+    },
+    {
+      "name": "RAISE Act — Frontier AI Governance",
+      "status": "Effective Jan 1, 2027",
+      "statusType": "warn",
+      "dellFit": 55,
+      "budgetStrength": 35,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "The Responsible AI Safety and Education Act (signed Dec 2025) imposes transparency, safety-protocol publication, and 72-hour incident reporting on large frontier-model developers, enforced by the AG with penalties up to $1M/$3M and an oversight office within DFS. It targets developers rather than buyers, but it reinforces the state's appetite for governed, auditable AI — favorable framing for private/on-prem AI in government.",
+      "ref": 5
+    },
+    {
+      "name": "ConnectALL Broadband",
+      "status": "Deploying",
+      "statusType": "good",
+      "dellFit": 40,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "BEAD", "Infrastructure"],
+      "summary": "The ConnectALL Office administers more than $664M in federal BEAD funding, with $644M released to expand affordable high-speed broadband to unserved/underserved locations. Projects commence in 2026 and run up to four years — a long-horizon infrastructure and edge-compute backdrop rather than a near-term server motion.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "New York centralizes most technology buying through the Office of General Services (OGS), which maintains statewide ('centralized') contracts that state agencies, local governments, and school districts can purchase against without running their own solicitations. The Office of Information Technology Services (ITS) is the consolidated executive-branch IT agency setting statewide direction. Large purchases above the STF §112 threshold require Office of the State Comptroller (OSC) approval.",
+    "vehicles": [
+      { "name": "OGS IT Umbrella Contracts (Manufacturer & Distributor)", "detail": "Primary vehicle. Dell holds a Manufacturer-Based IT Umbrella centralized contract (aggregate hardware buy); authorized users can issue POs against pre-established configuration pricing without a separate RFQ. Confirm Dell and reseller agreements are current and correctly scoped." },
+      { "name": "OGS Centralized Contracts (statewide)", "detail": "Broad catalog of ~1,500 commodity/service/technology contracts open to state agencies, local gov, and school districts." },
+      { "name": "OSC approval (STF §112)", "detail": "Not a contract, but a gate: purchases above the threshold require Office of the State Comptroller approval — plan timelines accordingly." }
+    ],
+    "entities": [
+      { "name": "OGS", "role": "Central procurement authority; owns statewide/centralized contracts including IT Umbrella awards." },
+      { "name": "ITS", "role": "Consolidated executive-branch IT agency; statewide technology and AI direction under the State CIO." },
+      { "name": "SUNY / CUNY & Empire AI", "role": "Largest independent research-computing and AI-infrastructure buyers; Empire AI center at UB." },
+      { "name": "Office of the State Comptroller (OSC)", "role": "Approves large contracts and expenditures — a procurement gate, not a buyer." }
+    ],
+    "competition": "New York is a contract-driven market with incumbents across OGS centralized vehicles. Dell already holds an IT Umbrella centralized contract, which de-risks the buying motion; differentiation comes from AI/HPC infrastructure capability mapped to Empire AI and SUNY/CUNY, cyber/EDR-adjacent secure compute, and lifecycle services rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Kathy Hochul", "title": "Governor", "org": "State of New York", "note": "Champions Empire AI and the state's AI agenda; signed the RAISE Act and the record FY2027 budget." },
+    { "name": "Dru Rai", "title": "State CIO & ITS Director", "org": "NYS ITS", "note": "Appointed Oct 2023; leads statewide digital transformation and cyber posture.", "ref": 6 },
+    { "name": "Eleonore Fournier-Tombs", "title": "Chief AI Officer", "org": "NYS ITS", "note": "Named Jan 2026 (state's second CAIO); shapes governed-AI direction across agencies.", "ref": 6 },
+    { "name": "John B. King Jr.", "title": "SUNY Chancellor", "org": "State University of New York", "note": "SUNY/UB host Empire AI — the state's flagship AI-infrastructure buyer." },
+    { "name": "Office of the State Comptroller (OSC)", "title": "Contract & fiscal oversight", "org": "State of New York", "note": "Approves large contracts (STF §112) — useful for forecasting deal timelines." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Hochul signs record $268.5B FY2027 budget (57 days late)", "impact": "Largest budget in state history funds a full fiscal year of agency operations and modernization; latest enactment in 16 years.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2026-01", "title": "ITS names second-ever Chief AI Officer and new Chief Digital Officer", "impact": "Signals sustained, governed-AI focus across agencies — an opening for private/on-prem AI on sensitive data.", "tags": ["AI", "Leadership"], "ref": 6 },
+    { "date": "2026-01", "title": "Empire AI announces SUNY campus partnerships to expand researcher access", "impact": "Broadens demand for AI compute across SUNY campuses (Albany, Binghamton, Buffalo, Stony Brook).", "tags": ["AI Infrastructure", "SUNY"], "ref": 9 },
+    { "date": "2025-12", "title": "Hochul signs RAISE Act (frontier-AI transparency; effective Jan 1, 2027)", "impact": "Reinforces state appetite for governed, auditable AI; targets large model developers with AG enforcement.", "tags": ["AI", "Policy"], "ref": 5 },
+    { "date": "2025-06", "title": "Empire AI launches 'Beta' on NVIDIA Blackwell ($40M)", "impact": "One of the most powerful academic AI supercomputers in the U.S.; ~11x training, ~40x inference uplift at UB.", "tags": ["AI Infrastructure", "HPC"], "ref": 4 },
+    { "date": "2025-05", "title": "Empire AI permanent center on track for 2026 completion", "impact": "Sustained, multi-year AI-infrastructure buildout at SUNY's University at Buffalo.", "tags": ["AI Infrastructure"], "ref": 3 }
+  ],
+
+  "dellActions": [
+    "Lead with AI/HPC infrastructure into Empire AI, SUNY, and CUNY research computing — map Dell ISG / AI Factory offerings to the UB supercomputing buildout and expanding campus access.",
+    "Leverage Dell's existing OGS IT Umbrella centralized contract to accelerate endpoint, client, and lifecycle refresh across executive agencies on a record FY2027 budget.",
+    "Engage ITS and the State CIO/CAIO on governed, private/on-prem AI for sensitive agency workloads ahead of the RAISE Act and broader AI policy.",
+    "Attach secure compute and managed services to the JSOC and county cyber shared-services (EDR) motion at both state and local tiers.",
+    "Plan for OSC (STF §112) approval timelines on large deals and confirm Dell/reseller centralized-contract coverage is current for each target agency."
+  ],
+
+  "sources": [
+    { "label": "Governor Hochul — Agreement on FY 2027 State Budget", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-agreement-fy-2027-state-budget" },
+    { "label": "Governor Hochul — FY 2026 New York State Budget", "url": "https://www.governor.ny.gov/programs/fy-2026-new-york-state-budget" },
+    { "label": "Empire AI — Beta launch (one of the most powerful academic AI supercomputers)", "url": "https://www.empireai.edu/2025/06/27/empire-ai-launches-beta-one-of-the-most-powerful-academic-ai-supercomputers-in-the-nation/" },
+    { "label": "Governor Hochul — $40M to launch Empire AI Beta supercomputer", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-40-million-launch-empire-ai-beta-supercomputer" },
+    { "label": "Governor Hochul — Nation-leading legislation requiring AI frameworks for frontier models (RAISE Act)", "url": "https://www.governor.ny.gov/news/governor-hochul-signs-nation-leading-legislation-require-ai-frameworks-ai-frontier-models" },
+    { "label": "NYS ITS — Office of Information Technology Services (CIO Dru Rai; executive team)", "url": "https://its.ny.gov/meet-executive-team" },
+    { "label": "Governor Hochul — $30M shared services program to enhance county cyber defenses", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-launch-30-million-shared-services-program-enhance-cyber-defenses" },
+    { "label": "Governor Hochul — ConnectALL accepting applications for $644M broadband expansion (BEAD)", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-connectall-accepting-applications-644-million-expand-affordable" },
+    { "label": "Governor Hochul — Empire AI SUNY campus partnerships (Jan 30, 2026)", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-empire-ai-suny-campus-partnerships-expand-access-artificial" },
+    { "label": "NYS OGS — Award 22802, Information Technology Umbrella Contract (Manufacturer-Based, Dell)", "url": "https://online.ogs.ny.gov/purchase/snt/awardnotes/7360022802RFQ23-01_HowToUse.pdf" }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "code": "PA",
+  "name": "Pennsylvania",
+  "slug": "pennsylvania",
+  "region": "Mid-Atlantic",
+  "updated": "2026-06-15",
+  "tagline": "A first-in-the-nation government AI program, a $90B+ wave of AI data-center investment, and a $1.16B broadband buildout — Pennsylvania is one of the most active SLG technology markets in the country.",
+
+  "snapshot": [
+    { "label": "2025–26 Enacted Budget", "value": "$50.1B" },
+    { "label": "Primary IT Vehicle", "value": "COSTARS / DGS" },
+    { "label": "Gov AI Users", "value": "3,000+" },
+    { "label": "BEAD Broadband", "value": "$1.16B" }
+  ],
+
+  "execSummary": {
+    "summary": "Pennsylvania is one of the most dynamic SLG technology markets in the country right now, and three forces define it. First, the Shapiro Administration ran the nation's first state-government generative-AI pilot (ChatGPT Enterprise with OpenAI and Carnegie Mellon) and in April 2026 expanded AI to 3,000+ employees across 35 agencies under a new Generative AI Governing Board — agencies are actively operationalizing AI and need governed infrastructure. Second, a roughly $90B wave of AI data-center investment is landing in the Commonwealth, anchored by Amazon's $20B commitment and the $10B Homer City gas-powered campus, making PA national-scale AI infrastructure. Third, the central technology buy runs through the Department of General Services' COSTARS cooperative program and statewide contracts, with the Office of Administration (OA-OIT) setting enterprise IT and security policy. The 2025–26 budget landed late ($50.1B, signed Nov 12, 2025), and 2026–27 negotiations are live now — timing matters for forecasting.",
+    "opportunities": [
+      "AI-infrastructure / 'AI factory' demand tied to the $90B+ PA data-center boom (PowerEdge, networking, services) plus university research computing.",
+      "Governed AI for state agencies expanding from 3,000 toward enterprise scale — private/on-prem options for sensitive workloads under the new AI Governing Board.",
+      "NIST-aligned endpoint and security refresh as SB 377 pushes NIST standards into IT procurement.",
+      "Client, endpoint, and lifecycle modernization across ~80,000 executive-branch employees and the CODE PA digital-services push."
+    ],
+    "stats": [
+      { "value": "$50.1B", "label": "2025–26 Enacted Budget", "note": "Signed Nov 12, 2025 (135 days late)", "ref": 2 },
+      { "value": "3,000+", "label": "State employees on gen-AI", "note": "Across 35 agencies; +6,500 in training", "ref": 4 },
+      { "value": "~$90B", "label": "AI data-center investment wave", "note": "Announced/underway across PA", "ref": 8 },
+      { "value": "$1.16B", "label": "BEAD broadband", "note": "$793.4M provisionally approved", "ref": 7 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Pennsylvania budgets annually on a July 1 fiscal year. The 2025–26 General Fund budget of $50.1B was signed November 12, 2025 — 135 days late — and 2026–27 negotiations are underway now. There is no single 'state IT budget' line; technology spend is distributed across agencies, the Office of Administration's enterprise IT services, and named digital and broadband initiatives.",
+    "stats": [
+      { "value": "$50.1B", "label": "2025–26 General Fund", "note": "Enacted Nov 12, 2025", "ref": 2 },
+      { "value": "$11.55M", "label": "CODE PA budget", "note": "Up from $8.24M prior year", "ref": 1 },
+      { "value": "~80,000", "label": "Executive-branch employees", "note": "OA-supported IT footprint", "ref": 3 }
+    ],
+    "breakdown": [
+      { "label": "BEAD broadband (federal, via PBDA)", "amount": 1160, "display": "$1.16B", "note": "$793.4M provisionally approved" },
+      { "label": "CODE PA (digital experience)", "amount": 11.55, "display": "$11.55M", "note": "2025–26 enacted" }
+    ],
+    "notes": [
+      "The 2025–26 budget was enacted 135 days late; confirm appropriation status before forecasting against agency timelines.",
+      "BEAD is federal infrastructure money administered by the PA Broadband Development Authority, not General Fund IT spend — different buyers and rules."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Statewide Generative AI Expansion",
+      "status": "Scaling",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 65,
+      "tags": ["AI", "OpenAI", "Governance"],
+      "summary": "Pennsylvania ran the first state-government gen-AI pilot (ChatGPT Enterprise with OpenAI and Carnegie Mellon's Block Center); pilot employees saved ~95 minutes a day. In April 2026 the Shapiro Administration expanded AI to 3,000+ employees across 35 agencies, with 6,500 more in training, under a new Generative AI Governing Board. A clear opening to lead with governed, private/on-prem AI for sensitive workloads as adoption scales.",
+      "ref": 4
+    },
+    {
+      "name": "AI Data-Center & Energy Buildout",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Energy"],
+      "summary": "A ~$90B investment wave is landing in PA: Amazon's $20B commitment (incl. a campus beside the Susquehanna nuclear plant), the $10B Homer City gas-powered AI campus on a retired coal site, and CoreWeave's $6B Lancaster build. PA's natural-gas and nuclear power plus its RGGI exit are pitched as energy advantages. The strongest tailwind for Dell ISG / AI-infrastructure demand in the state.",
+      "ref": 8
+    },
+    {
+      "name": "BEAD Broadband Deployment",
+      "status": "Awards in progress",
+      "statusType": "good",
+      "dellFit": 45,
+      "budgetStrength": 80,
+      "tags": ["Broadband", "Federal", "Infrastructure"],
+      "summary": "PA's $1.16B BEAD program (via the PA Broadband Development Authority) closed its final application round in August 2025; the board provisionally approved $793.4M in grants pending NTIA sign-off. Aimed at universal high-speed access by decade's end. Mostly a fiber/ISP motion, but it signals sustained network and edge investment statewide.",
+      "ref": 7
+    },
+    {
+      "name": "SB 377 — NIST Standards in IT Procurement",
+      "status": "Advancing",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 40,
+      "tags": ["Security", "Procurement", "NIST"],
+      "summary": "SB 377 (Phillips-Hill) passed the Senate 49-0 in June 2025, requiring procured endpoint devices and related services to meet NIST cybersecurity guidelines or industry best practices. It pushes a NIST baseline into Commonwealth IT contracting — favorable to vendors who can document NIST-aligned endpoint security and lifecycle controls.",
+      "ref": 9
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Department of General Services (DGS) runs central procurement, including the COSTARS cooperative purchasing program ('Cooperative Sourcing to Achieve Reductions in Spend'), which lets registered local governments, school districts, and state-affiliated entities buy from DGS-established contracts — including IT hardware and software — without running their own RFP. The Office of Administration (OA-OIT) sets enterprise IT strategy, security policy, and shared services for the ~80,000 executive-branch employees under the Governor's jurisdiction.",
+    "vehicles": [
+      { "name": "COSTARS Cooperative Purchasing", "detail": "Primary cooperative vehicle via DGS for local gov, schools, and state-affiliated entities. Covers IT hardware/software. Confirm Dell agreements and reseller registration are current." },
+      { "name": "DGS Statewide Contracts", "detail": "Pre-competed Commonwealth contracts for IT commodities and services used by executive agencies." },
+      { "name": "OA-OIT Enterprise IT Services", "detail": "Shared infrastructure, security policy, and IT operations for executive-branch agencies — sets standards a winning offer must meet." }
+    ],
+    "entities": [
+      { "name": "Office of Administration (OA-OIT)", "role": "Enterprise IT strategy, security, and shared services; home of the CIO and gen-AI program." },
+      { "name": "Department of General Services (DGS)", "role": "Central procurement and COSTARS cooperative — the statewide buying motion." },
+      { "name": "Department of Human Services / large agencies", "role": "Among the largest agency IT and data-modernization spenders." },
+      { "name": "Penn State, PASSHE & state-related universities", "role": "Large, largely independent research-computing and AI-infrastructure buyers." }
+    ],
+    "competition": "Pennsylvania is a contract-driven market where COSTARS and DGS statewide contracts shape access and incumbents hold positions across compute, client, and networking. Differentiation tends to come from AI-infrastructure capability tied to the data-center wave, NIST-aligned security (SB 377), and governed AI for agencies rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Josh Shapiro", "title": "Governor", "org": "Commonwealth of Pennsylvania", "note": "Champions the gen-AI program and the AI data-center/energy agenda; drove the RGGI exit as an energy play.", "ref": 4 },
+    { "name": "Bry Pardoe", "title": "Commonwealth CIO", "org": "Office of Administration (OA-OIT)", "note": "Named CIO Oct 2025; former CODE PA executive director. Owns enterprise IT and cybersecurity direction.", "ref": 5 },
+    { "name": "Neil Weaver", "title": "Secretary of Administration", "org": "Office of Administration", "note": "Leads OA (HR, IT, records) for ~80,000 employees; public face of the AI governance push.", "ref": 4 },
+    { "name": "PA Broadband Development Authority (PBDA)", "title": "Broadband program owner", "org": "Commonwealth of Pennsylvania", "note": "Administers the $1.16B BEAD program and grant awards." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "PA expands generative AI to 3,000+ employees across 35 agencies", "impact": "Agencies are scaling AI under a new Governing Board — demand for governed, secure AI infrastructure grows.", "tags": ["AI"], "ref": 4 },
+    { "date": "2025-11", "title": "Shapiro signs $50.1B 2025–26 budget, 135 days late", "impact": "Budget finally enacted; late cycle compresses agency procurement timelines and sets up live 2026–27 talks.", "tags": ["Budget"], "ref": 2 },
+    { "date": "2025-07", "title": "CoreWeave secures funding for $6B Lancaster AI data-center campus", "impact": "Adds to PA's national-scale AI-infrastructure footprint.", "tags": ["Data Centers", "AI"], "ref": 8 },
+    { "date": "2025-06", "title": "Amazon commits $20B to PA data centers (incl. site by Susquehanna nuclear)", "impact": "Largest private investment in state history; cements PA as an AI-infrastructure hub.", "tags": ["Data Centers", "AI"], "ref": 6 },
+    { "date": "2025-06", "title": "SB 377 (NIST standards in IT procurement) passes Senate 49-0", "impact": "Pushes a NIST cybersecurity baseline into Commonwealth IT contracting.", "tags": ["Security", "Procurement"], "ref": 9 },
+    { "date": "2025-04", "title": "Homer City retired coal plant to become $10B gas-powered AI campus", "impact": "Signals PA's energy-advantage pitch for hyperscale AI compute.", "tags": ["Data Centers", "Energy"], "ref": 10 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to PA's ~$90B data-center wave and to Penn State / PASSHE research-computing buyers.",
+    "Position governed, private/on-prem AI for sensitive agency workloads as the gen-AI program scales past 3,000 users under the new Governing Board.",
+    "Lead endpoint and security refresh with NIST-aligned lifecycle controls to align with SB 377's procurement direction.",
+    "Validate Dell's COSTARS and DGS statewide-contract coverage and reseller registration are current for the agencies and locals you're targeting.",
+    "Time agency engagement to the budget cycle — the 2025–26 budget was late and 2026–27 talks are live; confirm appropriations before forecasting."
+  ],
+
+  "sources": [
+    { "label": "Technical.ly — New Pennsylvania budget invests millions in biotech, workforce and tech (CODE PA)", "url": "https://technical.ly/civics/pa-fy2025-26-budget-innovation-business-research/" },
+    { "label": "City & State PA — 5 things to know about Pennsylvania's 2025-26 state budget", "url": "https://www.cityandstatepa.com/policy/2025/11/5-things-know-about-pennsylvanias-2025-26-state-budget/409550/" },
+    { "label": "PA Office of Administration — About IT (OA-OIT)", "url": "https://www.pa.gov/agencies/oa/programs/information-technology2/about-it" },
+    { "label": "PA Office of Administration — Shapiro Admin expands safe, responsible AI", "url": "https://www.pa.gov/agencies/oa/newsroom/shapiro-admin-expands-safe-responsible-ai-improve-services" },
+    { "label": "City & State PA — Bry Pardoe is Pennsylvania's acting CIO following IT staff changes", "url": "https://www.cityandstatepa.com/policy/2025/10/bry-pardoe-pennsylvanias-acting-cio-following-it-staff-changes/408747/" },
+    { "label": "CNBC — Amazon to spend $20 billion on data centers in Pennsylvania", "url": "https://www.cnbc.com/2025/06/09/amazon-to-spend-20-billion-on-data-centers-in-pennsylvania-including-one-next-to-a-nuclear-power-plant.html" },
+    { "label": "PA Broadband Development Authority — ~$800M in BEAD grants provisionally approved", "url": "https://broadband.pa.gov/pennsylvania-broadband-development-authority-announces-provisional-approval-of-nearly-800-million-in-bead-grants-that-will-connect-all-pennsylvanians-with-high-speed-internet/" },
+    { "label": "Data Center Frontier — Pennsylvania's $90 Billion AI infrastructure investment wave", "url": "https://www.datacenterfrontier.com/hyperscale/article/55303578/pennsylvania-raises-its-game-in-the-ai-infrastructure-boom-with-90-billion-investment-wave" },
+    { "label": "PA General Assembly — Senate Bill 377 (2025-2026, NIST IT procurement)", "url": "https://www.palegis.us/legislation/bills/2025/sb377" },
+    { "label": "Construction Review Online — Former Homer City plant to become $10B AI data center campus", "url": "https://constructionreviewonline.com/former-homer-city-plant-to-become-a-10-billion-ai-data-center-campus/" },
+    { "label": "DGS — COSTARS Cooperative Purchasing", "url": "https://www.pa.gov/agencies/dgs/programs-and-services/costars" },
+    { "label": "StateScoop — Pennsylvania expanded generative AI to 3,000 employees", "url": "https://statescoop.com/pennsylvania-expands-generative-ai-tools-3000-employees/" }
+  ]
+}

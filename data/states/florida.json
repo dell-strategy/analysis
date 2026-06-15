@@ -1,0 +1,154 @@
+{
+  "code": "FL",
+  "name": "Florida",
+  "slug": "florida",
+  "region": "Southeast",
+  "updated": "2026-06-15",
+  "tagline": "A ~$115B annual budget, a State CIO consolidating enterprise IT, a first-in-nation hyperscale data-center law, and $1.16B in broadband money landing in 2026 — Florida is centralizing how it governs and buys technology.",
+
+  "snapshot": [
+    { "label": "FY2025–26 Budget", "value": "~$115B" },
+    { "label": "Primary IT Vehicle", "value": "DMS State Term Contracts" },
+    { "label": "IT Authority", "value": "Florida Digital Service" },
+    { "label": "BEAD Broadband", "value": "$1.16B" }
+  ],
+
+  "execSummary": {
+    "summary": "Florida runs an annual budget on a July–June fiscal year; the FY2025–26 General Appropriations Act came in near $115B after roughly $576M in line-item vetoes, and the Governor's proposed Floridians First FY2026–27 budget is about $117.4B. Three structural shifts matter for SLG sellers. First, the Florida Digital Service (FLDS) under State CIO Warren Sponholtz is consolidating enterprise IT governance, security, and procurement oversight — and 2026 legislation (SB 480) floated moving FLDS into the Governor's office as a new technology division, the latest in repeated attempts to restructure state IT. Second, Florida just enacted a first-in-the-nation hyperscale data-center law (SB 484, signed May 7, 2026) regulating power and water costs — a signal of how fast AI infrastructure is landing in the state. Third, $1.16B in federal BEAD broadband funding is moving into deployment in 2026. For Dell, the buying motion runs through DMS State Term Contracts and MyFloridaMarketPlace, with FLDS gating large IT projects.",
+    "opportunities": [
+      "AI-infrastructure demand tied to university research computing (UF HiPerGator AI 2.0) and the hyperscale data-center buildout (PowerEdge, networking, services).",
+      "Enterprise security and lifecycle modernization as FLDS centralizes IT governance and consolidates agency purchasing.",
+      "Governed, private/on-prem AI for state agencies as Florida studies and regulates government AI use under FLDS direction.",
+      "Endpoint, client, and infrastructure refresh across a ~$115B general-government budget and 20+ agencies."
+    ],
+    "stats": [
+      { "value": "~$115B", "label": "FY2025–26 Budget", "note": "GAA after vetoes; annual cycle", "ref": 1 },
+      { "value": "$117.4B", "label": "FY2026–27 Proposed", "note": "Governor's Floridians First budget", "ref": 3 },
+      { "value": "$1.16B", "label": "BEAD Broadband", "note": "Federal allocation; deployment 2026", "ref": 7 },
+      { "value": "May 2026", "label": "Data-center law (SB 484)", "note": "First-in-nation hyperscale rules", "ref": 6 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Florida budgets annually on a July 1–June 30 fiscal year. The FY2025–26 General Appropriations Act totaled roughly $115.1B as passed (about $117.4B including back-of-the-bill items), reduced by ~$576M in line-item vetoes to a GAA near $114.8B. There is no single 'state IT budget' line; technology spend is distributed across agencies, with FLDS providing enterprise governance and oversight. The Governor's proposed Floridians First FY2026–27 budget is about $117.4B with large reserves.",
+    "stats": [
+      { "value": "~$115B", "label": "FY2025–26 GAA", "note": "After ~$576M vetoes", "ref": 1 },
+      { "value": "$117.4B", "label": "FY2026–27 proposed", "note": "Governor's recommendation", "ref": 3 },
+      { "value": "$10M", "label": "FLDS project gate", "note": "Presolicitation certification threshold", "ref": 2 }
+    ],
+    "breakdown": [
+      { "label": "BEAD broadband deployment", "amount": 1160, "display": "$1.16B", "note": "Federal; $970M+ announced July 2025" },
+      { "label": "FY2025–26 line-item vetoes", "amount": 576, "display": "~$576M", "note": "Removed by the Governor" },
+      { "label": "Reserves (FY2026–27 proposed)", "amount": 16750, "display": "$16.75B", "note": "Governor's recommendation" }
+    ],
+    "notes": [
+      "Budget figures are annual (single-year) totals; Florida does not budget biennially.",
+      "Reported FY2025–26 totals vary ($114.8B–$117.4B) depending on whether back-of-the-bill items are counted — confirm scope before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Florida Digital Service — IT Consolidation",
+      "status": "Ongoing",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 70,
+      "tags": ["IT Governance", "Procurement", "Enterprise"],
+      "summary": "FLDS, under State CIO Warren Sponholtz, is the central authority for statewide IT strategy, cybersecurity, enterprise governance, and project oversight. 2026 legislation (SB 480) strengthens FLDS authority over IT project management and procurement, adds a presolicitation certification gate for IT projects over $10M, and stands up new oversight structures — concentrating decisions and standards at the enterprise level.",
+      "ref": 2
+    },
+    {
+      "name": "Hyperscale Data-Center Regulation (SB 484)",
+      "status": "Signed May 2026",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 75,
+      "tags": ["AI Infrastructure", "Data Centers", "Policy"],
+      "summary": "SB 484 (signed May 7, 2026) is a first-in-the-nation framework requiring large 'hyperscale' AI data centers to pay their own power and infrastructure costs and protecting ratepayers and water supplies. The law signals the scale and speed of AI-infrastructure investment landing in Florida — a tailwind for Dell ISG, networking, and services demand even as it adds siting and utility scrutiny.",
+      "ref": 6
+    },
+    {
+      "name": "BEAD Broadband Deployment",
+      "status": "Deploying 2026",
+      "statusType": "good",
+      "dellFit": 55,
+      "budgetStrength": 80,
+      "tags": ["Broadband", "Federal Funds", "Rural"],
+      "summary": "Florida's $1.16B BEAD allocation moved from competitive subgrant selection (with $970M+ announced in July 2025) into NTIA-approved deployment beginning spring 2026. The program expands rural connectivity and digital-adoption infrastructure — adjacent demand for edge compute, networking, and managed services serving newly connected communities and the agencies coordinating the rollout.",
+      "ref": 7
+    },
+    {
+      "name": "Government AI Policy & Study",
+      "status": "In progress",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Florida's 2026 session debated AI heavily: SB 146 directs FLDS to study state-agency AI use, while the broader 'AI Bill of Rights' (SB 482) passed the Senate but died in the House in March 2026. The direction is toward governed, auditable AI in government — an opening for private/on-prem and controlled-cloud AI on sensitive state data rather than open public models.",
+      "ref": 4
+    },
+    {
+      "name": "University Research Computing (UF HiPerGator)",
+      "status": "Live",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 70,
+      "tags": ["AI Infrastructure", "Higher Ed", "Research"],
+      "summary": "The University of Florida launched HiPerGator AI 2.0 in October 2025 — among the fastest university-owned supercomputers in the U.S., built on NVIDIA DGX B200 SuperPOD architecture and serving the State University System. Florida's research universities are large, independent AI-infrastructure and research-computing buyers with recurring refresh and expansion needs.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Florida Department of Management Services (DMS) is the lead procurement agency, running State Term Contracts, Alternate Contract Sources, and the MyFloridaMarketPlace (MFMP) eProcurement and vendor-registration system. The Florida Digital Service (FLDS) sets enterprise IT standards and oversees large IT projects, including a presolicitation certification gate for IT procurements over $10M.",
+    "vehicles": [
+      { "name": "DMS State Term Contracts", "detail": "Primary vehicle. Pre-competed; open to state agencies, public universities/colleges, local government, and other eligible entities. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "MyFloridaMarketPlace (MFMP)", "detail": "Florida's eProcurement, vendor-registration, and PO/invoicing system — required registration to do business with the state." },
+      { "name": "Alternate Contract Sources", "detail": "DMS-approved external/cooperative agreements eligible entities may use as an alternative to a State Term Contract." }
+    ],
+    "entities": [
+      { "name": "DMS — State Purchasing", "role": "Lead procurement agency; owns State Term Contracts and MFMP." },
+      { "name": "Florida Digital Service (FLDS)", "role": "Enterprise IT standards, security, and large-project oversight; gates IT projects over $10M." },
+      { "name": "Agency for Health Care Administration / DCF / DOT", "role": "Among the largest agency IT spenders; data-heavy modernization." },
+      { "name": "State University System (UF, FSU, USF)", "role": "Large independent research-computing and AI-infrastructure buyers." }
+    ],
+    "competition": "Florida is a competitive, contract-driven market — incumbents hold DMS State Term Contracts across compute, networking, and services. Differentiation tends to come from AI-infrastructure capability, governed-AI and security offerings aligned to FLDS standards, and services mapped to the data-center buildout and university research computing rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Ron DeSantis", "title": "Governor", "org": "State of Florida", "note": "Signed the first-in-nation hyperscale data-center law; drives the AI and fiscal-discipline agenda.", "ref": 6 },
+    { "name": "Warren Sponholtz", "title": "State CIO", "org": "Florida Digital Service", "note": "Leading FL IT since Aug 2024; oversees statewide strategy, cybersecurity, governance, and modernization. 2026 GoldenGov State Executive of the Year.", "ref": 5 },
+    { "name": "Department of Management Services (DMS)", "title": "Lead procurement agency", "org": "State of Florida", "note": "Owns State Term Contracts and MyFloridaMarketPlace — the core buying motion." },
+    { "name": "Florida Legislature (Appropriations)", "title": "Budget & IT restructuring", "org": "State of Florida", "note": "Sets the annual budget and has repeatedly weighed restructuring state IT (SB 7026 in 2025, SB 480 in 2026)." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "DeSantis signs SB 484, first-in-nation hyperscale data-center law", "impact": "Confirms scale of AI-infrastructure investment landing in Florida while adding utility/water scrutiny to siting.", "tags": ["Data Centers", "AI", "Policy"], "ref": 6 },
+    { "date": "2026-03", "title": "AI 'Bill of Rights' (SB 482) passes Senate, dies in House", "impact": "AI policy remains unsettled; agencies still trend toward governed, auditable AI for sensitive workloads.", "tags": ["AI", "Policy"], "ref": 4 },
+    { "date": "2026-02", "title": "SB 480 proposes restructuring state IT under FLDS / Governor's office", "impact": "Centralizes IT governance and procurement oversight; raises the $10M project gate's profile.", "tags": ["IT Governance", "Procurement"], "ref": 2 },
+    { "date": "2025-12", "title": "Governor announces Floridians First FY2026–27 budget (~$117.4B)", "impact": "Continued spending capacity with large reserves; sets the FY2026–27 buying envelope.", "tags": ["Budget"], "ref": 3 },
+    { "date": "2025-10", "title": "University of Florida launches HiPerGator AI 2.0 (NVIDIA DGX B200 SuperPOD)", "impact": "Reinforces Florida higher-ed as a major AI-infrastructure and research-computing buyer.", "tags": ["AI Infrastructure", "Higher Ed"], "ref": 8 },
+    { "date": "2025-07", "title": "Florida announces $970M+ in BEAD broadband deployment funding", "impact": "Federal broadband money moves toward deployment; adjacent edge/networking demand in 2026.", "tags": ["Broadband", "Federal Funds"], "ref": 7 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the hyperscale data-center buildout and the State University System's research-computing buyers (UF HiPerGator).",
+    "Map every targeted IT pursuit to FLDS standards and the $10M presolicitation certification gate — engage enterprise governance early, not at close.",
+    "Validate Dell's DMS State Term Contract coverage and resellers are current and correctly scoped, and confirm MyFloridaMarketPlace registration is in order.",
+    "Position governed, private/on-prem AI for sensitive state workloads as Florida studies and regulates government AI use.",
+    "Track BEAD deployment for adjacent edge-compute, networking, and managed-services opportunities serving newly connected rural communities."
+  ],
+
+  "sources": [
+    { "label": "Executive Office of the Governor — DeSantis Signs FY2025–26 Budget", "url": "https://www.flgov.com/eog/news/press/2025/governor-ron-desantis-signs-florida-fiscal-year-2025-2026-budget" },
+    { "label": "GovTech — Lawmakers Propose Another Restructuring of Florida IT (SB 480)", "url": "https://www.govtech.com/policy/lawmakers-propose-another-restructuring-of-florida-it" },
+    { "label": "Executive Office of the Governor — Floridians First 2026–2027 Budget", "url": "https://www.flgov.com/eog/news/press/2025/governor-ron-desantis-announces-floridians-first-2026-2027-budget" },
+    { "label": "Florida Phoenix — AI 'Bill of Rights' filed in the Florida Senate", "url": "https://floridaphoenix.com/2025/12/22/ai-bill-of-rights-filed-in-the-florida-senate/" },
+    { "label": "GovTech — Warren Sponholtz Named Florida's State CIO", "url": "https://www.govtech.com/workforce/warren-sponholtz-deputy-ciso-named-floridas-state-cio" },
+    { "label": "WUSF — DeSantis signs bill adding regulations for hyperscale AI data centers (SB 484)", "url": "https://www.wusf.org/politics-issues/2026-05-07/desantis-signs-bill-adding-regulations-for-hyper-scale-ai-data-centers" },
+    { "label": "FloridaCommerce — $970M+ in BEAD Broadband Funding", "url": "https://floridajobs.org/news-center/DEO-Press/2025/07/15/floridacommerce-announces-more-than--970-million-in-broadband-funding-through-the-bead-deployment-program" },
+    { "label": "HPCwire — UF Welcomes NVIDIA DGX Systems for HiPerGator AI 2.0", "url": "https://www.hpcwire.com/off-the-wire/uf-welcomes-24m-in-nvidia-dgx-systems-paving-way-for-next-gen-hipergator-ai-2-0/" },
+    { "label": "Florida DMS — State Contracts and Agreements / State Purchasing", "url": "https://www.dms.myflorida.com/business_operations/state_purchasing/state_contracts_and_agreements" }
+  ]
+}

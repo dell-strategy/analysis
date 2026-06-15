@@ -1,0 +1,156 @@
+{
+  "code": "MT",
+  "name": "Montana",
+  "slug": "montana",
+  "region": "Mountain West",
+  "updated": "2026-06-15",
+  "tagline": "A tech-forward governor, the nation's first 'Right to Compute' law, a historic BEAD broadband award, and a sudden gigawatt-scale data-center rush — Montana is punching above its size on technology.",
+
+  "snapshot": [
+    { "label": "2027 Biennial Budget (HB 2)", "value": "~$16.6B" },
+    { "label": "Central IT", "value": "SITSD (DOA)" },
+    { "label": "BEAD Broadband Award", "value": "$629M" },
+    { "label": "AI Stance", "value": "Right to Compute" }
+  ],
+
+  "execSummary": {
+    "summary": "Montana is a small-population, biennially-budgeted state that has become unexpectedly important in technology policy. Governor Greg Gianforte — a software entrepreneur (RightNow Technologies) before politics — signed the nation's first 'Right to Compute Act' (SB 212) in April 2025, codifying a light-touch, pro-compute stance rather than restrictive AI regulation. The 2025 Legislature (69th) enacted the ~$16.6B 2027-biennium budget (HB 2) plus the Long-Range IT Program (HB 10, ~$54M) that funds SITSD modernization, mainframe retirement, and cybersecurity. On November 18, 2025 NTIA approved Montana's final BEAD proposal — roughly $629M to close rural broadband gaps under ConnectMT. And a gigawatt-scale data-center rush (Project Cardinal in Great Falls, Atlas/Sabey in Butte, Quantica's 'Big Sky Campus') is testing the grid and creating private AI-infrastructure demand. For Dell, the buying motion runs through SITSD and the State Procurement Services Division's term contracts; the opportunity is modernization, whole-of-state cybersecurity, and AI-ready infrastructure for both government and the incoming data-center operators.",
+    "opportunities": [
+      "SITSD modernization under HB 10 (LRITP ~$54M) — mainframe/legacy retirement, server/storage refresh, and cloud migration for a centralized state IT shop.",
+      "Whole-of-state cybersecurity — extend the University of Montana SOC model (5,000+ endpoints across counties and towns) with secure compute, endpoint, and managed services.",
+      "Private/on-prem AI aligned to the state's 'Right to Compute' posture — governed AI on sensitive workloads without heavy regulatory friction.",
+      "AI-infrastructure demand from the data-center boom (Great Falls, Butte, Broadview) — PowerEdge, networking, and services for new operators landing in-state."
+    ],
+    "stats": [
+      { "value": "~$16.6B", "label": "2027 Biennial Budget (HB 2)", "note": "Signed June 2025; ~2-year all-funds", "ref": 1 },
+      { "value": "~$54M", "label": "Long-Range IT Program", "note": "HB 10 LRITP, 2027 biennium", "ref": 2 },
+      { "value": "$629M", "label": "BEAD broadband award", "note": "NTIA final-proposal approval Nov 2025", "ref": 4 },
+      { "value": "Apr 2025", "label": "Right to Compute Act", "note": "SB 212 — first in the nation", "ref": 6 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Montana budgets on a two-year (biennial) cycle. The 69th Legislature's HB 2 appropriates roughly $16.6B all-funds for the 2027 biennium (signed by Gov. Gianforte in June 2025) — about a 2% increase over the prior biennium, with federal dollars making up nearly half. There is no single 'state IT budget'; technology spend is centralized largely through SITSD's billable-service model (200+ services) and funded for major projects through the separate Long-Range Information Technology Program (HB 10).",
+    "stats": [
+      { "value": "~$16.6B", "label": "2027 biennium all-funds", "note": "HB 2, 69th Legislature", "ref": 1 },
+      { "value": "~$54M", "label": "LRITP (HB 10)", "note": "Major IT projects, 2027 biennium", "ref": 2 },
+      { "value": "200+", "label": "SITSD billable services", "note": "Shared IT to state & local entities", "ref": 3 }
+    ],
+    "breakdown": [
+      { "label": "Long-Range IT Program (HB 10)", "amount": 54, "display": "~$54M", "note": "2027-biennium major IT projects" },
+      { "label": "BEAD broadband (federal, ConnectMT)", "amount": 629, "display": "$629M", "note": "NTIA-approved; 4-yr deployment to subgrantees" },
+      { "label": "ARPA broadband (prior round)", "amount": 270, "display": "$270M", "note": "61 projects approved 2022" }
+    ],
+    "notes": [
+      "Budget figures are biennial (two-year) totals unless noted; HB 2 is all-funds.",
+      "Broadband dollars (BEAD/ARPA) flow to ISP subgrantees, not state IT — but signal the state's connectivity buildout and SITSD's network role.",
+      "Confirm whether a target program is funded via SITSD's billable-service model or a discrete HB 10 project before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Right to Compute Act (SB 212)",
+      "status": "In effect",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 40,
+      "tags": ["AI", "Policy", "Light-Touch"],
+      "summary": "Signed April 2025, Montana became the first state to codify a 'right to privately own and use computational resources for lawful purposes,' subjecting any restriction to strict scrutiny. For critical-infrastructure AI, deployers must adopt a NIST-aligned risk-management policy. The pro-compute, low-regulation posture favors private/on-prem AI adoption — a chance for Dell to lead with governed, auditable AI rather than wait on heavy compliance gates.",
+      "ref": 6
+    },
+    {
+      "name": "ConnectMT / BEAD Broadband Buildout",
+      "status": "Funded — deploying",
+      "statusType": "good",
+      "dellFit": 45,
+      "budgetStrength": 85,
+      "tags": ["Broadband", "Federal", "Rural"],
+      "summary": "NTIA approved Montana's final BEAD proposal in November 2025, awarding roughly $629M to bring service to unserved/underserved rural locations; subgrantees have four years to build. This follows a $270M ARPA round (61 projects, 2022). Dollars flow to ISPs, but the buildout strengthens SITSD's statewide network role and the digital-government surface Dell can support.",
+      "ref": 4
+    },
+    {
+      "name": "SITSD Modernization (HB 10 / LRITP)",
+      "status": "Underway",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 60,
+      "tags": ["Modernization", "Data Center", "Cloud"],
+      "summary": "SITSD runs the state's WAN, the Helena primary data center and a Miles City DR site, and 200+ billable services. The Long-Range IT Program (~$54M for the 2027 biennium) funds major modernization — including retiring legacy/mainframe infrastructure under State CIO Kevin Gilbertson. Centralized, project-based buying is a clean motion for Dell compute, storage, and services.",
+      "ref": 2
+    },
+    {
+      "name": "Whole-of-State Cybersecurity",
+      "status": "Maturing",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "Local Gov", "SOC"],
+      "summary": "Montana pairs SITSD's Network Operations Security Center with a University of Montana Security Operations Center (HB 10-funded) that monitors 5,000+ endpoints across counties (Sheridan, Ravalli, Lake) and towns (Whitefish, Manhattan, Harlowton), plus a Cyber Range and rural policy academy with CISA and the National Guard. Extending endpoint, secure-compute, and managed services to thin-staffed local governments is a strong Dell fit.",
+      "ref": 7
+    },
+    {
+      "name": "Data-Center / AI-Infrastructure Rush",
+      "status": "Accelerating",
+      "statusType": "warn",
+      "dellFit": 85,
+      "budgetStrength": 70,
+      "tags": ["AI Infrastructure", "Data Centers", "Private Sector"],
+      "summary": "Gigawatt-scale projects are landing fast: TAC's 'Project Cardinal' near Great Falls (up to 600MW, $1-1.5B), Atlas Power and Sabey in Butte, and Quantica's 5,000-acre 'Big Sky Campus' near Broadview (500MW Phase I). Proposed loads (~2,100MW+) far exceed NorthWestern's current ~750MW average — a grid/ratepayer flashpoint, but a major private AI-infrastructure demand signal Dell can serve alongside the public sector.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "Technology procurement in Montana is centralized under the Department of Administration. The State Information Technology Services Division (SITSD) owns shared IT infrastructure and services, while the State Procurement Services Division (SPSD / State Procurement Bureau) runs competitive solicitations and establishes statewide term contracts that state agencies — and, where indicated, cooperative purchasers — buy from at predetermined prices.",
+    "vehicles": [
+      { "name": "Statewide Term Contracts (SPSD)", "detail": "Primary vehicle for commodities and IT goods/services at fixed unit prices; many open to cooperative purchasers. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "SITSD Shared Services / billable catalog", "detail": "200+ billable services — WAN, data center, virtualized server/storage, DR — delivered to state and participating local entities." },
+      { "name": "Long-Range IT Program (HB 10)", "detail": "Project-based appropriation channel for major modernization; the place large compute/storage refreshes get funded and scoped." }
+    ],
+    "entities": [
+      { "name": "SITSD (Dept. of Administration)", "role": "Central IT authority — infrastructure, shared services, cybersecurity, and the State CIO." },
+      { "name": "State Procurement Services Division", "role": "Runs solicitations and statewide term contracts; the contractual front door for vendors." },
+      { "name": "University of Montana / Montana State University", "role": "Independent research-computing and cybersecurity (SOC, Cyber Range) buyers; whole-of-state security hub." },
+      { "name": "Dept. of Public Health & Human Services (DPHHS)", "role": "Among the largest agency IT spenders; data-heavy modernization." }
+    ],
+    "competition": "Montana is a small, centralized, relationship-driven market — fewer seats than a large state, but decisions concentrate in SITSD and SPSD, so coverage on the right term contracts matters more than volume of accounts. Differentiation comes from modernization/lifecycle value, whole-of-state cybersecurity for thin-staffed locals, and AI-ready infrastructure that fits the state's pro-compute posture — not price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Greg Gianforte", "title": "Governor", "org": "State of Montana", "note": "Software entrepreneur (founded RightNow Technologies) before politics; signed the Right to Compute Act and champions a light-touch, pro-tech agenda.", "ref": 6 },
+    { "name": "Kevin Gilbertson", "title": "State CIO", "org": "SITSD / Dept. of Administration", "note": "Appointed 2021 by Gianforte; leads SITSD, drives mainframe retirement and modernization, reports quarterly to the Legislative Finance Committee.", "ref": 5 },
+    { "name": "Daniel Zolnikov", "title": "State Senator (sponsor)", "org": "Montana Legislature", "note": "Authored SB 212 (Right to Compute) and the state's data-privacy and pro-crypto laws — the legislative voice on technology policy." },
+    { "name": "Legislative Finance Committee / Fiscal Division", "title": "Appropriations & fiscal analysis", "org": "Montana Legislature", "note": "Sizes and tracks HB 2 and HB 10 IT projects via the LFC dashboard — useful for forecasting modernization spend.", "ref": 2 }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "AI investors eye Montana for data centers as water and grid concerns mount", "impact": "Eleven developers reportedly in talks with NorthWestern; signals scale of private AI-infrastructure demand and the grid constraint shaping it.", "tags": ["Data Centers", "AI"], "ref": 8 },
+    { "date": "2025-11", "title": "NTIA approves Montana's final BEAD proposal (~$629M)", "impact": "Largest broadband award in state history; subgrantees get four years to build, expanding the digital-government surface.", "tags": ["Broadband", "Federal"], "ref": 4 },
+    { "date": "2025-11", "title": "Groups push back on Montana's 'data center boom'", "impact": "Ratepayer and water concerns surface as proposed loads (~2,100MW+) dwarf existing demand — a political constraint on the buildout.", "tags": ["Data Centers", "Policy"], "ref": 9 },
+    { "date": "2025-06", "title": "Gianforte signs ~$16.6B two-year budget (HB 2) with line-item vetoes", "impact": "Sets the 2027-biennium spending baseline that agency IT modernization runs within.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-06", "title": "Project Cardinal data center advances near Great Falls (up to 600MW)", "impact": "Anchor private AI-infrastructure project; energy supply is the gating factor.", "tags": ["Data Centers", "AI Infrastructure"], "ref": 10 },
+    { "date": "2025-04", "title": "Montana enacts first-in-nation Right to Compute Act (SB 212)", "impact": "Codifies a pro-compute, light-touch AI posture — favorable backdrop for private/on-prem AI adoption.", "tags": ["AI", "Policy"], "ref": 6 }
+  ],
+
+  "dellActions": [
+    "Anchor on SITSD as the centralized account — map Dell compute/storage and lifecycle to HB 10 modernization and the mainframe/legacy retirement underway.",
+    "Lead whole-of-state cybersecurity: extend the University of Montana SOC model with secure compute, endpoint, and managed services for thin-staffed counties and towns.",
+    "Position governed, private/on-prem AI to fit the state's Right to Compute posture — auditable AI on sensitive workloads without heavy regulatory friction.",
+    "Pursue the data-center rush (Great Falls, Butte, Broadview) as private AI-infrastructure demand — PowerEdge, networking, and services for incoming operators.",
+    "Validate Dell coverage on SPSD statewide term contracts and reseller scope before pursuing agency or cooperative buys."
+  ],
+
+  "sources": [
+    { "label": "Daily Montanan — Gianforte signs $16 billion two-year budget with line-item vetoes", "url": "https://dailymontanan.com/2025/06/23/gianforte-signs-16-billion-two-year-budget-with-line-item-vetoes/" },
+    { "label": "Montana Legislature — Long-Range IT Program / Section F (HB 10), 2027 Biennium", "url": "https://archive.legmt.gov/content/Publications/fiscal/2027-Biennium/Budget-and-Revenue/Fiscal-Reports/Section-F-FR-27Bi.pdf" },
+    { "label": "Montana Dept. of Administration — State Information Technology Services Division (SITSD)", "url": "https://sitsd.mt.gov/" },
+    { "label": "ConnectMT — BEAD / IIJA Broadband Program (NTIA final-proposal approval)", "url": "https://doa.mt.gov/ConnectMT/iija/" },
+    { "label": "Montana Legislature — LRITP/SITSD HB 10 presentation (State CIO Kevin Gilbertson)", "url": "https://archive.legmt.gov/content/Publications/fiscal/2027-Biennium/Committees/Section-F/2025-Session/LRITP-SITSD-HB-10-Presentation.pdf" },
+    { "label": "MultiState — Montana Right to Compute Law (SB 212)", "url": "https://www.multistate.ai/updates/vol-59-montana-right-to-compute-law" },
+    { "label": "Montana Dept. of Administration — SITSD Cybersecurity", "url": "https://doa.mt.gov/SITSD/cybersecurity" },
+    { "label": "Daily Montanan — Eleven data center developers in talks with NorthWestern", "url": "https://dailymontanan.com/2026/02/23/eleven-data-center-developers-in-talks-with-northwestern-group-says/" },
+    { "label": "Montana Free Press — Groups push back on Montana's 'data center boom'", "url": "https://montanafreepress.org/2025/11/18/groups-push-back-on-montanas-data-center-boom/" },
+    { "label": "Montana Free Press — Great Falls data center proposal (Project Cardinal), energy supply", "url": "https://montanafreepress.org/2025/06/24/for-massive-great-falls-data-center-proposal-energy-supply-is-crucial-to-push-project-forward/" }
+  ]
+}

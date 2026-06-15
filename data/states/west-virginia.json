@@ -1,0 +1,157 @@
+{
+  "code": "WV",
+  "name": "West Virginia",
+  "slug": "west-virginia",
+  "region": "Mid-Atlantic / Appalachia",
+  "updated": "2026-06-15",
+  "tagline": "A first-mover microgrid law is turning West Virginia into a destination for high-impact AI data centers — anchored by a new $4B intelligence center, a 'cloud-right' IT modernization push, and consolidated state cybersecurity authority.",
+
+  "snapshot": [
+    { "label": "FY2027 General Revenue Budget", "value": "$5.5B" },
+    { "label": "Central IT Authority", "value": "Office of Technology (OT)" },
+    { "label": "Data-Center Law", "value": "HB 2014 (microgrids)" },
+    { "label": "Flagship AI Project", "value": "$4B Intelligence Center" }
+  ],
+
+  "execSummary": {
+    "summary": "West Virginia is making an aggressive, infrastructure-led bet on the AI economy. The 2025 Power Generation and Consumption Act (HB 2014) created a statewide certified-microgrid program letting 'high-impact data centers' (50MW+ critical IT load) power themselves off-grid using coal, gas, and renewables — and it is already working: in February 2026 the state designated its first High Impact Intelligence Center, a $4B, 600MW Penzance campus in Berkeley County. The state budgets annually on a July–June fiscal year; the FY2027 budget Governor Morrisey signed in March 2026 is roughly $5.5B in general revenue, intentionally 'flat.' Centrally, technology runs through the Office of Technology (OT) under the Department of Administration, led by CIO Heather Abbott, who is driving a 'cloud-right, not cloud-first' modernization including an 18-month mainframe-exit, secure multi-cloud, and early AI pilots. HB 5638 (signed April 2026) consolidated cybersecurity authority under the CISO — and notably barred software-licensing terms that lock the state into a single deployment model. For Dell, the buying motion runs through OT IT statewide contracts and the Purchasing Division, with the data-center/microgrid buildout the strongest infrastructure tailwind.",
+    "opportunities": [
+      "AI-infrastructure demand tied to high-impact data centers landing under HB 2014 (PowerEdge, networking, storage, services) — beginning with the $4B Penzance/Berkeley County campus.",
+      "State IT modernization under CIO Abbott's 'cloud-right' strategy: mainframe migration, hybrid/private infrastructure, and endpoint/client refresh across agencies.",
+      "Consolidated cybersecurity program under the CISO (HB 5638) — secure compute, infrastructure, and managed services for an office an audit flagged as behind on its statutory framework.",
+      "Governed, on-prem/private AI for sensitive state workloads as OT moves from pilots (Gemini transcription/chatbots) toward production."
+    ],
+    "stats": [
+      { "value": "$5.5B", "label": "FY2027 General Revenue Budget", "note": "Signed March 2026; intentionally flat", "ref": 9 },
+      { "value": "$4B", "label": "First High Impact Intelligence Center", "note": "600MW Penzance campus, Berkeley County", "ref": 5 },
+      { "value": "50MW+", "label": "High-Impact Data Center threshold", "note": "Critical IT load under HB 2014", "ref": 2 },
+      { "value": "$545M", "label": "BEAD broadband (approved)", "note": "73,044 locations, 142 projects", "ref": 7 }
+    ]
+  },
+
+  "budget": {
+    "intro": "West Virginia budgets annually on a July–June fiscal year. The FY2027 budget Governor Morrisey signed in March 2026 is roughly $5.5B in general revenue and was kept intentionally 'flat,' continuing the state's recent fiscal-discipline tradition; the prior FY2026 general-revenue budget landed near $5.28B after line-item vetoes. There is no single consolidated 'state IT budget' line — technology spend is distributed across agencies, with the Office of Technology (OT) operating largely as an internal service fund and security/data-center activity funded through separate programs and private investment.",
+    "stats": [
+      { "value": "~$5.5B", "label": "FY2027 general revenue", "note": "Signed March 2026", "ref": 9 },
+      { "value": "~$5.28B", "label": "FY2026 general revenue", "note": "After Morrisey line-item vetoes", "ref": 8 },
+      { "value": "July–June", "label": "Fiscal year", "note": "Annual cycle (not biennial)", "ref": 8 }
+    ],
+    "breakdown": [
+      { "label": "First Intelligence Center (private)", "amount": 4000, "display": "$4B", "note": "Penzance / Berkeley County buildout" },
+      { "label": "BEAD broadband (federal)", "amount": 545, "display": "$545M", "note": "142 deployment projects" },
+      { "label": "Cyber contracts to date (OT)", "amount": 1.3, "display": "~$1.3M", "note": "Cited by legislative audit" }
+    ],
+    "notes": [
+      "West Virginia uses an annual (not biennial) budget; figures are single-fiscal-year general-revenue totals unless noted.",
+      "Major technology dollars are increasingly private (data-center capital) and federal (BEAD), not state IT line items — frame deals to the program funding them.",
+      "OT operates largely as an internal service fund; confirm the funding source and owning agency before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "HB 2014 — Certified Microgrid / Data-Center Program",
+      "status": "In effect (July 2025)",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Energy"],
+      "summary": "The 2025 Power Generation and Consumption Act created a statewide certified-microgrid program that lets 'high-impact data centers' (50MW+ critical IT load) operate on dedicated microgrids — independent of residential ratepayers — powered by coal, gas, and renewables, and sell up to 10% of generation wholesale. Site-certification rules were filed in November 2025. This is the single strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
+      "ref": 1
+    },
+    {
+      "name": "First High Impact Intelligence Center ($4B)",
+      "status": "Announced (Feb 2026)",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 80,
+      "tags": ["AI Infrastructure", "Data Centers", "Berkeley County"],
+      "summary": "In February 2026 Morrisey announced the state's first High Impact Intelligence Center: a $4B, ~600MW (1.9M sq ft) campus by Penzance on 548 acres at the Bedington/Falling Waters site in Berkeley County, enabled by HB 2014 and HB 2002 permitting reforms. It proves the microgrid model can attract hyperscale AI capacity — a flagship greenfield AI-infrastructure account and a template for follow-on sites.",
+      "ref": 5
+    },
+    {
+      "name": "'Cloud-Right' IT Modernization (OT)",
+      "status": "Active",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["Modernization", "Hybrid Cloud", "Mainframe"],
+      "summary": "CIO Heather Abbott is executing the OT 2025–2030 Strategic Plan with a 'cloud-right, not cloud-first' philosophy: evaluate each system on cost/security/performance before moving it, exit the legacy mainframe within ~18 months, build secure multi-cloud, and pilot AI (Google Gemini for transcription, summarization, chatbots). Mainframe-exit and hybrid posture open doors for on-prem/private infrastructure where cloud isn't the right fit.",
+      "ref": 6
+    },
+    {
+      "name": "HB 5638 — Cybersecurity Consolidation",
+      "status": "Signed (April 2026)",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 50,
+      "tags": ["Cybersecurity", "Policy", "Governance"],
+      "summary": "HB 5638 consolidated oversight of state cybersecurity under the CISO (Leroy Amos) within OT, directing a unified statewide standards framework — and added an anti-lock-in amendment barring software-licensing terms that restrict the state's infrastructure-deployment flexibility. A legislative audit found the office had not yet implemented its statutory framework despite ~$1.3M in contracts, signaling real need for secure compute, services, and a credible delivery partner.",
+      "ref": 4
+    },
+    {
+      "name": "BEAD Broadband Deployment",
+      "status": "Approved (Nov 2025)",
+      "statusType": "good",
+      "dellFit": 40,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Federal", "Rural"],
+      "summary": "NTIA approved West Virginia's revised BEAD plan in November 2025: ~$545M across 142 projects to connect 73,044 unserved/underserved locations (down from a prior ~$959M plan under federal 'Benefit of the Bargain' reforms). Primarily a fiber-deployment program, but it underpins the connectivity and rural-health/telehealth modernization that surround the state's digital-economy push.",
+      "ref": 7
+    }
+  ],
+
+  "procurement": {
+    "intro": "Technology procurement runs through two connected bodies. The Office of Technology (OT), within the Department of Administration and led by the CIO, sets IT direction and maintains IT statewide contracts that agencies buy from; the Purchasing Division (also under Administration) manages statewide contracts, solicitations, and the wvOASIS Vendor Self-Service (VSS) registration that every vendor must complete. Active bids post to the West Virginia Purchasing Bulletin.",
+    "vehicles": [
+      { "name": "OT IT Statewide Contracts", "detail": "Pre-established IT vehicles agencies order from — e.g. IP23 (desktops/laptops/monitors/docking), CPHONE20A (mobile), GSUITE20, LAR24 (Microsoft licensing), DATATRNSP23 (WAN). Confirm Dell's coverage on the client/endpoint and infrastructure contracts." },
+      { "name": "Purchasing Division Statewide Contracts", "detail": "Centralized statewide agreements and solicitations administered under the Department of Administration; agencies access them via the Purchasing Division." },
+      { "name": "wvOASIS Vendor Self-Service (VSS)", "detail": "Mandatory vendor registration and the gateway to the Purchasing Bulletin and bid solicitations — confirm Dell and reseller registrations are current." }
+    ],
+    "entities": [
+      { "name": "Office of Technology (OT)", "role": "Central IT authority and CISO host; owns IT statewide contracts, modernization, and the 'cloud-right' direction." },
+      { "name": "Purchasing Division", "role": "Statewide procurement, solicitations, and vendor registration (VSS); under the Department of Administration." },
+      { "name": "Dept. of Commerce — Economic Development", "role": "Certifies microgrid/data-center districts under HB 2014; the front door for high-impact data-center projects." },
+      { "name": "West Virginia University (WVU)", "role": "Largest independent research-computing and AI buyer; launched a CIO search in 2026." }
+    ],
+    "competition": "West Virginia is a smaller, contract-driven market where the action is shifting toward private data-center capital and federal broadband dollars. Differentiation comes from AI-infrastructure capability mapped to the HB 2014 buildout, a credible answer to the CISO's framework gap, and hybrid/on-prem options that fit a 'cloud-right' state — plus the HB 5638 anti-lock-in stance, which favors vendors who don't tie deployment to restrictive licensing."
+  },
+
+  "powerStructure": [
+    { "name": "Patrick Morrisey", "title": "Governor", "org": "State of West Virginia", "note": "Took office Jan 2025; champions the microgrid/data-center agenda (HB 2014) and 'Win, baby' digital-economy push.", "ref": 1 },
+    { "name": "Heather Abbott", "title": "Chief Information Officer", "org": "Office of Technology (Dept. of Administration)", "note": "Owns statewide IT direction; 'cloud-right' modernization, mainframe exit, AI pilots.", "ref": 6 },
+    { "name": "Leroy Amos", "title": "Chief Information Security Officer", "org": "OT — Cybersecurity Office", "note": "Authority expanded under HB 5638 to set unified statewide cyber standards.", "ref": 4 },
+    { "name": "Dept. of Commerce — Economic Development", "title": "Microgrid/data-center certification", "org": "State of West Virginia", "note": "Issues HB 2014 district certifications; gatekeeper for high-impact data-center projects.", "ref": 3 }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "Morrisey signs HB 5638 consolidating state cybersecurity under the CISO", "impact": "Unified statewide standards and an anti-lock-in licensing provision; audit shows the program is behind — real need for secure infrastructure and services.", "tags": ["Cybersecurity", "Policy"], "ref": 4 },
+    { "date": "2026-03", "title": "Morrisey signs ~$5.5B FY2027 budget", "impact": "Intentionally flat budget continues fiscal discipline; major tech dollars come from private and federal sources, not state IT lines.", "tags": ["Budget"], "ref": 9 },
+    { "date": "2026-02", "title": "$4B, 600MW first High Impact Intelligence Center announced (Berkeley County)", "impact": "Proves the HB 2014 microgrid model attracts hyperscale AI capacity — flagship greenfield AI-infrastructure account.", "tags": ["Data Centers", "AI"], "ref": 5 },
+    { "date": "2025-11", "title": "NTIA approves WV BEAD broadband plan (~$545M, 73,044 locations)", "impact": "Funds 142 deployment projects underpinning rural connectivity and telehealth modernization.", "tags": ["Broadband", "Federal"], "ref": 7 },
+    { "date": "2025-11", "title": "Site-certification rules released for the HB 2014 data-center/microgrid program", "impact": "Operationalizes the microgrid law; certification process opens for new high-impact data-center districts.", "tags": ["Data Centers", "Energy"], "ref": 3 },
+    { "date": "2025-07", "title": "Power Generation and Consumption Act (HB 2014) takes effect", "impact": "Statewide certified-microgrid program goes live — the foundation of the state's AI-data-center strategy.", "tags": ["Data Centers", "Energy"], "ref": 1 }
+  ],
+
+  "dellActions": [
+    "Lead AI-infrastructure on the HB 2014 buildout: map Dell ISG / AI Factory offerings to the $4B Berkeley County intelligence center and pursue follow-on high-impact data-center sites as districts certify.",
+    "Engage OT on 'cloud-right' modernization — position on-prem/private and hybrid infrastructure for the mainframe exit and systems that shouldn't move to public cloud.",
+    "Bring a credible cybersecurity story to the CISO's office: secure compute, infrastructure, and managed services that help close the statutory framework gap the audit flagged (HB 5638).",
+    "Confirm Dell's coverage and reseller registration on OT IT statewide contracts (e.g. IP23 client/endpoint) and in wvOASIS VSS for the agencies you're targeting.",
+    "Lean into the HB 5638 anti-lock-in posture — differentiate with flexible, deployment-agnostic licensing and governed private/on-prem AI for sensitive state workloads."
+  ],
+
+  "sources": [
+    { "label": "Gov. Morrisey signs Power Generation and Consumption Act of 2025 — The Real WV", "url": "https://therealwv.com/2025/05/01/gov-morrisey-signs-power-generation-and-consumption-act-of-2025-says-west-virginia-is-ready-to-win-baby/" },
+    { "label": "West Virginia's new law bets big on microgrids — pv magazine USA", "url": "https://pv-magazine-usa.com/2025/05/19/west-virginias-new-law-bets-big-on-microgrids/" },
+    { "label": "Site certification rules released for WV data center/microgrid law — News and Sentinel", "url": "https://www.newsandsentinel.com/news/business/2025/11/site-certification-rules-released-for-data-center-microgrid-law/" },
+    { "label": "West Virginia gives CISO greater authority to lead statewide cyber program — StateScoop", "url": "https://statescoop.com/west-virginia-cybersecurity-office-ciso-bill/" },
+    { "label": "Gov. Morrisey announces $4B private investment in WV's first High Impact Intelligence Center — WV Office of the Governor", "url": "https://governor.wv.gov/article/governor-morrisey-announces-4-billion-private-investment-west-virginias-first-high-impact" },
+    { "label": "W.Va. CIO's IT Vision: 'Cloud-Right, Not Cloud-First' — GovTech", "url": "https://www.govtech.com/workforce/w-va-cios-it-vision-cloud-right-not-cloud-first" },
+    { "label": "Gov. Morrisey announces Trump Administration approval of sweeping new broadband coverage — WV Office of the Governor", "url": "https://governor.wv.gov/article/gov-morrisey-announces-trump-administration-approval-sweeping-new-broadband-coverage" },
+    { "label": "West Virginia Legislature passes 'compromise' $5.3B FY2026 state budget — WV Gazette-Mail", "url": "https://www.wvgazettemail.com/news/legislative_session/update-west-virginia-legislature-passes-compromise-5-3b-fy2026-state-budget/article_3803a2f5-32dc-4a2c-ae80-b6c9cf6b4345.html" },
+    { "label": "Governor signs $5.5 billion budget — WV MetroNews", "url": "https://wvmetronews.com/2026/03/12/governor-signs-5-5-billion-budget-calls-it-a-success-but-does-offer-some-line-item-vetoes/" },
+    { "label": "IT Statewide Contracts — West Virginia Office of Technology", "url": "https://technology.wv.gov/technology-services_1/it-statewide-contracts" },
+    { "label": "Vendor Registration — West Virginia Purchasing Division", "url": "https://www.state.wv.us/admin/purchase/VendorReg.html" }
+  ]
+}

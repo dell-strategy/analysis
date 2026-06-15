@@ -1,0 +1,146 @@
+{
+  "code": "MA",
+  "name": "Massachusetts",
+  "slug": "massachusetts",
+  "region": "Northeast",
+  "updated": "2026-06-15",
+  "tagline": "A statewide AI Hub, new sustainable high-performance compute, and the nation's densest research-university cluster make Massachusetts one of the strongest applied-AI and research-computing markets in the country.",
+
+  "snapshot": [
+    { "label": "FY2026 State Budget", "value": "$60.9B" },
+    { "label": "Primary IT Vehicle", "value": "OSD Statewide Contracts" },
+    { "label": "Central IT Authority", "value": "EOTSS" },
+    { "label": "AI Anchor", "value": "Mass AI Hub" }
+  ],
+
+  "execSummary": {
+    "summary": "Massachusetts pairs a deep public-sector technology footprint with the densest concentration of research universities in the country, and the Healey administration has put applied AI at the center of its agenda. The Massachusetts AI Hub — a MassTech-run initiative recommended by the Governor's AI Task Force — anchors the strategy, backed by a $31M state grant to expand sustainable high-performance computing through the Massachusetts Green High Performance Computing Center (MGHPCC) and a projected ~$120M combined five-year investment with member universities. Central IT runs through the Executive Office of Technology Services and Security (EOTSS) under Secretary & Commonwealth CIO Jason Snyder, while purchasing flows through Operational Services Division (OSD) statewide contracts on COMMBUYS. The Mass Leads Act ($3.9B economic-development law) added permitting and investment tools for data centers, life sciences, and applied AI. For Dell, the strongest angle is research compute and AI infrastructure tied to the AI Hub, MGHPCC, and the BU/Harvard/MIT/Northeastern/UMass cluster, layered over enterprise refresh and a maturing cybersecurity program.",
+    "opportunities": [
+      "Research compute and AI infrastructure tied to the Massachusetts AI Hub and MGHPCC's new AI Compute Resources (AICR) environment (PowerEdge, GPU, networking, services).",
+      "University research-computing demand across the six MGHPCC members — Boston University, Harvard, MIT, Northeastern, UMass, and Yale.",
+      "Enterprise and endpoint refresh across executive agencies consolidated under EOTSS.",
+      "Cybersecurity infrastructure and managed services as the Commonwealth SOC and municipal cyber programs scale."
+    ],
+    "stats": [
+      { "value": "$60.9B", "label": "FY2026 State Budget", "note": "Signed July 4, 2025; +$3.2B over FY2025", "ref": 1 },
+      { "value": "$31M", "label": "AI Hub HPC grant", "note": "Sustainable high-performance compute via MGHPCC", "ref": 3 },
+      { "value": "~$120M", "label": "5-yr AI compute investment", "note": "State + MGHPCC member universities (projected)", "ref": 3 },
+      { "value": "$3.9B", "label": "Mass Leads Act", "note": "Econ-dev law; data centers, life sciences, applied AI", "ref": 6 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Massachusetts budgets on an annual fiscal-year cycle (July 1–June 30). Governor Healey signed the $60.9B FY2026 General Appropriations Act on July 4, 2025 — roughly $3.2B above FY2025 but about $1B below her January filing, reflecting fiscal caution. There is no single 'state IT budget'; technology spend is distributed across agencies, consolidated enterprise services run through EOTSS (line item 1790-0100), and a set of named AI, compute, and cybersecurity initiatives funded outside the core operating budget through MassTech and capital programs.",
+    "stats": [
+      { "value": "$60.9B", "label": "FY2026 budget", "note": "Signed July 4, 2025", "ref": 1 },
+      { "value": "$2.5M", "label": "AI Models Challenge", "note": "Domain-specific AI model grants", "ref": 4 },
+      { "value": "$2.5M", "label": "Grow with Google", "note": "Free AI training for ~30,000 residents", "ref": 7 }
+    ],
+    "breakdown": [
+      { "label": "AI Hub HPC grant (MGHPCC)", "amount": 31, "display": "$31M", "note": "Sustainable high-performance compute" },
+      { "label": "AI Models Innovation Challenge", "amount": 2.5, "display": "$2.5M", "note": "Domain-specific model awards" },
+      { "label": "Grow with Google AI training", "amount": 2.5, "display": "$2.5M", "note": "Google-funded; AI Hub-administered" }
+    ],
+    "notes": [
+      "EOTSS operating figures sit in line item 1790-0100; the agency's central role is enterprise IT consolidation, not a single statewide IT spend number.",
+      "Many AI and compute investments flow through MassTech (a quasi-public agency) and capital programs rather than the annual operating budget — confirm the funding vehicle before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Massachusetts AI Hub",
+      "status": "Active / scaling",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 75,
+      "tags": ["AI", "Research Compute", "MassTech"],
+      "summary": "A MassTech-run initiative and the centerpiece of the Healey administration's applied-AI strategy, recommended by the Governor's Strategic AI Task Force. It coordinates state AI investment, runs the AI Models Innovation Challenge (up to $2M in domain-specific model grants), and partners with MGHPCC to expand compute. Sabrina Mansur was named inaugural executive director in May 2025. The Hub is the front door to the state's applied-AI and research-compute demand.",
+      "ref": 5
+    },
+    {
+      "name": "AI Compute Resources via MGHPCC",
+      "status": "Funded",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 80,
+      "tags": ["AI Infrastructure", "HPC", "Universities"],
+      "summary": "A $31M state grant (announced May 2025) expands sustainable high-performance computing through the Massachusetts Green High Performance Computing Center, creating an AI Compute Resources (AICR) environment for universities, startups, and businesses. Combined state and university investment is projected at ~$120M over five years. MGHPCC's six members — BU, Harvard, MIT, Northeastern, UMass, and Yale — make this the strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
+      "ref": 3
+    },
+    {
+      "name": "Mass Leads Act",
+      "status": "In effect",
+      "statusType": "good",
+      "dellFit": 60,
+      "budgetStrength": 70,
+      "tags": ["Economic Dev", "Data Centers", "AI"],
+      "summary": "A $3.9B economic-development law signed November 2024 to keep Massachusetts a leader in life sciences, climatetech, and applied AI. It streamlines permitting (Permit Extension Act, a State Permitting Regulatory Office) and drives investment in data centers and emerging industries. A follow-on Mass Wins Act extends the agenda to AI, quantum, defense, and robotics — relevant context for data-center and infrastructure demand.",
+      "ref": 6
+    },
+    {
+      "name": "Commonwealth Cybersecurity Program",
+      "status": "Maturing",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "SOC", "Municipal"],
+      "summary": "EOTSS runs a unified Commonwealth Security Operations Center (SIEM, vulnerability management, threat intel, incident response). In 2025 it handled 41,000+ security events and mitigated 400,000+ vulnerabilities (a 26% YoY increase). Separately, CyberTrust Massachusetts operates a SOC for municipalities, with the Cyber Resilient Massachusetts grant raising per-entity awards to up to $50K. Secure compute, infrastructure, and managed services map directly to this buildout.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "Massachusetts splits technology governance from purchasing. The Executive Office of Technology Services and Security (EOTSS) sets enterprise IT strategy, policy, and security and runs consolidated services for executive agencies. The Operational Services Division (OSD) establishes the statewide contracts that state, municipal, and public-education buyers use, transacted through the COMMBUYS e-procurement system. For Dell, the practical buying motion runs through OSD IT statewide contracts.",
+    "vehicles": [
+      { "name": "OSD Statewide Contracts (COMMBUYS)", "detail": "Primary vehicle. Pre-negotiated, state-priced agreements open to state agencies, municipalities, and public education; orders placed in COMMBUYS." },
+      { "name": "ITC73 — IT Hardware & Services", "detail": "Statewide contract covering desktops, laptops, tablets, servers, storage, resellers, and related services. Confirm Dell and reseller positions are current and correctly scoped." },
+      { "name": "IT Software & Services contracts", "detail": "Companion statewide vehicles for software, cloud, and professional services — relevant for as-a-service and AI offerings." }
+    ],
+    "entities": [
+      { "name": "EOTSS", "role": "Central enterprise IT strategy, policy, security, and consolidated services; home of the Commonwealth SOC and the state CIO." },
+      { "name": "OSD", "role": "Establishes and manages statewide contracts; owns the COMMBUYS purchasing platform." },
+      { "name": "MassTech / Massachusetts AI Hub", "role": "Quasi-public driver of AI investment, the AI Hub, and compute partnerships — a key influence point for research-compute deals." },
+      { "name": "Research universities (BU, Harvard, MIT, Northeastern, UMass)", "role": "Large independent research-computing and AI-infrastructure buyers, linked through MGHPCC." }
+    ],
+    "competition": "Massachusetts is a competitive, contract-driven market with strong incumbents on OSD IT statewide contracts and deep vendor relationships across the university cluster. Differentiation tends to come from AI-infrastructure and HPC capability, sustainability (a stated MGHPCC and state priority), and services that map to the AI Hub and cybersecurity buildout rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Maura Healey", "title": "Governor", "org": "Commonwealth of Massachusetts", "note": "Champions the applied-AI agenda; launched the AI Hub and signed the Mass Leads Act.", "ref": 5 },
+    { "name": "Jason Snyder", "title": "Secretary of Technology Services & Security and Commonwealth CIO", "org": "EOTSS", "note": "Owns enterprise IT strategy, consolidation, and cybersecurity; former Harvard CTO. NASCIO 'Golden Gov' honoree (2025).", "ref": 9 },
+    { "name": "Sabrina Mansur", "title": "Executive Director, Massachusetts AI Hub", "org": "MassTech", "note": "Inaugural director (started May 2025); 20+ years in AI and autonomous systems. Key contact for applied-AI and compute strategy.", "ref": 5 },
+    { "name": "MassTech (Massachusetts Technology Collaborative)", "title": "Quasi-public economic-development & innovation agency", "org": "Commonwealth of Massachusetts", "note": "Runs the AI Hub, MGHPCC relationship, and cyber grant programs — a major influence point for research-compute investment." },
+    { "name": "MGHPCC", "title": "Massachusetts Green High Performance Computing Center", "org": "University consortium", "note": "Shared HPC facility for BU, Harvard, MIT, Northeastern, UMass, Yale; host of the new AI Compute Resources environment.", "ref": 3 }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "Healey and Google launch 'Grow with Google' free AI training", "impact": "$2.5M Google-funded program, administered by the AI Hub, aims to train ~30,000 residents — reinforcing the state's applied-AI workforce push.", "tags": ["AI", "Workforce"], "ref": 7 },
+    { "date": "2025-08", "title": "MassTech issues RFP for a 'Data Commons Collaborative'", "impact": "Synthetic-dataset infrastructure modeled on resident data — signals demand for governed data and compute platforms.", "tags": ["AI", "Data"], "ref": 5 },
+    { "date": "2025-07", "title": "Governor Healey signs $60.9B FY2026 budget", "impact": "Budget up $3.2B over FY2025 but trimmed ~$1B from the filing — fiscal caution shapes agency IT spend.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-05", "title": "$31M AI Hub HPC grant and AI Hub director announced at IBM Think (Boston)", "impact": "Expands sustainable high-performance compute via MGHPCC (~$120M projected over 5 yrs); names Sabrina Mansur as inaugural director.", "tags": ["AI Infrastructure", "HPC"], "ref": 3 },
+    { "date": "2025-04", "title": "Commonwealth SOC reports 41,000+ events, 400,000+ vulnerabilities mitigated", "impact": "26% YoY increase in vulnerability mitigation signals a scaling cybersecurity program and infrastructure demand.", "tags": ["Cybersecurity"], "ref": 8 },
+    { "date": "2024-11", "title": "Mass Leads Act signed ($3.9B)", "impact": "Permitting and investment tools for data centers, life sciences, and applied AI underpin longer-term infrastructure growth.", "tags": ["Economic Dev", "Data Centers"], "ref": 6 }
+  ],
+
+  "dellActions": [
+    "Lead with research compute and AI infrastructure: tie Dell ISG / AI Factory offerings to the Massachusetts AI Hub, the MGHPCC AICR environment, and the BU/Harvard/MIT/Northeastern/UMass cluster.",
+    "Engage MassTech and the AI Hub (Sabrina Mansur) as the front door to applied-AI and compute investment — influence early, before vehicles are set.",
+    "Emphasize sustainability in HPC and data-center proposals — it is a stated MGHPCC and Commonwealth priority, not a nice-to-have.",
+    "Validate Dell's position on OSD statewide IT contracts (ITC73 hardware and the software/services vehicles) on COMMBUYS for state, municipal, and education buyers.",
+    "Map secure-compute and managed-services offerings to the EOTSS Commonwealth SOC and the CyberTrust municipal cyber program as those programs scale."
+  ],
+
+  "sources": [
+    { "label": "Mass.gov — Governor Healey signs $60.9 billion FY2026 budget", "url": "https://www.mass.gov/news/governor-healey-signs-609-billion-fiscal-year-2026-budget" },
+    { "label": "Boston Globe — Healey signs $61 billion state budget", "url": "https://www.bostonglobe.com/2025/07/04/metro/healey-budget-state-house-congress-bill/" },
+    { "label": "MGHPCC — Healey advances AI leadership with major investments in the Massachusetts AI Hub", "url": "https://www.mghpcc.org/governor-healey-advances-states-ai-leadership-with-major-investments-in-massachusetts-ai-hub/" },
+    { "label": "MassTech — Massachusetts launches AI Models Innovation Challenge", "url": "https://masstech.org/news/massachusetts-launches-flagship-ai-models-innovation-challenge-drive-applied-ai-innovation" },
+    { "label": "Mass.gov — Governor Healey announces Massachusetts AI Hub", "url": "https://www.mass.gov/news/governor-healey-announces-massachusetts-ai-hub-to-make-state-global-leader-in-applied-ai-innovation" },
+    { "label": "MLSC — Governor Healey signs economic development bill (Mass Leads Act)", "url": "https://www.masslifesciences.com/governor-healey-signs-economic-development-bill-to-strengthen-massachusetts-global-leadership-in-climatetech-life-sciences-and-ai/" },
+    { "label": "MassTech — Healey and Google announce statewide free AI training partnership", "url": "https://masstech.org/news/governor-healey-and-google-announce-new-statewide-partnership-provide-free-ai-training" },
+    { "label": "WWLP — As demand rises, state turning corner in cybersecurity efforts", "url": "https://www.wwlp.com/news/massachusetts/as-demand-rises-state-turning-corner-in-cybersecurity-efforts/" },
+    { "label": "StateScoop — Massachusetts CIO Jason Snyder profile", "url": "https://statescoop.com/bio/jason-snyder/" },
+    { "label": "Mass.gov — Buy from a Statewide Contract (OSD / COMMBUYS)", "url": "https://www.mass.gov/buy-from-a-statewide-contract" }
+  ]
+}

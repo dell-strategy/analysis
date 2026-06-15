@@ -1,0 +1,159 @@
+{
+  "code": "IN",
+  "name": "Indiana",
+  "slug": "indiana",
+  "region": "Midwest",
+  "updated": "2026-06-15",
+  "tagline": "A new fiscally lean Braun administration, an IT-consolidation mandate, and one of the nation's largest AI data-center buildouts (Meta's $10B LEAP campus, SK hynix HBM packaging) are turning Indiana into a national AI-infrastructure hub.",
+
+  "snapshot": [
+    { "label": "2026-27 Biennial Budget", "value": "~$46.2B" },
+    { "label": "Primary IT Vehicle", "value": "QPA (IDOA)" },
+    { "label": "AI Marquee Project", "value": "Meta LEAP $10B" },
+    { "label": "State CIO / IOT", "value": "Warren Lenard" }
+  ],
+
+  "execSummary": {
+    "summary": "Indiana enters the FY2026-27 biennium under a cost-cutting Braun administration that paired a flat ~$46.2B General Fund budget with a statewide 5% spending reduction and an 'I-DOGE' efficiency review. For a Dell seller, three things matter. First, new State CIO Warren Lenard (appointed March 2025) carries an explicit mandate to consolidate IT across state agencies for better service at lower cost — a refresh-and-rationalize motion that favors standardized, well-priced infrastructure and devices. Second, Indiana is now one of the country's hottest AI-infrastructure markets: Meta broke ground on a $10B, 1GW data-center campus at the LEAP district in Lebanon (Feb 2026), SK hynix is building a $3.87B HBM advanced-packaging plant at Purdue Research Park, and Amazon, Google and Microsoft projects are landing across the state — all backed by aggressive data-center sales-tax exemptions. Third, the state's buying motion runs through IDOA Quantity Purchase Agreements (QPAs), so Dell's coverage and reseller alignment there is the gate to agency deals.",
+    "opportunities": [
+      "AI-infrastructure / 'AI factory' demand tied to the LEAP Lebanon and statewide data-center boom plus Purdue/SK hynix research compute (PowerEdge, networking, services).",
+      "Statewide IT consolidation under CIO Lenard — standardized compute, endpoints, and lifecycle services delivered through IOT at lower cost.",
+      "University and research-computing buyers (Purdue, IU) scaling AI and semiconductor R&D.",
+      "Governed AI adoption under the state's NIST-aligned AI policy and AI Task Force — private/on-prem AI for sensitive agency workloads."
+    ],
+    "stats": [
+      { "value": "~$46.2B", "label": "FY2026-27 General Fund", "note": "~$23.0B FY26 + ~$23.2B FY27", "ref": 1 },
+      { "value": "$10B", "label": "Meta LEAP data center", "note": "1GW campus, Lebanon; broke ground Feb 2026", "ref": 8 },
+      { "value": "$3.87B", "label": "SK hynix HBM plant", "note": "Purdue Research Park; up to $458M CHIPS funding", "ref": 9 },
+      { "value": "5%", "label": "Statewide spending cut", "note": "Braun budget discipline / I-DOGE", "ref": 2 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Indiana budgets on a two-year (biennial) cycle. The 2025 General Assembly's HEA 1001 funds FY2026-27 with roughly $23.0B in FY2026 and $23.2B in FY2027 of General Fund appropriations (~$46.2B total), including about $604M in capital. Facing a softer April 2025 revenue forecast, the budget applies a statewide ~5% reduction on most line items plus an additional 5% operating reserve. There is no single 'state IT budget' line — technology spend is distributed across agencies and recovered through the Indiana Office of Technology's internal-service rate model.",
+    "stats": [
+      { "value": "~$23.0B", "label": "FY2026 General Fund", "note": "HEA 1001 appropriations", "ref": 1 },
+      { "value": "~$23.2B", "label": "FY2027 General Fund", "note": "HEA 1001 appropriations", "ref": 1 },
+      { "value": "~$604M", "label": "Capital appropriations", "note": "Biennial total", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "BEAD broadband allocation", "amount": 868, "display": "~$868M", "note": "Federal BEAD funds for Indiana" },
+      { "label": "Capital appropriations", "amount": 604, "display": "~$604M", "note": "FY2026-27 biennium" },
+      { "label": "Data-center tax exemptions claimed", "amount": 655, "display": "~$655M", "note": "Cumulative sales/use tax forgone to date" }
+    ],
+    "notes": [
+      "Figures are biennial (two-year) or cumulative totals unless noted.",
+      "IOT funds itself largely through internal-service rates billed to agencies, so 'IT spend' shows up across agency budgets rather than as one appropriation.",
+      "A statewide 5% reduction plus 5% operating reserve makes cost and consolidation the dominant procurement themes this biennium."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Meta LEAP Lebanon Data Center",
+      "status": "Under construction",
+      "statusType": "good",
+      "dellFit": 88,
+      "budgetStrength": 90,
+      "tags": ["AI Infrastructure", "Data Centers", "LEAP"],
+      "summary": "Meta broke ground in February 2026 on a $10B+, ~1,500-acre, 1GW data-center campus at the LEAP Research and Innovation District in Lebanon (Boone County), one of its largest AI investments to date. Alongside Amazon (Project Rainier), Google (Project Zodiac) and Microsoft projects, the LEAP buildout anchors Indiana as national AI infrastructure — the strongest tailwind for Dell ISG, networking and services demand in the region.",
+      "ref": 8
+    },
+    {
+      "name": "SK hynix HBM Advanced Packaging (Purdue)",
+      "status": "Under construction",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 85,
+      "tags": ["Semiconductors", "AI Memory", "Purdue"],
+      "summary": "SK hynix is investing ~$3.87B in a high-bandwidth-memory (HBM) advanced-packaging and R&D facility at Purdue Research Park in West Lafayette — the first U.S. HBM packaging plant — backed by up to $458M in federal CHIPS funding. It deepens Indiana's AI-hardware ecosystem and Purdue's research-computing footprint, both adjacent demand for Dell AI-infrastructure and services.",
+      "ref": 9
+    },
+    {
+      "name": "Statewide IT Consolidation (IOT)",
+      "status": "In progress",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 60,
+      "tags": ["Consolidation", "Efficiency", "Modernization"],
+      "summary": "New State CIO Warren Lenard (appointed March 2025) was hired with an explicit mandate to consolidate IT organizations across state government to deliver better service at lower cost. Combined with Braun's I-DOGE efficiency drive, this favors standardized, competitively priced compute, endpoints and lifecycle services delivered through IOT — a refresh-and-rationalize opening for Dell.",
+      "ref": 6
+    },
+    {
+      "name": "Indiana AI Governance & Task Force",
+      "status": "Ongoing study",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 40,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Indiana's bipartisan AI Task Force (created by SEA 150, running through 2027) is studying government AI use, privacy and security, and the state adopted a NIST AI Risk Management Framework-aligned policy for agency AI. Agencies need governed, auditable AI — an opening to lead with private/on-prem AI for sensitive data rather than open public models.",
+      "ref": 10
+    },
+    {
+      "name": "Broadband Expansion (BEAD / Next Level Connections)",
+      "status": "Awarding",
+      "statusType": "good",
+      "dellFit": 45,
+      "budgetStrength": 65,
+      "tags": ["Broadband", "Rural", "Connectivity"],
+      "summary": "Indiana's ~$868M BEAD allocation, run by the Indiana Broadband Office alongside OCRA's Next Level Connections and the Indiana Connectivity Program, is mid-award — Round 1 BEAD covers ~70% of eligible unserved locations. Primarily a connectivity build, but it expands the digital footprint and edge/management needs across rural agencies and partners.",
+      "ref": 11
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Indiana Department of Administration (IDOA) Procurement Division is the central purchasing authority, while the Indiana Office of Technology (IOT) sets technology standards and delivers shared infrastructure. Most state agency technology buys run through IDOA Quantity Purchase Agreements (QPAs) — pre-competed statewide contracts that let agencies buy from qualified vendors without a separate solicitation, with typical PO processing of just a few days. Many IT QPAs ride established GSA/cooperative instruments.",
+    "vehicles": [
+      { "name": "Quantity Purchase Agreements (QPAs)", "detail": "Primary vehicle. Pre-competed statewide contracts (commonly 2-4 year terms) for IT equipment, software and services. Confirm Dell's QPA coverage and authorized resellers are current and correctly scoped." },
+      { "name": "IDOA Active Contracts", "detail": "Searchable statewide contracts and awards administered by the IDOA Procurement Division." },
+      { "name": "IOT shared services / internal-service rates", "detail": "IOT delivers consolidated infrastructure and services billed to agencies via internal-service rates — the channel for consolidation-driven refresh." }
+    ],
+    "entities": [
+      { "name": "IDOA Procurement", "role": "Central purchasing; owns QPAs and statewide contracts." },
+      { "name": "Indiana Office of Technology (IOT)", "role": "State CIO's agency; IT standards, security and shared infrastructure; leads consolidation." },
+      { "name": "FSSA (Family & Social Services)", "role": "Among the largest, most data-heavy agency IT spenders; modernization-driven." },
+      { "name": "Purdue University / Indiana University", "role": "Large independent research-computing and AI-infrastructure buyers." }
+    ],
+    "competition": "Indiana is a cost-conscious, contract-driven market — incumbents hold QPAs across compute, networking and services, and the Braun administration's efficiency focus puts pressure on price. Differentiation comes from AI-infrastructure capability tied to the data-center buildout, consolidation-friendly standardization, and services that map to IOT's modernization rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Mike Braun", "title": "Governor", "org": "State of Indiana", "note": "Cost-cutting agenda; launched I-DOGE efficiency review and a statewide 5% spending cut; champions the AI/data-center economic push.", "ref": 2 },
+    { "name": "Warren Lenard", "title": "State CIO & IOT Director", "org": "Indiana Office of Technology", "note": "Appointed March 2025 from the private sector (Byrider, Finish Line); mandate to consolidate state IT at lower cost.", "ref": 6 },
+    { "name": "Indiana Economic Development Corp (IEDC)", "title": "Economic development authority", "org": "State of Indiana", "note": "Drives the LEAP district and data-center deals; administers data-center sales-tax exemptions.", "ref": 7 },
+    { "name": "AI Task Force (SEA 150)", "title": "Legislative AI study body", "org": "Indiana General Assembly", "note": "Co-chaired by Rep. Matt Lehman; studying government AI use, privacy and security through 2027.", "ref": 10 },
+    { "name": "State Budget Agency", "title": "Appropriations & fiscal analysis", "org": "State of Indiana", "note": "Owns the biennial budget and revenue forecasts — useful for sizing agency IT spend under tightened budgets.", "ref": 1 }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "Meta breaks ground on $10B, 1GW data-center campus at LEAP Lebanon", "impact": "Anchors Indiana as national AI infrastructure; major ISG, networking and services tailwind.", "tags": ["Data Centers", "AI"], "ref": 8 },
+    { "date": "2025-05", "title": "HB 1601 signed (PL 178): data-center tax exemption expanded to quantum and advanced computing", "impact": "Sweetens incentives that keep AI/data-center investment flowing into the state.", "tags": ["Data Centers", "Policy"], "ref": 12 },
+    { "date": "2025-04", "title": "FY2026-27 biennial budget (HEA 1001) enacted with statewide 5% cut", "impact": "Cost and consolidation become the dominant procurement themes; price-disciplined buying.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-03", "title": "Gov. Braun appoints Warren Lenard as State CIO & IOT Director", "impact": "New private-sector leader with a mandate to consolidate state IT at lower cost.", "tags": ["Leadership"], "ref": 6 },
+    { "date": "2025-01", "title": "Braun launches I-DOGE and budget-discipline executive orders", "impact": "Efficiency review pressures agency spend; favors standardized, well-priced infrastructure.", "tags": ["Efficiency", "Policy"], "ref": 2 },
+    { "date": "2025-08", "title": "Indiana AI Task Force begins second year of work", "impact": "Government AI governance maturing; opening for governed, on-prem AI on sensitive data.", "tags": ["AI", "Policy"], "ref": 10 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the LEAP Lebanon buildout, SK hynix/Purdue ecosystem, and university research-computing buyers.",
+    "Validate Dell's IDOA QPA coverage and authorized resellers are current and correctly scoped for the agencies you're targeting.",
+    "Engage CIO Warren Lenard's IOT consolidation agenda with standardized compute, endpoints, and lifecycle services that lower per-unit and operating cost.",
+    "Frame proposals around Braun-era cost discipline (I-DOGE, 5% cuts) — quantify TCO and consolidation savings, not just unit price.",
+    "Position governed, private/on-prem AI for sensitive workloads as agencies operationalize the state's NIST-aligned AI policy and Task Force guidance."
+  ],
+
+  "sources": [
+    { "label": "Indiana State Budget Agency — The Whole Budget Report (FY2026-27)", "url": "https://www.in.gov/sba/files/TheWholeBudgetReport.pdf" },
+    { "label": "State of Indiana — Gov. Braun signs executive orders to streamline government (I-DOGE)", "url": "https://events.in.gov/event/gov-braun-signs-executive-orders-to-streamline-state-government-and-boost-efficiency" },
+    { "label": "IDOA Procurement — Quantity Purchase Agreements (QPAs)", "url": "https://secure.in.gov/idoa/procurement/quantity-purchase-agreements-qpas/" },
+    { "label": "IDOA Procurement — How the State of Indiana Buys", "url": "https://secure.in.gov/idoa/procurement/supplier-resource-center/how-the-state-of-indiana-buys/" },
+    { "label": "IDOA Procurement — Active Contracts and QPAs", "url": "https://www.in.gov/idoa/procurement/active-contracts-and-qpas/" },
+    { "label": "StateScoop — Indiana governor names Warren Lenard as new state CIO", "url": "https://statescoop.com/mike-braun-warren-lenard-indiana-chief-information-officer/" },
+    { "label": "IEDC — Data Center Sales Tax Exemption", "url": "https://iedc.in.gov/indiana-advantages/investments/data-center-sales-tax-exemption/overview" },
+    { "label": "IEDC — Gov. Braun breaks ground on $10B Meta data center campus at LEAP District", "url": "https://iedc.in.gov/events/news/details/2026/02/11/gov.-braun-breaks-ground-on-10b-meta-data-center-campus-at-leap-district" },
+    { "label": "NIST — SK hynix (Indiana) West Lafayette CHIPS award", "url": "https://www.nist.gov/chips/sk-hynix-indiana-west-lafayette" },
+    { "label": "WFYI — Indiana AI Task Force begins second year of work", "url": "https://www.wfyi.org/news/articles/indiana-task-force-on-artificial-intelligence-begins-second-year-of-work" },
+    { "label": "Troyer Group — Understanding the BEAD Rollout in Indiana", "url": "https://www.troyergroup.com/bead-funding-indiana-broadband-infrastructure-map-insights/" },
+    { "label": "Tax Notes — Indiana bill expands data center tax exemption to quantum research (HB 1601)", "url": "https://www.taxnotes.com/lr/resolve/tax-notes-today-state/indiana-bill-expands-data-center-tax-exemption-to-quantum-research/7s6kf" }
+  ]
+}

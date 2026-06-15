@@ -1,0 +1,156 @@
+{
+  "code": "WA",
+  "name": "Washington",
+  "slug": "washington",
+  "region": "Pacific Northwest",
+  "updated": "2026-06-15",
+  "tagline": "A $77.9B budget under fiscal pressure, a maturing AI-governance regime, and one of the nation's densest data-center corridors — Washington is buying carefully but modernizing aggressively.",
+
+  "snapshot": [
+    { "label": "2025–27 Operating Budget", "value": "$77.9B" },
+    { "label": "Central IT Authority", "value": "WaTech" },
+    { "label": "Primary Buy Vehicle", "value": "DES Master Contracts" },
+    { "label": "BEAD Broadband", "value": "~$1.2B" }
+  ],
+
+  "execSummary": {
+    "summary": "Washington enters 2026 with two forces pulling in opposite directions. On one side, a record $77.9B 2025–27 operating budget (signed May 2025) plus a roughly $1.2B BEAD broadband buildout and the densest data-center corridor in the Northwest are real tailwinds. On the other, the state is in genuine fiscal stress: Ferguson's December 2025 supplemental closed a $2.3B shortfall with cuts and reserves, and in June 2026 OFM warned agencies to prepare for further 'significant' shortfalls — discretionary IT spend will be scrutinized. The buying motion runs through WaTech (Washington Technology Solutions) for enterprise services and strategy, and through DES master contracts (including NASPO ValuePoint) for hardware and services. AI governance is maturing fast: WaTech's generative-AI guidelines became statewide IT policy in December 2025, and the AG-led AI Task Force delivers its final report July 1, 2026. For Dell, the message is governed modernization on a budget — refresh, consolidation, and AI-ready infrastructure that pencils out against a deficit.",
+    "opportunities": [
+      "Agency modernization and lifecycle refresh under WaTech's 2025–2028 IT Strategic Plan and Enterprise Shared Tenant onboarding (endpoint, server, storage).",
+      "AI-ready, governed infrastructure as agencies operationalize WaTech's generative-AI policy and the AI Task Force's NIST AI RMF recommendations — private/on-prem AI for sensitive data.",
+      "Cybersecurity infrastructure and managed services tied to the Office of Cybersecurity (OCS) and the State & Local Cybersecurity Grant Program.",
+      "Higher-ed and research-computing demand at the University of Washington and WSU; plus the Quincy/Central Washington data-center corridor."
+    ],
+    "stats": [
+      { "value": "$77.9B", "label": "2025–27 Operating Budget", "note": "SB 5167, signed May 20, 2025", "ref": 1 },
+      { "value": "$2.3B", "label": "Shortfall closed (Dec 2025)", "note": "Supplemental via cuts + reserves; more warned for 2026", "ref": 6 },
+      { "value": "~$1.2B", "label": "BEAD Broadband", "note": "$736M federal + $112M state match; more pending", "ref": 4 },
+      { "value": "Dec 2025", "label": "Statewide AI policy adopted", "note": "WaTech generative-AI guidelines", "ref": 9 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Washington budgets on a two-year (biennial) cycle running July–June, with supplemental adjustments in the off-year. The 2025–27 operating budget (SB 5167) is $77.9B; the capital budget is $7.3B. There is no single 'state IT budget' line — technology spend is distributed across agencies and reported in OFM's IT budget detail, with major projects subject to WaTech/OFM gated-funding oversight. The fiscal backdrop matters: a $2.3B shortfall was closed in the December 2025 supplemental, and OFM has warned of further shortfalls in the 2026 session.",
+    "stats": [
+      { "value": "$77.9B", "label": "Operating (2025–27)", "note": "SB 5167", "ref": 1 },
+      { "value": "$7.3B", "label": "Capital (2025–27)", "note": "SSB 5195", "ref": 1 },
+      { "value": "$2.3B", "label": "Deficit closed", "note": "Dec 2025 supplemental", "ref": 6 }
+    ],
+    "breakdown": [
+      { "label": "Operating budget (all funds)", "amount": 77900, "display": "$77.9B", "note": "2025–27 biennium (SB 5167)" },
+      { "label": "Capital budget", "amount": 7300, "display": "$7.3B", "note": "2025–27 (SSB 5195)" },
+      { "label": "BEAD broadband (federal + match)", "amount": 1200, "display": "~$1.2B", "note": "Commerce / WSBO buildout" }
+    ],
+    "notes": [
+      "Figures are biennial (two-year) totals unless noted; broadband is a federal program administered by the state.",
+      "Fiscal pressure is real — confirm a program's funding survived the 2026 supplemental before forecasting; gated IT projects need WaTech/OFM sign-off."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "WaTech 2025–2028 IT Strategic Plan",
+      "status": "In execution",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 60,
+      "tags": ["Modernization", "Enterprise-first", "Cloud"],
+      "summary": "Built from 80+ state leaders and 900+ ideas, the plan organizes around four goals: inclusive services, data-driven impact, technology modernization, and operational transformation, executed in six-month action cycles. 'Enterprise-first' thinking favors shared platforms (Enterprise Shared Tenant, Azure) — an opening for standardized, consolidated infrastructure and refresh.",
+      "ref": 2
+    },
+    {
+      "name": "Statewide AI Governance",
+      "status": "Policy live; final report due July 2026",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Governance", "NIST RMF"],
+      "summary": "WaTech's generative-AI guidelines became statewide IT policy on Dec 11, 2025, and the AG-led AI Task Force (created by SB 5838) recommends adopting the NIST AI Risk Management Framework, with its final report due July 1, 2026. Agencies now need governed, auditable AI — favoring private/on-prem deployments for sensitive data over open public models.",
+      "ref": 9
+    },
+    {
+      "name": "Office of Cybersecurity (OCS) & Grant Program",
+      "status": "Active",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "Federal Grants", "SLCGP"],
+      "summary": "WaTech's OCS runs statewide security under the 2025–2027 Enterprise IT Security Strategic Plan and administers the federal State & Local Cybersecurity Grant Program (4th round, webinars in mid-2026) with Emergency Management. Local-government security funding flows here — secure infrastructure, endpoint, and managed-service opportunities.",
+      "ref": 7
+    },
+    {
+      "name": "BEAD Broadband Buildout",
+      "status": "Funded; construction in 2026",
+      "statusType": "good",
+      "dellFit": 50,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Federal", "Rural"],
+      "summary": "NTIA approved Washington's final BEAD proposal in early 2026, unlocking $736M federal plus $112M state match (potentially ~$1.2B total) to connect ~166,500 homes and businesses over four years, with some projects breaking ground in 2026. Indirect infrastructure and edge-compute pull-through for the agencies and partners delivering it.",
+      "ref": 4
+    },
+    {
+      "name": "Central Washington Data-Center Corridor",
+      "status": "Expanding (under new scrutiny)",
+      "statusType": "warn",
+      "dellFit": 80,
+      "budgetStrength": 65,
+      "tags": ["AI Infrastructure", "Data Centers", "Power"],
+      "summary": "Quincy and Central Washington host one of the nation's densest hyperscale clusters (Microsoft and others), driving major regional economic activity. But power demand is straining the grid and lawmakers are revisiting data-center tax incentives in 2026 — a tailwind for AI-infrastructure demand with policy risk to watch.",
+      "ref": 5
+    }
+  ],
+
+  "procurement": {
+    "intro": "Washington splits its technology motion between two central bodies. WaTech (Washington Technology Solutions) is the enterprise IT authority — it sets statewide strategy and policy, runs core services (network, data center, Azure, Enterprise Shared Tenant), and provides gated oversight of major IT projects with OFM. The Department of Enterprise Services (DES) runs statewide master contracts for goods and services, including cooperative agreements (NASPO ValuePoint, Sourcewell) that more than 1,800 state, local, tribal, K-12, and higher-ed purchasers can use.",
+    "vehicles": [
+      { "name": "DES Master Contracts", "detail": "Primary vehicle for IT hardware and services. Competitively solicited or cooperative (NASPO ValuePoint, Sourcewell). Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "DES IT Professional Services (ITPS)", "detail": "Pre-qualified pool for IT services, open to 1,800+ purchasers including local gov, K-12, and higher-ed." },
+      { "name": "WaTech Enterprise Services", "detail": "Azure cloud, Enterprise Shared Tenant (M365), data center, and network — WaTech is Customer of Record; onboarding is a recurring infrastructure trigger." },
+      { "name": "WaTech/OFM Gated Funding Oversight", "detail": "Not a contract, but major agency IT projects need WaTech + OFM approval to release funds — engage early." }
+    ],
+    "entities": [
+      { "name": "WaTech", "role": "Central IT strategy, policy, security (OCS), and enterprise services; gated project oversight." },
+      { "name": "DES", "role": "Statewide master contracts and cooperative purchasing for IT goods and services." },
+      { "name": "Health Care Authority / DSHS", "role": "Among the largest agency IT spenders; data-heavy modernization." },
+      { "name": "University of Washington / WSU", "role": "Large independent research-computing and AI-infrastructure buyers." }
+    ],
+    "competition": "Washington is a Microsoft-anchored, contract-driven market — Azure and the Enterprise Shared Tenant shape the cloud baseline, and incumbents hold DES master contracts across compute, networking, and services. With the state under fiscal pressure, differentiation comes from consolidation/TCO, governed AI-ready infrastructure, and security-grant-aligned offerings rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Bob Ferguson", "title": "Governor", "org": "State of Washington", "note": "Former AG; focused on closing budget shortfalls, AI guardrails (chatbot/digital-replica), and data-center grid impacts.", "ref": 3 },
+    { "name": "Bill Kehoe", "title": "State CIO & WaTech Director", "org": "WaTech", "note": "In role since 2021; retained by Ferguson. NASCIO Executive Committee. Owns statewide tech direction and enterprise-first strategy.", "ref": 10 },
+    { "name": "K.D. Chapman-See", "title": "Director, OFM", "org": "Office of Financial Management", "note": "Controls the budget and gated IT funding; authored the June 2026 shortfall warning to agencies.", "ref": 6 },
+    { "name": "Washington AI Task Force", "title": "AI policy body (AG-administered)", "org": "Created by SB 5838", "note": "Recommends NIST AI RMF adoption; final report due July 1, 2026 — shapes agency AI procurement.", "ref": 8 }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "OFM warns agencies of further 'significant' budget shortfalls", "impact": "Discretionary IT spend will be scrutinized in the 2026 session; lead with TCO and consolidation.", "tags": ["Budget", "Risk"], "ref": 6 },
+    { "date": "2026-03", "title": "Ferguson signs digital-replica law; pushes AI chatbot safeguards (SB 5984)", "impact": "Signals an active AI-regulation posture; agencies favor governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 3 },
+    { "date": "2026-02", "title": "NTIA approves Washington's final BEAD proposal (~$1.2B)", "impact": "Broadband construction begins in 2026 — infrastructure and edge pull-through.", "tags": ["Broadband", "Federal"], "ref": 4 },
+    { "date": "2026-01", "title": "Lawmakers move to revisit data-center tax incentives", "impact": "Policy risk to the Central WA data-center boom; watch for changes to the buildout pace.", "tags": ["Data Centers", "Policy"], "ref": 5 },
+    { "date": "2025-12", "title": "WaTech generative-AI guidelines adopted as statewide IT policy; AI Task Force interim report", "impact": "Agencies now need governed AI aligned to NIST AI RMF — opening for private/on-prem AI.", "tags": ["AI", "Policy"], "ref": 9 },
+    { "date": "2025-05", "title": "Ferguson signs $77.9B operating budget (SB 5167)", "impact": "Record budget but with a large tax package and tight fiscal outlook — buy carefully.", "tags": ["Budget"], "ref": 1 }
+  ],
+
+  "dellActions": [
+    "Lead with TCO and consolidation: tie Dell refresh, server, and storage to WaTech's enterprise-first strategy and Enterprise Shared Tenant onboarding in a budget-constrained year.",
+    "Position governed, private/on-prem AI for sensitive workloads as agencies operationalize WaTech's AI policy and the AI Task Force's NIST AI RMF recommendations.",
+    "Map cybersecurity offerings to OCS priorities and the State & Local Cybersecurity Grant Program so local-gov deals ride federal grant dollars.",
+    "Validate Dell's DES master-contract and NASPO ValuePoint coverage and resellers are current and correctly scoped for state, local, K-12, and higher-ed buyers.",
+    "Engage WaTech and OFM early on gated IT projects, and pursue UW/WSU research-computing and the Central WA data-center corridor for AI-infrastructure demand."
+  ],
+
+  "sources": [
+    { "label": "Washington State Standard — Ferguson signs 2025–27 budget", "url": "https://washingtonstatestandard.com/2025/05/20/ferguson-signs-budget-boosting-washington-state-spending-and-taxes/" },
+    { "label": "WaTech — Washington releases updated statewide IT Strategic Plan 2025–2028", "url": "https://watech.wa.gov/watech/news/2025/washington-releases-updated-statewide-it-strategic-plan-2025-2028" },
+    { "label": "OPB — Ferguson calls for AI chatbot regulations", "url": "https://www.opb.org/article/2026/01/12/washington-governor-bob-ferguson-calls-ai-chatbot-regulations/" },
+    { "label": "Commerce — NTIA approves Washington's final BEAD proposal ($1B+)", "url": "https://www.commerce.wa.gov/ntia-approves-washingtons-final-bead-proposal-unlocking-1-billion-investment-for-broadband-expansion-2/" },
+    { "label": "GeekWire — Washington embraces data centers, now setting terms", "url": "https://www.geekwire.com/2026/washington-state-has-embraced-data-centers-but-now-its-looking-to-set-terms-of-engagement/" },
+    { "label": "OPB — Washington warns agencies of significant budget shortfalls", "url": "https://www.opb.org/article/2026/06/08/budget-shortfall-washington-state/" },
+    { "label": "WaTech — State Office of Cybersecurity (OCS)", "url": "https://watech.wa.gov/cybersecurity/state-office-cybersecurity" },
+    { "label": "Inside Global Tech — Washington AI Task Force releases policy recommendations for 2026", "url": "https://www.insideglobaltech.com/2025/12/11/washington-state-ai-task-force-releases-ai-policy-recommendations-for-2026/" },
+    { "label": "WaTech — Interim Guidelines for Responsible Use of Generative AI", "url": "https://watech.wa.gov/policies/interim-guidelines-purposeful-and-responsible-use-generative-artificial-intelligence-ai-washington" },
+    { "label": "WaTech — Bill Kehoe to remain as State CIO under new governor", "url": "https://watech.wa.gov/news/2025/bill-kehoe-remain-wash-state-cio-under-new-governor" }
+  ]
+}

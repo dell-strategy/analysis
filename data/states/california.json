@@ -1,0 +1,156 @@
+{
+  "code": "CA",
+  "name": "California",
+  "slug": "california",
+  "region": "West",
+  "updated": "2026-06-15",
+  "tagline": "The nation's largest state IT market enters FY2025-26 under fiscal pressure but with a new tech chief, a sweeping AI-procurement order, and the country's first frontier-AI law reshaping how California buys and governs technology.",
+
+  "snapshot": [
+    { "label": "FY2025-26 Budget", "value": "$321.1B" },
+    { "label": "Central IT Vehicle", "value": "CMAS / DGS" },
+    { "label": "Security Roadmap", "value": "Cal-Secure" },
+    { "label": "AI Order (new)", "value": "EO N-5-26" }
+  ],
+
+  "execSummary": {
+    "summary": "California is the largest single state-government technology market in the U.S., and FY2025-26 brings three shifts every SLG seller should track. First, the state is operating under fiscal pressure: the Budget Act of 2025 ($321.1B total, ~$228.4B General Fund) closed an ~$11.8B shortfall with cuts and reserve draws, so deals must map to mandated modernization, not discretionary spend. Second, leadership turned over — long-time CIO Liana Bailey-Crimmins retired in spring 2026 and Governor Newsom appointed Chris Given (ex-IRS Direct File, GovOps) as the new CDT Director and State CIO, with legacy-system modernization, digital identity, and AI as stated priorities. Third, AI governance is now central: Executive Order N-5-26 (March 2026) creates an AI vendor-certification and procurement framework, while SB 53 — the nation's first frontier-AI transparency law — took effect January 1, 2026. For Dell, the buying motion runs through DGS / CMAS and agency contracts; AI-infrastructure, endpoint refresh, and the Cal-Secure security buildout are the strongest entry points.",
+    "opportunities": [
+      "AI-infrastructure demand as agencies operationalize GenAI pilots (Caltrans, CDTFA, Microsoft 365 Copilot) under new governance — an opening for governed private/on-prem AI (PowerEdge, networking, services).",
+      "Cal-Secure five-year security roadmap modernization across CDT/OIS and state entities — secure compute, endpoint, and managed services.",
+      "Legacy-system and benefits modernization (EDDNext and similar) under a new CIO focused on retiring technical debt — server, storage, and services refresh.",
+      "Endpoint, client, and lifecycle refresh across the nation's largest state workforce, plus UC/CSU/community-college research and campus buyers."
+    ],
+    "stats": [
+      { "value": "$321.1B", "label": "FY2025-26 Budget", "note": "Budget Act of 2025; ~$228.4B General Fund", "ref": 1 },
+      { "value": "~$797M", "label": "CDT FY2025-26 expenditures", "note": "Mostly Technology Services Revolving Fund", "ref": 8 },
+      { "value": "Mar 2026", "label": "EO N-5-26 signed", "note": "AI procurement & vendor certification", "ref": 5 },
+      { "value": "Jan 1 2026", "label": "SB 53 in effect", "note": "First U.S. frontier-AI transparency law", "ref": 6 }
+    ]
+  },
+
+  "budget": {
+    "intro": "California budgets on an annual cycle (fiscal year July 1-June 30). The Budget Act of 2025, signed June 27, 2025, appropriates roughly $321.1B in total spending with about $228.4B from the General Fund. The plan closed an estimated $11.8B shortfall through ~$2.8B in cuts, reserve draws, and fund shifts, so FY2025-26 is a constrained environment. There is no single 'state IT budget' line — technology spend is distributed across agencies plus the California Department of Technology (CDT), whose own expenditures run roughly $797M (largely the Technology Services Revolving Fund).",
+    "stats": [
+      { "value": "$321.1B", "label": "Total spending", "note": "Budget Act of 2025", "ref": 1 },
+      { "value": "$228.4B", "label": "General Fund", "note": "FY2025-26", "ref": 1 },
+      { "value": "~$11.8B", "label": "Shortfall closed", "note": "Cuts, reserves, fund shifts", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "CDT total expenditures", "amount": 797, "display": "~$797M", "note": "FY2025-26; mostly revolving fund" },
+      { "label": "EDDNext modernization", "amount": 124, "display": "~$124M", "note": "One-time benefits-system upgrade" },
+      { "label": "Last Mile broadband (FFA)", "amount": 1100, "display": "~$1.1B", "note": "Awarded Jun 2024-Feb 2025, 113 projects" }
+    ],
+    "notes": [
+      "Figures are annual (single-year) unless noted; California does not use a biennial cycle.",
+      "FY2025-26 is fiscally constrained — tie offers to mandated modernization and federal/state-funded programs rather than discretionary budget."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "EO N-5-26 — AI Procurement & Vendor Certification",
+      "status": "Signed Mar 2026",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Procurement", "Governance"],
+      "summary": "Executive Order N-5-26 (March 30, 2026) directs DGS and CDT to build a vendor-certification and procurement framework for AI: vendors must attest to safeguards against illegal content, harmful bias, and civil-rights harms, and the state CISO may challenge federal supply-chain risk designations. Recommendations are due ~120 days out. Agencies will need governed, auditable AI — an opening for private/on-prem AI on sensitive workloads.",
+      "ref": 5
+    },
+    {
+      "name": "Statewide GenAI Deployment",
+      "status": "Scaling",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 60,
+      "tags": ["AI", "Modernization", "Agencies"],
+      "summary": "California has moved GenAI from pilot to production: Caltrans traffic/safety analytics, a CDTFA call-center assistant, a State Digital Assistant tool across eight departments, and Microsoft 365 Copilot Chat offered at no cost to departments. EO N-5-26 pushes vetted GenAI tools to employees with safeguards. Production AI workloads drive infrastructure, networking, and services demand — and a governed private-AI alternative for sensitive data.",
+      "ref": 4
+    },
+    {
+      "name": "Cal-Secure Cybersecurity Roadmap",
+      "status": "In execution",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 60,
+      "tags": ["Cybersecurity", "CDT/OIS", "Modernization"],
+      "summary": "Cal-Secure is California's multi-year information-security maturity roadmap, led by CDT's Office of Information Security with Cal-CSIC, Cal OES, CHP, and the Military Department. It spans people, process, and technology priorities and drives sustained investment in security tooling and services across state entities — secure compute, endpoint, and managed-services opportunity.",
+      "ref": 7
+    },
+    {
+      "name": "SB 53 — Frontier AI Transparency Act",
+      "status": "In effect Jan 1, 2026",
+      "statusType": "warn",
+      "dellFit": 55,
+      "budgetStrength": 35,
+      "tags": ["AI", "Policy", "Regulation"],
+      "summary": "SB 53 (signed Sept 2025, effective Jan 1, 2026) is the first U.S. law directly regulating frontier-AI developers, requiring published safety frameworks, transparency reports, catastrophic-risk disclosures, and whistleblower protections. It targets large model developers rather than buyers, but it sets the policy backdrop California agencies operate in and reinforces demand for transparent, governed AI approaches.",
+      "ref": 6
+    },
+    {
+      "name": "Broadband: Last Mile + Middle Mile + BEAD",
+      "status": "Deploying",
+      "statusType": "good",
+      "dellFit": 50,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Infrastructure", "Federal"],
+      "summary": "California is deploying broadband at historic scale: the CPUC's Last Mile Federal Funding Account awarded ~$1.1B across 113 projects, with further grants in late 2025/early 2026 and ~$550M slated for FY2027-28. The state holds an ~$1.8B BEAD allocation (more eligible locations than any other state) plus a statewide middle-mile network — adjacent edge, networking, and compute infrastructure demand.",
+      "ref": 9
+    }
+  ],
+
+  "procurement": {
+    "intro": "The California Department of General Services (DGS) is the central procurement authority; the California Department of Technology (CDT) sets IT policy, oversight, and statewide services. Most state and local technology buys run through DGS leveraged procurement vehicles — chiefly the California Multiple Award Schedules (CMAS), which extend federal GSA pricing into California so agencies can buy from pre-approved vendors without a full competitive bid.",
+    "vehicles": [
+      { "name": "CMAS (California Multiple Award Schedules)", "detail": "Primary leveraged vehicle. Extends federal GSA Schedule pricing into California; open to state agencies, cities, counties, districts, UC, CSU, K-12, and community colleges. Confirm Dell CMAS coverage and reseller scope are current." },
+      { "name": "DGS Leveraged Procurement Agreements", "detail": "Statewide contracts and master agreements for IT goods/services administered by DGS Procurement Division." },
+      { "name": "CDT statewide services", "detail": "CDT delivers data-center, cloud, and security services (CalCloud / Technology Services) to participating departments through the Technology Services Revolving Fund." }
+    ],
+    "entities": [
+      { "name": "DGS", "role": "Central procurement authority; owns CMAS and statewide leveraged agreements." },
+      { "name": "CDT", "role": "IT policy, oversight, and statewide technology/security services; home of the State CIO and Office of Information Security." },
+      { "name": "GovOps (Government Operations Agency)", "role": "Oversees CDT/DGS and drives the GenAI and modernization agenda." },
+      { "name": "UC / CSU / Community Colleges", "role": "Large independent research-computing, AI-infrastructure, and endpoint buyers." }
+    ],
+    "competition": "California is a large, mature, contract-driven market — incumbents hold CMAS and DGS agreements across compute, networking, and services, and the state's procurement and AI-governance rules add compliance overhead. Differentiation comes from AI-infrastructure capability, governed/private-AI for sensitive data, Cal-Secure-aligned security, and services that map to legacy modernization rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Gavin Newsom", "title": "Governor", "org": "State of California", "note": "Signed EO N-5-26 (AI procurement) and SB 53 (frontier-AI law); drives the GenAI-in-government agenda." },
+    { "name": "Chris Given", "title": "State CIO & CDT Director", "org": "California Department of Technology", "note": "Appointed Apr 2026 (ex-IRS Direct File, GovOps). Priorities: legacy modernization, digital identity, AI. Senate confirmation pending.", "ref": 3 },
+    { "name": "Liana Bailey-Crimmins", "title": "Former State CIO & CDT Director", "org": "California Department of Technology", "note": "Led CDT 2022-spring 2026 through the state's early GenAI rollout; retired April 2026.", "ref": 2 },
+    { "name": "Government Operations Agency (GovOps)", "title": "Oversight agency", "org": "State of California", "note": "Oversees CDT and DGS; co-leads GenAI executive-order implementation." },
+    { "name": "DGS Procurement Division", "title": "Central procurement", "org": "Department of General Services", "note": "Administers CMAS and statewide IT agreements — the contracting gateway for state and local buyers." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "Newsom appoints Chris Given as State CIO & CDT Director", "impact": "New tech leadership with a legacy-modernization and AI mandate; relationship-building window for sellers.", "tags": ["Leadership"], "ref": 3 },
+    { "date": "2026-03", "title": "EO N-5-26 establishes AI vendor-certification & procurement framework", "impact": "New compliance gate for AI buys; recommendations due ~120 days out. Favors governed, auditable AI.", "tags": ["AI", "Procurement"], "ref": 5 },
+    { "date": "2026-04", "title": "Liana Bailey-Crimmins retires as State CIO", "impact": "End of a four-year tenure that launched California's GenAI program; transition in CDT leadership.", "tags": ["Leadership"], "ref": 2 },
+    { "date": "2026-01", "title": "SB 53 frontier-AI transparency law takes effect", "impact": "Nation's first frontier-AI regulation is live; reinforces demand for transparent, governed AI.", "tags": ["AI", "Policy"], "ref": 6 },
+    { "date": "2025-06", "title": "Budget Act of 2025 signed (~$321.1B; ~$11.8B shortfall closed)", "impact": "Constrained fiscal year — tie offers to mandated modernization and federal/state-funded programs.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-04", "title": "California scales GenAI in state government (Caltrans, CDTFA, Copilot)", "impact": "Production AI workloads drive infrastructure, networking, and services demand.", "tags": ["AI", "Modernization"], "ref": 4 }
+  ],
+
+  "dellActions": [
+    "Lead with governed, private/on-prem AI for sensitive workloads as agencies operationalize GenAI under EO N-5-26 and SB 53 — position Dell AI Factory / ISG as the auditable alternative to public models.",
+    "Engage the new CIO (Chris Given) and CDT/GovOps early around legacy-system and benefits modernization (EDDNext-style) — server, storage, and services refresh.",
+    "Map offerings to the Cal-Secure roadmap with CDT's Office of Information Security — secure compute, endpoint, and managed services.",
+    "Validate Dell's CMAS coverage and reseller scope are current and correctly mapped to target state, local, and UC/CSU buyers before pursuing deals.",
+    "Frame all proposals to a constrained FY2025-26 budget — anchor to mandated modernization, federal broadband/BEAD adjacency, and measurable efficiency gains rather than discretionary spend."
+  ],
+
+  "sources": [
+    { "label": "California EDGE Coalition — Summary of the 2025-26 Enacted State Budget", "url": "https://www.caedge.org/2025-26-enacted-state-budget/" },
+    { "label": "GovTech — California's State CIO Liana Bailey-Crimmins Will Retire", "url": "https://www.govtech.com/workforce/californias-state-cio-liana-bailey-crimmins-will-retire" },
+    { "label": "StateScoop — California's governor appoints former federal official as new state CIO (Chris Given)", "url": "https://statescoop.com/california-appoints-cio-chris-given/" },
+    { "label": "Office of the Governor — California deploys first-in-the-nation GenAI technologies in state government", "url": "https://www.gov.ca.gov/2025/04/29/governor-newsom-deploys-first-in-the-nation-genai-technologies-to-improve-efficiency-in-state-government/" },
+    { "label": "Ropes & Gray — Newsom Signs Executive Order N-5-26 (AI Vendor Certification & Procurement)", "url": "https://www.ropesgray.com/en/insights/alerts/2026/04/newsom-signs-executive-order-establishing-ai-vendor-certification-and-procurement-framework" },
+    { "label": "Future of Privacy Forum — California's SB 53: The First Frontier AI Law, Explained", "url": "https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/" },
+    { "label": "California Department of Technology — Cybersecurity Strategy Plan (Cal-Secure)", "url": "https://www.cdt.ca.gov/wp-content/uploads/2021/10/Cybersecurity_Strategy_Plan_FINAL.pdf" },
+    { "label": "California eBudget — Department of Technology (7502) FY2025-26", "url": "https://ebudget.ca.gov/2025-26/pdf/GovernorsBudget/7500/7502.pdf" },
+    { "label": "CPUC — Last Mile Federal Funding Account (broadband)", "url": "https://www.cpuc.ca.gov/industries-and-topics/internet-and-phone/broadband-implementation-for-california/last-mile-federal-funding-account" },
+    { "label": "DGS — California Multiple Award Schedules (CMAS)", "url": "https://dgs.ca.gov/PD-CMAS" }
+  ]
+}

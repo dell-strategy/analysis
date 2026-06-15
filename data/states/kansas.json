@@ -1,0 +1,154 @@
+{
+  "code": "KS",
+  "name": "Kansas",
+  "slug": "kansas",
+  "region": "Midwest",
+  "updated": "2026-06-15",
+  "tagline": "A statewide IT-and-cybersecurity consolidation under one Executive CITO, a first-in-the-nation NIST CSF 2.0 mandate, and a Kansas City-metro data-center and battery boom — Kansas is centralizing how it buys and secures technology.",
+
+  "snapshot": [
+    { "label": "FY2027 State Spending", "value": "~$26.8B" },
+    { "label": "OITS IT Budget", "value": "~$98.7M" },
+    { "label": "Buying Authority", "value": "Office of Procurement & Contracts" },
+    { "label": "Security Mandate", "value": "NIST CSF 2.0 by 2028" }
+  ],
+
+  "execSummary": {
+    "summary": "Kansas is in the middle of a structural reorganization of state technology that every SLG seller should track. SB 291 (2024) directs the Office of Information Technology Services (OITS) to consolidate IT — especially cybersecurity controls — under the Executive Chief Information Technology Officer, and makes Kansas the only state to mandate NIST Cybersecurity Framework 2.0 compliance (by July 1, 2028). OITS ran a statewide IT assessment with Gartner through 2025 and is now shaping 2026 integration projects, stood up a 24/7 Security Operations Center, and operates a statewide generative-AI policy. Kansas budgets annually (FY2027 total state spending ~$26.8B), and the central buying motion runs through the Department of Administration's Office of Procurement and Contracts using cooperative vehicles like NASPO ValuePoint and Sourcewell. Outside government, the Kansas City metro is a fast-growing data-center and battery hub — Panasonic's $4B De Soto plant and Meta's $1B KC-area campus signal where infrastructure demand is concentrating. For Dell, consolidation creates a centralized buyer, a security-modernization runway, and AI-infrastructure tailwinds.",
+    "opportunities": [
+      "IT consolidation under the Executive CITO — server, storage, network, and DCaaS standardization as agencies migrate into shared OITS services.",
+      "Cybersecurity modernization toward the NIST CSF 2.0 mandate and the 24/7 SOC — secure compute, endpoint, and managed-security demand.",
+      "Governed AI adoption under the state generative-AI policy — private/on-prem AI for restricted-use data rather than open public models.",
+      "Endpoint, client, and lifecycle refresh as agencies consolidate onto common OITS-managed platforms."
+    ],
+    "stats": [
+      { "value": "~$26.8B", "label": "FY2027 State Spending", "note": "HB 2513, signed 2026", "ref": 1 },
+      { "value": "~$98.7M", "label": "OITS IT Budget", "note": "FY2026 all-funds request; revised higher", "ref": 2 },
+      { "value": "July 2028", "label": "NIST CSF 2.0 Deadline", "note": "SB 291 — only state with this mandate", "ref": 3 },
+      { "value": "$2.0M", "label": "24/7 SOC Funding", "note": "Appropriated 2025", "ref": 3 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Kansas budgets on an annual fiscal-year cycle. HB 2513 sets FY2027 total state spending at roughly $26.8B and also carries appropriations into later years. There is no single statewide 'IT budget'; central technology spend flows through OITS (a ~$98.7M FY2026 all-funds request, revised upward toward ~$116.5M), while most agency technology dollars sit inside individual agency budgets. SB 291's consolidation is gradually shifting more of that spend — especially cybersecurity — into OITS.",
+    "stats": [
+      { "value": "~$26.8B", "label": "FY2027 total spend", "note": "All funds (HB 2513)", "ref": 1 },
+      { "value": "~$98.7M", "label": "OITS FY2026 request", "note": "+$12.2M over revised FY2025", "ref": 2 },
+      { "value": "$15M", "label": "SB 291 SGF appropriation", "note": "Drives consolidation/cyber work", "ref": 2 }
+    ],
+    "breakdown": [
+      { "label": "OITS all-funds (FY2026 request)", "amount": 98.7, "display": "~$98.7M", "note": "Central IT services" },
+      { "label": "SB 291 SGF appropriation", "amount": 15, "display": "$15M", "note": "Consolidation & cybersecurity" },
+      { "label": "24/7 Security Operations Center", "amount": 2, "display": "$2.0M", "note": "Appropriated 2025" }
+    ],
+    "notes": [
+      "Figures are annual (fiscal-year) totals, not biennial.",
+      "Cybersecurity spend is mid-migration into OITS under SB 291 — confirm whether a program is agency-owned or already consolidated before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "SB 291 IT & Cybersecurity Consolidation",
+      "status": "In progress",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 70,
+      "tags": ["Consolidation", "Cybersecurity", "OITS"],
+      "summary": "SB 291 (2024) directs OITS to technically consolidate IT services — especially cybersecurity controls — under the Executive Chief Information Technology Officer. OITS ran a statewide assessment with Gartner through 2025 and is scoping 2026 integration projects. Consolidation centralizes the buyer and creates standardization demand across compute, storage, network, and DCaaS as agencies migrate into shared services.",
+      "ref": 4
+    },
+    {
+      "name": "NIST CSF 2.0 Mandate & 24/7 SOC",
+      "status": "Ramping to 2028",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 60,
+      "tags": ["Cybersecurity", "Compliance", "SOC"],
+      "summary": "Kansas is the only state to require NIST Cybersecurity Framework 2.0 compliance, with each branch appointing a CISO and aligning programs by July 1, 2028. OITS stood up a $2.0M, 24/7 Security Operations Center for real-time threat detection. Recent incidents (Judicial Branch 2023, Wichita 2024) keep urgency high — an opening for secure infrastructure and managed-security offerings.",
+      "ref": 3
+    },
+    {
+      "name": "Statewide Generative AI Policy",
+      "status": "In effect",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Governance", "Policy"],
+      "summary": "Governor Kelly directed Executive Branch agencies to adopt an OITS-authored generative-AI policy requiring human review of outputs and barring restricted-use information from public AI tools. Legislators are weighing an AI task force (HB 2592). The governed posture favors private/on-prem AI for sensitive workloads over open public models.",
+      "ref": 5
+    },
+    {
+      "name": "KC-Metro Data Center & Battery Boom",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 75,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Panasonic's $4B De Soto EV-battery plant opened July 2025 (and is exploring a shift toward data-center batteries by ~2029), while Meta's $1B Kansas City-area campus went live in 2025 with AI-optimized capacity following. The metro is becoming a regional AI-infrastructure and power hub — the strongest commercial tailwind for Dell ISG and AI Factory demand near the state.",
+      "ref": 6
+    },
+    {
+      "name": "BEAD Broadband Deployment",
+      "status": "Funded",
+      "statusType": "good",
+      "dellFit": 40,
+      "budgetStrength": 55,
+      "tags": ["Broadband", "Federal Funds", "Connectivity"],
+      "summary": "NTIA approved the Kansas Office of Broadband Development's $166.6M BEAD final proposal in December 2025, reaching ~26,673 eligible locations via fiber, fixed wireless, and LEO satellite across 14 subrecipients. Broadband buildout is mostly a carrier/ISP motion, but it expands the connected footprint that downstream public-sector compute and edge needs ride on.",
+      "ref": 7
+    }
+  ],
+
+  "procurement": {
+    "intro": "Central buying for Executive Branch agencies runs through the Kansas Department of Administration's Office of Procurement and Contracts. IT procurements require the Chief Information Technology Officer (or designee) on the Procurement Negotiating Committee, so the CITO has a direct hand in technology buys. Kansas leverages national cooperative vehicles rather than a single in-state IT catalog, and SB 291 consolidation is steadily centralizing more technology purchasing through OITS.",
+    "vehicles": [
+      { "name": "NASPO ValuePoint", "detail": "Primary cooperative for IT and commodities; Kansas participates in multi-state, pre-competed agreements. Confirm Dell awards and resellers are active and correctly scoped." },
+      { "name": "Sourcewell", "detail": "National cooperative used by Kansas state and local entities for technology and equipment buys without a separate RFP." },
+      { "name": "Office of Procurement & Contracts solicitations", "detail": "State-run bids and statewide contracts via the Department of Administration; IT buys route through a Procurement Negotiating Committee that includes the CITO." }
+    ],
+    "entities": [
+      { "name": "OITS", "role": "Central IT service provider and consolidation lead under the Executive CITO; growing owner of cybersecurity and shared infrastructure." },
+      { "name": "Office of Procurement & Contracts (Dept. of Administration)", "role": "Statewide buying authority and contract administration for Executive Branch agencies." },
+      { "name": "Kansas Highway Patrol / KDOT / KDHE", "role": "Large agency IT spenders with data-heavy and field-edge modernization needs." },
+      { "name": "Regents universities (KU, K-State)", "role": "Independent research-computing and AI-infrastructure buyers, including K-State's AI initiatives." }
+    ],
+    "competition": "Kansas is a cooperative-driven market where incumbents hold NASPO ValuePoint and Sourcewell positions across compute, networking, and services. Differentiation comes from consolidation-ready standardization, NIST CSF 2.0-aligned security, and governed AI infrastructure rather than price alone — and from mapping offers to OITS's shared-services roadmap."
+  },
+
+  "powerStructure": [
+    { "name": "Laura Kelly", "title": "Governor", "org": "State of Kansas", "note": "Directed the statewide generative-AI policy and signed the FY2026–27 budget; term-limited, with a 2026 election shaping continuity.", "ref": 5 },
+    { "name": "Jeff Maxon", "title": "Executive Chief Information Technology Officer (CITO)", "org": "OITS", "note": "Owns statewide IT direction and leads the SB 291 consolidation and IT integration initiative.", "ref": 4 },
+    { "name": "Office of Procurement & Contracts", "title": "Director of Purchases", "org": "Dept. of Administration", "note": "Runs statewide buying; CITO sits on IT Procurement Negotiating Committees.", "ref": 8 },
+    { "name": "Joint Committee on Information Technology (JCIT)", "title": "Legislative oversight", "org": "Kansas Legislature", "note": "Reviews OITS plans, consolidation progress, and the SB 291 sunset (HB 2271) — useful for forecasting IT/cyber spend.", "ref": 3 }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "Kansas Legislature sends FY2027 budget (HB 2513) to Governor Kelly", "impact": "Sets ~$26.8B total state spending; technology spend continues to flow through OITS and agency budgets.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-12", "title": "NTIA approves Kansas $166.6M BEAD final proposal", "impact": "Funds connectivity to ~26,673 locations; expands the connected footprint for downstream public-sector compute.", "tags": ["Broadband", "Federal Funds"], "ref": 7 },
+    { "date": "2025-11", "title": "OITS nears completion of SB 291 cybersecurity integration planning", "impact": "Three-year IT plan and 2026 consolidation projects take shape — centralizing the buyer.", "tags": ["Consolidation", "Cybersecurity"], "ref": 4 },
+    { "date": "2025-08", "title": "Meta's $1B Kansas City-area data center goes live", "impact": "Signals the scale of AI-infrastructure investment landing in the KC metro; AI-optimized capacity to follow.", "tags": ["Data Centers", "AI"], "ref": 6 },
+    { "date": "2025-07", "title": "Panasonic opens $4B De Soto EV-battery plant", "impact": "Anchors a regional battery/data-center industrial base; exploring data-center battery production by ~2029.", "tags": ["Economic Dev", "Manufacturing"], "ref": 6 },
+    { "date": "2025-06", "title": "OITS advances statewide IT assessment with Gartner", "impact": "Current-state infrastructure review feeds the SB 291 consolidation roadmap and 2026 integration projects.", "tags": ["Consolidation"], "ref": 4 }
+  ],
+
+  "dellActions": [
+    "Engage OITS as the centralizing buyer: tie Dell compute, storage, network, and DCaaS to the SB 291 consolidation and shared-services roadmap as agencies migrate.",
+    "Lead with NIST CSF 2.0-aligned security and SOC-supporting infrastructure ahead of the July 2028 mandate — secure compute, endpoint, and managed-security offerings.",
+    "Position governed, private/on-prem AI for restricted-use data as agencies operationalize the state generative-AI policy.",
+    "Confirm Dell coverage and resellers are active on NASPO ValuePoint and Sourcewell, and that IT buys are scoped for the CITO-involved Procurement Negotiating Committee.",
+    "Map Dell ISG / AI Factory offerings to the KC-metro data-center and battery buildout and to KU/K-State research-computing buyers."
+  ],
+
+  "sources": [
+    { "label": "Governor of Kansas — Kelly Signs Bipartisan Budget Bill (HB 2513)", "url": "https://www.governor.ks.gov/Home/Components/News/News/1004/55" },
+    { "label": "Kansas Division of the Budget — OITS FY2026 Budget Narrative", "url": "https://budget.kansas.gov/wp-content/uploads/335-OITS-Budget-Narrative-FY-2026.pdf" },
+    { "label": "Kansas Legislative Research Dept. — Briefing Book 2026: Cybersecurity Update (SB 291, SOC, NIST CSF 2.0)", "url": "https://klrd.gov/2026/03/02/briefing-book-2026-cybersecurity-update/" },
+    { "label": "Kansas OITS (EBIT) — IT Integration Project", "url": "https://www.ebit.ks.gov/resources/it-integration-project" },
+    { "label": "Governor of Kansas — Kelly Administration Implements Generative AI Policy", "url": "https://www.governor.ks.gov/Home/Components/News/News/543/55?arch=1" },
+    { "label": "KCUR — Meta opens $1B Kansas City data center", "url": "https://www.kcur.org/housing-development-section/2025-08-23/meta-kansas-city-data-center-northland" },
+    { "label": "Kansas Dept. of Commerce — Kansas Broadband Receives Federal Approval for $166.6M BEAD Final Proposal", "url": "https://www.kansascommerce.gov/2025/12/kansas-broadband-receives-federal-approval-for-166-6m-bead-final-proposal/" },
+    { "label": "Kansas Dept. of Administration — Office of Procurement and Contracts", "url": "https://admin.ks.gov/offices/procurement-contracts" },
+    { "label": "Kansas Dept. of Commerce — Governor Kelly Celebrates Grand Opening of Panasonic EV Battery Facility in De Soto", "url": "https://www.kansascommerce.gov/2025/07/governor-kelly-celebrates-grand-opening-of-panasonic-ev-battery-manufacturing-facility-in-de-soto/" }
+  ]
+}

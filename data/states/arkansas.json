@@ -1,0 +1,145 @@
+{
+  "code": "AR",
+  "name": "Arkansas",
+  "slug": "arkansas",
+  "region": "South Central",
+  "updated": "2026-06-15",
+  "tagline": "A statewide IT reorganization, a brand-new centralized cybersecurity office, an AI Center of Excellence, and the largest data-center investments in state history — Arkansas is rewiring how it buys and secures technology.",
+
+  "snapshot": [
+    { "label": "FY2026 General Revenue", "value": "$6.49B" },
+    { "label": "Central IT Authority", "value": "Office of State Technology" },
+    { "label": "Procurement", "value": "OSP / State Contracts" },
+    { "label": "AI Posture", "value": "AI Center of Excellence" }
+  ],
+
+  "execSummary": {
+    "summary": "Arkansas is in the middle of the biggest restructuring of its technology operations in decades, and every move is led from the Governor's office. Executive Order EO 25-08 (June 2025) renamed the Division of Information Systems to the Department of Shared Administrative Services, Office of State Technology (effective August 6, 2025), centralized IT governance, and stood up a new statewide cybersecurity office — a direct response to a state review finding Arkansas spends only ~$6M a year on cybersecurity versus a ~$60M state average. In parallel, the Governor's AI Center of Excellence delivered its effectiveness-and-safety report in February 2026, recommending a Chief AI Officer, NIST-based evaluation, and an AI-enabled government services portal. Underpinning all of it is a historic private-sector buildout: Google's $4B West Memphis AI campus and AVAIO Digital's $6B (up to $21B) Little Rock data-center hub, plus the Walmart Global Tech gravity well in Bentonville. For Dell, the buying motion runs through the Office of State Procurement (OSP) and approved state/cooperative contracts; the centralization and cyber buildout create a consolidated, greenfield buyer at exactly the moment AI-infrastructure demand is landing in-state.",
+    "opportunities": [
+      "Greenfield cybersecurity buildout — Arkansas is closing a ~$6M-to-~$60M spending gap and standing up a new centralized cyber office (secure compute, infrastructure, managed services).",
+      "IT centralization and consolidation under the Office of State Technology — server, storage, and data-center modernization as duplicative agency systems are consolidated.",
+      "AI infrastructure tied to the Google West Memphis and AVAIO Little Rock data-center boom, plus the Walmart/Bentonville and University of Arkansas research-computing ecosystem (PowerEdge, networking, services).",
+      "Governed agency AI as the AI Center of Excellence recommendations move to implementation — private/on-prem AI for sensitive Medicaid/SNAP and citizen-service workloads."
+    ],
+    "stats": [
+      { "value": "$6.49B", "label": "FY2026 General Revenue Budget", "note": "RSA — SB 637 / HB 2003, 2025 session", "ref": 1 },
+      { "value": "~$6M", "label": "Current annual cyber spend", "note": "vs ~$60M average for peer states; driver for reorg", "ref": 2 },
+      { "value": "$65–130M", "label": "Projected annual savings", "note": "From IT centralization/consolidation", "ref": 2 },
+      { "value": "Feb 2026", "label": "AI Center of Excellence report", "note": "Recommends Chief AI Officer + NIST-based governance", "ref": 4 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Arkansas budgets on an annual cycle via the Revenue Stabilization Act (RSA), with a regular legislative session in odd years and a fiscal session in even years. The 2025 session set FY2026 general revenue at $6.49B (a ~3% / ~$182.5M increase); the Governor presented the FY2027 proposal on March 3, 2026 ahead of the April 2026 fiscal session. There is no single 'state IT budget' line — Arkansas spends roughly $680–700M on technology across agencies, and the current reorganization is meant to consolidate that spend under the Office of State Technology.",
+    "stats": [
+      { "value": "$6.49B", "label": "FY2026 general revenue", "note": "Begins July 1, 2025", "ref": 1 },
+      { "value": "$680–700M", "label": "Statewide annual tech spend", "note": "Across agencies (state review estimate)", "ref": 2 },
+      { "value": "~$80M", "label": "DIS/OST products & solutions", "note": "Delivered to ~300 agencies, K-12, higher-ed, local gov", "ref": 3 }
+    ],
+    "breakdown": [
+      { "label": "Statewide technology spend", "amount": 690, "display": "~$690M", "note": "Distributed across agencies; consolidation target" },
+      { "label": "Current annual cybersecurity spend", "amount": 6, "display": "~$6M", "note": "State review flagged as far below peers" },
+      { "label": "Projected consolidation savings", "amount": 100, "display": "$65–130M", "note": "Annual, from centralization/de-duplication" }
+    ],
+    "notes": [
+      "Arkansas runs an annual budget cycle (regular session odd years, fiscal session even years) — confirm FY2027 appropriations after the April 2026 fiscal session.",
+      "Technology dollars are mid-migration from the former DIS into the new Office of State Technology and centralized cyber office — confirm which entity owns a program before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Statewide IT Reorganization & Office of State Technology",
+      "status": "In progress",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 70,
+      "tags": ["IT Centralization", "New Structure", "Consolidation"],
+      "summary": "EO 25-08 (June 2025) renamed DIS to the Department of Shared Administrative Services, Office of State Technology (effective Aug 6, 2025), centralized IT administration and governance, mandated statewide project management, and ordered consolidation of duplicative services. Projected to save $65–130M annually. A consolidating, central buyer means fewer, larger infrastructure and modernization decisions.",
+      "ref": 2
+    },
+    {
+      "name": "Centralized State Cybersecurity Office",
+      "status": "Standing up",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 65,
+      "tags": ["Cybersecurity", "New Office", "Greenfield"],
+      "summary": "The same executive order created a new centralized cyber office to coordinate all cyber risk-management activities across the state — driven by a finding that Arkansas spends only ~$6M/yr on cybersecurity versus a ~$60M peer average. That gap is the clearest single tailwind in the state: a greenfield mandate likely to grow spend, with needs for secure compute, infrastructure, and managed services.",
+      "ref": 2
+    },
+    {
+      "name": "AI Center of Excellence",
+      "status": "Report delivered Feb 2026",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Governance", "Citizen Services"],
+      "summary": "Launched June 2024; delivered its effectiveness-and-safety report to the Governor on Feb 13, 2026. Recommendations include a Chief AI Officer, NIST-based AI evaluation, strengthened data/cyber foundations, AI literacy, and an AI-enabled Government Services Portal — including program-integrity use in Medicaid and SNAP. Agencies will need governed, auditable AI, opening a path for private/on-prem AI on sensitive data.",
+      "ref": 4
+    },
+    {
+      "name": "AI Data-Center & Power Buildout",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Google's $4B West Memphis cloud/AI campus (announced Oct 2025, on 1,100 acres) and AVAIO Digital's 'Leo' hub in Little Rock — $6B first phase, up to $21B and ~1GW at full build — are the largest investments in state history. Enabled by the 2025 Arkansas IMPACT package (Generating Arkansas Jobs Act; Act 548 data-center tax exemptions). The strongest tailwind for Dell AI-infrastructure and ISG demand in-state.",
+      "ref": 5
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Office of State Procurement (OSP), within the Department of Shared Administrative Services (DSAS), has primary responsibility for statewide procurement of commodities, technical and professional services for state agencies, boards, commissions, and colleges and universities. Most technology buys run through OSP state contracts; cooperative contracts are permitted but limited and require pre-approval by OSP. The Office of State Technology (formerly DIS) delivers shared technology products and services to ~300 agencies, K-12, higher-ed, and local government.",
+    "vehicles": [
+      { "name": "OSP State Contracts", "detail": "Primary vehicle. Statewide pre-competed contracts for commodities and IT/professional services. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "Cooperative Contracts (OSP-approved)", "detail": "National/cooperative agreements are usable but limited and require OSP pre-approval — verify the specific cooperative is approved before relying on it." },
+      { "name": "Office of State Technology services", "detail": "Shared technology products/solutions (~$80M) delivered through the former DIS to agencies, schools, and local government." },
+      { "name": "Arkansas Vendor Services", "detail": "Mandatory vendor registration (vendor.ark.org) to contract with the state — a prerequisite, not a contract." }
+    ],
+    "entities": [
+      { "name": "Office of State Technology (OST, former DIS)", "role": "Central technology authority — governance, shared services, and the consolidation/cyber motion under DSAS." },
+      { "name": "Office of State Procurement (OSP)", "role": "Statewide procurement authority; owns state and cooperative contracts. Director: Jessica Patterson." },
+      { "name": "Centralized Cybersecurity Office", "role": "New statewide cyber risk-management buyer standing up under the reorganization." },
+      { "name": "University of Arkansas system", "role": "Independent research-computing and AI-infrastructure buyer; partner in workforce/AI investments tied to the data-center boom." }
+    ],
+    "competition": "Arkansas is a centralized, contract-driven market where OSP state contracts and OST shared services concentrate buying decisions. Differentiation comes from cybersecurity and consolidation capability, AI-infrastructure readiness, and services that map to the reorganization and data-center buildout rather than price alone. Confirm Arkansas Vendor Services registration and current contract coverage early."
+  },
+
+  "powerStructure": [
+    { "name": "Sarah Huckabee Sanders", "title": "Governor", "org": "State of Arkansas", "note": "Drives the IT/cyber reorganization (EO 25-08), the AI Center of Excellence, and the Arkansas IMPACT economic agenda behind the data-center boom.", "ref": 2 },
+    { "name": "Jay Harton", "title": "State CTO & Director, Office of State Technology (DIS)", "org": "DSAS / Office of State Technology", "note": "Named director March 7, 2025; ~29-year state veteran, former DIS COO. Owns the statewide technology direction and consolidation.", "ref": 6 },
+    { "name": "Jessica Patterson", "title": "Director, Office of State Procurement", "org": "DSAS / OSP", "note": "Owns statewide IT/commodity procurement and approval of cooperative contracts — key gatekeeper for any deal.", "ref": 7 },
+    { "name": "James Hudson", "title": "Secretary, Department of Finance & Administration", "org": "Arkansas DFA", "note": "Owns the RSA budget forecast and general-revenue allocation — useful for sizing and timing tech spend.", "ref": 8 }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "Governor receives AI Center of Excellence effectiveness & safety report", "impact": "Recommends a Chief AI Officer, NIST-based evaluation, and an AI-enabled services portal — agencies will need governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 4 },
+    { "date": "2026-01", "title": "AVAIO Digital announces $6B (up to $21B) AI-ready data center in Little Rock", "impact": "Largest economic investment in state history; ~1GW power campus signals the scale of in-state AI-infrastructure demand.", "tags": ["Data Centers", "AI"], "ref": 9 },
+    { "date": "2025-10", "title": "Google marks start of $4B AI data center in West Memphis", "impact": "Five-data-center campus plus $1M in ASU/U of Arkansas workforce training — reinforces Arkansas as an AI-infrastructure hub.", "tags": ["Data Centers", "AI"], "ref": 5 },
+    { "date": "2025-08", "title": "DIS becomes the Department of Shared Administrative Services, Office of State Technology", "impact": "Central IT authority is renamed and reorganized; consolidation and statewide project management begin.", "tags": ["IT Centralization"], "ref": 2 },
+    { "date": "2025-06", "title": "Governor Sanders issues EO 25-08 to centralize IT and create a cyber office", "impact": "New centralized cybersecurity office and consolidation mandate; $65–130M projected annual savings.", "tags": ["Cybersecurity", "Reorganization"], "ref": 2 },
+    { "date": "2025-04", "title": "Legislature approves $6.49B FY2026 general-revenue budget", "impact": "~$182.5M (~3%) increase sets the FY2026 spending baseline; FY2027 set in the April 2026 fiscal session.", "tags": ["Budget"], "ref": 1 }
+  ],
+
+  "dellActions": [
+    "Engage the new centralized cybersecurity office and Office of State Technology early — Arkansas is closing a ~$6M-to-~$60M cyber gap, a greenfield opening for secure compute, infrastructure, and managed services.",
+    "Tie Dell offerings to the IT consolidation mandate — position server/storage/data-center modernization as agencies de-duplicate systems toward the $65–130M savings target.",
+    "Lead the AI-infrastructure conversation: connect Dell ISG / AI Factory offerings to the Google West Memphis and AVAIO Little Rock buildout and to University of Arkansas research-computing buyers.",
+    "Confirm Arkansas Vendor Services registration and current OSP state-contract coverage — and verify any cooperative contract is OSP-approved before relying on it.",
+    "Position governed, private/on-prem AI for sensitive Medicaid/SNAP and citizen-service workloads as the AI Center of Excellence recommendations move to implementation."
+  ],
+
+  "sources": [
+    { "label": "Arkansas Advocate — Lawmakers approve $182.5M state budget increase (FY2026, $6.49B)", "url": "https://arkansasadvocate.com/2025/04/17/arkansas-lawmakers-approve-182-5-million-state-budget-increase/" },
+    { "label": "StateScoop — Arkansas governor orders technology dept. to centralize, improve cyber (EO 25-08)", "url": "https://statescoop.com/arkansas-governor-technology-reorganization-202/" },
+    { "label": "Arkansas DIS / Office of State Technology — About DIS", "url": "https://sas.arkansas.gov/agency/dis/" },
+    { "label": "Office of the Governor — Sanders receives AI Center of Excellence effectiveness and safety report", "url": "https://governor.arkansas.gov/news_post/sanders-receives-ai-center-of-excellence-effectiveness-and-safety-report/" },
+    { "label": "Arkansas Advocate — Google marks start of $4B AI data center in West Memphis", "url": "https://arkansasadvocate.com/2025/10/02/google-state-and-local-officials-mark-start-of-4-billion-ai-data-center-in-west-memphis/" },
+    { "label": "StateScoop — Arkansas names new IT director Jay Harton", "url": "https://statescoop.com/arkansas-jay-harton-cto-director-dis-2025/" },
+    { "label": "Arkansas DSAS — Office of State Procurement / State Contracts", "url": "https://sas.arkansas.gov/procurement/state-contracts/" },
+    { "label": "Arkansas Senate — Updated Budget Set for Fiscal Session (FY2027 timeline)", "url": "https://senate.arkansas.gov/senate-news/posts/2026/march/updated-budget-set-for-fiscal-session/" },
+    { "label": "KATV — AI-ready data center coming to Little Rock, $6B AVAIO investment", "url": "https://katv.com/news/local/ai-ready-data-center-coming-to-little-rock-6-billion-investment-largest-in-state-history" }
+  ]
+}

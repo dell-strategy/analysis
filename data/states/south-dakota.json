@@ -1,0 +1,144 @@
+{
+  "code": "SD",
+  "name": "South Dakota",
+  "slug": "south-dakota",
+  "region": "Midwest",
+  "updated": "2026-06-15",
+  "tagline": "A small, highly consolidated IT shop punching far above its weight on cyber — anchored by Dakota State University, a nationally recognized NSA cyber powerhouse, and a centralized Bureau of Information & Technology that buys for nearly all of state government.",
+
+  "snapshot": [
+    { "label": "FY2027 Total Budget", "value": "~$7.5B" },
+    { "label": "Central IT", "value": "BIT (consolidated)" },
+    { "label": "Cyber Anchor", "value": "Dakota State (DSU)" },
+    { "label": "New State CIO", "value": "Neal Nachtigall" }
+  ],
+
+  "execSummary": {
+    "summary": "South Dakota is a small state with an outsized cyber story and one of the most consolidated IT operating models in the country. The Bureau of Information & Technology (BIT) runs enterprise compute, data centers, networking, and security for nearly all of state government, higher ed, the constitutional offices, and the Unified Judicial System — meaning a handful of decisions in Pierre move the whole estate. The cyber center of gravity is Dakota State University in Madison: one of only a handful of schools holding all three NSA Centers of Academic Excellence designations, home to the Madison Cyber Labs (MadLabs) and a $90M, five-year research and workforce push, with a new Applied Research Lab opening in Sioux Falls in 2026. Governor Larry Rhoden has framed national security and defense — including cyber — as the state's 'next big industry,' and his FY2027 budget carries ~$10M for IT infrastructure plus a cloud-based cyber backup investment. For Dell, the two clearest angles are (1) the consolidated BIT estate — server refresh, data-center modernization, and security — and (2) the DSU cyber/AI research and applied-lab buildout.",
+    "opportunities": [
+      "Consolidated BIT estate refresh — server replacement, data-center modernization, and enterprise security across nearly all of state government from a single buyer.",
+      "Dakota State University cyber/AI buildout — Madison Cyber Labs and the Sioux Falls Applied Research Lab (opening 2026) need secure compute, lab infrastructure, and research-computing capacity.",
+      "Cloud-based cyber backup and resilience investment in the FY2027 budget — backup/recovery, secure storage, and redundancy.",
+      "AI and data modernization under a new CIO focused on improving state operations with AI and data."
+    ],
+    "stats": [
+      { "value": "~$7.5B", "label": "FY2027 Total Budget", "note": "Adopted by lawmakers; +2.4% YoY", "ref": 4 },
+      { "value": "~$10M", "label": "IT Infrastructure (FY2027)", "note": "Gov. budget line for state IT infrastructure", "ref": 4 },
+      { "value": "$90M", "label": "DSU Cyber Initiative", "note": "Five-year cyber research & workforce push; NSA partner", "ref": 6 },
+      { "value": "June 5 2026", "label": "New State CIO", "note": "Neal Nachtigall named BIT commissioner & CIO", "ref": 2 }
+    ]
+  },
+
+  "budget": {
+    "intro": "South Dakota budgets on an annual fiscal-year cycle (FY runs July–June). Governor Rhoden's FY2027 proposal, delivered December 2, 2025, recommended roughly $7.46B in total funds with a ~$2.52B general fund; lawmakers adopted a budget of about $7.5B in March 2026 (a ~2.4% increase). There is no single consolidated 'state IT budget' line — technology spend runs through the Bureau of Information & Technology (BIT) and is distributed across agencies, but the FY2027 plan does call out targeted IT and cyber investments.",
+    "stats": [
+      { "value": "~$2.52B", "label": "FY2027 General Fund", "note": "Gov. proposal; +~$51.6M over FY2026", "ref": 3 },
+      { "value": "~$10M", "label": "IT Infrastructure", "note": "FY2027 budget line", "ref": 4 },
+      { "value": "$870K+", "label": "BIT Server Replacement", "note": "Other-fund authority increase (FY2026)", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "Total Budget (FY2027)", "amount": 7500, "display": "~$7.5B", "note": "Adopted by lawmakers, March 2026" },
+      { "label": "IT Infrastructure", "amount": 10, "display": "~$10M", "note": "FY2027 budget line" },
+      { "label": "DSU Cyber Initiative", "amount": 90, "display": "$90M", "note": "Five-year research/workforce push (mixed funding)" }
+    ],
+    "notes": [
+      "South Dakota uses an annual budget cycle; FY2027 begins July 2026.",
+      "There is no consolidated statewide IT line — confirm whether a given technology buy sits in BIT's enterprise budget or an individual agency before forecasting.",
+      "The DSU $90M figure spans five years and blends state, philanthropic (Denny Sanford), and partner funding — not a single appropriation."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Dakota State University — Cyber & AI Powerhouse",
+      "status": "Expanding",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 75,
+      "tags": ["Cyber Education", "AI", "Research Computing", "NSA"],
+      "summary": "DSU in Madison is a nationally recognized cyber school — one of only a handful holding all three NSA Centers of Academic Excellence designations (cyber defense, offense, research) and offering a PhD in Cyber Operations. The Madison Cyber Labs (MadLabs) is a 40,000-sq-ft hub with 15 labs, a secure (SCIF) facility, and a growing AI-and-cybersecurity graduate program. A $90M, five-year initiative (with NSA, state, and philanthropic backing) aims to double Beacom College graduates and stand up an Applied Research Lab in Sioux Falls opening in 2026. This is the strongest research-computing and secure-infrastructure account in the state.",
+      "ref": 6
+    },
+    {
+      "name": "Consolidated BIT Enterprise & Data Centers",
+      "status": "Ongoing",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 60,
+      "tags": ["Data Center", "Server Refresh", "Consolidation"],
+      "summary": "BIT provides enterprise compute and data-center services for nearly all of state government, higher ed, constitutional offices, and the Unified Judicial System from a single, highly consolidated shop. Recent budgets fund mainframe transition and server replacement (an $870K+ other-fund authority increase). One buyer, one estate — a clean motion for server refresh, data-center modernization, and lifecycle.",
+      "ref": 1
+    },
+    {
+      "name": "Cloud-Based Cyber Backup & Resilience",
+      "status": "Funded (FY2027)",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "Backup", "Resilience"],
+      "summary": "The FY2027 budget adds a cloud-based cyber backup system and funds redundancy/reliability in the statewide radio network used by law enforcement and emergency services, alongside ~$10M for IT infrastructure. An opening for backup/recovery, secure storage, immutable data protection, and resilience offerings tied to a clearly stated state priority.",
+      "ref": 4
+    },
+    {
+      "name": "AI & Data Modernization under New CIO",
+      "status": "Emerging",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 45,
+      "tags": ["AI", "Data", "Modernization"],
+      "summary": "Recent BIT leadership has emphasized improving state operations with AI and data. New commissioner/CIO Neal Nachtigall (effective June 5, 2026) brings enterprise IT, security, and digital-transformation experience from GE Healthcare, Sanford Health, and SONIFI. Early days, but a chance to shape governed AI and data-platform direction with a small, centralized decision set.",
+      "ref": 2
+    }
+  ],
+
+  "procurement": {
+    "intro": "South Dakota technology procurement runs through two centralized authorities. The Bureau of Information & Technology (BIT) owns enterprise IT strategy, data centers, networking, and security for the state, while the Office of Procurement Management within the Bureau of Human Resources & Administration (formerly Bureau of Administration) is the central purchasing agency for goods and services, including NASPO ValuePoint cooperative contracts. The consolidated model means relatively few decision-makers control a broad estate.",
+    "vehicles": [
+      { "name": "NASPO ValuePoint Cooperative Contracts", "detail": "Cooperative agreements available to state agencies, universities, and political subdivisions via a state Participating Addendum. Confirm Dell agreements and the relevant SD addenda are current and correctly scoped." },
+      { "name": "State Contracts (Office of Procurement Management)", "detail": "State-let contracts administered centrally in Pierre; distinct from NASPO ValuePoint — purchases must follow the specific contract terms." },
+      { "name": "BIT Enterprise Services", "detail": "BIT delivers data-center, compute, network, and security services centrally; many technology buys are channeled through or coordinated with BIT rather than run independently by agencies." }
+    ],
+    "entities": [
+      { "name": "Bureau of Information & Technology (BIT)", "role": "Central IT authority — enterprise compute, data centers, networking, security, and statewide tech direction." },
+      { "name": "Office of Procurement Management (BHRA)", "role": "Central purchasing agency; administers state contracts and NASPO ValuePoint participating addenda." },
+      { "name": "Dakota State University (DSU)", "role": "Cyber/AI research and applied-lab buyer — secure compute and research-computing infrastructure (Madison + Sioux Falls)." },
+      { "name": "Board of Regents / SDSU", "role": "Higher-ed research and campus IT buyers across the regental system." }
+    ],
+    "competition": "South Dakota is a small, centralized market where relationships with BIT and the Office of Procurement Management matter more than volume. Differentiation comes from secure-infrastructure and research-computing fit (DSU), resilient backup/recovery for the funded cyber-backup priority, and a clean consolidated-refresh motion — rather than the scale plays that dominate larger states."
+  },
+
+  "powerStructure": [
+    { "name": "Larry Rhoden", "title": "Governor", "org": "State of South Dakota", "note": "Frames national security/defense (incl. cyber) as the state's 'next big industry'; FY2027 budget funds IT infrastructure and cyber backup.", "ref": 5 },
+    { "name": "Neal Nachtigall", "title": "Commissioner, BIT & State CIO", "org": "Bureau of Information & Technology", "note": "Named effective June 5, 2026; elevated from within BIT. 25+ yrs enterprise IT/security; prior GE Healthcare, Sanford Health, SONIFI.", "ref": 2 },
+    { "name": "Jose-Marie Griffiths", "title": "President", "org": "Dakota State University", "note": "Architect of DSU's cyber/AI rise — MadLabs, the $90M initiative, and the Sioux Falls Applied Research Lab.", "ref": 6 },
+    { "name": "Office of Procurement Management", "title": "Central purchasing", "org": "Bureau of Human Resources & Administration", "note": "Administers state contracts and NASPO ValuePoint addenda — the gate for non-BIT-channeled buys.", "ref": 8 }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Neal Nachtigall named BIT Commissioner & State CIO (effective June 5)", "impact": "New, internally promoted IT leader takes over a highly consolidated estate as Mark Wixon retires — a fresh relationship to build early.", "tags": ["Leadership"], "ref": 2 },
+    { "date": "2026-03", "title": "Lawmakers adopt ~$7.5B FY2027 budget (+2.4%)", "impact": "Modest-growth budget with ~$10M for IT infrastructure and a cloud cyber-backup investment; FY2027 begins July 2026.", "tags": ["Budget"], "ref": 4 },
+    { "date": "2025-12", "title": "Gov. Rhoden unveils FY2027 budget", "impact": "~$7.46B proposal funds state IT, radio-network redundancy, and a cloud-based cyber backup system.", "tags": ["Budget", "Cybersecurity"], "ref": 3 },
+    { "date": "2025-11", "title": "Dakota State profiled as a national cyber-workforce leader", "impact": "Reinforces DSU's standing (all three NSA CAE designations, PhD in Cyber Operations) and the Sioux Falls Applied Research Lab opening in 2026.", "tags": ["Cyber Education"], "ref": 6 },
+    { "date": "2025-09", "title": "Rhoden calls national security South Dakota's 'next big industry'", "impact": "Sets a top-down strategic frame tying cyber, defense, and tech to the state's economic future.", "tags": ["Strategy"], "ref": 5 },
+    { "date": "2025-06", "title": "DSU advances $90M cyber research initiative with NSA partnership", "impact": "Five-year push to expand cyber research and double Beacom College graduates — sustained demand for secure and research compute.", "tags": ["Cyber Education", "Research"], "ref": 7 }
+  ],
+
+  "dellActions": [
+    "Treat BIT as a single, high-leverage account — map the consolidated estate (data centers, server fleet, network, security) and lead with refresh, modernization, and lifecycle for nearly all of state government from one buyer.",
+    "Build the Dakota State University relationship now — secure compute, lab infrastructure, and research-computing capacity for MadLabs and the Sioux Falls Applied Research Lab opening in 2026.",
+    "Tie offerings to the funded cyber-backup priority — immutable backup, secure storage, and resilient recovery aligned to the FY2027 cloud cyber-backup investment.",
+    "Open an early dialogue with new CIO Neal Nachtigall on AI and data modernization — position governed, secure AI and data platforms for a centralized decision set.",
+    "Confirm Dell's NASPO ValuePoint participating addenda and state-contract coverage are current and correctly scoped for South Dakota agencies and the regental system."
+  ],
+
+  "sources": [
+    { "label": "South Dakota Legislature — Bureau of Information & Telecommunications (BIT) budget (2025)", "url": "https://mylrc.sdlegislature.gov/api/Documents/Attachment/276389.pdf?Year=2025" },
+    { "label": "KOTA Radio — Nachtigall named South Dakota BIT commissioner, effective June 5", "url": "https://www.kotaradio.com/2026/06/01/nachtigall-named-south-dakota-bit-commissioner-effective-june-5/" },
+    { "label": "SDPB — Rhoden unveils FY27 budget", "url": "https://www.sdpb.org/politics/2025-12-02/rhoden-unveils-fy27-budget" },
+    { "label": "South Dakota Searchlight — Lawmakers adopt $7.5 billion budget", "url": "https://southdakotasearchlight.com/2026/03/12/lawmakers-adopt-7-5-billion-budget-with-1-4-increase-for-schools-state-workers-health-providers/" },
+    { "label": "The Dakota Scout — Governor ties South Dakota's economic future to U.S. defense, national security", "url": "https://www.thedakotascout.com/p/governor-ties-south-dakotas-economic" },
+    { "label": "Route Fifty — How Dakota State University looks to lead on growing the cyber workforce", "url": "https://www.route-fifty.com/cybersecurity/2025/11/how-dakota-state-university-looks-lead-growing-cyber-workforce/409398/" },
+    { "label": "GovTech — Dakota State Partners With NSA, Puts $90M into Cyber Research", "url": "https://www.govtech.com/education/higher-ed/dakota-state-partners-with-nsa-puts-90m-into-cyber-research" },
+    { "label": "South Dakota Bureau of Administration — Procurement Management (NASPO Contracts)", "url": "https://boa.sd.gov/central-services/procurement-management/procurement-management-naspo-contracts.aspx" }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "code": "NC",
+  "name": "North Carolina",
+  "slug": "north-carolina",
+  "region": "Southeast",
+  "updated": "2026-06-15",
+  "tagline": "A record-breaking AI data-center boom, a fresh AI executive order, and a first-ever statewide cybersecurity plan — all moving forward despite a still-unfinished state budget.",
+
+  "snapshot": [
+    { "label": "Recommended Budget (FY26-27)", "value": "~$33.6B/yr" },
+    { "label": "Primary IT Vehicle", "value": "NCDIT Statewide Contracts" },
+    { "label": "AI Governance", "value": "Exec Order 24" },
+    { "label": "AWS Investment", "value": "$10B (record)" }
+  ],
+
+  "execSummary": {
+    "summary": "North Carolina is one of the hottest AI-infrastructure markets in the country, but it is buying technology through an unusual political moment. The structural story is opportunity: Amazon's $10B Richmond County campus is the largest single capital project in state history, and Apple, Microsoft, Meta and Google are all expanding data centers in the state. Governor Josh Stein's September 2025 Executive Order 24 stood up an AI Leadership Council, an AI Accelerator inside NCDIT, and agency AI oversight teams, while NCDIT published the state's first five-year cybersecurity strategic plan (2025-2030) and doubled its security program. The complication: the General Assembly failed to enact a full FY2025-27 budget — North Carolina was the only state to end 2025 without one — and has been operating on mini-budgets. For Dell, demand and policy tailwinds are strong, but full-budget uncertainty means timing discipline matters. The buying motion runs through NCDIT Statewide IT Contracts, where RFP cycles have been cut from ~8 months to ~8 weeks.",
+    "opportunities": [
+      "AI-infrastructure pull-through tied to the nation-leading data-center boom (PowerEdge, networking, services) and UNC-system research computing.",
+      "Governed, on-prem and private-cloud AI for agencies operationalizing Executive Order 24 and the NCDIT AI Accelerator pilots.",
+      "Whole-of-state cybersecurity buildout under the new 2025-2030 plan and a doubled NCDIT security program — secure compute, infrastructure, modernization.",
+      "Endpoint, client and lifecycle refresh across cabinet agencies and a faster NCDIT procurement pipeline (8-week RFPs)."
+    ],
+    "stats": [
+      { "value": "$10B", "label": "AWS Richmond County campus", "note": "Largest capital project in state history (June 2025)", "ref": 2 },
+      { "value": "Sept 2 2025", "label": "Executive Order 24 on AI", "note": "AI Council + AI Accelerator in NCDIT", "ref": 3 },
+      { "value": "~$33.6B", "label": "FY2025-26 recommended budget", "note": "Stein recommended; full budget not enacted", "ref": 1 },
+      { "value": "$1.5B", "label": "Federal BEAD broadband allocation", "note": "Administered by NCDIT", "ref": 7 }
+    ]
+  },
+
+  "budget": {
+    "intro": "North Carolina budgets on a two-year (biennial) cycle, but the FY2025-27 cycle is atypical: the House and Senate deadlocked over income-tax cuts and never enacted a full budget, leaving the state operating on a series of 'mini-budgets.' Governor Stein's recommended budget was roughly $33.6B for FY2025-26 and $34.3B for FY2026-27. There is no single statewide 'IT budget' line; technology spend is distributed across agencies and a set of named technology, AI, cybersecurity and broadband programs.",
+    "stats": [
+      { "value": "~$33.6B", "label": "FY2025-26 (recommended)", "note": "Stein recommended budget", "ref": 1 },
+      { "value": "~$34.3B", "label": "FY2026-27 (recommended)", "note": "Stein recommended budget", "ref": 1 },
+      { "value": "0", "label": "Full budgets enacted 2025", "note": "Only state to end 2025 without one", "ref": 6 }
+    ],
+    "breakdown": [
+      { "label": "Federal BEAD broadband", "amount": 1530, "display": "$1.53B", "note": "NCDIT-administered; ~$300M+ awarded" },
+      { "label": "AWS data-center investment", "amount": 10000, "display": "$10B", "note": "Private capital; Richmond County" },
+      { "label": "N.C. 911 equipment grants", "amount": 9, "display": "~$9M", "note": "2025 PSAP equipment + facility funding" }
+    ],
+    "notes": [
+      "Budget figures are from the Governor's recommended budget; a full enacted FY2025-27 budget did not pass — confirm appropriations status before forecasting.",
+      "Mixed units: BEAD/AWS figures are program/investment totals, not annual operating appropriations.",
+      "Federal funds (BEAD, ARPA, SLCGP cyber grants) are a meaningful share of technology-adjacent dollars."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "AI Data-Center Boom",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Amazon's $10B Richmond County campus (20 buildings, ~800 acres) is the largest capital project in state history, and Apple ($175M Maiden expansion), Microsoft (Catawba County), Meta (~$750M across three sites) and Google (Charlotte) are all expanding. Duke Energy projects demand growing eight times faster over 15 years. This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
+      "ref": 2
+    },
+    {
+      "name": "Executive Order 24 — Trustworthy AI",
+      "status": "In effect (Sept 2025)",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["AI", "Governance", "Policy"],
+      "summary": "Stein's EO 24 created a 25-member AI Leadership Council (co-chaired by the IT and Commerce secretaries), an AI Accelerator inside NCDIT as the state's central AI hub, and agency AI oversight teams. Each cabinet agency must propose at least three AI use cases within 180 days. NC's AI standing reportedly jumped from 36th to 7th nationally — an opening for governed, auditable, on-prem AI on sensitive data.",
+      "ref": 3
+    },
+    {
+      "name": "Statewide Cybersecurity Plan 2025-2030",
+      "status": "Launched",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 60,
+      "tags": ["Cybersecurity", "Whole-of-State", "Zero Trust"],
+      "summary": "NCDIT published North Carolina's first five-year cybersecurity strategic plan, anchored by six goals including zero-trust architecture, data classification and statewide collaboration. The department doubled its cybersecurity and risk-management program under a new statewide CISO and uses a whole-of-state model extending protection to local government — a broad surface for secure compute, infrastructure and managed services.",
+      "ref": 5
+    },
+    {
+      "name": "$1.5B BEAD Broadband Program",
+      "status": "Awarding",
+      "statusType": "good",
+      "dellFit": 50,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Federal Funds", "Connectivity"],
+      "summary": "NCDIT administers North Carolina's ~$1.53B federal BEAD allocation; the state has been approved to award $300M+ to connect 93,000+ locations and targets 210,000 additional connections by end of 2026. Primarily fiber deployment, but the connectivity expansion enlarges the addressable base of connected endpoints and edge sites across rural North Carolina.",
+      "ref": 7
+    }
+  ],
+
+  "procurement": {
+    "intro": "The N.C. Department of Information Technology (NCDIT) is the central technology procurement authority. Its Statewide IT Procurement Office develops and manages Statewide IT Contracts available to state agencies, local government and educational entities, and sets standards for IT products and services. Non-IT goods run through the Department of Administration's Division of Purchase & Contract. NCDIT has sharply compressed RFP cycles — from roughly eight months to eight weeks.",
+    "vehicles": [
+      { "name": "NCDIT Statewide IT Contracts", "detail": "Primary vehicle. Pre-established contracts open to state agencies, local gov and education. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "DOA Statewide Term Contracts", "detail": "Non-IT goods and services through the Division of Purchase & Contract; IT items are carved out to NCDIT." },
+      { "name": "Cooperative / federal pathways", "detail": "Local entities and federally funded programs (BEAD, SLCGP cyber grants) bring additional buying pathways alongside statewide contracts." }
+    ],
+    "entities": [
+      { "name": "NCDIT", "role": "Central IT procurement, policy, AI Accelerator, cybersecurity and broadband — leads the statewide technology motion." },
+      { "name": "Cabinet agencies (HHS, DPS, DMV/Transportation)", "role": "Large agency IT spenders; each now runs an AI oversight team under EO 24." },
+      { "name": "UNC System & research universities", "role": "Major independent research-computing and AI-infrastructure buyers (NC State, UNC-Chapel Hill, Research Triangle)." },
+      { "name": "Local government", "role": "Reached through the whole-of-state cyber model and cooperative purchasing." }
+    ],
+    "competition": "North Carolina is a competitive, contract-driven market with incumbents across compute, networking and services. Differentiation comes from AI-infrastructure capability tied to the data-center boom, governed AI for EO 24 workloads, and whole-of-state security offerings — plus moving at the pace of NCDIT's faster RFP cycles."
+  },
+
+  "powerStructure": [
+    { "name": "Josh Stein", "title": "Governor", "org": "State of North Carolina", "note": "Signed Executive Order 24 on AI; champions the data-center / AI-infrastructure agenda and has pushed for a full budget.", "ref": 3 },
+    { "name": "Nate Denny", "title": "Secretary of IT & State CIO", "org": "NCDIT", "note": "Senate-confirmed May 2026; sworn in April 2026. Two decades in NC public-sector IT; previously led the state's $500M+ broadband expansion.", "ref": 4 },
+    { "name": "Bernice Russell-Bond", "title": "Statewide CISO", "org": "NCDIT", "note": "Leads the doubled cybersecurity program and the 2025-2030 strategic plan; partners with the Carolina Cyber Network.", "ref": 5 },
+    { "name": "AI Leadership Council", "title": "AI governance body", "org": "State of NC", "note": "25 members co-chaired by the IT and Commerce secretaries; initial deliverables due June 30, 2026.", "ref": 3 },
+    { "name": "N.C. General Assembly", "title": "Appropriations", "org": "State of NC", "note": "House/Senate deadlock over tax cuts left the FY2025-27 full budget unenacted — the key variable for spend timing.", "ref": 6 }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Senate confirms Nate Denny as NCDIT Secretary & State CIO", "impact": "Tech leadership stabilizes under a broadband-experienced insider after Piccione's departure.", "tags": ["Leadership"], "ref": 4 },
+    { "date": "2026-04", "title": "Stein announces broadband projects to connect 93,000 locations", "impact": "BEAD dollars begin flowing; rural connectivity and connected-endpoint base expand.", "tags": ["Broadband", "Federal Funds"], "ref": 8 },
+    { "date": "2026-01", "title": "NCDIT recaps a landmark 2025 in AI, cyber and connectivity", "impact": "AI rank 36th to 7th; cyber program doubled; RFP cycles cut ~76% — a faster, AI-forward buyer.", "tags": ["AI", "Cybersecurity"], "ref": 5 },
+    { "date": "2025-11", "title": "North Carolina launches AI Leadership Council", "impact": "Governance scaffolding for agency AI adoption stands up; demand for governed AI grows.", "tags": ["AI", "Policy"], "ref": 3 },
+    { "date": "2025-09", "title": "Governor Stein signs Executive Order 24 on trustworthy AI", "impact": "AI Accelerator and agency oversight teams created; agencies must surface AI use cases.", "tags": ["AI", "Policy"], "ref": 3 },
+    { "date": "2025-06", "title": "Amazon to invest $10B in Richmond County AI data centers", "impact": "Largest capital project in state history; anchors NC as a top AI-infrastructure market.", "tags": ["Data Centers", "AI"], "ref": 2 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the record data-center boom and UNC-system research-computing buyers.",
+    "Engage NCDIT's AI Accelerator and agency AI oversight teams early — position governed, private/on-prem AI for sensitive EO 24 workloads.",
+    "Map to the 2025-2030 cybersecurity plan and whole-of-state model — secure compute, zero-trust infrastructure, and managed services across state and local.",
+    "Validate that Dell's NCDIT Statewide IT Contract coverage and resellers are current and scoped for target agencies; move at the pace of 8-week RFP cycles.",
+    "Watch the full-budget situation — sequence proposals around mini-budget timing and confirm appropriations before forecasting large agency deals."
+  ],
+
+  "sources": [
+    { "label": "OSBM — Governor Stein's Recommended Budget (FY2026-27)", "url": "https://www.osbm.nc.gov/fy2026-27-budget-rec-budget-book/open" },
+    { "label": "NC Governor — Amazon to invest $10B in NC for AI infrastructure", "url": "https://governor.nc.gov/news/press-releases/2025/06/04/governor-stein-announces-amazon-plans-invest-10-billion-north-carolina-ai-infrastructure" },
+    { "label": "NC Governor — Executive Order No. 24: Advancing Trustworthy AI", "url": "https://governor.nc.gov/executive-order-no-24-advancing-trustworthy-artificial-intelligence-benefits-all-north-carolinians" },
+    { "label": "NCDIT — Senate confirms Nate Denny as Secretary of NCDIT", "url": "https://it.nc.gov/news/press-releases/2026/05/13/north-carolina-senate-confirms-nate-denny-secretary-nc-department-information-technology" },
+    { "label": "NCDIT — 2025: A Landmark Year in AI, Innovation, Connectivity and Security", "url": "https://it.nc.gov/news/press-releases/2026/01/12/2025-landmark-year-ncdit-ai-innovation-connectivity-and-security-advancements" },
+    { "label": "WUNC — NC lawmakers unveil 'mini-budget' as Stein blasts budget impasse", "url": "https://www.wunc.org/politics/2025-07-29/nc-lawmakers-mini-budget-stein-blasts-broader-budget-impasse" },
+    { "label": "NCDIT Broadband — Revised $1.5B BEAD program launch", "url": "https://www.ncbroadband.gov/news/press-releases/2025/06/20/ncdit-launch-revised-15b-broadband-equity-access-and-deployment-program-expand-high-speed-internet" },
+    { "label": "NCDIT Broadband — Stein announces projects to connect 93,000 locations", "url": "https://www.ncbroadband.gov/news/press-releases/2026/04/23/governor-josh-stein-announces-launch-statewide-high-speed-internet-projects-connect-93000-locations" },
+    { "label": "NCDIT — Statewide IT Procurement / Statewide IT Contracts", "url": "https://it.nc.gov/resources/statewide-it-procurement/about-statewide-it-procurement" },
+    { "label": "NCDIT — State of North Carolina Cybersecurity Strategic Plan 2025-2030", "url": "https://it.nc.gov/programs/cybersecurity-risk-management/state-north-carolina-cybersecurity-strategic-plan" }
+  ]
+}

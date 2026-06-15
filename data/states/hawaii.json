@@ -1,0 +1,156 @@
+{
+  "code": "HI",
+  "name": "Hawaii",
+  "slug": "hawaii",
+  "region": "Pacific / West",
+  "updated": "2026-06-15",
+  "tagline": "A new state CIO of Native Hawaiian ancestry, a $500M+ broadband and undersea-fiber buildout, and an AI roadmap for state agencies — all atop the most strategically significant U.S. defense footprint in the Pacific.",
+
+  "snapshot": [
+    { "label": "2025–27 Biennial Budget", "value": "~$20.4B" },
+    { "label": "Central IT Authority", "value": "ETS" },
+    { "label": "Procurement Hub", "value": "SPO + NASPO" },
+    { "label": "Broadband Program", "value": "Connect Kākou" }
+  ],
+
+  "execSummary": {
+    "summary": "Hawaii budgets on a two-year (biennial) cycle and runs roughly a $20B all-funds operating budget, with about $10.6B in general funds. Technology spend is not a single line item — it sits with the Office of Enterprise Technology Services (ETS) and is distributed across agencies and the University of Hawaii. Three threads matter most for a Dell seller. First, leadership: Christine Sakuda became State CIO and ETS administrator in 2025, the state's first female CIO of Native Hawaiian ancestry, and is driving a practical AI roadmap for agencies. Second, connectivity: the Connect Kākou initiative has $500M+ in federal, state, and private funds, including a ~$120M inter-island undersea fiber system (Hawaiian Islands Fiber Link) targeting service in late 2026 and ~$149.5M in BEAD funding. Third, context: Hawaii hosts U.S. Indo-Pacific Command (INDOPACOM), Pearl Harbor, and DISA Pacific — a dense federal/defense buyer base adjacent to (but separate from) the state market. Buying runs through the State Procurement Office and NASPO ValuePoint cooperative contracts; the University of Hawaii is a large independent research-computing and broadband buyer.",
+    "opportunities": [
+      "Agency AI adoption under the ETS roadmap — governed, auditable AI for permitting, disaster response, and service delivery (private/on-prem for sensitive workloads).",
+      "Broadband and inter-island connectivity buildout (Connect Kākou / HIFL) — networking, edge compute, and resilient infrastructure across six islands.",
+      "Disaster-resilience and recovery modernization in the wake of the 2023 Maui wildfires — secure, redundant compute and data protection.",
+      "Endpoint, client, and lifecycle refresh across state agencies, the Department of Education, and the University of Hawaii."
+    ],
+    "stats": [
+      { "value": "~$20.4B", "label": "FY2027 All-Funds Budget", "note": "Biennial cycle; ~$10.6B general fund", "ref": 9 },
+      { "value": "$500M+", "label": "Connect Kākou broadband", "note": "Federal + state + private funds", "ref": 5 },
+      { "value": "~$120M", "label": "Inter-island undersea fiber", "note": "Hawaiian Islands Fiber Link; RFS late 2026", "ref": 4 },
+      { "value": "2025", "label": "New State CIO", "note": "Christine Sakuda leads ETS", "ref": 2 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Hawaii budgets on a two-year (biennial) cycle; the Governor submits in December and fiscal years begin July 1. The FY2025–27 biennium runs roughly $20B all-funds per year (~$20.4B in FY2027), with about $10.6B in general funds. There is no single statewide 'IT budget' line — technology spend is distributed across agencies, ETS, the Department of Education, and the University of Hawaii, plus a set of named, largely federally funded connectivity programs.",
+    "stats": [
+      { "value": "~$20.4B", "label": "FY2027 all-funds", "note": "Per NASBO summary", "ref": 9 },
+      { "value": "~$10.6B", "label": "General fund", "note": "FY2027 recommended", "ref": 9 },
+      { "value": "Biennial", "label": "Budget cycle", "note": "FY begins July 1", "ref": 9 }
+    ],
+    "breakdown": [
+      { "label": "Connect Kākou (broadband)", "amount": 500, "display": "$500M+", "note": "Federal + state + private, cumulative" },
+      { "label": "Inter-island undersea fiber (HIFL)", "amount": 120, "display": "~$120M", "note": "UH-led; ~half federally funded" },
+      { "label": "BEAD allocation", "amount": 149, "display": "~$149.5M", "note": "NTIA broadband expansion" }
+    ],
+    "notes": [
+      "Budget figures are annual within a two-year (biennial) appropriation; confirm the enacted vs. supplemental figure before forecasting.",
+      "Most large connectivity dollars are federally sourced and flow through the University of Hawaii Broadband Office, not a state IT agency."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Connect Kākou — Statewide Broadband",
+      "status": "Building",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 80,
+      "tags": ["Broadband", "Networking", "Federal Funds"],
+      "summary": "Connect Kākou is the Green administration's flagship broadband program with $500M+ in federal, state, and private funds. It includes ~$149.5M in BEAD funding (final federal approval to draw down, Jan 2026) to serve ~7,000 locations, ~82% via fiber. The University of Hawaii Broadband Office oversees implementation and contracts. A multi-island connectivity buildout creates demand for networking, edge compute, and resilient infrastructure.",
+      "ref": 5
+    },
+    {
+      "name": "Hawaiian Islands Fiber Link (HIFL)",
+      "status": "Under construction",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 75,
+      "tags": ["Undersea Cable", "Connectivity", "Resilience"],
+      "summary": "A ~$120M open-access, carrier-neutral inter-island undersea fiber system linking Oahu, Hawaii Island, Maui, Kauai, Lanai, and Molokai. UH awarded the build contract in 2025; the 24-fiber-pair system has a 25-year design life and targets ready-for-service in late 2026. It addresses Hawaii's core constraint — island isolation and single-points-of-failure — and pairs naturally with redundant data infrastructure and disaster-resilient compute.",
+      "ref": 4
+    },
+    {
+      "name": "ETS AI Roadmap & Generative AI Governance",
+      "status": "In progress",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 50,
+      "tags": ["AI", "Governance", "Modernization"],
+      "summary": "ETS is required to report to the Legislature on generative-AI risks and benefits and is standing up data-sharing/governance working groups. CIO Christine Sakuda is driving a practical AI roadmap spanning permit processing, disaster response, and service delivery. Agencies need governed, auditable AI — an opening for private/on-prem and private-cloud AI on sensitive data rather than open public models.",
+      "ref": 6
+    },
+    {
+      "name": "Disaster Resilience & Recovery Modernization",
+      "status": "Ongoing",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 55,
+      "tags": ["Resilience", "Data Protection", "Recovery"],
+      "summary": "Following the 2023 Maui wildfires and as a climate-exposed island state, Hawaii prioritizes resilient, redundant systems and rapid recovery. The Governor's supplemental budget emphasizes infrastructure and climate resiliency. This favors secure, redundant compute, backup/DR, and data-protection offerings — and reinforces the case for distributed infrastructure across islands.",
+      "ref": 10
+    },
+    {
+      "name": "Federal / Defense Adjacency (INDOPACOM)",
+      "status": "Context",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 85,
+      "tags": ["Defense", "Federal", "Indo-Pacific"],
+      "summary": "Hawaii hosts U.S. Indo-Pacific Command, Pearl Harbor Naval Shipyard, Joint Base Pearl Harbor-Hickam, and the DISA Pacific data center. The state carries roughly 8% of the military's construction budget — the highest share of any state — including a $1.2B Pearl Harbor dry dock. This is a separate federal buying motion from the state market, but a major regional tailwind for Dell Federal/ISG and a reason to coordinate state and federal account teams.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "The State Procurement Office (SPO) is the central authority on procurement statutes and rules for the State and its counties. Technology purchasing commonly runs through SPO price-and-vendor-list contracts and the Cooperative Purchasing Program, which leverages NASPO ValuePoint and other multi-state cooperatives. The Office of Enterprise Technology Services (ETS) sets IT governance, the statewide IT portfolio/roadmap, and the IT budget/spend-request cycle that agencies follow.",
+    "vehicles": [
+      { "name": "NASPO ValuePoint (via SPO)", "detail": "Primary cooperative path for IT — multi-state pre-competed contracts. Confirm Dell agreements and Hawaii participation/resellers are current and correctly scoped." },
+      { "name": "SPO Price & Vendor List Contracts", "detail": "State-established contracts that agencies and counties buy from without running their own solicitation." },
+      { "name": "Cooperative Purchasing Program", "detail": "Piggyback purchasing under HRS 103D / HAR 3-128; jurisdictions must comply to use cooperative contracts." }
+    ],
+    "entities": [
+      { "name": "ETS (Office of Enterprise Technology Services)", "role": "Central IT governance, statewide IT portfolio/roadmap, AI policy, and the IT budget/spend-request cycle." },
+      { "name": "State Procurement Office (SPO)", "role": "Central procurement authority for the State and counties; owns cooperative and price-list contracts." },
+      { "name": "University of Hawaii (UH)", "role": "Large independent research-computing buyer; runs the UH Broadband Office and Connect Kākou / HIFL contracts." },
+      { "name": "Dept. of Education / Health", "role": "Among the largest agency IT and modernization spenders." }
+    ],
+    "competition": "Hawaii is a relationship- and cooperative-driven market with a small in-state vendor base and high logistics/connectivity costs. Differentiation comes from resilient, redundant, island-aware infrastructure, AI-roadmap alignment with ETS, NASPO-ready offerings, and the ability to coordinate across state, UH, and the large adjacent federal/defense footprint rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Josh Green, M.D.", "title": "Governor", "org": "State of Hawaii", "note": "Champions Connect Kākou broadband and climate/disaster resiliency; sets the modernization agenda.", "ref": 2 },
+    { "name": "Christine Sakuda", "title": "State CIO & ETS Administrator", "org": "Office of Enterprise Technology Services", "note": "Appointed 2025; first female CIO of Native Hawaiian ancestry. Owns statewide IT direction and the AI roadmap.", "ref": 2 },
+    { "name": "Sylvia Luke", "title": "Lieutenant Governor", "org": "State of Hawaii", "note": "Public face of broadband expansion announcements and federal-funding milestones.", "ref": 7 },
+    { "name": "University of Hawaii / UH Broadband Office", "title": "Implementation lead", "org": "University of Hawaii", "note": "Oversees Connect Kākou implementation and the HIFL undersea-fiber and BEAD contracts." },
+    { "name": "State Procurement Office (SPO)", "title": "Central procurement authority", "org": "State of Hawaii", "note": "Owns cooperative/NASPO and price-list contracts — the path to most state IT buys." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "Hawaii gets final federal OK to spend ~$149.5M (BEAD) on statewide internet", "impact": "Connect Kākou moves from approval to execution; networking and infrastructure demand across ~7,000 locations.", "tags": ["Broadband", "Federal Funds"], "ref": 5 },
+    { "date": "2026-02", "title": "UH inter-island undersea fiber network still targeting 2026 completion", "impact": "HIFL build proceeds toward late-2026 ready-for-service; redundant island connectivity nears reality.", "tags": ["Undersea Cable"], "ref": 4 },
+    { "date": "2025-12", "title": "Federal AI executive order signals preemption of state AI laws", "impact": "National AI standard may reshape how far Hawaii's own AI governance can go; agencies still need governed AI now.", "tags": ["AI", "Policy"], "ref": 6 },
+    { "date": "2025-09", "title": "CIO Sakuda keynotes Hawaii AI & Cloud Innovation Summit on the state's AI roadmap", "impact": "ETS lays out a practical path for AI in permitting, disaster response, and services — a buying signal for governed AI.", "tags": ["AI", "Leadership"], "ref": 3 },
+    { "date": "2025-08", "title": "Contractors selected to install the ~$120M HIFL undersea fiber system", "impact": "Major construction milestone for inter-island connectivity backbone.", "tags": ["Undersea Cable", "Networking"], "ref": 4 },
+    { "date": "2025-03", "title": "Hawaii Senate advises and consents on Christine Sakuda as State CIO", "impact": "Stable, AI-forward leadership at ETS — the key relationship for the statewide tech motion.", "tags": ["Leadership"], "ref": 2 }
+  ],
+
+  "dellActions": [
+    "Build the ETS relationship around the AI roadmap — position governed, private/on-prem and private-cloud AI for sensitive agency workloads (permitting, disaster response, services).",
+    "Engage the University of Hawaii and UH Broadband Office on Connect Kākou / HIFL — networking, edge compute, and resilient infrastructure for a six-island buildout.",
+    "Lead with disaster-resilience and data-protection messaging — redundant, island-aware compute and backup/DR resonate post-Maui and in a climate-exposed state.",
+    "Validate Dell's NASPO ValuePoint coverage and Hawaii SPO contract/reseller scope before pursuing agency deals.",
+    "Coordinate state and federal account teams — the INDOPACOM / Pearl Harbor / DISA Pacific footprint is a major adjacent opportunity and a credibility anchor."
+  ],
+
+  "sources": [
+    { "label": "Hawaii Dept. of Budget & Finance — Executive Biennium Budget FY2025–27", "url": "https://budget.hawaii.gov/budget/executive-biennium-budget-fiscal-budget-2025-2027/" },
+    { "label": "Hawaii ETS — Office of Enterprise Technology Services (CIO Sakuda)", "url": "https://ets.hawaii.gov/about/" },
+    { "label": "DBEDT — Fourth Annual Hawaii AI & Cloud Innovation Summit (Sakuda keynote)", "url": "https://invest.hawaii.gov/fourth-annual-hawaii-ai-cloud-innovation-summit-returns-september-10/" },
+    { "label": "University of Hawaii — $120M undersea fiber (HIFL) project", "url": "https://www.hawaii.edu/news/article.php?aId=13035" },
+    { "label": "Hawaii News Now — Hawaii awarded ~$149M to expand high-speed internet (Connect Kākou)", "url": "https://www.hawaiinewsnow.com/2026/01/22/hawaii-awarded-149m-expand-high-speed-internet/" },
+    { "label": "Honolulu Civil Beat — Is Hawaii doing enough to rein in AI?", "url": "https://www.civilbeat.org/2025/12/is-hawaii-doing-enough-to-rein-in-artificial-intelligence/" },
+    { "label": "Office of the Governor — Federal approval advances Hawaii's broadband expansion", "url": "https://governor.hawaii.gov/newsroom/lt-gov-luke-uhbo-release-federal-approval-advances-hawai%CA%BBis-broadband-expansion/" },
+    { "label": "Hawaii Tribune-Herald — Pentagon seeks Pacific-forces spending; Hawaii's defense footprint", "url": "https://www.hawaiitribune-herald.com/2025/03/24/hawaii-news/trumps-pentagon-seeks-spending-on-pacific-forces-cuts-to-environmental-and-cultural-programs/" },
+    { "label": "NASBO — Hawaii state budget summary (FY2026–27)", "url": "https://www.nasbo.org/mainsite/resources/proposed-enacted-budgets/hawaii-budget" },
+    { "label": "Hawaii State Procurement Office — Cooperative Purchasing Program", "url": "https://spo.hawaii.gov/for-state-county-personnel/programs/cooperative-purchasing/" }
+  ]
+}

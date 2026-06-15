@@ -1,0 +1,156 @@
+{
+  "code": "CO",
+  "name": "Colorado",
+  "slug": "colorado",
+  "region": "Mountain West",
+  "updated": "2026-06-15",
+  "tagline": "A tighter $46.8B budget, a freshly reorganized state IT office under a brand-new CIO, and an AI law that just pivoted to a lighter touch — Colorado is resetting how it buys, governs, and secures technology.",
+
+  "snapshot": [
+    { "label": "FY2026–27 Budget", "value": "$46.8B" },
+    { "label": "Central IT", "value": "OIT" },
+    { "label": "AI Law (live)", "value": "Jan 1 2027" },
+    { "label": "Broadband (BEAD)", "value": "$826.5M" }
+  ],
+
+  "execSummary": {
+    "summary": "Colorado heads into FY2026–27 with a tighter $46.8B budget signed in May 2026 after lawmakers closed a roughly $1.5B shortfall, mostly through Medicaid cuts while sparing K-12. Three structural shifts matter to an SLG seller. First, the Governor's Office of Information Technology (OIT) just went through a major reorganization in May 2026 — roughly 173 positions eliminated, a new operating model, and a brand-new state CIO, Sarah Tuneberg, who started June 1, 2026. Second, the Colorado AI Act (SB 24-205) was repealed-and-replaced by SB 189 in May 2026, pushing the effective date to January 1, 2027 and pivoting from a heavy EU-style risk framework to a narrower disclosure/ADMT model. Third, the AI data-center wave is colliding with Colorado politics — two incentive bills died in the 2026 session, yet hyperscale interest (QTS in Aurora) and the Space Force/aerospace cluster keep demand alive. For Dell, the buying motion runs through OIT and the State Purchasing & Contracts Office (SPCO) plus NASPO ValuePoint cooperative contracts.",
+    "opportunities": [
+      "Re-platforming and consolidation work as the reorganized OIT stands up a new operating model with leaner staff — managed services, lifecycle, and as-a-service compute to backfill capacity.",
+      "AI-infrastructure demand tied to hyperscale interest (QTS Aurora) and the Colorado Springs/Aurora Space Force and aerospace-defense cluster (PowerEdge, networking, secure compute).",
+      "Whole-of-State cybersecurity for local governments, schools, and critical infrastructure coordinated through OIT's Information Security Office.",
+      "Endpoint, client, and lifecycle refresh across a budget-constrained executive branch that needs to do more with less."
+    ],
+    "stats": [
+      { "value": "$46.8B", "label": "FY2026–27 Budget", "note": "Signed May 8, 2026; ~$4B over prior year", "ref": 1 },
+      { "value": "~173", "label": "OIT positions cut", "note": "May 2026 reorganization", "ref": 3 },
+      { "value": "Jan 1 2027", "label": "AI Act effective", "note": "SB 189 repeal/replace of SB 24-205", "ref": 4 },
+      { "value": "$826.5M", "label": "BEAD broadband", "note": "Federal allocation; $420.6M Final Proposal approved", "ref": 7 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Colorado budgets annually via the 'Long Bill,' constrained by the TABOR revenue cap. The FY2026–27 budget signed May 8, 2026 totals about $46.8B — roughly $4B more than the prior year — but only after closing an estimated $1.5B shortfall, largely through Medicaid reductions while protecting K-12. There is no single 'state IT budget' line; technology spend runs through OIT (which has managed a roughly $373M annual budget plus about $1B in federal grant spend) and is distributed across agencies.",
+    "stats": [
+      { "value": "$46.8B", "label": "FY2026–27 total", "note": "All funds", "ref": 1 },
+      { "value": "~$1.5B", "label": "Shortfall closed", "note": "Mostly Medicaid cuts", "ref": 2 },
+      { "value": "~$373M", "label": "OIT annual budget", "note": "Plus ~$1B federal grant spend", "ref": 3 }
+    ],
+    "breakdown": [
+      { "label": "OIT annual operating budget", "amount": 373, "display": "~$373M", "note": "Central technology office" },
+      { "label": "BEAD broadband (federal)", "amount": 826, "display": "$826.5M", "note": "$420.6M Final Proposal approved" },
+      { "label": "Advance-Local broadband", "amount": 27, "display": "$27.4M", "note": "State High Cost Support Mechanism" }
+    ],
+    "notes": [
+      "Colorado runs an annual (not biennial) budget; figures are single-year unless noted.",
+      "TABOR caps state revenue growth — a structural reason the FY2026–27 budget was constrained and IT spend is scrutinized.",
+      "Broadband dollars are federal (BEAD) plus a smaller state-funded Advance-Local program; confirm program ownership before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "OIT Reorganization & New Operating Model",
+      "status": "In progress",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["IT Modernization", "Leadership", "Operating Model"],
+      "summary": "In May 2026 OIT announced a strategic realignment that eliminated roughly 173 positions and moved to a new operating model, with Sarah Tuneberg taking over as State CIO and Executive Director on June 1, 2026 (replacing David Edinger). A leaner central IT office that must keep services running is an opening for managed services, as-a-service compute, and lifecycle support to backfill capacity.",
+      "ref": 3
+    },
+    {
+      "name": "Colorado AI Act (SB 24-205 → SB 189)",
+      "status": "Effective Jan 1, 2027",
+      "statusType": "warn",
+      "dellFit": 60,
+      "budgetStrength": 40,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Colorado's first-in-the-nation AI Act was repealed and replaced by SB 189 (signed May 2026), pushing the effective date to January 1, 2027 and pivoting away from the EU-style risk-management framework toward a narrower disclosure model centered on automated decision-making technology (ADMT). Agencies still need governed, auditable AI — an opening to lead with private/on-prem AI for sensitive workloads as the rules settle.",
+      "ref": 4
+    },
+    {
+      "name": "AI Data-Center Wave & Aerospace/Defense Cluster",
+      "status": "Contested but active",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 60,
+      "tags": ["AI Infrastructure", "Data Centers", "Defense"],
+      "summary": "Two data-center incentive bills died in the 2026 session amid water/power and community concerns, yet hyperscale interest persists — QTS acquired land in Aurora for a potential campus, and retired military leaders argue Colorado needs AI compute to retain its Space Force bases. The Colorado Springs/Aurora aerospace-defense cluster (and a $26M EDC tax package for an aerospace firm) keeps secure-compute demand alive even without new statewide incentives.",
+      "ref": 8
+    },
+    {
+      "name": "Whole-of-State Cybersecurity",
+      "status": "Ongoing",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 50,
+      "tags": ["Cybersecurity", "Local Government", "Critical Infrastructure"],
+      "summary": "OIT's Information Security Office runs a Whole-of-State effort that helps local governments, schools, public safety, and critical-infrastructure partners through information sharing, assessments, training, and threat awareness, with legislation tightening OIT's cyber authority and the state cyber operations center. Security infrastructure, endpoint protection, and managed services map well to this coordinated, locals-included motion.",
+      "ref": 9
+    },
+    {
+      "name": "Broadband Buildout (BEAD + Advance-Local)",
+      "status": "Funded / deploying",
+      "statusType": "good",
+      "dellFit": 45,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Federal Funds", "Rural"],
+      "summary": "The Colorado Broadband Office (within OIT) secured a $826.5M BEAD allocation with a $420.6M Final Proposal approved by NTIA, plus a $27.4M state-funded Advance-Local program targeting middle-mile and last-mile gaps. While the deployment dollars favor ISPs, the surrounding network, edge, and compute modernization is an adjacent Dell play.",
+      "ref": 7
+    }
+  ],
+
+  "procurement": {
+    "intro": "Colorado runs a comparatively decentralized procurement model. The State Purchasing & Contracts Office (SPCO), within the Office of the State Controller, manages purchasing for state agencies and higher-ed, while the Governor's Office of Information Technology (OIT) is the central technology authority for the executive branch. Colorado leans heavily on NASPO ValuePoint cooperative contracts (NASPO is headquartered in the region and Colorado leads several cooperative solicitations), letting agencies buy from pre-competed agreements.",
+    "vehicles": [
+      { "name": "NASPO ValuePoint cooperative contracts", "detail": "Primary cooperative vehicle. Pre-competed, multi-state agreements; Colorado leads several categories. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "State Purchasing & Contracts Office (SPCO)", "detail": "Manages state agency and higher-ed purchasing in a decentralized model; statewide price agreements and solicitations." },
+      { "name": "OIT technology direction", "detail": "Sets executive-branch technology standards, security policy, and the new operating model — shapes what gets bought and how." }
+    ],
+    "entities": [
+      { "name": "OIT", "role": "Central executive-branch technology authority; home to the Information Security Office and Colorado Broadband Office. Mid-reorganization under a new CIO." },
+      { "name": "SPCO (State Controller)", "role": "State purchasing and contracts; the formal vehicle owner for many statewide buys." },
+      { "name": "Health Care Policy & Financing (HCPF)", "role": "Largest budget driver (Medicaid); data-heavy systems under cost pressure." },
+      { "name": "Higher-ed & research (CU Boulder, aerospace cluster)", "role": "Independent research-computing and AI-infrastructure buyers tied to the aerospace-defense ecosystem." }
+    ],
+    "competition": "Colorado is a cooperative-contract-driven, value-conscious market made tighter by the FY26–27 budget squeeze and OIT's leaner operating model. Differentiation comes from NASPO ValuePoint positioning, managed-services and as-a-service offers that backfill cut staff capacity, and AI/secure-compute capability for the defense and research cluster — not price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Jared Polis", "title": "Governor", "org": "State of Colorado", "note": "Drove the AI Act reset (SB 189) and the OIT reorganization; pragmatic, efficiency-focused on technology.", "ref": 5 },
+    { "name": "Sarah Tuneberg", "title": "State CIO & Executive Director, OIT", "org": "OIT", "note": "Started June 1, 2026; former Colorado Digital Service director and COVID-19 innovation lead. Owns the new operating model.", "ref": 6 },
+    { "name": "Jill Fraser", "title": "Chief Information Security Officer", "org": "OIT Information Security Office", "note": "State CISO since Feb 2024; leads the Whole-of-State cyber effort.", "ref": 9 },
+    { "name": "Joint Budget Committee (JBC)", "title": "Appropriations / Long Bill authors", "org": "Colorado General Assembly", "note": "Wrote the FY26–27 Long Bill and closed the ~$1.5B shortfall — the body that sizes agency spend." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Sarah Tuneberg becomes State CIO & OIT Executive Director", "impact": "New technology leadership takes over a reorganized office; relationships and roadmap reset.", "tags": ["Leadership"], "ref": 6 },
+    { "date": "2026-05", "title": "OIT reorganizes, eliminates ~173 positions and adopts new operating model", "impact": "Leaner central IT creates capacity gaps — opening for managed services and as-a-service compute.", "tags": ["IT Modernization"], "ref": 3 },
+    { "date": "2026-05", "title": "Polis signs SB 189, repealing and replacing the Colorado AI Act", "impact": "AI rules shift to a lighter ADMT/disclosure model effective Jan 1, 2027; agencies still need governed AI.", "tags": ["AI", "Policy"], "ref": 4 },
+    { "date": "2026-05", "title": "FY2026–27 $46.8B budget signed after closing a ~$1.5B shortfall", "impact": "Budget-constrained agencies must do more with less — favors efficiency and lifecycle plays.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2026-05", "title": "Both 2026 data-center incentive bills rejected", "impact": "No new statewide data-center incentives, but hyperscale and defense-driven demand persists.", "tags": ["Data Centers", "AI"], "ref": 8 },
+    { "date": "2026-04", "title": "Colorado EDC approves $26M tax package to retain an aerospace/defense firm", "impact": "Reinforces the aerospace-defense cluster as a secure-compute and AI-infrastructure buyer.", "tags": ["Defense", "Economic Dev"], "ref": 10 }
+  ],
+
+  "dellActions": [
+    "Build relationships with the new OIT leadership (Sarah Tuneberg) and map the post-reorganization operating model — position managed services and as-a-service compute to backfill cut staff capacity.",
+    "Lead AI-infrastructure conversations with the Colorado Springs/Aurora aerospace-defense and Space Force cluster and CU research computing — secure compute, PowerEdge, and networking.",
+    "Engage OIT's Information Security Office on the Whole-of-State motion to reach local governments, schools, and critical infrastructure through a coordinated buyer.",
+    "Validate Dell's NASPO ValuePoint and SPCO contract coverage and resellers are current and correctly scoped for Colorado agencies.",
+    "Position governed, private/on-prem AI for sensitive workloads ahead of the Colorado AI Act's January 1, 2027 effective date."
+  ],
+
+  "sources": [
+    { "label": "CPR — Governor Polis signs state budget (FY2026–27)", "url": "https://www.cpr.org/2026/05/08/polis-signs-colorado-budget/" },
+    { "label": "Colorado Sun — Legislature sends $46.8B budget to governor", "url": "https://coloradosun.com/2026/04/28/colorado-budget-passes/" },
+    { "label": "Colorado Sun — Colorado overhauls state IT office, lays off 173 employees", "url": "https://coloradosun.com/2026/05/27/colorado-overhauls-state-it-office-lays-off-employees/" },
+    { "label": "Troutman — Colorado legislature passes bill to repeal and replace Colorado AI Act (SB 189)", "url": "https://www.troutmanprivacy.com/2026/05/colorado-legislature-passes-bill-to-repeal-and-replace-colorado-ai-act/" },
+    { "label": "Hunton — Colorado AI Act amended and effective date delayed", "url": "https://www.hunton.com/privacy-and-cybersecurity-law-blog/colorado-ai-act-amended-and-effective-date-delayed" },
+    { "label": "StateScoop — Colorado IT office lays off 170 staff, names new CIO", "url": "https://statescoop.com/colorado-it-office-lays-off-170-staff-names-new-cio/" },
+    { "label": "OIT — State publishes proposed BEAD funding awards / Final Proposal", "url": "https://oit.colorado.gov/press-release/state-publishes-proposed-broadband-equity-access-and-deployment-funding-awards" },
+    { "label": "Colorado Newsline — Both Colorado data center bills rejected in 2026 session", "url": "https://coloradonewsline.com/2026/05/11/data-center-bills-rejected-legislative-session/" },
+    { "label": "OIT — Office of Information Security", "url": "https://oit.colorado.gov/standards-policies-guides/cybersecurity-and-information-security-guide/information-security-office" },
+    { "label": "Colorado Politics — Colorado awards $26M in tax incentives to keep aerospace company in state", "url": "https://www.coloradopolitics.com/2026/04/16/colorado-awards-26m-in-tax-incentives-to-keep-aerospace-company-in-state/" }
+  ]
+}

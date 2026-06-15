@@ -1,0 +1,144 @@
+{
+  "code": "KY",
+  "name": "Kentucky",
+  "slug": "kentucky",
+  "region": "Southeast",
+  "updated": "2026-06-15",
+  "tagline": "A disciplined new two-year budget, the nation's most comprehensive state AI-governance law now in force, and a hyperscale data-center boom landing in Louisville — Kentucky is rewiring how it adopts and secures technology.",
+
+  "snapshot": [
+    { "label": "2026–28 Executive Budget", "value": "~$32B GF" },
+    { "label": "Central IT Authority", "value": "COT" },
+    { "label": "AI Law (live)", "value": "SB 4" },
+    { "label": "BEAD Broadband", "value": "$1.1B" }
+  ],
+
+  "execSummary": {
+    "summary": "Kentucky budgets on a two-year (biennial) cycle, and the FY2026–28 executive budget (HB 500) — roughly $32B in General Fund spending — became law in April 2026 after the GOP supermajority overrode most of Governor Beshear's vetoes. It is a disciplined plan that trims executive-branch spending and grows reserves, so technology dollars are spread across agencies rather than a single IT line. Three structural shifts matter for sellers. First, Senate Bill 4 (signed March 2025) is among the most comprehensive state AI-governance laws in the country: it puts the Commonwealth Office of Technology (COT) in charge of generative-AI policy, creates an AI Governance Committee, and requires every agency to inventory AI use cases — driving demand for governed, auditable AI. Second, an AI-driven data-center boom is landing, anchored by a 400MW campus in Louisville (PowerHouse/Poe), backed by long-running sales-tax incentives. Third, $1.1B in federal BEAD broadband funding is flowing through the Office of Broadband Development. For Dell, the buying motion runs through COT-governed Master Agreements and NASPO ValuePoint cooperative contracts.",
+    "opportunities": [
+      "Governed, private/on-prem AI for sensitive agency workloads as SB 4 forces every department to inventory and assess AI use cases.",
+      "AI-infrastructure demand tied to the Louisville 400MW data-center buildout and the broader Kentucky hyperscale push (PowerEdge, networking, services).",
+      "Cloud-migration and Executive Branch IT consolidation work under COT's modernization agenda (compute, storage, lifecycle).",
+      "Whole-of-state cybersecurity for state agencies, counties, and schools coordinated through COT's Office of the CISO."
+    ],
+    "stats": [
+      { "value": "~$32B", "label": "2026–28 GF Budget", "note": "Executive branch, HB 500 (became law April 2026)", "ref": 3 },
+      { "value": "SB 4", "label": "AI law in effect", "note": "Signed March 2025; COT-led AI governance", "ref": 4 },
+      { "value": "400MW", "label": "Louisville data center", "note": "First 130MW available Oct 2026", "ref": 6 },
+      { "value": "$1.1B", "label": "BEAD broadband", "note": "Federal allocation via Office of Broadband Development", "ref": 7 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Kentucky budgets on a two-year (biennial) cycle. The executive-branch budget for FY2026–28 (HB 500) directs roughly $32B in General Fund spending and became law in April 2026 after the legislature overrode most of the Governor's vetoes. It is a deliberately austere plan — trimming executive-branch spending, funding 2% annual state-employee raises, and adding to already-large reserves. There is no single 'state IT budget' line; technology spend is distributed across agencies and administered centrally through COT.",
+    "stats": [
+      { "value": "~$15.3B", "label": "FY2027 General Fund", "note": "HB 500 executive-branch budget", "ref": 2 },
+      { "value": "~$15.6B", "label": "FY2028 General Fund", "note": "HB 500 executive-branch budget", "ref": 2 },
+      { "value": "2%", "label": "Annual state-worker raise", "note": "Both fiscal years", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "FY2027 General Fund", "amount": 15340, "display": "~$15.3B", "note": "Executive branch (HB 500)" },
+      { "label": "FY2028 General Fund", "amount": 15637, "display": "~$15.6B", "note": "Executive branch (HB 500)" },
+      { "label": "BEAD broadband (federal)", "amount": 1100, "display": "$1.1B", "note": "Multi-year, via Office of Broadband Development" }
+    ],
+    "notes": [
+      "Figures are biennial/annual budget totals, not a dedicated IT appropriation — technology spend is embedded across agencies.",
+      "The budget is intentionally tight; forecast modernization dollars against agency priorities (Medicaid, K-12, public safety) rather than a discretionary tech pool."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "SB 4 — AI Governance Framework",
+      "status": "In effect",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Signed by Gov. Beshear in March 2025, SB 4 is among the most comprehensive state AI-governance laws in the U.S. It tasks COT with creating policies for transparent, ethical generative-AI use, stands up an AI Governance Committee, requires disclosure and human oversight for consequential decisions, and directs every department and agency to report potential (including high-risk) AI use cases. Agencies now need governed, auditable AI — an opening for private/on-prem AI on sensitive data.",
+      "ref": 4
+    },
+    {
+      "name": "Louisville Data-Center Buildout",
+      "status": "Under construction",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 80,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "A 400MW data-center campus is being developed in Louisville through a PowerHouse Data Centers / Poe Companies joint venture, with the first 130MW slated to come online in October 2026. Statewide sales-tax incentives (originally Jefferson County in 2024, expanded statewide in 2025) are pulling hyperscale and AI workloads into Kentucky. This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state, though cost/energy questions are a live 2026 legislative topic.",
+      "ref": 6
+    },
+    {
+      "name": "BEAD Broadband Deployment",
+      "status": "In subaward",
+      "statusType": "good",
+      "dellFit": 50,
+      "budgetStrength": 75,
+      "tags": ["Broadband", "Federal Funds", "Infrastructure"],
+      "summary": "Kentucky's Office of Broadband Development is administering a ~$1.1B federal BEAD allocation to reach unserved and underserved areas at 100/20 Mbps, leveraging KentuckyWired dark fiber. Round 2 project applications ran in mid-2025 and subawards are advancing. Primarily a last-mile build, but it expands the connected footprint and downstream compute/edge needs across the Commonwealth.",
+      "ref": 7
+    },
+    {
+      "name": "Cloud Migration & IT Consolidation",
+      "status": "Ongoing",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["Cloud", "Modernization", "COT"],
+      "summary": "COT has led Executive Branch IT consolidation and a statewide cloud-migration strategy — initiatives CIO Jim Barnhart has championed over two decades at the agency. With a tight budget, modernization is about efficiency: consolidating infrastructure, refreshing endpoints, and migrating workloads. Dell ISG, client, and lifecycle offerings map directly to this efficiency-driven agenda.",
+      "ref": 5
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Commonwealth Office of Technology (COT), within the Finance & Administration Cabinet, is the central IT authority. Under KRS 42.726, COT oversees and approves Executive Branch IT procurements and contracts for compliance with state standards. Statewide Master Agreements are maintained by the Office of Procurement Services, and agencies are generally required to buy from them. Kentucky is also an active NASPO ValuePoint participant, giving eligible entities access to pre-competed national cooperative contracts.",
+    "vehicles": [
+      { "name": "Statewide Master Agreements (MA)", "detail": "Centrally maintained contracts that Executive Branch agencies are required to use; searchable via Kentucky's Transparency contract search. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "NASPO ValuePoint", "detail": "National cooperative purchasing. Non-Executive Branch agencies are eligible users; Executive Branch agencies may use it only with COT approval — engage COT early." },
+      { "name": "COT enterprise contracts", "detail": "COT-administered enterprise technology contracts and shared services for Executive Branch agencies; COT must approve IT buys for compliance." }
+    ],
+    "entities": [
+      { "name": "Commonwealth Office of Technology (COT)", "role": "Central IT authority — oversees/approves Executive Branch IT procurement, owns AI governance (SB 4), cloud and consolidation." },
+      { "name": "Office of Procurement Services (FAC)", "role": "Central procurement agency for the Executive Branch; maintains statewide Master Agreements." },
+      { "name": "Office of Broadband Development", "role": "Administers the ~$1.1B BEAD program and KentuckyWired." },
+      { "name": "Universities (UK, U of L)", "role": "Large independent research-computing and AI-infrastructure buyers." }
+    ],
+    "competition": "Kentucky is a centralized, contract-driven market — COT governs and approves Executive Branch IT buys, and incumbents hold Master Agreement and NASPO positions across compute, networking, and services. Differentiation comes from governed/private-AI capability aligned to SB 4, AI-infrastructure tied to the data-center boom, and consolidation/efficiency services that fit a tight budget — not price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Andy Beshear", "title": "Governor", "org": "Commonwealth of Kentucky", "note": "Signed SB 4 AI-governance law; proposed the FY2026–28 budget. Faces a GOP legislative supermajority that overrode most of his budget vetoes.", "ref": 4 },
+    { "name": "Jim Barnhart", "title": "State CIO & Executive Director", "org": "Commonwealth Office of Technology (COT)", "note": "Named CIO in 2025 after serving as acting CIO under three administrations; led IT consolidation and cloud migration. Owns the statewide tech direction.", "ref": 5 },
+    { "name": "Office of the CISO (COT)", "title": "Statewide cybersecurity", "org": "COT", "note": "Runs the NIST 800-53-aligned security program, network monitoring/response, and fee-based services to agencies; whole-of-state direction." },
+    { "name": "GOP General Assembly leadership", "title": "Appropriations & policy", "org": "Kentucky General Assembly", "note": "Supermajority controls the budget and sets data-center incentive and AI policy — a key forecasting input." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "Legislature overrides most Beshear vetoes; ~$32B two-year budget becomes law", "impact": "FY2026–28 spending is set and disciplined; tech dollars sit inside agency budgets, not a discretionary pool.", "tags": ["Budget"], "ref": 3 },
+    { "date": "2026-04", "title": "GA finalizes disciplined, balanced two-year state budget (HB 500)", "impact": "Confirms the austere posture — modernization must be framed as efficiency and consolidation.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-12", "title": "AI data-center boom arrives in Kentucky; 2026 session to weigh costs", "impact": "Hyperscale AI demand grows, but energy/cost debate may shape incentives — watch for policy moves.", "tags": ["Data Centers", "AI"], "ref": 6 },
+    { "date": "2025-07", "title": "Kentucky opens BEAD Round 2 project applications (~$1.1B)", "impact": "Broadband subawards advance, expanding the connected footprint and downstream compute needs.", "tags": ["Broadband"], "ref": 7 },
+    { "date": "2025-05", "title": "Jim Barnhart named permanent State CIO", "impact": "Tech direction stabilizes under a consolidation- and cloud-focused leader who owns SB 4 AI governance.", "tags": ["Leadership"], "ref": 5 },
+    { "date": "2025-03", "title": "Gov. Beshear signs SB 4 AI-governance law", "impact": "Government-use AI guardrails are live; agencies need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 4 }
+  ],
+
+  "dellActions": [
+    "Lead with governed, private/on-prem AI for sensitive workloads as agencies inventory and assess AI use cases under SB 4 — position Dell AI Factory for auditable, on-prem adoption.",
+    "Tie Dell ISG / AI-infrastructure to the Louisville 400MW data-center buildout and university research-computing buyers as hyperscale demand lands in Kentucky.",
+    "Engage COT early — it approves Executive Branch IT buys and NASPO use; confirm Dell's Master Agreement coverage and resellers are current and correctly scoped.",
+    "Frame modernization as efficiency for a tight budget: IT consolidation, cloud migration, endpoint refresh, and lifecycle services aligned to COT's agenda.",
+    "Offer whole-of-state cybersecurity tied to COT's Office of the CISO — secure compute and managed services extending to counties and schools."
+  ],
+
+  "sources": [
+    { "label": "Kentucky Senate GOP — General Assembly finalizes two-year state budget", "url": "https://kysenaterepublicans.com/press-releases/2026/4/6/general-assembly-finalizes-disciplined-balanced-two-year-state-budget" },
+    { "label": "KY Center for Economic Policy — HB 500 second-version analysis", "url": "https://kypolicy.org/hb-500-state-budget-second-version-analysis/" },
+    { "label": "LPM — Republicans override most of Beshear's budget vetoes", "url": "https://www.lpm.org/news/2026-04-14/republicans-tore-through-beshears-vetoes-tuesday-overriding-nearly-all-of-them" },
+    { "label": "Akin — Kentucky passes bill (SB 4) to regulate AI in government", "url": "https://www.akingump.com/en/insights/ai-law-and-regulation-tracker/kentucky-passes-bill-to-regulate-ai-in-government" },
+    { "label": "GovTech — Kentucky taps veteran tech leader Jim Barnhart as CIO", "url": "https://www.govtech.com/workforce/kentucky-taps-veteran-tech-leader-to-drive-future-of-it" },
+    { "label": "LPM — The AI data-center boom is coming for Kentucky", "url": "https://www.lpm.org/news/2025-12-09/the-ai-data-center-boom-is-coming-for-kentucky-what-will-lawmakers-do-about-it" },
+    { "label": "Kentucky Office of Broadband Development — BEAD program", "url": "https://broadband.ky.gov/resources/Pages/State-Broadband-Plan.aspx" },
+    { "label": "Kentucky Finance & Administration Cabinet — State agency and local government procurement", "url": "https://finance.ky.gov/eProcurement/Pages/state-agency-and-local-government-procurement.aspx" },
+    { "label": "Commonwealth Office of Technology — Office of the CISO services", "url": "https://technology.ky.gov/OCISO/Pages/services.aspx" }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "code": "WY",
+  "name": "Wyoming",
+  "slug": "wyoming",
+  "region": "Mountain West",
+  "updated": "2026-06-15",
+  "tagline": "Cheap, abundant power plus the nation's friendliest digital-asset law are turning Wyoming into a magnet for hyperscale AI data centers — even as the state runs IT on one of the leanest budgets in the country.",
+
+  "snapshot": [
+    { "label": "2025-26 Biennial Budget", "value": "~$10.9B" },
+    { "label": "Central IT Org", "value": "ETS (under A&I)" },
+    { "label": "Flagship AI Project", "value": "Crusoe 1.8GW" },
+    { "label": "Digital-Asset Law", "value": "WYST live" }
+  ],
+
+  "execSummary": {
+    "summary": "Wyoming is a small-budget state with an outsized AI-infrastructure story. It is the fourth-largest net energy producer in the U.S. and uses a fraction of what it generates, so Governor Gordon's 'Winning the AI Race' push is converting cheap, surplus power into a hyperscale data-center boom around Cheyenne — Meta's $800M+ campus, Microsoft's existing site plus a planned 3,200-acre expansion, and the Crusoe/Tallgrass 'Project Jade' campus starting at 1.8GW with room to scale to 10GW. The state also leads the nation on digital-asset law (45+ blockchain bills since 2016, SPDI banks, DAO LLCs, and the now-live Wyoming Stable Token). For Dell, the state's own IT spend is modest and runs through Enterprise Technology Services (ETS) under A&I via NASPO ValuePoint and statewide contracts — but the data-center buildout, the University of Wyoming, and the NCAR-Wyoming Supercomputing Center are where the real AI-infrastructure and HPC opportunity sits. ETS's 2026-2028 plan is centered on governance and cybersecurity hardening rather than big new programs, so security and modernization remain the central-government angles.",
+    "opportunities": [
+      "AI-infrastructure / 'AI factory' demand riding the Cheyenne data-center boom (Crusoe Project Jade, Meta, Microsoft) — PowerEdge, networking, services, and ecosystem pull-through.",
+      "University of Wyoming and the NCAR-Wyoming Supercomputing Center (NWSC) as established HPC/research-computing buyers with GPU refresh cycles.",
+      "Cybersecurity and risk-management modernization — the explicit top theme of the ETS 2026-2028 strategic plan for a lean central IT org.",
+      "Endpoint, client, and lifecycle refresh across executive-branch agencies on a tight biennial budget where value and consolidation matter."
+    ],
+    "stats": [
+      { "value": "~$10.9B", "label": "2025-26 Biennial Budget", "note": "All funds; ~$3.4B general fund", "ref": 5 },
+      { "value": "1.8GW", "label": "Crusoe Project Jade", "note": "Cheyenne; scalable toward 10GW", "ref": 2 },
+      { "value": "3,200 ac", "label": "Microsoft Cheyenne expansion", "note": "Announced Apr 2026; multiyear", "ref": 4 },
+      { "value": "45+", "label": "Blockchain/digital-asset laws", "note": "Enacted since 2016; WYST now live", "ref": 6 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Wyoming budgets on a two-year (biennial) cycle, with the main budget set in even-year general sessions. The 2025-26 biennial budget totals roughly $10.9B all-funds (about $3.4B general fund). There is no single consolidated 'state IT budget'; technology spend is distributed across agencies, and Enterprise Technology Services (ETS) sets rate structures that agencies use to build their IT ('400-series') budgets each biennium. Wyoming pursues digital transformation on a fraction of the budget larger states have — a structural reason value, consolidation, and shared services resonate. The 2025 supplemental budget did not pass, leaving some agencies strained heading into the 2027-28 cycle; Governor Gordon has since proposed an ~$11.13B 2027-28 budget.",
+    "stats": [
+      { "value": "~$10.9B", "label": "2025-26 all-funds", "note": "Enacted Mar 2024", "ref": 5 },
+      { "value": "~$3.4B", "label": "2025-26 general fund", "note": "Two-year total", "ref": 5 },
+      { "value": "~$11.13B", "label": "2027-28 proposed", "note": "Gordon's Nov 2025 proposal", "ref": 7 }
+    ],
+    "breakdown": [
+      { "label": "2025-26 all-funds budget", "amount": 10900, "display": "~$10.9B", "note": "Biennial total" },
+      { "label": "2025-26 general fund", "amount": 3400, "display": "~$3.4B", "note": "Subset of all-funds" },
+      { "label": "2027-28 proposed (Gordon)", "amount": 11130, "display": "~$11.13B", "note": "Proposal, not enacted" }
+    ],
+    "notes": [
+      "Figures are biennial (two-year) totals; Wyoming has no single line-item 'state IT budget.'",
+      "ETS funds much of its delivery through an internal-service rate model that agencies pay into — confirm where a given workload's dollars actually sit before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Cheyenne AI Data-Center Boom",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Cheap, surplus power is drawing hyperscale AI capacity to the Cheyenne area: Meta's $800M+ campus, Microsoft's existing datacenters plus a planned 3,200-acre expansion (announced April 2026), and the Crusoe/Tallgrass 'Project Jade' campus starting at 1.8GW and designed to scale toward 10GW. Part of Gordon's 'Winning the AI Race' agenda. This is the single strongest tailwind for Dell AI-infrastructure and ISG demand in the state, both directly and via ecosystem pull-through.",
+      "ref": 2
+    },
+    {
+      "name": "Winning the AI Race (Gordon agenda)",
+      "status": "Active",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 60,
+      "tags": ["AI", "Energy", "Policy"],
+      "summary": "Governor Gordon is positioning Wyoming to convert exported energy into in-state value via AI infrastructure, courting Google, Microsoft, Meta and AWS (a closed-door Jackson summit in March 2026) while insisting developers 'do it the Wyoming way' on power, water, and community impact. The framing — digital sovereignty built on Wyoming power — aligns well with sovereign/private AI infrastructure positioning.",
+      "ref": 8
+    },
+    {
+      "name": "Wyoming Stable Token (WYST) & Digital-Asset Leadership",
+      "status": "Live",
+      "statusType": "good",
+      "dellFit": 45,
+      "budgetStrength": 40,
+      "tags": ["Blockchain", "Digital Assets", "Policy"],
+      "summary": "Wyoming has enacted 45+ digital-asset laws since 2016 (SPDI banks, DAO LLCs) and launched WYST, the first fiat-backed, fully-reserved stable token issued by a U.S. public entity, chaired by Governor Gordon. The brand makes Wyoming a national destination for blockchain/fintech compute and signals an innovation-forward government — relevant context more than a direct hardware play, but it reinforces the digital-sovereignty narrative.",
+      "ref": 6
+    },
+    {
+      "name": "NCAR-Wyoming Supercomputing Center (NWSC)",
+      "status": "Operating",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 55,
+      "tags": ["HPC", "Research Computing", "GPU"],
+      "summary": "The NWSC in Cheyenne — an NCAR / University of Wyoming collaboration — runs the GPU-accelerated 'Derecho' system (19.87 petaflops, 382 NVIDIA A100 GPUs) for climate, wildfire, and space-weather research. An established HPC buyer with a refresh cadence. Note risk: an NSF transition plan announced in early 2026 raised questions about the center's future, so qualify governance and funding before forecasting.",
+      "ref": 9
+    },
+    {
+      "name": "ETS Cybersecurity & Governance Modernization",
+      "status": "In progress",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 45,
+      "tags": ["Cybersecurity", "Governance", "Modernization"],
+      "summary": "The ETS 2026-2028 strategic plan centers on IT governance maturation, foundational service improvement, financial stewardship, and 'enhancing cybersecurity and risk management' (asset hygiene, identity/access, incident response) rather than large new programs. For a lean central IT org, the opening is security, consolidation, and lifecycle modernization that map to these themes.",
+      "ref": 1
+    }
+  ],
+
+  "procurement": {
+    "intro": "Wyoming's central IT organization is Enterprise Technology Services (ETS), with statewide purchasing run through the A&I (Administration & Information) General Services / Procurement Section. State agencies commonly buy IT off NASPO ValuePoint cooperative contracts (which satisfy Wyoming's competitive-bid statute) and A&I 'all-agency' statewide contracts. ETS also runs its own IT network-bid process for circuits/bandwidth. There is no single DIR-style co-op; the motion is leaner and contract-driven.",
+    "vehicles": [
+      { "name": "NASPO ValuePoint", "detail": "Primary cooperative path. Wyoming participating addenda (e.g., cloud solutions, IT software/hardware) satisfy competitive-bid requirements — confirm Dell/reseller coverage and current pricing." },
+      { "name": "A&I Statewide / All-Agency Contracts", "detail": "Pre-competed statewide contracts agencies can buy from without running their own solicitation; managed by A&I General Services Purchasing." },
+      { "name": "ETS IT Network Bids", "detail": "ETS-run competitive process for new/upgraded network circuits and bandwidth across the state." }
+    ],
+    "entities": [
+      { "name": "Enterprise Technology Services (ETS)", "role": "Central executive-branch IT: governance, foundational services, cybersecurity, and the agency rate model — owns statewide tech direction." },
+      { "name": "A&I General Services — Purchasing", "role": "Statewide procurement authority; runs solicitations and all-agency contracts." },
+      { "name": "University of Wyoming / NWSC", "role": "Independent research-computing and HPC buyer (Derecho); GPU and infrastructure refresh." },
+      { "name": "Hyperscale data-center operators (Crusoe, Meta, Microsoft)", "role": "Private buyers driving the Cheyenne AI buildout — ecosystem and infrastructure pull-through." }
+    ],
+    "competition": "Wyoming is a lean, contract-driven market: most large IT buys flow through NASPO ValuePoint and A&I statewide contracts where incumbents already hold coverage. With a tight central budget, differentiation comes from value, consolidation, security alignment, and — above all — AI-infrastructure and HPC capability tied to the data-center boom, the university, and NWSC rather than chasing small agency price deals."
+  },
+
+  "powerStructure": [
+    { "name": "Mark Gordon", "title": "Governor", "org": "State of Wyoming", "note": "Drives the 'Winning the AI Race' data-center agenda and chairs the Wyoming Stable Token Commission.", "ref": 8 },
+    { "name": "Jeff Clines", "title": "State CIO & ETS Director", "org": "Enterprise Technology Services (A&I)", "note": "Appointed 2024; focused on process maturity, trust, and cybersecurity for a lean central IT org.", "ref": 3 },
+    { "name": "Anthony Apollo", "title": "Executive Director", "org": "Wyoming Stable Token Commission", "note": "Leads WYST, the first U.S. publicly-issued stable token — face of the state's digital-asset program.", "ref": 6 },
+    { "name": "Wyoming Legislature — Joint Appropriations Committee", "title": "Appropriations & fiscal", "org": "State of Wyoming", "note": "Sets the biennial budget and ETS rate authority; the 2025 supplemental did not pass, tightening agency budgets.", "ref": 5 }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "Microsoft announces intent to expand Cheyenne datacenters (~3,200 acres)", "impact": "Signals a multiyear hyperscale buildout and deepening AI-infrastructure ecosystem around Cheyenne.", "tags": ["Data Centers", "AI"], "ref": 4 },
+    { "date": "2026-03", "title": "Wyoming pitches data-center developers at closed-door Jackson summit", "impact": "Google, Microsoft, Meta and AWS attend; the state is actively competing for AI capacity.", "tags": ["AI", "Economic Dev"], "ref": 8 },
+    { "date": "2026-02", "title": "NSF transition plan for NCAR-Wyoming raises questions in science community", "impact": "Future governance/funding of the NWSC and Derecho is uncertain — qualify before forecasting HPC.", "tags": ["HPC", "Risk"], "ref": 9 },
+    { "date": "2025-11", "title": "Gov. Gordon proposes ~$11.13B 2027-28 budget", "impact": "Sets the next biennial spending frame; investment income keeps the state cautious but solvent.", "tags": ["Budget"], "ref": 7 },
+    { "date": "2025-08", "title": "Crusoe/Tallgrass 'Project Jade' 1.8GW AI data center unveiled for Cheyenne", "impact": "Anchor AI campus — power use could dwarf the state's residential load; first buildings expected ~2027.", "tags": ["Data Centers", "AI"], "ref": 2 },
+    { "date": "2025-07", "title": "Wyoming Stable Token (WYST) advances toward launch", "impact": "First U.S. publicly-issued, fully-reserved stable token goes live, cementing digital-asset leadership.", "tags": ["Blockchain", "Policy"], "ref": 6 }
+  ],
+
+  "dellActions": [
+    "Lead with AI-infrastructure: tie Dell ISG / AI Factory offerings to the Cheyenne data-center boom (Crusoe, Meta, Microsoft) and pursue ecosystem and supply pull-through around those campuses.",
+    "Engage the University of Wyoming and NWSC as HPC/research-computing accounts on GPU and infrastructure refresh — but qualify NWSC's NSF transition status first.",
+    "Position cybersecurity, consolidation, and lifecycle modernization to ETS that map directly to its 2026-2028 governance and risk-management themes for a lean central IT org.",
+    "Validate Dell's NASPO ValuePoint and A&I statewide-contract coverage so executive-branch agencies can buy without a custom solicitation.",
+    "Use the 'digital sovereignty on Wyoming power' narrative (Gordon's AI-race agenda, WYST) to frame sovereign/private AI infrastructure for state and partner workloads."
+  ],
+
+  "sources": [
+    { "label": "Wyoming ETS — 2026-2028 Strategic Plan", "url": "https://ets.wyo.gov/strategy/2026-2028-strategic-plan" },
+    { "label": "Wyoming Public Media — Cheyenne mayor welcomes 1.8GW data center", "url": "https://www.wyomingpublicmedia.org/politics-government/2025-08-08/cheyenne-mayor-welcomes-1-8-gigawatt-data-center-as-cities-race-to-fuel-ai" },
+    { "label": "GovTech — Wyoming CIO Jeff Clines Is Upgrading Processes and Trust", "url": "https://www.govtech.com/workforce/wyoming-cio-jeff-clines-is-upgrading-processes-and-trust" },
+    { "label": "Microsoft — Intent to expand datacenter operations in Cheyenne", "url": "https://news.microsoft.com/source/2026/04/14/microsoft-announces-intent-to-expand-datacenter-operations-in-cheyenne-accelerating-innovation-and-economic-growth/" },
+    { "label": "Urban Institute — Wyoming state and local expenditure overview", "url": "https://apps.urban.org/features/slfi-state-pages-prod/factsheets/Wyoming.html" },
+    { "label": "Wyoming Stable Token Commission — Advances toward historic launch", "url": "https://content.govdelivery.com/accounts/WYGOV/bulletins/3d7f5f8" },
+    { "label": "Cowboy State Daily — Gordon proposes $11.13B two-year budget", "url": "https://cowboystatedaily.com/2025/11/17/governor-gordon-proposes-11-13-billion-two-year-budget/" },
+    { "label": "DataCenterDynamics — Gordon on Wyoming's AI data center boom", "url": "https://www.datacenterdynamics.com/en/analysis/data-centers-in-the-land-of-coal-and-cowboys/" },
+    { "label": "HPCwire — NSF transition plan for NCAR-Wyoming raises questions", "url": "https://www.hpcwire.com/2026/02/19/nsf-transition-plan-for-ncar-wyoming-raises-questions-in-science-community/" }
+  ]
+}

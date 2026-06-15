@@ -1,0 +1,157 @@
+{
+  "code": "OR",
+  "name": "Oregon",
+  "slug": "oregon",
+  "region": "Pacific Northwest",
+  "updated": "2026-06-15",
+  "tagline": "A record $138.9B biennial budget, a centralized EIS technology shop adopting GovRAMP for cloud, and a Hillsboro 'Silicon Forest' that is now one of the nation's hottest data-center and semiconductor markets — Oregon is buying and securing technology on a single enterprise motion.",
+
+  "snapshot": [
+    { "label": "2025–27 Biennial Budget", "value": "$138.9B" },
+    { "label": "Central IT Authority", "value": "EIS (within DAS)" },
+    { "label": "Cloud Gate", "value": "GovRAMP" },
+    { "label": "AI Posture", "value": "Action Plan (Feb 2025)" }
+  ],
+
+  "execSummary": {
+    "summary": "Oregon budgets on a two-year (biennial) cycle and adopted a record $138.9B all-funds budget for 2025–27. For an SLG seller, three things define the motion. First, technology is centralized: Enterprise Information Services (EIS), an office within the Department of Administrative Services (DAS) led by State CIO Terrence Woods, sets statewide IT strategy, runs Data Center Services and Cyber Security Services, and gatekeeps every IT project over $1M. Second, the cloud gate is shifting to GovRAMP — EIS's 'Phase 1: Accept' program now requires GovRAMP-aligned security provisions in all new cloud/hosted-service solicitations under ORS 276A.300, so cloud and as-a-service offerings need to clear that bar early. Third, the Hillsboro-area 'Silicon Forest' (Intel's Gordon Moore Park R&D campus plus a fast-growing Flexential/Aligned data-center cluster drawn by no sales tax and renewable power) makes Oregon a national AI-infrastructure market — even as grid capacity becomes the binding constraint. Buying runs through DAS Statewide Price Agreements, OregonBuys, the ORCPP cooperative, and NASPO ValuePoint.",
+    "opportunities": [
+      "AI-infrastructure / data-center demand tied to the Hillsboro 'Silicon Forest' cluster and Intel's R&D expansion (PowerEdge, networking, services, liquid-cooling).",
+      "Governed AI adoption as agencies operationalize the State AI Action Plan — an opening for private/on-prem AI on sensitive data with auditable governance.",
+      "Cyber and cloud modernization under EIS Cyber Security Services as GovRAMP rolls out across statewide cloud contracts.",
+      "Endpoint, client, and lifecycle refresh across a record general-government budget and the higher-ed research-computing buyers (OSU, UO)."
+    ],
+    "stats": [
+      { "value": "$138.9B", "label": "2025–27 All-Funds Budget", "note": "Legislatively adopted; +5.9% over 2023–25", "ref": 1 },
+      { "value": "GovRAMP", "label": "Cloud security gate", "note": "EIS 'Phase 1: Accept' under ORS 276A.300", "ref": 6 },
+      { "value": "Feb 2025", "label": "State AI Action Plan delivered", "note": "5 strategic executive actions", "ref": 4 },
+      { "value": "$689M", "label": "Federal BEAD allocation", "note": "Broadband buildout; projects start late 2026", "ref": 8 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Oregon budgets on a two-year (biennial) cycle. The 2025 Legislature adopted a $138.9B all-funds budget for 2025–27 — roughly $37.3B General Fund, $1.8B Lottery, $56.1B Other Funds, and $43.7B Federal Funds — a 5.9% increase over 2023–25. There is no single 'state IT budget' line; technology spend is distributed across agencies, with EIS providing enterprise governance and shared services. Any agency IT project of $1M or more must be documented to EIS, a useful early signal for deal forecasting.",
+    "stats": [
+      { "value": "$37.3B", "label": "General Fund", "note": "2025–27 biennium", "ref": 1 },
+      { "value": "$56.1B", "label": "Other Funds", "note": "Includes agency service charges", "ref": 1 },
+      { "value": "$1M+", "label": "EIS oversight threshold", "note": "IT projects must be reported to EIS", "ref": 5 }
+    ],
+    "breakdown": [
+      { "label": "General Fund", "amount": 37300, "display": "$37.3B", "note": "2025–27 biennium" },
+      { "label": "Other Funds", "amount": 56100, "display": "$56.1B", "note": "Agency charges incl. EIS shared services" },
+      { "label": "Federal Funds", "amount": 43700, "display": "$43.7B", "note": "Includes BEAD broadband dollars" }
+    ],
+    "notes": [
+      "Funding figures are biennial (two-year) totals unless noted.",
+      "Technology spend is decentralized across agencies; use the EIS $1M project-reporting threshold and IT Investment Governance process to find pipeline rather than a single IT line item."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Silicon Forest Data-Center & Semiconductor Cluster",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 80,
+      "tags": ["AI Infrastructure", "Data Centers", "Semiconductors"],
+      "summary": "Hillsboro and the surrounding 'Silicon Forest' have become one of the nation's most competitive data-center markets — Flexential is building a fifth, ~36MW Hillsboro facility (online 2026) and planning a sixth, alongside Aligned and others, drawn by no sales tax, enterprise-zone incentives, and renewable power. Intel continues to anchor the cluster with a major Gordon Moore Park R&D expansion (D1X/D1A). This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state — with grid capacity now the gating constraint.",
+      "ref": 9
+    },
+    {
+      "name": "State AI Action Plan",
+      "status": "In implementation",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Governance", "Policy"],
+      "summary": "Governor Kotek's AI Advisory Council (chaired by State CIO Terrence Woods, created via Executive Order 23-26) delivered a final Action Plan in February 2025 recommending five executive actions: AI governance structures, privacy/security, reference architecture, and workforce readiness. Agencies now need governed, auditable AI — an opening for private/on-prem AI on sensitive workloads rather than open public models.",
+      "ref": 4
+    },
+    {
+      "name": "GovRAMP Cloud Security (EIS Phase 1: Accept)",
+      "status": "Rolling out",
+      "statusType": "risk",
+      "dellFit": 65,
+      "budgetStrength": 50,
+      "tags": ["Cloud", "Security", "Compliance"],
+      "summary": "EIS Cyber Security Services has adopted GovRAMP (formerly StateRAMP). The 'Phase 1: Accept' program applies to all agencies under EIS information-security authority (ORS 276A.300): new and renewed cloud/hosted-service solicitations and contracts must carry GovRAMP-aligned provisions, and agencies complete a Cloud Checklist before acquiring cloud services. Any Dell cloud/as-a-service offering touching state data needs to clear this gate early, not at close.",
+      "ref": 6
+    },
+    {
+      "name": "EIS Enterprise IT Modernization & Shared Services",
+      "status": "Ongoing",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 60,
+      "tags": ["Modernization", "Data Center", "Shared Services"],
+      "summary": "EIS runs statewide Data Center Services, Cyber Security Services, and IT Investment Governance, and reviews every agency IT project of $1M or more. Its 2025–27 budget overview (State CIO Terrence Woods) emphasizes maturing governance, optimizing investments, and delivering secure, modern infrastructure — the central hub for compute, networking, and managed-services pull-through across executive-branch agencies.",
+      "ref": 3
+    },
+    {
+      "name": "Broadband Equity, Access & Deployment (BEAD)",
+      "status": "Awards finalized",
+      "statusType": "warn",
+      "dellFit": 35,
+      "budgetStrength": 55,
+      "tags": ["Broadband", "Federal Funds", "Rural"],
+      "summary": "The Oregon Broadband Office (Business Oregon) is deploying a $689M federal BEAD allocation — $621M to 19 awardees covering ~104,000 unserved/underserved locations (53% fiber, 46% LEO satellite). Most projects start in late 2026. Primarily a connectivity program, but it expands the digital-government footprint and edge/network modernization context Dell can attach to over time.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "Oregon centralizes technology procurement under the Department of Administrative Services (DAS). DAS Procurement Services establishes Statewide Price Agreements (master contracts usable by all state entities), runs the OregonBuys eProcurement system, and operates the Oregon Cooperative Procurement Program (ORCPP) for local governments and other public bodies. EIS sets the IT and information-security requirements that overlay these vehicles — most importantly the GovRAMP cloud gate. NASPO ValuePoint cooperative contracts are also widely used.",
+    "vehicles": [
+      { "name": "DAS Statewide Price Agreements", "detail": "Primary vehicle. Master agreements for products/services usable by all state entities; leverage state buying power. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "Oregon Cooperative Procurement Program (ORCPP)", "detail": "Extends DAS price agreements and NASPO ValuePoint contracts to local governments, education, and other public bodies." },
+      { "name": "OregonBuys (eProcurement)", "detail": "Statewide buying platform; funded by a 1% Vendor Collected Administrative Fee on DAS price agreements. Where solicitations and orders flow." },
+      { "name": "GovRAMP certification", "detail": "Not a contract, but the EIS prerequisite gate for any cloud/hosted offering touching state data under ORS 276A.300." }
+    ],
+    "entities": [
+      { "name": "EIS (within DAS)", "role": "Central IT strategy, security, Data Center Services, and $1M+ project oversight — leads the statewide technology motion." },
+      { "name": "DAS Procurement Services", "role": "Owns Statewide Price Agreements, OregonBuys, and the ORCPP cooperative." },
+      { "name": "Oregon Health Authority / ODHS", "role": "Among the largest agency IT spenders; data-heavy health and human-services modernization." },
+      { "name": "OSU & University of Oregon", "role": "Independent research-computing and AI-infrastructure buyers outside the EIS executive-branch motion." }
+    ],
+    "competition": "Oregon is a centralized, contract-driven market — incumbents hold DAS price agreements and NASPO ValuePoint positions across compute, networking, and services. Differentiation comes from GovRAMP-ready offerings, AI-infrastructure capability aligned to the Silicon Forest buildout, and services that map to EIS modernization and the AI Action Plan rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Tina Kotek", "title": "Governor", "org": "State of Oregon", "note": "Created the State AI Advisory Council (EO 23-26); set the record 2025–27 budget agenda.", "ref": 4 },
+    { "name": "Terrence Woods", "title": "State Chief Information Officer", "org": "EIS / DAS", "note": "Owns statewide IT strategy and EIS; chairs the AI Advisory Council; reports to the Governor.", "ref": 3 },
+    { "name": "Kathryn Darnall Helms", "title": "State Chief Data Officer", "org": "EIS / DAS", "note": "Data governance and transparency; member of the AI Advisory Council.", "ref": 4 },
+    { "name": "Nick Batz", "title": "Director, Oregon Broadband Office", "org": "Business Oregon", "note": "Leads the $689M BEAD deployment; rural connectivity buildout.", "ref": 8 },
+    { "name": "DAS Procurement Services / State CPO", "title": "Central procurement authority", "org": "DAS", "note": "Owns Statewide Price Agreements, OregonBuys, and ORCPP — the contractual path to every state buyer." }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "Hillsboro pauses adding industrial land for high-tech and data centers", "impact": "Signals land and grid capacity becoming the binding constraint on Silicon Forest growth — power/efficiency story matters to buyers.", "tags": ["Data Centers", "Policy"], "ref": 10 },
+    { "date": "2025-10", "title": "Flexential plans a sixth Hillsboro data center as the cluster expands", "impact": "Reinforces Oregon as one of the nation's hottest AI-infrastructure markets; ISG and AI-factory demand.", "tags": ["Data Centers", "AI"], "ref": 9 },
+    { "date": "2025-09", "title": "Oregon files BEAD final proposal — $689M to connect ~104,000 locations", "impact": "Largest reported share of allocation committed; expands digital-government and network modernization footprint.", "tags": ["Broadband", "Federal Funds"], "ref": 8 },
+    { "date": "2025-06", "title": "Legislature adopts $138.9B 2025–27 biennial budget (+5.9%)", "impact": "Record all-funds budget sets the two-year spending baseline for agency IT investment.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-03", "title": "State CIO Terrence Woods presents EIS 2025–27 budget to Ways & Means", "impact": "Confirms EIS priorities — governance maturity, security, and modernization — and the buying motion sellers should map to.", "tags": ["Leadership", "Budget"], "ref": 3 },
+    { "date": "2025-02", "title": "Oregon AI Advisory Council delivers final State AI Action Plan", "impact": "Five executive actions on AI governance and security; agencies need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 4 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the Hillsboro Silicon Forest data-center cluster and OSU/UO research computing — and bring a power/cooling-efficiency angle given the grid constraint.",
+    "Clear the GovRAMP gate before pursuing cloud/as-a-service deals — confirm the right certification level for any offering touching state data under EIS Phase 1: Accept.",
+    "Engage EIS early as the central authority — map deals to its IT Investment Governance and the $1M+ project-reporting threshold to find and shape pipeline.",
+    "Validate Dell's DAS Statewide Price Agreement and NASPO ValuePoint coverage and resellers are current and correctly scoped for the agencies you're targeting.",
+    "Position governed, private/on-prem AI for sensitive workloads as agencies operationalize the State AI Action Plan."
+  ],
+
+  "sources": [
+    { "label": "Oregon LFO — 2025-27 Legislatively Adopted Budget Summary", "url": "https://www.oregonlegislature.gov/lfo/Documents/2025-2%20LAB%20Summary%202025-27.pdf" },
+    { "label": "Oregon LFO — 2025-27 Budget Highlights (October 2025)", "url": "https://www.oregonlegislature.gov/lfo/Documents/2025-27%20Budget%20Highlights.pdf" },
+    { "label": "Oregon EIS — 2025-2027 Budget Overview, State CIO Terrence Woods", "url": "https://olis.oregonlegislature.gov/liz/2025R1/Downloads/CommitteeMeetingDocument/296427" },
+    { "label": "Oregon Governor's Office — Governor Kotek Announces Artificial Intelligence Action Plan", "url": "https://apps.oregon.gov/oregon-newsroom/OR/GOV/Posts/Post/governor-kotek-announces-artificial-intelligence-action-plan" },
+    { "label": "Oregon Revised Statutes — ORS 276A.236 (enterprise IT; $1M+ initiatives)", "url": "https://oregon.public.law/statutes/ors_276a.236" },
+    { "label": "Oregon EIS — Cyber Security Services: Guidance for State Agencies (GovRAMP / cloud)", "url": "https://www.oregon.gov/eis/cyber-security-services/pages/guidance-for-state-agencies.aspx" },
+    { "label": "Oregon DAS — Statewide Price Agreements & Cooperative Procurement (ORCPP / OregonBuys)", "url": "https://www.oregon.gov/das/OPM/Pages/price-agreement.aspx" },
+    { "label": "Oregon Broadband Office — BEAD Program Update (Director Nick Batz)", "url": "https://apps.oregonlegislature.gov/liz/2026R1/Downloads/CommitteeMeetingDocument/312451" },
+    { "label": "Hillsboro News Times — One of Hillsboro's largest data center operators plans 6th facility", "url": "https://hillsboronewstimes.com/2025/10/01/one-of-hillsboros-largest-data-center-operators-plans-6th-facility/" },
+    { "label": "OPB — Hillsboro will not get more industrial land for high tech, data centers after all", "url": "https://www.opb.org/article/2026/03/03/hillsboro-will-not-get-more-industrial-land-for-high-tech-data-centers/" }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "code": "TN",
+  "name": "Tennessee",
+  "slug": "tennessee",
+  "region": "Southeast",
+  "updated": "2026-06-15",
+  "tagline": "Home to the world's largest AI supercomputer build (xAI's Memphis 'Colossus'), a brand-new statewide AI Action Plan, and a centralized IT shop in execution mode — Tennessee is one of the country's hottest AI-infrastructure markets.",
+
+  "snapshot": [
+    { "label": "FY2026 All-Funds Budget", "value": "$59.5B" },
+    { "label": "Central IT Org", "value": "STS (F&A)" },
+    { "label": "Primary Buying Vehicle", "value": "CPO Statewide Contracts" },
+    { "label": "AI Posture", "value": "Action Plan (Nov 2025)" }
+  ],
+
+  "execSummary": {
+    "summary": "Tennessee enters FY2026 with a $59.5B all-funds budget and an unusually strong AI-infrastructure story for an SLG seller. First, the state is now a national AI-compute epicenter: xAI's 'Colossus' in Memphis is one of the largest AI supercomputers on earth (scaling toward 2GW and ~555,000 GPUs as of January 2026), and Oak Ridge National Laboratory is standing up the 'Lux' AI cluster (early 2026) ahead of its next-gen 'Discovery' exascale system. Second, state government itself is moving fast on AI: a State AI Advisory Council released Tennessee's first statewide AI Action Plan in November 2025, and Strategic Technology Solutions (STS) has already deployed ChatGPT Enterprise to thousands of employees. Third, IT is centralized and in 'execution' mode under new State CIO Kristin Darby, including an ERP modernization that explicitly demands 'native AI architecture.' For Dell, the buying motion runs through the Central Procurement Office's statewide contracts, and the data-and-compute-readiness pillar of the AI plan is a direct opening for governed, secure infrastructure.",
+    "opportunities": [
+      "AI-infrastructure / 'AI factory' demand across the Memphis (xAI Colossus), Nashville, and Oak Ridge corridors (PowerEdge, networking, services).",
+      "State AI Action Plan's 'Data & Compute Readiness' pillar — secure statewide infrastructure for safe AI experimentation, a fit for governed on-prem / private-cloud AI.",
+      "ERP modernization requiring 'native AI architecture,' plus broad enterprise modernization and automation under STS.",
+      "Endpoint, client, and lifecycle refresh across a ~1,200-person central IT org and the agencies it serves."
+    ],
+    "stats": [
+      { "value": "$59.5B", "label": "FY2026 All-Funds Budget", "note": "Gov. Lee's recommended budget", "ref": 1 },
+      { "value": "~555K GPUs", "label": "xAI Colossus (Memphis)", "note": "Scaling toward ~2GW (Jan 2026)", "ref": 7 },
+      { "value": "3,000", "label": "ChatGPT Enterprise licenses", "note": "1,000 live, ~2,000 staged", "ref": 5 },
+      { "value": "Nov 2025", "label": "Statewide AI Action Plan", "note": "Four strategic pillars", "ref": 3 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Tennessee budgets annually on a July 1–June 30 fiscal year. Governor Lee's FY2026 recommended budget totals roughly $59.5B from all revenue sources (about $29.5B in state dollars). There is no single consolidated 'state IT budget' line — technology spend is distributed across agencies and the centralized Strategic Technology Solutions (STS) organization within Finance & Administration, supplemented by large federal flows such as BEAD broadband funding.",
+    "stats": [
+      { "value": "$59.5B", "label": "All-funds budget", "note": "FY2026 recommended", "ref": 1 },
+      { "value": "$29.5B", "label": "State revenue", "note": "+9% vs. FY2025", "ref": 1 },
+      { "value": "~1,200", "label": "STS IT workforce", "note": "Central IT organization", "ref": 6 }
+    ],
+    "breakdown": [
+      { "label": "BEAD broadband (federal)", "amount": 813, "display": "$813M", "note": "Final proposal approved Feb 2026" },
+      { "label": "Broadband / digital opportunity grants", "amount": 163, "display": "~$163M", "note": "State-administered award round" }
+    ],
+    "notes": [
+      "Tennessee runs an annual (not biennial) budget; figures above are FY2026 (July 2025–June 2026).",
+      "There is no published consolidated state IT line item — confirm agency-level technology budgets and the STS operating budget when forecasting.",
+      "AI-infrastructure investment in-state is overwhelmingly private (xAI) and federal (Oak Ridge/DOE), not state-appropriated — the state-government opportunity is modernization and governed AI adoption."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "xAI 'Colossus' AI Supercomputer — Memphis",
+      "status": "Scaling fast",
+      "statusType": "good",
+      "dellFit": 88,
+      "budgetStrength": 90,
+      "tags": ["AI Infrastructure", "Data Centers", "Memphis"],
+      "summary": "xAI's Memphis 'Colossus' is among the largest AI training clusters in the world, reported to be scaling toward roughly 2 gigawatts and around 555,000 GPUs as of January 2026, with a stated ambition of one million GPUs. The buildout is anchoring a fast-growing West Tennessee AI-infrastructure ecosystem (power, cooling, networking, supply chain) and reshaping the state's identity as a national compute hub — the single strongest AI-infrastructure tailwind in the market.",
+      "ref": 7
+    },
+    {
+      "name": "Tennessee Statewide AI Action Plan",
+      "status": "Adopted Nov 2025",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["AI", "Governance", "Modernization"],
+      "summary": "The State AI Advisory Council — co-chaired by CIO Kristin Darby and F&A Commissioner Jim Bryson — unanimously adopted Tennessee's first statewide AI Action Plan in November 2025. Its four pillars are Modernization & Pilots, Data & Compute Readiness, Workforce & Change Enablement, and Safety/Security/Accountability. The 'Data & Compute Readiness' pillar (secure statewide infrastructure for safe AI experimentation) is a direct opening for governed, auditable on-prem and private-cloud AI.",
+      "ref": 3
+    },
+    {
+      "name": "STS Enterprise Modernization (ERP + Automation)",
+      "status": "In execution",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 60,
+      "tags": ["Modernization", "ERP", "AI"],
+      "summary": "Under CIO Kristin Darby, STS describes 2026 as a shift into 'execution and action.' A flagship effort is modernizing the state's enterprise resource planning (ERP) system; the RFI explicitly calls for 'native AI architecture' that is extensible, secure, and auditable. Alongside ERP, STS is centered on broad modernization and automation across a ~1,200-person IT organization — a multi-year infrastructure and services runway.",
+      "ref": 6
+    },
+    {
+      "name": "ChatGPT Enterprise Rollout",
+      "status": "Deployed",
+      "statusType": "good",
+      "dellFit": 45,
+      "budgetStrength": 50,
+      "tags": ["AI", "Productivity", "Governance"],
+      "summary": "After a 60-day pilot in spring 2025, STS deployed ChatGPT Enterprise statewide, with about 1,000 licenses live and roughly 2,000 more staged. The state reports meaningful per-user time savings and frames adoption around governance ('Should we use AI for this?'). The pace signals an agency leadership genuinely operationalizing AI — useful context for positioning the secure compute and data foundations that production AI ultimately needs.",
+      "ref": 5
+    },
+    {
+      "name": "Oak Ridge AI / Exascale Compute",
+      "status": "Lux 2026, Discovery 2028",
+      "statusType": "good",
+      "dellFit": 65,
+      "budgetStrength": 80,
+      "tags": ["HPC", "AI", "Federal"],
+      "summary": "Oak Ridge National Laboratory hosts Frontier (the first exascale supercomputer) and is standing up the 'Lux' AI cluster in early 2026, with the next-gen 'Discovery' exascale system slated for 2028. While DOE-funded and procured federally, ORNL anchors East Tennessee as an HPC/AI research hub that pulls in talent, partners, and adjacent research-computing demand.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "Tennessee centralizes most non-IT and technology purchasing through the Central Procurement Office (CPO), a division of the Department of General Services created under TCA § 4-56-104. The CPO issues statewide contracts that state agencies — and, for many categories, local governments and nonprofits — can buy from without running their own solicitation. Suppliers must be registered in the state's Edison system to do business. Strategic Technology Solutions (STS) sets statewide IT direction, standards, and security policy within Finance & Administration.",
+    "vehicles": [
+      { "name": "CPO Statewide Contracts", "detail": "Primary vehicle. Pre-competed agreements (including a dedicated technology category) usable by state agencies and, for many categories, local government and nonprofits. Confirm Dell agreements and reseller scope are current." },
+      { "name": "Edison Supplier Portal", "detail": "Mandatory supplier registration and the transactional backbone for doing business with the state — ensure Dell and partners are correctly registered and represented." },
+      { "name": "Cooperative / NASPO ValuePoint", "detail": "Tennessee participates in cooperative purchasing; multi-state cooperative contracts can be a path for technology categories — verify lead-state and TN adoption status." }
+    ],
+    "entities": [
+      { "name": "Strategic Technology Solutions (STS)", "role": "Centralized state IT organization within F&A; sets IT direction, standards, and security policy. ~1,200 staff under CIO Kristin Darby." },
+      { "name": "Central Procurement Office (CPO)", "role": "Statewide contracts and procurement authority within General Services; the contractual front door for most buys." },
+      { "name": "Department of Finance & Administration (F&A)", "role": "Parent of STS and the AI Advisory Council; owns enterprise modernization (e.g., ERP)." },
+      { "name": "TennCare / large agencies", "role": "Data-heavy agencies among the larger technology and modernization spenders." }
+    ],
+    "competition": "Tennessee is a centralized, contract-driven market where incumbents hold statewide and cooperative agreements across compute, client, and services. Differentiation comes less from price and more from AI-infrastructure capability, governed/auditable AI offerings aligned to the state's AI Action Plan, and services that map to STS modernization and the Memphis/Oak Ridge compute ecosystem."
+  },
+
+  "powerStructure": [
+    { "name": "Bill Lee", "title": "Governor", "org": "State of Tennessee", "note": "Champions broadband expansion and the state's AI-leadership and economic-development agenda; owns the FY2026 budget." },
+    { "name": "Kristin Darby", "title": "State CIO", "org": "Strategic Technology Solutions (F&A)", "note": "Took office March 31, 2025; ex-healthcare/finance CIO. Leads ~1,200-person STS, co-chairs the AI Advisory Council, frames 2026 as 'execution.'", "ref": 11 },
+    { "name": "Jim Bryson", "title": "Commissioner", "org": "Department of Finance & Administration", "note": "F&A Commissioner and co-chair of the State AI Advisory Council; STS reports up through F&A." },
+    { "name": "AI Advisory Council", "title": "Statewide AI governance body", "org": "State of Tennessee", "note": "Authored the November 2025 AI Action Plan; sets the framework for state AI adoption and data/compute readiness.", "ref": 3 },
+    { "name": "Central Procurement Office", "title": "Statewide procurement authority", "org": "Department of General Services", "note": "Owns the statewide contracts and Edison registration that gate most technology buys.", "ref": 9 }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "Tennessee secures additional $218M federal broadband grant", "impact": "Adds to BEAD funding to reach remaining unserved Tennesseans; sustained connectivity buildout statewide.", "tags": ["Broadband", "Federal"], "ref": 10 },
+    { "date": "2026-02", "title": "NTIA approves Tennessee's BEAD final proposal (~$813M)", "impact": "Unlocks a major federal broadband program; expanded last-mile and digital-opportunity activity.", "tags": ["Broadband", "Budget"], "ref": 10 },
+    { "date": "2026-01", "title": "xAI's Memphis 'Colossus' scales toward ~2GW / ~555,000 GPUs", "impact": "Cements Tennessee as a top-tier national AI-compute hub; massive infrastructure ecosystem demand.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 7 },
+    { "date": "2025-11", "title": "State AI Advisory Council adopts Tennessee's first AI Action Plan", "impact": "Sets four-pillar framework including 'Data & Compute Readiness' — an opening for governed AI infrastructure.", "tags": ["AI", "Policy"], "ref": 3 },
+    { "date": "2025-10", "title": "Oak Ridge to receive 'Lux' AI cluster (2026) and 'Discovery' exascale (2028)", "impact": "Reinforces East Tennessee as an HPC/AI research hub with adjacent compute demand.", "tags": ["HPC", "AI"], "ref": 8 },
+    { "date": "2025-03", "title": "Kristin Darby takes office as State CIO", "impact": "New, AI-forward leadership over centralized STS; shift toward execution and modernization.", "tags": ["Leadership"], "ref": 11 }
+  ],
+
+  "dellActions": [
+    "Lead with AI infrastructure: connect Dell ISG / AI Factory offerings to the Memphis (xAI), Nashville, and Oak Ridge compute corridors and to the AI Action Plan's 'Data & Compute Readiness' pillar.",
+    "Engage STS as a centralized account in 'execution' mode — map Dell modernization, automation, and the ERP 'native AI architecture' requirement to active STS priorities.",
+    "Position governed, secure, auditable on-prem / private-cloud AI for sensitive state workloads, aligned to the AI Action Plan's safety and accountability pillar.",
+    "Confirm Dell's CPO statewide-contract coverage, Edison registration, and reseller scope are current for the agencies you're targeting.",
+    "Refresh endpoint, client, and lifecycle across the ~1,200-person STS org and the agencies it serves; tie to broadband-enabled digital-opportunity programs where relevant."
+  ],
+
+  "sources": [
+    { "label": "Sycamore Institute — Summary of Gov. Lee's FY2026 Recommended Budget", "url": "https://sycamoretn.org/2026-lee-budget/" },
+    { "label": "Tennessee F&A — Strategic Technology Solutions (STS)", "url": "https://www.tn.gov/finance/sts.html" },
+    { "label": "Tennessee F&A — Tennessee Sets Bold Course for AI Leadership (AI Action Plan)", "url": "https://www.tn.gov/finance/news/2025/11/24/tennessee-sets-bold-course-for-ai-leadership.html" },
+    { "label": "Tennessee AI Advisory Council — Action Plan (November 2025)", "url": "https://www.tn.gov/content/dam/tn/finance/aicouncil/documents/TN%20AI%20Advisory%20Council%20Action%20Plan%20-%20November%202025.pdf" },
+    { "label": "StateScoop — Inside Tennessee's deployment of ChatGPT Enterprise", "url": "https://statescoop.com/tennessee-chatgpt-enterprise-kristin-darby/" },
+    { "label": "GovTech — Tennessee CIO on Agentic AI, Government's 'Inflection Point'", "url": "https://www.govtech.com/workforce/tennessee-cio-on-agentic-ai-govt-s-inflection-point" },
+    { "label": "Introl — xAI Colossus 2GW expansion (555K GPUs, Jan 2026)", "url": "https://introl.com/blog/xai-colossus-2-gigawatt-expansion-555k-gpus-january-2026" },
+    { "label": "OLCF — ORNL, AMD, and HPE to Deliver Discovery and Lux AI Supercomputers", "url": "https://www.olcf.ornl.gov/2025/10/27/ornl-amd-and-hpe-to-deliver-does-newest-ai-supercomputers-discovery-and-lux/" },
+    { "label": "Tennessee General Services — Procurement / Central Procurement Office", "url": "https://www.tn.gov/generalservices/procurement.html" },
+    { "label": "Tennessee ECD — BEAD Program (broadband)", "url": "https://www.tn.gov/ecd/rural-development/broadband-office/redirect-provider-resources/bead-program.html" },
+    { "label": "StateScoop — Tennessee names Kristin Darby as new CIO", "url": "https://statescoop.com/tennessee-new-cio-kristin-darby-2025/" }
+  ]
+}

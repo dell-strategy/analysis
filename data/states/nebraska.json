@@ -1,0 +1,156 @@
+{
+  "code": "NE",
+  "name": "Nebraska",
+  "slug": "nebraska",
+  "region": "Plains",
+  "updated": "2026-06-15",
+  "tagline": "A hyperscale data-center magnet (Google, Meta) and a first-in-20-years IT reorganization under a cost-cutting CIO — Nebraska is rewiring how it buys, secures, and runs technology while a budget squeeze forces every dollar to work harder.",
+
+  "snapshot": [
+    { "label": "2025–27 Biennial Budget", "value": "~$11B/yr" },
+    { "label": "Central IT", "value": "Office of the CIO (OCIO)" },
+    { "label": "Procurement", "value": "DAS Materiel" },
+    { "label": "Data-Center Boom", "value": "Google + Meta" }
+  ],
+
+  "execSummary": {
+    "summary": "Nebraska's technology story for a Dell seller is defined by two forces pulling in opposite directions. On one side, the state is one of the hottest hyperscale data-center markets in the country: Google has invested more than $3.5B since 2019 across Papillion, Omaha and Lincoln, Meta's Sarpy County campus is expanding toward a nine-building, ~4M sq ft footprint, and a Google-linked proposal in southeast Nebraska could draw 1,000–3,000 MW — more than three times the city of Lincoln. On the other side, the state faces a roughly $471M budget deficit, and Governor Pillen has directed cabinet agencies to cut hundreds of millions, so State CIO Matthew McCarville is running the first major OCIO reorganization in 20 years explicitly to reduce IT cost. The result is a buyer that is modernizing aggressively (mainframe migration, AI/data Center of Excellence in Omaha, a Joint Cybersecurity Operations Command Center) but scrutinizing every dollar. Buying runs centrally through OCIO with statewide contracts via DAS Materiel; the AI-infrastructure tailwind from the hyperscaler buildout is the strongest Dell angle.",
+    "opportunities": [
+      "AI-infrastructure / 'AI factory' pull from the Google and Meta hyperscale buildout in Sarpy County and across the state (PowerEdge, networking, services, power-and-cooling adjacency).",
+      "OCIO modernization: mainframe migration off 1960s-era systems and consolidation of duplicative hardware/applications across agencies — a refresh and platform play.",
+      "Joint Cybersecurity Operations Command Center serving state, local, and education — secure compute and infrastructure for a whole-of-state SOC.",
+      "Data & AI Center of Excellence in Omaha — governed, on-prem/private AI on clean state data, aligned to a cost-conscious, data-governance-first CIO."
+    ],
+    "stats": [
+      { "value": "~$11B", "label": "Annual state budget", "note": "2025–27 biennium mainline budget, per year", "ref": 5 },
+      { "value": "$3.5B+", "label": "Google NE investment", "note": "Cumulative since 2019 (Papillion/Omaha/Lincoln)", "ref": 6 },
+      { "value": "~$471M", "label": "Budget deficit pressure", "note": "Drives statewide cost-cutting mandate", "ref": 4 },
+      { "value": "20 yrs", "label": "Since last IT reorg", "note": "OCIO's first major restructuring in two decades", "ref": 3 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Nebraska budgets on a two-year (biennial) cycle. The 2025–27 biennium mainline budget is roughly $11B per year, set against an estimated ~$471M deficit that has pushed Governor Pillen to direct cabinet agencies toward large recurring cuts. There is no single published 'state IT budget' line — technology spend is distributed across agencies and the centrally-run Office of the CIO (OCIO), which is deliberately lowering its internal rates to cut cost for the agencies it serves.",
+    "stats": [
+      { "value": "~$11B", "label": "Annual mainline budget", "note": "2025–27 biennium", "ref": 5 },
+      { "value": "~$471M", "label": "Estimated deficit", "note": "Drives agency cost-cutting", "ref": 4 },
+      { "value": "$13M", "label": "OCIO cost-cut goal", "note": "Recurring overhead reduction target; ~$2.5M cut so far", "ref": 3 }
+    ],
+    "breakdown": [
+      { "label": "OCIO overhead reduction (target)", "amount": 13, "display": "$13M", "note": "Recurring; ~$2.5M achieved to date" },
+      { "label": "Cybersecurity expansion", "amount": 0, "display": "Cash fund", "note": "Funded via OCIO cash fund; CIO seeking budgeting change" },
+      { "label": "Mainframe / app modernization", "amount": 0, "display": "Cost-offset", "note": "Migration + website insourcing pitched as net savings" }
+    ],
+    "notes": [
+      "Budget figures are biennial; the ~$11B is an approximate annual mainline total, not an IT-specific line.",
+      "OCIO funds much of its cybersecurity expansion from a cash fund rather than a dedicated appropriation — confirm funding source before forecasting any security program."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Hyperscale Data-Center Buildout (Google + Meta)",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Nebraska is among the nation's hottest hyperscale markets. Google has invested $3.5B+ since 2019 across Papillion, Omaha and Lincoln; Meta's Sarpy County campus is scaling toward roughly nine buildings and ~4M sq ft. A Google-linked southeast-Nebraska proposal could draw 1,000–3,000 MW (potentially online ~2029). This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
+      "ref": 6
+    },
+    {
+      "name": "OCIO Reorganization & Modernization",
+      "status": "Underway",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["Modernization", "Consolidation", "Cost Savings"],
+      "summary": "Under CIO Matthew McCarville, OCIO is executing its first major restructuring in 20 years — new web-services, cybersecurity, and data/AI departments reporting to the CIO. Priorities include migrating off 1960s-era mainframe systems, insourcing ~1,500 websites, and retiring duplicative hardware/applications across agencies. Modernization is framed as net cost reduction, which shapes how Dell must position any spend.",
+      "ref": 3
+    },
+    {
+      "name": "Data & AI Center of Excellence (Omaha)",
+      "status": "Active",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 50,
+      "tags": ["AI", "Data", "Governance"],
+      "summary": "A new data analytics & AI department under a chief data officer runs a Data and AI Center of Excellence in Omaha, plus an internship and a 2026 statewide IT apprenticeship pipeline. The CIO's stated priority is clean, well-governed data as the foundation for AI use cases — an opening for governed, private/on-prem AI on sensitive state data rather than open public models.",
+      "ref": 2
+    },
+    {
+      "name": "Joint Cybersecurity Operations Command Center",
+      "status": "Building",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 50,
+      "tags": ["Cybersecurity", "Whole-of-State", "SOC"],
+      "summary": "OCIO is standing up a Joint Cybersecurity Operations Command Center to serve state agencies, education, and local governments — a whole-of-state security posture. It is funded largely from an OCIO cash fund while the CIO works with the Legislature to change cybersecurity budgeting. Greenfield SOC capacity means secure-compute, infrastructure, and managed-services needs.",
+      "ref": 3
+    },
+    {
+      "name": "State AI Policy (LB 525 chatbot law)",
+      "status": "Enacted Apr 2026",
+      "statusType": "warn",
+      "dellFit": 45,
+      "budgetStrength": 30,
+      "tags": ["AI", "Policy"],
+      "summary": "Pillen signed LB 525 (Apr 14, 2026), making Nebraska the fourth state with a chatbot-disclosure law, and the state has acted to protect minors from AI misuse. Pillen also publicly opposed a federal AI-regulation moratorium, favoring state-level guardrails. The signal for sellers: AI adoption is welcomed but expected to be transparent and governed.",
+      "ref": 7
+    }
+  ],
+
+  "procurement": {
+    "intro": "Nebraska runs technology centrally through the Office of the CIO (OCIO), with statewide purchasing administered by the DAS Materiel Division. Agencies are generally required to use contracts the Materiel Division designates for statewide use unless the materiel administrator permits otherwise. Active state contracts are publicly searchable, and the Nebraska Information Technology Commission (NITC) sets statewide IT policy and standards.",
+    "vehicles": [
+      { "name": "DAS Materiel statewide contracts", "detail": "Primary vehicle. Agencies must use designated statewide contracts unless exempted. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "State Contract Web Search", "detail": "Public database of active Nebraska state contracts (effective Jan 1, 2014 onward) — useful for incumbency and renewal-window intelligence." },
+      { "name": "OCIO enterprise services", "detail": "Central IT delivery (compute, security, web, data/AI) that many agencies consume; OCIO is actively lowering its internal rates." }
+    ],
+    "entities": [
+      { "name": "Office of the CIO (OCIO)", "role": "Central IT authority — sets direction, runs enterprise services, owns modernization and cybersecurity. Lincoln HQ." },
+      { "name": "DAS Materiel Division", "role": "Statewide procurement and purchasing; administers designated statewide contracts." },
+      { "name": "NITC", "role": "Nebraska Information Technology Commission — statewide IT policy, standards, and project oversight." },
+      { "name": "University of Nebraska system", "role": "Large independent research-computing and AI-infrastructure buyer; talent pipeline partner for OCIO." }
+    ],
+    "competition": "Nebraska is a centralized, cost-disciplined market. With a sizable share of IT staff retirement-eligible and a budget deficit forcing cuts, differentiation comes from total-cost-of-ownership, modernization-as-savings narratives, AI-infrastructure capability tied to the hyperscaler buildout, and services that map to OCIO's consolidation and cyber-SOC priorities — not price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Jim Pillen", "title": "Governor", "org": "State of Nebraska", "note": "Drives the cost-cutting mandate; backs state-level AI guardrails over a federal moratorium; signed LB 525.", "ref": 8 },
+    { "name": "Matthew McCarville", "title": "State Chief Information Officer", "org": "Office of the CIO", "note": "Appointed Apr 2024 from the university system; leads the 20-year IT reorg with a cost-savings mandate.", "ref": 9 },
+    { "name": "OCIO Chief Data Officer", "title": "Leads data analytics & AI department", "org": "Office of the CIO", "note": "Runs the Omaha Data & AI Center of Excellence and data-governance push that underpins AI use cases.", "ref": 2 },
+    { "name": "NITC", "title": "Statewide IT policy body", "org": "State of Nebraska", "note": "Sets IT standards and reviews major technology projects — relevant for forecasting enterprise direction.", "ref": 1 }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "Pillen signs LB 525 chatbot-disclosure law", "impact": "Nebraska becomes the 4th state with a chatbot law; signals a governed, transparency-first posture on AI adoption.", "tags": ["AI", "Policy"], "ref": 7 },
+    { "date": "2026-03", "title": "Google-linked proposal could draw 1,000–3,000 MW in southeast Nebraska", "impact": "Underscores the scale of AI-infrastructure investment landing in the state (potential online date ~2029).", "tags": ["Data Centers", "AI"], "ref": 6 },
+    { "date": "2025-12", "title": "Trump executive order targets state AI regulation; Nebraska reviewing impact", "impact": "Adds uncertainty to Nebraska's state-level AI rules; agencies watch how guardrails evolve.", "tags": ["AI", "Policy"], "ref": 10 },
+    { "date": "2025-07", "title": "Pillen joins 17 GOP governors opposing congressional AI moratorium", "impact": "Confirms Nebraska intends to keep regulating AI at the state level — governed adoption is the expectation.", "tags": ["AI", "Policy"], "ref": 8 },
+    { "date": "2025-06", "title": "OCIO pursues IT cost cuts amid ~$471M state deficit", "impact": "Cost-efficiency becomes the lens for all IT spend; modernization must pencil out as savings.", "tags": ["Budget", "Modernization"], "ref": 4 },
+    { "date": "2025-01", "title": "Meta expands Sarpy County data-center campus toward ~4M sq ft", "impact": "Continued hyperscale buildout reinforces Nebraska as an AI-infrastructure hub.", "tags": ["Data Centers"], "ref": 6 }
+  ],
+
+  "dellActions": [
+    "Lead with AI-infrastructure: tie Dell ISG / AI Factory offerings to the Google and Meta hyperscale buildout and to University of Nebraska research-computing buyers.",
+    "Frame state-government modernization as cost reduction — map PowerEdge refresh, mainframe migration, and consolidation to OCIO's $13M overhead-cut goal and the deficit mandate.",
+    "Engage the Joint Cybersecurity Operations Command Center as a whole-of-state SOC opportunity — secure compute, infrastructure, and managed services across state/local/education.",
+    "Position governed, private/on-prem AI on clean state data with the Omaha Data & AI Center of Excellence and the chief data officer, aligned to LB 525-era transparency expectations.",
+    "Confirm Dell's DAS Materiel statewide-contract coverage and resellers are current; use the public State Contract Web Search to map incumbents and renewal windows."
+  ],
+
+  "sources": [
+    { "label": "Nebraska OCIO — official site", "url": "https://cio.nebraska.gov/" },
+    { "label": "GovTech — Nebraska CIO on Preparing for Future Talent, Tech Needs", "url": "https://www.govtech.com/workforce/nebraska-cio-on-preparing-for-future-talent-tech-needs" },
+    { "label": "GovTech — Nebraska Innovates IT Through Reorganization, Modernization", "url": "https://www.govtech.com/gov-experience/nebraska-innovates-it-through-reorganization-modernization" },
+    { "label": "GovLoop — Coping With a Tighter Budget in Nebraska", "url": "https://www.govloop.com/coping-with-a-tighter-budget-in-nebraska/" },
+    { "label": "State of Nebraska — Executive Budget 2025–2027 Biennium (DAS)", "url": "https://das.nebraska.gov/budget/publications/docs/2025-2027/2025/ExecutiveBudgetinBrief2025-2027Biennium.pdf" },
+    { "label": "Flatwater Free Press — Google proposes Nebraska data center requiring more power than all of Lincoln", "url": "https://flatwaterfreepress.org/google-proposes-nebraska-data-center-requiring-more-power-than-all-of-lincoln/" },
+    { "label": "Nebraska Legislature — LB 525 (chatbot law)", "url": "https://nebraskalegislature.gov/FloorDocs/109/PDF/Slip/LB525.pdf" },
+    { "label": "Nebraska Examiner — Pillen among 17 GOP governors opposing AI moratorium", "url": "https://nebraskaexaminer.com/2025/07/02/nebraskas-pillen-among-17-republican-governors-to-oppose-congressional-ai-moratorium/" },
+    { "label": "MeriTalk SLG — Nebraska Gov. Pillen Taps McCarville as new CIO", "url": "https://www.meritalkslg.com/articles/nebraska-gov-pillen-taps-mccarville-as-new-cio/" },
+    { "label": "Nebraska Examiner — How does Trump's AI executive order impact Nebraska?", "url": "https://nebraskaexaminer.com/2025/12/12/how-does-trumps-ai-executive-order-impact-nebraska/" },
+    { "label": "Nebraska DAS — Materiel Division (state purchasing)", "url": "https://das.nebraska.gov/materiel/index.html" }
+  ]
+}

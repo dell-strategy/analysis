@@ -1,0 +1,157 @@
+{
+  "code": "WI",
+  "name": "Wisconsin",
+  "slug": "wisconsin",
+  "region": "Midwest",
+  "updated": "2026-06-15",
+  "tagline": "A historic AI data-center buildout on the old Foxconn site, a new $111B biennial budget, and a centralized DET procurement motion — Wisconsin is becoming a national AI-infrastructure hub almost overnight.",
+
+  "snapshot": [
+    { "label": "2025–27 Biennial Budget", "value": "$111.1B" },
+    { "label": "Primary IT Vehicle", "value": "VendorNet / DOA" },
+    { "label": "State CIO / DET", "value": "Trina Zanow" },
+    { "label": "AI Investment", "value": "$7B+ (MSFT)" }
+  ],
+
+  "execSummary": {
+    "summary": "Wisconsin enters the 2025–27 biennium with a $111.1B all-funds budget (2025 Act 15, signed July 3, 2025) and a once-in-a-generation AI-infrastructure story. Microsoft is building one of the world's most powerful AI data centers on the former Foxconn site in Mount Pleasant — a $3.3B first phase coming online in early 2026, plus a committed second campus that pushes total investment past $7B. Separately, Vantage/Oracle/OpenAI broke ground in December 2025 on the $15B+ 'Lighthouse' Stargate campus in Port Washington (~900MW). For Dell, the state's technology buying is centralized: the Department of Administration's Division of Enterprise Technology (DET) sets IT direction and the State Bureau of Procurement runs statewide contracts published through VendorNet, with DOA Secretary sign-off required on IT buys over $150K. Governor Evers' AI and broadband (BEAD, $1B+) agendas add agency-modernization tailwinds.",
+    "opportunities": [
+      "AI-infrastructure / 'AI factory' demand tied to the Mount Pleasant and Port Washington hyperscale buildout — PowerEdge, networking, storage, and services to the broader supply-chain and edge ecosystem around these campuses.",
+      "Whole-of-state cybersecurity buildout under DET and the State & Local Cybersecurity Grant Program (SLCGP) — secure infrastructure and managed detection/response for state, local, K-12, and tribal entities.",
+      "Agency modernization and endpoint/lifecycle refresh across a record $111.1B biennial budget centralized under DET.",
+      "Governed AI adoption following the Governor's Task Force on Workforce and AI — an opening for private/on-prem AI on sensitive government workloads."
+    ],
+    "stats": [
+      { "value": "$111.1B", "label": "2025–27 All-Funds Budget", "note": "2025 Act 15, signed July 3, 2025", "ref": 1 },
+      { "value": "$7B+", "label": "Microsoft AI investment", "note": "Mount Pleasant (former Foxconn site)", "ref": 3 },
+      { "value": "$15B+", "label": "Vantage 'Lighthouse' campus", "note": "Port Washington Stargate site, ~900MW", "ref": 5 },
+      { "value": "$1B+", "label": "BEAD broadband allocation", "note": "Federal funds via PSC/DOA", "ref": 9 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Wisconsin budgets on a two-year (biennial) cycle. The 2025–27 budget, enacted as 2025 Act 15 (signed July 3, 2025), totals roughly $111.1B all funds. There is no single 'state IT budget' line; technology spend is distributed across agencies, with the Department of Administration's Division of Enterprise Technology (DET) providing shared infrastructure and the State Bureau of Procurement running statewide IT contracts. Cybersecurity and broadband are funded through a mix of state appropriations and federal grant programs.",
+    "stats": [
+      { "value": "$111.1B", "label": "2025–27 all funds", "note": "2025 Act 15", "ref": 1 },
+      { "value": "$1B+", "label": "BEAD broadband", "note": "Federal NTIA funds", "ref": 9 },
+      { "value": "$150K", "label": "DOA IT sign-off threshold", "note": "Exec Order 288 — Secretary approval", "ref": 7 }
+    ],
+    "breakdown": [
+      { "label": "Microsoft AI data centers", "amount": 7000, "display": "$7B+", "note": "Private; Mount Pleasant, two campuses" },
+      { "label": "Vantage 'Lighthouse' campus", "amount": 15000, "display": "$15B+", "note": "Private; Port Washington Stargate site" },
+      { "label": "BEAD broadband", "amount": 1000, "display": "$1B+", "note": "Federal allocation to Wisconsin" }
+    ],
+    "notes": [
+      "Budget figures are biennial (two-year) totals; the data-center figures are privately funded capital investments, not state appropriations.",
+      "IT procurement above $150K requires DOA Secretary approval — confirm sign-off path early when forecasting agency deals."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Microsoft Mount Pleasant AI Data Centers",
+      "status": "Phase 1 online early 2026",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 90,
+      "tags": ["AI Infrastructure", "Data Centers", "Hyperscale"],
+      "summary": "Microsoft is building what it calls one of the world's most powerful AI data centers on the former Foxconn site in Mount Pleasant — a $3.3B first phase (housing hundreds of thousands of NVIDIA GB200 GPUs) coming online in early 2026, plus a committed ~$4B second campus that pushes total investment past $7B. It also includes a manufacturing-focused AI co-innovation lab and a 100,000-resident AI skilling initiative. The strongest single tailwind for Dell AI-infrastructure and ISG demand in the state and its supply-chain ecosystem.",
+      "ref": 3
+    },
+    {
+      "name": "Vantage 'Lighthouse' / Stargate Port Washington",
+      "status": "Broke ground Dec 2025",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 90,
+      "tags": ["AI Infrastructure", "Stargate", "Hyperscale"],
+      "summary": "OpenAI, Oracle, and Vantage Data Centers are developing a $15B+ campus in Port Washington (~27 miles north of Milwaukee) — four data centers totaling ~2.5M sq ft and up to ~900MW of AI capacity, completing around 2028. Part of OpenAI/Oracle's Stargate expansion. A second anchor for AI-infrastructure, networking, and edge/ecosystem opportunity in southeastern Wisconsin.",
+      "ref": 5
+    },
+    {
+      "name": "Whole-of-State Cybersecurity (DET / SLCGP)",
+      "status": "Active",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 60,
+      "tags": ["Cybersecurity", "Whole-of-State", "Grants"],
+      "summary": "DET sets statewide cybersecurity policy on a NIST 800-53 Rev. 5 baseline and coordinates a whole-of-state approach across state agencies, local government, K-12, higher-ed, and tribes. The federally funded State & Local Cybersecurity Grant Program (SLCGP), administered with Wisconsin Emergency Management, funds local hardening — projects run June 2026 through August 2027, capped at $100K per entity. An opening for secure infrastructure and managed detection/response.",
+      "ref": 11
+    },
+    {
+      "name": "Governor's Task Force on Workforce & AI",
+      "status": "Final action plan released",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 45,
+      "tags": ["AI", "Policy", "Workforce"],
+      "summary": "Created by Executive Order #211, the task force released a final action plan to connect workers with AI skills and advance responsible AI adoption, backed by federal workforce funding (e.g., WisTRAIN, ~$7M). As agencies operationalize governed AI, there's an opening to lead with private/on-prem AI for sensitive government workloads rather than open public models.",
+      "ref": 10
+    },
+    {
+      "name": "BEAD Broadband Expansion",
+      "status": "Restructuring underway",
+      "statusType": "warn",
+      "dellFit": 50,
+      "budgetStrength": 65,
+      "tags": ["Broadband", "Federal Funds", "Digital Equity"],
+      "summary": "Wisconsin has access to more than $1B through the federal BEAD program, with the PSC and DOA leading deployment to unserved areas. NTIA's June 2025 'BEAD Restructuring Policy Notice' forced significant program changes. Drives connectivity, edge, and downstream modernization demand across rural Wisconsin.",
+      "ref": 9
+    }
+  ],
+
+  "procurement": {
+    "intro": "Technology buying in Wisconsin is centralized under the Department of Administration (DOA). The State Bureau of Procurement (SBOP) administers procurement law and runs statewide contracts for goods and services used across state government, UW System, and participating municipalities. Contracts and solicitations are published through VendorNet, the state's online purchasing portal, which also supports cooperative purchasing. Under Executive Order 288, agencies must obtain DOA Secretary approval before making an IT purchase over $150,000.",
+    "vehicles": [
+      { "name": "VendorNet statewide contracts", "detail": "Primary portal for state contracts and solicitations; supports cooperative purchasing by agencies, UW System, and municipalities. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "State Bureau of Procurement (SBOP)", "detail": "Sets procurement policy and runs mandatory/statewide contracts for goods and services across state government." },
+      { "name": "DET shared technology services", "detail": "DOA's Division of Enterprise Technology provides shared infrastructure, hosting, and security services to executive-branch agencies." }
+    ],
+    "entities": [
+      { "name": "DOA — Division of Enterprise Technology (DET)", "role": "Central IT authority — shared infrastructure, cybersecurity policy, and statewide technology direction." },
+      { "name": "State Bureau of Procurement (SBOP)", "role": "Runs statewide contracts and VendorNet; enforces procurement policy and the $150K IT sign-off." },
+      { "name": "University of Wisconsin System", "role": "Large, semi-independent buyer of research computing and AI infrastructure across campuses; ~$1.2B modernization in Act 15." },
+      { "name": "Department of Health Services (DHS)", "role": "Among the largest agency IT spenders; data-heavy modernization." }
+    ],
+    "competition": "Wisconsin is a centralized, contract-driven market — buys flow through SBOP statewide contracts and VendorNet, with DOA Secretary sign-off on larger IT deals. Differentiation tends to come from AI-infrastructure capability tied to the data-center buildout, whole-of-state cybersecurity, and services that map to DET's shared-services model rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Tony Evers", "title": "Governor", "org": "State of Wisconsin", "note": "Signed the $111.1B 2025–27 budget; champions AI workforce, broadband, and the data-center economic agenda.", "ref": 1 },
+    { "name": "Trina Zanow", "title": "State CIO & DET Administrator", "org": "DOA — Division of Enterprise Technology", "note": "25-year state veteran, former DET deputy administrator; owns statewide IT direction and shared services.", "ref": 6 },
+    { "name": "Bill Brinkley", "title": "State Chief Information Security Officer", "org": "DOA — DET Security Bureau", "note": "Leads statewide cybersecurity on a NIST 800-53 Rev. 5 baseline and the whole-of-state approach.", "ref": 8 },
+    { "name": "Kathy Blumenfeld", "title": "Secretary", "org": "Department of Administration", "note": "DOA leadership; Secretary approval is required on IT purchases over $150K (Exec Order 288).", "ref": 7 },
+    { "name": "Jay Rothman", "title": "President", "org": "University of Wisconsin System", "note": "Leads a large independent research-computing and AI-infrastructure buyer; ~$1.2B modernization in Act 15." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Reports detail $15B Port Washington AI data-center campus and new building era", "impact": "Confirms the scale of southeastern Wisconsin's AI-infrastructure boom and a multi-year construction/ecosystem pipeline.", "tags": ["Data Centers", "AI"], "ref": 5 },
+    { "date": "2026-01", "title": "Phase 1 of Microsoft's Mount Pleasant AI data center targeted to come online", "impact": "World-class AI compute lands in Wisconsin; anchors a regional AI supply-chain and services ecosystem.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 3 },
+    { "date": "2025-12", "title": "Vantage/Oracle/OpenAI break ground on $15B+ 'Lighthouse' Stargate campus in Port Washington", "impact": "Second hyperscale anchor (~900MW) for AI-infrastructure demand near Milwaukee.", "tags": ["Data Centers", "Stargate"], "ref": 4 },
+    { "date": "2025-09", "title": "Microsoft commits additional ~$4B for a second Wisconsin data center (>$7B total)", "impact": "Doubles down on Wisconsin as a national AI-compute hub.", "tags": ["AI", "Data Centers"], "ref": 2 },
+    { "date": "2025-07", "title": "Governor Evers signs $111.1B 2025–27 biennial budget (2025 Act 15)", "impact": "Sets the two-year fiscal frame, including ~$1.2B UW System modernization.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-06", "title": "NTIA 'BEAD Restructuring Policy Notice' forces changes to Wisconsin's $1B+ broadband program", "impact": "Resets timelines and rules for rural connectivity deployment.", "tags": ["Broadband", "Policy"], "ref": 9 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the Mount Pleasant and Port Washington hyperscale buildout and the surrounding supply-chain, edge, and UW research-computing ecosystem.",
+    "Pursue whole-of-state cybersecurity: position secure infrastructure and managed detection/response aligned to DET's NIST baseline and the SLCGP grant cycle (June 2026–Aug 2027).",
+    "Map the procurement path early: confirm Dell coverage on SBOP statewide contracts / VendorNet and account for the $150K DOA Secretary IT sign-off when forecasting agency deals.",
+    "Engage DET (Trina Zanow's organization) on shared-services and modernization across a record $111.1B biennial budget.",
+    "Position governed, private/on-prem AI for sensitive workloads as agencies operationalize the Governor's Workforce & AI action plan."
+  ],
+
+  "sources": [
+    { "label": "Wisconsin DOA — Veto Message / 2025 Act 15 (2025–27 Biennial Budget)", "url": "https://content.govdelivery.com/attachments/WIGOV/2025/07/03/file_attachments/3314199/2025-27%20Veto%20Message%20Final.pdf" },
+    { "label": "CNBC — Microsoft to spend $4 billion on second Wisconsin data center", "url": "https://www.cnbc.com/2025/09/18/microsoft-wisconsin-data-center.html" },
+    { "label": "Microsoft On the Issues — Made in Wisconsin: the world's most powerful AI datacenter", "url": "https://blogs.microsoft.com/on-the-issues/2025/09/18/made-in-wisconsin-the-worlds-most-powerful-ai-datacenter/" },
+    { "label": "Vantage Data Centers — OpenAI, Oracle and Vantage announce Stargate site in Wisconsin", "url": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/" },
+    { "label": "The Daily Reporter — $15B Vantage data center breaks ground in Port Washington", "url": "https://dailyreporter.com/2025/12/18/15-billion-vantage-data-center-breaks-ground-in-port-washington/" },
+    { "label": "StateScoop — Wisconsin names Trina Zanow new CIO", "url": "https://statescoop.com/wisconsin-names-trina-zanow-new-cio/" },
+    { "label": "Wisconsin DOA — State Bureau of Procurement / VendorNet", "url": "https://doa.wi.gov/Pages/StateEmployees/Procurement.aspx" },
+    { "label": "Wisconsin DET — Cybersecurity & Senior Leadership", "url": "https://det.wi.gov/Pages/Security.aspx" },
+    { "label": "WPR — Evers broadband task force / BEAD ($1B+)", "url": "https://www.wpr.org/news/evers-broadband-task-force-says-internet-for-all-requires-affordability-digital-literacy" },
+    { "label": "WEDC — Governor's Task Force on Workforce and Artificial Intelligence final action plan", "url": "https://wedc.org/gov-evers-announces-governors-task-force-on-workforce-and-artificial-intelligence-releases-final-action-plan/" },
+    { "label": "Wisconsin DET — Cybersecurity Grants (SLCGP)", "url": "https://det.wi.gov/Pages/Cybersecurity_Grants.aspx" }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "code": "MO",
+  "name": "Missouri",
+  "slug": "missouri",
+  "region": "Midwest",
+  "updated": "2026-06-15",
+  "tagline": "A record $15B Google AI data center, a new statewide AI framework due late 2026, and a consolidated central IT shop serving 15 executive departments — Missouri is rebuilding around AI infrastructure under a cost-disciplined new administration.",
+
+  "snapshot": [
+    { "label": "FY2026 Operating Budget", "value": "$50.8B" },
+    { "label": "Central IT Authority", "value": "OA-ITSD" },
+    { "label": "Google Data Center", "value": "$15B" },
+    { "label": "AI Framework Due", "value": "Nov 2026" }
+  ],
+
+  "execSummary": {
+    "summary": "Missouri enters FY2026 under first-term Governor Mike Kehoe with a $50.8B operating budget and an explicit message that 'spending, not revenue, is the problem' — meaning sellers should expect cost-justified, efficiency-framed buys rather than open-ended expansion. Three threads matter most. First, Google's $15B AI data-center campus in New Florence (announced May 2026) — backed by 1+ gigawatt of new generation — makes Missouri a national AI-infrastructure story and reshapes the energy and economic-development conversation. Second, Executive Order 26-02 (Jan 2026) directs the Office of Administration to deliver a statewide AI integration framework by November 30, 2026, opening the door to governed government AI. Third, the buying motion is centralized: OA-ITSD (~1,000 staff) runs IT for 15 consolidated executive departments, and the OA Division of Purchasing runs the statewide-contract and cooperative-procurement vehicles every deal flows through. For Dell, the play is AI-ready infrastructure, a client/endpoint refresh framed on efficiency, and getting onto (or validating coverage on) Missouri statewide contracts early.",
+    "opportunities": [
+      "AI-infrastructure demand riding the Google New Florence buildout and statewide AI-framework momentum (PowerEdge, networking, services).",
+      "Governed, on-prem / private-cloud AI for agencies operationalizing the EO 26-02 framework on sensitive state data.",
+      "Endpoint, client, and lifecycle refresh across 15 OA-ITSD-consolidated departments, framed on the administration's efficiency mandate.",
+      "Cybersecurity modernization tied to SLCGP whole-of-state grants and OA-ITSD Information Security."
+    ],
+    "stats": [
+      { "value": "$50.8B", "label": "FY2026 Operating Budget", "note": "Signed June 30, 2025; FY begins July 1", "ref": 3 },
+      { "value": "$15B", "label": "Google AI Data Center", "note": "New Florence; 1+ GW; announced May 2026", "ref": 6 },
+      { "value": "Nov 30 2026", "label": "Statewide AI Framework Due", "note": "Executive Order 26-02", "ref": 5 },
+      { "value": "~1,000", "label": "OA-ITSD IT Staff", "note": "Serving 15 consolidated departments", "ref": 2 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Missouri budgets on an annual fiscal-year cycle beginning July 1. Governor Kehoe signed the $50.8B FY2026 operating budget (about $15.4B in general revenue) on June 30, 2025, issuing more than 200 line-item vetoes to constrain spending. There is no single published 'state IT budget' line — technology spend is embedded across agencies and delivered centrally through OA-ITSD. The FY2027 cycle is shaped by a December 2025 consensus revenue estimate of $13.65B net general revenue (3.8% growth), with the administration signaling continued spending discipline.",
+    "stats": [
+      { "value": "$50.8B", "label": "FY2026 All-Funds Budget", "note": "Signed June 30, 2025", "ref": 3 },
+      { "value": "$13.65B", "label": "FY2027 GR Estimate", "note": "Consensus estimate, Dec 2025; +3.8%", "ref": 4 },
+      { "value": "$814M", "label": "BEAD Broadband Approved", "note": "NTIA approval Jan 2026", "ref": 8 }
+    ],
+    "breakdown": [
+      { "label": "BEAD broadband (approved award)", "amount": 814, "display": "$814M", "note": "From $1.7B allocation; ~$900M saved" },
+      { "label": "SLCGP cyber grant (FY2025)", "amount": 1.93, "display": "~$1.9M", "note": "Federal award to Missouri" },
+      { "label": "AI framework implementation", "amount": 0, "display": "N/A", "note": "No dedicated appropriation yet; framework due Nov 2026" }
+    ],
+    "notes": [
+      "Missouri budgets annually (FY starts July 1) — figures are single-year unless noted.",
+      "Technology is funded through agency budgets and delivered by OA-ITSD; there is no consolidated public 'IT budget' line to forecast against.",
+      "Expect cost-justified, efficiency-framed buys under the Kehoe administration's 'spending is the problem' posture."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Google New Florence AI Data Center",
+      "status": "Announced",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 90,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Announced May 2026, Google's $15B campus on 900+ acres in New Florence (Montgomery County) is described as among the largest investments in Missouri history. Google has contracted 1+ gigawatt of new generation plus ~500MW through Ameren. It anchors Missouri as a national AI-infrastructure hub and is the strongest tailwind for Dell ISG / AI-factory and ecosystem demand in the state.",
+      "ref": 6
+    },
+    {
+      "name": "Statewide AI Integration Framework (EO 26-02)",
+      "status": "In progress — due Nov 30, 2026",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 45,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Executive Order 26-02 (signed Jan 15, 2026) directs OA Commissioner Kenneth Zellers to deliver a statewide AI integration framework by Nov 30, 2026 — prioritizing service delivery, data privacy/security, human-in-the-loop decisions, transparency, and data quality. The order also tasks DNR and the PSC with addressing data-center energy demand. Agencies will need governed, auditable AI — an opening for private/on-prem AI on sensitive workloads.",
+      "ref": 5
+    },
+    {
+      "name": "OA-ITSD Consolidated IT Services",
+      "status": "Operational",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 60,
+      "tags": ["Central IT", "Consolidation", "Infrastructure"],
+      "summary": "OA-ITSD (~1,000 professionals) is the consolidated IT provider for 15 executive departments plus the Governor's and Lt. Governor's offices, delivering client engagement, GIS, information security, networks/telecom, servers/storage/email, and app development. Consolidation concentrates infrastructure, endpoint, and lifecycle decisions in one buyer — a high-leverage relationship for Dell across server, storage, and client.",
+      "ref": 2
+    },
+    {
+      "name": "Whole-of-State Cybersecurity (SLCGP)",
+      "status": "Active",
+      "statusType": "warn",
+      "dellFit": 60,
+      "budgetStrength": 40,
+      "tags": ["Cybersecurity", "Grants", "State & Local"],
+      "summary": "Missouri's State and Local Cybersecurity Grant Program (administered by DPS/Office of Homeland Security, ~$1.9M FY2025 federal award) funds local-government planning, monitoring, protection, and legacy-tech upgrades — capped at $200K per applicant. Combined with OA-ITSD Information Security, this is a modest but steady channel for endpoint security, infrastructure hardening, and modernization in local jurisdictions.",
+      "ref": 9
+    },
+    {
+      "name": "Connecting All Missourians Broadband (BEAD)",
+      "status": "Funded",
+      "statusType": "good",
+      "dellFit": 35,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Rural", "Federal Funds"],
+      "summary": "The DED Office of Broadband Development won NTIA approval (Jan 2026) to award $814M of Missouri's $1.7B BEAD allocation — reaching 200,000+ locations with ~81% fiber while saving ~$900M. Primarily a connectivity program rather than a direct Dell compute play, but it expands the addressable government and community-anchor footprint over time.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "Missouri's technology procurement is centralized under the Office of Administration. The OA Division of Purchasing competitively bids and maintains Statewide Contracts — 150+ categories and 650+ individual contracts — that all executive agencies use and that are extended to local governments and quasi-public bodies through the Cooperative Procurement Program. OA-ITSD is the consolidated IT delivery arm that operationalizes these buys for 15 executive departments.",
+    "vehicles": [
+      { "name": "Missouri Statewide Contracts", "detail": "Primary vehicle. Competitively bid (RFP) and re-bid by the OA Division of Purchasing; 150+ categories. Confirm Dell agreements and resellers are current and correctly scoped for target agencies." },
+      { "name": "Cooperative Procurement Program", "detail": "Extends statewide contracts to eligible local governments, political subdivisions, and quasi-public bodies. Voluntary participation — broadens reach beyond state agencies." },
+      { "name": "NASPO ValuePoint / national cooperatives", "detail": "Missouri participates in national cooperative agreements that can serve as alternate paths where a statewide contract gap exists. Validate the cleanest route per opportunity." }
+    ],
+    "entities": [
+      { "name": "OA Division of Purchasing", "role": "Central procurement authority; owns statewide contracts and the cooperative program." },
+      { "name": "OA-ITSD", "role": "Consolidated IT provider for 15 executive departments; the operational technology buyer and standards owner." },
+      { "name": "Dept. of Economic Development (DED)", "role": "Office of Broadband Development; data-center / economic-development incentives tied to the Google project." },
+      { "name": "University of Missouri System", "role": "Independent research-computing and AI/informatics buyer (NextGen Precision Health, MU informatics)." }
+    ],
+    "competition": "Missouri is a centralized, contract-driven, cost-conscious market. With buying concentrated in OA-ITSD and the Division of Purchasing, incumbents on statewide contracts hold an advantage, and the Kehoe administration's efficiency posture rewards clear ROI. Differentiation comes from AI-infrastructure capability tied to the data-center buildout, governed-AI readiness for the EO 26-02 framework, and lifecycle/TCO economics rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Mike Kehoe", "title": "Governor", "org": "State of Missouri", "note": "First-term Republican; champions the Google data-center win and an efficiency-first budget — 'spending, not revenue, is the problem.'", "ref": 1 },
+    { "name": "Kenneth Zellers", "title": "Commissioner", "org": "Office of Administration", "note": "Owns delivery of the statewide AI integration framework due Nov 30, 2026 under EO 26-02; oversees OA-ITSD and Purchasing.", "ref": 5 },
+    { "name": "John Laurent", "title": "State CIO", "org": "OA-ITSD", "note": "Appointed CIO Dec 2024; former Global VP of IT at Enterprise Holdings and Accenture consultant. Owns statewide IT direction and standards.", "ref": 1 },
+    { "name": "OA Division of Purchasing", "title": "Central procurement authority", "org": "Office of Administration", "note": "Bids and maintains the statewide contracts and cooperative program every technology deal runs through.", "ref": 10 }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Google announces $15B AI data center in New Florence", "impact": "Largest-scale AI-infrastructure investment in state history; reshapes energy and economic-development agenda and creates a major ecosystem tailwind for Dell ISG.", "tags": ["Data Centers", "AI"], "ref": 6 },
+    { "date": "2026-04", "title": "Missouri AI regulation bills stall amid federal-funding concerns", "impact": "State AI rules remain unsettled as lawmakers weigh risk to rural broadband funds; governed-AI guidance now flows mainly through the executive branch.", "tags": ["AI", "Policy"], "ref": 7 },
+    { "date": "2026-01", "title": "Governor Kehoe signs Executive Order 26-02 on AI", "impact": "Mandates a statewide AI integration framework by Nov 30, 2026; agencies will need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
+    { "date": "2026-01", "title": "NTIA approves Missouri's $814M BEAD broadband plan", "impact": "Funds fiber to 200,000+ locations while saving ~$900M of the $1.7B allocation; expands the long-term connected-government footprint.", "tags": ["Broadband"], "ref": 8 },
+    { "date": "2025-12", "title": "FY2027 consensus revenue estimate set at $13.65B (+3.8%)", "impact": "Frames a disciplined FY2027 budget; sellers should expect cost-justified, efficiency-led IT buys.", "tags": ["Budget"], "ref": 4 },
+    { "date": "2025-06", "title": "Kehoe signs $50.8B FY2026 budget with 200+ vetoes", "impact": "Sets a constrained spending environment; technology investments must show clear ROI and efficiency gains.", "tags": ["Budget"], "ref": 3 }
+  ],
+
+  "dellActions": [
+    "Lead with AI-ready infrastructure: tie Dell ISG / AI Factory to the Google New Florence buildout, the EO 26-02 framework, and University of Missouri research-computing demand.",
+    "Engage OA-ITSD as the consolidated buyer for 15 executive departments — server, storage, networking, and client/lifecycle, framed on the administration's efficiency mandate.",
+    "Validate Dell's coverage on Missouri statewide contracts and the cooperative program before pursuing deals; confirm resellers are current and correctly scoped.",
+    "Position governed, private/on-prem AI for sensitive state workloads ahead of the November 2026 AI framework deadline.",
+    "Map cybersecurity offerings to SLCGP whole-of-state grants and OA-ITSD Information Security for state-and-local endpoint and infrastructure modernization."
+  ],
+
+  "sources": [
+    { "label": "Governor Mike Kehoe — Governor's Priorities", "url": "https://governor.mo.gov/governors-priorities" },
+    { "label": "Missouri OA-ITSD — About OA-ITSD", "url": "https://itsd.oa.mo.gov/about-oa-itsd" },
+    { "label": "Governor Kehoe — Takes Action on FY26 State Operating Budget Bills", "url": "https://governor.mo.gov/press-releases/archive/governor-kehoe-takes-action-fy26-state-operating-budget-bills" },
+    { "label": "Governor Kehoe — FY2027 Consensus Revenue Estimate", "url": "https://governor.mo.gov/press-releases/archive/governor-kehoe-budget-leadership-announce-fy-2027-consensus-revenue-estimate" },
+    { "label": "GovTech — Missouri Executive Order Seeks to Advance AI Strategy, Use", "url": "https://www.govtech.com/artificial-intelligence/missouri-executive-order-seeks-to-advance-ai-strategy-use" },
+    { "label": "Governor Kehoe — Missouri Secures $15 Billion Investment from Google in Montgomery County", "url": "https://governor.mo.gov/press-releases/archive/missouri-secures-15-billion-investment-google-montgomery-county" },
+    { "label": "Missouri Independent — Missouri AI regulations stall as lawmakers fear loss of rural broadband funds", "url": "https://missouriindependent.com/2026/04/07/missouri-ai-regulations-stall-as-lawmakers-fear-loss-of-rural-broadband-funds/" },
+    { "label": "KY3 — Missouri receives approval for $814 million broadband expansion", "url": "https://www.ky3.com/2026/01/08/missouri-receives-approval-814-million-broadband-expansion/" },
+    { "label": "Missouri DPS — FY2025 State and Local Cybersecurity Grant Program (NOFO)", "url": "https://dps.mo.gov/dir/programs/ohs/grantstraining/documents/fy2025-slcgp-nofo.pdf" },
+    { "label": "Missouri OA — Cooperative Procurement Program FAQs", "url": "https://oa.mo.gov/purchasing/cooperative-procurement-program/faqs" }
+  ]
+}

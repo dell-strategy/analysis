@@ -1,0 +1,144 @@
+{
+  "code": "TX",
+  "name": "Texas",
+  "slug": "texas",
+  "region": "South Central",
+  "updated": "2026-06-15",
+  "tagline": "Largest state budget in Texas history, a new standalone cyber agency, and an AI-governance law now in force — Texas is reshaping how it buys and secures technology.",
+
+  "snapshot": [
+    { "label": "2026–27 Biennial Budget", "value": "$337.4B" },
+    { "label": "Primary IT Vehicle", "value": "DIR Co-op" },
+    { "label": "Cloud Gate", "value": "TX-RAMP" },
+    { "label": "AI Law (live)", "value": "TRAIGA" }
+  ],
+
+  "execSummary": {
+    "summary": "Texas enters the 2026–27 biennium with the largest budget in its history ($337.4B) and three structural shifts every SLG seller should know. First, cybersecurity is being pulled out of DIR into a brand-new standalone agency — the Texas Cyber Command in San Antonio — changing where security dollars and decisions sit. Second, the Texas Responsible AI Governance Act (TRAIGA) took effect January 1, 2026, putting real guardrails on government use of AI and creating an AI Advisory Council and regulatory sandbox. Third, an historic semiconductor and data-center buildout (TSIF, Meta, Stargate, TI) is turning Texas into national AI infrastructure. For Dell, the buying motion still runs through DIR Cooperative Contracts, and TX-RAMP cloud certification remains a hard gate on anything touching state data.",
+    "opportunities": [
+      "AI-infrastructure / 'AI factory' demand tied to the Texas data-center and semiconductor boom (PowerEdge, networking, services).",
+      "Stand-up of the Texas Cyber Command in San Antonio — secure compute, infrastructure, and managed services for a greenfield agency.",
+      "Agency AI adoption under TRAIGA guardrails — a chance to lead with governed, on-prem and private-cloud AI for sensitive workloads.",
+      "Endpoint, client, and lifecycle refresh across a record general-government budget."
+    ],
+    "stats": [
+      { "value": "$337.4B", "label": "2026–27 All-Funds Budget", "note": "Largest in state history (SB 1, 89th Leg.)", "ref": 1 },
+      { "value": "$135M", "label": "Texas Cyber Command", "note": "State GR through 2027; HQ San Antonio", "ref": 3 },
+      { "value": "~$948M", "label": "Semiconductor Fund (TSIF)", "note": "$698M (2023) + $250M (2025)", "ref": 8 },
+      { "value": "Jan 1 2026", "label": "TRAIGA in effect", "note": "Government-use AI guardrails", "ref": 5 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Texas budgets on a two-year (biennial) cycle. The 89th Legislature's SB 1 appropriates $337.4B for 2026–27 — roughly $176B in FY2026 and $160B in FY2027 — the largest in state history. There is no single 'state IT budget' line; technology spend is distributed across agencies and a set of named technology and security initiatives funded this biennium.",
+    "stats": [
+      { "value": "$176B", "label": "FY2026 spend", "note": "All articles", "ref": 1 },
+      { "value": "$160B", "label": "FY2027 spend", "note": "All articles", "ref": 1 },
+      { "value": "+130", "label": "New cyber staff by 2027", "note": "LBB estimate for cyber buildout", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "Semiconductor Fund (TSIF)", "amount": 948, "display": "~$948M", "note": "Cumulative through 2025" },
+      { "label": "Texas Cyber Command", "amount": 135, "display": "$135M", "note": "GR through 2027" },
+      { "label": "TRAIGA implementation", "amount": 25, "display": "~$25M", "note": "AG + DIR staffing/systems" }
+    ],
+    "notes": [
+      "Funding figures are biennial (two-year) totals unless noted.",
+      "Cybersecurity dollars are mid-migration from DIR to the new Texas Cyber Command — confirm which entity owns a given program before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Texas Cyber Command",
+      "status": "Launched",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 75,
+      "tags": ["Cybersecurity", "New Agency", "San Antonio"],
+      "summary": "HB 150 (signed June 2025) created the nation's largest state cyber agency, headquartered in San Antonio with UTSA as a partner. It is absorbing cybersecurity operations previously run by DIR and stands up a Cyber Threat Intelligence Center serving state and local government. A greenfield agency means greenfield infrastructure, secure compute, and services needs.",
+      "ref": 3
+    },
+    {
+      "name": "TRAIGA — Responsible AI Governance Act",
+      "status": "In effect Jan 1, 2026",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "HB 149 focuses on government use of AI: prohibits manipulative/discriminatory and social-scoring systems, stands up an AI Advisory Council, and opens a 36-month regulatory sandbox. Agencies now need governed, auditable AI — an opening for private/on-prem AI on sensitive data rather than open public models.",
+      "ref": 5
+    },
+    {
+      "name": "Semiconductor & Data-Center Buildout",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Semiconductors", "Economic Dev"],
+      "summary": "The Texas CHIPS Act funds the Texas Semiconductor Innovation Fund (~$948M). Alongside it, hyperscale AI data centers are landing fast (Meta's $1.5B El Paso campus scaling toward 1GW; the multi-site Stargate project; TI's new Sherman 300mm fab). This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
+      "ref": 8
+    },
+    {
+      "name": "TX-RAMP Cloud Security Program",
+      "status": "Mandatory",
+      "statusType": "risk",
+      "dellFit": 65,
+      "budgetStrength": 50,
+      "tags": ["Cloud", "Compliance", "Security"],
+      "summary": "Under DIR, Texas agencies and public higher-ed may only contract for cloud services that hold TX-RAMP certification (NIST 800-53 Low/Moderate baselines). Certification must be maintained for the life of the contract. Any Dell cloud/as-a-service offering touching state data needs the right TX-RAMP level — a gate to clear early, not at close.",
+      "ref": 6
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Texas Department of Information Resources (DIR) is the central technology procurement authority. Most state, local, and higher-ed technology buys run through DIR Cooperative Contracts, which let eligible entities purchase from pre-competed vendor agreements without running their own RFP. DIR also delivers Shared Technology Services and Communications Technology Services.",
+    "vehicles": [
+      { "name": "DIR Cooperative Contracts", "detail": "Primary vehicle. Pre-competed; open to state agencies, local gov, and higher-ed. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "DIR Shared Technology Services (STS)", "detail": "Data center, cloud, and managed services delivered through DIR for participating agencies." },
+      { "name": "TX-RAMP certification", "detail": "Not a contract, but a prerequisite gate for any cloud/as-a-service offering touching state data." }
+    ],
+    "entities": [
+      { "name": "DIR", "role": "Central IT procurement, policy, and (currently) cyber — leads the statewide technology motion." },
+      { "name": "Health & Human Services (HHSC)", "role": "Among the largest agency IT spenders; data-heavy modernization." },
+      { "name": "Texas Cyber Command", "role": "New buyer for security infrastructure and services; San Antonio." },
+      { "name": "University systems (UT, Texas A&M)", "role": "Large independent research-computing and AI-infrastructure buyers." }
+    ],
+    "competition": "Texas is a competitive, contract-driven market — incumbents hold DIR agreements across compute, networking, and services. Differentiation tends to come from TX-RAMP-ready offerings, AI-infrastructure capability, and services that map to the Cyber Command and data-center buildout rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Greg Abbott", "title": "Governor", "org": "State of Texas", "note": "Made Cyber Command an emergency item; champions the semiconductor/AI agenda." },
+    { "name": "Tony Sauerhoff", "title": "State CIO & DIR Executive Director", "org": "DIR", "note": "Permanent in March 2026; former Chief AI & Innovation Officer and state CISO. Owns the statewide tech direction.", "ref": 7 },
+    { "name": "Tan Parker / Giovanni Capriglione", "title": "Legislative sponsors", "org": "Texas Legislature", "note": "Lead authors behind Cyber Command (HB 150) and AI/innovation policy." },
+    { "name": "Legislative Budget Board (LBB)", "title": "Appropriations & fiscal analysis", "org": "State of Texas", "note": "Sizes program costs and staffing — useful for forecasting cyber/AI spend." }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "Tony Sauerhoff confirmed as permanent State CIO & DIR Executive Director", "impact": "Tech direction stabilizes under an AI-forward leader; DIR continues its reorg as cyber moves to the Cyber Command.", "tags": ["Leadership"], "ref": 7 },
+    { "date": "2026-01", "title": "TRAIGA takes effect", "impact": "Government-use AI guardrails are now live; agencies need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
+    { "date": "2025-12", "title": "TI opens 300mm semiconductor fab in Sherman", "impact": "Reinforces Texas as a chip-manufacturing and AI-hardware hub.", "tags": ["Semiconductors"], "ref": 8 },
+    { "date": "2025-10", "title": "Texas Cyber Command officially launches in San Antonio", "impact": "New buyer and security mandate stands up; greenfield infrastructure and services demand.", "tags": ["Cybersecurity"], "ref": 4 },
+    { "date": "2025-10", "title": "Meta announces $1.5B El Paso AI data center (scaling toward 1GW)", "impact": "Signals the scale of AI-infrastructure investment landing in Texas.", "tags": ["Data Centers", "AI"], "ref": 8 },
+    { "date": "2025-06", "title": "TSIF receives an additional $250M (now ~$948M total)", "impact": "Sustained state backing for the semiconductor ecosystem.", "tags": ["Semiconductors", "Budget"], "ref": 8 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the Texas data-center and semiconductor buildout and the university research-computing buyers.",
+    "Engage the Texas Cyber Command early as a greenfield account in San Antonio — secure compute, infrastructure, and managed services for a brand-new agency.",
+    "Clear the TX-RAMP gate before pursuing cloud/as-a-service deals — confirm the right certification level for any offering touching state data.",
+    "Validate that Dell's DIR Cooperative Contract coverage and resellers are current and correctly scoped for the agencies you're targeting.",
+    "Position governed, private/on-prem AI for sensitive workloads as agencies operationalize TRAIGA."
+  ],
+
+  "sources": [
+    { "label": "LBB — General Appropriations Act, 2026–27 Biennium", "url": "https://www.lbb.texas.gov/Documents/Appropriations_Bills/89/Final/9306_2026-27_Biennium_Funding_by_Article_All_Funds.pdf" },
+    { "label": "The Texan — Texas Senate approves $336B 2026–27 budget", "url": "https://thetexan.news/issues/texas-taxes-spending/texas-senate-gives-initial-approval-to-336-billion-budget-for-2026-2027-biennium/article_c5f8b894-c5ea-4b01-b386-fb576847a761.html" },
+    { "label": "Office of the Governor — Abbott signs Texas Cyber Command into law", "url": "https://gov.texas.gov/news/post/governor-abbott-signs-texas-cyber-command-into-law-in-san-antonio" },
+    { "label": "UTSA Today — Texas Cyber Command launch", "url": "https://news.utsa.edu/2025/10/state-officials-and-university-leaders-mark-launch-of-texas-cyber-command/" },
+    { "label": "Holland & Knight — Texas enacts comprehensive AI governance (TRAIGA / HB 149)", "url": "https://www.hklaw.com/en/insights/publications/2025/06/texas-enacts-comprehensive-ai-governance-laws" },
+    { "label": "Texas DIR — Texas Risk and Authorization Management Program (TX-RAMP)", "url": "https://dir.texas.gov/information-security/texas-risk-and-authorization-management-program-tx-ramp" },
+    { "label": "GovTech — Texas confirms Tony Sauerhoff as State CIO, DIR Leader", "url": "https://www.govtech.com/workforce/texas-confirms-tony-sauerhoff-as-state-cio-dir-leader" },
+    { "label": "Office of the Governor — Texas Semiconductor Innovation Fund (TSIF)", "url": "https://gov.texas.gov/business/page/tsif" },
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "code": "NH",
+  "name": "New Hampshire",
+  "slug": "new-hampshire",
+  "region": "Northeast",
+  "updated": "2026-06-15",
+  "tagline": "A lean $15.9B biennial budget, a fresh 2025–2029 statewide IT strategy built around 'Digital Transformation is the Business,' and a rising wave of local-government cyberattacks — New Hampshire is modernizing under tight fiscal discipline.",
+
+  "snapshot": [
+    { "label": "2026–27 Biennial Budget", "value": "$15.9B" },
+    { "label": "Central IT Authority", "value": "DoIT" },
+    { "label": "IT Strategy", "value": "2025–2029" },
+    { "label": "Primary Buy Path", "value": "Statewide Contracts" }
+  ],
+
+  "execSummary": {
+    "summary": "New Hampshire is a small, fiscally conservative, centralized-IT state — a high-touch, relationship-driven market rather than a big-dollar one. Governor Kelly Ayotte signed a $15.9B two-year budget (HB1/HB2) on June 27, 2025, that trimmed agencies (including a roughly $51M cut to Health & Human Services and reductions to the University System), so technology spend will favor consolidation, modernization, and security over net-new expansion. Three things shape the motion for a Dell seller. First, the Department of Information Technology (DoIT) runs a fully consolidated, agency-wide IT model and just ratified its 2025–2029 statewide IT strategy ('Digital Transformation is the Business') in December 2025. Second, cybersecurity is the dominant theme: a string of 2025 ransomware and breach incidents hit counties, courts, and school districts, and the state is pushing a 'whole-of-state' security posture under new CISO Pamela McLeod. Third, buying runs through the DAS Bureau of Purchase & Property statewide contracts, with DoIT approval required on IT purchases over $500.",
+    "opportunities": [
+      "Whole-of-state cybersecurity — endpoint, identity, backup/recovery, and resilience for state agencies plus counties, courts, and K-12 hit by 2025 attacks.",
+      "Infrastructure modernization and data-center consolidation under DoIT's 2025–2029 strategy (PowerEdge, storage, networking, services).",
+      "Client/endpoint lifecycle refresh across a fully consolidated state IT estate that DoIT manages centrally.",
+      "Research-computing and AI infrastructure at the University of New Hampshire (HPC, NSF/NVIDIA-funded multimodal AI work)."
+    ],
+    "stats": [
+      { "value": "$15.9B", "label": "2026–27 Biennial Budget", "note": "HB1/HB2, signed June 27, 2025", "ref": 1 },
+      { "value": "2025–2029", "label": "Statewide IT Strategy", "note": "Ratified by IT Council, Dec 2025", "ref": 6 },
+      { "value": "Apr 2025", "label": "New State CISO", "note": "Pamela McLeod leads cyber", "ref": 3 },
+      { "value": "$196.6M", "label": "Federal Broadband (BEAD/BIL)", "note": "Final proposal approved Nov 2025", "ref": 4 }
+    ]
+  },
+
+  "budget": {
+    "intro": "New Hampshire budgets on a two-year (biennial) cycle running July 1 to June 30. The FY2026–27 budget — HB1 (operating) and HB2 (trailer/policy) — totals roughly $15.9B and was signed by Governor Ayotte on June 27, 2025. It is a constrained budget that trimmed several agencies, so there is no large standalone 'state IT budget' line; technology spend is centralized under DoIT and distributed across agency operating budgets, with security and modernization prioritized over expansion.",
+    "stats": [
+      { "value": "$15.9B", "label": "2026–27 All-Funds Budget", "note": "HB1 + HB2", "ref": 1 },
+      { "value": "~$51M", "label": "HHS reduction", "note": "Largest single agency cut", "ref": 1 },
+      { "value": "2-year", "label": "Fiscal Cycle", "note": "Biennial; FY26 + FY27", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "Federal Broadband (BEAD/BIL)", "amount": 196.6, "display": "$196.6M", "note": "Federal funds via Office of Broadband Initiatives" },
+      { "label": "State Broadband Build (2 rounds)", "amount": 90, "display": "~$90M", "note": "~48,000 locations by end of 2026" },
+      { "label": "DoIT centralized IT operations", "amount": 0, "display": "Centralized", "note": "Embedded across agency operating budgets" }
+    ],
+    "notes": [
+      "Budget figures are biennial (two-year) totals.",
+      "There is no published single statewide 'IT budget' number — IT is consolidated under DoIT and funded through agency operating lines.",
+      "Broadband dollars are predominantly federal (BEAD/BIL) and may face federal program changes — confirm current status before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "2025–2029 Statewide IT Strategy",
+      "status": "Ratified Dec 2025",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 55,
+      "tags": ["Modernization", "Digital Transformation", "DoIT"],
+      "summary": "The NH IT Council ratified the statewide 2025–2029 IT Strategy & Implementation plan in December 2025 under the theme 'Digital Transformation is the Business.' It sets the mission, goals, and actions driving technology across state government — the blueprint for infrastructure modernization, service delivery, and security investment over the biennium. Aligning Dell offerings to its goals is the way into multi-year planning.",
+      "ref": 6
+    },
+    {
+      "name": "Whole-of-State Cybersecurity",
+      "status": "Active priority",
+      "statusType": "warn",
+      "dellFit": 80,
+      "budgetStrength": 60,
+      "tags": ["Cybersecurity", "Whole-of-State", "Resilience"],
+      "summary": "2025 brought a wave of incidents — Hillsborough County systems offline, Strafford County court disruptions, and ransomware/breaches at Pelham/Hudson school districts and Coös County health services. The state's 2025 and 2026 Cyber Threat Assessments push a 'whole-of-state' posture spanning state, county, and local entities. Under new CISO Pamela McLeod, this is the strongest near-term security tailwind: endpoint, identity, backup/recovery, and resilience.",
+      "ref": 7
+    },
+    {
+      "name": "Broadband Expansion (BEAD / BIL)",
+      "status": "In execution",
+      "statusType": "good",
+      "dellFit": 35,
+      "budgetStrength": 65,
+      "tags": ["Broadband", "Federal Funds", "Infrastructure"],
+      "summary": "New Hampshire received roughly $196.6M in federal broadband funds and its BEAD Final Proposal was approved by NTIA in November 2025; the state has also awarded ~$90M across two rounds to connect ~48,000 homes/businesses by end of 2026, run by the Office of Broadband Initiatives within Business & Economic Affairs. Mostly a connectivity build, but it expands the digital surface DoIT must secure and support.",
+      "ref": 4
+    },
+    {
+      "name": "Responsible AI Use Policy",
+      "status": "In effect",
+      "statusType": "warn",
+      "dellFit": 55,
+      "budgetStrength": 35,
+      "tags": ["AI", "Governance", "Policy"],
+      "summary": "DoIT maintains a statewide policy on AI and Automated Decision Systems setting principles for responsible, ethical use across agencies, with strong emphasis on protecting Personal Identifying Information (PII). NH is taking a measured, governance-first approach rather than a funded AI program — an opening to lead with governed, private/on-prem AI for sensitive state data rather than open public models.",
+      "ref": 5
+    }
+  ],
+
+  "procurement": {
+    "intro": "Procurement is centralized. The Department of Administrative Services (DAS) Bureau of Purchase & Property runs most state goods and non-construction services through statewide contracts, and most buys post there rather than agency-direct. The Department of Information Technology (DoIT) is the central technology authority: it coordinates, reviews, and approves statewide IT activities, and any IT equipment purchase over $500 requires DoIT review and a DoIT approval number.",
+    "vehicles": [
+      { "name": "DAS Statewide Contracts (Bureau of Purchase & Property)", "detail": "Primary vehicle for state goods and services, including IT. Confirm Dell and reseller coverage is on current statewide contracts (e.g., software value-added reseller and hardware vehicles)." },
+      { "name": "DoIT IT approval (>$500)", "detail": "Not a contract — a required gate. IT equipment purchases over $500 must carry a DoIT approval number; engage DoIT early to align purchases with the statewide strategy." },
+      { "name": "Cooperative / NASPO ValuePoint", "detail": "NH participates in cooperative and NASPO ValuePoint vehicles for certain categories — useful where a statewide contract does not exist." }
+    ],
+    "entities": [
+      { "name": "DoIT", "role": "Central, consolidated IT authority — owns statewide strategy, approvals, infrastructure, and cybersecurity. The single most important account." },
+      { "name": "DAS Bureau of Purchase & Property", "role": "Runs statewide contracts and the procurement process for nearly all state buying." },
+      { "name": "Health & Human Services (DHHS)", "role": "Largest agency and a data-heavy modernization buyer, despite this biennium's cut." },
+      { "name": "University System of New Hampshire (UNH)", "role": "Independent research-computing, HPC, and AI-infrastructure buyer with its own ET&S IT organization." }
+    ],
+    "competition": "New Hampshire is a small, centralized, relationship-driven market where price discipline and statewide-contract presence matter more than scale. Because DoIT consolidates IT and gates purchases, the winning motion is fewer, deeper relationships — aligning to the 2025–2029 strategy and the whole-of-state cyber agenda — rather than chasing many independent agency deals."
+  },
+
+  "powerStructure": [
+    { "name": "Kelly Ayotte", "title": "Governor", "org": "State of New Hampshire", "note": "Signed the $15.9B FY2026–27 budget June 27, 2025; fiscal-discipline agenda; backs broadband expansion.", "ref": 1 },
+    { "name": "Denis Goulet", "title": "Commissioner & State CIO", "org": "Department of Information Technology (DoIT)", "note": "Long-tenured CIO (since 2015); recognized by NASCIO in 2025 for a decade of service. Owns statewide IT direction.", "ref": 2 },
+    { "name": "Pamela McLeod", "title": "Chief Information Security Officer (CISO)", "org": "DoIT", "note": "Took the role April 2025 from ACT and the Concord School District; leads the whole-of-state cyber push.", "ref": 3 },
+    { "name": "NH Information Technology Council", "title": "IT governance body", "org": "State of New Hampshire", "note": "Ratified the 2025–2029 statewide IT strategy in Dec 2025; sets technology direction across agencies.", "ref": 6 }
+  ],
+
+  "news": [
+    { "date": "2025-12", "title": "IT Council ratifies 2025–2029 statewide IT strategy", "impact": "'Digital Transformation is the Business' becomes the blueprint for modernization and security spend — align Dell offerings to its goals.", "tags": ["Strategy", "Modernization"], "ref": 6 },
+    { "date": "2025-11", "title": "NTIA approves New Hampshire's BEAD Final Proposal", "impact": "Unlocks federal broadband execution (~$196.6M total federal); expands the digital footprint DoIT must support and secure.", "tags": ["Broadband", "Federal Funds"], "ref": 4 },
+    { "date": "2025-10", "title": "Local cyber incidents mount across NH counties, courts, and schools", "impact": "Hillsborough, Strafford, Pelham/Hudson, and Coös County incidents harden the whole-of-state security case — resilience and recovery demand.", "tags": ["Cybersecurity"], "ref": 7 },
+    { "date": "2025-06", "title": "Governor Ayotte signs $15.9B FY2026–27 budget (HB1/HB2)", "impact": "A constrained budget with agency cuts; technology spend favors consolidation, modernization, and security over expansion.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-04", "title": "Pamela McLeod named State CISO", "impact": "New security leadership accelerates the whole-of-state cyber agenda — a fresh relationship to build early.", "tags": ["Leadership", "Cybersecurity"], "ref": 3 },
+    { "date": "2025-04", "title": "NASCIO recognizes CIO Denis Goulet for a decade of leadership", "impact": "Continuity and stability at the top of DoIT — a known, long-term decision-maker owns the statewide tech direction.", "tags": ["Leadership"], "ref": 2 }
+  ],
+
+  "dellActions": [
+    "Make DoIT the anchor account: map Dell ISG, client, and services offerings to the 2025–2029 statewide IT strategy and engage on modernization/consolidation planning, not one-off buys.",
+    "Lead with whole-of-state cybersecurity — endpoint, identity, immutable backup/recovery, and resilience for state plus the counties, courts, and K-12 districts hit in 2025; build the relationship with CISO Pamela McLeod's team.",
+    "Confirm Dell and reseller coverage on current DAS statewide contracts, and bake the DoIT >$500 IT-approval step into every deal path so it doesn't stall at close.",
+    "Engage the University of New Hampshire independently for HPC and AI-infrastructure (NSF/NVIDIA-funded research computing) outside the central state-agency motion.",
+    "Position governed, private/on-prem AI for PII-sensitive workloads consistent with DoIT's responsible AI-use policy, rather than open public-model approaches."
+  ],
+
+  "sources": [
+    { "label": "New Hampshire Bulletin — Ayotte signs two-year state budget", "url": "https://newhampshirebulletin.com/2025/06/27/ayotte-signs-two-year-state-budget-closing-turbulent-final-chapter/" },
+    { "label": "NASCIO — Honors New Hampshire CIO Denis Goulet with Decade of Leadership Award", "url": "https://www.nascio.org/press-releases/nascio-honors-new-hampshire-cio-denis-goulet-with-10-year-service-award/" },
+    { "label": "StateScoop — New Hampshire names Pamela McLeod as new state CISO", "url": "https://statescoop.com/new-hampshire-pamela-mcleod-new-state-ciso/" },
+    { "label": "Governor Ayotte — New Hampshire secures new federal funding to advance broadband expansion", "url": "https://www.governor.nh.gov/news/new-hampshire-secures-new-federal-funding-advance-broadband-expansion" },
+    { "label": "NH DoIT — Use of Artificial Intelligence Technologies Policy", "url": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf" },
+    { "label": "NH DoIT — Strategic Planning (2025–2029 IT Strategy)", "url": "https://www.doit.nh.gov/strategic-planning" },
+    { "label": "NH DoIT — 2026 New Hampshire Cyber Threat Assessment", "url": "https://mm.nh.gov/files/uploads/doit/documents/2026-new-hampshire-cyber-threat-assessment.pdf" },
+    { "label": "NH DAS — Procurement & Support Services (Statewide Contracts)", "url": "https://apps.das.nh.gov/bidscontracts/contracts.aspx" }
+  ]
+}

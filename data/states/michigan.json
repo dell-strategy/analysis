@@ -1,0 +1,155 @@
+{
+  "code": "MI",
+  "name": "Michigan",
+  "slug": "michigan",
+  "region": "Great Lakes",
+  "updated": "2026-06-15",
+  "tagline": "A historic AI data-center boom anchored by Stargate, fresh sales-tax incentives, and a fully centralized DTMB make Michigan one of the strongest AI-infrastructure markets in the Midwest.",
+
+  "snapshot": [
+    { "label": "FY2027 Exec Budget", "value": "$88.1B" },
+    { "label": "Primary IT Vehicle", "value": "MiDEAL / State Contracts" },
+    { "label": "IT Authority", "value": "DTMB (centralized)" },
+    { "label": "AI Data Centers", "value": "Stargate (1.4GW)" }
+  ],
+
+  "execSummary": {
+    "summary": "Michigan is in transition heading into 2026, and three things matter most for an SLG seller. First, technology is almost entirely centralized in one department — the Department of Technology, Management & Budget (DTMB) — which owns IT, procurement, and budget, so the buying motion is unusually consolidated. Second, Michigan has become a national AI-infrastructure destination: the OpenAI/Oracle/Related Digital 'Stargate' campus in Saline Township (~1.4GW, called the largest one-time investment in state history) plus new enterprise data-center sales-tax exemptions extended to 2050/2065 are pulling hyperscale and enterprise compute into the state. Third, leadership is in flux — DTMB has an acting director and acting CIO as of early 2026, and a new state Chief Security Officer arrived in December 2025 — so relationships and account mapping are being reset. Dell's clearest plays are AI-infrastructure and research-computing demand, endpoint and lifecycle refresh across a centralized estate, and governed AI as agencies operationalize DTMB's 2025 AI guidelines.",
+    "opportunities": [
+      "AI-infrastructure and 'AI factory' demand tied to the Stargate buildout and broader data-center boom (PowerEdge, networking, services).",
+      "Centralized DTMB estate refresh — endpoint, client, server, and lifecycle across consolidated state IT.",
+      "Governed, private/on-prem AI for sensitive workloads as agencies stand up DTMB's AI guidelines and any generative-AI pilot.",
+      "University research computing (University of Michigan, Michigan State) as independent large-scale AI-infrastructure buyers."
+    ],
+    "stats": [
+      { "value": "$88.1B", "label": "FY2027 Exec Budget", "note": "Whitmer's final exec rec, Feb 11 2026", "ref": 5 },
+      { "value": "~1.4GW", "label": "Stargate Michigan", "note": "OpenAI/Oracle/Related Digital, Saline Twp", "ref": 7 },
+      { "value": "$1.47B", "label": "Broadband investment", "note": "$920M BEAD + private match", "ref": 6 },
+      { "value": "to 2050/65", "label": "Data-center tax exemption", "note": "Enterprise/qualified DC sales & use tax", "ref": 2 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Michigan budgets on an annual fiscal cycle ending September 30. Governor Whitmer's eighth and final executive recommendation, presented February 11, 2026, proposes roughly $88.1B for FY2027, against a projected ~$1.8B gap driven by softening revenue, rising health costs, and federal fiscal impacts. There is no single 'state IT budget' line; technology spend is centralized in DTMB and distributed across agency services, with a dedicated Information Technology Investment Fund for modernization.",
+    "stats": [
+      { "value": "$88.1B", "label": "FY2027 proposed", "note": "Total state spending (exec rec)", "ref": 5 },
+      { "value": "$13.6B", "label": "FY2027 General Fund", "note": "Discretionary portion", "ref": 5 },
+      { "value": "~$1.8B", "label": "Projected gap", "note": "Revenue + federal pressure", "ref": 5 }
+    ],
+    "breakdown": [
+      { "label": "IT Investment Fund", "amount": 50, "display": "~$50M", "note": "Technology modernization (FY25-26 basis)" },
+      { "label": "Broadband (BEAD)", "amount": 920, "display": "$920M", "note": "Federal award; ~$1.47B w/ match" },
+      { "label": "Local election equipment", "amount": 5, "display": "$5M", "note": "Replacement aid (FY25-26)" }
+    ],
+    "notes": [
+      "Figures are annual (single fiscal year) unless noted; FY2027 numbers are an executive proposal, not enacted.",
+      "Technology spend is centralized in DTMB and largely embedded in agency service charges rather than broken out as a single IT line."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Stargate & AI Data-Center Boom",
+      "status": "Under construction",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "The OpenAI/Oracle/Related Digital 'Stargate' campus in Saline Township (~1.4GW of DTE-supplied load, multi-billion-dollar, called the largest one-time investment in state history) broke ground in early 2026 despite local opposition. It anchors a wider data-center wave drawn by Michigan's expanded sales/use-tax exemptions. This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
+      "ref": 7
+    },
+    {
+      "name": "Enterprise Data-Center Tax Exemption",
+      "status": "In effect",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 70,
+      "tags": ["Incentives", "Data Centers", "Policy"],
+      "summary": "Public Act 207 of 2024 (signed Jan 2025) extends the data-center equipment sales/use-tax exemption through 2050 for qualified centers and creates a new enterprise exemption through 2065 for brownfield/former-powerplant sites. Qualification requires $250M+ investment and 30+ jobs at 150% of regional median wage — structurally favoring large, hardware-intensive buildouts.",
+      "ref": 2
+    },
+    {
+      "name": "DTMB AI Guidelines & Generative-AI Pilot",
+      "status": "Emerging",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Governance", "Policy"],
+      "summary": "DTMB issued statewide AI use guidelines in 2025, and HB 5899 (introduced 2026) would create an AI governing board and a controlled generative-AI pilot across agencies with mandatory human review of outputs. Agencies need governed, auditable AI — an opening for private/on-prem AI on sensitive data rather than open public models.",
+      "ref": 4
+    },
+    {
+      "name": "MIHI Broadband Expansion (BEAD)",
+      "status": "Deploying",
+      "statusType": "good",
+      "dellFit": 40,
+      "budgetStrength": 75,
+      "tags": ["Broadband", "Infrastructure", "Federal Funds"],
+      "summary": "The Michigan High-Speed Internet Office (MIHI) secured a $920M BEAD award — third-largest pool of eligible locations in the nation — for ~$1.47B total with private match, connecting ~200,000 locations over 31,000+ miles of fiber. Construction begins 2026. Indirect Dell value: edge, networking, and the connected public-sector endpoints that follow.",
+      "ref": 6
+    },
+    {
+      "name": "Statewide Cybersecurity Modernization",
+      "status": "Active",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "Centralized IT", "Leadership"],
+      "summary": "DTMB runs cybersecurity centrally for the enterprise; a new state Chief Security Officer (Rex Menold) stepped in December 2025, and the annual Michigan Cyber Summit continues to anchor state/local partnerships. Leadership turnover plus a tight budget mean security spend is being re-prioritized — a window to lead with secure compute, infrastructure, and resilience services.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "DTMB is the central technology procurement authority and consolidates IT, procurement, facilities, and budget under one executive department — a structure cited as a national best practice. State technology buys run through DTMB-managed statewide contracts, and the MiDEAL extended purchasing program lets local governments, K-12, universities, community colleges, tribes, and nonprofit hospitals buy off those same contracts without running their own RFP.",
+    "vehicles": [
+      { "name": "MiDEAL Extended Purchasing Program", "detail": "Primary cooperative vehicle (since 1984; 1,300+ members). Lets local gov, schools, universities, and nonprofit hospitals buy from state contracts. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "DTMB Statewide Contracts (Contract Connect)", "detail": "Pre-competed master agreements for state agencies across IT hardware, software, and services — the backbone of the centralized buy." },
+      { "name": "SUITE / centralized IT services", "detail": "State Unified Information Technology Environment standards; DTMB delivers consolidated IT as a shared service to agencies." }
+    ],
+    "entities": [
+      { "name": "DTMB", "role": "Central IT, procurement, facilities, and budget authority — owns the statewide technology motion." },
+      { "name": "Dept of Health & Human Services (MDHHS)", "role": "Among the largest agency IT consumers; data-heavy modernization." },
+      { "name": "University of Michigan", "role": "Independent large-scale research-computing and AI-infrastructure buyer." },
+      { "name": "Michigan State University", "role": "Independent research-computing buyer; separate procurement from the state." }
+    ],
+    "competition": "Michigan is a centralized, contract-driven market — incumbents hold DTMB statewide agreements across compute, networking, and services. Differentiation comes from AI-infrastructure capability tied to the data-center boom, governed-AI and security offerings, and MiDEAL-ready packaging for local/education buyers rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Gretchen Whitmer", "title": "Governor", "org": "State of Michigan", "note": "In her final year (term ends Jan 2027); champions the 'Make It in Michigan' agenda and the Stargate/data-center wins.", "ref": 5 },
+    { "name": "Kyle Guerrant", "title": "Acting Director, DTMB", "org": "DTMB", "note": "Appointed acting director January 2026; oversees centralized IT, procurement, and budget.", "ref": 3 },
+    { "name": "Eric Swanson", "title": "Acting State CIO", "org": "DTMB", "note": "Acting CIO directing state technology and security; longtime DTMB leader who built the Center for Shared Solutions.", "ref": 3 },
+    { "name": "Rex Menold", "title": "Chief Security Officer", "org": "DTMB", "note": "Stepped into the state CSO role December 2025; owns enterprise cybersecurity direction.", "ref": 8 }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Stargate Michigan construction advances; Saline Township buildout proceeds", "impact": "Confirms Michigan as a top-tier AI-infrastructure market; sustained hyperscale compute demand.", "tags": ["Data Centers", "AI"], "ref": 7 },
+    { "date": "2026-02", "title": "Whitmer presents final FY2027 budget (~$88.1B) amid ~$1.8B gap", "impact": "Tighter discretionary spend; agencies prioritize modernization with proven ROI.", "tags": ["Budget"], "ref": 5 },
+    { "date": "2026-01", "title": "DTMB gets acting director (Kyle Guerrant) and acting CIO (Eric Swanson)", "impact": "Leadership reset at the central IT authority; account mapping and relationships in flux.", "tags": ["Leadership"], "ref": 3 },
+    { "date": "2025-12", "title": "Michigan celebrates $1.47B high-speed internet investment ($920M BEAD)", "impact": "Large fiber buildout begins 2026; downstream edge, networking, and endpoint demand.", "tags": ["Broadband"], "ref": 6 },
+    { "date": "2025-12", "title": "Rex Menold named State Chief Security Officer", "impact": "New owner of enterprise cybersecurity strategy — a fresh relationship to build.", "tags": ["Cybersecurity", "Leadership"], "ref": 8 },
+    { "date": "2025-10", "title": "Whitmer announces Saline Township data center as 'largest investment in state history'", "impact": "Signals the scale of AI-infrastructure capital landing in Michigan.", "tags": ["Data Centers", "AI"], "ref": 7 }
+  ],
+
+  "dellActions": [
+    "Lead with AI infrastructure: tie Dell ISG / AI Factory offerings to the Stargate buildout, the data-center tax incentives, and university research-computing buyers.",
+    "Re-map DTMB now — engage the acting director, acting CIO, and new CSO early while relationships are being reset under a centralized authority.",
+    "Validate Dell's DTMB statewide-contract and MiDEAL coverage and resellers are current and correctly scoped for both state and local/education buyers.",
+    "Position governed, private/on-prem AI for sensitive workloads as agencies operationalize DTMB's AI guidelines and any generative-AI pilot.",
+    "Frame modernization around ROI given the ~$1.8B budget gap — endpoint/lifecycle refresh and resilience services that pay back quickly."
+  ],
+
+  "sources": [
+    { "label": "Ryan — Michigan Expands Sales Tax Exemption for Data Center Equipment", "url": "https://ryan.com/about-ryan/news-and-insights/2025/michigan-data-center-equipment-sales-tax-exemption/" },
+    { "label": "Michigan Business — Enterprise Data Center Sales & Use Tax Exemption", "url": "https://www.michiganbusiness.org/services/data-center/" },
+    { "label": "GovTech — Michigan Appoints Acting Director of Technology Department", "url": "https://www.govtech.com/workforce/michigan-appoints-acting-director-of-technology-department" },
+    { "label": "Route Fifty — AI creates a brave new world for state agencies in Michigan", "url": "https://www.route-fifty.com/artificial-intelligence/2026/05/artificial-intelligence-creates-brave-new-world-state-agencies-michigan/413722/" },
+    { "label": "Michigan Advance — Whitmer proposes $88.1B FY2027 budget", "url": "https://michiganadvance.com/2026/02/11/whitmer-proposes-88-1b-budget-as-state-reckons-with-federal-impacts/" },
+    { "label": "Michigan LEO — Gov. Whitmer celebrates $1.47B high-speed internet investment", "url": "https://www.michigan.gov/leo/news/2025/12/02/gov-whitmer-celebrates-high-speed-internet-investment" },
+    { "label": "Michigan Advance — Saline Township data center 'largest investment in Michigan history'", "url": "https://michiganadvance.com/2025/10/30/whitmer-multi-billion-dollar-saline-township-data-center-largest-investment-in-michigan-history/" },
+    { "label": "Security Boulevard — Securing Michigan: the State's Public Sector Cybersecurity Leaders", "url": "https://securityboulevard.com/2026/04/securing-michigan-the-states-public-sector-cybersecurity-leaders/" },
+    { "label": "DTMB — MiDEAL Extended Purchasing Program", "url": "https://www.michigan.gov/dtmb/procurement/mideal-extended-purchasing-program" },
+    { "label": "DTMB — Procurement / Contract Connect", "url": "https://www.michigan.gov/dtmb/procurement" }
+  ]
+}

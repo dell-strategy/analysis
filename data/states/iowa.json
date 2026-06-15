@@ -1,0 +1,157 @@
+{
+  "code": "IA",
+  "name": "Iowa",
+  "slug": "iowa",
+  "region": "Midwest",
+  "updated": "2026-06-15",
+  "tagline": "A landmark statewide cloud migration to AWS, a hyperscale data-center boom led by Google and Microsoft, and a new generative-AI policy — Iowa is consolidating and modernizing how it runs and buys technology.",
+
+  "snapshot": [
+    { "label": "FY2026 General Fund", "value": "$9.42B" },
+    { "label": "Central IT", "value": "DOM-DoIT (OCIO)" },
+    { "label": "Cloud Move", "value": "AWS + Cognizant" },
+    { "label": "Buying Vehicle", "value": "DAS Master Agreements" }
+  ],
+
+  "execSummary": {
+    "summary": "Iowa is in the middle of one of the most consequential state-IT shifts in the country, and every SLG seller should understand three things. First, on June 9, 2026 Gov. Reynolds announced a sweeping migration of executive-branch IT to Amazon Web Services with Cognizant Government Solutions running day-to-day operations — retiring dozens of state data centers and thousands of physical servers, with roughly 200 DoIT staff moving to Cognizant and service starting August 3, 2026. That changes who owns infrastructure decisions and compresses the legacy on-prem footprint. Second, Iowa is a national hyperscale data-center hub: Google's $7B Cedar Rapids/Council Bluffs expansion and Microsoft's $6B+ West Des Moines campuses anchor a pipeline of AI-infrastructure investment. Third, Iowa's enterprise generative-AI policy (effective March 31, 2025) sets guardrails for state-agency AI use. For Dell, the central buying motion runs through Iowa DAS statewide Master Agreements and DOM-DoIT IT procurement; the cloud consolidation reshapes the on-prem opportunity while higher-ed and hyperscale buildouts open AI-infrastructure demand.",
+    "opportunities": [
+      "AI-infrastructure / 'AI factory' demand tied to the Google and Microsoft hyperscale data-center buildout and the supporting ecosystem (PowerEdge, networking, services).",
+      "Higher-ed research computing at the University of Iowa and Iowa State — independent, AI-forward infrastructure buyers.",
+      "Edge, endpoint, and lifecycle refresh as the state standardizes under a consolidated DOM-DoIT and a leaner on-prem footprint.",
+      "Governed, private/on-prem AI for sensitive agency workloads as Iowa operationalizes its generative-AI policy."
+    ],
+    "stats": [
+      { "value": "$9.42B", "label": "FY2026 General Fund", "note": "Enacted; +5.3% over revised FY2025", "ref": 1 },
+      { "value": "$525M+", "label": "10-yr cloud savings (projected)", "note": "AWS + Cognizant migration", "ref": 2 },
+      { "value": "$7B", "label": "Google Iowa investment", "note": "Cedar Rapids + Council Bluffs (2025)", "ref": 4 },
+      { "value": "Mar 2025", "label": "State GenAI policy in effect", "note": "Enterprise PY-AI guardrails", "ref": 6 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Iowa budgets on an annual fiscal-year cycle (July 1 – June 30). The Legislature enacted roughly $9.42B in General Fund appropriations for FY2026 — about 5.3% above revised FY2025. There is no single 'state IT budget' line; technology spend is distributed across agencies and through the centralized Department of Management Division of Information Technology (DOM-DoIT, formerly the OCIO). The state's cloud migration is expected to shift IT cost from on-prem infrastructure toward managed cloud services over the next decade.",
+    "stats": [
+      { "value": "$9.42B", "label": "FY2026 General Fund", "note": "Enacted appropriations", "ref": 1 },
+      { "value": "+5.3%", "label": "YoY growth", "note": "vs. revised FY2025", "ref": 1 },
+      { "value": "$525M+", "label": "Projected 10-yr IT savings", "note": "From cloud consolidation", "ref": 2 }
+    ],
+    "breakdown": [
+      { "label": "Empower Rural Iowa Broadband (NOFA #009)", "amount": 400, "display": "$400M", "note": "Latest 2025 grant round; BEAD-supported" },
+      { "label": "Google Iowa data-center investment", "amount": 7000, "display": "$7B", "note": "Private capital (2025)" },
+      { "label": "Microsoft West Des Moines campuses", "amount": 6000, "display": "$6B+", "note": "Cumulative private capital" }
+    ],
+    "notes": [
+      "Iowa appropriates annually, not biennially — confirm the current fiscal year before forecasting.",
+      "Data-center and broadband figures are private and grant capital, not state IT operating dollars; they signal the surrounding AI-infrastructure economy.",
+      "The AWS/Cognizant migration shifts spend from capital on-prem hardware toward operating cloud/managed-services — model the on-prem footprint accordingly."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Statewide Cloud Migration (AWS + Cognizant)",
+      "status": "Launching Aug 2026",
+      "statusType": "warn",
+      "dellFit": 45,
+      "budgetStrength": 80,
+      "tags": ["Cloud", "Modernization", "Managed Services"],
+      "summary": "Announced June 9, 2026, Iowa will migrate executive-branch IT to AWS with Cognizant Government Solutions managing daily operations — retiring dozens of data centers and thousands of physical servers, projected to save $525M+ over 10 years. About 200 DoIT staff receive Cognizant offers; service begins August 3, 2026. This compresses the state's on-prem footprint, so Dell's state-data-center motion narrows toward edge, endpoint, and AI workloads that stay outside the public cloud.",
+      "ref": 2
+    },
+    {
+      "name": "Hyperscale Data-Center Buildout",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Google committed $7B (2025) to expand AI and cloud infrastructure in Cedar Rapids and Council Bluffs, with a first building due in 2026; Microsoft's West Des Moines campuses now exceed $6B cumulatively with a sixth site underway. Iowa's cheap power and renewables make it a national AI-infrastructure magnet — the strongest tailwind for Dell ISG / AI-factory demand across the supporting ecosystem and partners.",
+      "ref": 4
+    },
+    {
+      "name": "Enterprise Generative-AI Policy",
+      "status": "In effect Mar 31, 2025",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 45,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Iowa's statewide generative-AI policy (Enterprise PY-AI) sets minimum requirements and prohibited uses for agency AI, mandating human evaluation of AI output before it informs decisions. A state DOGE task force is also exploring AI and automation to cut costs. Agencies now need governed, auditable AI — an opening to lead with private/on-prem AI for sensitive data rather than open public models.",
+      "ref": 6
+    },
+    {
+      "name": "Empower Rural Iowa Broadband",
+      "status": "Active",
+      "statusType": "good",
+      "dellFit": 35,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Rural", "Grants"],
+      "summary": "The Empower Rural Iowa Broadband Grant Program, supported by federal BEAD funding, ran a ~$400M round (NOFA #009) in mid-2025 to close unserved and underserved gaps. Administered through DOM, it drives network and edge investment across rural Iowa — relevant for connectivity-adjacent infrastructure and partner-led solutions rather than core Dell compute.",
+      "ref": 7
+    },
+    {
+      "name": "24/7 State Security Operations Center",
+      "status": "Operational",
+      "statusType": "good",
+      "dellFit": 60,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "SOC", "Operations"],
+      "summary": "Under CISO Shane Dwyer and CIO Matthew Behrens, Iowa runs a consolidated, 24-hour security operations center providing continuous monitoring across the state enterprise. The AWS migration is framed as a cybersecurity upgrade ('a single, secure cloud system'). Security-hardened infrastructure, endpoint, and resilience services map to this posture.",
+      "ref": 9
+    }
+  ],
+
+  "procurement": {
+    "intro": "Iowa centralizes technology under the Department of Management Division of Information Technology (DOM-DoIT, formerly the Office of the Chief Information Officer), which leads IT standards, cybersecurity, and IT procurement, contracting, and vendor management. General and IT purchasing run through the Department of Administrative Services (DAS) Central Procurement, whose statewide Master Agreements support a Cooperative Purchasing Program open to state agencies, counties, cities, and other Iowa public entities. IT service agreements established by DAS-CP or DOM-DoIT can carry terms up to 10 years.",
+    "vehicles": [
+      { "name": "DAS Statewide Master Agreements", "detail": "Primary vehicle. Pre-competed contracts open via the Cooperative Purchasing Program to state, county, city, and other public entities. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "DOM-DoIT IT Procurement", "detail": "Centralized IT sourcing, contracting, and vendor management for state agencies; IT agreements may run up to 10 years." },
+      { "name": "IMPACS", "detail": "Iowa Management of Procurement and Contracts System — the state's procurement/contract platform vendors should be registered and active in." }
+    ],
+    "entities": [
+      { "name": "DOM-DoIT (OCIO)", "role": "Central IT authority — standards, cybersecurity, and IT procurement; leads the statewide technology motion." },
+      { "name": "Department of Administrative Services (DAS)", "role": "Owns statewide Master Agreements and cooperative purchasing — the contracting backbone for most buys." },
+      { "name": "University of Iowa / Iowa State", "role": "Large, independent research-computing and AI-infrastructure buyers with their own CIO organizations." },
+      { "name": "Cognizant Government Solutions", "role": "New managed-operations partner running day-to-day executive-branch IT from Aug 2026 — an influence point for infrastructure decisions." }
+    ],
+    "competition": "Iowa is a centralized, contract-driven market consolidating onto AWS-managed cloud and operated by Cognizant — so the executive-branch on-prem opportunity is narrowing. Differentiation comes from AI-infrastructure capability, higher-ed and hyperscale-adjacent demand, and edge/endpoint/security offerings that map to the consolidated DOM-DoIT environment rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Kim Reynolds", "title": "Governor", "org": "State of Iowa", "note": "Announced the AWS/Cognizant IT modernization and champions data-center growth and government efficiency (DOGE task force)." },
+    { "name": "Kraig Paulsen", "title": "Director, Dept. of Management", "org": "DOM", "note": "Owns the IT consolidation and cloud-migration agenda; the executive sponsor of the AWS/Cognizant deal.", "ref": 2 },
+    { "name": "Matthew Behrens", "title": "State Chief Information Officer", "org": "DOM-DoIT", "note": "Two-decade state IT veteran; led SOC expansion and broadband distribution. Owns statewide tech direction.", "ref": 10 },
+    { "name": "Shane Dwyer", "title": "State Chief Information Security Officer", "org": "DOM-DoIT", "note": "Leads the enterprise information-security program and 24/7 SOC across state government.", "ref": 9 }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Gov. Reynolds announces AWS + Cognizant statewide IT modernization", "impact": "Executive-branch IT moves to AWS-managed cloud operated by Cognizant; retires dozens of data centers and thousands of servers, ~$525M projected 10-yr savings.", "tags": ["Cloud", "Modernization"], "ref": 2 },
+    { "date": "2025-07", "title": "$400M Empower Rural Iowa Broadband round (NOFA #009) opens", "impact": "Latest BEAD-supported grant round drives rural network and edge buildout across Iowa.", "tags": ["Broadband", "Grants"], "ref": 7 },
+    { "date": "2025-06", "title": "Google announces $7B Iowa expansion (Cedar Rapids + Council Bluffs)", "impact": "Major AI/cloud infrastructure investment; first Cedar Rapids building due 2026, reinforcing Iowa as a national hyperscale hub.", "tags": ["Data Centers", "AI"], "ref": 4 },
+    { "date": "2025-05", "title": "Microsoft advances sixth West Des Moines data center", "impact": "Cumulative Microsoft investment exceeds $6B; sustained hyperscale buildout in central Iowa.", "tags": ["Data Centers"], "ref": 5 },
+    { "date": "2025-04", "title": "Technology Association of Iowa stands up AI Policy Subcommittee", "impact": "Industry input begins shaping Iowa AI legislation and innovation posture.", "tags": ["AI", "Policy"], "ref": 8 },
+    { "date": "2025-03", "title": "State enterprise generative-AI policy takes effect", "impact": "Agencies must apply guardrails and human review to AI output — a path for governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 6 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the Google and Microsoft hyperscale buildout and the supporting ecosystem and partners.",
+    "Prioritize higher-ed — University of Iowa and Iowa State research computing are independent, AI-forward infrastructure buyers outside the executive-branch cloud move.",
+    "Re-scope the executive-branch motion around the AWS/Cognizant migration: focus on edge, endpoint, lifecycle, and AI workloads that stay off the public cloud, and engage Cognizant as an operations influencer.",
+    "Confirm Dell's DAS statewide Master Agreement coverage and reseller scope, and ensure registration/activity in IMPACS for the agencies you target.",
+    "Position governed, private/on-prem AI for sensitive workloads as agencies operationalize Iowa's generative-AI policy."
+  ],
+
+  "sources": [
+    { "label": "Iowa LSA — Budget Recap FY2024–FY2026", "url": "https://www.legis.iowa.gov/docs/publications/FR/1543047.pdf" },
+    { "label": "Office of the Governor — Reynolds announces AWS & Cognizant IT modernization (June 9, 2026)", "url": "https://governor.iowa.gov/press-release/2026-06-09/gov-reynolds-modernize-state-it" },
+    { "label": "Iowa DOM — Information Technology (DOM-DoIT / OCIO)", "url": "https://dom.iowa.gov/state-government/information-technology" },
+    { "label": "The Gazette — Google announces $7B investment in Iowa for cloud, AI infrastructure", "url": "https://www.thegazette.com/business/google-announces-7b-investment-in-iowa-to-expand-cloud-ai-infrastructure/article_41e8da2d-0034-5691-81a4-83ae2081f1aa.html" },
+    { "label": "Business Record — West Des Moines approves Microsoft's sixth data center", "url": "https://www.businessrecord.com/west-des-moines-approves-agreement-with-microsoft-for-6th-data-center/" },
+    { "label": "Iowa DOM — State of Iowa Generative Artificial Intelligence (AI) Policy (Enterprise PY-AI)", "url": "https://dxsandbox.iowa.gov/state-iowa-generative-artificial-intelligence-ai-policy" },
+    { "label": "Iowa DOM — Empower Rural Iowa Broadband Grant Program NOFA #009", "url": "https://dom.iowa.gov/broadband/notice-funding-availability-009" },
+    { "label": "innovationIOWA — TAI launches AI Policy Subcommittee", "url": "https://innovationia.com/2025/05/22/new-tai-subcommittee-to-shape-artificial-intelligence-policy/" },
+    { "label": "GovTech — Shane Dwyer to serve as Iowa Chief Information Security Officer", "url": "https://www.govtech.com/workforce/shane-dwyer-to-serve-as-iowa-chief-information-security-officer" },
+    { "label": "StateScoop — Iowa officially names Matthew Behrens statewide CIO", "url": "https://statescoop.com/iowa-cio-matthew-behrens/" },
+    { "label": "Iowa DAS — State of Iowa Cooperative Purchasing Program", "url": "https://das.iowa.gov/state-employees/procurement/cooperative-purchasing-program" }
+  ]
+}

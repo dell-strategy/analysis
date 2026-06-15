@@ -1,0 +1,155 @@
+{
+  "code": "LA",
+  "name": "Louisiana",
+  "slug": "louisiana",
+  "region": "South Central",
+  "updated": "2026-06-15",
+  "tagline": "Meta's $10B 'Hyperion' AI data center, a centralized IT shop consolidating every state vendor contract, and a new AI-governance and cyber posture under Governor Landry — Louisiana is rewiring itself as an AI infrastructure state.",
+
+  "snapshot": [
+    { "label": "OTS Budget (FY26)", "value": "~$671M" },
+    { "label": "Meta AI Data Center", "value": "$10B" },
+    { "label": "Central IT Authority", "value": "OTS" },
+    { "label": "AI Posture", "value": "Restrict / Govern" }
+  ],
+
+  "execSummary": {
+    "summary": "Louisiana is being reshaped by the single largest private investment in state history: Meta's $10B, 4-million-sq-ft 'Hyperion' AI-optimized data center in Richland Parish (northeast LA), under construction through 2030 and backed by ~$3.3B in equipment tax exemptions. For Dell, the data-center buildout and its supply chain, power, and connectivity ripple effects are the headline angle. Inside state government, technology buying is highly centralized: the Office of Technology Services (OTS) is the executive branch's consolidated IT organization and the sole centralized customer for IT vendor contracts, with new CIO Evelina Broussard (appointed Feb 2025) leading. Governor Landry has set an assertive AI and cyber posture — an October 2025 executive order banning foreign-adversary AI (e.g., DeepSeek), requiring approval before agencies adopt AI, and directing state tech leaders to set AI safety rules by Dec 15, 2025, alongside a state Cyber Threat Analytics Center. Louisiana is also first in the nation to win federal approval to deploy $1.355B in BEAD broadband funding (GUMBO 2.0).",
+    "opportunities": [
+      "AI-infrastructure tailwind from Meta's Hyperion buildout and Louisiana's positioning as an AI data-center state (PowerEdge, networking, services, ecosystem/supply-chain pull).",
+      "Centralized modernization through OTS — a single consolidated buyer for executive-branch compute, client, and lifecycle refresh.",
+      "Governed AI adoption under Landry's restrict-and-approve posture — an opening for private/on-prem AI on sensitive state data rather than open public models.",
+      "Cybersecurity buildout around the state Cyber Threat Analytics Center / Security Operations Center."
+    ],
+    "stats": [
+      { "value": "~$671M", "label": "OTS FY2025-26 budget", "note": "Total means of financing; ~4% YoY decrease", "ref": 1 },
+      { "value": "$10B", "label": "Meta 'Hyperion' data center", "note": "Richland Parish; largest private investment in state history", "ref": 2 },
+      { "value": "~$3.3B", "label": "Meta equipment tax breaks", "note": "20-yr sales/use tax exemption incl. GPUs", "ref": 3 },
+      { "value": "$1.355B", "label": "BEAD broadband funding", "note": "First state approved; GUMBO 2.0", "ref": 7 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Louisiana budgets on an annual fiscal-year cycle (July 1 - June 30) through the Executive Budget. There is no single statewide 'IT budget' line, but the Office of Technology Services (OTS) is the consolidated executive-branch IT organization and its appropriation is the clearest proxy: the FY2025-26 recommended total means of financing for OTS is ~$671M, funded almost entirely by interagency transfers (chargebacks to the agencies it serves), down ~4% from the prior year. Additional technology spend is distributed across agencies and large externally funded programs (broadband, economic development).",
+    "stats": [
+      { "value": "~$671M", "label": "OTS FY26 financing", "note": "~$669M interagency transfers + self-generated", "ref": 1 },
+      { "value": "~-4%", "label": "YoY change", "note": "Decrease vs. prior fiscal year", "ref": 1 },
+      { "value": "July-June", "label": "Fiscal cycle", "note": "Annual Executive Budget", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "OTS operating financing (FY26)", "amount": 671, "display": "~$671M", "note": "Consolidated executive-branch IT" },
+      { "label": "BEAD / GUMBO 2.0 broadband", "amount": 1355, "display": "$1.355B", "note": "Federal; admin by ConnectLA" },
+      { "label": "Meta data-center tax exemptions", "amount": 3300, "display": "~$3.3B", "note": "20-yr equipment exemption (foregone revenue, not spend)" }
+    ],
+    "notes": [
+      "OTS is funded largely by interagency transfers (chargebacks), so its appropriation reflects services billed to agencies rather than a discretionary tech fund.",
+      "The Meta ~$3.3B figure is foregone tax revenue (an incentive), not state IT spending — context for the data-center scale, not a buying budget."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Meta 'Hyperion' AI Data Center",
+      "status": "Under construction",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 90,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Meta's $10B, 4-million-sq-ft AI-optimized data center on a 2,250-acre site in Richland Parish is the largest private capital investment in Louisiana history. Construction runs through 2030 with ~5,000 peak construction workers and 500+ permanent jobs; the state granted ~$3.3B in 20-year equipment (incl. GPU) tax exemptions. Meta is pairing it with 1,500+ MW of new energy and $200M+ in local infrastructure. This is the strongest tailwind in the state for Dell AI-infrastructure, supply-chain, and ecosystem demand.",
+      "ref": 2
+    },
+    {
+      "name": "OTS IT Consolidation & Modernization",
+      "status": "Ongoing",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 70,
+      "tags": ["Modernization", "Central IT", "Cloud"],
+      "summary": "OTS is the executive branch's consolidated IT organization (created 2014) and the sole centralized customer for IT vendor contracts — reviewing, approving, and managing hardware, software, networking, and IT consulting buys for state agencies. New CIO Evelina Broussard (Feb 2025) leads ongoing modernization. A single centralized buyer means one relationship governs most executive-branch compute, client, and lifecycle spend.",
+      "ref": 5
+    },
+    {
+      "name": "State AI Governance & Restrictions",
+      "status": "In force",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Governor Landry's October 2025 executive order bans free foreign-adversary AI tools (e.g., DeepSeek) from schools, universities, and state agencies, requires approval before agencies adopt new AI, and directed state technology leaders to establish AI safety rules by Dec 15, 2025. The restrict-and-approve posture pushes agencies toward governed, auditable AI — an opening for private/on-prem AI on sensitive data rather than open public models.",
+      "ref": 6
+    },
+    {
+      "name": "Cyber Threat Analytics Center",
+      "status": "Standing up",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "SOC"],
+      "summary": "Louisiana is establishing a state Cyber Threat Analytics Center (Security Operations Center) to gather and analyze intelligence and protect state agencies from cyber attacks. Paired with a tightened data-breach law (48-hour notification, effective July 1, 2026), it signals rising demand for secure compute, detection infrastructure, and managed security services across state government.",
+      "ref": 6
+    },
+    {
+      "name": "GUMBO 2.0 Broadband (BEAD)",
+      "status": "Awards approved",
+      "statusType": "good",
+      "dellFit": 50,
+      "budgetStrength": 80,
+      "tags": ["Broadband", "Connectivity", "Federal"],
+      "summary": "On Nov 7, 2025, Louisiana became the first state to win federal approval to deploy $1.355B in BEAD funding. Administered by ConnectLA, GUMBO 2.0 connects ~140,000 locations via 20 ISPs (nearly 70% Louisiana companies), reaching households, small businesses, and 4,000 community anchor institutions. An indirect but real driver of edge connectivity and downstream public-sector IT demand.",
+      "ref": 7
+    }
+  ],
+
+  "procurement": {
+    "intro": "Louisiana technology procurement is highly centralized. The Office of Technology Services (OTS) is the executive branch's consolidated IT organization and the sole centralized customer for IT vendor contracts — it reviews, coordinates, approves, and manages procurement of hardware, software, networking, and IT consulting on behalf of state agencies. The Office of State Procurement (OSP), within the Division of Administration, runs broader state contracting and the LaPAC contract network, and cooperative purchasing statutes let parishes, municipalities, and other subdivisions ride existing public contracts.",
+    "vehicles": [
+      { "name": "OTS centralized IT contracts", "detail": "Primary path for executive-branch technology. OTS is the single centralized customer for IT vendor agreements — confirm Dell agreements and resellers are current and correctly scoped through OTS." },
+      { "name": "OSP / LaPAC state contracts", "detail": "Office of State Procurement statewide contracts managed via the LaPAC network; the broader vehicle behind goods and services buys." },
+      { "name": "Cooperative purchasing (R.S. 39:198 / 38:321.1)", "detail": "Lets parishes, municipalities, and political subdivisions purchase through existing Louisiana public contracts — a route to local-gov reach." }
+    ],
+    "entities": [
+      { "name": "Office of Technology Services (OTS)", "role": "Central IT authority and sole centralized customer for IT vendor contracts; leads the statewide technology motion." },
+      { "name": "Office of State Procurement (OSP)", "role": "Statewide procurement and contracting (Division of Administration); runs LaPAC." },
+      { "name": "Louisiana Economic Development (LED)", "role": "Owns the Meta data-center deal and the AI/tech investment agenda — the gateway to the buildout ecosystem." },
+      { "name": "LSU / higher education", "role": "Independent research-computing and AI-infrastructure buyers; major cyber and workforce partner." }
+    ],
+    "competition": "Because OTS is the single centralized IT customer, winning in Louisiana means winning the OTS relationship and the right cooperative/statewide vehicles rather than chasing fragmented agency deals. Differentiation comes from AI-infrastructure capability tied to the data-center economy, governed private/on-prem AI for a restrict-and-approve state, and security offerings that map to the Cyber Threat Analytics Center."
+  },
+
+  "powerStructure": [
+    { "name": "Jeff Landry", "title": "Governor", "org": "State of Louisiana", "note": "Champions the Meta/AI investment agenda; set the restrict-and-approve AI posture and foreign-AI ban by executive order.", "ref": 2 },
+    { "name": "Evelina Broussard", "title": "Chief Information Officer", "org": "Office of Technology Services (OTS)", "note": "Appointed Feb 2025; 30-yr private-sector IT veteran (Atmos Energy). Owns the centralized state technology direction.", "ref": 5 },
+    { "name": "Office of Technology Services (OTS)", "title": "Central IT organization", "org": "Division of Administration", "note": "Consolidated executive-branch IT and sole centralized customer for IT vendor contracts." },
+    { "name": "Louisiana Economic Development (LED)", "title": "Economic development agency", "org": "State of Louisiana", "note": "Structured the $10B Meta data-center deal; gateway to the AI-infrastructure buildout." }
+  ],
+
+  "news": [
+    { "date": "2025-11", "title": "Louisiana first in nation approved to deploy $1.355B in BEAD broadband (GUMBO 2.0)", "impact": "~140,000 locations connected via 20 ISPs; expands edge connectivity and downstream public-sector IT demand.", "tags": ["Broadband", "Federal"], "ref": 7 },
+    { "date": "2025-10", "title": "Gov. Landry bans foreign-adversary AI (DeepSeek) from state systems", "impact": "Restrict-and-approve AI posture; agencies need governed, auditable AI — opening for private/on-prem approaches.", "tags": ["AI", "Policy"], "ref": 6 },
+    { "date": "2025-02", "title": "Evelina Broussard appointed State CIO at OTS", "impact": "Private-sector IT veteran takes the centralized state technology lead under Governor Landry.", "tags": ["Leadership"], "ref": 5 },
+    { "date": "2026-03", "title": "Meta 'Hyperion' data center scales up amid local impact reporting", "impact": "Reporting reframes the project at far larger long-run scale; reinforces the magnitude of the AI buildout in Richland Parish.", "tags": ["Data Centers", "AI"], "ref": 4 },
+    { "date": "2026-05", "title": "Legislature authorizes Meta's ~$3.3B equipment tax exemption", "impact": "Locks in the 20-yr sales/use tax break (incl. GPUs); confirms state commitment to the data-center economy.", "tags": ["Data Centers", "Budget"], "ref": 3 },
+    { "date": "2026-07", "title": "Tightened data-breach law takes effect (48-hour notification)", "impact": "Raises the security bar for entities handling Louisianans' data; tailwind for detection and response capabilities.", "tags": ["Cybersecurity", "Policy"], "ref": 6 }
+  ],
+
+  "dellActions": [
+    "Lead with AI infrastructure: tie Dell ISG / AI Factory offerings to the Meta Hyperion buildout, its supply-chain and power ecosystem, and LSU research computing.",
+    "Make OTS the anchor relationship — it is the sole centralized IT customer for the executive branch; confirm Dell agreements and resellers are current and correctly scoped there.",
+    "Position governed, private/on-prem AI for sensitive workloads given Louisiana's restrict-and-approve AI posture and foreign-AI ban.",
+    "Engage the state Cyber Threat Analytics Center / SOC buildout with secure compute, detection infrastructure, and managed security services.",
+    "Track cooperative and OSP/LaPAC vehicles to extend reach to parishes and political subdivisions riding state contracts."
+  ],
+
+  "sources": [
+    { "label": "Louisiana DOA - Executive Budget Supporting Document FY2025-26 (OTS / Economic Development)", "url": "https://doa.louisiana.gov/media/ibal3g1x/louisianaeconomicdevelopment.pdf" },
+    { "label": "Office of Governor Jeff Landry - Meta selects North Louisiana for $10B AI data center", "url": "https://gov.louisiana.gov/news/4697" },
+    { "label": "Fortune - Meta's $10B Louisiana data center getting $3.3B in tax breaks (Hyperion)", "url": "https://fortune.com/2026/05/14/meta-data-center-tax-break-hyperion-louisiana/" },
+    { "label": "Fortune - Meta's AI data center causing chaos in small-town Louisiana", "url": "https://fortune.com/2026/03/26/meta-ai-data-center-hyperion-louisiana/" },
+    { "label": "GovTech - Louisiana names private-sector IT veteran (Evelina Broussard) as new CIO", "url": "https://www.govtech.com/workforce/louisiana-names-private-sector-it-veteran-as-its-new-cio" },
+    { "label": "Office of Governor Jeff Landry - Bans Communist Chinese AI platforms from Louisiana government systems", "url": "https://gov.louisiana.gov/news/4960" },
+    { "label": "Office of Governor Jeff Landry - First in nation approved for $1.355B broadband (BEAD/GUMBO 2.0)", "url": "https://gov.louisiana.gov/news/4990" },
+    { "label": "Louisiana DOA - Office of Technology Services (OTS)", "url": "https://www.doa.la.gov/doa/ots/" },
+    { "label": "Louisiana DOA - Office of State Procurement (OSP)", "url": "https://doa.la.gov/doa/osp/" },
+    { "label": "Connect Louisiana - GUMBO 2.0 (BEAD)", "url": "https://connect.louisiana.gov/gumbo-2" }
+  ]
+}

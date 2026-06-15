@@ -1,0 +1,157 @@
+{
+  "code": "AZ",
+  "name": "Arizona",
+  "slug": "arizona",
+  "region": "Southwest",
+  "updated": "2026-06-15",
+  "tagline": "A $165B TSMC semiconductor megaproject, one of the nation's hottest data-center markets, and a governor leaning on AI to run government leaner — Arizona is a structural AI-infrastructure play.",
+
+  "snapshot": [
+    { "label": "FY2026 State Budget", "value": "$18.3B" },
+    { "label": "Primary IT Vehicle", "value": "SPO Statewide / Co-op" },
+    { "label": "Central IT Org", "value": "ADOA-ASET" },
+    { "label": "Efficiency Lever", "value": "ACE Initiative (AI)" }
+  ],
+
+  "execSummary": {
+    "summary": "Arizona is one of the most important AI-infrastructure stories in the country, and the buying motion is driven more by economic-development gravity than by a single big appropriation. TSMC's Phoenix campus has scaled from $12B to a committed ~$165B (six fabs, advanced packaging, R&D), and the company bought another 900 acres at a January 2026 state land auction — the largest foreign greenfield investment in U.S. history. Around it, Arizona has become a top-two U.S. data-center market alongside Texas, with multi-gigawatt projects (Hassayampa Ranch, the La Osa/Vermaland park) landing fast. On the state side, Governor Hobbs signed an $18.3B bipartisan FY2026 budget on June 13, 2026 that includes a three-year moratorium on data-center tax incentives — a signal the state is managing growth, not stopping it. Her 'Arizona Capacity and Efficiency' (ACE) Initiative consolidates IT purchasing and deploys AI across agencies to save $40M-$100M, and the state's first AI Steering Committee is delivering governance and procurement guidance in 2026. For Dell, the center of gravity is AI infrastructure (PowerEdge, networking, services) plus a real consolidation/standardization opening as ADOA-ASET centralizes spend.",
+    "opportunities": [
+      "AI-infrastructure / 'AI factory' demand tied to the TSMC semiconductor megaproject and a top-tier data-center market (PowerEdge, networking, services).",
+      "IT consolidation and standardization under the ACE Initiative — a chance to displace fragmented agency buying with standardized Dell platforms and lifecycle.",
+      "Governed agency AI adoption as the AI Steering Committee lands procurement guidance — private/on-prem AI for sensitive state workloads.",
+      "Endpoint, client, and managed-services refresh across 130+ agencies served by ADOA-ASET."
+    ],
+    "stats": [
+      { "value": "$18.3B", "label": "FY2026 Enacted Budget", "note": "Bipartisan; signed June 13, 2026", "ref": 1 },
+      { "value": "~$165B", "label": "TSMC Arizona commitment", "note": "Largest U.S. greenfield FDI; 6 fabs", "ref": 4 },
+      { "value": "$40M-$100M", "label": "ACE Initiative savings target", "note": "IT consolidation + AI", "ref": 6 },
+      { "value": "3-yr", "label": "Data-center tax-incentive pause", "note": "Saves ~$57M; growth continues", "ref": 1 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Arizona budgets on an annual fiscal-year cycle (July 1-June 30). Governor Hobbs signed an $18.3B bipartisan FY2026 budget on June 13, 2026. There is no single published 'state IT budget' line; technology spend is distributed across agencies, with ADOA-ASET providing centralized enterprise technology services and the ACE Initiative now consolidating purchasing. The state's most consequential tech dollars sit outside the appropriations bill — in the private semiconductor and data-center buildout it is courting and, increasingly, managing.",
+    "stats": [
+      { "value": "$18.3B", "label": "FY2026 all-funds budget", "note": "Bipartisan deal", "ref": 1 },
+      { "value": "~$57M", "label": "Saved by DC incentive pause", "note": "3-year moratorium", "ref": 1 },
+      { "value": "$40M-$100M", "label": "ACE efficiency target", "note": "Not yet booked in budget", "ref": 6 }
+    ],
+    "breakdown": [
+      { "label": "ACE Initiative (IT consolidation + AI)", "amount": 100, "display": "up to $100M", "note": "Savings target via ADOA; uses remaining ARPA funds" },
+      { "label": "Data-center incentive moratorium", "amount": 57, "display": "~$57M", "note": "State savings over the pause" }
+    ],
+    "notes": [
+      "Figures are annual (single fiscal year) unless noted; Arizona does not budget biennially like Texas.",
+      "ACE savings are a target, not an appropriation, and were not booked into the proposed budget — treat as directional.",
+      "The largest 'tech spend' in Arizona is private capex (TSMC, hyperscale data centers), not state appropriations — frame economic-development and ecosystem motions accordingly."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "TSMC Phoenix Semiconductor Megaproject",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 90,
+      "tags": ["AI Infrastructure", "Semiconductors", "Economic Dev"],
+      "summary": "TSMC's North Phoenix campus has expanded from $12B to a committed ~$165B — planned for six wafer fabs, two advanced-packaging (CoWoS) facilities, and an R&D center, the largest foreign greenfield investment in U.S. history. Fab 1 is in volume production; Fab 3 broke ground in 2025 for N2/A16; and the board approved buying another 900 acres at a January 2026 state land auction. This anchors an AI-hardware supply chain in-state and is the strongest tailwind for Dell ISG and AI-infrastructure demand around it.",
+      "ref": 4
+    },
+    {
+      "name": "Arizona Data-Center Buildout",
+      "status": "Booming (being managed)",
+      "statusType": "good",
+      "dellFit": 88,
+      "budgetStrength": 80,
+      "tags": ["Data Centers", "AI", "Power"],
+      "summary": "Arizona is a top-two U.S. data-center market alongside Texas, with Google, Microsoft, Meta, and Apple expanding around Phoenix and multi-gigawatt projects landing (the ~1.5GW Hassayampa Ranch, the up-to-3GW La Osa/Vermaland park in Pinal County). The FY2026 budget's three-year pause on data-center tax incentives signals the state is managing grid and water pressure rather than slowing growth — demand for compute, networking, and services remains very strong.",
+      "ref": 9
+    },
+    {
+      "name": "ACE — Arizona Capacity & Efficiency Initiative",
+      "status": "Launched (Mar 2026)",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["IT Consolidation", "AI", "Modernization"],
+      "summary": "Governor Hobbs' ACE Initiative, run through ADOA, consolidates fragmented agency technology purchasing and deploys AI across agencies to improve productivity, targeting $40M-$100M in savings using remaining ARPA funds. The state explicitly cites agencies independently buying similar IT tools with unused seats and duplication — a direct opening to standardize on Dell platforms and lifecycle across the enterprise.",
+      "ref": 6
+    },
+    {
+      "name": "AI Steering Committee & Governed AI",
+      "status": "Recommendations due 2026",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Hobbs launched Arizona's first AI Steering Committee (19 members, including State CIO J.R. Sloan) in May 2025 to deliver a statewide AI policy framework, governance models, and procurement guidelines, with recommendations expected in 2026. As governance lands, agencies will need auditable AI on sensitive data — an opening for governed private/on-prem AI rather than open public models.",
+      "ref": 5
+    },
+    {
+      "name": "Enterprise Cybersecurity (ASET + Cyber Command)",
+      "status": "Ongoing",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "Whole-of-State"],
+      "summary": "Security is split across ADOA-ASET's Security Operations Center (serving 130+ agencies) and the Arizona Cyber Command, stood up under the Department of Homeland Security in 2021 for statewide coordination and threat intelligence. As data-center and AI footprints grow, secure compute, infrastructure, and managed-security services map to both organizations — confirm which entity owns a given program before forecasting.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Arizona Department of Administration (ADOA) State Procurement Office (SPO) is the central procurement authority. Most state and public-sector technology buys run through SPO statewide contracts and the Arizona State Procurement Cooperative Program, which gives eligible local governments, tribes, school districts, and other public bodies shared access to competitively sourced agreements (900+ statewide contracts). ADOA-ASET (Arizona Strategic Enterprise Technology) sets statewide IT policy and delivers shared enterprise technology, data-center, and security services.",
+    "vehicles": [
+      { "name": "SPO Statewide Contracts", "detail": "Primary vehicle. Competitively sourced; high-value IT contracts each typically exceed $5M annually. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "Arizona State Procurement Cooperative", "detail": "Co-op program (ARS Ch. 23, Art. 10) open to local gov, tribal entities, school districts, and public bodies — 900+ statewide contracts available to members." },
+      { "name": "ADOA-ASET enterprise services", "detail": "Centralized data-center, security (SOC), and enterprise technology services; the ACE Initiative routes consolidated/standardized purchasing here." }
+    ],
+    "entities": [
+      { "name": "ADOA-ASET", "role": "Central IT policy, enterprise technology and security services for 130+ agencies; owns the statewide tech direction and the State CIO." },
+      { "name": "ADOA State Procurement Office (SPO)", "role": "Central procurement authority; statewide IT contracts and the co-op program." },
+      { "name": "Arizona Commerce Authority (ACA)", "role": "Economic-development and incentives engine behind TSMC and the data-center buildout — the gateway to the AI-infrastructure ecosystem." },
+      { "name": "ASU & University of Arizona", "role": "Large independent research-computing and AI-infrastructure buyers; major workforce pipeline for the chip ecosystem." }
+    ],
+    "competition": "Arizona is a competitive, contract-driven market with incumbents holding SPO statewide agreements across compute, networking, and services. Differentiation comes from AI-infrastructure capability tied to the semiconductor/data-center ecosystem, standardization stories that fit the ACE consolidation mandate, and governed-AI and security services — rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Katie Hobbs", "title": "Governor", "org": "State of Arizona", "note": "Signed the $18.3B FY2026 budget; champions the ACE efficiency/AI agenda and is actively managing the data-center boom.", "ref": 1 },
+    { "name": "J.R. Sloan", "title": "State CIO", "org": "ADOA-ASET", "note": "Owns statewide IT direction; sits on the AI Steering Committee and has held a NASCIO Executive Committee role.", "ref": 3 },
+    { "name": "AI Steering Committee", "title": "AI policy & procurement guidance", "org": "Office of the Governor", "note": "19 members across government, academia, and industry; recommendations expected in 2026.", "ref": 5 },
+    { "name": "Arizona Commerce Authority", "title": "Economic development & incentives", "org": "State of Arizona", "note": "Administers data-center tax incentives (now paused 3 years) and the TSMC/chip ecosystem relationships." },
+    { "name": "ADOA State Procurement Office", "title": "Central procurement", "org": "ADOA", "note": "Owns statewide IT contracts and the cooperative program — the contracting path for state and local buyers." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Hobbs signs $18.3B bipartisan FY2026 budget with 3-year data-center incentive pause", "impact": "Sets the fiscal frame; signals the state is managing (not stopping) the data-center boom — demand stays strong.", "tags": ["Budget", "Data Centers"], "ref": 1 },
+    { "date": "2026-03", "title": "Hobbs launches ACE Initiative to consolidate IT and deploy AI", "impact": "Direct opening to standardize agency technology on Dell platforms and lead governed agency AI.", "tags": ["IT Consolidation", "AI"], "ref": 6 },
+    { "date": "2026-01", "title": "TSMC buys 900 more acres in Phoenix at state land auction", "impact": "Confirms continued expansion of the ~$165B megaproject and a deepening in-state AI-hardware ecosystem.", "tags": ["Semiconductors"], "ref": 7 },
+    { "date": "2025-12", "title": "~1.5GW Hassayampa Ranch data-center development wins zoning approval", "impact": "Underscores the scale of AI-infrastructure capacity landing in Arizona.", "tags": ["Data Centers", "AI"], "ref": 9 },
+    { "date": "2025-09", "title": "Up-to-3GW La Osa / Vermaland data-center park announced in Pinal County (~$33B)", "impact": "Signals one of the largest planned campuses in the U.S. — sustained compute and networking demand.", "tags": ["Data Centers"], "ref": 10 },
+    { "date": "2025-05", "title": "Hobbs names Arizona's first AI Steering Committee (incl. State CIO Sloan)", "impact": "Governance and procurement guidance ahead — shapes how agencies buy and deploy AI.", "tags": ["AI", "Policy"], "ref": 5 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the TSMC megaproject, the Phoenix data-center market, and ASU/UA research-computing buyers.",
+    "Pursue the ACE Initiative as a consolidation play — bring a standardization story (platforms, lifecycle, asset management) that replaces fragmented agency buying through ADOA-ASET.",
+    "Validate Dell's SPO statewide contract coverage and reseller scope, and confirm cooperative-program access for the local/education buyers you target.",
+    "Position governed, private/on-prem AI for sensitive workloads ahead of the AI Steering Committee's 2026 procurement guidance.",
+    "Engage ADOA-ASET (SOC) and Arizona Cyber Command on secure compute and managed-security services as the state's compute footprint grows."
+  ],
+
+  "sources": [
+    { "label": "Arizona Capitol Times — Hobbs signs $18.3B bipartisan budget", "url": "https://azcapitoltimes.com/news/2026/06/13/hobbs-signs-18-3-billion-bipartisan-budget/" },
+    { "label": "Office of the Arizona Governor — FY2026 Executive Budget Proposal", "url": "https://azgovernor.gov/office-arizona-governor/news/2025/01/governor-katie-hobbs-releases-fy2026-executive-budget-proposal" },
+    { "label": "ADOA-ASET — About (State CIO J.R. Sloan)", "url": "https://aset.az.gov/people-profile/jr-sloan" },
+    { "label": "NIST — TSMC Arizona (Phoenix)", "url": "https://www.nist.gov/chips/tsmc-arizona-phoenix" },
+    { "label": "Office of the Arizona Governor — Members of Arizona's First AI Steering Committee", "url": "https://azgovernor.gov/office-arizona-governor/news/2025/05/governor-katie-hobbs-announces-members-arizonas-first-ai" },
+    { "label": "KJZZ — Hobbs proposes government efficiency plan, leaning on AI (ACE)", "url": "https://www.kjzz.org/politics/2026-03-10/hobbs-proposes-government-efficiency-plan-leaning-on-ai" },
+    { "label": "Wikipedia — TSMC Arizona (900-acre land auction, expansion)", "url": "https://en.wikipedia.org/wiki/TSMC_Arizona" },
+    { "label": "Arizona Department of Homeland Security — Cyber Command", "url": "https://azdohs.gov/cyber" },
+    { "label": "Fortune — AI data centers in Arizona (Hassayampa Ranch)", "url": "https://fortune.com/2025/12/27/ai-data-centers-arizona-hassayampa-ranch/" },
+    { "label": "Blackridge Research — Upcoming Data Centers in Arizona (La Osa / Vermaland)", "url": "https://www.blackridgeresearch.com/blog/latest-list-upcoming-data-centers-in-arizona-az-united-states-us" },
+    { "label": "Arizona State Procurement Office — Cooperative Contracts", "url": "https://spo.az.gov/cooperative-contracts" }
+  ]
+}

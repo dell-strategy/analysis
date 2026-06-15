@@ -1,0 +1,147 @@
+{
+  "code": "AK",
+  "name": "Alaska",
+  "slug": "alaska",
+  "region": "Pacific / Northwest",
+  "updated": "2026-06-15",
+  "tagline": "Oil-driven budgets under pressure, a $1B+ broadband buildout reaching the most remote communities in America, and an IT-and-shared-services consolidation in motion — Alaska's tech story is about connecting and modernizing a frontier government.",
+
+  "snapshot": [
+    { "label": "FY2026 Operating Budget", "value": "~$14.7B" },
+    { "label": "Central IT", "value": "OIT (DOA)" },
+    { "label": "BEAD Awards", "value": "$629M" },
+    { "label": "Revenue Driver", "value": "Oil + Permanent Fund" }
+  ],
+
+  "execSummary": {
+    "summary": "Alaska is a connectivity-and-modernization story more than a hyperscale-AI story, and that is exactly where Dell's edge and infrastructure narrative fits. The state's finances ride on volatile oil revenue and Permanent Fund earnings, so FY2026 was signed at roughly $14.7B with $122M in vetoes after the revenue outlook softened, and the FY2027 draft carries a deficit near $1.5B — budgets are tight and efficiency-driven. The dominant technology event is broadband: NIST approved more than $629M of Alaska's BEAD awards (March 2026) for 29 projects across 15 providers using fiber, wireless, and satellite to reach over 46,000 of the hardest-to-serve locations in the nation. Centrally, the Office of Information Technology (OIT) under the Department of Administration runs enterprise IT and is being folded into the AAPEX consolidation initiative, while AI governance bills remain in committee rather than enacted. For Dell, the angles are rural/remote edge compute and resilient connectivity, OIT enterprise refresh and cloud/cyber modernization, and the University of Alaska's research and Arctic-science computing.",
+    "opportunities": [
+      "Edge and remote-site infrastructure tied to the $629M+ BEAD broadband buildout — compute, storage, and networking at rural anchor institutions, clinics, and provider points of presence.",
+      "OIT enterprise modernization under the AAPEX consolidation — endpoint/client refresh, server and storage lifecycle, and managed services for a consolidating central IT.",
+      "Cybersecurity modernization for a remote, distributed government — resilient on-prem and hybrid infrastructure where bandwidth and isolation make pure-cloud impractical.",
+      "University of Alaska research, Arctic-science, and HPC computing as an independent infrastructure buyer."
+    ],
+    "stats": [
+      { "value": "~$14.7B", "label": "FY2026 budget (post-veto)", "note": "Signed June 2025; $122M vetoed", "ref": 1 },
+      { "value": "$629M", "label": "BEAD deployment awards", "note": "NIST-approved March 2026", "ref": 4 },
+      { "value": "46,000+", "label": "Locations to be connected", "note": "29 projects, 15 providers", "ref": 4 },
+      { "value": "~$1.5B", "label": "FY2027 projected deficit", "note": "Governor's draft, Dec 2025", "ref": 2 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Alaska budgets annually on a July–June fiscal year, and revenue is unusually concentrated: roughly 60% of unrestricted funding comes from Permanent Fund earnings and about 30% from oil, leaving the budget highly exposed to oil-price swings. The FY2026 budget was signed in June 2025 at about $14.7B after $122M in vetoes, when the Department of Revenue cut its general-fund outlook ~$222M below the spring forecast. There is no single 'state IT budget' line — technology spend is distributed across agencies, with central enterprise IT run by OIT under the Department of Administration.",
+    "stats": [
+      { "value": "~$68/bbl", "label": "FY2026 oil assumption", "note": "Spring forecast; actuals came in softer", "ref": 1 },
+      { "value": "~60%", "label": "From Permanent Fund", "note": "Largest single revenue source", "ref": 2 },
+      { "value": "~$1.5B", "label": "FY2027 deficit (draft)", "note": "Driven partly by a full statutory PFD", "ref": 2 }
+    ],
+    "breakdown": [
+      { "label": "BEAD broadband awards", "amount": 629, "display": "$629M", "note": "Federal; deployment subgrants" },
+      { "label": "Total BEAD allocation", "amount": 1017, "display": "~$1.017B", "note": "Full Alaska allocation" },
+      { "label": "FY2026 vetoes", "amount": 122, "display": "$122M", "note": "Cut against weaker revenue" }
+    ],
+    "notes": [
+      "Alaska's fiscal year runs July 1–June 30; figures are annual, not biennial.",
+      "Budget swings track oil prices and Permanent Fund earnings — confirm the latest Department of Revenue forecast before forecasting agency spend.",
+      "Most large technology dollars currently flowing into Alaska are federal broadband funds, not state IT appropriations."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "BEAD Broadband Buildout",
+      "status": "Awards approved",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 85,
+      "tags": ["Broadband", "Rural / Edge", "Connectivity"],
+      "summary": "NIST approved more than $629M of Alaska's BEAD awards in March 2026 — 29 deployment projects across 15 providers (GCI, Alaska Communications, Matanuska Telecom, and regional cooperatives) using fiber, wireless, and satellite to reach over 46,000 of the most remote locations in the country, at the highest per-location cost of any state. As connectivity lands at rural anchor institutions and provider sites, edge compute, storage, and networking demand follows.",
+      "ref": 4
+    },
+    {
+      "name": "AAPEX — IT & Shared-Services Consolidation",
+      "status": "Underway",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 50,
+      "tags": ["Consolidation", "Enterprise IT", "Modernization"],
+      "summary": "The Department of Administration's AAPEX (Alaska Administrative Productivity and Excellence) initiative is restructuring and combining OIT with Shared Services operations, with Alvarez & Marsal engaged to assess processes, ERP, and enterprise systems. A consolidating central IT means standardized refresh cycles and a clearer enterprise buying motion — engage early to shape standards and lifecycle.",
+      "ref": 8
+    },
+    {
+      "name": "Cybersecurity Modernization",
+      "status": "Ongoing",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 50,
+      "tags": ["Cybersecurity", "Resilience", "Hybrid"],
+      "summary": "OIT reports modernizing its cybersecurity environment and leveraging cloud for resilience, while phishing and ransomware pressure on Alaska healthcare and energy targets continues. For a distributed, bandwidth-constrained government, resilient on-prem and hybrid infrastructure and security services are a natural fit alongside cloud.",
+      "ref": 6
+    },
+    {
+      "name": "AI Governance (Pending)",
+      "status": "In committee",
+      "statusType": "risk",
+      "dellFit": 55,
+      "budgetStrength": 30,
+      "tags": ["AI", "Policy", "Pending"],
+      "summary": "Alaska has multiple AI bills in play (e.g., state-agency AI use, deepfake disclosure, and restrictions on data transfers to countries of concern such as HB 306 / SB 2 lineage), but none are enacted as of mid-2026. Expect inventories, human-oversight, and impact-assessment requirements if they pass — an opening for governed, auditable, and on-prem AI on sensitive state data rather than open public models.",
+      "ref": 7
+    }
+  ],
+
+  "procurement": {
+    "intro": "Alaska's central procurement runs through the Department of Administration's Office of Procurement and Property Management (OPPM), which manages Statewide Master Agreements (SMAs) that executive-branch agencies use to buy commonly needed goods and services. Central enterprise IT is delivered by the Office of Information Technology (OIT), also within the Department of Administration, which sets mandatory statewide IT standards (including cloud) that executive departments must follow. Cooperative purchasing is available via waiver, letting agencies leverage national vehicles where an SMA does not exist.",
+    "vehicles": [
+      { "name": "Statewide Master Agreements (SMAs)", "detail": "OPPM-managed pre-competed contracts for common goods and services. Confirm Dell and reseller coverage and that hardware/software are correctly scoped." },
+      { "name": "Cooperative Purchasing (via waiver)", "detail": "Agencies may use national co-op vehicles (e.g., GSA, NASPO, Sourcewell) with an approved waiver where no SMA exists — a common path for IT." },
+      { "name": "OIT IT Standards", "detail": "Not a contract, but a gate — executive-branch hardware, software, and cloud purchases must conform to OIT's mandatory statewide IT standards." }
+    ],
+    "entities": [
+      { "name": "OIT (Office of Information Technology)", "role": "Central enterprise IT, statewide IT standards, cybersecurity, and cloud — the primary technology decision-maker, under DOA." },
+      { "name": "OPPM (Office of Procurement & Property Management)", "role": "Central procurement; owns Statewide Master Agreements and cooperative-purchasing waivers." },
+      { "name": "Alaska Broadband Office (Dept. of Commerce)", "role": "Administers BEAD; gateway to the broadband providers driving rural connectivity and edge demand." },
+      { "name": "University of Alaska", "role": "Independent buyer for research, Arctic-science, and HPC computing across UAF/UAA/UAS." }
+    ],
+    "competition": "Alaska is a small, relationship-driven market shaped by extreme geography and bandwidth constraints. Differentiation comes from solutions that work at the remote edge (resilient, low-touch, hybrid), strong reseller and field presence in Anchorage/Juneau, and alignment to BEAD-connected sites and the OIT consolidation rather than price alone. Connectivity providers (GCI, Alaska Communications) are central partners, not just competitors."
+  },
+
+  "powerStructure": [
+    { "name": "Mike Dunleavy", "title": "Governor", "org": "State of Alaska", "note": "Sets the fiscal posture; vetoed $122M from FY2026 and proposed a full statutory PFD in FY2027 despite a ~$1.5B deficit.", "ref": 2 },
+    { "name": "Bill Smith", "title": "State Chief Information Officer", "org": "Office of Information Technology (DOA)", "note": "First permanent state CIO since 2018; 28+ years public/private IT. Owns enterprise IT, cloud, and cybersecurity direction.", "ref": 6 },
+    { "name": "Department of Administration", "title": "Home of OIT, OPPM & AAPEX", "org": "State of Alaska", "note": "Drives the IT-and-shared-services consolidation (AAPEX) reshaping how the state buys and runs technology.", "ref": 8 },
+    { "name": "Alaska Broadband Office", "title": "BEAD administrator", "org": "Dept. of Commerce, Community & Economic Development", "note": "Manages the $1B+ broadband program and provider awards — the gateway to rural-connectivity opportunity." , "ref": 4 },
+    { "name": "Office of Management & Budget (OMB)", "title": "Budget & fiscal planning", "org": "Office of the Governor", "note": "Publishes the 10-Year Plan and budget drafts — the place to read where money (and tech spend) is headed.", "ref": 2 }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "NIST approves $629M of Alaska BEAD deployment awards", "impact": "29 projects across 15 providers move toward construction; rural connectivity and edge-infrastructure demand begins to land.", "tags": ["Broadband", "Rural / Edge"], "ref": 4 },
+    { "date": "2026-01", "title": "OMB releases revised FY2027 10-Year Plan", "impact": "Reaffirms a tight, deficit-pressured outlook tied to oil and PFD policy — efficiency and modernization framing matters.", "tags": ["Budget"], "ref": 2 },
+    { "date": "2025-12", "title": "Governor unveils FY2027 draft budget with ~$1.5B deficit", "impact": "A full statutory PFD widens the gap; expect continued cost scrutiny on agency and IT spend.", "tags": ["Budget", "Policy"], "ref": 2 },
+    { "date": "2025-06", "title": "Dunleavy signs FY2026 budget (~$14.7B) with $122M in vetoes", "impact": "Weaker oil-revenue outlook drives cuts — sellers should lead with efficiency and consolidation value.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-04", "title": "Legislature hears AI, deepfake, and data-transfer testimony", "impact": "Signals coming AI-governance requirements (inventories, oversight) even though no bill is yet enacted.", "tags": ["AI", "Policy"], "ref": 7 },
+    { "date": "2024-11", "title": "AAPEX consolidation kicks off; Alvarez & Marsal engaged", "impact": "OIT and Shared Services begin restructuring — a window to influence enterprise IT standards and lifecycle.", "tags": ["Consolidation", "Enterprise IT"], "ref": 8 }
+  ],
+
+  "dellActions": [
+    "Lead with the remote edge: position resilient, low-touch compute, storage, and networking for BEAD-connected anchor institutions, clinics, and provider sites where pure-cloud is impractical.",
+    "Engage OIT and the AAPEX consolidation early — shape enterprise IT standards and lifecycle, and pursue endpoint/client and server/storage refresh as central IT standardizes.",
+    "Map the Statewide Master Agreement and cooperative-purchasing (waiver) paths; confirm Dell and reseller coverage and that offerings meet OIT's mandatory IT standards.",
+    "Build the field relationships that matter in a small market — Anchorage/Juneau presence and partnership with connectivity providers (GCI, Alaska Communications) over price-led plays.",
+    "Pursue the University of Alaska as an independent research, Arctic-science, and HPC buyer, and pre-position governed on-prem AI ahead of any enacted AI-governance rules."
+  ],
+
+  "sources": [
+    { "label": "Office of the Governor — Dunleavy signs FY2026 budget; vetoes reflect reduced revenue", "url": "https://gov.alaska.gov/governor-dunleavy-signs-fy2026-budget-vetoes-reflect-reduced-revenue-outlook/" },
+    { "label": "Alaska Beacon — Governor unveils first-draft FY2027 budget (deficit, PFD)", "url": "https://alaskabeacon.com/2025/12/11/disasters-dividends-and-deficit-alaska-governor-unveils-first-draft-state-budget/" },
+    { "label": "Alaska OMB — FY2027 10-Year Plan (revised Jan 2026)", "url": "https://omb.alaska.gov/ombfiles/27_budget/PDFs/10-Year_Plan_FY2027_Revised_1.27.2026.pdf" },
+    { "label": "Sen. Murkowski — $629M to boost Alaska internet connectivity (BEAD)", "url": "https://www.murkowski.senate.gov/press/release/murkowski-sullivan-announce-629-million-funding-to-boost-alaskas-internet-connectivity" },
+    { "label": "Alaska Broadband Office — Department of Commerce", "url": "https://www.commerce.alaska.gov/web/abo/" },
+    { "label": "Alaska OIT — About Us (CIO Bill Smith, mission, cloud & cybersecurity)", "url": "https://oit.alaska.gov/about-us/" },
+    { "label": "ITIF — Testimony to the Alaska Legislature on AI, deepfakes, cybersecurity, data transfers", "url": "https://itif.org/publications/2025/04/29/testimony-to-the-alaska-state-senate-regarding-ai-deepfakes-cybersecurity-and-data-transfers/" },
+    { "label": "Alaska DOA — AAPEX (Administrative Productivity and Excellence) announcement", "url": "https://doa.alaska.gov/aapex/news/initial-announcement.html" },
+    { "label": "Alaska OPPM — Statewide Master Agreements", "url": "https://oppm.doa.alaska.gov/alaska-centers-of-procurement-excellence/statewide-master-agreements/" },
+    { "label": "GovTech — After several interim leaders, Alaska has a permanent CIO (Bill Smith)", "url": "https://www.govtech.com/people/after-several-interim-leaders-alaska-has-a-permanent-cio.html" }
+  ]
+}

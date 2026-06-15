@@ -1,0 +1,155 @@
+{
+  "code": "AL",
+  "name": "Alabama",
+  "slug": "alabama",
+  "region": "Southeast",
+  "updated": "2026-06-15",
+  "tagline": "A record state budget, cybersecurity newly codified under a strengthened CIO, a fast-growing AI data-center footprint, and the nation's defense and space-command center landing at Redstone — Alabama is a rising technology buyer.",
+
+  "snapshot": [
+    { "label": "FY2026 General Fund", "value": "$3.7B" },
+    { "label": "Central IT Authority", "value": "OIT" },
+    { "label": "AI/Tech Oversight", "value": "TQA Board" },
+    { "label": "BEAD Broadband", "value": "$460M" }
+  ],
+
+  "execSummary": {
+    "summary": "Alabama enters FY2026 (Oct 1, 2025–Sept 30, 2026) with a record $3.7B General Fund and a nearly $10B Education Trust Fund, and several structural shifts a Dell seller should track. First, Act 2025-369 (HB207) formally codified cybersecurity under the Office of Information Technology (OIT) and its CIO and made OIT the centralized approving authority for new technology acquisitions — concentrating both security and buying decisions in one office. Second, Governor Ivey stood up a Technology Quality Assurance Board in February 2026 to set statewide standards for AI and emerging tech, building on her GenAI Task Force and a NIST-aligned governance posture. Third, Alabama has become a magnet for AI data-center investment (Google's $1.5B Jackson County expansion, Meta's Montgomery and Huntsville campuses, and large proposed AI sites), while U.S. Space Command's phased move to Redstone Arsenal deepens an already dense Huntsville defense and aerospace tech cluster. For Dell, the motion runs through OIT-governed statewide contracts and cooperative purchasing, and the strongest tailwinds are AI infrastructure, the defense/space buyers around Huntsville, and a modernizing, cyber-focused state IT office.",
+    "opportunities": [
+      "AI-infrastructure demand riding Alabama's data-center boom (Google, Meta, Project Marvel/Red Clay/Nebius) — PowerEdge, networking, and AI Factory offerings.",
+      "Defense, space, and aerospace compute around Redstone Arsenal, U.S. Space Command, and Cummings Research Park — a federal-adjacent SLG angle.",
+      "State cybersecurity buildout now codified under OIT and a CISO — secure infrastructure, endpoint, and managed services for a consolidating IT office.",
+      "Governed AI adoption under the Technology Quality Assurance Board and NIST AI RMF — private/on-prem AI for sensitive state workloads."
+    ],
+    "stats": [
+      { "value": "$3.7B", "label": "FY2026 General Fund", "note": "Record; +10% (~$347M) YoY, signed by Gov. Ivey", "ref": 1 },
+      { "value": "~$10B", "label": "FY2026 Education Trust Fund", "note": "Largest education budget in state history", "ref": 1 },
+      { "value": "$460M", "label": "BEAD broadband award", "note": "63 projects, ~92,000 unserved locations", "ref": 8 },
+      { "value": "Feb 2026", "label": "Tech Quality Assurance Board", "note": "Statewide AI/emerging-tech standards", "ref": 3 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Alabama budgets annually on a fiscal year running October 1 to September 30, split between the General Fund (non-education government) and the Education Trust Fund (ETF). The FY2026 budgets, signed by Governor Ivey in May 2025 and effective Oct 1, 2025, set records: roughly $3.7B General Fund (up about 10% / $347M) and nearly $10B ETF. There is no single published 'state IT budget' line — OIT operates largely on a chargeback model funded through a Telecommunications Revolving Fund, and technology spend is distributed across agencies.",
+    "stats": [
+      { "value": "$3.7B", "label": "FY2026 General Fund", "note": "+10% (~$347M) YoY; record", "ref": 1 },
+      { "value": "~$10B", "label": "FY2026 ETF", "note": "Largest in state history; ~6% increase", "ref": 1 },
+      { "value": "Oct–Sep", "label": "Fiscal year", "note": "Annual cycle; FY2026 began Oct 1, 2025", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "General Fund (non-education)", "amount": 3700, "display": "$3.7B", "note": "Funds Medicaid, corrections, OIT-served agencies" },
+      { "label": "Education Trust Fund", "amount": 10000, "display": "~$10B", "note": "K-12, higher ed, ed-tech buyers" },
+      { "label": "BEAD broadband (federal)", "amount": 460, "display": "$460M", "note": "63 projects via ADECA; FY26 deployment" }
+    ],
+    "notes": [
+      "Figures are annual FY2026 totals; Alabama does not budget on a biennial cycle.",
+      "OIT is largely chargeback-funded via a Telecommunications Revolving Fund (Act 2025-369), so IT dollars are not a single appropriated line — confirm the owning agency before forecasting.",
+      "BEAD is federal pass-through funding administered by ADECA, separate from the state General Fund."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "OIT Cybersecurity Codification (Act 2025-369 / HB207)",
+      "status": "Enacted May 2025",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 60,
+      "tags": ["Cybersecurity", "Governance", "OIT"],
+      "summary": "HB207 (Act 2025-369), signed May 2025, formally placed cybersecurity responsibilities under the OIT and its CIO, consolidated technology-operations law, confirmed OIT as the centralized approving authority for new technology acquisitions, and created a Telecommunications Revolving Fund for IT services. A strengthened, centralized security mandate under CIO Daniel Urquhart and CISO Chadwick Smith means secure-infrastructure, endpoint, and managed-services needs concentrate in one office.",
+      "ref": 2
+    },
+    {
+      "name": "Technology Quality Assurance Board",
+      "status": "Formed Feb 2026",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Announced February 13, 2026, the TQA Board sets statewide standards for AI and emerging tech across executive agencies (Education, Finance, Law Enforcement, Medicaid, Technology, Transportation, Revenue). It operationalizes the GenAI Task Force recommendations — NIST AI Risk Management Framework adoption, agency GenAI policies, and employee AI training — creating demand for governed, auditable AI rather than open public models.",
+      "ref": 3
+    },
+    {
+      "name": "AI Data-Center Buildout",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 80,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Alabama has become a national data-center destination: Google is investing $1.5B in 2026–27 to expand its Jackson County campus, Meta is building campuses in Montgomery and Huntsville optimized for AI workloads, and large AI sites are proposed (Project Marvel in Bessemer, Project Red Clay in Lowndes County, Nebius AI Factory in Birmingham). As of 2026 the state has 20+ operating data centers across a dozen cities — the strongest tailwind for Dell ISG and AI-infrastructure demand.",
+      "ref": 6
+    },
+    {
+      "name": "Redstone / Space & Defense Cluster",
+      "status": "Expanding",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 75,
+      "tags": ["Defense", "Space", "Huntsville"],
+      "summary": "U.S. Space Command began its phased relocation to Redstone Arsenal in 2026 (first arrivals April 2026; ~1,400 of ~1,700 positions, new HQ groundbreaking targeted 2027). Redstone already anchors Army aviation/missile commands, DEVCOM AvMC, and Cummings Research Park — the nation's second-largest research park, home to UAH and Fortune 500 defense contractors. A federal-adjacent SLG and contractor ecosystem with deep secure-compute needs.",
+      "ref": 7
+    },
+    {
+      "name": "BEAD Broadband Deployment",
+      "status": "Awards approved",
+      "statusType": "good",
+      "dellFit": 50,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Connectivity", "ADECA"],
+      "summary": "NTIA approved Alabama's final BEAD proposal in March 2026, awarding nearly $460M across 63 projects to reach ~92,000 unserved locations (71% fiber). ADECA administers the program, and Alabama saved over $800M of its original $1.4B allocation for future non-deployment uses. Network expansion underpins downstream edge, connectivity, and managed-service opportunities.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "Alabama's Office of Information Technology (OIT) is the centralized approving authority for new state technology acquisitions, a role reinforced by Act 2025-369. Statewide contracts are competitively bid through the Alabama Department of Finance's State Purchasing Division, and a 2009 cooperative-purchasing law (Act 2009-763) lets state entities buy off agreements competitively let by approved purchasing cooperatives. OIT's IT Procurement Policy (230-00) requires use of established statewide contracts where applicable and lets the CIO or State Purchasing Director hold non-compliant requests.",
+    "vehicles": [
+      { "name": "Statewide IT Contracts (State Purchasing)", "detail": "Competitively-bid contracts through the Dept. of Finance; OIT Policy 230-00 requires their use where applicable. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "Cooperative Purchasing (Act 2009-763)", "detail": "Lets state entities buy off cooperative/GPO agreements competitively let elsewhere; cooperatives must be on the Examiners of Public Accounts approved list (NASPO ValuePoint, etc.)." },
+      { "name": "OIT acquisition approval", "detail": "Not a contract but a gate — OIT is the centralized approving authority for new technology acquisitions; the CIO can hold non-compliant requests." }
+    ],
+    "entities": [
+      { "name": "OIT", "role": "Central IT approving authority, cybersecurity owner, and statewide tech direction under the CIO." },
+      { "name": "Dept. of Finance — State Purchasing", "role": "Runs competitive statewide contracts; co-gatekeeper with OIT on IT buys." },
+      { "name": "ADECA", "role": "Administers BEAD broadband and economic-development/grant programs." },
+      { "name": "University of Alabama in Huntsville (UAH) & university systems", "role": "Independent research-computing and AI-infrastructure buyers tied to the Redstone/defense ecosystem." }
+    ],
+    "competition": "Alabama is a contract-driven market where incumbents hold statewide and cooperative agreements across compute, networking, and services. Differentiation comes from AI-infrastructure capability tied to the data-center boom, secure compute for the defense/space cluster around Redstone, and offerings that map to OIT's cybersecurity and AI-governance priorities rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Kay Ivey", "title": "Governor", "org": "State of Alabama", "note": "Champions the AI/data-center economic agenda; created the GenAI Task Force and the Technology Quality Assurance Board.", "ref": 3 },
+    { "name": "Daniel Urquhart", "title": "Secretary of IT & State CIO", "org": "OIT", "note": "Appointed CIO in 2023 after two decades with the state; now owns codified cybersecurity authority and is the central acquisition approver.", "ref": 4 },
+    { "name": "Chadwick Smith", "title": "Chief Information Security Officer", "org": "OIT", "note": "Leads the state's security posture now formally housed under OIT.", "ref": 4 },
+    { "name": "Brooke Covington", "title": "Executive Director, Finance & Procurement", "org": "OIT", "note": "Owns OIT procurement processes — a key contact for technology-acquisition approvals.", "ref": 4 },
+    { "name": "Kenneth Boswell", "title": "Director", "org": "ADECA", "note": "Oversees the $460M BEAD broadband program and economic-development grants.", "ref": 8 }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Google announces $1.5B Jackson County data-center expansion (2026–27)", "impact": "Reinforces Alabama as a national AI-infrastructure hub; strong ISG/AI tailwind.", "tags": ["Data Centers", "AI"], "ref": 6 },
+    { "date": "2026-04", "title": "U.S. Space Command's first personnel arrive at Redstone Arsenal", "impact": "Phased HQ move begins (~1,400 positions); deepens Huntsville defense/space compute demand.", "tags": ["Defense", "Space"], "ref": 7 },
+    { "date": "2026-03", "title": "NTIA approves Alabama's final BEAD plan — $460M, 63 projects", "impact": "Broadband deployment to ~92,000 unserved locations via ADECA; downstream edge/connectivity work.", "tags": ["Broadband"], "ref": 8 },
+    { "date": "2026-02", "title": "Gov. Ivey forms the Technology Quality Assurance Board", "impact": "Statewide AI/emerging-tech standards (NIST AI RMF) — demand for governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 3 },
+    { "date": "2025-05", "title": "Act 2025-369 (HB207) codifies cybersecurity under OIT/CIO", "impact": "Centralizes security and tech-acquisition approval authority in OIT.", "tags": ["Cybersecurity", "Governance"], "ref": 2 },
+    { "date": "2025-05", "title": "Gov. Ivey signs record FY2026 budgets", "impact": "$3.7B General Fund and ~$10B ETF effective Oct 1, 2025 — a record general-government and ed-tech spending base.", "tags": ["Budget"], "ref": 1 }
+  ],
+
+  "dellActions": [
+    "Lead with AI infrastructure: map Dell ISG / AI Factory offerings to Alabama's data-center boom (Google, Meta, Project Marvel/Red Clay/Nebius) and UAH research computing.",
+    "Pursue the Redstone/Huntsville defense and space cluster — U.S. Space Command, Army missile/aviation commands, and Cummings Research Park contractors — as a federal-adjacent secure-compute opportunity.",
+    "Engage OIT early: it is now the centralized acquisition approver and cybersecurity owner — align security, endpoint, and managed-services proposals to CIO Urquhart and CISO Smith's priorities.",
+    "Confirm Dell's statewide and cooperative (Act 2009-763 / NASPO) contract coverage and resellers are current and correctly scoped under OIT Policy 230-00 before pursuing deals.",
+    "Position governed, private/on-prem AI for sensitive workloads as agencies operationalize the Technology Quality Assurance Board and NIST AI RMF."
+  ],
+
+  "sources": [
+    { "label": "Alabama Reflector — Gov. Ivey signs 2026 ETF, General Fund budgets", "url": "https://alabamareflector.com/2025/05/05/gov-kay-ivey-signs-2026-etf-general-fund-budgets/" },
+    { "label": "StateScoop — Alabama forms emerging tech board, codifies IT office's cyber responsibilities (HB207 / Act 2025-369)", "url": "https://statescoop.com/alabama-technology-quality-assurance-board/" },
+    { "label": "Office of the Governor — Ivey forms Technology Quality Assurance Board", "url": "https://governor.alabama.gov/newsroom/2026/02/governor-ivey-forms-technology-quality-assurance-board-to-oversee-innovation-and-safeguard-statewide-it-systems/" },
+    { "label": "Alabama OIT — Leadership", "url": "https://oit.alabama.gov/about/leadership/" },
+    { "label": "Alabama OIT — Policy 230-00: Information Technology Procurement", "url": "https://oit.alabama.gov/wp-content/uploads/2022/07/Policy_230_IT_Procurement.pdf" },
+    { "label": "Google Blog — Alabama data center investment (June 2026)", "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/" },
+    { "label": "Military Times — U.S. Space Command phased HQ relocation to Alabama", "url": "https://www.militarytimes.com/news/your-military/2026/03/27/us-space-command-provides-update-on-phased-headquarters-relocation-to-alabama/" },
+    { "label": "Office of the Governor — Ivey announces final BEAD approval, $460M award", "url": "https://governor.alabama.gov/newsroom/2026/03/governor-ivey-announces-approval-of-final-bead-broadband-proposal-awards-460-million-to-expand-access-to-high-speed-internet/" }
+  ]
+}

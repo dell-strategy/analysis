@@ -1,0 +1,156 @@
+{
+  "code": "OK",
+  "name": "Oklahoma",
+  "slug": "oklahoma",
+  "region": "South Central",
+  "updated": "2026-06-15",
+  "tagline": "A strongly consolidated state IT model under OMES, a new statewide AI and modernization push, and a $9B Google-led data-center boom — Oklahoma is buying technology centrally and building AI infrastructure fast.",
+
+  "snapshot": [
+    { "label": "FY2027 State Budget", "value": "$12.8B" },
+    { "label": "Central IT Authority", "value": "OMES" },
+    { "label": "IT Model", "value": "Consolidated" },
+    { "label": "Data-Center Wave", "value": "$9B+ Google" }
+  ],
+
+  "execSummary": {
+    "summary": "Oklahoma runs one of the most consolidated state IT models in the country: under the Information Technology Consolidation and Coordination Act (ITCCA), the State CIO at the Office of Management and Enterprise Services (OMES) controls planning, acquisition, and standards for technology — including AI — across 125+ executive agencies. That makes OMES the single most important account in the state. Three shifts matter for sellers in 2026. First, new leadership and strategy: Dan Cronin became State CIO in January 2025 and Tai Phan was named the state's first Chief AI & Technology Officer in November 2025, behind a FY2026–2028 IT Strategic Plan centered on cloud-native modernization and killing legacy systems. Second, AI and cybersecurity are now formal statewide programs, including AI-driven threat detection (Darktrace) and a published state AI-use standard. Third, a historic data-center buildout — led by Google's ~$9B Oklahoma investment plus Meta, IREN, and others — is turning the state into national AI infrastructure. Buying runs centrally through OMES Central Purchasing statewide contracts and cooperative vehicles (NASPO ValuePoint).",
+    "opportunities": [
+      "OMES as a consolidated enterprise account — statewide refresh, cloud-native modernization, and legacy-system retirement across 125+ agencies under one CIO.",
+      "AI-infrastructure / 'AI factory' demand tied to the Google, Meta, and IREN data-center boom (PowerEdge, networking, services).",
+      "Governed, secure AI adoption under Oklahoma's published AI-use standard — private/on-prem AI for sensitive state workloads.",
+      "Cybersecurity modernization tied to the state's AI-driven threat-detection program and Cybersecurity Awareness initiatives.",
+      "Endpoint, client, and lifecycle refresh standardized through OMES statewide and mandatory statewide contracts."
+    ],
+    "stats": [
+      { "value": "$12.8B", "label": "FY2027 Appropriations", "note": "SB 1177, signed Apr 16, 2026", "ref": 2 },
+      { "value": "125+", "label": "Executive Agencies", "note": "IT consolidated under OMES / State CIO", "ref": 4 },
+      { "value": "~$9B", "label": "Google OK Investment", "note": "Stillwater + Pryor AI/cloud campuses", "ref": 7 },
+      { "value": "FY26–28", "label": "IT Strategic Plan", "note": "Cloud-native modernization", "ref": 5 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Oklahoma budgets on an annual fiscal-year cycle (July 1 – June 30). The Legislature's general appropriations bill (SB 1177) provides roughly $12.8B for FY2027, a slight increase over the ~$12.6B FY2026 budget, with new dollars for education, mental health, human services, and Medicaid. There is no single published 'state IT budget' line — technology spend is centralized through OMES and distributed across agencies, then standardized via statewide contracts and enterprise agreements the State CIO negotiates.",
+    "stats": [
+      { "value": "$12.8B", "label": "FY2027 budget", "note": "SB 1177 general appropriations", "ref": 2 },
+      { "value": "~$12.6B", "label": "FY2026 budget", "note": "Prior fiscal year", "ref": 1 },
+      { "value": "$574M", "label": "BEAD broadband", "note": "Federal deployment funding", "ref": 8 }
+    ],
+    "breakdown": [
+      { "label": "FY2027 appropriations", "amount": 12800, "display": "$12.8B", "note": "All-funds general appropriations" },
+      { "label": "BEAD broadband deployment", "amount": 574, "display": "$574M", "note": "Federal; ~$1.4B combined w/ matching" },
+      { "label": "Google OK investment", "amount": 9000, "display": "~$9B", "note": "Private; Stillwater + Pryor campuses" }
+    ],
+    "notes": [
+      "Figures are annual fiscal-year totals unless noted; Oklahoma does not budget biennially.",
+      "Most technology dollars are not a single line item — they flow through OMES central purchasing and agency budgets, so engage OMES to find the spend."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "OMES IT Consolidation (ITCCA)",
+      "status": "In force",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 70,
+      "tags": ["Consolidation", "Enterprise", "OMES"],
+      "summary": "Under the Information Technology Consolidation and Coordination Act, the State CIO at OMES owns planning, acquisition, standards, and implementation of technology — including AI — across 125+ executive agencies. The CIO can designate statewide and mandatory statewide contracts and negotiate enterprise/consolidation agreements. This makes OMES a single consolidated enterprise account rather than many fragmented agency buys.",
+      "ref": 4
+    },
+    {
+      "name": "FY2026–2028 IT Strategic Plan",
+      "status": "Launched",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 60,
+      "tags": ["Modernization", "Cloud", "Strategy"],
+      "summary": "OMES and State CIO Dan Cronin published a three-year plan built on four goals: customer centricity, making complexity invisible, a future-ready workforce, and modernizing with purpose. The practical thrust is reducing service outages, retiring outdated/legacy systems, and moving to secure, cloud-native infrastructure and shared platforms — a clear lane for refresh, infrastructure, and services.",
+      "ref": 5
+    },
+    {
+      "name": "Statewide AI Strategy & Standard",
+      "status": "Active",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 50,
+      "tags": ["AI", "Governance", "Policy"],
+      "summary": "Oklahoma named Tai Phan as its first State Chief AI & Technology Officer (Nov 2025) and published a 'Use of AI in Oklahoma State Government' standard, fulfilling a recommendation of the Governor's Task Force on Emerging Technologies. Agencies need governed, auditable AI — an opening to lead with private/on-prem AI for sensitive data rather than open public models.",
+      "ref": 6
+    },
+    {
+      "name": "Data-Center & AI-Infrastructure Boom",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Google announced ~$9B to build a Stillwater campus and expand its Pryor facility for cloud and AI workloads. Meta broke ground on an AI-optimized Tulsa data center (Project Anthem), and IREN, Core Scientific, and Beale Infrastructure are adding capacity. This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
+      "ref": 7
+    },
+    {
+      "name": "AI-Driven Cybersecurity",
+      "status": "Deployed",
+      "statusType": "good",
+      "dellFit": 65,
+      "budgetStrength": 50,
+      "tags": ["Cybersecurity", "AI", "Security"],
+      "summary": "OMES has stood up AI/ML-based threat detection (including Darktrace) and runs annual Cybersecurity Awareness initiatives under a recurring gubernatorial proclamation. Security is a standing statewide program under the CIO — an opening for secure compute, infrastructure, and managed services tied to the modernization plan.",
+      "ref": 3
+    }
+  ],
+
+  "procurement": {
+    "intro": "Procurement is centralized at OMES. Central Purchasing runs statewide acquisition under the Central Purchasing Act, and the State CIO has separate authority to designate IT contracts as statewide — including mandatory statewide contracts that agencies must use. Cooperative vehicles (notably NASPO ValuePoint via participating addenda) extend reach. The consolidated model means a few correctly-scoped statewide contracts can cover most of the executive branch.",
+    "vehicles": [
+      { "name": "OMES Statewide Contracts (SW####)", "detail": "Primary vehicle. CIO can designate IT contracts as statewide or mandatory statewide; agencies (and many locals) purchase off them without separate RFPs. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "NASPO ValuePoint (participating addenda)", "detail": "Cooperative national contracts extended into Oklahoma via OMES participating addenda — e.g., the Carahsoft cloud-solutions addendum. A fast path for cloud and IT goods/services." },
+      { "name": "Enterprise / consolidation agreements", "detail": "The State CIO can negotiate enterprise and consolidation contracts across multiple agencies to cut acquisition cost — the lever for large standardized buys." }
+    ],
+    "entities": [
+      { "name": "OMES — Information Services & Central Purchasing", "role": "Central IT authority and statewide procurement; the single most important account under the State CIO." },
+      { "name": "Oklahoma Broadband Office (OBO)", "role": "Administers ~$1.4B in federal broadband programs incl. $574M BEAD deployment in 2026." },
+      { "name": "University of Oklahoma (OU) / Oklahoma State (OSU)", "role": "Independent research-computing and AI-infrastructure buyers; OSU anchors the Stillwater data-center corridor." },
+      { "name": "Health & human-services agencies", "role": "Among the larger data-heavy agency IT spenders within the consolidated model." }
+    ],
+    "competition": "Oklahoma is a centralized, contract-driven market — winning means holding the right OMES statewide and cooperative agreements and aligning to the CIO's modernization plan. Incumbents and resellers (e.g., Carahsoft, WWT) hold cooperative coverage across compute, cloud, and services. Differentiation comes from cloud-native modernization fit, AI-infrastructure capability tied to the data-center boom, and governed-AI/security offerings rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Kevin Stitt", "title": "Governor", "org": "State of Oklahoma", "note": "Pushes efficiency, AI adoption, and fiscal stewardship; created the Task Force on Emerging Technologies and declares annual Cybersecurity Awareness Month." },
+    { "name": "Dan Cronin", "title": "State Chief Information Officer", "org": "OMES", "note": "Appointed Jan 6, 2025; 25+ yrs (Microsoft, Allstate, Marriott). Owns the consolidated IT model, statewide contracts, and the FY26–28 strategic plan.", "ref": 5 },
+    { "name": "Tai Phan", "title": "State Chief AI & Technology Officer", "org": "OMES", "note": "First-ever role, named Nov 21, 2025; OU grad and former OMES CTO. Leads AI strategy and digital modernization across agencies.", "ref": 6 },
+    { "name": "OMES Central Purchasing", "title": "Statewide procurement authority", "org": "State of Oklahoma", "note": "Runs the Central Purchasing Act and statewide/cooperative IT contracts — the buying mechanism for the executive branch." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "Meta breaks ground on AI-optimized Tulsa data center (Project Anthem)", "impact": "Adds to the AI-infrastructure wave; reinforces Oklahoma as a national AI hub.", "tags": ["Data Centers", "AI"], "ref": 7 },
+    { "date": "2026-04", "title": "Gov. Stitt signs FY2027 budget (SB 1177, ~$12.8B)", "impact": "Slightly larger budget funds agency services; technology flows centrally through OMES.", "tags": ["Budget"], "ref": 2 },
+    { "date": "2025-11", "title": "Tai Phan named first State Chief AI & Technology Officer", "impact": "Formalizes statewide AI leadership; agencies need governed, auditable AI approaches.", "tags": ["AI", "Leadership"], "ref": 6 },
+    { "date": "2025-10", "title": "Statewide Cybersecurity Awareness Month + AI threat detection", "impact": "Security elevated as a standing CIO program; openings for secure compute and services.", "tags": ["Cybersecurity"], "ref": 3 },
+    { "date": "2025-08", "title": "Google announces ~$9B Oklahoma cloud/AI investment", "impact": "Stillwater campus + Pryor expansion signal the scale of AI infrastructure landing in-state.", "tags": ["Data Centers", "AI"], "ref": 7 },
+    { "date": "2025-01", "title": "Dan Cronin begins as State CIO; FY26–28 IT Strategic Plan follows", "impact": "New leadership sets a cloud-native modernization and legacy-retirement agenda at OMES.", "tags": ["Leadership", "Modernization"], "ref": 5 }
+  ],
+
+  "dellActions": [
+    "Treat OMES as the primary consolidated enterprise account — map Dell offerings to the FY26–28 IT Strategic Plan's cloud-native modernization and legacy-retirement goals across 125+ agencies.",
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the Google, Meta, and IREN data-center boom and to OU/OSU research-computing buyers.",
+    "Confirm Dell's OMES statewide and NASPO ValuePoint cooperative coverage and resellers are current and correctly scoped before pursuing agency deals.",
+    "Position governed, private/on-prem AI for sensitive workloads against Oklahoma's published state AI-use standard as agencies operationalize AI.",
+    "Engage the State CIO and Chief AI & Technology Officer directly — in a consolidated model, leadership alignment drives statewide standardization."
+  ],
+
+  "sources": [
+    { "label": "Oklahoma Voice — Republicans tout proposed $12.6B budget deal (FY2026)", "url": "https://oklahomavoice.com/2025/05/14/oklahoma-republicans-tout-proposed-12-6-billion-budget-deal/" },
+    { "label": "Oklahoma Voice — Governor signs Oklahoma budget bill (FY2027, SB 1177)", "url": "https://oklahomavoice.com/briefs/governor-signs-oklahoma-budget-bill/" },
+    { "label": "OMES — Cybersecurity Awareness Month: Oklahoma's commitment to a safer digital future", "url": "https://oklahoma.gov/omes/newsroom/2025/cybersecurity-awareness-month--oklahoma-s-commitment-to-a-safer-.html" },
+    { "label": "OMES — Oklahoma's Artificial Intelligence (AI) strategy & ITCCA authority", "url": "https://oklahoma.gov/ai.html" },
+    { "label": "OMES — Oklahoma announces IT strategy (FY2026–2028 IT Strategic Plan)", "url": "https://oklahoma.gov/omes/media/blog/2025/oklahoma-announces-it-strategy-for-more-efficient-customer-focus.html" },
+    { "label": "OMES — Tai Phan announced as State Chief AI and Technology Officer", "url": "https://oklahoma.gov/omes/newsroom/2025/tai-phan-announced-as-state-chief-ai-and-technology-officer.html" },
+    { "label": "Google — $9B investment in Oklahoma AI/cloud infrastructure", "url": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-oklahoma/" },
+    { "label": "Oklahoma Broadband Office — BEAD program (deployment funding)", "url": "https://oklahoma.gov/broadband/grant-programs/broadband-equity-access-and-deployment-program-.html" },
+    { "label": "GovTech — Oklahoma names Dan Cronin as the state's newest CIO", "url": "https://www.govtech.com/workforce/oklahoma-names-dan-cronin-as-the-states-newest-cio" },
+    { "label": "OMES — IT Procurement (statewide/mandatory statewide IT contracts)", "url": "https://oklahoma.gov/omes/divisions/information-services/about-information-services/it-procurement.html" }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "code": "SC",
+  "name": "South Carolina",
+  "slug": "south-carolina",
+  "region": "Southeast",
+  "updated": "2026-06-15",
+  "tagline": "A $9B Google data-center buildout, a citizen-facing AI assistant going live, and a CIO running a 'protect, promote, pursue' AI playbook across 80+ agencies — South Carolina is modernizing fast on a centralized buying model.",
+
+  "snapshot": [
+    { "label": "FY2025-26 Budget (all funds)", "value": "~$41.6B" },
+    { "label": "Primary IT Vehicle", "value": "Statewide Term Contracts" },
+    { "label": "Central IT", "value": "DTO / Admin" },
+    { "label": "AI Governance", "value": "AI Center of Excellence" }
+  ],
+
+  "execSummary": {
+    "summary": "South Carolina budgets annually (fiscal year July–June) and runs a centralized technology model: the Division of Technology Operations (DTO) inside the Department of Administration delivers enterprise IT, while the Division of Procurement Services / Materials Management Office owns statewide contracts. Three things matter to a Dell seller right now. First, an historic AI-infrastructure buildout is landing — Google committed roughly $9B through 2027 across Berkeley and Dorchester counties, and Meta is building an ~$800M AI-optimized data center in Aiken County. Second, the state is operationalizing AI under CIO Nathan Hogue's 'three Ps' framework (protect, promote, pursue), an AI Center of Excellence that vets proposals, and the citizen-facing 'Bradley' AI assistant (with Tyler Technologies). Third, centralized cybersecurity spans 80+ agencies, with a Deloitte-run security operations center, next-gen firewalls, and legacy modernization opening the door to cloud and AI. The buying motion runs through SC statewide term contracts; greenfield data centers and agency modernization are the strongest Dell tailwinds.",
+    "opportunities": [
+      "AI-infrastructure demand tied to the Google ($9B) and Meta (~$800M) data-center buildout — PowerEdge, networking, and services.",
+      "Legacy application and infrastructure modernization across 80+ agencies as the state unlocks 'trapped' data for cloud and AI.",
+      "Governed, on-prem / private-cloud AI for sensitive citizen data as agencies move proposals through the AI Center of Excellence.",
+      "Endpoint, client, and lifecycle refresh across a centralized enterprise-IT estate run by DTO."
+    ],
+    "stats": [
+      { "value": "~$41.6B", "label": "FY2025-26 budget (all funds)", "note": "~$13.2B general fund; H.4025", "ref": 1 },
+      { "value": "$9B", "label": "Google SC data centers", "note": "Through 2027; Berkeley + Dorchester", "ref": 7 },
+      { "value": "~$800M", "label": "Meta Aiken County data center", "note": "AI-optimized; ~715,000 sq ft", "ref": 8 },
+      { "value": "80+", "label": "Agencies under central cyber monitoring", "note": "Deloitte-run SOC; next-gen firewalls", "ref": 3 }
+    ]
+  },
+
+  "budget": {
+    "intro": "South Carolina enacts an annual budget on a July–June fiscal year. The FY2025-26 General Appropriations Act (H.4025) totals roughly $41.6B in all funds, of which about $13.2B is general fund. There is no single published 'state IT budget' line — technology spend is distributed across agencies, with enterprise services centralized in the Division of Technology Operations and statewide buying run through Procurement Services. Governor McMaster's FY2026-27 executive budget (announced January 2026) totals ~$42.8B all funds / ~$14.0B general fund and is now moving through the General Assembly.",
+    "stats": [
+      { "value": "~$13.2B", "label": "FY2025-26 general fund", "note": "H.4025, enacted", "ref": 1 },
+      { "value": "~$14.0B", "label": "FY2026-27 GF (proposed)", "note": "McMaster executive budget", "ref": 2 },
+      { "value": "$41.3M", "label": "Planned BEAD spend", "note": "Of ~$551M allocated; few unserved left", "ref": 9 }
+    ],
+    "breakdown": [
+      { "label": "Total budget (all funds)", "amount": 41600, "display": "~$41.6B", "note": "FY2025-26 enacted (H.4025)" },
+      { "label": "General fund", "amount": 13200, "display": "~$13.2B", "note": "FY2025-26 portion" },
+      { "label": "Planned BEAD broadband spend", "amount": 41, "display": "$41.3M", "note": "Of ~$551M; ~7.5% drawn" }
+    ],
+    "notes": [
+      "South Carolina budgets annually, not biennially — confirm the current enacted fiscal year before forecasting.",
+      "There is no single 'state IT budget' line item; technology dollars sit inside agency appropriations and enterprise services run by DTO."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Data-Center Buildout (Google + Meta)",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Google committed roughly $9B through 2027 to expand its Berkeley County campus and complete two new campuses in Dorchester County, and Meta is building an ~$800M, ~715,000-sq-ft AI-optimized data center in Aiken County. This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state, with adjacent ecosystem and supplier opportunity.",
+      "ref": 7
+    },
+    {
+      "name": "Statewide AI Program & Center of Excellence",
+      "status": "Operationalizing",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["AI", "Governance", "Modernization"],
+      "summary": "CIO Nathan Hogue's 'three Ps' framework (protect, promote, pursue) anchors the state's AI strategy. An AI Center of Excellence — convening agencies, higher ed, and industry — held its first meeting in February 2025 and vets proposals on privacy and security before rollout. An opening for governed, auditable, private/on-prem AI on sensitive citizen data.",
+      "ref": 5
+    },
+    {
+      "name": "Bradley — Citizen AI Assistant",
+      "status": "Launching",
+      "statusType": "warn",
+      "dellFit": 55,
+      "budgetStrength": 50,
+      "tags": ["AI", "Citizen Services"],
+      "summary": "Built with Tyler Technologies, 'Bradley' lets citizens use plain language to apply to be a notary, pay taxes, or find water-bill information, with identity management and fraud detection. It signals appetite for AI-driven service delivery and the compute, data, and security backbone such workloads require.",
+      "ref": 4
+    },
+    {
+      "name": "Enterprise Cybersecurity & Modernization",
+      "status": "Active",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 60,
+      "tags": ["Cybersecurity", "Cloud", "Modernization"],
+      "summary": "South Carolina centrally monitors 80+ agencies, runs a Deloitte-operated security operations center, upgraded next-gen firewall services, and hardened Office 365. Hogue frames legacy modernization as foundational to unlocking trapped data for cloud and AI — a multi-year infrastructure and services runway.",
+      "ref": 3
+    }
+  ],
+
+  "procurement": {
+    "intro": "South Carolina runs a centralized procurement model under the Consolidated Procurement Code. The Division of Procurement Services (within the Department of Administration) is the state's central procurement authority; its Materials Management Office and an Information Technology Management Office establish open-ended statewide term contracts that leverage the collective buying power of state agencies and political subdivisions. Enterprise IT delivery is centralized in the Division of Technology Operations (DTO).",
+    "vehicles": [
+      { "name": "Statewide Term Contracts", "detail": "Primary vehicle. Pre-competed, open-ended contracts open to state agencies and political subdivisions; searchable via procurement.sc.gov. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "IT Management Office", "detail": "Information Technology Management Officer within Procurement Services leads IT-specific acquisitions and large technology procurements." },
+      { "name": "DTO Enterprise Services", "detail": "Division of Technology Operations delivers centralized enterprise IT, security monitoring, and shared services for participating agencies." }
+    ],
+    "entities": [
+      { "name": "Division of Procurement Services / MMO", "role": "Central procurement authority; owns statewide term contracts and IT acquisitions." },
+      { "name": "Division of Technology Operations (DTO)", "role": "Enterprise IT, cybersecurity monitoring (80+ agencies), and shared services." },
+      { "name": "Department of Administration", "role": "Houses DTO and Procurement Services; sets statewide technology and budget direction." },
+      { "name": "Clemson University & University of South Carolina", "role": "Large independent research-computing and AI-infrastructure buyers." }
+    ],
+    "competition": "South Carolina is a centralized, contract-driven market — differentiation comes from statewide-contract coverage, AI-infrastructure capability tied to the data-center boom, and services that map to enterprise modernization and the AI Center of Excellence rather than price alone. Incumbents like Deloitte (SOC) and Tyler Technologies (citizen services) hold meaningful agency relationships."
+  },
+
+  "powerStructure": [
+    { "name": "Henry McMaster", "title": "Governor", "org": "State of South Carolina", "note": "Sets the executive budget; champions the data-center and economic-development agenda.", "ref": 2 },
+    { "name": "Nathan Hogue", "title": "State CIO", "org": "SC Department of Administration", "note": "Owns statewide tech direction; author of the 'three Ps' AI framework and AI Center of Excellence. Career SC IT leader since 2001.", "ref": 6 },
+    { "name": "Division of Procurement Services", "title": "Central procurement / statewide contracts", "org": "Dept. of Administration", "note": "Materials Management Office + IT Management Office own the statewide buying motion." },
+    { "name": "House AI & Cybersecurity Committee", "title": "Legislative oversight", "org": "SC General Assembly", "note": "Regulations, Administrative Procedures, AI & Cybersecurity Committee — tracks AI/cyber policy.", "ref": 3 }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Statewide AI report (Edition 0.1) published via SC Research Authority", "impact": "Signals a maturing, governed AI agenda across state government.", "tags": ["AI", "Policy"], "ref": 3 },
+    { "date": "2026-01", "title": "McMaster announces FY2026-27 executive budget (~$42.8B all funds)", "impact": "Sets spending priorities; budget moves through the General Assembly for July start.", "tags": ["Budget"], "ref": 2 },
+    { "date": "2025-12", "title": "Google confirms ~$9B SC data-center expansion through 2027", "impact": "Largest AI-infrastructure tailwind in the state; Berkeley + Dorchester campuses.", "tags": ["Data Centers", "AI"], "ref": 7 },
+    { "date": "2025-10", "title": "Meta announces ~$800M AI-optimized data center in Aiken County", "impact": "First Meta operation in SC; reinforces the state as an AI-infrastructure hub.", "tags": ["Data Centers", "AI"], "ref": 8 },
+    { "date": "2025-09", "title": "'Bradley' citizen AI assistant goes live (with Tyler Technologies)", "impact": "AI-driven service delivery raises demand for compute, data, and security backbone.", "tags": ["AI", "Citizen Services"], "ref": 4 },
+    { "date": "2025-02", "title": "AI Center of Excellence holds inaugural meeting", "impact": "Formal governance gate for agency AI proposals — an opening for governed, auditable AI.", "tags": ["AI", "Governance"], "ref": 5 }
+  ],
+
+  "dellActions": [
+    "Lead with AI-infrastructure: tie Dell ISG / AI Factory offerings to the Google and Meta data-center buildout and the Clemson/USC research-computing buyers.",
+    "Pursue enterprise modernization across DTO's 80+-agency estate — position infrastructure and services that unlock legacy data for cloud and AI.",
+    "Position governed, private/on-prem AI for sensitive citizen workloads as proposals move through the AI Center of Excellence.",
+    "Validate Dell's statewide term contract coverage and resellers via Procurement Services / the IT Management Office for the agencies you're targeting.",
+    "Engage on the cybersecurity stack (SOC, next-gen firewall, endpoint) where Deloitte and incumbents operate — find the secure-compute and infrastructure gaps."
+  ],
+
+  "sources": [
+    { "label": "SC Legislature — FY2025-26 General Appropriations Bill (H.4025)", "url": "https://www.scstatehouse.gov/sess126_2025-2026/appropriations2025/gab4025.php" },
+    { "label": "Gov. McMaster — FY2026-27 Executive Budget announcement", "url": "https://governor.sc.gov/news/2026-01/governor-henry-mcmaster-announces-fiscal-year-2026-2027-executive-budget" },
+    { "label": "GovTech — South Carolina AI, Cyber Initiatives Reshape Services", "url": "https://www.govtech.com/artificial-intelligence/south-carolina-ai-cyber-initiatives-reshape-services" },
+    { "label": "GovTech — South Carolina Looks to Modernize, Build on Partnerships", "url": "https://www.govtech.com/computing/south-carolina-looks-to-modernize-build-on-partnerships" },
+    { "label": "GovTech — South Carolina Prepares to Launch AI Center of Excellence", "url": "https://www.govtech.com/artificial-intelligence/south-carolina-prepares-to-launch-ai-center-of-excellence" },
+    { "label": "SC ETV — Nathan Hogue, CIO, SC Department of Administration", "url": "https://www.scetv.org/about/people/nathan-hogue" },
+    { "label": "Data Center Dynamics — Google to invest $9B in South Carolina data centers", "url": "https://www.datacenterdynamics.com/en/news/google-to-invest-9bn-in-south-carolina-data-centers/" },
+    { "label": "WLTX — Meta to build ~$800M data center in Aiken County", "url": "https://www.wltx.com/article/news/local/midlands/building-the-midlands/google-to-invest-9billion-dollars-in-south-carolina-data-center-expansion/101-6999f41c-efd3-4663-9bd1-c18414f7efd0" },
+    { "label": "Broadband Breakfast — South Carolina plans to spend a fraction of its BEAD allocation", "url": "https://broadbandbreakfast.com/south-carolina-plans-to-spend-just-10-of-original-bead-allocation/" },
+    { "label": "SC Procurement — Statewide Term Contract Search / Procurement Services", "url": "https://procurement.sc.gov/contracts/search" }
+  ]
+}

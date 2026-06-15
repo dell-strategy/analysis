@@ -1,0 +1,148 @@
+{
+  "code": "GA",
+  "name": "Georgia",
+  "slug": "georgia",
+  "region": "Southeast",
+  "updated": "2026-06-15",
+  "tagline": "A $38.5B FY2027 budget, a fast-maturing statewide AI governance program, and one of the nation's hottest data-center markets now facing a tax and energy reckoning — Georgia is reshaping how it adopts and secures technology.",
+
+  "snapshot": [
+    { "label": "FY2027 Budget", "value": "$38.5B" },
+    { "label": "Central IT Agency", "value": "GTA" },
+    { "label": "AI Posture", "value": "Governance = Security" },
+    { "label": "Broadband (BEAD)", "value": "~$1.3B" }
+  ],
+
+  "execSummary": {
+    "summary": "Georgia budgets annually on a July–June fiscal year. Governor Kemp signed the $38.5B FY2027 budget in May 2026, a fiscally cautious plan that directs agencies to withhold more than $300M in proposed new spending — a 'disciplined growth' signal sellers should price in. Three structural themes matter for SLG sellers. First, the Georgia Technology Authority (GTA) runs a centralized, security-first technology motion under State CIO Shawnzia Thomas, whose 2026 philosophy is explicitly 'AI Governance Is Security' — NIST controls applied to AI the same as any other system, with every agency required to publish an AI usage plan by Dec 31, 2026. Second, Georgia is deploying ~$1.3B in BEAD broadband funding through GTA, moving from planning into build-out. Third, metro Atlanta is one of the country's largest data-center hubs, but a 2026 legislative fight over tax exemptions, energy, and local moratoriums is creating uncertainty. For Dell, the buying motion runs through GTA Direct and statewide contracts, and the security-first culture rewards governed, on-prem and private-cloud AI for sensitive workloads.",
+    "opportunities": [
+      "Governed AI adoption as agencies build mandated AI usage plans (due Dec 31, 2026) — lead with private/on-prem AI and NIST-aligned controls for sensitive data.",
+      "Cybersecurity modernization tied to GTA's 'security is security' posture and statewide exercises like Cyber Dawg.",
+      "AI-infrastructure and ISG demand from the metro-Atlanta data-center market and the University System of Georgia's research computing.",
+      "Endpoint, client, and lifecycle refresh across a large, centralized state enterprise under disciplined-growth budgeting."
+    ],
+    "stats": [
+      { "value": "$38.5B", "label": "FY2027 Budget", "note": "Signed May 12, 2026; ~2% growth", "ref": 1 },
+      { "value": "$37.7B", "label": "FY2026 Budget", "note": "Signed May 9, 2025", "ref": 2 },
+      { "value": "~$1.3B", "label": "BEAD Broadband", "note": "Federal funds via GTA; final proposal approved Nov 2025", "ref": 7 },
+      { "value": "Dec 31 2026", "label": "Agency AI plans due", "note": "Mandated AI usage plans", "ref": 6 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Georgia budgets on an annual July–June fiscal cycle, with an Amended FY (AFY) mid-year adjustment. The General Assembly passed and Governor Kemp signed a $38.5B budget for FY2027 in May 2026 — about 2% (~$738M) above current spending. There is no single 'state IT budget' line; technology spend is distributed across agencies, with GTA providing centralized infrastructure, security, and procurement services and named programs (broadband, AI) funded separately.",
+    "stats": [
+      { "value": "$38.5B", "label": "FY2027 total", "note": "All funds", "ref": 1 },
+      { "value": "$37.7B", "label": "FY2026 total", "note": "All funds", "ref": 2 },
+      { "value": ">$300M", "label": "Withheld new spending", "note": "Kemp directive in FY2027", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "BEAD broadband (federal)", "amount": 1300, "display": "~$1.3B", "note": "Deployed via GTA; multi-year" },
+      { "label": "GBI crime-lab tech upgrade", "amount": 1.7, "display": "$1.7M", "note": "New positions + technology (FY26)" },
+      { "label": "Statewide gang case-management system", "amount": 1, "display": "$1M", "note": "Enforcement support (FY26)" }
+    ],
+    "notes": [
+      "Georgia's fiscal year runs July 1–June 30; figures here are annual unless noted.",
+      "FY2027 is a disciplined-growth budget — >$300M of proposed new spending was held back, so confirm an agency's funded scope before forecasting.",
+      "BEAD is multi-year federal money administered by GTA, not a single-year state appropriation."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Statewide AI Governance Framework",
+      "status": "Scaling",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 60,
+      "tags": ["AI", "Governance", "Security"],
+      "summary": "GTA's Office of Artificial Intelligence runs a maturing framework: an AI Roadmap and Governance Framework, a Generative AI Responsible Use Standard, a Georgia Board for Artificial Intelligence, and a mandate that every agency publish a detailed AI usage plan by Dec 31, 2026. Governance is treated as security (NIST controls applied to AI). This is an opening for governed, auditable, private/on-prem AI on sensitive data rather than open public models.",
+      "ref": 5
+    },
+    {
+      "name": "'AI Governance Is Security' — Cyber Posture",
+      "status": "Active",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "AI", "NIST"],
+      "summary": "Under State CIO Shawnzia Thomas, Georgia's 2026 philosophy applies the same NIST controls — access control, audit logging, data protection, oversight — to AI as to any other technology. The state runs large-scale exercises (Cyber Dawg) and a July 2025 Innovation Lab that uses synthetic data only. Security-first culture rewards vendors who lead with controls, not just capability.",
+      "ref": 4
+    },
+    {
+      "name": "BEAD Broadband Build-Out",
+      "status": "Implementation",
+      "statusType": "good",
+      "dellFit": 50,
+      "budgetStrength": 80,
+      "tags": ["Broadband", "Federal Funds", "Infrastructure"],
+      "summary": "GTA administers ~$1.3B in federal BEAD funding to close Georgia's digital divide. After an NTIA-mandated restructuring in mid-2025, Georgia's updated final proposal was approved Nov 18, 2025, and the program is moving from planning into implementation. Leftover funds can support workforce, telehealth, cybersecurity, and digital-literacy use cases.",
+      "ref": 7
+    },
+    {
+      "name": "Metro-Atlanta Data-Center Market",
+      "status": "Under Policy Review",
+      "statusType": "warn",
+      "dellFit": 80,
+      "budgetStrength": 65,
+      "tags": ["Data Centers", "AI Infrastructure", "Legislation"],
+      "summary": "Metro Atlanta is a top-tier U.S. data-center hub (Microsoft, QTS, CoreSite, DataBank and others). But a 2026 legislative fight over sales-tax exemptions, energy/grid impacts, and a wave of local moratoriums (multiple HB/SB bills) is creating uncertainty for new builds. The strongest Dell AI-infrastructure tailwind in the state — but watch the tax/energy policy outcome.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Georgia Technology Authority (GTA) is the state's central IT and cybersecurity agency. Most state technology buys run through GTA Direct — a managed-services path that gives agencies, local governments, colleges/universities, and boards of education access to IT services through pre-qualified, market-leading providers. For transactions over $25,000, GTA procurement uses solicitation types (RFQ, RFP, RFQC) prioritized by 'best value,' often establishing pools of pre-qualified contractors. GTA also endorses major agency technology procurements.",
+    "vehicles": [
+      { "name": "GTA Direct", "detail": "Primary managed-services path. Pre-qualified providers; open to state agencies, local gov, higher-ed, and boards of education. Confirm Dell coverage and resellers are current." },
+      { "name": "GTA-endorsed agency procurements", "detail": "Large agency technology buys require GTA endorsement — engage GTA early to shape requirements." },
+      { "name": "RFQC pre-qualified pools", "detail": "Request for Qualified Contractors establishes vendor pools; getting into the pool is the gate to compete." },
+      { "name": "AI governance review", "detail": "Not a contract, but AI/software purchases flow through GTA's AI governance and software-approval process — clear it early." }
+    ],
+    "entities": [
+      { "name": "GTA", "role": "Central IT, cybersecurity, AI governance, broadband, and statewide procurement — leads the technology motion." },
+      { "name": "Dept. of Administrative Services (DOAS)", "role": "Statewide non-IT procurement authority; coordinates with GTA on enterprise buys." },
+      { "name": "University System of Georgia (USG)", "role": "26 institutions; large, semi-independent research-computing and AI-infrastructure buyer." },
+      { "name": "Dept. of Community Health / large agencies", "role": "Data-heavy modernization and among the larger agency technology spenders." }
+    ],
+    "competition": "Georgia is a centralized, governance-driven market — GTA's pre-qualified pools and 'best value' model mean incumbents hold position across compute, security, and services. Differentiation comes from NIST-aligned, governed-AI-ready offerings, security-first packaging that fits the 'AI Governance Is Security' culture, and AI-infrastructure capability mapped to the data-center and USG research buyers — not price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Brian Kemp", "title": "Governor", "org": "State of Georgia", "note": "Signed the $38.5B FY2027 budget; fiscally disciplined, withheld >$300M in new spending.", "ref": 1 },
+    { "name": "Shawnzia Thomas", "title": "State CIO & GTA Executive Director", "org": "Georgia Technology Authority", "note": "Owns statewide tech direction; 2026 philosophy 'AI Governance Is Security.'", "ref": 4 },
+    { "name": "GTA Office of Artificial Intelligence", "title": "AI governance & standards", "org": "GTA", "note": "Runs the AI roadmap, GenAI Responsible Use Standard, and agency AI-plan mandate (due Dec 31, 2026).", "ref": 5 },
+    { "name": "Georgia General Assembly", "title": "Appropriations & legislation", "org": "State of Georgia", "note": "Sets the annual budget; in 2026 debating data-center tax exemptions, energy, and moratoriums.", "ref": 8 },
+    { "name": "University System of Georgia", "title": "Higher-ed system", "org": "USG", "note": "26 institutions; large independent research-computing and AI-infrastructure buyer." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Kemp signs $38.5B FY2027 budget; directs >$300M in withheld new spending", "impact": "Disciplined-growth budget — confirm funded scope before forecasting agency deals.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2026-03", "title": "GTA releases FY2025 Annual State IT Report", "impact": "Highlights agencywide AI licensing/training and secured broadband funding — signals where modernization dollars flow.", "tags": ["IT Strategy", "AI"], "ref": 3 },
+    { "date": "2026-02", "title": "2026 legislature debates data-center tax-exemption suspension and moratorium bills", "impact": "Policy uncertainty for new data-center builds; watch tax/energy outcome before pursuing infrastructure deals.", "tags": ["Data Centers", "Legislation"], "ref": 8 },
+    { "date": "2026-01", "title": "Georgia's 2026 tech philosophy framed as 'AI Governance Is Security'", "impact": "Security-first buying culture; lead with NIST-aligned, governed AI.", "tags": ["AI", "Cybersecurity"], "ref": 4 },
+    { "date": "2025-11", "title": "NTIA approves Georgia's updated BEAD final proposal (~$1.3B)", "impact": "Broadband program moves from planning into implementation via GTA.", "tags": ["Broadband"], "ref": 7 },
+    { "date": "2025-07", "title": "GTA launches Innovation Lab (synthetic-data only)", "impact": "A governed sandbox for agencies to test emerging tech — a channel for piloting governed AI.", "tags": ["AI", "Innovation"], "ref": 4 }
+  ],
+
+  "dellActions": [
+    "Lead with governed, private/on-prem AI as agencies build mandated AI usage plans (due Dec 31, 2026) — map offerings to GTA's NIST-aligned governance framework.",
+    "Package security-first to fit the 'AI Governance Is Security' culture — emphasize access control, audit logging, and data protection, not just capability.",
+    "Validate Dell's GTA Direct coverage and reseller scope, and get into the relevant RFQC pre-qualified pools before pursuing agency deals.",
+    "Tie Dell ISG / AI-infrastructure offerings to the metro-Atlanta data-center market and University System of Georgia research computing — while tracking the 2026 tax/energy policy outcome.",
+    "Engage GTA early on endorsed agency procurements and the Innovation Lab to shape requirements ahead of competition."
+  ],
+
+  "sources": [
+    { "label": "Office of the Governor — Gov. Kemp Signs FY27 Budget", "url": "https://gov.georgia.gov/press-releases/2026-05-12/gov-kemp-signs-fy27-budget" },
+    { "label": "Office of the Governor — Gov. Kemp Signs FY26 Budget", "url": "https://gov.georgia.gov/press-releases/2025-05-09/atlanta-governor-brian-p-kemp-joined" },
+    { "label": "GTA — FY2025 Annual State IT Report", "url": "https://gta.georgia.gov/news/2026-03-06/fy2025-annual-state-it-report" },
+    { "label": "GovTech — Georgia's 2026 Tech Philosophy: 'AI Governance Is Security'", "url": "https://www.govtech.com/security/georgias-2026-tech-philosophy-ai-governance-is-security" },
+    { "label": "Georgia Office of Artificial Intelligence — AI Roadmap and Governance Framework", "url": "https://ai.georgia.gov/blog/2025-02-25/state-georgia-ai-roadmap-and-governance-framework" },
+    { "label": "Georgia Office of Artificial Intelligence — About the Program", "url": "https://ai.georgia.gov/about-program" },
+    { "label": "GTA — BEAD Program", "url": "https://gta.georgia.gov/policies-and-programs/broadband/funding/bead-program" },
+    { "label": "Data Center Dynamics — Georgia Senate passes bill to suspend data center tax exemptions", "url": "https://www.datacenterdynamics.com/en/news/georgia-senate-passes-bill-to-suspend-data-center-tax-exemptions/" },
+    { "label": "GTA — Procurement", "url": "https://gta.georgia.gov/about-us/procurement" },
+    { "label": "GTA — GTA Direct Services", "url": "https://gta.georgia.gov/services-contracts" }
+  ]
+}

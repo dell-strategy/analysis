@@ -1,0 +1,155 @@
+{
+  "code": "MS",
+  "name": "Mississippi",
+  "slug": "mississippi",
+  "region": "Southeast",
+  "updated": "2026-06-15",
+  "tagline": "A $25B AWS data-center buildout, a brand-new state Security Operations Center, and a hard-centralizing ITS — Mississippi is becoming national AI infrastructure while tightening how it buys and secures technology.",
+
+  "snapshot": [
+    { "label": "FY2026 General Fund", "value": "~$7.0B" },
+    { "label": "Primary IT Authority", "value": "MDITS (ITS)" },
+    { "label": "AWS Investment", "value": "$25B" },
+    { "label": "New Cyber Hub", "value": "State SOC" }
+  ],
+
+  "execSummary": {
+    "summary": "Mississippi is punching far above its budget weight in technology. AWS has committed $25B across the state — the largest capital investment in Mississippi history — anchored by 'Project Atlas' in Madison County and additional campuses in Warren, Hinds and Clinton, turning the Magnolia State into national AI infrastructure. At the same time, the 2026 legislature passed a tight pair of laws: the IT Optimization Act (SB2653), which centralizes technology administration and kills duplicative contracts through ITS, and SB2654, creating a statewide State Security Operations Center (SOC) inside ITS. The Mississippi Department of Information Technology Services (MDITS/ITS) is the central procurement and approval gate for essentially all state IT — any acquisition above a modest threshold must run through ITS. For Dell, the data-center boom is the headline AI-infrastructure angle, but the buying motion runs through ITS, and the new SOC plus a centralizing mandate create fresh infrastructure and refresh demand.",
+    "opportunities": [
+      "AI-infrastructure / 'AI factory' demand tied to the $25B AWS data-center buildout and the broader central-Mississippi compute corridor (PowerEdge, networking, services, supporting ecosystem).",
+      "Stand-up of the State Security Operations Center inside ITS — secure compute, infrastructure, and managed services for a greenfield cyber function.",
+      "IT Optimization Act consolidation — contract rationalization and shared services create displacement and standardization openings across dozens of agencies.",
+      "Endpoint, client, and lifecycle refresh across state agencies and the public university (IHL) system as ITS centralizes purchasing."
+    ],
+    "stats": [
+      { "value": "$25B", "label": "AWS investment in MS", "note": "Largest in state history; ~2,000 jobs", "ref": 1 },
+      { "value": "~$7.0B", "label": "FY2026 General Fund", "note": "Annual cycle; FY starts July 1", "ref": 4 },
+      { "value": "~$3M", "label": "State SOC (SB2654)", "note": "New cyber operations center in ITS", "ref": 6 },
+      { "value": "$250K", "label": "ITS approval threshold", "note": "Buys above require ITS involvement", "ref": 9 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Mississippi budgets on an annual cycle with the fiscal year beginning July 1. The FY2026 General Fund is roughly $7.0B, set against an adopted revenue estimate near $7.6B. There is no single consolidated 'state IT budget' line — technology spend is distributed across agencies and a handful of named initiatives, with MDITS/ITS acting as the central procurement and approval authority rather than a large direct spender.",
+    "stats": [
+      { "value": "~$7.0B", "label": "FY2026 General Fund", "note": "Joint Legislative Budget Committee", "ref": 4 },
+      { "value": "~$7.6B", "label": "FY2026 revenue estimate", "note": "Adopted estimate", "ref": 4 },
+      { "value": "July 1", "label": "Fiscal year start", "note": "Annual appropriations cycle", "ref": 5 }
+    ],
+    "breakdown": [
+      { "label": "State Security Operations Center", "amount": 3, "display": "~$3M", "note": "New cyber SOC in ITS (SB2654)" },
+      { "label": "Statewide Data Exchange study", "amount": 1, "display": "~$1M", "note": "ITS / Gartner data-sharing study (SB2267)" },
+      { "label": "Optimization-driven savings", "amount": 2, "display": "~$2M", "note": "Illustrative; email-license consolidation alone" }
+    ],
+    "notes": [
+      "Mississippi appropriates annually; figures here are FY2026 unless noted.",
+      "IT dollars are distributed across agencies; ITS is the procurement/approval gate, not a single large spending line — confirm the owning agency before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "AWS $25B Data-Center Buildout",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 90,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "AWS has committed $25B across Mississippi — the largest capital investment in state history — anchored by 'Project Atlas' in Madison County (~$11B, two industrial parks, ~1,700 acres) plus campuses in Warren County/Vicksburg (~$3B), Hinds County (former Delphi plant), and Clinton, creating roughly 2,000 jobs. This is the strongest tailwind in the state for Dell AI-infrastructure and ISG demand and the supporting compute ecosystem.",
+      "ref": 1
+    },
+    {
+      "name": "IT Optimization Act (SB2653)",
+      "status": "Signed 2026",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 60,
+      "tags": ["Centralization", "Procurement", "Shared Services"],
+      "summary": "Signed by Gov. Reeves, the Act centralizes technology administration and reduces duplicative contracts across dozens of agencies, and establishes a council of agency CIOs to advise ITS on consolidation and technology standards (an illustrative example: consolidating 31 Microsoft email licenses to save ~$2M). Contract rationalization creates displacement and standardization openings — and reinforces ITS as the single buying gate.",
+      "ref": 7
+    },
+    {
+      "name": "State Security Operations Center (SB2654)",
+      "status": "Enacted 2026",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "New Function", "ITS"],
+      "summary": "SB2654 creates a statewide State Security Operations Center (~$3M) housed in ITS to detect, respond to, and recover from cyber threats, with authority to set statewide security standards, require incident reporting, and coordinate with Homeland Security and federal partners. A greenfield cyber function means greenfield secure compute, infrastructure, and managed-services needs.",
+      "ref": 6
+    },
+    {
+      "name": "Statewide Data Exchange",
+      "status": "Study underway",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 45,
+      "tags": ["Data", "Modernization", "ITS"],
+      "summary": "SB2267 (2025) directed ITS to study creation of a statewide data exchange to break down agency data silos; ITS contracted Gartner in September 2025 to scope it. As the study moves toward implementation, it opens data-platform, storage, and integration infrastructure conversations across state government.",
+      "ref": 6
+    },
+    {
+      "name": "BEAD Broadband Buildout (BEAM)",
+      "status": "Approved Feb 2026",
+      "statusType": "good",
+      "dellFit": 40,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Federal Funds", "Infrastructure"],
+      "summary": "NTIA approved Mississippi's BEAD Final Proposal on Feb 9, 2026; the Office of Broadband Expansion and Accessibility of Mississippi (BEAM) will administer it. Preliminary awards exceed $508M to reach ~93,000 unserved households, with ~$321M in matching private funds. Indirect tailwind: broadband and data-center growth raise the state's overall digital-infrastructure demand.",
+      "ref": 3
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Mississippi Department of Information Technology Services (MDITS/ITS) is the central technology procurement and approval authority for state government. ITS facilitates procurement of IT hardware, software, and services for state agencies and public universities (IHLs) as required by statute, and holds approval authority over IT acquisitions — acquisitions above ~$250,000 lifecycle cost require ITS involvement, with limited delegated authority below that threshold. This central-gate structure means the ITS relationship is decisive for nearly every state deal.",
+    "vehicles": [
+      { "name": "ITS Procurement (Express Products List / state contracts)", "detail": "Primary vehicle. ITS runs competitive procurements and maintains state contracts/EPL agreements agencies buy from. Confirm Dell agreements and resellers are current and correctly scoped." },
+      { "name": "ITS approval / acquisition oversight", "detail": "Acquisitions above ~$250K lifecycle cost require ITS involvement; below that, limited delegated authority (e.g., to IHL CIOs). Engage ITS early." },
+      { "name": "IHL / university purchasing", "detail": "Public universities buy research-computing and AI infrastructure, often through or alongside ITS contracts under delegated thresholds." }
+    ],
+    "entities": [
+      { "name": "MDITS / ITS", "role": "Central IT procurement, approval, policy, and now the State SOC — the decisive statewide technology gate." },
+      { "name": "State Security Operations Center", "role": "New cyber function inside ITS; buyer for security infrastructure and managed services." },
+      { "name": "BEAM (Broadband Office)", "role": "Administers BEAD; oversees statewide broadband buildout and related infrastructure." },
+      { "name": "IHL university system (MSU, Ole Miss, USM)", "role": "Research-computing and AI-infrastructure buyers under ITS delegation." }
+    ],
+    "competition": "Mississippi is a centralized, ITS-gated market — winning means being correctly positioned on ITS contracts and standards rather than competing agency-by-agency. Differentiation comes from AI-infrastructure capability tied to the data-center boom, security offerings mapped to the new State SOC, and consolidation/standardization plays aligned to the IT Optimization Act."
+  },
+
+  "powerStructure": [
+    { "name": "Tate Reeves", "title": "Governor", "org": "State of Mississippi", "note": "Champions the AWS data-center agenda; signed the IT Optimization Act and the State SOC law.", "ref": 1 },
+    { "name": "Craig P. Orgeron, Ph.D.", "title": "Executive Director & State CIO", "org": "MDITS / ITS", "note": "Long-tenured state CIO; NASCIO past president and former AWS government advisor — owns the centralized statewide tech motion.", "ref": 8 },
+    { "name": "Mississippi Legislature (Senate)", "title": "IT & cyber legislation", "org": "State of Mississippi", "note": "Authored SB2653 (Optimization Act) and SB2654 (State SOC); SB2625 cabinet-CIO bill died in committee.", "ref": 7 },
+    { "name": "Mississippi Development Authority (MDA)", "title": "Economic development", "org": "State of Mississippi", "note": "Lead on the AWS/data-center deals — useful entry point for the AI-infrastructure ecosystem.", "ref": 2 },
+    { "name": "BEAM — Broadband Office", "title": "Broadband administration", "org": "State of Mississippi", "note": "Administers $500M+ BEAD program; drives statewide digital-infrastructure demand.", "ref": 3 }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "AWS commits to $25B total in Mississippi (Project Atlas + new campuses)", "impact": "Largest investment in state history; cements MS as national AI infrastructure and the top Dell AI-infra tailwind.", "tags": ["Data Centers", "AI"], "ref": 1 },
+    { "date": "2026-03", "title": "Legislature passes SB2654 creating a statewide State Security Operations Center in ITS", "impact": "New greenfield cyber function inside ITS — secure compute, infrastructure, and managed-services demand.", "tags": ["Cybersecurity"], "ref": 6 },
+    { "date": "2026-02", "title": "Gov. Reeves signs the IT Optimization Act (SB2653)", "impact": "Centralizes tech administration and kills duplicative contracts — displacement and standardization openings via ITS.", "tags": ["Procurement", "Centralization"], "ref": 7 },
+    { "date": "2026-02", "title": "NTIA approves Mississippi's BEAD Final Proposal", "impact": "$500M+ broadband buildout under BEAM proceeds; raises statewide digital-infrastructure demand.", "tags": ["Broadband"], "ref": 3 },
+    { "date": "2026-02", "title": "SB2625 cabinet-level CIO bill dies in committee", "impact": "State CIO remains the ITS Executive Director (Orgeron); tech authority stays centralized in ITS.", "tags": ["Leadership", "Policy"], "ref": 7 },
+    { "date": "2025-09", "title": "ITS contracts Gartner for the statewide data exchange study (SB2267)", "impact": "Data-sharing modernization moves toward implementation — data-platform and storage conversations open.", "tags": ["Data", "Modernization"], "ref": 6 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the $25B AWS data-center buildout and the central-Mississippi compute corridor, including the supporting ecosystem and IHL research-computing buyers.",
+    "Engage MDITS/ITS as the decisive central gate — confirm Dell's ITS contract/EPL coverage and resellers are current and correctly scoped before pursuing any agency.",
+    "Pursue the new State Security Operations Center as a greenfield cyber account inside ITS — secure compute, infrastructure, and managed services.",
+    "Map consolidation and standardization plays to the IT Optimization Act — position Dell as the standard for refresh and shared services as ITS rationalizes contracts.",
+    "Use the MDA / data-center momentum and Orgeron's AWS background as relationship entry points, then route the actual buying motion through ITS."
+  ],
+
+  "sources": [
+    { "label": "Mississippi Development Authority — AWS to invest $10B (record), Madison County", "url": "https://mississippi.org/news/amazon-web-services-to-invest-record-shattering-10-billion/" },
+    { "label": "Mississippi Development Authority — Amazon expands to $25B total across Mississippi", "url": "https://mississippi.org/news/amazon-continues-mississippi-expansion-announcing-plans-to-invest-a-total-of-25-billion-across-the-magnolia-state/" },
+    { "label": "Governor of Mississippi — BEAD Final Proposal Approved", "url": "https://governorreeves.ms.gov/bead-final-proposal-approved/" },
+    { "label": "Magnolia Tribune — Joint legislative committee adopts FY2026 budget recommendations", "url": "https://magnoliatribune.com/2024/12/12/joint-legislative-committee-adopts-fy-2026-mississippi-state-budget-recommendations/" },
+    { "label": "Mississippi LBO — Budget Terminology (fiscal year)", "url": "https://www.lbo.ms.gov/Home/BudgetTerminology" },
+    { "label": "StateScoop — Mississippi approves security operations center, centralizing IT services", "url": "https://statescoop.com/mississippi-cybersecurity-operations-center-shared-services/" },
+    { "label": "GovTech — Mississippi Bill Moves to Reshape State Tech Leadership (SB2625/2653)", "url": "https://www.govtech.com/policy/mississippi-bill-moves-to-reshape-state-tech-leadership" },
+    { "label": "Mississippi ITS — Executive Director (Craig Orgeron)", "url": "https://www.its.ms.gov/about/executive-director" },
+    { "label": "Mississippi ITS — Purchasing (IT Procurement) Learn More", "url": "https://www.its.ms.gov/services/purchasing-it-procurement-learn-more" }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "code": "VA",
+  "name": "Virginia",
+  "slug": "virginia",
+  "region": "Southeast",
+  "updated": "2026-06-15",
+  "tagline": "Home of the world's largest data-center market, a centralized IT-buying authority in VITA, and a first-in-the-nation agentic-AI pilot — Virginia is where AI infrastructure and government technology demand collide.",
+
+  "snapshot": [
+    { "label": "2026–28 Budget", "value": "Impasse (~$211B introduced)" },
+    { "label": "Primary IT Authority", "value": "VITA" },
+    { "label": "Cloud Gate", "value": "COV Ramp" },
+    { "label": "Data-Center Market", "value": "#1 in the world" }
+  ],
+
+  "execSummary": {
+    "summary": "Virginia is the single most important state in the country for AI infrastructure: Loudoun County's 'Data Center Alley' is the densest concentration of data centers on the planet, and the hyperscale buildout shapes the state's politics, power grid, and tax base. For an SLG seller, three things matter most. First, that data-center boom is both an economic engine and a political fight — 15 data-center bills passed the 2026 General Assembly and a ~$1.6B/year sales-and-use tax exemption is the central dispute that has stalled the 2026–28 budget into June 2026. Second, government technology buying is unusually centralized: VITA (the Virginia IT Agency) sets policy, runs statewide contracts, and gates cloud through its COV Ramp security review. Third, leadership just turned over — Gov. Spanberger took office in January 2026 and named Mike Watson Commonwealth CIO in April 2026, with a stated focus on cloud transformation and AI adoption. Dell's strongest plays are AI-infrastructure / 'AI factory' demand and a centralized, governed buying motion through VITA.",
+    "opportunities": [
+      "AI-infrastructure and 'AI factory' demand tied to the world's largest data-center market and the surrounding ecosystem (PowerEdge, networking, services).",
+      "Enterprise cloud transformation and AI adoption under a new Commonwealth CIO — modernization across 60-plus executive-branch agencies.",
+      "Governed, auditable AI to support the state's first-in-the-nation agentic-AI regulatory-review pilot and emerging AI-in-schools guidance.",
+      "Endpoint, client, and lifecycle refresh across a large centralized executive-branch IT footprint managed through VITA."
+    ],
+    "stats": [
+      { "value": "#1", "label": "Data-center market (world)", "note": "Loudoun 'Data Center Alley' — densest globally", "ref": 1 },
+      { "value": "~$1.6B/yr", "label": "Data-center tax exemption", "note": "Central budget dispute; fiscal note", "ref": 2 },
+      { "value": "15", "label": "Data-center bills passed 2026", "note": "Of 61 considered; siting, energy, water", "ref": 2 },
+      { "value": "April 2026", "label": "New Commonwealth CIO", "note": "Mike Watson appointed by Gov. Spanberger", "ref": 5 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Virginia budgets on a two-year (biennial) cycle running July 1 to June 30, with the General Assembly amending the off-year budget annually. As of mid-June 2026 the 2026–28 biennial budget is unresolved: the regular session ended March 14 without a deal, an April 23 special session failed, and lawmakers reconvened in June facing a July 1 deadline to avoid disruption. Gov. Youngkin's introduced 2026–28 budget was roughly $211B over two years. There is no single 'state IT budget' line — technology spend is distributed across agencies and run through VITA.",
+    "stats": [
+      { "value": "~$211B", "label": "2026–28 introduced budget", "note": "Youngkin two-year proposal; not yet enacted", "ref": 3 },
+      { "value": "July 1, 2026", "label": "Budget deadline", "note": "Must pass to avoid disruption", "ref": 4 },
+      { "value": "$10M/yr", "label": "VATI broadband", "note": "Last-mile deployment, prior biennium baseline", "ref": 9 }
+    ],
+    "breakdown": [
+      { "label": "Data-center tax exemption (annual fiscal note)", "amount": 1600, "display": "~$1.6B", "note": "Per-year value at center of budget fight" },
+      { "label": "VATI broadband (per year)", "amount": 10, "display": "$10M", "note": "Last-mile; supplemented by federal BEAD" }
+    ],
+    "notes": [
+      "The 2026–28 budget was not enacted as of mid-June 2026 — confirm final appropriations before forecasting agency spend.",
+      "The data-center sales-and-use tax exemption (~$1.6B/yr) is the central political dispute and a proxy for the state's posture toward the AI-infrastructure boom."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Data Center Alley & AI-Infrastructure Buildout",
+      "status": "Dominant / contested",
+      "statusType": "good",
+      "dellFit": 92,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Loudoun County hosts the world's densest concentration of data centers, generating roughly 38% of the county's general-fund revenue. The 2026 General Assembly passed 15 of 61 data-center bills — adding siting/site-assessment requirements for 100MW+ facilities (HB 153), shifting grid-capacity costs to 25MW+ high-load users (HB 1393, HB 284), and water-reporting rules. The buildout is the strongest tailwind in the country for AI-infrastructure and ISG demand.",
+      "ref": 2
+    },
+    {
+      "name": "Enterprise Cloud & AI Modernization (VITA)",
+      "status": "Active under new CIO",
+      "statusType": "good",
+      "dellFit": 78,
+      "budgetStrength": 60,
+      "tags": ["Cloud", "AI", "Modernization"],
+      "summary": "Commonwealth CIO Mike Watson (appointed April 2026) leads enterprise IT strategy, cloud transformation, AI adoption, and digital modernization across the executive branch. With deep VITA and security tenure, his agenda points to governed cloud migration and agency AI enablement — an opening for private/hybrid infrastructure and services.",
+      "ref": 5
+    },
+    {
+      "name": "Agentic-AI Regulatory Review Pilot (EO 51)",
+      "status": "Live",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 40,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Executive Order 51 (July 2025) made Virginia the first state to deploy an agentic-AI tool to scan regulations and guidance for redundancy and statutory conflicts; from end-2025, executive-branch agencies must fold AI into their periodic regulatory reviews. Most broader AI legislation was tabled to 2027, so the near-term motion is operational AI adoption rather than new mandates — a chance to lead with governed, auditable AI.",
+      "ref": 6
+    },
+    {
+      "name": "COV Ramp Cloud Security Review",
+      "status": "Mandatory gate",
+      "statusType": "risk",
+      "dellFit": 60,
+      "budgetStrength": 50,
+      "tags": ["Cloud", "Compliance", "Security"],
+      "summary": "COV Ramp (formerly ECOS), run by VITA, evaluates the security programs of SaaS/PaaS suppliers before agencies may procure them; 400-plus cloud products are assessed and approvals are valid 12 months and must be renewed. Any Dell cloud/as-a-service offering touching Commonwealth data must clear COV Ramp and align to the SEC530 security standard — a gate to plan for early.",
+      "ref": 7
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Virginia IT Agency (VITA) is the centralized technology authority for the executive branch — it sets IT policy and security standards, runs statewide contracts, and manages sourcing for more than 60 agencies and 65,000-plus users. Most state technology buys run through VITA statewide contracts and its multisupplier service model, with delegated agency procurements still subject to VITA oversight.",
+    "vehicles": [
+      { "name": "VITA Statewide Contracts", "detail": "Primary vehicle. Pre-competed IT goods/services contracts available to executive-branch agencies and, in many cases, local government and higher-ed. Confirm Dell agreements and authorized resellers (incl. Software VAR) are current and correctly scoped." },
+      { "name": "VITA Multisupplier Model", "detail": "Service-tower delivery model for infrastructure, cloud, and managed services across the Commonwealth IT enterprise." },
+      { "name": "COV Ramp", "detail": "Not a contract, but a mandatory cloud-security review gate for any SaaS/PaaS touching Commonwealth data (12-month approvals)." }
+    ],
+    "entities": [
+      { "name": "VITA", "role": "Central IT policy, security, and procurement authority — leads the statewide technology motion." },
+      { "name": "Department of Planning & Budget (DPB)", "role": "Owns the budget process; final 2026–28 appropriations gate agency spend." },
+      { "name": "University systems (UVA, Virginia Tech, George Mason)", "role": "Large independent research-computing and AI-infrastructure buyers near Data Center Alley." },
+      { "name": "Local government (Loudoun, Fairfax, Prince William)", "role": "Data-center-rich localities with strong revenue and their own technology buying." }
+    ],
+    "competition": "Virginia is a centralized, contract-driven market — incumbents hold VITA statewide agreements across compute, networking, and services, and the dense federal/contractor presence in Northern Virginia makes it a sophisticated buyer. Differentiation comes from COV Ramp-ready offerings, AI-infrastructure capability tied to the data-center ecosystem, and services that map to cloud/AI modernization rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Abigail Spanberger", "title": "Governor", "org": "Commonwealth of Virginia", "note": "Took office January 2026; navigating the data-center tax fight and an unresolved 2026–28 budget.", "ref": 4 },
+    { "name": "Mike Watson", "title": "Commonwealth CIO & VITA Agency Head", "org": "VITA", "note": "Appointed April 2026; 17+ years at VITA and former state CISO/deputy CIO. Owns cloud transformation and AI adoption.", "ref": 5 },
+    { "name": "Department of Planning & Budget (DPB)", "title": "Budget development & execution", "org": "Commonwealth of Virginia", "note": "Runs the biennial budget process — track for final 2026–28 appropriations." },
+    { "name": "General Assembly money committees", "title": "Appropriations & data-center policy", "org": "Virginia General Assembly", "note": "Senate (Lucas) vs. House (Scott) split on the data-center tax exemption drove the 2026 budget impasse.", "ref": 4 }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Lawmakers advance bipartisan 2026–28 budget proposal as July 1 deadline nears", "impact": "Keeps the data-center tax exemption but adds a study commission; final appropriations still pending — confirm before forecasting agency spend.", "tags": ["Budget"], "ref": 4 },
+    { "date": "2026-04", "title": "Gov. Spanberger names Mike Watson Commonwealth CIO and VITA head", "impact": "New tech leadership focused on cloud transformation and AI adoption; predecessor Bob Osmond departs for Delaware.", "tags": ["Leadership"], "ref": 5 },
+    { "date": "2026-04", "title": "Special budget session ends without a deal", "impact": "Budget uncertainty extends; agency IT planning constrained until appropriations land.", "tags": ["Budget"], "ref": 4 },
+    { "date": "2026-03", "title": "General Assembly passes 15 data-center bills (of 61)", "impact": "New siting, energy-cost, and water rules reshape data-center growth — the core AI-infrastructure market.", "tags": ["Data Centers", "Policy"], "ref": 2 },
+    { "date": "2026-02", "title": "Most standalone AI legislation tabled to 2027 session", "impact": "Near-term AI motion is operational adoption (e.g., EO 51 pilot) rather than new statutory mandates.", "tags": ["AI", "Policy"], "ref": 8 },
+    { "date": "2025-07", "title": "EO 51 launches first-in-the-nation agentic-AI regulatory-review pilot", "impact": "Signals state appetite for governed, auditable AI across executive-branch agencies.", "tags": ["AI"], "ref": 6 }
+  ],
+
+  "dellActions": [
+    "Lead with AI infrastructure: tie Dell ISG / AI Factory offerings to the world's largest data-center market and the surrounding ecosystem, plus university research-computing buyers in Northern Virginia.",
+    "Engage Commonwealth CIO Mike Watson's modernization agenda early — position governed cloud transformation and agency AI adoption across the centralized VITA enterprise.",
+    "Clear the COV Ramp gate before pursuing cloud/as-a-service deals, and confirm alignment to the SEC530 security standard for any offering touching Commonwealth data.",
+    "Validate that Dell's VITA statewide-contract coverage and authorized resellers (including Software VAR) are current and correctly scoped for target agencies.",
+    "Time agency-spend forecasts to the final 2026–28 appropriations — track DPB and the General Assembly money committees given the budget impasse."
+  ],
+
+  "sources": [
+    { "label": "Loudoun County — Data Center Capital of the World", "url": "https://www.loudoun.gov/ArchiveCenter/ViewFile/Item/13979" },
+    { "label": "MultiState — Virginia lawmakers pass 15 data center bills as tax exemption fight looms", "url": "https://www.multistate.us/insider/2026/3/30/virginia-lawmakers-pass-15-data-center-bills-as-tax-exemption-fight-looms" },
+    { "label": "AOL/AP — Virginia lawmakers pass biennial budget (context on Youngkin's ~$211B proposal)", "url": "https://www.aol.com/virginia-lawmakers-pass-biennial-budget-201622368.html" },
+    { "label": "WDBJ7 — House lawmakers, Governor band together to push Virginia budget impasse", "url": "https://www.wdbj7.com/2026/06/12/gov-spanberger-supports-latest-budget-proposal/" },
+    { "label": "GovTech — Virginia Elevates Deputy CIO, Security Leader Mike Watson to State CIO", "url": "https://www.govtech.com/workforce/virginia-elevates-deputy-cio-security-leader-to-state-cio" },
+    { "label": "GovTech — Virginia to Use Agentic AI to Power Review of Regulations (EO 51)", "url": "https://www.govtech.com/artificial-intelligence/virginia-to-use-agentic-ai-to-power-review-of-regulations" },
+    { "label": "VITA — COV Ramp cloud security review", "url": "https://www.vita.virginia.gov/services/cov-grade/cov-ramp/" },
+    { "label": "VPM — Most AI legislation in Virginia tabled until 2027", "url": "https://www.vpm.org/generalassembly/2026-02-23/virginia-ai-bills-hayes-maldonado-salim-trump-spanberger" },
+    { "label": "DHCD — Virginia Telecommunication Initiative (VATI)", "url": "https://www.dhcd.virginia.gov/index.php/vati" },
+    { "label": "VITA — Procurement & statewide contracts", "url": "https://www.vita.virginia.gov/procurement/" }
+  ]
+}

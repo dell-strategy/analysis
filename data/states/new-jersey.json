@@ -1,0 +1,144 @@
+{
+  "code": "NJ",
+  "name": "New Jersey",
+  "slug": "new-jersey",
+  "region": "Northeast",
+  "updated": "2026-06-15",
+  "tagline": "A new governor, a marquee AI Hub anchored by Princeton, CoreWeave and Microsoft, and a first-in-the-nation push to regulate AI data centers — New Jersey is positioning itself as the East Coast's AI center while reshaping how it powers and governs that compute.",
+
+  "snapshot": [
+    { "label": "FY2026 State Budget", "value": "$58.78B" },
+    { "label": "Central IT", "value": "NJOIT" },
+    { "label": "Buying Platform", "value": "NJSTART" },
+    { "label": "Signature Bet", "value": "NJ AI Hub" }
+  ],
+
+  "execSummary": {
+    "summary": "New Jersey enters mid-2026 under a new administration with a clear technology identity. Governor Mikie Sherrill (D), sworn in January 20, 2026 as the state's 57th governor, inherits the NJ AI Hub — a Princeton-anchored ecosystem with CoreWeave and Microsoft as founding partners that aims to make New Jersey the East Coast's leading AI center. The state runs on a single-year fiscal cycle; the FY2026 budget signed by former Governor Murphy totals $58.78B. Three shifts matter for SLG sellers: the AI Hub and surrounding 'AI corridor' along Route 1 are pulling in compute and talent; Sherrill has unveiled a first-in-the-nation framework to regulate AI data centers (making operators fund their own power and grid upgrades) amid ~20% electric-bill increases driven largely by data-center demand; and central IT leadership is in transition after CTO Chris Rein's retirement, with NJOIT (50+ departments) and the NJCCIC cyber fusion center as the key statewide buyers. For Dell, the AI-infrastructure angle is the headline, balanced against an energy-and-governance climate that rewards efficient, governed compute.",
+    "opportunities": [
+      "AI-infrastructure demand tied to the NJ AI Hub, Princeton/Rutgers research computing, and the Route 1 'AI corridor' (PowerEdge, networking, GPU-dense systems, services).",
+      "Governed, on-prem / private-cloud AI for state agencies operationalizing the NJ AI Assistant and AI Task Force recommendations — sensitive workloads that favor controlled compute over open public models.",
+      "Cyber resilience build-out with the NJCCIC and the new Civilian Cyber Resilience Corps — secure infrastructure and managed services for state and local government.",
+      "Endpoint, client, and lifecycle modernization across 50+ NJOIT-served departments as leadership and priorities reset under a new administration."
+    ],
+    "stats": [
+      { "value": "$58.78B", "label": "FY2026 State Budget", "note": "Signed June 30, 2025 (single-year cycle)", "ref": 1 },
+      { "value": "$72M+", "label": "NJ AI Hub investment", "note": "State, Princeton, Microsoft, CoreWeave, NJEDA", "ref": 2 },
+      { "value": "Jan 20 2026", "label": "Gov. Sherrill inaugurated", "note": "57th Governor of New Jersey", "ref": 3 },
+      { "value": "~70%", "label": "New power demand from data centers", "note": "Driver of ~20% 2025 electric-bill rise", "ref": 9 }
+    ]
+  },
+
+  "budget": {
+    "intro": "New Jersey budgets on an annual (single-year) cycle running July 1 to June 30. The FY2026 Appropriations Act, signed by then-Governor Murphy on June 30, 2025, appropriates $58.78B in State funds (plus roughly $31B in federal funds). There is no single 'state IT budget' line; technology spend is distributed across agencies and is centrally coordinated through the Office of Information Technology (NJOIT), with cyber funded through Homeland Security / the NJCCIC. Governor Sherrill delivered her first budget address in early 2026 emphasizing affordability, energy, and accountability for Big Tech and data centers.",
+    "stats": [
+      { "value": "$58.78B", "label": "FY2026 State funds", "note": "Appropriations Act signed 6/30/2025", "ref": 1 },
+      { "value": "~$31B", "label": "FY2026 federal funds", "note": "Pass-through and matched programs", "ref": 1 },
+      { "value": "July–June", "label": "Fiscal year", "note": "Annual cycle; FY2027 in formation under Sherrill", "ref": 8 }
+    ],
+    "breakdown": [
+      { "label": "NJ AI Hub (founding investment)", "amount": 72, "display": "$72M+", "note": "State + Princeton + Microsoft + CoreWeave + NJEDA" }
+    ],
+    "notes": [
+      "Budget figures are annual (single-year) totals; New Jersey does not budget biennially.",
+      "Technology and cyber dollars are distributed across NJOIT-served agencies and Homeland Security (NJCCIC) rather than a single consolidated IT appropriation — confirm the owning entity before forecasting.",
+      "FY2027 is being shaped under a new administration focused on affordability and energy costs; expect data-center and grid policy to influence tech-adjacent spending."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "NJ AI Hub",
+      "status": "Operational / scaling",
+      "statusType": "good",
+      "dellFit": 88,
+      "budgetStrength": 75,
+      "tags": ["AI Infrastructure", "Princeton", "Economic Dev"],
+      "summary": "Announced in January 2025 by then-Governor Murphy and Princeton President Eisgruber, with Microsoft and CoreWeave as founding partners and $72M+ committed across the state (NJEDA), Princeton, and industry. Located at 619 Alexander Road in West Windsor along the Route 1 corridor, the Hub advances three pillars: AI research, commercialization/acceleration, and AI education/workforce. In December 2025 it selected Plug and Play to operate a regional AI Accelerator. The strongest tailwind in the state for Dell AI-infrastructure and research-computing demand.",
+      "ref": 2
+    },
+    {
+      "name": "AI Data Center Regulatory Framework",
+      "status": "Proposed (June 2026)",
+      "statusType": "warn",
+      "dellFit": 60,
+      "budgetStrength": 55,
+      "tags": ["AI", "Energy", "Policy"],
+      "summary": "Governor Sherrill in June 2026 unveiled what her administration calls the country's first comprehensive statewide framework for regulating AI data centers. The four-part plan would make operators fund their own energy supply and grid upgrades, publicly report energy/water use, negotiate community benefit agreements, and use union labor — shifting costs off ratepayers. Related bills (e.g., S680) tie clean-energy mandates and large-load tariffs to data centers. The climate rewards efficient, governed, lower-power compute and creates uncertainty for raw hyperscale buildout.",
+      "ref": 7
+    },
+    {
+      "name": "NJCCIC & Civilian Cyber Resilience Corps",
+      "status": "Active / expanding",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "State & Local"],
+      "summary": "The New Jersey Cybersecurity and Communications Integration Cell (NJCCIC), the state's cyber fusion center within Homeland Security, published a new 2026–2030 strategic plan and in December 2025 launched the Civilian Cyber Resilience Corps — a statewide volunteer initiative to help state, local, and critical-infrastructure entities prevent, withstand, and recover from attacks. Drives demand for secure infrastructure, endpoint protection, and managed services across state and local government.",
+      "ref": 5
+    },
+    {
+      "name": "Enterprise GenAI for State Government",
+      "status": "In production",
+      "statusType": "good",
+      "dellFit": 72,
+      "budgetStrength": 50,
+      "tags": ["AI", "Governance", "Productivity"],
+      "summary": "Under EO 346 (2023) New Jersey stood up an AI Task Force and directed NJOIT to govern state AI use. The Office of Innovation launched the NJ AI Assistant — a safe 'sandbox' GenAI platform for state employees — and one of the nation's first comprehensive GenAI training programs. As agencies move from pilot to scale, governed and auditable AI on sensitive data is an opening for private/on-prem compute rather than open public models.",
+      "ref": 6
+    }
+  ],
+
+  "procurement": {
+    "intro": "New Jersey centralizes IT direction in the Office of Information Technology (NJOIT), which oversees infrastructure for 50+ state departments and agencies, while purchasing is run by the Department of the Treasury's Division of Purchase & Property (DPP) through the NJSTART eProcurement marketplace. Most technology buys run through DPP statewide contracts and NASPO ValuePoint cooperative agreements (including Cloud Solutions via a Carahsoft participating addendum).",
+    "vehicles": [
+      { "name": "NJSTART Statewide Contracts", "detail": "Primary platform. DPP-awarded statewide term contracts searchable and orderable by state, county, and municipal entities. Confirm Dell agreements and reseller paths are current." },
+      { "name": "NASPO ValuePoint (cooperative)", "detail": "New Jersey participates in NASPO ValuePoint IT contracts (e.g., Cloud Solutions, IT VMSP) via participating addenda — a fast lane for cooperative IT purchasing." },
+      { "name": "NJEDA / partnership vehicles", "detail": "For AI Hub and economic-development-linked compute, the NJ Economic Development Authority and Princeton partnerships can be non-traditional routes alongside standard procurement." }
+    ],
+    "entities": [
+      { "name": "NJOIT (Office of Information Technology)", "role": "Central IT authority and infrastructure provider for 50+ departments; sets statewide tech and AI-governance direction." },
+      { "name": "Division of Purchase & Property (Treasury)", "role": "Statewide procurement authority; runs NJSTART and awards term contracts." },
+      { "name": "NJCCIC (Homeland Security)", "role": "Cyber fusion center and security buyer for state and local government." },
+      { "name": "Princeton & Rutgers", "role": "Large independent research-computing and AI-infrastructure buyers; Princeton anchors the NJ AI Hub." }
+    ],
+    "competition": "New Jersey is a contract-driven, cooperative-friendly market where incumbents hold NJSTART and NASPO agreements across compute, networking, and services. Differentiation comes from AI-infrastructure capability tied to the AI Hub and research universities, energy-efficient/governed compute that aligns with the state's data-center scrutiny, and cyber-ready offerings mapped to NJCCIC — more than on price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Mikie Sherrill", "title": "Governor (57th)", "org": "State of New Jersey", "note": "Sworn in Jan 20, 2026. Priorities: affordability, energy/permitting reform, and accountability for Big Tech and AI data centers.", "ref": 3 },
+    { "name": "Dale Caldwell", "title": "Lieutenant Governor", "org": "State of New Jersey", "note": "Sworn in alongside Sherrill, Jan 2026.", "ref": 3 },
+    { "name": "Vernon Spencer", "title": "Interim Chief Technology Officer", "org": "NJOIT", "note": "Stepped in after CTO Chris Rein retired (Jan 2026) following 8 years leading NJOIT. Leadership transition in progress.", "ref": 4 },
+    { "name": "NJ AI Task Force", "title": "AI policy & governance body", "org": "Office of Innovation / NJOIT", "note": "Chartered by EO 346; led by chief innovation officer, CTO, and NJEDA CEO. Shapes state AI adoption and guardrails.", "ref": 6 },
+    { "name": "NJCCIC", "title": "State cyber fusion center", "org": "NJ Office of Homeland Security & Preparedness", "note": "Coordinates statewide cybersecurity; 2026–2030 strategic plan and new Cyber Resilience Corps.", "ref": 5 }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Gov. Sherrill unveils first-in-the-nation AI data-center regulatory framework", "impact": "Operators would fund their own power and grid upgrades and disclose energy/water use; rewards efficient, governed compute and adds uncertainty to raw hyperscale buildout.", "tags": ["AI", "Energy", "Policy"], "ref": 7 },
+    { "date": "2026-03", "title": "Sherrill's first budget address targets affordability and Big Tech", "impact": "Signals FY2027 priorities — energy costs, data-center accountability — that shape tech-adjacent spending.", "tags": ["Budget", "Leadership"], "ref": 8 },
+    { "date": "2026-01", "title": "Mikie Sherrill inaugurated as New Jersey's 57th Governor", "impact": "New administration resets executive priorities; technology direction in transition.", "tags": ["Leadership"], "ref": 3 },
+    { "date": "2026-01", "title": "NJOIT CTO Chris Rein retires; Vernon Spencer named interim CTO", "impact": "Central IT leadership transition; relationship-building window for statewide tech direction.", "tags": ["Leadership"], "ref": 4 },
+    { "date": "2025-12", "title": "NJ AI Hub selects Plug and Play to operate regional AI Accelerator", "impact": "Hub moves from launch to scaling startups and research; deepens the state's AI ecosystem and compute demand.", "tags": ["AI", "Economic Dev"], "ref": 2 },
+    { "date": "2025-12", "title": "NJCCIC launches Civilian Cyber Resilience Corps; releases 2026–2030 plan", "impact": "Expands statewide cyber posture; demand for secure infrastructure and managed services across state and local government.", "tags": ["Cybersecurity"], "ref": 5 }
+  ],
+
+  "dellActions": [
+    "Lead with AI infrastructure: tie Dell ISG / AI Factory offerings to the NJ AI Hub, Princeton/Rutgers research computing, and the Route 1 AI corridor.",
+    "Position energy-efficient, governed compute that aligns with New Jersey's data-center scrutiny — frame Dell as the partner for high-performance AI that minimizes power and grid burden.",
+    "Engage NJOIT during its leadership transition (interim CTO Vernon Spencer) to shape statewide refresh and AI-platform direction before priorities harden under the new administration.",
+    "Map cyber offerings to the NJCCIC and Civilian Cyber Resilience Corps for state and local secure-infrastructure and managed-services demand.",
+    "Validate Dell coverage on NJSTART statewide contracts and NASPO ValuePoint participating addenda so targeted agencies can buy without a fresh RFP."
+  ],
+
+  "sources": [
+    { "label": "Office of the Governor — Governor Murphy Signs Fiscal Year 2026 Budget into Law", "url": "https://www.nj.gov/governor/news/news/562025/approved/20250630d.shtml" },
+    { "label": "Microsoft — Governor Murphy and Princeton announce Microsoft and CoreWeave as founding partners in NJ AI Hub", "url": "https://news.microsoft.com/source/2025/01/31/governor-murphy-and-princeton-university-president-eisgruber-announce-microsoft-and-coreweave-as-founding-partners-in-nj-ai-hub/" },
+    { "label": "NPR — Democrat Mikie Sherrill wins New Jersey governor's race", "url": "https://www.npr.org/2025/11/04/nx-s1-5590033/election-results-new-jersey-governor-sherrill" },
+    { "label": "GovTech — New Jersey Chief Technology Officer Chris Rein Retires", "url": "https://www.govtech.com/workforce/new-jersey-chief-technology-officer-chris-rein-retires" },
+    { "label": "NJCCIC — Strategic Plan 2026–2030 and Civilian Cyber Resilience Corps", "url": "https://www.cyber.nj.gov/grants-and-resources/state-resources/njccic-strategic-plan" },
+    { "label": "StateScoop — New Jersey launches generative AI assistant and training tool for state employees", "url": "https://statescoop.com/new-jersey-ai-assistant-training-tool-state-employees/" },
+    { "label": "Central Jersey — Gov. Sherrill unveils data center regulations", "url": "https://www.centraljersey.com/2026/06/01/gov-sherrill-unveils-data-center-regulations/" },
+    { "label": "NJBIZ — First 100 days: Sherrill targets affordability, permitting reform, energy", "url": "https://njbiz.com/first-100-days-sherrill-permitting-energy-affordability/" },
+    { "label": "Gothamist — Gov. Sherrill lays out plan to ease AI data centers' burden on NJ towns, electric bills", "url": "https://gothamist.com/news/gov-sherrill-lays-out-plan-to-ease-ai-data-centers-burden-on-nj-towns-electric-bills" }
+  ]
+}

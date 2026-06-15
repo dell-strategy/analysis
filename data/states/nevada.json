@@ -1,0 +1,155 @@
+{
+  "code": "NV",
+  "name": "Nevada",
+  "slug": "nevada",
+  "region": "West",
+  "updated": "2026-06-15",
+  "tagline": "A statewide ransomware attack reset Nevada's security agenda, a new centralized SOC is standing up under the Governor's CIO, and northern Nevada is becoming one of the world's largest AI data-center markets.",
+
+  "snapshot": [
+    { "label": "2025–27 Biennial Budget", "value": "$56.7B" },
+    { "label": "Central IT", "value": "Gov's Tech Office (OCIO)" },
+    { "label": "Primary IT Vehicle", "value": "NASPO ValuePoint" },
+    { "label": "Cyber Catalyst", "value": "Aug 2025 attack" }
+  ],
+
+  "execSummary": {
+    "summary": "Nevada budgets biennially; the legislatively approved 2025–27 budget is roughly $56.7B. Three shifts define the technology landscape for SLG sellers. First, security: a major ransomware attack in August 2025 took 60+ state agencies offline for up to 28 days, and the state's response — refusing the ransom, recovering ~90% of data, and standing up a centralized Security Operations Center via special-session legislation (AB1) — has made cyber resilience the top funded priority. Second, organization: enterprise IT moved out of the Department of Administration into the Office of the CIO inside the Governor's Office (the Governor's Technology Office), centralizing strategy under State CIO Tim Galluzi. Third, infrastructure: the Tahoe Reno Industrial Center has become one of the world's largest AI data-center clusters (Google, Switch, Apple, Vantage, Novva, PowerHouse), a major tailwind for Dell ISG/AI demand. The buying motion runs largely through NASPO ValuePoint cooperative contracts and the State Purchasing Division.",
+    "opportunities": [
+      "Whole-of-state cybersecurity rebuild post-attack: secure compute, backup/recovery, SOC tooling, and managed services tied to AB1 and the new statewide SOC.",
+      "AI-infrastructure demand from the Tahoe Reno / TRIC data-center cluster and from in-house AI-enhanced app development at the Governor's Technology Office.",
+      "CORE.NV ERP modernization (financials live; HR/payroll deployed) — infrastructure, reporting, and lifecycle needs as it enters its optimization phase.",
+      "Endpoint, client, and lifecycle refresh and resilient backup across 60+ agencies hardening after the 2025 incident."
+    ],
+    "stats": [
+      { "value": "$56.7B", "label": "2025–27 Biennial Budget", "note": "Legislatively approved, +6.1% over prior biennium", "ref": 1 },
+      { "value": "28 days", "label": "Cyber recovery", "note": "Aug 2025 attack; 60+ agencies; no ransom paid", "ref": 4 },
+      { "value": "~$1.5M", "label": "Incident response spend", "note": "External vendor support for the 2025 attack", "ref": 5 },
+      { "value": "$416M", "label": "BEAD broadband allocation", "note": "$170M+ unlocked; deployment from mid-2026", "ref": 8 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Nevada budgets on a two-year (biennial) cycle. The 83rd Legislature approved a 2025–27 budget of roughly $56.7B all funds — up about 6.1% over the prior biennium. There is no single 'state IT budget' line; technology spend is distributed across agencies and the internal-service rates of the Governor's Technology Office (OCIO), with discrete funding attached to named initiatives such as the statewide SOC and broadband deployment.",
+    "stats": [
+      { "value": "$56.7B", "label": "2025–27 all-funds budget", "note": "Legislatively approved", "ref": 1 },
+      { "value": "~$11B", "label": "General Fund (biennial)", "note": "Lombardo executive budget framing", "ref": 1 },
+      { "value": "$416M", "label": "Federal BEAD broadband", "note": "Administered by OSIT", "ref": 8 }
+    ],
+    "breakdown": [
+      { "label": "BEAD broadband (federal)", "amount": 416, "display": "$416M", "note": "$170M+ unlocked; mid-2026 build start" },
+      { "label": "2025 cyber incident response", "amount": 1.5, "display": "~$1.5M", "note": "External vendor support" },
+      { "label": "New cyber initiatives (FY26)", "amount": 0.3, "display": "~$300K", "note": "Threat analysis + SOC expansion" }
+    ],
+    "notes": [
+      "Budget figures are biennial (two-year) totals unless noted.",
+      "Most state technology is funded through the Governor's Technology Office internal-service rates and individual agency budgets, not a single statewide IT line — confirm the funding owner before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Statewide Security Operations Center (AB1)",
+      "status": "Standing up",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 70,
+      "tags": ["Cybersecurity", "Whole-of-State", "SOC"],
+      "summary": "After the August 2025 ransomware attack, a special session passed AB1, creating a centralized SOC under the Office of the CIO, a Cybersecurity Talent Pipeline Program, annual SOC reporting, and authority for school districts and underserved communities to use state cyber services. Operationalizing the SOC is the CIO's top 2026 priority — a greenfield need for secure compute, monitoring, backup/recovery, and managed services.",
+      "ref": 3
+    },
+    {
+      "name": "Cyber Resilience Rebuild (post-attack)",
+      "status": "Active",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "Backup & Recovery", "Modernization"],
+      "summary": "The 2025 attack — traced to a malware download in May, deployed in August, taking 60+ agencies offline for up to 28 days — exposed gaps that the state is now closing across 60+ agencies. The 90% recovery without paying ransom validated pre-negotiated vendor agreements and playbooks; agencies are hardening endpoints, identity, and resilient backup, an immediate Dell opening.",
+      "ref": 4
+    },
+    {
+      "name": "Tahoe Reno / TRIC AI Data-Center Cluster",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "The Tahoe Reno Industrial Center — larger than the city of Detroit — has become one of the world's largest data-center markets, with Google (1,210 acres), Switch (potentially 7M+ sq ft), Apple, Vantage, Novva, EdgeCore, and PowerHouse building or expanding. The AI buildout is the strongest tailwind for Dell ISG and AI-infrastructure demand in the state.",
+      "ref": 6
+    },
+    {
+      "name": "CORE.NV ERP Modernization",
+      "status": "In progress",
+      "statusType": "good",
+      "dellFit": 60,
+      "budgetStrength": 55,
+      "tags": ["ERP", "Modernization", "Cloud"],
+      "summary": "Nevada's enterprise resource planning overhaul delivered its core financial module in January 2025 and payroll/HR in October 2025, entering an optimization ('Achieve') phase in 2026 focused on reporting and metrics. A long-running modernization with infrastructure, integration, and lifecycle needs.",
+      "ref": 2
+    },
+    {
+      "name": "AI-Enhanced In-House Development & AI Policy",
+      "status": "Emerging",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 40,
+      "tags": ["AI", "Policy", "Productivity"],
+      "summary": "The Governor's Technology Office is bringing application development back in-house, with the CIO noting one developer can now do the work of three or four using AI tooling. Nevada has issued a Policy on the Responsible and Ethical Use of AI signed by the CIO — a pragmatic stance that favors governed, auditable AI and opens a door for private/on-prem AI on sensitive workloads.",
+      "ref": 7
+    }
+  ],
+
+  "procurement": {
+    "intro": "Nevada's central technology authority sits with the Governor's Technology Office / Office of the CIO (formerly the EITS Division), which moved into the Governor's Office in 2023. Statewide purchasing runs through the State Purchasing Division, which leans heavily on NASPO ValuePoint cooperative contracts (NASPO's lead-state cooperative model) — including statewide Cloud Solutions contracts — usable by state agencies, counties, cities, K-12, and higher education via participating addenda.",
+    "vehicles": [
+      { "name": "NASPO ValuePoint", "detail": "Primary cooperative vehicle. Lead-state, pre-competed contracts (including Cloud Solutions) adopted by Nevada via participating addenda; open to state, local, K-12, and higher-ed. Confirm Dell/reseller positions on relevant master agreements." },
+      { "name": "State Purchasing Division statewide contracts", "detail": "Nevada-administered statewide contracts and addenda layered on cooperative agreements; the central buying motion for state agencies." },
+      { "name": "Governor's Technology Office (OCIO) services & rates", "detail": "Internal-service catalog and rates through which agencies consume shared IT; a path to standardize compute, endpoints, and managed services." }
+    ],
+    "entities": [
+      { "name": "Governor's Technology Office / OCIO", "role": "Central IT strategy, security, and shared services under the State CIO; now owns the statewide SOC." },
+      { "name": "State Purchasing Division (Dept. of Administration)", "role": "Statewide procurement authority; administers NASPO ValuePoint addenda and statewide contracts." },
+      { "name": "OSIT (Office of Science, Innovation & Technology)", "role": "Administers the $416M BEAD broadband program and tech/innovation strategy." },
+      { "name": "NSHE — UNLV & UNR", "role": "Large independent research-computing and AI-infrastructure buyers; procure via BCN Purchasing and NASPO." }
+    ],
+    "competition": "Nevada is a cooperative-contract-driven market where NASPO ValuePoint positioning matters more than one-off RFPs. Post-attack, differentiation comes from resilient/secure offerings (backup, recovery, SOC enablement), AI-infrastructure capability tied to the TRIC cluster, and services that map to the SOC stand-up and CORE.NV rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Joe Lombardo", "title": "Governor", "org": "State of Nevada", "note": "Called the special session that passed the SOC bill (AB1); backs a pragmatic AI and cyber-resilience agenda.", "ref": 3 },
+    { "name": "Timothy Galluzi", "title": "State Chief Information Officer", "org": "Governor's Technology Office (OCIO)", "note": "Reappointed CIO after EITS moved into the Governor's Office; owns SOC stand-up, CORE.NV, and AI direction.", "ref": 2 },
+    { "name": "State Purchasing Division", "title": "Statewide procurement", "org": "Dept. of Administration", "note": "Administers NASPO ValuePoint addenda and statewide IT/cloud contracts — the buying gate." },
+    { "name": "Office of Science, Innovation & Technology (OSIT)", "title": "Broadband & innovation", "org": "Governor's Office", "note": "Administers the $416M BEAD broadband program; partner for connectivity-adjacent deals.", "ref": 8 }
+  ],
+
+  "news": [
+    { "date": "2025-12", "title": "Lombardo signs cybersecurity bills, including statewide SOC (AB1)", "impact": "Centralizes cyber under the CIO and authorizes school districts/underserved communities to use state cyber services.", "tags": ["Cybersecurity", "Policy"], "ref": 3 },
+    { "date": "2025-12", "title": "CIO outlines 2026 priorities: operationalize SOC, modernize CMS, advance CORE.NV", "impact": "Clear roadmap of where security and modernization dollars and decisions sit for 2026.", "tags": ["Leadership", "Modernization"], "ref": 2 },
+    { "date": "2025-11", "title": "Nevada completes 28-day recovery from statewide cyber incident; refuses ransom", "impact": "After-action validates pre-negotiated vendor agreements; ~90% data recovered, ~$1.5M response spend.", "tags": ["Cybersecurity"], "ref": 4 },
+    { "date": "2025-10", "title": "Nevada commits $327M to broadband; CORE.NV payroll/HR goes live", "impact": "Connectivity buildout advances and the ERP modernization reaches a new milestone.", "tags": ["Broadband", "ERP"], "ref": 8 },
+    { "date": "2025-08", "title": "Ransomware attack takes 60+ state agencies offline", "impact": "DMV, healthcare access, and public safety disrupted; reset the state's security agenda.", "tags": ["Cybersecurity"], "ref": 5 },
+    { "date": "2025-05", "title": "Northern Nevada cements status as a top global AI data-center market", "impact": "TRIC cluster (Google, Switch, Apple, Vantage, PowerHouse) signals the scale of AI-infrastructure investment landing in Nevada.", "tags": ["Data Centers", "AI"], "ref": 6 }
+  ],
+
+  "dellActions": [
+    "Lead with cyber resilience: position backup/recovery, endpoint security, identity, and SOC-enablement infrastructure tied to AB1 and the agencies hardening after the 2025 attack.",
+    "Engage the Governor's Technology Office (OCIO) as the central account standing up the statewide SOC — secure compute, monitoring infrastructure, and managed services.",
+    "Tie Dell ISG / AI Factory offerings to the Tahoe Reno / TRIC data-center cluster and to the OCIO's AI-enhanced in-house development push.",
+    "Confirm Dell and reseller positions on relevant NASPO ValuePoint master agreements and Nevada statewide/cloud contracts before pursuing deals.",
+    "Map services to CORE.NV's optimization phase and to NSHE (UNLV/UNR) research-computing buyers for AI-infrastructure and lifecycle opportunities."
+  ],
+
+  "sources": [
+    { "label": "Guinn Center — Legislatively Approved Budget, 2025–27 Biennium", "url": "https://www.guinncenter.org/research/the-legislatively-approved-budget-for-the-state-of-nevada-2025-2027-biennium" },
+    { "label": "GovTech — How Nevada's CIO Will Build on Year's Cyber Lessons in 2026", "url": "https://www.govtech.com/workforce/how-nevadas-cio-will-build-on-years-cyber-lessons-in-2026" },
+    { "label": "KOLO TV — Lombardo to sign bills on cybersecurity, healthcare and workforce capacity (AB1)", "url": "https://www.kolotv.com/2025/12/17/lombardo-sign-bills-cybersecurity-healthcare-workforce-capacity/" },
+    { "label": "Nevada Independent — Nevada didn't pay ransom; spent $1.5M on response", "url": "https://thenevadaindependent.com/article/report-nevada-didnt-pay-ransom-in-statewide-cyberattack-spent-1-5m-on-response" },
+    { "label": "Cybersecurity Dive — Nevada ransomware attack traced to malware download", "url": "https://www.cybersecuritydive.com/news/nevada-ransomware-attack-traced-back-to-malware-download-by-employee/805011/" },
+    { "label": "MIT Technology Review — The data center boom in the desert (Tahoe Reno)", "url": "https://www.technologyreview.com/2025/05/20/1116287/ai-data-centers-nevada-water-reno-computing-environmental-impact/" },
+    { "label": "Nevada Governor's Technology Office — Policy on Responsible & Ethical Use of AI", "url": "https://it.nv.gov/uploadedFiles/itnewnvgov/content/Governance/Policy%20on%20the%20Responsible%20and%20Ethical%20Use%20of%20Artificial%20Intelligence%20in%20Nevada%20-%20CIO%20Signed.pdf" },
+    { "label": "News3LV — Federal approval unlocks $170M of Nevada's $416M BEAD allocation", "url": "https://news3lv.com/news/local/federal-approval-170m-nevada-high-speed-internet-expansion-bead-broadband-access-computer-phone-tablet-technology-ntia-las-vegas-reno-carson-city" },
+    { "label": "Nevada State Purchasing Division — Cloud Solutions / statewide contracts", "url": "https://www.purchasing.nv.gov/statewide-contracts/cloud-solutions/" },
+    { "label": "Nevada Governor's Technology Office (OCIO) — it.nv.gov", "url": "https://www.it.nv.gov/" }
+  ]
+}

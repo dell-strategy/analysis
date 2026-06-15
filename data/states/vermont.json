@@ -1,0 +1,156 @@
+{
+  "code": "VT",
+  "name": "Vermont",
+  "slug": "vermont",
+  "region": "Northeast",
+  "updated": "2026-06-15",
+  "tagline": "A new AI Economic Task Force, a centralizing 'One ADS' tech strategy, a $70M+ Workday HR/finance overhaul, and a near-complete fiber broadband buildout — small-state Vermont is consolidating how it buys and runs technology.",
+
+  "snapshot": [
+    { "label": "FY2026 All-Funds Budget", "value": "$9.1B" },
+    { "label": "Central IT Authority", "value": "ADS" },
+    { "label": "Procurement Platform", "value": "VT Buys" },
+    { "label": "AI Task Force (new)", "value": "EO 01-26" }
+  ],
+
+  "execSummary": {
+    "summary": "Vermont is a small, centralized market where most state technology decisions run through a single agency — the Agency of Digital Services (ADS), led by Secretary & CIO Denise Reilly-Hughes. Three shifts matter for a Dell seller in 2026. First, ADS is executing a multi-year 'One ADS' strategy that moves the state to a service-based (internal service fund) IT budgeting model, backed by a $15M appropriation, to consolidate fragmented systems and bill agencies for shared services. Second, Governor Scott's new AI Economic Task Force (Executive Order 01-26, May 2026), co-chaired by Reilly-Hughes, sits alongside the state's existing Council on Artificial Intelligence (Act 132 of 2022) and is tasked within 90 days with naming priority opportunities where AI can help state employees. Third, a $70M+ Workday HR/finance modernization is mid-flight — recently shifted from phased to all-at-once rollout — and Vermont's federally funded fiber broadband buildout is pushing access toward 99% statewide. Buying runs through Buildings & General Services (BGS) Office of Purchasing & Contracting and ADS vendor procurement, increasingly via the VT Buys platform and statewide IT contracts.",
+    "opportunities": [
+      "Infrastructure consolidation under 'One ADS' and the service-based IT funding model — compute, storage, networking, and lifecycle for shared state services.",
+      "Governed AI enablement as the AI Economic Task Force and Council on AI define state use cases — an opening for private/on-prem AI on sensitive workloads.",
+      "Cybersecurity for state and local government via the Cybersecurity Advisory Council and federal SLCGP grants — secure compute, endpoint, and resilience.",
+      "Client/endpoint and data-center refresh tied to the Workday modernization and a record all-funds budget."
+    ],
+    "stats": [
+      { "value": "$9.1B", "label": "FY2026 All-Funds Budget", "note": "H.493 / Act 27; ~$2.48B General Fund", "ref": 1 },
+      { "value": "$15M", "label": "Service-based IT funding", "note": "Toward 'One ADS' internal service fund model", "ref": 2 },
+      { "value": "$70M+", "label": "Workday HR/finance overhaul", "note": "Now a single all-at-once rollout", "ref": 4 },
+      { "value": "EO 01-26", "label": "AI Economic Task Force", "note": "Signed May 18, 2026", "ref": 5 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Vermont budgets on an annual fiscal-year cycle (July 1–June 30). The FY2026 Appropriations Act (H.493 / Act 27) totals roughly $9.1B across all funds, with about $2.48B in General Fund appropriations. There is no single consolidated 'state IT budget' line — the state spends well over $140M a year on government IT, distributed across agencies, with ADS now moving toward a service-based internal service fund that bills agencies for shared technology.",
+    "stats": [
+      { "value": "$9.1B", "label": "FY2026 all funds", "note": "Unduplicated total (Act 27)", "ref": 1 },
+      { "value": "$2.48B", "label": "FY2026 General Fund", "note": "General Fund appropriations", "ref": 1 },
+      { "value": ">$140M", "label": "Annual state IT spend", "note": "Distributed across agencies", "ref": 2 }
+    ],
+    "breakdown": [
+      { "label": "Service-based IT funding (One ADS)", "amount": 15, "display": "$15M", "note": "Toward internal service fund model" },
+      { "label": "Workday HR/finance modernization", "amount": 70, "display": "$70M+", "note": "Multi-year; cost may rise with rollout change" },
+      { "label": "Broadband buildout (federal-led)", "amount": 229, "display": "~$229M", "note": "BEAD-anchored fiber program via VCBB/CUDs" }
+    ],
+    "notes": [
+      "Figures are annual (FY2026) unless a program is noted as multi-year/cumulative.",
+      "Most technology spend is embedded in agency budgets; the 'One ADS' service-based model will reshape how shared IT is funded and billed — confirm which entity owns a program before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "One ADS — Service-Based IT Strategy",
+      "status": "In progress",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 65,
+      "tags": ["Modernization", "Consolidation", "ADS"],
+      "summary": "ADS is executing a multi-year 'One ADS' strategy to consolidate fragmented state technology and move to a service-based (internal service fund) budgeting and billing model, backed by a $15M appropriation. The goal is greater reliability, transparency, and predictable cost — a consolidation motion that creates demand for standardized infrastructure, shared compute/storage, and lifecycle services.",
+      "ref": 2
+    },
+    {
+      "name": "AI Economic Task Force & Council on AI",
+      "status": "Established May 2026",
+      "statusType": "warn",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Policy", "Economic Dev"],
+      "summary": "Governor Scott's Executive Order 01-26 (May 18, 2026) created the AI Economic Task Force, co-chaired by ADS Secretary/CIO Reilly-Hughes, with working groups on Economic Acceleration, Small Business Competitiveness, and Community Resilience. Within 90 days it must name up to five priority opportunities for AI to help state employees. It complements the existing Council on Artificial Intelligence (Act 132 of 2022) that governs state AI use — an opening for governed, auditable AI.",
+      "ref": 5
+    },
+    {
+      "name": "Workday HR & Finance Modernization",
+      "status": "Mid-implementation",
+      "statusType": "warn",
+      "dellFit": 45,
+      "budgetStrength": 60,
+      "tags": ["ERP", "Modernization", "Risk"],
+      "summary": "Vermont is replacing legacy human-resources and finance systems with the Workday cloud platform at a cost exceeding $70M. Officials recently shifted from a phased to an all-at-once rollout after finding the HR and finance components more interconnected than expected — a change that could raise cost and risk. While the platform is SaaS, the surrounding infrastructure, integration, and endpoint refresh create adjacent opportunity.",
+      "ref": 4
+    },
+    {
+      "name": "Cybersecurity Advisory Council & SLCGP",
+      "status": "Active",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 50,
+      "tags": ["Cybersecurity", "State & Local", "Grants"],
+      "summary": "Vermont's Cybersecurity Advisory Council is extending protection beyond state government to critical-infrastructure and local entities, using a tiered plan (training/planning, risk management, information sharing). Federal State and Local Cybersecurity Grant Program (SLCGP) funds, administered with Ready Vermont, help municipalities meet baseline security — a channel for secure compute, endpoint, and resilience offerings into the SLG market.",
+      "ref": 6
+    },
+    {
+      "name": "Broadband Buildout — VCBB & CUDs",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 30,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Rural", "Federal Funds"],
+      "summary": "The Vermont Community Broadband Board (VCBB) and locally governed Communications Union Districts (CUDs) are building fiber into rural Vermont with a ~$229M, BEAD-anchored program; NEK Broadband alone won ~$93M to reach ~10,000 addresses. The goal is ~99% statewide access. Primarily a fiber/ISP motion, but the expanding state and CUD digital footprint drives downstream network, edge, and security needs.",
+      "ref": 7
+    }
+  ],
+
+  "procurement": {
+    "intro": "Vermont technology buying is centralized. Statewide purchasing policy and contracting run through the Buildings & General Services (BGS) Office of Purchasing & Contracting, while the Agency of Digital Services (ADS) owns technology strategy, standards, and IT vendor procurement. The state is standardizing sourcing on the VT Buys eProcurement platform, and maintains statewide IT contracts that agencies buy from without running their own solicitations.",
+    "vehicles": [
+      { "name": "Statewide IT contracts (ITS75 / IT Retainer)", "detail": "Pre-competed statewide agreements for software, resellers, and IT professional services with set rates; agencies purchase against them. Confirm Dell and reseller coverage is current and correctly scoped." },
+      { "name": "VT Buys (eProcurement)", "detail": "The state's emerging primary platform for sourcing, solicitation, contracting, and supplier management — register and stay current here." },
+      { "name": "ADS vendor procurement", "detail": "ADS leads technology-specific solicitations and standards; engage early to shape requirements for consolidation and AI/security workloads." }
+    ],
+    "entities": [
+      { "name": "Agency of Digital Services (ADS)", "role": "Central IT, cybersecurity, telecom, and standards for all of state government — owns the statewide technology motion." },
+      { "name": "BGS Office of Purchasing & Contracting", "role": "Statewide purchasing policy, contracting, and the VT Buys platform." },
+      { "name": "Agency of Administration / Finance & Management", "role": "Budget, the Workday modernization, and finance systems oversight." },
+      { "name": "University of Vermont (UVM) & UVM Health Network", "role": "Independent research-computing, data-center, and security buyer; UVM Health Network sits on the Cybersecurity Advisory Council." }
+    ],
+    "competition": "Vermont is a small, relationship-driven, centralized market. Volume is modest versus large states, so differentiation comes from fit with ADS consolidation, governed AI, and state/local cybersecurity — plus presence on current statewide IT contracts and VT Buys — rather than price alone. Incumbent resellers and SaaS platforms (e.g., Workday for ERP) hold key footholds."
+  },
+
+  "powerStructure": [
+    { "name": "Phil Scott", "title": "Governor", "org": "State of Vermont", "note": "Established the AI Economic Task Force (EO 01-26); sets the administration's technology and economic agenda.", "ref": 5 },
+    { "name": "Denise Reilly-Hughes", "title": "Secretary & State CIO", "org": "Agency of Digital Services", "note": "Leads all state IT and cybersecurity; co-chairs the AI Economic Task Force. The single most important account contact.", "ref": 3 },
+    { "name": "Sarah Clark", "title": "Secretary of Administration", "org": "Agency of Administration", "note": "Oversees the budget and the $70M+ Workday HR/finance modernization.", "ref": 4 },
+    { "name": "Cybersecurity Advisory Council", "title": "Statewide security governance", "org": "ADS-led", "note": "Coordinates state, local, and critical-infrastructure cyber; gateway for SLG security demand.", "ref": 6 },
+    { "name": "Joint Information Technology Oversight Committee (JITOC)", "title": "Legislative IT oversight", "org": "Vermont Legislature", "note": "Reviews large IT projects (including Workday) — useful for reading project risk and direction.", "ref": 4 }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Gov. Scott establishes Vermont AI Economic Task Force (EO 01-26)", "impact": "New state AI agenda; ADS co-chairs and must name priority AI opportunities within 90 days.", "tags": ["AI", "Policy"], "ref": 5 },
+    { "date": "2026-04", "title": "Vermont shifts $70M+ Workday rollout from phased to all-at-once", "impact": "HR/finance components found more interconnected than expected; raises cost/risk and oversight attention.", "tags": ["ERP", "Modernization"], "ref": 4 },
+    { "date": "2026-01", "title": "ADS 2026 Annual Report details 'One ADS' service-based IT model", "impact": "Consolidation and internal-service-fund billing reshape how shared technology is funded.", "tags": ["ADS", "Budget"], "ref": 2 },
+    { "date": "2025-12", "title": "Cybersecurity Advisory Council moves to extend protection beyond state government", "impact": "Local and critical-infrastructure cyber demand grows; SLCGP funds in play.", "tags": ["Cybersecurity"], "ref": 6 },
+    { "date": "2025-09", "title": "VCBB outlines ~$180–229M broadband proposal; NEK Broadband wins ~$93M", "impact": "Fiber buildout pushes toward ~99% statewide access; expanding CUD digital footprint.", "tags": ["Broadband"], "ref": 7 },
+    { "date": "2025-06", "title": "FY2026 Appropriations Act (Act 27) enacted at ~$9.1B all funds", "impact": "Record all-funds budget frames agency technology and modernization spend.", "tags": ["Budget"], "ref": 1 }
+  ],
+
+  "dellActions": [
+    "Build the relationship with ADS (Secretary/CIO Reilly-Hughes and team) as the single front door — Vermont's IT decisions are centralized there.",
+    "Tie infrastructure, compute, and lifecycle offerings to the 'One ADS' consolidation and service-based funding model rather than one-off agency deals.",
+    "Lead with governed, private/on-prem AI for sensitive workloads as the AI Economic Task Force and Council on AI define state use cases.",
+    "Pursue state and local cybersecurity through the Cybersecurity Advisory Council and SLCGP grant funding — secure compute, endpoint, and resilience.",
+    "Confirm Dell and reseller coverage on current statewide IT contracts (ITS75 / IT Retainer) and register/stay current on the VT Buys platform."
+  ],
+
+  "sources": [
+    { "label": "Vermont Legislature — H.493 (Act 27), FY2026 Appropriations Act status", "url": "https://legislature.vermont.gov/bill/status/2026/H.493" },
+    { "label": "ADS 2026 Annual Report (Vermont Legislature)", "url": "https://legislature.vermont.gov/assets/Legislative-Reports/ADS-2026-Annual-Report_Final.pdf" },
+    { "label": "StateScoop — Vermont governor names Denise Reilly-Hughes statewide CIO", "url": "https://statescoop.com/denise-reilly-hughes-vermont-cio-agency-digital-services/" },
+    { "label": "VTDigger — Changes to Vermont's $70M+ IT (Workday) overhaul could increase costs and delays", "url": "https://vtdigger.org/2026/04/10/changes-to-vermonts-70-million-plus-it-overhaul-could-increase-costs-and-delays/" },
+    { "label": "Office of Governor Phil Scott — Establishes Vermont AI Economic Task Force", "url": "https://governor.vermont.gov/press-release/governor-phil-scott-establishes-vermont-ai-economic-task-force" },
+    { "label": "GovTech — Vermont Cybersecurity Council to extend protection beyond state gov", "url": "https://www.govtech.com/security/vermont-cybersecurity-council-to-extend-protection-beyond-state-gov" },
+    { "label": "VTDigger — Vermont broadband board outlines $180M proposal, major NEK investment", "url": "https://vtdigger.org/2025/09/03/vermont-broadband-board-outlines-180m-funding-proposal-with-major-investment-in-nek/" },
+    { "label": "Vermont BGS — Office of Purchasing and Contracting", "url": "https://bgs.vermont.gov/purchasing" },
+    { "label": "Vermont ADS — Vendor Procurement", "url": "https://digitalservices.vermont.gov/working-us/procurement" },
+    { "label": "Vermont ADS — Artificial Intelligence", "url": "https://digitalservices.vermont.gov/ai" }
+  ]
+}

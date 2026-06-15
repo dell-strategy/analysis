@@ -1,0 +1,156 @@
+{
+  "code": "NM",
+  "name": "New Mexico",
+  "slug": "new-mexico",
+  "region": "Southwest",
+  "updated": "2026-06-15",
+  "tagline": "A national-lab HPC powerhouse and a sudden hyperscale AI build-out — New Mexico pairs Sandia and Los Alamos supercomputing with Project Jupiter and Intel's Rio Rancho fabs, all in a leadership-transition year.",
+
+  "snapshot": [
+    { "label": "FY2027 State Budget", "value": "~$33.4B" },
+    { "label": "DoIT Appropriation", "value": "~$113M" },
+    { "label": "Primary IT Vehicle", "value": "GSD Price Agreements / NASPO" },
+    { "label": "Marquee AI Build", "value": "Project Jupiter" }
+  ],
+
+  "execSummary": {
+    "summary": "New Mexico is two markets at once. The first is federal-scale HPC: Sandia and Los Alamos national labs run some of the world's most advanced supercomputers (Los Alamos' Venado, Sandia's new Spectra) and partner across the NNSA tri-lab program — a sustained, high-end compute and AI buyer that sits in-state. The second is a brand-new commercial AI build-out: Project Jupiter in Santa Teresa, a multi-building Oracle/OpenAI Stargate campus announced in February 2026, plus Intel's $3.5B advanced-packaging fabs (Fab 9 / Fab 11x) in Rio Rancho. The state itself budgets annually; the FY2027 budget is ~$33.4B with the Department of Information Technology (DoIT) funded around $113M for enterprise services, cybersecurity, and broadband. For Dell sellers, the headline angle is national-lab and research HPC/AI-infrastructure, layered on a steady state-government refresh. Note the timing: Gov. Lujan Grisham is term-limited and 2026 is a gubernatorial election year, so a DoIT/CIO leadership transition is likely after January 2027.",
+    "opportunities": [
+      "National-lab and research HPC/AI-infrastructure pull — Sandia, Los Alamos, UNM, and NM Tech are sophisticated, high-end compute buyers in-state.",
+      "Commercial AI build-out (Project Jupiter / Stargate, Intel Rio Rancho) creating an ISG and AI-factory ecosystem and partner motion in southern and central New Mexico.",
+      "State-government modernization under DoIT — enterprise services, cybersecurity, and endpoint/lifecycle refresh on an annual budget.",
+      "Emerging-tech and broadband money ($270M+ for fusion/quantum in 2026; ~$675M federal BEAD) seeding new compute and connectivity demand."
+    ],
+    "stats": [
+      { "value": "~$33.4B", "label": "FY2027 State Budget", "note": "Enacted 2026 session; ~$11B+ general fund", "ref": 1 },
+      { "value": "~$113M", "label": "DoIT Appropriation", "note": "Enterprise services, cyber, broadband, program support", "ref": 1 },
+      { "value": "$3.5B", "label": "Intel Rio Rancho", "note": "Fab 9 advanced-packaging investment", "ref": 7 },
+      { "value": "~$675M", "label": "Federal BEAD Award", "note": "Broadband deployment via OBAE", "ref": 6 }
+    ]
+  },
+
+  "budget": {
+    "intro": "New Mexico budgets on an annual fiscal cycle (FY begins July 1). The 2026 legislative session enacted an FY2027 budget of roughly $33.4B, including more than $11B from the general fund, and directed over $500M to economic development — with $270M+ aimed at emerging technologies like fusion and quantum. There is no single consolidated 'state IT budget'; technology spend is distributed across agencies, with the Department of Information Technology (DoIT) funded around $113M for compliance, project management, enterprise services, broadband access, cybersecurity, and program support.",
+    "stats": [
+      { "value": "~$33.4B", "label": "FY2027 total", "note": "Enacted 2026 session", "ref": 1 },
+      { "value": "~$113M", "label": "DoIT appropriation", "note": "Enterprise IT, cyber, broadband", "ref": 1 },
+      { "value": "$270M+", "label": "Emerging tech", "note": "Fusion / quantum (2026 session)", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "DoIT appropriation", "amount": 113, "display": "~$113M", "note": "Statewide enterprise IT, cyber, broadband" },
+      { "label": "Emerging technologies", "amount": 270, "display": "$270M+", "note": "Fusion / quantum, 2026 session" },
+      { "label": "Federal BEAD broadband", "amount": 675, "display": "~$675M", "note": "Federal award administered by OBAE" }
+    ],
+    "notes": [
+      "State figures are annual (FY2027). BEAD is a federal award administered through the Office of Broadband Access and Expansion, not a recurring state line.",
+      "National-lab compute (Sandia, Los Alamos) is funded federally through DOE/NNSA, not the state budget — size those opportunities through the labs and their integrators, not the state appropriation."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "National-Lab HPC (Sandia & Los Alamos)",
+      "status": "Active / Refreshing",
+      "statusType": "good",
+      "dellFit": 88,
+      "budgetStrength": 90,
+      "tags": ["HPC", "AI", "National Labs"],
+      "summary": "Los Alamos runs Venado (NVIDIA Grace Hopper, now hosting frontier AI models for national-security science) and Crossroads, with a next-gen AI machine planned for 2026; Sandia stood up Spectra in December 2025 and partners with Los Alamos and Lawrence Livermore under NNSA's Advanced Simulation and Computing tri-lab program. These are federally funded, high-end, recurring compute and AI-infrastructure buyers physically in New Mexico — the strongest Dell angle in the state.",
+      "ref": 4
+    },
+    {
+      "name": "Project Jupiter (Oracle / OpenAI Stargate)",
+      "status": "In development",
+      "statusType": "good",
+      "dellFit": 80,
+      "budgetStrength": 85,
+      "tags": ["AI Infrastructure", "Data Centers", "Stargate"],
+      "summary": "Announced February 2026 by Gov. Lujan Grisham and BorderPlex Digital Assets, Project Jupiter is a multi-building AI-training data-center campus in Santa Teresa (Doña Ana County), built for Oracle to host OpenAI infrastructure as part of the ~$500B Stargate initiative. It runs on a self-contained power system and anchors a southern-NM AI-infrastructure ecosystem and partner/ISG motion.",
+      "ref": 9
+    },
+    {
+      "name": "Intel Rio Rancho (Fab 9 / Advanced Packaging)",
+      "status": "Operational",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 80,
+      "tags": ["Semiconductors", "Advanced Packaging", "Economic Dev"],
+      "summary": "Intel's $3.5B investment turned its Rio Rancho site into Fab 9 / Fab 11x — its first co-located high-volume advanced-packaging (Foveros 3D) operation. It anchors central New Mexico's chip ecosystem and the supplier, R&D, and compute demand that orbits it.",
+      "ref": 7
+    },
+    {
+      "name": "Broadband & Digital Equity (BEAD / OBAE)",
+      "status": "Deploying",
+      "statusType": "warn",
+      "dellFit": 45,
+      "budgetStrength": 70,
+      "tags": ["Broadband", "Connectivity", "Federal Funds"],
+      "summary": "The Office of Broadband Access and Expansion (OBAE / Connect New Mexico) administers a ~$675M federal BEAD allocation to reach tens of thousands of unserved locations across nearly every county, alongside a Three-Year Statewide Broadband Plan and digital-equity grants. Federal program timing remains in flux, but the build-out seeds downstream connectivity and edge-compute demand.",
+      "ref": 6
+    },
+    {
+      "name": "State AI Governance & Cybersecurity",
+      "status": "Emerging",
+      "statusType": "warn",
+      "dellFit": 60,
+      "budgetStrength": 50,
+      "tags": ["AI", "Cybersecurity", "Policy"],
+      "summary": "The 2026 session debated AI guardrails (including notice when AI makes consequential decisions), and DoIT's appropriation funds statewide cybersecurity under CISO leadership. Universities are building capacity too — NM Tech launched the Raul Deju Institute for AI spanning AI, data science, and cybersecurity. Agencies will need governed, auditable AI on sensitive data, an opening for private/on-prem approaches.",
+      "ref": 8
+    }
+  ],
+
+  "procurement": {
+    "intro": "Central state procurement runs through the State Purchasing Division (SPD) within the General Services Department (GSD), which enforces the State Procurement Code and establishes statewide price agreements usable by state agencies and other New Mexico governmental entities. For technology, New Mexico leans heavily on cooperative vehicles — notably NASPO ValuePoint — and has historically purchased Dell through that channel. DoIT sets statewide IT policy, security standards, and enterprise services.",
+    "vehicles": [
+      { "name": "GSD Statewide Price Agreements", "detail": "SPD-established agreements open to state agencies and NM governmental entities; the primary state contract route. Confirm Dell coverage and reseller scope are current." },
+      { "name": "NASPO ValuePoint", "detail": "National cooperative used by New Mexico for IT; a common path for Dell hardware purchases. Verify the relevant master agreement and NM participating addendum." },
+      { "name": "DoIT enterprise services / standards", "detail": "DoIT owns statewide IT policy, cybersecurity standards, and shared enterprise services — align offerings to its standards early." }
+    ],
+    "entities": [
+      { "name": "Department of Information Technology (DoIT)", "role": "State CIO function: enterprise IT, cybersecurity, broadband oversight, and statewide IT policy." },
+      { "name": "General Services Department — State Purchasing Division", "role": "Central procurement authority; establishes and manages statewide price agreements." },
+      { "name": "Sandia & Los Alamos National Laboratories", "role": "Federally funded HPC/AI-infrastructure buyers (DOE/NNSA); engage via labs and their integrators." },
+      { "name": "University of New Mexico / NM Tech / NMSU", "role": "Research-computing and AI buyers building independent HPC and AI institutes." }
+    ],
+    "competition": "Two distinct competitive fields. State-government IT is cooperative-contract driven and price-sensitive, with oversight concerns historically flagged around ad-hoc purchasing — coverage and compliance matter. The lab and research-HPC field is a high-end, integrator-led arena where differentiation comes from AI-infrastructure capability, references, and services rather than catalog price."
+  },
+
+  "powerStructure": [
+    { "name": "Michelle Lujan Grisham", "title": "Governor", "org": "State of New Mexico", "note": "Term-limited; 2026 was her final legislative session. Champions Project Jupiter, Intel, and emerging-tech investment. Successor takes office Jan 2027.", "ref": 5 },
+    { "name": "Manny Barreras", "title": "Cabinet Secretary & State CIO", "org": "Department of Information Technology (DoIT)", "note": "Appointed by the Governor and Senate-confirmed in September 2024; owns statewide IT direction. Expect a transition after the 2026 election.", "ref": 2 },
+    { "name": "Raja Sambandam", "title": "State Chief Information Security Officer", "org": "DoIT", "note": "Leads statewide cybersecurity; prior interim CIO. Key contact for security standards and posture.", "ref": 2 },
+    { "name": "State Purchasing Division", "title": "Central Procurement Authority", "org": "General Services Department", "note": "Establishes statewide price agreements and enforces the Procurement Code — gate for state contract motions.", "ref": 3 }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "Project Jupiter to be powered by Bloom Energy fuel cells (up to 2.45 GW)", "impact": "Confirms scale and self-contained power for the Oracle/OpenAI campus; operations targeted before end of 2026.", "tags": ["Data Centers", "AI"], "ref": 10 },
+    { "date": "2026-02", "title": "Gov. Lujan Grisham and BorderPlex announce Project Jupiter in Santa Teresa", "impact": "Marquee AI-training data center (Oracle / OpenAI Stargate) anchors a southern-NM AI-infrastructure ecosystem.", "tags": ["AI Infrastructure", "Economic Dev"], "ref": 9 },
+    { "date": "2026-02", "title": "Legislature enacts ~$33.4B FY2027 budget; $270M+ for fusion/quantum", "impact": "Funds DoIT (~$113M) and seeds emerging-tech demand; Governor's final session.", "tags": ["Budget", "Emerging Tech"], "ref": 1 },
+    { "date": "2026-01", "title": "NM Tech launches Raul Deju Institute for Artificial Intelligence", "impact": "University AI/data-science/cybersecurity hub deepens the in-state research-computing market.", "tags": ["AI", "Higher Ed"], "ref": 8 },
+    { "date": "2025-12", "title": "Sandia unveils Spectra supercomputer", "impact": "New NNSA-mission machine reinforces New Mexico as a top-tier HPC buyer in-state.", "tags": ["HPC", "National Labs"], "ref": 4 },
+    { "date": "2025-08", "title": "Los Alamos launches frontier AI models on the Venado supercomputer", "impact": "Lab compute pivots toward AI for national-security science; next-gen machine planned for 2026.", "tags": ["AI", "HPC"], "ref": 11 }
+  ],
+
+  "dellActions": [
+    "Lead with HPC/AI-infrastructure into the national labs and research universities — Sandia, Los Alamos, UNM, NM Tech, NMSU — where the highest-end, recurring compute demand sits; engage through lab integrators and DOE/NNSA programs.",
+    "Build a partner/ISG motion around the commercial AI build-out (Project Jupiter / Stargate in Santa Teresa, Intel Rio Rancho) — supplier, edge, and adjacent-account opportunities orbit these anchors.",
+    "Confirm Dell coverage on GSD statewide price agreements and the relevant NASPO ValuePoint master agreement / NM participating addendum before pursuing state deals.",
+    "Time state-government engagement around the leadership transition — Lujan Grisham is term-limited and a new administration plus likely DoIT/CIO change arrives January 2027; build relationships now, expect priorities to reset.",
+    "Position governed, private/on-prem AI for sensitive state workloads as New Mexico debates AI guardrails and agencies modernize under DoIT."
+  ],
+
+  "sources": [
+    { "label": "Office of the Governor — Governor celebrates landmark final legislative session (FY2027 budget)", "url": "https://www.governor.state.nm.us/2026/02/19/governor-celebrates-landmark-final-legislative-session-lawmakers-approve-medical-malpractice-universal-child-care-public-safety-road-improvement-and-education-bills/" },
+    { "label": "Office of the Governor — Governor appoints Manny Barreras as Secretary for the Department of Information Technology", "url": "https://www.governor.state.nm.us/2024/09/06/governor-appoints-manny-barreras-as-secretary-for-the-department-of-information-technology/" },
+    { "label": "New Mexico General Services Department — State Purchasing Division", "url": "https://generalservices.state.nm.us/state-purchasing/" },
+    { "label": "Sandia National Laboratories — Sandia's newest supercomputer (Spectra) takes the stage", "url": "https://newsreleases.sandia.gov/not-the-largest-supercomputer-but-maybe-the-most-interesting/" },
+    { "label": "Office of the Governor — Michelle Lujan Grisham", "url": "https://www.governor.state.nm.us/" },
+    { "label": "Benton Institute — New Mexico's Three-Year Plan to Close the Digital Divide (BEAD / OBAE)", "url": "https://www.benton.org/blog/new-mexicos-three-year-plan-close-digital-divide" },
+    { "label": "Intel Newsroom — Intel Opens Fab 9 in New Mexico", "url": "https://newsroom.intel.com/intel-foundry/intel-opens-fab-9-in-new-mexico" },
+    { "label": "New Mexico Tech — New Institute at NMT Will Propel AI Technologies", "url": "https://www.nmt.edu/news/2026/new-institute-at-nmt-will-propel-ai.php" },
+    { "label": "Albuquerque Journal — Doña Ana County's Project Jupiter joins $500B Stargate initiative led by OpenAI, Oracle", "url": "https://www.abqjournal.com/business/doa-ana-countys-project-jupiter-joins-500-billion-stargate-initiative-led-by-openai-oracle/493927" },
+    { "label": "Source New Mexico — Project Jupiter data center developers announce new plans for generating power", "url": "https://sourcenm.com/2026/04/27/nm-project-jupiter-data-center-developers-announce-new-plans-for-generating-power/" },
+    { "label": "U.S. Department of Energy / NNSA — Los Alamos launches frontier AI models on the Venado supercomputer", "url": "https://www.energy.gov/nnsa/articles/nnsas-los-alamos-national-laboratory-launches-frontier-ai-models-venado-supercomputer" }
+  ]
+}

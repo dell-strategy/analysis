@@ -1,0 +1,149 @@
+{
+  "code": "DE",
+  "name": "Delaware",
+  "slug": "delaware",
+  "region": "Mid-Atlantic",
+  "updated": "2026-06-15",
+  "tagline": "A small, highly centralized state with a brand-new CIO from Virginia, a cloud-first DTI moving 77% of servers off-prem, and an AI-governance framework already live — Delaware buys technology as one enterprise.",
+
+  "snapshot": [
+    { "label": "FY2027 Operating Budget", "value": "$6.94B" },
+    { "label": "DTI FY27 Request", "value": "~$69M" },
+    { "label": "Procurement Model", "value": "Centralized (GSS + DTI)" },
+    { "label": "GenAI Policy (live)", "value": "DTI Enterprise Policy" }
+  ],
+
+  "execSummary": {
+    "summary": "Delaware is the most centralized technology buyer in the country: the Department of Technology & Information (DTI) runs cybersecurity and IT for all three branches of government and the entire K-12 public/charter network, and statewide purchasing flows through OMB's Government Support Services. Three shifts matter for any SLG seller in 2026. First, new leadership — Governor Matt Meyer (in office since January 2025) installed Bob Osmond, formerly Virginia's Commonwealth CIO who directed ~$1.3B/year in tech procurement, as Delaware CIO in May 2026. Second, DTI is aggressively cloud-first: roughly 77% of state servers now live in Microsoft Cloud (Nebraska/North Carolina), and the FY27 budget ask funds more cloud, a new web-security system, and VPN/identity replacement. Third, AI governance is already operational — DTI's Enterprise GenAI Policy (July 2025) and a mandatory statewide AI training launched March 2026, both gated to US-based, enterprise tools. Delaware is small but disciplined: win the enterprise standard at DTI and you win the state.",
+    "opportunities": [
+      "Enterprise client and lifecycle refresh across a centralized executive branch and the statewide K-12 network DTI secures.",
+      "Cloud and hybrid infrastructure as DTI continues migrating off two internal data centers — storage, networking, and the on-prem footprint that remains.",
+      "Cybersecurity modernization: web-security system, VPN-to-modern-identity replacement, and admin-account hardening called out in the FY27 budget.",
+      "Governed, US-based AI for sensitive workloads that fits DTI's GenAI policy (enterprise Copilot/Bedrock allowed; foreign-origin tools prohibited)."
+    ],
+    "stats": [
+      { "value": "$6.94B", "label": "FY2027 Operating Budget", "note": "Meyer recommended, Jan 29 2026; +4.99%", "ref": 1 },
+      { "value": "~$69M", "label": "DTI FY27 Request", "note": "~$8M increase over ~$61M base", "ref": 2 },
+      { "value": "77%", "label": "Servers in Microsoft Cloud", "note": "Off-prem (NE/NC) per Acting CIO", "ref": 2 },
+      { "value": "$107M", "label": "BEAD Allocation", "note": "Federal broadband; buildout phasing", "ref": 6 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Delaware budgets on an annual fiscal-year cycle (July 1–June 30). Governor Meyer's FY2027 recommended budget, unveiled January 29, 2026, totals $6.94B in operating funds (about +4.99%) plus roughly $1.0B in capital/bond spending. There is no single 'state IT budget' line; technology is concentrated in DTI, whose FY27 request is about $69M — roughly $8M above its ~$61M base — with the increase aimed at cloud, security, and digital services.",
+    "stats": [
+      { "value": "$6.94B", "label": "FY2027 operating", "note": "Recommended; +4.99% YoY", "ref": 1 },
+      { "value": "~$8M", "label": "DTI FY27 increase", "note": "~$7M to cloud, web security, portals", "ref": 2 },
+      { "value": "$20.1M", "label": "Technology cost driver", "note": "Listed in FY27 budget presentation", "ref": 3 }
+    ],
+    "breakdown": [
+      { "label": "DTI total request (FY27)", "amount": 69, "display": "~$69M", "note": "~$8M over ~$61M base" },
+      { "label": "Cloud / web security / portals", "amount": 7, "display": "~$7M", "note": "Bulk of the DTI increase" },
+      { "label": "VPN-to-identity replacement", "amount": 1.5, "display": "$1.5M+", "note": "Plus $400K+ admin-account hardening" }
+    ],
+    "notes": [
+      "Figures are annual (FY27) unless noted; Delaware does not budget on a biennial cycle.",
+      "ARPA money that funded prior security upgrades has expired — those costs are shifting onto the ongoing state operating budget.",
+      "The corporate franchise tax funds roughly a third of the state budget; detailed franchise-revenue data trails into spring, so treat IT funding as agency-driven, not earmarked."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Cloud-First Migration (Microsoft Cloud)",
+      "status": "Accelerating",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 70,
+      "tags": ["Cloud", "Data Center", "Infrastructure"],
+      "summary": "DTI operates two internal data centers but has moved ~77% of state servers into Microsoft Cloud hosted out of Nebraska and North Carolina, and expects continued growth. The FY27 ask funds more cloud infrastructure. For Dell this is a hybrid story: the remaining on-prem footprint, edge/storage, networking, and the lifecycle of the estate that supports a still-substantial hybrid environment.",
+      "ref": 2
+    },
+    {
+      "name": "Cybersecurity Modernization",
+      "status": "Funded (FY27)",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 60,
+      "tags": ["Cybersecurity", "Identity", "Web Security"],
+      "summary": "DTI secures all three branches plus the statewide K-12/charter network and is widely cited as a model state cyber program. FY27 funds a new web-security system, replacement of the legacy VPN with modern employee-verification/identity ($1.5M+), and $400K+ in admin-account hardening. Leadership has churned — longtime CSO Solomon Adote departed in 2025 — so security strategy is being reset under new CIO Osmond.",
+      "ref": 2
+    },
+    {
+      "name": "DTI Enterprise GenAI Policy & AI Training",
+      "status": "In effect",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Governance", "Policy"],
+      "summary": "DTI's Enterprise GenAI Policy (July 3, 2025) permits public tools (ChatGPT, Gemini) and enterprise tools (Microsoft Copilot, Amazon Bedrock) but bars uploading sensitive data to public models and prohibits tools originated or hosted outside the US (e.g., DeepSeek). A mandatory 'Responsible AI for Public Professionals' training launched March 2026. The Delaware AI Commission (created July 2024) guides adoption. The bar against foreign-origin tools favors governed, US-based and private AI.",
+      "ref": 9
+    },
+    {
+      "name": "Broadband Expansion (BEAD)",
+      "status": "Buildout phasing",
+      "statusType": "warn",
+      "dellFit": 35,
+      "budgetStrength": 55,
+      "tags": ["Broadband", "Digital Equity", "Federal"],
+      "summary": "Delaware was among the first states with an approved BEAD final proposal ($107M federal allocation). Federal rule changes in 2025 delayed rural Kent/Sussex fiber; the latest approved plan targets 4,728+ unserved/underserved locations with $27.8M federal plus ~$75M private (Verizon, Comcast), construction expected to begin Fall 2026. More a partner/ecosystem signal than a direct Dell motion, but it shapes the state's digital-services demand.",
+      "ref": 6
+    }
+  ],
+
+  "procurement": {
+    "intro": "Delaware procures technology as a single enterprise. OMB's Government Support Services (GSS) is the state's central contracting unit and administers most statewide contracts; covered agencies must buy material, equipment, and non-professional services through these contracts. DTI's Procurement Services team partners with OMB/GSS to facilitate selected technology agreements, and DTI sets the enterprise technology direction the rest of state government follows. The procurement portal is MyMarketplace.",
+    "vehicles": [
+      { "name": "GSS Statewide Contracts", "detail": "Primary vehicle. Central, pre-competed agreements; mandatory for covered state agencies and open to local government, school districts, and other eligible entities. Confirm Dell/reseller coverage." },
+      { "name": "DTI Technology Agreements", "detail": "DTI Procurement Services co-administers selected technology contracts with OMB/GSS and governs enterprise technology standards." },
+      { "name": "MyMarketplace Portal", "detail": "State procurement portal for bid solicitations, awarded contracts, and vendor registration." }
+    ],
+    "entities": [
+      { "name": "DTI", "role": "Central IT and cybersecurity authority for all three branches and K-12; sets enterprise standards and the cloud/security/AI direction." },
+      { "name": "OMB — Government Support Services", "role": "Central contracting unit; administers statewide goods/services contracts mandatory for covered agencies." },
+      { "name": "Health & Social Services (DHSS)", "role": "Among the largest agency IT/data spenders; benefits-systems and data-heavy modernization." },
+      { "name": "University of Delaware", "role": "Independent research-computing and HPC/AI-infrastructure buyer outside the central DTI model." }
+    ],
+    "competition": "Delaware is a small, tightly centralized market where the enterprise standard at DTI effectively decides the state. Microsoft is deeply embedded (cloud + Copilot), so incumbency is the main barrier. Differentiation comes from hybrid/on-prem and edge offerings that complement the cloud-first posture, US-based governed AI that fits DTI's policy, and security/identity capability — not price-per-unit alone."
+  },
+
+  "powerStructure": [
+    { "name": "Matt Meyer", "title": "Governor", "org": "State of Delaware", "note": "In office since January 2025; FY27 'Delaware First' budget; champions AI training and broadband.", "ref": 1 },
+    { "name": "Bob Osmond", "title": "Chief Information Officer", "org": "DTI", "note": "Sworn in May 8, 2026. Former Virginia Commonwealth CIO who directed ~$1.3B/yr tech procurement for 65K users; priorities are modernization, cybersecurity, digital services.", "ref": 4 },
+    { "name": "Jordan Schulties", "title": "Former Acting CIO / DTI CAO", "org": "DTI", "note": "Led DTI Jan–May 2026 and presented the FY27 budget request; remains a key DTI operations/budget contact.", "ref": 2 },
+    { "name": "OMB — Government Support Services", "title": "Central contracting", "org": "Office of Management & Budget", "note": "Owns the statewide contract vehicles every covered agency must use." },
+    { "name": "Delaware AI Commission", "title": "AI governance body", "org": "State of Delaware", "note": "Created July 2024; recommends AI guidelines and shapes responsible-adoption policy." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Bob Osmond sworn in as Delaware CIO", "impact": "Experienced enterprise leader (ex-Virginia CIO) takes over DTI; expect a refreshed modernization and cybersecurity agenda — engage early as direction resets.", "tags": ["Leadership"], "ref": 4 },
+    { "date": "2026-04", "title": "Meyer nominates Osmond as CIO", "impact": "Signals continuity toward centralized, security-forward IT modeled on Virginia's program.", "tags": ["Leadership"], "ref": 5 },
+    { "date": "2026-03", "title": "Statewide AI training launches for state employees", "impact": "'Responsible AI for Public Professionals' is mandatory for executive branch; operationalizes DTI's GenAI policy and opens governed-AI adoption.", "tags": ["AI", "Workforce"], "ref": 10 },
+    { "date": "2026-03", "title": "Governor announces major broadband milestone", "impact": "Federal approval to reach 4,728+ locations with $27.8M federal + ~$75M private; construction expected Fall 2026.", "tags": ["Broadband"], "ref": 7 },
+    { "date": "2026-02", "title": "DTI requests ~$8M FY27 increase (to ~$69M)", "impact": "Funds cloud infrastructure, a new web-security system, expanded portals, and VPN/identity replacement — directly buyable security and infrastructure scope.", "tags": ["Budget", "Cybersecurity"], "ref": 2 },
+    { "date": "2026-01", "title": "Meyer unveils $6.94B FY27 recommended budget", "impact": "'Delaware First' budget (+4.99%); technology listed among cost drivers. Sets the FY27 spending envelope.", "tags": ["Budget"], "ref": 1 }
+  ],
+
+  "dellActions": [
+    "Build the relationship with new CIO Bob Osmond's DTI team now — a leadership reset is the moment to influence the enterprise standard that governs the whole state.",
+    "Lead with hybrid: position storage, networking, edge, and lifecycle for the on-prem estate that remains as DTI runs ~77% in Microsoft Cloud — complement, don't fight, the cloud-first posture.",
+    "Map directly to the funded FY27 security scope: web-security system, VPN-to-modern-identity replacement, and admin-account hardening.",
+    "Position US-based, governed/private AI that fits DTI's GenAI policy (enterprise tools allowed, foreign-origin prohibited) for sensitive workloads.",
+    "Confirm Dell and reseller coverage on GSS statewide contracts and MyMarketplace, and pursue University of Delaware separately as an independent research-computing/AI-infrastructure buyer."
+  ],
+
+  "sources": [
+    { "label": "Delaware Business Times — Meyer proposes FY2027 budget at $6.94B", "url": "https://delawarebusinesstimes.com/news/meyer-proposes-2027-budget/" },
+    { "label": "Delaware Public Media — DTI seeks $8M budget increase (FY27)", "url": "https://www.delawarepublic.org/politics-government/2026-02-06/delawares-dept-of-information-and-technology-looks-for-8-million-budget-increase" },
+    { "label": "State of Delaware — FY2027 Budget Presentation (PDF)", "url": "https://budget.delaware.gov/budget/fy2027/documents/budget-presentation.pdf" },
+    { "label": "State of Delaware News — Governor Meyer Swears In New CIO", "url": "https://news.delaware.gov/2026/05/08/governor-meyer-swears-in-new-cio-for-delaware/" },
+    { "label": "State of Delaware News — Meyer Nominates Bob Osmond as CIO", "url": "https://news.delaware.gov/2026/04/06/governor-meyer-nominates-bob-osmond-as-chief-information-officer/" },
+    { "label": "Delaware Business Times — Federal approval for broadband expansion (BEAD)", "url": "https://delawarebusinesstimes.com/news-briefs/delaware-receives-federal-approval-for-internet-infrastructure-expansion-plans/" },
+    { "label": "State of Delaware News — Major Broadband Milestone", "url": "https://news.delaware.gov/2026/03/25/governor-matt-meyer-announces-major-broadband-milestone-for-delaware/" },
+    { "label": "Delaware OMB — Government Support Services (Contracting)", "url": "https://gss.omb.delaware.gov/default.shtml" },
+    { "label": "StateScoop — Delaware's gen AI policy allows ChatGPT, not DeepSeek", "url": "https://statescoop.com/delaware-policy-generative-ai-chatgpt-2025/" },
+    { "label": "State of Delaware News — Delaware Launches Statewide AI Training", "url": "https://news.delaware.gov/2026/03/19/delaware-launches-new-statewide-ai-training-for-state-employees/" },
+    { "label": "DTI — Strategic Priorities", "url": "https://dti.delaware.gov/about-dti/strategic-priorities/" },
+    { "label": "StateScoop — Delaware cyber chief Solomon Adote to depart", "url": "https://statescoop.com/delaware-cyber-chief-departs-after-six-years-2025/" }
+  ]
+}

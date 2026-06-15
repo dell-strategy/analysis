@@ -1,0 +1,156 @@
+{
+  "code": "IL",
+  "name": "Illinois",
+  "slug": "illinois",
+  "region": "Midwest",
+  "updated": "2026-06-15",
+  "tagline": "Largest budget in state history, a centralized $1.1B IT shop under a new CIO, a first-in-nation frontier-AI law, and a data-center boom now hitting an incentive pause — Illinois is reshaping where and how it buys technology.",
+
+  "snapshot": [
+    { "label": "FY2026 General Funds Budget", "value": "~$55.3B" },
+    { "label": "Central IT Agency", "value": "DoIT ($1.1B)" },
+    { "label": "Cloud / Co-op Gate", "value": "NASPO ValuePoint" },
+    { "label": "AI Law (signed)", "value": "SB 315 (frontier)" }
+  ],
+
+  "execSummary": {
+    "summary": "Illinois enters FY2026 with the largest budget in its history (roughly $55.3B general funds) and a centralized technology operating model every SLG seller should know. First, the Department of Innovation & Technology (DoIT) runs a consolidated ~$1.1B enterprise IT shop for executive-branch agencies under new Secretary and State CIO Brandon Ragle (April 2025) — one front door for most state tech decisions. Second, Illinois has positioned itself as a national AI-policy leader: SB 315 (frontier-AI safety, effective Jan 1, 2027) plus a State Government AI Act mean agencies need governed, auditable AI. Third, a massive data-center buildout (201+ facilities, ~$15.8B invested) is colliding with grid and cost concerns — Pritzker is pausing new data-center tax incentives from July 1, 2026. For Dell, the buying motion runs through DoIT and the Chief Procurement Office via statewide master contracts and approved cooperatives (NASPO ValuePoint, Sourcewell, OMNIA), and a long-running statewide ERP modernization is reshaping back-office and security spend.",
+    "opportunities": [
+      "AI-infrastructure demand from the University of Illinois / NCSA research-computing ecosystem (DeltaAI, NVIDIA GH200) and from agency AI adoption under new governance rules.",
+      "Statewide ERP modernization and the cybersecurity hardening attached to it — secure compute, storage, and lifecycle across consolidated DoIT systems.",
+      "Endpoint, client, and lifecycle refresh across a record budget and a centralized device-buying motion (JPMC device master contracts).",
+      "Governed private / on-prem AI for sensitive workloads as Illinois operationalizes SB 315 and the State Government AI Act."
+    ],
+    "stats": [
+      { "value": "~$55.3B", "label": "FY2026 General Funds", "note": "Largest in state history; ~$217M projected surplus", "ref": 1 },
+      { "value": "$1.1B", "label": "DoIT enterprise IT budget", "note": "Consolidated executive-branch IT", "ref": 3 },
+      { "value": "201+", "label": "Data centers in Illinois", "note": "~$15.8B invested as of May 2025", "ref": 8 },
+      { "value": "Jan 1 2027", "label": "SB 315 in effect", "note": "First-in-nation frontier-AI audits", "ref": 5 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Illinois budgets on an annual fiscal-year cycle (July 1 – June 30). The FY2026 enacted budget is roughly $55.3B in general-funds revenue against ~$55.1B in spending — the largest in state history, with a small projected surplus. There is no single 'state IT budget' line; most executive-branch technology spend is consolidated under DoIT's ~$1.1B enterprise budget, with additional technology and security dollars distributed across agencies and programs.",
+    "stats": [
+      { "value": "~$55.3B", "label": "FY2026 GF revenue", "note": "Enacted", "ref": 2 },
+      { "value": "~$55.1B", "label": "FY2026 GF spend", "note": "Enacted", "ref": 2 },
+      { "value": "$1.1B", "label": "DoIT enterprise IT", "note": "Consolidated executive-branch", "ref": 3 }
+    ],
+    "breakdown": [
+      { "label": "DoIT enterprise IT budget", "amount": 1100, "display": "$1.1B", "note": "Consolidated executive-branch technology" },
+      { "label": "Connect Illinois broadband", "amount": 420, "display": "$420M", "note": "State investment in the broadband grant program" },
+      { "label": "NCSA DeltaAI (federal)", "amount": 30, "display": "~$30M", "note": "NSF awards; U of I research computing" }
+    ],
+    "notes": [
+      "Illinois uses an annual (not biennial) budget; figures are FY2026 unless noted.",
+      "DoIT's $1.1B is an enterprise IT operating figure, not the sum of all state technology spend — agency-level tech dollars sit outside it.",
+      "Connect Illinois and NCSA figures are cumulative/programmatic, not single-year appropriations."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "SB 315 — Frontier AI Safety Act",
+      "status": "Signed; effective Jan 1, 2027",
+      "statusType": "warn",
+      "dellFit": 65,
+      "budgetStrength": 40,
+      "tags": ["AI", "Policy", "Governance"],
+      "summary": "Illinois became the first state to mandate independent third-party safety audits of frontier AI developers, requiring annual safety frameworks, pre-deployment transparency, incident reporting, and whistleblower protections. Paired with the State Government AI Act, it signals a governed, auditable posture — an opening to lead with private/on-prem AI for sensitive state data rather than open public models.",
+      "ref": 5
+    },
+    {
+      "name": "Statewide ERP Modernization",
+      "status": "In progress",
+      "statusType": "good",
+      "dellFit": 60,
+      "budgetStrength": 65,
+      "tags": ["Modernization", "ERP", "Security"],
+      "summary": "Illinois is consolidating financial and HR processes into a single statewide ERP, now tracking roughly 90% of the state budget. The program is a recognized model for state modernization and is tightly coupled with cybersecurity hardening — driving demand for secure compute, storage, and lifecycle across consolidated DoIT systems.",
+      "ref": 9
+    },
+    {
+      "name": "Data-Center Buildout & Incentive Pause",
+      "status": "Pause from July 1, 2026",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 70,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Illinois hosts 201+ data centers with ~$15.8B invested, driven by the Data Centers Investment Program incentives. Citing grid load, cost, and water concerns, Pritzker is pausing NEW data-center tax incentives starting July 1, 2026 (existing agreements honored). The infrastructure tailwind remains strong, but new greenfield economics shift — position around existing campuses, enterprise modernization, and research computing rather than net-new incentive plays.",
+      "ref": 8
+    },
+    {
+      "name": "NCSA DeltaAI — Research Supercomputing",
+      "status": "Operational",
+      "statusType": "good",
+      "dellFit": 85,
+      "budgetStrength": 60,
+      "tags": ["AI Infrastructure", "Higher Ed", "HPC"],
+      "summary": "The University of Illinois' National Center for Supercomputing Applications launched DeltaAI (~$30M NSF), quadrupling its AI compute with NVIDIA GH200 Grace Hopper hardware at the National Petascale Computing Facility. The U of I / NCSA ecosystem is a sophisticated, recurring AI-infrastructure and HPC buyer and the strongest research-computing tailwind in the state.",
+      "ref": 7
+    },
+    {
+      "name": "Connect Illinois Broadband",
+      "status": "Ongoing",
+      "statusType": "good",
+      "dellFit": 45,
+      "budgetStrength": 55,
+      "tags": ["Broadband", "Digital Equity"],
+      "summary": "A $420M state investment expanding universal and gigabit-symmetrical broadband, with privacy and cybersecurity requirements built in. Less of a direct compute play, but a driver of edge, networking, and security needs across counties and anchor institutions.",
+      "ref": 6
+    }
+  ],
+
+  "procurement": {
+    "intro": "Illinois technology procurement is split between policy/operations and contracting authority. DoIT sets enterprise technology direction and operations for executive-branch agencies, while the independent Chief Procurement Office (CPO) and Central Management Services (CMS) run the contracting machinery. State agencies must first consider their own procurement or an available statewide master contract; BidBuy is the primary sourcing system, and a set of approved cooperatives extends pre-competed buying.",
+    "vehicles": [
+      { "name": "Joint Purchase Master Contracts (JPMC)", "detail": "Statewide master contracts (e.g., device/Apple-Mac contracts) run jointly by DoIT, CPO-GS, CMS, and ISBE. Primary vehicle for centralized device and IT buys — confirm Dell coverage and reseller scope." },
+      { "name": "Approved cooperatives", "detail": "NASPO ValuePoint (reapproved June 2025), Sourcewell, OMNIA Partners, and others are approved for use under the Unified Procurement Program — useful pre-competed paths for state and local entities." },
+      { "name": "BidBuy / Illinois Procurement Bulletin", "detail": "State's sourcing platform for IT/Telecom solicitations and awards; where competitive opportunities are posted and tracked." }
+    ],
+    "entities": [
+      { "name": "DoIT", "role": "Central enterprise IT operations, policy, security, and ~$1.1B technology budget for executive-branch agencies." },
+      { "name": "Chief Procurement Office (CPO-GS)", "role": "Independent procurement authority under the Procurement Code; State Purchasing Officers run IT solicitations." },
+      { "name": "Central Management Services (CMS)", "role": "Shared services and joint master-contract authority; partners with DoIT on device and IT contracts." },
+      { "name": "University of Illinois / NCSA", "role": "Large independent research-computing and AI-infrastructure buyer (DeltaAI, HPC)." }
+    ],
+    "competition": "Illinois is a centralized, contract-driven market with strong incumbents on statewide master contracts and cooperatives. Differentiation comes from AI-infrastructure capability (research computing, governed on-prem AI), ERP/modernization-aligned security and compute, and correctly scoped cooperative coverage — not price alone."
+  },
+
+  "powerStructure": [
+    { "name": "JB Pritzker", "title": "Governor", "org": "State of Illinois", "note": "Champions AI policy leadership and data-center growth; now pausing new data-center incentives over grid/cost concerns.", "ref": 8 },
+    { "name": "Brandon Ragle", "title": "Secretary & State CIO", "org": "DoIT", "note": "Appointed April 2025; 20+ year Illinois IT veteran. Owns enterprise tech strategy, ~$1.1B budget, and statewide cyber posture.", "ref": 3 },
+    { "name": "Patrick Nolan", "title": "Deputy Secretary", "org": "DoIT", "note": "Assumed role June 2025; supports enterprise operations and delivery." },
+    { "name": "Chief Procurement Office (CPO-GS)", "title": "Independent procurement authority", "org": "State of Illinois", "note": "Controls IT contracting via State Purchasing Officers and the Unified Procurement Program / approved cooperatives.", "ref": 10 }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Pritzker pauses new data-center tax incentives effective July 1, 2026", "impact": "Greenfield data-center economics shift; existing agreements honored. Pivot to existing campuses, modernization, and research computing.", "tags": ["Data Centers", "Policy"], "ref": 8 },
+    { "date": "2026-06", "title": "SB 315 frontier-AI safety law signed (effective Jan 1, 2027)", "impact": "Illinois sets a first-in-nation AI-audit standard; agencies favor governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
+    { "date": "2026-01", "title": "Statewide ERP now tracks ~90% of the state budget", "impact": "Consolidation milestone drives secure compute/storage and cybersecurity hardening across DoIT systems.", "tags": ["Modernization", "ERP"], "ref": 9 },
+    { "date": "2025-06", "title": "NASPO ValuePoint reapproved as an Illinois cooperative", "impact": "Pre-competed cooperative path reaffirmed for state and local buyers — a usable route for Dell offerings.", "tags": ["Procurement"], "ref": 10 },
+    { "date": "2025-05", "title": "Illinois passes the largest budget in state history (FY2026)", "impact": "Record ~$55.3B general-funds budget with a small surplus sustains agency tech and refresh spend.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-04", "title": "Brandon Ragle named DoIT Secretary & State CIO", "impact": "Stable, IT-veteran leadership over the ~$1.1B enterprise tech and cyber agenda.", "tags": ["Leadership"], "ref": 3 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation with University of Illinois / NCSA (DeltaAI, HPC) and tie Dell AI Factory / ISG offerings to research computing and agency AI adoption.",
+    "Map Dell coverage on Joint Purchase Master Contracts and approved cooperatives (NASPO ValuePoint, Sourcewell, OMNIA) before pursuing centralized device and IT deals.",
+    "Engage DoIT as the single front door for executive-branch enterprise IT — align secure compute, storage, and lifecycle to the statewide ERP modernization and its security hardening.",
+    "Reframe data-center plays around existing campuses, enterprise modernization, and research computing given the July 1, 2026 incentive pause — avoid net-new incentive-dependent pitches.",
+    "Position governed private/on-prem AI for sensitive workloads as Illinois operationalizes SB 315 and the State Government AI Act."
+  ],
+
+  "sources": [
+    { "label": "CBS Chicago — Illinois lawmakers pass $56B FY2026 budget, largest in state history", "url": "https://www.cbsnews.com/chicago/news/illinois-budget-2026-news-jb-pritzker/" },
+    { "label": "Civic Federation — The State of Illinois FY2026 Enacted Budget", "url": "https://civicfed.org/blog/state-illinois-fy2026-enacted-budget" },
+    { "label": "Gov. Pritzker Newsroom — Brandon Ragle appointed DoIT Secretary ($1.1B budget)", "url": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-appoints-brandon-ragle-as-next-secretary-of-illinois-department-of-innovation-and-technology" },
+    { "label": "GovTech — Brandon Ragle Named CIO, Secretary of Illinois DoIT", "url": "https://www.govtech.com/workforce/brandon-ragle-named-cio-secretary-of-illinois-doit" },
+    { "label": "GovTech — Illinois' Landmark AI Law (SB 315) Sets a New Standard for Oversight", "url": "https://www.govtech.com/artificial-intelligence/illinois-landmark-ai-law-sets-a-new-standard-for-oversight" },
+    { "label": "Connect Illinois — Five-Year Action Plan (broadband)", "url": "https://dceo.illinois.gov/content/dam/soi/en/web/dceo/broadband/documents/connect-il-five-year-action-plan.pdf" },
+    { "label": "NCSA — NCSA Launches DeltaAI", "url": "https://www.ncsa.illinois.edu/2024/11/18/ncsa-launches-deltaai/" },
+    { "label": "Gov. Pritzker Newsroom — Pause on New Data Center Tax Incentives", "url": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-pauses-new-data-center-tax-incentives" },
+    { "label": "GovTech — Illinois ERP System Sets Standard for State Modernization", "url": "https://www.govtech.com/computing/illinois-erp-system-sets-standard-for-state-modernization.html" },
+    { "label": "NASPO ValuePoint — Reapproved for Illinois government agencies", "url": "https://www.naspovaluepoint.org/press_release/naspo-valuepoint-offers-illinois-government-agencies-best-value-cooperative-contracts/" }
+  ]
+}

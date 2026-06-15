@@ -1,0 +1,146 @@
+{
+  "code": "OH",
+  "name": "Ohio",
+  "slug": "ohio",
+  "region": "Midwest",
+  "updated": "2026-06-15",
+  "tagline": "A record two-year budget, the most aggressive data-center buildout in the Midwest, and a sudden pause on data-center tax breaks — Ohio is both the hottest AI-infrastructure market in the region and a state recalibrating how it pays for it.",
+
+  "snapshot": [
+    { "label": "2026–27 Biennial Budget", "value": "~$200B all-funds" },
+    { "label": "Primary IT Vehicle", "value": "DAS State Term Schedules" },
+    { "label": "AI Hub", "value": "Central Ohio data centers" },
+    { "label": "Watch Item", "value": "Data-center tax pause" }
+  ],
+
+  "execSummary": {
+    "summary": "Ohio enters the FY2026–27 biennium with a record ~$200B all-funds operating budget (HB 96, signed June 30, 2025) and a technology story dominated by one theme: AI infrastructure. Central Ohio has become one of the nation's densest data-center corridors — Google, Microsoft, Amazon, and Meta are all building — anchored by Intel's $28B 'Ohio One' semiconductor campus in New Albany. Two structural shifts matter most to sellers. First, the economics are being re-litigated: Intel has pushed its first fab to 2030–31, and in May 2026 Governor DeWine paused the state's data-center sales-tax exemption after it cost ~$1.6B in 2025 (12x the estimate), with the legislature studying a permanent change. Second, governance is tightening — DAS stood up a statewide AI Council and Generative AI sandbox, and HB 96 imposed new cybersecurity standards (ORC 9.64) on every local government effective September 30, 2025. For Dell, the buying motion runs through the Ohio Department of Administrative Services (DAS) and its State Term Schedules / cooperative purchasing, with Katrina Flory as the long-tenured state CIO.",
+    "opportunities": [
+      "AI-infrastructure demand across the central Ohio data-center corridor and university research computing (PowerEdge, networking, storage, services).",
+      "Statewide AI adoption under the DAS AI Council and GenAI sandbox — a chance to lead with governed, private/on-prem AI for sensitive state workloads.",
+      "Local-government cybersecurity uplift driven by the new ORC 9.64 mandate — endpoint, backup/recovery, and managed-security needs across 3,800+ subdivisions.",
+      "Endpoint, client, and lifecycle refresh across a record general-government budget and DAS enterprise shared services."
+    ],
+    "stats": [
+      { "value": "~$200B", "label": "2026–27 All-Funds Budget", "note": "HB 96, signed June 30, 2025; ~$60B/yr GRF", "ref": 1 },
+      { "value": "$28B", "label": "Intel 'Ohio One' campus", "note": "Largest private investment in OH history; first fab now 2030–31", "ref": 5 },
+      { "value": "~$1.6B", "label": "2025 data-center tax exemption cost", "note": "12x the $136M estimate; paused June 1, 2026", "ref": 8 },
+      { "value": "Sep 30 2025", "label": "Local-gov cyber mandate live", "note": "ORC 9.64 via HB 96", "ref": 10 }
+    ]
+  },
+
+  "budget": {
+    "intro": "Ohio budgets on a two-year (biennial) cycle running July 1 to June 30. HB 96, signed June 30, 2025, sets the FY2026–27 operating budget — roughly $60B/year in the General Revenue Fund and ~$200B all-funds across the biennium, the largest in state history. There is no single 'state IT budget' line; technology spend is distributed across agencies and delivered through DAS Office of Information Technology enterprise shared services, plus a set of named technology, broadband, and security programs.",
+    "stats": [
+      { "value": "~$200B", "label": "All-funds, 2026–27", "note": "Largest in state history", "ref": 1 },
+      { "value": "~$60B", "label": "GRF per year", "note": "General Revenue Fund baseline", "ref": 1 },
+      { "value": "67", "label": "Line-item vetoes", "note": "Record number by DeWine, incl. data-center limits", "ref": 1 }
+    ],
+    "breakdown": [
+      { "label": "Data-center sales-tax exemption (FY25 cost)", "amount": 1600, "display": "~$1.6B", "note": "Now paused; signals the scale of the buildout" },
+      { "label": "Broadband deployed to date", "amount": 5500, "display": "5,500+ mi", "note": "Statewide fiber via BroadbandOhio (miles, not $)" },
+      { "label": "Intel 'Ohio One' campus", "amount": 28000, "display": "$28B", "note": "Private investment; timeline pushed to 2030–31" }
+    ],
+    "notes": [
+      "Budget figures are biennial unless noted; the ~$200B all-funds total spans two fiscal years.",
+      "The data-center tax pause (June 2026) does not claw back exemptions for projects already in progress — but it reshapes the incentive math for new builds. Track the legislature's Joint Data Center Committee."
+    ]
+  },
+
+  "initiatives": [
+    {
+      "name": "Central Ohio Data-Center & AI Buildout",
+      "status": "Accelerating (with friction)",
+      "statusType": "good",
+      "dellFit": 90,
+      "budgetStrength": 80,
+      "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
+      "summary": "Central Ohio is one of the densest hyperscale corridors in the country — Google, Microsoft, Amazon, and Meta are all building near Columbus/New Albany. PUCO's 2025 AEP Ohio data-center tariff (large customers pay for 85%+ of subscribed energy) and a May 2026 pause on the sales-tax exemption add friction, but demand remains the strongest Dell ISG / AI Factory tailwind in the Midwest.",
+      "ref": 6
+    },
+    {
+      "name": "Intel 'Ohio One' Semiconductor Campus",
+      "status": "Delayed to 2030–31",
+      "statusType": "warn",
+      "dellFit": 75,
+      "budgetStrength": 70,
+      "tags": ["Semiconductors", "New Albany", "Economic Dev"],
+      "summary": "Intel's $28B New Albany campus is the largest private investment in Ohio history, but the first fab has slipped to 2030 with production in 2030–31 and a second fab in 2032. Site work continues. The long horizon tempers near-term supplier demand, yet the campus continues to anchor Ohio's identity as a chip and AI-hardware hub and draw an ecosystem of suppliers and data centers.",
+      "ref": 5
+    },
+    {
+      "name": "DAS AI Council & GenAI Sandbox",
+      "status": "Active",
+      "statusType": "good",
+      "dellFit": 70,
+      "budgetStrength": 45,
+      "tags": ["AI", "Governance", "Workforce"],
+      "summary": "The Ohio Department of Administrative Services established a statewide AI Council and a Generative AI 'sandbox' to vet use cases, set legal guardrails for third-party AI services, and build a central repository of approved GenAI use cases. Ohio also requires every K-12 school to adopt an AI policy by July 1, 2026. Agencies need governed, auditable AI — an opening for private/on-prem AI on sensitive data.",
+      "ref": 9
+    },
+    {
+      "name": "Local-Government Cybersecurity Mandate (ORC 9.64)",
+      "status": "In effect Sep 30, 2025",
+      "statusType": "good",
+      "dellFit": 75,
+      "budgetStrength": 55,
+      "tags": ["Cybersecurity", "Local Gov", "Compliance"],
+      "summary": "HB 96 added ORC 9.64, requiring Ohio political subdivisions to adopt cybersecurity standards, run risk assessments, train staff, maintain tested incident-response plans, and report ransomware incidents. With 3,800+ subdivisions now on the hook, this drives broad demand for endpoint security, resilient backup/recovery, and managed services — backed by the Ohio Cyber Reserve and Affordable Access to Cybersecurity aggregated purchasing.",
+      "ref": 10
+    }
+  ],
+
+  "procurement": {
+    "intro": "The Ohio Department of Administrative Services (DAS) is the central procurement and IT authority. DAS Office of Information Technology sets statewide IT direction and runs enterprise shared services (OAKS, the InnovateOhio Platform, Ohio Business Gateway). Most technology buys run through DAS State Term Schedules (STS) and Master Maintenance/Master Agreements; non-state entities, higher ed, and local governments can buy through DAS Cooperative Purchasing.",
+    "vehicles": [
+      { "name": "DAS State Term Schedules (STS)", "detail": "Primary vehicle. Pre-competed price schedules; agencies and cooperative members buy approved products/services without their own RFP. Confirm Dell schedules and reseller listings are current and correctly scoped." },
+      { "name": "DAS Cooperative Purchasing", "detail": "Extends state contracts to counties, cities, schools, higher ed, and other public entities — a wide reach across Ohio's 3,800+ subdivisions." },
+      { "name": "Mandatory-use contracts (GDC/LDC/MAC/RFP)", "detail": "Take precedence over State Term Schedules for covered categories — verify whether a target category is locked to a mandatory contract before forecasting." }
+    ],
+    "entities": [
+      { "name": "DAS Office of Information Technology", "role": "Central IT procurement, policy, AI governance, and enterprise shared services — leads the statewide technology motion." },
+      { "name": "Ohio Dept of Job & Family Services / Medicaid", "role": "Among the largest agency IT spenders; data-heavy modernization." },
+      { "name": "BroadbandOhio (within DAS/Development)", "role": "Drives statewide fiber expansion and affordable-access programs." },
+      { "name": "The Ohio State University & university systems", "role": "Large independent research-computing and AI-infrastructure buyers." }
+    ],
+    "competition": "Ohio is a competitive, contract-driven market — incumbents hold DAS State Term Schedules across compute, networking, and services. Differentiation comes from AI-infrastructure capability tied to the data-center corridor, governed-AI offerings that fit the DAS AI Council, and local-government security/backup bundles that map to the new ORC 9.64 mandate rather than price alone."
+  },
+
+  "powerStructure": [
+    { "name": "Mike DeWine", "title": "Governor", "org": "State of Ohio", "note": "Signed HB 96 with a record 67 line-item vetoes; paused the data-center tax exemption in 2026. Term-limited (final term).", "ref": 1 },
+    { "name": "Katrina Flory", "title": "State CIO & DAS Assistant Director", "org": "DAS Office of Information Technology", "note": "Permanent CIO since June 2021; long-tenured (deputy since 2011). Owns statewide IT direction, shared services, and AI governance.", "ref": 4 },
+    { "name": "DAS / Office of Procurement Services", "title": "Central procurement authority", "org": "State of Ohio", "note": "Approves State Term Schedule vendors and runs cooperative purchasing — the gate for most tech buys." },
+    { "name": "Joint Data Center Committee", "title": "Legislative study committee", "org": "Ohio General Assembly", "note": "Bipartisan committee weighing the future of data-center incentives — watch for tax-policy shifts affecting the buildout.", "ref": 8 }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "DeWine pauses Ohio's data-center sales-tax exemption (effective June 1)", "impact": "After the break cost ~$1.6B in 2025 (12x estimate), new exemptions are paused while a joint committee studies the future. Existing projects keep benefits; new-build incentive math changes.", "tags": ["Data Centers", "Tax"], "ref": 8 },
+    { "date": "2026-03", "title": "Intel confirms Ohio One first fab slips to 2030, production 2030–31", "impact": "Second major delay tempers near-term supplier demand, but site work continues and the campus still anchors Ohio's chip/AI identity.", "tags": ["Semiconductors"], "ref": 5 },
+    { "date": "2025-09", "title": "Local-government cybersecurity standards (ORC 9.64) take effect", "impact": "3,800+ subdivisions must adopt standards, assess risk, train staff, and report ransomware — broad security and backup/recovery demand.", "tags": ["Cybersecurity", "Local Gov"], "ref": 10 },
+    { "date": "2025-07", "title": "PUCO orders AEP Ohio data-center tariff (85% minimum take)", "impact": "Large data-center customers must pay for 85%+ of subscribed energy, stabilizing the grid and clearing the path for new central-Ohio builds.", "tags": ["Data Centers", "Energy"], "ref": 7 },
+    { "date": "2025-06", "title": "DeWine signs HB 96, the FY2026–27 budget (~$200B all-funds)", "impact": "Record budget with 67 line-item vetoes; sustains agency IT, broadband, and shared services spend.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2025-01", "title": "Ohio releases 2025 Comprehensive Cybersecurity Plan", "impact": "Statewide cyber roadmap via CyberOhio and the Ohio Cyber Integration Center frames security priorities and aggregated purchasing.", "tags": ["Cybersecurity", "Policy"], "ref": 11 }
+  ],
+
+  "dellActions": [
+    "Lead the AI-infrastructure conversation: tie Dell ISG / AI Factory offerings to the central Ohio data-center corridor and Ohio State / university research computing.",
+    "Engage local governments on the new ORC 9.64 cyber mandate — bundle endpoint security, resilient backup/recovery, and managed services for the 3,800+ subdivisions now required to comply.",
+    "Validate that Dell's DAS State Term Schedule coverage and reseller listings are current and correctly scoped, and confirm whether target categories are locked to a mandatory-use contract.",
+    "Position governed, private/on-prem AI for sensitive workloads as the DAS AI Council and GenAI sandbox move from pilots to approved use cases.",
+    "Track the Joint Data Center Committee and the tax-exemption pause — the incentive math for new builds is in flux, so time AI-infrastructure pursuits to where projects are already funded and underway."
+  ],
+
+  "sources": [
+    { "label": "WFMJ — DeWine signs FY2026–27 operating budget (HB 96)", "url": "https://www.wfmj.com/story/52891059/governor-dewine-signs-operating-budget-bill-for-20262027-fiscal-year" },
+    { "label": "Vorys — Ohio Budget Bill Brings Significant Changes (HB 96)", "url": "https://www.vorys.com/publication-ohio-budget-bill-brings-significant-changes-and-economic-development-focus" },
+    { "label": "StateNews.org — Two-year, $60B Ohio budget off to Gov. DeWine", "url": "https://www.statenews.org/government-politics/2025-06-25/ohio-biennial-budget-is-off-to-gov-mike-dewine" },
+    { "label": "GovTech — Ohio appoints Katrina Flory permanent CIO", "url": "https://www.govtech.com/workforce/ohio-it-deputy-katrina-flory-appointed-permanent-cio" },
+    { "label": "Manufacturing Dive — Intel delays Ohio chip project to 2031", "url": "https://www.manufacturingdive.com/news/intel-delays-new-albany-ohio-chip-manufacturing-project-again-2030-2031/741321/" },
+    { "label": "ABC6 — Ohio's data center building boom: nearly 80 more could be on the way", "url": "https://abc6onyourside.com/news/local/ohio-data-center-surge-powering-devices-growing-debate-building-growth-acres-80-more-microsoft-intel-meta-facebook-google-amazon-aws" },
+    { "label": "PUCO — Orders AEP Ohio to create data-center-specific tariff", "url": "https://puco.ohio.gov/news/puco-orders-aep-ohio-to-create-data-center-specific-tariff" },
+    { "label": "Office of the Governor — DeWine announces pause of data center tax exemption", "url": "https://governor.ohio.gov/wps/portal/gov/governor/media/news-and-media/governor-dewine-announces-pause-of-data-center-tax-exemption" },
+    { "label": "Community Solutions — DAS releases policy governing use of AI", "url": "https://www.communitysolutions.com/resources/ohio-department-of-administrative-services-releases-policy-governing-use-of-ai" },
+    { "label": "Clark Schaefer Hackett — New Ohio cybersecurity law for local governments", "url": "https://www.cshco.com/insights/new-ohio-cybersecurity-law-what-local-governments-need-to-know" },
+    { "label": "Ohio — 2025 Comprehensive Cybersecurity Plan (CyberOhio)", "url": "https://dam.assets.ohio.gov/image/upload/v1738856928/cyber.ohio.gov/OCCP/2025_Ohio_Comprehensive_Cybersecurity_Plan-Final_-PublicVersion.pdf" }
+  ]
+}
