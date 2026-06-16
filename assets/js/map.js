@@ -1,28 +1,33 @@
-/* Landing page enhancement: filter the state list, Enter jumps to first match.
-   Everything works without this script (links and the SVG map are native). */
+/* Landing page enhancement: the "find a state" picker.
+   The SVG map itself is native <a> links, so navigation works without this. */
 (function () {
   'use strict';
-  var search = document.getElementById('stateSearch');
-  var list = document.getElementById('stateList');
-  if (!search || !list) return;
+  var input = document.getElementById('statePicker');
+  var list = document.getElementById('state-options');
+  var go = document.getElementById('statePickerGo');
+  if (!input || !list) return;
 
-  var items = Array.prototype.slice.call(list.querySelectorAll('li'));
-
-  function apply() {
-    var q = search.value.trim().toLowerCase();
-    items.forEach(function (li) {
-      var name = li.getAttribute('data-name') || '';
-      li.style.display = (!q || name.indexOf(q) !== -1) ? '' : 'none';
-    });
+  function hrefFor(value) {
+    var v = value.trim().toLowerCase();
+    if (!v) return null;
+    var opts = list.options;
+    for (var i = 0; i < opts.length; i++) {
+      if ((opts[i].value || '').toLowerCase() === v) return opts[i].getAttribute('data-href');
+    }
+    return null;
   }
 
-  search.addEventListener('input', apply);
-  search.addEventListener('keydown', function (e) {
-    if (e.key !== 'Enter') return;
-    var firstLive = items.find(function (li) {
-      return li.style.display !== 'none' && !li.classList.contains('is-soon');
-    });
-    var link = firstLive && firstLive.querySelector('a[href]');
-    if (link) window.location.href = link.getAttribute('href');
+  function navigate() {
+    var href = hrefFor(input.value);
+    if (href) { window.location.href = href; return true; }
+    input.focus();
+    return false;
+  }
+
+  // Picking from the native dropdown fires 'change'.
+  input.addEventListener('change', navigate);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); navigate(); }
   });
+  if (go) go.addEventListener('click', navigate);
 })();

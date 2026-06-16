@@ -76,12 +76,17 @@ function siteHeader(rootPrefix, showBack) {
 </header>`;
 }
 
-function siteFooter(updated) {
-  const stamp = updated ? `Last updated ${esc(fmtLong(updated))}. ` : '';
+function siteFooter(rootPrefix, updated) {
+  const stamp = updated ? `Last updated ${esc(fmtLong(updated))}.` : '';
   return `<footer class="site-footer">
   <div class="site-footer__inner">
-    <span>Dell SLG Strategy Hub &middot; ${stamp}Internal sales enablement.</span>
-    <span class="muted">Synthesized from public sources &middot; verify before customer use.</span>
+    <div class="site-footer__brand">
+      <img class="footer-logo" src="${rootPrefix}assets/img/SLG-Strategy_B_Wordmark_on-dark.png" alt="SLG Strategy — State, Local &amp; Gov't" width="210">
+    </div>
+    <div class="site-footer__meta">
+      ${stamp ? `<span>${stamp}</span>` : ''}
+      <span class="muted">Synthesized from public sources &middot; verify before customer use.</span>
+    </div>
   </div>
 </footer>`;
 }
@@ -105,18 +110,18 @@ function buildMapSvg(svgRaw, states) {
         `<path class="state" id="${st.code}"$1><title>${esc(st.name)} — coming soon</title></path>`);
     }
   }
+  // Any shape still tagged .state is a non-state decorative artifact (inset
+  // frames, DC dot) — these are still self-closing since the loop never touched
+  // them. Neutralize so they don't render in the "coming soon" grey.
+  svg = svg.replace(/<(path|circle) class="state" (id="[^"]*"[^>]*?)\/>/g, '<$1 class="map-decor" $2/>');
   return svg;
 }
 
-function buildStateList(states) {
-  return states.slice().sort((a, b) => a.name.localeCompare(b.name)).map((st) => {
-    if (st.available) {
-      return `      <li data-name="${esc(st.name.toLowerCase())}"><a href="states/${st.slug}.html">` +
-        `<span class="name"><span class="pip"></span>${esc(st.name)}</span>${icon('go', 'go')}</a></li>`;
-    }
-    return `      <li class="is-soon" data-name="${esc(st.name.toLowerCase())}"><a tabindex="-1" aria-disabled="true">` +
-      `<span class="name"><span class="pip"></span>${esc(st.name)}</span><span class="soon-tag">soon</span></a></li>`;
-  }).join('\n');
+function buildStateOptions(states) {
+  return states.slice().sort((a, b) => a.name.localeCompare(b.name))
+    .filter((st) => st.available)
+    .map((st) => `          <option value="${esc(st.name)}" data-href="states/${st.slug}.html"></option>`)
+    .join('\n');
 }
 
 function feature(iconName, title, body) {
@@ -131,7 +136,7 @@ function renderIndex(manifest, svgRaw) {
   const states = manifest.states;
   const live = states.filter((s) => s.available).length;
   const map = buildMapSvg(svgRaw, states);
-  const list = buildStateList(states);
+  const options = buildStateOptions(states);
 
   return `${head('Dell SLG Strategy Hub | Interactive State Map', 'assets/css/styles.css')}
 <body>
@@ -142,42 +147,32 @@ ${siteHeader('', false)}
     <p class="eyebrow">Field &amp; District Sales Enablement</p>
     <h1>State &amp; Local Government strategy, state by state.</h1>
     <p class="lede">Budgets, initiatives, procurement paths, and the signals that shape each state's ability to buy technology &mdash; built for Dell sellers and district managers.</p>
-    <div class="hero-stats">
-      <div class="hero-stat"><b>${live}</b><span>States live</span></div>
-      <div class="hero-stat"><b>${states.length}</b><span>On the roadmap</span></div>
-      <div class="hero-stat"><b>6</b><span>Sections each</span></div>
-      <div class="hero-stat"><b>Cited</b><span>Sourced &amp; dated</span></div>
-    </div>
   </div>
 </section>
 
 <section class="wrap map-section">
-  <div class="map-layout">
-    <div class="panel map-panel">
-      <div class="map-panel__title">
-        <h2>Select a state</h2>
-        <span class="hint">Click a highlighted state to open its report</span>
-      </div>
-      ${map}
-      <div class="map-legend">
-        <span><span class="swatch swatch--avail"></span> Live report</span>
-        <span><span class="swatch swatch--hot"></span> Hover / selected</span>
-        <span><span class="swatch swatch--soon"></span> Coming soon</span>
-      </div>
+  <div class="panel map-panel">
+    <div class="map-panel__title">
+      <h2>Select a state</h2>
+      <span class="hint">Click any state to open its report</span>
     </div>
+    ${map}
+  </div>
 
-    <aside class="panel index-panel">
-      <div class="index-panel__head">
-        <div class="label"><h2>Browse states</h2><span class="live-count">${live} live</span></div>
-        <div class="index-search-wrap">
-          ${icon('search')}
-          <input type="text" class="index-search" id="stateSearch" placeholder="Search states&hellip;" aria-label="Search states">
-        </div>
+  <div class="panel browse-bar">
+    <div class="browse-bar__inner">
+      <span class="browse-bar__label">Find a state <span class="live-count">${live} live</span></span>
+      <div class="picker-wrap">
+        ${icon('search')}
+        <input type="text" id="statePicker" class="state-picker" list="state-options"
+               placeholder="Type or select a state&hellip;" autocomplete="off" aria-label="Find a state">
+        <datalist id="state-options">
+${options}
+        </datalist>
       </div>
-      <ul class="state-list" id="stateList">
-${list}
-      </ul>
-    </aside>
+      <button type="button" id="statePickerGo" class="btn btn--primary">Open report</button>
+    </div>
+    <p class="browse-bar__hint">Choose a state, or click any state on the map above.</p>
   </div>
 
   <div class="features">
@@ -187,7 +182,7 @@ ${list}
   </div>
 </section>
 
-${siteFooter('')}
+${siteFooter('', '')}
 <script src="assets/js/map.js"></script>
 </body>
 </html>`;
@@ -390,7 +385,7 @@ ${siteHeader('../', true)}
   </main>
 </div>
 
-${siteFooter(d.updated)}
+${siteFooter('../', d.updated)}
 <script src="../assets/js/nav.js"></script>
 </body>
 </html>`;
