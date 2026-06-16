@@ -120,7 +120,7 @@ function buildMapSvg(svgRaw, states) {
 function buildStateOptions(states) {
   return states.slice().sort((a, b) => a.name.localeCompare(b.name))
     .filter((st) => st.available)
-    .map((st) => `          <option value="${esc(st.name)}" data-href="states/${st.slug}.html"></option>`)
+    .map((st) => `          <li class="picker-option" role="option" data-name="${esc(st.name.toLowerCase())}" data-href="states/${st.slug}.html">${esc(st.name)}</li>`)
     .join('\n');
 }
 
@@ -164,11 +164,12 @@ ${siteHeader('', false)}
       <span class="browse-bar__label">Find a state <span class="live-count">${live} live</span></span>
       <div class="picker-wrap">
         ${icon('search')}
-        <input type="text" id="statePicker" class="state-picker" list="state-options"
-               placeholder="Type or select a state&hellip;" autocomplete="off" aria-label="Find a state">
-        <datalist id="state-options">
+        <input type="text" id="statePicker" class="state-picker" autocomplete="off"
+               placeholder="Type or select a state&hellip;" aria-label="Find a state"
+               role="combobox" aria-expanded="false" aria-controls="stateMenu" aria-autocomplete="list">
+        <ul class="picker-menu" id="stateMenu" role="listbox" hidden>
 ${options}
-        </datalist>
+        </ul>
       </div>
       <button type="button" id="statePickerGo" class="btn btn--primary">Open report</button>
     </div>

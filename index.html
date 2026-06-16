@@ -108,60 +108,61 @@
       <span class="browse-bar__label">Find a state <span class="live-count">50 live</span></span>
       <div class="picker-wrap">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5.2-5.2m0 0A7.5 7.5 0 105.2 5.2a7.5 7.5 0 0010.6 10.6z"/></svg>
-        <input type="text" id="statePicker" class="state-picker" list="state-options"
-               placeholder="Type or select a state&hellip;" autocomplete="off" aria-label="Find a state">
-        <datalist id="state-options">
-          <option value="Alabama" data-href="states/alabama.html"></option>
-          <option value="Alaska" data-href="states/alaska.html"></option>
-          <option value="Arizona" data-href="states/arizona.html"></option>
-          <option value="Arkansas" data-href="states/arkansas.html"></option>
-          <option value="California" data-href="states/california.html"></option>
-          <option value="Colorado" data-href="states/colorado.html"></option>
-          <option value="Connecticut" data-href="states/connecticut.html"></option>
-          <option value="Delaware" data-href="states/delaware.html"></option>
-          <option value="Florida" data-href="states/florida.html"></option>
-          <option value="Georgia" data-href="states/georgia.html"></option>
-          <option value="Hawaii" data-href="states/hawaii.html"></option>
-          <option value="Idaho" data-href="states/idaho.html"></option>
-          <option value="Illinois" data-href="states/illinois.html"></option>
-          <option value="Indiana" data-href="states/indiana.html"></option>
-          <option value="Iowa" data-href="states/iowa.html"></option>
-          <option value="Kansas" data-href="states/kansas.html"></option>
-          <option value="Kentucky" data-href="states/kentucky.html"></option>
-          <option value="Louisiana" data-href="states/louisiana.html"></option>
-          <option value="Maine" data-href="states/maine.html"></option>
-          <option value="Maryland" data-href="states/maryland.html"></option>
-          <option value="Massachusetts" data-href="states/massachusetts.html"></option>
-          <option value="Michigan" data-href="states/michigan.html"></option>
-          <option value="Minnesota" data-href="states/minnesota.html"></option>
-          <option value="Mississippi" data-href="states/mississippi.html"></option>
-          <option value="Missouri" data-href="states/missouri.html"></option>
-          <option value="Montana" data-href="states/montana.html"></option>
-          <option value="Nebraska" data-href="states/nebraska.html"></option>
-          <option value="Nevada" data-href="states/nevada.html"></option>
-          <option value="New Hampshire" data-href="states/new-hampshire.html"></option>
-          <option value="New Jersey" data-href="states/new-jersey.html"></option>
-          <option value="New Mexico" data-href="states/new-mexico.html"></option>
-          <option value="New York" data-href="states/new-york.html"></option>
-          <option value="North Carolina" data-href="states/north-carolina.html"></option>
-          <option value="North Dakota" data-href="states/north-dakota.html"></option>
-          <option value="Ohio" data-href="states/ohio.html"></option>
-          <option value="Oklahoma" data-href="states/oklahoma.html"></option>
-          <option value="Oregon" data-href="states/oregon.html"></option>
-          <option value="Pennsylvania" data-href="states/pennsylvania.html"></option>
-          <option value="Rhode Island" data-href="states/rhode-island.html"></option>
-          <option value="South Carolina" data-href="states/south-carolina.html"></option>
-          <option value="South Dakota" data-href="states/south-dakota.html"></option>
-          <option value="Tennessee" data-href="states/tennessee.html"></option>
-          <option value="Texas" data-href="states/texas.html"></option>
-          <option value="Utah" data-href="states/utah.html"></option>
-          <option value="Vermont" data-href="states/vermont.html"></option>
-          <option value="Virginia" data-href="states/virginia.html"></option>
-          <option value="Washington" data-href="states/washington.html"></option>
-          <option value="West Virginia" data-href="states/west-virginia.html"></option>
-          <option value="Wisconsin" data-href="states/wisconsin.html"></option>
-          <option value="Wyoming" data-href="states/wyoming.html"></option>
-        </datalist>
+        <input type="text" id="statePicker" class="state-picker" autocomplete="off"
+               placeholder="Type or select a state&hellip;" aria-label="Find a state"
+               role="combobox" aria-expanded="false" aria-controls="stateMenu" aria-autocomplete="list">
+        <ul class="picker-menu" id="stateMenu" role="listbox" hidden>
+          <li class="picker-option" role="option" data-name="alabama" data-href="states/alabama.html">Alabama</li>
+          <li class="picker-option" role="option" data-name="alaska" data-href="states/alaska.html">Alaska</li>
+          <li class="picker-option" role="option" data-name="arizona" data-href="states/arizona.html">Arizona</li>
+          <li class="picker-option" role="option" data-name="arkansas" data-href="states/arkansas.html">Arkansas</li>
+          <li class="picker-option" role="option" data-name="california" data-href="states/california.html">California</li>
+          <li class="picker-option" role="option" data-name="colorado" data-href="states/colorado.html">Colorado</li>
+          <li class="picker-option" role="option" data-name="connecticut" data-href="states/connecticut.html">Connecticut</li>
+          <li class="picker-option" role="option" data-name="delaware" data-href="states/delaware.html">Delaware</li>
+          <li class="picker-option" role="option" data-name="florida" data-href="states/florida.html">Florida</li>
+          <li class="picker-option" role="option" data-name="georgia" data-href="states/georgia.html">Georgia</li>
+          <li class="picker-option" role="option" data-name="hawaii" data-href="states/hawaii.html">Hawaii</li>
+          <li class="picker-option" role="option" data-name="idaho" data-href="states/idaho.html">Idaho</li>
+          <li class="picker-option" role="option" data-name="illinois" data-href="states/illinois.html">Illinois</li>
+          <li class="picker-option" role="option" data-name="indiana" data-href="states/indiana.html">Indiana</li>
+          <li class="picker-option" role="option" data-name="iowa" data-href="states/iowa.html">Iowa</li>
+          <li class="picker-option" role="option" data-name="kansas" data-href="states/kansas.html">Kansas</li>
+          <li class="picker-option" role="option" data-name="kentucky" data-href="states/kentucky.html">Kentucky</li>
+          <li class="picker-option" role="option" data-name="louisiana" data-href="states/louisiana.html">Louisiana</li>
+          <li class="picker-option" role="option" data-name="maine" data-href="states/maine.html">Maine</li>
+          <li class="picker-option" role="option" data-name="maryland" data-href="states/maryland.html">Maryland</li>
+          <li class="picker-option" role="option" data-name="massachusetts" data-href="states/massachusetts.html">Massachusetts</li>
+          <li class="picker-option" role="option" data-name="michigan" data-href="states/michigan.html">Michigan</li>
+          <li class="picker-option" role="option" data-name="minnesota" data-href="states/minnesota.html">Minnesota</li>
+          <li class="picker-option" role="option" data-name="mississippi" data-href="states/mississippi.html">Mississippi</li>
+          <li class="picker-option" role="option" data-name="missouri" data-href="states/missouri.html">Missouri</li>
+          <li class="picker-option" role="option" data-name="montana" data-href="states/montana.html">Montana</li>
+          <li class="picker-option" role="option" data-name="nebraska" data-href="states/nebraska.html">Nebraska</li>
+          <li class="picker-option" role="option" data-name="nevada" data-href="states/nevada.html">Nevada</li>
+          <li class="picker-option" role="option" data-name="new hampshire" data-href="states/new-hampshire.html">New Hampshire</li>
+          <li class="picker-option" role="option" data-name="new jersey" data-href="states/new-jersey.html">New Jersey</li>
+          <li class="picker-option" role="option" data-name="new mexico" data-href="states/new-mexico.html">New Mexico</li>
+          <li class="picker-option" role="option" data-name="new york" data-href="states/new-york.html">New York</li>
+          <li class="picker-option" role="option" data-name="north carolina" data-href="states/north-carolina.html">North Carolina</li>
+          <li class="picker-option" role="option" data-name="north dakota" data-href="states/north-dakota.html">North Dakota</li>
+          <li class="picker-option" role="option" data-name="ohio" data-href="states/ohio.html">Ohio</li>
+          <li class="picker-option" role="option" data-name="oklahoma" data-href="states/oklahoma.html">Oklahoma</li>
+          <li class="picker-option" role="option" data-name="oregon" data-href="states/oregon.html">Oregon</li>
+          <li class="picker-option" role="option" data-name="pennsylvania" data-href="states/pennsylvania.html">Pennsylvania</li>
+          <li class="picker-option" role="option" data-name="rhode island" data-href="states/rhode-island.html">Rhode Island</li>
+          <li class="picker-option" role="option" data-name="south carolina" data-href="states/south-carolina.html">South Carolina</li>
+          <li class="picker-option" role="option" data-name="south dakota" data-href="states/south-dakota.html">South Dakota</li>
+          <li class="picker-option" role="option" data-name="tennessee" data-href="states/tennessee.html">Tennessee</li>
+          <li class="picker-option" role="option" data-name="texas" data-href="states/texas.html">Texas</li>
+          <li class="picker-option" role="option" data-name="utah" data-href="states/utah.html">Utah</li>
+          <li class="picker-option" role="option" data-name="vermont" data-href="states/vermont.html">Vermont</li>
+          <li class="picker-option" role="option" data-name="virginia" data-href="states/virginia.html">Virginia</li>
+          <li class="picker-option" role="option" data-name="washington" data-href="states/washington.html">Washington</li>
+          <li class="picker-option" role="option" data-name="west virginia" data-href="states/west-virginia.html">West Virginia</li>
+          <li class="picker-option" role="option" data-name="wisconsin" data-href="states/wisconsin.html">Wisconsin</li>
+          <li class="picker-option" role="option" data-name="wyoming" data-href="states/wyoming.html">Wyoming</li>
+        </ul>
       </div>
       <button type="button" id="statePickerGo" class="btn btn--primary">Open report</button>
     </div>

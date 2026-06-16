@@ -167,6 +167,23 @@ a.state-link:focus .state { fill: var(--c-blue); }
   border: 1px solid var(--c-border-2); border-radius: var(--radius-sm); background: #fff; color: var(--c-ink);
 }
 .state-picker:focus { outline: none; border-color: var(--c-blue); box-shadow: var(--ring); }
+
+/* Custom dropdown — opens directly below the input, full width */
+.picker-menu {
+  position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 50;
+  margin: 0; padding: 6px; list-style: none;
+  background: #fff; border: 1px solid var(--c-border-2); border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg); max-height: 320px; overflow-y: auto;
+}
+.picker-menu[hidden] { display: none; }
+.picker-option {
+  padding: 9px 12px; border-radius: var(--radius-sm); font-size: .92rem; font-weight: 600;
+  color: var(--c-ink); cursor: pointer;
+}
+.picker-option[hidden] { display: none; }
+.picker-option:hover, .picker-option.is-active { background: var(--c-info-bg); color: var(--c-blue-700); }
+.picker-empty { padding: 10px 12px; font-size: .9rem; color: var(--c-muted); }
+
 .browse-bar .btn { flex: 0 0 auto; }
 .browse-bar__hint { margin: 11px 0 0; font-size: .82rem; color: var(--c-muted); }
 
