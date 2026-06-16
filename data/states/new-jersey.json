@@ -14,7 +14,7 @@
   ],
 
   "execSummary": {
-    "summary": "New Jersey enters mid-2026 under a new administration with a clear technology identity. Governor Mikie Sherrill (D), sworn in January 20, 2026 as the state's 57th governor, inherits the NJ AI Hub — a Princeton-anchored ecosystem with CoreWeave and Microsoft as founding partners that aims to make New Jersey the East Coast's leading AI center. The state runs on a single-year fiscal cycle; the FY2026 budget signed by former Governor Murphy totals $58.78B. Three shifts matter for SLG sellers: the AI Hub and surrounding 'AI corridor' along Route 1 are pulling in compute and talent; Sherrill has unveiled a first-in-the-nation framework to regulate AI data centers (making operators fund their own power and grid upgrades) amid ~20% electric-bill increases driven largely by data-center demand; and central IT leadership is in transition after CTO Chris Rein's retirement, with NJOIT (50+ departments) and the NJCCIC cyber fusion center as the key statewide buyers. For Dell, the AI-infrastructure angle is the headline, balanced against an energy-and-governance climate that rewards efficient, governed compute.",
+    "summary": "New Jersey enters mid-2026 under a new administration with a clear technology identity. Governor Mikie Sherrill (D), sworn in January 20, 2026 as the state's 57th governor, inherits the NJ AI Hub — a Princeton-anchored ecosystem with CoreWeave and Microsoft as founding partners that aims to make New Jersey the East Coast's leading AI center. The state runs on a single-year fiscal cycle; the FY2026 budget signed by former Governor Murphy totals $58.78B. Three shifts matter for SLG sellers: the AI Hub and surrounding 'AI corridor' along Route 1 are pulling in compute and talent; Sherrill has unveiled a first-in-the-nation framework to regulate AI data centers (making operators fund their own power and grid upgrades) amid ~20% electric-bill increases driven largely by data-center demand; and central IT leadership has settled under new CTO Kevin Dehmer (who succeeded the retired Chris Rein), with NJOIT (50+ departments) and the NJCCIC cyber fusion center as the key statewide buyers. For Dell, the AI-infrastructure angle is the headline, balanced against an energy-and-governance climate that rewards efficient, governed compute.",
     "opportunities": [
       "AI-infrastructure demand tied to the NJ AI Hub, Princeton/Rutgers research computing, and the Route 1 'AI corridor' (PowerEdge, networking, GPU-dense systems, services).",
       "Governed, on-prem / private-cloud AI for state agencies operationalizing the NJ AI Assistant and AI Task Force recommendations — sensitive workloads that favor controlled compute over open public models.",
@@ -108,7 +108,7 @@
   "powerStructure": [
     { "name": "Mikie Sherrill", "title": "Governor (57th)", "org": "State of New Jersey", "note": "Sworn in Jan 20, 2026. Priorities: affordability, energy/permitting reform, and accountability for Big Tech and AI data centers.", "ref": 3 },
     { "name": "Dale Caldwell", "title": "Lieutenant Governor", "org": "State of New Jersey", "note": "Sworn in alongside Sherrill, Jan 2026.", "ref": 3 },
-    { "name": "Vernon Spencer", "title": "Interim Chief Technology Officer", "org": "NJOIT", "note": "Stepped in after CTO Chris Rein retired (Jan 2026) following 8 years leading NJOIT. Leadership transition in progress.", "ref": 4 },
+    { "name": "Kevin Dehmer", "title": "Chief Technology Officer", "org": "NJOIT", "note": "Named permanent CTO by Gov. Sherrill (Feb 2026), succeeding retired CTO Chris Rein (8 years leading NJOIT); owns statewide IT direction.", "ref": 4 },
     { "name": "NJ AI Task Force", "title": "AI policy & governance body", "org": "Office of Innovation / NJOIT", "note": "Chartered by EO 346; led by chief innovation officer, CTO, and NJEDA CEO. Shapes state AI adoption and guardrails.", "ref": 6 },
     { "name": "NJCCIC", "title": "State cyber fusion center", "org": "NJ Office of Homeland Security & Preparedness", "note": "Coordinates statewide cybersecurity; 2026–2030 strategic plan and new Cyber Resilience Corps.", "ref": 5 }
   ],
@@ -117,7 +117,7 @@
     { "date": "2026-06", "title": "Gov. Sherrill unveils first-in-the-nation AI data-center regulatory framework", "impact": "Operators would fund their own power and grid upgrades and disclose energy/water use; rewards efficient, governed compute and adds uncertainty to raw hyperscale buildout.", "tags": ["AI", "Energy", "Policy"], "ref": 7 },
     { "date": "2026-03", "title": "Sherrill's first budget address targets affordability and Big Tech", "impact": "Signals FY2027 priorities — energy costs, data-center accountability — that shape tech-adjacent spending.", "tags": ["Budget", "Leadership"], "ref": 8 },
     { "date": "2026-01", "title": "Mikie Sherrill inaugurated as New Jersey's 57th Governor", "impact": "New administration resets executive priorities; technology direction in transition.", "tags": ["Leadership"], "ref": 3 },
-    { "date": "2026-01", "title": "NJOIT CTO Chris Rein retires; Vernon Spencer named interim CTO", "impact": "Central IT leadership transition; relationship-building window for statewide tech direction.", "tags": ["Leadership"], "ref": 4 },
+    { "date": "2026-02", "title": "Gov. Sherrill names Kevin Dehmer permanent NJOIT CTO (succeeding retired Chris Rein)", "impact": "Central IT leadership settles under the new administration — relationship-building window for statewide tech direction.", "tags": ["Leadership"], "ref": 4 },
     { "date": "2025-12", "title": "NJ AI Hub selects Plug and Play to operate regional AI Accelerator", "impact": "Hub moves from launch to scaling startups and research; deepens the state's AI ecosystem and compute demand.", "tags": ["AI", "Economic Dev"], "ref": 2 },
     { "date": "2025-12", "title": "NJCCIC launches Civilian Cyber Resilience Corps; releases 2026–2030 plan", "impact": "Expands statewide cyber posture; demand for secure infrastructure and managed services across state and local government.", "tags": ["Cybersecurity"], "ref": 5 }
   ],
@@ -125,7 +125,7 @@
   "dellActions": [
     "Lead with AI infrastructure: tie Dell ISG / AI Factory offerings to the NJ AI Hub, Princeton/Rutgers research computing, and the Route 1 AI corridor.",
     "Position energy-efficient, governed compute that aligns with New Jersey's data-center scrutiny — frame Dell as the partner for high-performance AI that minimizes power and grid burden.",
-    "Engage NJOIT during its leadership transition (interim CTO Vernon Spencer) to shape statewide refresh and AI-platform direction before priorities harden under the new administration.",
+    "Engage NJOIT under new CTO Kevin Dehmer to shape statewide refresh and AI-platform direction early in the Sherrill administration.",
     "Map cyber offerings to the NJCCIC and Civilian Cyber Resilience Corps for state and local secure-infrastructure and managed-services demand.",
     "Validate Dell coverage on NJSTART statewide contracts and NASPO ValuePoint participating addenda so targeted agencies can buy without a fresh RFP."
   ],
@@ -134,7 +134,7 @@
     { "label": "Office of the Governor — Governor Murphy Signs Fiscal Year 2026 Budget into Law", "url": "https://www.nj.gov/governor/news/news/562025/approved/20250630d.shtml" },
     { "label": "Microsoft — Governor Murphy and Princeton announce Microsoft and CoreWeave as founding partners in NJ AI Hub", "url": "https://news.microsoft.com/source/2025/01/31/governor-murphy-and-princeton-university-president-eisgruber-announce-microsoft-and-coreweave-as-founding-partners-in-nj-ai-hub/" },
     { "label": "NPR — Democrat Mikie Sherrill wins New Jersey governor's race", "url": "https://www.npr.org/2025/11/04/nx-s1-5590033/election-results-new-jersey-governor-sherrill" },
-    { "label": "GovTech — New Jersey Chief Technology Officer Chris Rein Retires", "url": "https://www.govtech.com/workforce/new-jersey-chief-technology-officer-chris-rein-retires" },
+    { "label": "GovTech — New Jersey Names a Permanent Chief Technology Officer (Kevin Dehmer)", "url": "https://www.govtech.com/workforce/new-jersey-names-a-permanent-chief-technology-officer" },
     { "label": "NJCCIC — Strategic Plan 2026–2030 and Civilian Cyber Resilience Corps", "url": "https://www.cyber.nj.gov/grants-and-resources/state-resources/njccic-strategic-plan" },
     { "label": "StateScoop — New Jersey launches generative AI assistant and training tool for state employees", "url": "https://statescoop.com/new-jersey-ai-assistant-training-tool-state-employees/" },
     { "label": "Central Jersey — Gov. Sherrill unveils data center regulations", "url": "https://www.centraljersey.com/2026/06/01/gov-sherrill-unveils-data-center-regulations/" },

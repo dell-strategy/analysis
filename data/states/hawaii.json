@@ -118,9 +118,7 @@
 
   "powerStructure": [
     { "name": "Josh Green, M.D.", "title": "Governor", "org": "State of Hawaii", "note": "Champions Connect Kākou broadband and climate/disaster resiliency; sets the modernization agenda.", "ref": 2 },
-    { "name": "Christine Sakuda", "title": "State CIO & ETS Administrator", "org": "Office of Enterprise Technology Services", "note": "Appointed 2025; first female CIO of Native Hawaiian ancestry. Owns statewide IT direction and the AI roadmap.", "ref": 2 },
-    { "name": "Sylvia Luke", "title": "Lieutenant Governor", "org": "State of Hawaii", "note": "Public face of broadband expansion announcements and federal-funding milestones.", "ref": 7 },
-    { "name": "University of Hawaii / UH Broadband Office", "title": "Implementation lead", "org": "University of Hawaii", "note": "Oversees Connect Kākou implementation and the HIFL undersea-fiber and BEAD contracts." },
+    { "name": "Christine Sakuda", "title": "State CIO & ETS Administrator", "org": "Office of Enterprise Technology Services", "note": "In role since Aug 2024 (Senate-confirmed 2025); first female CIO of Native Hawaiian ancestry. Owns statewide IT direction and the AI roadmap.", "ref": 2 },    { "name": "University of Hawaii / UH Broadband Office", "title": "Implementation lead", "org": "University of Hawaii", "note": "Oversees Connect Kākou implementation and the HIFL undersea-fiber and BEAD contracts." },
     { "name": "State Procurement Office (SPO)", "title": "Central procurement authority", "org": "State of Hawaii", "note": "Owns cooperative/NASPO and price-list contracts — the path to most state IT buys." }
   ],
 

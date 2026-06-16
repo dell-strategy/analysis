@@ -122,7 +122,7 @@
     { "name": "Wes Moore", "title": "Governor", "org": "State of Maryland", "note": "Champions AI-forward government and the 'Capital of Quantum'; issued the 2024 AI executive order and the Anthropic/Percepta partnership.", "ref": 11 },
     { "name": "Katie Savage", "title": "Secretary of Information Technology (State CIO)", "org": "DoIT", "note": "Leads statewide IT since 2023; author of the 2025 IT Master Plan, Maryland Digital Service, and the AI Innovation Lab.", "ref": 2 },
     { "name": "State Chief Information Security Officer", "title": "CISO, Office of Security Management", "org": "DoIT", "note": "Owns statewide security policy and the Cyber Coordinating Council; verify current officeholder before engagement.", "ref": 7 },
-    { "name": "Nishant Shah", "title": "Senior Advisor for Responsible AI", "org": "Maryland AI Subcabinet", "note": "Leads the state's first AI enablement team and the 2025 AI strategy across 12 critical domains.", "ref": 10 },
+    { "name": "Michael Boyce", "title": "Senior Advisor for Responsible AI", "org": "Maryland AI Subcabinet", "note": "Appointed Jan 2026, succeeding Nishant Shah; advises the Governor, CIO, and AI Subcabinet on the state's AI strategy across critical domains.", "ref": 10 },
     { "name": "University System of Maryland / UMD leadership", "title": "Research-computing & quantum buyers", "org": "USM", "note": "Drive 'Capital of Quantum' and large research-infrastructure procurement; 200+ quantum faculty at UMD." }
   ],
 

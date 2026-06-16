@@ -119,9 +119,7 @@
 
   "powerStructure": [
     { "name": "Tina Kotek", "title": "Governor", "org": "State of Oregon", "note": "Created the State AI Advisory Council (EO 23-26); set the record 2025–27 budget agenda.", "ref": 4 },
-    { "name": "Terrence Woods", "title": "State Chief Information Officer", "org": "EIS / DAS", "note": "Owns statewide IT strategy and EIS; chairs the AI Advisory Council; reports to the Governor.", "ref": 3 },
-    { "name": "Kathryn Darnall Helms", "title": "State Chief Data Officer", "org": "EIS / DAS", "note": "Data governance and transparency; member of the AI Advisory Council.", "ref": 4 },
-    { "name": "Nick Batz", "title": "Director, Oregon Broadband Office", "org": "Business Oregon", "note": "Leads the $689M BEAD deployment; rural connectivity buildout.", "ref": 8 },
+    { "name": "Terrence Woods", "title": "State Chief Information Officer", "org": "EIS / DAS", "note": "Owns statewide IT strategy and EIS; chairs the AI Advisory Council; reports to the Governor.", "ref": 3 },    { "name": "Nick Batz", "title": "Director, Oregon Broadband Office", "org": "Business Oregon", "note": "Leads the $689M BEAD deployment; rural connectivity buildout.", "ref": 8 },
     { "name": "DAS Procurement Services / State CPO", "title": "Central procurement authority", "org": "DAS", "note": "Owns Statewide Price Agreements, OregonBuys, and ORCPP — the contractual path to every state buyer." }
   ],
 

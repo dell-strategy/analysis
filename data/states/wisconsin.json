@@ -121,7 +121,7 @@
     { "name": "Trina Zanow", "title": "State CIO & DET Administrator", "org": "DOA — Division of Enterprise Technology", "note": "25-year state veteran, former DET deputy administrator; owns statewide IT direction and shared services.", "ref": 6 },
     { "name": "Bill Brinkley", "title": "State Chief Information Security Officer", "org": "DOA — DET Security Bureau", "note": "Leads statewide cybersecurity on a NIST 800-53 Rev. 5 baseline and the whole-of-state approach.", "ref": 8 },
     { "name": "Kathy Blumenfeld", "title": "Secretary", "org": "Department of Administration", "note": "DOA leadership; Secretary approval is required on IT purchases over $150K (Exec Order 288).", "ref": 7 },
-    { "name": "Jay Rothman", "title": "President", "org": "University of Wisconsin System", "note": "Leads a large independent research-computing and AI-infrastructure buyer; ~$1.2B modernization in Act 15." }
+    { "name": "Chris Patton", "title": "Acting Executive-in-Charge (President)", "org": "Universities of Wisconsin", "note": "Named acting leader after the Board of Regents removed President Jay Rothman (Apr 2026); oversees a large research-computing and AI-infrastructure buyer (~$1.2B modernization in Act 15)." }
   ],
 
   "news": [

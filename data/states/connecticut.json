@@ -4,17 +4,17 @@
   "slug": "connecticut",
   "region": "Northeast",
   "updated": "2026-06-15",
-  "tagline": "A $55.8B two-year budget, a state CIO consolidating IT under DAS, and a governor who killed sweeping AI regulation and is throttling data centers over energy costs — Connecticut is a centralized, cost-conscious market that rewards governed modernization over hype.",
+  "tagline": "A $55.8B two-year budget, a state CIO consolidating IT under DAS, and a governor who blocked sweeping AI rules in 2025 (a narrower AI law passed in 2026) and is throttling data centers over energy costs — Connecticut is a centralized, cost-conscious market that rewards governed modernization over hype.",
 
   "snapshot": [
     { "label": "2026–27 Biennial Budget", "value": "~$55.8B" },
     { "label": "Central IT Authority", "value": "DAS / BEST" },
     { "label": "Procurement Portal", "value": "CTsource" },
-    { "label": "AI Regulation (SB 2)", "value": "Stalled" }
+    { "label": "State AI Law", "value": "PA 26-15" }
   ],
 
   "execSummary": {
-    "summary": "Connecticut budgets on a two-year cycle; the FY2026–27 biennial budget signed in June 2025 totals roughly $55.8B (~$27.1B in FY2026, ~$28.4B in FY2027), and a FY2027 adjustment (Public Act 26-68) was signed in May 2026. For a Dell seller, three things shape the motion. First, technology is centralized: State CIO Mark Raymond runs IT for ~39 executive-branch agencies through the Department of Administrative Services' Bureau of Enterprise Systems & Technology (BEST), and IT buys above $500K route through BEST. Second, the policy posture is restraint, not acceleration — Gov. Lamont's veto threat killed the sweeping SB 2 AI-regulation bill in 2025, and he is publicly telling new data centers to 'slow down' unless they bring their own power generation, because Connecticut's wholesale energy costs run far above the national average. Third, the real demand is unglamorous but durable: IT consolidation and shared services, a 'whole-of-state' cybersecurity push funded partly by federal grants, governed AI pilots inside agencies, and the K-12/library/municipal network (Connecticut Education Network) plus the UConn/Yale research base. Sell governed modernization and lifecycle value, not speculative AI-factory scale.",
+    "summary": "Connecticut budgets on a two-year cycle; the FY2026–27 biennial budget signed in June 2025 totals roughly $55.8B (~$27.1B in FY2026, ~$28.4B in FY2027), and a FY2027 adjustment (Public Act 26-68) was signed in May 2026. For a Dell seller, three things shape the motion. First, technology is centralized: State CIO Mark Raymond runs IT for ~39 executive-branch agencies through the Department of Administrative Services' Bureau of Enterprise Systems & Technology (BEST), and IT buys above $500K route through BEST. Second, the policy posture is restraint, not acceleration — Gov. Lamont's veto threat killed the sweeping SB 2 AI bill in 2025 (a narrower AI law, Public Act 26-15, was enacted in May 2026), and he is publicly telling new data centers to 'slow down' unless they bring their own power generation, because Connecticut's wholesale energy costs run far above the national average. Third, the real demand is unglamorous but durable: IT consolidation and shared services, a 'whole-of-state' cybersecurity push funded partly by federal grants, governed AI pilots inside agencies, and the K-12/library/municipal network (Connecticut Education Network) plus the UConn/Yale research base. Sell governed modernization and lifecycle value, not speculative AI-factory scale.",
     "opportunities": [
       "IT consolidation and shared services under BEST — server, storage, and infrastructure refresh as the state standardizes across ~39 agencies.",
       "'Whole-of-state' cybersecurity for state agencies and municipalities, backed by federal State & Local Cybersecurity Grant funding and 24/7 monitoring already in place.",
@@ -25,7 +25,7 @@
       { "value": "~$55.8B", "label": "2026–27 Biennial Budget", "note": "~$27.1B FY26 / ~$28.4B FY27", "ref": 2 },
       { "value": "39", "label": "Executive agencies under State CIO", "note": "IT centralized in DAS/BEST", "ref": 5 },
       { "value": ">$500K", "label": "IT buys reviewed by BEST", "note": "Central technology-procurement gate", "ref": 8 },
-      { "value": "Stalled", "label": "SB 2 AI regulation", "note": "Died in House amid Lamont veto threat", "ref": 3 }
+      { "value": "PA 26-15", "label": "State AI law (2026)", "note": "Narrower AI law enacted May 2026 after the sweeping SB 2 failed in 2025", "ref": 3 }
     ]
   },
 
@@ -69,13 +69,13 @@
       "ref": 7
     },
     {
-      "name": "Governed AI Adoption (SB 2 stalled)",
+      "name": "Governed AI Adoption (narrow 2026 AI law)",
       "status": "Cautious / no statute",
       "statusType": "warn",
       "dellFit": 65,
       "budgetStrength": 45,
       "tags": ["AI", "Policy", "Governance"],
-      "summary": "The sweeping SB 2 AI-regulation bill passed the Senate 32-4 in May 2025 but died in the House after Gov. Lamont threatened a veto, citing harm to the state's tech sector — the second straight year a broad AI bill stalled. With no comprehensive statute, agencies are piloting AI cautiously (including in education via the CIO-chaired Commission for Educational Technology). The opening is governed, auditable, private/on-prem AI for sensitive data, not open public models.",
+      "summary": "After the sweeping SB 2 AI-regulation bill passed the Senate 32-4 in May 2025 but died in the House under a Lamont veto threat, Connecticut enacted a narrower AI law (Public Act 26-15) in May 2026. Agencies are piloting AI cautiously (including in education via the CIO-chaired Commission for Educational Technology). The opening is governed, auditable, private/on-prem AI for sensitive data, not open public models.",
       "ref": 3
     },
     {
@@ -107,9 +107,9 @@
   },
 
   "powerStructure": [
-    { "name": "Ned Lamont", "title": "Governor", "org": "State of Connecticut", "note": "Cost-conscious; threatened to veto broad AI regulation (SB 2) and is throttling new data centers over energy costs. Favors targeted tech (quantum in Fairfield County, an AI center near Stamford).", "ref": 4 },
+    { "name": "Ned Lamont", "title": "Governor", "org": "State of Connecticut", "note": "Cost-conscious; blocked the broad SB 2 AI bill in 2025 (a narrower AI law passed in 2026) and is throttling new data centers over energy costs. Favors targeted tech (quantum in Fairfield County, an AI center near Stamford).", "ref": 4 },
     { "name": "Mark Raymond", "title": "State Chief Information Officer", "org": "DAS / Bureau of Enterprise Systems & Technology (BEST)", "note": "On the state leadership team since 2011; runs IT for ~39 executive agencies, the Connecticut Education Network, and chairs the Commission for Educational Technology. Owns the statewide tech direction.", "ref": 5 },
-    { "name": "Sen. James Maroney", "title": "Lead AI legislator", "org": "Connecticut General Assembly", "note": "Sponsor of SB 2; a national voice on state AI policy. Useful for reading where AI governance — and agency AI demand — heads next.", "ref": 3 },
+    { "name": "Sen. James Maroney", "title": "Lead AI legislator", "org": "Connecticut General Assembly", "note": "Lead author of Connecticut's AI legislation (SB 2 in 2025; the enacted 2026 law); a national voice on state AI policy. Useful for reading where AI governance — and agency AI demand — heads next.", "ref": 3 },
     { "name": "Office of Policy and Management (OPM)", "title": "Budget & IT strategic planning", "org": "State of Connecticut", "note": "Publishes the state IT strategic plan and the biennial budget — the source of truth for forecasting tech priorities and spend.", "ref": 1 }
   ],
 
@@ -118,7 +118,7 @@
     { "date": "2026-02", "title": "Lamont's State of the State urges data centers to 'slow down'", "impact": "Signals Connecticut will not chase hyperscale AI buildout — frame in-state AI as governed enterprise/research workloads, not data-center scale.", "tags": ["Data Centers", "Energy"], "ref": 4 },
     { "date": "2025-09", "title": "CIO Mark Raymond profiled on IT consolidation and AI in education", "impact": "Reinforces shared-services strategy and cautious, governed AI adoption through the Commission for Educational Technology.", "tags": ["Leadership", "AI"], "ref": 5 },
     { "date": "2025-06", "title": "Lamont signs ~$55.8B FY2026–27 biennial budget", "impact": "Two-year spending plan under the state cap sets the funding baseline for agency technology priorities.", "tags": ["Budget"], "ref": 2 },
-    { "date": "2025-05", "title": "SB 2 AI bill passes Senate 32-4 but dies in the House", "impact": "No comprehensive AI statute after Lamont's veto threat — agencies proceed cautiously, favoring governed/auditable AI.", "tags": ["AI", "Policy"], "ref": 3 },
+    { "date": "2025-05", "title": "Sweeping SB 2 AI bill passes Senate 32-4 but dies in the House", "impact": "No broad AI statute in 2025; a narrower AI law (Public Act 26-15) followed in May 2026 — agencies proceed with governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 3 },
     { "date": "2025-02", "title": "CT weighs more AI data centers; energy costs remain the obstacle", "impact": "Highlights why hyperscale demand is muted in-state — wholesale energy costs run far above the U.S. average.", "tags": ["Data Centers", "AI"], "ref": 4 }
   ],
 
@@ -126,7 +126,7 @@
     "Lead with consolidation and shared services: tie Dell infrastructure, storage, and lifecycle offerings to BEST's standardization across ~39 agencies, and frame value as avoided cost under the spending cap.",
     "Engage BEST early on any IT pursuit above $500K — that threshold triggers central review, so align stakeholders and statewide-contract coverage before the deal matures.",
     "Position 'whole-of-state' security: secure infrastructure, endpoint, and managed services that extend from state agencies to municipalities, mapped to federal cybersecurity grant cycles.",
-    "Sell governed, private/on-prem AI for sensitive workloads — a fit for a state that rejected broad AI regulation but is cautious about open public models and hyperscale data centers.",
+    "Sell governed, private/on-prem AI for sensitive workloads — a fit for a state that enacted only narrow AI regulation (2026) and stays cautious about open public models and hyperscale data centers.",
     "Cultivate UConn and Yale as research-computing and AI-infrastructure accounts, and leverage the existing DAS–UConn purchasing partnership and the Connecticut Education Network footprint."
   ],
 

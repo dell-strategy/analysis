@@ -10,11 +10,11 @@
     { "label": "2025-26 Biennial Budget", "value": "~$10.9B" },
     { "label": "Central IT Org", "value": "ETS (under A&I)" },
     { "label": "Flagship AI Project", "value": "Crusoe 1.8GW" },
-    { "label": "Digital-Asset Law", "value": "WYST live" }
+    { "label": "Digital-Asset Law", "value": "FRNT live" }
   ],
 
   "execSummary": {
-    "summary": "Wyoming is a small-budget state with an outsized AI-infrastructure story. It is the fourth-largest net energy producer in the U.S. and uses a fraction of what it generates, so Governor Gordon's 'Winning the AI Race' push is converting cheap, surplus power into a hyperscale data-center boom around Cheyenne — Meta's $800M+ campus, Microsoft's existing site plus a planned 3,200-acre expansion, and the Crusoe/Tallgrass 'Project Jade' campus starting at 1.8GW with room to scale to 10GW. The state also leads the nation on digital-asset law (45+ blockchain bills since 2016, SPDI banks, DAO LLCs, and the now-live Wyoming Stable Token). For Dell, the state's own IT spend is modest and runs through Enterprise Technology Services (ETS) under A&I via NASPO ValuePoint and statewide contracts — but the data-center buildout, the University of Wyoming, and the NCAR-Wyoming Supercomputing Center are where the real AI-infrastructure and HPC opportunity sits. ETS's 2026-2028 plan is centered on governance and cybersecurity hardening rather than big new programs, so security and modernization remain the central-government angles.",
+    "summary": "Wyoming is a small-budget state with an outsized AI-infrastructure story. It is the fourth-largest net energy producer in the U.S. and uses a fraction of what it generates, so Governor Gordon's 'Winning the AI Race' push is converting cheap, surplus power into a hyperscale data-center boom around Cheyenne — Meta's $800M+ campus, Microsoft's existing site plus a planned 3,200-acre expansion, and the Crusoe/Tallgrass 'Project Jade' campus starting at 1.8GW with room to scale to 10GW. The state also leads the nation on digital-asset law (45+ blockchain bills since 2016, SPDI banks, DAO LLCs, and the now-live Frontier Stable Token, FRNT). For Dell, the state's own IT spend is modest and runs through Enterprise Technology Services (ETS) under A&I via NASPO ValuePoint and statewide contracts — but the data-center buildout, the University of Wyoming, and the NCAR-Wyoming Supercomputing Center are where the real AI-infrastructure and HPC opportunity sits. ETS's 2026-2028 plan is centered on governance and cybersecurity hardening rather than big new programs, so security and modernization remain the central-government angles.",
     "opportunities": [
       "AI-infrastructure / 'AI factory' demand riding the Cheyenne data-center boom (Crusoe Project Jade, Meta, Microsoft) — PowerEdge, networking, services, and ecosystem pull-through.",
       "University of Wyoming and the NCAR-Wyoming Supercomputing Center (NWSC) as established HPC/research-computing buyers with GPU refresh cycles.",
@@ -25,7 +25,7 @@
       { "value": "~$10.9B", "label": "2025-26 Biennial Budget", "note": "All funds; ~$3.4B general fund", "ref": 5 },
       { "value": "1.8GW", "label": "Crusoe Project Jade", "note": "Cheyenne; scalable toward 10GW", "ref": 2 },
       { "value": "3,200 ac", "label": "Microsoft Cheyenne expansion", "note": "Announced Apr 2026; multiyear", "ref": 4 },
-      { "value": "45+", "label": "Blockchain/digital-asset laws", "note": "Enacted since 2016; WYST now live", "ref": 6 }
+      { "value": "45+", "label": "Blockchain/digital-asset laws", "note": "Enacted since 2016; FRNT stable token now live", "ref": 6 }
     ]
   },
 
@@ -69,13 +69,13 @@
       "ref": 8
     },
     {
-      "name": "Wyoming Stable Token (WYST) & Digital-Asset Leadership",
+      "name": "Wyoming Stable Token (FRNT) & Digital-Asset Leadership",
       "status": "Live",
       "statusType": "good",
       "dellFit": 45,
       "budgetStrength": 40,
       "tags": ["Blockchain", "Digital Assets", "Policy"],
-      "summary": "Wyoming has enacted 45+ digital-asset laws since 2016 (SPDI banks, DAO LLCs) and launched WYST, the first fiat-backed, fully-reserved stable token issued by a U.S. public entity, chaired by Governor Gordon. The brand makes Wyoming a national destination for blockchain/fintech compute and signals an innovation-forward government — relevant context more than a direct hardware play, but it reinforces the digital-sovereignty narrative.",
+      "summary": "Wyoming has enacted 45+ digital-asset laws since 2016 (SPDI banks, DAO LLCs) and publicly launched the Frontier Stable Token (FRNT, branded WYST during development) in Jan 2026 — the first fiat-backed, fully-reserved stable token issued by a U.S. public entity, with the commission chaired by Governor Gordon. The brand makes Wyoming a national destination for blockchain/fintech compute and signals an innovation-forward government — relevant context more than a direct hardware play, but it reinforces the digital-sovereignty narrative.",
       "ref": 6
     },
     {
@@ -119,7 +119,7 @@
   "powerStructure": [
     { "name": "Mark Gordon", "title": "Governor", "org": "State of Wyoming", "note": "Drives the 'Winning the AI Race' data-center agenda and chairs the Wyoming Stable Token Commission.", "ref": 8 },
     { "name": "Jeff Clines", "title": "State CIO & ETS Director", "org": "Enterprise Technology Services (A&I)", "note": "Appointed 2024; focused on process maturity, trust, and cybersecurity for a lean central IT org.", "ref": 3 },
-    { "name": "Anthony Apollo", "title": "Executive Director", "org": "Wyoming Stable Token Commission", "note": "Leads WYST, the first U.S. publicly-issued stable token — face of the state's digital-asset program.", "ref": 6 },
+    { "name": "Anthony Apollo", "title": "Executive Director", "org": "Wyoming Stable Token Commission", "note": "Leads FRNT (Frontier Stable Token), the first U.S. publicly-issued stable token — face of the state's digital-asset program.", "ref": 6 },
     { "name": "Wyoming Legislature — Joint Appropriations Committee", "title": "Appropriations & fiscal", "org": "State of Wyoming", "note": "Sets the biennial budget and ETS rate authority; the 2025 supplemental did not pass, tightening agency budgets.", "ref": 5 }
   ],
 
@@ -127,9 +127,9 @@
     { "date": "2026-04", "title": "Microsoft announces intent to expand Cheyenne datacenters (~3,200 acres)", "impact": "Signals a multiyear hyperscale buildout and deepening AI-infrastructure ecosystem around Cheyenne.", "tags": ["Data Centers", "AI"], "ref": 4 },
     { "date": "2026-03", "title": "Wyoming pitches data-center developers at closed-door Jackson summit", "impact": "Google, Microsoft, Meta and AWS attend; the state is actively competing for AI capacity.", "tags": ["AI", "Economic Dev"], "ref": 8 },
     { "date": "2026-02", "title": "NSF transition plan for NCAR-Wyoming raises questions in science community", "impact": "Future governance/funding of the NWSC and Derecho is uncertain — qualify before forecasting HPC.", "tags": ["HPC", "Risk"], "ref": 9 },
+    { "date": "2026-01", "title": "Wyoming publicly launches the Frontier Stable Token (FRNT)", "impact": "First U.S. publicly-issued, fully-reserved stable token goes live for public purchase, cementing digital-asset leadership.", "tags": ["Blockchain", "Policy"], "ref": 6 },
     { "date": "2025-11", "title": "Gov. Gordon proposes ~$11.13B 2027-28 budget", "impact": "Sets the next biennial spending frame; investment income keeps the state cautious but solvent.", "tags": ["Budget"], "ref": 7 },
-    { "date": "2025-08", "title": "Crusoe/Tallgrass 'Project Jade' 1.8GW AI data center unveiled for Cheyenne", "impact": "Anchor AI campus — power use could dwarf the state's residential load; first buildings expected ~2027.", "tags": ["Data Centers", "AI"], "ref": 2 },
-    { "date": "2025-07", "title": "Wyoming Stable Token (WYST) advances toward launch", "impact": "First U.S. publicly-issued, fully-reserved stable token goes live, cementing digital-asset leadership.", "tags": ["Blockchain", "Policy"], "ref": 6 }
+    { "date": "2025-08", "title": "Crusoe/Tallgrass 'Project Jade' 1.8GW AI data center unveiled for Cheyenne", "impact": "Anchor AI campus — power use could dwarf the state's residential load; first buildings expected ~2027.", "tags": ["Data Centers", "AI"], "ref": 2 }
   ],
 
   "dellActions": [
@@ -137,7 +137,7 @@
     "Engage the University of Wyoming and NWSC as HPC/research-computing accounts on GPU and infrastructure refresh — but qualify NWSC's NSF transition status first.",
     "Position cybersecurity, consolidation, and lifecycle modernization to ETS that map directly to its 2026-2028 governance and risk-management themes for a lean central IT org.",
     "Validate Dell's NASPO ValuePoint and A&I statewide-contract coverage so executive-branch agencies can buy without a custom solicitation.",
-    "Use the 'digital sovereignty on Wyoming power' narrative (Gordon's AI-race agenda, WYST) to frame sovereign/private AI infrastructure for state and partner workloads."
+    "Use the 'digital sovereignty on Wyoming power' narrative (Gordon's AI-race agenda, the FRNT stable token) to frame sovereign/private AI infrastructure for state and partner workloads."
   ],
 
   "sources": [
@@ -146,7 +146,7 @@
     { "label": "GovTech — Wyoming CIO Jeff Clines Is Upgrading Processes and Trust", "url": "https://www.govtech.com/workforce/wyoming-cio-jeff-clines-is-upgrading-processes-and-trust" },
     { "label": "Microsoft — Intent to expand datacenter operations in Cheyenne", "url": "https://news.microsoft.com/source/2026/04/14/microsoft-announces-intent-to-expand-datacenter-operations-in-cheyenne-accelerating-innovation-and-economic-growth/" },
     { "label": "Urban Institute — Wyoming state and local expenditure overview", "url": "https://apps.urban.org/features/slfi-state-pages-prod/factsheets/Wyoming.html" },
-    { "label": "Wyoming Stable Token Commission — Advances toward historic launch", "url": "https://content.govdelivery.com/accounts/WYGOV/bulletins/3d7f5f8" },
+    { "label": "Office of the Governor — Wyoming launches the Frontier Stable Token (FRNT) for public purchase", "url": "https://governor.wyo.gov/news-releases/wyoming-ushers-in-new-era-launches-first-of-its-kind-frontier-stable-token-for-public-purchase" },
     { "label": "Cowboy State Daily — Gordon proposes $11.13B two-year budget", "url": "https://cowboystatedaily.com/2025/11/17/governor-gordon-proposes-11-13-billion-two-year-budget/" },
     { "label": "DataCenterDynamics — Gordon on Wyoming's AI data center boom", "url": "https://www.datacenterdynamics.com/en/analysis/data-centers-in-the-land-of-coal-and-cowboys/" },
     { "label": "HPCwire — NSF transition plan for NCAR-Wyoming raises questions", "url": "https://www.hpcwire.com/2026/02/19/nsf-transition-plan-for-ncar-wyoming-raises-questions-in-science-community/" }

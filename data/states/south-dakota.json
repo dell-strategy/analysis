@@ -110,7 +110,7 @@
   "powerStructure": [
     { "name": "Larry Rhoden", "title": "Governor", "org": "State of South Dakota", "note": "Frames national security/defense (incl. cyber) as the state's 'next big industry'; FY2027 budget funds IT infrastructure and cyber backup.", "ref": 5 },
     { "name": "Neal Nachtigall", "title": "Commissioner, BIT & State CIO", "org": "Bureau of Information & Technology", "note": "Named effective June 5, 2026; elevated from within BIT. 25+ yrs enterprise IT/security; prior GE Healthcare, Sanford Health, SONIFI.", "ref": 2 },
-    { "name": "Jose-Marie Griffiths", "title": "President", "org": "Dakota State University", "note": "Architect of DSU's cyber/AI rise — MadLabs, the $90M initiative, and the Sioux Falls Applied Research Lab.", "ref": 6 },
+    { "name": "John R. Ballard", "title": "President (incoming, June 2026)", "org": "Dakota State University", "note": "Succeeds Jose-Marie Griffiths (now DSU Chancellor) at the cyber/AI powerhouse — MadLabs, the $90M initiative, and the Sioux Falls Applied Research Lab.", "ref": 6 },
     { "name": "Office of Procurement Management", "title": "Central purchasing", "org": "Bureau of Human Resources & Administration", "note": "Administers state contracts and NASPO ValuePoint addenda — the gate for non-BIT-channeled buys.", "ref": 8 }
   ],
 
