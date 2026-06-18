@@ -43,7 +43,8 @@
     "notes": [
       "Figures are annual (single fiscal year) unless noted; Arizona does not budget biennially like Texas.",
       "ACE savings are a target, not an appropriation, and were not booked into the proposed budget — treat as directional.",
-      "The largest 'tech spend' in Arizona is private capex (TSMC, hyperscale data centers), not state appropriations — frame economic-development and ecosystem motions accordingly."
+      "The largest 'tech spend' in Arizona is private capex (TSMC, hyperscale data centers), not state appropriations — frame economic-development and ecosystem motions accordingly.",
+      "FY2027 (governor's proposed, per NASBO): $18.7B general fund, +4.9% vs FY2026; $74.9B all funds. Growth budget with a $1.68B rainy day fund (9.0% of GF); includes one-time state/local cybersecurity funding and eliminates the data-center tax exemption while adding a data-center water-usage fee."
     ]
   },
 
@@ -127,6 +128,7 @@
   "news": [
     { "date": "2026-06", "title": "Hobbs signs $18.3B bipartisan FY2026 budget with 3-year data-center incentive pause", "impact": "Sets the fiscal frame; signals the state is managing (not stopping) the data-center boom — demand stays strong.", "tags": ["Budget", "Data Centers"], "ref": 1 },
     { "date": "2026-03", "title": "Hobbs launches ACE Initiative to consolidate IT and deploy AI", "impact": "Direct opening to standardize agency technology on Dell platforms and lead governed agency AI.", "tags": ["IT Consolidation", "AI"], "ref": 6 },
+    { "date": "2026-01", "title": "Gov. Hobbs proposed a $18.7B general-fund FY2027 budget", "impact": "$74.9B all funds, +4.9% vs FY2026; $1.68B rainy day fund (9.0% of GF). Includes one-time state/local cybersecurity funding and replaces the data-center tax exemption with a data-center water-usage fee.", "tags": ["Budget", "Cybersecurity", "Data Centers"], "ref": 12 },
     { "date": "2026-01", "title": "TSMC buys 900 more acres in Phoenix at state land auction", "impact": "Confirms continued expansion of the ~$165B megaproject and a deepening in-state AI-hardware ecosystem.", "tags": ["Semiconductors"], "ref": 7 },
     { "date": "2025-12", "title": "~1.5GW Hassayampa Ranch data-center development wins zoning approval", "impact": "Underscores the scale of AI-infrastructure capacity landing in Arizona.", "tags": ["Data Centers", "AI"], "ref": 9 },
     { "date": "2025-09", "title": "Up-to-3GW La Osa / Vermaland data-center park announced in Pinal County (~$33B)", "impact": "Signals one of the largest planned campuses in the U.S. — sustained compute and networking demand.", "tags": ["Data Centers"], "ref": 10 },
@@ -152,6 +154,7 @@
     { "label": "Arizona Department of Homeland Security — Cyber Command", "url": "https://azdohs.gov/cyber" },
     { "label": "Fortune — AI data centers in Arizona (Hassayampa Ranch)", "url": "https://fortune.com/2025/12/27/ai-data-centers-arizona-hassayampa-ranch/" },
     { "label": "Blackridge Research — Upcoming Data Centers in Arizona (La Osa / Vermaland)", "url": "https://www.blackridgeresearch.com/blog/latest-list-upcoming-data-centers-in-arizona-az-united-states-us" },
-    { "label": "Arizona State Procurement Office — Cooperative Contracts", "url": "https://spo.az.gov/cooperative-contracts" }
+    { "label": "Arizona State Procurement Office — Cooperative Contracts", "url": "https://spo.az.gov/cooperative-contracts" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

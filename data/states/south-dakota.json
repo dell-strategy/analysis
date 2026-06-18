@@ -44,7 +44,8 @@
     "notes": [
       "South Dakota uses an annual budget cycle; FY2027 begins July 2026.",
       "There is no consolidated statewide IT line — confirm whether a given technology buy sits in BIT's enterprise budget or an individual agency before forecasting.",
-      "The DSU $90M figure spans five years and blends state, philanthropic (Denny Sanford), and partner funding — not a single appropriation."
+      "The DSU $90M figure spans five years and blends state, philanthropic (Denny Sanford), and partner funding — not a single appropriation.",
+      "FY2027 (governor's proposed, per NASBO): $2.51B general fund, +2.1% vs FY2026; $7.44B all funds. Conservative posture with a $315.2M reserve (12.5% of appropriations); GRIT task force funding hardens IT infrastructure and adds a backup to the State Radio system."
     ]
   },
 
@@ -118,6 +119,7 @@
     { "date": "2026-06", "title": "Neal Nachtigall named BIT Commissioner & State CIO (effective June 5)", "impact": "New, internally promoted IT leader takes over a highly consolidated estate as Mark Wixon retires — a fresh relationship to build early.", "tags": ["Leadership"], "ref": 2 },
     { "date": "2026-03", "title": "Lawmakers adopt ~$7.5B FY2027 budget (+2.4%)", "impact": "Modest-growth budget with ~$10M for IT infrastructure and a cloud cyber-backup investment; FY2027 begins July 2026.", "tags": ["Budget"], "ref": 4 },
     { "date": "2025-12", "title": "Gov. Rhoden unveils FY2027 budget", "impact": "~$7.46B proposal funds state IT, radio-network redundancy, and a cloud-based cyber backup system.", "tags": ["Budget", "Cybersecurity"], "ref": 3 },
+    { "date": "2025-12", "title": "Gov. Rhoden proposed a $2.51B general-fund FY2027 budget", "impact": "$7.44B all funds, +1.6% vs FY2026; conservative posture with a $315.2M reserve (12.5% of appropriations). GRIT task force funding hardens IT infrastructure and creates a backup to the State Radio system.", "tags": ["Budget", "Cybersecurity"], "ref": 9 },
     { "date": "2025-11", "title": "Dakota State profiled as a national cyber-workforce leader", "impact": "Reinforces DSU's standing (all three NSA CAE designations, PhD in Cyber Operations) and the Sioux Falls Applied Research Lab opening in 2026.", "tags": ["Cyber Education"], "ref": 6 },
     { "date": "2025-09", "title": "Rhoden calls national security South Dakota's 'next big industry'", "impact": "Sets a top-down strategic frame tying cyber, defense, and tech to the state's economic future.", "tags": ["Strategy"], "ref": 5 },
     { "date": "2025-06", "title": "DSU advances $90M cyber research initiative with NSA partnership", "impact": "Five-year push to expand cyber research and double Beacom College graduates — sustained demand for secure and research compute.", "tags": ["Cyber Education", "Research"], "ref": 7 }
@@ -139,6 +141,7 @@
     { "label": "The Dakota Scout — Governor ties South Dakota's economic future to U.S. defense, national security", "url": "https://www.thedakotascout.com/p/governor-ties-south-dakotas-economic" },
     { "label": "Route Fifty — How Dakota State University looks to lead on growing the cyber workforce", "url": "https://www.route-fifty.com/cybersecurity/2025/11/how-dakota-state-university-looks-lead-growing-cyber-workforce/409398/" },
     { "label": "GovTech — Dakota State Partners With NSA, Puts $90M into Cyber Research", "url": "https://www.govtech.com/education/higher-ed/dakota-state-partners-with-nsa-puts-90m-into-cyber-research" },
-    { "label": "South Dakota Bureau of Administration — Procurement Management (NASPO Contracts)", "url": "https://boa.sd.gov/central-services/procurement-management/procurement-management-naspo-contracts.aspx" }
+    { "label": "South Dakota Bureau of Administration — Procurement Management (NASPO Contracts)", "url": "https://boa.sd.gov/central-services/procurement-management/procurement-management-naspo-contracts.aspx" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

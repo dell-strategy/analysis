@@ -44,7 +44,8 @@
     ],
     "notes": [
       "General-fund figure is a biennial (two-year) total; most technology spend sits inside agency budgets rather than a central IT line.",
-      "MNIT's chargeback model means agency demand — not a single appropriation — drives most enterprise technology buying."
+      "MNIT's chargeback model means agency demand — not a single appropriation — drives most enterprise technology buying.",
+      "FY2027 (governor's proposed supplemental, per NASBO): a net +$63M general-fund spending change for the FY2026-27 biennium, leaving a projected $3.67B general-fund balance; a balanced-budget posture that slows program growth while funding legacy-IT modernization."
     ]
   },
 
@@ -127,6 +128,7 @@
 
   "news": [
     { "date": "2026-04", "title": "Reports flag Minnesota's data-center boom as 'on shaky ground'", "impact": "Grid, water, and local-opposition headwinds may slow some projects — qualify pipeline carefully before forecasting hyperscale-linked demand.", "tags": ["Data Centers"], "ref": 9 },
+    { "date": "2026-03", "title": "Gov. Walz proposed a +$63M net general-fund FY2026-27 supplemental", "impact": "Leaves a projected $3.67B general-fund balance; a balanced-budget posture slowing program growth. Allocates funding over three years to update Minnesota's legacy IT systems and creates a Governor's Council on the Future AI Economy.", "tags": ["Budget", "AI"], "ref": 11 },
     { "date": "2026-03", "title": "Jon Eichten appointed MNIT Commissioner & State CIO", "impact": "Tech direction stabilizes under a long-tenured MNIT leader; re-confirm relationships and priorities with the new CIO's office.", "tags": ["Leadership"], "ref": 3 },
     { "date": "2025-12", "title": "Mayo 'Bold. Forward. Unbound.' Rochester build advances", "impact": "Marquee ~$5B health-tech program with AI, robotics, and digital infrastructure — a strong private-sector Dell account.", "tags": ["Health Tech", "AI"], "ref": 8 },
     { "date": "2025-06", "title": "Data-center tax law (Chapter 13) signed; large-scale tier added", "impact": "35-year equipment exemption and a new large-scale tier pull hyperscale investment — but electricity exemption ends.", "tags": ["Data Centers", "Policy"], "ref": 4 },
@@ -152,6 +154,7 @@
     { "label": "MN DEED — Border-to-Border Broadband Grant Program", "url": "https://mn.gov/deed/programs-services/broadband/grant-program" },
     { "label": "Mayo Clinic — Bold. Forward. Unbound. in Rochester", "url": "https://www.mayoclinic.org/giving-to-mayo-clinic/our-priorities/bold-forward-unbound" },
     { "label": "Minnesota Reformer — Minnesota's data center boom on shaky ground", "url": "https://minnesotareformer.com/2026/04/27/minnesotas-long-predicted-data-center-boom-is-on-shaky-ground/" },
-    { "label": "Minnesota Office of State Procurement (Dept. of Administration)", "url": "https://www.mmd.admin.state.mn.us/" }
+    { "label": "Minnesota Office of State Procurement (Dept. of Administration)", "url": "https://www.mmd.admin.state.mn.us/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

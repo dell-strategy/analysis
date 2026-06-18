@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Budget figures are biennial; the ~$11B is an approximate annual mainline total, not an IT-specific line.",
-      "OCIO funds much of its cybersecurity expansion from a cash fund rather than a dedicated appropriation — confirm funding source before forecasting any security program."
+      "OCIO funds much of its cybersecurity expansion from a cash fund rather than a dedicated appropriation — confirm funding source before forecasting any security program.",
+      "FY2027 (governor's proposed mid-biennium adjustment, per NASBO): a net general-fund decrease of $208.6M in FY2027 (and $94M in FY2026), leaving a projected $458.9M biennium-end general-fund balance and a combined $1.28B with the cash reserve. A conservative, cut-driven posture trimming biennium spending ~1.1%."
     ]
   },
 
@@ -126,6 +127,7 @@
   "news": [
     { "date": "2026-04", "title": "Pillen signs LB 525 chatbot-disclosure law", "impact": "Nebraska becomes the 4th state with a chatbot law; signals a governed, transparency-first posture on AI adoption.", "tags": ["AI", "Policy"], "ref": 7 },
     { "date": "2026-03", "title": "Google-linked proposal could draw 1,000–3,000 MW in southeast Nebraska", "impact": "Underscores the scale of AI-infrastructure investment landing in the state (potential online date ~2029).", "tags": ["Data Centers", "AI"], "ref": 6 },
+    { "date": "2026-01", "title": "Gov. Pillen proposed a $208.6M FY2027 general-fund reduction (mid-biennium)", "impact": "A conservative adjustment cutting biennium spending ~1.1%, leaving a projected $458.9M general-fund balance ($1.28B with the cash reserve, ~24% of appropriations) that exceeds the 3% minimum reserve.", "tags": ["Budget"], "ref": 12 },
     { "date": "2025-12", "title": "Trump executive order targets state AI regulation; Nebraska reviewing impact", "impact": "Adds uncertainty to Nebraska's state-level AI rules; agencies watch how guardrails evolve.", "tags": ["AI", "Policy"], "ref": 10 },
     { "date": "2025-07", "title": "Pillen joins 17 GOP governors opposing congressional AI moratorium", "impact": "Confirms Nebraska intends to keep regulating AI at the state level — governed adoption is the expectation.", "tags": ["AI", "Policy"], "ref": 8 },
     { "date": "2025-06", "title": "OCIO pursues IT cost cuts amid ~$471M state deficit", "impact": "Cost-efficiency becomes the lens for all IT spend; modernization must pencil out as savings.", "tags": ["Budget", "Modernization"], "ref": 4 },
@@ -151,6 +153,7 @@
     { "label": "Nebraska Examiner — Pillen among 17 GOP governors opposing AI moratorium", "url": "https://nebraskaexaminer.com/2025/07/02/nebraskas-pillen-among-17-republican-governors-to-oppose-congressional-ai-moratorium/" },
     { "label": "MeriTalk SLG — Nebraska Gov. Pillen Taps McCarville as new CIO", "url": "https://www.meritalkslg.com/articles/nebraska-gov-pillen-taps-mccarville-as-new-cio/" },
     { "label": "Nebraska Examiner — How does Trump's AI executive order impact Nebraska?", "url": "https://nebraskaexaminer.com/2025/12/12/how-does-trumps-ai-executive-order-impact-nebraska/" },
-    { "label": "Nebraska DAS — Materiel Division (state purchasing)", "url": "https://das.nebraska.gov/materiel/index.html" }
+    { "label": "Nebraska DAS — Materiel Division (state purchasing)", "url": "https://das.nebraska.gov/materiel/index.html" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

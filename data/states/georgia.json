@@ -44,7 +44,8 @@
     "notes": [
       "Georgia's fiscal year runs July 1–June 30; figures here are annual unless noted.",
       "FY2027 is a disciplined-growth budget — >$300M of proposed new spending was held back, so confirm an agency's funded scope before forecasting.",
-      "BEAD is multi-year federal money administered by GTA, not a single-year state appropriation."
+      "BEAD is multi-year federal money administered by GTA, not a single-year state appropriation.",
+      "FY2027 (governor's proposed, per NASBO): $32.9B general-fund appropriations and $38.5B state funds; $76.5B total funds. Fiscally cautious — the Revenue Shortfall Reserve sits at $5.6B ('filled') alongside a fourth $1.0B tax rebate and a rate cut to 4.99%."
     ]
   },
 
@@ -120,6 +121,7 @@
     { "date": "2026-05", "title": "Kemp signs $38.5B FY2027 budget; directs >$300M in withheld new spending", "impact": "Disciplined-growth budget — confirm funded scope before forecasting agency deals.", "tags": ["Budget"], "ref": 1 },
     { "date": "2026-03", "title": "GTA releases FY2025 Annual State IT Report", "impact": "Highlights agencywide AI licensing/training and secured broadband funding — signals where modernization dollars flow.", "tags": ["IT Strategy", "AI"], "ref": 3 },
     { "date": "2026-02", "title": "2026 legislature debates data-center tax-exemption suspension and moratorium bills", "impact": "Policy uncertainty for new data-center builds; watch tax/energy outcome before pursuing infrastructure deals.", "tags": ["Data Centers", "Legislation"], "ref": 8 },
+    { "date": "2026-01", "title": "Gov. Kemp proposed a $32.9B general-fund FY2027 budget", "impact": "$76.5B total funds ($38.5B state funds); fiscally cautious with the Revenue Shortfall Reserve 'filled' at $5.6B, a fourth $1.0B tax rebate, and an income-tax rate cut to 4.99%.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-01", "title": "Georgia's 2026 tech philosophy framed as 'AI Governance Is Security'", "impact": "Security-first buying culture; lead with NIST-aligned, governed AI.", "tags": ["AI", "Cybersecurity"], "ref": 4 },
     { "date": "2025-11", "title": "NTIA approves Georgia's updated BEAD final proposal (~$1.3B)", "impact": "Broadband program moves from planning into implementation via GTA.", "tags": ["Broadband"], "ref": 7 },
     { "date": "2025-07", "title": "GTA launches Innovation Lab (synthetic-data only)", "impact": "A governed sandbox for agencies to test emerging tech — a channel for piloting governed AI.", "tags": ["AI", "Innovation"], "ref": 4 }
@@ -143,6 +145,7 @@
     { "label": "GTA — BEAD Program", "url": "https://gta.georgia.gov/policies-and-programs/broadband/funding/bead-program" },
     { "label": "Data Center Dynamics — Georgia Senate passes bill to suspend data center tax exemptions", "url": "https://www.datacenterdynamics.com/en/news/georgia-senate-passes-bill-to-suspend-data-center-tax-exemptions/" },
     { "label": "GTA — Procurement", "url": "https://gta.georgia.gov/about-us/procurement" },
-    { "label": "GTA — GTA Direct Services", "url": "https://gta.georgia.gov/services-contracts" }
+    { "label": "GTA — GTA Direct Services", "url": "https://gta.georgia.gov/services-contracts" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

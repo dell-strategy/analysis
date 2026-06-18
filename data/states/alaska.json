@@ -44,7 +44,8 @@
     "notes": [
       "Alaska's fiscal year runs July 1–June 30; figures are annual, not biennial.",
       "Budget swings track oil prices and Permanent Fund earnings — confirm the latest Department of Revenue forecast before forecasting agency spend.",
-      "Most large technology dollars currently flowing into Alaska are federal broadband funds, not state IT appropriations."
+      "Most large technology dollars currently flowing into Alaska are federal broadband funds, not state IT appropriations.",
+    "FY2027 (governor's proposed, per NASBO): $5.38B unrestricted general fund, +0.6% vs FY2026; $14.16B all funds (-6.7%). A restrained 'base budget' that fully funds statutory obligations (including a full PFD) while drawing $1.5B from the Constitutional Budget Reserve, with reserves near $2.96B."
     ]
   },
 
@@ -118,6 +119,7 @@
   "news": [
     { "date": "2026-03", "title": "NIST approves $629M of Alaska BEAD deployment awards", "impact": "29 projects across 15 providers move toward construction; rural connectivity and edge-infrastructure demand begins to land.", "tags": ["Broadband", "Rural / Edge"], "ref": 4 },
     { "date": "2026-01", "title": "OMB releases revised FY2027 10-Year Plan", "impact": "Reaffirms a tight, deficit-pressured outlook tied to oil and PFD policy — efficiency and modernization framing matters.", "tags": ["Budget"], "ref": 2 },
+    { "date": "2025-12", "title": "Gov. Dunleavy proposed a $5.38B general-fund FY2027 budget", "impact": "$14.16B all funds, -6.7% vs FY2026; restrained 'base budget' that draws $1.5B from the Constitutional Budget Reserve with reserves near $2.96B and a full statutory PFD.", "tags": ["Budget"], "ref": 11 },
     { "date": "2025-12", "title": "Governor unveils FY2027 draft budget with ~$1.5B deficit", "impact": "A full statutory PFD widens the gap; expect continued cost scrutiny on agency and IT spend.", "tags": ["Budget", "Policy"], "ref": 2 },
     { "date": "2025-06", "title": "Dunleavy signs FY2026 budget (~$14.7B) with $122M in vetoes", "impact": "Weaker oil-revenue outlook drives cuts — sellers should lead with efficiency and consolidation value.", "tags": ["Budget"], "ref": 1 },
     { "date": "2025-04", "title": "Legislature hears AI, deepfake, and data-transfer testimony", "impact": "Signals coming AI-governance requirements (inventories, oversight) even though no bill is yet enacted.", "tags": ["AI", "Policy"], "ref": 7 },
@@ -142,6 +144,7 @@
     { "label": "ITIF — Testimony to the Alaska Legislature on AI, deepfakes, cybersecurity, data transfers", "url": "https://itif.org/publications/2025/04/29/testimony-to-the-alaska-state-senate-regarding-ai-deepfakes-cybersecurity-and-data-transfers/" },
     { "label": "Alaska DOA — AAPEX (Administrative Productivity and Excellence) announcement", "url": "https://doa.alaska.gov/aapex/news/initial-announcement.html" },
     { "label": "Alaska OPPM — Statewide Master Agreements", "url": "https://oppm.doa.alaska.gov/alaska-centers-of-procurement-excellence/statewide-master-agreements/" },
-    { "label": "GovTech — After several interim leaders, Alaska has a permanent CIO (Bill Smith)", "url": "https://www.govtech.com/people/after-several-interim-leaders-alaska-has-a-permanent-cio.html" }
+    { "label": "GovTech — After several interim leaders, Alaska has a permanent CIO (Bill Smith)", "url": "https://www.govtech.com/people/after-several-interim-leaders-alaska-has-a-permanent-cio.html" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

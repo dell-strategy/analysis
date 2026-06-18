@@ -44,7 +44,8 @@
     "notes": [
       "Iowa appropriates annually, not biennially — confirm the current fiscal year before forecasting.",
       "Data-center and broadband figures are private and grant capital, not state IT operating dollars; they signal the surrounding AI-infrastructure economy.",
-      "The AWS/Cognizant migration shifts spend from capital on-prem hardware toward operating cloud/managed-services — model the on-prem footprint accordingly."
+      "The AWS/Cognizant migration shifts spend from capital on-prem hardware toward operating cloud/managed-services — model the on-prem footprint accordingly.",
+      "FY2027 (governor's proposed, per NASBO): $9.67B general-fund appropriations, +1.9% vs FY2026; NASBO does not break out an all-funds total. Fiscally conservative posture with $849.9M in reserve funds and a $2.70B Taxpayer Relief Fund balance."
     ]
   },
 
@@ -126,6 +127,7 @@
 
   "news": [
     { "date": "2026-06", "title": "Gov. Reynolds announces AWS + Cognizant statewide IT modernization", "impact": "Executive-branch IT moves to AWS-managed cloud operated by Cognizant; retires dozens of data centers and thousands of servers, ~$525M projected 10-yr savings.", "tags": ["Cloud", "Modernization"], "ref": 2 },
+    { "date": "2026-01", "title": "Gov. Kim Reynolds proposed a $9.67B general-fund FY2027 budget", "impact": "+1.9% vs FY2026 general-fund appropriations; $849.9M in reserve funds and a $2.70B Taxpayer Relief Fund balance. Education (56%) and health and human services (28%) dominate spending.", "tags": ["Budget"], "ref": 12 },
     { "date": "2025-07", "title": "$400M Empower Rural Iowa Broadband round (NOFA #009) opens", "impact": "Latest BEAD-supported grant round drives rural network and edge buildout across Iowa.", "tags": ["Broadband", "Grants"], "ref": 7 },
     { "date": "2025-06", "title": "Google announces $7B Iowa expansion (Cedar Rapids + Council Bluffs)", "impact": "Major AI/cloud infrastructure investment; first Cedar Rapids building due 2026, reinforcing Iowa as a national hyperscale hub.", "tags": ["Data Centers", "AI"], "ref": 4 },
     { "date": "2025-05", "title": "Microsoft advances sixth West Des Moines data center", "impact": "Cumulative Microsoft investment exceeds $6B; sustained hyperscale buildout in central Iowa.", "tags": ["Data Centers"], "ref": 5 },
@@ -152,6 +154,7 @@
     { "label": "innovationIOWA — TAI launches AI Policy Subcommittee", "url": "https://innovationia.com/2025/05/22/new-tai-subcommittee-to-shape-artificial-intelligence-policy/" },
     { "label": "GovTech — Shane Dwyer to serve as Iowa Chief Information Security Officer", "url": "https://www.govtech.com/workforce/shane-dwyer-to-serve-as-iowa-chief-information-security-officer" },
     { "label": "StateScoop — Iowa officially names Matthew Behrens statewide CIO", "url": "https://statescoop.com/iowa-cio-matthew-behrens/" },
-    { "label": "Iowa DAS — State of Iowa Cooperative Purchasing Program", "url": "https://das.iowa.gov/state-employees/procurement/cooperative-purchasing-program" }
+    { "label": "Iowa DAS — State of Iowa Cooperative Purchasing Program", "url": "https://das.iowa.gov/state-employees/procurement/cooperative-purchasing-program" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

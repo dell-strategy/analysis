@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Figures are annual (FY2026) unless a program is noted as multi-year/cumulative.",
-      "Most technology spend is embedded in agency budgets; the 'One ADS' service-based model will reshape how shared IT is funded and billed — confirm which entity owns a program before forecasting."
+      "Most technology spend is embedded in agency budgets; the 'One ADS' service-based model will reshape how shared IT is funded and billed — confirm which entity owns a program before forecasting.",
+      "FY2027 (governor's proposed, per NASBO): $2.53B general fund, -0.6% vs FY2026; $9.4B all funds. Fiscal discipline amid tighter conditions and less expected federal support; reserves ~$375M (~14.8% of GF)."
     ]
   },
 
@@ -127,6 +128,7 @@
   "news": [
     { "date": "2026-05", "title": "Gov. Scott establishes Vermont AI Economic Task Force (EO 01-26)", "impact": "New state AI agenda; ADS co-chairs and must name priority AI opportunities within 90 days.", "tags": ["AI", "Policy"], "ref": 5 },
     { "date": "2026-04", "title": "Vermont shifts $70M+ Workday rollout from phased to all-at-once", "impact": "HR/finance components found more interconnected than expected; raises cost/risk and oversight attention.", "tags": ["ERP", "Modernization"], "ref": 4 },
+    { "date": "2026-01", "title": "Gov. Scott proposed a $2.53B general-fund FY2027 budget", "impact": "$9.4B all funds, -0.6% vs FY2026; reserves ~$375M (~14.8% of GF). Recommends fiscal discipline amid tighter conditions and less expected federal support.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-01", "title": "ADS 2026 Annual Report details 'One ADS' service-based IT model", "impact": "Consolidation and internal-service-fund billing reshape how shared technology is funded.", "tags": ["ADS", "Budget"], "ref": 2 },
     { "date": "2025-12", "title": "Cybersecurity Advisory Council moves to extend protection beyond state government", "impact": "Local and critical-infrastructure cyber demand grows; SLCGP funds in play.", "tags": ["Cybersecurity"], "ref": 6 },
     { "date": "2025-09", "title": "VCBB outlines ~$180–229M broadband proposal; NEK Broadband wins ~$93M", "impact": "Fiber buildout pushes toward ~99% statewide access; expanding CUD digital footprint.", "tags": ["Broadband"], "ref": 7 },
@@ -151,6 +153,7 @@
     { "label": "VTDigger — Vermont broadband board outlines $180M proposal, major NEK investment", "url": "https://vtdigger.org/2025/09/03/vermont-broadband-board-outlines-180m-funding-proposal-with-major-investment-in-nek/" },
     { "label": "Vermont BGS — Office of Purchasing and Contracting", "url": "https://bgs.vermont.gov/purchasing" },
     { "label": "Vermont ADS — Vendor Procurement", "url": "https://digitalservices.vermont.gov/working-us/procurement" },
-    { "label": "Vermont ADS — Artificial Intelligence", "url": "https://digitalservices.vermont.gov/ai" }
+    { "label": "Vermont ADS — Artificial Intelligence", "url": "https://digitalservices.vermont.gov/ai" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

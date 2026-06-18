@@ -44,7 +44,8 @@
     "notes": [
       "Colorado runs an annual (not biennial) budget; figures are single-year unless noted.",
       "TABOR caps state revenue growth — a structural reason the FY2026–27 budget was constrained and IT spend is scrutinized.",
-      "Broadband dollars are federal (BEAD) plus a smaller state-funded Advance-Local program; confirm program ownership before forecasting."
+      "Broadband dollars are federal (BEAD) plus a smaller state-funded Advance-Local program; confirm program ownership before forecasting.",
+      "FY2027 (governor's proposed, per NASBO): $18.5B general fund operating, +1.6% vs FY2026; $50.5B all funds. Maintains a 13% general-fund reserve while slowing Medicaid growth."
     ]
   },
 
@@ -130,7 +131,8 @@
     { "date": "2026-05", "title": "Polis signs SB 189, repealing and replacing the Colorado AI Act", "impact": "AI rules shift to a lighter ADMT/disclosure model effective Jan 1, 2027; agencies still need governed AI.", "tags": ["AI", "Policy"], "ref": 4 },
     { "date": "2026-05", "title": "FY2026–27 $46.8B budget signed after closing a ~$1.5B shortfall", "impact": "Budget-constrained agencies must do more with less — favors efficiency and lifecycle plays.", "tags": ["Budget"], "ref": 1 },
     { "date": "2026-05", "title": "Both 2026 data-center incentive bills rejected", "impact": "No new statewide data-center incentives, but hyperscale and defense-driven demand persists.", "tags": ["Data Centers", "AI"], "ref": 8 },
-    { "date": "2026-04", "title": "Colorado EDC approves $26M tax package to retain an aerospace/defense firm", "impact": "Reinforces the aerospace-defense cluster as a secure-compute and AI-infrastructure buyer.", "tags": ["Defense", "Economic Dev"], "ref": 10 }
+    { "date": "2026-04", "title": "Colorado EDC approves $26M tax package to retain an aerospace/defense firm", "impact": "Reinforces the aerospace-defense cluster as a secure-compute and AI-infrastructure buyer.", "tags": ["Defense", "Economic Dev"], "ref": 10 },
+    { "date": "2025-10", "title": "Gov. Polis proposed a $18.5B general-fund FY2027 budget", "impact": "$50.5B all funds, +1.6% GF vs FY2026; maintains a 13% general-fund reserve while slowing Medicaid growth to 5.6%.", "tags": ["Budget"], "ref": 11 }
   ],
 
   "dellActions": [
@@ -151,6 +153,7 @@
     { "label": "OIT — State publishes proposed BEAD funding awards / Final Proposal", "url": "https://oit.colorado.gov/press-release/state-publishes-proposed-broadband-equity-access-and-deployment-funding-awards" },
     { "label": "Colorado Newsline — Both Colorado data center bills rejected in 2026 session", "url": "https://coloradonewsline.com/2026/05/11/data-center-bills-rejected-legislative-session/" },
     { "label": "OIT — Office of Information Security", "url": "https://oit.colorado.gov/standards-policies-guides/cybersecurity-and-information-security-guide/information-security-office" },
-    { "label": "Colorado Politics — Colorado awards $26M in tax incentives to keep aerospace company in state", "url": "https://www.coloradopolitics.com/2026/04/16/colorado-awards-26m-in-tax-incentives-to-keep-aerospace-company-in-state/" }
+    { "label": "Colorado Politics — Colorado awards $26M in tax incentives to keep aerospace company in state", "url": "https://www.coloradopolitics.com/2026/04/16/colorado-awards-26m-in-tax-incentives-to-keep-aerospace-company-in-state/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Figures are biennial/annual budget totals, not a dedicated IT appropriation — technology spend is embedded across agencies.",
-      "The budget is intentionally tight; forecast modernization dollars against agency priorities (Medicaid, K-12, public safety) rather than a discretionary tech pool."
+      "The budget is intentionally tight; forecast modernization dollars against agency priorities (Medicaid, K-12, public safety) rather than a discretionary tech pool.",
+      "FY2027 (governor's proposed, per NASBO): $16.4B general fund, -1.9% vs FY2026; $154.8B all funds across the FY2027–28 biennium. Disciplined biennial plan that fully funds pensions, builds a ~$3.0B Budget Reserve Trust Fund, and includes a Kentucky Cyber Resilience Task Force."
     ]
   },
 
@@ -116,6 +117,7 @@
   "news": [
     { "date": "2026-04", "title": "Legislature overrides most Beshear vetoes; ~$32B two-year budget becomes law", "impact": "FY2026–28 spending is set and disciplined; tech dollars sit inside agency budgets, not a discretionary pool.", "tags": ["Budget"], "ref": 3 },
     { "date": "2026-04", "title": "GA finalizes disciplined, balanced two-year state budget (HB 500)", "impact": "Confirms the austere posture — modernization must be framed as efficiency and consolidation.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2026-01", "title": "Gov. Beshear proposed a $16.4B general-fund FY2027 budget", "impact": "$154.8B all funds across the FY2027–28 biennium, -1.9% vs FY2026; fully funds pensions and builds a ~$3.0B Budget Reserve Trust Fund. Proposes a Kentucky Cyber Resilience Task Force to detect, respond to, and recover from cyber incidents.", "tags": ["Budget", "Cybersecurity"], "ref": 10 },
     { "date": "2025-12", "title": "AI data-center boom arrives in Kentucky; 2026 session to weigh costs", "impact": "Hyperscale AI demand grows, but energy/cost debate may shape incentives — watch for policy moves.", "tags": ["Data Centers", "AI"], "ref": 6 },
     { "date": "2025-07", "title": "Kentucky opens BEAD Round 2 project applications (~$1.1B)", "impact": "Broadband subawards advance, expanding the connected footprint and downstream compute needs.", "tags": ["Broadband"], "ref": 7 },
     { "date": "2025-05", "title": "Jim Barnhart named permanent State CIO", "impact": "Tech direction stabilizes under a consolidation- and cloud-focused leader who owns SB 4 AI governance.", "tags": ["Leadership"], "ref": 5 },
@@ -139,6 +141,7 @@
     { "label": "LPM — The AI data-center boom is coming for Kentucky", "url": "https://www.lpm.org/news/2025-12-09/the-ai-data-center-boom-is-coming-for-kentucky-what-will-lawmakers-do-about-it" },
     { "label": "Kentucky Office of Broadband Development — BEAD program", "url": "https://broadband.ky.gov/resources/Pages/State-Broadband-Plan.aspx" },
     { "label": "Kentucky Finance & Administration Cabinet — State agency and local government procurement", "url": "https://finance.ky.gov/eProcurement/Pages/state-agency-and-local-government-procurement.aspx" },
-    { "label": "Commonwealth Office of Technology — Office of the CISO services", "url": "https://technology.ky.gov/OCISO/Pages/services.aspx" }
+    { "label": "Commonwealth Office of Technology — Office of the CISO services", "url": "https://technology.ky.gov/OCISO/Pages/services.aspx" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

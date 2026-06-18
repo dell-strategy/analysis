@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Mississippi appropriates annually; figures here are FY2026 unless noted.",
-      "IT dollars are distributed across agencies; ITS is the procurement/approval gate, not a single large spending line — confirm the owning agency before forecasting."
+      "IT dollars are distributed across agencies; ITS is the procurement/approval gate, not a single large spending line — confirm the owning agency before forecasting.",
+      "FY2027 (governor's proposed, per NASBO): $7.5B general-fund revenue, -1.3% vs FY2026 ($7.4B available after a 2% set-aside); $8.3B agency appropriations from state support funds, +5.8%. Economy- and workforce-focused with energy-infrastructure investments."
     ]
   },
 
@@ -130,6 +131,7 @@
     { "date": "2026-02", "title": "Gov. Reeves signs the IT Optimization Act (SB2653)", "impact": "Centralizes tech administration and kills duplicative contracts — displacement and standardization openings via ITS.", "tags": ["Procurement", "Centralization"], "ref": 7 },
     { "date": "2026-02", "title": "NTIA approves Mississippi's BEAD Final Proposal", "impact": "$500M+ broadband buildout under BEAM proceeds; raises statewide digital-infrastructure demand.", "tags": ["Broadband"], "ref": 3 },
     { "date": "2026-02", "title": "SB2625 cabinet-level CIO bill dies in committee", "impact": "State CIO remains the ITS Executive Director (Orgeron); tech authority stays centralized in ITS.", "tags": ["Leadership", "Policy"], "ref": 7 },
+    { "date": "2025-11", "title": "Gov. Reeves proposed a $7.5B general-fund FY2027 budget", "impact": "$8.3B agency appropriations from state support funds, +5.8% vs FY2026; GF revenue -1.3% with a 2% ($151M) set-aside leaving $7.4B available. Calls on the legislature to replace the antiquated youth court case management system with a modern system.", "tags": ["Budget"], "ref": 10 },
     { "date": "2025-09", "title": "ITS contracts Gartner for the statewide data exchange study (SB2267)", "impact": "Data-sharing modernization moves toward implementation — data-platform and storage conversations open.", "tags": ["Data", "Modernization"], "ref": 6 }
   ],
 
@@ -150,6 +152,7 @@
     { "label": "StateScoop — Mississippi approves security operations center, centralizing IT services", "url": "https://statescoop.com/mississippi-cybersecurity-operations-center-shared-services/" },
     { "label": "GovTech — Mississippi Bill Moves to Reshape State Tech Leadership (SB2625/2653)", "url": "https://www.govtech.com/policy/mississippi-bill-moves-to-reshape-state-tech-leadership" },
     { "label": "Mississippi ITS — Executive Director (Craig Orgeron)", "url": "https://www.its.ms.gov/about/executive-director" },
-    { "label": "Mississippi ITS — Purchasing (IT Procurement) Learn More", "url": "https://www.its.ms.gov/services/purchasing-it-procurement-learn-more" }
+    { "label": "Mississippi ITS — Purchasing (IT Procurement) Learn More", "url": "https://www.its.ms.gov/services/purchasing-it-procurement-learn-more" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

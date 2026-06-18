@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Empire AI's $500M+ total blends state capital (up to ~$340M), SUNY operating funds, and private/philanthropic backing — confirm which pool funds a given purchase.",
-      "ConnectALL broadband dollars are largely federal (BEAD); deployment projects begin in 2026 and run up to four years."
+      "ConnectALL broadband dollars are largely federal (BEAD); deployment projects begin in 2026 and run up to four years.",
+      "FY2027 (governor's proposed Jan 20, per NASBO): $126.8B general fund, +0.4% vs FY2026; $260.0B all funds. The budget was later enacted in May 2026 at a record $268.5B; reserves of $14.6B including $10.8B in rainy day funds."
     ]
   },
 
@@ -126,6 +127,7 @@
 
   "news": [
     { "date": "2026-05", "title": "Hochul signs record $268.5B FY2027 budget (57 days late)", "impact": "Largest budget in state history funds a full fiscal year of agency operations and modernization; latest enactment in 16 years.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2026-01", "title": "Gov. Hochul proposed a $126.8B general-fund FY2027 budget", "impact": "$260.0B all funds, +0.7% vs FY2026; $14.6B in reserves including $10.8B in rainy day funds (later enacted in May 2026 at a record $268.5B). Funds law enforcement technology (LETECH) grants.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-01", "title": "ITS names second-ever Chief AI Officer and new Chief Digital Officer", "impact": "Signals sustained, governed-AI focus across agencies — an opening for private/on-prem AI on sensitive data.", "tags": ["AI", "Leadership"], "ref": 6 },
     { "date": "2026-01", "title": "Empire AI announces SUNY campus partnerships to expand researcher access", "impact": "Broadens demand for AI compute across SUNY campuses (Albany, Binghamton, Buffalo, Stony Brook).", "tags": ["AI Infrastructure", "SUNY"], "ref": 9 },
     { "date": "2025-12", "title": "Hochul signs RAISE Act (frontier-AI transparency; effective Jan 1, 2027)", "impact": "Reinforces state appetite for governed, auditable AI; targets large model developers with AG enforcement.", "tags": ["AI", "Policy"], "ref": 5 },
@@ -151,6 +153,7 @@
     { "label": "Governor Hochul — $30M shared services program to enhance county cyber defenses", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-launch-30-million-shared-services-program-enhance-cyber-defenses" },
     { "label": "Governor Hochul — ConnectALL accepting applications for $644M broadband expansion (BEAD)", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-connectall-accepting-applications-644-million-expand-affordable" },
     { "label": "Governor Hochul — Empire AI SUNY campus partnerships (Jan 30, 2026)", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-empire-ai-suny-campus-partnerships-expand-access-artificial" },
-    { "label": "NYS OGS — Award 22802, Information Technology Umbrella Contract (Manufacturer-Based, Dell)", "url": "https://online.ogs.ny.gov/purchase/snt/awardnotes/7360022802RFQ23-01_HowToUse.pdf" }
+    { "label": "NYS OGS — Award 22802, Information Technology Umbrella Contract (Manufacturer-Based, Dell)", "url": "https://online.ogs.ny.gov/purchase/snt/awardnotes/7360022802RFQ23-01_HowToUse.pdf" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

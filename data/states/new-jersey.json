@@ -42,7 +42,8 @@
     "notes": [
       "Budget figures are annual (single-year) totals; New Jersey does not budget biennially.",
       "Technology and cyber dollars are distributed across NJOIT-served agencies and Homeland Security (NJCCIC) rather than a single consolidated IT appropriation — confirm the owning entity before forecasting.",
-      "FY2027 is being shaped under a new administration focused on affordability and energy costs; expect data-center and grid policy to influence tech-adjacent spending."
+      "FY2027 is being shaped under a new administration focused on affordability and energy costs; expect data-center and grid policy to influence tech-adjacent spending.",
+      "FY2027 (governor's proposed, per NASBO): $35.5B general fund, -1.9% vs FY2026; $60.7B all funds. Targets ~$2B in spending cuts while delivering record property tax relief and a $5.4B projected surplus."
     ]
   },
 
@@ -115,6 +116,7 @@
 
   "news": [
     { "date": "2026-06", "title": "Gov. Sherrill unveils first-in-the-nation AI data-center regulatory framework", "impact": "Operators would fund their own power and grid upgrades and disclose energy/water use; rewards efficient, governed compute and adds uncertainty to raw hyperscale buildout.", "tags": ["AI", "Energy", "Policy"], "ref": 7 },
+    { "date": "2026-03", "title": "Gov. Sherrill proposed a $35.5B general-fund FY2027 budget", "impact": "$60.7B all funds, +1.6% vs FY2026; ~$2B in spending cuts with a $5.4B projected surplus. Funds technology upgrades including the Division of Consumer Affairs licensing system and the NJ Innovation Authority Permitting Dashboard.", "tags": ["Budget"], "ref": 10 },
     { "date": "2026-03", "title": "Sherrill's first budget address targets affordability and Big Tech", "impact": "Signals FY2027 priorities — energy costs, data-center accountability — that shape tech-adjacent spending.", "tags": ["Budget", "Leadership"], "ref": 8 },
     { "date": "2026-01", "title": "Mikie Sherrill inaugurated as New Jersey's 57th Governor", "impact": "New administration resets executive priorities; technology direction in transition.", "tags": ["Leadership"], "ref": 3 },
     { "date": "2026-02", "title": "Gov. Sherrill names Kevin Dehmer permanent NJOIT CTO (succeeding retired Chris Rein)", "impact": "Central IT leadership settles under the new administration — relationship-building window for statewide tech direction.", "tags": ["Leadership"], "ref": 4 },
@@ -139,6 +141,7 @@
     { "label": "StateScoop — New Jersey launches generative AI assistant and training tool for state employees", "url": "https://statescoop.com/new-jersey-ai-assistant-training-tool-state-employees/" },
     { "label": "Central Jersey — Gov. Sherrill unveils data center regulations", "url": "https://www.centraljersey.com/2026/06/01/gov-sherrill-unveils-data-center-regulations/" },
     { "label": "NJBIZ — First 100 days: Sherrill targets affordability, permitting reform, energy", "url": "https://njbiz.com/first-100-days-sherrill-permitting-energy-affordability/" },
-    { "label": "Gothamist — Gov. Sherrill lays out plan to ease AI data centers' burden on NJ towns, electric bills", "url": "https://gothamist.com/news/gov-sherrill-lays-out-plan-to-ease-ai-data-centers-burden-on-nj-towns-electric-bills" }
+    { "label": "Gothamist — Gov. Sherrill lays out plan to ease AI data centers' burden on NJ towns, electric bills", "url": "https://gothamist.com/news/gov-sherrill-lays-out-plan-to-ease-ai-data-centers-burden-on-nj-towns-electric-bills" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

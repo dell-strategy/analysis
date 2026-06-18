@@ -44,7 +44,8 @@
     ],
     "notes": [
       "Figures are annual fiscal-year totals unless noted; Oklahoma does not budget biennially.",
-      "Most technology dollars are not a single line item — they flow through OMES central purchasing and agency budgets, so engage OMES to find the spend."
+      "Most technology dollars are not a single line item — they flow through OMES central purchasing and agency budgets, so engage OMES to find the spend.",
+      "FY2027 (governor's proposed Feb 2, per NASBO): $8.12B general-revenue expenditure authority, +4.7% vs FY2026; $11.75B all funds (-6.7%). The enacted SB 1177 budget later landed at ~$12.8B; total reserves projected at $2.88B."
     ]
   },
 
@@ -127,6 +128,7 @@
   "news": [
     { "date": "2026-04", "title": "Meta breaks ground on AI-optimized Tulsa data center (Project Anthem)", "impact": "Adds to the AI-infrastructure wave; reinforces Oklahoma as a national AI hub.", "tags": ["Data Centers", "AI"], "ref": 7 },
     { "date": "2026-04", "title": "Gov. Stitt signs FY2027 budget (SB 1177, ~$12.8B)", "impact": "Slightly larger budget funds agency services; technology flows centrally through OMES.", "tags": ["Budget"], "ref": 2 },
+    { "date": "2026-02", "title": "Gov. Stitt proposed an $8.12B general-revenue FY2027 budget", "impact": "$11.75B all funds, -6.7% vs FY2026; total reserves projected at $2.88B (later enacted via SB 1177 at ~$12.8B). Funds OMES to stand up a statewide call center.", "tags": ["Budget"], "ref": 11 },
     { "date": "2025-11", "title": "Tai Phan named first State Chief AI & Technology Officer", "impact": "Formalizes statewide AI leadership; agencies need governed, auditable AI approaches.", "tags": ["AI", "Leadership"], "ref": 6 },
     { "date": "2025-10", "title": "Statewide Cybersecurity Awareness Month + AI threat detection", "impact": "Security elevated as a standing CIO program; openings for secure compute and services.", "tags": ["Cybersecurity"], "ref": 3 },
     { "date": "2025-08", "title": "Google announces ~$9B Oklahoma cloud/AI investment", "impact": "Stillwater campus + Pryor expansion signal the scale of AI infrastructure landing in-state.", "tags": ["Data Centers", "AI"], "ref": 7 },
@@ -151,6 +153,7 @@
     { "label": "Google — $9B investment in Oklahoma AI/cloud infrastructure", "url": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-oklahoma/" },
     { "label": "Oklahoma Broadband Office — BEAD program (deployment funding)", "url": "https://oklahoma.gov/broadband/grant-programs/broadband-equity-access-and-deployment-program-.html" },
     { "label": "GovTech — Oklahoma names Dan Cronin as the state's newest CIO", "url": "https://www.govtech.com/workforce/oklahoma-names-dan-cronin-as-the-states-newest-cio" },
-    { "label": "OMES — IT Procurement (statewide/mandatory statewide IT contracts)", "url": "https://oklahoma.gov/omes/divisions/information-services/about-information-services/it-procurement.html" }
+    { "label": "OMES — IT Procurement (statewide/mandatory statewide IT contracts)", "url": "https://oklahoma.gov/omes/divisions/information-services/about-information-services/it-procurement.html" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

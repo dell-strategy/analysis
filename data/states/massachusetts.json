@@ -43,7 +43,8 @@
     ],
     "notes": [
       "EOTSS operating figures sit in line item 1790-0100; the agency's central role is enterprise IT consolidation, not a single statewide IT spend number.",
-      "Many AI and compute investments flow through MassTech (a quasi-public agency) and capital programs rather than the annual operating budget — confirm the funding vehicle before forecasting."
+      "Many AI and compute investments flow through MassTech (a quasi-public agency) and capital programs rather than the annual operating budget — confirm the funding vehicle before forecasting.",
+      "FY2027 (governor's House 2 proposed, per NASBO): $56.9B general-fund revenue; $63.4B total appropriations (+1.1% vs FY2026) and $89.5B total spending across all funds. Builds the Stabilization (rainy day) Fund toward a projected ~$8.7B total balance while controlling spending."
     ]
   },
 
@@ -116,6 +117,7 @@
 
   "news": [
     { "date": "2026-02", "title": "Healey and Google launch 'Grow with Google' free AI training", "impact": "$2.5M Google-funded program, administered by the AI Hub, aims to train ~30,000 residents — reinforcing the state's applied-AI workforce push.", "tags": ["AI", "Workforce"], "ref": 7 },
+    { "date": "2026-01", "title": "Gov. Healey proposed a $56.9B general-fund FY2027 budget", "impact": "$89.5B all funds; $63.4B total appropriations (+1.1% vs FY2026), with the House 2 operating total up 3.5% over original FY2026. Controls spending while building the Stabilization Fund toward a projected ~$8.7B total balance.", "tags": ["Budget"], "ref": 11 },
     { "date": "2025-08", "title": "MassTech issues RFP for a 'Data Commons Collaborative'", "impact": "Synthetic-dataset infrastructure modeled on resident data — signals demand for governed data and compute platforms.", "tags": ["AI", "Data"], "ref": 5 },
     { "date": "2025-07", "title": "Governor Healey signs $60.9B FY2026 budget", "impact": "Budget up $3.2B over FY2025 but trimmed ~$1B from the filing — fiscal caution shapes agency IT spend.", "tags": ["Budget"], "ref": 1 },
     { "date": "2025-05", "title": "$31M AI Hub HPC grant and AI Hub director announced at IBM Think (Boston)", "impact": "Expands sustainable high-performance compute via MGHPCC (~$120M projected over 5 yrs); names Sabrina Mansur as inaugural director.", "tags": ["AI Infrastructure", "HPC"], "ref": 3 },
@@ -141,6 +143,7 @@
     { "label": "MassTech — Healey and Google announce statewide free AI training partnership", "url": "https://masstech.org/news/governor-healey-and-google-announce-new-statewide-partnership-provide-free-ai-training" },
     { "label": "WWLP — As demand rises, state turning corner in cybersecurity efforts", "url": "https://www.wwlp.com/news/massachusetts/as-demand-rises-state-turning-corner-in-cybersecurity-efforts/" },
     { "label": "StateScoop — Massachusetts CIO Jason Snyder profile", "url": "https://statescoop.com/bio/jason-snyder/" },
-    { "label": "Mass.gov — Buy from a Statewide Contract (OSD / COMMBUYS)", "url": "https://www.mass.gov/buy-from-a-statewide-contract" }
+    { "label": "Mass.gov — Buy from a Statewide Contract (OSD / COMMBUYS)", "url": "https://www.mass.gov/buy-from-a-statewide-contract" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

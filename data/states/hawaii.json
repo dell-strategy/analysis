@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Budget figures are annual within a two-year (biennial) appropriation; confirm the enacted vs. supplemental figure before forecasting.",
-      "Most large connectivity dollars are federally sourced and flow through the University of Hawaii Broadband Office, not a state IT agency."
+      "Most large connectivity dollars are federally sourced and flow through the University of Hawaii Broadband Office, not a state IT agency.",
+      "FY2027 (governor's proposed supplemental, per NASBO): $10.59B general fund, roughly flat vs enacted FY2027; $20.4B all funds. Record investments in infrastructure, housing, and healthcare while preparing for federal changes, with a $1.68B Emergency and Budget Reserve Fund."
     ]
   },
 
@@ -125,6 +126,7 @@
   "news": [
     { "date": "2026-01", "title": "Hawaii gets final federal OK to spend ~$149.5M (BEAD) on statewide internet", "impact": "Connect Kākou moves from approval to execution; networking and infrastructure demand across ~7,000 locations.", "tags": ["Broadband", "Federal Funds"], "ref": 5 },
     { "date": "2026-02", "title": "UH inter-island undersea fiber network still targeting 2026 completion", "impact": "HIFL build proceeds toward late-2026 ready-for-service; redundant island connectivity nears reality.", "tags": ["Undersea Cable"], "ref": 4 },
+    { "date": "2025-12", "title": "Gov. Josh Green proposed a $10.59B general-fund FY2027 budget", "impact": "$20.4B all funds, roughly flat general fund vs enacted FY2027; $1.68B Emergency and Budget Reserve Fund. Includes general and federal funds for Medicaid technology upgrades to meet new federal requirements.", "tags": ["Budget"], "ref": 11 },
     { "date": "2025-12", "title": "Federal AI executive order signals preemption of state AI laws", "impact": "National AI standard may reshape how far Hawaii's own AI governance can go; agencies still need governed AI now.", "tags": ["AI", "Policy"], "ref": 6 },
     { "date": "2025-09", "title": "CIO Sakuda keynotes Hawaii AI & Cloud Innovation Summit on the state's AI roadmap", "impact": "ETS lays out a practical path for AI in permitting, disaster response, and services — a buying signal for governed AI.", "tags": ["AI", "Leadership"], "ref": 3 },
     { "date": "2025-08", "title": "Contractors selected to install the ~$120M HIFL undersea fiber system", "impact": "Major construction milestone for inter-island connectivity backbone.", "tags": ["Undersea Cable", "Networking"], "ref": 4 },
@@ -149,6 +151,7 @@
     { "label": "Office of the Governor — Federal approval advances Hawaii's broadband expansion", "url": "https://governor.hawaii.gov/newsroom/lt-gov-luke-uhbo-release-federal-approval-advances-hawai%CA%BBis-broadband-expansion/" },
     { "label": "Hawaii Tribune-Herald — Pentagon seeks Pacific-forces spending; Hawaii's defense footprint", "url": "https://www.hawaiitribune-herald.com/2025/03/24/hawaii-news/trumps-pentagon-seeks-spending-on-pacific-forces-cuts-to-environmental-and-cultural-programs/" },
     { "label": "NASBO — Hawaii state budget summary (FY2026–27)", "url": "https://www.nasbo.org/mainsite/resources/proposed-enacted-budgets/hawaii-budget" },
-    { "label": "Hawaii State Procurement Office — Cooperative Purchasing Program", "url": "https://spo.hawaii.gov/for-state-county-personnel/programs/cooperative-purchasing/" }
+    { "label": "Hawaii State Procurement Office — Cooperative Purchasing Program", "url": "https://spo.hawaii.gov/for-state-county-personnel/programs/cooperative-purchasing/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

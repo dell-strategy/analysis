@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Budget figures are biennial; technology spend is not a single line item — it is distributed across agencies and coordinated centrally by DAS/BEST.",
-      "Connecticut operates under a statutory spending cap; the posture is cost-conscious, so frame value as consolidation, lifecycle, and avoided cost rather than net-new spend."
+      "Connecticut operates under a statutory spending cap; the posture is cost-conscious, so frame value as consolidation, lifecycle, and avoided cost rather than net-new spend.",
+      "FY2027 (governor's proposed adjustment, per NASBO): $25.5B general fund, +0.4% vs enacted FY2027 (+4.5% vs FY2026); $28.7B all funds. A mid-biennium adjustment that holds a $5.8B budget reserve and stays under the spending cap."
     ]
   },
 
@@ -115,6 +116,7 @@
 
   "news": [
     { "date": "2026-05", "title": "Lamont signs FY2027 budget adjustment (Public Act 26-68)", "impact": "Mid-biennium adjustment includes $9.86M for State Police technology modernization; confirms a steady, cap-bound spending posture.", "tags": ["Budget"], "ref": 6 },
+    { "date": "2026-02", "title": "Gov. Lamont proposed a $25.5B general-fund FY2027 budget adjustment", "impact": "$28.7B all funds, +0.4% GF vs enacted FY2027; a mid-biennium adjustment holding a $5.8B reserve under the spending cap.", "tags": ["Budget"], "ref": 9 },
     { "date": "2026-02", "title": "Lamont's State of the State urges data centers to 'slow down'", "impact": "Signals Connecticut will not chase hyperscale AI buildout — frame in-state AI as governed enterprise/research workloads, not data-center scale.", "tags": ["Data Centers", "Energy"], "ref": 4 },
     { "date": "2025-09", "title": "CIO Mark Raymond profiled on IT consolidation and AI in education", "impact": "Reinforces shared-services strategy and cautious, governed AI adoption through the Commission for Educational Technology.", "tags": ["Leadership", "AI"], "ref": 5 },
     { "date": "2025-06", "title": "Lamont signs ~$55.8B FY2026–27 biennial budget", "impact": "Two-year spending plan under the state cap sets the funding baseline for agency technology priorities.", "tags": ["Budget"], "ref": 2 },
@@ -138,6 +140,7 @@
     { "label": "UConn Today — Mark Raymond, CIO, State of Connecticut", "url": "https://today.uconn.edu/2025/09/building-curiosity-mark-raymond-cio-state-of-connecticut/" },
     { "label": "Office of Governor Lamont — Signs FY2027 State Budget (PA 26-68)", "url": "https://portal.ct.gov/governor/news/press-releases/2026/05-2026/governor-lamont-signs-fy-2027-state-budget" },
     { "label": "CIS — State and Local Cybersecurity Grant Program (SLCGP)", "url": "https://www.cisecurity.org/ms-isac/slcgp" },
-    { "label": "CT DAS — Procurement Programs and Services", "url": "https://portal.ct.gov/das/procurement-programs-and-services" }
+    { "label": "CT DAS — Procurement Programs and Services", "url": "https://portal.ct.gov/das/procurement-programs-and-services" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Figures are annual (single-year) unless noted; California does not use a biennial cycle.",
-      "FY2025-26 is fiscally constrained — tie offers to mandated modernization and federal/state-funded programs rather than discretionary budget."
+      "FY2025-26 is fiscally constrained — tie offers to mandated modernization and federal/state-funded programs rather than discretionary budget.",
+      "FY2027 (governor's proposed, per NASBO): $248.3B general fund, +4.5% vs FY2026; $348.9B total state spending (excl. federal funds). A constrained, balanced plan that limits new ongoing commitments and addresses a $2.9B shortfall, strengthening reserves to $23.0B combined ($14.4B in the rainy day BSA)."
     ]
   },
 
@@ -128,6 +129,7 @@
     { "date": "2026-04", "title": "Newsom appoints Chris Given as State CIO & CDT Director", "impact": "New tech leadership with a legacy-modernization and AI mandate; relationship-building window for sellers.", "tags": ["Leadership"], "ref": 3 },
     { "date": "2026-03", "title": "EO N-5-26 establishes AI vendor-certification & procurement framework", "impact": "New compliance gate for AI buys; recommendations due ~120 days out. Favors governed, auditable AI.", "tags": ["AI", "Procurement"], "ref": 5 },
     { "date": "2026-04", "title": "Liana Bailey-Crimmins retires as State CIO", "impact": "End of a four-year tenure that launched California's GenAI program; transition in CDT leadership.", "tags": ["Leadership"], "ref": 2 },
+    { "date": "2026-01", "title": "Gov. Newsom proposed a $248.3B general-fund FY2027 budget", "impact": "$348.9B total state spending (excl. federal), +4.5% vs FY2026; balanced plan addressing a $2.9B shortfall and strengthening reserves to $23.0B combined ($14.4B rainy day).", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-01", "title": "SB 53 frontier-AI transparency law takes effect", "impact": "Nation's first frontier-AI regulation is live; reinforces demand for transparent, governed AI.", "tags": ["AI", "Policy"], "ref": 6 },
     { "date": "2025-06", "title": "Budget Act of 2025 signed (~$321.1B; ~$11.8B shortfall closed)", "impact": "Constrained fiscal year — tie offers to mandated modernization and federal/state-funded programs.", "tags": ["Budget"], "ref": 1 },
     { "date": "2025-04", "title": "California scales GenAI in state government (Caltrans, CDTFA, Copilot)", "impact": "Production AI workloads drive infrastructure, networking, and services demand.", "tags": ["AI", "Modernization"], "ref": 4 }
@@ -151,6 +153,7 @@
     { "label": "California Department of Technology — Cybersecurity Strategy Plan (Cal-Secure)", "url": "https://www.cdt.ca.gov/wp-content/uploads/2021/10/Cybersecurity_Strategy_Plan_FINAL.pdf" },
     { "label": "California eBudget — Department of Technology (7502) FY2025-26", "url": "https://ebudget.ca.gov/2025-26/pdf/GovernorsBudget/7500/7502.pdf" },
     { "label": "CPUC — Last Mile Federal Funding Account (broadband)", "url": "https://www.cpuc.ca.gov/industries-and-topics/internet-and-phone/broadband-implementation-for-california/last-mile-federal-funding-account" },
-    { "label": "DGS — California Multiple Award Schedules (CMAS)", "url": "https://dgs.ca.gov/PD-CMAS" }
+    { "label": "DGS — California Multiple Award Schedules (CMAS)", "url": "https://dgs.ca.gov/PD-CMAS" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

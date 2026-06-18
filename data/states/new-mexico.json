@@ -43,7 +43,8 @@
     ],
     "notes": [
       "State figures are annual (FY2027). BEAD is a federal award administered through the Office of Broadband Access and Expansion, not a recurring state line.",
-      "National-lab compute (Sandia, Los Alamos) is funded federally through DOE/NNSA, not the state budget — size those opportunities through the labs and their integrators, not the state appropriation."
+      "National-lab compute (Sandia, Los Alamos) is funded federally through DOE/NNSA, not the state budget — size those opportunities through the labs and their integrators, not the state appropriation.",
+      "FY2027 (governor's proposed, per NASBO): $11.33B recurring general fund, +4.6% vs FY2026; $33.95B all funds. Reserves at $3.4B (30% of recurring GF), with emerging-tech and public-safety technology investments."
     ]
   },
 
@@ -128,6 +129,7 @@
     { "date": "2026-02", "title": "Gov. Lujan Grisham and BorderPlex announce Project Jupiter in Santa Teresa", "impact": "Marquee AI-training data center (Oracle / OpenAI Stargate) anchors a southern-NM AI-infrastructure ecosystem.", "tags": ["AI Infrastructure", "Economic Dev"], "ref": 9 },
     { "date": "2026-02", "title": "Legislature enacts ~$33.4B FY2027 budget; $270M+ for fusion/quantum", "impact": "Funds DoIT (~$113M) and seeds emerging-tech demand; Governor's final session.", "tags": ["Budget", "Emerging Tech"], "ref": 1 },
     { "date": "2026-01", "title": "NM Tech launches Raul Deju Institute for Artificial Intelligence", "impact": "University AI/data-science/cybersecurity hub deepens the in-state research-computing market.", "tags": ["AI", "Higher Ed"], "ref": 8 },
+    { "date": "2025-12", "title": "Gov. Lujan Grisham proposed an $11.33B general-fund FY2027 budget", "impact": "$33.95B all funds, +4.6% vs FY2026; reserves at $3.4B (30% of recurring GF). Funds a statewide AI-enabled wildfire early-detection camera network, a quantum-technology benchmarking initiative, and critical technology upgrades at the Department of Public Safety.", "tags": ["Budget", "AI"], "ref": 12 },
     { "date": "2025-12", "title": "Sandia unveils Spectra supercomputer", "impact": "New NNSA-mission machine reinforces New Mexico as a top-tier HPC buyer in-state.", "tags": ["HPC", "National Labs"], "ref": 4 },
     { "date": "2025-08", "title": "Los Alamos launches frontier AI models on the Venado supercomputer", "impact": "Lab compute pivots toward AI for national-security science; next-gen machine planned for 2026.", "tags": ["AI", "HPC"], "ref": 11 }
   ],
@@ -151,6 +153,7 @@
     { "label": "New Mexico Tech — New Institute at NMT Will Propel AI Technologies", "url": "https://www.nmt.edu/news/2026/new-institute-at-nmt-will-propel-ai.php" },
     { "label": "Albuquerque Journal — Doña Ana County's Project Jupiter joins $500B Stargate initiative led by OpenAI, Oracle", "url": "https://www.abqjournal.com/business/doa-ana-countys-project-jupiter-joins-500-billion-stargate-initiative-led-by-openai-oracle/493927" },
     { "label": "Source New Mexico — Project Jupiter data center developers announce new plans for generating power", "url": "https://sourcenm.com/2026/04/27/nm-project-jupiter-data-center-developers-announce-new-plans-for-generating-power/" },
-    { "label": "U.S. Department of Energy / NNSA — Los Alamos launches frontier AI models on the Venado supercomputer", "url": "https://www.energy.gov/nnsa/articles/nnsas-los-alamos-national-laboratory-launches-frontier-ai-models-venado-supercomputer" }
+    { "label": "U.S. Department of Energy / NNSA — Los Alamos launches frontier AI models on the Venado supercomputer", "url": "https://www.energy.gov/nnsa/articles/nnsas-los-alamos-national-laboratory-launches-frontier-ai-models-venado-supercomputer" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

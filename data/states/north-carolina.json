@@ -44,7 +44,8 @@
     "notes": [
       "Budget figures are from the Governor's recommended budget; a full enacted FY2025-27 budget did not pass — confirm appropriations status before forecasting.",
       "Mixed units: BEAD/AWS figures are program/investment totals, not annual operating appropriations.",
-      "Federal funds (BEAD, ARPA, SLCGP cyber grants) are a meaningful share of technology-adjacent dollars."
+      "Federal funds (BEAD, ARPA, SLCGP cyber grants) are a meaningful share of technology-adjacent dollars.",
+      "FY2027 (governor's proposed FY2026-27 biennial budget, per NASBO): $35.4B general fund, +6.5% vs proposed FY2026 ($33.3B). Maintains fiscal stability with $5.8B in reserves, including $3.7B in the Savings Reserve."
     ]
   },
 
@@ -117,6 +118,7 @@
 
   "news": [
     { "date": "2026-05", "title": "Senate confirms Nate Denny as NCDIT Secretary & State CIO", "impact": "Tech leadership stabilizes under a broadband-experienced insider after Piccione's departure.", "tags": ["Leadership"], "ref": 4 },
+    { "date": "2026-04", "title": "Gov. Stein proposed a $35.4B general-fund FY2027 budget", "impact": "Part of a proposed FY2026-27 biennial budget, +6.5% vs proposed FY2026; maintains fiscal stability with $5.8B in reserves including $3.7B in the Savings Reserve.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-04", "title": "Stein announces broadband projects to connect 93,000 locations", "impact": "BEAD dollars begin flowing; rural connectivity and connected-endpoint base expand.", "tags": ["Broadband", "Federal Funds"], "ref": 8 },
     { "date": "2026-01", "title": "NCDIT recaps a landmark 2025 in AI, cyber and connectivity", "impact": "AI rank 36th to 7th; cyber program doubled; RFP cycles cut ~76% — a faster, AI-forward buyer.", "tags": ["AI", "Cybersecurity"], "ref": 5 },
     { "date": "2025-11", "title": "North Carolina launches AI Leadership Council", "impact": "Governance scaffolding for agency AI adoption stands up; demand for governed AI grows.", "tags": ["AI", "Policy"], "ref": 3 },
@@ -142,6 +144,7 @@
     { "label": "NCDIT Broadband — Revised $1.5B BEAD program launch", "url": "https://www.ncbroadband.gov/news/press-releases/2025/06/20/ncdit-launch-revised-15b-broadband-equity-access-and-deployment-program-expand-high-speed-internet" },
     { "label": "NCDIT Broadband — Stein announces projects to connect 93,000 locations", "url": "https://www.ncbroadband.gov/news/press-releases/2026/04/23/governor-josh-stein-announces-launch-statewide-high-speed-internet-projects-connect-93000-locations" },
     { "label": "NCDIT — Statewide IT Procurement / Statewide IT Contracts", "url": "https://it.nc.gov/resources/statewide-it-procurement/about-statewide-it-procurement" },
-    { "label": "NCDIT — State of North Carolina Cybersecurity Strategic Plan 2025-2030", "url": "https://it.nc.gov/programs/cybersecurity-risk-management/state-north-carolina-cybersecurity-strategic-plan" }
+    { "label": "NCDIT — State of North Carolina Cybersecurity Strategic Plan 2025-2030", "url": "https://it.nc.gov/programs/cybersecurity-risk-management/state-north-carolina-cybersecurity-strategic-plan" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

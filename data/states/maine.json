@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Budget figures are General Fund biennial totals; Maine has no broken-out statewide IT appropriation.",
-      "Broadband funding faces federal uncertainty — BEAD restructuring in 2025 left a large share of Maine's promised allocation undelivered; forecast cautiously."
+      "Broadband funding faces federal uncertainty — BEAD restructuring in 2025 left a large share of Maine's promised allocation undelivered; forecast cautiously.",
+      "FY2027 (governor's proposed supplemental, per NASBO): $5.86B general-fund revenue, +1.4% vs FY2026; the supplemental adds ~$187.8M in net FY2027 GF appropriations, bringing the FY2026–27 biennial GF total to $11.93B. Taps a record rainy day fund (projected >$700M after withdrawals) for one-time investments, including AI initiatives from the governor's AI task force."
     ]
   },
 
@@ -128,6 +129,7 @@
     { "date": "2026-04", "title": "Gov. Mills signs EO 5 creating the Data Center Advisory Council (after vetoing LD 307 moratorium)", "impact": "Signals a cautious, policy-gated stance on large data centers; limited near-term in-state hyperscale demand. Recommendations due Jan 2027.", "tags": ["Data Centers", "Policy"], "ref": 8 },
     { "date": "2026-03", "title": "MaineIT Generative AI Policy takes effect", "impact": "State moves from a GenAI moratorium to governed adoption — opens the door to auditable, private/on-prem AI on sensitive data.", "tags": ["AI", "Policy"], "ref": 6 },
     { "date": "2026-02", "title": "~$50M in new broadband awards announced (~22,000 connections)", "impact": "Continued last-mile buildout via the Maine Connectivity Authority, even amid federal-funding pressure.", "tags": ["Broadband", "Infrastructure"], "ref": 7 },
+    { "date": "2026-02", "title": "Gov. Mills proposed a $5.86B general-fund FY2027 supplemental budget", "impact": "Supplemental adds ~$187.8M in net FY2027 GF appropriations (+1.4% revenue vs FY2026), bringing the biennial GF total to $11.93B; taps a record rainy day fund (>$700M after withdrawals) for one-time investments. Directs funds to AI initiatives in line with the governor's AI task force.", "tags": ["Budget", "AI"], "ref": 11 },
     { "date": "2025-10", "title": "Maine AI Task Force delivers final report (~34 recommendations)", "impact": "Sets the strategic direction for state-agency AI use, transparency, and risk management; informs upcoming MaineIT policy and spend.", "tags": ["AI", "Strategy"], "ref": 5 },
     { "date": "2025-06", "title": "Federal BEAD restructuring to 'infrastructure-only' leaves much of Maine's allocation undelivered", "impact": "Introduces real uncertainty into the broadband funding picture — forecast infrastructure demand cautiously.", "tags": ["Broadband", "Federal Funds"], "ref": 7 },
     { "date": "2025-03", "title": "FY2026–27 biennial General Fund budget (~$11.65B) enacted", "impact": "Sets the two-year spending baseline that frames agency technology budgets through mid-2027.", "tags": ["Budget"], "ref": 2 }
@@ -151,6 +153,7 @@
     { "label": "Benton Institute — Maine Connectivity Authority 2025 Impact Report", "url": "https://www.benton.org/headlines/maine-connectivity-authority-2025-impact-report" },
     { "label": "Office of Governor Mills — Executive Order Establishing the Maine Data Center Advisory Council", "url": "https://www.maine.gov/governor/mills/news/governor-mills-signs-executive-order-establish-maine-data-center-advisory-council-2026-04-29" },
     { "label": "University of Maine — ARCSIM Advanced Research Computing", "url": "https://umaine.edu/arcsim/computing/" },
-    { "label": "State of Maine Cloud Solutions Contract (NASPO ValuePoint / Carahsoft)", "url": "https://www.carahsoft.com/buy/slg-contracts/maine-state-contracts/state-maine-cloud-solutions-contract-naspo" }
+    { "label": "State of Maine Cloud Solutions Contract (NASPO ValuePoint / Carahsoft)", "url": "https://www.carahsoft.com/buy/slg-contracts/maine-state-contracts/state-maine-cloud-solutions-contract-naspo" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

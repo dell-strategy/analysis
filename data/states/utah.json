@@ -45,7 +45,8 @@
     "notes": [
       "Utah uses an annual fiscal year — figures are single-year unless noted; do not compare directly to biennial-budget states.",
       "DTS centralizes most executive-branch IT, so the practical 'tech budget' concentrates there rather than spread across agencies.",
-      "AI and compute line items are one-time appropriations from the 2026 session — confirm recurring vs. one-time before forecasting."
+      "AI and compute line items are one-time appropriations from the 2026 session — confirm recurring vs. one-time before forecasting.",
+      "FY2027 (governor's proposed, per NASBO): $12.1B general fund (GF/ITF/USF), +2.4% vs FY2026; $30.7B all funds. Disciplined plan with rainy day funds near $1.6B."
     ]
   },
 
@@ -129,6 +130,7 @@
     { "date": "2026-02", "title": "MyUtah citizen portal launches publicly; Pro-Human AI Task Force members named", "impact": "DTS digital-government modernization goes live; AI governance moves from policy to execution across state services.", "tags": ["Digital Gov", "AI"], "ref": 5 },
     { "date": "2026-03", "title": "Legislature approves ~$31.6B FY2027 budget incl. $15M AI compute capacity", "impact": "Dedicated compute funding signals real state AI workloads — an opening for governed AI infrastructure.", "tags": ["Budget", "AI"], "ref": 1 },
     { "date": "2025-12", "title": "Gov. Cox unveils $10M 'Pro-Human' AI initiative at Utah's first AI Summit", "impact": "State backs AI workforce, curricula, and government deployment — agencies will need governed AI approaches.", "tags": ["AI", "Policy"], "ref": 7 },
+    { "date": "2025-12", "title": "Gov. Cox proposed a $12.1B general-fund FY2027 budget", "impact": "$30.7B all funds, +2.4% vs FY2026; rainy day funds near $1.6B. GRIT Initiative funds a unified e-permitting/information-management system and AI to modernize state services.", "tags": ["Budget", "AI"], "ref": 11 },
     { "date": "2025-09", "title": "Silicon Slopes data-center buildout accelerates (Creekstone Delta gigasite, Nephi, Box Elder)", "impact": "Utah becomes a national AI-infrastructure hub — strong tailwind for Dell ISG/AI-infrastructure demand.", "tags": ["Data Centers", "AI"], "ref": 9 },
     { "date": "2025-05", "title": "SB 149 amendments narrow AI disclosure rules; sandbox sunset extended to July 2027", "impact": "Utah refines its first-in-nation AI law, keeping the Learning Lab open — continued governed-AI demand.", "tags": ["AI", "Policy"], "ref": 4 },
     { "date": "2025-03", "title": "Utah joins GovRAMP as a participating government", "impact": "GovRAMP becomes the practical cloud-security gate for state data; clear it early on as-a-service deals.", "tags": ["Cybersecurity", "Cloud"], "ref": 6 }
@@ -152,6 +154,7 @@
     { "label": "CDO Magazine — Utah launches $10M Pro-Human AI initiative", "url": "https://www.cdomagazine.tech/aiml/utah-launches-10-million-pro-human-ai-initiative-to-prep-workforce-and-expand-adoption" },
     { "label": "Utah Division of Purchasing — State Cooperative Contracts", "url": "https://purchasing.utah.gov/purchasing/" },
     { "label": "ABC4 — Tracking AI data centers being built in Utah", "url": "https://www.abc4.com/news/digital-exclusives/tracking-ai-data-centers-utah-map/" },
-    { "label": "@theU — University of Utah to build Utah Health AI Vault (UHAIV)", "url": "https://attheu.utah.edu/science-technology/u-to-build-out-utah-health-ai-vault-uhaiv-with-state-support/" }
+    { "label": "@theU — University of Utah to build Utah Health AI Vault (UHAIV)", "url": "https://attheu.utah.edu/science-technology/u-to-build-out-utah-health-ai-vault-uhaiv-with-state-support/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

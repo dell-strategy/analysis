@@ -44,7 +44,8 @@
     "notes": [
       "Rhode Island uses an annual (not biennial) budget cycle; figures are single-year.",
       "Broadband dollars are largely federal pass-through administered by RI Commerce, not ETSS — confirm program ownership before forecasting.",
-      "There is no published consolidated state IT line; technology spend is embedded across ETSS and agency budgets."
+      "There is no published consolidated state IT line; technology spend is embedded across ETSS and agency budgets.",
+      "FY2027 (governor's proposed, per NASBO): $5.95B general fund, +2.5% vs FY2026; $14.86B all funds. Thin free surplus ($0.8M) with a $307M Budget and Cash Stabilization Fund balance; proposes IT and staff investment to administer Medicaid and SNAP under OBBBA."
     ]
   },
 
@@ -118,6 +119,7 @@
     { "date": "2026-02", "title": "ETSS more than doubles completed projects in 2025 (114 vs. 46)", "impact": "Signals a sustained modernization wave — infrastructure, endpoint, and lifecycle demand across executive agencies.", "tags": ["Modernization"], "ref": 3 },
     { "date": "2026-01", "title": "Rhode Island releases its statewide AI roadmap", "impact": "Task Force prioritizes government AI pilots and upskilling over heavy regulation — an opening for governed, private AI.", "tags": ["AI", "Strategy"], "ref": 6 },
     { "date": "2026-01", "title": "Gov. McKee proposes ~$14.9B FY2027 budget (incl. $19.3M IT for Medicaid/SNAP)", "impact": "Tech spend embedded in agency programs; benefit-systems IT is a funded near-term need.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2026-01", "title": "Gov. McKee proposed a $5.95B general-fund FY2027 budget", "impact": "$14.86B all funds, +3.6% vs FY2026; thin $0.8M free surplus with a $307M stabilization fund balance. Funds IT and staff to administer Medicaid and SNAP in response to OBBBA.", "tags": ["Budget"], "ref": 10 },
     { "date": "2025-11", "title": "Workday payroll/HCM goes live, completing the ERP cutover", "impact": "Retires aging mainframe systems; downstream integration and infrastructure work follows in hyper-care.", "tags": ["ERP", "Modernization"], "ref": 3 },
     { "date": "2025-07", "title": "Workday finance module launches", "impact": "First phase of the ERP replacement; sets the modernization baseline for FY26-27.", "tags": ["ERP"], "ref": 3 },
     { "date": "2025-04", "title": "RI Commerce opens BEAD ($108.7M) broadband applications", "impact": "Large federal connectivity buildout begins; network/edge and downstream services to track.", "tags": ["Broadband", "Federal Funds"], "ref": 7 }
@@ -140,6 +142,7 @@
     { "label": "Rhode Island Current — Rhode Island releases its roadmap for AI", "url": "https://rhodeislandcurrent.com/2026/01/28/rhode-island-releases-its-roadmap-for-ai-some-boundaries-have-yet-to-be-drawn/" },
     { "label": "Brander Group — Rhode Island's $108.7M BEAD Program", "url": "https://brandergroup.net/2025/04/rhode-islands-108-7m-bead-program/" },
     { "label": "Rhode Island Division of Purchases — Master Price Agreements", "url": "https://ridop.ri.gov/master-price-agreements" },
-    { "label": "Rhode Island Division of Purchases — Ocean State Procures (OSP)", "url": "https://ridop.ri.gov/ocean-state-procures-osp" }
+    { "label": "Rhode Island Division of Purchases — Ocean State Procures (OSP)", "url": "https://ridop.ri.gov/ocean-state-procures-osp" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

@@ -45,7 +45,8 @@
     "notes": [
       "Figures are annual (FY2026) unless noted; FY2026 begins July 1, 2025.",
       "The deficit-driven climate favors modernization that cuts cost (centralization, legacy retirement) and high-ROI AI over net-new discretionary spend.",
-      "Broadband (BEAD) dollars are federal pass-through and subject to revised NTIA rules issued in 2025."
+      "Broadband (BEAD) dollars are federal pass-through and subject to revised NTIA rules issued in 2025.",
+      "FY2027 (governor's proposed, per NASBO): $27.7B general fund, -0.6% vs FY2026; $70.8B all funds, +0.8%. Closes a ~$1.5B cash shortfall with ~$900M in cuts and no new taxes; sustains CyberMaryland, quantum/Deep Tech, and the new MD TRAIN AI-workforce program, and closes FY2027 with a $2.2B (8%) rainy day fund."
     ]
   },
 
@@ -129,6 +130,7 @@
   "news": [
     { "date": "2026-05", "title": "Moore launches AI Innovation Lab inside DoIT", "impact": "Secure sandbox for agencies to test AI — a path for governed, private/on-prem AI on sensitive workloads.", "tags": ["AI", "DoIT"], "ref": 12 },
     { "date": "2026-01", "title": "FY2026 budget closes ~$3B deficit without sales/property tax hikes", "impact": "Tech spend concentrates on cost-cutting modernization and high-ROI AI; discretionary net-new is tighter.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2026-01", "title": "Gov. Moore proposed a $27.7B general-fund FY2027 budget", "impact": "$70.8B all funds, +0.8% vs FY2026 (general fund -0.6%); closes a ~$1.5B cash shortfall with no new taxes and ends FY2027 with a $2.2B (8%) rainy day fund. Sustains CyberMaryland, quantum/Deep Tech investments, and a new MD TRAIN program to upskill small/mid-sized-business workers for the AI era.", "tags": ["Budget", "AI", "Cybersecurity"], "ref": 13 },
     { "date": "2025-11", "title": "Maryland announces Anthropic/Percepta AI partnership for service delivery", "impact": "Multi-agency AI push for benefits and housing signals demand for governed AI infrastructure.", "tags": ["AI", "Partnership"], "ref": 11 },
     { "date": "2025-07", "title": "DoIT releases 2025 IT Master Plan (FY2026–2028)", "impact": "Three pillars — workforce, centralization, security — frame modernization and refresh demand.", "tags": ["Modernization", "Strategy"], "ref": 3 },
     { "date": "2025-05", "title": "Moore signs 2025 cybersecurity laws (Cyber Maryland, water/OT zero-trust)", "impact": "Expands state and local cyber funding and mandates — direct pull for secure infrastructure and OT protection.", "tags": ["Cybersecurity", "Policy"], "ref": 7 },
@@ -155,6 +157,7 @@
     { "label": "Office of Governor Moore — $1 Billion 'Capital of Quantum' Initiative", "url": "https://governor.maryland.gov/news/press/pages/governor-moore-announces-1-billion-capital-of-quantum-initiative.aspx" },
     { "label": "Maryland DoIT — 2025 AI Enablement Strategy & AI Study Roadmap", "url": "https://doit.maryland.gov/policies/ai/Pages/maryland-AI-enablement-strategy-and-roadmap.aspx" },
     { "label": "Office of Governor Moore — Landmark AI Partnership to Transform State Service Delivery", "url": "https://governor.maryland.gov/news/press-releases/maryland-governor-wes-moore-announces-landmark-ai-partnership-transform-state-service-delivery" },
-    { "label": "StateScoop — Maryland's new AI Innovation Lab to help state agencies adopt, experiment with tech", "url": "https://statescoop.com/maryland-ai-innovation-lab-state-agencies-adopt-experiment-2026/" }
+    { "label": "StateScoop — Maryland's new AI Innovation Lab to help state agencies adopt, experiment with tech", "url": "https://statescoop.com/maryland-ai-innovation-lab-state-agencies-adopt-experiment-2026/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

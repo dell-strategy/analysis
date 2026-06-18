@@ -44,7 +44,8 @@
     "notes": [
       "Missouri budgets annually (FY starts July 1) — figures are single-year unless noted.",
       "Technology is funded through agency budgets and delivered by OA-ITSD; there is no consolidated public 'IT budget' line to forecast against.",
-      "Expect cost-justified, efficiency-framed buys under the Kehoe administration's 'spending is the problem' posture."
+      "Expect cost-justified, efficiency-framed buys under the Kehoe administration's 'spending is the problem' posture.",
+      "FY2027 (governor's proposed, per NASBO): $16.3B general revenue, +0.01% vs FY2026; $54.5B all funds, -1.1%. Fiscal-discipline 'Foundation for Growth' budget cutting $600M+ from core operations with a thin $4.7M ending balance."
     ]
   },
 
@@ -127,6 +128,7 @@
   "news": [
     { "date": "2026-05", "title": "Google announces $15B AI data center in New Florence", "impact": "Largest-scale AI-infrastructure investment in state history; reshapes energy and economic-development agenda and creates a major ecosystem tailwind for Dell ISG.", "tags": ["Data Centers", "AI"], "ref": 6 },
     { "date": "2026-04", "title": "Missouri AI regulation bills stall amid federal-funding concerns", "impact": "State AI rules remain unsettled as lawmakers weigh risk to rural broadband funds; governed-AI guidance now flows mainly through the executive branch.", "tags": ["AI", "Policy"], "ref": 7 },
+    { "date": "2026-01", "title": "Gov. Kehoe proposed a $16.3B general-revenue FY2027 budget", "impact": "$54.5B all funds, -1.1% vs FY2026; a fiscal-discipline budget cutting $600M+ from core operations with a thin $4.7M ending balance. Reinforces Missouri's commitment to safely integrate AI into state-government operations under the Missouri GREAT initiative.", "tags": ["Budget", "AI"], "ref": 11 },
     { "date": "2026-01", "title": "Governor Kehoe signs Executive Order 26-02 on AI", "impact": "Mandates a statewide AI integration framework by Nov 30, 2026; agencies will need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
     { "date": "2026-01", "title": "NTIA approves Missouri's $814M BEAD broadband plan", "impact": "Funds fiber to 200,000+ locations while saving ~$900M of the $1.7B allocation; expands the long-term connected-government footprint.", "tags": ["Broadband"], "ref": 8 },
     { "date": "2025-12", "title": "FY2027 consensus revenue estimate set at $13.65B (+3.8%)", "impact": "Frames a disciplined FY2027 budget; sellers should expect cost-justified, efficiency-led IT buys.", "tags": ["Budget"], "ref": 4 },
@@ -151,6 +153,7 @@
     { "label": "Missouri Independent — Missouri AI regulations stall as lawmakers fear loss of rural broadband funds", "url": "https://missouriindependent.com/2026/04/07/missouri-ai-regulations-stall-as-lawmakers-fear-loss-of-rural-broadband-funds/" },
     { "label": "KY3 — Missouri receives approval for $814 million broadband expansion", "url": "https://www.ky3.com/2026/01/08/missouri-receives-approval-814-million-broadband-expansion/" },
     { "label": "Missouri DPS — FY2025 State and Local Cybersecurity Grant Program (NOFO)", "url": "https://dps.mo.gov/dir/programs/ohs/grantstraining/documents/fy2025-slcgp-nofo.pdf" },
-    { "label": "Missouri OA — Cooperative Procurement Program FAQs", "url": "https://oa.mo.gov/purchasing/cooperative-procurement-program/faqs" }
+    { "label": "Missouri OA — Cooperative Procurement Program FAQs", "url": "https://oa.mo.gov/purchasing/cooperative-procurement-program/faqs" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

@@ -43,7 +43,8 @@
     ],
     "notes": [
       "South Carolina budgets annually, not biennially — confirm the current enacted fiscal year before forecasting.",
-      "There is no single 'state IT budget' line item; technology dollars sit inside agency appropriations and enterprise services run by DTO."
+      "There is no single 'state IT budget' line item; technology dollars sit inside agency appropriations and enterprise services run by DTO.",
+      "FY2027 (governor's proposed, per NASBO): $14.0B general fund, +6.0% vs FY2026; $42.8B all funds. Sets aside $1.4B (10% of FY2025 GF revenue) across the General and Capital Reserve Funds and proposes a new Office of Statewide Data led by a Chief Data Officer."
     ]
   },
 
@@ -116,6 +117,7 @@
   "news": [
     { "date": "2026-05", "title": "Statewide AI report (Edition 0.1) published via SC Research Authority", "impact": "Signals a maturing, governed AI agenda across state government.", "tags": ["AI", "Policy"], "ref": 3 },
     { "date": "2026-01", "title": "McMaster announces FY2026-27 executive budget (~$42.8B all funds)", "impact": "Sets spending priorities; budget moves through the General Assembly for July start.", "tags": ["Budget"], "ref": 2 },
+    { "date": "2026-01", "title": "Gov. McMaster proposed a $14.0B general-fund FY2027 budget", "impact": "$42.8B all funds, +9.2% vs FY2026; sets aside $1.4B across the General and Capital Reserve Funds. Proposes a new Office of Statewide Data led by a Chief Data Officer to improve data management and use across agencies.", "tags": ["Budget"], "ref": 11 },
     { "date": "2025-12", "title": "Google confirms ~$9B SC data-center expansion through 2027", "impact": "Largest AI-infrastructure tailwind in the state; Berkeley + Dorchester campuses.", "tags": ["Data Centers", "AI"], "ref": 7 },
     { "date": "2025-10", "title": "Meta announces ~$800M AI-optimized data center in Aiken County", "impact": "First Meta operation in SC; reinforces the state as an AI-infrastructure hub.", "tags": ["Data Centers", "AI"], "ref": 8 },
     { "date": "2025-09", "title": "'Bradley' citizen AI assistant goes live (with Tyler Technologies)", "impact": "AI-driven service delivery raises demand for compute, data, and security backbone.", "tags": ["AI", "Citizen Services"], "ref": 4 },
@@ -140,6 +142,7 @@
     { "label": "Data Center Dynamics — Google to invest $9B in South Carolina data centers", "url": "https://www.datacenterdynamics.com/en/news/google-to-invest-9bn-in-south-carolina-data-centers/" },
     { "label": "WLTX — Meta to build ~$800M data center in Aiken County", "url": "https://www.wltx.com/article/news/local/midlands/building-the-midlands/google-to-invest-9billion-dollars-in-south-carolina-data-center-expansion/101-6999f41c-efd3-4663-9bd1-c18414f7efd0" },
     { "label": "Broadband Breakfast — South Carolina plans to spend a fraction of its BEAD allocation", "url": "https://broadbandbreakfast.com/south-carolina-plans-to-spend-just-10-of-original-bead-allocation/" },
-    { "label": "SC Procurement — Statewide Term Contract Search / Procurement Services", "url": "https://procurement.sc.gov/contracts/search" }
+    { "label": "SC Procurement — Statewide Term Contract Search / Procurement Services", "url": "https://procurement.sc.gov/contracts/search" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

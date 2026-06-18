@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Arkansas runs an annual budget cycle (regular session odd years, fiscal session even years) — confirm FY2027 appropriations after the April 2026 fiscal session.",
-      "Technology dollars are mid-migration from the former DIS into the new Office of State Technology and centralized cyber office — confirm which entity owns a program before forecasting."
+      "Technology dollars are mid-migration from the former DIS into the new Office of State Technology and centralized cyber office — confirm which entity owns a program before forecasting.",
+      "FY2027 (governor's proposed, per NASBO): $6.69B general revenue, +3.0% (~$194.5M) vs FY2026. A limited-government posture that funds priority areas while phasing out the state income tax; net available revenues projected at $7.02B (+2.7%)."
     ]
   },
 
@@ -115,6 +116,7 @@
   ],
 
   "news": [
+    { "date": "2026-03", "title": "Gov. Sanders proposed a $6.69B general-revenue FY2027 budget", "impact": "+3.0% (~$194.5M) vs FY2026; net available revenues of $7.02B (+2.7%). Limited-government posture that funds priority areas while continuing to phase out the state income tax.", "tags": ["Budget"], "ref": 10 },
     { "date": "2026-02", "title": "Governor receives AI Center of Excellence effectiveness & safety report", "impact": "Recommends a Chief AI Officer, NIST-based evaluation, and an AI-enabled services portal — agencies will need governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 4 },
     { "date": "2026-01", "title": "AVAIO Digital announces $6B (up to $21B) AI-ready data center in Little Rock", "impact": "Largest economic investment in state history; ~1GW power campus signals the scale of in-state AI-infrastructure demand.", "tags": ["Data Centers", "AI"], "ref": 9 },
     { "date": "2025-10", "title": "Google marks start of $4B AI data center in West Memphis", "impact": "Five-data-center campus plus $1M in ASU/U of Arkansas workforce training — reinforces Arkansas as an AI-infrastructure hub.", "tags": ["Data Centers", "AI"], "ref": 5 },
@@ -140,6 +142,7 @@
     { "label": "StateScoop — Arkansas names new IT director Jay Harton", "url": "https://statescoop.com/arkansas-jay-harton-cto-director-dis-2025/" },
     { "label": "Arkansas DSAS — Office of State Procurement / State Contracts", "url": "https://sas.arkansas.gov/procurement/state-contracts/" },
     { "label": "Arkansas Senate — Updated Budget Set for Fiscal Session (FY2027 timeline)", "url": "https://senate.arkansas.gov/senate-news/posts/2026/march/updated-budget-set-for-fiscal-session/" },
-    { "label": "KATV — AI-ready data center coming to Little Rock, $6B AVAIO investment", "url": "https://katv.com/news/local/ai-ready-data-center-coming-to-little-rock-6-billion-investment-largest-in-state-history" }
+    { "label": "KATV — AI-ready data center coming to Little Rock, $6B AVAIO investment", "url": "https://katv.com/news/local/ai-ready-data-center-coming-to-little-rock-6-billion-investment-largest-in-state-history" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

@@ -42,7 +42,8 @@
     ],
     "notes": [
       "The 2026–28 budget was not enacted as of mid-June 2026 — confirm final appropriations before forecasting agency spend.",
-      "The data-center sales-and-use tax exemption (~$1.6B/yr) is the central political dispute and a proxy for the state's posture toward the AI-infrastructure boom."
+      "The data-center sales-and-use tax exemption (~$1.6B/yr) is the central political dispute and a proxy for the state's posture toward the AI-infrastructure boom.",
+      "FY2027 (outgoing Gov. Youngkin's proposed FY2027-28 biennial budget, per NASBO): $34.8B general fund, +6.2% vs FY2026; $99.96B all funds (FY2027). Structurally balanced with combined reserves at the 15% cap (~$4.3B)."
     ]
   },
 
@@ -118,6 +119,7 @@
     { "date": "2026-04", "title": "Special budget session ends without a deal", "impact": "Budget uncertainty extends; agency IT planning constrained until appropriations land.", "tags": ["Budget"], "ref": 4 },
     { "date": "2026-03", "title": "General Assembly passes 15 data-center bills (of 61)", "impact": "New siting, energy-cost, and water rules reshape data-center growth — the core AI-infrastructure market.", "tags": ["Data Centers", "Policy"], "ref": 2 },
     { "date": "2026-02", "title": "Most standalone AI legislation tabled to 2027 session", "impact": "Near-term AI motion is operational adoption (e.g., EO 51 pilot) rather than new statutory mandates.", "tags": ["AI", "Policy"], "ref": 8 },
+    { "date": "2025-12", "title": "Outgoing Gov. Youngkin proposed a $34.8B GF FY2027-28 biennial budget", "impact": "$99.96B all funds (FY2027), +6.2% vs FY2026 GF; structurally balanced with reserves at the 15% statutory cap (~$4.3B).", "tags": ["Budget"], "ref": 11 },
     { "date": "2025-07", "title": "EO 51 launches first-in-the-nation agentic-AI regulatory-review pilot", "impact": "Signals state appetite for governed, auditable AI across executive-branch agencies.", "tags": ["AI"], "ref": 6 }
   ],
 
@@ -139,6 +141,7 @@
     { "label": "VITA — COV Ramp cloud security review", "url": "https://www.vita.virginia.gov/services/cov-grade/cov-ramp/" },
     { "label": "VPM — Most AI legislation in Virginia tabled until 2027", "url": "https://www.vpm.org/generalassembly/2026-02-23/virginia-ai-bills-hayes-maldonado-salim-trump-spanberger" },
     { "label": "DHCD — Virginia Telecommunication Initiative (VATI)", "url": "https://www.dhcd.virginia.gov/index.php/vati" },
-    { "label": "VITA — Procurement & statewide contracts", "url": "https://www.vita.virginia.gov/procurement/" }
+    { "label": "VITA — Procurement & statewide contracts", "url": "https://www.vita.virginia.gov/procurement/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

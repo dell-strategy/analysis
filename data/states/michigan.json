@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Figures are annual (single fiscal year) unless noted; FY2027 numbers are an executive proposal, not enacted.",
-      "Technology spend is centralized in DTMB and largely embedded in agency service charges rather than broken out as a single IT line."
+      "Technology spend is centralized in DTMB and largely embedded in agency service charges rather than broken out as a single IT line.",
+      "FY2027 (governor's proposed, per NASBO): $13.6B general fund, -3.6% vs FY2026; $88.1B all funds. Fiscal-responsibility frame with a $400M rainy-day withdrawal that still leaves the reserve near an all-time high."
     ]
   },
 
@@ -125,7 +126,7 @@
 
   "news": [
     { "date": "2026-06", "title": "Stargate Michigan construction advances; Saline Township buildout proceeds", "impact": "Confirms Michigan as a top-tier AI-infrastructure market; sustained hyperscale compute demand.", "tags": ["Data Centers", "AI"], "ref": 7 },
-    { "date": "2026-02", "title": "Whitmer presents final FY2027 budget (~$88.1B) amid ~$1.8B gap", "impact": "Tighter discretionary spend; agencies prioritize modernization with proven ROI.", "tags": ["Budget"], "ref": 5 },
+    { "date": "2026-02", "title": "Gov. Whitmer proposed a $13.6B general-fund FY2027 budget", "impact": "$88.1B all funds, -3.6% GF vs FY2026; a $400M rainy-day withdrawal still leaves reserves near an all-time high amid a ~$1.8B gap. Continues investments to modernize state systems and strengthen the Election Equipment Reserve Fund.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-01", "title": "DTMB gets acting director (Kyle Guerrant) and acting CIO (Eric Swanson)", "impact": "Leadership reset at the central IT authority; account mapping and relationships in flux.", "tags": ["Leadership"], "ref": 3 },
     { "date": "2025-12", "title": "Michigan celebrates $1.47B high-speed internet investment ($920M BEAD)", "impact": "Large fiber buildout begins 2026; downstream edge, networking, and endpoint demand.", "tags": ["Broadband"], "ref": 6 },
     { "date": "2025-12", "title": "Rex Menold named State Chief Security Officer", "impact": "New owner of enterprise cybersecurity strategy — a fresh relationship to build.", "tags": ["Cybersecurity", "Leadership"], "ref": 8 },
@@ -150,6 +151,7 @@
     { "label": "Michigan Advance — Saline Township data center 'largest investment in Michigan history'", "url": "https://michiganadvance.com/2025/10/30/whitmer-multi-billion-dollar-saline-township-data-center-largest-investment-in-michigan-history/" },
     { "label": "Security Boulevard — Securing Michigan: the State's Public Sector Cybersecurity Leaders", "url": "https://securityboulevard.com/2026/04/securing-michigan-the-states-public-sector-cybersecurity-leaders/" },
     { "label": "DTMB — MiDEAL Extended Purchasing Program", "url": "https://www.michigan.gov/dtmb/procurement/mideal-extended-purchasing-program" },
-    { "label": "DTMB — Procurement / Contract Connect", "url": "https://www.michigan.gov/dtmb/procurement" }
+    { "label": "DTMB — Procurement / Contract Connect", "url": "https://www.michigan.gov/dtmb/procurement" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

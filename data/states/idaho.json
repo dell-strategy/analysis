@@ -43,7 +43,8 @@
     ],
     "notes": [
       "ITS is funded largely by billing the agencies it serves, not a single appropriation — most IT dollars sit inside agency budgets.",
-      "Idaho enacted mid-year general-fund reductions in FY2026; verify which programs survived the cuts before forecasting spend."
+      "Idaho enacted mid-year general-fund reductions in FY2026; verify which programs survived the cuts before forecasting spend.",
+      "FY2027 (governor's proposed, per NASBO): $5.66B general fund, +0.6% vs FY2026; $14.44B all funds. Fiscally restrained 'Enduring Idaho' plan with 3% ongoing general-fund cuts made permanent and 100+ vacant positions reverted."
     ]
   },
 
@@ -126,6 +127,7 @@
 
   "news": [
     { "date": "2026-03", "title": "Governor signs additional FY2026 budget cuts (SB 1331)", "impact": "Mid-year general-fund reductions tighten agency spend; confirm program funding before forecasting.", "tags": ["Budget"], "ref": 6 },
+    { "date": "2026-01", "title": "Gov. Brad Little proposed a $5.66B general-fund FY2027 budget", "impact": "$14.44B all funds, +0.6% vs FY2026; ~$1.20B total reserve balances, with 3% ongoing general-fund cuts made permanent under the 'Enduring Idaho' plan.", "tags": ["Budget"], "ref": 10 },
     { "date": "2025-07", "title": "Idaho preps statewide AI rollout; ITS shares draft AI guidance", "impact": "Agencies move toward governed AI use; opening for auditable, private/on-prem AI on sensitive data.", "tags": ["AI", "Policy"], "ref": 8 },
     { "date": "2025-06", "title": "Micron announces second Boise fab (part of $200B U.S. expansion)", "impact": "Deepens Boise as a memory-manufacturing and AI-hardware hub; output targeted 2027.", "tags": ["Semiconductors"], "ref": 2 },
     { "date": "2025-06", "title": "Idaho BEAD program advances (~$583M allocation)", "impact": "Rural broadband buildout proceeds through subgrantee selection; expands connected footprint.", "tags": ["Broadband"], "ref": 9 },
@@ -151,6 +153,7 @@
     { "label": "GovTech — Idaho IT staffs up for future consolidation", "url": "https://www.govtech.com/workforce/idaho-it-staffs-up-to-set-stage-for-future-consolidation" },
     { "label": "Idaho Capital Sun — Idaho preps to roll out AI in state government", "url": "https://idahocapitalsun.com/2025/07/10/idaho-preps-to-roll-out-artificial-intelligence-in-state-government/" },
     { "label": "Link Up Idaho — BEAD Program", "url": "https://linkup.idaho.gov/broadband-equity-access-and-deployment-bead-program/" },
-    { "label": "Idaho Division of Purchasing — Statewide Contracts", "url": "https://purchasing.idaho.gov/statewide-contracts/" }
+    { "label": "Idaho Division of Purchasing — Statewide Contracts", "url": "https://purchasing.idaho.gov/statewide-contracts/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

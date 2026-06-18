@@ -44,7 +44,8 @@
     "notes": [
       "Figures are annual FY2026 totals; Alabama does not budget on a biennial cycle.",
       "OIT is largely chargeback-funded via a Telecommunications Revolving Fund (Act 2025-369), so IT dollars are not a single appropriated line — confirm the owning agency before forecasting.",
-      "BEAD is federal pass-through funding administered by ADECA, separate from the state General Fund."
+      "BEAD is federal pass-through funding administered by ADECA, separate from the state General Fund.",
+      "FY2027 (governor's proposed, per NASBO): $3.7B General Fund (non-earmarked), -0.8% vs FY2026; $10.5B Education Trust Fund (+5.8%). Disciplined posture with level agency funding, a 2% pay raise, and a $385.3M General Fund rainy day balance."
     ]
   },
 
@@ -127,6 +128,7 @@
 
   "news": [
     { "date": "2026-06", "title": "Google announces $1.5B Jackson County data-center expansion (2026–27)", "impact": "Reinforces Alabama as a national AI-infrastructure hub; strong ISG/AI tailwind.", "tags": ["Data Centers", "AI"], "ref": 6 },
+    { "date": "2026-01", "title": "Gov. Ivey proposed a $3.7B general-fund FY2027 budget", "impact": "$3.7B non-earmarked General Fund, -0.8% vs FY2026, plus a $10.5B Education Trust Fund (+5.8%, largest in state history); disciplined posture with a 2% pay raise and a $385.3M General Fund rainy day balance.", "tags": ["Budget"], "ref": 9 },
     { "date": "2026-04", "title": "U.S. Space Command's first personnel arrive at Redstone Arsenal", "impact": "Phased HQ move begins (~1,400 positions); deepens Huntsville defense/space compute demand.", "tags": ["Defense", "Space"], "ref": 7 },
     { "date": "2026-03", "title": "NTIA approves Alabama's final BEAD plan — $460M, 63 projects", "impact": "Broadband deployment to ~92,000 unserved locations via ADECA; downstream edge/connectivity work.", "tags": ["Broadband"], "ref": 8 },
     { "date": "2026-02", "title": "Gov. Ivey forms the Technology Quality Assurance Board", "impact": "Statewide AI/emerging-tech standards (NIST AI RMF) — demand for governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 3 },
@@ -150,6 +152,7 @@
     { "label": "Alabama OIT — Policy 230-00: Information Technology Procurement", "url": "https://oit.alabama.gov/wp-content/uploads/2022/07/Policy_230_IT_Procurement.pdf" },
     { "label": "Google Blog — Alabama data center investment (June 2026)", "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/" },
     { "label": "Military Times — U.S. Space Command phased HQ relocation to Alabama", "url": "https://www.militarytimes.com/news/your-military/2026/03/27/us-space-command-provides-update-on-phased-headquarters-relocation-to-alabama/" },
-    { "label": "Office of the Governor — Ivey announces final BEAD approval, $460M award", "url": "https://governor.alabama.gov/newsroom/2026/03/governor-ivey-announces-approval-of-final-bead-broadband-proposal-awards-460-million-to-expand-access-to-high-speed-internet/" }
+    { "label": "Office of the Governor — Ivey announces final BEAD approval, $460M award", "url": "https://governor.alabama.gov/newsroom/2026/03/governor-ivey-announces-approval-of-final-bead-broadband-proposal-awards-460-million-to-expand-access-to-high-speed-internet/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

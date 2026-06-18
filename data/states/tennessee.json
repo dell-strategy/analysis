@@ -43,7 +43,8 @@
     "notes": [
       "Tennessee runs an annual (not biennial) budget; figures above are FY2026 (July 2025–June 2026).",
       "There is no published consolidated state IT line item — confirm agency-level technology budgets and the STS operating budget when forecasting.",
-      "AI-infrastructure investment in-state is overwhelmingly private (xAI) and federal (Oak Ridge/DOE), not state-appropriated — the state-government opportunity is modernization and governed AI adoption."
+      "AI-infrastructure investment in-state is overwhelmingly private (xAI) and federal (Oak Ridge/DOE), not state-appropriated — the state-government opportunity is modernization and governed AI adoption.",
+      "FY2027 (governor's proposed, per NASBO): $25.8B general fund appropriations; $57.9B all funds, -9.6% vs FY2026 (driven by a federal-funds decline, with state appropriations down just 0.4%). Disciplined posture with a $20.0M rainy-day deposit bringing reserves to $2.2B; proposes non-recurring funds to support quantum computing infrastructure."
     ]
   },
 
@@ -126,6 +127,7 @@
 
   "news": [
     { "date": "2026-03", "title": "Tennessee secures additional $218M federal broadband grant", "impact": "Adds to BEAD funding to reach remaining unserved Tennesseans; sustained connectivity buildout statewide.", "tags": ["Broadband", "Federal"], "ref": 10 },
+    { "date": "2026-02", "title": "Gov. Lee proposed a $25.8B general-fund FY2027 budget", "impact": "$57.9B all funds, -9.6% vs FY2026 (a federal-funds drop; state appropriations down 0.4%); $20.0M rainy-day deposit lifts reserves to $2.2B. Proposes non-recurring funds for quantum computing infrastructure and added investment in the Nuclear Energy Fund.", "tags": ["Budget"], "ref": 12 },
     { "date": "2026-02", "title": "NTIA approves Tennessee's BEAD final proposal (~$813M)", "impact": "Unlocks a major federal broadband program; expanded last-mile and digital-opportunity activity.", "tags": ["Broadband", "Budget"], "ref": 10 },
     { "date": "2026-01", "title": "xAI's Memphis 'Colossus' scales toward ~2GW / ~555,000 GPUs", "impact": "Cements Tennessee as a top-tier national AI-compute hub; massive infrastructure ecosystem demand.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 7 },
     { "date": "2025-11", "title": "State AI Advisory Council adopts Tennessee's first AI Action Plan", "impact": "Sets four-pillar framework including 'Data & Compute Readiness' — an opening for governed AI infrastructure.", "tags": ["AI", "Policy"], "ref": 3 },
@@ -152,6 +154,7 @@
     { "label": "OLCF — ORNL, AMD, and HPE to Deliver Discovery and Lux AI Supercomputers", "url": "https://www.olcf.ornl.gov/2025/10/27/ornl-amd-and-hpe-to-deliver-does-newest-ai-supercomputers-discovery-and-lux/" },
     { "label": "Tennessee General Services — Procurement / Central Procurement Office", "url": "https://www.tn.gov/generalservices/procurement.html" },
     { "label": "Tennessee ECD — BEAD Program (broadband)", "url": "https://www.tn.gov/ecd/rural-development/broadband-office/redirect-provider-resources/bead-program.html" },
-    { "label": "StateScoop — Tennessee names Kristin Darby as new CIO", "url": "https://statescoop.com/tennessee-new-cio-kristin-darby-2025/" }
+    { "label": "StateScoop — Tennessee names Kristin Darby as new CIO", "url": "https://statescoop.com/tennessee-new-cio-kristin-darby-2025/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

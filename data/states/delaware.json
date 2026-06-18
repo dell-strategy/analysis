@@ -44,7 +44,8 @@
     "notes": [
       "Figures are annual (FY27) unless noted; Delaware does not budget on a biennial cycle.",
       "ARPA money that funded prior security upgrades has expired — those costs are shifting onto the ongoing state operating budget.",
-      "The corporate franchise tax funds roughly a third of the state budget; detailed franchise-revenue data trails into spring, so treat IT funding as agency-driven, not earmarked."
+      "The corporate franchise tax funds roughly a third of the state budget; detailed franchise-revenue data trails into spring, so treat IT funding as agency-driven, not earmarked.",
+      "FY2027 (governor's proposed, per NASBO): $6.94B general fund operating, +5.4% vs FY2026, plus $150M in net new revenue measures; reserves held at $366.5M (Budget Reserve) and $469.3M (Budget Stabilization)."
     ]
   },
 
@@ -144,6 +145,7 @@
     { "label": "StateScoop — Delaware's gen AI policy allows ChatGPT, not DeepSeek", "url": "https://statescoop.com/delaware-policy-generative-ai-chatgpt-2025/" },
     { "label": "State of Delaware News — Delaware Launches Statewide AI Training", "url": "https://news.delaware.gov/2026/03/19/delaware-launches-new-statewide-ai-training-for-state-employees/" },
     { "label": "DTI — Strategic Priorities", "url": "https://dti.delaware.gov/about-dti/strategic-priorities/" },
-    { "label": "StateScoop — Delaware cyber chief Solomon Adote to depart", "url": "https://statescoop.com/delaware-cyber-chief-departs-after-six-years-2025/" }
+    { "label": "StateScoop — Delaware cyber chief Solomon Adote to depart", "url": "https://statescoop.com/delaware-cyber-chief-departs-after-six-years-2025/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

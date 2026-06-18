@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Figures are annual (fiscal-year) totals, not biennial.",
-      "Cybersecurity spend is mid-migration into OITS under SB 291 — confirm whether a program is agency-owned or already consolidated before forecasting."
+      "Cybersecurity spend is mid-migration into OITS under SB 291 — confirm whether a program is agency-owned or already consolidated before forecasting.",
+      "FY2027 (governor's proposed, per NASBO): $10.8B general fund, +1.6% vs FY2026; $26.7B all funds. Charts a path back to structural balance with a $1.6B general-fund ending balance (14.7%) and a $2.03B budget stabilization fund."
     ]
   },
 
@@ -126,6 +127,7 @@
   "news": [
     { "date": "2026-03", "title": "Kansas Legislature sends FY2027 budget (HB 2513) to Governor Kelly", "impact": "Sets ~$26.8B total state spending; technology spend continues to flow through OITS and agency budgets.", "tags": ["Budget"], "ref": 1 },
     { "date": "2025-12", "title": "NTIA approves Kansas $166.6M BEAD final proposal", "impact": "Funds connectivity to ~26,673 locations; expands the connected footprint for downstream public-sector compute.", "tags": ["Broadband", "Federal Funds"], "ref": 7 },
+    { "date": "2026-01", "title": "Gov. Laura Kelly proposed a $10.8B general-fund FY2027 budget", "impact": "$26.7B all funds, +1.6% vs FY2026; $1.6B general-fund ending balance (14.7%) and a $2.03B budget stabilization fund, charting a path back to structural balance.", "tags": ["Budget"], "ref": 9 },
     { "date": "2025-11", "title": "OITS nears completion of SB 291 cybersecurity integration planning", "impact": "Three-year IT plan and 2026 consolidation projects take shape — centralizing the buyer.", "tags": ["Consolidation", "Cybersecurity"], "ref": 4 },
     { "date": "2025-08", "title": "Meta's $1B Kansas City-area data center goes live", "impact": "Signals the scale of AI-infrastructure investment landing in the KC metro; AI-optimized capacity to follow.", "tags": ["Data Centers", "AI"], "ref": 6 },
     { "date": "2025-07", "title": "Panasonic opens $4B De Soto EV-battery plant", "impact": "Anchors a regional battery/data-center industrial base; exploring data-center battery production by ~2029.", "tags": ["Economic Dev", "Manufacturing"], "ref": 6 },
@@ -149,6 +151,7 @@
     { "label": "KCUR — Meta opens $1B Kansas City data center", "url": "https://www.kcur.org/housing-development-section/2025-08-23/meta-kansas-city-data-center-northland" },
     { "label": "Kansas Dept. of Commerce — Kansas Broadband Receives Federal Approval for $166.6M BEAD Final Proposal", "url": "https://www.kansascommerce.gov/2025/12/kansas-broadband-receives-federal-approval-for-166-6m-bead-final-proposal/" },
     { "label": "Kansas Dept. of Administration — Office of Procurement and Contracts", "url": "https://admin.ks.gov/offices/procurement-contracts" },
-    { "label": "Kansas Dept. of Commerce — Governor Kelly Celebrates Grand Opening of Panasonic EV Battery Facility in De Soto", "url": "https://www.kansascommerce.gov/2025/07/governor-kelly-celebrates-grand-opening-of-panasonic-ev-battery-manufacturing-facility-in-de-soto/" }
+    { "label": "Kansas Dept. of Commerce — Governor Kelly Celebrates Grand Opening of Panasonic EV Battery Facility in De Soto", "url": "https://www.kansascommerce.gov/2025/07/governor-kelly-celebrates-grand-opening-of-panasonic-ev-battery-manufacturing-facility-in-de-soto/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

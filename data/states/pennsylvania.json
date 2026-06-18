@@ -42,7 +42,8 @@
     ],
     "notes": [
       "The 2025–26 budget was enacted 135 days late; confirm appropriation status before forecasting against agency timelines.",
-      "BEAD is federal infrastructure money administered by the PA Broadband Development Authority, not General Fund IT spend — different buyers and rules."
+      "BEAD is federal infrastructure money administered by the PA Broadband Development Authority, not General Fund IT spend — different buyers and rules.",
+      "FY2027 (governor's proposed, per NASBO): $53.3B general fund, +5.4% vs FY2026; $137.22B all funds. Proposes drawing $4.58B from the rainy day fund to offset a negative projected balance, leaving a $3.31B reserve."
     ]
   },
 
@@ -114,6 +115,7 @@
 
   "news": [
     { "date": "2026-04", "title": "PA expands generative AI to 3,000+ employees across 35 agencies", "impact": "Agencies are scaling AI under a new Governing Board — demand for governed, secure AI infrastructure grows.", "tags": ["AI"], "ref": 4 },
+    { "date": "2026-02", "title": "Gov. Shapiro proposed a $53.3B general-fund FY2027 budget", "impact": "$137.22B all funds, +2.2% vs FY2026; proposes a $4.58B rainy-day draw, leaving a $3.31B reserve. Recommends environmental and community protections for responsible data-center development and calls on agencies to create guidance for safe AI use.", "tags": ["Budget", "Data Centers", "AI"], "ref": 13 },
     { "date": "2025-11", "title": "Shapiro signs $50.1B 2025–26 budget, 135 days late", "impact": "Budget finally enacted; late cycle compresses agency procurement timelines and sets up live 2026–27 talks.", "tags": ["Budget"], "ref": 2 },
     { "date": "2025-07", "title": "CoreWeave secures funding for $6B Lancaster AI data-center campus", "impact": "Adds to PA's national-scale AI-infrastructure footprint.", "tags": ["Data Centers", "AI"], "ref": 8 },
     { "date": "2025-06", "title": "Amazon commits $20B to PA data centers (incl. site by Susquehanna nuclear)", "impact": "Largest private investment in state history; cements PA as an AI-infrastructure hub.", "tags": ["Data Centers", "AI"], "ref": 6 },
@@ -141,6 +143,7 @@
     { "label": "PA General Assembly — Senate Bill 377 (2025-2026, NIST IT procurement)", "url": "https://www.palegis.us/legislation/bills/2025/sb377" },
     { "label": "Construction Review Online — Former Homer City plant to become $10B AI data center campus", "url": "https://constructionreviewonline.com/former-homer-city-plant-to-become-a-10-billion-ai-data-center-campus/" },
     { "label": "DGS — COSTARS Cooperative Purchasing", "url": "https://www.pa.gov/agencies/dgs/programs-and-services/costars" },
-    { "label": "StateScoop — Pennsylvania expanded generative AI to 3,000 employees", "url": "https://statescoop.com/pennsylvania-expands-generative-ai-tools-3000-employees/" }
+    { "label": "StateScoop — Pennsylvania expanded generative AI to 3,000 employees", "url": "https://statescoop.com/pennsylvania-expands-generative-ai-tools-3000-employees/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

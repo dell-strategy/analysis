@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Figures are biennial (two-year) totals unless noted; broadband is a federal program administered by the state.",
-      "Fiscal pressure is real — confirm a program's funding survived the 2026 supplemental before forecasting; gated IT projects need WaTech/OFM sign-off."
+      "Fiscal pressure is real — confirm a program's funding survived the 2026 supplemental before forecasting; gated IT projects need WaTech/OFM sign-off.",
+      "FY2027 (Gov. Ferguson's proposed supplemental to the enacted biennium, per NASBO): $39.3B FY2027 operating appropriation; $79.4B biennial across revenue-outlook funds, +1.5% vs the prior budget. Closes a projected $2.3B shortfall with reductions and reserves; rainy day (BSA) ending balance ~$1.03B."
     ]
   },
 
@@ -129,6 +130,7 @@
     { "date": "2026-03", "title": "Ferguson signs digital-replica law; pushes AI chatbot safeguards (SB 5984)", "impact": "Signals an active AI-regulation posture; agencies favor governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 3 },
     { "date": "2026-02", "title": "NTIA approves Washington's final BEAD proposal (~$1.2B)", "impact": "Broadband construction begins in 2026 — infrastructure and edge pull-through.", "tags": ["Broadband", "Federal"], "ref": 4 },
     { "date": "2026-01", "title": "Lawmakers move to revisit data-center tax incentives", "impact": "Policy risk to the Central WA data-center boom; watch for changes to the buildout pace.", "tags": ["Data Centers", "Policy"], "ref": 5 },
+    { "date": "2025-12", "title": "Gov. Ferguson proposed a supplemental FY2026-27 operating budget", "impact": "$39.3B FY2027 appropriation; $79.4B biennial (revenue-outlook funds), +1.5% vs the prior budget; closes a $2.3B shortfall via cuts and reserves (BSA ending balance ~$1.03B). Adds staffing and IT to implement new SNAP/Medicaid work requirements and lower SNAP error rates.", "tags": ["Budget"], "ref": 11 },
     { "date": "2025-12", "title": "WaTech generative-AI guidelines adopted as statewide IT policy; AI Task Force interim report", "impact": "Agencies now need governed AI aligned to NIST AI RMF — opening for private/on-prem AI.", "tags": ["AI", "Policy"], "ref": 9 },
     { "date": "2025-05", "title": "Ferguson signs $77.9B operating budget (SB 5167)", "impact": "Record budget but with a large tax package and tight fiscal outlook — buy carefully.", "tags": ["Budget"], "ref": 1 }
   ],
@@ -151,6 +153,7 @@
     { "label": "WaTech — State Office of Cybersecurity (OCS)", "url": "https://watech.wa.gov/cybersecurity/state-office-cybersecurity" },
     { "label": "Inside Global Tech — Washington AI Task Force releases policy recommendations for 2026", "url": "https://www.insideglobaltech.com/2025/12/11/washington-state-ai-task-force-releases-ai-policy-recommendations-for-2026/" },
     { "label": "WaTech — Interim Guidelines for Responsible Use of Generative AI", "url": "https://watech.wa.gov/policies/interim-guidelines-purposeful-and-responsible-use-generative-artificial-intelligence-ai-washington" },
-    { "label": "WaTech — Bill Kehoe to remain as State CIO under new governor", "url": "https://watech.wa.gov/news/2025/bill-kehoe-remain-wash-state-cio-under-new-governor" }
+    { "label": "WaTech — Bill Kehoe to remain as State CIO under new governor", "url": "https://watech.wa.gov/news/2025/bill-kehoe-remain-wash-state-cio-under-new-governor" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

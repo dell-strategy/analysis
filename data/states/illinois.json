@@ -44,7 +44,8 @@
     "notes": [
       "Illinois uses an annual (not biennial) budget; figures are FY2026 unless noted.",
       "DoIT's $1.1B is an enterprise IT operating figure, not the sum of all state technology spend — agency-level tech dollars sit outside it.",
-      "Connect Illinois and NCSA figures are cumulative/programmatic, not single-year appropriations."
+      "Connect Illinois and NCSA figures are cumulative/programmatic, not single-year appropriations.",
+      "FY2027 (governor's proposed, per NASBO): $56.03B general fund, +1.6% vs FY2026; $131.8B all funds. Builds on seven years of restored fiscal stability with a $2.4B rainy day fund and a $24M projected general-fund surplus."
     ]
   },
 
@@ -127,6 +128,7 @@
   "news": [
     { "date": "2026-06", "title": "Pritzker pauses new data-center tax incentives effective July 1, 2026", "impact": "Greenfield data-center economics shift; existing agreements honored. Pivot to existing campuses, modernization, and research computing.", "tags": ["Data Centers", "Policy"], "ref": 8 },
     { "date": "2026-06", "title": "SB 315 frontier-AI safety law signed (effective Jan 1, 2027)", "impact": "Illinois sets a first-in-nation AI-audit standard; agencies favor governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
+    { "date": "2026-02", "title": "Gov. JB Pritzker proposed a $56.03B general-fund FY2027 budget", "impact": "$131.8B all funds, +1.6% vs FY2026; $2.4B rainy day fund and a $24M projected surplus. Funds the fourth year of the Computer Science Equity Grant Program and modernizes the R&D tax credit.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-01", "title": "Statewide ERP now tracks ~90% of the state budget", "impact": "Consolidation milestone drives secure compute/storage and cybersecurity hardening across DoIT systems.", "tags": ["Modernization", "ERP"], "ref": 9 },
     { "date": "2025-06", "title": "NASPO ValuePoint reapproved as an Illinois cooperative", "impact": "Pre-competed cooperative path reaffirmed for state and local buyers — a usable route for Dell offerings.", "tags": ["Procurement"], "ref": 10 },
     { "date": "2025-05", "title": "Illinois passes the largest budget in state history (FY2026)", "impact": "Record ~$55.3B general-funds budget with a small surplus sustains agency tech and refresh spend.", "tags": ["Budget"], "ref": 1 },
@@ -151,6 +153,7 @@
     { "label": "NCSA — NCSA Launches DeltaAI", "url": "https://www.ncsa.illinois.edu/2024/11/18/ncsa-launches-deltaai/" },
     { "label": "Gov. Pritzker Newsroom — Pause on New Data Center Tax Incentives", "url": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-pauses-new-data-center-tax-incentives" },
     { "label": "GovTech — Illinois ERP System Sets Standard for State Modernization", "url": "https://www.govtech.com/computing/illinois-erp-system-sets-standard-for-state-modernization.html" },
-    { "label": "NASPO ValuePoint — Reapproved for Illinois government agencies", "url": "https://www.naspovaluepoint.org/press_release/naspo-valuepoint-offers-illinois-government-agencies-best-value-cooperative-contracts/" }
+    { "label": "NASPO ValuePoint — Reapproved for Illinois government agencies", "url": "https://www.naspovaluepoint.org/press_release/naspo-valuepoint-offers-illinois-government-agencies-best-value-cooperative-contracts/" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

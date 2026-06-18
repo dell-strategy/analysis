@@ -43,7 +43,8 @@
     ],
     "notes": [
       "Budget figures are annual (single-year) totals; Florida does not budget biennially.",
-      "Reported FY2025–26 totals vary ($114.8B–$117.4B) depending on whether back-of-the-bill items are counted — confirm scope before forecasting."
+      "Reported FY2025–26 totals vary ($114.8B–$117.4B) depending on whether back-of-the-bill items are counted — confirm scope before forecasting.",
+      "FY2027 (governor's proposed, per NASBO): $53.2B general revenue, +5.7% vs FY2026; $117.4B all funds (+2.2%). A combined $16.8B reserve, with the Budget Stabilization Fund at its $5.0B constitutional limit; the budget hardens cybersecurity across state agencies."
     ]
   },
 
@@ -128,6 +129,7 @@
     { "date": "2026-03", "title": "AI 'Bill of Rights' (SB 482) passes Senate, dies in House", "impact": "AI policy remains unsettled; agencies still trend toward governed, auditable AI for sensitive workloads.", "tags": ["AI", "Policy"], "ref": 4 },
     { "date": "2026-02", "title": "SB 480 proposes restructuring state IT under FLDS / Governor's office", "impact": "Centralizes IT governance and procurement oversight; raises the $10M project gate's profile.", "tags": ["IT Governance", "Procurement"], "ref": 2 },
     { "date": "2025-12", "title": "Governor announces Floridians First FY2026–27 budget (~$117.4B)", "impact": "Continued spending capacity with large reserves; sets the FY2026–27 buying envelope.", "tags": ["Budget"], "ref": 3 },
+    { "date": "2025-12", "title": "Gov. DeSantis proposed a $53.2B general-revenue FY2027 budget", "impact": "$117.4B all funds, +2.2% vs FY2026; $16.8B combined reserve with the Budget Stabilization Fund at its $5.0B constitutional limit. Hardens Florida's cybersecurity framework across state agencies and funds IT projects that reduce staffing needs.", "tags": ["Budget", "Cybersecurity"], "ref": 10 },
     { "date": "2025-10", "title": "University of Florida launches HiPerGator AI 2.0 (NVIDIA DGX B200 SuperPOD)", "impact": "Reinforces Florida higher-ed as a major AI-infrastructure and research-computing buyer.", "tags": ["AI Infrastructure", "Higher Ed"], "ref": 8 },
     { "date": "2025-07", "title": "Florida announces $970M+ in BEAD broadband deployment funding", "impact": "Federal broadband money moves toward deployment; adjacent edge/networking demand in 2026.", "tags": ["Broadband", "Federal Funds"], "ref": 7 }
   ],
@@ -149,6 +151,7 @@
     { "label": "WUSF — DeSantis signs bill adding regulations for hyperscale AI data centers (SB 484)", "url": "https://www.wusf.org/politics-issues/2026-05-07/desantis-signs-bill-adding-regulations-for-hyper-scale-ai-data-centers" },
     { "label": "FloridaCommerce — $970M+ in BEAD Broadband Funding", "url": "https://floridajobs.org/news-center/DEO-Press/2025/07/15/floridacommerce-announces-more-than--970-million-in-broadband-funding-through-the-bead-deployment-program" },
     { "label": "HPCwire — UF Welcomes NVIDIA DGX Systems for HiPerGator AI 2.0", "url": "https://www.hpcwire.com/off-the-wire/uf-welcomes-24m-in-nvidia-dgx-systems-paving-way-for-next-gen-hipergator-ai-2-0/" },
-    { "label": "Florida DMS — State Contracts and Agreements / State Purchasing", "url": "https://www.dms.myflorida.com/business_operations/state_purchasing/state_contracts_and_agreements" }
+    { "label": "Florida DMS — State Contracts and Agreements / State Purchasing", "url": "https://www.dms.myflorida.com/business_operations/state_purchasing/state_contracts_and_agreements" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }

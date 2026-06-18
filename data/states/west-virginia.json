@@ -44,7 +44,8 @@
     "notes": [
       "West Virginia uses an annual (not biennial) budget; figures are single-fiscal-year general-revenue totals unless noted.",
       "Major technology dollars are increasingly private (data-center capital) and federal (BEAD), not state IT line items — frame deals to the program funding them.",
-      "OT operates largely as an internal service fund; confirm the funding source and owning agency before forecasting."
+      "OT operates largely as an internal service fund; confirm the funding source and owning agency before forecasting.",
+      "FY2027 (governor's proposed Jan 2026, per NASBO): $5.5B general revenue, +1.6% vs FY2026; $40.9B all funds, -7.3%. Intentionally flat plan; Rainy Day funds total ~$1.42B (Parts A+B)."
     ]
   },
 
@@ -128,6 +129,7 @@
     { "date": "2026-04", "title": "Morrisey signs HB 5638 consolidating state cybersecurity under the CISO", "impact": "Unified statewide standards and an anti-lock-in licensing provision; audit shows the program is behind — real need for secure infrastructure and services.", "tags": ["Cybersecurity", "Policy"], "ref": 4 },
     { "date": "2026-03", "title": "Morrisey signs ~$5.5B FY2027 budget", "impact": "Intentionally flat budget continues fiscal discipline; major tech dollars come from private and federal sources, not state IT lines.", "tags": ["Budget"], "ref": 9 },
     { "date": "2026-02", "title": "$4B, 600MW first High Impact Intelligence Center announced (Berkeley County)", "impact": "Proves the HB 2014 microgrid model attracts hyperscale AI capacity — flagship greenfield AI-infrastructure account.", "tags": ["Data Centers", "AI"], "ref": 5 },
+    { "date": "2026-01", "title": "Gov. Morrisey proposed a $5.5B general-revenue FY2027 budget", "impact": "$40.9B all funds, -7.3% vs FY2026; intentionally flat, Rainy Day funds ~$1.42B. State-of-the-State launched SENTRY, a flood-detection pilot expanding sensors and predictive models to warn the public.", "tags": ["Budget"], "ref": 12 },
     { "date": "2025-11", "title": "NTIA approves WV BEAD broadband plan (~$545M, 73,044 locations)", "impact": "Funds 142 deployment projects underpinning rural connectivity and telehealth modernization.", "tags": ["Broadband", "Federal"], "ref": 7 },
     { "date": "2025-11", "title": "Site-certification rules released for the HB 2014 data-center/microgrid program", "impact": "Operationalizes the microgrid law; certification process opens for new high-impact data-center districts.", "tags": ["Data Centers", "Energy"], "ref": 3 },
     { "date": "2025-07", "title": "Power Generation and Consumption Act (HB 2014) takes effect", "impact": "Statewide certified-microgrid program goes live — the foundation of the state's AI-data-center strategy.", "tags": ["Data Centers", "Energy"], "ref": 1 }
@@ -152,6 +154,7 @@
     { "label": "West Virginia Legislature passes 'compromise' $5.3B FY2026 state budget — WV Gazette-Mail", "url": "https://www.wvgazettemail.com/news/legislative_session/update-west-virginia-legislature-passes-compromise-5-3b-fy2026-state-budget/article_3803a2f5-32dc-4a2c-ae80-b6c9cf6b4345.html" },
     { "label": "Governor signs $5.5 billion budget — WV MetroNews", "url": "https://wvmetronews.com/2026/03/12/governor-signs-5-5-billion-budget-calls-it-a-success-but-does-offer-some-line-item-vetoes/" },
     { "label": "IT Statewide Contracts — West Virginia Office of Technology", "url": "https://technology.wv.gov/technology-services_1/it-statewide-contracts" },
-    { "label": "Vendor Registration — West Virginia Purchasing Division", "url": "https://www.state.wv.us/admin/purchase/VendorReg.html" }
+    { "label": "Vendor Registration — West Virginia Purchasing Division", "url": "https://www.state.wv.us/admin/purchase/VendorReg.html" },
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
   ]
 }
