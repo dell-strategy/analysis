@@ -3,13 +3,13 @@
   "name": "Wyoming",
   "slug": "wyoming",
   "region": "Mountain West",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "Cheap, abundant power plus the nation's friendliest digital-asset law are turning Wyoming into a magnet for hyperscale AI data centers — even as the state runs IT on one of the leanest budgets in the country.",
 
   "snapshot": [
     { "label": "2025-26 Biennial Budget", "value": "~$10.9B" },
     { "label": "Central IT Org", "value": "ETS (under A&I)" },
-    { "label": "Flagship AI Project", "value": "Crusoe 1.8GW" },
+    { "label": "Flagship AI Project", "value": "Crusoe Jade (paused 6/26)" },
     { "label": "Digital-Asset Law", "value": "FRNT live" }
   ],
 
@@ -55,7 +55,7 @@
       "dellFit": 90,
       "budgetStrength": 85,
       "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
-      "summary": "Cheap, surplus power is drawing hyperscale AI capacity to the Cheyenne area: Meta's $800M+ campus, Microsoft's existing datacenters plus a planned 3,200-acre expansion (announced April 2026), and the Crusoe/Tallgrass 'Project Jade' campus starting at 1.8GW and designed to scale toward 10GW. Part of Gordon's 'Winning the AI Race' agenda. This is the single strongest tailwind for Dell AI-infrastructure and ISG demand in the state, both directly and via ecosystem pull-through.",
+      "summary": "Cheap, surplus power is drawing hyperscale AI capacity to the Cheyenne area: Meta's $800M+ campus, Microsoft's existing datacenters plus a planned 3,200-acre expansion (announced April 2026) and continued 'Project Cosmo' activity, and the Crusoe/Tallgrass 'Project Jade' campus (scaled to 2.7GW by Jan 2026, designed toward 10GW). Note: Crusoe PAUSED Project Jade in June 2026 'at the request of our customer,' so the state's flagship multi-GW campus is on hold even as Microsoft/Meta buildout continues. Part of Gordon's 'Winning the AI Race' agenda — still the strongest tailwind for Dell AI-infrastructure and ISG demand, with near-term uncertainty on Jade.",
       "ref": 2
     },
     {
@@ -85,7 +85,7 @@
       "dellFit": 70,
       "budgetStrength": 55,
       "tags": ["HPC", "Research Computing", "GPU"],
-      "summary": "The NWSC in Cheyenne — an NCAR / University of Wyoming collaboration — runs the GPU-accelerated 'Derecho' system (19.87 petaflops, 382 NVIDIA A100 GPUs) for climate, wildfire, and space-weather research. An established HPC buyer with a refresh cadence. Note risk: an NSF transition plan announced in early 2026 raised questions about the center's future, so qualify governance and funding before forecasting.",
+      "summary": "The NWSC in Cheyenne — an NCAR / University of Wyoming collaboration — runs the GPU-accelerated 'Derecho' system (19.87 petaflops, 382 NVIDIA A100 GPUs) for climate, wildfire, and space-weather research. An established HPC buyer with a refresh cadence. Note risk: NSF moved in Feb 2026 to transition NWSC operations (proposing a transfer toward the University of Wyoming), but UCAR sued and a federal court issued a March 2026 injunction blocking the transition — status quo (UCAR-managed) holds for now. Qualify governance and funding before forecasting.",
       "ref": 9
     },
     {
@@ -124,9 +124,10 @@
   ],
 
   "news": [
+    { "date": "2026-06-09", "title": "Crusoe pauses 'Project Jade' Cheyenne campus 'at the request of our customer'", "impact": "Wyoming's flagship multi-GW AI data center is on hold — near-term uncertainty for the state's largest data-center bet; qualify Jade-dependent pipeline.", "tags": ["Data Centers", "Risk"], "ref": 11 },
+    { "date": "2026-03", "title": "Federal court enjoins NSF's NWSC operations transition after UCAR lawsuit", "impact": "Derecho/NWSC governance shake-up legally stalled — status quo (UCAR-managed) holds; HPC refresh path remains uncertain.", "tags": ["HPC", "Risk"], "ref": 12 },
     { "date": "2026-04", "title": "Microsoft announces intent to expand Cheyenne datacenters (~3,200 acres)", "impact": "Signals a multiyear hyperscale buildout and deepening AI-infrastructure ecosystem around Cheyenne.", "tags": ["Data Centers", "AI"], "ref": 4 },
     { "date": "2026-03", "title": "Wyoming pitches data-center developers at closed-door Jackson summit", "impact": "Google, Microsoft, Meta and AWS attend; the state is actively competing for AI capacity.", "tags": ["AI", "Economic Dev"], "ref": 8 },
-    { "date": "2026-02", "title": "NSF transition plan for NCAR-Wyoming raises questions in science community", "impact": "Future governance/funding of the NWSC and Derecho is uncertain — qualify before forecasting HPC.", "tags": ["HPC", "Risk"], "ref": 9 },
     { "date": "2026-01", "title": "Wyoming publicly launches the Frontier Stable Token (FRNT)", "impact": "First U.S. publicly-issued, fully-reserved stable token goes live for public purchase, cementing digital-asset leadership.", "tags": ["Blockchain", "Policy"], "ref": 6 },
     { "date": "2025-11", "title": "Gov. Gordon proposes ~$11.13B 2027-28 budget", "impact": "Sets the next biennial spending frame ($3.35B GF/BRA, ~$3.74B ongoing GF revenue; LSRA rainy day ~$1.38B per NASBO); investment income keeps the state cautious but solvent.", "tags": ["Budget"], "ref": 10 },
     { "date": "2025-08", "title": "Crusoe/Tallgrass 'Project Jade' 1.8GW AI data center unveiled for Cheyenne", "impact": "Anchor AI campus — power use could dwarf the state's residential load; first buildings expected ~2027.", "tags": ["Data Centers", "AI"], "ref": 2 }
@@ -150,6 +151,8 @@
     { "label": "Cowboy State Daily — Gordon proposes $11.13B two-year budget", "url": "https://cowboystatedaily.com/2025/11/17/governor-gordon-proposes-11-13-billion-two-year-budget/" },
     { "label": "DataCenterDynamics — Gordon on Wyoming's AI data center boom", "url": "https://www.datacenterdynamics.com/en/analysis/data-centers-in-the-land-of-coal-and-cowboys/" },
     { "label": "HPCwire — NSF transition plan for NCAR-Wyoming raises questions", "url": "https://www.hpcwire.com/2026/02/19/nsf-transition-plan-for-ncar-wyoming-raises-questions-in-science-community/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Bloomberg — Crusoe touts 5GW of data-center deals, pauses Wyoming site (June 9, 2026)", "url": "https://www.bloomberg.com/news/articles/2026-06-09/crusoe-touts-5-gigawatts-worth-of-data-centers-deals-pauses-wyoming-site" },
+    { "label": "Courthouse News — Judge keeps control of supercomputer with Colorado climate lab (Mar 16, 2026)", "url": "https://www.courthousenews.com/judge-keeps-control-of-supercomputer-with-colorado-climate-lab/" }
   ]
 }

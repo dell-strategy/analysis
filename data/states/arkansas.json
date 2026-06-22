@@ -3,7 +3,7 @@
   "name": "Arkansas",
   "slug": "arkansas",
   "region": "South Central",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A statewide IT reorganization, a brand-new centralized cybersecurity office, an AI Center of Excellence, and the largest data-center investments in state history — Arkansas is rewiring how it buys and secures technology.",
 
   "snapshot": [
@@ -30,7 +30,7 @@
   },
 
   "budget": {
-    "intro": "Arkansas budgets on an annual cycle via the Revenue Stabilization Act (RSA), with a regular legislative session in odd years and a fiscal session in even years. The 2025 session set FY2026 general revenue at $6.49B (a ~3% / ~$182.5M increase); the Governor presented the FY2027 proposal on March 3, 2026 ahead of the April 2026 fiscal session. There is no single 'state IT budget' line — Arkansas spends roughly $680–700M on technology across agencies, and the current reorganization is meant to consolidate that spend under the Office of State Technology.",
+    "intro": "Arkansas budgets on an annual cycle via the Revenue Stabilization Act (RSA), with a regular legislative session in odd years and a fiscal session in even years. The 2025 session set FY2026 general revenue at $6.49B (a ~3% / ~$182.5M increase); the 2026 fiscal session (April 8–29, 2026) finalized FY2027 general revenue at about $6.7B (~3% increase), signed by Gov. Sanders via the Revenue Stabilization Act and effective July 1, 2026. There is no single 'state IT budget' line — Arkansas spends roughly $680–700M on technology across agencies, and the current reorganization is meant to consolidate that spend under the Office of State Technology.",
     "stats": [
       { "value": "$6.49B", "label": "FY2026 general revenue", "note": "Begins July 1, 2025", "ref": 1 },
       { "value": "$680–700M", "label": "Statewide annual tech spend", "note": "Across agencies (state review estimate)", "ref": 2 },
@@ -42,9 +42,9 @@
       { "label": "Projected consolidation savings", "amount": 100, "display": "$65–130M", "note": "Annual, from centralization/de-duplication" }
     ],
     "notes": [
-      "Arkansas runs an annual budget cycle (regular session odd years, fiscal session even years) — confirm FY2027 appropriations after the April 2026 fiscal session.",
+      "Arkansas runs an annual budget cycle (regular session odd years, fiscal session even years); the 2026 fiscal session adjourned April 29, 2026 and the FY2027 RSA is enacted, effective July 1, 2026.",
       "Technology dollars are mid-migration from the former DIS into the new Office of State Technology and centralized cyber office — confirm which entity owns a program before forecasting.",
-      "FY2027 (governor's proposed, per NASBO): $6.69B general revenue, +3.0% (~$194.5M) vs FY2026. A limited-government posture that funds priority areas while phasing out the state income tax; net available revenues projected at $7.02B (+2.7%)."
+      "FY2027 enacted: ~$6.7B general revenue (~3% / ~$194.5M increase), signed by Gov. Sanders. A limited-government posture that funds priority areas while phasing out the state income tax; net available revenues projected near $7.02B (+2.7%). Data-center resolutions (SR 7/8/9) did not advance in the fiscal session."
     ]
   },
 
@@ -116,13 +116,13 @@
   ],
 
   "news": [
+    { "date": "2026-04", "title": "Fiscal session closes; Gov. Sanders signs ~$6.7B FY2027 budget (RSA)", "impact": "FY2027 general revenue enacted (~3% increase), effective July 1, 2026; data-center resolutions (SR 7/8/9) did not advance. Sets the FY2027 spending baseline for agency and IT forecasting.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-03", "title": "Gov. Sanders proposed a $6.69B general-revenue FY2027 budget", "impact": "+3.0% (~$194.5M) vs FY2026; net available revenues of $7.02B (+2.7%). Limited-government posture that funds priority areas while continuing to phase out the state income tax.", "tags": ["Budget"], "ref": 10 },
     { "date": "2026-02", "title": "Governor receives AI Center of Excellence effectiveness & safety report", "impact": "Recommends a Chief AI Officer, NIST-based evaluation, and an AI-enabled services portal — agencies will need governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 4 },
     { "date": "2026-01", "title": "AVAIO Digital announces $6B (up to $21B) AI-ready data center in Little Rock", "impact": "Largest economic investment in state history; ~1GW power campus signals the scale of in-state AI-infrastructure demand.", "tags": ["Data Centers", "AI"], "ref": 9 },
     { "date": "2025-10", "title": "Google marks start of $4B AI data center in West Memphis", "impact": "Five-data-center campus plus $1M in ASU/U of Arkansas workforce training — reinforces Arkansas as an AI-infrastructure hub.", "tags": ["Data Centers", "AI"], "ref": 5 },
     { "date": "2025-08", "title": "DIS becomes the Department of Shared Administrative Services, Office of State Technology", "impact": "Central IT authority is renamed and reorganized; consolidation and statewide project management begin.", "tags": ["IT Centralization"], "ref": 2 },
-    { "date": "2025-06", "title": "Governor Sanders issues EO 25-08 to centralize IT and create a cyber office", "impact": "New centralized cybersecurity office and consolidation mandate; $65–130M projected annual savings.", "tags": ["Cybersecurity", "Reorganization"], "ref": 2 },
-    { "date": "2025-04", "title": "Legislature approves $6.49B FY2026 general-revenue budget", "impact": "~$182.5M (~3%) increase sets the FY2026 spending baseline; FY2027 set in the April 2026 fiscal session.", "tags": ["Budget"], "ref": 1 }
+    { "date": "2025-06", "title": "Governor Sanders issues EO 25-08 to centralize IT and create a cyber office", "impact": "New centralized cybersecurity office and consolidation mandate; $65–130M projected annual savings.", "tags": ["Cybersecurity", "Reorganization"], "ref": 2 }
   ],
 
   "dellActions": [
@@ -143,6 +143,7 @@
     { "label": "Arkansas DSAS — Office of State Procurement / State Contracts", "url": "https://sas.arkansas.gov/procurement/state-contracts/" },
     { "label": "Arkansas Senate — Updated Budget Set for Fiscal Session (FY2027 timeline)", "url": "https://senate.arkansas.gov/senate-news/posts/2026/march/updated-budget-set-for-fiscal-session/" },
     { "label": "KATV — AI-ready data center coming to Little Rock, $6B AVAIO investment", "url": "https://katv.com/news/local/ai-ready-data-center-coming-to-little-rock-6-billion-investment-largest-in-state-history" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "KATV — Arkansas closes fiscal session, finalizes $6.7B FY2027 budget signed by Gov. Sanders", "url": "https://katv.com/news/local/arkansas-closes-fiscal-session-finalizes-67b-fy2027-budget-signed-by-gov-sanders" }
   ]
 }

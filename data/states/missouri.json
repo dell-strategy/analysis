@@ -3,8 +3,8 @@
   "name": "Missouri",
   "slug": "missouri",
   "region": "Midwest",
-  "updated": "2026-06-15",
-  "tagline": "A record $15B Google AI data center, a new statewide AI framework due late 2026, and a consolidated central IT shop serving 15 executive departments — Missouri is rebuilding around AI infrastructure under a cost-disciplined new administration.",
+  "updated": "2026-06-22",
+  "tagline": "Back-to-back mega data centers — Google's $15B and Amazon's $10B, both in Montgomery County — plus a statewide AI framework due late 2026 and a consolidated central IT shop serving 15 executive departments make Missouri a national AI-infrastructure story under a cost-disciplined new administration.",
 
   "snapshot": [
     { "label": "FY2026 Operating Budget", "value": "$50.8B" },
@@ -126,13 +126,13 @@
   ],
 
   "news": [
+    { "date": "2026-06-15", "title": "Amazon to invest $10B in Montgomery County data-center campus", "impact": "A second AI-scale anchor in the same county as Google's New Florence project; deepens Missouri's AI-infrastructure ecosystem and the Dell ISG/partner tailwind.", "tags": ["Data Centers", "AI"], "ref": 12 },
+    { "date": "2026-05", "title": "Missouri General Assembly sends ~$50.7B FY2027 budget to Governor Kehoe", "impact": "Disciplined FY2027 plan reaches the governor's desk (signing deadline end of June); sellers should expect cost-justified, efficiency-led IT buys.", "tags": ["Budget"], "ref": 13 },
     { "date": "2026-05", "title": "Google announces $15B AI data center in New Florence", "impact": "Largest-scale AI-infrastructure investment in state history; reshapes energy and economic-development agenda and creates a major ecosystem tailwind for Dell ISG.", "tags": ["Data Centers", "AI"], "ref": 6 },
     { "date": "2026-04", "title": "Missouri AI regulation bills stall amid federal-funding concerns", "impact": "State AI rules remain unsettled as lawmakers weigh risk to rural broadband funds; governed-AI guidance now flows mainly through the executive branch.", "tags": ["AI", "Policy"], "ref": 7 },
     { "date": "2026-01", "title": "Gov. Kehoe proposed a $16.3B general-revenue FY2027 budget", "impact": "$54.5B all funds, -1.1% vs FY2026; a fiscal-discipline budget cutting $600M+ from core operations with a thin $4.7M ending balance. Reinforces Missouri's commitment to safely integrate AI into state-government operations under the Missouri GREAT initiative.", "tags": ["Budget", "AI"], "ref": 11 },
     { "date": "2026-01", "title": "Governor Kehoe signs Executive Order 26-02 on AI", "impact": "Mandates a statewide AI integration framework by Nov 30, 2026; agencies will need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
-    { "date": "2026-01", "title": "NTIA approves Missouri's $814M BEAD broadband plan", "impact": "Funds fiber to 200,000+ locations while saving ~$900M of the $1.7B allocation; expands the long-term connected-government footprint.", "tags": ["Broadband"], "ref": 8 },
-    { "date": "2025-12", "title": "FY2027 consensus revenue estimate set at $13.65B (+3.8%)", "impact": "Frames a disciplined FY2027 budget; sellers should expect cost-justified, efficiency-led IT buys.", "tags": ["Budget"], "ref": 4 },
-    { "date": "2025-06", "title": "Kehoe signs $50.8B FY2026 budget with 200+ vetoes", "impact": "Sets a constrained spending environment; technology investments must show clear ROI and efficiency gains.", "tags": ["Budget"], "ref": 3 }
+    { "date": "2026-01", "title": "NTIA approves Missouri's $814M BEAD broadband plan", "impact": "Funds fiber to 200,000+ locations while saving ~$900M of the $1.7B allocation; expands the long-term connected-government footprint.", "tags": ["Broadband"], "ref": 8 }
   ],
 
   "dellActions": [
@@ -154,6 +154,8 @@
     { "label": "KY3 — Missouri receives approval for $814 million broadband expansion", "url": "https://www.ky3.com/2026/01/08/missouri-receives-approval-814-million-broadband-expansion/" },
     { "label": "Missouri DPS — FY2025 State and Local Cybersecurity Grant Program (NOFO)", "url": "https://dps.mo.gov/dir/programs/ohs/grantstraining/documents/fy2025-slcgp-nofo.pdf" },
     { "label": "Missouri OA — Cooperative Procurement Program FAQs", "url": "https://oa.mo.gov/purchasing/cooperative-procurement-program/faqs" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "AIwire/HPCwire — Amazon Selects Missouri for $10B Data Center Campus", "url": "https://www.hpcwire.com/aiwire/2026/06/16/amazon-selects-missouri-for-10b-data-center-campus/" },
+    { "label": "The Beacon — Missouri General Assembly sends $50.7 billion budget to governor's desk", "url": "https://thebeaconnews.org/stories/2026/05/07/missouri-lawmakers-approve-50-7-billion-budget/" }
   ]
 }

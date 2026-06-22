@@ -3,7 +3,7 @@
   "name": "Kansas",
   "slug": "kansas",
   "region": "Midwest",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A statewide IT-and-cybersecurity consolidation under one Executive CITO, a first-in-the-nation NIST CSF 2.0 mandate, and a Kansas City-metro data-center and battery boom — Kansas is centralizing how it buys and secures technology.",
 
   "snapshot": [
@@ -125,13 +125,13 @@
   ],
 
   "news": [
+    { "date": "2026-06-17", "title": "Panasonic to shift some De Soto lines to AI data-center batteries", "impact": "~$2.18B data-center-battery investment (parent ~$3B FY27–29); first cells ~late 2028/early 2029. Confirms the KC-metro as an AI-infrastructure supply cluster — tailwind for Dell ISG/data-center demand near the state.", "tags": ["Data Centers", "AI Infrastructure", "Economic Dev"], "ref": 10 },
     { "date": "2026-03", "title": "Kansas Legislature sends FY2027 budget (HB 2513) to Governor Kelly", "impact": "Sets ~$26.8B total state spending; technology spend continues to flow through OITS and agency budgets.", "tags": ["Budget"], "ref": 1 },
     { "date": "2025-12", "title": "NTIA approves Kansas $166.6M BEAD final proposal", "impact": "Funds connectivity to ~26,673 locations; expands the connected footprint for downstream public-sector compute.", "tags": ["Broadband", "Federal Funds"], "ref": 7 },
     { "date": "2026-01", "title": "Gov. Laura Kelly proposed a $10.8B general-fund FY2027 budget", "impact": "$26.7B all funds, +1.6% vs FY2026; $1.6B general-fund ending balance (14.7%) and a $2.03B budget stabilization fund, charting a path back to structural balance.", "tags": ["Budget"], "ref": 9 },
     { "date": "2025-11", "title": "OITS nears completion of SB 291 cybersecurity integration planning", "impact": "Three-year IT plan and 2026 consolidation projects take shape — centralizing the buyer.", "tags": ["Consolidation", "Cybersecurity"], "ref": 4 },
     { "date": "2025-08", "title": "Meta's $1B Kansas City-area data center goes live", "impact": "Signals the scale of AI-infrastructure investment landing in the KC metro; AI-optimized capacity to follow.", "tags": ["Data Centers", "AI"], "ref": 6 },
-    { "date": "2025-07", "title": "Panasonic opens $4B De Soto EV-battery plant", "impact": "Anchors a regional battery/data-center industrial base; exploring data-center battery production by ~2029.", "tags": ["Economic Dev", "Manufacturing"], "ref": 6 },
-    { "date": "2025-06", "title": "OITS advances statewide IT assessment with Gartner", "impact": "Current-state infrastructure review feeds the SB 291 consolidation roadmap and 2026 integration projects.", "tags": ["Consolidation"], "ref": 4 }
+    { "date": "2025-07", "title": "Panasonic opens $4B De Soto EV-battery plant", "impact": "Anchors a regional battery/data-center industrial base; exploring data-center battery production by ~2029.", "tags": ["Economic Dev", "Manufacturing"], "ref": 6 }
   ],
 
   "dellActions": [
@@ -152,6 +152,7 @@
     { "label": "Kansas Dept. of Commerce — Kansas Broadband Receives Federal Approval for $166.6M BEAD Final Proposal", "url": "https://www.kansascommerce.gov/2025/12/kansas-broadband-receives-federal-approval-for-166-6m-bead-final-proposal/" },
     { "label": "Kansas Dept. of Administration — Office of Procurement and Contracts", "url": "https://admin.ks.gov/offices/procurement-contracts" },
     { "label": "Kansas Dept. of Commerce — Governor Kelly Celebrates Grand Opening of Panasonic EV Battery Facility in De Soto", "url": "https://www.kansascommerce.gov/2025/07/governor-kelly-celebrates-grand-opening-of-panasonic-ev-battery-manufacturing-facility-in-de-soto/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Kansas Reflector — Panasonic to shift some Kansas production lines to make AI data-center batteries (June 17, 2026)", "url": "https://kansasreflector.com/2026/06/17/panasonic-to-shift-some-kansas-production-lines-to-make-ai-data-center-batteries/" }
   ]
 }

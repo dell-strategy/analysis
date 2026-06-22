@@ -3,7 +3,7 @@
   "name": "Kentucky",
   "slug": "kentucky",
   "region": "Southeast",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A disciplined new two-year budget, the nation's most comprehensive state AI-governance law now in force, and a hyperscale data-center boom landing in Louisville — Kentucky is rewiring how it adopts and secures technology.",
 
   "snapshot": [
@@ -110,18 +110,18 @@
   "powerStructure": [
     { "name": "Andy Beshear", "title": "Governor", "org": "Commonwealth of Kentucky", "note": "Signed SB 4 AI-governance law; proposed the FY2026–28 budget. Faces a GOP legislative supermajority that overrode most of his budget vetoes.", "ref": 4 },
     { "name": "Jim Barnhart", "title": "State CIO & Executive Director", "org": "Commonwealth Office of Technology (COT)", "note": "Named CIO in 2025 after serving as acting CIO under three administrations; led IT consolidation and cloud migration. Owns the statewide tech direction.", "ref": 5 },
-    { "name": "Office of the CISO (COT)", "title": "Statewide cybersecurity", "org": "COT", "note": "Runs the NIST 800-53-aligned security program, network monitoring/response, and fee-based services to agencies; whole-of-state direction." },
+    { "name": "Office of the CISO (COT)", "title": "Statewide cybersecurity (CISO seat currently vacant)", "org": "COT", "note": "Runs the NIST 800-53-aligned security program, network monitoring/response, and fee-based services to agencies; the COT CISO position is listed vacant as of June 2026 — a near-term opening for managed-security engagement.", "ref": 9 },
     { "name": "GOP General Assembly leadership", "title": "Appropriations & policy", "org": "Kentucky General Assembly", "note": "Supermajority controls the budget and sets data-center incentive and AI policy — a key forecasting input." }
   ],
 
   "news": [
+    { "date": "2026-06-19", "title": "EPIC releases Kentucky's first statewide data-center policy analysis for the General Assembly", "impact": "Quantifies a deep pipeline (37 existing centers; LG&E/KU ~29 projects, ~3.5 GW at ≥50% likelihood, up to ~12 GW prospective; Louisville campus ~402 MW / ~$11B lifetime). Frames where/when KY compute capacity lands and the ratepayer/cost rules lawmakers must set first.", "tags": ["Data Centers", "Policy", "Energy"], "ref": 11 },
     { "date": "2026-04", "title": "Legislature overrides most Beshear vetoes; ~$32B two-year budget becomes law", "impact": "FY2026–28 spending is set and disciplined; tech dollars sit inside agency budgets, not a discretionary pool.", "tags": ["Budget"], "ref": 3 },
     { "date": "2026-04", "title": "GA finalizes disciplined, balanced two-year state budget (HB 500)", "impact": "Confirms the austere posture — modernization must be framed as efficiency and consolidation.", "tags": ["Budget"], "ref": 1 },
     { "date": "2026-01", "title": "Gov. Beshear proposed a $16.4B general-fund FY2027 budget", "impact": "$154.8B all funds across the FY2027–28 biennium, -1.9% vs FY2026; fully funds pensions and builds a ~$3.0B Budget Reserve Trust Fund. Proposes a Kentucky Cyber Resilience Task Force to detect, respond to, and recover from cyber incidents.", "tags": ["Budget", "Cybersecurity"], "ref": 10 },
     { "date": "2025-12", "title": "AI data-center boom arrives in Kentucky; 2026 session to weigh costs", "impact": "Hyperscale AI demand grows, but energy/cost debate may shape incentives — watch for policy moves.", "tags": ["Data Centers", "AI"], "ref": 6 },
     { "date": "2025-07", "title": "Kentucky opens BEAD Round 2 project applications (~$1.1B)", "impact": "Broadband subawards advance, expanding the connected footprint and downstream compute needs.", "tags": ["Broadband"], "ref": 7 },
-    { "date": "2025-05", "title": "Jim Barnhart named permanent State CIO", "impact": "Tech direction stabilizes under a consolidation- and cloud-focused leader who owns SB 4 AI governance.", "tags": ["Leadership"], "ref": 5 },
-    { "date": "2025-03", "title": "Gov. Beshear signs SB 4 AI-governance law", "impact": "Government-use AI guardrails are live; agencies need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 4 }
+    { "date": "2025-05", "title": "Jim Barnhart named permanent State CIO", "impact": "Tech direction stabilizes under a consolidation- and cloud-focused leader who owns SB 4 AI governance.", "tags": ["Leadership"], "ref": 5 }
   ],
 
   "dellActions": [
@@ -142,6 +142,7 @@
     { "label": "Kentucky Office of Broadband Development — BEAD program", "url": "https://broadband.ky.gov/resources/Pages/State-Broadband-Plan.aspx" },
     { "label": "Kentucky Finance & Administration Cabinet — State agency and local government procurement", "url": "https://finance.ky.gov/eProcurement/Pages/state-agency-and-local-government-procurement.aspx" },
     { "label": "Commonwealth Office of Technology — Office of the CISO services", "url": "https://technology.ky.gov/OCISO/Pages/services.aspx" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Kentucky Senate — EPIC releases first statewide analysis of data-center development (June 19, 2026)", "url": "https://kysenaterepublicans.com/press-releases/2026/6/19/kentucky-energy-planning-and-inventory-commission-releases-first-statewide-analysis-of-data-center-development" }
   ]
 }

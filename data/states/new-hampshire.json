@@ -3,7 +3,7 @@
   "name": "New Hampshire",
   "slug": "new-hampshire",
   "region": "Northeast",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A lean $15.9B biennial budget, a fresh 2025–2029 statewide IT strategy built around 'Digital Transformation is the Business,' and a rising wave of local-government cyberattacks — New Hampshire is modernizing under tight fiscal discipline.",
 
   "snapshot": [
@@ -115,6 +115,7 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "NH data-center regulation bills die; no statewide framework", "impact": "Statewide data-center bills (incl. SB 439) failed and the Nottingham proposal was withdrawn amid local opposition — NH remains a small, energy-constrained market unlikely to land hyperscale AI build, keeping the Dell motion on state-government modernization and cyber rather than data-center ecosystem.", "tags": ["Data Centers", "Policy"], "ref": 9 },
     { "date": "2025-12", "title": "IT Council ratifies 2025–2029 statewide IT strategy", "impact": "'Digital Transformation is the Business' becomes the blueprint for modernization and security spend — align Dell offerings to its goals.", "tags": ["Strategy", "Modernization"], "ref": 6 },
     { "date": "2025-11", "title": "NTIA approves New Hampshire's BEAD Final Proposal", "impact": "Unlocks federal broadband execution (~$196.6M total federal); expands the digital footprint DoIT must support and secure.", "tags": ["Broadband", "Federal Funds"], "ref": 4 },
     { "date": "2025-10", "title": "Local cyber incidents mount across NH counties, courts, and schools", "impact": "Hillsborough, Strafford, Pelham/Hudson, and Coös County incidents harden the whole-of-state security case — resilience and recovery demand.", "tags": ["Cybersecurity"], "ref": 7 },
@@ -139,6 +140,7 @@
     { "label": "NH DoIT — Use of Artificial Intelligence Technologies Policy", "url": "https://mm.nh.gov/files/uploads/doit/documents/sonh-use-of-artificial-intelligence-technologies-policy.pdf" },
     { "label": "NH DoIT — Strategic Planning (2025–2029 IT Strategy)", "url": "https://www.doit.nh.gov/strategic-planning" },
     { "label": "NH DoIT — 2026 New Hampshire Cyber Threat Assessment", "url": "https://mm.nh.gov/files/uploads/doit/documents/2026-new-hampshire-cyber-threat-assessment.pdf" },
-    { "label": "NH DAS — Procurement & Support Services (Statewide Contracts)", "url": "https://apps.das.nh.gov/bidscontracts/contracts.aspx" }
+    { "label": "NH DAS — Procurement & Support Services (Statewide Contracts)", "url": "https://apps.das.nh.gov/bidscontracts/contracts.aspx" },
+    { "label": "NHPR — As Nottingham addresses data-center backlash, what does NH law say? (June 2, 2026)", "url": "https://www.nhpr.org/nh-news/2026-06-02/nottingham-data-center-proposal-nh-stand-data-centers-laws-regulations-ai" }
   ]
 }

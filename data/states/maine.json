@@ -3,7 +3,7 @@
   "name": "Maine",
   "slug": "maine",
   "region": "Northeast",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A new $11.65B biennial budget, a governed path to AI in state government, a deliberate stance on data centers, and a broadband buildout squeezed by federal uncertainty — Maine is a small, centralized, relationship-driven market.",
 
   "snapshot": [
@@ -44,7 +44,7 @@
     "notes": [
       "Budget figures are General Fund biennial totals; Maine has no broken-out statewide IT appropriation.",
       "Broadband funding faces federal uncertainty — BEAD restructuring in 2025 left a large share of Maine's promised allocation undelivered; forecast cautiously.",
-      "FY2027 (governor's proposed supplemental, per NASBO): $5.86B general-fund revenue, +1.4% vs FY2026; the supplemental adds ~$187.8M in net FY2027 GF appropriations, bringing the FY2026–27 biennial GF total to $11.93B. Taps a record rainy day fund (projected >$700M after withdrawals) for one-time investments, including AI initiatives from the governor's AI task force."
+      "FY2026–27 supplemental budget (~$519M) signed April 10, 2026 — draws ~$292M from the rainy day fund, makes Free Community College permanent, and adds relief/property-tax measures. (Per NASBO's FY2027 summary, the supplemental adds ~$187.8M in net FY2027 GF appropriations, bringing the biennial GF total to ~$11.93B.)"
     ]
   },
 
@@ -118,7 +118,7 @@
   },
 
   "powerStructure": [
-    { "name": "Janet Mills", "title": "Governor", "org": "State of Maine", "note": "Drove the AI Task Force (EO, Dec 2024); vetoed the data-center moratorium and created the Data Center Advisory Council. Term-limited; 2026 is an election year — watch for transition.", "ref": 8 },
+    { "name": "Janet Mills", "title": "Governor", "org": "State of Maine", "note": "Drove the AI Task Force (EO, Dec 2024); vetoed the data-center moratorium (override failed) and created the Data Center Advisory Council. Term-limited (leaves Jan 2027); dropped her 2026 U.S. Senate bid Apr 30, 2026. Open-seat governor's race (Pingree-D, Charles-R, Bennett-I) — watch for transition.", "ref": 12 },
     { "name": "Nicholas Marquis", "title": "Acting State CIO", "org": "MaineIT / DAFS", "note": "Acting Chief Information Officer leading MaineIT; testified to the Legislature as Acting CIO in 2025. The seat has been in an acting posture since 2023 — confirm current status before forecasting.", "ref": 4 },
     { "name": "B. Victor Chakravarty", "title": "Director of Digital Services", "org": "MaineIT", "note": "Leads digital services within MaineIT — a key contact for application modernization and citizen-facing platforms." },
     { "name": "DAFS Procurement Services", "title": "Statewide contracting authority", "org": "DAFS", "note": "Owns master agreements and cooperative-vehicle participation; the gatekeeper for state technology buys." },
@@ -126,12 +126,12 @@
   ],
 
   "news": [
-    { "date": "2026-04", "title": "Gov. Mills signs EO 5 creating the Data Center Advisory Council (after vetoing LD 307 moratorium)", "impact": "Signals a cautious, policy-gated stance on large data centers; limited near-term in-state hyperscale demand. Recommendations due Jan 2027.", "tags": ["Data Centers", "Policy"], "ref": 8 },
+    { "date": "2026-06-03", "title": "Data Center Advisory Council holds first meetings (June 3 and June 23)", "impact": "Council is actively debating grid, ratepayer, and environmental restrictions on large data centers; recommendations due Jan 29, 2027. Confirms Maine's deliberate, policy-gated posture — qualify in-state hyperscale demand carefully.", "tags": ["Data Centers", "Policy"], "ref": 13 },
+    { "date": "2026-05", "title": "$550M Jay data center proceeds after moratorium veto override fails", "impact": "Mills' veto of the first-in-nation data-center moratorium stood (override failed Apr 29); a $550M project at the former Androscoggin Mill (capped ~82MW) moves forward — a rare in-state large-DC signal in an otherwise cautious market.", "tags": ["Data Centers", "Economic Dev"], "ref": 14 },
+    { "date": "2026-04", "title": "Gov. Mills signs ~$519M supplemental budget; creates Data Center Advisory Council (EO 5)", "impact": "Supplemental enacted Apr 10 (draws ~$292M from the rainy day fund; makes Free Community College permanent). EO 5 (Apr 29) stands up the 15-member Data Center Advisory Council with recommendations due Jan 2027.", "tags": ["Budget", "Data Centers", "Policy"], "ref": 8 },
     { "date": "2026-03", "title": "MaineIT Generative AI Policy takes effect", "impact": "State moves from a GenAI moratorium to governed adoption — opens the door to auditable, private/on-prem AI on sensitive data.", "tags": ["AI", "Policy"], "ref": 6 },
     { "date": "2026-02", "title": "~$50M in new broadband awards announced (~22,000 connections)", "impact": "Continued last-mile buildout via the Maine Connectivity Authority, even amid federal-funding pressure.", "tags": ["Broadband", "Infrastructure"], "ref": 7 },
-    { "date": "2026-02", "title": "Gov. Mills proposed a $5.86B general-fund FY2027 supplemental budget", "impact": "Supplemental adds ~$187.8M in net FY2027 GF appropriations (+1.4% revenue vs FY2026), bringing the biennial GF total to $11.93B; taps a record rainy day fund (>$700M after withdrawals) for one-time investments. Directs funds to AI initiatives in line with the governor's AI task force.", "tags": ["Budget", "AI"], "ref": 11 },
     { "date": "2025-10", "title": "Maine AI Task Force delivers final report (~34 recommendations)", "impact": "Sets the strategic direction for state-agency AI use, transparency, and risk management; informs upcoming MaineIT policy and spend.", "tags": ["AI", "Strategy"], "ref": 5 },
-    { "date": "2025-06", "title": "Federal BEAD restructuring to 'infrastructure-only' leaves much of Maine's allocation undelivered", "impact": "Introduces real uncertainty into the broadband funding picture — forecast infrastructure demand cautiously.", "tags": ["Broadband", "Federal Funds"], "ref": 7 },
     { "date": "2025-03", "title": "FY2026–27 biennial General Fund budget (~$11.65B) enacted", "impact": "Sets the two-year spending baseline that frames agency technology budgets through mid-2027.", "tags": ["Budget"], "ref": 2 }
   ],
 
@@ -154,6 +154,9 @@
     { "label": "Office of Governor Mills — Executive Order Establishing the Maine Data Center Advisory Council", "url": "https://www.maine.gov/governor/mills/news/governor-mills-signs-executive-order-establish-maine-data-center-advisory-council-2026-04-29" },
     { "label": "University of Maine — ARCSIM Advanced Research Computing", "url": "https://umaine.edu/arcsim/computing/" },
     { "label": "State of Maine Cloud Solutions Contract (NASPO ValuePoint / Carahsoft)", "url": "https://www.carahsoft.com/buy/slg-contracts/maine-state-contracts/state-maine-cloud-solutions-contract-naspo" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Maine Public — Janet Mills drops out of race for U.S. Senate (Apr 30, 2026)", "url": "https://www.mainepublic.org/politics/2026-04-30/janet-mills-drops-out-of-race-for-us-senate" },
+    { "label": "Maine Morning Star — New advisory group weighs benefits, pitfalls of data centers (Jun 4, 2026)", "url": "https://mainemorningstar.com/2026/06/04/new-advisory-group-weighs-potential-benefits-pitfalls-of-data-centers/" },
+    { "label": "IT Brew — After Maine data center moratorium veto, one project expected to move forward (May 4, 2026)", "url": "https://www.itbrew.com/stories/2026/05/04/after-maine-data-center-moratorium-veto-one-project-expected-to-move-forward" }
   ]
 }

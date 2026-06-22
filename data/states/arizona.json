@@ -3,18 +3,18 @@
   "name": "Arizona",
   "slug": "arizona",
   "region": "Southwest",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A $165B TSMC semiconductor megaproject, one of the nation's hottest data-center markets, and a governor leaning on AI to run government leaner — Arizona is a structural AI-infrastructure play.",
 
   "snapshot": [
-    { "label": "FY2026 State Budget", "value": "$18.3B" },
+    { "label": "FY2027 State Budget", "value": "$18.3B" },
     { "label": "Primary IT Vehicle", "value": "SPO Statewide / Co-op" },
     { "label": "Central IT Org", "value": "ADOA-ASET" },
     { "label": "Efficiency Lever", "value": "ACE Initiative (AI)" }
   ],
 
   "execSummary": {
-    "summary": "Arizona is one of the most important AI-infrastructure stories in the country, and the buying motion is driven more by economic-development gravity than by a single big appropriation. TSMC's Phoenix campus has scaled from $12B to a committed ~$165B (six fabs, advanced packaging, R&D), and the company bought another 900 acres at a January 2026 state land auction — the largest foreign greenfield investment in U.S. history. Around it, Arizona has become a top-two U.S. data-center market alongside Texas, with multi-gigawatt projects (Hassayampa Ranch, the La Osa/Vermaland park) landing fast. On the state side, Governor Hobbs signed an $18.3B bipartisan FY2026 budget on June 13, 2026 that includes a three-year moratorium on data-center tax incentives — a signal the state is managing growth, not stopping it. Her 'Arizona Capacity and Efficiency' (ACE) Initiative consolidates IT purchasing and deploys AI across agencies to save $40M-$100M, and the state's first AI Steering Committee is delivering governance and procurement guidance in 2026. For Dell, the center of gravity is AI infrastructure (PowerEdge, networking, services) plus a real consolidation/standardization opening as ADOA-ASET centralizes spend.",
+    "summary": "Arizona is one of the most important AI-infrastructure stories in the country, and the buying motion is driven more by economic-development gravity than by a single big appropriation. TSMC's Phoenix campus has scaled from $12B to a committed ~$165B (six fabs, advanced packaging, R&D), and the company bought another 900 acres at a January 2026 state land auction — the largest foreign greenfield investment in U.S. history. Around it, Arizona has become a top-two U.S. data-center market alongside Texas, with multi-gigawatt projects (Hassayampa Ranch, the La Osa/Vermaland park) landing fast. On the state side, Governor Hobbs signed an $18.3B bipartisan FY2027 budget on June 13, 2026 (the fiscal year begins July 1, 2026) that includes a three-year moratorium on data-center tax incentives and ~$1.4B in tax cuts — a signal the state is managing growth, not stopping it. Her 'Arizona Capacity and Efficiency' (ACE) Initiative consolidates IT purchasing and deploys AI across agencies to save $40M-$100M, and the state's first AI Steering Committee is delivering governance and procurement guidance in 2026. For Dell, the center of gravity is AI infrastructure (PowerEdge, networking, services) plus a real consolidation/standardization opening as ADOA-ASET centralizes spend.",
     "opportunities": [
       "AI-infrastructure / 'AI factory' demand tied to the TSMC semiconductor megaproject and a top-tier data-center market (PowerEdge, networking, services).",
       "IT consolidation and standardization under the ACE Initiative — a chance to displace fragmented agency buying with standardized Dell platforms and lifecycle.",
@@ -22,7 +22,7 @@
       "Endpoint, client, and managed-services refresh across 130+ agencies served by ADOA-ASET."
     ],
     "stats": [
-      { "value": "$18.3B", "label": "FY2026 Enacted Budget", "note": "Bipartisan; signed June 13, 2026", "ref": 1 },
+      { "value": "$18.3B", "label": "FY2027 Enacted Budget", "note": "Bipartisan; signed June 13, 2026", "ref": 1 },
       { "value": "~$165B", "label": "TSMC Arizona commitment", "note": "Largest U.S. greenfield FDI; 6 fabs", "ref": 4 },
       { "value": "$40M-$100M", "label": "ACE Initiative savings target", "note": "IT consolidation + AI", "ref": 6 },
       { "value": "3-yr", "label": "Data-center tax-incentive pause", "note": "Saves ~$57M; growth continues", "ref": 1 }
@@ -30,9 +30,9 @@
   },
 
   "budget": {
-    "intro": "Arizona budgets on an annual fiscal-year cycle (July 1-June 30). Governor Hobbs signed an $18.3B bipartisan FY2026 budget on June 13, 2026. There is no single published 'state IT budget' line; technology spend is distributed across agencies, with ADOA-ASET providing centralized enterprise technology services and the ACE Initiative now consolidating purchasing. The state's most consequential tech dollars sit outside the appropriations bill — in the private semiconductor and data-center buildout it is courting and, increasingly, managing.",
+    "intro": "Arizona budgets on an annual fiscal-year cycle (July 1-June 30). Governor Hobbs signed an $18.3B bipartisan FY2027 budget on June 13, 2026 (effective July 1, 2026), keeping spending growth to ~3% with a three-year data-center incentive moratorium and ~$1.4B in tax cuts. There is no single published 'state IT budget' line; technology spend is distributed across agencies, with ADOA-ASET providing centralized enterprise technology services and the ACE Initiative now consolidating purchasing. The state's most consequential tech dollars sit outside the appropriations bill — in the private semiconductor and data-center buildout it is courting and, increasingly, managing.",
     "stats": [
-      { "value": "$18.3B", "label": "FY2026 all-funds budget", "note": "Bipartisan deal", "ref": 1 },
+      { "value": "$18.3B", "label": "FY2027 enacted budget", "note": "Bipartisan; signed June 13, 2026", "ref": 1 },
       { "value": "~$57M", "label": "Saved by DC incentive pause", "note": "3-year moratorium", "ref": 1 },
       { "value": "$40M-$100M", "label": "ACE efficiency target", "note": "Not yet booked in budget", "ref": 6 }
     ],
@@ -44,7 +44,7 @@
       "Figures are annual (single fiscal year) unless noted; Arizona does not budget biennially like Texas.",
       "ACE savings are a target, not an appropriation, and were not booked into the proposed budget — treat as directional.",
       "The largest 'tech spend' in Arizona is private capex (TSMC, hyperscale data centers), not state appropriations — frame economic-development and ecosystem motions accordingly.",
-      "FY2027 (governor's proposed, per NASBO): $18.7B general fund, +4.9% vs FY2026; $74.9B all funds. Growth budget with a $1.68B rainy day fund (9.0% of GF); includes one-time state/local cybersecurity funding and eliminates the data-center tax exemption while adding a data-center water-usage fee."
+      "FY2027 enacted (signed June 13, 2026): ~$18.3B, a bipartisan deal holding spending growth to ~3% with ~$1.4B in tax cuts (no tax on tips/overtime from July 1, higher standard deduction), a three-year data-center tax-incentive moratorium (~$57M saved), and ~2.5% agency budget cuts. Hobbs' January FY2027 executive proposal (per NASBO) had been $18.7B general fund / $74.9B all funds with a $1.68B rainy day fund and a proposed data-center water-usage fee; the enacted deal pared that back."
     ]
   },
 
@@ -118,7 +118,7 @@
   },
 
   "powerStructure": [
-    { "name": "Katie Hobbs", "title": "Governor", "org": "State of Arizona", "note": "Signed the $18.3B FY2026 budget; champions the ACE efficiency/AI agenda and is actively managing the data-center boom.", "ref": 1 },
+    { "name": "Katie Hobbs", "title": "Governor", "org": "State of Arizona", "note": "Signed the $18.3B FY2027 budget (June 13, 2026); champions the ACE efficiency/AI agenda and is actively managing the data-center boom.", "ref": 1 },
     { "name": "J.R. Sloan", "title": "State CIO", "org": "ADOA-ASET", "note": "Owns statewide IT direction; sits on the AI Steering Committee and has held a NASCIO Executive Committee role.", "ref": 3 },
     { "name": "AI Steering Committee", "title": "AI policy & procurement guidance", "org": "Office of the Governor", "note": "19 members across government, academia, and industry; recommendations expected in 2026.", "ref": 5 },
     { "name": "Arizona Commerce Authority", "title": "Economic development & incentives", "org": "State of Arizona", "note": "Administers data-center tax incentives (now paused 3 years) and the TSMC/chip ecosystem relationships." },
@@ -126,7 +126,7 @@
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Hobbs signs $18.3B bipartisan FY2026 budget with 3-year data-center incentive pause", "impact": "Sets the fiscal frame; signals the state is managing (not stopping) the data-center boom — demand stays strong.", "tags": ["Budget", "Data Centers"], "ref": 1 },
+    { "date": "2026-06", "title": "Hobbs signs $18.3B bipartisan FY2027 budget with 3-year data-center incentive pause", "impact": "Enacted June 13, 2026 (effective July 1); ~$1.4B in tax cuts and ~2.5% agency cuts, but signals the state is managing (not stopping) the data-center boom — demand stays strong.", "tags": ["Budget", "Data Centers"], "ref": 1 },
     { "date": "2026-03", "title": "Hobbs launches ACE Initiative to consolidate IT and deploy AI", "impact": "Direct opening to standardize agency technology on Dell platforms and lead governed agency AI.", "tags": ["IT Consolidation", "AI"], "ref": 6 },
     { "date": "2026-01", "title": "Gov. Hobbs proposed a $18.7B general-fund FY2027 budget", "impact": "$74.9B all funds, +4.9% vs FY2026; $1.68B rainy day fund (9.0% of GF). Includes one-time state/local cybersecurity funding and replaces the data-center tax exemption with a data-center water-usage fee.", "tags": ["Budget", "Cybersecurity", "Data Centers"], "ref": 12 },
     { "date": "2026-01", "title": "TSMC buys 900 more acres in Phoenix at state land auction", "impact": "Confirms continued expansion of the ~$165B megaproject and a deepening in-state AI-hardware ecosystem.", "tags": ["Semiconductors"], "ref": 7 },

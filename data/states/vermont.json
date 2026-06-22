@@ -3,7 +3,7 @@
   "name": "Vermont",
   "slug": "vermont",
   "region": "Northeast",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A new AI Economic Task Force, a centralizing 'One ADS' tech strategy, a $70M+ Workday HR/finance overhaul, and a near-complete fiber broadband buildout — small-state Vermont is consolidating how it buys and runs technology.",
 
   "snapshot": [
@@ -76,7 +76,7 @@
       "dellFit": 45,
       "budgetStrength": 60,
       "tags": ["ERP", "Modernization", "Risk"],
-      "summary": "Vermont is replacing legacy human-resources and finance systems with the Workday cloud platform at a cost exceeding $70M. Officials recently shifted from a phased to an all-at-once rollout after finding the HR and finance components more interconnected than expected — a change that could raise cost and risk. While the platform is SaaS, the surrounding infrastructure, integration, and endpoint refresh create adjacent opportunity.",
+      "summary": "Vermont is replacing legacy human-resources and finance systems with the Workday cloud platform at a cost exceeding $70M. In April 2026 officials postponed the HR (HCM) go-live and moved to a single 'unified launch' now targeted for 2028 after finding the HR and finance components more interconnected than expected; legislators flagged the lack of an upfront gap analysis and are scrutinizing the project — raising cost, risk, and oversight attention. While the platform is SaaS, the slipping timeline opens room for advisory/integration and the surrounding infrastructure and endpoint refresh.",
       "ref": 4
     },
     {
@@ -126,13 +126,13 @@
   ],
 
   "news": [
-    { "date": "2026-05", "title": "Gov. Scott establishes Vermont AI Economic Task Force (EO 01-26)", "impact": "New state AI agenda; ADS co-chairs and must name priority AI opportunities within 90 days.", "tags": ["AI", "Policy"], "ref": 5 },
-    { "date": "2026-04", "title": "Vermont shifts $70M+ Workday rollout from phased to all-at-once", "impact": "HR/finance components found more interconnected than expected; raises cost/risk and oversight attention.", "tags": ["ERP", "Modernization"], "ref": 4 },
+    { "date": "2026-06-16", "title": "Gov. Scott signs FY2027 budget (H.951, ~$9.33B); vetoes S.190", "impact": "Budget enacted ~$1M below the January proposal with a 'disciplined spending' posture — expect cost scrutiny on new IT spend.", "tags": ["Budget"], "ref": 12 },
+    { "date": "2026-05", "title": "Gov. Scott establishes Vermont AI Economic Task Force (EO 01-26)", "impact": "New state AI agenda; ADS co-chairs and must name priority AI opportunities within 90 days (report due ~mid-Aug 2026).", "tags": ["AI", "Policy"], "ref": 5 },
+    { "date": "2026-04", "title": "Vermont postpones Workday HR go-live; unified launch slips to 2028", "impact": "HR/finance components found more interconnected than expected; raises cost/risk, oversight attention, and integration/advisory openings.", "tags": ["ERP", "Modernization"], "ref": 13 },
     { "date": "2026-01", "title": "Gov. Scott proposed a $2.53B general-fund FY2027 budget", "impact": "$9.4B all funds, -0.6% vs FY2026; reserves ~$375M (~14.8% of GF). Recommends fiscal discipline amid tighter conditions and less expected federal support.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-01", "title": "ADS 2026 Annual Report details 'One ADS' service-based IT model", "impact": "Consolidation and internal-service-fund billing reshape how shared technology is funded.", "tags": ["ADS", "Budget"], "ref": 2 },
     { "date": "2025-12", "title": "Cybersecurity Advisory Council moves to extend protection beyond state government", "impact": "Local and critical-infrastructure cyber demand grows; SLCGP funds in play.", "tags": ["Cybersecurity"], "ref": 6 },
-    { "date": "2025-09", "title": "VCBB outlines ~$180–229M broadband proposal; NEK Broadband wins ~$93M", "impact": "Fiber buildout pushes toward ~99% statewide access; expanding CUD digital footprint.", "tags": ["Broadband"], "ref": 7 },
-    { "date": "2025-06", "title": "FY2026 Appropriations Act (Act 27) enacted at ~$9.1B all funds", "impact": "Record all-funds budget frames agency technology and modernization spend.", "tags": ["Budget"], "ref": 1 }
+    { "date": "2025-09", "title": "VCBB outlines ~$180–229M broadband proposal; NEK Broadband wins ~$93M", "impact": "Fiber buildout pushes toward ~99% statewide access; expanding CUD digital footprint.", "tags": ["Broadband"], "ref": 7 }
   ],
 
   "dellActions": [
@@ -154,6 +154,8 @@
     { "label": "Vermont BGS — Office of Purchasing and Contracting", "url": "https://bgs.vermont.gov/purchasing" },
     { "label": "Vermont ADS — Vendor Procurement", "url": "https://digitalservices.vermont.gov/working-us/procurement" },
     { "label": "Vermont ADS — Artificial Intelligence", "url": "https://digitalservices.vermont.gov/ai" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Vermont Business Magazine — Scott signs 16 bills, vetoes S.190 (June 17, 2026)", "url": "https://vermontbiz.com/news/2026/june/17/scott-signs-16-bills-vetoes-s190-reference-based-pricing" },
+    { "label": "Vermont Public — Lawmakers scrutinize $70M IT overhaul as administration postpones rollout (Apr 8, 2026)", "url": "https://www.vermontpublic.org/local-news/2026-04-08/lawmakers-scrutinize-70m-it-overhaul-scott-administration-postpones-rollout" }
   ]
 }

@@ -3,7 +3,7 @@
   "name": "Michigan",
   "slug": "michigan",
   "region": "Great Lakes",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A historic AI data-center boom anchored by Stargate, fresh sales-tax incentives, and a fully centralized DTMB make Michigan one of the strongest AI-infrastructure markets in the Midwest.",
 
   "snapshot": [
@@ -44,7 +44,7 @@
     "notes": [
       "Figures are annual (single fiscal year) unless noted; FY2027 numbers are an executive proposal, not enacted.",
       "Technology spend is centralized in DTMB and largely embedded in agency service charges rather than broken out as a single IT line.",
-      "FY2027 (governor's proposed, per NASBO): $13.6B general fund, -3.6% vs FY2026; $88.1B all funds. Fiscal-responsibility frame with a $400M rainy-day withdrawal that still leaves the reserve near an all-time high."
+      "FY2027 budget not yet enacted as of June 2026: the Senate passed ~$88.1B (Apr 29) but the GOP-led House and the Dem Senate/Governor are split, with a continuation/stopgap budget floated that could delay a deal past the November elections; a second straight missed July 1 deadline is a live risk. (Governor's proposal, per NASBO: $13.6B GF, -3.6% vs FY2026; $88.1B all funds; $400M rainy-day withdrawal leaving reserves near an all-time high.)"
     ]
   },
 
@@ -56,7 +56,7 @@
       "dellFit": 90,
       "budgetStrength": 85,
       "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
-      "summary": "The OpenAI/Oracle/Related Digital 'Stargate' campus in Saline Township (~1.4GW of DTE-supplied load, multi-billion-dollar, called the largest one-time investment in state history) broke ground in early 2026 despite local opposition. It anchors a wider data-center wave drawn by Michigan's expanded sales/use-tax exemptions. This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
+      "summary": "The OpenAI/Oracle/Related Digital 'Stargate' campus in Saline Township (~1.4GW power, multi-billion-dollar, called the largest one-time investment in state history) advanced to active construction in mid-2026 — the June 1 'The Barn' milestone marked three ~550,000 sq ft halls (~1.65M sq ft total), completion targeted end-2027, despite local opposition. It anchors a wider data-center wave drawn by Michigan's expanded sales/use-tax exemptions. This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
       "ref": 7
     },
     {
@@ -125,9 +125,9 @@
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Stargate Michigan construction advances; Saline Township buildout proceeds", "impact": "Confirms Michigan as a top-tier AI-infrastructure market; sustained hyperscale compute demand.", "tags": ["Data Centers", "AI"], "ref": 7 },
-    { "date": "2026-02", "title": "Gov. Whitmer proposed a $13.6B general-fund FY2027 budget", "impact": "$88.1B all funds, -3.6% GF vs FY2026; a $400M rainy-day withdrawal still leaves reserves near an all-time high amid a ~$1.8B gap. Continues investments to modernize state systems and strengthen the Election Equipment Reserve Fund.", "tags": ["Budget"], "ref": 11 },
-    { "date": "2026-01", "title": "DTMB gets acting director (Kyle Guerrant) and acting CIO (Eric Swanson)", "impact": "Leadership reset at the central IT authority; account mapping and relationships in flux.", "tags": ["Leadership"], "ref": 3 },
+    { "date": "2026-06-01", "title": "Stargate 'The Barn' construction celebrated in Saline Township", "impact": "Oracle/OpenAI/Related Digital and Gov. Whitmer mark construction of a ~1GW (1.4GW power) campus — three ~550,000 sq ft halls, ~1.65M sq ft total, completion targeted end-2027. Confirms Michigan as a top-tier AI-infrastructure market despite local opposition.", "tags": ["Data Centers", "AI"], "ref": 7 },
+    { "date": "2026-06", "title": "FY2027 budget unsigned; stopgap risk before July 1 deadline", "impact": "Senate passed ~$88.1B (Apr 29) but the GOP-led House and Dem Senate/Governor remain split; House Speaker floated a continuation budget that could push a deal past the Nov elections. A second straight missed July 1 deadline would delay FY2027 state IT procurement decisions.", "tags": ["Budget"], "ref": 11 },
+    { "date": "2026-01", "title": "DTMB gets acting director (Kyle Guerrant) and acting CIO (Eric Swanson)", "impact": "Leadership reset at the central IT authority; both seats still acting as of June 2026 — account mapping and relationships in flux.", "tags": ["Leadership"], "ref": 3 },
     { "date": "2025-12", "title": "Michigan celebrates $1.47B high-speed internet investment ($920M BEAD)", "impact": "Large fiber buildout begins 2026; downstream edge, networking, and endpoint demand.", "tags": ["Broadband"], "ref": 6 },
     { "date": "2025-12", "title": "Rex Menold named State Chief Security Officer", "impact": "New owner of enterprise cybersecurity strategy — a fresh relationship to build.", "tags": ["Cybersecurity", "Leadership"], "ref": 8 },
     { "date": "2025-10", "title": "Whitmer announces Saline Township data center as 'largest investment in state history'", "impact": "Signals the scale of AI-infrastructure capital landing in Michigan.", "tags": ["Data Centers", "AI"], "ref": 7 }
@@ -152,6 +152,8 @@
     { "label": "Security Boulevard — Securing Michigan: the State's Public Sector Cybersecurity Leaders", "url": "https://securityboulevard.com/2026/04/securing-michigan-the-states-public-sector-cybersecurity-leaders/" },
     { "label": "DTMB — MiDEAL Extended Purchasing Program", "url": "https://www.michigan.gov/dtmb/procurement/mideal-extended-purchasing-program" },
     { "label": "DTMB — Procurement / Contract Connect", "url": "https://www.michigan.gov/dtmb/procurement" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Oracle — Related Digital, Oracle, OpenAI, Walbridge and Gov. Whitmer celebrate Stargate campus construction (Jun 1, 2026)", "url": "https://www.oracle.com/news/announcement/related-digital-oracle-openai-walbridge-and-governor-whitmer-celebrate-construction-of-stargate-campus-in-saline-township-2026-06-01/" },
+    { "label": "Michigan Public — House Speaker floats stopgap budget as July 1 deadline nears (Jun 12, 2026)", "url": "https://www.michiganpublic.org/politics-government/2026-06-12/michigan-house-speaker-floats-stopgap-budget-as-july-1-deadline-nears" }
   ]
 }

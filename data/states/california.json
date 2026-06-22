@@ -3,7 +3,7 @@
   "name": "California",
   "slug": "california",
   "region": "West",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "The nation's largest state IT market enters FY2025-26 under fiscal pressure but with a new tech chief, a sweeping AI-procurement order, and the country's first frontier-AI law reshaping how California buys and governs technology.",
 
   "snapshot": [
@@ -126,13 +126,13 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Legislature passes FY2026-27 budget at the June 15 deadline; final deal in negotiation", "impact": "Builds on Newsom's May Revise; higher revenue projections add billions for K-12/community colleges, with final figures to be settled with the governor before July 1.", "tags": ["Budget"], "ref": 13 },
+    { "date": "2026-05", "title": "Newsom's May Revision eliminates the FY2026-27 deficit", "impact": "$0 deficit this year and next via a ~$1.8B General Fund reduction; ~$30B combined reserves. Constrained but balanced — tie offers to mandated modernization, not discretionary spend.", "tags": ["Budget"], "ref": 12 },
     { "date": "2026-04", "title": "Newsom appoints Chris Given as State CIO & CDT Director", "impact": "New tech leadership with a legacy-modernization and AI mandate; relationship-building window for sellers.", "tags": ["Leadership"], "ref": 3 },
     { "date": "2026-03", "title": "EO N-5-26 establishes AI vendor-certification & procurement framework", "impact": "New compliance gate for AI buys; recommendations due ~120 days out. Favors governed, auditable AI.", "tags": ["AI", "Procurement"], "ref": 5 },
     { "date": "2026-04", "title": "Liana Bailey-Crimmins retires as State CIO", "impact": "End of a four-year tenure that launched California's GenAI program; transition in CDT leadership.", "tags": ["Leadership"], "ref": 2 },
-    { "date": "2026-01", "title": "Gov. Newsom proposed a $248.3B general-fund FY2027 budget", "impact": "$348.9B total state spending (excl. federal), +4.5% vs FY2026; balanced plan addressing a $2.9B shortfall and strengthening reserves to $23.0B combined ($14.4B rainy day).", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-01", "title": "SB 53 frontier-AI transparency law takes effect", "impact": "Nation's first frontier-AI regulation is live; reinforces demand for transparent, governed AI.", "tags": ["AI", "Policy"], "ref": 6 },
-    { "date": "2025-06", "title": "Budget Act of 2025 signed (~$321.1B; ~$11.8B shortfall closed)", "impact": "Constrained fiscal year — tie offers to mandated modernization and federal/state-funded programs.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-04", "title": "California scales GenAI in state government (Caltrans, CDTFA, Copilot)", "impact": "Production AI workloads drive infrastructure, networking, and services demand.", "tags": ["AI", "Modernization"], "ref": 4 }
+    { "date": "2025-06", "title": "Budget Act of 2025 signed (~$321.1B; ~$11.8B shortfall closed)", "impact": "Constrained fiscal year — tie offers to mandated modernization and federal/state-funded programs.", "tags": ["Budget"], "ref": 1 }
   ],
 
   "dellActions": [
@@ -154,6 +154,8 @@
     { "label": "California eBudget — Department of Technology (7502) FY2025-26", "url": "https://ebudget.ca.gov/2025-26/pdf/GovernorsBudget/7500/7502.pdf" },
     { "label": "CPUC — Last Mile Federal Funding Account (broadband)", "url": "https://www.cpuc.ca.gov/industries-and-topics/internet-and-phone/broadband-implementation-for-california/last-mile-federal-funding-account" },
     { "label": "DGS — California Multiple Award Schedules (CMAS)", "url": "https://dgs.ca.gov/PD-CMAS" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Office of the Governor — May Revision eliminates California's deficit (2026-27)", "url": "https://www.gov.ca.gov/2026/05/14/may-revise/" },
+    { "label": "EdSource — California Legislature passes 2026-27 budget", "url": "https://edsource.org/2026/california-legislature-passes-budget/760411" }
   ]
 }

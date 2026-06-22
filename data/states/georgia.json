@@ -3,7 +3,7 @@
   "name": "Georgia",
   "slug": "georgia",
   "region": "Southeast",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A $38.5B FY2027 budget, a fast-maturing statewide AI governance program, and one of the nation's hottest data-center markets now facing a tax and energy reckoning — Georgia is reshaping how it adopts and secures technology.",
 
   "snapshot": [
@@ -14,7 +14,7 @@
   ],
 
   "execSummary": {
-    "summary": "Georgia budgets annually on a July–June fiscal year. Governor Kemp signed the $38.5B FY2027 budget in May 2026, a fiscally cautious plan that directs agencies to withhold more than $300M in proposed new spending — a 'disciplined growth' signal sellers should price in. Three structural themes matter for SLG sellers. First, the Georgia Technology Authority (GTA) runs a centralized, security-first technology motion under State CIO Shawnzia Thomas, whose 2026 philosophy is explicitly 'AI Governance Is Security' — NIST controls applied to AI the same as any other system, with every agency required to publish an AI usage plan by Dec 31, 2026. Second, Georgia is deploying ~$1.3B in BEAD broadband funding through GTA, moving from planning into build-out. Third, metro Atlanta is one of the country's largest data-center hubs, but a 2026 legislative fight over tax exemptions, energy, and local moratoriums is creating uncertainty. For Dell, the buying motion runs through GTA Direct and statewide contracts, and the security-first culture rewards governed, on-prem and private-cloud AI for sensitive workloads.",
+    "summary": "Georgia budgets annually on a July–June fiscal year. Governor Kemp signed the $38.5B FY2027 budget in May 2026, a fiscally cautious plan that directs agencies to withhold more than $300M in proposed new spending — a 'disciplined growth' signal sellers should price in. Three structural themes matter for SLG sellers. First, the Georgia Technology Authority (GTA) runs a centralized, security-first technology motion under State CIO Shawnzia Thomas, whose 2026 philosophy is explicitly 'AI Governance Is Security' — NIST controls applied to AI the same as any other system, with every agency required to publish an AI usage plan by Dec 31, 2026. Second, Georgia is deploying ~$1.3B in BEAD broadband funding through GTA, moving from planning into build-out. Third, metro Atlanta is one of the country's largest data-center hubs; a 2026 legislative push to suspend tax exemptions and shift energy costs (SB 410, SB 34, HB 1063) failed when the session ended April 3, leaving Georgia's data-center tax breaks intact — though energy/grid scrutiny and local moratoriums persist. For Dell, the buying motion runs through GTA Direct and statewide contracts, and the security-first culture rewards governed, on-prem and private-cloud AI for sensitive workloads.",
     "opportunities": [
       "Governed AI adoption as agencies build mandated AI usage plans (due Dec 31, 2026) — lead with private/on-prem AI and NIST-aligned controls for sensitive data.",
       "Cybersecurity modernization tied to GTA's 'security is security' posture and statewide exercises like Cyber Dawg.",
@@ -82,12 +82,12 @@
     },
     {
       "name": "Metro-Atlanta Data-Center Market",
-      "status": "Under Policy Review",
-      "statusType": "warn",
+      "status": "Tax Breaks Intact",
+      "statusType": "good",
       "dellFit": 80,
       "budgetStrength": 65,
       "tags": ["Data Centers", "AI Infrastructure", "Legislation"],
-      "summary": "Metro Atlanta is a top-tier U.S. data-center hub (Microsoft, QTS, CoreSite, DataBank and others). But a 2026 legislative fight over sales-tax exemptions, energy/grid impacts, and a wave of local moratoriums (multiple HB/SB bills) is creating uncertainty for new builds. The strongest Dell AI-infrastructure tailwind in the state — but watch the tax/energy policy outcome.",
+      "summary": "Metro Atlanta is a top-tier U.S. data-center hub (Microsoft, QTS, CoreSite, DataBank and others). The 2026 session (ended April 3) saw a flood of bills targeting data-center tax exemptions and energy costs (SB 410, SB 34, HB 1063), but none cleared both chambers — Georgia left its data-center sales-tax breaks intact despite an estimated $2.5B in 2026 forgone revenue. The policy cloud has lifted for now, keeping this the strongest Dell AI-infrastructure tailwind in the state, though energy/grid scrutiny and local moratoriums persist.",
       "ref": 8
     }
   ],
@@ -113,18 +113,17 @@
     { "name": "Brian Kemp", "title": "Governor", "org": "State of Georgia", "note": "Signed the $38.5B FY2027 budget; fiscally disciplined, withheld >$300M in new spending.", "ref": 1 },
     { "name": "Shawnzia Thomas", "title": "State CIO & GTA Executive Director", "org": "Georgia Technology Authority", "note": "Owns statewide tech direction; 2026 philosophy 'AI Governance Is Security.'", "ref": 4 },
     { "name": "GTA Office of Artificial Intelligence", "title": "AI governance & standards", "org": "GTA", "note": "Runs the AI roadmap, GenAI Responsible Use Standard, and agency AI-plan mandate (due Dec 31, 2026).", "ref": 5 },
-    { "name": "Georgia General Assembly", "title": "Appropriations & legislation", "org": "State of Georgia", "note": "Sets the annual budget; in 2026 debating data-center tax exemptions, energy, and moratoriums.", "ref": 8 },
+    { "name": "Georgia General Assembly", "title": "Appropriations & legislation", "org": "State of Georgia", "note": "Sets the annual budget; in the 2026 session (ended April 3) several data-center tax/energy bills failed, leaving exemptions intact.", "ref": 8 },
     { "name": "University System of Georgia", "title": "Higher-ed system", "org": "USG", "note": "26 institutions; large independent research-computing and AI-infrastructure buyer." }
   ],
 
   "news": [
     { "date": "2026-05", "title": "Kemp signs $38.5B FY2027 budget; directs >$300M in withheld new spending", "impact": "Disciplined-growth budget — confirm funded scope before forecasting agency deals.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2026-04", "title": "Georgia 2026 session ends; data-center tax/energy bills fail, exemptions intact", "impact": "Policy cloud lifts for new data-center builds — keeps metro Atlanta a strong Dell AI-infrastructure tailwind, though energy/grid scrutiny persists.", "tags": ["Data Centers", "Legislation"], "ref": 12 },
     { "date": "2026-03", "title": "GTA releases FY2025 Annual State IT Report", "impact": "Highlights agencywide AI licensing/training and secured broadband funding — signals where modernization dollars flow.", "tags": ["IT Strategy", "AI"], "ref": 3 },
-    { "date": "2026-02", "title": "2026 legislature debates data-center tax-exemption suspension and moratorium bills", "impact": "Policy uncertainty for new data-center builds; watch tax/energy outcome before pursuing infrastructure deals.", "tags": ["Data Centers", "Legislation"], "ref": 8 },
     { "date": "2026-01", "title": "Gov. Kemp proposed a $32.9B general-fund FY2027 budget", "impact": "$76.5B total funds ($38.5B state funds); fiscally cautious with the Revenue Shortfall Reserve 'filled' at $5.6B, a fourth $1.0B tax rebate, and an income-tax rate cut to 4.99%.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-01", "title": "Georgia's 2026 tech philosophy framed as 'AI Governance Is Security'", "impact": "Security-first buying culture; lead with NIST-aligned, governed AI.", "tags": ["AI", "Cybersecurity"], "ref": 4 },
-    { "date": "2025-11", "title": "NTIA approves Georgia's updated BEAD final proposal (~$1.3B)", "impact": "Broadband program moves from planning into implementation via GTA.", "tags": ["Broadband"], "ref": 7 },
-    { "date": "2025-07", "title": "GTA launches Innovation Lab (synthetic-data only)", "impact": "A governed sandbox for agencies to test emerging tech — a channel for piloting governed AI.", "tags": ["AI", "Innovation"], "ref": 4 }
+    { "date": "2025-11", "title": "NTIA approves Georgia's updated BEAD final proposal (~$1.3B)", "impact": "Broadband program moves from planning into implementation via GTA.", "tags": ["Broadband"], "ref": 7 }
   ],
 
   "dellActions": [
@@ -146,6 +145,7 @@
     { "label": "Data Center Dynamics — Georgia Senate passes bill to suspend data center tax exemptions", "url": "https://www.datacenterdynamics.com/en/news/georgia-senate-passes-bill-to-suspend-data-center-tax-exemptions/" },
     { "label": "GTA — Procurement", "url": "https://gta.georgia.gov/about-us/procurement" },
     { "label": "GTA — GTA Direct Services", "url": "https://gta.georgia.gov/services-contracts" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Georgia Watch — Lawmakers leave data center tax breaks intact, punt on energy costs (2026 session)", "url": "https://georgiawatch.org/georgia-lawmakers-leave-data-center-tax-breaks-intact-punt-on-energy-costs/" }
   ]
 }

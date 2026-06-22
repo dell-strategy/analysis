@@ -3,7 +3,7 @@
   "name": "New Mexico",
   "slug": "new-mexico",
   "region": "Southwest",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A national-lab HPC powerhouse and a sudden hyperscale AI build-out — New Mexico pairs Sandia and Los Alamos supercomputing with Project Jupiter and Intel's Rio Rancho fabs, all in a leadership-transition year.",
 
   "snapshot": [
@@ -125,13 +125,13 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Project Jupiter expands community outreach amid water scrutiny", "impact": "Oracle (confirmed tenant) details a closed-loop cooling system and an ~$165B campus plan while local water concerns grow; reaffirms the marquee southern-NM AI-infrastructure ecosystem and partner/ISG motion, with operations targeted before end of 2026.", "tags": ["Data Centers", "AI"], "ref": 13 },
     { "date": "2026-04", "title": "Project Jupiter to be powered by Bloom Energy fuel cells (up to 2.45 GW)", "impact": "Confirms scale and self-contained power for the Oracle/OpenAI campus; operations targeted before end of 2026.", "tags": ["Data Centers", "AI"], "ref": 10 },
     { "date": "2026-02", "title": "Gov. Lujan Grisham and BorderPlex announce Project Jupiter in Santa Teresa", "impact": "Marquee AI-training data center (Oracle / OpenAI Stargate) anchors a southern-NM AI-infrastructure ecosystem.", "tags": ["AI Infrastructure", "Economic Dev"], "ref": 9 },
     { "date": "2026-02", "title": "Legislature enacts ~$33.4B FY2027 budget; $270M+ for fusion/quantum", "impact": "Funds DoIT (~$113M) and seeds emerging-tech demand; Governor's final session.", "tags": ["Budget", "Emerging Tech"], "ref": 1 },
     { "date": "2026-01", "title": "NM Tech launches Raul Deju Institute for Artificial Intelligence", "impact": "University AI/data-science/cybersecurity hub deepens the in-state research-computing market.", "tags": ["AI", "Higher Ed"], "ref": 8 },
     { "date": "2025-12", "title": "Gov. Lujan Grisham proposed an $11.33B general-fund FY2027 budget", "impact": "$33.95B all funds, +4.6% vs FY2026; reserves at $3.4B (30% of recurring GF). Funds a statewide AI-enabled wildfire early-detection camera network, a quantum-technology benchmarking initiative, and critical technology upgrades at the Department of Public Safety.", "tags": ["Budget", "AI"], "ref": 12 },
-    { "date": "2025-12", "title": "Sandia unveils Spectra supercomputer", "impact": "New NNSA-mission machine reinforces New Mexico as a top-tier HPC buyer in-state.", "tags": ["HPC", "National Labs"], "ref": 4 },
-    { "date": "2025-08", "title": "Los Alamos launches frontier AI models on the Venado supercomputer", "impact": "Lab compute pivots toward AI for national-security science; next-gen machine planned for 2026.", "tags": ["AI", "HPC"], "ref": 11 }
+    { "date": "2025-12", "title": "Sandia unveils Spectra supercomputer", "impact": "New NNSA-mission machine reinforces New Mexico as a top-tier HPC buyer in-state.", "tags": ["HPC", "National Labs"], "ref": 4 }
   ],
 
   "dellActions": [
@@ -154,6 +154,7 @@
     { "label": "Albuquerque Journal — Doña Ana County's Project Jupiter joins $500B Stargate initiative led by OpenAI, Oracle", "url": "https://www.abqjournal.com/business/doa-ana-countys-project-jupiter-joins-500-billion-stargate-initiative-led-by-openai-oracle/493927" },
     { "label": "Source New Mexico — Project Jupiter data center developers announce new plans for generating power", "url": "https://sourcenm.com/2026/04/27/nm-project-jupiter-data-center-developers-announce-new-plans-for-generating-power/" },
     { "label": "U.S. Department of Energy / NNSA — Los Alamos launches frontier AI models on the Venado supercomputer", "url": "https://www.energy.gov/nnsa/articles/nnsas-los-alamos-national-laboratory-launches-frontier-ai-models-venado-supercomputer" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "NPR — Worries over water as a giant data center moves into the New Mexico desert (June 12, 2026)", "url": "https://www.npr.org/2026/06/12/nx-s1-5786551/worries-over-water-as-a-giant-data-center-moves-into-the-new-mexico-desert" }
   ]
 }

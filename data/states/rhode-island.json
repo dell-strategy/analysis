@@ -3,11 +3,11 @@
   "name": "Rhode Island",
   "slug": "rhode-island",
   "region": "Northeast",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A small, centralized state moving fast: a Workday ERP cutover, a post-RIBridges security rebuild, a just-released statewide AI roadmap, and $108.7M in BEAD broadband — all routed through one IT division and one purchasing office.",
 
   "snapshot": [
-    { "label": "FY2027 Budget (signed)", "value": "~$14.9B" },
+    { "label": "FY2027 Budget (signed)", "value": "$15.2B" },
     { "label": "Central IT", "value": "ETSS (under DOA)" },
     { "label": "Procurement", "value": "Division of Purchases / OSP" },
     { "label": "AI Roadmap", "value": "Released Jan 2026" }
@@ -22,7 +22,7 @@
       "Higher-ed and research compute at URI, Brown, and RIC's new cybersecurity institute as independent AI-infrastructure buyers."
     ],
     "stats": [
-      { "value": "~$14.9B", "label": "FY2027 Budget (signed)", "note": "FY begins July 1, 2026", "ref": 2 },
+      { "value": "$15.2B", "label": "FY2027 Budget (signed)", "note": "Signed June 12, 2026; FY begins July 1, 2026", "ref": 2 },
       { "value": "114", "label": "ETSS projects completed in 2025", "note": "Up from 46 in 2024", "ref": 3 },
       { "value": "$108.7M", "label": "BEAD broadband allocation", "note": "Federal; admin via RI Commerce", "ref": 7 },
       { "value": "Jan 2026", "label": "Statewide AI roadmap released", "note": "McKee AI Task Force", "ref": 6 }
@@ -30,9 +30,9 @@
   },
 
   "budget": {
-    "intro": "Rhode Island budgets annually; the fiscal year begins July 1. Governor McKee signed a roughly $14.9B FY2027 budget (FY beginning July 1, 2026). As in most states, there is no single consolidated 'state IT budget' line — technology spend sits inside ETSS operations and is distributed across agency programs. ETSS itself manages a large contract portfolio: it reported roughly $154M in contract value and ~$5.3M in negotiated vendor savings in 2025.",
+    "intro": "Rhode Island budgets annually; the fiscal year begins July 1. Governor McKee signed a $15.2B FY2027 budget on June 12, 2026 — the largest in state history, roughly $300M above his January proposal and ~$900M above FY2026. As in most states, there is no single consolidated 'state IT budget' line — technology spend sits inside ETSS operations and is distributed across agency programs. ETSS itself manages a large contract portfolio: it reported roughly $154M in contract value and ~$5.3M in negotiated vendor savings in 2025.",
     "stats": [
-      { "value": "~$14.9B", "label": "FY2027 all-funds budget", "note": "Signed by Gov. McKee", "ref": 2 },
+      { "value": "$15.2B", "label": "FY2027 all-funds budget", "note": "Signed by Gov. McKee June 12, 2026", "ref": 2 },
       { "value": "~$154M", "label": "ETSS contract value (2025)", "note": "Annual report figure", "ref": 3 },
       { "value": "$19.3M", "label": "Medicaid/SNAP IT", "note": "IT + staff for federal benefit changes", "ref": 1 }
     ],
@@ -109,20 +109,20 @@
   },
 
   "powerStructure": [
-    { "name": "Daniel McKee", "title": "Governor", "org": "State of Rhode Island", "note": "Signed the FY2027 budget; issued EO 24-06 standing up the AI Task Force and DAAI Center of Excellence.", "ref": 5 },
+    { "name": "Daniel McKee", "title": "Governor", "org": "State of Rhode Island", "note": "Signed the $15.2B FY2027 budget June 12, 2026; issued EO 24-06 standing up the AI Task Force and DAAI Center of Excellence. Political-continuity risk: trailing in the Sept 8, 2026 Democratic primary and denied the state party endorsement June 20, 2026 — a new administration could reshuffle ETSS/IT leadership in 2027.", "ref": 5 },
     { "name": "Brian Tardiff", "title": "Chief Digital Officer & State CIO", "org": "ETSS / Dept. of Administration", "note": "Leads ETSS; called 2025 an 'unprecedented' year of project delivery.", "ref": 3 },
     { "name": "Scott Gausland", "title": "Lead, Data/Analytics/AI Center of Excellence", "org": "ETSS (DAAI CoE)", "note": "Runs the state's innovation hub for data, analytics, and AI projects.", "ref": 4 },
     { "name": "Jim Langevin", "title": "Chair, AI Task Force", "org": "RIC Institute for Cybersecurity & Emerging Technologies", "note": "Former U.S. Representative and cyber leader; shaped the Jan 2026 AI roadmap.", "ref": 6 }
   ],
 
   "news": [
+    { "date": "2026-06-12", "title": "Gov. McKee signs $15.2B FY2027 budget — largest in state history", "impact": "Highest budget ever (~$900M above FY2026); includes ~$20M for IT, personnel, and resources to keep Rhode Islanders enrolled in Medicaid/SNAP amid federal changes — an eligibility-systems modernization angle. FY begins July 1, 2026.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-02", "title": "ETSS more than doubles completed projects in 2025 (114 vs. 46)", "impact": "Signals a sustained modernization wave — infrastructure, endpoint, and lifecycle demand across executive agencies.", "tags": ["Modernization"], "ref": 3 },
     { "date": "2026-01", "title": "Rhode Island releases its statewide AI roadmap", "impact": "Task Force prioritizes government AI pilots and upskilling over heavy regulation — an opening for governed, private AI.", "tags": ["AI", "Strategy"], "ref": 6 },
     { "date": "2026-01", "title": "Gov. McKee proposes ~$14.9B FY2027 budget (incl. $19.3M IT for Medicaid/SNAP)", "impact": "Tech spend embedded in agency programs; benefit-systems IT is a funded near-term need.", "tags": ["Budget"], "ref": 1 },
     { "date": "2026-01", "title": "Gov. McKee proposed a $5.95B general-fund FY2027 budget", "impact": "$14.86B all funds, +3.6% vs FY2026; thin $0.8M free surplus with a $307M stabilization fund balance. Funds IT and staff to administer Medicaid and SNAP in response to OBBBA.", "tags": ["Budget"], "ref": 10 },
     { "date": "2025-11", "title": "Workday payroll/HCM goes live, completing the ERP cutover", "impact": "Retires aging mainframe systems; downstream integration and infrastructure work follows in hyper-care.", "tags": ["ERP", "Modernization"], "ref": 3 },
-    { "date": "2025-07", "title": "Workday finance module launches", "impact": "First phase of the ERP replacement; sets the modernization baseline for FY26-27.", "tags": ["ERP"], "ref": 3 },
-    { "date": "2025-04", "title": "RI Commerce opens BEAD ($108.7M) broadband applications", "impact": "Large federal connectivity buildout begins; network/edge and downstream services to track.", "tags": ["Broadband", "Federal Funds"], "ref": 7 }
+    { "date": "2025-07", "title": "Workday finance module launches", "impact": "First phase of the ERP replacement; sets the modernization baseline for FY26-27.", "tags": ["ERP"], "ref": 3 }
   ],
 
   "dellActions": [
@@ -143,6 +143,7 @@
     { "label": "Brander Group — Rhode Island's $108.7M BEAD Program", "url": "https://brandergroup.net/2025/04/rhode-islands-108-7m-bead-program/" },
     { "label": "Rhode Island Division of Purchases — Master Price Agreements", "url": "https://ridop.ri.gov/master-price-agreements" },
     { "label": "Rhode Island Division of Purchases — Ocean State Procures (OSP)", "url": "https://ridop.ri.gov/ocean-state-procures-osp" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Rhode Island Current — McKee signs $15.2B FY27 budget (June 12, 2026)", "url": "https://rhodeislandcurrent.com/2026/06/12/mckee-signs-15-2b-fy27-budget-to-great-fanfare-from-lawmakers-and-advocates/" }
   ]
 }

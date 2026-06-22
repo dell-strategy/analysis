@@ -3,7 +3,7 @@
   "name": "Florida",
   "slug": "florida",
   "region": "Southeast",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A ~$115B annual budget, a State CIO consolidating enterprise IT, a first-in-nation hyperscale data-center law, and $1.16B in broadband money landing in 2026 — Florida is centralizing how it governs and buys technology.",
 
   "snapshot": [
@@ -30,7 +30,7 @@
   },
 
   "budget": {
-    "intro": "Florida budgets annually on a July 1–June 30 fiscal year. The FY2025–26 General Appropriations Act totaled roughly $115.1B as passed (about $117.4B including back-of-the-bill items), reduced by ~$576M in line-item vetoes to a GAA near $114.8B. There is no single 'state IT budget' line; technology spend is distributed across agencies, with FLDS providing enterprise governance and oversight. The Governor's proposed Floridians First FY2026–27 budget is about $117.4B with large reserves.",
+    "intro": "Florida budgets annually on a July 1–June 30 fiscal year. The FY2025–26 General Appropriations Act totaled roughly $115.1B as passed (about $117.4B including back-of-the-bill items), reduced by ~$576M in line-item vetoes to a GAA near $114.8B. There is no single 'state IT budget' line; technology spend is distributed across agencies, with FLDS providing enterprise governance and oversight. The Governor's proposed Floridians First FY2026–27 budget was about $117.4B; the Legislature passed a roughly $114.5B FY2026–27 budget on May 29, 2026, which awaits the Governor's signature and line-item vetoes before the July 1 fiscal-year start.",
     "stats": [
       { "value": "~$115B", "label": "FY2025–26 GAA", "note": "After ~$576M vetoes", "ref": 1 },
       { "value": "$117.4B", "label": "FY2026–27 proposed", "note": "Governor's recommendation", "ref": 3 },
@@ -119,19 +119,19 @@
 
   "powerStructure": [
     { "name": "Ron DeSantis", "title": "Governor", "org": "State of Florida", "note": "Signed the first-in-nation hyperscale data-center law; drives the AI and fiscal-discipline agenda.", "ref": 6 },
-    { "name": "Warren Sponholtz", "title": "State CIO", "org": "Florida Digital Service", "note": "Leading FL IT since Aug 2024; oversees statewide strategy, cybersecurity, governance, and modernization. 2026 GoldenGov State Executive of the Year.", "ref": 5 },
+    { "name": "Warren Sponholtz", "title": "State CIO", "org": "Florida Digital Service", "note": "Leading FL IT since Aug 2024; oversees statewide strategy, cybersecurity, governance, and modernization. 2026 GoldenGov State Executive of the Year; testified before U.S. House Homeland Security Committee in May 2026.", "ref": 5 },
     { "name": "Department of Management Services (DMS)", "title": "Lead procurement agency", "org": "State of Florida", "note": "Owns State Term Contracts and MyFloridaMarketPlace — the core buying motion." },
     { "name": "Florida Legislature (Appropriations)", "title": "Budget & IT restructuring", "org": "State of Florida", "note": "Sets the annual budget and has repeatedly weighed restructuring state IT (SB 7026 in 2025, SB 480 in 2026)." }
   ],
 
   "news": [
+    { "date": "2026-05-29", "title": "Legislature passes ~$114.5B FY2026–27 budget; awaiting DeSantis signature/vetoes", "impact": "Sets the FY2026–27 buying envelope (effective July 1); includes $25M for a new USF Bellini College of AI, Cybersecurity & Computing facility. Watch for line-item vetoes before June 30.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-05", "title": "DeSantis signs SB 484, first-in-nation hyperscale data-center law", "impact": "Confirms scale of AI-infrastructure investment landing in Florida while adding utility/water scrutiny to siting.", "tags": ["Data Centers", "AI", "Policy"], "ref": 6 },
     { "date": "2026-03", "title": "AI 'Bill of Rights' (SB 482) passes Senate, dies in House", "impact": "AI policy remains unsettled; agencies still trend toward governed, auditable AI for sensitive workloads.", "tags": ["AI", "Policy"], "ref": 4 },
     { "date": "2026-02", "title": "SB 480 proposes restructuring state IT under FLDS / Governor's office", "impact": "Centralizes IT governance and procurement oversight; raises the $10M project gate's profile.", "tags": ["IT Governance", "Procurement"], "ref": 2 },
     { "date": "2025-12", "title": "Governor announces Floridians First FY2026–27 budget (~$117.4B)", "impact": "Continued spending capacity with large reserves; sets the FY2026–27 buying envelope.", "tags": ["Budget"], "ref": 3 },
     { "date": "2025-12", "title": "Gov. DeSantis proposed a $53.2B general-revenue FY2027 budget", "impact": "$117.4B all funds, +2.2% vs FY2026; $16.8B combined reserve with the Budget Stabilization Fund at its $5.0B constitutional limit. Hardens Florida's cybersecurity framework across state agencies and funds IT projects that reduce staffing needs.", "tags": ["Budget", "Cybersecurity"], "ref": 10 },
-    { "date": "2025-10", "title": "University of Florida launches HiPerGator AI 2.0 (NVIDIA DGX B200 SuperPOD)", "impact": "Reinforces Florida higher-ed as a major AI-infrastructure and research-computing buyer.", "tags": ["AI Infrastructure", "Higher Ed"], "ref": 8 },
-    { "date": "2025-07", "title": "Florida announces $970M+ in BEAD broadband deployment funding", "impact": "Federal broadband money moves toward deployment; adjacent edge/networking demand in 2026.", "tags": ["Broadband", "Federal Funds"], "ref": 7 }
+    { "date": "2025-10", "title": "University of Florida launches HiPerGator AI 2.0 (NVIDIA DGX B200 SuperPOD)", "impact": "Reinforces Florida higher-ed as a major AI-infrastructure and research-computing buyer.", "tags": ["AI Infrastructure", "Higher Ed"], "ref": 8 }
   ],
 
   "dellActions": [
@@ -152,6 +152,8 @@
     { "label": "FloridaCommerce — $970M+ in BEAD Broadband Funding", "url": "https://floridajobs.org/news-center/DEO-Press/2025/07/15/floridacommerce-announces-more-than--970-million-in-broadband-funding-through-the-bead-deployment-program" },
     { "label": "HPCwire — UF Welcomes NVIDIA DGX Systems for HiPerGator AI 2.0", "url": "https://www.hpcwire.com/off-the-wire/uf-welcomes-24m-in-nvidia-dgx-systems-paving-way-for-next-gen-hipergator-ai-2-0/" },
     { "label": "Florida DMS — State Contracts and Agreements / State Purchasing", "url": "https://www.dms.myflorida.com/business_operations/state_purchasing/state_contracts_and_agreements" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Florida Phoenix — FY26-27 budget done, vetoes are coming (May 29, 2026)", "url": "https://floridaphoenix.com/2026/05/29/fy-26-27-budget-done-vetoes-are-coming-and-property-tax-debate-lies-ahead/" },
+    { "label": "USF — Florida Legislature agrees to a 2026-27 state budget (USF Bellini College of AI)", "url": "https://www.usf.edu/news/2026/an-update-on-the-2026-27-state-budget.aspx" }
   ]
 }

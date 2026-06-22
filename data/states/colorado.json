@@ -3,7 +3,7 @@
   "name": "Colorado",
   "slug": "colorado",
   "region": "Mountain West",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A tighter $46.8B budget, a freshly reorganized state IT office under a brand-new CIO, and an AI law that just pivoted to a lighter touch — Colorado is resetting how it buys, governs, and secures technology.",
 
   "snapshot": [
@@ -77,7 +77,7 @@
       "dellFit": 85,
       "budgetStrength": 60,
       "tags": ["AI Infrastructure", "Data Centers", "Defense"],
-      "summary": "Two data-center incentive bills died in the 2026 session amid water/power and community concerns, yet hyperscale interest persists — QTS acquired land in Aurora for a potential campus, and retired military leaders argue Colorado needs AI compute to retain its Space Force bases. The Colorado Springs/Aurora aerospace-defense cluster (and a $26M EDC tax package for an aerospace firm) keeps secure-compute demand alive even without new statewide incentives.",
+      "summary": "Two data-center incentive bills died in the 2026 session amid water/power and community concerns, and local backlash is now spreading — Denver (May) and Jefferson County (May) enacted moratoriums and Longmont (June) capped new projects at 100MW. Yet build-out continues: Flexential's ~$192M Parker campus tops out (online ~Jan 2027), CoreSite is expanding in Denver, and Project Taurus won approval near Colorado Springs. Hyperscale interest (QTS in Aurora) and the Colorado Springs/Aurora aerospace-defense and Space Force cluster keep secure-compute demand alive even without new statewide incentives.",
       "ref": 8
     },
     {
@@ -126,11 +126,11 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Local data-center moratoriums spread (Denver, Jefferson County, Longmont)", "impact": "After both 2026 incentive bills failed, locals are pausing/capping projects over power, water, and pollution — but build-out continues (Flexential Parker, CoreSite Denver), keeping compute demand alive while siting gets harder.", "tags": ["Data Centers", "AI"], "ref": 12 },
     { "date": "2026-06", "title": "Sarah Tuneberg becomes State CIO & OIT Executive Director", "impact": "New technology leadership takes over a reorganized office; relationships and roadmap reset.", "tags": ["Leadership"], "ref": 6 },
     { "date": "2026-05", "title": "OIT reorganizes, eliminates ~173 positions and adopts new operating model", "impact": "Leaner central IT creates capacity gaps — opening for managed services and as-a-service compute.", "tags": ["IT Modernization"], "ref": 3 },
     { "date": "2026-05", "title": "Polis signs SB 189, repealing and replacing the Colorado AI Act", "impact": "AI rules shift to a lighter ADMT/disclosure model effective Jan 1, 2027; agencies still need governed AI.", "tags": ["AI", "Policy"], "ref": 4 },
     { "date": "2026-05", "title": "FY2026–27 $46.8B budget signed after closing a ~$1.5B shortfall", "impact": "Budget-constrained agencies must do more with less — favors efficiency and lifecycle plays.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2026-05", "title": "Both 2026 data-center incentive bills rejected", "impact": "No new statewide data-center incentives, but hyperscale and defense-driven demand persists.", "tags": ["Data Centers", "AI"], "ref": 8 },
     { "date": "2026-04", "title": "Colorado EDC approves $26M tax package to retain an aerospace/defense firm", "impact": "Reinforces the aerospace-defense cluster as a secure-compute and AI-infrastructure buyer.", "tags": ["Defense", "Economic Dev"], "ref": 10 },
     { "date": "2025-10", "title": "Gov. Polis proposed a $18.5B general-fund FY2027 budget", "impact": "$50.5B all funds, +1.6% GF vs FY2026; maintains a 13% general-fund reserve while slowing Medicaid growth to 5.6%.", "tags": ["Budget"], "ref": 11 }
   ],
@@ -154,6 +154,7 @@
     { "label": "Colorado Newsline — Both Colorado data center bills rejected in 2026 session", "url": "https://coloradonewsline.com/2026/05/11/data-center-bills-rejected-legislative-session/" },
     { "label": "OIT — Office of Information Security", "url": "https://oit.colorado.gov/standards-policies-guides/cybersecurity-and-information-security-guide/information-security-office" },
     { "label": "Colorado Politics — Colorado awards $26M in tax incentives to keep aerospace company in state", "url": "https://www.coloradopolitics.com/2026/04/16/colorado-awards-26m-in-tax-incentives-to-keep-aerospace-company-in-state/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Colorado Sun — What's the status of massive data centers in Colorado? (moratoriums, projects)", "url": "https://coloradosun.com/2026/06/18/colorado-data-center-update-pollution-protests-moratoriums/" }
   ]
 }

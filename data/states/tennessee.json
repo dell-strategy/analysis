@@ -3,7 +3,7 @@
   "name": "Tennessee",
   "slug": "tennessee",
   "region": "Southeast",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "Home to the world's largest AI supercomputer build (xAI's Memphis 'Colossus'), a brand-new statewide AI Action Plan, and a centralized IT shop in execution mode — Tennessee is one of the country's hottest AI-infrastructure markets.",
 
   "snapshot": [
@@ -24,7 +24,7 @@
     "stats": [
       { "value": "$59.5B", "label": "FY2026 All-Funds Budget", "note": "Gov. Lee's recommended budget", "ref": 1 },
       { "value": "~555K GPUs", "label": "xAI Colossus (Memphis)", "note": "Scaling toward ~2GW (Jan 2026)", "ref": 7 },
-      { "value": "3,000", "label": "ChatGPT Enterprise licenses", "note": "1,000 live, ~2,000 staged", "ref": 5 },
+      { "value": "5,000+", "label": "ChatGPT Enterprise licenses", "note": "In day-to-day operations; ~1.5–2.5 hrs/day saved", "ref": 5 },
       { "value": "Nov 2025", "label": "Statewide AI Action Plan", "note": "Four strategic pillars", "ref": 3 }
     ]
   },
@@ -44,7 +44,7 @@
       "Tennessee runs an annual (not biennial) budget; figures above are FY2026 (July 2025–June 2026).",
       "There is no published consolidated state IT line item — confirm agency-level technology budgets and the STS operating budget when forecasting.",
       "AI-infrastructure investment in-state is overwhelmingly private (xAI) and federal (Oak Ridge/DOE), not state-appropriated — the state-government opportunity is modernization and governed AI adoption.",
-      "FY2027 (governor's proposed, per NASBO): $25.8B general fund appropriations; $57.9B all funds, -9.6% vs FY2026 (driven by a federal-funds decline, with state appropriations down just 0.4%). Disciplined posture with a $20.0M rainy-day deposit bringing reserves to $2.2B; proposes non-recurring funds to support quantum computing infrastructure."
+      "FY2027 budget signed by Gov. Lee May 22, 2026 (~$58B total, ~$29.8B from state dollars); FY begins July 1, 2026. Disciplined posture with a $20.0M rainy-day deposit bringing reserves to $2.2B. Notably includes $50M for AI infrastructure — moving state AI from proof-of-concept toward enterprise-wide use, including an 'AI data management layer' to unify siloed state data — plus non-recurring funds for quantum computing infrastructure."
     ]
   },
 
@@ -86,7 +86,7 @@
       "dellFit": 45,
       "budgetStrength": 50,
       "tags": ["AI", "Productivity", "Governance"],
-      "summary": "After a 60-day pilot in spring 2025, STS deployed ChatGPT Enterprise statewide, with about 1,000 licenses live and roughly 2,000 more staged. The state reports meaningful per-user time savings and frames adoption around governance ('Should we use AI for this?'). The pace signals an agency leadership genuinely operationalizing AI — useful context for positioning the secure compute and data foundations that production AI ultimately needs.",
+      "summary": "After a 60-day pilot in 2025, STS moved ChatGPT Enterprise into day-to-day operations, now with 5,000+ state employees licensed (users reportedly saving 1.5–2.5 hours/day). STS built an AI governance framework and steering committee requiring measurable outcomes. The pace signals agency leadership genuinely operationalizing AI — useful context for positioning the secure compute and data foundations that production AI ultimately needs.",
       "ref": 5
     },
     {
@@ -127,7 +127,7 @@
 
   "news": [
     { "date": "2026-03", "title": "Tennessee secures additional $218M federal broadband grant", "impact": "Adds to BEAD funding to reach remaining unserved Tennesseans; sustained connectivity buildout statewide.", "tags": ["Broadband", "Federal"], "ref": 10 },
-    { "date": "2026-02", "title": "Gov. Lee proposed a $25.8B general-fund FY2027 budget", "impact": "$57.9B all funds, -9.6% vs FY2026 (a federal-funds drop; state appropriations down 0.4%); $20.0M rainy-day deposit lifts reserves to $2.2B. Proposes non-recurring funds for quantum computing infrastructure and added investment in the Nuclear Energy Fund.", "tags": ["Budget"], "ref": 12 },
+    { "date": "2026-05", "title": "Gov. Lee signs ~$58B FY2027 budget with $50M for AI infrastructure", "impact": "Enacts a dedicated $50M AI-infrastructure investment — moving state AI from proof-of-concept to enterprise-wide, including an 'AI data management layer' to unify siloed state data. A direct opening for governed compute, data platforms, and secure infrastructure. FY begins July 1, 2026.", "tags": ["Budget", "AI"], "ref": 13 },
     { "date": "2026-02", "title": "NTIA approves Tennessee's BEAD final proposal (~$813M)", "impact": "Unlocks a major federal broadband program; expanded last-mile and digital-opportunity activity.", "tags": ["Broadband", "Budget"], "ref": 10 },
     { "date": "2026-01", "title": "xAI's Memphis 'Colossus' scales toward ~2GW / ~555,000 GPUs", "impact": "Cements Tennessee as a top-tier national AI-compute hub; massive infrastructure ecosystem demand.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 7 },
     { "date": "2025-11", "title": "State AI Advisory Council adopts Tennessee's first AI Action Plan", "impact": "Sets four-pillar framework including 'Data & Compute Readiness' — an opening for governed AI infrastructure.", "tags": ["AI", "Policy"], "ref": 3 },
@@ -155,6 +155,7 @@
     { "label": "Tennessee General Services — Procurement / Central Procurement Office", "url": "https://www.tn.gov/generalservices/procurement.html" },
     { "label": "Tennessee ECD — BEAD Program (broadband)", "url": "https://www.tn.gov/ecd/rural-development/broadband-office/redirect-provider-resources/bead-program.html" },
     { "label": "StateScoop — Tennessee names Kristin Darby as new CIO", "url": "https://statescoop.com/tennessee-new-cio-kristin-darby-2025/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "StateScoop — Tennessee leans on public-private collaboration and $50M for AI", "url": "https://statescoop.com/tennessee-public-private-sector-collaboration-ai/" }
   ]
 }

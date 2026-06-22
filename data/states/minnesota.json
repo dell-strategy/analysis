@@ -3,7 +3,7 @@
   "name": "Minnesota",
   "slug": "minnesota",
   "region": "Midwest",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A new state CIO, a sweeping data-center tax incentive driving a hyperscale buildout, and a whole-of-state cybersecurity push — Minnesota's technology agenda is in motion mid-biennium.",
 
   "snapshot": [
@@ -45,7 +45,7 @@
     "notes": [
       "General-fund figure is a biennial (two-year) total; most technology spend sits inside agency budgets rather than a central IT line.",
       "MNIT's chargeback model means agency demand — not a single appropriation — drives most enterprise technology buying.",
-      "FY2027 (governor's proposed supplemental, per NASBO): a net +$63M general-fund spending change for the FY2026-27 biennium, leaving a projected $3.67B general-fund balance; a balanced-budget posture that slows program growth while funding legacy-IT modernization."
+      "2026 supplemental enacted: the Legislature adjourned May 17, 2026 and Walz signed a bipartisan end-of-session package (incl. a ~$1.2B bonding/infrastructure bill). Net +$63M general-fund change for the FY2026-27 biennium leaves a projected ~$3.67B balance; a balanced-budget posture that slows program growth while funding multi-year legacy-IT modernization."
     ]
   },
 
@@ -57,7 +57,7 @@
       "dellFit": 90,
       "budgetStrength": 80,
       "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
-      "summary": "A 2025 law (Chapter 13) created a 'qualified large-scale data center' tier (25,000+ sq ft and $250M+ invested within 60 months) and extended the IT-equipment sales-tax exemption to 35 years, pulling a wave of hyperscale projects. Meta's ~$800M Rosemount campus is under construction and 20-plus sites have been proposed statewide. The state ended the electricity exemption and projects face grid and local-opposition headwinds, but this remains the strongest tailwind for Dell AI-infrastructure and ISG demand in Minnesota.",
+      "summary": "A 2025 law (Chapter 13) created a 'qualified large-scale data center' tier (25,000+ sq ft and $250M+ invested within 60 months) and extended the IT-equipment sales-tax exemption to 35 years, pulling a wave of hyperscale projects. Meta's ~$800M Rosemount campus is under construction. But local opposition is escalating in 2026: Minneapolis imposed a 6-month moratorium (May 22), Rosemount a 1-year moratorium on new centers, Nobles County denied a rezoning, and statewide bill SF 4298 could freeze permitting. Still the strongest tailwind for Dell AI-infrastructure demand in Minnesota — but qualify the pipeline carefully against the political headwinds.",
       "ref": 4
     },
     {
@@ -119,21 +119,21 @@
   },
 
   "powerStructure": [
-    { "name": "Tim Walz", "title": "Governor", "org": "State of Minnesota", "note": "Signed the FY2026-27 budget and the 2025 data-center tax law; sets the technology and economic-development agenda." },
+    { "name": "Tim Walz", "title": "Governor", "org": "State of Minnesota", "note": "Signed the FY2026-27 budget and the 2025 data-center tax law. Withdrew from the 2026 reelection race (Jan 5, 2026) but remains in office through Jan 2027 — a lame-duck posture; build relationships with MNIT career leadership and watch the Nov 2026 open-seat race.", "ref": 12 },
     { "name": "Jon Eichten", "title": "Commissioner & State CIO", "org": "MNIT", "note": "Appointed March 16, 2026; MNIT leader since 2012 (most recently Deputy Commissioner). Owns statewide tech direction.", "ref": 3 },
-    { "name": "Tarek Tomes", "title": "Former State CIO; now senior tech leader", "org": "University of Minnesota", "note": "Led MNIT 2019-2026 before moving to the U of M — a warm, Dell-relevant relationship on the higher-ed side.", "ref": 3 },
+    { "name": "Tarek Tomes", "title": "VP for Information Technology & CIO", "org": "University of Minnesota", "note": "Led MNIT 2019-2026; became U of M's VP for IT and CIO effective Mar 16, 2026 — a warm, Dell-relevant relationship on the higher-ed side.", "ref": 15 },
     { "name": "Office of State Procurement", "title": "State contracting authority", "org": "Dept. of Administration", "note": "Establishes IT contracts and the CPV cooperative path used by state and local buyers." },
     { "name": "Minnesota Cybersecurity Task Force", "title": "Whole-of-state cyber governance", "org": "MNIT-led", "note": "Steers SLCGP/SSMI grant priorities to state and local jurisdictions." }
   ],
 
   "news": [
-    { "date": "2026-04", "title": "Reports flag Minnesota's data-center boom as 'on shaky ground'", "impact": "Grid, water, and local-opposition headwinds may slow some projects — qualify pipeline carefully before forecasting hyperscale-linked demand.", "tags": ["Data Centers"], "ref": 9 },
-    { "date": "2026-03", "title": "Gov. Walz proposed a +$63M net general-fund FY2026-27 supplemental", "impact": "Leaves a projected $3.67B general-fund balance; a balanced-budget posture slowing program growth. Allocates funding over three years to update Minnesota's legacy IT systems and creates a Governor's Council on the Future AI Economy.", "tags": ["Budget", "AI"], "ref": 11 },
-    { "date": "2026-03", "title": "Jon Eichten appointed MNIT Commissioner & State CIO", "impact": "Tech direction stabilizes under a long-tenured MNIT leader; re-confirm relationships and priorities with the new CIO's office.", "tags": ["Leadership"], "ref": 3 },
+    { "date": "2026-05-22", "title": "Data-center moratorium wave: Minneapolis (6-mo), Rosemount, Nobles County; statewide bill SF 4298", "impact": "Minneapolis City Council imposed a 6-month halt on large data centers (May 22); Rosemount adopted a 1-year moratorium on NEW centers (Apr, not affecting the existing Meta build); Nobles County denied a rezoning (Apr 21); statewide SF 4298 could freeze permitting. Hyperscale momentum is real but politically contested — qualify pipeline carefully.", "tags": ["Data Centers", "Policy"], "ref": 13 },
+    { "date": "2026-05", "title": "Walz signs 2026 supplemental budget; session ends May 17", "impact": "Bipartisan end-of-session deal: ~$1.2B bonding/infrastructure bill, $205M one-time for HCMC, $250M car-tab relief, $125M property-tax relief. Net +$63M GF leaves a projected ~$3.67B balance; funds multi-year legacy-IT modernization and a Governor's Council on the Future AI Economy.", "tags": ["Budget", "AI"], "ref": 14 },
+    { "date": "2026-03", "title": "Jon Eichten named permanent MNIT Commissioner & State CIO", "impact": "Tech direction stabilizes under a long-tenured MNIT leader (made permanent Mar 16); re-confirm relationships and priorities with the new CIO's office.", "tags": ["Leadership"], "ref": 3 },
+    { "date": "2026-03", "title": "Tarek Tomes becomes University of Minnesota VP for IT & CIO", "impact": "Former state CIO takes the U of M's top tech seat (effective Mar 16) — a warm, Dell-relevant higher-ed relationship to cultivate.", "tags": ["Leadership", "Higher Ed"], "ref": 15 },
     { "date": "2025-12", "title": "Mayo 'Bold. Forward. Unbound.' Rochester build advances", "impact": "Marquee ~$5B health-tech program with AI, robotics, and digital infrastructure — a strong private-sector Dell account.", "tags": ["Health Tech", "AI"], "ref": 8 },
     { "date": "2025-06", "title": "Data-center tax law (Chapter 13) signed; large-scale tier added", "impact": "35-year equipment exemption and a new large-scale tier pull hyperscale investment — but electricity exemption ends.", "tags": ["Data Centers", "Policy"], "ref": 4 },
-    { "date": "2025-06", "title": "Governor Walz signs FY2026-27 biennial budget (~$66B GF)", "impact": "Sets the mid-biennium spending frame; opportunity is execution, not a fresh appropriation.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-01", "title": "Meta's ~$800M Rosemount data center under construction", "impact": "The state's only confirmed hyperscale build-out underway — a benchmark for AI-infrastructure scale landing in Minnesota.", "tags": ["Data Centers", "AI"], "ref": 9 }
+    { "date": "2025-06", "title": "Governor Walz signs FY2026-27 biennial budget (~$66B GF)", "impact": "Sets the mid-biennium spending frame; opportunity is execution, not a fresh appropriation.", "tags": ["Budget"], "ref": 1 }
   ],
 
   "dellActions": [
@@ -155,6 +155,10 @@
     { "label": "Mayo Clinic — Bold. Forward. Unbound. in Rochester", "url": "https://www.mayoclinic.org/giving-to-mayo-clinic/our-priorities/bold-forward-unbound" },
     { "label": "Minnesota Reformer — Minnesota's data center boom on shaky ground", "url": "https://minnesotareformer.com/2026/04/27/minnesotas-long-predicted-data-center-boom-is-on-shaky-ground/" },
     { "label": "Minnesota Office of State Procurement (Dept. of Administration)", "url": "https://www.mmd.admin.state.mn.us/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "CBS Minnesota — Tim Walz to drop out of 2026 gubernatorial race (Jan 5, 2026)", "url": "https://www.cbsnews.com/minnesota/news/tim-walz-drop-out-of-gubernatorial-race-2026/" },
+    { "label": "MPR News — Minneapolis City Council imposes six-month halt on data centers (May 22, 2026)", "url": "https://www.mprnews.org/story/2026/05/22/minneapolis-city-council-imposes-six-month-halt-on-data-centers" },
+    { "label": "MN House — 2026 Session Daily: end-of-session budget agreement", "url": "https://www.house.mn.gov/sessiondaily/Story/19179" },
+    { "label": "UMN Brief — Tarek Tomes named VP for Information Technology and CIO (Feb 6, 2026)", "url": "https://brief.umn.edu/awards-recognition/tarek-tomes-named-vice-president-information-technology-and-chief-information" }
   ]
 }

@@ -3,7 +3,7 @@
   "name": "Ohio",
   "slug": "ohio",
   "region": "Midwest",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A record two-year budget, the most aggressive data-center buildout in the Midwest, and a sudden pause on data-center tax breaks — Ohio is both the hottest AI-infrastructure market in the region and a state recalibrating how it pays for it.",
 
   "snapshot": [
@@ -114,7 +114,8 @@
   ],
 
   "news": [
-    { "date": "2026-05", "title": "DeWine pauses Ohio's data-center sales-tax exemption (effective June 1)", "impact": "After the break cost ~$1.6B in 2025 (12x estimate), new exemptions are paused while a joint committee studies the future. Existing projects keep benefits; new-build incentive math changes.", "tags": ["Data Centers", "Tax"], "ref": 8 },
+    { "date": "2026-06-04", "title": "Joint Data Center Committee grills Amazon/Google/Meta/Microsoft on NDAs, water, utility costs", "impact": "Heightened transparency pressure and scrutiny on data-center deals; tax-incentive legislation stalled over incentive terms. Watch for follow-on legislation on siting, power and water that shapes the central-Ohio buildout pipeline.", "tags": ["Data Centers", "Policy"], "ref": 12 },
+    { "date": "2026-06-01", "title": "DeWine pauses Ohio's data-center sales-tax exemption (new applications)", "impact": "After the break cost ~$1.6B in 2025 (12x estimate), new exemptions are paused while the Joint Data Center Committee studies the future. Existing projects keep benefits; new-build incentive math changes.", "tags": ["Data Centers", "Tax"], "ref": 8 },
     { "date": "2026-03", "title": "Intel confirms Ohio One first fab slips to 2030, production 2030–31", "impact": "Second major delay tempers near-term supplier demand, but site work continues and the campus still anchors Ohio's chip/AI identity.", "tags": ["Semiconductors"], "ref": 5 },
     { "date": "2025-09", "title": "Local-government cybersecurity standards (ORC 9.64) take effect", "impact": "3,800+ subdivisions must adopt standards, assess risk, train staff, and report ransomware — broad security and backup/recovery demand.", "tags": ["Cybersecurity", "Local Gov"], "ref": 10 },
     { "date": "2025-07", "title": "PUCO orders AEP Ohio data-center tariff (85% minimum take)", "impact": "Large data-center customers must pay for 85%+ of subscribed energy, stabilizing the grid and clearing the path for new central-Ohio builds.", "tags": ["Data Centers", "Energy"], "ref": 7 },
@@ -141,6 +142,7 @@
     { "label": "Office of the Governor — DeWine announces pause of data center tax exemption", "url": "https://governor.ohio.gov/wps/portal/gov/governor/media/news-and-media/governor-dewine-announces-pause-of-data-center-tax-exemption" },
     { "label": "Community Solutions — DAS releases policy governing use of AI", "url": "https://www.communitysolutions.com/resources/ohio-department-of-administrative-services-releases-policy-governing-use-of-ai" },
     { "label": "Clark Schaefer Hackett — New Ohio cybersecurity law for local governments", "url": "https://www.cshco.com/insights/new-ohio-cybersecurity-law-what-local-governments-need-to-know" },
-    { "label": "Ohio — 2025 Comprehensive Cybersecurity Plan (CyberOhio)", "url": "https://dam.assets.ohio.gov/image/upload/v1738856928/cyber.ohio.gov/OCCP/2025_Ohio_Comprehensive_Cybersecurity_Plan-Final_-PublicVersion.pdf" }
+    { "label": "Ohio — 2025 Comprehensive Cybersecurity Plan (CyberOhio)", "url": "https://dam.assets.ohio.gov/image/upload/v1738856928/cyber.ohio.gov/OCCP/2025_Ohio_Comprehensive_Cybersecurity_Plan-Final_-PublicVersion.pdf" },
+    { "label": "Statehouse News Bureau — Questions left unanswered after big-tech hearing on data centers in Ohio (June 4, 2026)", "url": "https://www.statenews.org/government-politics/2026-06-04/questions-left-unanswered-after-big-tech-hearing-on-data-centers-in-ohio" }
   ]
 }

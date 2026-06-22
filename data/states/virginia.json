@@ -3,11 +3,11 @@
   "name": "Virginia",
   "slug": "virginia",
   "region": "Southeast",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "Home of the world's largest data-center market, a centralized IT-buying authority in VITA, and a first-in-the-nation agentic-AI pilot — Virginia is where AI infrastructure and government technology demand collide.",
 
   "snapshot": [
-    { "label": "2026–28 Budget", "value": "Impasse (~$211B introduced)" },
+    { "label": "2026–28 Budget", "value": "Compromise reached; vote June 23" },
     { "label": "Primary IT Authority", "value": "VITA" },
     { "label": "Cloud Gate", "value": "COV Ramp" },
     { "label": "Data-Center Market", "value": "#1 in the world" }
@@ -30,7 +30,7 @@
   },
 
   "budget": {
-    "intro": "Virginia budgets on a two-year (biennial) cycle running July 1 to June 30, with the General Assembly amending the off-year budget annually. As of mid-June 2026 the 2026–28 biennial budget is unresolved: the regular session ended March 14 without a deal, an April 23 special session failed, and lawmakers reconvened in June facing a July 1 deadline to avoid disruption. Gov. Youngkin's introduced 2026–28 budget was roughly $211B over two years. There is no single 'state IT budget' line — technology spend is distributed across agencies and run through VITA.",
+    "intro": "Virginia budgets on a two-year (biennial) cycle running July 1 to June 30, with the General Assembly amending the off-year budget annually. After a months-long impasse (regular session ended March 14 without a deal; an April 23 special session failed), negotiators reached a ~$74B compromise on June 20, 2026, with floor votes scheduled June 23 and signing required before the July 1 deadline — the data-center sales/use tax exemption is retained but paired with a new $0.011/kWh data-center energy tax. As of June 22 the budget is agreed but not yet voted or signed. There is no single 'state IT budget' line — technology spend is distributed across agencies and run through VITA.",
     "stats": [
       { "value": "~$211B", "label": "2026–28 introduced budget", "note": "Youngkin two-year proposal; not yet enacted", "ref": 3 },
       { "value": "July 1, 2026", "label": "Budget deadline", "note": "Must pass to avoid disruption", "ref": 4 },
@@ -107,14 +107,14 @@
   },
 
   "powerStructure": [
-    { "name": "Abigail Spanberger", "title": "Governor", "org": "Commonwealth of Virginia", "note": "Took office January 2026; navigating the data-center tax fight and an unresolved 2026–28 budget.", "ref": 4 },
+    { "name": "Abigail Spanberger", "title": "Governor", "org": "Commonwealth of Virginia", "note": "Sworn in Jan 17, 2026; backed the June 20 budget compromise resolving the data-center tax fight and the 2026–28 budget impasse.", "ref": 12 },
     { "name": "Mike Watson", "title": "Commonwealth CIO & VITA Agency Head", "org": "VITA", "note": "Appointed April 2026; 17+ years at VITA and former state CISO/deputy CIO. Owns cloud transformation and AI adoption.", "ref": 5 },
     { "name": "Department of Planning & Budget (DPB)", "title": "Budget development & execution", "org": "Commonwealth of Virginia", "note": "Runs the biennial budget process — track for final 2026–28 appropriations." },
     { "name": "General Assembly money committees", "title": "Appropriations & data-center policy", "org": "Virginia General Assembly", "note": "Senate (Lucas) vs. House (Scott) split on the data-center tax exemption drove the 2026 budget impasse.", "ref": 4 }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Lawmakers advance bipartisan 2026–28 budget proposal as July 1 deadline nears", "impact": "Keeps the data-center tax exemption but adds a study commission; final appropriations still pending — confirm before forecasting agency spend.", "tags": ["Budget"], "ref": 4 },
+    { "date": "2026-06-20", "title": "Negotiators reach ~$74B 2026–28 budget compromise; floor vote set June 23, ahead of July 1 deadline", "impact": "Data centers keep the sales/use tax exemption but face a new $0.011/kWh energy tax (capped $600M/yr, ~$1.2B over the biennium); ends ~3-month impasse but not yet voted/signed — confirm enactment before forecasting agency spend.", "tags": ["Budget", "Data Centers"], "ref": 12 },
     { "date": "2026-04", "title": "Gov. Spanberger names Mike Watson Commonwealth CIO and VITA head", "impact": "New tech leadership focused on cloud transformation and AI adoption; predecessor Bob Osmond departs for Delaware.", "tags": ["Leadership"], "ref": 5 },
     { "date": "2026-04", "title": "Special budget session ends without a deal", "impact": "Budget uncertainty extends; agency IT planning constrained until appropriations land.", "tags": ["Budget"], "ref": 4 },
     { "date": "2026-03", "title": "General Assembly passes 15 data-center bills (of 61)", "impact": "New siting, energy-cost, and water rules reshape data-center growth — the core AI-infrastructure market.", "tags": ["Data Centers", "Policy"], "ref": 2 },
@@ -142,6 +142,7 @@
     { "label": "VPM — Most AI legislation in Virginia tabled until 2027", "url": "https://www.vpm.org/generalassembly/2026-02-23/virginia-ai-bills-hayes-maldonado-salim-trump-spanberger" },
     { "label": "DHCD — Virginia Telecommunication Initiative (VATI)", "url": "https://www.dhcd.virginia.gov/index.php/vati" },
     { "label": "VITA — Procurement & statewide contracts", "url": "https://www.vita.virginia.gov/procurement/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "VPM — Lawmakers reach FY2027–FY2028 budget deal with data-center energy tax (June 20, 2026)", "url": "https://www.vpm.org/generalassembly/2026-06-20/lucas-torian-scott-spanberger-fy2027-fy2028-budget-deal" }
   ]
 }

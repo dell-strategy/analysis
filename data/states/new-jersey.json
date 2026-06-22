@@ -3,7 +3,7 @@
   "name": "New Jersey",
   "slug": "new-jersey",
   "region": "Northeast",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A new governor, a marquee AI Hub anchored by Princeton, CoreWeave and Microsoft, and a first-in-the-nation push to regulate AI data centers — New Jersey is positioning itself as the East Coast's AI center while reshaping how it powers and governs that compute.",
 
   "snapshot": [
@@ -60,12 +60,12 @@
     },
     {
       "name": "AI Data Center Regulatory Framework",
-      "status": "Proposed (June 2026)",
+      "status": "Proposed (May 2026)",
       "statusType": "warn",
       "dellFit": 60,
       "budgetStrength": 55,
       "tags": ["AI", "Energy", "Policy"],
-      "summary": "Governor Sherrill in June 2026 unveiled what her administration calls the country's first comprehensive statewide framework for regulating AI data centers. The four-part plan would make operators fund their own energy supply and grid upgrades, publicly report energy/water use, negotiate community benefit agreements, and use union labor — shifting costs off ratepayers. Related bills (e.g., S680) tie clean-energy mandates and large-load tariffs to data centers. The climate rewards efficient, governed, lower-power compute and creates uncertainty for raw hyperscale buildout.",
+      "summary": "Governor Sherrill on May 27, 2026 unveiled what her administration calls the country's first comprehensive statewide framework for regulating AI data centers. The four-part plan would make operators fund their own energy supply and grid upgrades, publicly report energy/water use, negotiate community benefit agreements, and use union labor — shifting costs off ratepayers. Related bills (e.g., S680) tie clean-energy mandates and large-load tariffs to data centers. The climate rewards efficient, governed, lower-power compute and creates uncertainty for raw hyperscale buildout.",
       "ref": 7
     },
     {
@@ -115,11 +115,11 @@
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Gov. Sherrill unveils first-in-the-nation AI data-center regulatory framework", "impact": "Operators would fund their own power and grid upgrades and disclose energy/water use; rewards efficient, governed compute and adds uncertainty to raw hyperscale buildout.", "tags": ["AI", "Energy", "Policy"], "ref": 7 },
+    { "date": "2026-06-17", "title": "NJ AI Hub marks one year; Sherrill unveils statewide AI-skills push", "impact": "Hub expands via AI Ready NJ (18 community colleges) and an AI Library Learning Network; the governor's continued backing deepens NJ's AI ecosystem and research-computing demand.", "tags": ["AI", "Economic Dev"], "ref": 11 },
+    { "date": "2026-05-27", "title": "Gov. Sherrill unveils first-in-the-nation AI data-center regulatory framework", "impact": "Operators would fund their own power and grid upgrades and disclose energy/water use; rewards efficient, governed compute and adds uncertainty to raw hyperscale buildout.", "tags": ["AI", "Energy", "Policy"], "ref": 12 },
     { "date": "2026-03", "title": "Gov. Sherrill proposed a $35.5B general-fund FY2027 budget", "impact": "$60.7B all funds, +1.6% vs FY2026; ~$2B in spending cuts with a $5.4B projected surplus. Funds technology upgrades including the Division of Consumer Affairs licensing system and the NJ Innovation Authority Permitting Dashboard.", "tags": ["Budget"], "ref": 10 },
-    { "date": "2026-03", "title": "Sherrill's first budget address targets affordability and Big Tech", "impact": "Signals FY2027 priorities — energy costs, data-center accountability — that shape tech-adjacent spending.", "tags": ["Budget", "Leadership"], "ref": 8 },
-    { "date": "2026-01", "title": "Mikie Sherrill inaugurated as New Jersey's 57th Governor", "impact": "New administration resets executive priorities; technology direction in transition.", "tags": ["Leadership"], "ref": 3 },
     { "date": "2026-02", "title": "Gov. Sherrill names Kevin Dehmer permanent NJOIT CTO (succeeding retired Chris Rein)", "impact": "Central IT leadership settles under the new administration — relationship-building window for statewide tech direction.", "tags": ["Leadership"], "ref": 4 },
+    { "date": "2026-01", "title": "Mikie Sherrill inaugurated as New Jersey's 57th Governor", "impact": "New administration resets executive priorities; technology direction in transition.", "tags": ["Leadership"], "ref": 3 },
     { "date": "2025-12", "title": "NJ AI Hub selects Plug and Play to operate regional AI Accelerator", "impact": "Hub moves from launch to scaling startups and research; deepens the state's AI ecosystem and compute demand.", "tags": ["AI", "Economic Dev"], "ref": 2 },
     { "date": "2025-12", "title": "NJCCIC launches Civilian Cyber Resilience Corps; releases 2026–2030 plan", "impact": "Expands statewide cyber posture; demand for secure infrastructure and managed services across state and local government.", "tags": ["Cybersecurity"], "ref": 5 }
   ],
@@ -142,6 +142,8 @@
     { "label": "Central Jersey — Gov. Sherrill unveils data center regulations", "url": "https://www.centraljersey.com/2026/06/01/gov-sherrill-unveils-data-center-regulations/" },
     { "label": "NJBIZ — First 100 days: Sherrill targets affordability, permitting reform, energy", "url": "https://njbiz.com/first-100-days-sherrill-permitting-energy-affordability/" },
     { "label": "Gothamist — Gov. Sherrill lays out plan to ease AI data centers' burden on NJ towns, electric bills", "url": "https://gothamist.com/news/gov-sherrill-lays-out-plan-to-ease-ai-data-centers-burden-on-nj-towns-electric-bills" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "NJ AI Hub — Governor Sherrill joins NJ AI Hub as it marks one year of operations (June 17, 2026)", "url": "https://njaihub.org/news/2026/governor-mikie-sherrill-joins-new-jersey-ai-hub-it-marks-one-year-operations-nj-ai-hub" },
+    { "label": "Office of the Governor — Governor Sherrill Announces Comprehensive Plan on Data Centers (May 27, 2026)", "url": "https://www.nj.gov/governor/news/2026/20260527a.shtml" }
   ]
 }

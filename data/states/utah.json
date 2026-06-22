@@ -3,7 +3,7 @@
   "name": "Utah",
   "slug": "utah",
   "region": "Mountain West",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "The first state with a dedicated AI policy office, a fast-growing 'Silicon Slopes' data-center boom, and a centralized DTS that runs the nation's largest cloud cooperative — Utah is a digital-government bellwether.",
 
   "snapshot": [
@@ -127,13 +127,14 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "AI data-center backlash: Kevin O'Leary 'Stratos' hyperscale project scaled back ~75%; Congress watching", "impact": "Massive AI-infrastructure pipeline continues but is politically contested over water/power/community impact — siting risk to navigate alongside opportunity.", "tags": ["Data Centers", "AI"], "ref": 13 },
+    { "date": "2026-05", "title": "Gov. Cox signs EO 2026-03 establishing statewide data-center development standards", "impact": "Directs agencies to protect Great Salt Lake water, ratepayers, and air quality; signals a possible Sept 2026 special session on data-center legislation — new siting/procurement guardrails.", "tags": ["Data Centers", "Policy"], "ref": 12 },
     { "date": "2026-02", "title": "MyUtah citizen portal launches publicly; Pro-Human AI Task Force members named", "impact": "DTS digital-government modernization goes live; AI governance moves from policy to execution across state services.", "tags": ["Digital Gov", "AI"], "ref": 5 },
     { "date": "2026-03", "title": "Legislature approves ~$31.6B FY2027 budget incl. $15M AI compute capacity", "impact": "Dedicated compute funding signals real state AI workloads — an opening for governed AI infrastructure.", "tags": ["Budget", "AI"], "ref": 1 },
     { "date": "2025-12", "title": "Gov. Cox unveils $10M 'Pro-Human' AI initiative at Utah's first AI Summit", "impact": "State backs AI workforce, curricula, and government deployment — agencies will need governed AI approaches.", "tags": ["AI", "Policy"], "ref": 7 },
     { "date": "2025-12", "title": "Gov. Cox proposed a $12.1B general-fund FY2027 budget", "impact": "$30.7B all funds, +2.4% vs FY2026; rainy day funds near $1.6B. GRIT Initiative funds a unified e-permitting/information-management system and AI to modernize state services.", "tags": ["Budget", "AI"], "ref": 11 },
     { "date": "2025-09", "title": "Silicon Slopes data-center buildout accelerates (Creekstone Delta gigasite, Nephi, Box Elder)", "impact": "Utah becomes a national AI-infrastructure hub — strong tailwind for Dell ISG/AI-infrastructure demand.", "tags": ["Data Centers", "AI"], "ref": 9 },
-    { "date": "2025-05", "title": "SB 149 amendments narrow AI disclosure rules; sandbox sunset extended to July 2027", "impact": "Utah refines its first-in-nation AI law, keeping the Learning Lab open — continued governed-AI demand.", "tags": ["AI", "Policy"], "ref": 4 },
-    { "date": "2025-03", "title": "Utah joins GovRAMP as a participating government", "impact": "GovRAMP becomes the practical cloud-security gate for state data; clear it early on as-a-service deals.", "tags": ["Cybersecurity", "Cloud"], "ref": 6 }
+    { "date": "2025-05", "title": "SB 149 amendments narrow AI disclosure rules; sandbox sunset extended to July 2027", "impact": "Utah refines its first-in-nation AI law, keeping the Learning Lab open — continued governed-AI demand.", "tags": ["AI", "Policy"], "ref": 4 }
   ],
 
   "dellActions": [
@@ -155,6 +156,8 @@
     { "label": "Utah Division of Purchasing — State Cooperative Contracts", "url": "https://purchasing.utah.gov/purchasing/" },
     { "label": "ABC4 — Tracking AI data centers being built in Utah", "url": "https://www.abc4.com/news/digital-exclusives/tracking-ai-data-centers-utah-map/" },
     { "label": "@theU — University of Utah to build Utah Health AI Vault (UHAIV)", "url": "https://attheu.utah.edu/science-technology/u-to-build-out-utah-health-ai-vault-uhaiv-with-state-support/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Deseret News — Utah executive order sets higher data-center development standards (May 29, 2026)", "url": "https://www.deseret.com/utah/2026/05/29/utah-executive-order-data-center-gov-cox/" },
+    { "label": "Roll Call — Data center uproar in Utah, Congress watching (June 11, 2026)", "url": "https://rollcall.com/2026/06/11/data-center-uproar-utah-congress-watching-waiting/" }
   ]
 }

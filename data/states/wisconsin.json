@@ -3,7 +3,7 @@
   "name": "Wisconsin",
   "slug": "wisconsin",
   "region": "Midwest",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A historic AI data-center buildout on the old Foxconn site, a new $111B biennial budget, and a centralized DET procurement motion — Wisconsin is becoming a national AI-infrastructure hub almost overnight.",
 
   "snapshot": [
@@ -121,12 +121,13 @@
     { "name": "Trina Zanow", "title": "State CIO & DET Administrator", "org": "DOA — Division of Enterprise Technology", "note": "25-year state veteran, former DET deputy administrator; owns statewide IT direction and shared services.", "ref": 6 },
     { "name": "Bill Brinkley", "title": "State Chief Information Security Officer", "org": "DOA — DET Security Bureau", "note": "Leads statewide cybersecurity on a NIST 800-53 Rev. 5 baseline and the whole-of-state approach.", "ref": 8 },
     { "name": "Kathy Blumenfeld", "title": "Secretary", "org": "Department of Administration", "note": "DOA leadership; Secretary approval is required on IT purchases over $150K (Exec Order 288).", "ref": 7 },
-    { "name": "Chris Patton", "title": "Acting Executive-in-Charge (President)", "org": "Universities of Wisconsin", "note": "Named acting leader after the Board of Regents removed President Jay Rothman (Apr 2026); oversees a large research-computing and AI-infrastructure buyer (~$1.2B modernization in Act 15)." }
+    { "name": "Renée Wachter", "title": "Interim President", "org": "Universities of Wisconsin", "note": "UW-Superior chancellor named Interim President by the Board of Regents May 8, 2026 (effective May 18), replacing the acting Chris Patton arrangement after President Jay Rothman was fired Apr 7; a permanent-president search (chaired by Regent Ashok Rai) is underway. Oversees a large research-computing and AI-infrastructure buyer (~$1.2B modernization in Act 15).", "ref": 12 }
   ],
 
   "news": [
-    { "date": "2026-05", "title": "Reports detail $15B Port Washington AI data-center campus and new building era", "impact": "Confirms the scale of southeastern Wisconsin's AI-infrastructure boom and a multi-year construction/ecosystem pipeline.", "tags": ["Data Centers", "AI"], "ref": 5 },
-    { "date": "2026-01", "title": "Phase 1 of Microsoft's Mount Pleasant AI data center targeted to come online", "impact": "World-class AI compute lands in Wisconsin; anchors a regional AI supply-chain and services ecosystem.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 3 },
+    { "date": "2026-05", "title": "Regents name Renée Wachter Interim President of Universities of Wisconsin", "impact": "Stabilizes leadership of a ~$1.2B-modernization research/AI-infrastructure buyer after Rothman's April firing; permanent-president search underway — fresh executive relationships to build.", "tags": ["Leadership", "Higher Ed"], "ref": 12 },
+    { "date": "2026-04", "title": "Microsoft 'Fairwater' Mount Pleasant AI data center goes live ahead of schedule", "impact": "Phase 1 of 'the world's most powerful AI datacenter' is operational — anchors a regional AI supply-chain and services ecosystem now, not later.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 13 },
+    { "date": "2026-01", "title": "Microsoft proposes $13.3B Mount Pleasant expansion; 15 more data-center buildings approved", "impact": "Sustained multi-billion-dollar AI-infrastructure growth and rising state/local power, permitting, and IT-ecosystem demand.", "tags": ["AI", "Data Centers"], "ref": 3 },
     { "date": "2025-12", "title": "Vantage/Oracle/OpenAI break ground on $15B+ 'Lighthouse' Stargate campus in Port Washington", "impact": "Second hyperscale anchor (~900MW) for AI-infrastructure demand near Milwaukee.", "tags": ["Data Centers", "Stargate"], "ref": 4 },
     { "date": "2025-09", "title": "Microsoft commits additional ~$4B for a second Wisconsin data center (>$7B total)", "impact": "Doubles down on Wisconsin as a national AI-compute hub.", "tags": ["AI", "Data Centers"], "ref": 2 },
     { "date": "2025-07", "title": "Governor Evers signs $111.1B 2025–27 biennial budget (2025 Act 15)", "impact": "Sets the two-year fiscal frame, including ~$1.2B UW System modernization.", "tags": ["Budget"], "ref": 1 },
@@ -152,6 +153,8 @@
     { "label": "Wisconsin DET — Cybersecurity & Senior Leadership", "url": "https://det.wi.gov/Pages/Security.aspx" },
     { "label": "WPR — Evers broadband task force / BEAD ($1B+)", "url": "https://www.wpr.org/news/evers-broadband-task-force-says-internet-for-all-requires-affordability-digital-literacy" },
     { "label": "WEDC — Governor's Task Force on Workforce and Artificial Intelligence final action plan", "url": "https://wedc.org/gov-evers-announces-governors-task-force-on-workforce-and-artificial-intelligence-releases-final-action-plan/" },
-    { "label": "Wisconsin DET — Cybersecurity Grants (SLCGP)", "url": "https://det.wi.gov/Pages/Cybersecurity_Grants.aspx" }
+    { "label": "Wisconsin DET — Cybersecurity Grants (SLCGP)", "url": "https://det.wi.gov/Pages/Cybersecurity_Grants.aspx" },
+    { "label": "Spectrum News 1 — Interim president of Universities of Wisconsin named (May 8, 2026)", "url": "https://spectrumnews1.com/wi/milwaukee/news/2026/05/08/uw-interim-president" },
+    { "label": "BizTimes — Microsoft starts bringing Mount Pleasant data center online (Apr 2026)", "url": "https://biztimes.com/microsoft-starts-bringing-mount-pleasant-data-center-online/" }
   ]
 }

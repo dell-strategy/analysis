@@ -3,14 +3,14 @@
   "name": "Illinois",
   "slug": "illinois",
   "region": "Midwest",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "Largest budget in state history, a centralized $1.1B IT shop under a new CIO, a first-in-nation frontier-AI law, and a data-center boom now hitting an incentive pause — Illinois is reshaping where and how it buys technology.",
 
   "snapshot": [
     { "label": "FY2026 General Funds Budget", "value": "~$55.3B" },
     { "label": "Central IT Agency", "value": "DoIT ($1.1B)" },
     { "label": "Cloud / Co-op Gate", "value": "NASPO ValuePoint" },
-    { "label": "AI Law (signed)", "value": "SB 315 (frontier)" }
+    { "label": "AI Law (passed)", "value": "SB 315 (frontier)" }
   ],
 
   "execSummary": {
@@ -52,7 +52,7 @@
   "initiatives": [
     {
       "name": "SB 315 — Frontier AI Safety Act",
-      "status": "Signed; effective Jan 1, 2027",
+      "status": "Passed legislature; awaiting signature (effective Jan 1, 2027)",
       "statusType": "warn",
       "dellFit": 65,
       "budgetStrength": 40,
@@ -126,9 +126,9 @@
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Pritzker pauses new data-center tax incentives effective July 1, 2026", "impact": "Greenfield data-center economics shift; existing agreements honored. Pivot to existing campuses, modernization, and research computing.", "tags": ["Data Centers", "Policy"], "ref": 8 },
-    { "date": "2026-06", "title": "SB 315 frontier-AI safety law signed (effective Jan 1, 2027)", "impact": "Illinois sets a first-in-nation AI-audit standard; agencies favor governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
-    { "date": "2026-02", "title": "Gov. JB Pritzker proposed a $56.03B general-fund FY2027 budget", "impact": "$131.8B all funds, +1.6% vs FY2026; $2.4B rainy day fund and a $24M projected surplus. Funds the fourth year of the Computer Science Equity Grant Program and modernizes the R&D tax credit.", "tags": ["Budget"], "ref": 11 },
+    { "date": "2026-06-16", "title": "Pritzker signs ~$55.9B FY2027 budget (largest in state history)", "impact": "8th consecutive balanced budget sustains agency tech and refresh spend; funded partly by new business/tech taxes (social-media, digital-advertising, digital-asset levies).", "tags": ["Budget"], "ref": 12 },
+    { "date": "2026-06-05", "title": "Pritzker pauses new data-center tax incentives effective July 1, 2026", "impact": "Greenfield data-center economics shift; existing agreements honored. Pivot to existing campuses, modernization, and research computing.", "tags": ["Data Centers", "Policy"], "ref": 8 },
+    { "date": "2026-05", "title": "SB 315 frontier-AI safety bill passes both chambers (House 110-0); awaits governor's signature", "impact": "First-in-nation AI-audit standard heading to Pritzker (effective Jan 1, 2027 once signed); agencies favor governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
     { "date": "2026-01", "title": "Statewide ERP now tracks ~90% of the state budget", "impact": "Consolidation milestone drives secure compute/storage and cybersecurity hardening across DoIT systems.", "tags": ["Modernization", "ERP"], "ref": 9 },
     { "date": "2025-06", "title": "NASPO ValuePoint reapproved as an Illinois cooperative", "impact": "Pre-competed cooperative path reaffirmed for state and local buyers — a usable route for Dell offerings.", "tags": ["Procurement"], "ref": 10 },
     { "date": "2025-05", "title": "Illinois passes the largest budget in state history (FY2026)", "impact": "Record ~$55.3B general-funds budget with a small surplus sustains agency tech and refresh spend.", "tags": ["Budget"], "ref": 1 },
@@ -154,6 +154,7 @@
     { "label": "Gov. Pritzker Newsroom — Pause on New Data Center Tax Incentives", "url": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-pauses-new-data-center-tax-incentives" },
     { "label": "GovTech — Illinois ERP System Sets Standard for State Modernization", "url": "https://www.govtech.com/computing/illinois-erp-system-sets-standard-for-state-modernization.html" },
     { "label": "NASPO ValuePoint — Reapproved for Illinois government agencies", "url": "https://www.naspovaluepoint.org/press_release/naspo-valuepoint-offers-illinois-government-agencies-best-value-cooperative-contracts/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Capitol News Illinois — Pritzker signs nearly $56B FY2027 budget with new business taxes (June 16, 2026)", "url": "https://capitolnewsillinois.com/news/pritzker-signs-nearly-56b-budget-with-new-business-taxes-as-he-seeks-3rd-term/" }
   ]
 }

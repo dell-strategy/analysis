@@ -3,7 +3,7 @@
   "name": "Maryland",
   "slug": "maryland",
   "region": "Mid-Atlantic",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "Home to Fort Meade, NSA, and U.S. Cyber Command, Maryland pairs a deep cyber and quantum identity with an aggressive, AI-forward IT modernization push — all while closing one of the largest budget gaps in a generation.",
 
   "snapshot": [
@@ -46,7 +46,7 @@
       "Figures are annual (FY2026) unless noted; FY2026 begins July 1, 2025.",
       "The deficit-driven climate favors modernization that cuts cost (centralization, legacy retirement) and high-ROI AI over net-new discretionary spend.",
       "Broadband (BEAD) dollars are federal pass-through and subject to revised NTIA rules issued in 2025.",
-      "FY2027 (governor's proposed, per NASBO): $27.7B general fund, -0.6% vs FY2026; $70.8B all funds, +0.8%. Closes a ~$1.5B cash shortfall with ~$900M in cuts and no new taxes; sustains CyberMaryland, quantum/Deep Tech, and the new MD TRAIN AI-workforce program, and closes FY2027 with a $2.2B (8%) rainy day fund."
+      "FY2027 budget signed April 8, 2026: ~$70.8B all funds (~$27.7B general fund), closing a ~$1.5B structural deficit with ~$900M in cuts and no new taxes; rainy day fund held at 8%. Sustains CyberMaryland, quantum/Deep Tech, and the new MD TRAIN AI-workforce program. Resolved in regular session — no special session required."
     ]
   },
 
@@ -122,19 +122,19 @@
   "powerStructure": [
     { "name": "Wes Moore", "title": "Governor", "org": "State of Maryland", "note": "Champions AI-forward government and the 'Capital of Quantum'; issued the 2024 AI executive order and the Anthropic/Percepta partnership.", "ref": 11 },
     { "name": "Katie Savage", "title": "Secretary of Information Technology (State CIO)", "org": "DoIT", "note": "Leads statewide IT since 2023; author of the 2025 IT Master Plan, Maryland Digital Service, and the AI Innovation Lab.", "ref": 2 },
-    { "name": "State Chief Information Security Officer", "title": "CISO, Office of Security Management", "org": "DoIT", "note": "Owns statewide security policy and the Cyber Coordinating Council; verify current officeholder before engagement.", "ref": 7 },
-    { "name": "Michael Boyce", "title": "Senior Advisor for Responsible AI", "org": "Maryland AI Subcabinet", "note": "Appointed Jan 2026, succeeding Nishant Shah; advises the Governor, CIO, and AI Subcabinet on the state's AI strategy across critical domains.", "ref": 10 },
+    { "name": "James Saunders", "title": "Acting State CISO, Office of Security Management", "org": "DoIT", "note": "Acting State Chief Information Security Officer (pending Senate confirmation); former CISO at U.S. OPM and the Small Business Administration. Owns statewide security policy and the Cyber Coordinating Council.", "ref": 14 },
+    { "name": "Michael Boyce", "title": "Senior Advisor for Responsible AI", "org": "Maryland AI Subcabinet", "note": "Appointed June 10, 2026, succeeding Nishant Shah; former Director of the AI Corps at DHS. Advises the Governor, Secretary Savage, and the AI Subcabinet on AI strategy across critical domains.", "ref": 15 },
     { "name": "University System of Maryland / UMD leadership", "title": "Research-computing & quantum buyers", "org": "USM", "note": "Drive 'Capital of Quantum' and large research-infrastructure procurement; 200+ quantum faculty at UMD." }
   ],
 
   "news": [
-    { "date": "2026-05", "title": "Moore launches AI Innovation Lab inside DoIT", "impact": "Secure sandbox for agencies to test AI — a path for governed, private/on-prem AI on sensitive workloads.", "tags": ["AI", "DoIT"], "ref": 12 },
-    { "date": "2026-01", "title": "FY2026 budget closes ~$3B deficit without sales/property tax hikes", "impact": "Tech spend concentrates on cost-cutting modernization and high-ROI AI; discretionary net-new is tighter.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2026-01", "title": "Gov. Moore proposed a $27.7B general-fund FY2027 budget", "impact": "$70.8B all funds, +0.8% vs FY2026 (general fund -0.6%); closes a ~$1.5B cash shortfall with no new taxes and ends FY2027 with a $2.2B (8%) rainy day fund. Sustains CyberMaryland, quantum/Deep Tech investments, and a new MD TRAIN program to upskill small/mid-sized-business workers for the AI era.", "tags": ["Budget", "AI", "Cybersecurity"], "ref": 13 },
-    { "date": "2025-11", "title": "Maryland announces Anthropic/Percepta AI partnership for service delivery", "impact": "Multi-agency AI push for benefits and housing signals demand for governed AI infrastructure.", "tags": ["AI", "Partnership"], "ref": 11 },
-    { "date": "2025-07", "title": "DoIT releases 2025 IT Master Plan (FY2026–2028)", "impact": "Three pillars — workforce, centralization, security — frame modernization and refresh demand.", "tags": ["Modernization", "Strategy"], "ref": 3 },
-    { "date": "2025-05", "title": "Moore signs 2025 cybersecurity laws (Cyber Maryland, water/OT zero-trust)", "impact": "Expands state and local cyber funding and mandates — direct pull for secure infrastructure and OT protection.", "tags": ["Cybersecurity", "Policy"], "ref": 7 },
-    { "date": "2025-01", "title": "$1B 'Capital of Quantum' initiative announced with University of Maryland", "impact": "Quantum and research-computing buildout (incl. IonQ data center) drives infrastructure demand.", "tags": ["Quantum", "Research"], "ref": 9 }
+    { "date": "2026-06-10", "title": "Moore names Michael Boyce Senior AI Advisor (succeeding Nishant Shah)", "impact": "Former DHS AI Corps director takes the state's top AI-strategy advisory seat — continuity on the AI-forward agenda and a fresh executive relationship for governed-AI positioning.", "tags": ["AI", "Leadership"], "ref": 15 },
+    { "date": "2026-05", "title": "Moore launches AI Innovation Lab inside DoIT", "impact": "Secure sandbox (six-month pilots, workforce training, security testing) for agencies to move AI from experiment to production — a path for governed, private/on-prem AI on sensitive workloads.", "tags": ["AI", "DoIT"], "ref": 12 },
+    { "date": "2026-05", "title": "BPW advances Western Maryland middle-mile fiber deal; DHCD infrastructure grants released", "impact": "Exclusive state access to Western Maryland fiber (473 unserved/underserved premises, 48 anchor institutions); 43,000+ homes connected since 2023 — backdrop for edge/connectivity demand.", "tags": ["Broadband", "Infrastructure"], "ref": 16 },
+    { "date": "2026-04", "title": "Gov. Moore signs balanced ~$70.8B FY2027 budget (no new taxes)", "impact": "Signed Apr 8; closes a ~$1.5B structural deficit with the rainy day fund held at 8%. Sustains CyberMaryland, quantum/Deep Tech, and the MD TRAIN AI-workforce program — tech spend stays focused on cost-cutting modernization and high-ROI AI.", "tags": ["Budget", "AI", "Cybersecurity"], "ref": 18 },
+    { "date": "2026-04", "title": "Maryland secures $500M+ in quantum investment; IonQ HQ funded", "impact": "'Capital of Quantum' momentum — IonQ building a 100,000 sq ft UMD Discovery District HQ (doubling to 250+ staff); drives research-computing and data-center infrastructure demand.", "tags": ["Quantum", "Research"], "ref": 17 },
+    { "date": "2025-11", "title": "Maryland announces Anthropic/Percepta AI partnership for service delivery", "impact": "Multi-agency AI push for benefits and housing (SNAP, Medicaid, WIC) signals demand for governed AI infrastructure.", "tags": ["AI", "Partnership"], "ref": 11 },
+    { "date": "2025-07", "title": "DoIT releases 2025 IT Master Plan (FY2026–2028)", "impact": "Three pillars — workforce, centralization, security — frame modernization and refresh demand.", "tags": ["Modernization", "Strategy"], "ref": 3 }
   ],
 
   "dellActions": [
@@ -158,6 +158,11 @@
     { "label": "Maryland DoIT — 2025 AI Enablement Strategy & AI Study Roadmap", "url": "https://doit.maryland.gov/policies/ai/Pages/maryland-AI-enablement-strategy-and-roadmap.aspx" },
     { "label": "Office of Governor Moore — Landmark AI Partnership to Transform State Service Delivery", "url": "https://governor.maryland.gov/news/press-releases/maryland-governor-wes-moore-announces-landmark-ai-partnership-transform-state-service-delivery" },
     { "label": "StateScoop — Maryland's new AI Innovation Lab to help state agencies adopt, experiment with tech", "url": "https://statescoop.com/maryland-ai-innovation-lab-state-agencies-adopt-experiment-2026/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Maryland DoIT — State Chief Information Security Officer (James Saunders, Acting)", "url": "https://doit.maryland.gov/About-DoIT/Leadership/Pages/State-Chief-Information-Security-Officer.aspx" },
+    { "label": "Office of Governor Moore — Announces Senior AI Advisor for the State of Maryland (Jun 10, 2026)", "url": "https://governor.maryland.gov/news/press-releases/governor-moore-announces-senior-ai-advisor-state-maryland" },
+    { "label": "Maryland DHCD — Network Infrastructure Grant Programs (May 15, 2026)", "url": "https://news.maryland.gov/dhcd/2026/05/15/infrastructure-grant-programs/" },
+    { "label": "The Quantum Insider — Maryland doubles down on quantum with IonQ HQ funding (Apr 29, 2026)", "url": "https://thequantuminsider.com/2026/04/29/maryland-doubles-down-on-quantum-with-ionq-hq-funding-and-startup-infrastructure/" },
+    { "label": "Office of Governor Moore — Signs FY2027 Budget (Apr 8, 2026)", "url": "https://governor.maryland.gov/news/press/pages/governor-moore-signs-fy-2027-budget,-delivering-historic-education-and-public-safety-investments-without-raising-taxes-or-f.aspx" }
   ]
 }

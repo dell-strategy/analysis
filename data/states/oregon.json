@@ -3,7 +3,7 @@
   "name": "Oregon",
   "slug": "oregon",
   "region": "Pacific Northwest",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A record $138.9B biennial budget, a centralized EIS technology shop adopting GovRAMP for cloud, and a Hillsboro 'Silicon Forest' that is now one of the nation's hottest data-center and semiconductor markets — Oregon is buying and securing technology on a single enterprise motion.",
 
   "snapshot": [
@@ -124,12 +124,13 @@
   ],
 
   "news": [
+    { "date": "2026-06-05", "title": "Oregon data-center property-tax moratorium (HB 4084) takes effect", "impact": "New data centers become ineligible for the Enterprise Zone tax incentive until ~90 days after the 2027 session (SIP breaks and approved projects unaffected). Operators front-loaded applications before the cutoff, pulling near-term hardware demand forward while injecting uncertainty into post-2026 Silicon Forest expansion.", "tags": ["Data Centers", "Policy"], "ref": 11 },
+    { "date": "2026-06", "title": "Hillsboro 'Silicon Forest' data-center community backlash escalates", "impact": "200+ residents packed the June 2 council meeting over Enterprise Zone exemptions; recall sentiment toward the mayor. Rising local permitting friction means future capacity adds hinge on community-benefit, jobs, energy and water narratives — relevant to efficient/AI-optimized infrastructure positioning and to county/city IT accounts.", "tags": ["Data Centers", "Policy"], "ref": 12 },
     { "date": "2026-03", "title": "Hillsboro pauses adding industrial land for high-tech and data centers", "impact": "Signals land and grid capacity becoming the binding constraint on Silicon Forest growth — power/efficiency story matters to buyers.", "tags": ["Data Centers", "Policy"], "ref": 10 },
     { "date": "2025-10", "title": "Flexential plans a sixth Hillsboro data center as the cluster expands", "impact": "Reinforces Oregon as one of the nation's hottest AI-infrastructure markets; ISG and AI-factory demand.", "tags": ["Data Centers", "AI"], "ref": 9 },
     { "date": "2025-09", "title": "Oregon files BEAD final proposal — $689M to connect ~104,000 locations", "impact": "Largest reported share of allocation committed; expands digital-government and network modernization footprint.", "tags": ["Broadband", "Federal Funds"], "ref": 8 },
     { "date": "2025-06", "title": "Legislature adopts $138.9B 2025–27 biennial budget (+5.9%)", "impact": "Record all-funds budget sets the two-year spending baseline for agency IT investment.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-03", "title": "State CIO Terrence Woods presents EIS 2025–27 budget to Ways & Means", "impact": "Confirms EIS priorities — governance maturity, security, and modernization — and the buying motion sellers should map to.", "tags": ["Leadership", "Budget"], "ref": 3 },
-    { "date": "2025-02", "title": "Oregon AI Advisory Council delivers final State AI Action Plan", "impact": "Five executive actions on AI governance and security; agencies need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 4 }
+    { "date": "2025-03", "title": "State CIO Terrence Woods presents EIS 2025–27 budget to Ways & Means", "impact": "Confirms EIS priorities — governance maturity, security, and modernization — and the buying motion sellers should map to.", "tags": ["Leadership", "Budget"], "ref": 3 }
   ],
 
   "dellActions": [
@@ -150,6 +151,8 @@
     { "label": "Oregon DAS — Statewide Price Agreements & Cooperative Procurement (ORCPP / OregonBuys)", "url": "https://www.oregon.gov/das/OPM/Pages/price-agreement.aspx" },
     { "label": "Oregon Broadband Office — BEAD Program Update (Director Nick Batz)", "url": "https://apps.oregonlegislature.gov/liz/2026R1/Downloads/CommitteeMeetingDocument/312451" },
     { "label": "Hillsboro News Times — One of Hillsboro's largest data center operators plans 6th facility", "url": "https://hillsboronewstimes.com/2025/10/01/one-of-hillsboros-largest-data-center-operators-plans-6th-facility/" },
-    { "label": "OPB — Hillsboro will not get more industrial land for high tech, data centers after all", "url": "https://www.opb.org/article/2026/03/03/hillsboro-will-not-get-more-industrial-land-for-high-tech-data-centers/" }
+    { "label": "OPB — Hillsboro will not get more industrial land for high tech, data centers after all", "url": "https://www.opb.org/article/2026/03/03/hillsboro-will-not-get-more-industrial-land-for-high-tech-data-centers/" },
+    { "label": "Davis Wright Tremaine — Oregon data center tax-break moratorium (June 2026)", "url": "https://www.dwt.com/blogs/energy--environmental-law-blog/2026/06/oregon-data-center-tax-break-moratorium" },
+    { "label": "OPB — Hillsboro residents pack city council meeting over data centers (June 3, 2026)", "url": "https://www.opb.org/article/2026/06/03/data-center-hillsboro-residents-city-council-meeting/" }
   ]
 }

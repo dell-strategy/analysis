@@ -3,7 +3,7 @@
   "name": "Idaho",
   "slug": "idaho",
   "region": "Mountain West",
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "tagline": "A historic Micron memory-fab buildout, a new Meta hyperscale data center in Kuna, and a centralizing state IT shop make Idaho a small-budget state with outsized AI-infrastructure and consolidation upside.",
 
   "snapshot": [
@@ -14,7 +14,7 @@
   ],
 
   "execSummary": {
-    "summary": "Idaho is a small-population, fiscally conservative state, but two private-sector megaprojects are reshaping its technology landscape. Micron — headquartered in Boise — is building leading-edge DRAM fabs as part of a $200B U.S. expansion ($150B manufacturing + $50B R&D), with a second Boise fab announced in June 2025 and output targeted for 2027. Meta's roughly $800M–$1B hyperscale data center in Kuna is nearing operation. On the government side, the Office of Information Technology Services (ITS), under State CIO Alberto Gonzalez, is in the middle of a multi-phase statewide IT consolidation, and the FY2026 budget created a $10M Cybersecurity and Information Technology Resilience fund. Note that Idaho tightened spending mid-year: the governor ordered agency general-fund reductions in 2025 and signed additional FY2026 cuts in March 2026, so timing matters. For Dell, the strongest angles are AI/data-center infrastructure adjacent to the Micron and Meta buildouts and the consolidation-driven modernization of state agency IT, with procurement running primarily through NASPO ValuePoint cooperative contracts gated by the State CIO's office.",
+    "summary": "Idaho is a small-population, fiscally conservative state, but two private-sector megaprojects are reshaping its technology landscape. Micron — headquartered in Boise — is building leading-edge DRAM fabs as part of a $200B U.S. expansion ($150B manufacturing + $50B R&D), with a second Boise fab announced in June 2025 and output targeted for 2027. Meta's roughly $800M hyperscale data center in Kuna — redesigned mid-build for AI workloads — is now targeted to come online by end of 2026. On the government side, the Office of Information Technology Services (ITS), under State CIO Alberto Gonzalez, is in the middle of a multi-phase statewide IT consolidation, and the FY2026 budget created a $10M Cybersecurity and Information Technology Resilience fund. Note that Idaho tightened spending mid-year: the governor ordered agency general-fund reductions in 2025 and signed additional FY2026 cuts in March 2026, so timing matters. For Dell, the strongest angles are AI/data-center infrastructure adjacent to the Micron and Meta buildouts and the consolidation-driven modernization of state agency IT, with procurement running primarily through NASPO ValuePoint cooperative contracts gated by the State CIO's office.",
     "opportunities": [
       "AI-infrastructure and data-center demand in the orbit of Micron's Boise fab expansion and Meta's Kuna hyperscale campus (PowerEdge, networking, ISG, services).",
       "Statewide IT consolidation under ITS — a multi-agency centralization that drives infrastructure standardization, refresh, and managed-services needs.",
@@ -66,7 +66,7 @@
       "dellFit": 80,
       "budgetStrength": 80,
       "tags": ["Data Centers", "AI", "Hyperscale"],
-      "summary": "Meta's roughly $800M–$1B, 960,000+ sq ft data center in Kuna is its first in Idaho, backed by 100% renewable energy on Idaho Power's system and ~$50M in city water/sewer investment. It is nearing operational status (targeted around 2026). It signals Idaho as a viable hyperscale and AI-infrastructure location and seeds adjacent compute, networking, and services demand.",
+      "summary": "Meta's roughly $800M, ~1M sq ft data center in Kuna is its first in Idaho, backed by 100% renewable energy on Idaho Power's system and ~$70M in donated city water/sewer infrastructure. The facility was redesigned mid-build to support AI workloads at scale, pushing completion to end of 2026 (about a year later than planned); building exteriors are complete and the site hit peak construction (~1,400 workers) in early 2026. It signals Idaho as a viable hyperscale and AI-infrastructure location and seeds adjacent compute, networking, and services demand.",
       "ref": 4
     },
     {
@@ -76,7 +76,7 @@
       "dellFit": 75,
       "budgetStrength": 55,
       "tags": ["Consolidation", "Modernization", "Infrastructure"],
-      "summary": "Under State CIO Alberto Gonzalez (appointed 2022), ITS is centralizing IT services from individual agencies into a single operation in multi-agency phases — six additional agencies were in scope after the first three phases. Consolidation standardizes infrastructure and creates openings for refresh, common platforms, and managed services, but procurement decisions concentrate under the State CIO's office.",
+      "summary": "Under State CIO Alberto Gonzalez (appointed 2022), ITS has centralized IT services for more than 50 agencies and is now nearly done — as of early 2026 only one agency remains (the Idaho Department of Health & Welfare), with full completion roughly two fiscal years out. Beyond consolidation, AI, privacy, and ADA compliance are the CIO's 2026 priorities. Consolidation standardizes infrastructure and creates openings for refresh, common platforms, and managed services, but procurement decisions concentrate under the State CIO's office.",
       "ref": 7
     },
     {
@@ -126,13 +126,13 @@
   ],
 
   "news": [
+    { "date": "2026-03", "title": "Meta's $800M Kuna data center hits peak construction; AI redesign pushes opening to end-2026", "impact": "Building exteriors complete, ~1,400 workers on site; redesigned for AI workloads — reinforces Idaho as an AI-infrastructure location and seeds adjacent compute/networking demand.", "tags": ["Data Centers", "AI", "Hyperscale"], "ref": 11 },
     { "date": "2026-03", "title": "Governor signs additional FY2026 budget cuts (SB 1331)", "impact": "Mid-year general-fund reductions tighten agency spend; confirm program funding before forecasting.", "tags": ["Budget"], "ref": 6 },
+    { "date": "2026-02", "title": "Idaho state IT consolidation nearly complete — only IDHW remains", "impact": "ITS has centralized 50+ agencies; the final phase (Health & Welfare) concentrates buying authority under the State CIO — engage ITS directly for standardized refresh and managed services.", "tags": ["Consolidation", "Modernization"], "ref": 12 },
     { "date": "2026-01", "title": "Gov. Brad Little proposed a $5.66B general-fund FY2027 budget", "impact": "$14.44B all funds, +0.6% vs FY2026; ~$1.20B total reserve balances, with 3% ongoing general-fund cuts made permanent under the 'Enduring Idaho' plan.", "tags": ["Budget"], "ref": 10 },
     { "date": "2025-07", "title": "Idaho preps statewide AI rollout; ITS shares draft AI guidance", "impact": "Agencies move toward governed AI use; opening for auditable, private/on-prem AI on sensitive data.", "tags": ["AI", "Policy"], "ref": 8 },
     { "date": "2025-06", "title": "Micron announces second Boise fab (part of $200B U.S. expansion)", "impact": "Deepens Boise as a memory-manufacturing and AI-hardware hub; output targeted 2027.", "tags": ["Semiconductors"], "ref": 2 },
-    { "date": "2025-06", "title": "Idaho BEAD program advances (~$583M allocation)", "impact": "Rural broadband buildout proceeds through subgrantee selection; expands connected footprint.", "tags": ["Broadband"], "ref": 9 },
-    { "date": "2025-02", "title": "FY2026 budget proposes $10M Cyber & IT Resilience fund", "impact": "Signals security/resilience as a rising state priority alongside IT centralization.", "tags": ["Cybersecurity", "Budget"], "ref": 1 },
-    { "date": "2025-01", "title": "ITS adds deputy CIO and CTO leadership for consolidation", "impact": "Leadership bench built out to drive multi-agency IT centralization.", "tags": ["Leadership"], "ref": 7 }
+    { "date": "2025-06", "title": "Idaho BEAD program advances (~$583M allocation)", "impact": "Rural broadband buildout proceeds through subgrantee selection; expands connected footprint.", "tags": ["Broadband"], "ref": 9 }
   ],
 
   "dellActions": [
@@ -154,6 +154,8 @@
     { "label": "Idaho Capital Sun — Idaho preps to roll out AI in state government", "url": "https://idahocapitalsun.com/2025/07/10/idaho-preps-to-roll-out-artificial-intelligence-in-state-government/" },
     { "label": "Link Up Idaho — BEAD Program", "url": "https://linkup.idaho.gov/broadband-equity-access-and-deployment-bead-program/" },
     { "label": "Idaho Division of Purchasing — Statewide Contracts", "url": "https://purchasing.idaho.gov/statewide-contracts/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Construction Equipment Guide — Meta Hits 'Peak Construction' on $800M Idaho Data Center", "url": "https://www.constructionequipmentguide.com/meta-hits-peak-construction-on-800m-idaho-data-center/70046" },
+    { "label": "GovTech — In Idaho, AI Improves Government Experience, Efficiency (consolidation near complete)", "url": "https://www.govtech.com/workforce/in-idaho-ai-improves-government-experience-efficiency" }
   ]
 }
