@@ -1,10 +1,25 @@
-# Internal source workbooks — NEVER publish.
-# These contain internal-only fields (revenue, account IDs, BDM reps). The
-# published account pages are generated from them with those fields stripped;
-# the raw workbooks themselves must stay local.
+# ─────────────────────────────────────────────────────────────────────────
+# Working / source materials — NEVER publish to this public repo.
+# The site is built FROM these; only the generated HTML/CSS/JSON belongs here.
+# Keep raw spreadsheets, budget docs, and other working files LOCAL.
+# (To intentionally publish one of these types, use `git add -f <file>`.)
+# ─────────────────────────────────────────────────────────────────────────
+
+# Internal source workbooks (revenue, account IDs, BDM reps — stripped by the parser)
 SLG Focused Accounts.xlsx
 *.xlsx
 *.xlsm
+*.xls
+
+# Working/source documents (government-affairs summaries, budget PDFs, etc.)
+*.pdf
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.csv
+*.tsv
+*.zip
 
 # OS / editor cruft
 Thumbs.db
