@@ -1,0 +1,84 @@
+{
+  "state": "maryland",
+  "stateName": "Maryland",
+  "type": "State Agency",
+  "name": "Maryland Dept of Information Technology (DoIT)",
+  "slug": "doit",
+  "hq": "Annapolis, MD",
+  "updated": "2026-06-22",
+  "tagline": "Maryland's central IT agency: DoIT sets statewide technology and cyber policy, runs the IT Investment Fund that bankrolls major modernization projects, and houses the Maryland Digital Service, the responsible-AI office, and the state's quantum ambitions under State CIO Katie Savage.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central IT authority" },
+    { "label": "Secretary / State CIO", "value": "Katie Savage" },
+    { "label": "Funding lever", "value": "IT Investment Fund (ITIF)" },
+    { "label": "Signature bet", "value": "\"Capital of Quantum\"" }
+  ],
+
+  "overview": "The Maryland Department of Information Technology (DoIT) is the state's central IT agency — it sets statewide technology, cybersecurity, and data policy, operates shared infrastructure and networks, and administers the Information Technology Investment Fund (ITIF) that finances the state's largest modernization projects. Under Secretary and State CIO Katie Savage (appointed 2023), DoIT has pursued a deliberately federated model: rather than centralizing all IT, it has helped individual agencies stand up their own CIOs, CISOs, and product managers while DoIT provides governance, funding, and shared capability. New in-house teams reflect that build-out — the Maryland Digital Service (state product managers, designers, researchers, and engineers) and an Office of AI Enablement led by a Senior Advisor for Responsible AI. DoIT also anchors Governor Moore's headline tech bets, including the $1B \"Capital of Quantum\" initiative centered at the University of Maryland and a responsible-AI agenda flowing from the Governor's 2024 AI executive order. For a Dell seller, DoIT is both a direct buyer of infrastructure and the governance/funding hub that shapes modernization demand across the executive branch.",
+
+  "budget": {
+    "intro": "DoIT's leverage shows up through the ITIF — the fund that finances Major Information Technology Development Projects (MITDPs) across the executive branch. DoIT's FY2026 request raised its operating allowance by roughly $65.9M (about 20%), much of it flowing into the ITIF to push large modernization efforts from planning into procurement and build.",
+    "stats": [
+      { "value": "~$65.9M", "label": "FY26 allowance increase", "note": "~20% rise in DoIT's requested operating allowance, much directed to the ITIF (per DLS analysis)" },
+      { "value": "58", "label": "MITDPs funded by ITIF (FY26)", "note": "Major IT Development Projects drawing on the Investment Fund in fiscal 2026" },
+      { "value": "~$69M", "label": "Top-3 projects (FY26)", "note": "FMIS, CPB Payroll, and Integrated Tax modernization — ~53% of ITIF in FY26 (up from ~$19.8M in FY25)" }
+    ],
+    "notes": [
+      "Legislative analysts (DLS) flagged ITIF project-oversight and a fund-balance discrepancy in the FY26 review — expect tighter reporting requirements on expedited projects.",
+      "The largest end-user IT spend often sits inside individual agencies (health, transportation, public safety); DoIT governs and co-funds rather than owning every line.",
+      "SB85 / HB266 (2026 session, signed May 2026) broadened authorized ITIF uses — confirm current scope before mapping a project to the fund."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "\"Capital of Quantum\" initiative", "summary": "Governor Moore's $1B public-private initiative (announced Jan 2025) to make Maryland a global quantum hub, anchored at the University of Maryland with IonQ and a Microsoft quantum research center in the Discovery District. Watch for downstream compute, data-center, and HPC infrastructure demand.", "tags": ["Quantum", "Economic Development", "HPC"] },
+    { "name": "Responsible AI enablement", "summary": "Flowing from the Governor's 2024 AI executive order, DoIT's Office of AI Enablement (Senior Advisor for Responsible AI Nishant Shah) runs an AI Subcabinet, a Responsible AI Policy, and a 2025 AI Enablement Strategy / Study Roadmap targeting critical domains — a path for AI-infrastructure and platform conversations.", "tags": ["AI", "Governance", "Data"] },
+    { "name": "Maryland Digital Service & modernization", "summary": "An in-house team of product managers, designers, researchers, and engineers driving website/application redesigns and discovery work — informing more agile, accurate procurements. Tied to flagship ITIF rebuilds (FMIS, payroll, integrated tax).", "tags": ["Modernization", "Digital Services"] },
+    { "name": "Federated agency IT model", "summary": "Savage is pushing CIO/CISO/product-manager capacity back into individual agencies while DoIT sets standards and funds. Map the right buying center per agency rather than assuming all decisions sit centrally.", "tags": ["Org Model", "Governance"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling into Maryland state IT runs primarily through eMaryland Marketplace Advantage (eMMA) and DoIT's statewide IT contracts. Confirm Dell's position on the relevant statewide vehicles and that any cloud/AI offering meets the state's security and AI-policy expectations before pursuing agency deals.",
+    "vehicles": [
+      { "name": "eMaryland Marketplace Advantage (eMMA)", "detail": "The state's central e-procurement portal (administered by the Dept. of General Services) where solicitations, bids, and awards are posted across state agencies and many local entities — the front door for registering and tracking opportunities." },
+      { "name": "DoIT Statewide IT Contracts", "detail": "DoIT-managed master/statewide contracts for IT products and services (hardware, software, services) that agencies can buy from — the primary IT-specific path; confirm Dell scope and category coverage." },
+      { "name": "ITIF-funded projects", "detail": "Major modernization buys are financed through the IT Investment Fund and run as MITDPs — align infrastructure and services to projects already in the funded pipeline (e.g., FMIS, payroll, integrated tax)." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Katie Savage", "title": "Secretary of Information Technology & State CIO", "note": "Top statewide tech relationship; sets direction, owns the ITIF, and champions the federated agency-IT model. AI- and modernization-forward." },
+    { "name": "Nishant Shah", "title": "Senior Advisor for Responsible AI", "note": "Leads the Office of AI Enablement and sits on the Governor's AI Subcabinet — the entry point for AI strategy, policy, and use-case conversations." },
+    { "name": "James Saunders", "title": "Acting State Chief Information Security Officer (SCISO)", "note": "Leads DoIT's Office of Security Management (effective May 2025); former CISO at U.S. OPM and SBA. Owns statewide security standards — confirm if confirmed to permanent role." },
+    { "name": "Maryland Digital Service", "title": "Product / design / engineering team", "note": "In-house delivery team shaping modernization and procurement discovery — a technical influencer on what gets bought." },
+    { "name": "Dept. of General Services — Procurement", "title": "eMMA administrator", "note": "Runs the central procurement portal and many statewide vehicles; the contracting path alongside DoIT's IT contracts." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Moore signs SB85 / HB266 broadening IT Investment Fund uses", "impact": "Expands authorized ITIF spending (incl. communications sites/equipment) — re-check what modernization and infrastructure can now be funded through the fund.", "tags": ["Budget", "Legislation"] },
+    { "date": "2026-02", "title": "Savage details plan to push IT power back to agencies", "impact": "Agencies increasingly hire their own CIOs/CISOs/product managers — map buying centers per agency, not just to DoIT central.", "tags": ["Org Model", "Leadership"] },
+    { "date": "2025-07", "title": "DoIT publishes 2025 IT Master Plan", "impact": "Sets statewide modernization, AI, data, and cyber priorities — align the Dell narrative to the plan's stated tracks.", "tags": ["Strategy"] },
+    { "date": "2025-05", "title": "James Saunders named Acting State CISO", "impact": "New security leadership (ex-OPM/SBA) — rebuild the security relationship and align cloud/AI offerings to refreshed standards.", "tags": ["Cybersecurity", "Leadership"] },
+    { "date": "2025-01", "title": "Moore announces $1B \"Capital of Quantum\" initiative", "impact": "Multi-year quantum buildout with UMD/IonQ/Microsoft — watch for downstream HPC, data-center, and compute infrastructure demand.", "tags": ["Quantum", "Infrastructure"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's coverage on DoIT statewide IT contracts and eMMA registration — the access path to executive-branch agencies, not just DoIT central.",
+    "Map the ITIF-funded MITDP pipeline (FMIS, payroll, integrated tax, plus 58 funded projects) and align ISG infrastructure and services to projects already moving into build.",
+    "Lead AI-infrastructure and data-platform conversations through the Office of AI Enablement and the 2025 AI Roadmap, tied to the state's responsible-AI policy.",
+    "Track the \"Capital of Quantum\" buildout (UMD / IonQ / Microsoft) for downstream HPC, data-center, and compute opportunities around College Park.",
+    "Engage the Acting State CISO (Saunders) and the federated agency CISOs early — align cybersecurity and cloud offerings to refreshed statewide standards."
+  ],
+
+  "sources": [
+    { "label": "Maryland DoIT — Secretary Katie Savage", "url": "https://doit.maryland.gov/About-DoIT/Leadership/Pages/Secretary.aspx" },
+    { "label": "Maryland DoIT — 2025 IT Master Plan (PDF)", "url": "https://doit.maryland.gov/About-DoIT/Documents/Maryland-Information-Technology-Master-Plan-2025.pdf" },
+    { "label": "MGA — FY2026 DoIT Operating Budget Analysis (F50, PDF)", "url": "https://mgaleg.maryland.gov/pubs/budgetfiscal/2026fy-budget-docs-operating-F50-Department-of-Information-Technology.pdf" },
+    { "label": "Maryland DoIT — Senior Advisor for Responsible AI (Nishant Shah)", "url": "https://doit.maryland.gov/About-DoIT/Leadership/Pages/Senior-Advisor-for-Responsible-AI.aspx" },
+    { "label": "Maryland DoIT — Acting State CISO (James Saunders)", "url": "https://doit.maryland.gov/About-DoIT/Leadership/Pages/State-Chief-Information-Security-Officer.aspx" },
+    { "label": "Office of Governor Moore — $1B \"Capital of Quantum\" Initiative", "url": "https://governor.maryland.gov/news/press/pages/governor-moore-announces-1-billion-capital-of-quantum-initiative.aspx" },
+    { "label": "Maryland Procurement — eMaryland Marketplace Advantage (eMMA)", "url": "https://procurement.maryland.gov/" },
+    { "label": "Federal News Network — Savage giving IT power back to state agencies", "url": "https://federalnewsnetwork.com/ask-the-cio/2026/02/savage-giving-specific-it-power-back-to-the-state-agencies/" }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "state": "georgia",
+  "stateName": "Georgia",
+  "type": "County",
+  "name": "DeKalb County, Georgia",
+  "slug": "dekalb-county-georgia",
+  "hq": "Decatur, GA",
+  "updated": "2026-06-22",
+  "tagline": "Georgia's 4th-largest county (~760K-770K residents in metro Atlanta), run by a strong elected CEO and consolidating its technology under the Department of Innovation & Technology — now rebuilding after back-to-back 2025-2026 ransomware incidents.",
+
+  "snapshot": [
+    { "label": "Type", "value": "CEO-led county government" },
+    { "label": "Population", "value": "~770K (4th in GA)" },
+    { "label": "Central IT", "value": "DoIT (~110 staff, 40+ depts)" },
+    { "label": "Buying signal", "value": "Cyber recovery / modernization" }
+  ],
+
+  "overview": "DeKalb County is the fourth-most-populous county in Georgia, with roughly 760,000-770,000 residents across the eastern half of metropolitan Atlanta (county seat Decatur). It is one of Georgia's few counties governed by a strong, separately elected Chief Executive Officer rather than a county-manager model: Lorraine Cochran-Johnson took office in January 2025 as the county's first Black woman CEO, working alongside a seven-member Board of Commissioners. Central technology is consolidated in the Department of Innovation & Technology (DoIT), which supports 40-plus county departments with enterprise applications, infrastructure and cloud (Microsoft 365), strategic planning/procurement, and cybersecurity, with a workforce of roughly 110 IT professionals. For a Dell SLG seller, DeKalb is a large, urban county account in active modernization mode — recent ERP/HR/payroll platform work and a publicly stated cloud-migration push — but the dominant near-term theme is security: the county was hit by Lynx ransomware in October 2025 (with a resident data-breach notice in March 2026) and its Sheriff's Office/jail systems were struck by a separate ransomware attack in March 2026, putting cyber resilience, recovery, and infrastructure refresh at the center of the buying conversation.",
+
+  "budget": {
+    "intro": "DeKalb adopted its FY2026 budget on February 26, 2026. The county runs on a calendar fiscal year and a multi-fund structure; technology spending sits within DoIT and is spread across departmental capital and operating lines rather than a single published IT appropriation, so confirm the IT/cyber line items against the adopted budget document before forecasting.",
+    "stats": [
+      { "value": "~$1.9B", "label": "Total operating funds (FY2026)", "note": "All-funds estimate, up ~$3.9M vs FY2025" },
+      { "value": "~$612M", "label": "General fund revenue (FY2026)", "note": "Against ~$582.9M in expenditures" },
+      { "value": "~110", "label": "DoIT IT professionals", "note": "Central tech staff supporting 40+ departments" }
+    ],
+    "notes": [
+      "FY2026 budget adopted Feb 26, 2026; DeKalb uses a calendar-year fiscal year.",
+      "There is no single published 'IT budget' line — technology spend is distributed across DoIT operating funds and departmental/capital projects; confirm against the adopted budget PDF.",
+      "Cyber-incident recovery costs (2025-2026 ransomware events) are a likely driver of near-term security and infrastructure spend."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Cybersecurity recovery & resilience", "summary": "After the October 2025 Lynx ransomware attack (resident breach notice issued March 2026) and a separate March 2026 ransomware hit on the Sheriff's Office/jail systems, DeKalb is rebuilding around threat monitoring, identity protection, incident response, and resilient system design. The clearest near-term buying center.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "Infrastructure & cloud modernization", "summary": "DoIT's Infrastructure & Support division runs server/cloud (Microsoft 365), networks, and data centers; the county has publicly highlighted cloud migration and was recognized for digital-innovation efforts. Hybrid infrastructure refresh and data-center modernization are open lanes.", "tags": ["Cloud", "Infrastructure"] },
+    { "name": "Enterprise platform / ERP modernization", "summary": "Recent transformative projects modernized HR, payroll, benefits, and pension administration on enterprise platforms supporting the county workforce — a sign of sustained appetite for backend systems refresh and the compute/storage underneath it.", "tags": ["Modernization", "Enterprise Apps"] },
+    { "name": "Digital services expansion", "summary": "DoIT cites growing demand for resident-facing digital services and online accessibility across 40+ departments, supported by 24/7 monitoring — an ongoing track that pulls infrastructure and security spend with it.", "tags": ["Digital Services"] }
+  ],
+
+  "procurement": {
+    "intro": "DeKalb buys through its own Purchasing & Contracting department (competitive ITBs/RFPs posted via OpenGov, the county website, The Champion, and the Georgia Procurement Registry) and also leverages cooperative and statewide vehicles to avoid running fresh solicitations. Confirm Dell's coverage across the relevant co-ops before pursuing a deal.",
+    "vehicles": [
+      { "name": "DeKalb Purchasing & Contracting (direct)", "detail": "County's own competitive process — ITBs/RFPs posted via the OpenGov procurement portal, county site, The Champion, and the Georgia Procurement Registry. Led by the Chief Procurement Officer." },
+      { "name": "Georgia statewide contracts (SWC / DOAS)", "detail": "DeKalb uses Georgia statewide contracts administered through the state's procurement system for commodities and IT — a pre-competed path for eligible buys." },
+      { "name": "National cooperative purchasing (e.g. Sourcewell)", "detail": "The county references cooperative agreements such as Sourcewell for equipment and services — a route to leverage national co-op pricing without a local RFP." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Lorraine Cochran-Johnson", "title": "Chief Executive Officer", "note": "Strong elected CEO since Jan 2025 (first Black woman to hold the role); owns county operations and budget direction. The top executive relationship for major initiatives." },
+    { "name": "Scott Shelton", "title": "CIO & Director, Innovation & Technology (DoIT)", "note": "Permanently appointed CIO in May 2026 after serving as interim from Aug 2025; 24+ years in IT, 16 at DeKalb. Owns enterprise tech, cloud, and cyber direction — the primary IT relationship." },
+    { "name": "DoIT Cybersecurity Division", "title": "Threat monitoring, IR & risk", "note": "Dedicated security division (one of DoIT's four) handling monitoring, identity protection, and incident response — the buying center for the post-ransomware security rebuild." },
+    { "name": "Chief Procurement Officer", "title": "Purchasing & Contracting", "note": "Owns the county's solicitations, contract awards, and co-op/statewide vehicle use — the path onto a DeKalb deal." },
+    { "name": "Board of Commissioners (7 districts)", "title": "Legislative / budget approval", "note": "Approves the budget and major contracts; works with (and at times checks) the CEO. Relevant for large capital tech spend." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Scott Shelton named permanent CIO / DoIT Director", "impact": "Stable, internally promoted IT leadership after the interim period — a settled top relationship for the tech motion.", "tags": ["Leadership"] },
+    { "date": "2026-03", "title": "Resident data-breach notice follows Oct 2025 Lynx ransomware; separate ransomware hits Sheriff's Office/jail", "impact": "Cyber resilience, recovery, and infrastructure hardening move to the front of the buying conversation; FBI/GBI engaged on the Sheriff's incident.", "tags": ["Cybersecurity"] },
+    { "date": "2026-02", "title": "FY2026 budget adopted (Feb 26, 2026)", "impact": "~$1.9B all-funds budget sets the spend envelope; cyber recovery is a likely near-term driver. Confirm IT/security line items.", "tags": ["Budget"] },
+    { "date": "2025-10", "title": "Lynx ransomware group claims attack on DeKalb County government", "impact": "Triggered the security rebuild now driving DeKalb's technology priorities.", "tags": ["Cybersecurity"] },
+    { "date": "2025-01", "title": "Lorraine Cochran-Johnson sworn in as DeKalb CEO", "impact": "New strong-CEO administration sets the multi-year agenda — infrastructure and modernization framed as priorities.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Lead with the cybersecurity recovery story: after two ransomware incidents (Oct 2025 and March 2026), bring resilient infrastructure, secure-by-design compute/storage, recovery/immutable backup, and incident-hardening to the DoIT Cybersecurity Division.",
+    "Engage CIO Scott Shelton on infrastructure and cloud modernization — server/data-center refresh and the county's stated cloud-migration push (Microsoft 365 environment) are open lanes for ISG.",
+    "Confirm Dell's access paths: Georgia statewide (DOAS/SWC) contracts plus national co-ops (e.g. Sourcewell) alongside the county's own OpenGov solicitations — avoid forcing a fresh RFP where a co-op already covers the buy.",
+    "Tie compute/storage to the enterprise-platform modernization (HR/payroll/pension/ERP) already underway — sell the infrastructure layer beneath those applications.",
+    "Map the strong-CEO structure: align executive sponsorship with CEO Cochran-Johnson's modernization agenda while working DoIT and Purchasing, and watch the Board of Commissioners on large capital approvals."
+  ],
+
+  "sources": [
+    { "label": "DeKalb County — Department of Innovation & Technology", "url": "https://dekalbcountyga.gov/departments/innovation-technology" },
+    { "label": "DeKalb County — Office of the CEO (Lorraine Cochran-Johnson)", "url": "https://www.dekalbcountyga.gov/chief-executive-officer/ceo-lorraine-cochran-johnson" },
+    { "label": "DeKalb County — FY2026 Annual Budget (adopted Feb 26, 2026)", "url": "https://dekalbcountyga.gov/sites/default/files/2026-04/FY2026%20DeKalb%20County%20Annual%20Budget%20as%20adopted.pdf" },
+    { "label": "DeKalb County — Purchasing & Contracting", "url": "https://www.dekalbcountyga.gov/purchasing-contracting/about-purchasing-and-contracting" },
+    { "label": "U.S. Census Bureau QuickFacts — DeKalb County, Georgia", "url": "https://www.census.gov/quickfacts/fact/table/dekalbcountygeorgia/PST045224" },
+    { "label": "Lynx ransomware strikes DeKalb County government (Oct 2025)", "url": "https://www.dexpose.io/lynx-ransomware-strikes-dekalb-county-government/" }
+  ]
+}

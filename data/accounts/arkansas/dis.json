@@ -1,0 +1,85 @@
+{
+  "state": "arkansas",
+  "stateName": "Arkansas",
+  "type": "State Agency",
+  "name": "Arkansas Division of Information Systems (DIS)",
+  "slug": "dis",
+  "hq": "Little Rock, AR",
+  "updated": "2026-06-22",
+  "tagline": "Arkansas's central IT and shared-services provider: the former Division of Information Systems runs the statewide network, data-center and shared technology services, and now the centralized cybersecurity program — recently renamed the Office of State Technology (OST) under the Department of Shared Administrative Services.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central IT / shared services" },
+    { "label": "Now branded", "value": "Office of State Technology (OST)" },
+    { "label": "DIS appropriation", "value": "~$102M/yr" },
+    { "label": "Statewide IT spend", "value": "~$680–700M/yr" }
+  ],
+
+  "overview": "The Arkansas Division of Information Systems (DIS) is the state's central IT and shared-services organization, providing the statewide network backbone (data, voice, video), data-center and hosting, and shared technology services for state agencies, and increasingly setting statewide technology and security policy. Following Gov. Sarah Huckabee Sanders' June 12, 2025 executive order and a statewide IT assessment, DIS was reorganized and rebranded as the Office of State Technology (OST), reporting to the Department of Shared Administrative Services (SAS) — the renamed successor to the Department of Transformation & Shared Services (TSS), effective around July 1, 2025. Public references still use 'DIS' and 'TSS' interchangeably with the new OST/SAS names during the transition, so confirm the current entity name on any document. DIS/OST is funded largely through cost recovery (non-revenue receipts) on services it provides to state, local, and federal customers rather than a single large general-revenue line, and it is the natural buying center for statewide infrastructure, hosting, cloud, and now consolidated cybersecurity. For a Dell seller, DIS/OST is best understood as both the standards-and-security layer above agency IT and the shared-services delivery arm — the path into statewide infrastructure modernization.",
+
+  "budget": {
+    "intro": "DIS isn't the state's largest direct spender, but it sits at the center of Arkansas IT economics. The division's own appropriation runs roughly $102M/year (largely cost-recovery from customer agencies), while the 2025 statewide assessment found Arkansas spends on the order of $680–700M/year on technology overall — heavily weighted toward applications rather than infrastructure, and only ~$6M on cybersecurity versus a ~$60M peer-state average. The reorganization is pitched as saving $65–130M/year through consolidation and stronger vendor negotiation.",
+    "stats": [
+      { "value": "~$102M", "label": "DIS appropriation (annual)", "note": "FY24 ~$101.7M / FY25 ~$101.8M requested; mostly cost-recovery receipts" },
+      { "value": "~$680–700M", "label": "Statewide IT spend (annual)", "note": "Per the 2025 statewide IT assessment cited in the reorganization" },
+      { "value": "~$6M", "label": "Annual cyber spend", "note": "Assessment flagged this vs. a ~$60M peer-state average — a stated investment gap" }
+    ],
+    "notes": [
+      "DIS funds most delivery through cost recovery (non-revenue receipts) on services it sells to state, local, and federal customers, not a single large general-fund line.",
+      "The assessment found IT spend skewed toward applications over infrastructure, and projected $65–130M/year in savings from consolidation and vendor negotiation — a tailwind for infrastructure and shared-services consolidation conversations.",
+      "Confirm specific appropriation and fiscal-year figures against the enacted Arkansas budget (DFA budget manual 0470) before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Statewide IT centralization & reorganization", "summary": "Gov. Sanders' June 2025 executive order, backed by a ~956-page assessment, consolidates IT administration and governance, institutes statewide project management, and consolidates duplicative services. DIS was rebranded as the Office of State Technology (OST) under SAS. The consolidation drive is the central opening — confirm which entity owns a given program before forecasting.", "tags": ["Modernization", "Reorg"] },
+    { "name": "Centralized cybersecurity program", "summary": "A new State Cybersecurity Office (SCSO) centralizes cyber risk management across agencies, with the assessment flagging Arkansas's ~$6M cyber spend as far below peers. Closing that gap is a stated priority — a clear opening for security infrastructure, endpoint, and resilience offerings.", "tags": ["Cybersecurity"] },
+    { "name": "AI adoption & governance", "summary": "Arkansas is standing up an AI & Analytics Center of Excellence, recruiting its first Chief AI Officer, and OST issued statewide AI acceptable-use policy under Act 848 (2025). Gov. Sanders' AI report targets productivity, Medicaid/SNAP program integrity, and an AI-enabled services portal — opening AI-infrastructure and platform conversations.", "tags": ["AI", "Data"] },
+    { "name": "eProcurement & shared-services modernization", "summary": "The state is migrating to a new SAP Ariba eProcurement system (targeted July 2026) and consolidating shared technology services. Infrastructure refresh, hosting/cloud, and managed services across agencies are the recurring delivery openings.", "tags": ["Cloud", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to or through DIS/OST runs on Arkansas's central procurement framework, not one-off agency RFPs. Confirm three things first: that Dell holds the right Arkansas statewide/technology contracts, how cooperative vehicles apply, and that IT buys clear the State Technology Cost Analysis review and SAS-secretary sign-off thresholds.",
+    "vehicles": [
+      { "name": "Office of State Procurement (OSP) statewide contracts", "detail": "OSP holds primary authority over statewide procurement of commodities and technical/professional services for agencies, boards, and higher-ed — the primary path to put products on contract for Arkansas buyers." },
+      { "name": "State Technology Cost Analysis review", "detail": "IT procurements of $100,000 or more are subject to cost-analysis review and budget control; under the new cyber governance the SAS secretary holds final sign-off on cooperative purchasing and significant technology buys — clear this gate early." },
+      { "name": "Cooperative / NASPO ValuePoint", "detail": "Arkansas participates in NASPO ValuePoint cooperative technology contracts (e.g., data-com and IT categories) via participating addenda — a route to ride an existing cooperative vehicle rather than a fresh solicitation." },
+      { "name": "SAP Ariba eProcurement (transition)", "detail": "Arkansas is moving to a new Ariba eProcurement system targeted for July 2026 — align reseller/vendor registration and catalogs to the new platform to stay sourceable." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Leslie Fisken", "title": "Secretary, Dept. of Shared Administrative Services (SAS)", "note": "Cabinet secretary over the renamed department DIS/OST reports into; holds final sign-off on cooperative purchasing and significant technology buys under the new cyber governance. The cabinet-level owner of the IT/shared-services portfolio." },
+    { "name": "Jay Harton", "title": "State CTO & Director, Division of Information Systems (OST)", "note": "27+ year DIS veteran (former COO, interim director from Feb 2024), named permanent CTO/director by Gov. Sanders in March 2025. The top relationship for the statewide infrastructure and shared-services motion." },
+    { "name": "Gary Vance", "title": "Chief Information Security Officer (CISO)", "note": "Leads the new State Cybersecurity Office (SCSO) centralizing cyber across agencies — the buying center for the statewide security program and the flagged investment gap." },
+    { "name": "Robert McGough", "title": "Chief Data Officer", "note": "Owns statewide data strategy — a natural partner for analytics, AI-data, and the AI & Analytics Center of Excellence work." },
+    { "name": "Chief AI Officer (CAIO)", "title": "Newly created role — being recruited", "note": "Arkansas is hiring its first Chief AI Officer to own statewide AI strategy; confirm the appointee and decision rights before mapping the AI buying center." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Arkansas targets July 2026 cutover to SAP Ariba eProcurement", "impact": "New procurement platform changes how vendors register, list catalogs, and transact — align reseller and contract content to Ariba to stay sourceable.", "tags": ["Procurement"] },
+    { "date": "2025-07", "title": "DIS rebranded Office of State Technology (OST) under Dept. of Shared Administrative Services (SAS)", "impact": "Entity names and reporting lines changed mid-transition — re-confirm the current owner of each program and contract before forecasting.", "tags": ["Reorg"] },
+    { "date": "2025-06", "title": "Gov. Sanders' executive order centralizes state IT; assessment flags cyber and infrastructure gaps", "impact": "Consolidation, statewide project management, and a new cybersecurity office create openings for infrastructure and security; the ~$6M cyber spend and $65–130M savings target frame the business case.", "tags": ["Modernization", "Cybersecurity"] },
+    { "date": "2025-04", "title": "Act 848 signed: public entities must adopt AI use policies; OST issues statewide AI guidance", "impact": "Statewide AI governance takes hold (effective Aug 2025) with a human-in-the-loop mandate — position AI infrastructure and tooling against the new policy guardrails.", "tags": ["AI"] },
+    { "date": "2025-03", "title": "Jay Harton named permanent State CTO & DIS Director", "impact": "Stable, long-tenured leadership at the top of the statewide IT motion — build the top relationship around the consolidation and modernization agenda.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Map Dell's coverage on Arkansas OSP statewide/technology contracts and NASPO ValuePoint participating addenda — confirm reseller scope as the on-contract path into Arkansas agencies, not just DIS itself.",
+    "Lead with infrastructure and shared-services consolidation tied to the 2025 reorganization's $65–130M savings target and the assessment's 'too much app, too little infrastructure' finding.",
+    "Build the security motion around the new State Cybersecurity Office (CISO Gary Vance) and the flagged ~$6M-vs-$60M cyber-investment gap — endpoint, resilience, and secure infrastructure.",
+    "Engage early on AI infrastructure with the AI & Analytics Center of Excellence and the incoming Chief AI Officer, framed against Act 848 governance and the AI-services-portal agenda.",
+    "Track the DIS→OST/SAS rebrand and the July 2026 Ariba eProcurement cutover so contracts, catalogs, and the relationship map stay current through the transition."
+  ],
+
+  "sources": [
+    { "label": "Arkansas SAS — Jay Harton Named Director of the Division of Information Systems", "url": "https://sas.arkansas.gov/news/jay-harton-named-director-of-the-division-of-information-systems/" },
+    { "label": "GovTech — Arkansas Renames IT Division, Unifies Cybersecurity Efforts", "url": "https://www.govtech.com/computing/arkansas-renames-it-division-unifies-cybersecurity-efforts" },
+    { "label": "StateScoop — Arkansas governor orders technology dept. to centralize, improve cyber", "url": "https://statescoop.com/arkansas-governor-technology-reorganization-202/" },
+    { "label": "Arkansas SAS — Cybersecurity (State Cybersecurity Office)", "url": "https://transform.ar.gov/information-systems/cybersecurity/" },
+    { "label": "Arkansas SAS — Procurement / Office of State Procurement", "url": "https://sas.arkansas.gov/procurement/" },
+    { "label": "Arkansas SAS — Office of State Technology AI Policy", "url": "https://sas.arkansas.gov/wp-content/uploads/Policy_AI_Artificial-Intelligence.pdf" },
+    { "label": "DFA — Division of Information Systems budget (0470)", "url": "https://www.dfa.arkansas.gov/wp-content/uploads/0470_information_systems2024.pdf" },
+    { "label": "GovTech — Arkansas Seeks Its First Chief AI Officer to Guide Strategy", "url": "https://www.govtech.com/artificial-intelligence/arkansas-seeks-its-first-chief-ai-officer-to-guide-strategy" }
+  ]
+}

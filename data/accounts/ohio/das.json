@@ -1,0 +1,81 @@
+{
+  "state": "ohio",
+  "stateName": "Ohio",
+  "type": "State Agency",
+  "name": "Ohio Dept of Administrative Services",
+  "slug": "das",
+  "hq": "Columbus, OH",
+  "updated": "2026-06-22",
+  "tagline": "Ohio's central services agency: DAS houses the Office of Information Technology that runs statewide IT and the InnovateOhio Platform, and it owns the State Term Schedules and Cooperative Purchasing Program most Ohio public buyers use.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central IT & procurement" },
+    { "label": "State IT arm", "value": "DAS Office of Information Technology" },
+    { "label": "Primary vehicle", "value": "State Term Schedules + Co-op" },
+    { "label": "Platform", "value": "InnovateOhio Platform (IOP)" }
+  ],
+
+  "overview": "The Ohio Department of Administrative Services (DAS) is the state's central business-operations agency — it provides shared services across HR, fleet, real estate, general services, and information technology to Ohio's executive-branch agencies. For a technology seller, two parts of DAS matter most. First, the DAS Office of Information Technology (OIT), led by the State Chief Information Officer, sets statewide IT policy and standards, runs the InnovateOhio Platform (the state's shared cloud, data-analytics, and OHID digital-identity stack), and houses the Office of Information Security and Privacy. Second, DAS Procurement Services owns the State Term Schedules (STS) and the Cooperative Purchasing Program — the contract vehicles state agencies, counties, cities, K-12, higher ed, and other political subdivisions buy IT through, transacted on the OhioBuys e-procurement system. DAS is best understood as both Ohio's statewide IT authority and the procurement path into the broader Ohio public sector, rather than the state's largest end-user of technology.",
+
+  "budget": {
+    "intro": "DAS is funded through a mix of general revenue and cost recovery on the shared services it provides to agencies; its leverage is statewide IT direction and the contract vehicles, more than a single large IT line item. Ohio's FY2026–FY2027 operating budget (Am. Sub. H.B. 96) was signed by Gov. DeWine on June 30, 2025.",
+    "stats": [
+      { "value": "FY26–27", "label": "Current biennium", "note": "H.B. 96 operating budget, signed June 30, 2025; covers July 1, 2025 – June 30, 2027" },
+      { "value": "~$112M / ~$131M", "label": "DAS GRF (FY26 / FY27)", "note": "General Revenue Fund appropriations reported for DAS; agency total spend is larger via cost recovery" },
+      { "value": "~8M", "label": "OHID users", "note": "Ohioans using the InnovateOhio Platform digital identity to access state services" }
+    ],
+    "notes": [
+      "Much of DAS IT delivery is funded by chargeback/cost recovery to served agencies rather than a single GRF IT appropriation — confirm the funding source for any specific program before forecasting.",
+      "The largest agency IT budgets (Medicaid/JFS, Taxation, BMV/Public Safety, etc.) sit with those agencies; DAS OIT sets standards and runs shared platforms they consume."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "InnovateOhio Platform (IOP)", "summary": "The state's shared digital platform built on three pillars — user experience, OHID digital identity, and data analytics — with the data layer hosted in AWS. IOP is the consolidation point for cloud, identity, and analytics across agencies and a natural place to attach infrastructure, data, and AI offerings.", "tags": ["Cloud", "Data", "Digital Identity"] },
+    { "name": "Statewide AI governance", "summary": "DAS supports a multi-agency AI Council and published a state AI policy setting guardrails for generative AI use, approval workflows, employee training (via InnovateUS), and procurement disclosure. The State CIO reports dozens of approved AI use cases with more in development — an active governed-AI buying environment.", "tags": ["AI", "Governance"] },
+    { "name": "Cloud migration & modernization", "summary": "OIT is moving agencies toward cloud with a 'teach them to fish' playbook model, plus CMS modernization (HCL to Contentful) and a contact-center platform refresh (RFP issued late 2025). Infrastructure, migration, and managed-services opportunities sit here.", "tags": ["Cloud", "Modernization"] },
+    { "name": "Cybersecurity (OISP) with embedded AI", "summary": "The Office of Information Security and Privacy runs statewide security tooling, now with AI-assisted threat monitoring and fraud detection. Note a leadership transition: CISO Holly Drake departed in December 2025, with deputy Matthew Hemker stepping in as interim CISO.", "tags": ["Cybersecurity", "AI"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to or through DAS runs on pre-established contract vehicles transacted in OhioBuys, not one-off RFPs for every buyer. Confirm Dell's State Term Schedule coverage is active and correctly scoped, and that the right co-op pathway is in place to reach agencies and political subdivisions.",
+    "vehicles": [
+      { "name": "State Term Schedules (STS)", "detail": "DAS-established multi-vendor schedules for IT and non-IT goods and services. Listed vendors and approved price pages can be sold to registered Cooperative Purchasing Program members — the core IT vehicle." },
+      { "name": "Cooperative Purchasing Program", "detail": "Free, perpetual membership that lets counties, cities, K-12, higher ed, and other political subdivisions buy off state contracts, extending DAS vehicles across the Ohio public sector." },
+      { "name": "OhioBuys", "detail": "The state's enterprise e-procurement system (DAS-overseen, interfaced with OAKS) where requisitions, solicitations, contracts, and STS catalogs are managed — the transaction layer to be onboarded to." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Kathleen Madden", "title": "Director, DAS", "note": "Leads the department since July 2021; sets overall direction for shared services and procurement. Top relationship for the agency-wide motion." },
+    { "name": "Katrina Flory", "title": "State Chief Information Officer (DAS OIT)", "note": "Permanent State CIO since 2021 (prior deputy CIO ~10 years); owns statewide IT strategy, the InnovateOhio Platform, AI Council membership, and cloud direction. The key IT relationship." },
+    { "name": "Matthew Hemker", "title": "Interim State CISO (OISP)", "note": "Former deputy CISO; stepped in as interim after Holly Drake's December 2025 departure. Owns statewide security policy and tooling — confirm permanent appointment status." },
+    { "name": "InnovateOhio Platform team (DAS OIT)", "title": "Cloud / data analytics / OHID", "note": "Runs the shared platform pillars (user experience, digital identity, data analytics on AWS) — the buying center for shared infrastructure, identity, and data services." },
+    { "name": "DAS Procurement Services", "title": "State Term Schedules & Cooperative Purchasing", "note": "Owns STS, the co-op program, and OhioBuys onboarding — the path onto the vehicles that reach the whole Ohio public sector." }
+  ],
+
+  "news": [
+    { "date": "2025-12", "title": "State CISO Holly Drake departs DAS; deputy Matthew Hemker named interim CISO", "impact": "Security leadership transition at OISP — rebuild the relationship map for the statewide security buying center and watch for a permanent appointment.", "tags": ["Cybersecurity", "Leadership"] },
+    { "date": "2025-12", "title": "DAS OIT issues contact-center platform modernization RFP", "impact": "Active modernization procurement — a near-term opening for platform, cloud, and managed-services positioning.", "tags": ["Modernization", "Procurement"] },
+    { "date": "2025-06", "title": "Ohio FY2026–27 operating budget (H.B. 96) signed by Gov. DeWine", "impact": "Sets the two-year funding envelope DAS programs and agency IT draw from through June 2027.", "tags": ["Budget"] },
+    { "date": "2025-01", "title": "State of Ohio AI policy and AI Council guardrails in force via DAS", "impact": "Generative-AI use is now governed with approval workflows and procurement disclosure — clear AI governance requirements early in any AI-touching deal.", "tags": ["AI", "Governance"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's Ohio State Term Schedule coverage and reseller scope — it is the access path to the entire Ohio public sector through the Cooperative Purchasing Program, not just DAS itself.",
+    "Lead the IT relationship with State CIO Katrina Flory's office, tied to InnovateOhio Platform cloud, data-analytics, and OHID modernization where Dell infrastructure and services attach.",
+    "Bring governed-AI infrastructure and use cases aligned to Ohio's AI Council and state AI policy — meet the approval-workflow and procurement-disclosure requirements up front.",
+    "Track the OISP CISO transition (Drake to interim Hemker) and rebuild the security buying-center map; position cyber and fraud-detection offerings that fit the AI-assisted tooling direction.",
+    "Engage the late-2025 contact-center modernization and cloud-migration tracks early, and ensure offerings are onboarded and discoverable in OhioBuys."
+  ],
+
+  "sources": [
+    { "label": "Ohio DAS — Department home", "url": "https://das.ohio.gov/" },
+    { "label": "InnovateOhio Platform", "url": "https://innovateohio.gov/platform" },
+    { "label": "Ohio Procurement — Cooperative Purchasing Program", "url": "https://procure.ohio.gov/state-and-local-agencies/resources/cooperative-purchasing" },
+    { "label": "GovTech — Ohio CIO Katrina Flory Expands and Evolves Digital Services", "url": "https://www.govtech.com/workforce/ohio-cio-katrina-flory-expands-and-evolves-digital-services" },
+    { "label": "GovTech — Top Ohio Cybersecurity Official Is Returning to Academia", "url": "https://www.govtech.com/workforce/top-ohio-cybersecurity-official-is-returning-to-academia" },
+    { "label": "Community Solutions — Ohio DAS releases policy governing use of AI", "url": "https://www.communitysolutions.com/resources/ohio-department-of-administrative-services-releases-policy-governing-use-of-ai" },
+    { "label": "Governor DeWine — FY2026–27 budget signed (H.B. 96)", "url": "https://governor.ohio.gov/media/news-and-media/governor-dewine-introduces-biennial-executive-budget-proposal" }
+  ]
+}

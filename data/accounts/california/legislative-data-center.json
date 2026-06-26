@@ -1,0 +1,78 @@
+{
+  "state": "california",
+  "stateName": "California",
+  "type": "State Agency",
+  "name": "California Legislative Data Center",
+  "slug": "legislative-data-center",
+  "hq": "Sacramento, CA",
+  "updated": "2026-06-22",
+  "tagline": "The IT engine of the California State Legislature: the Legislative Data Center is the technology arm of the Office of Legislative Counsel, running the data center, statewide networks, devices, and applications that keep the Assembly, Senate, and legislative offices operating — and the public leginfo site online.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Legislative-branch IT / data center" },
+    { "label": "Branch", "value": "Legislative (not CDT/DGS)" },
+    { "label": "Scale", "value": "500+ servers, 3,000+ devices" },
+    { "label": "Parent", "value": "Office of Legislative Counsel" }
+  ],
+
+  "overview": "The Legislative Data Center (LDC) is the information-technology branch of the California Office of Legislative Counsel — the nonpartisan agency that serves the State Legislature. The LDC delivers the technology that runs legislative business: it maintains the databases of pending legislation and existing law, builds and supports the applications behind bill publishing, Assembly and Senate floor sessions, vote recording, and committee hearings, and operates the public leginfo.legislature.ca.gov website. Per the Office's own description, the data center comprises more than 500 servers, a mainframe, and over 3,000 personal computers and wireless devices, connected by statewide wide-area, local-area, and wireless networks with sophisticated storage systems, and it staffs a customer-support center 24 hours a day, 365 days a year. Crucially for a seller, the LDC sits in the LEGISLATIVE branch — it is distinct from the executive-branch IT bodies (the California Department of Technology and the procurement-running Department of General Services) and generally operates and contracts under the Legislature's own authority rather than CDT/DGS rules. Much of the detail below is hedged: the legislative branch publishes far less operational and budget data than executive agencies.",
+
+  "budget": {
+    "intro": "Public, line-item budget detail for legislative-branch IT is thin. The Office of Legislative Counsel and the broader Legislature are funded through the annual state Budget Act (Legislature business units), but the enacted budget does not break out a discrete, publicly itemized 'Legislative Data Center' technology appropriation the way executive agencies surface IT project budgets. Treat the figures below as scale indicators from the Office's own public description, not as a procurement-ready budget.",
+    "stats": [
+      { "value": "500+", "label": "Servers (plus a mainframe)", "note": "Per the Office of Legislative Counsel's public description of the data center" },
+      { "value": "3,000+", "label": "PCs & wireless devices", "note": "Endpoint estate supported across the Capitol and district offices statewide" },
+      { "value": "24/365", "label": "Support coverage", "note": "Customer-support center staffed around the clock" }
+    ],
+    "notes": [
+      "Funding flows through the annual California Budget Act under the Legislature's business units; a standalone LDC technology line is not publicly itemized — confirm specifics directly with the Office of Legislative Counsel.",
+      "Because the LDC is legislative-branch, its spend is governed by the Legislature's own rules rather than the executive-branch DGS/CDT process — model the buying cycle accordingly and verify before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Core infrastructure & data-center operations", "summary": "The LDC runs a 500+ server estate plus a mainframe, statewide WAN/LAN/wireless, and advanced storage. Server refresh, storage modernization, and network/hardware lifecycle in the Capitol and district offices are the recurring infrastructure tracks — Dell's core ISG and client portfolio map directly. Confirm current refresh cadence; public detail is limited.", "tags": ["Data Center", "Infrastructure"] },
+    { "name": "Legislative business applications", "summary": "Custom applications support bill publishing, floor sessions, vote recording, committee hearings, and the leginfo public site. These are mission-critical, availability-sensitive workloads — a natural fit for resilient compute, storage, and modernization conversations rather than a rip-and-replace pitch.", "tags": ["Applications", "Modernization"] },
+    { "name": "Endpoint & device fleet", "summary": "More than 3,000 PCs and wireless devices span members, legislative staff, and Office of Legislative Counsel employees, including hardware in district offices statewide. A large, geographically distributed endpoint estate that maps to client devices, deployment, and lifecycle services.", "tags": ["Endpoint", "Client"] },
+    { "name": "Cybersecurity & resilience (hedged)", "summary": "Public detail on the LDC's cyber posture and cloud adoption is limited. Given the sensitivity of legislative systems and a 24/365 support mission, security hardening, resilience, and backup/recovery are plausible priorities — but verify the actual roadmap directly before positioning.", "tags": ["Cybersecurity", "Resilience"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling here is different from the executive branch. The Legislature generally operates under its own procurement authority and is not run through DGS Cal eProcure / CMAS or CDT IT-project oversight the way state departments are. Confirm the exact contracting path with the Office of Legislative Counsel before assuming any statewide vehicle applies — and check whether a cooperative or competitively-bid statewide contract can still be leveraged for legislative buys.",
+    "vehicles": [
+      { "name": "Direct legislative-branch contracting", "detail": "The Legislature and Office of Legislative Counsel generally contract under their own authority rather than the executive-branch DGS/CDT process. Treat this as the primary path and verify requirements directly." },
+      { "name": "Statewide / cooperative contracts (verify)", "detail": "DGS Leveraged Procurement Agreements (CMAS, statewide contracts) and cooperatives can sometimes be referenced for pricing or convenience, but applicability to the legislative branch must be confirmed — do not assume eligibility." },
+      { "name": "Reseller / partner alignment", "detail": "Map which Dell partners hold the relationship and any usable agreements with the Legislature; the access path may run through an existing services or reseller relationship rather than a state vehicle." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Cara L. Jenkins", "title": "Legislative Counsel of California", "note": "Heads the Office of Legislative Counsel, which the LDC sits within; appointed in December 2020. The top of the parent organization — confirm tenure before outreach." },
+    { "name": "Legislative Data Center leadership", "title": "LDC Director / IT executive", "note": "The LDC's director / senior IT leadership owns infrastructure and applications. Names are not consistently published; identify the current leader before engaging." },
+    { "name": "Information Technology branch (LDC)", "title": "Systems, networking & operations", "note": "Systems analysts, programmers, software/networking specialists, and operations staff — the technical buying center for compute, storage, network, and devices." },
+    { "name": "Office of Legislative Counsel — administration", "title": "Budget & contracting authority", "note": "Administrative leadership controls funding and the legislative-branch contracting process; the gatekeeper for any procurement." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Legislative-branch IT detail remains sparse in public sources", "impact": "Plan discovery-led engagement: the LDC publishes little operational/budget data, so lead with questions and verification rather than assuming an executive-branch buying motion.", "tags": ["Market Intel"] },
+    { "date": "2025-06", "title": "California enacts FY2025-26 Budget Act funding the Legislature", "impact": "The Legislature's operations (including the Office of Legislative Counsel and LDC) are funded through the annual Budget Act, but a discrete LDC technology line is not publicly itemized — confirm specifics with the Office.", "tags": ["Budget"] },
+    { "date": "2020-12", "title": "Cara L. Jenkins appointed Legislative Counsel of California", "impact": "Establishes the leadership of the parent office the LDC reports into; confirm current tenure and the LDC's own IT leadership before outreach.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Treat the LDC as a legislative-branch account, separate from CDT/DGS — confirm the Legislature's own contracting path before assuming any statewide vehicle applies.",
+    "Lead with core ISG (server, storage, networking) and client/endpoint refresh against a stated 500+ server, 3,000+ device estate — a recurring lifecycle motion, not a one-time bid.",
+    "Run a discovery-first engagement: public detail is thin, so use questions to map current infrastructure, refresh cadence, cyber posture, and cloud appetite before positioning.",
+    "Identify the current LDC IT director and the Office of Legislative Counsel administrative/contracting owners; build the relationship map the public record does not give you.",
+    "Verify every assumption against primary sources or direct contact — never forecast off the hedged figures here; legislative-branch data is sparse and changes are easy to miss."
+  ],
+
+  "sources": [
+    { "label": "Office of Legislative Counsel — What We Do (Legislative Data Center)", "url": "https://legislativecounsel.ca.gov/about-us/what-we-do" },
+    { "label": "Office of Legislative Counsel — IT Careers (data center scale & services)", "url": "https://legislativecounsel.ca.gov/employment/exciting-information-technology-careers" },
+    { "label": "Office of Legislative Counsel — About Us / Who We Are", "url": "https://legislativecounsel.ca.gov/about-us" },
+    { "label": "California Office of Legislative Counsel — Wikipedia", "url": "https://en.wikipedia.org/wiki/California_Office_of_Legislative_Counsel" },
+    { "label": "California Legislative Information (leginfo) — public legislative site run by the LDC", "url": "https://leginfo.legislature.ca.gov/" },
+    { "label": "SB 101 — Budget Act of 2025 (legislative-branch funding)", "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB101" }
+  ]
+}

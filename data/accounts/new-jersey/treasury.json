@@ -1,0 +1,83 @@
+{
+  "state": "new-jersey",
+  "stateName": "New Jersey",
+  "type": "State Agency",
+  "name": "New Jersey Dept of the Treasury",
+  "slug": "treasury",
+  "hq": "Trenton, NJ",
+  "updated": "2026-06-22",
+  "tagline": "New Jersey's finance and administration hub: Treasury houses the Division of Purchase & Property — the state's central procurement shop that runs NJSTART and the statewide term contracts most NJ public buyers use — plus the Office of Management and Budget.",
+
+  "snapshot": [
+    { "label": "Role", "value": "State finance & central procurement" },
+    { "label": "FY2027 proposed budget", "value": "$60.7B" },
+    { "label": "Procurement portal", "value": "NJSTART" },
+    { "label": "Central IT runs elsewhere", "value": "NJOIT" }
+  ],
+
+  "overview": "The New Jersey Department of the Treasury is the state's finance and administration backbone. It houses the Office of Management and Budget (OMB), which builds and executes the state budget, and the Division of Purchase & Property (DPP), the central procurement agency that runs the NJSTART eProcurement portal and awards the statewide term contracts that state agencies, and many counties, municipalities, schools, and authorities, buy off of. For a technology seller, Treasury is best understood as the contracting path and the budget authority rather than the primary end user of IT — central IT strategy, the state data center, cybersecurity, and the NJ AI Assistant are run by a separate agency, the NJ Office of Information Technology (NJOIT), led by the Chief Technology Officer. The account sits inside a leadership transition: Governor Mikie Sherrill took office in January 2026 with a new Treasurer (Aaron Binder) and a new CTO (Kevin Dehmer), so buying centers and priorities are being reset across both Treasury and NJOIT.",
+
+  "budget": {
+    "intro": "Treasury owns the budget process through OMB, so its leverage is the whole state spending plan, not a single agency line. Governor Sherrill's inaugural FY2027 proposed budget is about $60.7B with a roughly $5.4B surplus; the bulk flows out as property-tax relief and aid to schools and local governments rather than direct state operations.",
+    "stats": [
+      { "value": "$60.7B", "label": "FY2027 proposed budget", "note": "Sherrill's first budget; ~$5.4B proposed surplus" },
+      { "value": "~$1.6B", "label": "Structural deficit (proposed)", "note": "Roughly halved from ~$3.0B in the FY2027 plan" },
+      { "value": "$4.2B", "label": "Property-tax relief", "note": "ANCHOR, Senior Freeze, Stay NJ — most spending is aid, not state IT" }
+    ],
+    "notes": [
+      "Figures are from the Governor's FY2027 proposed budget; the enacted budget is set through the legislative process around the July 1 fiscal-year start and may shift.",
+      "Agency-level IT spend lives in each department's budget; Treasury/DPP is the contracting vehicle and OMB the budget authority, not the wallet for most IT buys.",
+      "The Sherrill administration's stated themes are affordability, fiscal discipline (cost cuts of nearly $2B), and government efficiency/transparency — a frame for modernization and automation conversations."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "NJSTART eProcurement modernization", "summary": "NJSTART is NJ's centralized, web-based procurement portal run by DPP — vendor registration, solicitations/RFPs, awarded term contracts, and electronic invoicing all flow through it. Being registered and correctly categorized in NJSTART is the precondition to selling to or through the state.", "tags": ["Procurement", "Digital Government"] },
+    { "name": "NJ AI Assistant & responsible-AI push", "summary": "NJ (via the NJ Innovation Authority with NJOIT) launched the NJ AI Assistant, a genAI environment for state employees, alongside an AI Task Force and statewide responsible-use policy and training. AI adoption is led outside Treasury at NJOIT/Innovation, but it signals demand for AI-ready infrastructure across state agencies.", "tags": ["AI", "Workforce"] },
+    { "name": "Digital government & efficiency agenda", "summary": "The new administration is prioritizing permitting/licensing modernization, clearing backlogs, and cutting wait times — work that runs through NJOIT and individual agencies and is funded via OMB. Modernization and managed-services plays should map to these stated efficiency goals.", "tags": ["Modernization", "Citizen Services"] },
+    { "name": "Cybersecurity posture (NJOIT / NJCCIC)", "summary": "Statewide cyber is run outside Treasury — by NJOIT and the NJ Cybersecurity & Communications Integration Cell (NJCCIC) — with the CTO mandate to strengthen defenses against AI-driven threats. Treasury/DPP is the contracting path; the security buying center sits with NJOIT.", "tags": ["Cybersecurity", "Risk"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to New Jersey runs through DPP's central vehicles, not one-off agency RFPs in most cases. Two things to confirm first: an active, correctly scoped NJSTART vendor registration, and which statewide term contract(s) a Dell offering falls under. Cooperative purchasing also lets local governments, schools, and authorities ride state contracts.",
+    "vehicles": [
+      { "name": "NJSTART vendor registration", "detail": "The mandatory front door — vendors register and maintain a profile in NJSTART to bid, hold contracts, and invoice the state electronically. Confirm Dell's registration and categories are current." },
+      { "name": "Statewide term contracts (DPP)", "detail": "DPP awards master/term contracts that agencies buy off without separate RFPs. IT-relevant examples include M0483 (Computer Equipment & Peripherals), M4002 (Cloud & Software Solutions), and M4010 (Business & IT Consulting). Verify exact contract numbers/scope before forecasting." },
+      { "name": "NJ Cooperative Purchasing Program", "detail": "Lets registered counties, municipalities, school districts, and authorities purchase off state term contracts under N.J.A.C. 5:34 — extends a single state award across the broader NJ public sector." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Aaron Binder", "title": "State Treasurer", "note": "Sherrill-appointed Treasurer (took office early 2026); owns the FY2027 budget message and Treasury's divisions, including Purchase & Property and OMB. Top relationship for the finance/contracting motion." },
+    { "name": "Andrea Spalla, Esq.", "title": "Assistant Treasurer (oversees Purchase & Property)", "note": "Senior Treasury official cited as overseeing divisions including Purchase & Property — a key path into the central procurement organization. Confirm current title before engagement." },
+    { "name": "Director, Division of Purchase & Property", "title": "Central procurement / NJSTART owner", "note": "Owns statewide term contracts, solicitations, and the NJSTART portal — the buying center for contracting. Confirm the current named director directly, as the role is not consistently published." },
+    { "name": "Kevin Dehmer", "title": "Chief Technology Officer, NJOIT", "note": "Appointed Feb 2026; runs central IT, digital infrastructure, modernization, and cybersecurity OUTSIDE Treasury. The primary technology-strategy relationship — Treasury is the contracting path, NJOIT the IT decision-maker." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "FY2027 budget moving through the Legislature ahead of the July 1 deadline", "impact": "Final appropriations and any IT/modernization line items firm up around fiscal-year start — watch the enacted budget vs. the $60.7B proposal before forecasting agency spend.", "tags": ["Budget"] },
+    { "date": "2026-03", "title": "Gov. Sherrill presents first FY2027 budget (~$60.7B); Treasurer Binder cites fiscal discipline", "impact": "Sets the affordability + efficiency frame and roughly halves the structural deficit — position modernization/automation against stated cost-cutting goals.", "tags": ["Budget", "Leadership"] },
+    { "date": "2026-02", "title": "Sherrill appoints Kevin Dehmer as state CTO (NJOIT)", "impact": "New owner of central IT, digital modernization, and cybersecurity strategy — rebuild the NJOIT relationship map; this is the IT decision-maker, distinct from Treasury contracting.", "tags": ["Leadership", "IT"] },
+    { "date": "2026-01", "title": "New Sherrill administration takes office; Aaron Binder sworn in as Treasurer", "impact": "Leadership reset across Treasury and its divisions — re-confirm contacts and priorities in Purchase & Property and OMB.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's NJSTART vendor registration is active and correctly categorized, and verify which DPP statewide term contracts (e.g., computer equipment, cloud/software, IT consulting) cover Dell's offerings — this is the access path to NJ state and cooperative buyers.",
+    "Run the technology motion through NJOIT and the CTO (Kevin Dehmer), not Treasury: Treasury/DPP is the contracting and budget authority, but central IT, AI, and cyber decisions sit at NJOIT.",
+    "Frame ISG/AI-infrastructure around the state's NJ AI Assistant and modernization agenda — position AI-ready compute and managed services as enablers of the efficiency goals the administration is funding.",
+    "Re-map relationships after the Jan 2026 transition: new Treasurer (Binder), new CTO (Dehmer), and confirm the current Director of Purchase & Property before forecasting.",
+    "Leverage the NJ Cooperative Purchasing Program to extend a single state term-contract award across counties, municipalities, schools, and authorities — broadening reach beyond state agencies."
+  ],
+
+  "sources": [
+    { "label": "NJ Division of Purchase & Property", "url": "https://www.nj.gov/treasury/purchase/" },
+    { "label": "NJSTART eProcurement portal", "url": "https://www.njstart.gov/bso/" },
+    { "label": "Gov. Sherrill presents FY2027 budget", "url": "https://www.nj.gov/governor/news/2026/20260310b.shtml" },
+    { "label": "FY2027 Budget in Brief (NJ OMB)", "url": "https://www.nj.gov/treasury/omb/publications/27bib/BIB.pdf" },
+    { "label": "Sherrill appoints Kevin Dehmer as state CTO (NJOIT)", "url": "https://www.nj.gov/governor/news/2026/20260202a.shtml" },
+    { "label": "Aaron Binder sworn in as State Treasurer (NJ Globe)", "url": "https://newjerseyglobe.com/state-government/binder-sworn-in-as-treasurer-names-leadership-team/" },
+    { "label": "NJ AI Task Force (NJ Innovation Authority)", "url": "https://innovation.nj.gov/projects/ai-task-force/" },
+    { "label": "NJ launches generative AI assistant for state employees (StateScoop)", "url": "https://statescoop.com/new-jersey-ai-assistant-training-tool-state-employees/" },
+    { "label": "NJ Cooperative Purchasing Program (N.J.A.C. 5:34-7.29)", "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-5-34-7-29" }
+  ]
+}

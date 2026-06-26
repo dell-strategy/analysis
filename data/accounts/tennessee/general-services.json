@@ -1,0 +1,82 @@
+{
+  "state": "tennessee",
+  "stateName": "Tennessee",
+  "type": "State Agency",
+  "name": "Tennessee Dept of General Services",
+  "slug": "general-services",
+  "hq": "Nashville, TN",
+  "updated": "2026-06-22",
+  "tagline": "The contractual front door to Tennessee public-sector buying: General Services runs the Central Procurement Office, which owns the statewide contracts and the Edison supplier portal that most state, local, and higher-ed technology purchases flow through.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Statewide procurement authority" },
+    { "label": "Primary vehicle", "value": "CPO Statewide Contracts" },
+    { "label": "Supplier gate", "value": "Edison registration" },
+    { "label": "IT direction", "value": "Set by STS (F&A)" }
+  ],
+
+  "overview": "The Tennessee Department of General Services (DGS) is the state's central administrative and procurement agency — it manages state real estate, vehicles and assets, document solutions, and, most relevant to a technology seller, the Central Procurement Office (CPO). The CPO, created under TCA § 4-56-104, is the statewide procurement authority: it competes and awards Statewide Contracts (SWCs) that state agencies — and, for many categories, local governments and nonprofits — can buy from without running their own solicitation. DGS is best understood as the contractual path rather than the IT decision-maker: it owns the vehicles and the Edison supplier portal that gate most buys, while statewide IT strategy, standards, and security policy sit with Strategic Technology Solutions (STS), the centralized IT organization within the Department of Finance & Administration. For a Dell SLG seller, DGS/CPO is the access layer to the entire Tennessee public sector, and the demand signal is largely set upstream by STS modernization and the state's AI agenda. New leadership took over the department in January 2026.",
+
+  "budget": {
+    "intro": "DGS is not a large direct IT spender — its leverage is the volume of public-sector purchasing that routes through its statewide contracts, not its own appropriation. Tennessee runs an annual (July 1–June 30) budget; the FY2027 budget Gov. Lee signed in May 2026 totals roughly $58B (about $29.8B from state dollars) and notably includes a dedicated $50M for state AI infrastructure. There is no published consolidated 'state IT' line item — technology spend is distributed across agencies and the centralized STS organization.",
+    "stats": [
+      { "value": "~$58B", "label": "FY2027 state budget", "note": "Signed May 2026; the pool CPO-vehicle buys draw from. FY begins July 1, 2026" },
+      { "value": "$50M", "label": "AI-infrastructure funding", "note": "FY2027 line moving state AI from pilots toward enterprise-wide use" },
+      { "value": "~1,200", "label": "STS IT workforce", "note": "Centralized state IT org under F&A — the demand engine behind CPO buys" }
+    ],
+    "notes": [
+      "DGS itself is the procurement and asset-management agency, not a major technology budget holder — the dollars sit with STS and the program agencies that buy through CPO contracts.",
+      "There is no consolidated state IT budget line; confirm agency-level technology budgets and STS operating budget when forecasting. AI-infrastructure investment in-state is overwhelmingly private (xAI Memphis) and federal (Oak Ridge/DOE), so the state-government opportunity is modernization and governed AI adoption."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Statewide Contracts (SWC) for technology", "summary": "The CPO maintains a Statewide Contract Listing with a dedicated technology category; SWCs are the pre-competed agreements agencies and many local/nonprofit buyers use without their own RFP. Confirming Dell's SWC coverage and reseller scope is the single most important access step for the Tennessee motion.", "tags": ["Procurement", "Statewide Contracts"] },
+    { "name": "Edison supplier portal & e-procurement", "summary": "Edison is the state's mandatory supplier-registration and transactional backbone. Suppliers must be registered and correctly represented in Edison to do business with the state — a gate to clear and keep current for Dell and its partners.", "tags": ["Procurement", "Supplier Onboarding"] },
+    { "name": "STS-driven modernization (ERP + automation)", "summary": "Demand routed through CPO is shaped by STS, which describes 2026 as a shift into 'execution.' A flagship effort is an ERP modernization whose RFI calls for 'native AI architecture,' alongside broad modernization and automation — multi-year infrastructure and services runway that ultimately procures through CPO vehicles.", "tags": ["Modernization", "ERP", "AI"] },
+    { "name": "Statewide AI Action Plan alignment", "summary": "Tennessee's first statewide AI Action Plan (adopted Nov 2025) includes a 'Data & Compute Readiness' pillar — secure statewide infrastructure for safe AI experimentation. Purchases enabling that pillar will be contracted through CPO, an opening for governed, auditable on-prem and private-cloud AI.", "tags": ["AI", "Governance"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Tennessee state government runs through CPO-owned vehicles, not one-off agency RFPs in most cases. Two things to confirm first: that Dell's Statewide Contract coverage is active and correctly scoped for the categories you're targeting, and that Dell and its partners are properly registered in Edison. STS sets the IT standards and security policy that buys must conform to.",
+    "vehicles": [
+      { "name": "CPO Statewide Contracts (SWC)", "detail": "The primary vehicle — pre-competed agreements (including a dedicated technology category) usable by state agencies and, for many categories, local government and nonprofits. Confirm Dell's SWC agreements and reseller scope are current." },
+      { "name": "Edison Supplier Portal", "detail": "Mandatory supplier registration and the transactional backbone for doing business with the state — ensure Dell and partners are correctly registered and represented before pursuing awards." },
+      { "name": "NASPO ValuePoint / cooperative", "detail": "Tennessee participates in cooperative purchasing; multi-state cooperative contracts can be a path for technology categories — verify lead-state terms and TN adoption status for a given offering." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Andy T. Kidd", "title": "Commissioner, Dept of General Services", "note": "Appointed by Gov. Lee effective January 2026; oversees all DGS divisions including the Central Procurement Office. The top of the house for the account; came from a fiscal/administrative leadership role at the Dept of Disability and Aging." },
+    { "name": "Mike Perry", "title": "Chief Procurement Officer, Central Procurement Office", "note": "Long-tenured CPO (in the role since 2013) with decades in TN state government; owns the statewide contracts, solicitations, and supplier processes — the operational owner of the buying path." },
+    { "name": "Central Procurement Office (CPO)", "title": "Statewide procurement authority (within DGS)", "note": "Created under TCA § 4-56-104; competes and awards the Statewide Contracts and runs Edison registration that gate most technology buys across state, local, and higher-ed." },
+    { "name": "Kristin Darby", "title": "State CIO, Strategic Technology Solutions (F&A)", "note": "Took office March 2025; leads the ~1,200-person STS org and co-chairs the AI Advisory Council. Sets the IT direction and modernization demand that ultimately procures through CPO — the strategic relationship for the technology agenda." },
+    { "name": "Jim Bryson", "title": "Commissioner, Finance & Administration", "note": "F&A is the parent of STS and co-chairs the State AI Advisory Council; owns enterprise modernization (e.g., ERP). Relevant context for where IT demand originates upstream of CPO." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Gov. Lee signs ~$58B FY2027 budget with $50M for AI infrastructure", "impact": "Enacts a dedicated AI-infrastructure line moving state AI from pilots toward enterprise-wide use — demand that will be contracted through CPO statewide vehicles. FY begins July 1, 2026.", "tags": ["Budget", "AI"] },
+    { "date": "2026-01", "title": "Andy T. Kidd becomes Commissioner of General Services", "impact": "New leadership over the department that owns the Central Procurement Office and Edison — rebuild the executive relationship map and confirm procurement priorities under the new commissioner.", "tags": ["Leadership"] },
+    { "date": "2025-12", "title": "Gov. Lee announces leadership transition at DGS", "impact": "Signals continuity in CPO operations (CPO Mike Perry remains) with a new commissioner above it — the contractual machinery is stable while the top changes.", "tags": ["Leadership"] },
+    { "date": "2025-11", "title": "State adopts first statewide AI Action Plan ('Data & Compute Readiness' pillar)", "impact": "Sets the framework whose infrastructure purchases will flow through CPO contracts — an opening for governed, auditable AI infrastructure positioned via the statewide vehicles.", "tags": ["AI", "Policy"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's CPO Statewide Contract coverage, technology-category scope, and reseller arrangements are current — this is the access path to the entire Tennessee public sector, not just DGS itself.",
+    "Verify Dell and partner registration in the Edison supplier portal so awards and transactions aren't blocked by onboarding gaps.",
+    "Map the demand upstream: engage STS (CIO Kristin Darby) and F&A on ERP modernization, automation, and the AI Action Plan's 'Data & Compute Readiness' pillar, then route the resulting buys through CPO vehicles.",
+    "Rebuild the executive map under new Commissioner Andy Kidd (since Jan 2026) while leveraging continuity with long-tenured CPO Mike Perry for the contractual path.",
+    "Position governed, secure, auditable on-prem / private-cloud AI infrastructure aligned to the state's $50M FY2027 AI-infrastructure investment and the AI Action Plan, contracted through the statewide vehicles."
+  ],
+
+  "sources": [
+    { "label": "Tennessee General Services — Procurement / Central Procurement Office", "url": "https://www.tn.gov/generalservices/procurement.html" },
+    { "label": "Tennessee CPO — Contract Information (Statewide Contracts, Edison, NASPO)", "url": "https://www.tn.gov/generalservices/procurement/central-procurement-office--cpo-/contract-information.html" },
+    { "label": "Gov. Lee Announces Key Leadership Transition at Tennessee DGS (Andy Kidd, Dec 2025)", "url": "https://www.tn.gov/governor/news/2025/12/16/gov--lee-announces-key-leadership-transition-at-tennessee-department-of-general-services.html" },
+    { "label": "Tennessee DGS — Commissioner", "url": "https://www.tn.gov/generalservices/about-dgs/dgs-commissioner.html" },
+    { "label": "Tennessee Code § 4-56-104 — Central Procurement Office / Chief Procurement Officer", "url": "https://law.justia.com/codes/tennessee/title-4/chapter-56/section-4-56-104/" },
+    { "label": "Tennessee F&A — Strategic Technology Solutions (STS)", "url": "https://www.tn.gov/finance/sts.html" },
+    { "label": "Tennessee F&A — Tennessee Sets Bold Course for AI Leadership (AI Action Plan, Nov 2025)", "url": "https://www.tn.gov/finance/news/2025/11/24/tennessee-sets-bold-course-for-ai-leadership.html" },
+    { "label": "StateScoop — Tennessee leans on public-private collaboration and $50M for AI", "url": "https://statescoop.com/tennessee-public-private-sector-collaboration-ai/" }
+  ]
+}

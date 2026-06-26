@@ -1,0 +1,87 @@
+{
+  "state": "california",
+  "stateName": "California",
+  "type": "County",
+  "name": "Los Angeles County, California",
+  "slug": "los-angeles-county",
+  "hq": "Los Angeles, CA",
+  "updated": "2026-06-22",
+  "tagline": "The nation's largest local government — ~10M residents, ~$48.8B budget, 38 departments. Enterprise IT direction sits with the Chief Information Office (CIO) in the Chief Executive Office; buying flows through the Internal Services Department (ISD) and Board of Supervisors approval.",
+
+  "snapshot": [
+    { "label": "Residents", "value": "~10M (largest U.S. county)" },
+    { "label": "FY2025-26 budget", "value": "$48.8B adopted" },
+    { "label": "Workforce", "value": "~110,000 employees" },
+    { "label": "Buying gate", "value": "ISD procurement + Board approval >$100K" }
+  ],
+
+  "overview": "Los Angeles County is the most populous county in the United States — roughly 10 million residents, larger than most U.S. states — governed by a five-member Board of Supervisors and run day-to-day through a County Chief Executive Office (CEO) overseeing roughly three dozen departments. Enterprise technology direction lives with the County Chief Information Office (CIO), which sits inside the CEO and oversees technology, data, security, and privacy countywide; the Chief Data Office, Privacy Office, and Chief Information Security Office report up through it. Operational IT, telecom, and — critically for sellers — most procurement run through the Internal Services Department (ISD). The County is best understood as a federated buyer: the CIO sets strategy and governance, large departments (Health Services, DHS, Sheriff, DPSS, the courts-adjacent agencies) carry their own substantial IT budgets and run their own modernization, and ISD plus the Board of Supervisors gate the contracts. For a Dell SLG seller, this is one of the largest single local-government opportunities in the country, but the entry point is the procurement machinery and the department-level buying centers, not a single central IT wallet.",
+
+  "budget": {
+    "intro": "The County's adopted FY2025-26 budget is $48.8B (the April 2025 Recommended Budget was $47.9B). This is an austerity cycle: facing federal and state funding pressure, the January 2025 wildfires, and the AB 218 childhood-sexual-assault settlement, the Board adopted a Supplemental Budget on September 30, 2025 imposing roughly 5.5% cuts and eliminating a net ~1,125 budgeted positions. IT spend is distributed across departments rather than concentrated in one central line.",
+    "stats": [
+      { "value": "$48.8B", "label": "FY2025-26 adopted budget", "note": "Recommended Budget was $47.9B (April 2025)" },
+      { "value": "~5.5%", "label": "Supplemental cuts", "note": "Adopted Sept 30, 2025; ~1,125 net positions eliminated" },
+      { "value": "~110,000", "label": "County employees", "note": "Scale of the ERP / payroll / HR systems the CIO oversees" }
+    ],
+    "notes": [
+      "IT spending is federated: large departments (Health Services, Sheriff, Public Social Services) hold their own IT budgets and run their own modernization, so there is no single county-wide 'IT budget' line to target.",
+      "FY2025-26 is a cost-pressure year — wildfire recovery, litigation settlements, and federal/state funding risk are squeezing discretionary spend, which favors efficiency, automation, and consolidation pitches over net-new capital.",
+      "Always verify a department's own appropriation before forecasting; the County is mid-transition under Measure G (2024 voter-approved) toward an elected county executive (2028) and a nine-member board (by 2032)."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Generative AI adoption & AI Implementation Plan", "summary": "The County is operationalizing generative AI countywide — an AI Implementation Plan with a 2026-27 phase to stand up AI Transformation Teams and bake responsible-AI practices into procurement and legal review, plus an annual County AI Professional Development Summit. AI-infrastructure and data-platform conversations are live.", "tags": ["AI", "Data"] },
+    { "name": "Cloud data platforms & RPA Center of Excellence", "summary": "The CIO has championed modern cloud data platforms and a Center of Excellence for Robotic Process Automation to drive automation and information sharing across departments — a fit for infrastructure, data, and as-a-service plays.", "tags": ["Cloud", "Modernization"] },
+    { "name": "Regional cyber resilience ahead of 2026/2028 mega-events", "summary": "LA is hardening critical-infrastructure cyber defenses ahead of the 2026 FIFA World Cup and 2028 Olympic & Paralympic Games. A Regional Cyber Coalition and a multi-county Threat Intelligence Sharing Platform are sharing real-time threat intel across the greater LA region.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "Enterprise ERP & shared systems", "summary": "The CIO oversees countywide Financials, Budget, Payroll, Personnel, HR, and property-tax systems serving ~110K employees — a long-running modernization and infrastructure-refresh track underpinning the whole enterprise.", "tags": ["ERP", "Infrastructure"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to LA County means navigating its procurement machinery, not a single buying desk. ISD's Procurement division buys goods and services for County departments and provides governance through the Office of Countywide Contracting; the Board of Supervisors must approve service contracts over $100,000. The County also participates in cooperative purchasing to extend other jurisdictions' pricing and terms. Confirm which department owns the requirement, then map the ISD path and any co-op vehicle.",
+    "vehicles": [
+      { "name": "ISD Procurement / Office of Countywide Contracting", "detail": "The central purchasing function for County departments; runs solicitations posted on the LA County Solicitations (LACoBids) portal and administers master agreements departments buy against." },
+      { "name": "Board of Supervisors approval (>$100K)", "detail": "Service contracts above $100,000 require Board approval — factor Board agenda timing and supplier-requirement compliance into any sizable deal." },
+      { "name": "Cooperative purchasing consortiums", "detail": "The County participates in purchasing consortiums/cooperatives to extend pre-negotiated pricing and terms — a faster path than a stand-alone County solicitation where a usable co-op contract exists." },
+      { "name": "Department-delegated purchasing", "detail": "Departments have delegated authority for smaller buys; ISD assists with purchases beyond that delegation. Identify whether a requirement clears at the department level or must route through ISD." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Peter Loo", "title": "County Chief Information Officer (CIO)", "note": "Made permanent CIO June 26, 2024 after years as acting CIO; 30+ years in County IT. Owns enterprise technology, data, security, and privacy strategy — the top enterprise-IT relationship." },
+    { "name": "James Thurmond", "title": "Acting Chief Information Security Officer (CISO)", "note": "Leads countywide information-security strategy and governance, directing Departmental Information Security Officers (DISOs). The security buying-center owner; confirm current/permanent status before forecasting." },
+    { "name": "Michael Owh", "title": "Director, Internal Services Department (ISD)", "note": "Runs the department that owns countywide procurement; former chief procurement officer for the City of LA and New York City. The procurement gatekeeper for most County buys." },
+    { "name": "Fesia Davenport", "title": "Chief Executive Officer (County CEO)", "note": "Heads the Chief Executive Office, which the CIO sits within and which builds the County budget — the executive context for any enterprise-scale program. Verify incumbency at time of engagement." },
+    { "name": "Hilda L. Solis", "title": "Chair, Board of Supervisors (1st District, 2026)", "note": "The Board is the County's governing body and approves contracts >$100K. Board chairship rotates annually; District 1 and 3 seats are up for election in November 2026." }
+  ],
+
+  "news": [
+    { "date": "2025-09", "title": "Board adopts FY2025-26 Supplemental Budget with ~5.5% cuts, ~1,125 positions eliminated", "impact": "Confirms an austerity posture — lead with efficiency, automation, and consolidation; expect tighter scrutiny on new capital.", "tags": ["Budget"] },
+    { "date": "2025-06", "title": "LA County AI Professional Development Summit convenes business and IT leaders", "impact": "AI is an active, executive-sponsored priority — an opening for AI-infrastructure and data-platform conversations.", "tags": ["AI"] },
+    { "date": "2025-04", "title": "CEO unveils $47.9B FY2025-26 Recommended Budget amid 'unprecedented' pressures", "impact": "Wildfire recovery, AB 218 settlement, and federal/state funding risk frame the spending environment.", "tags": ["Budget"] },
+    { "date": "2025", "title": "Regional Cyber Coalition / multi-county Threat Intelligence Sharing Platform advances", "impact": "Cyber resilience ahead of the 2026 FIFA World Cup and 2028 Olympics is a funded, regional priority — a security and infrastructure entry point.", "tags": ["Cybersecurity"] },
+    { "date": "2024-06", "title": "Peter Loo confirmed as permanent County CIO", "impact": "Stable, long-tenured leadership at the top of enterprise IT — a durable relationship to build.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Map the federated buying centers — CIO/CEO for enterprise strategy, but Health Services, Sheriff, and DPSS hold large independent IT budgets. Pursue department-level programs, not a single central IT line.",
+    "Lead with efficiency and consolidation in an austerity year: position infrastructure refresh, automation (RPA), and AI-ready data platforms as cost-takeout, not net-new capital.",
+    "Tie ISG / AI-infrastructure to the County's generative-AI and cloud-data-platform push and the AI Implementation Plan's 2026-27 operational phase.",
+    "Engage the security buying center (CISO James Thurmond, DISOs) on cyber resilience ahead of the 2026 World Cup and 2028 Olympics, including the Regional Cyber Coalition.",
+    "Get the procurement path right early: confirm ISD/Office of Countywide Contracting routing, usable cooperative-purchasing vehicles, and Board-approval timing for any contract over $100K."
+  ],
+
+  "sources": [
+    { "label": "LA County CEO — 2025-2026 Budget", "url": "https://ceo.lacounty.gov/2025-2026-budget/" },
+    { "label": "LA County — 2025-26 Recommended Budget announcement", "url": "https://lacounty.gov/2025/04/14/la-county-unveils-2025-26-recommended-budget-reflecting-unprecedented-financial-challenges/" },
+    { "label": "LA County CEO — Chief Information Office", "url": "https://ceo.lacounty.gov/chief-information-office/" },
+    { "label": "LA County CIO — Information Security", "url": "https://ceo.lacounty.gov/security/" },
+    { "label": "GovTech — L.A. County Makes Longtime Acting CIO Peter Loo Permanent", "url": "https://www.govtech.com/workforce/l-a-county-makes-longtime-acting-cio-peter-loo-permanent" },
+    { "label": "GovTech Insider — LA County Taps Insider (Michael Owh) to Lead ISD", "url": "https://insider.govtech.com/california/news/los-angeles-county-taps-insider-to-lead-internal-service" },
+    { "label": "LA County ISD — Procurement", "url": "https://isd.lacounty.gov/services/procurement/" },
+    { "label": "LA County — Purchasing and Contract Opportunities", "url": "https://lacounty.gov/business/doing-business-with-la-county/lac-purchasing-and-contract-opportunities/" },
+    { "label": "LA County Board of Supervisors", "url": "https://bos.lacounty.gov/" },
+    { "label": "Wikipedia — 2026 LA County Board of Supervisors election / Measure G", "url": "https://en.wikipedia.org/wiki/2026_Los_Angeles_County_Board_of_Supervisors_election" }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "state": "florida",
+  "stateName": "Florida",
+  "type": "State Agency",
+  "name": "Florida Dept of Transportation (FDOT)",
+  "slug": "fdot",
+  "hq": "Tallahassee, FL",
+  "updated": "2026-06-22",
+  "tagline": "Florida's statewide transportation agency: FDOT plans, builds, and operates the state highway system through seven districts plus Florida's Turnpike Enterprise, running a large intelligent-transportation (SunGuide), traffic-management, all-electronic tolling (SunPass), and connected-vehicle estate with a deep field, edge, and data footprint.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Statewide transportation agency" },
+    { "label": "5-yr work program", "value": "$32.8B (FY26-30)" },
+    { "label": "Turnpike system", "value": "515 mi, all-electronic tolling" },
+    { "label": "Buying path", "value": "MyFloridaMarketplace + DMS state term contracts" }
+  ],
+
+  "overview": "The Florida Department of Transportation (FDOT) is the state's lead transportation agency, headquartered in Tallahassee and operating through seven geographic districts plus Florida's Turnpike Enterprise (FTE). It plans, designs, builds, maintains, and operates the State Highway System and oversees aviation, rail, transit, seaports, and the statewide intelligent-transportation network. For a technology seller, FDOT is a heavily instrumented, data- and edge-rich account rather than a back-office IT shop: it runs the SunGuide advanced traffic-management software that serves as the hub of Florida's ITS network across regional Transportation Management Centers (TMCs), deploys connected-vehicle (CV) corridors, and operates one of the nation's largest all-electronic tolling systems through FTE — a 515-mile turnpike serving roughly 3M daily customers via SunPass and interoperable transponders. Technology is led by the Office of Information Technology (OIT) under the agency CIO, while statewide IT standards and most enterprise procurement sit above FDOT at the Department of Management Services (DMS) and the state's central IT body, which is itself being restructured in 2026.",
+
+  "budget": {
+    "intro": "FDOT is one of Florida's largest capital agencies — its spending power shows up in the multi-year Work Program rather than a back-office IT line. The adopted Five-Year Work Program for FY2026-2030 totals roughly $32.8B, and the FY2025-26 state budget signed by Governor DeSantis directed about $15.1B to transportation, including ~$13.7B for the State Transportation Work Program. Most technology rides on these capital and operations programs (ITS, tolling, TMC operations) plus DMS enterprise vehicles, not a standalone agency IT appropriation.",
+    "stats": [
+      { "value": "$32.8B", "label": "5-yr Work Program (FY26-30)", "note": "Adopted Five-Year Work Program; capacity, resurfacing, bridge, and safety" },
+      { "value": "$15.1B", "label": "Transportation budget (FY25-26)", "note": "Signed by Governor DeSantis; ~$13.7B for the State Transportation Work Program" },
+      { "value": "~$1.35B", "label": "Annual Turnpike toll revenue", "note": "Florida's Turnpike Enterprise; self-funding entity reinvesting net tolls into infrastructure" }
+    ],
+    "notes": [
+      "FTE is a financially self-sustaining business unit that funds its own tolling, ITS, and back-office technology from toll revenue — a distinct buying center from the core districts.",
+      "Most technology dollars are embedded in capital projects (ITS deployments, TMC operations, tolling systems) and DMS enterprise contracts rather than a single FDOT IT line — confirm which program or district owns a given system before forecasting.",
+      "Work Program figures are the adopted/tentative plan; annual appropriations and project schedules shift, so track the current Work Program cycle and the Governor's transportation budget proposal each session."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "SunGuide ITS & TMC modernization", "summary": "SunGuide is FDOT's enterprise advanced traffic-management software and the hub of the statewide ITS network, integrating field devices, software, and network applications across regional Transportation Management Centers and enabling TMC-to-TMC interoperability and data archiving. Ongoing 24/7/365 TMC operations and the suite of interconnected TSM&O software keep sustained demand for resilient compute, storage, networking, and managed services at the core and the edge.", "tags": ["ITS", "Traffic Management", "Edge"] },
+    { "name": "Connected & automated vehicles (CAV)", "summary": "FDOT deploys connected-vehicle strategies on select corridors — e.g., District Six's US-1 corridor in the Keys — to let infrastructure and vehicles exchange real-time travel data, with 2026 lessons-learned/best-practices guidance covering integration with central systems (SunGuide, SCMS, DEPOT). CAV expands the field/edge device footprint and the need for low-latency data ingestion, security, and roadside-to-cloud connectivity.", "tags": ["Connected Vehicle", "Edge", "Data"] },
+    { "name": "All-electronic tolling & SunPass (FTE)", "summary": "Florida's Turnpike Enterprise runs a 515-mile, fully all-electronic tolling system (since Nov 2021) serving ~3M daily customers via SunPass and interoperable transponders, collecting on the order of $1.35B annually. High-volume transaction processing, image/plate recognition, and customer-account systems point to sustained data-platform, analytics, and resilient-infrastructure demand in a self-funding business unit.", "tags": ["Tolling", "Data Platform", "Analytics"] },
+    { "name": "AI in operations & engineering", "summary": "FDOT has begun exploring AI in its core mission — including a solicitation to apply AI to FDOT Standard Specifications for road and bridge construction — alongside data-heavy ITS, asset-management, and safety analytics. Early-stage AI/ML demand spans document and specification automation, traffic analytics, and predictive maintenance; any AI/cloud offering touching state data must clear Florida's statewide security and procurement gates.", "tags": ["AI", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling into FDOT means navigating both the agency's own competitive procurements and Florida's centralized purchasing machinery. FDOT advertises commodity and contractual-services solicitations through the State of Florida Vendor Bid System and requires vendors to register in MyFloridaMarketplace (MFMP); districts and FTE also run their own RFP/ITN procurements for ITS, TMC operations, and tolling systems. Most catalog-style hardware, software, and IT services flow through DMS state term contracts. Confirm Dell's coverage on the relevant DMS vehicles and FDOT's Approved Products List context before forecasting.",
+    "vehicles": [
+      { "name": "MyFloridaMarketplace (MFMP) / FL Vendor Bid System", "detail": "Statewide vendor registration and bid portal; FDOT commodity and contractual-services solicitations are advertised here. Vendors must be registered in MFMP to bid — the front door for FDOT competitive opportunities." },
+      { "name": "DMS State Term Contracts", "detail": "Pre-competed statewide vehicles for hardware, software, and IT services that FDOT and other agencies buy from — the fastest path for catalog-style infrastructure and licensing. Confirm Dell's coverage is active and correctly scoped." },
+      { "name": "FDOT district & FTE RFP / ITN solicitations", "detail": "For complex, mission-specific systems (ITS/SunGuide, 24/7/365 TMC operations, connected-vehicle, and tolling systems) FDOT districts and Florida's Turnpike Enterprise run their own competitive procurements — the path for large ITS, edge, and data work." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Jared W. Perdue, P.E.", "title": "Secretary, FDOT", "note": "Heads FDOT and reports to the Governor; sets the agency's capital, operations, and modernization agenda. The top relationship for the account — confirm continuity before engaging." },
+    { "name": "Office of the Governor (Ron DeSantis)", "title": "Sets FDOT budget & transportation priorities", "note": "The Secretary is a gubernatorial appointee; the transportation budget and statewide IT-policy direction originate here and flow top-down." },
+    { "name": "Glendora Fortune", "title": "FDOT Chief Information Officer & Director, Office of Information Technology (OIT)", "note": "Owns agency information-resources management, IT planning, and alignment to Florida Digital Services standards. The primary enterprise-IT relationship — verify the current officeholder before engaging." },
+    { "name": "FDOT TSM&O / ITS program", "title": "SunGuide, TMC operations & connected vehicle", "note": "Owns the statewide ITS software suite, regional TMC operations, and CAV deployments — the buying center for field, edge, traffic-management, and data work." },
+    { "name": "Florida's Turnpike Enterprise (FTE)", "title": "Tolling, SunPass & enterprise systems", "note": "Self-funding business unit running 515 miles of all-electronic tolling and high-volume transaction systems — a distinct buying center for tolling, data-platform, and resilient-infrastructure needs." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "FDOT District Six TSM&O presents connected-vehicle and operations work at FIU transportation symposium", "impact": "Reinforces active investment in CAV corridors and TMC operations across southeast Florida — keeps ITS, edge, and data infrastructure in near-term scope.", "tags": ["ITS", "Connected Vehicle"] },
+    { "date": "2026-01", "title": "FDOT publishes 2026 Connected Vehicles Lessons Learned & Best Practices guidance", "impact": "Technical direction covering integration with SunGuide/SCMS/DEPOT and field-device operations signals an expanding CAV footprint — more roadside-to-cloud connectivity, security, and data-ingestion demand.", "tags": ["Connected Vehicle", "Edge"] },
+    { "date": "2025-07", "title": "FY2025-26 budget directs ~$15.1B to transportation, ~$13.7B to the State Transportation Work Program", "impact": "Sustained capital funding keeps ITS, tolling, and operations programs — the carriers for FDOT technology spend — fully funded; track project-level ITS and TMC line items.", "tags": ["Budget", "Operations"] },
+    { "date": "2025-01", "title": "FDOT advances ITS/TMC operations procurement for Miami-Dade & Monroe SunGuide center", "impact": "A 24/7/365 SunGuide TMC operations solicitation spanning multiple service categories signals continued managed-operations and infrastructure demand at the regional center level.", "tags": ["ITS", "Procurement"] }
+  ],
+
+  "dellActions": [
+    "Anchor on the ITS/edge estate: position ISG infrastructure, rugged/edge compute, storage, networking, and managed services against SunGuide TMC operations and the statewide TSM&O software suite across the seven districts.",
+    "Pursue connected/automated-vehicle deployments as an edge-to-cloud play — roadside compute, low-latency data ingestion, security, and analytics tied to FDOT's expanding CAV corridors and 2026 CV guidance.",
+    "Engage Florida's Turnpike Enterprise as a distinct, self-funding buying center: target high-volume tolling/SunPass transaction processing, data-platform, analytics, and resilient-infrastructure needs.",
+    "Confirm Dell's position on DMS state term contracts and ensure MyFloridaMarketplace registration/coverage is active — the catalog path into FDOT — while watching district and FTE ITN/RFP solicitations for larger ITS and tolling work.",
+    "Frame early-stage AI offerings (specification automation, traffic and safety analytics, predictive maintenance) to clear Florida's statewide cybersecurity standards and procurement gates, and track the 2026 statewide IT-governance restructuring (Florida Digital Service → DIGIT) that sits above FDOT's enterprise buys."
+  ],
+
+  "sources": [
+    { "label": "FDOT — Office of Information Technology (CIO)", "url": "https://www.fdot.gov/it/cio.shtm" },
+    { "label": "FDOT — SunGuide Software / ITS", "url": "https://www.fdot.gov/traffic/its/projects-arch/sunguide.shtm" },
+    { "label": "FDOT — Office of Work Program and Budget", "url": "https://www.fdot.gov/workprogram/" },
+    { "label": "FDOT — Governor DeSantis' FY2025-26 Budget Makes Strategic Investments to Keep Florida Moving", "url": "https://www.fdot.gov/info/co/news/2025/07012025" },
+    { "label": "FDOT District Six TSM&O — Connected Vehicles", "url": "https://sunguide.info/connected-vehicles/" },
+    { "label": "FDOT — 2026 Edition Connected Vehicles Lessons Learned & Best Practices (PDF)", "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/traffic/cav-guidance-ll-bp_2026-edition.pdf" },
+    { "label": "Florida's Turnpike — Leadership & Financials (515-mi system, all-electronic tolling)", "url": "https://floridasturnpike.com/about/floridas-turnpike-financials/" },
+    { "label": "FDOT — Doing Business / Procurement (MyFloridaMarketplace, Vendor Bid System)", "url": "https://www.fdot.gov/procurement/doingbusiness.shtm" },
+    { "label": "MyFloridaMarketplace — FDOT Standard Specifications AI solicitation (Vendor Information Portal)", "url": "https://vendor.myfloridamarketplace.com/search/bids/detail/12513" }
+  ]
+}

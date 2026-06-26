@@ -1,0 +1,82 @@
+{
+  "state": "illinois",
+  "stateName": "Illinois",
+  "type": "State Agency",
+  "name": "Illinois DoIT (Dept of Innovation & Technology)",
+  "slug": "doit",
+  "hq": "Springfield / Chicago, IL",
+  "updated": "2026-06-22",
+  "tagline": "Illinois's consolidated central IT agency: DoIT runs technology delivery, shared infrastructure, statewide cybersecurity, and AI strategy for the agencies, boards, and commissions under the Governor.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Consolidated central IT" },
+    { "label": "Tech budget", "value": "~$1.1B managed" },
+    { "label": "State CIO", "value": "Brandon Ragle" },
+    { "label": "Buying gate", "value": "CMS / CPO + BidBuy" }
+  ],
+
+  "overview": "The Illinois Department of Innovation & Technology (DoIT) is the state's consolidated central IT agency, created to bring technology staff, systems, and infrastructure for the agencies under the Governor into a single organization. DoIT sets statewide technology direction, runs enterprise application delivery and legacy modernization, operates shared data-center and cloud infrastructure, and houses statewide cybersecurity (including the state Security Operations Center) and the state's generative-AI strategy work. It manages roughly $1.1B in state technology spend across its client agencies. Historically DoIT was funded largely by billing those client agencies for services; beginning in FY2026 the state started shifting a portion of that to direct General Revenue Fund appropriation, with corresponding reductions in client-agency IT lines. For a Dell SLG seller, DoIT is the enterprise technology buying center for Illinois state government — but the contract and purchasing mechanics run through Central Management Services (CMS) and the independent Chief Procurement Office, so the relationship map and the contract path are two different things.",
+
+  "budget": {
+    "intro": "DoIT manages roughly $1.1B in state technology spend. Its funding model is mid-transition: long funded by charging client agencies for IT services, DoIT began receiving direct General Revenue Fund appropriation in FY2026, offset by lowering client agencies' own IT appropriations. The agency operates inside an Illinois FY2026 enacted budget of about $55.2B in general funds.",
+    "stats": [
+      { "value": "~$1.1B", "label": "State technology budget", "note": "Technology spend DoIT manages across client agencies" },
+      { "value": "$55.2B", "label": "State FY2026 budget", "note": "Enacted general-funds operating budget; the pool agency IT draws from" },
+      { "value": "FY2026", "label": "Direct-appropriation shift begins", "note": "First tranche of DoIT GRF appropriation; client-agency IT lines reduced to offset" }
+    ],
+    "notes": [
+      "DoIT has historically recovered cost by billing its client agencies for IT services rather than running on a single large appropriation; the FY2026 direct-appropriation step is a structural change worth tracking.",
+      "The largest line-item IT spend can still sit inside big client agencies (Human Services, Revenue, Healthcare & Family Services); DoIT is the delivery and infrastructure layer, not always the wallet of record."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Cybersecurity & state SOC", "summary": "DoIT runs statewide cybersecurity for agencies, boards, and commissions under the Governor, including a state Security Operations Center for monitoring and rapid response, MFA enforcement, and support extended to local governments and schools. Security modernization and threat-detection tooling are an active buying track.", "tags": ["Cybersecurity", "SOC"] },
+    { "name": "Generative AI strategy & task force", "summary": "Illinois's Generative AI & Natural Language Processing Task Force (with DoIT) filed its landmark report in late 2024 / early 2025 and has an addendum due Dec 31, 2026. Expect AI governance, use-case piloting, and procurement guardrails to shape near-term technology decisions.", "tags": ["AI", "Policy"] },
+    { "name": "Legacy modernization & enterprise apps", "summary": "DoIT leads consolidation and modernization of legacy state systems and enterprise applications across more than 700 technology staff. Application refresh, platform migration, and the underlying compute/storage are recurring needs.", "tags": ["Modernization", "Applications"] },
+    { "name": "Shared infrastructure & cloud", "summary": "DoIT operates consolidated data-center and cloud capacity for client agencies. Infrastructure refresh, hybrid cloud, and as-a-service delivery across participating agencies are an ongoing infrastructure track.", "tags": ["Data Center", "Cloud"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Illinois state government means separating the relationship (DoIT, the technology owner) from the contract path. Procurement authority is centralized but split: Central Management Services (CMS) administers many statewide contracts, and the independent Chief Procurement Office (CPO) holds procurement authority under the Illinois Procurement Code. Solicitations and orders for IT/telecom typically run through the state's BidBuy system.",
+    "vehicles": [
+      { "name": "CMS statewide / master contracts", "detail": "Central Management Services administers statewide master contracts many agencies buy from. DoIT is also one of the entities authorized to enter joint purchase master contracts (JPMC) alongside CMS, the CPO for General Services, and ISBE." },
+      { "name": "Chief Procurement Office (CPO)", "detail": "An independent office exercising procurement authority under the Illinois Procurement Code through State Purchasing Officers. The CPO for General Services oversees most IT solicitations and awards — the compliance gate for new business." },
+      { "name": "BidBuy (state e-procurement)", "detail": "Illinois's primary sourcing and ordering system for IT/telecom, commodities, and services. Solicitations are advertised, evaluated, and awarded here — confirm Dell's positioning on active vehicles before forecasting." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Brandon Ragle", "title": "Secretary & State CIO, DoIT", "note": "Appointed by Gov. Pritzker in 2025 after serving as deputy secretary/deputy CIO and interim secretary; long-tenured state technologist. The top relationship for the statewide IT motion." },
+    { "name": "Jason Bowen", "title": "Chief Information Security Officer (State CISO)", "note": "Joined DoIT in 2024 from the private sector (Protiviti); Army veteran. Owns statewide cybersecurity strategy, the SOC, and the security buying center." },
+    { "name": "Christopher Britten", "title": "Acting Assistant Secretary, DoIT", "note": "Leads statewide solution delivery and a workforce of 700+ technology professionals — the delivery/modernization buying center." },
+    { "name": "CMS — Central Management Services", "title": "Statewide contracts & shared services", "note": "Administers statewide master contracts and JPMCs; a primary contract path to DoIT-served agencies." },
+    { "name": "Chief Procurement Office", "title": "Independent procurement authority", "note": "Owns solicitations, awards, and vendor compliance under the Illinois Procurement Code — the gate any new contract clears." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Gen-AI task force addendum due to Governor and General Assembly by Dec 31, 2026", "impact": "Forthcoming AI governance and procurement guidance will shape how Illinois buys and deploys AI — position early on responsible-AI infrastructure.", "tags": ["AI", "Policy"] },
+    { "date": "2025-04", "title": "Brandon Ragle appointed DoIT Secretary & State CIO", "impact": "Stable, internally promoted leadership at the top of the statewide IT motion — continuity for relationship-building.", "tags": ["Leadership"] },
+    { "date": "2025-01", "title": "Illinois Generative AI & NLP Task Force releases landmark report", "impact": "First in-depth state analysis of generative AI across civil rights, labor, and consumer protection — signals AI guardrails ahead of large-scale deployment.", "tags": ["AI"] },
+    { "date": "2025-07", "title": "FY2026 budget begins DoIT shift to direct GRF appropriation", "impact": "DoIT's funding model is changing from client-agency billing toward direct appropriation — monitor how this reshapes IT budget ownership.", "tags": ["Budget"] }
+  ],
+
+  "dellActions": [
+    "Map the relationship-vs-contract split: build the DoIT relationship (Ragle, Britten, Bowen) while confirming Dell's positioning on CMS statewide contracts and the CPO/BidBuy path that actually carries the order.",
+    "Lead infrastructure and modernization through DoIT's consolidated data-center and cloud track — tie ISG and AI-ready compute to legacy-modernization and enterprise-app refresh.",
+    "Engage the State CISO (Jason Bowen) on SOC tooling, threat detection, and MFA/endpoint modernization, including the extension of security services to local governments and schools.",
+    "Track the FY2026 funding-model shift to direct appropriation and the Dec 2026 AI task-force addendum — both move budget authority and AI procurement rules.",
+    "Confirm Dell's coverage on active Illinois statewide / JPMC vehicles in BidBuy before forecasting, since that is the path to DoIT-served agencies, not just DoIT itself."
+  ],
+
+  "sources": [
+    { "label": "Illinois DoIT — official site", "url": "https://doit.illinois.gov/" },
+    { "label": "GovTech — Brandon Ragle Named CIO, Secretary of Illinois DoIT", "url": "https://www.govtech.com/workforce/brandon-ragle-named-cio-secretary-of-illinois-doit" },
+    { "label": "GovTech — Illinois Hires Private-Sector Veteran to Fill CISO Role (Jason Bowen)", "url": "https://www.govtech.com/security/illinois-hires-private-sector-veteran-to-fill-ciso-role" },
+    { "label": "Illinois DoIT — Cybersecurity initiatives", "url": "https://doit.illinois.gov/initiatives/cybersecurity.html" },
+    { "label": "Illinois DoIT — State Task Force Releases Landmark Report on Generative AI", "url": "https://doit.illinois.gov/doit-news/doit-in-the-news/state-task-force-releases-landmark-report-on-the-effects-of-gene.html" },
+    { "label": "Illinois CMS — Procurement", "url": "https://cms.illinois.gov/business/procurement.html" },
+    { "label": "Illinois Chief Procurement Office", "url": "https://cpo.illinois.gov/" },
+    { "label": "Civic Federation — State of Illinois FY2026 Enacted Budget", "url": "https://civicfed.org/blog/state-illinois-fy2026-enacted-budget" }
+  ]
+}

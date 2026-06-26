@@ -1,0 +1,83 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "State Agency",
+  "name": "Texas Dept of Transportation (TxDOT)",
+  "slug": "txdot",
+  "hq": "Austin, TX",
+  "updated": "2026-06-22",
+  "tagline": "Texas's statewide transportation agency and one of the largest in the nation — a sprawling field, edge, sensor, ITS, and data footprint built around a 10-year, $100B+ Unified Transportation Program and an AI plan now moving from pilots into daily operations.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Statewide DOT" },
+    { "label": "UTP (10-yr)", "value": "$101.6B" },
+    { "label": "IT staff", "value": "700+ pros" },
+    { "label": "Cloud gate", "value": "TX-RAMP / IS-RAMP" }
+  ],
+
+  "overview": "The Texas Department of Transportation (TxDOT) plans, builds, operates, and maintains the state highway system — one of the largest transportation networks in the country, spanning roughly 80,000 centerline miles across 25 districts. Headquartered in Austin, it is a heavy edge and field organization: traffic management centers, roadside ITS and sensor infrastructure, signals, cameras, connected-vehicle pilots, and a large back-office data and applications estate. Its capital program runs through the annually updated Unified Transportation Program (UTP), a 10-year 'road map' that the draft 2026 edition put at roughly $101.6B — the third straight year above $100B. On the technology side, TxDOT's Information Technology Division supports more than 700 IT professionals and the agency has moved aggressively on AI: its AI Strategic Plan, launched December 2024 and updated in February 2026, frames AI as a 'force multiplier' embedded in workflows under a 'human-led, AI-supported' governance model. For a Dell SLG seller, TxDOT is an infrastructure-, edge-, and data-rich account whose buying runs through TxDOT's own procurement plus DIR Cooperative Contracts, gated by TX-RAMP and TxDOT's internal IS-RAMP requirements.",
+
+  "budget": {
+    "intro": "TxDOT's scale shows up in its capital program, not a small IT line. The draft 2026 UTP was about $101.6B over 10 years (roughly $7.5B of it new funding), and Governor Abbott has separately framed a broader transportation investment of over $146B. Embedded in the capital plan is a meaningful traffic-technology / ITS component — the kind of sensor, edge, and data infrastructure a compute and storage vendor maps to.",
+    "stats": [
+      { "value": "$101.6B", "label": "Draft 2026 UTP (10-yr)", "note": "Third consecutive year above $100B; ~$7.5B of new funding" },
+      { "value": "$146B+", "label": "Total transportation investment", "note": "Broader plan figure cited by Gov. Abbott" },
+      { "value": "$264M+", "label": "Traffic-tech in draft 2026 UTP", "note": "New traffic-management technology / ITS projects (per GovTech, Jul 2025)" }
+    ],
+    "notes": [
+      "The UTP is updated annually and approved by the Texas Transportation Commission — figures shift between draft and adopted versions, so confirm against the final adopted UTP before forecasting.",
+      "TxDOT is a large direct technology spender in its own right (700+ IT pros, statewide ITS/edge), distinct from DIR, which is the procurement path rather than the end customer."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "AI Strategic Plan — pilots to operations", "summary": "Launched Dec 2024 and updated Feb 2026, TxDOT is moving AI from isolated pilots into everyday operations under a 'human-led, AI-supported' model. It has evaluated 200+ use cases via a Readiness Scorecard, with live examples like AI incident detection in Austin. Strong fit for AI-infrastructure, data-platform, and edge-compute conversations.", "tags": ["AI", "Data", "Edge"] },
+    { "name": "Connected & autonomous vehicles / ITS", "summary": "TxDOT runs a Connected and Autonomous Vehicle Task Force and a growing intelligent-transportation-systems footprint — roadside sensors, traffic management centers, signal tech, and connected-vehicle pilots. The draft 2026 UTP earmarks $264M+ in new traffic-management technology. This is an edge, sensor-data, and real-time-processing buildout.", "tags": ["ITS", "Connected Vehicle", "Edge"] },
+    { "name": "Innovation & testing platforms", "summary": "Programs such as the Texas Innovation Alliance (analytics and AI for smart transportation) and proposed neutral testing/proving-ground concepts position TxDOT as a public-private innovation buyer — a route for piloting compute, data, and AI solutions before scaling.", "tags": ["Innovation", "Analytics"] },
+    { "name": "Cybersecurity & data protection (IS-RAMP)", "summary": "TxDOT operates its own Information Security Risk and Authorization Management Program (IS-RAMP) and a controls-standards catalog, with a CISO who reviews and approves technology proposals. Security and TX-RAMP posture is a gate to clear on any data-touching deal.", "tags": ["Cybersecurity", "Compliance"] }
+  ],
+
+  "procurement": {
+    "intro": "TxDOT buys both through its own agency procurement and through statewide vehicles. Two early checks for any technology play: that Dell's DIR Cooperative Contracts are active and correctly scoped for TxDOT, and that any cloud / as-a-service offering meets TX-RAMP and TxDOT's internal IS-RAMP security requirements.",
+    "vehicles": [
+      { "name": "TxDOT agency procurement", "detail": "TxDOT runs its own solicitations and contracts for goods, services, and IT — distinct from DIR. Larger and program-specific buys typically flow through the agency's own procurement and the Texas Transportation Commission's approvals." },
+      { "name": "DIR Cooperative Contracts", "detail": "The statewide pre-competed vehicle TxDOT can buy IT hardware, software, and services through without running a separate RFP — a common path for technology purchases." },
+      { "name": "TX-RAMP / IS-RAMP certification", "detail": "TX-RAMP is the statewide cloud-security gate; TxDOT additionally enforces its own IS-RAMP requirements for third parties that access, store, or transmit TxDOT data. Clear the right level before pursuing cloud / aaS deals." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Marc D. Williams, P.E.", "title": "Executive Director", "note": "Agency leader (22nd Executive Director); has publicly positioned AI as 'a strategic asset embedded in our workflows.' The top relationship for the account." },
+    { "name": "Anh Selissen", "title": "Chief Information Officer & IT Division Director", "note": "Leads 700+ IT professionals across security, operations, applications, data governance, and traffic-technology operations. Recognized State IT Leader of the Year — the central technology relationship." },
+    { "name": "TxDOT IT Division — Cybersecurity / CISO", "title": "Security policy, IS-RAMP, approvals", "note": "TxDOT's CISO function reviews and approves technology proposals and owns the IS-RAMP / controls-standards requirements vendors must meet." },
+    { "name": "Texas Transportation Commission", "title": "Governing body", "note": "Governor-appointed commission that adopts the UTP and approves major contracts and program funding — the body that sets the capital and program envelope." }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "TxDOT updates AI Strategic Plan; AI 'embedded in our workflows'", "impact": "Signals durable demand for AI infrastructure, data platforms, and edge compute — and a governance framework (Readiness Scorecard, human-led review) to align solutions to.", "tags": ["AI"] },
+    { "date": "2025-07", "title": "Draft 2026 UTP includes $264M+ in new traffic-management technology", "impact": "Confirms a funded ITS / sensor / edge buildout inside the capital program — a mappable infrastructure and data opportunity.", "tags": ["ITS", "Budget"] },
+    { "date": "2025-06", "title": "TxDOT advances ~$101.6B draft 2026 Unified Transportation Program", "impact": "Third straight 10-year plan above $100B; the capital envelope that drives downstream technology and field-infrastructure spend.", "tags": ["Budget"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's DIR Cooperative Contract coverage and reseller scope for TxDOT, and identify TxDOT's own agency procurement path for larger program-specific buys.",
+    "Lead with AI-infrastructure, data-platform, and edge-compute messaging tied directly to TxDOT's AI Strategic Plan (pilots-to-operations) and its 'human-led, AI-supported' governance model.",
+    "Map the ITS / connected-vehicle / traffic-technology buildout (the $264M+ in the draft 2026 UTP) to edge, ruggedized, sensor-data, and real-time-processing solutions.",
+    "Engage CIO Anh Selissen's IT Division early and clear TX-RAMP plus TxDOT's internal IS-RAMP security requirements before pursuing any cloud / as-a-service deal.",
+    "Track the adopted (final) 2026 UTP versus the draft, and the Texas Transportation Commission's approvals, to time forecasts and major program pursuits."
+  ],
+
+  "sources": [
+    { "label": "TxDOT — Unified Transportation Program (UTP)", "url": "https://www.txdot.gov/projects/planning/utp.html" },
+    { "label": "TxDOT — UTP seeks feedback on $101.6B 10-year plan", "url": "https://www.txdot.gov/about/newsroom/statewide/txdot-seeks-feedback-on-1016-billion-10-year-plan.html" },
+    { "label": "Governor Abbott — Over $146B Texas transportation investment", "url": "https://gov.texas.gov/news/post/governor-abbott-announces-over-146-billion-texas-transportation-investment" },
+    { "label": "GovTech Insider — Draft 2026 UTP includes $264M+ in traffic tech", "url": "https://insider.govtech.com/texas/news/txdots-2026-unified-transportation-program-draft-includes-264m-in-traffic-tech" },
+    { "label": "TxDOT — Executive Director Marc D. Williams", "url": "https://www.txdot.gov/about/leadership/administration/executive-director-marc-d-williams.html" },
+    { "label": "TxDOT — Chief Information Officer (Anh Selissen)", "url": "https://www.txdot.gov/about/leadership/administration/chief-information-officer.html" },
+    { "label": "TxDOT — Information Technology Division", "url": "https://www.txdot.gov/about/divisions/information-technology-division.html" },
+    { "label": "TxDOT — Updates AI Strategic Plan (Feb 2026)", "url": "https://www.txdot.gov/about/newsroom/stories/txdot-updates-ai-strategic-plan.html" },
+    { "label": "TxDOT — AI Strategic Plan update page", "url": "https://www.txdot.gov/about/leadership/strategic-plans/txdot-artificial-intelligence-strategic-plan-update.html" },
+    { "label": "TxDOT — Connected & Automated Vehicles Task Force", "url": "https://www.txdot.gov/about/programs/innovative-transportation/connected-automated-vehicles-task-force.html" },
+    { "label": "TxDOT — Information Resources & Security Requirements (IS-RAMP)", "url": "https://ftp.txdot.gov/pub/txdot/itd/cybersecurity/information-resources-and-security-requirements.pdf" }
+  ]
+}

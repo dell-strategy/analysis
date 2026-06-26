@@ -1,0 +1,90 @@
+{
+  "state": "new-york",
+  "stateName": "New York",
+  "type": "City",
+  "name": "New York City Police Department (NYPD)",
+  "slug": "nypd",
+  "hq": "New York, NY",
+  "updated": "2026-06-22",
+  "tagline": "The largest municipal police force in the U.S. — ~33,000–36,000 officers across 77 precincts — and one of the most technology-intensive law-enforcement buyers anywhere, running real-time crime intelligence, a citywide camera/sensor network, body cameras, and a Drone-as-First-Responder program through its Information Technology Bureau.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Largest U.S. municipal police force" },
+    { "label": "Expense budget (FY26)", "value": "~$6.1B" },
+    { "label": "Tech owner", "value": "Information Technology Bureau" },
+    { "label": "Buying gate", "value": "NYC procurement (MOCS/DCAS/OTI) + POST Act" }
+  ],
+
+  "overview": "The New York City Police Department is the largest and one of the most technologically advanced municipal police forces in the United States, with roughly 33,000–36,000 uniformed officers (the City has funded a path back toward ~40,000 by FY2029) policing more than 8 million residents across 77 precincts and the transit and housing commands. For a Dell SLG seller, the NYPD is best understood as a very large, data- and infrastructure-hungry public-safety operator whose technology is run by its Information Technology Bureau (ITB), led by a Deputy Commissioner of Information Technology who also serves as the Department's CIO. The NYPD's flagship platforms are well documented in public reporting: the Domain Awareness System (DAS) — originally built with Microsoft and reported to have cost over $1B across its life — aggregates feeds from thousands of public and private CCTV cameras, license-plate readers, gunshot-detection sensors, and records systems; the Real-Time Crime Center, opened in 2005 and among the nation's largest, fuses that data for investigators; a department-wide body-worn-camera program generates massive video volumes; and a Drone-as-First-Responder (DFR) program — with first-in-the-nation FAA beyond-visual-line-of-sight authorization (2024) — sends drones to evaluate 911 scenes ahead of officers. All of this rides on storage, compute, networking, mobility, and increasingly AI/analytics — the infrastructure layers where Dell ISG and client opportunity concentrates. Procurement runs through NYC's centralized contracting machinery rather than a state-style co-op, and surveillance-related technology must clear the POST Act transparency regime. A mayoral transition in January 2026 brought the Mamdani administration, but — per public reporting — Police Commissioner Jessica Tisch was retained, a notable point of continuity for the technology roadmap.",
+
+  "budget": {
+    "intro": "The NYPD is one of the City's largest single spenders. Its FY2026 expense budget is about $6.1B, the overwhelming majority of which (~90%+) is personnel — overtime and headcount, not capital technology. Technology lives in a comparatively small but strategically dense slice of the operating budget plus the City's multi-year capital plan; the marquee surveillance and data platforms have historically been funded through a mix of City capital, the operating budget, and federal Homeland Security grants.",
+    "stats": [
+      { "value": "~$6.1B", "label": "NYPD expense budget (FY26)", "note": "Of NYC's ~$115.9B FY2026 adopted budget; ~90%+ personnel" },
+      { "value": "~33K–36K", "label": "Uniformed officers", "note": "Largest U.S. municipal force; City funded a path toward ~40K by FY2029" },
+      { "value": "$1B+", "label": "Domain Awareness System (life-to-date)", "note": "Reported cumulative spend on the DAS surveillance/data platform (originally with Microsoft)" }
+    ],
+    "notes": [
+      "Because personnel and overtime dominate the NYPD line, technology spend is better tracked through the City capital plan, OTI-coordinated citywide IT, and specific procurements (DAS, RTCC, body cameras, drones, mobility) than through the headline expense number.",
+      "Surveillance and data-platform programs have historically blended City capital, operating funds, and federal Homeland Security grants — confirm the funding source per program before forecasting.",
+      "Figures reflect the Adams-era FY2026 adopted budget; the Mamdani administration that took office Jan 2026 may reprioritize public-safety spending in its first executive/adopted budgets, even with Commissioner Tisch retained."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Domain Awareness System (DAS) & Real-Time Crime Center", "summary": "The DAS aggregates thousands of public and private CCTV feeds, license-plate readers, gunshot-detection sensors, and records systems into a single real-time view used by the Real-Time Crime Center (among the nation's largest, serving 77 precincts and tens of thousands of officers). Originally built with Microsoft, it is a continuous data-platform, storage, and analytics workload — core ISG and AI-infrastructure territory.", "tags": ["Real-Time Intelligence", "Data", "Surveillance"] },
+    { "name": "Body-worn cameras & video data", "summary": "The NYPD operates a department-wide body-worn-camera program that generates enormous volumes of video requiring ingest, retention, redaction, and disclosure workflows. Video storage, lifecycle management, and the supporting compute/network are recurring infrastructure demands — and a frequent driver of cloud/on-prem capacity decisions.", "tags": ["Body Cameras", "Storage", "Video"] },
+    { "name": "Drone-as-First-Responder (DFR) program", "summary": "One of the nation's most advanced urban DFR models, with first-in-the-nation FAA beyond-visual-line-of-sight authorization (2024): drones assess 911 scenes before officers arrive. The Department has also published drone-detection impact-and-use policy (updated Feb 2026). Implies edge compute, connectivity, video pipelines, and data management at the precinct and incident level.", "tags": ["Drones", "Edge", "Public Safety"] },
+    { "name": "AI/analytics & the IT Bureau modernization track", "summary": "Public reporting describes growing interest in AI-powered analytics over the CCTV network and exploration of facial-recognition and crowd-monitoring tools, alongside legacy tools like the Patternizr crime-pattern algorithm. The IT Bureau modernizes mission-critical systems, mobility, and resilience department-wide — an AI-readiness and infrastructure-refresh opportunity, gated by POST Act transparency and city AI governance.", "tags": ["AI", "Analytics", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "The NYPD does not buy through a state-style cooperative. Its technology procurement runs through New York City's centralized contracting framework — Agency Chief Contracting Officers (ACCOs), the Mayor's Office of Contract Services (MOCS), and DCAS commodity/requirements contracts — while citywide IT direction and the cloud-review gate are coordinated by the Office of Technology & Innovation (OTI). Surveillance-related technology carries an extra, public-facing gate: the POST Act requires the NYPD to publish an impact-and-use policy (and, for new tech, propose it at least 90 days before use). Confirm vehicle coverage and POST Act exposure before forecasting any NYPD deal.",
+    "vehicles": [
+      { "name": "NYPD ACCO + Mayor's Office of Contract Services (MOCS)", "detail": "The NYPD's Agency Chief Contracting Officer runs the Department's competitive bids, RFPs, and systems-integrator awards under MOCS oversight of citywide procurement policy and the contract pipeline. The primary path for NYPD-specific technology and services." },
+      { "name": "DCAS (Dept. of Citywide Administrative Services)", "detail": "Runs citywide goods procurement and requirements contracts many agencies — including the NYPD — buy commodity IT, client hardware, and equipment through. A complementary route alongside agency-specific solicitations." },
+      { "name": "OTI citywide IT direction & cloud-review gate", "detail": "OTI sets citywide technology direction and reviews/approves cloud services before agencies deploy them; align NYPD cloud or as-a-service plays with OTI's technical and security review early." },
+      { "name": "POST Act impact-and-use policy", "detail": "Mandatory transparency gate for surveillance technology: the NYPD must publish an impact-and-use policy and, for newly acquired tech, propose it at least 90 days prior to use. Amendments passed in 2025 tightened reporting — factor this timeline and scrutiny into any data/surveillance/analytics offering." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Jessica Tisch", "title": "Police Commissioner", "note": "Per public reporting, retained by Mayor Mamdani for the administration that took office Jan 2026 — a key point of continuity. A noted technology modernizer (prior Sanitation and DoITT leadership); sets the Department's tech and budget priorities." },
+    { "name": "Yisroel Hecht", "title": "Deputy Commissioner, Information Technology & CIO", "note": "Leads the Information Technology Bureau; stepped into the role in late 2024 and was reaffirmed among Commissioner Tisch's executive staff. 25+ years across NYC tech (former NYPD Director of IT Services, City CISO, DoITT). The top technology buying-center relationship for the account — verify current standing." },
+    { "name": "NYPD Information Technology Bureau (ITB)", "title": "Department-wide technology & systems", "note": "Owns mission-critical systems, infrastructure, mobility, networks, and modernization across the Department — the engine behind DAS, RTCC, body-camera, and drone data workloads." },
+    { "name": "NYPD Agency Chief Contracting Officer (ACCO)", "title": "NYPD procurement & vendor management", "note": "Runs the Department's solicitations, RFPs, and systems-integrator contracts under MOCS oversight — the contracting path onto NYPD-specific deals." },
+    { "name": "NYC Office of Technology & Innovation (OTI) / City CISO", "title": "Citywide IT direction, cloud-review & cybersecurity", "note": "Coordinates citywide technology and the cloud-review gate; NYC Cyber Command (City CISO) handles citywide cyber. Relevant context for any NYPD cloud, data, or security play." }
+  ],
+
+  "news": [
+    { "date": "2025-11", "title": "Mayor-elect Mamdani retains Jessica Tisch as Police Commissioner", "impact": "Continuity at the top of the NYPD despite the mayoral transition — the technology-modernization posture under Tisch is expected to persist; re-engage early but the buying center is comparatively stable.", "tags": ["Leadership", "Continuity"] },
+    { "date": "2026-01", "title": "Mamdani administration takes office; new public-safety priorities form", "impact": "New mayoral administration sets citywide budget and public-safety direction (including a new Office of Community Safety); expect first executive/adopted budgets to reshape priorities even with Tisch retained.", "tags": ["Transition", "Budget"] },
+    { "date": "2026-02", "title": "NYPD publishes updated Drone-Detection Systems impact-and-use policy", "impact": "Reflects the active drone/DFR program and ongoing POST Act disclosure; signals continued investment in drone, sensor, and the supporting data/edge infrastructure.", "tags": ["Drones", "POST Act"] },
+    { "date": "2025-10", "title": "City funds path toward ~40,000 officers by FY2029", "impact": "Headcount growth raises demand for client devices, mobility, identity, and the back-end systems that support a larger force — a multi-year infrastructure and client tailwind.", "tags": ["Workforce", "Budget"] },
+    { "date": "2025-04", "title": "City Council passes expanded POST Act surveillance-transparency package", "impact": "Tightens NYPD reporting on surveillance tech and data-sharing — adds disclosure/timeline obligations that any data, analytics, or surveillance-adjacent offering must account for.", "tags": ["POST Act", "Governance"] }
+  ],
+
+  "dellActions": [
+    "Map the buying center precisely: the Information Technology Bureau (DCIT/CIO Yisroel Hecht) as the technology owner, the NYPD ACCO and MOCS for contracting, DCAS for commodity hardware, and OTI for citywide direction and cloud review — sequence the deal accordingly.",
+    "Lead with data-platform and AI-ready infrastructure (ISG) tied to the real workloads: DAS/RTCC video and sensor fusion, body-camera storage and lifecycle, and drone/edge data pipelines — the highest-volume, most durable demand at the NYPD.",
+    "Confirm Dell's coverage on NYC/DCAS commodity and requirements contracts so client refresh and equipment for a growing (~40K-target) force can be bought compliantly without a full one-off RFP.",
+    "Build the POST Act and OTI cloud-review timelines into any surveillance/analytics/cloud pursuit — surveillance-tech impact-and-use policies (90-day pre-use proposal, tightened by 2025 amendments) and OTI approval are gates, not afterthoughts.",
+    "Treat Commissioner Tisch's retention as continuity but re-engage under the new Mamdani administration's public-safety priorities (incl. the Office of Community Safety) before the first adopted budget hardens the roadmap."
+  ],
+
+  "sources": [
+    { "label": "NYPD — Information Technology Bureau", "url": "https://www.nyc.gov/site/nypd/bureaus/administrative/information-technology.page" },
+    { "label": "NYPD — Technology (equipment & tech)", "url": "https://www.nyc.gov/site/nypd/about/about-nypd/equipment-tech/technology.page" },
+    { "label": "NYPD — Police Commissioner Tisch Announces Executive Staff Appointments", "url": "https://www.nyc.gov/site/nypd/news/pr533/police-commissioner-tisch-executive-staff-appointments" },
+    { "label": "PBS NewsHour — Mamdani says NYC's police commissioner will stay on the job", "url": "https://www.pbs.org/newshour/nation/mamdani-says-new-york-citys-current-police-commissioner-will-stay-on-the-job" },
+    { "label": "NYC Comptroller — Comments on NYC's FY2026 Adopted Budget", "url": "https://comptroller.nyc.gov/reports/comments-on-new-york-citys-fiscal-year-2026-adopted-budget/" },
+    { "label": "citymeetings.nyc — Overview of NYPD's FY2026 Budget (May 2025)", "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-05-29-1000-am-committee-on-public-safety/chapter/overview-of-nypds-fiscal-year-2026-budget/" },
+    { "label": "NYC Mayor's Office — Additional funding for 5,000 new NYPD officers (toward ~40K by FY2029)", "url": "https://www.nyc.gov/mayors-office/news/2025/10/mayor-adams-announces-additional-funding-for-5-000-new-nypd-offi" },
+    { "label": "Police1 — At NYPD's real-time crime center, the future of policing has arrived", "url": "https://www.police1.com/tech-pulse/at-nypds-real-time-crime-center-the-future-of-policing-has-arrived" },
+    { "label": "Wikipedia — Domain Awareness System", "url": "https://en.wikipedia.org/wiki/Domain_Awareness_System" },
+    { "label": "NYPD — Drone-Detection Systems Impact and Use Policy (updated Feb 2026)", "url": "https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/post-final/Drone-Detection-Systems-NYPD-Impact-and-Use-Policy-2.4.26-FINAL.pdf" },
+    { "label": "NYPD — Public Oversight of Surveillance Technology (POST) Act", "url": "https://www.nyc.gov/site/nypd/about/about-nypd/policy/post-act.page" },
+    { "label": "NYC Council — Expanded POST Act package passed (Apr 2025)", "url": "https://council.nyc.gov/amanda-farias/2025/04/15/city-council-passes-expanded-post-act-legislative-package-to-strengthen-transparency-and-oversight-of-nypd-surveillance-technology/" },
+    { "label": "Brennan Center — NYPD Surveillance Technology", "url": "https://www.brennancenter.org/our-work/research-reports/new-york-city-police-department-surveillance-technology" }
+  ]
+}

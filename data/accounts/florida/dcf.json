@@ -1,0 +1,82 @@
+{
+  "state": "florida",
+  "stateName": "Florida",
+  "type": "State Agency",
+  "name": "Florida Dept of Children & Families (DCF)",
+  "slug": "dcf",
+  "hq": "Tallahassee, FL",
+  "updated": "2026-06-22",
+  "tagline": "Florida's human-services backbone: DCF runs child welfare, mental health and substance-abuse services, and the ACCESS Florida public-benefits eligibility engine — a data-heavy agency in the middle of a multi-year child-welfare system modernization.",
+
+  "snapshot": [
+    { "label": "Mission", "value": "Child welfare, behavioral health, benefits" },
+    { "label": "FY2026–27 proposed", "value": "$4.8B+" },
+    { "label": "Benefits portal", "value": "ACCESS Florida / MyACCESS" },
+    { "label": "Buying gate", "value": "DMS / MyFloridaMarketplace" }
+  ],
+
+  "overview": "The Florida Department of Children and Families (DCF) is the state's primary human-services agency, responsible for child welfare (abuse and neglect intake, investigations, and case management), mental health and substance-abuse services, and public-benefits eligibility through the ACCESS Florida program (SNAP, Temporary Cash Assistance, and Medicaid eligibility determination). It is one of Florida's most data-intensive agencies: it operates statewide eligibility and case-management systems, the MyACCESS self-service portal, and the Florida Safe Families Network (FSFN) child-welfare case system. DCF processes very high transaction volumes — by its own public figures it handles, on average, hundreds of thousands of Medicaid applications, redeterminations, and assistance requests each month. The agency is in the middle of a multi-year modernization to a federally compliant CCWIS (Comprehensive Child Welfare Information System), making it an active modernization account where data integration, cloud, and security work all surface. For a Dell SLG seller, DCF is a large, infrastructure- and modernization-driven buyer reached primarily through Florida's central procurement vehicles rather than agency-only RFPs.",
+
+  "budget": {
+    "intro": "DCF is a large direct spender funded through Florida's annual General Appropriations Act, with a substantial federal match flowing through SNAP, Medicaid eligibility, and Title IV-E child-welfare funding. Governor DeSantis' FY2026–27 'Floridians First' budget proposed more than $4.8B for the Department — the proposed figure, not a final enacted appropriation, so confirm the signed General Appropriations Act before forecasting.",
+    "stats": [
+      { "value": "$4.8B+", "label": "FY2026–27 proposed", "note": "Governor's proposed budget for DCF; not yet the enacted figure" },
+      { "value": "Hundreds of thousands / mo", "label": "Eligibility transactions", "note": "DCF-cited monthly average of Medicaid applications, redeterminations, and assistance requests" },
+      { "value": "Multi-year", "label": "CCWIS modernization", "note": "Phased child-welfare system rebuild with IV&V oversight" }
+    ],
+    "notes": [
+      "DCF's appropriation mixes state general revenue with large federal streams (SNAP/Medicaid administration, Title IV-E) — funding for IT and modernization often rides federal cost-allocation rules.",
+      "SNAP caseloads fell sharply across Florida in 2025–2026 following federal program changes (H.R. 1); shifting caseloads affect eligibility-system load and modernization priorities.",
+      "Budget figures cited here are the Governor's proposed numbers — confirm the enacted General Appropriations Act before committing to a forecast."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "CCWIS child-welfare modernization", "summary": "DCF is replacing/modernizing its child-welfare technology toward a federally compliant CCWIS, in a modular, phased approach starting with intake, investigations, and case management, and building new enterprise-architecture foundations. Independent IV&V oversight is in place. A multi-year program — strong surface for data, cloud, and integration infrastructure.", "tags": ["Modernization", "Child Welfare", "Data"] },
+    { "name": "ACCESS Florida / MyACCESS eligibility", "summary": "The ACCESS Florida eligibility engine and the MyACCESS self-service portal determine SNAP, cash-assistance, and Medicaid eligibility at very high volume. Reliability, capacity, and customer-facing digital experience are recurring priorities — an infrastructure and benefits-modernization play.", "tags": ["Benefits", "Cloud", "Citizen Experience"] },
+    { "name": "Data integration & cybersecurity", "summary": "DCF holds highly sensitive child-welfare, behavioral-health, and benefits data and shares it across agencies (e.g., Medicaid, juvenile justice). Data integration, identity, and security controls are persistent requirements alongside the CCWIS rebuild.", "tags": ["Cybersecurity", "Data"] },
+    { "name": "Behavioral-health capacity", "summary": "Recent budgets emphasize expanding mental-health and substance-abuse capacity and modernizing the continuum of care. Supporting systems, data, and reporting follow these program expansions.", "tags": ["Behavioral Health", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "DCF buys through Florida's centralized procurement framework, administered by the Department of Management Services (DMS). Confirm the right vehicle before pursuing a deal: vendors must register in the Vendor Information Portal, and most commodity IT flows through State Term Contracts and MyFloridaMarketplace; larger or specialized programs (like CCWIS) run as dedicated solicitations.",
+    "vehicles": [
+      { "name": "DMS State Term Contracts", "detail": "Pre-competed statewide contracts administered by the Department of Management Services for commodity hardware, software, and services — the default path for routine IT buys by agencies including DCF." },
+      { "name": "MyFloridaMarketplace (MFMP)", "detail": "Florida's eProcurement and purchase-order/invoicing system. Vendors must register in the Vendor Information Portal (VIP) to do business with the state; agencies transact through MFMP." },
+      { "name": "Agency / program solicitations", "detail": "Large or specialized programs — notably CCWIS modernization and eligibility systems — run as their own competitive solicitations, often with separate IV&V oversight contracts." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Taylor N. Hatch", "title": "Secretary, DCF", "note": "Appointed by Gov. DeSantis (2025), previously led the Agency for Persons with Disabilities; her Senate confirmation advanced in early 2026. The top relationship for the DCF account." },
+    { "name": "Kathryn 'Kate' Williams", "title": "Deputy Secretary", "note": "Operational and policy leadership across child & family well-being, economic self-sufficiency, behavioral health, and quality/innovation — a key cross-program decision-maker." },
+    { "name": "Bridget Royster", "title": "Assistant Secretary, Economic Self-Sufficiency (ESS)", "note": "Owns the ACCESS Florida / MyACCESS benefits-eligibility program — the buying center for eligibility-system and benefits-modernization work." },
+    { "name": "Office of Information Technology / CIO", "title": "DCF technology leadership", "note": "Owns DCF's systems including FSFN and the CCWIS modernization; the agency CIO role has shown recent turnover, so confirm the current officeholder before engaging." }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "DCF Secretary Taylor Hatch's confirmation advances to full Florida Senate", "impact": "Leadership stabilizing at the top of the agency; the Secretary's priorities set the modernization and budget agenda.", "tags": ["Leadership"] },
+    { "date": "2026-02", "title": "Governor's 'Floridians First' FY2026–27 budget proposes $4.8B+ for DCF", "impact": "Signals continued investment in modernizing the continuum of care and behavioral-health capacity — confirm the enacted appropriation before forecasting.", "tags": ["Budget"] },
+    { "date": "2026-01", "title": "Florida SNAP caseloads fall to multi-year lows after federal program changes", "impact": "Shifting eligibility volumes affect ACCESS Florida system load and may reshape benefits-modernization priorities.", "tags": ["Benefits", "Policy"] },
+    { "date": "2025-12", "title": "DCF reflects on 2025: CCWIS child-welfare modernization advances toward implementation", "impact": "The multi-year system rebuild is an active modernization program — a recurring surface for data, cloud, and integration infrastructure.", "tags": ["Modernization", "Child Welfare"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's coverage on DMS State Term Contracts and active VIP/MyFloridaMarketplace registration — these are the access path for routine DCF IT buys.",
+    "Engage the CCWIS modernization as the lead motion: position data-platform, storage, and integration infrastructure plus security around the phased child-welfare rebuild.",
+    "Tie ACCESS Florida / MyACCESS capacity and reliability to compute, storage, and cloud infrastructure — a benefits-modernization play at very high transaction volume.",
+    "Lead with cybersecurity and data protection given DCF's highly sensitive child-welfare, behavioral-health, and benefits data and cross-agency data sharing.",
+    "Map the leadership chain — Secretary Hatch, Deputy Secretary Williams, ESS Assistant Secretary Royster, and the (recently changed) CIO office — and confirm the current CIO before forecasting."
+  ],
+
+  "sources": [
+    { "label": "Florida DCF — Executive Leadership", "url": "https://www.myflfamilies.com/about/additional-services-offices/office-secretary/executive-leadership/" },
+    { "label": "Florida Phoenix — Senate panel OKs Taylor Hatch to lead DCF", "url": "https://floridaphoenix.com/2026/02/10/senate-panel-oks-taylor-hatch-to-lead-dcf-as-senate-confirmation-process-begins/" },
+    { "label": "Florida DCF — Governor's Floridians First budget for DCF (FY2026–27)", "url": "https://www.myflfamilies.com/DCF-Underscores-Governor-Ron-DeSantis-Investments-for-Families-in-Floridians-First-Budget" },
+    { "label": "Florida DCF — Public Benefits & Services (ACCESS Florida)", "url": "https://www.myflfamilies.com/services/public-assistance" },
+    { "label": "MyACCESS self-service portal", "url": "https://myaccess.myflfamilies.com/" },
+    { "label": "CSG — IV&V for Florida's CCWIS modernization", "url": "https://csgdelivers.com/case-study/floridas-comprehensive-child-welfare-system-modernization/" },
+    { "label": "Florida DMS — State Purchasing (State Contracts & MyFloridaMarketplace)", "url": "https://www.dms.myflorida.com/business_operations/state_purchasing" },
+    { "label": "Florida Policy Institute — SNAP participation falls sharply across Florida", "url": "https://www.floridapolicy.org/posts/participation-in-snap-falls-sharply-across-florida-after-congress-makes-drastic-program-cuts" }
+  ]
+}

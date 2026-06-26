@@ -1,0 +1,84 @@
+{
+  "state": "pennsylvania",
+  "stateName": "Pennsylvania",
+  "type": "State Agency",
+  "name": "Commonwealth of Pennsylvania (Office of Administration / OA-OIT)",
+  "slug": "oa-oit",
+  "hq": "Harrisburg, PA",
+  "updated": "2026-06-22",
+  "tagline": "Pennsylvania's central IT shop: OA's Office for Information Technology sets statewide technology direction, runs shared services and cyber for executive agencies, and is the public face of the state's first-in-the-nation generative-AI push.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Statewide central IT (OA-OIT)" },
+    { "label": "Commonwealth CIO", "value": "Bry Pardoe" },
+    { "label": "AI program", "value": "ChatGPT Enterprise, 3,000+ users" },
+    { "label": "Co-op vehicle", "value": "COSTARS (DGS)" }
+  ],
+
+  "overview": "The Office for Information Technology (OA-OIT) sits inside the Governor's Office of Administration and is the Commonwealth's central IT authority — it oversees the investment in and performance of IT across all executive agencies under the Governor's jurisdiction and sets the policies, standards, and security guidelines those agencies follow. OA-OIT runs enterprise shared services (infrastructure, cloud, data, identity), statewide cybersecurity, and the digital-experience portfolio, and it is the most visible state-government AI program in the country following Pennsylvania's OpenAI/ChatGPT Enterprise pilot. Leadership turned over in late 2025 and was stabilized in early 2026: Bry Pardoe became Commonwealth CIO in October 2025, and in February 2026 Secretary of Administration Neil Weaver made four interim OIT leaders permanent, including a new state CISO. Note the buying nuance — large agency IT budgets (DHS, PennDOT, etc.) live with those agencies; OA-OIT is the policy, standards, and shared-services center, while most cooperative purchasing flows through the separate Department of General Services (DGS) and its COSTARS program.",
+
+  "budget": {
+    "intro": "OA-OIT's leverage is in statewide direction, shared services, and security policy rather than a single large appropriation. Governor Shapiro's FY2026-27 proposed budget is $53.26B in General Fund spending (up ~5.4%), and OA's IT story this cycle is modernization savings plus a multi-year cybersecurity build-out.",
+    "stats": [
+      { "value": "$53.26B", "label": "FY2026-27 proposed budget", "note": "Shapiro General Fund proposal; ~5.4% increase" },
+      { "value": "$37M+", "label": "Tech savings (3 yr)", "note": "From right-sizing IT contracts, cloud, and in-housing" },
+      { "value": "3,000+", "label": "Generative-AI users", "note": "ChatGPT Enterprise across 35 agencies" }
+    ],
+    "notes": [
+      "The FY2026-27 proposal directs additional funding to a multi-year OA cybersecurity modernization strategy against ransomware and data-theft threats.",
+      "OA reports ~$37M in technology savings over three years by right-sizing contracts, expanding cloud, and bringing work in-house (CODE PA alone ~$10M) — a cost-discipline frame Dell should expect in deals.",
+      "The largest IT spend sits in operating agencies (DHS, PennDOT, Revenue, etc.); OA-OIT is the policy and shared-services center, not the wallet for every project."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Generative AI — ChatGPT Enterprise expansion", "summary": "After a first-in-the-nation OpenAI pilot (175 employees, 14 agencies) that reported ~95 min/day saved, Pennsylvania expanded ChatGPT Enterprise to 3,000+ employees across 35 agencies in early 2026, with more in training. AI is a top-of-house priority — align infrastructure, data, and endpoint plays to it.", "tags": ["AI", "Productivity"] },
+    { "name": "Cybersecurity modernization", "summary": "OA is pursuing a multi-year cyber modernization strategy, reinforced in the FY2026-27 proposal, to harden state systems against ransomware and data theft. A clear lane for secure infrastructure, endpoint, and zero-trust offerings under the new CISO.", "tags": ["Cybersecurity", "Modernization"] },
+    { "name": "Cloud & IT cost optimization", "summary": "OA credits ~$37M in three-year savings to right-sizing IT contracts, expanding cloud, and in-housing work. Expect ROI-driven, consolidation-minded buying — position hybrid cloud and as-a-service against measurable cost outcomes.", "tags": ["Cloud", "Cost Savings"] },
+    { "name": "Digital experience (CODE PA)", "summary": "The Commonwealth Office of Digital Experience continues a pa.gov redesign and resident-service modernization track, with new permanent leadership in 2026 — a pull-through for the data and infrastructure beneath citizen-facing services.", "tags": ["Digital Services", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling into Pennsylvania state government runs through pre-established contracts, not one-off RFPs per agency. Most cooperative purchasing is administered by the Department of General Services (DGS), not OA — confirm Dell's coverage on the right DGS statewide and COSTARS contracts, and register in the PA Supplier Portal.",
+    "vehicles": [
+      { "name": "COSTARS (DGS cooperative)", "detail": "Pennsylvania's cooperative purchasing program, run by DGS — local governments, school districts, and state-affiliated entities buy off DGS-established contracts (including IT hardware/software) without their own RFP. Thousands of members registered." },
+      { "name": "DGS statewide contracts", "detail": "Statewide contracts established by DGS that executive agencies and COSTARS members buy from — the primary path for commodity and enterprise IT acquisition." },
+      { "name": "PA Supplier Portal registration", "detail": "Prerequisite to bidding on statewide or COSTARS contracts — suppliers register to receive a vendor number before participating." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Neil Weaver", "title": "Secretary of Administration", "note": "Cabinet head over OA; oversees enterprise IT, HR, and digital services. The executive sponsor above the CIO." },
+    { "name": "Bry Pardoe", "title": "Commonwealth Chief Information Officer", "note": "Named CIO Oct 2025; owns IT for all executive agencies under the Governor. Came from CODE PA — UX- and AI-forward. The top IT relationship." },
+    { "name": "Jim Sipe", "title": "Executive Deputy CIO", "note": "Made permanent Feb 2026 (prior state CISO since 2023) — day-to-day delivery and operations leader under the CIO." },
+    { "name": "Andy Ritter", "title": "Chief Information Security Officer", "note": "Confirmed permanent state CISO Feb 2026; interim since Oct 2025 and deputy CISO before. Owns statewide security policy and the cyber-modernization buying center." },
+    { "name": "Greg Fiedler", "title": "Chief Technology Officer", "note": "Appointed CTO March 2026 — architecture, infrastructure, and platform direction." }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "Greg Fiedler appointed Commonwealth CTO", "impact": "Completes the rebuilt OIT leadership bench — engage the new CTO on architecture and infrastructure direction.", "tags": ["Leadership"] },
+    { "date": "2026-02", "title": "Pennsylvania makes four interim OIT leaders permanent, including new CISO Andy Ritter", "impact": "Leadership stabilizes after late-2025 turnover; clarifies who owns delivery (Sipe) and security (Ritter) for relationship mapping.", "tags": ["Leadership"] },
+    { "date": "2026-02", "title": "Shapiro FY2026-27 proposal strengthens OA cybersecurity funding", "impact": "Multi-year cyber-modernization funding signals demand for secure infrastructure and endpoint — time security plays to the budget cycle.", "tags": ["Budget", "Cybersecurity"] },
+    { "date": "2026-01", "title": "Generative AI expanded to 3,000+ employees across 35 agencies", "impact": "AI is a marquee statewide priority — anchor infrastructure, data, and device conversations to the AI program.", "tags": ["AI"] },
+    { "date": "2025-10", "title": "Bry Pardoe named Commonwealth CIO", "impact": "New top IT decision-maker, UX/AI-oriented from CODE PA — reset the executive relationship at OA-OIT.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's coverage on DGS statewide and COSTARS IT contracts and current PA Supplier Portal registration — that is the access path to executive agencies and the broader Pennsylvania public sector.",
+    "Anchor the motion to OA-OIT's generative-AI program: position AI-ready infrastructure (compute, storage, networking) and secure endpoints behind the ChatGPT Enterprise rollout.",
+    "Lead cybersecurity offerings — secure infrastructure, endpoint, and zero-trust — into the FY2026-27 multi-year cyber-modernization funding, with CISO Andy Ritter's office.",
+    "Frame deals around measurable cost outcomes (cloud optimization, contract right-sizing) to match OA's $37M-savings, in-housing-minded posture.",
+    "Rebuild the relationship map after the 2025-26 leadership turnover: CIO Bry Pardoe, Exec Deputy CIO Jim Sipe, CTO Greg Fiedler, and CISO Andy Ritter, under Secretary Neil Weaver."
+  ],
+
+  "sources": [
+    { "label": "PA OA — Office of Information Technology (About IT)", "url": "https://www.pa.gov/agencies/oa/programs/information-technology2/about-it" },
+    { "label": "PA OA — Leadership", "url": "https://www.pa.gov/agencies/oa/about-oa/leadership" },
+    { "label": "StateScoop — Pennsylvania promotes four interim IT officials to permanent roles", "url": "https://statescoop.com/pennsylvania-promotes-four-interim-it-officials-to-permanent-roles/" },
+    { "label": "StateScoop — Pennsylvania expands generative AI to 3,000 employees", "url": "https://statescoop.com/pennsylvania-expands-generative-ai-tools-3000-employees/" },
+    { "label": "PA OA — Shapiro 2026-27 Budget Strengthens Cybersecurity", "url": "https://www.pa.gov/agencies/oa/newsroom/governor-shapiro-s-2026-27-budget-proposal-strengthens-cybersecu" },
+    { "label": "PA Budget in Brief 2026-27", "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/budget/documents/publications-and-reports/commonwealthbudget/2026-27-budget-documents/2026-27%20budget%20in%20brief.final.web.v.2.pdf" },
+    { "label": "PA DGS — COSTARS Cooperative Purchasing", "url": "https://www.pa.gov/agencies/dgs/programs-and-services/costars.html" },
+    { "label": "GovTech — Pennsylvania Names Andy Ritter as Permanent State CISO", "url": "https://www.govtech.com/workforce/pennsylvania-names-andy-ritter-as-permanent-state-ciso" }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "state": "georgia",
+  "stateName": "Georgia",
+  "type": "State Agency",
+  "name": "Georgia Technology Authority (GTA)",
+  "slug": "gta",
+  "hq": "Atlanta, GA",
+  "updated": "2026-06-22",
+  "tagline": "Georgia's central IT authority: GTA sets statewide technology and security policy, runs the GETS managed-services model that delivers infrastructure to executive-branch agencies, and houses the state's Office of Information Security and Office of Artificial Intelligence.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central IT authority" },
+    { "label": "Delivery model", "value": "GETS managed services" },
+    { "label": "Network reach", "value": "100K+ users, 1,200+ sites" },
+    { "label": "AI / cyber gate", "value": "Office of AI + State CISO" }
+  ],
+
+  "overview": "The Georgia Technology Authority (GTA) is the state's central IT agency. It sets statewide technology policy and security standards, must endorse/approve technology Georgia agencies use, and delivers shared infrastructure through the Georgia Enterprise Technology Services (GETS) program — a long-running public-private managed-services model rather than a state-run data center. Under GETS, GTA coordinates a multi-vendor ecosystem (with Capgemini serving as the multi-sourcing service integrator and providers such as AT&T, NTT DATA, Unisys, Atos, and Xerox delivering network, end-user, server, mainframe, and print services) to supply IT to a core set of executive-branch agencies, while managed network services reach more than 100,000 users across 1,200-plus state and local locations. GTA also houses the state Office of Information Security (led by the State CISO) and an Office of Artificial Intelligence created in 2023, making it the policy gate for security, cloud, and AI across Georgia government. For a Dell seller, GTA is best understood as the policy authority and integration hub — much agency IT is bought and delivered through GETS contracts and statewide vehicles, with day-to-day purchasing also touching the Department of Administrative Services (DOAS) State Purchasing Division.",
+
+  "budget": {
+    "intro": "GTA's leverage is structural, not a large direct appropriation: it sets policy, must endorse agency technology buys, and routes infrastructure through the GETS managed-services contracts rather than spending a big general-revenue IT line itself. Public, current dollar figures for total GETS contract value are not consistently published; the most citable scale metrics are operational (users and sites served) plus the state's published GETS Ready convenience-contract program.",
+    "stats": [
+      { "value": "100K+", "label": "Network-service users", "note": "Managed network services across 1,200+ state and local locations (GTA-reported scale)" },
+      { "value": "14", "label": "Core GETS agencies", "note": "Core executive-branch agencies receiving GETS IT infrastructure services; broader network reach is far larger" },
+      { "value": "$100M+", "label": "GETS Ready annual value", "note": "GTA-cited annual contract value of the GETS Ready convenience-contract program as of FY2018; treat as dated/directional" }
+    ],
+    "notes": [
+      "GTA recovers much of its cost through GETS and shared-services billing rather than a large standalone general-revenue line; the largest agency IT budgets sit with the agencies themselves.",
+      "Figures above are GTA-published operational metrics; confirm current totals against the latest FY2025 Annual State IT Report before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Office of Artificial Intelligence & AI governance", "summary": "GTA stood up an Office of Artificial Intelligence in 2023 with an AI Advisory Council and guiding principles, and in 2025 issued a Generative AI Responsible Use Standard (SS-25-001) requiring human review, labeling, prompt/output recordkeeping, annual audits, and 48-hour incident reporting. State CIO Shawnzia Thomas frames 2026 as 'AI governance is security' — every AI buy must clear the same security bar.", "tags": ["AI", "Governance", "Security"] },
+    { "name": "GETS managed-services model", "summary": "GTA coordinates the multi-vendor GETS ecosystem (Capgemini as service integrator; AT&T, NTT DATA, Unisys, Atos, Xerox as service providers) delivering infrastructure, end-user, server, mainframe, network, and print services. Infrastructure refresh and modernization run through this model, not direct agency procurement.", "tags": ["Managed Services", "Infrastructure", "Modernization"] },
+    { "name": "Cybersecurity & Office of Information Security", "summary": "The State CISO leads GTA's Office of Information Security, unifying security across the enterprise, GETS, and GTA. The state runs large-scale cyber exercises (e.g., Cyber Dawg) and applies uniform controls — access management, audit logging, data protection — across both traditional and AI systems.", "tags": ["Cybersecurity", "Compliance"] },
+    { "name": "Innovation Lab & responsible experimentation", "summary": "GTA opened an Innovation Lab in July 2025 to test emerging technologies using synthetic rather than production data, paired with workforce upskilling partnerships (Google, Microsoft, AWS, Palo Alto, Oracle). A useful entry point for AI-infrastructure and proof-of-concept positioning.", "tags": ["AI", "Innovation", "Workforce"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Georgia state government runs through several layers: GTA must endorse/approve technology agencies use and delivers infrastructure via GETS, while routine commodity IT buys flow through DOAS State Purchasing Division statewide contracts. Confirm which path a given opportunity uses before forecasting — managed-services delivery (GETS) and product/reseller buys (statewide contracts) are different motions.",
+    "vehicles": [
+      { "name": "GETS managed services", "detail": "GTA's core delivery model — a coordinated multi-vendor managed-services arrangement (Capgemini as integrator) supplying infrastructure and end-user services to executive-branch agencies. Infrastructure and as-a-service plays typically land here rather than as one-off agency buys." },
+      { "name": "GETS Ready convenience contracts", "detail": "GTA acts as broker, pre-qualifying providers and offering convenience contracts with price ceilings. Open to Georgia public entities — cities, counties, school and health boards, public universities, local courts — making it a route to the broader public sector, not just state agencies." },
+      { "name": "DOAS statewide contracts (State Purchasing Division)", "detail": "The Department of Administrative Services / SPD establishes statewide IT contracts (the published 'IT Matrix' lists suppliers and resellers). GTA still advises on/must endorse technology procurements, so coordinate both." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Shawnzia A. Thomas", "title": "State CIO & GTA Executive Director", "note": "Top relationship for the Georgia statewide motion; AI- and security-forward, framing 2026 priorities as AI governance, cybersecurity, and workforce readiness." },
+    { "name": "Steve Hodges", "title": "State CISO (Office of Information Security)", "note": "Leads security across the IT enterprise, GETS, and GTA; owner of the security bar every cloud/AI offering must clear." },
+    { "name": "GTA Office of Artificial Intelligence", "title": "AI policy, standards & Advisory Council", "note": "Owns AI guiding principles and the SS-25-001 generative-AI standard — the governance gate for AI deals." },
+    { "name": "GTA Office of Procurement Management", "title": "Technology procurement & GETS contracts", "note": "Owns GTA's contracting, endorsement, and GETS/GETS Ready vehicles — the path onto state delivery." },
+    { "name": "Georgia DOAS — State Purchasing Division", "title": "Statewide contracts / IT Matrix", "note": "Establishes and administers statewide IT contracts and reseller listings; coordinate alongside GTA endorsement." }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "GTA publishes FY2025 Annual State IT Report", "impact": "Primary public source for current GETS scale, AI licensing, broadband funding, and security posture — refresh budget/scale assumptions against it.", "tags": ["Reporting", "Budget"] },
+    { "date": "2026-01", "title": "State CIO Thomas frames 2026 priorities as 'AI governance is security'", "impact": "Confirms AI, cybersecurity, and workforce as top buying themes; every AI/cloud play must clear the security bar.", "tags": ["AI", "Leadership"] },
+    { "date": "2025-07", "title": "GTA opens Innovation Lab using synthetic data", "impact": "A low-risk entry point for AI-infrastructure proofs of concept and emerging-tech evaluation.", "tags": ["AI", "Innovation"] },
+    { "date": "2025-01", "title": "GTA issues Generative AI Responsible Use Standard (SS-25-001)", "impact": "Sets human-review, labeling, audit, and incident-reporting requirements — shapes how AI products must be packaged for state use.", "tags": ["AI", "Governance"] }
+  ],
+
+  "dellActions": [
+    "Map the GETS managed-services model and Capgemini's integrator role — infrastructure and as-a-service typically land through GETS, so position ISG/AI-infrastructure with the integrator and GTA, not just direct agency contacts.",
+    "Confirm Dell coverage on DOAS statewide IT contracts and GTA GETS Ready convenience contracts — together they reach state agencies plus cities, counties, schools, and universities.",
+    "Lead AI-infrastructure conversations through GTA's Office of AI and Innovation Lab, and package offerings to satisfy the SS-25-001 generative-AI standard up front.",
+    "Engage the State CISO / Office of Information Security early — 'AI governance is security' means security review is the gate for cloud and AI deals.",
+    "Validate current GETS scale and funding against the FY2025 Annual State IT Report rather than older published figures before building a forecast."
+  ],
+
+  "sources": [
+    { "label": "GTA — About / Who We Are", "url": "https://gta.georgia.gov/about-us/who-we-are" },
+    { "label": "GTA — Leadership (State CIO Shawnzia Thomas)", "url": "https://gta.georgia.gov/about-us/who-we-are/gta-leadership" },
+    { "label": "GTA — Technology Services (GETS)", "url": "https://gta.georgia.gov/technology-services-1" },
+    { "label": "GTA — GETS Ready convenience contracts", "url": "https://gta.georgia.gov/gets-ready" },
+    { "label": "GTA — Artificial Intelligence program", "url": "https://gta.georgia.gov/policies-and-programs/artificial-intelligence" },
+    { "label": "GTA — Steve Hodges named State CISO", "url": "https://gta.georgia.gov/news/2023-01-09/steve-hodges-named-state-ciso" },
+    { "label": "GTA — FY2025 Annual State IT Report", "url": "https://gta.georgia.gov/news/2026-03-06/fy2025-annual-state-it-report" },
+    { "label": "GovTech — Georgia's 2026 Tech Philosophy: 'AI Governance Is Security'", "url": "https://www.govtech.com/security/georgias-2026-tech-philosophy-ai-governance-is-security" },
+    { "label": "Georgia.gov — Office of Artificial Intelligence", "url": "https://ai.georgia.gov/" },
+    { "label": "Capgemini — State of Georgia / GETS service integrator", "url": "https://www.capgemini.com/us-en/client-story/driving-value-for-the-state-of-georgia-technology-authority/" },
+    { "label": "Georgia DOAS — Statewide Contracts (State Purchasing)", "url": "https://doas.ga.gov/state-purchasing/statewide-contracts" }
+  ]
+}

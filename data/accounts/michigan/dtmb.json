@@ -1,0 +1,82 @@
+{
+  "state": "michigan",
+  "stateName": "Michigan",
+  "type": "State Agency",
+  "name": "Michigan DTMB — Department of Technology, Management & Budget",
+  "slug": "dtmb",
+  "hq": "Lansing, MI",
+  "updated": "2026-06-22",
+  "tagline": "Michigan's central engine for IT, procurement, and budget: DTMB runs the state's consolidated technology services, owns the statewide contracts and the MiDEAL co-op most public buyers use, and sets enterprise cyber and AI policy.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central IT, procurement & budget" },
+    { "label": "Workforce", "value": "~2,800 employees" },
+    { "label": "Primary co-op", "value": "MiDEAL" },
+    { "label": "IT modernization fund", "value": "$50M ITIF (FY25-26)" }
+  ],
+
+  "overview": "The Department of Technology, Management & Budget (DTMB) is Michigan's central support agency — it consolidates information technology for nearly all of state government, runs central procurement, and houses the State Budget Office. State IT is almost entirely centralized inside DTMB rather than spread across agencies, which makes it the single most important enterprise relationship for selling technology into Michigan. DTMB's CIO organization spans the Office of the Chief Technology Officer, Agency Services (the IT teams embedded with each department), Cybersecurity and Infrastructure Protection (CIP), and the Center for Shared Solutions. On the buying side, DTMB's Central Procurement Services is the state's purchasing authority and operates MiDEAL, the extended-purchasing co-op that lets Michigan cities, counties, school districts, universities, community colleges, and nonprofit hospitals buy off state contracts without running their own solicitations. DTMB is also where statewide AI and cyber policy is set — it has published the state's AI strategy and adoption guidelines and is the proposed home for a new AI governing board.",
+
+  "budget": {
+    "intro": "DTMB's leverage is structural: because Michigan centralizes IT here, most state technology spend and most public-sector contract access flow through this one department. Its own modernization money is concentrated in the Information Technology Investment Fund (ITIF), which rose to $50.0M in FY2025-26 from $35.0M the prior year — the pool that funds legacy-system modernization and transformation projects.",
+    "stats": [
+      { "value": "$50.0M", "label": "IT Investment Fund (ITIF)", "note": "FY2025-26; up from $35.0M in FY2024-25 — funds legacy modernization" },
+      { "value": "~2,800", "label": "DTMB employees", "note": "Delivering IT, procurement, budget, and admin services statewide" },
+      { "value": "Centralized", "label": "State IT model", "note": "Nearly all state-agency IT is consolidated inside DTMB" }
+    ],
+    "notes": [
+      "Much of DTMB's IT delivery is funded through cost recovery / interdepartmental charges to the agencies it serves, not a single large general-fund line.",
+      "The DTMB director also serves as State Budget Director, so this department sits at the center of both technology and appropriations decisions.",
+      "Confirm current enacted figures against the House/Senate Fiscal Agency DTMB budget briefings before forecasting — appropriation detail shifts each budget cycle."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Statewide AI strategy & generative-AI rollout", "summary": "DTMB published Michigan's AI strategy and formal adoption/usage guidelines, and began rolling out a Retrieval-Augmented-Generation public chatbot — starting with Unemployment Insurance content — with the stated goal of a unified assistant across the state's ~110 Michigan.gov sites. Strong pull for AI-ready infrastructure, data, and GPU/compute.", "tags": ["AI", "Modernization"] },
+    { "name": "AI governance board (HB 5899)", "summary": "Legislation introduced in late April 2026 would create an AI governing board inside DTMB and a generative-AI pilot for state employees/agencies, with human review of AI outputs and a public evaluation report. Watch as the policy gate that will shape what AI offerings are buyable.", "tags": ["AI", "Policy"] },
+    { "name": "Legacy IT modernization (ITIF)", "summary": "The Information Technology Investment Fund (now $50.0M) bankrolls modernization of aging state systems and service-delivery transformation. The recurring funding line to map opportunities against — infrastructure refresh, cloud, and application modernization.", "tags": ["Modernization", "Infrastructure"] },
+    { "name": "Enterprise cybersecurity (CIP)", "summary": "DTMB's Cybersecurity and Infrastructure Protection organization runs enterprise security; Michigan's cyber program is consistently ranked among the strongest of any state. Continued investment in resilience, endpoint, and identity is a durable theme.", "tags": ["Cybersecurity", "Resilience"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling into Michigan runs through DTMB's Central Procurement Services and its statewide contracts — and, for the broader public sector, through the MiDEAL co-op. Confirm Dell's relevant statewide/MiDEAL contract coverage first; it's the access path to far more than DTMB itself.",
+    "vehicles": [
+      { "name": "MiDEAL (Extended Purchasing Program)", "detail": "The state's cooperative co-op since 1984: Michigan cities, townships, villages, counties, school districts, universities, community colleges, and nonprofit hospitals can buy off competitively bid state contracts for a nominal annual fee — without running their own RFP." },
+      { "name": "Statewide contracts / Central Procurement Services", "detail": "DTMB Central Procurement Services is the state's central purchasing authority; statewide contracts are the primary route for agencies to buy technology, hardware, and services." },
+      { "name": "Contract Connect", "detail": "DTMB's portal for searching current contracts and open solicitations — the place to confirm vehicle coverage and track upcoming RFPs." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Kyle Guerrant", "title": "Acting Director, DTMB (and State Budget Director)", "note": "Appointed acting director in January 2026; the department's top executive across IT, procurement, and budget." },
+    { "name": "Eric Swanson", "title": "Acting Chief Information Officer, State of Michigan", "note": "Named acting CIO by Gov. Whitmer on Dec 19, 2025 after Laura Clark's departure; 35-year state veteran, also leads the Center for Shared Solutions. The top enterprise-IT relationship." },
+    { "name": "Office of the Chief Technology Officer (DTMB)", "title": "Enterprise architecture & technology direction", "note": "Sets enterprise standards and platforms — a key buying center for infrastructure and AI." },
+    { "name": "Cybersecurity & Infrastructure Protection (CIP)", "title": "Enterprise security organization", "note": "Owns statewide cyber strategy and operations; runs Michigan Cyber Partners outreach to local governments." },
+    { "name": "Central Procurement Services (DTMB)", "title": "State purchasing authority & MiDEAL", "note": "Owns statewide contracts, solicitations, and the MiDEAL co-op — the path onto Michigan's contract vehicles." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Michigan expands generative-AI use across state agencies", "impact": "DTMB's RAG chatbot and AI guidelines signal scaling AI adoption — opening demand for AI-ready compute, data infrastructure, and secure deployment.", "tags": ["AI"] },
+    { "date": "2026-04", "title": "HB 5899 introduced to create an AI governing board inside DTMB", "impact": "Would formalize the AI policy gate and a generative-AI pilot — track it to know what AI offerings will be buyable and on what terms.", "tags": ["AI", "Policy"] },
+    { "date": "2026-01", "title": "Kyle Guerrant named acting DTMB director", "impact": "New top executive over IT, procurement, and budget — refresh the senior relationship map.", "tags": ["Leadership"] },
+    { "date": "2025-12", "title": "Eric Swanson named acting State CIO after Laura Clark resigns", "impact": "Leadership transition at the top of the statewide IT motion; build the relationship with the new CIO and his CSS base.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's statewide-contract and MiDEAL coverage — it's the access path to Michigan state agencies plus locals, K-12, and higher-ed, not just DTMB.",
+    "Lead enterprise: because IT is centralized in DTMB, position infrastructure, client, and services as enterprise standards through the CIO/CTO organization rather than agency-by-agency.",
+    "Tie AI-infrastructure and compute to the state's AI strategy and chatbot rollout; align to DTMB's published AI guidelines and the pending governance board.",
+    "Map the new leadership early — build with acting CIO Eric Swanson (and CSS) and acting director Kyle Guerrant before priorities harden.",
+    "Engage CIP and Michigan Cyber Partners on resilience, identity, and endpoint to support one of the nation's top-ranked state cyber programs."
+  ],
+
+  "sources": [
+    { "label": "Michigan DTMB — Leadership", "url": "https://www.michigan.gov/dtmb/about/exec" },
+    { "label": "Michigan DTMB — About MiDEAL", "url": "https://www.michigan.gov/dtmb/procurement/mideal-extended-purchasing-program/about" },
+    { "label": "Michigan DTMB — Procurement (Central Procurement Services / Contract Connect)", "url": "https://www.michigan.gov/dtmb/procurement" },
+    { "label": "Gov. Whitmer Announces Eric Swanson as Acting Chief Information Officer (Dec 19, 2025)", "url": "https://www.michigan.gov/whitmer/news/press-releases/2025/12/19/whitmer-announces-eric-swanson-as-acting-chief-information-officer" },
+    { "label": "Route Fifty — AI creates a brave new world for Michigan state agencies (May 2026)", "url": "https://www.route-fifty.com/artificial-intelligence/2026/05/artificial-intelligence-creates-brave-new-world-state-agencies-michigan/413722/" },
+    { "label": "Michigan AI Strategy (NASCIO, 2025)", "url": "https://www.nascio.org/wp-content/uploads/2025/09/MI_Artificial-Intelligence.pdf" },
+    { "label": "Michigan House Fiscal Agency — DTMB FY2025-26 Budget Briefing (ITIF)", "url": "https://www.house.mi.gov/hfa/PDF/Briefings/GG_DTMB_BudgetBriefing_fy25-26.pdf" }
+  ]
+}

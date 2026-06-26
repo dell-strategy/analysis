@@ -1,0 +1,87 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "County",
+  "name": "Harris County, Texas",
+  "slug": "harris-county",
+  "hq": "Houston, TX",
+  "updated": "2026-06-22",
+  "tagline": "The most populous county in Texas — ~4.8M residents across the Houston metro — running its technology through Harris County Universal Services (HCUS), with Commissioners Court controlling a ~$2.8B budget and every major IT contract.",
+
+  "snapshot": [
+    { "label": "Residents", "value": "~4.8M (largest TX county)" },
+    { "label": "FY26 county budget", "value": "~$2.8B" },
+    { "label": "Central IT", "value": "Universal Services (HCUS)" },
+    { "label": "Buying gate", "value": "Commissioners Court" }
+  ],
+
+  "overview": "Harris County is the third-most-populous county in the U.S. and the largest in Texas, serving roughly 4.8 million residents across the Houston metro. Its central technology organization is Harris County Universal Services (HCUS), which runs IT, cybersecurity, telecommunications, radio, fleet, records management, and the county 311 line through eleven divisions, supporting around 18,000 county employees and roughly 70 departments. Governance sits with a five-member Commissioners Court — the County Judge plus four precinct Commissioners — which adopts the budget and must approve essentially every significant purchase. Day-to-day administration runs through the County Administrator's office, created in 2021. For a Dell SLG seller, the practical map is: HCUS is the technology buying center, the Office of County Administration and Office of Management & Budget shape what gets funded, and Commissioners Court is the gate every deal of size must clear. The county is mid-modernization — replacing its aging JWEB justice platform, standardizing infrastructure, and rationalizing software licensing — which is where ISG, client, and services opportunity concentrates.",
+
+  "budget": {
+    "intro": "Harris County adopted a roughly $2.8B FY2026 budget on September 24, 2025, after a contested process to close an estimated ~$200M gap. Technology is a comparatively small but strategically concentrated line: HCUS's proposed FY26 budget was about $96.1M, including dedicated cybersecurity, a large Microsoft licensing increase, and an EV-fleet pilot. The fiscal year begins October 1.",
+    "stats": [
+      { "value": "~$2.8B", "label": "FY2026 county budget", "note": "Adopted Sep 24, 2025; closed an estimated ~$200M gap" },
+      { "value": "~$96.1M", "label": "HCUS technology budget", "note": "FY26 proposed for Universal Services (central IT)" },
+      { "value": "~$2.5M", "label": "Cybersecurity line", "note": "Within HCUS FY26; plus ~$2M for higher Microsoft licensing costs" }
+    ],
+    "notes": [
+      "The budget passed 3-2 — Commissioners Briones, Ramsey, and Garcia in favor; County Judge Hidalgo and Commissioner Ellis opposed — so technology priorities can shift with the court's balance.",
+      "HCUS serves ~18,000 county staff and ~4.8M residents across ~11 divisions; named FY26 priorities include standardizing technology, reducing software-license spend, optimizing call centers, and automation.",
+      "The largest IT-adjacent spends sit with operating offices (Sheriff, District Attorney, courts, Flood Control); HCUS is the central path, not the only wallet."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "JWEB → integrated justice platform (iJIMS)", "summary": "Harris County is modernizing JWEB, the central judicial system serving 100+ courts and agencies (Sheriff, DA, Public Defender, Juvenile Probation, Pretrial). An RFI (No. MAY71425) for an Integrated Justice Information System closed July 29, 2025, targeting better interagency data sharing, reliability, and CJIS-compliant security. Large justice-infrastructure and data play.", "tags": ["Justice", "Modernization", "Data"] },
+    { "name": "Cybersecurity program build-out", "summary": "HCUS funds a dedicated cybersecurity line (~$2.5M in FY26) and hosted its inaugural Cyber Day during Cybersecurity Awareness Month 2025. Security sits under the CTO/Information Security function — a recurring opportunity for endpoint, CJIS-aligned protection, and resilience.", "tags": ["Cybersecurity", "CJIS"] },
+    { "name": "Infrastructure standardization & licensing optimization", "summary": "FY26 priorities call out standardizing technology across departments, reducing software-license costs (including a ~$2M Microsoft increase to manage), optimizing call centers, and using automation to streamline processes — a window for consolidation, client refresh, and managed services.", "tags": ["Infrastructure", "Optimization"] },
+    { "name": "Fleet electrification pilot", "summary": "FY26 includes a ~$3.9M EV pilot under HCUS, which also owns Fleet Services — relevant for charging, connected-fleet data, and the supporting compute/edge that fleet telemetry implies.", "tags": ["Fleet", "Sustainability"] }
+  ],
+
+  "procurement": {
+    "intro": "Harris County buys through the Harris County Purchasing Department, and any award of size must be approved by Commissioners Court. The county is an active user of cooperative vehicles — including Texas DIR Cooperative Contracts — which let it buy pre-competed technology at state pricing without running its own full RFP. Confirm Dell's coverage on the right co-ops before pursuing a deal.",
+    "vehicles": [
+      { "name": "Harris County Purchasing + Commissioners Court", "detail": "The Purchasing Department runs solicitations and the Purchasing Agent administers contracts, but Commissioners Court approval is the gate for significant awards. Texas interested-parties disclosure applies to court-approved contracts." },
+      { "name": "Texas DIR Cooperative Contracts", "detail": "As a local government, Harris County can buy technology off DIR's pre-competed co-op at State of Texas pricing — a primary path to avoid a full county RFP. Verify Dell's DIR contract scope covers the products in play." },
+      { "name": "Other purchasing cooperatives", "detail": "The county also leverages cooperatives such as Choice Partners and other interlocal/national co-ops for goods and services — confirm which vehicle a given category is bought through." },
+      { "name": "RFI / RFP solicitations", "detail": "Larger or novel programs (e.g., the iJIMS justice platform) run through formal RFI then competitive solicitation; track the Purchasing portal and named procurement contacts early." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Lina Hidalgo", "title": "Harris County Judge", "note": "Top elected executive and Commissioners Court chair; announced Sept 2025 she will not seek reelection, serving through December 2026 — a leadership transition is coming." },
+    { "name": "Jesse Dickerman", "title": "County Administrator", "note": "Appointed April 23, 2025 (4-1 vote); runs day-to-day county administration including budget and operations coordination. Prior role: director of energy transition." },
+    { "name": "Sindhu Menon", "title": "Executive Director & CIO, Universal Services (HCUS)", "note": "Leads central IT; the top technology relationship for the account. Harris County's first female CIO (since 2022)." },
+    { "name": "Girish Ramachandran", "title": "CTO, Universal Services", "note": "Owns technology delivery including the cybersecurity program — key technical buying-center contact alongside the CIO." },
+    { "name": "Commissioners Court", "title": "County Judge + 4 precinct Commissioners", "note": "Ellis (Pct 1), Garcia (Pct 2), Ramsey (Pct 3), Briones (Pct 4). Adopts the budget and approves contracts of size — the decision gate for any major deal." }
+  ],
+
+  "news": [
+    { "date": "2025-09", "title": "Commissioners Court adopts ~$2.8B FY2026 budget", "impact": "Closed an estimated ~$200M gap on a 3-2 vote; sets the FY26 funding envelope (incl. ~$96.1M HCUS) and signals a fiscally constrained year — lead with cost-optimization and consolidation value.", "tags": ["Budget"] },
+    { "date": "2025-09", "title": "County Judge Lina Hidalgo announces she won't seek reelection", "impact": "Top-of-county leadership transition lands in Dec 2026 — expect shifts in priorities and the court's balance; build relationships at the HCUS/administration layer that persist across the change.", "tags": ["Leadership"] },
+    { "date": "2025-07", "title": "Justice modernization RFI (iJIMS) closes", "impact": "RFI No. MAY71425 to replace JWEB across 100+ courts and justice agencies closed July 29, 2025 — track the follow-on solicitation for a large integrated-justice infrastructure and data opportunity.", "tags": ["Justice", "Procurement"] },
+    { "date": "2025-10", "title": "HCUS hosts inaugural Cyber Day for Cybersecurity Awareness Month", "impact": "Signals a maturing security posture and executive attention to cyber — entry point for endpoint, CJIS-aligned, and resilience conversations.", "tags": ["Cybersecurity"] },
+    { "date": "2025-04", "title": "Jesse Dickerman appointed County Administrator", "impact": "New administrative leader (4-1 vote) coordinating budget and operations — a relationship to establish for funding and cross-department technology programs.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Map the buying center precisely: HCUS (CIO Sindhu Menon, CTO Girish Ramachandran) as the technology owner, Office of County Administration / OMB for funding, and Commissioners Court as the approval gate — sequence the deal accordingly.",
+    "Confirm Dell's Texas DIR Cooperative Contract and other co-op coverage so the county can buy at state pricing without a full RFP — the fastest compliant path.",
+    "Engage the iJIMS / justice-modernization track early (post-RFI) with integrated-infrastructure, data-sharing, and CJIS-aligned security positioning across the 100+ courts and agencies.",
+    "Lead FY26 conversations with cost-optimization, standardization, software-license rationalization, and managed services — the budget is constrained and these are stated county priorities.",
+    "Prepare for the Dec 2026 County Judge transition by anchoring relationships at the HCUS and administrator layer that survive changes in the elected court."
+  ],
+
+  "sources": [
+    { "label": "Harris County Universal Services — Overview", "url": "https://hcus.harriscountytx.gov/About-Us/Overview" },
+    { "label": "Harris County Universal Services — Leadership", "url": "https://hcus.harriscountytx.gov/About-Us/Leadership" },
+    { "label": "Houston Public Media — Commissioners approve $2.8B FY2026 budget", "url": "https://www.houstonpublicmedia.org/articles/news/harris-county/2025/09/24/531837/harris-county-commissioners-court-approve-2-8-billion-budget-for-2026-fiscal-year/" },
+    { "label": "OCA — Commissioners Court approves FY26 budget", "url": "https://oca.harriscountytx.gov/Media/OCA-Press-Releases/harris-county-commissioners-court-approves-fy26-budget-balancing-county-deficit" },
+    { "label": "GovTech — Harris County proposes $96M+ for Universal Services budget", "url": "https://insider.govtech.com/texas/news/harris-county-proposes-96m-for-universal-services-budget" },
+    { "label": "GovTech — Harris County plans to modernize judicial web system (JWEB/iJIMS)", "url": "https://insider.govtech.com/texas/news/harris-county-plans-to-modernize-judicial-web-system" },
+    { "label": "Texas Tribune — Lina Hidalgo won't seek reelection", "url": "https://www.texastribune.org/2025/09/16/lina-hidalgo-harris-county-judge-not-running-for-reelection-2026/" },
+    { "label": "KTRH — Commissioners Court appoints new County Administrator (Dickerman)", "url": "https://ktrh.iheart.com/featured/houston-texas-news/content/2025-04-22-commissioners-court-appoints-new-county-administrator/" },
+    { "label": "Harris County Purchasing Department", "url": "https://purchasing.harriscountytx.gov/" },
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+  ]
+}

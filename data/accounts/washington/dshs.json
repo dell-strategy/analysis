@@ -1,0 +1,84 @@
+{
+  "state": "washington",
+  "stateName": "Washington",
+  "type": "State Agency",
+  "name": "Washington Dept of Social & Health Services (DSHS)",
+  "slug": "dshs",
+  "hq": "Olympia, WA",
+  "updated": "2026-06-22",
+  "tagline": "One of Washington's largest agencies — behavioral health, long-term care, and economic services for millions of residents — running a deep, aging data and IT footprint that is mid-stream in a multi-year benefits-eligibility modernization.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Human-services delivery" },
+    { "label": "Biennial budget", "value": "~$25B all funds" },
+    { "label": "Staff", "value": "~18,000 FTE" },
+    { "label": "IT gate", "value": "WaTech / OCIO oversight" }
+  ],
+
+  "overview": "The Washington Department of Social & Health Services (DSHS) is one of the state's largest agencies, delivering behavioral health (state psychiatric hospitals and community supports), long-term care and developmental disabilities services, and economic services such as SNAP/TANF benefits and child support. Leadership has publicly described the agency as running on roughly 18,000 staff and a two-year budget near $25 billion across all fund sources. For a technology seller, DSHS matters less as a policy authority than as a high-volume operational agency with a large, partly legacy data and IT estate — most notably the 30-year-old mainframe-based Automated Client Eligibility System (ACES), which underpins benefits eligibility statewide and is the centerpiece of the multi-agency Integrated Eligibility & Enrollment (IE&E) modernization. DSHS does not buy IT in a vacuum: major technology investments run through statewide governance, with Washington Technology Solutions (WaTech) and the Office of the CIO providing oversight and approval, and most procurement flowing through Department of Enterprise Services (DES) statewide and cooperative master contracts.",
+
+  "budget": {
+    "intro": "DSHS is a large direct spender, not a pass-through. The enacted 2025–27 state operating budget appropriates roughly $12.1 billion general fund–state to DSHS, and agency leadership has publicly cited an all-funds two-year budget near $25 billion. Capital and behavioral-health investments add to that, including a new forensic hospital on the Western State Hospital campus.",
+    "stats": [
+      { "value": "~$25B", "label": "All-funds biennial budget", "note": "2025–27, per DSHS leadership statements" },
+      { "value": "$12.1B", "label": "General fund–state (2025–27)", "note": "Enacted operating appropriation to DSHS" },
+      { "value": "~$379M", "label": "2026 supplemental request", "note": "Reported additional GFS ask for the biennium, partly SNAP-related" }
+    ],
+    "notes": [
+      "A large share of DSHS spending is federally matched (Medicaid, SNAP, child support), so federal policy shifts directly move the agency's budget and supplemental requests.",
+      "Behavioral health is a major capital driver — a new 350-bed forensic hospital at Western State Hospital is under construction (started summer 2025, targeted completion ~2028).",
+      "Figures are drawn from public budget documents and agency statements; confirm exact current-law numbers against the enacted 2025–27 and 2026 supplemental budgets before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Integrated Eligibility & Enrollment (IE&E) modernization", "summary": "Multi-year, multi-agency program to replace the eligibility experience built on the aging ACES mainframe with a modern cloud foundation. Public materials describe roughly eight concurrent projects spanning mainframe stabilization and a new cloud platform — a long runway for cloud, data, integration, and services work.", "tags": ["Modernization", "Cloud", "Benefits"] },
+    { "name": "ACES legacy mainframe risk", "summary": "ACES is a ~30-year-old system with millions of lines of legacy code carrying elevated failure risk. Public roadmap materials reference a Mainframe-as-a-Service arrangement to stabilize the platform while modern capabilities are built and ACES components are gradually decommissioned.", "tags": ["Legacy", "Risk", "Infrastructure"] },
+    { "name": "Behavioral health capital & data", "summary": "Construction of a new forensic hospital at Western State Hospital plus community behavioral-health expansion creates demand for facility IT, clinical data systems, and secure infrastructure across the state hospital system.", "tags": ["Behavioral Health", "Data Center", "Security"] },
+    { "name": "AI, cyber & cloud under statewide priorities", "summary": "Washington's CIO and WaTech are pushing AI, modernization, and cybersecurity — the top NASCIO 2026 themes. DSHS programs that touch eligibility, client, and health data sit squarely in scope for secure cloud, data protection, and emerging AI use cases under OCIO oversight.", "tags": ["AI", "Cybersecurity", "Cloud"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to DSHS runs through Washington's centralized procurement and IT-oversight structure rather than purely agency-by-agency RFPs. Confirm three things early: that Dell holds the right DES statewide / cooperative master contracts, that any major IT investment is mapped to WaTech / OCIO approval and oversight, and whether a given workstream is procured directly by DSHS or jointly through the IE&E coalition.",
+    "vehicles": [
+      { "name": "DES statewide & master contracts", "detail": "The Department of Enterprise Services manages 180+ statewide contracts that agencies are generally required to use — the primary path for hardware, infrastructure, and many IT goods/services." },
+      { "name": "Washington cooperative contracts (DES)", "detail": "DES-led and third-party cooperatives (e.g., NASPO ValuePoint, Sourcewell) extend competitively awarded master contracts to state and local buyers, another route onto DSHS opportunities." },
+      { "name": "WaTech / OCIO oversight", "detail": "Major IT investments are subject to WaTech's IT Investments Approval & Oversight policy and the Office of the CIO — clear the governance and approval gates, not just the contract." },
+      { "name": "DSHS / IE&E agency solicitations", "detail": "Some work is run as DSHS RFPs or through the multi-agency IE&E coalition's purchasing process — confirm the buying entity before pursuing." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Angela Ramirez", "title": "Secretary, DSHS", "note": "Appointed by Gov. Ferguson (announced Aug 2025); former chief of staff at the U.S. Dept of Health & Human Services. Sets agency direction — the executive sponsor for any enterprise motion." },
+    { "name": "Rich Pannkuk", "title": "CFO & Assistant Secretary, Finance, Technology and Analytics Administration", "note": "Owns the administration that houses finance and technology — the most relevant senior owner for IT, data, and analytics buying decisions at DSHS." },
+    { "name": "DSHS Office of the CIO", "title": "Agency IT, data & security", "note": "Sits within Finance, Technology and Analytics. Public org materials don't clearly name the current CIO/CISO — verify the named CIO and information-security lead before mapping the security buying center." },
+    { "name": "Bill Kehoe", "title": "State CIO & Director, WaTech", "note": "State CIO since 2021; OCIO duties were folded into WaTech in 2024. Owns statewide IT oversight, AI/modernization push, and the approval gates major DSHS investments must clear." },
+    { "name": "Sjan Talbot", "title": "Acting Assistant Secretary, Behavioral Health & Habilitation Administration", "note": "Leads behavioral health — the buying center behind state-hospital construction, clinical systems, and community BH data needs." }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "DSHS org chart lists Finance, Technology and Analytics Administration under CFO Rich Pannkuk", "impact": "Confirms where IT/data/analytics ownership sits — center the technology relationship on the FTA administration, then verify the named CIO/CISO.", "tags": ["Leadership"] },
+    { "date": "2025-12", "title": "First end-to-end IE&E solution milestone targeted; ACES decommissioning to begin in state FY26", "impact": "The eligibility modernization moves from build to early production — active demand for cloud, data, integration, and managed-services work.", "tags": ["Modernization", "Cloud"] },
+    { "date": "2025-08", "title": "Gov. Ferguson appoints Angela Ramirez as DSHS Secretary", "impact": "New executive leadership with federal HHS background — re-establish the top relationship and read priorities for the term.", "tags": ["Leadership"] },
+    { "date": "2025-06", "title": "Construction starts on new 350-bed forensic hospital at Western State Hospital (completion ~2028)", "impact": "Multi-year capital build creates facility IT, clinical-data, and secure-infrastructure demand in the state hospital system.", "tags": ["Behavioral Health", "Infrastructure"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's DES statewide and cooperative master-contract coverage for Washington — it's the required path onto most DSHS IT purchases, not just a convenience.",
+    "Lead the IE&E and ACES modernization with cloud-foundation infrastructure, data platform, and migration/managed-services positioning, while respecting the WaTech/OCIO oversight gates.",
+    "Anchor the relationship in the Finance, Technology and Analytics Administration (CFO Rich Pannkuk) and verify the named DSHS CIO/CISO before forecasting security and data deals.",
+    "Tie behavioral-health capital (new Western State forensic hospital, community BH expansion) to facility IT, secure infrastructure, and clinical-data needs.",
+    "Map AI and cybersecurity offerings to Washington's statewide priorities under State CIO Bill Kehoe, framing DSHS's eligibility/client/health data as the protected workload."
+  ],
+
+  "sources": [
+    { "label": "DSHS — Meet Our Leadership", "url": "https://www.dshs.wa.gov/office-of-the-secretary/meet-our-leadership" },
+    { "label": "DSHS — Gov. Ferguson appoints Angela Ramirez secretary of DSHS", "url": "https://dshswa.medium.com/gov-ferguson-appoints-angela-ramirez-secretary-of-dshs-01dd56ded680" },
+    { "label": "Washington Research Council — DSHS supplemental budget request (SNAP)", "url": "https://researchcouncil.org/dshs-supplemental-budget-request-includes-spending-to-address-federal-changes-to-snap/" },
+    { "label": "Healthier Washington — Integrated Eligibility & Enrollment (IE&E) Modernization Program", "url": "https://waportal.org/health-initiatives/washington-state-health-and-human-services-enterprise-coalition/integrated-eligibility-and-enrollment-iee-modernization-program" },
+    { "label": "WaTech — IT Investments Approval & Oversight Policy", "url": "https://watech.wa.gov/policies/it-investments-approval-and-oversight-policy" },
+    { "label": "WaTech — Washington State CIO advances AI, GIS (2026)", "url": "https://watech.wa.gov/news/2026/washington-state-cio-advances-digital-equity-and-government-efficiency-ai-gis" },
+    { "label": "DES — How to Use Statewide Contracts", "url": "https://des.wa.gov/purchase/how-use-statewide-contracts" },
+    { "label": "DSHS — New Forensic Hospital on Western State Hospital Campus", "url": "https://www.dshs.wa.gov/bha/newstatehospital" }
+  ]
+}

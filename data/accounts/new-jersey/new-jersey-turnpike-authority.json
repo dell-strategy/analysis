@@ -1,0 +1,82 @@
+{
+  "state": "new-jersey",
+  "stateName": "New Jersey",
+  "type": "Special District",
+  "name": "New Jersey Turnpike Authority",
+  "slug": "new-jersey-turnpike-authority",
+  "hq": "Woodbridge, NJ",
+  "updated": "2026-06-22",
+  "tagline": "The toll-revenue-backed authority that runs the NJ Turnpike and Garden State Parkway — funding a multibillion-dollar capital program plus a long-running tolling, ITS, OT, and enterprise-IT modernization wave.",
+
+  "snapshot": [
+    { "label": "Role", "value": "State toll-road authority" },
+    { "label": "Operating budget (2026)", "value": "~$2.8B" },
+    { "label": "Capital program", "value": "$24B+ multi-year" },
+    { "label": "Tolling", "value": "E-ZPass / cashless" }
+  ],
+
+  "overview": "The New Jersey Turnpike Authority (NJTA) is an independent state authority that operates and maintains two of the nation's busiest toll roads — the New Jersey Turnpike and the Garden State Parkway — from its Woodbridge headquarters. It is funded almost entirely by toll revenue rather than general appropriations, which gives it an unusually large and self-directed capital program: NJTA's board has authorized a multi-year capital plan reported at roughly $24B for the Turnpike and Parkway, financed in part by scheduled toll increases (a 3% hike took effect January 1, 2026). Beyond roadway and bridge construction, the Authority runs a deep technology footprint — E-ZPass and cashless-tolling systems, intelligent transportation systems (ITS) and traffic management, operational technology (OT) for field devices and SCADA-style controls, and enterprise IT and cybersecurity across its workforce and customer-service operations. For a Dell SLG seller, NJTA is a large, capital-rich, self-funded buyer whose tolling-modernization, data-center, OT/IT-convergence, and cyber needs run on its own public bidding process rather than a state co-op.",
+
+  "budget": {
+    "intro": "NJTA is toll-funded, not appropriation-funded, so its spending power tracks traffic and toll policy rather than the state budget. Its 2026 budget is reported at roughly $2.8B, with toll revenue expected to supply more than $2.3B of it; alongside that operating budget sits a multi-year capital program reported in the $24B range for the Turnpike and Parkway.",
+    "stats": [
+      { "value": "~$2.8B", "label": "2026 budget", "note": "Covers operations, maintenance, debt service, and reserves" },
+      { "value": "~$2.3B", "label": "Toll revenue (2026)", "note": "Primary funding source; 3% toll increase effective Jan 1, 2026" },
+      { "value": "$24B+", "label": "Capital program", "note": "Multi-year Turnpike + Parkway plan, toll-revenue and bond backed" }
+    ],
+    "notes": [
+      "NJTA is self-funded through tolls and bonds — it does not buy through a state appropriation cycle, so timing follows its own board calendar and bond issuances.",
+      "The Authority also provides large dedicated transfers to NJ TRANSIT, a recurring claim on toll revenue to keep in view when sizing discretionary IT spend."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "E-ZPass back-office modernization", "summary": "In September 2024 NJTA awarded a long-term contract (reported at ~$1.73B over 13 years) to TransCore for a new E-ZPass back-office account-management system and enhanced customer-service operations. A large, multi-year tolling-platform refresh with surrounding data, integration, and infrastructure needs.", "tags": ["Tolling", "Modernization"] },
+    { "name": "Cashless / all-electronic tolling", "summary": "New Jersey toll roads are moving toward all-electronic tolling (the neighboring Atlantic City Expressway went fully cashless in January 2026). Removing toll plazas in favor of gantries and back-office processing shifts spend toward sensors, networking, edge/OT, and data systems.", "tags": ["Tolling", "ITS"] },
+    { "name": "ITS & traffic management", "summary": "Intelligent transportation systems — variable message signs, cameras, detection, and traffic operations centers — are an ongoing modernization track tied to the capital program. Edge compute, networking, storage, and analytics are natural infrastructure plays.", "tags": ["ITS", "Infrastructure"] },
+    { "name": "Cybersecurity & OT/IT convergence", "summary": "NJTA's IT organization has prioritized hardening cybersecurity across enterprise IT and the operational-technology environment that runs tolling and field systems. OT/IT convergence, segmentation, and resilient infrastructure are active needs as tolling goes fully digital.", "tags": ["Cybersecurity", "OT"] }
+  ],
+
+  "procurement": {
+    "intro": "NJTA buys through its own public bidding and RFP process, not a state cooperative — vendors register with the Authority and respond to advertised solicitations. Two things to confirm early: that Dell is a registered NJTA vendor, and which contracts run direct versus through a reseller or any applicable state cooperative.",
+    "vehicles": [
+      { "name": "NJTA public bidding / RFPs", "detail": "The primary path. The Authority advertises goods and non-engineering-services opportunities (generally above the ~$53K threshold) on its site and in NJ newspapers; contracts above $100K require Board of Commissioners authorization." },
+      { "name": "Goods & Non-Engineering Services", "detail": "NJTA's procurement track for IT hardware, software, and services — registered vendors respond to RFPs scored on weighted criteria including price." },
+      { "name": "State cooperative (where applicable)", "detail": "For some commodity IT, New Jersey state cooperative/contract vehicles may apply alongside NJTA's own bidding — confirm eligibility per purchase rather than assuming co-op access." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Kris Kolluri, Esq.", "title": "Executive Director, NJTA", "note": "Leads the Authority (took the role in early 2026) while also serving as NJ TRANSIT CEO — the top executive relationship and a link between the two agencies' tech agendas." },
+    { "name": "Jose Dios", "title": "Chief Information Officer", "note": "Owns enterprise IT and cybersecurity direction — the primary technology buying-center relationship for Dell." },
+    { "name": "Erwin Luna", "title": "Chief Financial Officer", "note": "Owns the toll-funded budget and capital financing — key for sizing and timing of large IT commitments." },
+    { "name": "Angela McNally", "title": "Director of Procurement & Materials Management", "note": "Runs the public bidding and RFP process — the path onto NJTA contracts and vendor onboarding." },
+    { "name": "Priya Jain", "title": "Chair, Board of Commissioners", "note": "The governor-appointed board authorizes contracts above $100K, so board approval is a required gate for large deals." }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "Kris Kolluri takes over as NJTA Executive Director", "impact": "New top leadership (and shared leadership with NJ TRANSIT) — reset the executive relationship map and watch for aligned tech priorities across both agencies.", "tags": ["Leadership"] },
+    { "date": "2026-01", "title": "3% toll increase takes effect on Turnpike and Parkway", "impact": "Reinforces the toll-revenue base funding the ~$2.8B budget and the multi-year capital program — supports continued IT and tolling investment.", "tags": ["Budget"] },
+    { "date": "2025-12", "title": "NJTA board approves 2026 budget tied to toll-revenue plan", "impact": "Confirms operating and capital funding for the year — a window to align proposals to the approved spend.", "tags": ["Budget"] },
+    { "date": "2024-09", "title": "NJTA awards long-term E-ZPass back-office contract to TransCore", "impact": "A multi-year, multibillion-dollar tolling-platform modernization that drives surrounding data, integration, and infrastructure demand.", "tags": ["Tolling", "Modernization"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell is a registered NJTA vendor and map which IT categories run via direct public bidding versus reseller or any applicable NJ state cooperative.",
+    "Lead infrastructure (ISG) and edge/OT plays tied to cashless-tolling and ITS modernization — compute, storage, networking, and ruggedized edge for gantries and traffic operations.",
+    "Bring a cybersecurity and OT/IT-convergence narrative to CIO Jose Dios's organization as tolling and field systems go fully digital.",
+    "Time large proposals to NJTA's board calendar and bond issuances — contracts above $100K need Board of Commissioners authorization.",
+    "Build the executive relationship with ED Kris Kolluri and CFO Erwin Luna, and watch for shared technology priorities across NJTA and NJ TRANSIT."
+  ],
+
+  "sources": [
+    { "label": "NJTA — Leadership", "url": "https://www.njta.gov/about/leadership/" },
+    { "label": "NJTA — Board of Commissioners", "url": "https://www.njta.com/about/board-of-commissioners" },
+    { "label": "NJTA — Current Solicitations / Business Hub", "url": "https://www.njta.gov/business-hub/current-solicitations/" },
+    { "label": "NJTA — Goods & Non-Engineering Services", "url": "https://www.njta.gov/business-hub/goods-non-engineering-services/" },
+    { "label": "NJBIZ — NJTA approves toll increases, $24B capital plan", "url": "https://njbiz.com/new-jersey-turnpike-authority-approves-toll-increases-24b-capital-plan/" },
+    { "label": "New Jersey Monitor — Parkway, Turnpike tolls rising in 2026", "url": "https://newjerseymonitor.com/briefs/parkway-turnpike-tolls/" },
+    { "label": "TransCore — NJTA affirms E-ZPass selection", "url": "https://transcore.com/new-jersey-turnpike-authority-affirms-its-selection-of-transcore-to-improve-e-zpass-services.html" },
+    { "label": "Governing — New Jersey starts transition to cashless toll collection", "url": "https://www.governing.com/transportation/new-jersey-starts-transition-to-cashless-toll-collection" }
+  ]
+}

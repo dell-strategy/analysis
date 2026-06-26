@@ -1,0 +1,82 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "City",
+  "name": "Fort Worth, Texas",
+  "slug": "fort-worth-texas",
+  "hq": "Fort Worth, TX",
+  "updated": "2026-06-22",
+  "tagline": "One of the fastest-growing big cities in the US — Fort Worth runs a ~$3.1B all-funds budget and centralizes technology in its IT Solutions Department, buying through Texas cooperative contracts to serve a population pushing past 1 million.",
+
+  "snapshot": [
+    { "label": "Role", "value": "11th/12th-largest US city" },
+    { "label": "FY2026 budget", "value": "$3.09B all funds" },
+    { "label": "Central IT", "value": "IT Solutions Dept" },
+    { "label": "Buying path", "value": "TX co-ops (DIR, BuyBoard)" }
+  ],
+
+  "overview": "Fort Worth is among the largest and fastest-growing cities in the country — consistently ranked the 11th- or 12th-most-populous US city and now approaching a population of roughly 1 million. The city government runs on a council-manager structure: an elected mayor and council set policy, and a professional City Manager (Jay Chapa, sworn in early 2025) runs day-to-day operations across departments. Technology is centralized in the IT Solutions Department (ITS), which delivers infrastructure, applications, networking, public-safety systems, and cybersecurity for city operations. Fort Worth adopted a ~$3.09B all-funds budget for FY2026 (a ~10.8% increase), of which the General Fund is ~$1.11B — the pool that funds most public-facing services. As of mid-2026 the city is forecasting a ~$49M General Fund shortfall for FY2027, which will tighten discretionary technology spend even as growth, AI adoption, and the regional data-center boom raise demand. Fort Worth buys most IT through Texas cooperative contracts rather than running every purchase as a standalone RFP.",
+
+  "budget": {
+    "intro": "Fort Worth adopted a ~$3.09B all-funds budget for FY2026, up ~10.8% year over year, while cutting the property-tax rate to $0.6700 per $100. The General Fund — the source of most operating and technology dollars — is ~$1.11B. Heading into FY2027 the city is projecting a ~$49M General Fund shortfall, so expect closer scrutiny of new and recurring IT spend.",
+    "stats": [
+      { "value": "$3.09B", "label": "FY2026 budget (all funds)", "note": "Adopted Sept 2025; ~10.8% increase YoY" },
+      { "value": "$1.11B", "label": "FY2026 General Fund", "note": "Funds most operating + technology services" },
+      { "value": "~$49M", "label": "FY2027 shortfall (projected)", "note": "Forecast gap presented April 2026" }
+    ],
+    "notes": [
+      "The FY2027 budget is built over summer 2026 (property values certified late July) with council adoption in the fall — a window where new IT asks get prioritized or deferred.",
+      "Tech spend is spread across the General Fund (ITS operations), enterprise/utility funds (water, aviation), and capital — confirm the fund and department behind any given buy before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Citywide AI & GenAI program", "summary": "Fort Worth adopted its first Generative AI policy in 2023 and expanded it in 2025 into a comprehensive AI/GenAI policy with a governance charter, board, and review committee. Reported use spans 18 of 27 departments — 911 call triage/translation, pavement and storm-drain assessment, HR, and legal research. AI-ready compute, data, and endpoint refresh are downstream needs.", "tags": ["AI", "Modernization"] },
+    { "name": "Cybersecurity for a growing city", "summary": "ITS owns security operations for a large municipality and its public-safety systems. Local government remains a top ransomware target nationally, keeping endpoint, identity, backup/recovery, and resilient infrastructure on the agenda — a steady refresh-and-harden motion.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "Infrastructure & cloud modernization", "summary": "Sustained population growth drives demand for data-center, server, storage, network, and hybrid-cloud capacity to keep city services online. Tie infrastructure refresh to service-continuity and the cost pressures of the FY2027 budget gap.", "tags": ["Data Center", "Cloud"] },
+    { "name": "DFW data-center / AI buildout (regional context)", "summary": "Dallas–Fort Worth is one of the largest US data-center and AI-infrastructure markets, with multibillion-dollar campuses (CyrusOne, Wistron AI plants, Siemens) and inventory projected to more than double. This shapes the workforce, power, and tech ecosystem around the city even though the campuses are private builds, not city procurement.", "tags": ["AI", "Ecosystem"] }
+  ],
+
+  "procurement": {
+    "intro": "Fort Worth centralizes buying through its Purchasing Division (Finance) and leans heavily on Texas cooperative contracts, which satisfy competitive-bid requirements without a standalone RFP. For a Dell seller the first move is confirming coverage on the co-ops the city actually uses and registering in the city's supplier portal.",
+    "vehicles": [
+      { "name": "Texas DIR Cooperative Contracts", "detail": "Statewide pre-competed IT vehicle available to Texas local governments — a primary path for hardware, software, and services. Confirm Dell's DIR contract is active and correctly scoped for the city." },
+      { "name": "BuyBoard / Equalis & other co-ops", "detail": "Fort Worth uses BuyBoard and Equalis (and similar regional/national co-ops) for many purchases. Match the offer to the co-op the city is buying through for a given category." },
+      { "name": "City Purchasing & supplier registration", "detail": "Direct solicitations and contracts run through the Finance Purchasing Division; vendors register via the city's PeopleSoft supplier portal. Larger awards go to City Council on the Mayor & Council Communication (M&C) agenda." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Jay Chapa", "title": "City Manager", "note": "Runs city operations; sworn in early 2025 after a 25-year city career. Sets the priorities and budget posture that IT spend follows." },
+    { "name": "Mattie Parker", "title": "Mayor", "note": "Elected leader who, with the City Council, sets policy and approves the budget and major contracts (M&C agenda)." },
+    { "name": "Kevin Gunn", "title": "Chief Technology Officer (IT Solutions)", "note": "Senior technology leader over the IT Solutions Department — the central buying center for city IT, infrastructure, and security. Confirm current title/scope before engaging." },
+    { "name": "IT Solutions Department (ITS)", "title": "Central IT, infrastructure & cybersecurity", "note": "Owns city technology delivery and the security function; the day-to-day relationship for infrastructure, cloud, endpoint, and cyber." },
+    { "name": "Finance — Purchasing Division", "title": "Citywide procurement", "note": "Owns solicitations, cooperative-contract use, and supplier onboarding — the gate to any city purchase." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "Fort Worth forecasts ~$49M General Fund shortfall for FY2027", "impact": "Tighter scrutiny of new and recurring IT spend; lead with cost-efficiency, lifecycle value, and co-op pricing.", "tags": ["Budget"] },
+    { "date": "2026-01", "title": "Data centers and AI projects headline Fort Worth's 2026 project list", "impact": "Regional AI/data-center buildout reshapes the tech ecosystem, workforce, and infrastructure demand around the city.", "tags": ["AI", "Ecosystem"] },
+    { "date": "2025-09", "title": "City Council adopts ~$3.09B FY2026 budget; tax rate cut to $0.6700", "impact": "Defines the FY2026 spending envelope (General Fund ~$1.11B) that city technology buys draw from.", "tags": ["Budget"] },
+    { "date": "2025-01", "title": "Fort Worth expands its AI/GenAI policy and governance framework", "impact": "Formal AI governance and broad departmental adoption point to downstream AI-ready compute, data, and endpoint needs.", "tags": ["AI"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's Texas DIR Cooperative Contract — plus BuyBoard/Equalis coverage — is active and scoped for the city, and register/verify status in Fort Worth's supplier portal.",
+    "Engage IT Solutions (CTO Kevin Gunn's organization) as the central buying center for infrastructure, client/endpoint, cloud, and cybersecurity.",
+    "Lead with cost-efficiency and lifecycle value given the projected FY2027 shortfall — frame refresh and consolidation as ways to do more within a tighter envelope.",
+    "Tie an AI-infrastructure and endpoint story to the city's expanding AI/GenAI program and the 18-of-27-department adoption already underway.",
+    "Track the summer-2026 FY2027 budget cycle (values certified late July, fall adoption) to time proposals to the city's funding decisions."
+  ],
+
+  "sources": [
+    { "label": "City of Fort Worth — IT Solutions (ITS)", "url": "https://www.fortworthtexas.gov/departments/it-solutions" },
+    { "label": "City of Fort Worth — FY2026 Budget", "url": "https://www.fortworthtexas.gov/departments/the-fwlab/budget/fy2026" },
+    { "label": "Hoodline — Fort Worth Council approves $3.09B FY2026 budget", "url": "https://hoodline.com/2025/09/fort-worth-city-council-approves-3-09-billion-budget-for-fy2026-aiming-for-steady-services-and-tax-relief-amid-population-growth/" },
+    { "label": "Community Impact — Fort Worth faces $49M FY2026-27 shortfall", "url": "https://communityimpact.com/dallas-fort-worth/keller-roanoke-northeast-fort-worth/government/2026/04/08/city-of-fort-worth-faces-49m-budget-shortfall-for-fiscal-year-2026-27/" },
+    { "label": "Fort Worth Inc. — How Fort Worth is using AI in city government", "url": "https://fortworthinc.com/commentary/artificial-intelligence-is-coming-to-local-government-%E2%80%94-fort/" },
+    { "label": "City of Fort Worth — City Manager Jay Chapa", "url": "https://www.fortworthtexas.gov/departments/city-manager/city-manager-contacts/chapa" },
+    { "label": "City of Fort Worth — Purchasing", "url": "https://www.fortworthtexas.gov/departments/finance/purchasing" },
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+  ]
+}

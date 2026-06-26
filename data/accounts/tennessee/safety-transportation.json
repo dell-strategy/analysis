@@ -1,0 +1,89 @@
+{
+  "state": "tennessee",
+  "stateName": "Tennessee",
+  "type": "State Agency",
+  "name": "Tennessee — Safety, Corrections & Transportation",
+  "slug": "safety-transportation",
+  "hq": "Nashville, TN",
+  "updated": "2026-06-22",
+  "tagline": "A grouping of Tennessee's public-safety and transportation agencies — Safety & Homeland Security (driver services, Highway Patrol), Correction, and Transportation (TDOT) — large field, edge, data, and intelligent-transportation footprints whose IT is delivered largely through the centralized STS organization.",
+
+  "snapshot": [
+    { "label": "Agencies", "value": "Safety/THP · Correction · TDOT" },
+    { "label": "Profile", "value": "Field / edge / ITS / data" },
+    { "label": "IT delivery", "value": "Centralized via STS (F&A)" },
+    { "label": "Buying path", "value": "CPO Statewide Contracts" }
+  ],
+
+  "overview": "This account groups three of Tennessee's largest operational agencies, all headquartered in Nashville and all carrying heavy field, edge, and data footprints. The Department of Safety & Homeland Security runs driver services (license/ID issuance, REAL ID, self-service kiosks, mobile units) and the Tennessee Highway Patrol, plus the state's homeland-security and fusion functions. The Department of Correction (TDOC) operates the state prison system — roughly 20,000 in custody — and is building a Nashville intelligence center, deploying drones against contraband, and weighing body-worn cameras. The Department of Transportation (TDOT) runs the highway program and a sizable intelligent-transportation-systems (ITS) estate — TDOT SmartWay, the I-24 SMART Corridor with AI-based decision support, and a Memphis–Blue Oval City smart-freight pilot. Crucially, IT for these agencies is delivered largely by Strategic Technology Solutions (STS), the centralized IT organization under Finance & Administration, which sets standards, security, and cloud policy; agency-specific systems (biometrics, ITS, corrections intelligence) are procured on top of that shared platform. For a Dell SLG seller, the demand is concentrated in edge/mobile devices, ruggedized field compute, data-center and storage for records and video, AI/analytics for traffic and corrections intelligence, and the networking behind ITS — most of it routed through the state's Central Procurement Office Statewide Contracts and shaped upstream by STS.",
+
+  "budget": {
+    "intro": "These agencies are funded through Tennessee's annual (July 1–June 30) budget; the FY2027 budget Gov. Lee signed in May 2026 totals roughly $58B. There is no consolidated 'state IT' line — technology is distributed across agencies and the centralized STS organization, so the relevant signals are agency program budgets plus STS-driven modernization. TDOT received $400M in one-time FY2027 infrastructure funds on top of its ~$1.2B annual work program and the Transportation Modernization Act; TDOC requested roughly $1.5B with discrete technology lines.",
+    "stats": [
+      { "value": "~$58B", "label": "FY2027 state budget", "note": "Signed May 2026; the pool agency and CPO-vehicle buys draw from. FY begins July 1, 2026" },
+      { "value": "$400M", "label": "TDOT FY2027 infrastructure", "note": "One-time funds: ~$50M maintenance, $150M bridge preservation, $200M capacity-adding projects" },
+      { "value": "~$10M", "label": "TDOC tech lines (FY2026–27)", "note": "Per budget hearing: ~$8.6M technology upgrades plus ~$1.7M drone/contraband program" }
+    ],
+    "notes": [
+      "No consolidated state IT budget line exists; confirm each agency's technology budget and the STS operating budget when forecasting, as STS delivers much of the underlying infrastructure.",
+      "TDOT's capital is dominated by the $15B fiscally constrained 10-Year Plan and the Transportation Modernization Act ($3B state general-fund transfer); ITS and technology spend is a subset of the broader program.",
+      "Figures are from public budget hearings and announcements and should be confirmed against final appropriations and agency LARs before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "TDOT ITS — I-24 SMART Corridor & AI decision support", "summary": "TDOT operates TDOT SmartWay and the I-24 SMART Corridor, a ~28-mile integrated corridor (Nashville–Murfreesboro) with VSL gantries, cameras, and an AI-based decision-support system developed with Southwest Research Institute and Vanderbilt. Phase 2 completed in early 2025; Phase 3 adds ramp metering, fiber, CCTV, and dynamic message signs — sustained demand for edge compute, networking, storage, and AI/analytics.", "tags": ["ITS", "AI/Analytics", "Edge"] },
+    { "name": "TDOT smart-freight & connected-autonomous pilots", "summary": "TDOT named a private partner (Cavnue) for a Memphis–Blue Oval City Smart Freight Corridor pilot on I-40 and is piloting connected/autonomous freight technology in real-world conditions — a multi-year program with roadside infrastructure, data, and analytics needs adjacent to the West Tennessee EV manufacturing buildout.", "tags": ["Connected Vehicles", "Freight", "Data"] },
+    { "name": "TDOC corrections intelligence, drones & body cameras", "summary": "The Department of Correction is standing up a Nashville central intelligence center (~30 staff) using AI to monitor inmate activity, plans ~$1.7M in drones to interdict contraband, and faces legislative pressure to pilot body-worn cameras at a private facility — opportunities across analytics compute, storage/retention for video, and edge devices, with public-records and retention constraints to design around.", "tags": ["Corrections", "AI/Analytics", "Video"] },
+    { "name": "Driver services modernization (Safety)", "summary": "Safety & Homeland Security runs license/ID issuance with self-service kiosks and mobile units, REAL ID, and a new noncitizen credential rollout beginning Jan 2026. Tennessee has not broadly launched a mobile/digital driver license — a likely future modernization track around secure issuance and identity infrastructure.", "tags": ["Driver Services", "Digital Identity"] }
+  ],
+
+  "procurement": {
+    "intro": "These agencies buy through Tennessee's centralized machinery, not standalone agency RFPs in most cases. The primary path is the Central Procurement Office's Statewide Contracts (with a dedicated technology category) and the Edison supplier portal; larger or specialized systems (ITS integration, biometrics, corrections platforms) can run as agency solicitations. STS sets the IT standards, cloud, and security policy that buys must conform to.",
+    "vehicles": [
+      { "name": "CPO Statewide Contracts (SWC)", "detail": "The primary vehicle — pre-competed technology agreements state agencies (and many local/nonprofit buyers) use without their own RFP. Confirm Dell's SWC coverage and reseller scope are current for the categories these agencies buy." },
+      { "name": "STS-delivered shared services", "detail": "STS provides the centralized infrastructure, cloud, and security platform these agencies run on — engage STS for enterprise infrastructure and modernization demand that underpins agency systems." },
+      { "name": "Edison Supplier Portal", "detail": "Mandatory supplier registration and the transactional backbone for doing business with the state — ensure Dell and partners are correctly registered before pursuing awards." },
+      { "name": "Agency / cooperative solicitations", "detail": "Specialized systems (ITS integration, biometrics, corrections intelligence) may run as agency RFPs or via cooperative contracts (e.g., NASPO ValuePoint) — track agency and Central Procurement postings and verify TN adoption for cooperative terms." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Jeff Long", "title": "Commissioner, Safety & Homeland Security", "note": "Appointed by Gov. Lee in 2019; oversees driver services, the Tennessee Highway Patrol, and homeland-security functions. The top relationship for the Safety/THP portion of the account." },
+    { "name": "Frank Strada", "title": "Commissioner, Dept of Correction (TDOC)", "note": "Appointed January 2023; leads the state prison system (~20,000 in custody) and the technology agenda around the new intelligence center, drones, and body-camera debate. The top relationship for the corrections portion." },
+    { "name": "Will Reid", "title": "Commissioner, Dept of Transportation (TDOT)", "note": "Former TDOT chief engineer elevated to Commissioner; owns the highway program, the 10-Year Plan, and the ITS/SMART Corridor and smart-freight initiatives. The top relationship for the transportation portion." },
+    { "name": "Kristin Darby", "title": "State CIO, Strategic Technology Solutions (F&A)", "note": "Took office March 2025; leads the centralized STS org that delivers IT for these agencies, co-chairs the State AI and Cybersecurity Councils, and describes a pragmatic cloud-first posture that keeps some low-latency/regulated workloads on-prem. The strategic relationship across all three agencies." },
+    { "name": "Central Procurement Office (DGS)", "title": "Statewide procurement authority", "note": "Within the Department of General Services; competes and awards the Statewide Contracts and runs Edison registration that gate most technology buys for these agencies." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "FY2027 budget dedicates $400M to TDOT infrastructure", "impact": "One-time funds for maintenance, bridge preservation, and capacity projects expand TDOT's program — supporting context for ITS, fiber, and roadside-technology demand that procures through statewide vehicles.", "tags": ["Budget", "TDOT"] },
+    { "date": "2026-04", "title": "TDOT names partner for Memphis–Blue Oval City smart-freight / autonomous pilot", "impact": "Launches a multi-year connected/autonomous freight program on I-40 — roadside infrastructure, data, and analytics needs adjacent to the West Tennessee manufacturing buildout.", "tags": ["TDOT", "Connected Vehicles"] },
+    { "date": "2026-02", "title": "TDOC budget hearing details ~$8.6M tech upgrades and ~$1.7M drone/contraband program", "impact": "Concrete corrections technology spend plus a Nashville AI intelligence center — entry points for analytics compute, storage/retention, and edge devices.", "tags": ["TDOC", "Budget"] },
+    { "date": "2026-01", "title": "Senate panel advances body-worn-camera pilot for TN prison guards", "impact": "Signals a likely corrections video-capture and retention program — position storage, data management, and edge devices, accounting for public-records and retention constraints.", "tags": ["TDOC", "Video"] },
+    { "date": "2025-01", "title": "TDOT completes Phase 2 of the I-24 SMART Corridor", "impact": "Advances the AI-based integrated-corridor-management deployment; Phase 3 (ramp metering, fiber, CCTV, DMS) is an opening for edge compute, networking, storage, and analytics.", "tags": ["TDOT", "ITS"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's CPO Statewide Contract coverage and reseller scope for the categories these agencies buy — it is the shared access path across Safety, Correction, and TDOT, not a per-agency vehicle.",
+    "Engage STS (CIO Kristin Darby) as the centralized delivery layer for enterprise infrastructure, cloud, and security, then map agency-specific demand (ITS, corrections intelligence, biometrics) on top of that platform.",
+    "Lead with edge and field infrastructure for TDOT ITS (SMART Corridor, smart-freight, roadside compute/networking) and AI/analytics for traffic decision support, positioning ahead of I-24 Phase 3 and the I-40 freight pilot.",
+    "Target TDOC's intelligence center, drone program, and probable body-camera rollout with analytics compute and high-capacity, governed storage/retention — design for public-records and retention constraints.",
+    "Watch driver-services modernization at Safety (kiosks, mobile units, new credential rollout, a probable future mobile/digital DL) and position secure issuance and identity infrastructure ahead of any program."
+  ],
+
+  "sources": [
+    { "label": "Tennessee Department of Safety & Homeland Security", "url": "https://www.tn.gov/safety.html" },
+    { "label": "Tennessee Safety — Driver Services / REAL ID", "url": "https://www.tn.gov/safety/driver-services.html" },
+    { "label": "Tennessee Department of Correction — Commissioner Frank Strada", "url": "https://www.tn.gov/correction/about-us/commissioner-frank-strada.html" },
+    { "label": "CitizenPortal — TDOC budget request, vacancies, technology and contraband", "url": "https://citizenportal.ai/articles/6683229/Tennessee-Department-of-Correction-asks-for-15-billion-as-lawmakers-press-on-vacancies-contraband-and-reporting" },
+    { "label": "Tennessee Lookout — Senators push for body cameras at CoreCivic prison", "url": "https://tennesseelookout.com/2026/01/07/tennessee-senators-push-for-body-cameras-at-corecivic-prison/" },
+    { "label": "TDOT — Intelligent Transportation Systems (SmartWay)", "url": "https://www.tn.gov/tdot/traffic-operations-division/intelligent-transportation-systems.html" },
+    { "label": "TDOT — I-24 SMART Corridor", "url": "https://www.tn.gov/tdot/projects/region-3/i-24-smart-corridor.html" },
+    { "label": "TDOT — Smart Freight Corridor pilot (Memphis–Blue Oval City)", "url": "https://www.tn.gov/tdot/news/2026/3/27/the-tennessee-department-of-transportation-names-firm-to-lead-smart-freight-corridor-pilot-between-memphis-and-blue-oval-city.html" },
+    { "label": "WSMV — Tennessee budget adds $400 million for roads, bridges and capacity", "url": "https://www.wsmv.com/2026/05/11/tennessee-budget-adds-400-million-roads-bridges-capacity-projects/" },
+    { "label": "Tennessee F&A — Strategic Technology Solutions (STS)", "url": "https://www.tn.gov/finance/strategic-technology-solutions.html" },
+    { "label": "GovTech — Tennessee CIO Kristin Darby on agentic AI and cloud posture", "url": "https://www.govtech.com/workforce/tennessee-cio-on-agentic-ai-govt-s-inflection-point" },
+    { "label": "Tennessee General Services — Central Procurement Office", "url": "https://www.tn.gov/generalservices/procurement.html" }
+  ]
+}

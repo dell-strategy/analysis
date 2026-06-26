@@ -1,0 +1,79 @@
+{
+  "name": "San Bernardino County, California",
+  "slug": "san-bernardino-county-california",
+  "state": "california",
+  "stateName": "California",
+  "type": "County",
+  "updated": "2026-06-22",
+  "hq": "San Bernardino, CA",
+  "tagline": "The largest county in the contiguous U.S. by land area, serving ~2.2M residents — central IT runs through the Innovation & Technology Department (ITD), with technology buys flowing through county Purchasing and California/national cooperative contracts.",
+
+  "snapshot": [
+    { "label": "Role", "value": "County government" },
+    { "label": "Residents", "value": "~2.2M" },
+    { "label": "FY26-27 budget", "value": "$10.9B" },
+    { "label": "Central IT", "value": "ITD (CIO-led)" }
+  ],
+
+  "overview": "San Bernardino County is the largest county in the contiguous United States by land area (~20,000 sq mi) and home to roughly 2.2 million residents, governed by an elected five-member Board of Supervisors and run day-to-day by an appointed Chief Executive Officer. Enterprise technology is centralized in the Innovation & Technology Department (ITD), led by the County CIO, which delivers infrastructure, applications, data, GIS, and the countywide information-security program across dozens of departments. The county is a self-contained buying center: it sets its own technology direction and procures through its Purchasing Department rather than a state portal, while remaining eligible to leverage California statewide (CMAS) and national cooperative vehicles. For a Dell SLG seller, this is a large, sophisticated single-account opportunity — a recognized 'Digital County' that has leaned into AI productivity tooling, analytics, GIS, and security maturity — where the relationship map runs CEO → CIO/ITD → CISO and Purchasing.",
+
+  "budget": {
+    "intro": "San Bernardino County's total countywide budget is roughly $10.9B for FY2026-27 (a near-flat budget versus the prior year), funded largely by state and federal program dollars; the discretionary general funding the county controls directly — primarily property tax — is a much smaller slice. IT spend is embedded within ITD's appropriation and individual department budgets rather than published as a single line, so size deals against department initiatives, not a headline IT number.",
+    "stats": [
+      { "value": "$10.9B", "label": "FY2026-27 total budget", "note": "Board-adopted June 2026; ~flat vs. prior year" },
+      { "value": "$10.5B+", "label": "FY2025-26 budget", "note": "Adopted with ~$205M in new community investments" },
+      { "value": "~27,600", "label": "Budgeted positions", "note": "FY26-27 payroll; large internal IT user base to support" }
+    ],
+    "notes": [
+      "Much of the budget is restricted state/federal program funding; discretionary general funding (mostly property tax) is the smaller pool the county steers directly.",
+      "IT capital and refresh dollars are distributed across ITD and department budgets — tie proposals to named programs (AI, analytics, security, GIS) rather than a single IT appropriation."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "AI productivity & developer tooling", "summary": "ITD deployed GitHub Copilot in its Solutions Development team, reporting roughly a 30% reduction in project timelines, and uses real-time translation (Wordly) for board meetings. An early, pragmatic AI-adoption posture — a hook for AI-ready endpoints, workstations, and infrastructure.", "tags": ["AI", "Productivity"] },
+    { "name": "Data & analytics modernization", "summary": "The county expanded analytics on Microsoft Dynamics 365 and stood up a Business Relationship Management function to align IT with departments. Analytics and data workloads drive demand for compute, storage, and data-platform infrastructure.", "tags": ["Data", "Analytics"] },
+    { "name": "Countywide information security program", "summary": "The security program added a Threat Intelligence team (2024) and runs progressive phishing-simulation testing. Security maturity is rising — an opening for endpoint security, identity, resilient storage, and zero-trust infrastructure conversations.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "GIS & enterprise geospatial / drone program", "summary": "An enterprise Esri agreement gives all departments GIS access, and the San Bernardino International Airport UAS Center standardizes drone governance — geospatial and imagery workloads that need scalable compute and storage at the edge and core.", "tags": ["GIS", "Edge"] }
+  ],
+
+  "procurement": {
+    "intro": "The county buys through its own Purchasing Department (with an ePro electronic procurement system) rather than a state agency portal, and is eligible to ride California statewide and national cooperative contracts to avoid one-off RFPs. Confirm Dell's coverage on the vehicles the county actually uses before forecasting.",
+    "vehicles": [
+      { "name": "County Purchasing / ePro", "detail": "The county's central Purchasing Department issues solicitations and runs the ePro system; vendor registration and competitive thresholds apply for direct buys." },
+      { "name": "California statewide contracts (CMAS / Cal-PCA)", "detail": "As a California public entity, the county can leverage California Multiple Award Schedules (CMAS) and statewide commodity/cooperative agreements to streamline technology purchases." },
+      { "name": "National cooperatives (NASPO ValuePoint, OMNIA, etc.)", "detail": "Counties commonly buy IT off national cooperative vehicles; confirm which co-ops the county uses and that Dell is positioned on them for the relevant categories." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Luther Snoke", "title": "Chief Executive Officer", "note": "Appointed permanent CEO after serving interim from 2023; runs county operations and the budget. Top executive sponsor for enterprise-scale technology priorities." },
+    { "name": "Lynn Fyhrlund", "title": "Chief Information Officer (ITD)", "note": "CIO since 2023 (formerly Milwaukee County CIO); owns enterprise IT strategy, infrastructure, and modernization. The primary technology relationship." },
+    { "name": "Innovation & Technology Department (ITD)", "title": "Central IT delivery", "note": "Delivers infrastructure, applications, data, GIS, and shared services countywide — the main buying center for enterprise infrastructure and devices." },
+    { "name": "Countywide Information Security Program / CISO", "title": "Security & threat intelligence", "note": "Owns the security program, threat-intel team, and phishing testing; confirm the current CISO by name. Owner for endpoint, identity, and resilience plays." },
+    { "name": "Purchasing Department", "title": "County procurement", "note": "Runs solicitations and the ePro system; the contracting path and the gatekeeper for vehicle eligibility and competitive process." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Board adopts ~$10.9B FY2026-27 budget (near flat)", "impact": "A flat budget signals disciplined spending — lead with ROI, consolidation, and lifecycle refresh rather than net-new expansion.", "tags": ["Budget"] },
+    { "date": "2025-06", "title": "FY2025-26 budget adopted at ~$10.5B with ~$205M in new investments", "impact": "Community-investment dollars create program-tied technology demand — map proposals to funded initiatives.", "tags": ["Budget"] },
+    { "date": "2025-05", "title": "County recognized in GovTech Digital Counties 2025 for AI and data", "impact": "Validates an innovation-forward IT posture — credible runway for AI-ready infrastructure and analytics conversations.", "tags": ["AI", "Recognition"] },
+    { "date": "2024-01", "title": "Information security program adds Threat Intelligence team", "impact": "Security maturity is rising — an opening for endpoint security, resilient storage, and zero-trust infrastructure.", "tags": ["Cybersecurity"] }
+  ],
+
+  "dellActions": [
+    "Build the relationship map CEO (Snoke) → CIO/ITD (Fyhrlund) → CISO and Purchasing; treat this as a large, self-contained single-account motion.",
+    "Lead with AI-ready client and infrastructure tied to the county's existing AI/Copilot and analytics momentum — frame around productivity ROI under a flat budget.",
+    "Confirm Dell's positioning on the vehicles the county actually buys through (county Purchasing/ePro, CMAS, and national cooperatives) before forecasting.",
+    "Engage the information-security program with endpoint security, identity, and resilient/recovery storage as the threat-intel and zero-trust posture matures.",
+    "Anchor proposals to funded department initiatives (data/analytics, GIS/drone, public safety) rather than a single IT line, given a near-flat overall budget."
+  ],
+
+  "sources": [
+    { "label": "San Bernardino County — 2025-26 Adopted Budget Book", "url": "https://main.sbcounty.gov/wp-content/uploads/sites/80/2025-26-Adopted-Budget-Book.pdf" },
+    { "label": "Hey SoCal — County supervisors OK $10.9B budget for 2026-27", "url": "https://heysocal.com/2026/06/12/san-bernardino-county-supervisors-ok-10-9b-budget-for-2026-27/" },
+    { "label": "GovTech — Digital Counties 2025: San Bernardino Leverages AI, Data", "url": "https://insider.govtech.com/california/news/digital-counties-2025-san-bernardino-county-leverages-ai-data-to-enhance-services" },
+    { "label": "San Bernardino County — Innovation & Technology Department", "url": "https://wp.sbcounty.gov/it/" },
+    { "label": "San Bernardino County — Purchasing Department", "url": "https://wp.sbcounty.gov/purchasing/" }
+  ]
+}

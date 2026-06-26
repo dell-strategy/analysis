@@ -1,0 +1,84 @@
+{
+  "state": "arizona",
+  "stateName": "Arizona",
+  "type": "City",
+  "name": "Phoenix, Arizona",
+  "slug": "phoenix-arizona",
+  "hq": "Phoenix, AZ",
+  "updated": "2026-06-22",
+  "tagline": "The 5th-largest U.S. city and Arizona's capital — Phoenix runs city technology through its Information Technology Services Department (ITS), backs a balanced FY2026-27 budget on a ~$2.29B General Fund and an $11.4B five-year capital plan, and is an active smart-city and responsible-AI adopter across traffic, water, and resident services.",
+
+  "snapshot": [
+    { "label": "Population rank", "value": "5th-largest U.S. city" },
+    { "label": "General Fund (FY26-27)", "value": "~$2.29B" },
+    { "label": "5-yr capital plan (CIP)", "value": "$11.4B" },
+    { "label": "Buying path", "value": "procurePHX + cooperative contracts" }
+  ],
+
+  "overview": "The City of Phoenix is the government of the fifth-largest city in the United States and the capital of Arizona, serving roughly 1.6 million residents across one of the nation's fastest-growing metros. City technology is run by the Information Technology Services Department (ITS), which delivers citywide IT under a federated model — supporting major operating departments including Phoenix Sky Harbor International Airport, Water Services, Police, and Fire alongside general-government services. The city's FY2026-27 budget is balanced, built on a General Fund of about $2.29 billion and supported by a preliminary five-year Capital Improvement Program (CIP) totaling $11.4 billion. Phoenix is a recognized smart-city and responsible-AI adopter: it operates an Office of Innovation, has published a Code of Conduct for the responsible use of generative AI, and has run AI-enabled pilots spanning traffic-signal optimization, water-system monitoring, and energy-efficient building systems. For a technology seller this is a large, growth-driven municipal IT buyer with stable IT leadership (CIO Steen Hambric), a newer CISO (Mitch Kohlbecker, 2025), and a returning City Manager (Ed Zuercher, 2025). Phoenix buys through its own central procurement — vendor registration via procurePHX and solicitations through its OpenGov-based Procurement Portal — and leverages cooperative purchasing under its city code.",
+
+  "budget": {
+    "intro": "Phoenix adopted a balanced FY2026-27 budget anchored by a General Fund of roughly $2.29 billion (up about 4.5% year over year), with a one-time surplus of about $162.5M directed to priorities such as housing, homelessness services, child-care affordability, and employee compensation. Technology spending is embedded across ITS operations and the capital program rather than reported as a single headline line — the preliminary five-year CIP totals $11.4 billion, with the first year alone at about $2.7 billion.",
+    "stats": [
+      { "value": "~$2.29B", "label": "General Fund (FY26-27)", "note": "Balanced adopted budget; ~4.5% increase over the prior year's General Fund" },
+      { "value": "$11.4B", "label": "5-year CIP", "note": "Preliminary five-year Capital Improvement Program; first year ~$2.7B — the pool infrastructure and technology capital draw from" },
+      { "value": "~$162.5M", "label": "FY26-27 surplus", "note": "One-time surplus directed to housing, homelessness, child care, and compensation in the proposed budget" }
+    ],
+    "notes": [
+      "Phoenix does not publish a single citywide 'IT budget' headline; technology funding flows through ITS operations plus department and CIP capital — confirm the specific funding source before forecasting a given program.",
+      "Large operating departments (Aviation/Sky Harbor, Water Services, Police, Fire) carry significant technology demand under the federated IT model — material refresh and modernization opportunity sits inside those departments, not only central ITS."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Responsible / generative AI program", "summary": "Phoenix has published a Code of Conduct for the Responsible Use of Generative AI and routes approved Gen AI uses through a technical review and committee-approval process. AI is being applied operationally — including an AI-assisted traffic-signal pilot across roughly 30 intersections and a Water Services pilot using AI sensors to monitor sewer pollutants. A live lane for governed AI infrastructure, data platforms, and use-case enablement.", "tags": ["AI", "Innovation"] },
+    { "name": "Smart-city and Office of Innovation pilots", "summary": "The Office of Innovation (stood up in late 2021) co-creates pilots to modernize city processes, and Phoenix has been recognized as an IDC Smart Cities North America Awards finalist (2025). Work spans connected infrastructure, resident-engagement, and sustainability use cases — a recurring entry point for IoT, edge, and data-platform conversations.", "tags": ["Smart City", "Data"] },
+    { "name": "Federated IT modernization across major departments", "summary": "ITS supports a federated model spanning Sky Harbor Airport, Water Services, Police, and Fire. Infrastructure refresh, network, end-user compute, and managed services demand is distributed across these large operating departments as well as central ITS — position ISG and services against department-level capital, not only the central budget.", "tags": ["Modernization", "Infrastructure"] },
+    { "name": "Cybersecurity under a maturing CISO office", "summary": "With Mitch Kohlbecker promoted to CISO in 2025 (after nearly five years as deputy CISO), the security office is advancing risk management, compliance, and system/security architecture. Active appetite for endpoint, network security, identity, and risk-visibility tooling across a large, multi-department estate.", "tags": ["Cybersecurity", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "Phoenix buys two main ways, and a seller should confirm both. It runs its own central procurement — vendor registration through procurePHX and competitive solicitations through its OpenGov-based Procurement Portal (in use for new solicitations since April 2025) — and it leverages cooperative purchasing authorized under the Phoenix City Code. Confirm Dell's standing in procurePHX and which cooperative vehicles the city actively buys technology through for a given category.",
+    "vehicles": [
+      { "name": "procurePHX vendor registration", "detail": "The city's vendor registration application, tied to its financial system. Any awarded vendor or payee must be registered in procurePHX — confirm Dell's registration and the relevant commodity categories before pursuing city-specific buys." },
+      { "name": "Phoenix Procurement Portal (OpenGov)", "detail": "The city publishes competitive solicitations (RFP/RFQ/IFB) and receives offers through its OpenGov-powered Procurement Portal, used for new solicitations since April 2025. The path for city-specific competitive technology procurements." },
+      { "name": "Cooperative purchasing", "detail": "Phoenix City Code authorizes cooperative procurement, allowing the city to buy off pre-competed contracts without a separate RFP. Confirm which national/cooperative vehicles Dell holds and which the city actively uses for hardware, software, and services in the target category." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Ed Zuercher", "title": "City Manager", "note": "Returned as City Manager in November 2025 (previously City Manager 2013-2021), succeeding the retiring Jeff Barton. Leads city operations, budget, and contracts — the top of the house and owner of budget priorities." },
+    { "name": "Steen Hambric", "title": "Chief Information Officer (ITS)", "note": "CIO since 2021, leading the Information Technology Services department and federated IT across Sky Harbor, Water Services, Police, and Fire. Background: ~18 years in IT leadership with the U.S. House of Representatives. The primary citywide IT relationship." },
+    { "name": "Mitch Kohlbecker", "title": "Chief Information Security Officer", "note": "Promoted to CISO in February 2025 after nearly five years as deputy CISO; succeeded Shannon Lawson (departed for the private sector, later San Antonio CISO). Owns the city's security strategy, risk, and compliance — the lead for security-tooling motions." },
+    { "name": "Michael Hammett", "title": "Chief Innovation Officer", "note": "Phoenix's first Chief Innovation Officer (appointed 2021), leading the Office of Innovation, performance/dashboard programs, and smart-city pilots. The relationship for AI, smart-city, and resident-experience use cases." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Phoenix City Council approves balanced FY2026-27 budget on a ~$2.29B General Fund", "impact": "Stable, surplus-backed budget with an $11.4B five-year CIP. Confirms multi-year infrastructure and capital spend capacity — an entry point for ISG, security, and services across central ITS and major departments.", "tags": ["Budget"] },
+    { "date": "2026-02", "title": "Phoenix expands AI-assisted traffic-signal management across ~30 intersections", "impact": "Operational AI moving from pilot toward scale signals appetite for governed AI/edge/data infrastructure beyond back-office use — a credibility-forward smart-city reference lane.", "tags": ["AI", "Smart City"] },
+    { "date": "2025-11", "title": "Ed Zuercher returns as Phoenix City Manager as Jeff Barton retires", "impact": "Leadership change at the top of the house. A returning, experienced City Manager resets executive priorities — align account messaging to the new administration's budget and modernization agenda.", "tags": ["Leadership"] },
+    { "date": "2025-02", "title": "Mitch Kohlbecker promoted to City of Phoenix CISO", "impact": "Internal security leader (ex-deputy CISO) now owns the city's security agenda. Build the CISO relationship for endpoint, network, identity, and risk-tooling across the multi-department estate.", "tags": ["Cybersecurity", "Leadership"] },
+    { "date": "2025-01", "title": "Phoenix named a finalist in IDC's 2025 Smart Cities North America Awards", "impact": "Reinforces Phoenix's smart-city credibility and active pilot pipeline through the Office of Innovation — useful context for positioning IoT, data, and connected-infrastructure offers.", "tags": ["Smart City", "Innovation"] }
+  ],
+
+  "dellActions": [
+    "Anchor the account on stable IT leadership — CIO Steen Hambric (since 2021) and CISO Mitch Kohlbecker (2025) — and align messaging to returning City Manager Ed Zuercher's FY2026-27 budget and modernization priorities.",
+    "Sell into the federated IT model: pursue ISG, network, end-user compute, and managed-services refresh inside the large operating departments (Sky Harbor, Water Services, Police, Fire) as well as central ITS, mapped against the $11.4B five-year CIP.",
+    "Lead AI infrastructure and data-platform conversations through the Office of Innovation and the city's responsible/generative-AI program — Phoenix's published AI Code of Conduct and live traffic/water pilots make a governed-AI motion credible.",
+    "Bring municipal security offers (endpoint, network, identity, risk visibility) tied to the maturing CISO office under Mitch Kohlbecker, framed for a large multi-department estate.",
+    "Confirm Dell's procurePHX vendor registration and standing in the city's OpenGov Procurement Portal, and verify which cooperative purchasing vehicles the city actively uses so catalog and competitive buys both have a clear path."
+  ],
+
+  "sources": [
+    { "label": "City of Phoenix — Information Technology Services (About ITS)", "url": "https://www.phoenix.gov/its/about" },
+    { "label": "City of Phoenix — Phoenix City Council Approves 2026-27 Budget", "url": "https://www.phoenix.gov/newsroom/budget-news/phoenix-city-council-approves-2026-27-budget--highlighted-by-com.html" },
+    { "label": "City of Phoenix — Use of Generative Artificial Intelligence", "url": "https://www.phoenix.gov/administration/departments/its/gen-ai.html" },
+    { "label": "City of Phoenix — Smart Cities (Office of Innovation)", "url": "https://www.phoenix.gov/administration/departments/innovation/smart-cities.html" },
+    { "label": "City of Phoenix — Appoints New Chief Information Security Officer", "url": "https://www.phoenix.gov/newsroom/articles/3346.html" },
+    { "label": "GovTech — Newly Appointed Phoenix CISO Rises from City's Security Ranks", "url": "https://www.govtech.com/workforce/newly-appointed-phoenix-ciso-rises-from-citys-security-ranks" },
+    { "label": "GovTech — Phoenix City Manager Appoints CIO, First Innovation Officer", "url": "https://www.govtech.com/workforce/phoenix-city-manager-appoints-cio-first-innovation-officer" },
+    { "label": "City of Phoenix — City Manager Jeff Barton Announces Retirement", "url": "https://www.phoenix.gov/newsroom/city-manager-news/city-manager-jeff-barton-announces-retirement.html" },
+    { "label": "City of Phoenix — Procurement", "url": "https://www.phoenix.gov/administration/departments/finance/procurement.html" },
+    { "label": "City of Phoenix — procurePHX Vendor Registration", "url": "https://www.phoenix.gov/administration/departments/finance/procurephx-vendor-registration.html" }
+  ]
+}

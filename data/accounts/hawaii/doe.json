@@ -1,0 +1,85 @@
+{
+  "state": "hawaii",
+  "stateName": "Hawaii",
+  "type": "State Agency",
+  "name": "Hawaii Dept of Education",
+  "slug": "doe",
+  "hq": "Honolulu, HI",
+  "updated": "2026-06-22",
+  "tagline": "The only statewide single school district in the U.S. — HIDOE runs every public school across seven islands as one organization, and its Office of Information Technology Services centralizes ed-tech, devices, networks, and security for ~165K students.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Statewide K-12 district" },
+    { "label": "Scale", "value": "~257 schools / ~165K students" },
+    { "label": "IT center", "value": "OITS (centralized)" },
+    { "label": "Operating budget", "value": "~$2.8B" }
+  ],
+
+  "overview": "The Hawaii State Department of Education (HIDOE) is unique in U.S. public education: it is the nation's only statewide single school district, governing every traditional public school across seven islands as a single organization rather than dozens of independent local districts. That structure means one superintendent, one board, and — critically for technology buyers — one centralized IT function. The Office of Information Technology Services (OITS), led by an assistant superintendent who reports through the deputy superintendent for operations, owns ed-tech, end-user devices, networks, data systems, and cybersecurity for roughly 257 schools and on the order of 165,000 students, plus a workforce of about 40,000. HIDOE leans heavily on Google's ecosystem (Workspace for Education, Chromebooks at scale, and Gemini/NotebookLM for staff AI), making it a fleet, connectivity, infrastructure, and security account more than a high-margin compute account. For a Dell SLG seller, the centralization is the opportunity: a single statewide decision center, a single procurement path, and a single set of standards — but also a single, deliberate buying motion that rewards being on the right contract vehicles early.",
+
+  "budget": {
+    "intro": "HIDOE is funded primarily by state general revenue, supplemented by federal funds and E-rate. Public reporting around the superintendent's 2025 reappointment cited an operating budget on the order of $2.8B; HIDOE's own materials have described an operating budget in the ~$2.1–2.2B range in recent fiscal years, with total revenue (all funds) higher. Treat the figures below as public approximations and confirm current-year appropriations against the enacted state budget.",
+    "stats": [
+      { "value": "~$2.8B", "label": "Operating budget (cited)", "note": "Figure cited publicly around the Nov. 2025 superintendent reappointment" },
+      { "value": "~165K", "label": "Students", "note": "Public enrollment across ~257 schools on seven islands" },
+      { "value": "~40K", "label": "Employees", "note": "Statewide workforce — large managed-endpoint and identity footprint" }
+    ],
+    "notes": [
+      "Funding is mostly state general revenue, so the IT capital cycle tracks the state budget and legislative session rather than dozens of separate local levies.",
+      "Federal E-rate (connectivity, internal connections, and the FCC cybersecurity pilot) is a meaningful supplement for network and security spend — confirm category and discount levels before forecasting.",
+      "Reported budget and enrollment figures vary by source and fiscal year; verify against the current enacted budget and the latest HIDOE data before quoting a number to a customer."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Statewide device fleet & 1:1 ecosystem", "summary": "HIDOE operates a large, centrally standardized device fleet — heavily Chromebook/Google Workspace — across all islands. Refresh cycles, MDM/endpoint management, imaging, and asset lifecycle for ~165K students and ~40K staff are run as one program, not school-by-school.", "tags": ["Devices", "Endpoint"] },
+    { "name": "AI in education (Gemini / NotebookLM)", "summary": "HIDOE has stood up an AI readiness program for staff and rolled out access to Google's Gemini and NotebookLM, plus an AI in Education Summit and an AI Readiness Toolkit. The motion is responsible-use and productivity first — frame AI as workflow and infrastructure enablement, not model spend.", "tags": ["AI", "Productivity"] },
+    { "name": "Cybersecurity & federal pilot funding", "summary": "K-12 is a top ransomware and student-data target. The FCC Schools & Libraries Cybersecurity Pilot and E-rate cybersecurity-eligible services open funding for firewalls, endpoint protection, identity/MFA, and detection-and-response — a buying window for security-attached infrastructure.", "tags": ["Cybersecurity", "E-rate"] },
+    { "name": "Network & connectivity modernization", "summary": "Connecting and securing schools across seven islands is a standing infrastructure challenge. WAN/LAN refresh, wireless, and resilient inter-island connectivity (E-rate Category One/Two eligible) underpin every other initiative.", "tags": ["Network", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "HIDOE buys through its own Procurement and Contracts Branch under Hawaii's centralized procurement code (HRS 103D / HAR Title 3), with solicitations posted on the state HIePRO eProcurement system. Two access paths matter: state cooperative purchasing under the State Procurement Office (SPO), and federal E-rate for connectivity and security. Confirm Dell's standing on the relevant SPO price/vendor lists and applicable cooperatives before pursuing a large refresh.",
+    "vehicles": [
+      { "name": "HIDOE Procurement & Contracts Branch (HIePRO)", "detail": "HIDOE issues its own IFBs/RFPs through the state HIePRO eProcurement portal — the primary direct path for device, network, and services buys." },
+      { "name": "SPO cooperative purchasing", "detail": "Hawaii's State Procurement Office runs cooperative purchasing (HAR 3-128) and statewide price/vendor lists that HIDOE can buy from — a pre-competed route worth confirming Dell coverage on." },
+      { "name": "Federal E-rate / FCC cybersecurity pilot", "detail": "USAC E-rate funds connectivity and internal connections; the Schools & Libraries Cybersecurity Pilot and FY2026 cyber-eligible services fund firewalls, endpoint, identity, and detection — attach eligible products to these dollars." },
+      { "name": "National K-12 cooperatives", "detail": "Cooperatives commonly used by K-12 (e.g., national purchasing cooperatives) can speed eligible buys when permitted under Hawaii's cooperative-purchasing rules — verify applicability with HIDOE/SPO before relying on one." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Keith T. Hayashi", "title": "Superintendent", "note": "Reappointed by the Board of Education to a four-year term (Jan. 1, 2026–Dec. 31, 2029). Leads the only statewide district — the top relationship and the owner of strategic direction." },
+    { "name": "Amy Peckinpaugh", "title": "Assistant Superintendent, Office of Information Technology Services (OITS)", "note": "Appointed Jan. 2025; came from senior IT/operations leadership at Bank of Hawaii and a director role at Gartner. The CIO-equivalent and the central technology decision-maker." },
+    { "name": "Dean Uchida", "title": "Deputy Superintendent for Operations", "note": "Appointed Jan. 2025; oversees OITS and Facilities & Operations — the executive above the IT buying center." },
+    { "name": "OITS security leadership / CISO function", "title": "Cybersecurity & risk (OITS)", "note": "Security policy, student-data protection, and the E-rate/FCC pilot run through OITS. Confirm the current named security lead before mapping the security buying center." },
+    { "name": "HIDOE Procurement & Contracts Branch", "title": "Solicitations & contracts (Waipahu)", "note": "Owns IFBs/RFPs via HIePRO and contract administration — the operational path onto a HIDOE deal." }
+  ],
+
+  "news": [
+    { "date": "2025-11", "title": "Board of Education reappoints Keith Hayashi as superintendent for a four-year term (2026–2029)", "impact": "Stable, multi-year leadership at the top of the statewide district — a predictable strategic horizon for multi-year refresh and platform decisions.", "tags": ["Leadership"] },
+    { "date": "2025-01", "title": "HIDOE names Amy Peckinpaugh assistant superintendent for OITS and Dean Uchida deputy superintendent for operations", "impact": "New, private-sector-experienced IT and operations leadership reshapes the technology decision center — an opening to (re)establish the executive relationship.", "tags": ["Leadership"] },
+    { "date": "2025-07", "title": "HIDOE hosts AI in Education Summit and expands staff access to Gemini and NotebookLM", "impact": "AI is moving from pilot to staff-wide enablement — position infrastructure, identity, device, and responsible-use support around the AI rollout.", "tags": ["AI"] },
+    { "date": "2025-01", "title": "FCC selects pilot participants for the Schools & Libraries Cybersecurity Pilot (up to $200M nationally)", "impact": "Federal dollars are flowing to K-12 cyber — firewalls, endpoint, identity, and detection/response become fundable; check HIDOE's pilot/E-rate position.", "tags": ["Cybersecurity", "E-rate"] }
+  ],
+
+  "dellActions": [
+    "Treat HIDOE as a single statewide account: one superintendent, one OITS, one procurement branch — map the executive triad (Hayashi / Uchida / Peckinpaugh) and call high on a multi-year refresh narrative.",
+    "Lead with device-fleet and endpoint lifecycle at scale (imaging, MDM, asset lifecycle, durability/logistics across seven islands) — the dominant K-12 motion in a Chromebook/Workspace environment.",
+    "Attach security to E-rate and the FCC cybersecurity pilot: firewalls, endpoint protection, identity/MFA, and detection/response funded by federal dollars rather than general revenue.",
+    "Frame AI as infrastructure and enablement (identity, data protection, device readiness, responsible-use support) around the Gemini/NotebookLM rollout — not as model or high-end compute spend.",
+    "Confirm Dell's standing on SPO cooperative price/vendor lists and HIePRO before a large buy, and time proposals to the state budget and legislative session that drive HIDOE's capital cycle."
+  ],
+
+  "sources": [
+    { "label": "HIDOE — Board reappoints Keith Hayashi as superintendent (2025)", "url": "https://hawaiipublicschools.org/2025-board-of-education-announces-four-year-reappointment-of-keith-t-hayashi-as-superintendent/" },
+    { "label": "HIDOE — New deputy superintendent for operations & assistant superintendent for OITS (2025)", "url": "https://hawaiipublicschools.org/2025-hidoe-announces-new-deputy-superintendent-for-operations-new-assistant-superintendent-for-information-technology-services/" },
+    { "label": "HIDOE — Organization", "url": "https://hawaiipublicschools.org/about/organization/" },
+    { "label": "HIDOE — Budget", "url": "https://hawaiipublicschools.org/about/budget/" },
+    { "label": "HIDOE — Artificial Intelligence (student programs)", "url": "https://hawaiipublicschools.org/student-programs/artificial-intelligence/" },
+    { "label": "HIDOE — Vendors working with HIDOE", "url": "https://hawaiipublicschools.org/useful-links/vendors-working-with-hidoe/" },
+    { "label": "Hawaii State Procurement Office — Cooperative Purchasing", "url": "https://spo.hawaii.gov/for-state-county-personnel/programs/cooperative-purchasing/" },
+    { "label": "State of Hawaii eProcurement — HIePRO", "url": "https://hiepro.ehawaii.gov/" },
+    { "label": "FCC — Schools and Libraries Cybersecurity Pilot Program", "url": "https://www.fcc.gov/cybersecurity-pilot-program" }
+  ]
+}

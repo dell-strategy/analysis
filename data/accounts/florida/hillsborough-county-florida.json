@@ -1,0 +1,80 @@
+{
+  "state": "florida",
+  "stateName": "Florida",
+  "type": "County",
+  "name": "Hillsborough County, Florida",
+  "slug": "hillsborough-county-florida",
+  "hq": "Tampa, FL",
+  "updated": "2026-06-22",
+  "tagline": "Florida's fourth-most-populous county and home to Tampa (~1.6M residents) — a large, fast-growing local government whose technology buying runs through a centralized Information & Innovation Office and the County's own Procurement Services department.",
+
+  "snapshot": [
+    { "label": "Role", "value": "County government" },
+    { "label": "Population", "value": "~1.6M (4th in FL)" },
+    { "label": "Budget", "value": "~$9B (FY26)" },
+    { "label": "Central IT", "value": "Info & Innovation Office" }
+  ],
+
+  "overview": "Hillsborough County is Florida's fourth-most-populous county, anchored by Tampa, with roughly 1.6 million residents and ongoing rapid growth. It is governed by a Board of County Commissioners with a professional County Administrator as chief executive, overseeing more than 5,200 employees and a wide service portfolio (public safety support, utilities/water, transportation, libraries, parks, health and human services). Technology is centralized: the County's Information & Innovation Office / IT Services function is led by a Chief Information & Innovation Officer who sits on the executive team, and it supports enterprise infrastructure, applications, data, and cybersecurity across departments. For a Dell SLG seller, Hillsborough is a high-value standalone account — large enough to run its own competitive procurements and cooperative buys, while also fitting inside the broader Florida public-sector and Tampa Bay regional growth story.",
+
+  "budget": {
+    "intro": "Hillsborough County's all-funds budget is large — reported at roughly $9 billion when Florida's state-level efficiency task force reviewed it in 2025 — spanning operating, capital, and enterprise (utility) funds. IT and innovation spending is a department-level slice of that total; exact figures live in the County's adopted budget documents and should be confirmed against the current adopted book before forecasting.",
+    "stats": [
+      { "value": "~$9B", "label": "All-funds budget", "note": "Figure cited in Aug 2025 state efficiency review; confirm against the FY26 adopted budget book" },
+      { "value": "~1.6M", "label": "Residents served", "note": "2025 estimate; 4th-largest FL county, ~8% growth since 2020" },
+      { "value": "5,200+", "label": "County employees", "note": "Endpoint, identity, and productivity footprint the IT office supports" }
+    ],
+    "notes": [
+      "The County publishes recommended and adopted budget books (FY26–FY27) on hcfl.gov — use those for the authoritative IT/innovation line and capital technology projects.",
+      "Property-tax-funded general government, enterprise utility funds, and grant funding each carry their own technology spend; the buying center varies by fund and department."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Enterprise IT & digital services", "summary": "The Information & Innovation Office centralizes infrastructure, applications, and data services for a 5,200-employee organization serving ~1.6M residents — an ongoing modernization track around data center, cloud, endpoint, and citizen-facing digital services. Confirm current refresh cycles and project lists in the adopted budget.", "tags": ["Modernization", "Digital Services"] },
+    { "name": "AI & innovation focus", "summary": "Leadership is branded around 'innovation' (Chief Information & Innovation Officer) and the County engages regional tech/AI forums such as the Tampa Technology Summit. Expect interest in AI/data use cases, though specific funded county AI programs should be verified before being treated as committed.", "tags": ["AI", "Innovation"] },
+    { "name": "Cybersecurity posture", "summary": "As a large county and critical-service provider, cyber resilience is a standing priority. Florida runs a Local Government Cybersecurity Grant Program and Cyber Florida (USF, Tampa) resources that counties can leverage — useful funding angles for security infrastructure deals.", "tags": ["Cybersecurity", "Grants"] },
+    { "name": "Growth-driven capacity", "summary": "Sustained population growth (~8% since 2020) pressures every service line and the systems behind them — a durable driver for compute, storage, network, and resilient infrastructure investment.", "tags": ["Growth", "Infrastructure"] }
+  ],
+
+  "procurement": {
+    "intro": "Hillsborough County runs its own Procurement Services department and competitive solicitations, and it also buys through cooperative and piggyback contracts. The County's Chapter 10 procurement policy expressly allows cooperative procurement and use of other governments' contracts, with State of Florida and GSA awards exempt from piggyback limits — confirm Dell's coverage on each vehicle before pursuing a deal.",
+    "vehicles": [
+      { "name": "Hillsborough County Procurement Services", "detail": "The County's own competitive solicitations and term contracts — the direct path for larger, county-specific buys." },
+      { "name": "Florida state term contracts", "detail": "State-negotiated contracts the County may use; piggyback limitations do not apply to State of Florida (or GSA) awards per the County's Chapter 10 policy." },
+      { "name": "Cooperative / piggyback contracts", "detail": "The County's policy permits cooperative procurement and piggybacking on other government contracts (e.g., national cooperatives such as OMNIA Partners, Sourcewell) to leverage pre-competed pricing — verify Dell's participation on the specific vehicle." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Bonnie M. Wise", "title": "County Administrator", "note": "Chief executive carrying out Board of County Commissioners decisions; owns budget preparation and oversees 5,200+ employees. The top executive relationship." },
+    { "name": "Ramin Kouzehkanani", "title": "Chief Information & Innovation Officer", "note": "Executive-team member leading the County's central IT/innovation function; an ORBIE-recognized public-sector CIO and active in regional tech forums. The primary technology decision-maker — verify current standing." },
+    { "name": "Board of County Commissioners", "title": "Elected governing body", "note": "Sets policy and approves the budget and major contracts; the appropriations authority behind large technology buys." },
+    { "name": "Procurement Services", "title": "County purchasing & solicitations", "note": "Owns competitive solicitations, term contracts, and cooperative/piggyback authority — the gatekeeper for getting on contract." }
+  ],
+
+  "news": [
+    { "date": "2025-08", "title": "Florida state efficiency task force reviews Hillsborough County's ~$9B budget", "impact": "State-level scrutiny aimed at cutting waste and property taxes could pressure spending and procurement justification — frame deals around efficiency and measurable ROI.", "tags": ["Budget", "Oversight"] },
+    { "date": "2025-07", "title": "County publishes Administrator's Recommended Budget (FY26–FY27)", "impact": "Authoritative source for IT/innovation funding and capital technology projects — mine it for funded initiatives before forecasting.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "Population estimate reaches ~1.6M, ~8% growth since 2020", "impact": "Sustained growth keeps pressure on county systems and infrastructure — a durable demand signal for compute, storage, and resilient infrastructure.", "tags": ["Growth"] }
+  ],
+
+  "dellActions": [
+    "Map the relationship to the Chief Information & Innovation Officer (Ramin Kouzehkanani) and the County Administrator's office — confirm current incumbents before outreach, and tie the conversation to the County's innovation branding.",
+    "Confirm Dell's coverage on the vehicles Hillsborough actually uses — its own Procurement Services contracts, Florida state term contracts, and national cooperatives (OMNIA, Sourcewell) — so there's a frictionless path to contract.",
+    "Lead with ISG infrastructure (compute, storage, networking) and client/endpoint refresh for a 5,200-employee, ~1.6M-resident organization under sustained growth pressure.",
+    "Attach a cybersecurity and resilience play to Florida's Local Government Cybersecurity Grant Program and Cyber Florida (USF, Tampa) resources as funding angles.",
+    "Frame proposals around efficiency and measurable ROI given the 2025 state-level budget review — position consolidation and lifecycle savings, not just net-new spend."
+  ],
+
+  "sources": [
+    { "label": "Hillsborough County — FY26 Budget", "url": "https://hcfl.gov/government/budget/budget-information/fy26-budget" },
+    { "label": "Hillsborough County — County Administrator (Bonnie M. Wise)", "url": "https://hcfl.gov/government/leadership/county-administrator" },
+    { "label": "Hillsborough County — Procurement Services", "url": "https://hcfl.gov/departments/procurement" },
+    { "label": "Hillsborough County — Chapter 10: Cooperative Procurement & Use of Other Government Agency Contracts", "url": "https://hcfl.gov/businesses/doing-business-with-hillsborough/vendors/procurement-policy/chapter-10-cooperative-procurement-and-use-of-other-government-agency-contracts" },
+    { "label": "FOX 13 Tampa Bay — Florida DOGE reviewing Hillsborough County's $9 billion budget", "url": "https://www.fox13news.com/news/florida-doge-reviewing-hillsborough-countys-9-billion-budget-week" },
+    { "label": "U.S. Census Bureau QuickFacts — Hillsborough County, Florida", "url": "https://www.census.gov/quickfacts/fact/table/hillsboroughcountyflorida/PST045225" },
+    { "label": "FloridaCIO ORBIE Awards / Tampa Technology Summit — Ramin Kouzehkanani, Chief Information & Innovation Officer", "url": "https://eitevents.com/event_pages/tampa-technology-summit-2026/" },
+    { "label": "Florida Digital Service — Local Government Cybersecurity Grant Program", "url": "https://cybergrants.fl.gov/" }
+  ]
+}

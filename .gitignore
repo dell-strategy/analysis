@@ -1,0 +1,11 @@
+# Internal source workbooks — NEVER publish.
+# These contain internal-only fields (revenue, account IDs, BDM reps). The
+# published account pages are generated from them with those fields stripped;
+# the raw workbooks themselves must stay local.
+SLG Focused Accounts.xlsx
+*.xlsx
+*.xlsm
+
+# OS / editor cruft
+Thumbs.db
+.DS_Store

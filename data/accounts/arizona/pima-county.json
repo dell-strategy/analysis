@@ -1,0 +1,82 @@
+{
+  "name": "Pima County, Arizona",
+  "slug": "pima-county",
+  "state": "arizona",
+  "stateName": "Arizona",
+  "type": "County",
+  "hq": "Tucson, AZ",
+  "updated": "2026-06-22",
+  "tagline": "Arizona's second-most-populous county and the home of metro Tucson: ~1.06M residents served across dozens of departments, with technology run centrally by the Information Technology Department (ITD).",
+
+  "snapshot": [
+    { "label": "Role", "value": "2nd-largest AZ county (~1.06M residents)" },
+    { "label": "Central IT", "value": "Information Technology Department (ITD)" },
+    { "label": "FY2027 budget", "value": "~$1.81B (tentative)" },
+    { "label": "Buying gate", "value": "Board of Supervisors approval" }
+  ],
+
+  "overview": "Pima County is the second most populous county in Arizona, with roughly 1.06 million residents centered on the Tucson metro area and stretching across a large desert and border region of southern Arizona. It is a full-service local government spanning public health, the Sheriff and justice system, transportation and regional flood control, public works, parks, and community services. Central technology is delivered by the Information Technology Department (ITD), which designs, implements, manages, and supports the County's information, network, communication, and application systems — including enterprise infrastructure, GIS, data management and analytics, collaboration tools, and information security. For a Dell SLG seller, Pima is best understood as a single mid-to-large local-government account where technology direction is concentrated in ITD but purchasing authority is centralized: contracts are run through the County's Procurement Department under the Pima County Procurement Code, and larger or longer-term awards must be approved by the elected Board of Supervisors. ITD sits operationally under a Deputy County Administrator, so the buying center spans the IT Director/CIO, the Procurement Director, and the County Administrator's office.",
+
+  "budget": {
+    "intro": "Pima County's Board of Supervisors adopted a tentative FY2027 budget of roughly $1.81 billion (about a 3.3% increase over FY2026), with final adoption scheduled for late June 2026. The County frames the plan around fiscal stability amid state cost-shifts and federal funding uncertainty, with priorities set by its Strategic Plan and the Prosperity and One Pima initiatives. ITD spending is not a single visible line item — it is funded across the departments ITD serves — so demand should be mapped to the operating departments as well as to central IT.",
+    "stats": [
+      { "value": "~$1.81B", "label": "FY2027 tentative budget", "note": "Board-adopted tentative total; ~3.3% over FY2026, final adoption late June 2026" },
+      { "value": "~$5.28", "label": "Total property tax rate", "note": "Per $100 net assessed value (tentative FY2027); no increase for general operations, with policy-driven adjustments for cost-shifts, infrastructure, and housing" },
+      { "value": "~1.06M", "label": "Residents served", "note": "Second-largest county in Arizona; metro Tucson and southern Arizona" }
+    ],
+    "notes": [
+      "ITD is a central service provider — its technology spend is distributed across the departments it supports rather than concentrated in one published IT budget line; map demand to departments (Health, Sheriff, Transportation, Public Works) as well as the CIO.",
+      "The FY2027 plan is shaped by state cost-shifts and federal funding pressure, signaling a cost-discipline posture — frame technology buys around efficiency, consolidation, and modernization of existing systems.",
+      "Specific ITD capital and refresh dollars are not broken out in the headline budget coverage reviewed; confirm current-year IT capital line items against the adopted budget book before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Data modernization and the 'Data Works' partnership", "summary": "ITD has stood up a 'Data Works' model pairing the County IT Analytics and Data Governance team with department data teams (starting with Public Health under a federal PHIG grant), centered on a Snowflake data warehouse, workflow automation, and data governance. A clear opening for data-platform infrastructure, analytics, and governed-data conversations.", "tags": ["Data", "Modernization"] },
+    { "name": "Enterprise infrastructure and continuity", "summary": "ITD owns network, hardware, and software systems for the County and emphasizes continuity of operations with redundancy and security across critical systems. This is the natural home for ISG (compute/storage), hybrid-cloud, and disaster-recovery / business-continuity refresh.", "tags": ["Infrastructure", "Data Center"] },
+    { "name": "Information security at department scale", "summary": "ITD describes employing security techniques 'at pace with evolving risks' across the County's systems. Endpoint, identity, and data protection are recurring themes for a county of this size and threat profile; confirm whether security is led by a dedicated CISO or held within ITD leadership.", "tags": ["Cybersecurity", "Security"] },
+    { "name": "GIS and data-driven services", "summary": "ITD runs the County's GIS and geospatial portals, mapping, and parcel data, and publicly positions itself around enabling data-driven decisions and transparency. A platform-and-infrastructure angle tied to analytics and public-facing data services.", "tags": ["GIS", "Analytics"] }
+  ],
+
+  "procurement": {
+    "intro": "Pima County buys under its own Procurement Code (Title 11) through the County Procurement Department. The defining gate for a seller: contracts of five years or longer, and IGAs / grant awards / professional-services agreements over $100,000, must be awarded by the elected Board of Supervisors; the Procurement Director signs or prepares contracts for Board approval by value. Cooperative purchasing is explicitly authorized, so confirm which pre-competed vehicle gives Dell the cleanest path before pursuing a one-off solicitation.",
+    "vehicles": [
+      { "name": "Pima County Procurement Department", "detail": "The central buying authority; runs solicitations and administers contracts under the Pima County Procurement Code (Title 11). The Procurement Director reviews all County contracts and routes larger awards to the Board." },
+      { "name": "Board of Supervisors approval", "detail": "Required for contracts of five years or more and for IGAs, grants, and professional-services agreements over $100,000 — the formal decision gate. Time deals to the Board calendar and identify the sponsoring department." },
+      { "name": "Cooperative agreements", "detail": "Authorized under Procurement Code 11.24.010; the County both leads and participates in cooperative purchasing with other public agencies. Often the fastest pre-competed path onto the County — confirm Dell's coverage on the relevant vehicle." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Jan Lesher", "title": "County Administrator", "note": "Chief executive over non-elected departmental operations; presents the budget to the Board and executes its priorities. The top of the operational chain above ITD." },
+    { "name": "Steve Holmes", "title": "Deputy County Administrator", "note": "ITD reports up through his portfolio per the County administration org chart — the executive sponsor layer above the IT Director for larger technology decisions." },
+    { "name": "Javier Baca", "title": "Director / CIO, Information Technology Department", "note": "Appointed ITD Director effective October 2022; prior CIO experience in Arizona K-12 (Sunnyside USD). The primary technology relationship for the account and champion of the Data Works model." },
+    { "name": "Pima County Procurement Department", "title": "Procurement Director & contracting", "note": "Owns solicitations, cooperative agreements, and contract administration under the Procurement Code; prepares or signs contracts and routes larger awards to the Board — the path onto the County." },
+    { "name": "Board of Supervisors", "title": "Elected approval authority", "note": "Five-member elected board that approves larger and longer-term contracts and adopts the budget. The formal buying gate — align pursuits to its calendar and a sponsoring department." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Board adopts ~$1.81B tentative FY2027 budget; final adoption late June", "impact": "Cost-discipline posture amid state cost-shifts and federal funding pressure — frame technology buys around efficiency, consolidation, and modernization rather than expansion.", "tags": ["Budget"] },
+    { "date": "2026-03", "title": "Pima County Health Department deepens IT partnership for data modernization ('Data Works')", "impact": "A concrete, grant-funded data-platform initiative (Snowflake, governance, automation) signals demand for data infrastructure and analytics — an opening beyond commodity hardware.", "tags": ["Data", "Modernization"] },
+    { "date": "2022-10", "title": "Javier Baca appointed ITD Director / CIO", "impact": "Establishes the central technology relationship owner; align to ITD's modernization and data-governance priorities and confirm tenure and current org structure.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Anchor the relationship on ITD Director/CIO Javier Baca as the central technology decision owner, while mapping demand to the large operating departments (Health, Sheriff, Transportation, Public Works) that fund the spend.",
+    "Lead with the 'Data Works' / data-modernization momentum — position ISG, data-platform infrastructure, and analytics around the County's Snowflake and governance work rather than commodity refresh alone.",
+    "Run ISG and hybrid-cloud conversations through ITD's enterprise-infrastructure and continuity remit, tied to redundancy, disaster recovery, and consolidation goals.",
+    "Confirm the cleanest pre-competed path — a Pima County cooperative agreement or an Arizona state vehicle — and align every pursuit to the Board of Supervisors approval calendar with a sponsoring department.",
+    "Clarify the security buying center: confirm whether information security is led by a dedicated CISO or held within ITD leadership, then engage early on endpoint, identity, and data protection across the department footprint."
+  ],
+
+  "sources": [
+    { "label": "Pima County — Information Technology Department", "url": "https://www.pima.gov/639/Information-Technology" },
+    { "label": "Pima County — Administration Organizational Chart", "url": "https://www.pima.gov/2780/Administration-Organizational-Chart" },
+    { "label": "Pima County — County Administrator (Jan Lesher)", "url": "https://www.pima.gov/382/County-Administrator" },
+    { "label": "Pima County — Board adopts final budget; keeps tax rate low (FY2027 coverage)", "url": "https://content.govdelivery.com/accounts/AZPIMA/bulletins/3e5bf88" },
+    { "label": "ASTHO — Pima County elevates collaboration with IT to advance data modernization", "url": "https://www.astho.org/communications/blog/2026/pima-county-collaboration-with-it-to-advance-data-modernization/" },
+    { "label": "Pima County — Procurement Department", "url": "https://www.pima.gov/163/Procurement" },
+    { "label": "Pima County — County Cooperative Agreements", "url": "https://www.pima.gov/177/County-Cooperative-Agreements--Authorize" },
+    { "label": "Pima County Procurement Code (Title 11, American Legal)", "url": "https://codelibrary.amlegal.com/codes/pimacounty/latest/pimacounty_az/0-0-0-7073" }
+  ]
+}

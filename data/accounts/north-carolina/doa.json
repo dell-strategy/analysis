@@ -1,0 +1,83 @@
+{
+  "state": "north-carolina",
+  "stateName": "North Carolina",
+  "type": "State Agency",
+  "name": "North Carolina Dept of Administration",
+  "slug": "doa",
+  "hq": "Raleigh, NC",
+  "updated": "2026-06-22",
+  "tagline": "North Carolina's central business agency: through its Division of Purchase & Contract, DOA runs statewide procurement for goods and services and sets the rules most state and local buyers follow — while IT term contracts sit with NCDIT.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central procurement & admin agency" },
+    { "label": "Procurement arm", "value": "Division of Purchase & Contract (P&C)" },
+    { "label": "IT term contracts", "value": "Owned by NCDIT, not DOA" },
+    { "label": "Co-op lever", "value": "NASPO ValuePoint" }
+  ],
+
+  "overview": "The North Carolina Department of Administration (DOA) is the state's central business and administrative agency, providing the operational backbone of state government — property and construction, motor fleet, mail, surplus, and, most relevant to technology sellers, statewide procurement. Procurement runs through DOA's Division of Purchase & Contract (P&C), the central authority that establishes and manages statewide term contracts and sets purchasing rules for state agencies, with delegated authority extending to many local and education buyers. An important boundary to understand: P&C governs non-IT statewide term contracts, while IT statewide term contracts are owned by the NC Department of Information Technology (NCDIT), the state's central IT agency. For a hardware-and-infrastructure vendor, that means most technology buying flows through NCDIT vehicles, but DOA/P&C still shapes the surrounding procurement policy, the NC eProcurement system, and cooperative purchasing. The two agencies are actively collaborating in 2026 to streamline IT acquisition — so the DOA relationship is best understood as the procurement-policy and cooperative-purchasing context around the NCDIT technology motion, not the primary IT buying center itself.",
+
+  "budget": {
+    "intro": "DOA is an operational and procurement agency, not a large technology spender — its leverage is the contract and policy framework that purchases flow through, not its own appropriation. The bigger budget signal for a seller is the state's overall fiscal posture: North Carolina entered 2026 without an enacted biennial budget, with much of state government operating on a continuation of the prior budget while the General Assembly and Governor Stein worked toward a deal.",
+    "stats": [
+      { "value": "Continuation", "label": "FY2025–27 budget status", "note": "State ran on a continuation budget into 2026 amid an enacted-budget impasse; confirm appropriations before forecasting." },
+      { "value": "Statewide", "label": "P&C contract scope", "note": "Non-IT statewide term contracts; IT term contracts sit with NCDIT." },
+      { "value": "Bronze", "label": "2025 NASPO Cronin Award", "note": "P&C recognized for procurement excellence by NASPO." }
+    ],
+    "notes": [
+      "The largest technology budgets sit with NCDIT and with end agencies (DHHS, transportation, etc.), not with DOA — DOA shapes how those dollars are competed and contracted.",
+      "Because exact biennial appropriations were unsettled, treat specific FY figures as provisional until the enacted budget is confirmed."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "DOA–NCDIT procurement modernization", "summary": "In June 2026 NCDIT named a Chief Procurement Transformation Officer (Shannon Casucci) and said it is collaborating with DOA to make IT acquisition more efficient, transparent, and customer-focused. This is the live procurement-reform track to watch — better processes and more interagency cooperation across both agencies.", "tags": ["Procurement", "Modernization"] },
+    { "name": "Statewide AI governance (EO No. 24)", "summary": "Gov. Stein's Sept 2025 Executive Order No. 24 stood up an AI Accelerator within NCDIT, an AI Leadership Council, and agency AI Oversight Teams. AI procurement and governance standards are forming now — a window for AI-infrastructure and responsible-AI positioning across state government.", "tags": ["AI", "Governance"] },
+    { "name": "NASPO ValuePoint cooperative leadership", "summary": "North Carolina is an active participant in NASPO ValuePoint and has served as a lead state on cooperative solicitations. Cooperative vehicles are a route to reach NC state and local buyers without a one-off RFP — confirm which NASPO contracts NC has adopted.", "tags": ["Cooperative", "Procurement"] },
+    { "name": "NC eProcurement & P&C policy framework", "summary": "DOA operates the NC eProcurement platform and the statewide term-contract program. Getting Dell offerings correctly listed and scoped on the right vehicles (and ensuring policy alignment) is the access mechanics underneath any NC public-sector deal.", "tags": ["eProcurement", "Contracts"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling into North Carolina runs on statewide term contracts and cooperative vehicles, with a key split: non-IT contracts through DOA/P&C and IT contracts through NCDIT. Confirm first which agency owns the vehicle for a given offering, that Dell is correctly listed and scoped, and whether a NASPO ValuePoint contract NC has adopted is the cleaner path.",
+    "vehicles": [
+      { "name": "NCDIT IT statewide term contracts", "detail": "The primary path for technology hardware and services — IT term contracts are owned by NCDIT, not DOA. Confirm Dell coverage and scope here for most infrastructure buys." },
+      { "name": "DOA / P&C statewide term contracts", "detail": "DOA's Division of Purchase & Contract manages non-IT statewide term contracts and the central procurement rules — relevant for non-IT goods/services and the surrounding policy framework." },
+      { "name": "NASPO ValuePoint", "detail": "State-led national cooperative; NC adopts and (on some categories) leads contracts. A route to state and local buyers without running a fresh solicitation — verify which contracts NC has enabled." },
+      { "name": "NC eProcurement", "detail": "DOA-operated purchasing platform used across state government; correct catalog listing and punchout setup are part of the access mechanics." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Gabriel J. Esparza", "title": "Secretary, NC Dept of Administration", "note": "Sworn in Jan 2025 in Gov. Stein's cabinet; first Latino NC cabinet secretary. Owns DOA direction including the procurement mission. Senior relationship for the DOA motion." },
+    { "name": "David O'Neal", "title": "State Purchasing Officer (Division of Purchase & Contract)", "note": "Runs statewide procurement and the term-contract program for non-IT goods/services; reports to the Secretary. The owner of P&C contract vehicles and rules." },
+    { "name": "Nate Denny", "title": "Secretary, NCDIT & State CIO", "note": "Confirmed by the NC Senate May 2026 (succeeded Teena Piccione); longtime NCDIT leader who led broadband expansion. Owns statewide IT direction — the top relationship for the technology motion." },
+    { "name": "Shannon Casucci", "title": "Chief Procurement Transformation Officer, NCDIT", "note": "Named June 2026; leads NCDIT IT procurement strategy and the DOA–NCDIT acquisition-reform collaboration. A federal IT veteran (ex-GSA) — key contact for IT contracting changes." },
+    { "name": "NCDIT Office of the CISO", "title": "Statewide cybersecurity & State CISO", "note": "Owns statewide security policy and standards within NCDIT — the gate for security posture on cloud and infrastructure deals. Confirm the current State CISO before engaging." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "NCDIT names Shannon Casucci Chief Procurement Transformation Officer; DOA–NCDIT collaborating on IT acquisition reform", "impact": "Live procurement-reform track — engage early to shape how IT buys are competed and to keep Dell vehicles well-positioned.", "tags": ["Procurement", "Leadership"] },
+    { "date": "2026-05", "title": "NC Senate confirms Nate Denny as NCDIT Secretary & State CIO", "impact": "Stable, experienced leadership atop the statewide technology motion; rebuild/confirm the top relationship.", "tags": ["Leadership"] },
+    { "date": "2026-03", "title": "Gov. Stein proclaims Procurement Month; P&C recognizes agency award honorees", "impact": "Signals procurement-modernization momentum across state agencies — useful air cover for value/transparency messaging.", "tags": ["Procurement"] },
+    { "date": "2025-09", "title": "Gov. Stein signs Executive Order No. 24 on trustworthy AI; AI Accelerator stood up in NCDIT", "impact": "AI governance and procurement standards are forming — early window for AI-infrastructure and responsible-AI positioning.", "tags": ["AI"] },
+    { "date": "2025-01", "title": "Gabriel J. Esparza sworn in as DOA Secretary in Gov. Stein's cabinet", "impact": "New agency leadership owning the procurement mission; establish the executive relationship.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's coverage and scope on NCDIT IT statewide term contracts first — that's the primary path for infrastructure, with DOA/P&C governing the surrounding non-IT and policy framework.",
+    "Engage the DOA–NCDIT procurement-reform effort early (via Casucci's office and P&C) to keep Dell vehicles well-positioned as acquisition processes are redesigned.",
+    "Map which NASPO ValuePoint contracts North Carolina has adopted and use them as a cooperative route to state and local buyers without a one-off RFP.",
+    "Lead AI-infrastructure and responsible-AI positioning tied to EO No. 24 and the NCDIT AI Accelerator — get ahead of forming AI procurement standards.",
+    "Build the executive map across both agencies — DOA Secretary Esparza and SPO O'Neal for procurement policy, NCDIT Secretary/CIO Denny for the technology motion."
+  ],
+
+  "sources": [
+    { "label": "NC DOA — Division of Purchase & Contract", "url": "https://www.doa.nc.gov/divisions/purchase-contract" },
+    { "label": "NC DOA — Statewide Term Contracts", "url": "https://www.doa.nc.gov/divisions/purchase-contract/statewide-term-contracts" },
+    { "label": "NC DOA — Secretary Gabriel J. Esparza", "url": "https://www.doa.nc.gov/about/leadership/gabriel-j-esparza" },
+    { "label": "NCDIT — Senate confirms Nate Denny as Secretary & State CIO", "url": "https://it.nc.gov/news/press-releases/2026/05/13/north-carolina-senate-confirms-nate-denny-secretary-nc-department-information-technology" },
+    { "label": "NCDIT — Names Shannon Casucci Chief Procurement Transformation Officer", "url": "https://it.nc.gov/news/press-releases/2026/06/24/ncdit-names-shannon-casucci-chief-procurement-transformation-officer" },
+    { "label": "NC Governor — Executive Order No. 24 on AI", "url": "https://governor.nc.gov/executive-order-no-24-advancing-trustworthy-artificial-intelligence-benefits-all-north-carolinians" },
+    { "label": "NASPO ValuePoint — Cooperative Contracts", "url": "https://www.naspovaluepoint.org/cooperative-contracts/" }
+  ]
+}

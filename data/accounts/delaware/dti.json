@@ -1,0 +1,88 @@
+{
+  "state": "delaware",
+  "stateName": "Delaware",
+  "type": "State Agency",
+  "name": "Delaware Dept of Technology & Information (DTI)",
+  "slug": "dti",
+  "hq": "Dover, DE",
+  "updated": "2026-06-22",
+  "tagline": "Delaware's central IT agency: DTI is chartered to deliver core enterprise services to other state organizations and govern statewide technology direction — running the state network, security, cloud, and the Secure End User Services (SEUS) shared-services stack under a fresh State CIO.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central / enterprise IT for the state" },
+    { "label": "State CIO", "value": "Bob Osmond (sworn in May 2026)" },
+    { "label": "Delivery model", "value": "IT centralization · SEUS shared services" },
+    { "label": "Contracting path", "value": "OMB / GSS statewide contracts · MyMarketplace" }
+  ],
+
+  "overview": "The Delaware Department of Technology & Information (DTI) is the state's central IT organization, chartered to deliver core technology services to other state organizations and to govern the technology direction and investments of the state. DTI operates the statewide network and security perimeter, enterprise infrastructure, cloud, and shared services that the Executive Branch agencies depend on, and it sets statewide IT policy and standards. It reports up through the Governor's administration — Governor Matt Meyer took office in January 2025. DTI is in the middle of a multi-year IT centralization effort: it has consolidated Executive-Branch agency IT under a shared-services chargeback model and stood up Secure End User Services (SEUS), a six-component enterprise stack (service desk, desktop, network & connectivity, voice, email & collaboration, and a security suite) with 24x7x365 support. For a Dell seller, DTI is both a direct buyer of infrastructure and end-user technology and the governance hub that shapes modernization demand across the executive branch, while contracting mechanics run through OMB's Government Support Services (GSS) and the MyMarketplace portal.",
+
+  "budget": {
+    "intro": "DTI's leverage is operational rather than a single large appropriation line: under IT centralization it runs enterprise infrastructure and end-user services as shared services and recovers much of its delivery cost from the agencies it serves via a chargeback model. Public top-line figures for the agency's own appropriation are limited; the macro pool is the state budget, and federal funds (ARPA, BEAD) underwrite specific modernization and broadband tracks.",
+    "stats": [
+      { "value": "Chargeback", "label": "Funding model", "note": "Shared-services chargeback recovers much of DTI's delivery cost from the agencies it serves" },
+      { "value": "BEAD", "label": "Broadband program", "note": "Federally approved plan to reach 4,728+ unserved/underserved locations; construction expected Fall 2026" },
+      { "value": "ARPA", "label": "Modernization funding", "note": "Federal ARPA dollars fund IT modernization tracks (e.g., grant-management and mainframe modernization)" }
+    ],
+    "notes": [
+      "DTI funds much of its delivery through chargebacks/cost recovery on enterprise and shared services rather than one large general-revenue line; agency-level IT spend lives in each department's budget.",
+      "Confirm DTI's own appropriation directly in the Delaware operating budget / Joint Finance Committee detail before forecasting — published top-line figures for the agency are limited.",
+      "Federal funding (ARPA, BEAD) is tied to specific programs and timelines; map a Dell offering to a funded track rather than assuming open general-revenue spend."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "IT centralization & SEUS shared services", "summary": "DTI is completing Executive-Branch IT centralization under a shared-services chargeback model, anchored by Secure End User Services (SEUS) — standard enterprise desktop, network & connectivity, voice, email/collaboration, service desk, and a security suite with 24x7x365 support. A direct end-user-compute and managed-services motion across agencies.", "tags": ["Modernization", "Shared Services", "End-User Compute"] },
+    { "name": "Generative AI policy & responsible-AI program", "summary": "DTI issued an enterprise Generative AI policy governing use of consumer vs. enterprise GenAI tools (prohibiting public tools with confidential data and tools located outside the U.S.), and in March 2026 launched statewide \"Responsible AI for Public Professionals\" training for state employees. Delaware also has an AI Sandbox initiative (joint resolution, 2025) for high-impact sectors. Signals real demand for AI-ready, state-controlled compute.", "tags": ["AI", "Governance", "Cloud"] },
+    { "name": "Cybersecurity & state network defense", "summary": "DTI owns statewide security standards, the state network perimeter, and incident response under the Chief Security Officer, plus a State & Local Cybersecurity Grant Program. The security buying center sits with DTI — position secure infrastructure, identity, and resilience here.", "tags": ["Cybersecurity", "Risk"] },
+    { "name": "Mainframe & legacy modernization + broadband", "summary": "DTI is modernizing mainframe and legacy systems (cloud-based grant-management replacement, improved availability, data integration, and cyber detection) while the Delaware Broadband Office runs BEAD to close the digital divide — construction expected to begin Fall 2026. Infrastructure refresh and hybrid-cloud plays map here.", "tags": ["Modernization", "Cloud", "Broadband"] }
+  ],
+
+  "procurement": {
+    "intro": "DTI is the central IT decision-maker and a direct buyer, but contracting mechanics largely run through OMB's Government Support Services (GSS) statewide contracts and the MyMarketplace portal, not one-off DTI RFPs in most cases. Two things to confirm first: that Dell is on the relevant GSS statewide and DTI-managed technology contracts, and that any cloud/AI offering meets DTI's security and GenAI-policy expectations before pursuing agency deals.",
+    "vehicles": [
+      { "name": "GSS statewide contracts (OMB)", "detail": "Government Support Services manages most statewide contracts for goods and services; Executive- and Judicial-Branch agencies must procure through these mandatory-use statewide contracts. The primary path — confirm Dell's coverage and category scope." },
+      { "name": "MyMarketplace / Delaware procurement portal", "detail": "MyMarketplace is the state's one-stop procurement portal for vendors and agencies — bids, contracts, registration, and opportunity tracking. The front door for registering and following solicitations." },
+      { "name": "DTI-managed technology contracts", "detail": "DTI's Procurement Services Team runs competitively bid DTI-specific contracts and, with GSS, select statewide mandatory-use technology agreements — the IT-specific route. Verify exact contract scope before forecasting (DTI_Procurement@delaware.gov)." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Bob Osmond", "title": "Chief Information Officer (State CIO), DTI", "note": "Sworn in May 7, 2026 by Gov. Meyer; former Virginia Commonwealth CIO (VITA), where he oversaw statewide cyber and IT for ~65,000 users and ~$1.3B/yr in tech investments. Mandate to strengthen cybersecurity, modernize systems, and deliver user-centered digital services — the top statewide tech relationship." },
+    { "name": "Aashish Patel", "title": "Chief Security Officer (CSO/CISO), DTI", "note": "Named permanent CSO ~Sept 2025 (interim from March 2025) after Solomon Adote's departure; prior DTI director of enterprise security operations. Owns statewide security standards, the network perimeter, and incident response — the security buying center." },
+    { "name": "Office of the Chief Technology Officer (DTI)", "title": "Enterprise architecture, data, shared services", "note": "Owns enterprise architecture, data management, and the SEUS/shared-services delivery stack — the technical influencer and buying center for ISG, end-user compute, and managed services." },
+    { "name": "OMB — Government Support Services (GSS)", "title": "Central procurement / statewide contracts", "note": "Runs statewide mandatory-use contracts and MyMarketplace — the contracting path for DTI and agency buys. Confirm current contract owners directly." },
+    { "name": "Gov. Matt Meyer administration", "title": "Executive sponsor of state tech agenda", "note": "Took office Jan 2025; drives broadband, AI policy/sandbox, and modernization priorities that DTI executes — the policy umbrella behind DTI's demand." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Gov. Meyer swears in Bob Osmond as Delaware CIO (DTI)", "impact": "Stable, experienced owner of central IT, cyber, and modernization (ex-Virginia Commonwealth CIO) — rebuild the DTI relationship map; this is the statewide IT decision-maker.", "tags": ["Leadership", "IT"] },
+    { "date": "2026-04", "title": "Meyer nominates Bob Osmond as CIO after Greg Lane's resignation", "impact": "Leadership transition at the top of the state IT motion — re-confirm contacts and priorities (cyber, modernization, digital services) ahead of confirmation.", "tags": ["Leadership"] },
+    { "date": "2026-03", "title": "Delaware launches statewide \"Responsible AI for Public Professionals\" training", "impact": "Three-part GenAI training for state employees built on DTI's GenAI policy — signals durable demand for governed, state-controlled AI tooling and AI-ready compute.", "tags": ["AI"] },
+    { "date": "2026-03", "title": "Meyer announces BEAD broadband milestone (4,728+ locations)", "impact": "Federally approved plan to reach unserved/underserved homes and businesses; construction expected Fall 2026 — downstream network and infrastructure demand through DTI's Broadband Office.", "tags": ["Broadband", "Infrastructure"] },
+    { "date": "2025-09", "title": "Aashish Patel named permanent DTI Chief Security Officer", "impact": "New security leadership owns statewide standards and incident response — align secure-infrastructure, identity, and resilience offerings to refreshed expectations.", "tags": ["Cybersecurity", "Leadership"] }
+  ],
+
+  "dellActions": [
+    "Run the technology motion through DTI and CIO Bob Osmond — this is the central IT decision-maker for statewide infrastructure, end-user compute, cloud, and cyber; OMB/GSS is the contracting path, not the IT buyer.",
+    "Lead with ISG and end-user-compute against IT centralization and the SEUS shared-services stack — position standardized enterprise desktop, network, and managed services agencies buy through DTI.",
+    "Confirm Dell's coverage on GSS statewide contracts and DTI-managed technology contracts, and that MyMarketplace registration and categories are current — the access path to executive-branch agencies, not just DTI central.",
+    "Position governed, state-controlled AI infrastructure tied to DTI's GenAI policy, employee AI training, and the AI Sandbox — AI-ready compute hosted on state infrastructure, not public consumer tools.",
+    "Engage CSO Aashish Patel and align secure-infrastructure, identity, and resilience to statewide standards; track BEAD broadband and mainframe/legacy modernization for downstream network and infrastructure opportunities."
+  ],
+
+  "sources": [
+    { "label": "Delaware DTI — About DTI", "url": "https://dti.delaware.gov/about-dti/dti/" },
+    { "label": "Delaware DTI — Strategic Priorities", "url": "https://dti.delaware.gov/about-dti/strategic-priorities/" },
+    { "label": "Delaware DTI — IT Centralization", "url": "https://dti.delaware.gov/itc/" },
+    { "label": "Governor Meyer Swears In New CIO for Delaware (May 2026)", "url": "https://news.delaware.gov/2026/05/08/governor-meyer-swears-in-new-cio-for-delaware/" },
+    { "label": "Governor Meyer Nominates Bob Osmond as CIO (Apr 2026)", "url": "https://news.delaware.gov/2026/04/06/governor-meyer-nominates-bob-osmond-as-chief-information-officer/" },
+    { "label": "GovTech — Delaware Picks a Familiar Face to Lead State Cybersecurity (Patel)", "url": "https://www.govtech.com/workforce/delaware-picks-a-familiar-face-to-lead-state-cybersecurity" },
+    { "label": "Delaware DTI — Generative Artificial Intelligence Policy (PDF)", "url": "https://webfiles.dti.delaware.gov/pdfs/pp/Generative%20Artificial%20Intelligence%20Policy.pdf" },
+    { "label": "Delaware Launches Statewide AI Training for State Employees (Mar 2026)", "url": "https://news.delaware.gov/2026/03/19/delaware-launches-new-statewide-ai-training-for-state-employees/" },
+    { "label": "Governor Meyer Announces Major Broadband Milestone (Mar 2026)", "url": "https://news.delaware.gov/2026/03/25/governor-matt-meyer-announces-major-broadband-milestone-for-delaware/" },
+    { "label": "Delaware DTI — Procurement Services", "url": "https://dti.delaware.gov/technology-services/vendor-information/procurement-services/" },
+    { "label": "OMB — Government Support Services (GSS)", "url": "https://gss.omb.delaware.gov/" },
+    { "label": "MyMarketplace: Delaware's Procurement Portal", "url": "https://mymarketplace.delaware.gov/" }
+  ]
+}

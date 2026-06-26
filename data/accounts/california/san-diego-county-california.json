@@ -1,0 +1,82 @@
+{
+  "name": "San Diego County, California",
+  "slug": "san-diego-county-california",
+  "state": "california",
+  "stateName": "California",
+  "type": "County",
+  "hq": "San Diego, CA",
+  "updated": "2026-06-22",
+  "tagline": "California's 2nd-most-populous county (~3.3M residents): central IT runs through the County Technology Office (CTO) on a long-running outsourced model, with a ~$9.16B FY2026-27 budget and a once-in-a-decade re-compete of the county's primary IT services contract reshaping the buying picture into 2028.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Major urban county (~3.3M)" },
+    { "label": "County budget (FY26-27)", "value": "~$9.16B" },
+    { "label": "IT model", "value": "Central CTO + outsourced delivery" },
+    { "label": "Primary buyer", "value": "Purchasing & Contracting (BuyNet)" }
+  ],
+
+  "overview": "San Diego County is the local government for roughly 3.3 million residents — California's second-most-populous county, behind only Los Angeles — and one of the largest public-sector technology buyers in the state. Its technology is coordinated centrally by the County Technology Office (CTO), which is distinctive for a long-running outsourced operating model: rather than running most IT in-house, the county delivers help desk, applications, desktop, network, and data-center services through an outsourced contract (currently held by Peraton, with roughly 300 contractor staff across those five service frameworks). The CTO sets strategy, governance, security, and AI policy while the prime contractor and subcontractors deliver day-to-day services. The FY2026-27 revised Recommended Budget is about $9.16B all-funds — roughly a 6% increase over 2025-26 — with the Board of Supervisors scheduled to vote on June 25, 2026. For a Dell SLG seller, the defining dynamic is the once-in-a-decade re-compete of the county's primary IT services contract: the county issued a Request for Information ahead of a competitive process for a new agreement expected to start around 2028, and has signaled it may move from a single prime to multiple vendors. That re-compete, the centralized CTO buying center, and an active AI-governance push are the near-term shapers of how and through whom hardware, infrastructure, and security dollars flow.",
+
+  "budget": {
+    "intro": "San Diego County's FY2026-27 Recommended Budget is about $9.16B all-funds in the revised plan (the CAO 'change letter'), up roughly 6% (~$522M) over the 2025-26 budget; the CAO first released a ~$9.1B recommended budget on May 18, 2026, with the Board of Supervisors scheduled to vote June 25, 2026. IT spend isn't published as a single public line — much of it is embedded in the outsourced IT services contract and in the budgets of the operating groups the CTO serves (Health & Human Services, Public Safety, Land Use, Finance & General Government), so the buying signal sits in the contract re-compete and in group modernization plans rather than a standalone IT appropriation.",
+    "stats": [
+      { "value": "~$9.16B", "label": "County budget (FY26-27)", "note": "Revised Recommended Budget; ~6% over 2025-26; Board vote scheduled June 25, 2026" },
+      { "value": "~3.3M", "label": "Residents served", "note": "2nd-most-populous CA county (behind Los Angeles)" },
+      { "value": "~300", "label": "Outsourced IT staff", "note": "Peraton contractor staff across help desk, apps, desktop, network, data center" }
+    ],
+    "notes": [
+      "IT is delivered largely through an outsourced services contract rather than a single large in-house IT general-revenue line — the contract value and its re-compete are the dominant spend signal.",
+      "Program and modernization dollars sit with the operating business groups (HHSA, Public Safety, Land Use & Environment, Finance & General Government) — map the funded group initiative, not just the CTO."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "IT outsourcing contract re-compete (toward ~2028)", "summary": "The county's primary IT services contract is reaching the end of its term. A Request for Information opened the path to a competitive procurement (RFI comment window through Feb 15, 2026), with a new agreement expected to begin around 2028. The county has signaled it may shift from a single prime to multiple vendors — the single biggest near-term factor in who delivers, and supplies, county IT.", "tags": ["Procurement", "Outsourcing", "Re-compete"] },
+    { "name": "County AI governance framework", "summary": "The CTO and a Board ad-hoc subcommittee have advanced an AI policy and governance framework emphasizing transparency, accountability, equity, and data protection across county operations, with direction to fold AI requirements into the upcoming IT contract. Signals appetite for governed AI deployment and the infrastructure, data, and security work that surrounds it.", "tags": ["AI", "Governance"] },
+    { "name": "IT Strategy & digital services modernization", "summary": "The county's Information Technology Strategy frames a digital ecosystem for innovative, customer-centric services. As a centralized buyer, the CTO carries ongoing data-center, network, end-user compute, and application modernization — a steady lifecycle-and-resilience motion regardless of which delivery vendor is in place.", "tags": ["Modernization", "Data Center"] },
+    { "name": "Cybersecurity & data protection", "summary": "Security and privacy are recurring CTO priorities, embedded in both the IT strategy and the AI framework's data-protection emphasis. A durable entry point for endpoint, identity, and infrastructure-security offerings across a large, multi-group county footprint.", "tags": ["Cybersecurity"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to San Diego County runs through the Department of Purchasing & Contracting, which manages solicitations and vendor registration via its BuyNet portal — and, critically for IT, through the prime IT outsourcing contract under which much delivery flows. Two paths shorten the cycle: the county's use of cooperative purchasing (riding awards another public agency already competed) and California statewide leveraged agreements the county can buy off without a fresh RFP.",
+    "vehicles": [
+      { "name": "Purchasing & Contracting (BuyNet)", "detail": "The central buying department for county solicitations, terms, and supplier registration via BuyNet (no registration fee) — the front door for direct county business." },
+      { "name": "IT outsourcing services contract", "detail": "Much county IT is delivered and procured through the prime IT services contract (currently Peraton). The active re-compete toward ~2028 — potentially multi-vendor — is the path most infrastructure and services dollars route through; engage as a partner/subcontractor and as an OEM behind the prime." },
+      { "name": "Cooperative & California statewide vehicles (NASPO ValuePoint, OMNIA, CMAS / Cal eProcure)", "detail": "The county leverages cooperative awards and California leveraged procurement agreements to buy off pre-competed contracts. Confirm Dell's cooperative coverage and CMAS/LPA scope are active and correctly scoped." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Ebony N. Shelton", "title": "Chief Administrative Officer (CAO)", "note": "Top of the county administration and budget; the CTO and all business groups report up through the CAO. Sets the spending frame and released the FY2026-27 recommended budget." },
+    { "name": "Eric Shiotsugu", "title": "Chief Information Officer (County Technology Office)", "note": "Appointed CIO effective December 2025 after serving in an acting role — owns county IT strategy, the CTO organization, and the IT contract re-compete. The central technology relationship; confirm current incumbency before forecasting." },
+    { "name": "County Technology Office (CTO)", "title": "Central IT strategy, security & AI policy", "note": "The governance and buying center that sets strategy, manages the outsourced delivery model, and owns security and AI policy — the org to map for endpoint, infrastructure, and security plays." },
+    { "name": "Department of Purchasing & Contracting", "title": "Procurement & vendor registration (BuyNet)", "note": "Owns solicitations, terms, and supplier onboarding — the contracting path for direct county business and the IT contract re-compete." },
+    { "name": "Board of Supervisors", "title": "Five-member governing board", "note": "Adopts the county budget and approves major contracts, including the upcoming IT services award — scheduled to vote on the FY2026-27 budget June 25, 2026." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "County releases ~$9.16B FY2026-27 Recommended Budget", "impact": "Large spending plan (~6% increase) released May 18 and revised via change letter, with Board vote set for June 25 — the funding backdrop and timing anchor for the account.", "tags": ["Budget"] },
+    { "date": "2026-02", "title": "RFI comment window closes for next IT services contract", "impact": "Public input on the re-compete (window through Feb 15, 2026) feeds staff recommendations on the future delivery model — possibly multiple vendors — ahead of a competitive procurement; the pivotal opening for IT engagement.", "tags": ["Procurement", "Re-compete"] },
+    { "date": "2025-12", "title": "Eric Shiotsugu appointed CIO of the County Technology Office", "impact": "New permanent technology leader (after acting role) at the head of the CTO and the IT contract re-compete — rebuild the executive relationship map and confirm priorities under the new CIO.", "tags": ["Leadership"] },
+    { "date": "2025-01", "title": "Board advances AI policy & governance framework", "impact": "County direction to govern AI use and fold AI requirements into the upcoming IT contract opens the door for governed-AI deployment plus surrounding infrastructure, data, and security work.", "tags": ["AI", "Governance"] }
+  ],
+
+  "dellActions": [
+    "Anchor the relationship with the CTO buying center — CIO Eric Shiotsugu and the County Technology Office — and confirm current incumbencies before mapping the org and forecasting.",
+    "Treat the IT services re-compete (toward ~2028, potentially multi-vendor) as the central play: position Dell as the OEM behind whichever prime(s) win and engage early via the RFI/competitive process and through Purchasing & Contracting.",
+    "Lead with data-center, server/storage, and end-user compute modernization plus as-a-service consumption tied to the county's IT Strategy — a steady lifecycle motion independent of the delivery vendor.",
+    "Build the security and AI motion with the CTO around the county's AI-governance framework and data-protection priorities — endpoint, identity, and infrastructure resilience for governed AI workloads.",
+    "Verify Dell's cooperative coverage (NASPO ValuePoint, OMNIA) and California CMAS/LPA scope, register on BuyNet, and time the motion around the June 25, 2026 budget vote and the IT contract timeline."
+  ],
+
+  "sources": [
+    { "label": "County of San Diego — County Technology Office (CTO)", "url": "https://www.sandiegocounty.gov/content/sdc/cto.html" },
+    { "label": "County of San Diego — IT Outsourcing Contract", "url": "https://www.sandiegocounty.gov/content/sdc/cto/outsourcing-contract.html" },
+    { "label": "County of San Diego — Artificial Intelligence", "url": "https://www.sandiegocounty.gov/content/sdc/cto/artificial-intelligence.html" },
+    { "label": "KPBS — County CAO releases $9.1B recommended budget, 6% increase", "url": "https://www.kpbs.org/news/economy/2026/05/18/county-cao-releases-9-1b-recommended-budget-6-increase-over-2025-26" },
+    { "label": "County News Center — County's $9.16B budget heads to the Board June 25", "url": "https://www.countynewscenter.com/countys-9-16b-budget-heads-to-the-board-for-final-review-june-25/" },
+    { "label": "GovTech — San Diego County Names New Chief Information Officer (Eric Shiotsugu)", "url": "https://www.govtech.com/workforce/san-diego-county-names-new-chief-information-officer" },
+    { "label": "County of San Diego — Ebony N. Shelton, Chief Administrative Officer", "url": "https://www.sandiegocounty.gov/content/sdc/cao/chief-administrative-officer.html" },
+    { "label": "County of San Diego — Purchasing & Contracting (BuyNet)", "url": "https://www.sandiegocounty.gov/content/sdc/purchasing.html" }
+  ]
+}

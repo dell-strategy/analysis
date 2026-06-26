@@ -1,0 +1,81 @@
+{
+  "state": "new-jersey",
+  "stateName": "New Jersey",
+  "type": "Court",
+  "name": "New Jersey Judiciary (Courts)",
+  "slug": "courts",
+  "hq": "Trenton, NJ",
+  "updated": "2026-06-22",
+  "tagline": "New Jersey's unified state court system — Supreme Court, Appellate Division, and 15 trial-court vicinages — run as a single statewide enterprise by the Administrative Office of the Courts (AOC), and an early mover on digital courts (eCourts), livestreaming, and AI governance.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Unified state court system" },
+    { "label": "Administrator", "value": "AOC (Trenton)" },
+    { "label": "Direct State Services", "value": "~$928M (FY2026)" },
+    { "label": "Buying path", "value": "Judiciary RFQs / NJSTART" }
+  ],
+
+  "overview": "The New Jersey Judiciary is one of the most centralized court systems in the country: the Supreme Court, the Appellate Division, the trial-court Superior Court across 15 county-based vicinages, the Tax Court, and the municipal courts all operate as a single statewide enterprise rather than a loose federation of county courts. The Administrative Office of the Courts (AOC), headquartered in Trenton, is the operational hub — it handles budget, personnel, training, statistics, and the development and operation of the Judiciary's information systems. That centralization makes the AOC the single technology decision point for the entire branch, which is unusual and useful from a seller's perspective: case management, e-filing, networking, end-user compute, and security are set centrally and rolled out to every vicinage. The Judiciary is also an established digital-court leader — its eCourts electronic filing and case-management platform processes the large majority of court documents electronically, and the branch has moved aggressively into livestreaming and AI governance. For a Dell SLG seller, the relationship is enterprise IT for a statewide judicial branch, sold as a separate constitutional branch from the Executive (state CIO / NJOIT) and procured largely through the Judiciary's own solicitations on top of statewide vehicles.",
+
+  "budget": {
+    "intro": "The Judiciary is a constitutional branch with its own appropriation, not a line inside an executive department. For FY2026 the Governor's budget recommended roughly $928 million in Direct State Services for the Judiciary, plus federal funds (about $133.9 million tied to the Title IV-D child-support program). Treat these as the publicly reported appropriation envelope; the IT share is a slice of the branch total, not separately broken out in the public summary.",
+    "stats": [
+      { "value": "~$928M", "label": "Direct State Services (FY2026)", "note": "Governor's recommended Judiciary appropriation per NJ Legislature budget docs" },
+      { "value": "~$133.9M", "label": "Federal funds (FY2026)", "note": "Largely the Judiciary's Title IV-D child-support/paternity program share" },
+      { "value": "15", "label": "Trial-court vicinages", "note": "County-based units the AOC equips and supports statewide" }
+    ],
+    "notes": [
+      "The Judiciary is funded as a separate branch — its buying decisions sit with the AOC, not the executive-branch state CIO.",
+      "Public budget summaries report the branch total; the technology/IT line is not separately itemized, so size IT opportunity from program activity (eCourts, livestreaming, refresh) rather than a published IT budget."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "eCourts digital case management & e-filing", "summary": "eCourts is the Judiciary's electronic filing and case-management backbone, now handling the large majority of court documents electronically across civil, criminal, and other practice areas, with JEDS for self-represented and non-registered filers. An ongoing modernization track — storage, compute, database, and resilience under a statewide caseload.", "tags": ["Digital Court", "Case Management"] },
+    { "name": "AI governance — Committee on AI and the Courts", "summary": "The Supreme Court's Committee on Artificial Intelligence and the Courts (convened 2023) produced preliminary attorney guidelines (Jan 2024) and principles for the Judiciary's own AI use emphasizing confidentiality and system security. Signals appetite for governed AI in case administration and public access — sell into the governance, security, and infrastructure layer.", "tags": ["AI", "Governance"] },
+    { "name": "Courtroom livestreaming & public access", "summary": "The Judiciary began livestreaming Appellate Division oral arguments (Sept 2024, with limited exceptions per the March 2025 Notice) and posts briefs online; trial-level proceedings may be livestreamed at judicial discretion. A transparency push that drives demand for media, streaming, networking, and storage capacity.", "tags": ["Digital Court", "Transparency"] },
+    { "name": "Cybersecurity & data protection", "summary": "As a statewide repository of sensitive case data, the Judiciary's stated AI and systems principles foreground confidentiality and the security of Judiciary systems. Court systems nationally are high-value ransomware targets, making resilience, backup/recovery, and endpoint/identity security a recurring infrastructure priority.", "tags": ["Cybersecurity", "Data Protection"] }
+  ],
+
+  "procurement": {
+    "intro": "The Judiciary buys largely through its own solicitations layered on top of statewide infrastructure. Two things to confirm first: that Dell's products and resellers are reachable via NJSTART-registered vendor status and applicable statewide/cooperative contracts, and that you are tracking the Judiciary's own public bidding portal — the branch issues its own RFQs distinct from executive-branch procurements.",
+    "vehicles": [
+      { "name": "Judiciary Public Bidding Opportunities", "detail": "The Judiciary posts its own Requests for Quotation (RFQs) and bidding opportunities at njcourts.gov — the branch procures separately from executive agencies, so monitor this portal directly." },
+      { "name": "NJSTART vendor registration", "detail": "New Jersey's statewide eProcurement system; vendors register a Bidder Profile and respond to solicitations. The on-ramp for selling to the Judiciary and other NJ public entities." },
+      { "name": "NJ statewide / cooperative contracts", "detail": "Division of Purchase and Property statewide term contracts and cooperative vehicles provide pre-competed paths for hardware, software, and services that branch buyers can leverage — confirm Dell coverage and scope." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Stuart Rabner", "title": "Chief Justice, Supreme Court of New Jersey", "note": "Heads the Judiciary and the Supreme Court; sets branch-wide direction including transparency and AI policy. The top of the judicial enterprise." },
+    { "name": "Michael J. Blee", "title": "Acting Administrative Director of the Courts (AOC)", "note": "Appellate Division judge designated Acting Administrative Director effective April 1, 2025, succeeding Glenn A. Grant. Runs the AOC — budget, operations, and information systems. The central operational relationship." },
+    { "name": "Administrative Office of the Courts (AOC)", "title": "Statewide court administration", "note": "Trenton-based hub that develops and operates the Judiciary's information systems and equips all 15 vicinages — the single statewide technology buying center for the branch." },
+    { "name": "AOC Information Technology Office", "title": "Judiciary IT / eCourts engineering", "note": "Owns eCourts, networking, end-user compute, and infrastructure for the branch. Confirm the current named technology leader directly — the Judiciary does not publicly publish a standing CIO name in budget materials." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Acting Administrative Director Blee delivers FY2027 budget testimony to Senate Budget & Appropriations", "impact": "Confirms Blee still leading the AOC in acting capacity in 2026; budget cycle is the window to align infrastructure and modernization asks.", "tags": ["Leadership", "Budget"] },
+    { "date": "2025-04", "title": "Michael J. Blee begins as Acting Administrative Director of the Courts", "impact": "New operational leader at the AOC after Glenn Grant's retirement — re-introduce and rebuild the central technology relationship.", "tags": ["Leadership"] },
+    { "date": "2025-03", "title": "Notice to the Bar sets exceptions for Appellate Division livestreaming", "impact": "Formalizes the expanding livestreaming program — sustained demand for streaming, media, networking, and storage capacity.", "tags": ["Digital Court", "Transparency"] },
+    { "date": "2024-09", "title": "Judiciary begins livestreaming Appellate Division oral arguments", "impact": "Public-access milestone that anchors an ongoing courtroom-technology and infrastructure modernization track.", "tags": ["Digital Court"] }
+  ],
+
+  "dellActions": [
+    "Treat the AOC in Trenton as the single statewide technology buying center for the entire judicial branch — one relationship reaches all 15 vicinages, distinct from the executive-branch state CIO.",
+    "Lead infrastructure modernization behind eCourts and livestreaming — compute, storage, database, networking, and end-user devices scaled to a statewide caseload.",
+    "Position cyber-resilience (backup/recovery, ransomware resilience, endpoint and identity security) given the Judiciary's stated focus on confidentiality and protecting sensitive case data.",
+    "Tie an AI-infrastructure conversation to the Committee on AI and the Courts' governance principles — governed, secure on-prem/hybrid capacity for court administration and public access.",
+    "Confirm Dell coverage on NJSTART and applicable statewide/cooperative contracts, and monitor the Judiciary's own Public Bidding Opportunities portal for branch-specific RFQs."
+  ],
+
+  "sources": [
+    { "label": "NJ Courts — Official Website of the New Jersey Judiciary", "url": "https://www.njcourts.gov/" },
+    { "label": "NJ Courts — eCourts and eFiling", "url": "https://www.njcourts.gov/attorneys/ecourts-and-efiling" },
+    { "label": "NJ Courts — Artificial Intelligence: Use in the Courts", "url": "https://www.njcourts.gov/attorneys/artificial-intelligence-use-courts" },
+    { "label": "NJ Courts — Public Bidding Opportunities", "url": "https://www.njcourts.gov/public/public-bidding-opportunities" },
+    { "label": "NJ Courts — Judge Glenn A. Grant to Retire; Judge Blee Named Successor (Jan 2025)", "url": "https://www.njcourts.gov/press-releases/2025/01/judge-glenn-a-grant-retire-administrative-director-atlanticcape-may-vicinage" },
+    { "label": "NJ Courts — Order Designating Judge Blee Acting Administrative Director (eff. Apr 1, 2025)", "url": "https://www.njcourts.gov/notices/order-judge-michael-j-blee-assigned-appellate-division-and-designated-acting-administrative" },
+    { "label": "NJ Legislature — Analysis of the NJ Budget FY2025-2026, The Judiciary", "url": "https://pub.njleg.state.nj.us/publications/budget/governors-budget/2026/jud_analysis_2026.pdf" },
+    { "label": "NJ Monitor — Appeals courts to expand public access by livestreaming hearings", "url": "https://newjerseymonitor.com/briefs/appeals-courts-to-expand-public-access-by-livestreaming-hearings-and-posting-briefs-online/" }
+  ]
+}

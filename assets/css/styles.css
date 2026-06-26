@@ -261,6 +261,44 @@ a.state-link:focus .state { fill: var(--c-blue); }
 .section__icon .icon { width: 20px; height: 20px; }
 .lead { font-size: 1.02rem; color: var(--c-ink-2); }
 
+/* Top Accounts directory (state breakout pages) */
+.accounts { background: var(--c-surface-2); border-bottom: 1px solid var(--c-border); }
+.accounts__inner { max-width: var(--maxw); margin: 0 auto; padding: 26px 28px; }
+.accounts__head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+.accounts__head h2 { font-size: 1.25rem; margin: 0; display: flex; align-items: center; gap: 9px; }
+.accounts__head h2 .icon { color: var(--c-blue-600); width: 20px; height: 20px; }
+.acct-group { margin-bottom: 20px; }
+.acct-group:last-child { margin-bottom: 0; }
+.acct-group h3 { font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; color: var(--c-muted); font-weight: 800; margin: 0 0 10px; display: flex; align-items: center; gap: 8px; }
+.acct-count { background: #e7edf3; color: var(--c-muted); border-radius: 999px; font-size: .7rem; padding: 1px 8px; font-weight: 700; }
+.acct-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(266px, 1fr)); gap: 12px; }
+.acct-card { display: flex; flex-direction: column; gap: 7px; padding: 15px 16px; background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--radius); box-shadow: var(--shadow-sm); text-decoration: none; color: var(--c-ink); transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+a.acct-card:hover { border-color: var(--c-blue); box-shadow: var(--shadow); transform: translateY(-2px); text-decoration: none; }
+.acct-card.is-soon { background: var(--c-surface-2); }
+.acct-card__top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.acct-badge { font-size: .64rem; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.acct-badge--agency { background: var(--c-info-bg); color: var(--c-blue-700); }
+.acct-badge--highered { background: #efe9fb; color: #6b46c1; }
+.acct-badge--county { background: var(--c-warn-bg); color: var(--c-warn); }
+.acct-badge--city { background: var(--c-good-bg); color: var(--c-good); }
+.acct-badge--district { background: #e3f1f4; color: #0e7490; }
+.acct-badge--court { background: #f1ede4; color: #8a6d1f; }
+.acct-badge--k12 { background: #fbe9f1; color: #b03a78; }
+.acct-badge--other { background: #eef2f7; color: var(--c-muted); }
+.acct-card__name { font-weight: 700; font-size: 1rem; line-height: 1.22; }
+.acct-card__hq { font-size: .8rem; color: var(--c-muted); display: flex; align-items: center; gap: 5px; }
+.acct-card__hq .icon { width: 14px; height: 14px; }
+.acct-card__blurb { font-size: .87rem; color: var(--c-ink-2); line-height: 1.45; }
+.acct-go { color: var(--c-faint); width: 16px; height: 16px; }
+a.acct-card:hover .acct-go { color: var(--c-blue); }
+.acct-card .soon-tag { font-size: .62rem; text-transform: uppercase; letter-spacing: .07em; color: var(--c-faint); font-weight: 700; }
+@media (max-width: 640px) { .acct-grid { grid-template-columns: 1fr; } }
+
+/* Account brief page (single-column, no TOC) */
+.brief { max-width: 980px; margin: 0 auto; padding: 6px 28px 50px; }
+.brief .section:first-child { border-top: 0; }
+.brief .report-hero__meta .updated-pill { background: rgba(255,255,255,.1); }
+
 /* Grid */
 .grid { display: grid; gap: 18px; }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }

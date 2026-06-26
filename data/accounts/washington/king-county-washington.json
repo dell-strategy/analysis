@@ -1,0 +1,86 @@
+{
+  "state": "washington",
+  "stateName": "Washington",
+  "type": "County",
+  "name": "King County, Washington",
+  "slug": "king-county-washington",
+  "hq": "Seattle, WA",
+  "updated": "2026-06-22",
+  "tagline": "Washington's most populous county and the Seattle metro's governing hub: King County serves ~2.3M residents and runs its enterprise technology through King County Information Technology (KCIT), a consolidated central IT department behind one of the region's largest public-sector IT budgets.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Largest WA county (Seattle metro)" },
+    { "label": "Population", "value": "~2.3M residents" },
+    { "label": "Central IT", "value": "KCIT (~$377M biennium)" },
+    { "label": "Buying co-op", "value": "DES / NASPO ValuePoint" }
+  ],
+
+  "overview": "King County is the most populous county in Washington — roughly 2.3 million residents across Seattle and its surrounding cities — and one of the largest local governments in the Pacific Northwest. Its enterprise technology is consolidated under King County Information Technology (KCIT), a central IT department that delivers infrastructure, applications, data, and security services to more than 15,000 county employees across all departments. KCIT reports a biennium budget on the order of $377 million and a workforce of roughly 450 technology professionals, making it a substantial buying center in its own right rather than a thin coordinating office. The county is in a leadership transition at the top: Girmay Zahilay was sworn in as County Executive in November 2025 (the youngest in county history), succeeding acting executive Shannon Braddock, whose proposed 2026–2027 biennial budget framed the county's fiscal posture. King County is best understood as a large, self-directed enterprise buyer that purchases through Washington's cooperative vehicles (DES master contracts and NASPO ValuePoint) plus its own competitive solicitations — and that also sponsors cooperative agreements other jurisdictions can ride. Verify current officials and enacted figures against county records before forecasting.",
+
+  "budget": {
+    "intro": "King County is a large direct spender, not a pass-through. The county's adopted 2026–2027 biennial budget runs in the ~$20 billion range (the proposed plan was $19.7B; the adopted figure was reported higher, near $20.16B), funding services for ~2.4M residents and more than 18,000 employees. Within that, KCIT reports a biennium budget on the order of $377M. Confirm enacted totals against King County's adopted budget book before forecasting.",
+    "stats": [
+      { "value": "~$20B", "label": "County biennial budget (2026-27)", "note": "Proposed $19.7B; adopted reported near $20.16B — verify against the adopted budget book" },
+      { "value": "~$377M", "label": "KCIT biennium budget", "note": "Per KCIT; ~450 tech staff serving 15,000+ county employees" },
+      { "value": "$1M", "label": "AI Innovation Fund (proposed)", "note": "Proposed reallocation of existing fund balance; agencies submit proposals in early 2026" }
+    ],
+    "notes": [
+      "The 2026-27 budget prioritized public safety, housing and homelessness, and behavioral health while bracing for federal funding uncertainty; a new 0.1% sales tax (HB 2015) adds ~$203.5M to the General Fund.",
+      "KCIT is a consolidated central IT department with its own sizeable budget and staff — a real buying center, not just a policy office.",
+      "The largest agency-specific IT spend can still sit with major county functions (e.g., Metro Transit, Public Health); KCIT is the enterprise standard-setter and shared-services provider."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Strategic IT Plan 2024-2027 & technical-debt reduction", "summary": "KCIT's current plan spans 56 strategic initiatives across five goals, centered on modernizing aging legacy equipment ('technical debt'), retiring redundant applications, and a new IT investment-prioritization model (enterprise-architecture portfolio tool) targeted for full operation in early 2026. A durable pull for infrastructure refresh, hybrid cloud, and application rationalization.", "tags": ["Modernization", "Data Center", "Cloud"] },
+    { "name": "AI Innovation Fund & generative-AI rollout", "summary": "KCIT proposed an Artificial Intelligence Innovation Fund (~$1M reallocated balance) with agency proposals due early 2026, routed through its existing technology project-review process; Microsoft Copilot license requests go through the same gate. The county's GenAI guidelines (2024) set responsible-use expectations and a software-request review path. Policy is still forming — the gate on what AI offerings are buyable.", "tags": ["AI", "Policy"] },
+    { "name": "Information-security investment", "summary": "KCIT has flagged significant new information-security investment, citing the wave of ransomware and attacks on neighboring public entities (e.g., Port of Seattle, Seattle Public Library). Expect continued demand for detection, response, identity, and resilience across a large, distributed county environment.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "Hybrid-cloud modernization", "summary": "King County has publicly described a hybrid-cloud approach to modernization, balancing on-prem data-center capacity with public cloud. A theme for migration services, cloud-adjacent infrastructure, and AI-ready compute tied to the SITP modernization track.", "tags": ["Cloud", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "King County buys both through Washington's pre-competed cooperative vehicles and through its own competitive solicitations — and it sponsors cooperative agreements other jurisdictions can use. The first thing to confirm is Dell's coverage on the relevant DES master contracts and NASPO ValuePoint agreements the county draws from, then KCIT's own technology project-review and onboarding paths.",
+    "vehicles": [
+      { "name": "King County Procurement & Payables (P&P)", "detail": "The county's central procurement division runs competitive solicitations and uses all available tools, including cooperative purchasing; KCIT projects clear an internal technology project-review/prioritization process." },
+      { "name": "WA DES master contracts", "detail": "Washington's Department of Enterprise Services administers statewide master contracts for IT hardware, software, and services that King County and other eligible entities can buy from." },
+      { "name": "NASPO ValuePoint (via DES)", "detail": "National cooperative master agreements made available to Washington agencies and political subdivisions — a co-op route for cloud, software, and hardware." },
+      { "name": "King County cooperative purchasing agreements", "detail": "King County both rides others' contracts and sponsors agreements that authorize other jurisdictions to use county contracts — useful context for scope and piggybacking." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Girmay Zahilay", "title": "King County Executive", "note": "Sworn in November 2025 (youngest in county history), succeeding acting executive Shannon Braddock. Sets the top political and budget direction — the senior relationship for the countywide motion." },
+    { "name": "Stephen Heard", "title": "Chief Information Officer & KCIT Director", "note": "Per KCIT, oversees a ~$377M biennium budget and ~450 technology professionals serving 15,000+ employees; longtime KCIT leader (joined 2007, formerly CTO). The top enterprise IT relationship — confirm current title, as KCIT leadership has shifted recently." },
+    { "name": "KCIT — IT Governance & project review", "title": "Investment prioritization & technology project review", "note": "Owns the prioritization model and project-review gate that AI, Copilot, and modernization requests pass through — a key buying-center checkpoint." },
+    { "name": "KCIT — Information Security / CISO function", "title": "County cybersecurity & resilience", "note": "Owns the county's security strategy and the flagged information-security investments — the security buying center. Confirm the current CISO by name before engaging." },
+    { "name": "King County Procurement & Payables (P&P)", "title": "Central procurement & contracting", "note": "Runs solicitations and cooperative purchasing — the path onto county contract vehicles." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "KCIT advances AI Innovation Fund and Copilot review for 2026", "impact": "Agencies submit AI proposals in early 2026 through KCIT's project-review process; Microsoft Copilot licensing routed the same way — a forming, gated demand signal for AI tooling and the compute behind it.", "tags": ["AI", "Policy"] },
+    { "date": "2025-11", "title": "Girmay Zahilay sworn in as King County Executive", "impact": "New top leadership (youngest in county history) succeeding acting executive Braddock — rebuild the executive-level relationship map and watch for shifts in budget and tech priorities.", "tags": ["Leadership"] },
+    { "date": "2025-11", "title": "King County Council adopts 2026-2027 biennial budget (~$20B)", "impact": "Adopted plan (reported near $20.16B) preserves services and adds a new sales-tax revenue stream; sets the two-year spending envelope KCIT and county tech buys draw from.", "tags": ["Budget"] },
+    { "date": "2025-01", "title": "KCIT reports progress on Strategic IT Plan 2024-2027 (56 initiatives)", "impact": "27 initiatives underway and an investment-prioritization model targeted for early-2026 operation — a roadmap of modernization, technical-debt, and cloud opportunities to map to.", "tags": ["Modernization", "Cloud"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's coverage on the WA DES master contracts and NASPO ValuePoint agreements King County buys from, plus any county-sponsored cooperative agreements — that's the access path, and it scopes more than KCIT alone.",
+    "Treat KCIT as a real enterprise buyer (~$377M biennium, ~450 staff): position infrastructure, client, and AI-ready compute against the Strategic IT Plan's technical-debt reduction and hybrid-cloud modernization tracks.",
+    "Tie AI-infrastructure and data platforms to the AI Innovation Fund and Copilot rollout, and align to the county's forming GenAI policy and project-review gate so offerings are buyable on the right terms.",
+    "Engage the KCIT information-security / CISO function on detection, identity, and resilience — security investment is explicitly flagged given regional ransomware activity (Port of Seattle, Seattle Public Library).",
+    "Re-map executive and IT relationships after the November 2025 leadership transition (Executive Zahilay; confirm current CIO/CISO by name), and track the adopted 2026-27 budget and project-prioritization model for net-new funded opportunity."
+  ],
+
+  "sources": [
+    { "label": "King County — About KCIT / CIO", "url": "https://kingcounty.gov/en/dept/kcit/about-king-county/about-kcit/cio" },
+    { "label": "King County — Information Technology (KCIT)", "url": "https://kingcounty.gov/en/dept/kcit" },
+    { "label": "King County — Strategic IT Plan 2024-2027", "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/kcit/documents/sitp-2024-2027.pdf" },
+    { "label": "King County — Strategic IT Plan 2025 Update", "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/kcit/documents/report---king-county-strategic-information-technology-plan-2025-update.pdf" },
+    { "label": "King County — GenAI guidelines for employees", "url": "https://kcemployees.com/2024/09/27/generative-artificial-intelligence-genai-guidelines-for-king-county-employees/" },
+    { "label": "King County — 2026-2027 Proposed Budget", "url": "https://kingcounty.gov/en/dept/executive/governance-leadership/performance-strategy-budget/budget/2026-2027-budget" },
+    { "label": "King County — Procurement & Payables", "url": "https://kingcounty.gov/en/dept/executive-services/about-king-county/business-operations/finance-business-operations/procurement-payables" },
+    { "label": "King County — Cooperative purchasing agreement", "url": "https://kingcounty.gov/en/dept/executive-services/about-king-county/business-operations/finance-business-operations/procurement-payables/cooperative-purchasing-agreement" },
+    { "label": "King County — Girmay Zahilay sworn in as Executive", "url": "https://content.govdelivery.com/accounts/WAKING/bulletins/3fd133b" },
+    { "label": "WA DES — NASPO ValuePoint / master contracts", "url": "https://des.wa.gov/purchase/washington-state-procurement-manual" }
+  ]
+}

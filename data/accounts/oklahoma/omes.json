@@ -1,0 +1,84 @@
+{
+  "state": "oklahoma",
+  "stateName": "Oklahoma",
+  "type": "State Agency",
+  "name": "Oklahoma Office of Management & Enterprise Services (OMES)",
+  "slug": "omes",
+  "hq": "Oklahoma City, OK",
+  "updated": "2026-06-22",
+  "tagline": "Oklahoma's central back office: OMES runs the state's consolidated IT, owns Central Purchasing and the statewide contracts most public buyers use, and manages the state budget and finances — the single front door for selling technology to Oklahoma state government.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central IT, procurement & budget" },
+    { "label": "IT model", "value": "Consolidated statewide" },
+    { "label": "Primary vehicle", "value": "OMES statewide contracts" },
+    { "label": "Agencies served", "value": "125+ / 180+ entities" }
+  ],
+
+  "overview": "The Office of Management and Enterprise Services (OMES) is Oklahoma's central administrative agency, combining three functions that matter to a technology seller in one place: consolidated statewide IT (via OMES Information Services), Central Purchasing (the state's procurement authority and statewide-contract vehicle), and budget/finance for the executive branch. Under the Information Technology Consolidation and Coordination Act (62 O.S. §§35.1–35.9), OMES delivers mandatory shared IT services — email, networking, applications, cybersecurity — across executive-branch agencies and charges costs back on a cost-recovery rate model rather than running purely on a large general-revenue line. OMES Information Services supports 125+ agencies, boards and commissions (and the state CISO's security mission spans 180+ entities), which makes OMES both a large IT operator and the procurement path most Oklahoma public buyers travel. For a Dell SLG seller, OMES is best understood as the consolidated buying center and contract gateway for state-government technology in Oklahoma.",
+
+  "budget": {
+    "intro": "OMES is funded by a mix of direct appropriations and cost-recovery chargebacks: the IT Consolidation Act requires OMES to provide mandatory shared services and bill agencies back to recoup costs, so much of its IT spend flows through a service rate model rather than a single appropriation. Specific appropriation figures are set each session by the Legislature; treat the numbers below as directional and confirm against the current enacted budget.",
+    "stats": [
+      { "value": "125+", "label": "Agencies served by IT", "note": "Agencies, boards and commissions on OMES Information Services" },
+      { "value": "180+", "label": "Entities under state CISO", "note": "Scope of statewide cybersecurity / Cyber Command coverage" },
+      { "value": "Cost-recovery", "label": "IT funding model", "note": "Mandatory shared services billed back via a service rate model (62 O.S. §§35.1–35.9)" }
+    ],
+    "notes": [
+      "OMES IT runs largely on chargebacks/cost recovery, not a single large GR line — the rate model, not one appropriation, drives most technology spend.",
+      "FY2027 appropriations include targeted items such as funding to comply with HB 3415 (a Central Purchasing database of state agency contracts with private vendors); confirm current enacted figures against the OMES FY27 Executive Budget and the Senate FY27 OMES Budget Performance Review.",
+      "SB68 lets some agencies hire IT staff directly, a softening of strict consolidation — watch how it shifts who owns a given IT buy."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "IT Strategic Plan (FY2026–2028)", "summary": "CIO Dan Cronin's plan (announced Aug 29, 2025) is anchored on four goals: customer centricity, reducing complexity, workforce development, and strategic modernization — prioritizing secure, cloud-native infrastructure and shared platforms that cut duplication. The roadmap for where statewide IT investment is heading.", "tags": ["Modernization", "Cloud"] },
+    { "name": "Statewide AI strategy under first Chief AI Officer", "summary": "Oklahoma named Tai Phan its first Chief AI & Technology Officer (announced Nov 21, 2025), fulfilling a Governor's Task Force on Emerging Technologies recommendation. He sets AI strategy, guardrails and ethics, and helps agencies find where AI streamlines operations — a buying center for responsible-AI and the infrastructure under it.", "tags": ["AI", "Governance"] },
+    { "name": "Cloud-native modernization & legacy replacement", "summary": "The strategic plan champions cloud-native infrastructure, shared identity management, and replacing legacy systems with real-time monitoring. Oklahoma is a public Google Cloud reference customer — frame infrastructure plays for a hybrid/cloud-forward environment.", "tags": ["Cloud", "Data Center"] },
+    { "name": "Cybersecurity via Oklahoma Cyber Command", "summary": "OMES Information Services runs Oklahoma Cyber Command, a 24/7/365 Security Operations Center protecting state users, devices, networks and data. New CISO Daniel Langley (started Oct 2025) oversees Cyber Command and security policy across 180+ entities — a focus on agency collaboration and closing vulnerabilities.", "tags": ["Cybersecurity"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Oklahoma state government runs through OMES Central Purchasing, the procurement authority under the Oklahoma Central Purchasing Act. The fastest path is a statewide contract — pre-competed and open to agencies and local entities — so confirm Dell's statewide-contract coverage and category codes before pursuing one-off solicitations.",
+    "vehicles": [
+      { "name": "OMES Statewide Contracts", "detail": "Pre-competed contracts open to state agencies, municipalities, higher education, school districts and other local governmental units — the primary buying vehicle. Searchable via OMES Central Purchasing's modernized statewide contract search." },
+      { "name": "Central Purchasing solicitations", "detail": "OMES Central Purchasing runs and oversees agency procurement under the Central Purchasing Act; larger or non-contract buys flow through its solicitations and oversight process." },
+      { "name": "OMES Information Services shared services", "detail": "Consolidated IT delivered by OMES and billed back via the service rate model — a route for infrastructure, networking, security and managed services across consolidated agencies." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Mark Wood", "title": "OMES Director", "note": "Appointed by Gov. Stitt effective Dec 17, 2025 (former Oklahoma Tax Commission chairman; 37+ yrs public accounting). Leads OMES across IT, procurement and budget — the top relationship for the account." },
+    { "name": "Dan Cronin", "title": "State Chief Information Officer", "note": "Appointed Jan 2025 (ex-Marriott global VP of engineering); author of the FY26–28 IT Strategic Plan and named to Constellation Research's 2026 Business Transformation 150. Owns statewide tech direction." },
+    { "name": "Tai Phan", "title": "Chief AI & Technology Officer", "note": "Oklahoma's first; announced Nov 21, 2025, selected by CIO Cronin. Sets AI strategy, guardrails and modernization delivery across 125+ agencies — the buying center for AI." },
+    { "name": "Daniel Langley", "title": "Chief Information Security Officer", "note": "Started Oct 2025 (ex-WaTech / Washington state). Leads statewide cyber strategy and Oklahoma Cyber Command's SOC across 180+ entities; reports under CIO Cronin." },
+    { "name": "OMES Central Purchasing", "title": "State procurement authority", "note": "Owns statewide contracts, solicitations and procurement oversight under the Central Purchasing Act — the path onto a sellable vehicle." }
+  ],
+
+  "news": [
+    { "date": "2025-12", "title": "Gov. Stitt names Mark Wood OMES Director (effective Dec 17, 2025)", "impact": "New agency head over IT, procurement and budget — re-confirm the top relationship and any early priorities.", "tags": ["Leadership"] },
+    { "date": "2025-11", "title": "Tai Phan named Oklahoma's first Chief AI & Technology Officer", "impact": "Establishes a dedicated AI buying center and statewide AI guardrails — engage early on responsible-AI infrastructure.", "tags": ["AI", "Leadership"] },
+    { "date": "2025-10", "title": "Daniel Langley appointed State CISO over Oklahoma Cyber Command", "impact": "New security decision-maker across 180+ entities; rebuild the cybersecurity relationship map.", "tags": ["Cybersecurity", "Leadership"] },
+    { "date": "2025-08", "title": "Oklahoma releases FY2026–2028 IT Strategic Plan", "impact": "Sets cloud-native modernization, complexity reduction and shared-platform priorities — align ISG and modernization plays to the four goals.", "tags": ["Modernization", "Strategy"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's OMES statewide-contract coverage and category codes — it's the access path to Oklahoma state agencies and many local buyers, not just OMES.",
+    "Map the new leadership bench early (Director Wood, CIO Cronin, AI Officer Phan, CISO Langley) — four key seats turned over between Oct and Dec 2025.",
+    "Lead modernization and AI-infrastructure plays tied to the FY26–28 IT Strategic Plan's cloud-native and shared-platform goals.",
+    "Engage Tai Phan's AI office on responsible-AI compute and data infrastructure as the statewide AI strategy and guardrails take shape.",
+    "Position security/infrastructure for Oklahoma Cyber Command's 24/7 SOC and CISO Langley's vulnerability-closing and agency-collaboration agenda."
+  ],
+
+  "sources": [
+    { "label": "OMES — Office of Management and Enterprise Services (overview)", "url": "https://oklahoma.gov/omes.html" },
+    { "label": "OMES — Central Purchasing (Statewide Contracts)", "url": "https://oklahoma.gov/omes/divisions/central-purchasing/agency-resources/statewide-contracts.html" },
+    { "label": "OMES — Oklahoma Cyber Command (About)", "url": "https://oklahoma.gov/omes/divisions/information-services/cyber-command/about.html" },
+    { "label": "OMES — Oklahoma announces IT strategy (FY26–28 plan)", "url": "https://oklahoma.gov/omes/media/blog/2025/oklahoma-announces-it-strategy-for-more-efficient-customer-focus.html" },
+    { "label": "OMES — Tai Phan named State Chief AI & Technology Officer", "url": "https://oklahoma.gov/omes/newsroom/2025/tai-phan-announced-as-state-chief-ai-and-technology-officer.html" },
+    { "label": "Gov. Stitt — Mark Wood transition to OMES (Dec 2025)", "url": "https://oklahoma.gov/governor/newsroom/newsroom/2025/governor-stitt-announces-transition-of-mark-wood-to-omes-appointment-of-dan-lafortune-to-otc.html" },
+    { "label": "GovTech — Oklahoma names Dan Cronin as State CIO", "url": "https://www.govtech.com/workforce/oklahoma-names-dan-cronin-as-the-states-newest-cio" },
+    { "label": "StateScoop — Oklahoma names Daniel Langley new cyber chief", "url": "https://statescoop.com/oklahoma-ciso-daniel-langley/" },
+    { "label": "Oklahoma Senate — FY2027 OMES Budget Performance Review", "url": "https://oksenate.gov/sites/default/files/2026-01/FY'27%20-%20OMES%20-%20BPR%20V2.pdf" }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "state": "colorado",
+  "stateName": "Colorado",
+  "type": "State Agency",
+  "name": "Colorado Governor's Office of Information Technology (OIT)",
+  "slug": "oit",
+  "hq": "Denver, CO",
+  "updated": "2026-06-22",
+  "tagline": "Colorado's central IT agency: OIT consolidates technology procurement, infrastructure, security, applications, and broadband for the executive branch, serving the agencies that deliver SNAP, unemployment, and driver-license services. A new CIO and a major 2026 restructuring are resetting the operating model.",
+
+  "snapshot": [
+    { "label": "Role", "value": "State central IT agency (executive branch)" },
+    { "label": "Annual budget", "value": "~$373M (cited 2026)" },
+    { "label": "Buying path", "value": "OIT IT procurement + statewide price agreements" },
+    { "label": "2026 shift", "value": "New CIO + restructuring (~173 roles cut)" }
+  ],
+
+  "overview": "The Colorado Governor's Office of Information Technology (OIT) is the state's central IT organization, established to consolidate and operate technology across executive-branch agencies. By statute, most IT procurement and services for state agencies route through OIT, which delivers enterprise infrastructure, applications, networking, identity, cybersecurity, and customer-facing digital services — the technology behind programs like SNAP benefits, unemployment insurance, and driver-license renewals. OIT also houses the Colorado Broadband Office (CBO), giving it ownership of the state's federally funded broadband buildout, and it leads statewide AI governance through Colorado's GenAI strategy and policy. For a seller, OIT is best understood as the consolidated front door to executive-branch technology rather than a federated set of agency CIOs: the central agency owns the standards, the procurement path, and much of the delivery. OIT is in the middle of a significant 2026 reset — a new CIO took over June 1, 2026, alongside a restructuring that eliminated roughly 173 positions and is shifting OIT toward a 'human-centered,' product-delivery operating model that pairs technology teams with agencies. Re-mapping buying centers and confirming program ownership is essential before forecasting.",
+
+  "budget": {
+    "intro": "OIT's own footprint is cited at roughly $373 million annually (per its May 2026 restructuring announcement), and it also stewards large federal grant dollars — most visibly the broadband program. The agency budgets through the state's FY2026-27 process and the Joint Technology Committee (JTC) / Joint Budget Committee (JBC), which set IT capital and operating appropriations. Treat the headline figure as OIT's operating scale; the largest program dollars (e.g., broadband) flow as federal grants rather than general fund.",
+    "stats": [
+      { "value": "~$373M", "label": "OIT annual budget (cited 2026)", "note": "Figure cited in OIT's May 2026 strategic-realignment announcement; confirm against the enacted FY2026-27 appropriation." },
+      { "value": "~$826M", "label": "Colorado BEAD allocation", "note": "Federal broadband (Equity, Access & Deployment) funds OIT's Colorado Broadband Office stewards; ~$420M+ unlocked via the approved Final Proposal." },
+      { "value": "~173", "label": "Positions eliminated (2026)", "note": "Part of the May 2026 restructuring toward a new operating model; signals cost pressure and a delivery-efficiency posture." }
+    ],
+    "notes": [
+      "OIT funds much of its delivery through cost recovery / chargeback to the agencies it serves, plus appropriated dollars — the headline budget understates total technology spend flowing through the agencies.",
+      "IT capital and operating appropriations are vetted through the Joint Technology Committee and Joint Budget Committee — factor that legislative cycle into timing for large efforts.",
+      "The 2026 restructuring and layoffs point to a cost-takeout and efficiency posture — lead with modernization that reduces technical debt and manual processes rather than net-new capital."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "2026 restructuring & 'human-centered' operating model", "summary": "OIT announced a May 2026 strategic realignment — eliminating ~173 roles and shifting to a product-delivery model that embeds technology teams with agencies (an Amazon/Google/Microsoft-style approach) to cut technical debt, manual processes, and complex governance. Re-map the buying centers and confirm who owns a given program before forecasting.", "tags": ["Modernization", "Transition"] },
+    { "name": "GenAI strategy & statewide AI policy", "summary": "OIT leads statewide AI governance, with a 2026 'Version 2.0' GenAI strategy scaling use cases that automate routine work and piloting GenAI for resident-facing interactions, plus a Statewide GenAI Policy for security and compliance. Colorado's separate AI consumer-protection law (originally SB 24-205) was repealed/replaced by SB 26-189 with an effective date moved to Jan 1, 2027 — a shifting regulatory backdrop. A driver for AI-ready infrastructure and governance tooling.", "tags": ["AI", "Governance"] },
+    { "name": "Broadband buildout (Colorado Broadband Office / BEAD)", "summary": "OIT's Colorado Broadband Office stewards ~$826M in federal BEAD funds (Final Proposal approved; $420M+ unlocked) plus middle-mile and state-funded Advance-Local programs to connect unserved homes and businesses. A multi-year infrastructure program with networking, connectivity, and edge implications.", "tags": ["Broadband", "Infrastructure"] },
+    { "name": "Cybersecurity & enterprise modernization", "summary": "OIT's Office of Information Security sets statewide security standards and runs security operations for executive-branch agencies, alongside ongoing infrastructure, cloud, and application modernization to retire technical debt. A standing opportunity for security, infrastructure refresh, and managed services — confirm current security leadership before engaging.", "tags": ["Cybersecurity", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Colorado executive-branch agencies runs largely through OIT, which consolidates IT procurement by statute, plus the state's central purchasing vehicles. Confirm whether a requirement is bought centrally through OIT or via a statewide price agreement, and check Dell's coverage on the relevant agreements before pursuing a deal.",
+    "vehicles": [
+      { "name": "OIT IT procurement (central)", "detail": "IT procurements for state agencies are consolidated under OIT — the primary path for executive-branch technology buys, vendor services, and standards-aligned solutions." },
+      { "name": "Statewide Price Agreements (SPCO)", "detail": "The State Purchasing & Contracts Office (Office of the State Controller) negotiates and maintains Price Agreements (terms up to 5 years) usable by state agencies, higher ed, local governments, and certified nonprofits — a pre-competed path to buy directly from vendors." },
+      { "name": "Solicitations via BIDS Colorado", "detail": "Competitive solicitations and active price agreements are posted/managed through the state's BIDS Colorado / contract-management systems — the venue to track open IT opportunities." },
+      { "name": "Cooperative & local-government routes", "detail": "Local governments can leverage state price agreements and cooperative purchasing (and national co-ops via authorized resellers), broadening reach beyond OIT-served state agencies." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Sarah Tuneberg", "title": "State CIO & Executive Director, OIT", "note": "Took over June 1, 2026, succeeding David Edinger; previously OIT's deputy executive director for digital and delivery. Owns the new operating model — the top relationship for the OIT motion." },
+    { "name": "David Edinger", "title": "Former State CIO & Executive Director (to mid-2026)", "note": "Led OIT from Nov 2023 and oversaw the 2026 restructuring before departing in June 2026 — context for the leadership transition." },
+    { "name": "Office of Information Security (OIT CISO)", "title": "Statewide security policy & operations", "note": "Owns executive-branch security standards and SecOps. Leadership has turned over since 2022 (Ray Yepes departed 2023) — confirm the current CISO / interim security lead before engaging." },
+    { "name": "Colorado Broadband Office (CBO)", "title": "Broadband program & BEAD stewardship", "note": "OIT-housed office running the ~$826M BEAD buildout and state broadband programs — the buying-influence center for connectivity and middle-mile infrastructure." },
+    { "name": "State Purchasing & Contracts Office (SPCO)", "title": "Statewide price agreements & purchasing", "note": "Within the Office of the State Controller; owns the statewide Price Agreements many buyers use — the route onto pre-competed contracts." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Sarah Tuneberg becomes State CIO & OIT Executive Director (effective June 1, 2026)", "impact": "New owner of statewide IT direction and the restructuring — rebuild the top relationship and confirm the new operating model's buying centers.", "tags": ["Leadership"] },
+    { "date": "2026-05", "title": "OIT announces strategic realignment; ~173 positions eliminated", "impact": "Cost-takeout and a 'human-centered' product-delivery shift — lead with modernization that cuts technical debt and manual processes over net-new capital.", "tags": ["Transition"] },
+    { "date": "2026-05", "title": "Colorado repeals/replaces its AI Act via SB 26-189; effective date moved to Jan 1, 2027", "impact": "Narrower AI rules and a delayed timeline reshape the governance backdrop for OIT's GenAI program — track requirements as they settle.", "tags": ["AI"] },
+    { "date": "2026", "title": "OIT publishes 'Version 2.0' GenAI strategy and a Statewide GenAI Policy", "impact": "Active push to scale automation and resident-facing GenAI pilots under a compliance framework — demand signal for AI-ready infrastructure and governance.", "tags": ["AI"] },
+    { "date": "2025-12", "title": "Colorado's BEAD Final Proposal approved; $420M+ in federal broadband funding unlocked", "impact": "Multi-year buildout moves to execution under OIT's Broadband Office — networking and connectivity infrastructure opportunity.", "tags": ["Broadband"] }
+  ],
+
+  "dellActions": [
+    "Lead with the OIT central-procurement path: most executive-branch IT is consolidated under OIT by statute, so confirm Dell's coverage on OIT vehicles and statewide Price Agreements (SPCO) before pursuing agency deals.",
+    "Frame for cost-takeout in a restructuring year: position infrastructure refresh, consolidation, and managed services as ways to retire technical debt and manual processes, matching OIT's 2026 efficiency posture.",
+    "Anchor AI-ready infrastructure to OIT's GenAI strategy and Statewide GenAI Policy, noting the delayed (Jan 1, 2027) AI-law backdrop — pair compute, data, and governance tooling to a funded, mandated program.",
+    "Engage the Colorado Broadband Office on the ~$826M BEAD and middle-mile buildout for networking, connectivity, and edge infrastructure tied to a multi-year execution timeline.",
+    "Rebuild the relationship map after the leadership change: open with new State CIO Sarah Tuneberg's office, and confirm the current security (CISO) lead given turnover before pursuing cybersecurity opportunities."
+  ],
+
+  "sources": [
+    { "label": "Colorado OIT — About Us", "url": "https://oit.colorado.gov/about-us" },
+    { "label": "Colorado OIT — Leadership", "url": "https://oit.colorado.gov/about-us/leadership" },
+    { "label": "Colorado OIT — Programs & Initiatives", "url": "https://oit.colorado.gov/about-us/programs-initiatives" },
+    { "label": "StateScoop — Colorado IT office lays off 170 staff, names new CIO", "url": "https://statescoop.com/colorado-it-office-lays-off-170-staff-names-new-cio/" },
+    { "label": "Colorado OIT — Strategic Realignment announcement", "url": "https://oit.colorado.gov/press-release/oit-announces-strategic-realignment-to-better-serve-coloradans-and-make-state" },
+    { "label": "Colorado OIT — Guide to Artificial Intelligence", "url": "https://oit.colorado.gov/ai" },
+    { "label": "Colorado OIT — Office of Information Security", "url": "https://oit.colorado.gov/standards-policies-guides/guide-to-cybersecurity/office-of-information-security" },
+    { "label": "Colorado OIT — Proposed BEAD Funding Awards", "url": "https://oit.colorado.gov/press-release/state-publishes-proposed-broadband-equity-access-and-deployment-funding-awards" },
+    { "label": "Colorado OIT — Colorado approved for $420M federal broadband funding", "url": "https://oit.colorado.gov/press-release/colorado-approved-for-420-million-in-federal-broadband-funding-connecting-rural" },
+    { "label": "Colorado OSC — State Purchasing & Contracts Office (SPCO)", "url": "https://osc.colorado.gov/spco" },
+    { "label": "Colorado OSC — State Price Agreements", "url": "https://osc.colorado.gov/spco/state-price-agreements" },
+    { "label": "Colorado General Assembly — JBC Staff Figure Setting FY2026-27, Office of the Governor", "url": "https://content.leg.colorado.gov/sites/default/files/FY2026-27_govfig1.pdf" },
+    { "label": "Troutman — Colorado Legislature passes bill to repeal and replace Colorado AI Act (SB 26-189)", "url": "https://www.troutmanprivacy.com/2026/05/colorado-legislature-passes-bill-to-repeal-and-replace-colorado-ai-act/" }
+  ]
+}

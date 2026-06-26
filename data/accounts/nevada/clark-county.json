@@ -1,0 +1,86 @@
+{
+  "state": "nevada",
+  "stateName": "Nevada",
+  "type": "County",
+  "name": "Clark County, Nevada",
+  "slug": "clark-county",
+  "hq": "Las Vegas, NV",
+  "updated": "2026-06-22",
+  "tagline": "Nevada's largest local government — ~2.4M residents, the Las Vegas Strip, and Harry Reid International Airport — run day-to-day by a County Manager and a seven-member Commission. Enterprise IT direction sits with the Information Technology department and its CIO; buying flows through Purchasing & Contracts under Nevada's Local Government Purchasing Act and Commission approval.",
+
+  "snapshot": [
+    { "label": "Residents", "value": "~2.4M (most populous NV county)" },
+    { "label": "Total budget (all funds)", "value": "~$11.7B" },
+    { "label": "FY2026 operational budget", "value": "~$2.1B (adopted May 2025)" },
+    { "label": "Buying gate", "value": "Purchasing & Contracts (NRS 332) + Commission approval" }
+  ],
+
+  "overview": "Clark County is the most populous county in Nevada — roughly 2.4 million residents and about 43 million annual visitors — and the seat of the Las Vegas metro, the Las Vegas Strip, and Harry Reid International Airport. It is governed by a seven-member Board of County Commissioners elected from geographic districts, with day-to-day operations run by an appointed County Manager overseeing roughly three dozen departments and more than 10,000 employees, including major enterprises such as University Medical Center and the airport. Enterprise technology direction lives with the County's Information Technology department, led by the Chief Information Officer, which runs IT strategy, digital services, infrastructure, data, and security for more than 700 county services. The County is best understood as a large, federated buyer: IT sets enterprise strategy and standards while individual departments carry their own programs, and the Purchasing & Contracts Division plus the Board of Commissioners gate the contracts. For a Dell SLG seller, Clark County is one of the largest single local-government opportunities in the Mountain West, but the entry point is the procurement machinery (NRS 332) and the department-level buying centers rather than a single central IT wallet.",
+
+  "budget": {
+    "intro": "Clark County's total spending plan across all funds runs roughly $11.7B, with an FY2026 (begins July 1, 2025) operational budget of about $2.1B adopted in May 2025. FY2026 is a cost-pressure cycle: a softening economy and declining sales-tax (C-Tax) receipts opened a roughly $56M general-fund gap, which the County closed with a one-time transfer from capital funds. IT spend is distributed across departments rather than concentrated in a single central line.",
+    "stats": [
+      { "value": "~$11.7B", "label": "Total budget (all funds)", "note": "Spans 38 departments including the airport and UMC" },
+      { "value": "~$2.1B", "label": "FY2026 operational budget", "note": "Adopted May 19, 2025; FY begins July 1, 2025" },
+      { "value": "~$56M", "label": "FY2026 general-fund gap", "note": "Closed via one-time transfer from capital funds amid C-Tax decline" }
+    ],
+    "notes": [
+      "Sales tax (C-Tax, ~43% of the budget) and property tax (~39%) are the dominant revenue sources, so the budget is exposed to tourism and real-estate cycles — favoring efficiency, automation, and consolidation pitches over net-new capital.",
+      "IT spending is federated across departments; there is no single county-wide 'IT budget' line to target — verify a department's own appropriation before forecasting.",
+      "Figures above are public budget totals; the County does not publicly break out a consolidated technology appropriation."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Applied AI ('augmented intelligence') across services", "summary": "The County is applying AI to its 700+ services rather than running it as a standalone program — multiple AI pilots are active, with an emphasis on privacy, security, and AI literacy among staff. The County participates in the GovAI Coalition for responsible implementation. A live opening for AI-infrastructure and data-platform conversations.", "tags": ["AI", "Data"] },
+    { "name": "2026-2028 IT Strategic Plan", "summary": "IT is launching a three-year strategic plan built around public-facing capabilities, internal/departmental enablement, and workforce development — the framing roadmap for modernization spend. Map offerings to these pillars when forecasting.", "tags": ["Modernization", "Strategy"] },
+    { "name": "Resident 360 / Business Owner 360 digital services", "summary": "Following a nine-month re-platform of clarkcountynv.gov, the County is building constituent-centered 'Resident 360' and 'Business Owner 360' experiences and addressing federal accessibility deadlines — a track for cloud, data, and as-a-service plays.", "tags": ["Digital Services", "Cloud"] },
+    { "name": "Cybersecurity posture & broadband", "summary": "The County reports defending against roughly a million intrusion attempts per week and treats security as a standing investment. A 'last-mile' broadband / digital-equity effort is being reassessed and locally re-funded after federal program changes (Digital Equity Act termination). Security and connectivity are durable buying centers.", "tags": ["Cybersecurity", "Broadband"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Clark County runs through its Purchasing & Contracts Division, which conducts solicitations (bids, RFPs, RFIs) and prepares contracts for the County's departments in compliance with the Nevada Local Government Purchasing Act (NRS 332). Vendors must register to access opportunities, and sizable awards require Board of Commissioners approval. Confirm which department owns the requirement, then map the Purchasing path and any usable cooperative vehicle.",
+    "vehicles": [
+      { "name": "Purchasing & Contracts Division", "detail": "The County's central purchasing function — runs competitive bids, RFPs, and RFIs and administers contracts under NRS 332; opportunities are posted via the County's procurement portal (DemandStar). Vendor registration is the entry step." },
+      { "name": "Board of Commissioners approval", "detail": "The seven-member Commission is the County's governing body and approves contracts above delegated thresholds — factor Commission agenda timing into any sizable deal and confirm the current dollar threshold in County ordinance." },
+      { "name": "Cooperative / piggyback contracts", "detail": "NRS 332 permits Nevada local governments to use joint/cooperative purchasing to leverage pre-negotiated pricing and terms — a faster path than a stand-alone solicitation where a usable co-op contract exists. Verify which vehicles the County will honor." },
+      { "name": "Department-delegated purchasing", "detail": "Departments hold delegated authority for smaller buys; Purchasing assists beyond that delegation. Identify whether a requirement clears at the department level or must route through Purchasing & the Commission." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Kevin Schiller", "title": "County Manager", "note": "Chief executive officer of the County since November 2022; runs day-to-day operations across ~38 departments and ~10,000 employees. The top executive relationship for any enterprise-scale program." },
+    { "name": "Bob Leek", "title": "Chief Information Officer (CIO)", "note": "Leads the County's IT department (~200 staff) with 30+ years in public- and private-sector IT (prior roles at Multnomah County, OR and Kaiser Permanente). Owns enterprise technology strategy, AI, and security direction — the top enterprise-IT relationship." },
+    { "name": "Information Technology — Security function", "title": "Cybersecurity & information security", "note": "Security strategy and operations sit within the IT department under the CIO. A separately named county CISO is not publicly confirmed — verify the current security buying-center owner before forecasting." },
+    { "name": "Purchasing & Contracts Division", "title": "Procurement (NRS 332)", "note": "Owns competitive solicitations, contract preparation, and vendor onboarding for County departments — the procurement gatekeeper for most county buys." },
+    { "name": "Michael Naft", "title": "Chair, Board of County Commissioners (2026)", "note": "Elected board chair for 2026 (District A); William McCurdy II is Vice Chair. The seven-member Commission is the governing body that approves sizable contracts. Chairship rotates — verify incumbency at time of engagement." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "Michael Naft elected 2026 Chair of the Clark County Commission", "impact": "Sets the governing-body leadership that approves sizable contracts for the year — refresh the Commission relationship map.", "tags": ["Leadership"] },
+    { "date": "2025-05", "title": "Commission adopts ~$2.1B FY2026 operational budget; closes ~$56M gap via capital transfer", "impact": "Confirms a cost-pressure posture tied to declining sales tax — lead with efficiency, automation, and consolidation over net-new capital.", "tags": ["Budget"] },
+    { "date": "2025", "title": "County advances applied-AI pilots and prepares 2026-2028 IT Strategic Plan", "impact": "AI and the next strategic-plan cycle are active, executive-sponsored priorities — an opening for AI-infrastructure and data-platform conversations.", "tags": ["AI"] },
+    { "date": "2025", "title": "clarkcountynv.gov re-platformed; 'Resident 360' / 'Business Owner 360' underway", "impact": "Digital-services modernization and accessibility compliance create cloud, data, and as-a-service entry points.", "tags": ["Digital Services"] }
+  ],
+
+  "dellActions": [
+    "Map the federated buying centers — CIO Bob Leek and the IT department for enterprise strategy, but large departments (airport, UMC, public safety, social services) run their own programs. Pursue department-level requirements, not a single central IT line.",
+    "Lead with efficiency and consolidation in a cost-pressure year: position infrastructure refresh, automation, and AI-ready data platforms as cost-takeout aligned to the ~$56M gap, not net-new capital.",
+    "Tie ISG / AI-infrastructure to the County's applied-AI pilots, GovAI Coalition participation, and the 2026-2028 IT Strategic Plan pillars.",
+    "Engage the IT security function on the County's standing cyber-defense posture and the reassessed broadband/digital-equity effort; confirm the current security buying-center owner since a county CISO is not publicly named.",
+    "Get the procurement path right early: confirm Purchasing & Contracts routing and vendor registration (NRS 332), usable cooperative/piggyback vehicles, and Board-of-Commissioners approval timing for any sizable contract."
+  ],
+
+  "sources": [
+    { "label": "Clark County — Information Technology", "url": "https://www.clarkcountynv.gov/government/departments/information_technology/index.php" },
+    { "label": "Clark County — Meet the CIO (Bob Leek)", "url": "https://www.clarkcountynv.gov/government/departments/information_technology/it_home/meet-the-cio" },
+    { "label": "GovTech — Clark County, Nev., CIO Bob Leek Talks Technology Strategy", "url": "https://www.govtech.com/workforce/clark-county-nev-cio-bob-leek-talks-technology-strategy" },
+    { "label": "Infosecurity Magazine — Clark County CIO on Securing AI Innovation & Broadband", "url": "https://www.infosecurity-magazine.com/interviews/clark-county-cio-cybersecurity/" },
+    { "label": "Clark County — County Manager Kevin Schiller biography", "url": "https://www.clarkcountynv.gov/government/county_managers_office/biographies/kevin-schiller-county-manager" },
+    { "label": "Las Vegas Review-Journal — Clark County plugs $56M budget deficit", "url": "https://www.reviewjournal.com/news/politics-and-government/clark-county/clark-county-facing-economic-slowdown-to-plug-56m-budget-deficit-3374918/" },
+    { "label": "Clark County — Budgets (Finance Department)", "url": "https://www.clarkcountynv.gov/government/departments/finance/financial_reporting/budget/budgets" },
+    { "label": "Clark County — Purchasing & Contracts / Business Opportunities", "url": "https://www.clarkcountynv.gov/business/business_opportunities/index.php" },
+    { "label": "Clark County Commission — Wikipedia (composition & chair)", "url": "https://en.wikipedia.org/wiki/Clark_County_Commission" },
+    { "label": "Fox5 Vegas — Clark County Commission votes for new chairman (Naft, 2026)", "url": "https://www.fox5vegas.com/2026/01/07/clark-county-commission-votes-new-chairman-board/" }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "State Agency",
+  "name": "Texas Dept of Public Safety (DPS)",
+  "slug": "dps",
+  "hq": "Austin, TX",
+  "updated": "2026-06-22",
+  "tagline": "Texas' statewide law-enforcement and homeland-security agency — Texas Rangers, Highway Patrol, driver license, border security, and the state fusion center — running a large field, mobile, data-center, and biometrics technology footprint.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Statewide law enforcement & homeland security" },
+    { "label": "Workforce", "value": "~11,000 personnel" },
+    { "label": "Biennial budget", "value": "$3.8B (FY26–27)" },
+    { "label": "Cloud gate", "value": "TX-RAMP" }
+  ],
+
+  "overview": "The Texas Department of Public Safety (DPS) is the state's primary law-enforcement and homeland-security agency. It runs the Texas Rangers, the Texas Highway Patrol, the statewide driver license and ID program, crime records and forensics, border-security operations, and the Texas Fusion Center — the 24/7 intelligence hub that serves as the state repository for homeland-security information. With roughly 11,000 commissioned and non-commissioned personnel, DPS combines a heavy mobile and field-operations profile (patrol vehicles, in-car and body-worn systems, mobile data) with substantial back-office data-center, records, and biometrics systems. Its technology estate spans the Multimodal Biometric Identification System (MBIS) for fingerprint, mugshot, and iris matching; the driver license issuance and online-services platforms (including the MyTexas app); CJIS-governed criminal-justice data; and real-time intelligence/analytics for the fusion center. For a Dell SLG seller, DPS is a high-value account that touches edge/mobile, secure data center, storage, biometrics, AI/analytics, and cybersecurity — most of it procurable through DIR Cooperative Contracts and gated by TX-RAMP and CJIS requirements.",
+
+  "budget": {
+    "intro": "DPS is a large direct spender. The FY2026–27 biennial budget (SB 1, 89th Legislature) funds DPS at roughly $3.8B, with an IT capital line of about $134M and record continued border-security funding driving much of the field, surveillance, and intelligence spend.",
+    "stats": [
+      { "value": "$3.8B", "label": "DPS biennial budget", "note": "FY2026–27 (SB 1, 89th Legislature)" },
+      { "value": "~$134M", "label": "IT capital items", "note": "Biennial allocation for technology capital" },
+      { "value": "$3.3B+", "label": "Border security (state)", "note": "FY26–27; Operation Lone Star, surveillance, wall — much flows through DPS" }
+    ],
+    "notes": [
+      "Border-security appropriations fund surveillance, intelligence, and field technology — a large recurring driver of DPS tech demand.",
+      "The 89th Legislature created a new Homeland Security Division within DPS, reshaping where border and intelligence programs sit.",
+      "Statewide cybersecurity functions are moving from DIR to the new Texas Cyber Command (transition through Dec 31, 2026); DPS retains its own operational cyber and CJIS-security responsibilities."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "MBIS biometrics modernization (cloud)", "summary": "DPS's Multimodal Biometric Identification System matches fingerprints, mugshots, and irises for arrest and applicant submissions. DPS has solicited cloud-based maintenance, support, disaster recovery, and enhancement services — a clear infrastructure, storage, and resiliency opening tied to a mission-critical system.", "tags": ["Biometrics", "Cloud", "Public Safety"] },
+    { "name": "Driver license modernization & digital services", "summary": "DPS rolled out a new, harder-to-counterfeit DL/ID card design (Aug 2025) and expanded online application, renewal, and replacement via the MyTexas app. Texas has not yet launched a mobile/digital driver license, an area of active national expansion and a likely future modernization track.", "tags": ["Driver License", "Digital Services"] },
+    { "name": "Texas Fusion Center & real-time intelligence", "summary": "The fusion center's Real-Time Watch Center operates 24/7 as the state's homeland-security information hub, consolidating threat and suspicious-activity data across federal, state, and local partners. Real-time data ingestion, analytics, and AI for threat detection map directly to high-performance compute, storage, and edge needs.", "tags": ["Intelligence", "AI/Analytics", "Homeland Security"] },
+    { "name": "Border-security field & surveillance technology", "summary": "Record border funding sustains surveillance infrastructure, mobile and edge compute, ruggedized field devices, and intelligence operations under Operation Lone Star and the new Homeland Security Division — a sustained driver of edge, mobile, and data-center demand.", "tags": ["Border Security", "Edge", "Mobile"] }
+  ],
+
+  "procurement": {
+    "intro": "DPS buys both through statewide vehicles and via its own agency solicitations. The most efficient path for IT and infrastructure is DIR Cooperative Contracts; larger or specialized systems (e.g., MBIS, driver license platforms) run as agency RFOs/RFPs. Any cloud or as-a-service offering must clear TX-RAMP, and criminal-justice data carries CJIS security obligations.",
+    "vehicles": [
+      { "name": "DIR Cooperative Contracts", "detail": "Primary statewide vehicle — pre-competed contracts DPS can buy hardware, software, cloud, and services through without a standalone RFP. Confirm Dell's coverage and scope." },
+      { "name": "Agency RFOs / RFPs", "detail": "Major or specialized systems (MBIS biometrics, driver license platforms, surveillance) run as DPS-issued Requests for Offers/Proposals — track DPS and Texas SmartBuy/ESBD postings." },
+      { "name": "TX-RAMP certification", "detail": "Mandatory cloud-security gate: cloud / as-a-service offerings must hold the right TX-RAMP level (NIST 800-53 Low/Moderate) to be sellable. Clear early." },
+      { "name": "CJIS compliance", "detail": "Criminal-justice information systems must meet FBI CJIS Security Policy requirements — a hard constraint on any solution touching DPS records or biometrics data." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Col. Freeman F. Martin", "title": "Director, Texas DPS", "note": "Sworn in Dec 1, 2024 — the first Texas Ranger to lead DPS; previously Senior Deputy Director over Homeland Security. Sets agency direction; the top relationship for the account." },
+    { "name": "Jessica Ballew", "title": "Chief Information Officer", "note": "CIO since Sept 2024, leading technology strategy with a stated focus on innovation, interoperability, and IT modernization. The primary IT decision-maker and key relationship." },
+    { "name": "Operations, Solutions & Delivery (OSD)", "title": "IT & data infrastructure service area", "note": "Manages enterprise IT and data infrastructure, statewide interoperability, the Innovation Office, Transformation (PMO), and the Enterprise Data Office — the buying center for infrastructure and modernization." },
+    { "name": "DPS Cyber Security", "title": "Agency cybersecurity & CJIS security", "note": "Owns DPS network defense, risk management, and CJIS-security obligations. Note statewide cyber policy is moving to the Texas Cyber Command — DPS retains operational responsibility for its own systems." },
+    { "name": "Public Safety Commission", "title": "Governing five-member board", "note": "Governor-appointed commission that oversees DPS and approves major leadership and policy decisions — the governance layer above the Director." }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "Texas remains on the sidelines as digital driver's licenses expand nationwide", "impact": "Signals a likely future mobile-DL / digital-identity modernization track at DPS — an opening to position secure issuance and identity infrastructure ahead of a program.", "tags": ["Driver License", "Digital Identity"] },
+    { "date": "2025-08", "title": "DPS rolls out new, harder-to-counterfeit DL/ID card design", "impact": "Active investment in driver license security and issuance — adjacent to platform, data, and fraud-prevention modernization needs.", "tags": ["Driver License"] },
+    { "date": "2025-06", "title": "SB 1 funds DPS at ~$3.8B for FY26–27 with record border-security and new Homeland Security Division", "impact": "Confirms budget capacity and a reorganized homeland-security buying center — recalibrate where border/intelligence tech decisions sit.", "tags": ["Budget", "Border Security"] },
+    { "date": "2024-12", "title": "Col. Freeman F. Martin assumes command as DPS Director", "impact": "New top-of-house leadership with a homeland-security and border background — reset the executive relationship map.", "tags": ["Leadership"] },
+    { "date": "2024-10", "title": "DPS solicits cloud-based maintenance and support for MBIS biometrics system", "impact": "Direct infrastructure, storage, and disaster-recovery opportunity around a mission-critical biometrics platform — a concrete entry point.", "tags": ["Biometrics", "Cloud"] }
+  ],
+
+  "dellActions": [
+    "Build the executive map under Director Col. Freeman F. Martin and CIO Jessica Ballew, and target the OSD service area as the IT and infrastructure buying center.",
+    "Pursue the MBIS biometrics modernization — position secure data-center, storage, high-availability, and disaster-recovery infrastructure for a mission-critical, CJIS-governed system.",
+    "Lead with edge and mobile (ruggedized field devices, mobile/in-vehicle compute) plus AI/analytics for the fusion center and border-surveillance operations funded by record border appropriations.",
+    "Confirm Dell's DIR Cooperative Contract coverage as the primary access path, and clear TX-RAMP and CJIS requirements early for any cloud or as-a-service play touching DPS data.",
+    "Watch for a future Texas digital/mobile driver license program and position identity-issuance and secure-data infrastructure ahead of the RFP."
+  ],
+
+  "sources": [
+    { "label": "Texas DPS — Freeman F. Martin Assumes Command of DPS", "url": "https://www.dps.texas.gov/news/freeman-f-martin-assumes-command-dps" },
+    { "label": "Texas DPS — Information Technology", "url": "https://www.dps.texas.gov/section/information-technology" },
+    { "label": "Texas DPS — Multimodal Biometric Identification System (MBIS)", "url": "https://www.dps.texas.gov/section/crime-records/multimodal-biometric-identification-system-mbis" },
+    { "label": "Biometric Update — Texas DPS solicits contractor to maintain biometric ID services", "url": "https://www.biometricupdate.com/202410/texas-dps-solicits-contractor-to-maintain-biometric-id-services" },
+    { "label": "Texas DPS — Texas Fusion Center", "url": "https://www.dps.texas.gov/section/homeland-security/texas-fusion-center" },
+    { "label": "Texas DPS — DPS Rolls Out New Driver License Design", "url": "https://www.dps.texas.gov/news/dps-rolls-out-new-driver-license-design" },
+    { "label": "Biometric Update — Texas on the sidelines as digital driver's licenses expand nationwide", "url": "https://www.biometricupdate.com/202602/texas-on-the-sidelines-as-digital-drivers-licenses-expand-nationwide" },
+    { "label": "Texas DPS — Legislative Appropriations Request FY2026–27 (Vol. I)", "url": "https://www.dps.texas.gov/LBB/lar2026-27_vol1.pdf" }
+  ]
+}

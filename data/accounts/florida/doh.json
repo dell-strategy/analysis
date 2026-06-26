@@ -1,0 +1,83 @@
+{
+  "state": "florida",
+  "stateName": "Florida",
+  "type": "State Agency",
+  "name": "Florida Dept of Health",
+  "slug": "doh",
+  "updated": "2026-06-22",
+  "tagline": "Florida's statewide public-health agency: DOH protects the health of 23M+ residents and visitors through 67 county health departments, running disease surveillance, vital records, clinical services, and emergency preparedness on a data-heavy estate centered on the state's certified Health Management System (HMS).",
+
+  "snapshot": [
+    { "label": "Role", "value": "Statewide public-health agency" },
+    { "label": "Footprint", "value": "67 county health depts" },
+    { "label": "Workforce", "value": "17,000+ employees" },
+    { "label": "Buying path", "value": "DMS state term contracts + agency RFPs" }
+  ],
+
+  "overview": "The Florida Department of Health (DOH) is the state's lead public-health agency, headquartered in Tallahassee and operating through a county health department in all 67 Florida counties. Its mission spans epidemiology and communicable-disease control, emergency preparedness and bioterrorism response, immunizations, vital records (birth/death certificates), environmental health, school health, and chronic-disease prevention for a population of 23M-plus residents plus a large visitor base. DOH is led by the State Surgeon General (who also serves as Secretary of Health) reporting to the Governor, and employs more than 17,000 people. For a technology seller, the relevant story is data- and records-intensive: DOH operates the Health Management System (HMS), an ONC-certified electronic health record (certified 2019, built on Microsoft Azure infrastructure) used across the county health departments, plus surveillance, vital-statistics, and prescription-drug-monitoring (E-FORCSE) systems. DOH does not run its own statewide IT procurement authority — technology buying flows through the Department of Management Services (DMS) state term contracts and the state's central IT-governance body, which is itself being restructured in 2026.",
+
+  "budget": {
+    "intro": "DOH is a sizable program agency but not a central IT buyer — its technology dollars ride on DMS vehicles and specific appropriations rather than a large standalone IT line. The Governor's FY2026-27 'Floridians First' budget proposal commits roughly $4.1B to health care, and notably earmarks funds to evaluate and replace the EHR/practice-management software used by the county health departments. The prior FY2025-26 budget cut about 601 DOH positions (~4.5% of the workforce), tightening the operating envelope.",
+    "stats": [
+      { "value": "~$4.1B", "label": "Health-care budget (FY26-27 proposed)", "note": "Governor's 'Floridians First' proposal, Dec 2025; covers DOH and related health investments" },
+      { "value": "$6.6M", "label": "County-EHR modernization (proposed)", "note": "FY26-27 proposal to evaluate/implement new EHR + practice-management software across the 67 county health departments" },
+      { "value": "~601", "label": "Positions cut (FY25-26)", "note": "451 vacant + 150 staffed positions eliminated; ~4.5% of DOH's rolls" }
+    ],
+    "notes": [
+      "A large share of DOH funding is federal and state grants tied to specific programs (immunization, emergency preparedness, HIV), which can shift with federal public-health funding decisions and create volatility independent of state general revenue.",
+      "Statewide IT governance and most technology procurement sit outside DOH at DMS — confirm which entity owns a given system or contract before forecasting.",
+      "Figures reflect the Governor's proposed FY26-27 budget; final appropriations depend on the Legislature, so track which line items (notably the county-EHR modernization) survive the budget conference."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "County health-department EHR / HMS modernization", "summary": "The FY26-27 budget proposal earmarks ~$6.6M to evaluate and implement new electronic health record and practice-management software across the 67 county health departments, an upgrade meant to integrate patient records and streamline operations statewide. DOH already runs the ONC-certified Health Management System (HMS) on Microsoft Azure; a refresh or replacement is the clearest near-term modernization vehicle and the natural anchor for infrastructure, migration, and data conversations.", "tags": ["EHR", "Modernization", "Data"] },
+    { "name": "Disease surveillance & vital-records systems", "summary": "DOH operates statewide surveillance, vital-statistics, and prescription-drug-monitoring (E-FORCSE) systems that ingest and exchange high volumes of clinical and registry data across 67 counties. Sustained demand for resilient, scalable infrastructure, faster data ingestion/analytics, and interoperability across legacy and modern platforms.", "tags": ["Surveillance", "Resilience"] },
+    { "name": "Data integration & analytics", "summary": "Linking patient demographics, clinical reconciliation, family-health history, and exportable health information across the county system points to ongoing data-platform and analytics needs. Any AI/advanced-analytics offering must clear data-privacy and federal health-records (HIPAA/ONC) gates given the sensitivity of the data.", "tags": ["Data Platform", "Analytics"] },
+    { "name": "Cybersecurity alignment to state standards", "summary": "DOH must align to the statewide Florida Cybersecurity Standards (Rule 60GG-2, F.A.C., NIST-based) administered by DMS, including access management, encryption, and incident reporting. Health-data sensitivity and the 2026 IT-governance restructuring keep security posture and asset visibility in active scope.", "tags": ["Cybersecurity", "Compliance"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling into DOH means navigating two layers: the agency's own competitive procurements and Florida's centralized IT-purchasing machinery. DOH buys mission-specific systems through its own RFP/ITN solicitations, but most technology goods and services flow through Department of Management Services (DMS) state term contracts and IT enterprise agreements, governed by the state's central IT body (the Florida Digital Service, now being transferred into the new DIGIT division). Confirm Dell's position on the relevant DMS state term contracts before forecasting.",
+    "vehicles": [
+      { "name": "DMS State Term Contracts", "detail": "Pre-competed statewide vehicles (hardware, software, IT enterprise agreements, and the Digital Security Solutions contract) that DOH and other agencies buy from — the fastest path for catalog-style infrastructure and licensing. Confirm Dell's coverage is active and correctly scoped." },
+      { "name": "DOH agency RFP / ITN solicitations", "detail": "For complex, mission-specific systems (EHR/HMS, surveillance, data platforms) DOH runs its own competitive Invitations to Negotiate and RFPs rather than buying off the shelf — the path for the county-EHR modernization and large systems work." },
+      { "name": "Florida Cybersecurity Standards (Rule 60GG-2)", "detail": "DMS-administered, NIST-aligned minimum security controls (access management, encryption, vulnerability management, incident reporting) that any product or cloud/as-a-service offering touching state health data must meet — clear this early." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Dr. Joseph Ladapo", "title": "State Surgeon General & Secretary of Health", "note": "Heads DOH and reports to the Governor; Senate-confirmed in 2022. Sets the agency's clinical and operational agenda — the top relationship for the account. Note he has been publicly floated for federal roles (e.g., CDC director), so confirm continuity before engaging." },
+    { "name": "Office of the Governor (Ron DeSantis)", "title": "Sets DOH budget & health priorities", "note": "The Surgeon General reports to the Governor; the 'Floridians First' budget and the 2026 IT-governance restructuring originate here. Budget and IT-policy direction flow top-down." },
+    { "name": "DOH Office of Information Technology / Agency CIO", "title": "Mission health-IT, HMS & data systems", "note": "Owns DOH's mission-specific IT, the Health Management System (HMS), surveillance, and vital-records platforms. The primary technical relationship for the EHR/HMS modernization — verify the current officeholder." },
+    { "name": "DOH Information Security / ISA", "title": "Agency information security", "note": "Runs DOH's security program and Information Security Administrator function, aligned to the statewide Florida Cybersecurity Standards (Rule 60GG-2) and HIPAA — the gate for any offering touching health data." },
+    { "name": "Florida State CIO (DIGIT / FLDS)", "title": "Statewide IT governance & procurement", "note": "Central IT authority for standards, enterprise contracts, and cybersecurity. The Florida Digital Service is being moved into the new Division of Integrated Government Innovation and Technology (DIGIT) under the Governor's office in 2026 — re-map this layer as the transition completes." }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "Florida Legislature weighs SB 480 to create DIGIT and abolish the Florida Digital Service", "impact": "Statewide IT governance, enterprise contracts, and cybersecurity would move to a new Division of Integrated Government Innovation and Technology (DIGIT) under the Governor's office, with an interim CIO through June 30, 2027 — rebuild the central-IT relationship map that sits above DOH's technology buys.", "tags": ["IT Governance", "Procurement"] },
+    { "date": "2025-12", "title": "Governor's 'Floridians First' FY26-27 budget proposes ~$4.1B for health care, including county-EHR modernization", "impact": "Proposal earmarks ~$6.6M to evaluate and replace county health-department EHR/practice-management software — the clearest near-term modernization opening at DOH; track whether it survives appropriations.", "tags": ["Budget", "EHR"] },
+    { "date": "2025-06", "title": "FY25-26 budget eliminates ~601 DOH positions", "impact": "451 vacant plus 150 staffed positions cut (~4.5% of the workforce), a ~$34M general-revenue impact — tighter staffing raises the pull toward automation, managed services, and efficiency-driven modernization.", "tags": ["Budget", "Operations"] },
+    { "date": "2025-02", "title": "FY25-26 health budget advances school-health and public-health investments", "impact": "Sustained funding for school-health services and core public-health programs keeps surveillance, records, and clinical IT systems in active use — steady infrastructure demand across the 67 counties.", "tags": ["Budget", "Operations"] }
+  ],
+
+  "dellActions": [
+    "Anchor on the county health-department EHR / HMS modernization: position ISG infrastructure, hybrid-cloud, storage, and migration services against the proposed ~$6.6M refresh and the existing Azure-based Health Management System across 67 counties.",
+    "Track the SB 480 / DIGIT restructuring and re-map the statewide IT-governance layer (Florida Digital Service moving into DIGIT, interim CIO through mid-2027) that sits above DOH's technology buys.",
+    "Confirm Dell's position on DMS state term contracts and IT enterprise agreements — the primary catalog path into DOH — and watch DOH's own ITN/RFP solicitations for the larger EHR and data-platform procurements.",
+    "Lead with resilient, scalable infrastructure for surveillance, vital records, and high-volume clinical data; frame around data integration and analytics needs across the county system.",
+    "Align security and AI offerings to the Florida Cybersecurity Standards (Rule 60GG-2, NIST-based) and HIPAA/ONC requirements given health-data sensitivity — clear these gates early for any cloud or as-a-service play."
+  ],
+
+  "sources": [
+    { "label": "Florida Department of Health — Health Management System (HMS)", "url": "https://www.floridahealth.gov/statistics-data/health-management-system/" },
+    { "label": "Florida Department of Health — State Surgeon General", "url": "https://www.floridahealth.gov/about-us/state-surgeon-general/" },
+    { "label": "Florida DOH — Governor commits $4.1B in 'Floridians First' budget (Dec 2025)", "url": "https://www.floridahealth.gov/2025/12/10/governor-desantis-announces-significant-investments-to-enhance-health-in-florida-by-committing-4-1b-in-the-floridians-first-budget/" },
+    { "label": "WUSF — DeSantis' 2026-27 budget proposal includes $4.1B for health care (Dec 2025)", "url": "https://www.wusf.org/health-news-florida/2025-12-11/desantis-2026-27-budget-proposal-includes-4-1-billion-for-health-care" },
+    { "label": "Miami Times — Budget conference slashes 600 state Health Department positions", "url": "https://www.miamitimesonline.com/lifestyles/health_wellness/budget-conference-chambers-sign-off-on-slashing-600-state-health-department-positions/article_5a548d1f-1f88-4718-a401-d7c7c3024896.html" },
+    { "label": "GovTech — Lawmakers Propose Another Restructuring of Florida IT (SB 480 / DIGIT)", "url": "https://www.govtech.com/policy/lawmakers-propose-another-restructuring-of-florida-it" },
+    { "label": "Florida Senate — SB 480 (2026) Bill Analysis", "url": "https://www.flsenate.gov/Session/Bill/2026/480/Analyses/2026s00480.ap.PDF" },
+    { "label": "Florida DMS — State Term Contracts / Digital Security Solutions", "url": "https://www.dms.myflorida.com/business_operations/state_purchasing/state_contracts_and_agreements/state_term_contract/digital_security_solutions" },
+    { "label": "Wikipedia — Florida Department of Health (role, 67 counties, 17,000+ staff)", "url": "https://en.wikipedia.org/wiki/Florida_Department_of_Health" }
+  ]
+}

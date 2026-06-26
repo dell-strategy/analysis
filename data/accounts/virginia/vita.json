@@ -1,0 +1,80 @@
+{
+  "state": "virginia",
+  "stateName": "Virginia",
+  "type": "State Agency",
+  "name": "Virginia — Secretary of Administration / VITA",
+  "slug": "vita",
+  "hq": "Richmond, VA",
+  "updated": "2026-06-22",
+  "tagline": "Virginia's central IT and technology-procurement authority: VITA runs the enterprise infrastructure, statewide IT contracts, and security program for the executive branch under the Secretary of Administration, and pioneered the state's multisourcing delivery model.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central IT authority" },
+    { "label": "Annual IT procurement", "value": "~$1.3B" },
+    { "label": "Delivery model", "value": "Multisourcing (MSI + suppliers)" },
+    { "label": "Reports to", "value": "Sec. of Administration" }
+  ],
+
+  "overview": "The Virginia Information Technologies Agency (VITA) is the commonwealth's central IT organization, sitting under the Secretary of Administration in the governor's cabinet. VITA sets statewide technology and security policy, owns the IT procurement vehicles executive-branch agencies buy through, and delivers shared infrastructure (data center and storage, network, end-user computing, messaging, mainframe, and public cloud). Per VITA's own figures, the agency supports roughly 65,000 users and 2,500 applications and oversees on the order of $1.3 billion in annual technology procurement. VITA is notable for its multisourcing model — one of the earliest in the United States — under which infrastructure services are split across multiple specialized suppliers and coordinated by a Multisourcing Service Integrator (MSI). For a vendor, VITA is best understood as both the standards-setter and the contracting path into Virginia's executive branch rather than a single large end-buyer; understanding which supplier owns a given tower, and where VITA's statewide contracts apply, is the key to the motion.",
+
+  "budget": {
+    "intro": "VITA's leverage is in the procurement volume that flows through its vehicles and the shared services it operates, more than a single large appropriation. VITA reports overseeing roughly $1.3 billion in annual technology procurement and supporting about 65,000 users and 2,500 applications across the executive branch; exact agency funding lines should be confirmed against the enacted state budget.",
+    "stats": [
+      { "value": "~$1.3B", "label": "Annual IT procurement", "note": "Technology procurement VITA oversees (VITA figure)" },
+      { "value": "~65,000", "label": "Users supported", "note": "Executive-branch users on VITA-managed services" },
+      { "value": "~2,500", "label": "Applications", "note": "Applications in VITA's managed environment" }
+    ],
+    "notes": [
+      "VITA recovers much of its delivery cost through chargebacks to customer agencies on its shared infrastructure and services, rather than a single large general-fund line.",
+      "Large agency-specific IT budgets (e.g., health and human services, transportation) sit with those agencies; VITA is the policy, security, and contracting layer above them.",
+      "Confirm specific appropriation and biennial-budget figures against the official enacted Virginia budget before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Multisourcing model evolution", "summary": "VITA splits infrastructure across specialized suppliers (data center, network, security, end-user, messaging, mainframe, public cloud) coordinated by an MSI. Re-procurements and tower refreshes are the recurring openings — know which supplier owns each tower before forecasting.", "tags": ["Infrastructure", "Multisourcing"] },
+    { "name": "Cloud and AI modernization", "summary": "CIO Mike Watson's mandate explicitly covers enterprise IT, cloud transformation, AI adoption, and digital modernization across the commonwealth's portfolio — a stated priority that opens infrastructure and platform conversations.", "tags": ["Cloud", "AI"] },
+    { "name": "Statewide security program", "summary": "VITA owns commonwealth security standards and the managed-security tower, and hosts the annual Commonwealth Information Security Conference. Security posture and managed-security delivery are an active, centrally governed track.", "tags": ["Cybersecurity"] },
+    { "name": "Data-center policy environment", "summary": "Virginia hosts the nation's largest commercial data-center market, and the Spanberger administration has signaled data centers should 'pay their fair share' while honoring signed contracts. State-side data-center and AI-infrastructure policy is politically active and worth tracking for downstream demand and constraints.", "tags": ["Data Center", "Policy"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to or through VITA runs on the multisourcing structure and statewide IT contracts, not one-off agency RFPs. Confirm first which supplier tower a need falls under, whether a VITA statewide contract already covers the product, and how SWaM (Small, Women-owned, and Minority-owned business) participation applies.",
+    "vehicles": [
+      { "name": "VITA statewide IT contracts", "detail": "Pre-competed contracts VITA publishes for executive-branch (and often broader public-sector) buyers — the primary path to put products on contract for Virginia agencies." },
+      { "name": "Multisourcing supplier towers (via MSI)", "detail": "Infrastructure is delivered through specialized suppliers (data center, network, security, end-user, cloud, etc.) coordinated by the Multisourcing Service Integrator — subcontracting or supplying into a tower is a key route." },
+      { "name": "eVA / SWaM participation", "detail": "Virginia's eVA eProcurement marketplace and SWaM small/women/minority-owned business goals shape sourcing — align reseller and partner strategy to SWaM requirements early." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Traci J. DeShazor", "title": "Secretary of Administration", "note": "Cabinet secretary in the Spanberger administration overseeing the secretariat VITA reports into; appointed late 2025, took office Jan 2026. The cabinet-level owner of the administrative/IT portfolio." },
+    { "name": "Michael (Mike) Watson", "title": "Chief Information Officer of the Commonwealth & VITA head", "note": "Appointed CIO by Gov. Spanberger in April 2026 after 18+ years at VITA, including a decade-plus as CISO. Mandate spans enterprise IT, cloud, AI, and digital modernization — the top relationship for the VITA motion." },
+    { "name": "Trey Stevens", "title": "Acting Chief Information Security Officer", "note": "Owns statewide security standards and the security program following Watson's move to CIO. Confirm whether the role is permanent before mapping the security buying center." },
+    { "name": "Brahma Alaparthi", "title": "Chief of Enterprise and Cloud Solutions", "note": "Leads enterprise and cloud solutions — a natural buying center for cloud transformation and platform modernization." },
+    { "name": "Naveen Abraham", "title": "Chief of Core Infrastructure Services", "note": "Owns core infrastructure delivery across the multisourcing towers — the buying center for data center, compute, storage, and infrastructure refresh." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "Gov. Spanberger names Mike Watson Commonwealth CIO and VITA head", "impact": "Stable, security-rooted leadership at the top of the statewide motion, with a stated mandate covering cloud, AI, and digital modernization. Build the top relationship around that agenda.", "tags": ["Leadership"] },
+    { "date": "2026-05", "title": "Spanberger reiterates data-center stance: 'pay their fair share,' honor signed contracts", "impact": "Signals a state posture that supports continued data-center activity while pressing on cost and accountability — track for downstream AI-infrastructure demand and policy constraints.", "tags": ["Data Center", "Policy"] },
+    { "date": "2026-01", "title": "Spanberger administration takes office; Traci DeShazor confirmed as Secretary of Administration", "impact": "New cabinet leadership over the secretariat VITA reports into — re-confirm priorities and decision rights for the administrative/IT portfolio.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Map Dell's coverage on VITA statewide IT contracts and confirm reseller scope — it's the on-contract path into Virginia's executive branch, not just VITA itself.",
+    "Identify which multisourcing supplier owns each relevant tower (data center, end-user, cloud) and pursue Dell ISG/CSG content through those suppliers and the MSI.",
+    "Lead with AI-infrastructure and cloud modernization tied to CIO Watson's stated mandate, while staying mindful of the state's active data-center cost/policy debate.",
+    "Align partner and reseller strategy to SWaM goals and eVA processes early to keep deals sourceable.",
+    "Track the CISO transition (Trey Stevens acting) and the security/managed-security tower to position for the centrally governed security program."
+  ],
+
+  "sources": [
+    { "label": "Virginia IT Agency — Meet Our Leadership Team", "url": "https://www.vita.virginia.gov/about/meet-our-leadership-team/" },
+    { "label": "Virginia IT Agency — Multisupplier Model Information", "url": "https://www.vita.virginia.gov/about/multisupplier-model-information/" },
+    { "label": "Virginia IT Agency — Procurement", "url": "https://www.vita.virginia.gov/procurement/" },
+    { "label": "StateScoop — Virginia promotes Mike Watson to state CIO", "url": "https://statescoop.com/mike-watson-named-virginia-cio/" },
+    { "label": "Governor of Virginia — Cabinet (Secretary of Administration)", "url": "https://www.governor.virginia.gov/cabinet/" },
+    { "label": "Cardinal News — Spanberger on data centers (May 2026)", "url": "https://cardinalnews.org/2026/05/28/spanberger-on-data-centers-im-not-going-to-break-a-contract-the-state-has-signed/" }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "state": "kansas",
+  "stateName": "Kansas",
+  "type": "State Agency",
+  "name": "Kansas Office of Information Technology Services",
+  "slug": "oits",
+  "hq": "Topeka, KS",
+  "updated": "2026-06-22",
+  "tagline": "Kansas's executive-branch IT shop: OITS runs shared data-center, network, and security services under the Executive CITO, and is the agency consolidating state IT under SB 291 — the central technology buying center for the Kelly administration.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Executive-branch central IT" },
+    { "label": "Governs", "value": "Executive CITO / KITO" },
+    { "label": "Big play", "value": "SB 291 IT consolidation" },
+    { "label": "Security arm", "value": "KISO (in-house CISO)" }
+  ],
+
+  "overview": "The Kansas Office of Information Technology Services (OITS) is the executive branch's central IT organization, headquartered in Topeka and led by the Executive Chief Information Technology Officer (CITO). OITS delivers shared infrastructure — mainframe, data center (production operations in Overland Park, KS), network, and end-user services — increasingly on an 'as a service' consolidated model, and houses the Kansas Information Security Office (KISO) and a 24x7 Security Operations Center. Governance runs through the Kansas Information Technology Office (KITO), which supports the statutory Executive, Judicial, and Legislative CITOs, the Chief Information Technology Architect (CITA), and the IT Executive Council (ITEC) that sets statewide IT policy and standards. The defining initiative is the SB 291-driven IT consolidation: a multi-year effort (with Gartner Consulting on the assessment) to bring agency IT infrastructure and security under OITS to cut risk and improve cyber posture. For a Dell SLG seller, OITS is the executive-branch enterprise buying center, while the actual purchasing vehicles sit with the Department of Administration's Office of Procurement and Contracts.",
+
+  "budget": {
+    "intro": "OITS is funded through a mix of State General Fund (SGF), agency cost recovery for shared services, and federal dollars. The headline funding event is SB 291: a $15.0M SGF appropriation to stand up consolidated IT and security, layered on top of normal service costs. Treat these figures as public budget-document estimates, not actuals.",
+    "stats": [
+      { "value": "$15.0M", "label": "SB 291 SGF appropriation", "note": "State General Fund tied to IT/security consolidation" },
+      { "value": "~171.75", "label": "OITS funded FTE (FY2027 request)", "note": "Per OITS FY2027 budget request" },
+      { "value": "59", "label": "KISO FTE (FY2026)", "note": "Up 19 in FY2026 as first step of SB 291 security consolidation" }
+    ],
+    "notes": [
+      "FY2026 budget cited ~+$3.1M for DCaaS (Data Center as a Service) and Microsoft O365 costs, partly offset by declining ARPA spend.",
+      "Much of OITS delivery is funded by cost recovery / chargeback to agencies for shared services rather than a single large GR line.",
+      "Largest agency IT spend (e.g., human services, transportation, revenue) sits with those agencies; OITS is the shared-services and consolidation hub."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "SB 291 IT & security consolidation", "summary": "The flagship effort: consolidate state-agency IT infrastructure and security under OITS to reduce risk and cost. Gartner Consulting led a current-state assessment running through October 2025, feeding a plan for 2026 integration projects. This is where infrastructure, security tooling, and managed-services demand concentrates — track which agencies migrate and when.", "tags": ["Consolidation", "Modernization"] },
+    { "name": "DCaaS & shared data-center modernization", "summary": "OITS is moving the mainframe and data-center footprint (production in Overland Park, KS) toward a Data-Center-as-a-Service / 'as a service' model, with O365 and managed services. A direct opening for ISG infrastructure, hybrid cloud, and lifecycle/managed offerings.", "tags": ["Data Center", "As-a-Service"] },
+    { "name": "Whole-of-state cybersecurity (KISO)", "summary": "KISO runs enterprise security for the state — a 24x7 SOC, baseline security tooling offered to agencies at no cost, and administration of the federal State and Local Cybersecurity Grant Program (SLCGP). Security is a buying center in its own right and a consolidation priority under SB 291.", "tags": ["Cybersecurity", "Whole-of-State"] },
+    { "name": "Statewide generative AI policy", "summary": "Under Gov. Kelly, OITS authored and the executive branch adopted a statewide generative AI acceptable-use policy (guardrails on restricted-use info, vendor disclosure of AI use). Signals AI governance is active — relevant for positioning AI-ready infrastructure and compliant solutions.", "tags": ["AI", "Governance"] }
+  ],
+
+  "procurement": {
+    "intro": "OITS sets executive-branch IT direction and is the consolidation buying center, but state purchasing runs through the Kansas Department of Administration's Office of Procurement and Contracts. Confirm Dell's active Kansas statewide contracts and the right cooperative paths before forecasting, and align infrastructure/managed-services plays to the SB 291 consolidation roadmap.",
+    "vehicles": [
+      { "name": "Kansas statewide contracts (Office of Procurement and Contracts)", "detail": "Central purchasing for Kansas; statewide contracts are usable by state agencies, local government, and public education. Dell is among the OEMs carried on Kansas IT hardware contracts via authorized resellers — confirm current contract numbers and scope." },
+      { "name": "Kansas eSupplier / Procurement portal", "detail": "Vendors must register on the State of Kansas supplier portal (supplier.sok.ks.gov) to bid; RFPs, bids, and awards post there. The route for new solicitations and contract onboarding." },
+      { "name": "Cooperative / national vehicles", "detail": "Kansas entities also buy via national cooperative purchasing programs (e.g., NASPO ValuePoint and similar). Useful where a statewide contract is absent or for faster access — verify eligibility per buy." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Jeff Maxon", "title": "Executive Chief Information Technology Officer (State CITO), OITS", "note": "Top executive-branch IT leader and SB 291 consolidation lead; former State CISO, so strong security orientation. The primary OITS relationship." },
+    { "name": "John Godfrey", "title": "Executive Chief Information Security Officer (CISO), KISO", "note": "Runs the Kansas Information Security Office, SOC, and SLCGP. Owns the security buying center and the security side of consolidation." },
+    { "name": "Chief Information Technology Architect (CITA)", "title": "Statewide IT architecture / standards", "note": "New CITA joined OITS in 2025; sets enterprise architecture standards through KITO — influences platform and infrastructure direction." },
+    { "name": "Kansas Information Technology Office (KITO)", "title": "IT governance & ITEC policy", "note": "Supports the statutory CITOs and the IT Executive Council (ITEC), which sets statewide IT policy and standards — the rules new solutions must meet." },
+    { "name": "Office of Procurement and Contracts (Dept. of Administration)", "title": "Central purchasing / statewide contracts", "note": "Owns the contract vehicles and supplier portal — the path onto Kansas statewide IT contracts." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "Governor's FY2027 budget continues OITS consolidation funding; ~171.75 OITS FTE requested", "impact": "Confirms the consolidation/shared-services build-out is funded into FY2027 — keep infrastructure and managed-services plays mapped to the roadmap.", "tags": ["Budget"] },
+    { "date": "2025-10", "title": "Gartner-led SB 291 IT current-state assessment wraps; 2026 integration planning begins", "impact": "Assessment phase ends and execution planning starts — the window where consolidated infrastructure, security, and migration spend gets scoped.", "tags": ["Consolidation"] },
+    { "date": "2025-08", "title": "OITS adds Chief IT Architect and other executive-team hires", "impact": "New architecture and operations leadership shapes enterprise standards — fresh relationships to build at the platform-decision level.", "tags": ["Leadership"] },
+    { "date": "2025-06", "title": "Kansas executive branch operating under statewide generative AI acceptable-use policy", "impact": "AI governance is active; position AI-ready infrastructure and compliant solutions to the policy's guardrails.", "tags": ["AI"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's active Kansas statewide contracts and authorized-reseller coverage through the Office of Procurement and Contracts — that's the access path to executive-branch buys.",
+    "Map the SB 291 consolidation roadmap with OITS leadership and tie ISG infrastructure, DCaaS, and managed services to the agencies migrating into the OITS shared model.",
+    "Engage KISO (CISO John Godfrey) on the security side of consolidation — SOC, endpoint, and whole-of-state tooling, including where SLCGP grant dollars apply.",
+    "Lead with the Overland Park data-center 'as a service' modernization — hybrid cloud, infrastructure refresh, and lifecycle/managed offerings.",
+    "Position AI-ready infrastructure aligned to Kansas's generative AI policy guardrails as the consolidated platform takes shape."
+  ],
+
+  "sources": [
+    { "label": "Kansas OITS (EBIT) — About OITS", "url": "https://www.ebit.ks.gov/about/oits" },
+    { "label": "Kansas OITS (EBIT) — Leadership", "url": "https://www.ebit.ks.gov/about/leadership" },
+    { "label": "Kansas OITS (EBIT) — IT Integration Project (SB 291 / Gartner)", "url": "https://www.ebit.ks.gov/resources/it-integration-project" },
+    { "label": "Kansas Information Security Office (KISO)", "url": "https://www.ebit.ks.gov/divisions/information-security-office-kiso" },
+    { "label": "Kansas OITS FY2027 Budget Request", "url": "https://budget.kansas.gov/wp-content/uploads/335-OITS-FY-2027.pdf" },
+    { "label": "GovTech — Jeff Maxon Named Kansas Chief Information Technology Officer", "url": "https://www.govtech.com/workforce/jeff-maxon-named-kansas-chief-information-technology-officer" },
+    { "label": "Governor of Kansas — Generative AI Policy announcement", "url": "https://www.governor.ks.gov/Home/Components/News/News/543/55" },
+    { "label": "Kansas Dept. of Administration — Office of Procurement and Contracts", "url": "https://admin.ks.gov/offices/procurement-contracts" }
+  ]
+}

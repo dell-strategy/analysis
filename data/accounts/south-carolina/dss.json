@@ -1,0 +1,87 @@
+{
+  "state": "south-carolina",
+  "stateName": "South Carolina",
+  "type": "State Agency",
+  "name": "South Carolina Dept of Social Services (DSS)",
+  "slug": "dss",
+  "hq": "Columbia, SC",
+  "updated": "2026-06-22",
+  "tagline": "South Carolina's human-services backbone: SCDSS runs child welfare, SNAP/TANF and other public benefits, and child support — a high-volume, data-heavy agency mid-stream in both a court-monitored child-welfare reform and a multi-year benefits-mainframe modernization.",
+
+  "snapshot": [
+    { "label": "Mission", "value": "Child welfare, benefits, child support" },
+    { "label": "FY2027 budget ask", "value": "~$114.6M" },
+    { "label": "Benefits caseload", "value": "300K+ households / 630K+ people" },
+    { "label": "Buying gate", "value": "SC OSP / statewide IT contracts" }
+  ],
+
+  "overview": "The South Carolina Department of Social Services (SCDSS) is the state's primary human-services agency, responsible for child welfare (abuse/neglect intake, investigations, and foster-care case management), public benefits (SNAP, TANF, and related economic-services programs), and child support enforcement. It is one of South Carolina's most data-intensive agencies: its eSAM benefits mainframe serves more than 300,000 households and roughly 630,000 individuals and processes on the order of $1.5B in annual benefit payments, while child-welfare casework runs on CAPSS, the state's SACWIS-class case-management system. SCDSS operates under federal oversight from the long-running Michelle H. v. McMaster child-welfare settlement, which has driven a multi-year child-welfare transformation and continuing data-quality and workload requirements. For a Dell SLG seller, SCDSS is a large, modernization-driven buyer with two active technology fronts — replacing/modernizing the aging benefits mainframe and improving the integrity and tooling of child-welfare case data — reached primarily through South Carolina's central statewide IT contracts rather than agency-only RFPs.",
+
+  "budget": {
+    "intro": "SCDSS is a direct spender funded through South Carolina's annual General Appropriations Act plus large federal streams (SNAP, Title IV-E child welfare, child-support, and CCDF child care). For FY2027, Director Tony Catone presented a request of roughly $114.6M to expand child-welfare supports and child care and to continue modernizing the benefits mainframe — a proposed ask, not a final enacted appropriation, so confirm the signed budget before forecasting.",
+    "stats": [
+      { "value": "~$114.6M", "label": "FY2027 request", "note": "Agency ask for child welfare, child care, prevention, and benefits-system modernization; not yet enacted" },
+      { "value": "$18.6M", "label": "Benefits-mainframe match", "note": "Nonrecurring state matching funds requested for the multiyear eSAM modernization; ~50% expected federal share" },
+      { "value": "~$1.5B / yr", "label": "Benefit payments", "note": "Annual benefit volume processed through the eSAM mainframe (300K+ households)" }
+    ],
+    "notes": [
+      "SCDSS funding mixes state general revenue with large federal match (SNAP/TANF administration, Title IV-E, CCDF, child support) — IT and modernization spend often rides federal cost-allocation rules, splitting project cost roughly half state / half federal.",
+      "The governor's executive budget separately included $25M in recurring funds for a child-welfare salary plan; staffing and Michelle H. workload requirements are recurring cost drivers.",
+      "Figures cited are the agency's requested numbers as presented to legislative subcommittees — confirm the enacted FY2027 appropriation before committing to a forecast."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "eSAM benefits-mainframe modernization", "summary": "SCDSS is pursuing a multiyear replacement/modernization of the aging eSAM mainframe that determines SNAP/TANF eligibility for 300K+ households and processes ~$1.5B in annual payments. The agency has requested successive installments (most recently $18.6M nonrecurring state match) and expects a new system to come online over the next couple of years — a long runway for cloud, data, integration, and migration work.", "tags": ["Modernization", "Benefits", "Cloud"] },
+    { "name": "Child-welfare transformation & CAPSS data integrity", "summary": "Under the Michelle H. settlement and court monitors, SCDSS is reforming foster care and improving the quality and integrity of data in CAPSS, its SACWIS case-management system. Documentation gaps and data-entry integrity have been flagged publicly — a surface for case-management tooling, data quality, integration, and analytics.", "tags": ["Child Welfare", "Data", "Modernization"] },
+    { "name": "Contact-center & benefits citizen experience", "summary": "SCDSS modernized 19 contact centers and its IVR with Amazon Connect and added real-time SNAP status notifications and video quality-control interviews; SNAP application timeliness rose from ~84% to 95%+ in 2025. Reliability, capacity, and digital experience remain priorities — an infrastructure and benefits-experience play.", "tags": ["Benefits", "Citizen Experience", "Cloud"] },
+    { "name": "Cybersecurity & data protection", "summary": "SCDSS holds highly sensitive child-welfare, benefits, and child-support data and shares it across agencies and with federal partners. Statewide security sits under the SC Dept of Administration's Division of Information Security (SCDIS), whose SCDIS-200/210 standards apply — data protection, identity, and compliance are persistent requirements alongside both modernization tracks.", "tags": ["Cybersecurity", "Data", "Compliance"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to SCDSS runs through South Carolina's centralized procurement framework under the Consolidated Procurement Code, administered by the Office of State Procurement (OSP) / Division of Procurement Services. Confirm the right path early: most commodity IT flows through statewide term contracts (with a dedicated IT term-contracting team), while larger or specialized programs — like the eSAM modernization or child-welfare systems — run as their own competitive agency solicitations, sometimes via sole-source determinations.",
+    "vehicles": [
+      { "name": "Statewide Term Contracts (IT)", "detail": "OSP / Division of Procurement Services establishes statewide term contracts for IT goods and services usable by all governmental bodies — the default path for routine SCDSS hardware, software, and services. Searchable at procurement.sc.gov/contracts." },
+      { "name": "Vendor registration (SCBO / OSP)", "detail": "Vendors must be registered to do business with the state and monitor opportunities through South Carolina Business Opportunities (SCBO); confirm Dell's registration and statewide-contract coverage before pursuing deals." },
+      { "name": "Agency / program solicitations", "detail": "Large or specialized programs — notably the eSAM benefits modernization and child-welfare (CAPSS) systems — run as their own SCDSS competitive solicitations or sole-source determinations; confirm the buying entity and vehicle before pursuing." },
+      { "name": "Cooperative contracts", "detail": "South Carolina governmental bodies may also use authorized cooperative vehicles (e.g., NASPO ValuePoint) for some IT acquisitions — an alternative route onto SCDSS opportunities." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Tony Catone", "title": "State Director, SCDSS", "note": "Appointed by Gov. McMaster (acting Jan 2025, appointed Mar 2025) and Senate-confirmed in May 2025; former agency general counsel. Sets agency direction and presents the budget — the top relationship for the SCDSS account." },
+    { "name": "Don Grant", "title": "Deputy State Director", "note": "Senior operational leadership across the agency — a key cross-program decision-maker." },
+    { "name": "Jose Encarnacion", "title": "Information Technology Director", "note": "Owns SCDSS systems including the eSAM benefits platform and CAPSS — the core technology buying center for modernization, data, and infrastructure work." },
+    { "name": "Amber Gillum", "title": "Deputy State Director, Economic Services", "note": "Owns SNAP/TANF and benefits-eligibility programs — the buying center behind the eSAM modernization and benefits citizen-experience work." },
+    { "name": "Dawn Barton", "title": "Deputy State Director, Child Welfare Services", "note": "Leads foster care and child-welfare reform under Michelle H. — the buying center for CAPSS case-management and child-welfare data needs. (CFO Susan Roben owns finance.)" }
+  ],
+
+  "news": [
+    { "date": "2025-12", "title": "Director Catone presents ~$114.6M FY2027 request: child welfare, child care, and benefits-mainframe modernization", "impact": "Signals continued investment in modernization and child-welfare reform, including another installment for the eSAM mainframe — confirm the enacted appropriation before forecasting.", "tags": ["Budget", "Modernization"] },
+    { "date": "2025-09", "title": "SCDSS launches video calling for SNAP quality-control interviews to meet new federal requirement", "impact": "Continued benefits-experience modernization on cloud/contact-center infrastructure — recurring demand for reliable capacity and integration.", "tags": ["Benefits", "Cloud"] },
+    { "date": "2025-05", "title": "SC Senate confirms Tony Catone as SCDSS Director", "impact": "Stable, permanent leadership at the top of the account — re-confirm priorities for the term and anchor the executive relationship.", "tags": ["Leadership"] },
+    { "date": "2024-12", "title": "SCDSS launches real-time SNAP status notifications; AWS contact-center modernization lifts timeliness to 95%+", "impact": "Benefits citizen-experience and contact-center modernization is active — an infrastructure and integration surface tied to high transaction volume.", "tags": ["Benefits", "Citizen Experience"] },
+    { "date": "2024-10", "title": "Court recognizes Michelle H. progress; SCDSS exits jurisdiction on several child-welfare measures", "impact": "Child-welfare reform advancing but ongoing — sustained demand for case-management data integrity (CAPSS), tooling, and analytics.", "tags": ["Child Welfare", "Data"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's coverage on South Carolina statewide IT term contracts (OSP / Division of Procurement Services) and active vendor registration/SCBO monitoring — the required access path for routine SCDSS IT buys.",
+    "Lead with the eSAM benefits-mainframe modernization: position cloud-foundation infrastructure, data platform, storage, and migration/managed services around the multiyear, federally cost-shared rebuild.",
+    "Engage the child-welfare transformation (Michelle H. / CAPSS) with data-integrity, integration, and analytics infrastructure that supports court-monitored reporting and casework quality.",
+    "Tie benefits citizen-experience and contact-center capacity to compute, storage, and infrastructure at high transaction volume, building on the existing AWS contact-center footprint rather than displacing it.",
+    "Anchor relationships with Director Catone, IT Director Jose Encarnacion, and the Economic Services and Child Welfare deputies, and map statewide security/compliance under the SC Dept of Administration's Division of Information Security (SCDIS) before forecasting security and data deals."
+  ],
+
+  "sources": [
+    { "label": "SCDSS — Agency Leadership", "url": "https://dss.sc.gov/about/agency-overview/leadership/" },
+    { "label": "S.C. Governor — McMaster appoints Tony Catone as SCDSS Director", "url": "https://governor.sc.gov/news/2025-03/governor-henry-mcmaster-appoints-tony-catone-next-director-sc-department-social" },
+    { "label": "WIS-TV — DSS seeks funding for SC childcare, foster care improvements (FY2027)", "url": "https://www.wistv.com/2025/12/18/dss-seeks-funding-sc-childcare-foster-care-improvements/" },
+    { "label": "WLTX — SC DSS requests budget funds to upgrade SNAP processing system", "url": "https://www.wltx.com/article/news/local/sc-dss-replace-old-food-stamp-computer-system/101-f1b6fe7f-52e8-43a1-a401-de509b3cf82d" },
+    { "label": "AWS Public Sector Blog — How SC DSS modernized 19 contact centers with Amazon Connect", "url": "https://aws.amazon.com/blogs/publicsector/how-south-carolina-dss-modernized-19-contact-centers-to-improve-benefits-delivery-with-amazon-connect/" },
+    { "label": "SCDSS — Child Welfare Transformation (Michelle H.)", "url": "https://dss.sc.gov/child-welfare-transformation/" },
+    { "label": "SCDSS — Michelle H. Final Settlement Update (Oct 30, 2024)", "url": "https://dss.sc.gov/news/michelle-h-final-settlement-update-october-30-2024/" },
+    { "label": "SCDSS — Federal grant to enhance efficiency and access in SNAP", "url": "https://dss.sc.gov/news/sc-department-of-social-services-receives-federal-grant-to-enhance-efficiency-and-access-in-snap/" },
+    { "label": "SC Office of State Procurement — Statewide Term Contracts", "url": "https://procurement.sc.gov/contracts" },
+    { "label": "SC Dept of Administration — Information Security and Privacy (SCDIS)", "url": "https://www.admin.sc.gov/services/technology-services/information-security-privacy" }
+  ]
+}

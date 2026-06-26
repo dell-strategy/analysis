@@ -1,0 +1,86 @@
+{
+  "state": "new-jersey",
+  "stateName": "New Jersey",
+  "type": "State Agency",
+  "name": "New Jersey Attorney General / Dept of Law & Public Safety",
+  "slug": "law-public-safety",
+  "hq": "Trenton, NJ",
+  "updated": "2026-06-22",
+  "tagline": "New Jersey's chief law-enforcement department, led by the Attorney General: a sprawling agency that houses the State Police, Division of Criminal Justice, Juvenile Justice, and Consumer Affairs, with deep public-safety IT, intelligence, digital-evidence, and cyber needs.",
+
+  "snapshot": [
+    { "label": "Role", "value": "State law enforcement & legal affairs" },
+    { "label": "Department workforce", "value": "~8,000 employees" },
+    { "label": "Officers overseen (statewide)", "value": "42,000+" },
+    { "label": "Procurement path", "value": "NJSTART / DPP term contracts" }
+  ],
+
+  "overview": "The New Jersey Department of Law & Public Safety (LPS) is the state's chief law-enforcement and legal-affairs department, led by the Attorney General as New Jersey's top law-enforcement officer. It is one of the largest and most technology-intensive departments in state government, housing the New Jersey State Police, the Division of Criminal Justice, the Juvenile Justice Commission, the Division of Consumer Affairs, the Division on Civil Rights, the Office of the Insurance Fraud Prosecutor, and more. The department employs roughly 8,000 people and the Attorney General sets policy and standards for the 42,000-plus state and local law-enforcement officers across New Jersey. For a Dell SLG seller this is a high-value, multi-program account that spans field and mobile (patrol vehicles, in-car and body-worn systems, mobile data computers), secure data-center and storage (records management, criminal-justice data, digital evidence), real-time intelligence and analytics (the State Police Regional Operations & Intelligence Center / fusion center), forensics and biometrics, and cybersecurity. The account sits inside a fresh leadership reset: Attorney General Jennifer Davenport took office in January 2026 under Governor Mikie Sherrill and was confirmed by the State Senate in February 2026, so priorities and buying-center contacts are being re-established. Note that central IT, the state data center, and statewide cyber strategy run outside LPS at NJOIT, while NJCCIC (the state's cyber threat-sharing cell) sits with the Office of Homeland Security & Preparedness — LPS owns its own operational, CJIS-governed public-safety systems.",
+
+  "budget": {
+    "intro": "LPS is a large direct spender funded through the state budget, with the New Jersey State Police as the biggest cost center inside the department. Governor Sherrill's inaugural FY2027 proposed budget totals about $60.7B statewide; the LPS appropriation is a line within it, and detailed figures for the department and State Police are published in the Governor's budget documents and the Legislature's LPS budget analysis. Confirm the enacted department total against those sources before forecasting.",
+    "stats": [
+      { "value": "$60.7B", "label": "FY2027 state budget (proposed)", "note": "Sherrill's first budget; LPS appropriation is a line within it" },
+      { "value": "~8,000", "label": "LPS employees", "note": "Department workforce across all divisions" },
+      { "value": "42,000+", "label": "Officers overseen", "note": "State and local law-enforcement officers under AG policy/standards" }
+    ],
+    "notes": [
+      "The State Police is the largest cost center within LPS; the Division of Criminal Justice, Juvenile Justice, and Consumer Affairs are other significant operating units.",
+      "Exact LPS and State Police appropriations are in the FY2027 Governor's budget and the Legislature's Department of Law & Public Safety budget analysis / discussion points — verify the enacted figure (set around the July 1 fiscal-year start).",
+      "Significant technology funding also arrives outside the operating line — federal homeland-security and justice grants, and the prior $58M statewide body-worn-camera grant program administered by the AG's Office — which drive recurring storage and digital-evidence demand."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Body-worn cameras & digital-evidence management", "summary": "New Jersey requires patrol officers statewide to wear body cameras (AG directive), and the AG's Office administered roughly $58M in grants to equip nearly 500 agencies. The state deliberately chose not to build one central footage repository, leaving large, recurring needs for secure storage, retention, redaction, and digital-evidence management — a clear infrastructure and storage opening.", "tags": ["Digital Evidence", "Storage", "Public Safety"] },
+    { "name": "State Police CAD/RMS & mobile modernization", "summary": "The State Police run statewide computer-aided dispatch (CAD), records management (RMS), and mobile data computers for field operations. These mission-critical, CJIS-governed systems are periodic modernization tracks that map to server, storage, resiliency, and ruggedized edge/mobile compute.", "tags": ["CAD/RMS", "Edge/Mobile", "Modernization"] },
+    { "name": "ROIC fusion center & real-time intelligence/AI", "summary": "The NJ Regional Operations & Intelligence Center (ROIC) is the state's primary hub for information-sharing, threat analysis, and homeland-security intelligence, partnering with federal, state, and local agencies. Real-time data ingestion, analytics, and AI for threat detection map directly to high-performance compute, storage, and secure-data-center needs.", "tags": ["Intelligence", "AI/Analytics", "Homeland Security"] },
+    { "name": "Forensics, biometrics & criminal-justice data", "summary": "The State Police lab and the Division of Criminal Justice run forensic science, fingerprint/biometric identification, and criminal-history systems under CJIS rules. Modernizing these data-heavy, high-availability systems is an opening for secure storage, disaster recovery, and compute.", "tags": ["Forensics", "Biometrics", "Data Center"] }
+  ],
+
+  "procurement": {
+    "intro": "LPS buys through New Jersey's central procurement framework, not primarily one-off agency RFPs. The contracting path runs through the Treasury Division of Purchase & Property (DPP) and the NJSTART eProcurement portal, with NJOIT shared services for IT and cooperative purchasing extending awards to local agencies. Two preconditions: an active, correctly categorized NJSTART vendor registration, and the right DPP statewide term contract for the offering. Anything touching criminal-justice data carries CJIS security obligations.",
+    "vehicles": [
+      { "name": "NJSTART vendor registration (DPP)", "detail": "The mandatory front door — vendors register and maintain a NJSTART profile to bid, hold contracts, and invoice electronically. Confirm Dell's registration and categories are current." },
+      { "name": "DPP statewide term contracts", "detail": "Treasury's Division of Purchase & Property awards master/term contracts agencies (including LPS) buy off without a separate RFP — IT-relevant categories include computer equipment, cloud/software, and IT consulting. Verify exact contract numbers and scope before forecasting." },
+      { "name": "NJOIT shared services & cooperatives", "detail": "Central IT, data-center, and shared services run through NJOIT; national cooperative vehicles (e.g., NASPO ValuePoint) and the NJ Cooperative Purchasing Program extend state awards to counties, municipalities, and authorities." },
+      { "name": "CJIS compliance", "detail": "Criminal-justice systems (records, biometrics, digital evidence) must meet FBI CJIS Security Policy requirements — a hard constraint on any solution touching LPS/State Police data." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Jennifer Davenport", "title": "Attorney General", "note": "Took office Jan 2026 under Gov. Sherrill; confirmed by the State Senate Feb 24, 2026. Former first assistant AG and federal prosecutor. Sets department direction and statewide law-enforcement policy — the top relationship; expect a leadership reset across LPS." },
+    { "name": "Superintendent, NJ State Police", "title": "Head of the largest LPS division", "note": "Runs the State Police — the department's biggest operational and technology footprint (field/mobile, CAD/RMS, ROIC, forensics). Confirm the current named Superintendent (a Governor-appointed role) before engagement." },
+    { "name": "Director, Division of Criminal Justice", "title": "Statewide prosecution & criminal-justice data", "note": "Leads criminal investigations/prosecutions and oversight of county prosecutors — a buying center for case, evidence, and analytics systems." },
+    { "name": "LPS / State Police IT leadership", "title": "Department & State Police technology", "note": "The State Police Identification & Information Technology Section and LPS IT own operational public-safety systems and CJIS security. The primary infrastructure decision-makers inside the department — confirm current named CIO/IT directors." },
+    { "name": "Kevin Dehmer", "title": "Chief Technology Officer, NJOIT", "note": "Appointed Feb 2026; runs central IT, data center, and statewide cyber strategy OUTSIDE LPS. Relevant because shared services and statewide policy flow through NJOIT even as LPS owns its operational systems." }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "Jennifer Davenport confirmed by State Senate as NJ Attorney General", "impact": "Confirms new top-of-house leadership at LPS after taking office in January — reset the executive relationship map across the department and its divisions.", "tags": ["Leadership"] },
+    { "date": "2026-01", "title": "Davenport sworn in as Acting Attorney General under the Sherrill administration", "impact": "Leadership transition at the head of the state's largest law-enforcement department — re-confirm priorities and contacts in State Police, Criminal Justice, and IT.", "tags": ["Leadership"] },
+    { "date": "2026-03", "title": "Gov. Sherrill presents FY2027 budget (~$60.7B); LPS funded as a line within it", "impact": "Sets the department's funding envelope and the administration's efficiency/affordability frame — watch the enacted LPS and State Police figures vs. the proposal.", "tags": ["Budget"] },
+    { "date": "2025-05", "title": "NJCCIC marks 10 years as the nation's first state cyber threat-sharing cell (NJOHSP, co-located at the ROIC)", "impact": "Underscores NJ's mature cyber/intelligence ecosystem around the State Police ROIC — relevant for analytics and secure-infrastructure positioning, though NJCCIC sits with NJOHSP, not LPS.", "tags": ["Cybersecurity", "Intelligence"] }
+  ],
+
+  "dellActions": [
+    "Re-map the executive and IT buying centers after the Jan/Feb 2026 transition under AG Jennifer Davenport, and confirm the current State Police Superintendent and LPS/State Police IT leadership before forecasting.",
+    "Lead with digital-evidence and body-worn-camera storage: NJ chose not to centralize footage, leaving recurring secure storage, retention, redaction, and DR demand across the AG-administered program — a concrete entry point.",
+    "Position secure data-center, storage, high-availability, and DR for mission-critical State Police systems (CAD/RMS, forensics/biometrics, criminal-history) under CJIS requirements.",
+    "Pursue AI/analytics and high-performance compute for the ROIC fusion center's real-time intelligence and threat-detection mission, plus ruggedized edge/mobile for field operations.",
+    "Confirm Dell's NJSTART registration and the right DPP statewide term contracts as the access path, use NJOIT shared services and cooperative vehicles to broaden reach, and clear CJIS obligations early for any data-touching play."
+  ],
+
+  "sources": [
+    { "label": "NJ Office of the Attorney General — Meet AG Davenport", "url": "https://www.njoag.gov/about/meet-attorney-general-davenport/" },
+    { "label": "New Jersey Monitor — Gov. Sherrill's AG pick clears key hurdle", "url": "https://newjerseymonitor.com/2026/02/02/gov-sherrill-attorney-general-pick/" },
+    { "label": "Troutman Pepper Regulatory Oversight — NJ AG unanimously confirmed", "url": "https://www.regulatoryoversight.com/2026/02/new-jersey-ag-is-unanimously-confirmed-as-enforcement-agenda-takes-shape/" },
+    { "label": "NJ Legislature — Dept of Law & Public Safety FY2026-2027 Discussion Points", "url": "https://pub.njleg.state.nj.us/publications/budget/governors-budget/2027/lps_response_2027.pdf" },
+    { "label": "NJ OMB — FY2027 Budget in Brief", "url": "https://www.nj.gov/treasury/omb/publications/27bib/BIB.pdf" },
+    { "label": "NJ State Police — Body Worn Cameras", "url": "https://nj.gov/njsp/information/body-worn-cameras.shtml" },
+    { "label": "NJ AG — Body Worn Camera Policy (AG Directive 2022-1)", "url": "https://www.nj.gov/oag/dcj/agguide/directives/ag-Directive-2022-1.pdf" },
+    { "label": "NJ State Police — Identification & Information Technology Section", "url": "https://www.nj.gov/njsp/division/administration/identification-information-technology.shtml" },
+    { "label": "NJ State Police — Regional Operations & Intelligence Center (ROIC)", "url": "https://www.nj.gov/njsp/division/investigations/njroic.shtml" },
+    { "label": "NJOHSP — NJCCIC 10th anniversary", "url": "https://www.njohsp.gov/Home/Components/News/News/1701/555" }
+  ]
+}

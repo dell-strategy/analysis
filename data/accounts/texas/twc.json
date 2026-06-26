@@ -1,0 +1,79 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "State Agency",
+  "name": "Texas Workforce Commission (TWC)",
+  "slug": "twc",
+  "hq": "Austin, TX",
+  "updated": "2026-06-22",
+  "tagline": "Texas's workforce and unemployment agency: TWC runs unemployment benefits and tax, statewide workforce development, and vocational rehabilitation on large, data-heavy systems now in the middle of a multi-year modernization.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Workforce, UI & VR agency" },
+    { "label": "Federal funds (26-27)", "value": "$4.9B" },
+    { "label": "Flagship project", "value": "TxUS UI modernization" },
+    { "label": "Cloud gate", "value": "TX-RAMP" }
+  ],
+
+  "overview": "The Texas Workforce Commission (TWC) is the state's workforce agency — it administers unemployment insurance (UI) benefits and employer UI tax, oversees the statewide network of Workforce Solutions boards and career centers, and runs Vocational Rehabilitation (VR) services that help Texans with disabilities prepare for and find work. TWC is one of Texas's most data- and transaction-intensive agencies: it processes high volumes of unemployment claims, employer wage filings, and benefit payments, and those workloads still run on aging legacy systems that the agency has publicly committed to replacing. Its largest funding stream is federal (workforce and UI administration grants pass through TWC), and its profile rose sharply during the pandemic when claims volume exposed the strain on legacy infrastructure. For a Dell SLG seller, TWC is a modernization story — UI-systems replacement, cloud migration, data and analytics, and the compute/storage and security underneath them — bought through the standard Texas vehicles.",
+
+  "budget": {
+    "intro": "TWC is funded predominantly by federal dollars, with state general revenue largely going to match programs like Vocational Rehabilitation. The 2026-27 budget recommendations included roughly $4.9B in (non-COVID) federal funds for the biennium, a net increase over 2024-25, set against Texas's $337.4B 2026-27 state budget.",
+    "stats": [
+      { "value": "$4.9B", "label": "Federal funds (26-27)", "note": "Non-COVID federal funds in the 2026-27 budget recommendations; TWC's largest stream" },
+      { "value": "$635M+", "label": "Vocational Rehabilitation", "note": "26-27 recs: ~$519.4M federal + ~$114.9M GR match + appropriated receipts" },
+      { "value": "$337.4B", "label": "State biennial budget", "note": "2026-27; the broader pool TWC's GR-funded programs draw from" }
+    ],
+    "notes": [
+      "TWC's funding is federally weighted — workforce and UI administration grants flow through the agency, so federal program rules shape much of what it can buy.",
+      "State general revenue concentrates in match-funded programs (notably Vocational Rehabilitation), not the bulk of UI operations.",
+      "Major IT modernization (e.g., UI systems replacement) is funded through specific appropriations and exceptional items rather than a single recurring line — confirm current funding before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Texas Unemployment System (TxUS) modernization", "summary": "TWC is replacing its legacy UI tax mainframe and public web applications (UTR, UTS, QuickFile, Magnetic Media) with a consolidated, modern TxUS platform, with the tax phase tracking toward go-live in 2026. A multi-phase replacement of mission-critical systems — the central modernization motion to track.", "tags": ["Modernization", "Unemployment Systems"] },
+    { "name": "Cloud migration of core systems", "summary": "TWC has been moving workloads — including its primary public website — to cloud environments and is replacing legacy mainframe/web systems with modern, cloud-based platforms. Compute, storage, hybrid-cloud, and managed-services demand sits underneath this shift.", "tags": ["Cloud", "Infrastructure"] },
+    { "name": "Data, scale & resilience for UI workloads", "summary": "UI benefits, tax, and appeals are high-volume, surge-prone workloads where capacity and uptime are mission-critical (a lesson from pandemic-era claims spikes). Data platforms, analytics, and resilient infrastructure are a recurring need.", "tags": ["Data & Analytics", "Resilience"] },
+    { "name": "Vocational Rehabilitation service delivery", "summary": "VR is a major program area with its own caseload, eligibility, and reporting systems serving Texans with disabilities — a distinct buying area for case management, accessibility, and supporting infrastructure.", "tags": ["Citizen Services", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "TWC buys technology through Texas's standard public-sector mechanisms: DIR Cooperative Contracts for pre-competed IT, agency-run RFPs/solicitations for larger or program-specific systems, and TX-RAMP certification as the gate for any cloud service. Confirm Dell's DIR co-op coverage and the right TX-RAMP level before pursuing cloud/as-a-service work.",
+    "vehicles": [
+      { "name": "DIR Cooperative Contracts", "detail": "The primary route for pre-competed IT — hardware, software, and services — that TWC and other Texas agencies can buy without running their own RFP." },
+      { "name": "Agency RFPs / solicitations", "detail": "Larger or program-specific systems (e.g., UI modernization, VR case management) are typically competed directly by TWC; watch agency and statewide procurement postings." },
+      { "name": "TX-RAMP certification", "detail": "Mandatory cloud-security gate (DIR-administered): cloud / as-a-service offerings need the right TX-RAMP level before they're sellable to TWC." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Joe Esparza", "title": "Chairman & Commissioner Representing Employers", "note": "Chairs the three-member Commission; the employer-side seat. Top of the governance structure." },
+    { "name": "Alberto Treviño, III", "title": "Commissioner Representing Labor", "note": "One of three governor-appointed full-time commissioners; the labor-side seat." },
+    { "name": "Brent Connett", "title": "Commissioner Representing the Public", "note": "Public-interest seat; appointed in late 2025. Rounds out the three-commissioner board that sets agency direction." },
+    { "name": "Steve Pier", "title": "Executive Director", "note": "Took the role in early 2026 (announced Jan 14, effective Feb 2, 2026); came from DIR where he was Deputy Executive Director and Deputy State CIO — strong IT-modernization background." },
+    { "name": "Heather Hall", "title": "Chief Information Officer", "note": "CIO since 2019, with deep Texas state-agency IT experience; owns the modernization roadmap, with deputy CIOs over Applications Solutions and IT Infrastructure Services. The core technical relationship." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "Steve Pier named TWC Executive Director", "impact": "A new ED with a DIR / state-CIO background signals continued emphasis on IT modernization — a leadership relationship worth building early.", "tags": ["Leadership"] },
+    { "date": "2025-10", "title": "TWC continues TxUS UI tax modernization rollout toward 2026 go-live", "impact": "The legacy UI tax replacement is actively progressing — infrastructure, integration, and support opportunities cluster around the transition.", "tags": ["Modernization", "Unemployment Systems"] },
+    { "date": "2025-09", "title": "Brent Connett appointed Commissioner Representing the Public", "impact": "Completes the three-member Commission; confirm the governance map before engaging at the leadership level.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Anchor on the TxUS / UI-systems modernization story — position compute, storage, and infrastructure (plus partner-delivered services) under the legacy-to-modern migration.",
+    "Confirm Dell's DIR Cooperative Contract coverage is active and scoped for TWC's buys — it's the fastest pre-competed path in.",
+    "Clear TX-RAMP early for any cloud / as-a-service offering that touches UI, tax, or VR data.",
+    "Build the CIO-office relationship (Heather Hall and the Applications / Infrastructure deputy CIOs), where the modernization roadmap and buying signals originate.",
+    "Connect early with new ED Steve Pier — his DIR / state-CIO background makes the modernization and statewide-vehicle conversation a natural fit."
+  ],
+
+  "sources": [
+    { "label": "TWC — Commissioners", "url": "https://www.twc.texas.gov/agency/commissioners" },
+    { "label": "TWC — Welcomes New Executive Director Steve Pier", "url": "https://www.twc.texas.gov/news/twc-welcomes-new-executive-director-steve-pier" },
+    { "label": "TWC — Texas Unemployment System (TxUS) UI Tax Replacement", "url": "https://www.twc.texas.gov/programs/unemployment-tax/texas-unemployment-system-txus-announcement" },
+    { "label": "LBB — TWC Summary of Budget Recommendations (89R, Agency 320)", "url": "https://www.lbb.texas.gov/Documents/SFC_Summary_Recs/89R/Agency_320.pdf" },
+    { "label": "GovTech — TWC CIO Discusses Achievements, Plans", "url": "https://insider.govtech.com/texas/news/insider-one-on-one-texas-workforce-commission-cio-discusses-achievements-plans" }
+  ]
+}

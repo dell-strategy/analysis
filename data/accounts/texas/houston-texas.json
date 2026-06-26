@@ -1,0 +1,84 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "City",
+  "name": "Houston, Texas",
+  "slug": "houston-texas",
+  "hq": "Houston, TX",
+  "updated": "2026-06-22",
+  "tagline": "The 4th-largest U.S. city (~2.3M residents) — Houston runs enterprise technology for ~22,000 employees across 23 departments through Houston Information Technology Services (HITS), on a ~$7B FY2026 budget that closed a ~$330M shortfall, and buys through its Strategic Procurement Division and Texas cooperative contracts.",
+
+  "snapshot": [
+    { "label": "Role", "value": "4th-largest US city (~2.3M)" },
+    { "label": "FY2026 budget", "value": "~$7B all funds" },
+    { "label": "Central IT", "value": "HITS (23 depts, ~22K staff)" },
+    { "label": "Buying path", "value": "City SPD + DIR Co-op" }
+  ],
+
+  "overview": "The City of Houston is the government of the 4th-largest city in the United States, serving roughly 2.3 million residents under a strong-mayor structure led by Mayor John Whitmire (sworn in January 2024). Enterprise technology is centralized in Houston Information Technology Services (HITS), which delivers IT for nearly 22,000 city employees across 23 operationally diverse departments — spanning public safety, utilities, transportation, community services, financial operations, infrastructure, building-code enforcement, public health, and constituent-facing digital services. HITS frames its mission as transforming Houston into 'a digital city for all,' with emphasis on resilient infrastructure, cybersecurity, and modern digital foundations. Houston adopted a ~$7B FY2026 all-funds budget (passed June 2025) that closed a projected ~$330M shortfall through a drainage-lawsuit settlement, a voluntary-retirement incentive program (taken by roughly one-third of 2,700 eligible employees), and department consolidations — including merging the 311 call center with water billing and consolidating Houston Police Department HR and IT. For a technology seller this is a very large municipal IT buyer operating under real fiscal pressure, with stable IT leadership and a $16.7B capital improvement plan funding longer-horizon infrastructure. Houston buys through its central Strategic Procurement Division and Texas cooperative contracts, including the Texas DIR Cooperative Contracts.",
+
+  "budget": {
+    "intro": "Houston City Council passed Mayor Whitmire's ~$7B FY2026 budget in June 2025, a plan built explicitly to close a projected ~$330M General Fund shortfall without service cuts. The General Fund — the pool that funds most operating and technology services — is about $3.03B, down ~$74.5M from the prior year. A separate ~$16.7B FY2026 capital improvement plan (CIP) funds multi-year infrastructure.",
+    "stats": [
+      { "value": "~$7B", "label": "FY2026 budget (all funds)", "note": "Passed June 2025; built to close a ~$330M projected shortfall" },
+      { "value": "$3.03B", "label": "FY2026 General Fund", "note": "Funds most operating + technology services; down ~$74.5M YoY" },
+      { "value": "$16.7B", "label": "FY2026 capital plan (CIP)", "note": "Multi-year infrastructure; separate from the operating budget" }
+    ],
+    "notes": [
+      "The shortfall was closed largely through one-time and structural moves — a drainage-lawsuit settlement (~$84M near-term relief), a voluntary-retirement program (~$30M savings), and consolidations (~$7M) — so expect continued scrutiny of new and recurring IT spend.",
+      "HITS does not publish a single headline IT line in public reporting; technology dollars are spread across the General Fund (HITS operations), department budgets, and the CIP. Confirm the fund and department behind any given buy before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Digital city / e-government modernization", "summary": "HITS positions itself as the catalyst to make Houston 'a digital city for all,' modernizing constituent-facing services (online permits, 311) and the underlying enterprise platforms for 23 departments. A broad lane for application modernization, end-user compute, and infrastructure refresh tied to service delivery.", "tags": ["Modernization", "Digital Services"] },
+    { "name": "Enterprise cybersecurity", "summary": "HITS owns city cybersecurity for ~22,000 employees and 23 departments, including public-safety systems, under City CISO Dr. Chris Mitchell. Local government remains a top ransomware target nationally, keeping endpoint, identity, backup/recovery, and resilient-infrastructure investment on the agenda — a steady refresh-and-harden motion.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "AI & emerging-tech adoption", "summary": "Houston is integrating AI into municipal operations (e.g., AI-assisted permitting) and a regional Tech Policy Advisory Committee is prioritizing AI/emerging-tech policy and AI-ready digital infrastructure. Downstream needs include AI-capable compute, data platforms, and governance — and the seam between city programs and the broader Houston AI/data-center buildout.", "tags": ["AI", "Modernization"] },
+    { "name": "Broadband & digital inclusion / smart city", "summary": "Houston's digital agenda includes broadband access, affordability, and digital-literacy programs tied to economic mobility, alongside smart-city efforts run through the city's technology organization. A live lane for connectivity, data, and connected-infrastructure use cases.", "tags": ["Smart City", "Data"] }
+  ],
+
+  "procurement": {
+    "intro": "Houston centralizes technology buying through its Strategic Procurement Division (SPD) and leans on Texas cooperative contracts, which satisfy competitive requirements without a standalone solicitation. For a Dell seller the first moves are confirming co-op coverage and registering in the city's vendor portal.",
+    "vehicles": [
+      { "name": "City of Houston Strategic Procurement Division (SPD)", "detail": "The central procurement office for all city departments; vendors register and respond to solicitations via the Beacon Bid agency portal. All technology purchases — including those made through a cooperative — must be processed by SPD. The gate to any city buy." },
+      { "name": "Texas DIR Cooperative Contracts", "detail": "As a Texas local government, Houston is an eligible DIR co-op customer and can buy hardware, software, and services off pre-competed statewide contracts. Confirm Dell's DIR coverage is active and correctly scoped — the fastest catalog-style path; co-op buys still route through SPD." },
+      { "name": "Other cooperative contracts", "detail": "Houston, like most large Texas cities, also uses other cooperative purchasing organizations for technology and catalog goods; each cooperative purchase requires a signed Request to Purchase from Cooperative/Interlocal justification. Confirm which co-ops Dell holds and which the city actively buys through for a given category." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "John Whitmire", "title": "Mayor", "note": "Strong-mayor executive (sworn in Jan 2024) who sets budget priorities and proposes the annual budget; council adopts it. The FY2026 budget posture — closing a ~$330M gap without service cuts — is his agenda and shapes the spending environment IT buys sit in." },
+    { "name": "Lisa Kent", "title": "Chief Information Officer & Director, HITS", "note": "Oversees enterprise IT for nearly 22,000 employees across 23 departments. The primary IT relationship and owner of citywide technology strategy, infrastructure, and digital transformation. Confirm current title/scope before engaging." },
+    { "name": "Dr. Chris Mitchell", "title": "Chief Information Security Officer", "note": "City CISO (recognized as Cisco's Cybersecurity Defender for the Americas in 2023). Owns the city's security strategy, policy, and operations across the HITS estate — the relationship for security-operations, endpoint, identity, and resilience motions." },
+    { "name": "Houston Information Technology Services (HITS)", "title": "Central IT, infrastructure & cybersecurity", "note": "The enterprise IT organization and day-to-day buying center for infrastructure, cloud, endpoint, applications, and security across 23 departments." },
+    { "name": "Strategic Procurement Division (SPD)", "title": "Citywide procurement", "note": "Owns solicitations, cooperative-contract processing, and supplier onboarding (Beacon Bid). The required path for any city technology purchase, including co-op buys." }
+  ],
+
+  "news": [
+    { "date": "2025-06", "title": "Houston City Council passes Mayor Whitmire's ~$7B FY2026 budget, closing a ~$330M shortfall", "impact": "Defines the FY2026 spending envelope (General Fund ~$3.03B) and signals continued cost discipline. Lead with cost-efficiency, lifecycle value, and co-op pricing for IT proposals.", "tags": ["Budget"] },
+    { "date": "2025-06", "title": "Council approves ~$16.7B FY2026 capital improvement plan", "impact": "A multi-year infrastructure envelope separate from the operating budget — a longer-horizon entry point for infrastructure-tied technology where eligible.", "tags": ["Budget", "Infrastructure"] },
+    { "date": "2025-05", "title": "City closes shortfall via voluntary retirements, drainage settlement, and consolidations", "impact": "Roughly one-third of 2,700 eligible employees took retirement incentives; 311/water-billing and HPD HR/IT functions consolidated. Workforce and org change can reshape IT priorities and create modernization openings.", "tags": ["Budget"] },
+    { "date": "2025-04", "title": "Houston technology leaders recognized at the 2025 HoustonCISO ORBIE Awards", "impact": "Signals an active, senior municipal security community in the metro — useful context and reference network for security positioning with the city CISO.", "tags": ["Cybersecurity"] }
+  ],
+
+  "dellActions": [
+    "Engage HITS (CIO Lisa Kent's organization) as the central buying center for infrastructure, client/endpoint, cloud, and applications across the 23-department, ~22,000-employee estate.",
+    "Lead with cost-efficiency and lifecycle value given the closed ~$330M shortfall and continued fiscal discipline — frame refresh and consolidation as ways to do more within a tighter envelope.",
+    "Bring municipal security-operations and endpoint offers to City CISO Dr. Chris Mitchell, tied to public-safety systems and the broad HITS estate.",
+    "Confirm Dell's Texas DIR Cooperative Contract coverage is active and correctly scoped, and verify registration in the city's Beacon Bid / Strategic Procurement Division portal — all technology buys, including co-op buys, route through SPD.",
+    "Tie an AI-infrastructure and data story to Houston's emerging-tech and digital-services agenda and the broader regional AI/data-center buildout, while keeping city programs distinct from private campus builds."
+  ],
+
+  "sources": [
+    { "label": "City of Houston — Houston Information Technology Services (HITS)", "url": "https://www.houstontx.gov/hits/" },
+    { "label": "City of Houston — Message from the CIO (Lisa Kent)", "url": "https://www.houstontx.gov/hits/chief_information_officer.html" },
+    { "label": "City of Houston — City Council Passes Mayor's FY2026 Budget", "url": "https://www.houstontx.gov/moc/2025/fy2026-budget-passed.html" },
+    { "label": "Community Impact — Houston's $7B FY2026 budget will eliminate $330M shortfall", "url": "https://communityimpact.com/houston/heights-river-oaks-montrose/government/2025/05/06/houstons-7b-budget-for-fy-2026-will-eliminate-330m-shortfall/" },
+    { "label": "Houston Public Media — Houston City Council approves $16.7 billion capital improvement plan", "url": "https://www.houstonpublicmedia.org/articles/news/city-of-houston/2025/06/25/524914/houston-city-council-approves-16-7-billion-capital-improvement-plan-with-amendments/" },
+    { "label": "City of Houston — Strategic Procurement Division", "url": "https://www.houstontx.gov/bizwithhou/" },
+    { "label": "City of Houston — Cooperative Purchasing for Technology", "url": "https://www.houstontx.gov/council/committees/tti/20210128/Cooperative-Purchasing-Technology.pdf" },
+    { "label": "City of Houston — City CISO Chris Mitchell Recognized as Cybersecurity Defender of 2023", "url": "https://www.houstontx.gov/hits/chris-mitchell-cybersecurity-defender-2023.html" },
+    { "label": "GlobeNewswire — Top Security Executives Recognized at the 2025 HoustonCISO ORBIE Awards", "url": "https://www.globenewswire.com/news-release/2025/04/24/3067830/0/en/Top-Security-Executives-Recognized-at-the-2025-HoustonCISO-ORBIE-Awards.html" },
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+  ]
+}

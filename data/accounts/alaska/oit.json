@@ -1,0 +1,83 @@
+{
+  "state": "alaska",
+  "stateName": "Alaska",
+  "type": "State Agency",
+  "name": "Alaska Office of Information Technology (OIT)",
+  "slug": "oit",
+  "hq": "Juneau, AK",
+  "updated": "2026-06-22",
+  "tagline": "Alaska's consolidated central IT: OIT, within the Department of Administration, runs the state's enterprise infrastructure, cloud, security, and shared services, and sets statewide technology policy under the State CIO.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Consolidated central IT" },
+    { "label": "OIT budget (FY2026)", "value": "~$64.6M" },
+    { "label": "State CIO", "value": "Bill Smith" },
+    { "label": "Buying co-op", "value": "NASPO ValuePoint via DOA" }
+  ],
+
+  "overview": "The Alaska Office of Information Technology (OIT) is the state's consolidated central IT organization, sitting within the Department of Administration (DOA) and led by the State Chief Information Officer. Established by administrative order to centralize technology that had been scattered across departments, OIT operates Alaska's enterprise infrastructure — servers, licensing, networks, helpdesk, cloud platforms, and statewide applications such as myAlaska — and houses the state's cybersecurity organization under a Chief Information Security Officer. OIT sets statewide IT policy, standards, and the FY26-FY28 strategic plan, and embeds Chief Technology Officers and Department Technology Officers across agencies to deliver a 'one government' technology model. It is best understood as the enterprise relationship for selling into Alaska state government: OIT owns the central infrastructure and security direction, though large project funding and agency-specific buying still flow through the line departments and the state's budget process. Note that Alaska's marquee connectivity effort — the $1B-class BEAD broadband program — is administered separately by the Alaska Broadband Office under the Department of Commerce, not by OIT, so connectivity is context rather than an OIT procurement.",
+
+  "budget": {
+    "intro": "OIT is a centralized service organization funded largely through chargebacks and inter-agency receipts for the infrastructure, licensing, and support it delivers, rather than a single large general-fund line. Its FY2026 operating budget within the Department of Administration was roughly $64.6M, with the bulk in licensing, infrastructure, and servers. Confirm enacted figures against Alaska OMB and the Legislative Finance records before forecasting.",
+    "stats": [
+      { "value": "~$64.6M", "label": "OIT budget (FY2026)", "note": "Enacted operating budget within Dept. of Administration; verify against OMB / LegFin" },
+      { "value": "~$44.1M", "label": "Licensing, infra & servers", "note": "Largest OIT allocation — the infrastructure/software spend most relevant to ISG/CSG" },
+      { "value": "$1B+", "label": "BEAD broadband (context)", "note": "Federal allocation administered by the Alaska Broadband Office (Dept. of Commerce), not OIT" }
+    ],
+    "notes": [
+      "OIT's spend is heavily cost-recovered through inter-agency receipts — the state's centralized model means much of its budget passes through from the agencies it serves.",
+      "The largest IT project funding sits with line departments and flows through the Investment Review Board (IRB) and Alaska's appropriations process — track those gates for net-new opportunity.",
+      "BEAD and satellite connectivity ($629M in initial deployment awards approved March 2026, including Starlink and major fiber/wireless providers) is a separate Department of Commerce motion, not OIT procurement — relevant as ecosystem context, not a direct OIT line."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Cloud migration (Phase 2)", "summary": "OIT completed a Phase 1 cloud migration moving 700+ applications off local data centers without service disruption, citing dynamic disaster and ransomware recovery and elastic capacity; Phase 2 is underway. A durable pull for hybrid-cloud, migration services, and the on-prem footprint that anchors a hybrid estate.", "tags": ["Cloud", "Modernization", "Resilience"] },
+    { "name": "myAlaska + agentic AI", "summary": "OIT issued a November 2025 RFI to embed 'agentic AI' into the myAlaska mobile app, with Microsoft AI feature integration in the FY26-FY28 plan — moving from a basic portal to autonomous, multi-step transactions that interact with legacy systems. Signals demand for AI-ready compute, data platforms, and integration services.", "tags": ["AI", "Digital Government"] },
+    { "name": "Mainframe & legacy modernization", "summary": "The FY26-FY28 strategic plan includes a Mainframe Migration Project and statewide application lifecycle management. A multi-year track for migration, modern infrastructure, and the data platforms that replace legacy systems.", "tags": ["Modernization", "Data Center"] },
+    { "name": "Cybersecurity: Zero Trust, managed SOC & DLP", "summary": "OIT's plan advances a Zero Trust roadmap, a managed Security Operations Center, and data loss prevention / data labeling governance under the State CISO. A centrally driven security theme spanning detection, identity, and resilience for state entities.", "tags": ["Cybersecurity", "Zero Trust"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling into Alaska state government runs on the Department of Administration's statewide contract vehicles and cooperative agreements, not one-off RFPs. The DOA Office of Procurement and Property Management (OPPM) owns statewide master agreements, and Alaska participates in NASPO ValuePoint (formerly WSCA-NASPO) cooperative contracts, including Cloud Solutions. Confirm Dell's coverage on the relevant Alaska statewide master agreements and NASPO ValuePoint vehicles first — it is the access path to far more than OIT alone, including agencies, the University of Alaska, boroughs, cities, and school districts.",
+    "vehicles": [
+      { "name": "Alaska statewide master agreements (OPPM)", "detail": "The DOA Office of Procurement and Property Management owns the statewide master agreements for IT hardware, software, and services available to executive-branch departments and other Alaska public entities." },
+      { "name": "NASPO ValuePoint (via DOA)", "detail": "Alaska participates in NASPO ValuePoint cooperative master agreements — including the Cloud Solutions contract (SaaS/PaaS/IaaS) — as a national co-op route for cloud, software, and hardware." },
+      { "name": "OIT central infrastructure & IRB gates", "detail": "OIT delivers consolidated servers, licensing, cloud, and managed services, and major IT projects clear the Investment Review Board — the buying center for enterprise infrastructure and the checkpoint funded projects pass through." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Bill Smith", "title": "State Chief Information Officer, OIT", "note": "CIO since 2019 (the state's second-ever CIO), confirmed continuing in 2025; ~28 years public/private IT, based in Anchorage. Sets statewide tech direction — the top enterprise relationship for the Alaska motion." },
+    { "name": "State CISO (Dept. of Administration)", "title": "Statewide cybersecurity & risk", "note": "Leads OIT's enterprise security program — strategy, standards, incident response, Zero Trust, and the managed SOC. The owner of the security buying center; confirm the current officeholder before engaging." },
+    { "name": "Paula Vrana", "title": "Commissioner, Department of Administration", "note": "OIT sits within DOA; the Commissioner has publicly championed the cloud-migration modernization. The departmental executive above the CIO." },
+    { "name": "DOA Office of Procurement & Property Management (OPPM)", "title": "Statewide contracts & cooperative agreements", "note": "Owns the statewide master agreements and NASPO ValuePoint participating addenda most Alaska public buyers use — the path onto the state's contract vehicles." },
+    { "name": "OIT Investment Review Board (IRB)", "title": "IT project funding & oversight", "note": "Reviews and gates major IT investments statewide — the checkpoint large funded projects clear; track it for net-new opportunity." }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "Alaska BEAD final proposal approved — $629M in initial deployment awards", "impact": "Federal broadband funding (fiber, fixed wireless, and Starlink satellite) to 46,000+ locations, administered by the Alaska Broadband Office (Dept. of Commerce), not OIT — ecosystem context for connectivity-dependent state IT, not a direct OIT buy.", "tags": ["Connectivity", "Broadband"] },
+    { "date": "2025-12", "title": "OIT plans agentic-AI overhaul of myAlaska via November 2025 RFI", "impact": "State explores autonomous AI modules that complete multi-step transactions and interact with legacy systems — demand signal for AI-ready compute, data platforms, and integration services.", "tags": ["AI", "Digital Government"] },
+    { "date": "2025-07", "title": "OIT FY26-FY28 strategic plan: cloud, mainframe migration, Zero Trust & managed SOC", "impact": "Three-year roadmap (Enterprise Alignment → Selective Growth → Transformation) names cloud, AI enablers, mainframe migration, an Emerging Technology Center of Excellence, and a managed SOC — the blueprint for where infrastructure and security spend is headed.", "tags": ["Strategy", "Modernization"] },
+    { "date": "2025-02", "title": "Bill Smith continues as State CIO", "impact": "Continuity in modernization-forward leadership at the top of Alaska's centralized IT motion — the senior relationship to invest in.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's coverage on Alaska's DOA statewide master agreements and NASPO ValuePoint vehicles (incl. Cloud Solutions) — it's the access path to OIT plus agencies, the University of Alaska, boroughs, cities, and school districts.",
+    "Lead enterprise through OIT's central infrastructure: position ISG/AI-ready compute, client refresh, and the on-prem anchor of a hybrid estate against the Phase 2 cloud migration and mainframe modernization, framed as statewide standards rather than agency-by-agency.",
+    "Tie AI-infrastructure, data platforms, and integration services to the myAlaska agentic-AI effort and the FY26-FY28 Emerging Technology Center of Excellence — and align to Alaska's forming AI governance.",
+    "Engage the State CISO on the Zero Trust roadmap, managed SOC, and DLP — a centrally driven security theme; verify the current officeholder before forecasting.",
+    "Treat BEAD/satellite connectivity as ecosystem context owned by the Alaska Broadband Office (Dept. of Commerce), not OIT — use it to frame demand for resilient, edge, and disaster-recovery infrastructure rather than as a direct OIT procurement."
+  ],
+
+  "sources": [
+    { "label": "Alaska OIT — About Us (mission, role, leadership)", "url": "https://oit.alaska.gov/about-us/" },
+    { "label": "Alaska OIT — FY26-FY28 Strategic Plan (PDF)", "url": "https://oit.alaska.gov/media/1337/office-of-information-technology-fy26-fy28-strategic-plan.pdf" },
+    { "label": "Gov. Dunleavy — State boosts digital security & efficiency through cloud", "url": "https://gov.alaska.gov/state-of-alaska-boosts-digital-security-and-efficiency-through-cloud-technology/" },
+    { "label": "Biometric Update — Alaska seeks AI overhaul of myAlaska app (Dec 2025)", "url": "https://www.biometricupdate.com/202512/alaska-seeks-major-ai-overhaul-of-state-services-through-myalaska-mobile-app" },
+    { "label": "StateScoop — Alaska finds permanent CIO Bill Smith", "url": "https://statescoop.com/alaska-hires-new-permanent-cio-bill-smith/" },
+    { "label": "DOA OPPM — Statewide Master Agreements", "url": "https://oppm.doa.alaska.gov/alaska-centers-of-procurement-excellence/statewide-master-agreements/" },
+    { "label": "DOA OPPM — Cloud Solutions (NASPO ValuePoint) contract", "url": "https://oppm.doa.alaska.gov/media/1382/13-cloud-solutions.pdf" },
+    { "label": "Anchorage Daily News — $629M to boost Alaska internet access (BEAD)", "url": "https://www.adn.com/business-economy/2026/03/17/federal-program-poised-to-provide-629m-to-boost-internet-access-across-alaska/" }
+  ]
+}

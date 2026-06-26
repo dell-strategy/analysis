@@ -1,0 +1,85 @@
+{
+  "state": "washington",
+  "stateName": "Washington",
+  "type": "State Agency",
+  "name": "Washington Technology Solutions (WaTech)",
+  "slug": "watech",
+  "hq": "Olympia, WA",
+  "updated": "2026-06-22",
+  "tagline": "Washington's consolidated central IT agency: WaTech runs the state's shared data-center, network, and cloud services, houses the Office of the CIO and the Office of Cybersecurity, and sets statewide technology, security, and AI policy.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central IT & cybersecurity authority" },
+    { "label": "Funding model", "value": "Proprietary / cost-recovery" },
+    { "label": "State CIO", "value": "Bill Kehoe" },
+    { "label": "Buying co-op", "value": "DES master contracts / NASPO" }
+  ],
+
+  "overview": "Washington Technology Solutions (WaTech) is the state's consolidated central IT services agency, headquartered in Olympia. It operates Washington's shared technology backbone — central data centers, the state network, cloud platforms, and enterprise applications — and serves state agencies plus county, city, and tribal governments and public-benefit nonprofits. WaTech sets statewide IT strategy and enterprise architecture, and it houses both the Office of the State CIO and the Office of Cybersecurity (OCS), Washington's central security organization. A 2024 reorganization (SHB 1947) folded the former standalone Office of the Chief Information Officer (OCIO) into WaTech, concentrating policy, oversight, and shared-services delivery under one roof. WaTech is best understood as a proprietary (central-service) agency: rather than a large general-fund appropriation, most of its revenue comes from billing the agencies it serves through allocated rates, fee-for-service, and agreements. That makes it the enterprise relationship for selling into Washington state government, though much agency-specific buying and the largest IT budgets still sit with the line agencies themselves.",
+
+  "budget": {
+    "intro": "WaTech is a proprietary agency funded mainly through cost recovery — allocated rates, fee-for-service, and agreements billed to the agencies it serves — rather than a single large general-revenue line. Its operating authority sits largely in the WA Technology Solutions Revolving Account, so its budget reflects services delivered statewide more than its own discretionary spend. Confirm enacted figures against OFM and the legislative fiscal records before forecasting.",
+    "stats": [
+      { "value": "~$424M", "label": "Agency budget (2025-27)", "note": "Governor's proposed 2025-27 biennial total for agency 163; verify against the enacted budget" },
+      { "value": "~417", "label": "Proposed FTEs", "note": "2025-27 proposed staffing; WaTech delivers shared IT statewide" },
+      { "value": "Cost-recovery", "label": "Funding model", "note": "Proprietary agency — revenue from billing agencies via allocations / fee-for-service" }
+    ],
+    "notes": [
+      "Because WaTech is proprietary, its spend largely passes through from the agencies it bills — the largest agency IT budgets sit with the line agencies, not WaTech.",
+      "The proposed 2025-27 figure reflected a modest reduction from the prior biennium; budget pressure is a stated constraint on modernization pace, which WaTech is positioning AI to help offset.",
+      "Project-level IT funding for large agency initiatives flows through OFM decision packages and WaTech's IT project oversight gates — track those for net-new opportunity."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "IT Strategic Plan 2025-2028 & resident portal", "summary": "WaTech's current plan centers on a trusted digital-government experience, data-driven decisions, emerging tech, and workforce. A flagship effort is a statewide resident portal with an AI chatbot to replace fragmented agency portals — a pull for cloud, data, and AI-ready infrastructure.", "tags": ["Digital Government", "AI", "Cloud"] },
+    { "name": "AI adoption & state AI Task Force", "summary": "Washington issued generative-AI guidance under executive order and stood up a legislative AI Task Force (ESSB 5838, administered by the Attorney General) whose final report is due July 1, 2026. WaTech is piloting AI uses including reading legacy COBOL mainframe logic in plain English. Policy is still forming — track it as the gate on what AI offerings are buyable.", "tags": ["AI", "Policy", "Modernization"] },
+    { "name": "Legacy modernization & cloud", "summary": "Modernization rose to NASCIO's top priorities, and WaTech is advancing it across agencies — mainframe/COBOL modernization, cloud platforms (noted use of Databricks, AWS, Azure), and data-center consolidation. A durable theme for infrastructure refresh, hybrid cloud, and migration services.", "tags": ["Modernization", "Data Center", "Cloud"] },
+    { "name": "Statewide cybersecurity (Office of Cybersecurity)", "summary": "The Office of Cybersecurity, recognized in state law in 2021, is Washington's central defense and incident-response organization led by the State CISO. Continued investment in detection, response, identity, and resilience for state and local entities is an ongoing track.", "tags": ["Cybersecurity", "Resilience"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling into Washington state runs on pre-competed vehicles, not one-off RFPs. Statewide IT contracts and cooperative agreements are administered by the Department of Enterprise Services (DES), including NASPO ValuePoint cooperative contracts; WaTech is the enterprise IT customer and the policy/oversight authority. Confirm Dell's coverage on the relevant DES master and NASPO ValuePoint agreements first — it's the access path to far more than WaTech alone.",
+    "vehicles": [
+      { "name": "DES master contracts", "detail": "Washington's Department of Enterprise Services owns and administers the statewide master contracts for IT hardware, software, and services that state agencies and eligible entities buy from." },
+      { "name": "NASPO ValuePoint (via DES)", "detail": "DES makes NASPO ValuePoint cooperative master agreements available to Washington agencies and political subdivisions — a national co-op route for cloud, software, and hardware." },
+      { "name": "WaTech shared services & IT project oversight", "detail": "WaTech delivers central data-center, network, and cloud services and runs the state's IT project-funding and oversight gates — the buying center for consolidated infrastructure and the checkpoint major projects clear." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Bill Kehoe", "title": "Director, WaTech & State Chief Information Officer", "note": "State CIO since August 2021 (continued under Gov. Ferguson; confirmation process in 2025). Sets statewide tech direction and is AI/modernization-forward — the top enterprise relationship for the Washington motion." },
+    { "name": "Ralph Johnson", "title": "State Chief Information Security Officer (CISO)", "note": "Leads WaTech's Office of Cybersecurity since Dec 2022; sets statewide security strategy and advises the CIO and agencies. The owner of the enterprise security buying center." },
+    { "name": "WaTech Office of the State CIO", "title": "Statewide IT strategy, policy & enterprise architecture", "note": "Absorbed the former OCIO under SHB 1947 (2024); owns standards, the IT strategic plan, and project oversight — a key gate and buying center." },
+    { "name": "WaTech shared technology services", "title": "Data center, network & cloud delivery", "note": "Delivers consolidated infrastructure and managed services to agencies and local/tribal partners — the route for infrastructure and as-a-service." },
+    { "name": "Department of Enterprise Services (DES)", "title": "Statewide procurement & master contracts", "note": "Owns the master contracts and NASPO ValuePoint access most Washington public buyers use — the path onto the state's contract vehicles." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "State CIO Kehoe details AI, GIS, and digital-equity push for 2026", "impact": "Resident portal with AI chatbot, GIS for emergency/health/parcel use, and cloud/AI modernization signal demand for AI-ready compute, data platforms, and migration services.", "tags": ["AI", "Cloud"] },
+    { "date": "2026-03", "title": "WA Legislature moves to roll back data-center sales-tax breaks (SB 6231)", "impact": "Ends exemptions for replacement servers and refurbishment-based eligibility (effective July 1, 2026); new-build exemptions preserved. Shifts the economics of data-center refresh and siting in Washington — factor into infrastructure positioning.", "tags": ["Data Center", "Policy"] },
+    { "date": "2025-12", "title": "State AI Task Force releases interim report with policy recommendations", "impact": "Eight recommendations on transparency, ethics, and rights ahead of the July 1, 2026 final report — the forming policy gate on what AI offerings will be buyable and on what terms.", "tags": ["AI", "Policy"] },
+    { "date": "2025-02", "title": "Bill Kehoe begins State CIO confirmation process under Gov. Ferguson", "impact": "Continuity in AI/modernization-forward leadership at the top of the statewide IT motion — the senior relationship to invest in.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's coverage on the relevant DES master contracts and NASPO ValuePoint agreements — it's the access path to Washington state agencies plus local and tribal governments, not just WaTech.",
+    "Lead enterprise through WaTech's shared services and CIO organization: position infrastructure, client, and AI-ready compute as statewide standards rather than agency-by-agency, tied to the 2025-2028 strategic plan and resident-portal rollout.",
+    "Tie AI-infrastructure, data platforms, and migration services to WaTech's AI and legacy-modernization push (COBOL/mainframe modernization, cloud), and align to the state's forming AI policy and the July 2026 AI Task Force report.",
+    "Engage the Office of Cybersecurity and State CISO on detection, identity, and resilience for state and local entities — a durable, centrally driven security theme.",
+    "Factor the SB 6231 data-center sales-tax changes (effective July 1, 2026) into infrastructure and refresh proposals, and track OFM decision packages and WaTech IT project-oversight gates for net-new funded opportunities."
+  ],
+
+  "sources": [
+    { "label": "WaTech — About (role, offices, leadership)", "url": "https://watech.wa.gov/about" },
+    { "label": "WaTech — State Office of Cybersecurity", "url": "https://watech.wa.gov/cybersecurity/state-office-cybersecurity" },
+    { "label": "WaTech — Bill Kehoe begins confirmation process (State CIO)", "url": "https://watech.wa.gov/watech/news/2025/state-cio-bill-kehoe-begins-confirmation-process" },
+    { "label": "WaTech — State CIO advances digital equity & efficiency with AI, GIS (Jun 2026)", "url": "https://watech.wa.gov/news/2026/washington-state-cio-advances-digital-equity-and-government-efficiency-ai-gis" },
+    { "label": "WaTech — Introduction to WaTech Allocations (Allocated Rates)", "url": "https://watech.wa.gov/introduction-watech-allocations-allocated-rates" },
+    { "label": "Washington's IT Strategic Plan (2025-2028)", "url": "https://wa.gov/washingtons-it-strategic-plan" },
+    { "label": "Washington AG — Artificial Intelligence Task Force (ESSB 5838)", "url": "https://www.atg.wa.gov/aitaskforce" },
+    { "label": "Washington State Standard — Data center tax break close to being zapped (Mar 2026)", "url": "https://washingtonstatestandard.com/2026/03/07/data-center-tax-break-close-to-getting-zapped-by-wa-legislature/" },
+    { "label": "WA DES — NASPO ValuePoint Contracts", "url": "https://apps.des.wa.gov/DESContracts/Home/WSCAContracts" },
+    { "label": "OFM — WaTech (agency 163) proposed 2025-27 budget detail", "url": "https://ofm.wa.gov/budget/state-budget-2025-27/proposed-biennial/agency-detail-budgets/proposed/163/" }
+  ]
+}

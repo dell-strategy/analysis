@@ -1,0 +1,83 @@
+{
+  "state": "florida",
+  "stateName": "Florida",
+  "type": "State Agency",
+  "name": "Florida Dept of Highway Safety & Motor Vehicles (FLHSMV)",
+  "slug": "flhsmv",
+  "hq": "Tallahassee, FL",
+  "updated": "2026-06-22",
+  "tagline": "Florida's driver-licensing, vehicle-titling, and public-safety agency — it runs high-volume transaction systems, owns the state's identity/credentialing motion (mobile driver's license), and operates the Florida Highway Patrol, making it an IT-heavy account spanning enterprise modernization, digital identity, and law-enforcement technology.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Licensing, titling & FHP" },
+    { "label": "HQ", "value": "Tallahassee, FL" },
+    { "label": "Modernization", "value": "Motorist Modernization / MyDMV Portal" },
+    { "label": "Buying path", "value": "DMS state term contracts + agency RFPs" }
+  ],
+
+  "overview": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) is the state agency responsible for driver licensing and identification, motor-vehicle and vessel titling and registration, and the Florida Highway Patrol (FHP). It operates statewide, high-transaction systems that touch nearly every Florida resident — the customer-facing MyDMV Portal for license and registration services, the credentialing systems behind physical and (relaunching) mobile IDs, and the public-safety IT that supports troopers in the field. The agency works through a network of county tax collectors and license-plate agents who deliver many in-person services, which makes data integration, identity verification, and secure service delivery central to its technology footprint. For a Dell SLG seller, FLHSMV is an enterprise-modernization, digital-identity, and law-enforcement-technology account rather than a single-program buyer: its Office of Motorist Modernization (OMM) is explicitly chartered to replace antiquated systems, and its public-safety mission drives demand for compute, storage, security, and edge/field infrastructure.",
+
+  "budget": {
+    "intro": "FLHSMV is funded through the annual Florida state budget; the FY2026-27 'Floridians First' budget recommended by Governor DeSantis emphasized Florida Highway Patrol resources and personnel, with several technology-adjacent line items. Figures below are from the agency's December 2025 summary of the Governor's recommendations and should be confirmed against the final enacted General Appropriations Act.",
+    "stats": [
+      { "value": "$11.5M", "label": "FHP Career Development Plan", "note": "FY2026-27 recommendation; trooper recruitment, retention, and professional growth" },
+      { "value": "$5.4M", "label": "Patrol vehicle replacement", "note": "FY2026-27 recommendation; replacing aging FHP fleet amid procurement cost increases" },
+      { "value": "$1M+", "label": "FHP communication services", "note": "FY2026-27 recommendation; law-enforcement software, crash-diagramming tools, and radio maintenance" }
+    ],
+    "notes": [
+      "Figures reflect the Governor's FY2026-27 recommended budget (per FLHSMV's Dec 16, 2025 release), not necessarily final enacted appropriations — verify against the enacted GAA.",
+      "FLHSMV's base budget runs in the hundreds of millions with thousands of FTE (Senate base-budget review materials list roughly 4,495 FTE); the largest dollars sit in FHP personnel and operations, with IT modernization funded across operating and capital lines.",
+      "Additional FY2026-27 recommendations included roughly $4.9M for the Tactical Aviation Command and over $2M for license-plate consumables — adjacent to fleet, aviation, and field-technology spend."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Motorist Modernization (MyDMV Portal)", "summary": "FLHSMV's Office of Motorist Modernization is chartered to replace antiquated systems with flexible architecture, improve service delivery, and strengthen data quality and security. The customer-facing MyDMV Portal digitizes driver-license, registration, title, and parking-permit transactions — a multi-year enterprise-modernization track touching identity, data, and cloud.", "tags": ["Modernization", "Digital Services"] },
+    { "name": "Mobile driver's license relaunch", "summary": "After pulling the Thales-built 'Florida Smart ID' from app stores in 2024, Florida is relaunching its mDL. HB 543 (passed the House March 6, 2026) would require ISO/IEC 18013-5 and 18013-7 compliance, selective disclosure, no state tracking, and unlinkable transactions. A high-profile digital-identity and credentialing modernization to track closely.", "tags": ["Digital ID", "Security"] },
+    { "name": "Identity verification / fraud prevention", "summary": "FLHSMV has moved to modernize identity-proofing for online services (reporting cited an upgrade toward selfie-biometric and identity-database verification for the MyDMV Portal). Identity assurance, fraud prevention, and secure authentication are recurring needs as more transactions shift online.", "tags": ["Identity", "Cybersecurity"] },
+    { "name": "Public-safety & field technology (FHP)", "summary": "Florida Highway Patrol drives demand for in-vehicle and field technology — law-enforcement software, crash-diagramming tools, radio/communications, and an FY2026-27 emphasis on aviation and fleet. A path for edge compute, ruggedized devices, storage, and secure connectivity.", "tags": ["Public Safety", "Edge"] }
+  ],
+
+  "procurement": {
+    "intro": "FLHSMV buys IT through Florida's centralized procurement framework plus its own agency solicitations. Confirm Dell's position on the relevant Department of Management Services (DMS) state term contracts and alternate contract sources, then track agency-specific RFPs for modernization and public-safety programs.",
+    "vehicles": [
+      { "name": "DMS state term contracts", "detail": "Florida's Department of Management Services (DMS) maintains statewide State Term Contracts and Alternate Contract Sources for IT commodities and services; agencies are generally directed to buy from these where they exist. The primary path for catalog hardware and services." },
+      { "name": "MyFloridaMarketPlace (MFMP) / Vendor Information Portal", "detail": "DMS's eProcurement system and vendor registry — vendors must register in the Vendor Information Portal (VIP) to do business with the state, and solicitations post to the Vendor Bid System." },
+      { "name": "Agency RFPs / ITNs", "detail": "FLHSMV issues its own solicitations (RFP / Invitation to Negotiate) for larger modernization, identity/credentialing, and public-safety programs — watch the Vendor Bid System and agency postings for OMM and mDL-related work." },
+      { "name": "Cooperative / piggyback contracts", "detail": "Cooperative and piggyback vehicles can supplement state term contracts for specific categories — confirm eligibility and current scope before relying on them." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Dave Kerner", "title": "Executive Director, FLHSMV", "note": "Florida's 11th FLHSMV Executive Director (approved by Governor and Cabinet, January 2023). Top executive sponsor for agency-wide modernization and public-safety priorities." },
+    { "name": "Col. Gary L. Howze II", "title": "Director, Florida Highway Patrol (FHP)", "note": "15th Colonel of FHP (appointed April 2023). Owns the public-safety mission and field-technology, fleet, aviation, and communications priorities." },
+    { "name": "Office of Motorist Modernization (OMM)", "title": "Enterprise modernization program", "note": "Agency program office chartered to replace antiquated systems and deliver MyDMV Portal and related modernization — the buying center for the modernization motion." },
+    { "name": "FLHSMV IT leadership", "title": "Information Systems Administration / agency CIO function", "note": "Owns the agency's IT and data systems (reporting has named a Director of Information Systems Administration). Confirm the current CIO/IT executive and reporting line before forecasting." },
+    { "name": "Florida DMS — State Purchasing", "title": "Statewide procurement authority", "note": "Owns the state term contracts, MFMP, and vendor registration that govern how FLHSMV buys IT — the gate for contract access." }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "Florida House passes HB 543 to relaunch the mobile driver's license", "impact": "Revives FLHSMV's mDL with ISO/IEC 18013-5/-7 compliance, selective disclosure, and strict privacy rules — a near-term digital-identity and credentialing modernization to position against. Confirm Senate passage and signature.", "tags": ["Digital ID", "Legislation"] },
+    { "date": "2025-12", "title": "FLHSMV summarizes Governor's FY2026-27 'Floridians First' budget for law enforcement", "impact": "Recommended FHP funding for career development, fleet replacement, aviation, and communications/law-enforcement software — signals where public-safety technology dollars are headed.", "tags": ["Budget", "Public Safety"] },
+    { "date": "2024-07", "title": "Florida pulls 'Florida Smart ID' mDL app from app stores for overhaul", "impact": "Reset the state's digital-ID program and set up the 2026 relaunch — context for why identity/credentialing is an active modernization track at FLHSMV.", "tags": ["Digital ID", "Modernization"] }
+  ],
+
+  "dellActions": [
+    "Map the modernization buying center: connect with the Office of Motorist Modernization and FLHSMV IT leadership, and confirm the current CIO/IT executive and reporting line before forecasting.",
+    "Confirm Dell's position on the relevant DMS state term contracts and alternate contract sources, and ensure VIP/MyFloridaMarketPlace registration is current so the agency can buy without friction.",
+    "Lead with enterprise-modernization infrastructure (compute, storage, data platform, and secure identity/authentication) tied to MyDMV Portal and the OMM systems-replacement roadmap.",
+    "Position for the public-safety mission with FHP: edge/field compute, ruggedized devices, storage for video/crash data, and secure connectivity, aligned to the FY2026-27 fleet, aviation, and communications priorities.",
+    "Track the HB 543 mDL relaunch and identity-verification work as digital-identity/security pull-through, and partner with the credentialing/identity ecosystem rather than competing with the credential issuer itself."
+  ],
+
+  "sources": [
+    { "label": "FLHSMV — Executive Director Dave Kerner approved by Governor and Cabinet (Jan 2023)", "url": "https://www.flhsmv.gov/2023/01/17/dave-kerner-approved-by-governor-desantis-and-the-cabinet-as-executive-director-of-florida-department-of-highway-safety-and-motor-vehicles/" },
+    { "label": "FLHSMV — Governor's FY2026-27 'Floridians First' Budget Supports Law Enforcement (Dec 2025)", "url": "https://www.flhsmv.gov/2025/12/16/executive-director-dave-kerner-governor-desantis-floridians-first-budget-supports-law-enforcement/" },
+    { "label": "FLHSMV — MyDMV Portal / Motorist Modernization", "url": "https://www.flhsmv.gov/motorist-modernization/mydmvportal/" },
+    { "label": "Biometric Update — Florida House passes bill to relaunch mDL program (HB 543)", "url": "https://www.biometricupdate.com/202603/florida-house-passes-bill-to-relaunch-mdl-program" },
+    { "label": "Biometric Update — Florida tosses mDL program (Smart ID pulled, 2024)", "url": "https://www.biometricupdate.com/202407/florida-tosses-mdl-program-into-the-gulf" },
+    { "label": "Florida Senate — DHSMV Base Budget review (FTE/appropriations)", "url": "https://www.flsenate.gov/UserContent/Topics/IntensiveBudgetReview/ATD/DHSMVBaseBudget.pdf" },
+    { "label": "Florida DMS — State Purchasing (state term contracts, MFMP)", "url": "https://www.dms.myflorida.com/business_operations/state_purchasing" },
+    { "label": "FAST — Gary Howze II named FHP Director (Colonel)", "url": "https://fastinc.org/2023/05/03/gary-howze-ii-named-fhp-director/" }
+  ]
+}

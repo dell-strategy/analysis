@@ -1,0 +1,88 @@
+{
+  "state": "iowa",
+  "stateName": "Iowa",
+  "type": "State Agency",
+  "name": "Iowa Office of the Chief Information Officer (OCIO)",
+  "slug": "ocio",
+  "hq": "Des Moines, IA",
+  "updated": "2026-06-22",
+  "tagline": "Iowa's central IT agency: the OCIO (now organized under the Department of Management as DoIT) runs enterprise shared services, statewide cybersecurity, broadband grants, and the IT master agreements most Iowa public buyers use — and it runs heavily on outsourced and managed services.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central / enterprise IT" },
+    { "label": "Org", "value": "OCIO under Dept. of Management (DoIT)" },
+    { "label": "Funding model", "value": "Rate-based cost recovery" },
+    { "label": "Delivery", "value": "Heavy outsourcing / managed services" }
+  ],
+
+  "overview": "The Iowa Office of the Chief Information Officer (OCIO) is the state's central IT agency — it leads statewide technology strategy, delivers enterprise shared services to executive-branch agencies, runs statewide cybersecurity, and administers Iowa's broadband grant program. Since a 2022 reorganization the OCIO has been organized under the Iowa Department of Management as its Division of Information Technology (DoIT), and its public web presence is migrating to dom.iowa.gov; the OCIO name and brand remain in active use. Per its FY2022 annual report the office served all executive-branch agencies plus numerous counties, cities, and schools, owned 852 information systems and supported 2,932 systems, and is funded primarily by rates charged to agencies and local subdivisions for the services they consume rather than a large general-fund appropriation. A defining trait for a Dell SLG seller: Iowa's IT model leans heavily on outsourcing and managed services — IT staff augmentation/managed services through CAI (Computer Aid), endpoint managed services through Insight, and cloud/consulting master agreements (e.g., Resultant for Google Cloud, Capgemini) — so OCIO is as much a contract-and-vendor-management hub as it is a direct operator. The CIO is appointed by and reports to the Governor and is subject to Iowa Senate confirmation.",
+
+  "budget": {
+    "intro": "OCIO is a rate-funded shared-services organization, not a large direct general-fund spender — its leverage shows up in the enterprise services and master agreements that agency and local buys flow through. Treat the figures below as public budget-document and annual-report estimates, not current actuals.",
+    "stats": [
+      { "value": "852 / 2,932", "label": "Systems owned / supported", "note": "Per OCIO FY2022 annual report — indicates enterprise scope" },
+      { "value": "~$8.0M", "label": "Working-capital reserve", "note": "~60 days of operating capital carryforward (FY2022 report)" },
+      { "value": "Rate-based", "label": "Primary funding model", "note": "Funded mainly by rates/chargeback to agencies and local subdivisions" }
+    ],
+    "notes": [
+      "Because delivery is rate-funded, demand concentrates where agencies consume enterprise services — infrastructure, endpoints, cloud, and security — rather than in a single appropriation line.",
+      "The largest agency IT budgets (Health & Human Services, Transportation, Revenue) sit with those agencies; OCIO is the shared-services and master-agreement hub.",
+      "Iowa's outsourcing posture means much of the spend lands with managed-service and staff-augmentation vendors operating under OCIO/DoIT contracts."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Enterprise generative AI policy", "summary": "Iowa adopted a statewide Enterprise Generative AI policy (effective March 31, 2025), administered by the Department of Management, setting minimum requirements, prohibited uses, mandatory human review of AI output, and a ban on free/unapproved AI tools without written authorization. Signals active AI governance — position AI-ready infrastructure and compliant solutions to the policy's guardrails.", "tags": ["AI", "Governance"] },
+    { "name": "Broadband — Empower Rural Iowa / BEAD", "summary": "OCIO/DoIT administers the Empower Rural Iowa Broadband Grant Program; prior rounds awarded roughly $500M to reach 100,000+ locations, and a 2025 round opened up to $400M via the federal BEAD program. A large, multi-year build-out adjacent to infrastructure, networking, and edge needs.", "tags": ["Broadband", "Federal Funds"] },
+    { "name": "Whole-of-state cybersecurity", "summary": "The state runs enterprise information security under the CISO, coordinates incident response, and (with Iowa Homeland Security & Emergency Management and Iowa State's CyIO) channels the federal State and Local Cybersecurity Grant Program to local governments. Security is its own buying center and a whole-of-state priority.", "tags": ["Cybersecurity", "Whole-of-State"] },
+    { "name": "Managed-services / outsourced delivery model", "summary": "Iowa delivers much of its IT through master agreements with managed-service and staff-augmentation vendors (CAI for IT managed services/staff aug, Insight for endpoint managed services, Resultant/Capgemini for cloud and consulting). Modernization runs through these vehicles — map ISG, endpoint, and lifecycle/managed offerings to them.", "tags": ["Managed Services", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to or through OCIO runs on pre-competed master agreements plus Iowa's central procurement and cooperative paths — confirm Dell's active Iowa vehicles and reseller coverage before forecasting, and align infrastructure/managed-services plays to the outsourced delivery model.",
+    "vehicles": [
+      { "name": "OCIO/DoIT IT Master Agreements", "detail": "Competitively solicited IT master agreements that agencies and political subdivisions can buy off without further competition (e.g., Insight technology products/endpoint managed services, CAI managed services/staff augmentation, Resultant Google Cloud, Capgemini). Contact IT Vendor Management (ITVM@dom.iowa.gov) / OCIO procurement; confirm Dell's current contract numbers and scope." },
+      { "name": "DAS Central Procurement & statewide master agreements", "detail": "The Iowa Department of Administrative Services (DAS) Central Procurement competes statewide master agreements and runs the IMPACS contracting system; bids post at bidopportunities.iowa.gov. The route for new solicitations and contract onboarding." },
+      { "name": "State of Iowa Cooperative Purchasing Program", "detail": "Lets cities, counties, schools, and other Iowa government entities buy off DAS master agreements — broadening reach beyond state agencies. Verify eligibility per buy; useful where a direct contract is absent." },
+      { "name": "National cooperative vehicles", "detail": "Iowa entities also buy via national cooperatives (e.g., NASPO ValuePoint, Sourcewell/US Communities-style programs) referenced on OCIO technology-products agreements — a faster path where a state contract doesn't fit. Confirm current eligibility." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Matt Behrens", "title": "State Chief Information Officer (OCIO / Dept. of Management DoIT)", "note": "Named permanent CIO in 2022 after serving interim; long State of Iowa tenure overseeing the state's technology portfolio and ~200 IT staff. The top OCIO relationship; appointed by and reporting to the Governor (Senate-confirmed)." },
+    { "name": "Shane Dwyer", "title": "State Chief Information Security Officer (CISO)", "note": "Leads statewide information security operations, enterprise cyber strategy, and IT risk; active in MS-ISAC, NASCIO, and NGA. Owns the security buying center." },
+    { "name": "OCIO / DoIT IT Vendor & Contract Management", "title": "Master agreements & vendor management", "note": "Owns the IT master agreements, vendor onboarding, and managed-services contracts (ITVM@dom.iowa.gov) — the path onto Iowa's IT vehicles." },
+    { "name": "DAS Central Procurement", "title": "Statewide purchasing / IMPACS", "note": "Competes statewide master agreements and runs the cooperative purchasing program and bid portal — the central purchasing authority alongside OCIO's IT-specific vehicles." },
+    { "name": "Office of the Governor (Kim Reynolds)", "title": "Appoints/confirms the CIO; sets tech priorities", "note": "The CIO serves at the Governor's pleasure with Senate confirmation; executive priorities (AI policy, broadband, cyber) shape OCIO direction." }
+  ],
+
+  "news": [
+    { "date": "2025-07", "title": "Empower Rural Iowa broadband round opens with up to $400M via federal BEAD", "impact": "Large multi-year broadband build continues — keep networking, infrastructure, and edge plays mapped to the program and its awardees.", "tags": ["Broadband"] },
+    { "date": "2025-03", "title": "State of Iowa Enterprise Generative AI policy takes effect (Mar 31, 2025)", "impact": "AI governance is active statewide; position AI-ready infrastructure and compliant solutions to the policy's data and human-review guardrails.", "tags": ["AI"] },
+    { "date": "2025-01", "title": "Iowa channels federal SLCGP cyber grants to local governments (with ISU CyIO)", "impact": "Whole-of-state security funding flows to locals — align endpoint, SOC, and resilience offerings to where grant dollars land.", "tags": ["Cybersecurity"] },
+    { "date": "2024-09", "title": "OCIO continues renewing IT managed-services and master agreements (CAI, Insight, cloud)", "impact": "Iowa's outsourced delivery model runs through these vehicles — confirm Dell coverage and partner with prime managed-service vendors.", "tags": ["Procurement"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's coverage on OCIO/DoIT IT master agreements and DAS statewide contracts (and authorized-reseller scope) — that's the access path to executive-branch and cooperative buys.",
+    "Lead with ISG infrastructure, endpoints, and lifecycle/managed offerings mapped to Iowa's outsourced model — partner with the prime managed-service vendors (CAI, Insight) rather than around them.",
+    "Engage the CISO (Shane Dwyer) on whole-of-state security — endpoint, SOC, and resilience — including where SLCGP grant dollars reach local governments.",
+    "Tie networking, infrastructure, and edge plays to the Empower Rural Iowa / BEAD broadband build-out and the agencies and locals it touches.",
+    "Position AI-ready infrastructure aligned to Iowa's Enterprise Generative AI policy guardrails as enterprise AI adoption scales."
+  ],
+
+  "sources": [
+    { "label": "Iowa OCIO — Who We Are", "url": "https://ocio.iowa.gov/about-us/who-we-are" },
+    { "label": "Iowa OCIO — What We Do", "url": "https://ocio.iowa.gov/about-us/what-we-do" },
+    { "label": "Iowa OCIO — DOM-OCIO FY2022 Annual Report (Iowa Legislature)", "url": "https://www.legis.iowa.gov/docs/publications/DF/1376634.pdf" },
+    { "label": "Iowa Dept. of Management — Information Technology", "url": "https://dom.iowa.gov/state-government/information-technology" },
+    { "label": "Iowa OCIO/DoIT — IT Master Agreements", "url": "https://dom.iowa.gov/state-government/information-technology/it-procurement-contracts-sourcing-and-vendor-management/information-technology-master-agreements" },
+    { "label": "Iowa OCIO — IT Managed Services (CAI)", "url": "https://ocio.iowa.gov/it-managed-services" },
+    { "label": "Iowa DAS — State of Iowa Cooperative Purchasing Program", "url": "https://das.iowa.gov/state-employees/procurement/cooperative-purchasing-program" },
+    { "label": "Iowa Dept. of Management — Broadband Grants (Empower Rural Iowa)", "url": "https://dom.iowa.gov/broadband/broadband-grants" },
+    { "label": "State of Iowa — Enterprise Generative AI Policy", "url": "https://dom.iowa.gov/media/785/download?inline=" },
+    { "label": "GovTech — Iowa Officially Names Matt Behrens as CIO", "url": "https://www.govtech.com/workforce/interim-no-longer-iowa-officially-names-matt-behrens-as-cio" },
+    { "label": "StateScoop — Iowa hires statewide CISO Shane Dwyer", "url": "https://statescoop.com/iowa-ciso-shane-dwyer/" },
+    { "label": "Iowa Homeland Security — State and Local Cybersecurity Grant Program (SLCGP)", "url": "https://homelandsecurity.iowa.gov/grants/state-and-local-cybersecurity-grant-program-slcgp" }
+  ]
+}

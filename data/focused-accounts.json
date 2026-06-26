@@ -1,0 +1,772 @@
+{
+  "alabama": [
+    {
+      "type": "State Agency",
+      "name": "Alabama Dept of Finance (OIT)",
+      "slug": "finance",
+      "region": "",
+      "available": true
+    }
+  ],
+  "alaska": [
+    {
+      "type": "State Agency",
+      "name": "Alaska Office of Information Technology (OIT)",
+      "slug": "oit",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "arizona": [
+    {
+      "type": "County",
+      "name": "Maricopa County, Arizona",
+      "slug": "maricopa-county",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Pima County, Arizona",
+      "slug": "pima-county",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Phoenix, Arizona",
+      "slug": "phoenix-arizona",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Arizona Dept of Administration (ADOA-ASET)",
+      "slug": "adoa",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "arkansas": [
+    {
+      "type": "State Agency",
+      "name": "Arkansas Division of Information Systems (DIS)",
+      "slug": "dis",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "california": [
+    {
+      "type": "County",
+      "name": "Los Angeles County, California",
+      "slug": "los-angeles-county",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Los Angeles, California",
+      "slug": "los-angeles",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "California Health & Human Services Agency (CHHS)",
+      "slug": "chhs",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "California Dept of General Services (DGS)",
+      "slug": "dgs",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Sacramento County, California",
+      "slug": "sacramento-county-california",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "San Francisco, California",
+      "slug": "san-francisco-california",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "California Legislative Data Center",
+      "slug": "legislative-data-center",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "San Bernardino County, California",
+      "slug": "san-bernardino-county-california",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Orange County, California",
+      "slug": "orange-county-california",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "San Diego County, California",
+      "slug": "san-diego-county-california",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Alameda County, California",
+      "slug": "alameda-county-california",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "colorado": [
+    {
+      "type": "State Agency",
+      "name": "Colorado Governor's Office of Information Technology (OIT)",
+      "slug": "oit",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "delaware": [
+    {
+      "type": "State Agency",
+      "name": "Delaware Dept of Technology & Information (DTI)",
+      "slug": "dti",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "florida": [
+    {
+      "type": "State Agency",
+      "name": "Florida Dept of Health",
+      "slug": "doh",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Broward County, Florida",
+      "slug": "broward-county-florida",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Florida Dept of Transportation (FDOT)",
+      "slug": "fdot",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Florida Dept of Children & Families (DCF)",
+      "slug": "dcf",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Palm Beach County, Florida",
+      "slug": "palm-beach-county-florida",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Hillsborough County, Florida",
+      "slug": "hillsborough-county-florida",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Florida Dept of Highway Safety & Motor Vehicles (FLHSMV)",
+      "slug": "flhsmv",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Miami-Dade County, Florida",
+      "slug": "miami-dade-county",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Florida Dept of Corrections (FDC)",
+      "slug": "fdc",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Jacksonville (Duval County), Florida",
+      "slug": "jacksonville",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "georgia": [
+    {
+      "type": "State Agency",
+      "name": "Georgia Technology Authority (GTA)",
+      "slug": "gta",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Dekalb County, Georgia",
+      "slug": "dekalb-county-georgia",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "hawaii": [
+    {
+      "type": "State Agency",
+      "name": "Hawaii Dept of Education",
+      "slug": "doe",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "illinois": [
+    {
+      "type": "Special District",
+      "name": "Illinois Tollway (Toll Highway Authority)",
+      "slug": "tollway",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Chicago, Illinois",
+      "slug": "chicago",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Illinois DoIT (Dept of Innovation & Technology)",
+      "slug": "doit",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "indiana": [
+    {
+      "type": "State Agency",
+      "name": "Indiana Office of Technology (IOT)",
+      "slug": "iot",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "iowa": [
+    {
+      "type": "State Agency",
+      "name": "Iowa Office of the Chief Information Officer (OCIO)",
+      "slug": "ocio",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "kansas": [
+    {
+      "type": "State Agency",
+      "name": "Kansas Office of Information Technology Services",
+      "slug": "oits",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "kentucky": [
+    {
+      "type": "State Agency",
+      "name": "Kentucky Finance & Administration Cabinet",
+      "slug": "finance-administration-cabinet",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Louisville/Jefferson County Metro, Kentucky",
+      "slug": "louisville-metro",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "louisiana": [
+    {
+      "type": "State Agency",
+      "name": "Louisiana Division of Administration (OTS)",
+      "slug": "division-of-administration",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "maryland": [
+    {
+      "type": "County",
+      "name": "Montgomery County, Maryland",
+      "slug": "montgomery-county",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Maryland Dept of Information Technology (DoIT)",
+      "slug": "doit",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Baltimore, Maryland",
+      "slug": "baltimore-maryland",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Maryland Attorney General's Office",
+      "slug": "attorney-general",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "michigan": [
+    {
+      "type": "State Agency",
+      "name": "Michigan DTMB — Dept of Technology, Management & Budget",
+      "slug": "dtmb",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "minnesota": [
+    {
+      "type": "State Agency",
+      "name": "Minnesota IT Services (MNIT)",
+      "slug": "mnit",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "missouri": [
+    {
+      "type": "State Agency",
+      "name": "Missouri ITSD (OA Information Technology Services Division)",
+      "slug": "itsd",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "nevada": [
+    {
+      "type": "State Agency",
+      "name": "Nevada Dept of Administration",
+      "slug": "doa",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Clark County, Nevada",
+      "slug": "clark-county",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "new-jersey": [
+    {
+      "type": "Court",
+      "name": "New Jersey Judiciary (Courts)",
+      "slug": "courts",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "New Jersey Dept of the Treasury",
+      "slug": "treasury",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "New Jersey Office of Information Technology (NJOIT)",
+      "slug": "njoit",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "New Jersey Attorney General / Dept of Law & Public Safety",
+      "slug": "law-public-safety",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "Special District",
+      "name": "New Jersey Turnpike Authority",
+      "slug": "new-jersey-turnpike-authority",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "new-mexico": [
+    {
+      "type": "State Agency",
+      "name": "New Mexico Dept of Information Technology (DoIT)",
+      "slug": "doit",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "new-york": [
+    {
+      "type": "City",
+      "name": "NYC Office of Technology & Innovation (OTI)",
+      "slug": "nyc-oti",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "Special District",
+      "name": "NY Metropolitan Transportation Authority (MTA)",
+      "slug": "mta",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "NYC Dept of Health & Mental Hygiene",
+      "slug": "nyc-health",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "New York City Police Department (NYPD)",
+      "slug": "nypd",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "Court",
+      "name": "New York State Court System",
+      "slug": "nys-courts",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "NYS Office of Information Technology Services (ITS)",
+      "slug": "nys-its",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "New York State Dept of Health",
+      "slug": "nys-doh",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "NYC Dept of Environmental Protection (DEP)",
+      "slug": "nyc-dep",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Suffolk County, New York",
+      "slug": "suffolk-county-new-york",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "north-carolina": [
+    {
+      "type": "State Agency",
+      "name": "North Carolina Dept of Administration",
+      "slug": "doa",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Charlotte, North Carolina",
+      "slug": "charlotte-north-carolina",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Mecklenburg County, North Carolina",
+      "slug": "mecklenburg-county-north-carolina",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "ohio": [
+    {
+      "type": "State Agency",
+      "name": "Ohio Dept of Administrative Services",
+      "slug": "das",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Columbus, Ohio",
+      "slug": "columbus-ohio",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Cincinnati, Ohio",
+      "slug": "cincinnati-ohio",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "oklahoma": [
+    {
+      "type": "State Agency",
+      "name": "Oklahoma Office of Management & Enterprise Services (OMES)",
+      "slug": "omes",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "oregon": [
+    {
+      "type": "State Agency",
+      "name": "Oregon Dept of Administrative Services (DAS/EIS)",
+      "slug": "das",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "pennsylvania": [
+    {
+      "type": "City",
+      "name": "Philadelphia, Pennsylvania",
+      "slug": "philadelphia",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Commonwealth of Pennsylvania (Office of Administration / OA-OIT)",
+      "slug": "oa-oit",
+      "region": "Region 1 - Northeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "south-carolina": [
+    {
+      "type": "State Agency",
+      "name": "South Carolina Dept of Social Services (DSS)",
+      "slug": "dss",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "tennessee": [
+    {
+      "type": "State Agency",
+      "name": "Tennessee Dept of General Services",
+      "slug": "general-services",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Tennessee — Safety, Corrections & Transportation",
+      "slug": "safety-transportation",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Nashville and Davidson County, Tennessee",
+      "slug": "nashville-and-davidson-county-tennessee",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "texas": [
+    {
+      "type": "State Agency",
+      "name": "Texas Health & Human Services Commission (HHSC)",
+      "slug": "hhsc",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Texas Dept of Transportation (TxDOT)",
+      "slug": "txdot",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Austin, Texas",
+      "slug": "austin",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Harris County, Texas",
+      "slug": "harris-county",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "San Antonio, Texas",
+      "slug": "san-antonio-texas",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Texas Dept of Public Safety (DPS)",
+      "slug": "dps",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Fort Worth, Texas",
+      "slug": "fort-worth-texas",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Texas Dept of Family & Protective Services (DFPS)",
+      "slug": "dfps",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Texas DIR — Department of Information Resources",
+      "slug": "dir",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Texas Workforce Commission (TWC)",
+      "slug": "twc",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Bexar County, Texas",
+      "slug": "bexar-county-texas",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "City",
+      "name": "Houston, Texas",
+      "slug": "houston-texas",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Travis County, Texas",
+      "slug": "travis-county-texas",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Dallas County, Texas",
+      "slug": "dallas-county-texas",
+      "region": "Region 3 - Central — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "utah": [
+    {
+      "type": "State Agency",
+      "name": "Utah Dept of Technology Services (DTS)",
+      "slug": "dts",
+      "region": "",
+      "available": true
+    }
+  ],
+  "virginia": [
+    {
+      "type": "State Agency",
+      "name": "Virginia — Secretary of Administration / VITA",
+      "slug": "vita",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "Fairfax County, Virginia",
+      "slug": "fairfax-county-virginia",
+      "region": "Region 2 - Southeast — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ],
+  "washington": [
+    {
+      "type": "State Agency",
+      "name": "Washington Technology Solutions (WaTech)",
+      "slug": "watech",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "State Agency",
+      "name": "Washington Dept of Social & Health Services (DSHS)",
+      "slug": "dshs",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    },
+    {
+      "type": "County",
+      "name": "King County, Washington",
+      "slug": "king-county-washington",
+      "region": "Region 4 - West — Top 25 SLG Accounts by 3-Year Average Revenue",
+      "available": true
+    }
+  ]
+}

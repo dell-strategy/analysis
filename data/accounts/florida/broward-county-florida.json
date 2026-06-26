@@ -1,0 +1,80 @@
+{
+  "name": "Broward County, Florida",
+  "slug": "broward-county-florida",
+  "state": "florida",
+  "stateName": "Florida",
+  "type": "County",
+  "hq": "Fort Lauderdale, FL",
+  "updated": "2026-06-22",
+  "tagline": "Florida's second-most-populous county (2M+ residents, Fort Lauderdale) runs its IT through Enterprise Technology Services (ETS) — a ~165-person shop now focused on cloud migration, GenAI governance, and cybersecurity ahead of the 2026 World Cup.",
+
+  "snapshot": [
+    { "label": "Role", "value": "2nd-largest FL county" },
+    { "label": "Total budget (FY26)", "value": "$8.8B" },
+    { "label": "IT shop", "value": "ETS (~165 staff)" },
+    { "label": "Buying path", "value": "Purchasing Division / BPRO" }
+  ],
+
+  "overview": "Broward County is the second-most-populous county in Florida — more than 2 million residents across Fort Lauderdale and 30+ municipalities — and the 17th-largest county in the United States. County government operates under a County Administrator (CEO model) with an elected nine-member Board of County Commissioners. Day-to-day IT is run by Enterprise Technology Services (ETS), a division of roughly 165 IT professionals organized around application services, infrastructure, project management, IT business services, and financial services. ETS is the central technology provider for county agencies, supporting a portfolio that spans the airport (FLL), Port Everglades, transit, public safety, libraries, and human services. Under CIO Domenic DiLullo (in the role since March 2024), the division's stated priorities are cybersecurity, modernization, and organizational culture — with active work streams in cloud migration strategy, ERP and AI governance, and AI-driven process automation. For a Dell SLG seller, Broward is a large, infrastructure-rich county account where the buying motion runs through the county Purchasing Division and cooperative contracts rather than the state's central vehicle.",
+
+  "budget": {
+    "intro": "Broward adopted an $8.8B total budget for FY2026 (Oct 1, 2025–Sep 30, 2026). Most of that is enterprise funds (airport, seaport, water/wastewater), grants, and pass-throughs; the discretionary property-tax-supported portion is about $1.7B. ETS's own operating IT budget has been reported in the ~$28M range — the figure to anchor IT-specific spend against.",
+    "stats": [
+      { "value": "$8.8B", "label": "Total county budget (FY26)", "note": "Includes airport, seaport, utilities, grants — not all discretionary" },
+      { "value": "$1.7B", "label": "Property-tax budget (FY26)", "note": "The discretionary, Commission-controlled General Fund portion" },
+      { "value": "~$28M", "label": "ETS operating IT budget", "note": "Reported ~2024–25 figure for the central IT division" }
+    ],
+    "notes": [
+      "Commissioners lowered the countywide millage to 5.6658 mills for FY26 — the first rate cut since 2018 — and trimmed ~159 funded positions and ~$20M in recurring operating costs, so net-new IT spend faces a tighter General Fund.",
+      "Large capital and technology spend often lives inside enterprise agencies (FLL airport, Port Everglades, Water & Wastewater) with their own funding — worth mapping separately from the General Fund / ETS budget."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Cloud & data modernization", "summary": "ETS is running a feasibility assessment and strategy for future cloud migration architecture — an opening for hybrid-cloud infrastructure, data-center refresh, and migration services as the county defines its target state.", "tags": ["Cloud", "Modernization"] },
+    { "name": "GenAI governance & automation", "summary": "Broward completed its first County Administration policy on Generative AI (two years in the making) and is standing up AI and ERP governance plus AI-driven process automation to streamline county services. Governance-first posture means AI-infrastructure and trusted-platform conversations land well.", "tags": ["AI", "Governance"] },
+    { "name": "Cybersecurity & compliance", "summary": "Cybersecurity is the CIO's stated top priority. ETS is investing in security and compliance consulting and hardening — relevant as Broward sits among the South Florida jurisdictions preparing for 2026 World Cup-related threat activity.", "tags": ["Cybersecurity"] },
+    { "name": "Major-event technology readiness", "summary": "The CIO serves on technology and communications subcommittees for the 2025 FIFA Club World Cup and 2026 FIFA World Cup, contributing cybersecurity, public-safety, and emergency-operations expertise — a near-term driver for resilient infrastructure and security capacity.", "tags": ["Public Safety", "Resilience"] }
+  ],
+
+  "procurement": {
+    "intro": "Broward buys through its own Purchasing Division, not the state's central vehicle. Confirm two things first: Dell's standing on the cooperative contracts the county already leans on, and registration in the county's procurement portal so you can see and respond to solicitations.",
+    "vehicles": [
+      { "name": "Broward County Purchasing Division", "detail": "The county's central procurement authority — issues ITBs, RFPs, and open-end contracts under the Broward Procurement Code. Cooperative purchasing is an authorized method in that code." },
+      { "name": "BPRO / Bonfire e-procurement portal", "detail": "Broward's electronic procurement system (powered by Bonfire). Vendors must register to view, download, and respond to solicitations and posted results." },
+      { "name": "Cooperative contracts", "detail": "Broward, like most FL counties, leverages cooperative vehicles (e.g., national co-ops and piggyback contracts) to buy IT off pre-competed pricing without a standalone RFP — confirm Dell coverage on the ones the county uses." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Monica Cepero", "title": "County Administrator (CEO)", "note": "Chief executive of the county since March 2022; 35+ years in FL state/local government. Owns the executive layer above ETS — the top relationship for large cross-agency plays." },
+    { "name": "Domenic DiLullo", "title": "Chief Information Officer (ETS)", "note": "CIO since March 2024; leads ~165 IT staff. Priorities are cybersecurity, modernization, and culture; came from FL Dept. of Commerce CTO role. The primary IT relationship." },
+    { "name": "Office of Management & Budget (OMB)", "title": "County budget", "note": "Owns the FY budget process and capital plan — the gatekeeper for funding any net-new IT initiative." },
+    { "name": "Broward County Purchasing Division", "title": "Procurement authority", "note": "Director of Purchasing owns solicitations, the BPRO portal, and contract awards — the path onto county vehicles." },
+    { "name": "Board of County Commissioners", "title": "9-member elected board", "note": "Approves the budget, millage, and large contracts. Major awards ultimately need Commission approval." }
+  ],
+
+  "news": [
+    { "date": "2025-09", "title": "Commission adopts $8.8B FY2026 budget and cuts millage to 5.6658", "impact": "First rate cut since 2018, ~159 positions and ~$20M recurring costs trimmed — a tighter General Fund for net-new IT spend, so co-op pricing and ROI framing matter.", "tags": ["Budget"] },
+    { "date": "2025-09", "title": "Broward completes first County GenAI policy after two-year effort", "impact": "Governance is now in place — clears a path for AI pilots and AI-infrastructure conversations on a trusted, policy-backed footing.", "tags": ["AI", "Governance"] },
+    { "date": "2025-03", "title": "CIO DiLullo outlines cloud migration, GenAI, and cybersecurity priorities", "impact": "Confirms the three buying centers to lead with: cloud/data-center modernization, AI automation, and security hardening.", "tags": ["Leadership", "Modernization"] },
+    { "date": "2025-06", "title": "South Florida jurisdictions ramp 2026 FIFA World Cup security readiness", "impact": "Regional event-driven demand for resilient infrastructure, cybersecurity, and emergency-operations capacity; Broward's CIO sits on FIFA tech/comms subcommittees.", "tags": ["Cybersecurity", "Public Safety"] }
+  ],
+
+  "dellActions": [
+    "Lead with the CIO's stated priorities — cloud/data-center modernization, AI-driven automation, and cybersecurity — and tie Dell ISG infrastructure and AI offerings to the active cloud-migration feasibility work.",
+    "Confirm Dell's standing on the cooperative contracts Broward uses and register in the BPRO (Bonfire) portal so you can see and respond to ETS solicitations early.",
+    "Frame an AI-infrastructure conversation against the county's new GenAI governance policy — Broward has chosen a governance-first posture, so trusted, on-prem/hybrid AI platforms resonate.",
+    "Map the enterprise agencies (FLL airport, Port Everglades, Water & Wastewater) separately — they carry their own capital and tech budgets outside the General Fund / ETS line.",
+    "Position resilience and security capacity around 2026 World Cup readiness, where Broward's CIO is actively engaged on the technology and communications subcommittees."
+  ],
+
+  "sources": [
+    { "label": "Broward County — Enterprise Technology Services (ETS)", "url": "https://www.broward.org/Ets/Pages/Default.aspx" },
+    { "label": "Broward County — Office of Management and Budget", "url": "https://www.broward.org/Budget/Pages/Default.aspx" },
+    { "label": "Broward County — Purchasing Division", "url": "https://www.broward.org/Purchasing/Pages/Default.aspx" },
+    { "label": "Broward County — County Administrator Monica Cepero", "url": "https://www.broward.org/Administrator/Pages/MonicaCepero.aspx" },
+    { "label": "GovTech / Industry Insider — Broward CIO on Cybersecurity, GenAI and Cloud Migration", "url": "https://insider.govtech.com/florida/news/broward-county-cio-discusses-cybersecurity-genai-and-cloud-migration-efforts" },
+    { "label": "Broward County — Commissioners Lower Property Tax Rate in FY2026 ($8.8B budget)", "url": "https://webapps6.broward.org/newsrelease/View.aspx?intMessageId=16019" }
+  ]
+}

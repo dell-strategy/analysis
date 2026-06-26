@@ -1,0 +1,83 @@
+{
+  "name": "Nevada Dept of Administration",
+  "slug": "doa",
+  "state": "nevada",
+  "stateName": "Nevada",
+  "type": "State Agency",
+  "hq": "Carson City, NV",
+  "updated": "2026-06-22",
+  "tagline": "Nevada's internal-services backbone: the Department of Administration runs the State Purchasing Division — the central buying authority and statewide-contract program most executive-branch agencies use — while statewide IT strategy now sits in the separate Governor's Technology Office.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central admin & procurement" },
+    { "label": "Buying center", "value": "State Purchasing Division" },
+    { "label": "Primary vehicle", "value": "Nevada Statewide Contracts" },
+    { "label": "Cloud gate", "value": "GovRAMP (July 2026)" }
+  ],
+
+  "overview": "The Nevada Department of Administration (DoA) is the state's internal-services department, providing centralized support functions to executive-branch agencies through roughly ten divisions — including Administrative Services, Human Resource Management, Risk Management, State Public Works, and, most relevant to a technology seller, the State Purchasing Division. For a Dell SLG seller the important structural point is that the DoA is the procurement door, not the IT-strategy owner: the Purchasing Division (NRS Chapter 333) is the central authority that runs Nevada's statewide contracts and buys goods and services on behalf of state agencies. Note an org change that is easy to get wrong — the Enterprise Information Technology Services (EITS) division, historically housed under the DoA, transitioned in 2023 into what is now the cabinet-level Governor's Technology Office (GTO) / Office of the CIO. Statewide IT policy, the enterprise service desk, security, cloud, and the new GovRAMP cloud-security mandate therefore live with the GTO today, while the DoA retains the central purchasing and broader administrative functions. Treat the two as paired but distinct buying centers.",
+
+  "budget": {
+    "intro": "The DoA is an internal-services department funded largely through cost allocations and assessments to the agencies it serves rather than a single large general-fund line, so its leverage for a technology seller is the procurement volume it channels rather than its own IT appropriation. For scale, Governor Joe Lombardo's 2025–2027 executive budget proposed roughly $12.7B in general-fund spending across the biennium — the pool that statewide-contract purchases ultimately draw from.",
+    "stats": [
+      { "value": "~$12.7B", "label": "State GF budget (biennium)", "note": "Lombardo 2025–27 executive budget, general fund; the pool statewide-contract buys draw from" },
+      { "value": "~10", "label": "DoA divisions", "note": "Internal-services divisions incl. State Purchasing; figure per the department's own divisions listing" },
+      { "value": "July 2026", "label": "GovRAMP cloud gate", "note": "New cloud-security requirement (GTO-owned) that conditions executive-branch cloud contracts" }
+    ],
+    "notes": [
+      "The DoA funds much of its delivery through internal cost allocations to served agencies rather than a large standalone IT appropriation; exact division-level figures require the official Nevada executive budget documents.",
+      "The largest end-user IT budgets sit with individual agencies (DMV, Health & Human Services, etc.) and with the Governor's Technology Office — the DoA Purchasing Division is the path many of those dollars flow through, not the wallet.",
+      "Budget figures here are state-level public estimates; confirm against budget.nv.gov before forecasting a deal."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "GovRAMP cloud-security mandate", "summary": "Nevada has adopted GovRAMP as its statewide cloud third-party risk and authorization program, aligned to NIST 800-53 Rev. 5. Public reporting points to a July 2026 effective point after which new executive-branch cloud contracts require demonstrated progress on the GovRAMP path. Owned by the GTO/CIO, but a direct gate on anything cloud sold through Purchasing — clear it early.", "tags": ["Cloud", "Compliance", "Cybersecurity"] },
+    { "name": "EITS → Governor's Technology Office consolidation", "summary": "The former DoA-housed EITS division transitioned in 2023 into the cabinet-level Governor's Technology Office. Statewide IT strategy, the enterprise service desk, and security now sit with the GTO/CIO, while the DoA keeps central purchasing. Map both buying centers and confirm which one owns a given program before forecasting.", "tags": ["Modernization", "Org change"] },
+    { "name": "Cyber resilience & zero trust", "summary": "Following a publicly reported ransomware incident, state IT leadership has emphasized zero-trust architecture, identity and access management as the 'new firewall,' and security-by-verification. Infrastructure refresh, endpoint, and identity modernization are live themes — largely GTO-led but procured through statewide vehicles.", "tags": ["Cybersecurity", "Zero Trust"] },
+    { "name": "Responsible AI for digital services", "summary": "State IT leadership has signaled it is exploring AI to improve digital services for residents. Specifics are early-stage and not yet pinned to named programs; treat as a watch item rather than a funded buy, and hedge any AI-infrastructure framing accordingly.", "tags": ["AI", "Digital services"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling into Nevada state agencies runs through the DoA's State Purchasing Division and its pre-negotiated statewide contracts under NRS Chapter 333, rather than one-off agency RFPs wherever a contract already exists. Two things to confirm first: that Dell sits on the right active statewide contract category (e.g., computer equipment, software, cloud), and that any cloud or as-a-service offering can demonstrate GovRAMP progress ahead of the July 2026 gate.",
+    "vehicles": [
+      { "name": "Nevada Statewide Contracts", "detail": "The primary vehicle — pre-negotiated, NRS Chapter 333 contracts maintained by the State Purchasing Division across 100+ categories incl. cloud solutions, software products, and IT/data-communication equipment that agencies buy from without running their own solicitation." },
+      { "name": "State Purchasing Division (central authority)", "detail": "Statutory central buyer for state agencies under NRS 333. Larger or non-delegated buys route through Purchasing; agencies may hold delegated authority below certain thresholds — confirm the delegation line for any specific deal." },
+      { "name": "GovRAMP cloud authorization", "detail": "Emerging mandatory gate (GTO-owned): cloud services that store, process, or transmit state or constituent data must show progress along the GovRAMP / NIST 800-53 Rev. 5 path. Clear this before pursuing cloud / as-a-service contracts." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Joy Grimmer", "title": "Director, Dept of Administration", "note": "Appointed July 2024. Owns the DoA's internal-services and procurement portfolio — the top of the administrative/purchasing motion." },
+    { "name": "William Taylor", "title": "Administrator, State Purchasing Division", "note": "Appointed April 2025. Runs central procurement and the statewide-contract program — the most direct buying-center relationship for vehicle access." },
+    { "name": "Timothy Galluzi", "title": "State CIO, Governor's Technology Office", "note": "Cabinet-level since the 2023 GTO elevation; sponsor of the GovRAMP mandate and statewide IT strategy. Lives outside the DoA but owns the IT direction Purchasing buys against." },
+    { "name": "Michael D. Smith", "title": "State CTO, Governor's Technology Office", "note": "Named CTO May 2026; career Nevada IT leader (former EITS/enterprise architecture). Operations- and field-delivery focused — a key technical relationship for the statewide motion." },
+    { "name": "Bertrum Carroll", "title": "State CISO, Office of Information Security (GTO)", "note": "Leads statewide cybersecurity, enterprise risk, and the security standards behind GovRAMP — the owner to engage on any security or cloud-compliance play." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Michael D. Smith named Nevada State CTO (Governor's Technology Office)", "impact": "New technical leadership emphasizing operational delivery and field outcomes — refresh the GTO technical relationship map.", "tags": ["Leadership"] },
+    { "date": "2026-03", "title": "Nevada mandates GovRAMP for executive-branch cloud cybersecurity", "impact": "Cloud / as-a-service offerings must show GovRAMP (NIST 800-53 Rev. 5) progress to stay sellable — a gate to clear before the July 2026 effective point.", "tags": ["Cloud", "Compliance"] },
+    { "date": "2025-04", "title": "William Taylor appointed Administrator, State Purchasing Division", "impact": "New owner of central procurement and statewide contracts — the key buying-center relationship to (re)build.", "tags": ["Leadership", "Procurement"] },
+    { "date": "2024-07", "title": "Joy Grimmer appointed Director of the Department of Administration", "impact": "Stable department leadership over the procurement and internal-services portfolio.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's position on the relevant Nevada statewide contract categories (computer/IT equipment, software, cloud solutions) through the State Purchasing Division — it is the access path to executive-branch agencies, not just the DoA.",
+    "Engage the Purchasing Division (William Taylor) on vehicle scope and delegation thresholds, and the GTO leadership (CIO Galluzi / CTO Smith) on the IT-strategy side, since the two buying centers were split in the 2023 EITS → GTO move.",
+    "Get ahead of the GovRAMP / NIST 800-53 Rev. 5 cloud gate (effective ~July 2026) for any cloud or as-a-service offering before it conditions new contracts; coordinate with CISO Bertrum Carroll.",
+    "Lead infrastructure-refresh, endpoint, identity, and zero-trust framing tied to the state's post-incident cyber-resilience priorities, routed through statewide contracts.",
+    "Treat AI-for-digital-services as an early watch item — keep messaging exploratory until named, funded programs surface rather than forecasting AI-infrastructure demand."
+  ],
+
+  "sources": [
+    { "label": "Nevada Dept of Administration — Divisions", "url": "https://www.admin.nv.gov/divisions/" },
+    { "label": "Nevada Dept of Administration — Leadership", "url": "https://admin.nv.gov/About/Leadership/" },
+    { "label": "Nevada State Purchasing — Statewide Contracts", "url": "https://www.purchasing.nv.gov/statewide-contracts/" },
+    { "label": "Nevada GTO — Leadership Team (CIO/CTO/CISO)", "url": "https://www.it.nv.gov/organization/gto/leadership-team/" },
+    { "label": "GovTech — Nevada Names Michael D. Smith Its Chief Technology Officer", "url": "https://www.govtech.com/workforce/nevada-names-michael-d-smith-its-chief-technology-officer" },
+    { "label": "GovRAMP — Nevada Partners with GovRAMP to Standardize Cloud Security", "url": "https://govramp.org/blog/nevada-partners-with-govramp-to-standardize-cloud-security-across/" },
+    { "label": "Nevada it.nv.gov — Nevada Mandates GovRAMP (press release)", "url": "https://www.it.nv.gov/press-releases/nevada-mandates-govramp-a-new-era-of-standardized-streamlined-cloud-cybersecurity-for-the-silver-state/" },
+    { "label": "Nevada Independent — What's in the 5 Nevada budget bills of the 2025 session", "url": "https://thenevadaindependent.com/article/whats-in-the-5-nevada-budget-bills-of-the-2025-legislative-session" }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "state": "new-mexico",
+  "stateName": "New Mexico",
+  "type": "State Agency",
+  "name": "New Mexico Dept of Information Technology (DoIT)",
+  "slug": "doit",
+  "hq": "Santa Fe, NM",
+  "updated": "2026-06-22",
+  "tagline": "New Mexico's central IT agency: DoIT runs enterprise services for state agencies on a cost-recovery model, houses the state's broadband office driving a $382M federal buildout, and supports the statewide cybersecurity and public-safety radio backbone.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central state IT agency" },
+    { "label": "Funding model", "value": "Cost recovery / internal service" },
+    { "label": "BEAD broadband award", "value": "$382M" },
+    { "label": "Buying gate", "value": "DoIT review + GSD price agreements" }
+  ],
+
+  "overview": "The New Mexico Department of Information Technology (DoIT) is the executive branch's central IT agency, headquartered in Santa Fe. It delivers enterprise services to state agencies — telecommunications, network and internet access, server and application hosting, the statewide SHARE ERP system, and public-safety radio (the Digital Trunked Radio System) — and is organized into six authorized programs: Program Support, Compliance and Project Management, Enterprise Services, Equipment Replacement, Broadband, and Cybersecurity. DoIT funds most of its operations through cost recovery: it charges customer agencies published rates for services rather than running on a large general-fund appropriation, and uses non-reverting equipment-replacement funds to refresh aging infrastructure. Two policy offices are administratively attached to DoIT but operate with their own mandates — the Office of Broadband Access & Expansion (OBAE), which is executing New Mexico's federal broadband buildout, and the Office of Cybersecurity (OCS), whose CISO now reports to a Cybersecurity Advisory Committee rather than to the CIO. For a Dell seller, DoIT is both an enterprise-infrastructure buyer for the state's data-center and network estate and the central authority that shapes how other agencies procure IT.",
+
+  "budget": {
+    "intro": "DoIT is funded primarily through cost recovery, not a large direct appropriation: it bills customer agencies published rates for enterprise services and sustains its non-reverting equipment-replacement funds from those fees. Its FY27 appropriation request (submitted September 2025) aligned spending to FY25 actuals and accommodated a 5% rate increase for Enterprise Services approved by the rate committee. The most consequential dollars in DoIT's orbit are pass-through and grant funds — most visibly the $382M federal broadband award flowing through OBAE.",
+    "stats": [
+      { "value": "$382M", "label": "BEAD broadband award", "note": "Federal NTIA/BEAD funds approved Jan 2026, administered by OBAE under DoIT" },
+      { "value": "6", "label": "Authorized programs", "note": "Support, Compliance/PM, Enterprise Services, Equipment Replacement, Broadband, Cybersecurity" },
+      { "value": "+5%", "label": "Enterprise Services rate increase", "note": "Approved by the rate committee for FY27; flows into agency IT bills" }
+    ],
+    "notes": [
+      "DoIT recovers operating costs by charging customer agencies for telecom, hosting, network, ISP access, public-safety radio, and SHARE — so spend on Dell infrastructure shows up inside enterprise-service rates rather than a single line item.",
+      "The largest end-spending IT budgets sit with the big program agencies (HHS, Human Services, public safety); DoIT is the central provider and procurement gatekeeper, not always the wallet.",
+      "Broadband and cybersecurity dollars are heavily federal/grant-funded and time-bound — confirm the fund source and period of performance before forecasting against them."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "BEAD broadband buildout via OBAE", "summary": "New Mexico's $382M federal BEAD plan (approved by NTIA in Jan 2026) funds 31 grants to connect 42,500+ unserved/underserved locations across 32 of 33 counties, using a tech-neutral mix of fixed wireless, fiber, and LEO satellite. OBAE, attached to DoIT, runs the program. Adjacent opportunity for network, edge, and middle-mile infrastructure rather than a direct DoIT data-center play.", "tags": ["Broadband", "Federal Funds"] },
+    { "name": "Statewide cybersecurity under the Office of Cybersecurity", "summary": "New Mexico's Cybersecurity Act stood up an independent Office of Cybersecurity whose CISO reports to a Cybersecurity Advisory Committee, with scope extended to local, county, tribal, and education entities. The state expects roughly $13M over four years via the State and Local Cybersecurity Grant Program (80% to locals) and is pursuing statewide procurement vehicles for shared security tooling.", "tags": ["Cybersecurity", "Whole-of-State"] },
+    { "name": "Enterprise services & infrastructure modernization", "summary": "DoIT's Enterprise Services program is the core motion for Dell: consolidated hosting, network, cloud, and the equipment-replacement refresh cycle for aging state infrastructure. The 5% FY27 rate increase signals continued reinvestment in the shared estate.", "tags": ["Data Center", "Modernization"] },
+    { "name": "Digital Trunked Radio System (DTRS) expansion", "summary": "Secretary Barreras has named expansion of the statewide public-safety radio system (DTRS) a top priority to improve coverage and interoperability for federal, state, local, and tribal users — a sustained capital and infrastructure track adjacent to DoIT's core IT services.", "tags": ["Public Safety", "Infrastructure"] }
+  ],
+
+  "procurement": {
+    "intro": "New Mexico buying runs through two layers: the General Services Department (GSD) State Purchasing Division, which establishes statewide price agreements open to state and local government entities, and DoIT, which reviews IT projects and professional-services procurement. Confirm Dell's coverage on the relevant GSD statewide price agreements and understand where a deal needs DoIT's IT review.",
+    "vehicles": [
+      { "name": "GSD Statewide Price Agreements", "detail": "The State Purchasing Division (GSD) establishes statewide pricing agreements usable by NM governmental entities; the state notes over $6B expended annually across these and cooperative contracts. The primary path to pre-competed access — confirm Dell hardware/services coverage." },
+      { "name": "DoIT IT review & professional-services route", "detail": "Goods and non-professional services generally go through GSD; professional services and IT projects route through DFA/DoIT, with DoIT IT project review and a Contract Review Board in the loop for technology buys." },
+      { "name": "Formal solicitations (>$60K)", "detail": "Procurements above the $60K threshold require formal sealed bids/proposals under the State Procurement Code; below it, agencies use quote-based methods. Scope deal size against these thresholds early." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Manny Barreras", "title": "Cabinet Secretary & State CIO", "note": "Senate-confirmed March 2025 (appointed Sept 2024); former Motorola Solutions account executive. Top relationship for the statewide IT and DTRS radio motion." },
+    { "name": "Jason Habedank", "title": "Deputy Cabinet Secretary", "note": "Joined Feb 2024 with 25+ years of IT and leadership experience; key operational counterpart." },
+    { "name": "Raja Sambandam", "title": "State CISO (Office of Cybersecurity)", "note": "Reports to the Cybersecurity Advisory Committee, not the CIO, with statewide (incl. local/tribal) scope. Owner of the whole-of-state security buying center." },
+    { "name": "John Padilla", "title": "Director, Enterprise Services", "note": "Owns the consolidated hosting/network/cloud and equipment-refresh buying center — the core DoIT infrastructure motion." },
+    { "name": "Jeff Lopez", "title": "Director, Office of Broadband Access & Expansion", "note": "Runs the $382M BEAD program and grant awards — the broadband/middle-mile relationship." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "NTIA approves New Mexico's $382M BEAD broadband plan", "impact": "31 grants to connect 42,500+ locations across 32 of 33 counties; construction follows contract execution by OBAE. Network/edge opportunity, not a DoIT data-center buy — map the grantees.", "tags": ["Broadband"] },
+    { "date": "2025-09", "title": "DoIT submits FY27 appropriation request with 5% Enterprise Services rate increase", "impact": "Confirms continued reinvestment in the shared infrastructure estate; agency IT bills rise, reinforcing the enterprise-services motion.", "tags": ["Budget"] },
+    { "date": "2025-03", "title": "Senate unanimously confirms Manny Barreras as DoIT Secretary & State CIO", "impact": "Stable top leadership; priorities center on modernizing/securing state IT and expanding the DTRS public-safety radio system.", "tags": ["Leadership"] },
+    { "date": "2024-09", "title": "Governor appoints Manny Barreras Cabinet Secretary and State CIO", "impact": "Vendor-background leader installed at the top of the statewide IT motion — relationship reset point.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell coverage on the relevant GSD statewide price agreements — that, plus DoIT's IT review path, is the access route to the New Mexico public sector.",
+    "Lead the Enterprise Services / Equipment Replacement refresh with ISG (server, storage, network) and tie messaging to the FY27 rate-supported reinvestment in the shared estate.",
+    "Engage the Office of Cybersecurity (CISO Sambandam) on whole-of-state shared security tooling, leveraging the SLCGP grant economics and statewide procurement vehicles.",
+    "Position network/edge and middle-mile infrastructure around the OBAE $382M BEAD buildout by mapping the 31 grantees rather than chasing OBAE as a direct buyer.",
+    "Build the DTRS/public-safety angle with Secretary Barreras as a sustained infrastructure track adjacent to core IT."
+  ],
+
+  "sources": [
+    { "label": "NM DoIT — Leadership", "url": "https://www.doit.nm.gov/about-the-department/leadership/" },
+    { "label": "NM DoIT — FY2027 Appropriation Request (NMDFA)", "url": "https://www.nmdfa.state.nm.us/wp-content/uploads/2026/05/Department-of-Information-Technology.pdf" },
+    { "label": "NM Office of the Governor — Feds approve $382M broadband plan", "url": "https://www.governor.state.nm.us/2026/01/27/feds-approve-new-mexicos-382m-broadband-plan-landmark-initiative-will-enable-high-speed-connectivity-statewide/" },
+    { "label": "GovTech — New Mexico Gives CISO More Reach, Independence", "url": "https://www.govtech.com/security/new-mexico-gives-ciso-more-reach-independence" },
+    { "label": "NM DoIT — Senate confirms Manny Barreras", "url": "https://www.doit.nm.gov/2025/03/03/senate-unanimously-confirms-manny-barreras-as-secretary-of-department-of-information-technology/" },
+    { "label": "NM GSD — Statewide Price Agreements", "url": "https://generalservices.state.nm.us/state-purchasing/statewide-price-agreements/" },
+    { "label": "NM DoIT — Broadband program", "url": "https://www.doit.nm.gov/programs/broadband/" }
+  ]
+}

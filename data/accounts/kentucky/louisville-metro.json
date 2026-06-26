@@ -1,0 +1,82 @@
+{
+  "state": "kentucky",
+  "stateName": "Kentucky",
+  "type": "County",
+  "name": "Louisville/Jefferson County Metro, Kentucky",
+  "slug": "louisville-metro",
+  "hq": "Louisville, KY",
+  "updated": "2026-06-22",
+  "tagline": "Kentucky's largest local government — the consolidated Louisville/Jefferson County Metro (~770K residents). Central IT runs through Metro Technology Services (MTS), and the city is moving early on enterprise AI under a new Chief AI Officer and a four-person AI office.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Consolidated city-county government" },
+    { "label": "Population", "value": "~770K (KY's largest)" },
+    { "label": "Central IT", "value": "Metro Technology Services (MTS)" },
+    { "label": "FY27 budget", "value": "~$1.1B (approved)" }
+  ],
+
+  "overview": "Louisville/Jefferson County Metro Government is the consolidated city-county government formed when Louisville and Jefferson County merged — the largest local government in Kentucky, serving roughly 770,000 residents. It is a strong-mayor government led by Mayor Craig Greenberg, with a 26-member Metro Council. Central technology runs through Metro Technology Services (MTS), the enterprise IT organization that delivers infrastructure, networking, applications, public-safety systems, GIS/smart-city, and cybersecurity across Metro departments, led by executive director (CIO) Chris Seidt. For a Dell SLG seller, Louisville Metro is best understood as a single, sizable municipal buyer with centralized IT and an unusually forward AI posture: in December 2025 the city named its first Chief Artificial Intelligence Officer (Pamela McKnight, formerly of Intel) and stood up a small AI office, then in January 2026 awarded its first AI pilot (permitting) via RFP. Cybersecurity has been led inside MTS for roughly a decade, and the city has a long-running smart-city program. Procurement is centralized in the Office of Management & Budget (OMB), and Metro can buy off cooperative vehicles (e.g., Sourcewell, NASPO ValuePoint via the KY participating addendum) in addition to its own competitive solicitations.",
+
+  "budget": {
+    "intro": "Louisville Metro is a direct end spender with a centralized budget, unlike the state cabinets — its leverage is its own ~$1.1B annual budget plus a centralized IT and procurement function. Metro Council approved the amended FY2026–27 (FY27) operating and capital budget of roughly $1.1 billion in June 2026 in a 22–3 vote, with public safety as the largest category and continued investment in housing, paving, and parks. MTS-specific line items were not separately confirmed here; treat IT as funded within the central budget plus dedicated AI dollars.",
+    "stats": [
+      { "value": "~$1.1B", "label": "FY27 Metro budget (approved)", "note": "Amended operating + capital, approved June 2026 by a 22–3 Council vote" },
+      { "value": "~$2M", "label": "AI initiative expansion", "note": "Budget expansion tied to the new Chief AI Officer and four-person AI office" },
+      { "value": "~770K", "label": "Residents served", "note": "Kentucky's largest local government; consolidated city-county scale" }
+    ],
+    "notes": [
+      "Council amended the mayor's proposal — trimming the Belvedere renovation and Affordable Housing Trust Fund from $15M to $10M each and raising park maintenance to ~$4.4M — so confirm final line items against the enacted ordinance.",
+      "Public safety (incl. LMPD) is the single largest spending category; technology and IT spend sit within the central budget rather than a separately published large IT line.",
+      "MTS-specific appropriations were not separately confirmed here — treat the IT/AI split as directional and validate against the published FY27 budget book."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Enterprise AI office & Chief AI Officer", "summary": "Louisville named its first Chief Artificial Intelligence Officer (Pamela McKnight, ex-Intel) in December 2025 to lead an enterprise-wide AI strategy and a four-person AI team focused on responsible adoption across departments. A clear entry point for AI-infrastructure, responsible-AI, and workstation/compute conversations — engage the AI office and MTS together.", "tags": ["AI", "Leadership"] },
+    { "name": "AI permitting pilot (Govstream.ai)", "summary": "In January 2026 Metro awarded its first AI pilot — via its first AI-focused RFP — to Govstream.ai to streamline residential permitting using assistants grounded in the city's own codes, spatial data, and permit records (aggregate fee cap ~$30K, running through spring 2026). A signal that Metro is moving from policy to procured AI use cases.", "tags": ["AI", "Modernization"] },
+    { "name": "Cybersecurity & compliance", "summary": "MTS has run Metro's cybersecurity, risk-management, compliance, and security-awareness program for roughly a decade (led by James Meece since 2015). Cyber also helped shape the city's AI policy. A standing lane for security, identity, endpoint, and data-protection offerings across a complex municipal estate.", "tags": ["Cybersecurity", "Compliance"] },
+    { "name": "Smart city & civic innovation", "summary": "Louisville runs a long-standing smart-city / civic-innovation program inside MTS (open data, sensors, GIS, connectivity), with a long-term vision of fiber-to-the-home and environmental sensing. Relevant for edge/IoT data infrastructure, networking, and the compute behind data and analytics.", "tags": ["Smart City", "Data"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Louisville Metro runs through the Office of Management & Budget (OMB) Procurement Division, whose director is delegated purchasing authority and reports to Metro's CFO. Confirm two things first: which path fits (Metro's own competitive solicitation vs. a cooperative/piggyback contract), and that Dell's cooperative coverage is active and correctly scoped for a Kentucky local buyer.",
+    "vehicles": [
+      { "name": "Louisville Metro OMB Procurement", "detail": "Central purchasing authority for Metro Government — competitive sealed bids, competitive negotiation, cooperative, piggyback, and sole/single-source under the OMB Procurement Policy & Manual. Supplier registration and active solicitations run through OMB Procurement." },
+      { "name": "Cooperative contracts (e.g., Sourcewell)", "detail": "Metro policy expressly allows cooperative purchasing after due diligence; Sourcewell is a commonly used national cooperative. Confirm Dell's relevant cooperative contract is active and that Metro is an eligible/registered member before forecasting." },
+      { "name": "Kentucky NASPO ValuePoint addendum", "detail": "As a Kentucky local government, Metro can typically leverage the state's NASPO ValuePoint participating addenda (e.g., the Dell MNWNC-109 computer-equipment master price agreement via the KY addendum). Verify local-buyer eligibility and configuration limits per addendum." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Craig Greenberg", "title": "Mayor, Louisville Metro", "note": "Strong-mayor executive; AI-forward — personally announced the first Chief AI Officer and the first AI pilot. Top of the house and the sponsor of the city's technology/AI agenda." },
+    { "name": "Chris Seidt", "title": "Executive Director / CIO, Metro Technology Services (MTS)", "note": "~20-year Metro IT veteran (Smart Cities, IT Operations) and executive director since 2018. The primary enterprise IT relationship across infrastructure, apps, and security." },
+    { "name": "Pamela McKnight", "title": "Chief Artificial Intelligence Officer (CAIO)", "note": "Named December 2025 from Intel; leads enterprise AI strategy and a four-person AI office. The owner of the AI buying center — engage alongside MTS." },
+    { "name": "James Meece", "title": "Cybersecurity / information-security lead, MTS", "note": "Has led Metro's cybersecurity, risk, and compliance program since 2015 and helped shape the city's AI policy. The security relationship to build before forecasting cyber deals." },
+    { "name": "OMB Procurement Division", "title": "Central purchasing (under Metro CFO)", "note": "Procurement director is delegated buying authority and reports to the CFO within OMB — owns solicitations, cooperative approvals, and supplier onboarding; the contracting path into Metro." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Metro Council approves amended ~$1.1B FY27 budget (22–3)", "impact": "Sets the FY27 spending envelope with public safety as the largest category; confirm final IT/AI line items against the enacted ordinance and frame buys around modernization ROI.", "tags": ["Budget"] },
+    { "date": "2026-01", "title": "Louisville awards first AI pilot to Govstream.ai for permitting", "impact": "First AI use case procured via RFP (~$30K cap, through spring) — signals Metro is moving from AI policy to procured deployments; an opening to position AI infrastructure and responsible-AI offerings.", "tags": ["AI", "Modernization"] },
+    { "date": "2025-12", "title": "Louisville names first Chief AI Officer (Pamela McKnight)", "impact": "Creates a dedicated AI buying center and a four-person AI office backed by a ~$2M expansion — build the relationship early alongside MTS.", "tags": ["AI", "Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's access paths for a Kentucky local buyer first — Metro's OMB cooperative/piggyback options (e.g., Sourcewell) and the NASPO ValuePoint KY addendum (MNWNC-109) — and verify eligibility and configuration limits before forecasting.",
+    "Build the relationship with MTS executive director / CIO Chris Seidt as the enterprise IT owner across infrastructure, apps, and security.",
+    "Engage the new AI office and CAIO Pamela McKnight alongside MTS — position AI infrastructure, responsible-AI, and AI-ready workstations/compute tied to the city's permitting pilot and broader AI roadmap.",
+    "Align security pitches to MTS cybersecurity (James Meece) — endpoint, identity, and data protection across a complex municipal estate, referencing the city's AI policy and compliance posture.",
+    "Frame buys around the ~$1.1B FY27 budget: lead with consolidation/lifecycle savings, smart-city/data infrastructure, and as-a-service economics, and validate final line items against the enacted budget."
+  ],
+
+  "sources": [
+    { "label": "Louisville Metro — Metro Technology Services (About Us)", "url": "https://louisvilleky.gov/government/metro-technology-services/about-us" },
+    { "label": "Louisville Metro — Office of Artificial Intelligence (AI)", "url": "https://louisvilleky.gov/government/metro-technology-services/office-artificial-intelligence-ai" },
+    { "label": "GovTech — Louisville, Ky.'s First AI Officer Comes from Private Sector", "url": "https://www.govtech.com/workforce/louisville-ky-s-first-ai-officer-comes-from-private-sector" },
+    { "label": "Louisville Metro — Mayor announces first AI pilot to improve permitting (Govstream.ai)", "url": "https://louisvilleky.gov/news/mayor-greenberg-announces-first-ai-pilot-project-improve-permitting-process" },
+    { "label": "LPM — Louisville officials approve $1.1 billion budget (FY27)", "url": "https://www.lpm.org/news/2026-06-25/louisville-officials-approve-1-1-billion-budget-with-investments-in-parks-roads-and-housing" },
+    { "label": "WHAS11 — Metro Council approves amended Greenberg budget", "url": "https://www.whas11.com/article/news/local/louisville-metro-council-approves-amended-craig-greenberg-budget/417-2a7926e4-f756-43fa-8112-e3c9cc428968" },
+    { "label": "Louisville Metro — OMB Procurement Policy & Manual", "url": "https://louisvilleky.gov/sites/default/files/2026-02/Procurement%20Policy%20Manual%20202602.pdf" },
+    { "label": "Louisville Metro — Smart City", "url": "https://louisvilleky.gov/government/metro-technology-services/smart-city" }
+  ]
+}

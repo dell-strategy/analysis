@@ -1,0 +1,81 @@
+{
+  "name": "Orange County, California",
+  "slug": "orange-county-california",
+  "state": "california",
+  "stateName": "California",
+  "type": "County",
+  "hq": "Santa Ana, CA",
+  "updated": "2026-06-22",
+  "tagline": "California's 3rd-most-populous county (~3.2M residents): a centralized internal IT shop, OC Information Technology (OCIT), runs technology for county agencies, with a ~$10.5B FY2026-27 budget and an active cloud-modernization push shaping near-term tech spend.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Major urban county (~3.2M)" },
+    { "label": "County budget (FY26-27)", "value": "~$10.5B" },
+    { "label": "IT model", "value": "Centralized — OCIT" },
+    { "label": "Primary buyer", "value": "County Procurement Office (CPO)" }
+  ],
+
+  "overview": "Orange County is the local government for ~3.2 million residents — California's third-most-populous county, behind Los Angeles and San Diego — and one of the largest urban-county technology buyers in the state. IT is centralized: OC Information Technology (OCIT) is the county's internal service provider, delivering data-center, applications, client-services, networking, and security across roughly two dozen county agencies under the County Executive Office. OCIT is best understood as a shared-services shop that bills the operating departments it serves (Social Services, Health Care, Sheriff, Assessor, Registrar of Voters, and others) rather than a standalone agency with a large discretionary budget of its own — the program dollars largely sit with those departments. The county's FY2026-27 Recommended Budget is about $10.5B all-funds ($5.2B general fund), released May 20, 2026, with Board adoption scheduled for June 23, 2026. For a Dell SLG seller, the combination of a centralized IT buying center, a large stable budget, and an in-flight cloud and ERP modernization (Oracle Fusion for finance/HR, selected May 2025) points the motion toward infrastructure refresh, hybrid-cloud and data-center modernization, and security — routed through the county's central procurement office.",
+
+  "budget": {
+    "intro": "Orange County's FY2026-27 Recommended Budget totals about $10.5B all-funds, of which ~$5.2B is the General Fund and ~$1.3B is General Purpose Revenue covering mandated services. It was released May 20, 2026, with Board of Supervisors adoption scheduled for June 23, 2026. IT spend isn't published as a single public line — it flows through OCIT's internal cost-recovery model and the budgets of the ~23 county agencies it serves, so the buying signal is in department modernization plans rather than a standalone IT appropriation.",
+    "stats": [
+      { "value": "~$10.5B", "label": "County budget (FY26-27)", "note": "All-funds Recommended Budget released May 20, 2026; adoption scheduled June 23, 2026" },
+      { "value": "~$5.2B", "label": "General Fund", "note": "FY26-27; ~$1.3B General Purpose Revenue for mandated services" },
+      { "value": "~3.2M", "label": "Residents served", "note": "3rd-most-populous CA county; ~23 agencies, ~19,000 positions" }
+    ],
+    "notes": [
+      "OCIT is funded largely through internal service charges to the county agencies it supports, not a single large general-revenue IT line.",
+      "Program and modernization dollars sit with the operating departments (Social Services, Health Care, Sheriff, Assessor, etc.) — map the funded department initiative, not just OCIT."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Oracle Fusion Cloud ERP (finance & HR)", "summary": "The county selected Oracle Fusion Cloud Applications in May 2025 to move finance and HR off legacy systems. A multi-year program signaling appetite for cloud modernization and a reference point for the infrastructure, data, and integration work that surrounds a major ERP migration.", "tags": ["Cloud", "Modernization", "ERP"] },
+    { "name": "Cloud services migration & data-center strategy", "summary": "OCIT has run cloud-migration solicitations and lists Cloud, Mobility, Open Data, and Infrastructure as its core technology strategies. The pitch is hybrid-cloud and data-center modernization that pairs on-prem refresh with cloud workloads — Dell's ISG and as-a-service consumption fit this track.", "tags": ["Cloud", "Data Center"] },
+    { "name": "County Cybersecurity Program", "summary": "OCIT runs a formal county Cybersecurity Program — reducing security risk while enabling secure information exchange across county agencies and partners. FY25-26 strategic priorities lead with strengthening system and data security, making security a durable, recurring entry point for endpoint, identity, and infrastructure-security offerings.", "tags": ["Cybersecurity"] },
+    { "name": "High-availability network & systems refresh", "summary": "OCIT's stated FY25-26 priorities include implementing a high-availability network and enhancing county systems and applications. As a centralized shared-services provider, it carries ongoing server, storage, network, and end-user compute refresh across agencies — a steady lifecycle-and-resilience motion.", "tags": ["Networking", "Refresh"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Orange County runs through its central County Procurement Office (CPO), which issues solicitations and manages vendor registration. Two paths shorten the cycle: national cooperative contracts the county has already adopted, and California statewide leveraged agreements the county can buy off without a fresh RFP.",
+    "vehicles": [
+      { "name": "County Procurement Office (CPO)", "detail": "The central buying office for county solicitations, terms, and vendor registration (cpo.oc.gov) — the front door for direct county business." },
+      { "name": "Cooperative contracts (OMNIA Partners, NASPO ValuePoint)", "detail": "The county leverages national cooperatives — e.g., an OMNIA Partners agreement (#R240303 via Carahsoft) available to agencies within Orange County — to buy off pre-competed awards. Confirm Dell's cooperative coverage and reseller scope." },
+      { "name": "California statewide LPAs (CMAS / Cal eProcure)", "detail": "California Multiple Award Schedules and other DGS leveraged procurement agreements let the county buy off pre-competed statewide contracts — verify Dell's CMAS/LPA coverage is active and correctly scoped." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Michelle Aguirre", "title": "County Executive Officer (CEO)", "note": "Top of the county administration and budget; appointed June 2025, OCIT reports up through the CEO's office. Sets the spending frame every agency operates within." },
+    { "name": "KC Roestenberg", "title": "Chief Information Officer (OCIT)", "note": "Owns county IT strategy and the OCIT shared-services organization — the central technology relationship for the account. Confirm current incumbency before forecasting." },
+    { "name": "Ed Althof", "title": "Assistant CIO & Chief Technology Officer (OCIT)", "note": "Deputy/CTO who manages the department in the CIO's absence — a key technical and operational relationship in the buying center." },
+    { "name": "Andrew Alipanah", "title": "Information Security Director & County Privacy Officer (OCIT)", "note": "Owns the county Cybersecurity Program and privacy posture — the security buying-center relationship for endpoint, identity, and infrastructure-security plays." },
+    { "name": "Board of Supervisors", "title": "Five-member governing board", "note": "Adopts the county budget and approves major contracts — the body scheduled to adopt the FY2026-27 budget on June 23, 2026." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "County releases ~$10.5B FY2026-27 Recommended Budget", "impact": "Large, stable spending plan ($5.2B GF) released May 20, 2026, with Board adoption set for June 23 — the funding backdrop and timing anchor for the account.", "tags": ["Budget"] },
+    { "date": "2025-06", "title": "Michelle Aguirre appointed County Executive Officer", "impact": "New top of the county administration that OCIT reports up through — rebuild the executive relationship map and confirm tech priorities under the new CEO.", "tags": ["Leadership"] },
+    { "date": "2025-05", "title": "County selects Oracle Fusion Cloud Applications for finance & HR", "impact": "A major cloud-ERP modernization signals appetite to retire legacy and opens surrounding infrastructure, data, and integration work — a proof point for the next modernization conversation.", "tags": ["Cloud", "Modernization"] },
+    { "date": "2025-10", "title": "OCIT advances cloud services migration solicitation", "impact": "Active cloud-migration procurement confirms the hybrid-cloud and data-center modernization track — a near-term opening for ISG and as-a-service positioning.", "tags": ["Cloud", "Procurement"] }
+  ],
+
+  "dellActions": [
+    "Anchor the relationship with the OCIT buying center — CIO KC Roestenberg and Assistant CIO/CTO Ed Althof — and confirm current incumbencies before mapping the org and forecasting.",
+    "Lead with hybrid-cloud and data-center modernization tied to the Oracle Fusion ERP migration and OCIT's cloud-services track — position Dell ISG, storage, and as-a-service consumption around the surrounding infrastructure.",
+    "Build the security motion with Information Security Director / County Privacy Officer Andrew Alipanah around the county Cybersecurity Program — endpoint, identity, and infrastructure resilience.",
+    "Verify Dell's cooperative coverage (OMNIA Partners, NASPO ValuePoint) and California CMAS/LPA scope so the county can buy without a fresh RFP; register and track solicitations through the County Procurement Office (CPO).",
+    "Time the motion around the June 23, 2026 budget adoption and OCIT's FY priorities (security, high-availability network, systems enhancement) when funding and roadmaps firm up."
+  ],
+
+  "sources": [
+    { "label": "OC Information Technology (OCIT)", "url": "https://ocit.oc.gov/" },
+    { "label": "OCIT — Our Leadership Team", "url": "https://ocit.oc.gov/about-us/our-leadership-team" },
+    { "label": "OCIT — Orange County Cybersecurity Program", "url": "https://ocit.oc.gov/page/orange-county-cybersecurity-program" },
+    { "label": "County of Orange — FY 2026-27 Recommended Budget (press release)", "url": "https://www.ocgov.com/press/county-orange-releases-fy-2026-27-recommended-budget" },
+    { "label": "County of Orange — Michelle Aguirre Appointed County Executive Officer", "url": "https://www.ocgov.com/press/michelle-aguirre-appointed-orange-countys-county-executive-officer" },
+    { "label": "Oracle — Orange County Picks Oracle's AI-powered Cloud Applications", "url": "https://www.oracle.com/news/announcement/orange-county-picks-oracle-ai-powered-cloud-applications-2025-05-06/" },
+    { "label": "Orange County — County Procurement Office (CPO)", "url": "https://cpo.oc.gov/" }
+  ]
+}

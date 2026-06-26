@@ -1,0 +1,79 @@
+{
+  "state": "alabama",
+  "stateName": "Alabama",
+  "type": "State Agency",
+  "name": "Alabama Dept of Finance (OIT)",
+  "slug": "finance",
+  "hq": "Montgomery, AL",
+  "updated": "2026-06-22",
+  "tagline": "Alabama's central fiscal and administrative agency, home to the Office of Information Technology (OIT) — the state's enterprise IT authority — and the Purchasing Division that runs statewide contracts most Alabama public buyers use.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central finance + enterprise IT" },
+    { "label": "Enterprise IT", "value": "OIT (State CIO)" },
+    { "label": "Primary vehicle", "value": "AL statewide contracts" },
+    { "label": "FY2026 General Fund", "value": "~$3.7B" }
+  ],
+
+  "overview": "The Alabama Department of Finance is the state's central fiscal and administrative agency — it builds the executive budget, manages the treasury and accounting (STAARS) systems, and houses the operational divisions that run government, including the Office of Information Technology (OIT) and the Division of Purchasing. OIT, established in 2013 and led by the Secretary of Information Technology / State CIO, is Alabama's enterprise IT authority: it sets statewide IT policy, owns the IT strategic plan, and delivers shared services (network, data center, cloud, cybersecurity) to executive-branch agencies. For a Dell SLG seller, Finance/OIT is the most important single relationship in the state — it is both the enterprise standards-setter and, through the Purchasing Division, the gateway to statewide contracts that agencies, and in many cases local and education buyers, purchase against. Recent context matters: a May 2025 statewide cybersecurity event sharpened OIT's focus on identity, resilience, and whole-of-state security.",
+
+  "budget": {
+    "intro": "Alabama runs two main budgets — the General Fund (non-education) and the Education Trust Fund (ETF). Finance/OIT itself is not a large direct end-spender; OIT recovers much of its cost from the agencies it serves rather than a single large general-revenue line. The figures below set the funding pool that IT buys draw from.",
+    "stats": [
+      { "value": "~$3.7B", "label": "FY2026 General Fund", "note": "Non-education budget; the pool most agency IT operating spend draws from" },
+      { "value": "~$9.9B", "label": "FY2026 Education Trust Fund", "note": "Education budget; K-12 and higher-ed technology sits here" },
+      { "value": "~$19M", "label": "Federal cyber grant (SLCGP)", "note": "State & Local Cybersecurity Grant Program allocation supporting whole-of-state security" }
+    ],
+    "notes": [
+      "OIT is funded largely through cost recovery / internal service charges to the agencies it serves, not a single appropriation line — IT demand shows up across agency budgets.",
+      "Finance Director Bill Poole has repeatedly urged conservative budgeting amid economic uncertainty; forecast deals against a flattening, not expanding, revenue picture.",
+      "Confirm exact FY2026 enacted figures against the official Alabama executive budget before quoting to a customer."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Whole-of-state cybersecurity", "summary": "Following the May 2025 statewide cyber event, OIT and the State CISO are driving a whole-of-state security model — NIST-aligned frameworks, identity hardening, mandatory resets, and shared tooling extended to agencies and local government. A clear opening for security, identity, and resilient-infrastructure plays.", "tags": ["Cybersecurity", "Whole-of-State"] },
+    { "name": "Enterprise IT consolidation & shared services", "summary": "OIT's mandate is to streamline IT statewide — consolidating network, data center, and shared platforms across executive-branch agencies to reduce duplicated cost. Position infrastructure refresh and managed/as-a-service offerings against the consolidation roadmap.", "tags": ["Consolidation", "Data Center"] },
+    { "name": "Cloud & data-center modernization", "summary": "OIT delivers cloud and hosting as shared services; modernization tracks include hybrid cloud, infrastructure refresh, and resilient hosting for agency workloads. Tie ISG and AI-ready infrastructure to the enterprise hosting environment.", "tags": ["Cloud", "Modernization"] },
+    { "name": "AI & data governance (emerging)", "summary": "Like most states, Alabama is forming policy on enterprise AI use and data governance under OIT's standards authority. Treat AI as an early, relationship-building motion — confirm any governance/guidance is in place before forecasting AI-infrastructure deals.", "tags": ["AI", "Governance"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Alabama state government runs primarily through the Department of Finance's Division of Purchasing, which competes and maintains statewide contracts that agencies buy against. Confirm first that Dell holds the right statewide contracts and that any offering aligns with OIT enterprise standards.",
+    "vehicles": [
+      { "name": "Alabama statewide contracts (Purchasing Division)", "detail": "The Division of Purchasing competes and maintains statewide contracts for IT goods and services; executive-branch agencies purchase against them. The primary path onto state business." },
+      { "name": "OIT enterprise services", "detail": "OIT delivers network, data center, cloud, and security as shared services to agencies — a route for infrastructure and as-a-service that flows through the enterprise rather than agency-by-agency RFPs." },
+      { "name": "Cooperative purchasing", "detail": "Cooperative vehicles (e.g., NASPO ValuePoint and similar national co-ops) are commonly used by Alabama public buyers — confirm Dell's coverage as a complement to state contracts for local/education reach." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Bill Poole", "title": "State Finance Director", "note": "Cabinet-level CFO; owns the executive budget and the administrative divisions (incl. OIT and Purchasing). The top fiscal relationship and the umbrella over enterprise IT." },
+    { "name": "Daniel Urquhart", "title": "Secretary of Information Technology / State CIO", "note": "Leads OIT; sets statewide IT policy and the strategic plan. Appointed July 2023; 20+ year state veteran. The key enterprise-IT relationship for the Dell motion." },
+    { "name": "Chad Smith", "title": "State Chief Information Security Officer (CISO)", "note": "Reports to the State CIO; drives whole-of-state security and NIST-aligned frameworks. The buying center for security and identity." },
+    { "name": "Christine S. Cook", "title": "Chief Procurement Officer, Purchasing Division", "note": "Owns statewide contracts and solicitations — the path onto state business and the contract-compliance gate." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "Finance Director Bill Poole presents FY2026 budget, urges conservative outlook", "impact": "Signals a flattening revenue picture; forecast IT deals against caution rather than expansion, and emphasize cost-recovery and consolidation value.", "tags": ["Budget"] },
+    { "date": "2025-05", "title": "Statewide cybersecurity event disrupts Alabama state systems; OIT mandates password resets", "impact": "Sharpened OIT focus on identity, resilience, and whole-of-state security — a durable opening for security, identity, and resilient-infrastructure offerings.", "tags": ["Cybersecurity"] },
+    { "date": "2025-04", "title": "OIT names Chad Smith as State CISO", "impact": "Establishes a clear security buying-center owner driving NIST-aligned, whole-of-state strategy — map the security relationship to this office.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's Alabama statewide-contract coverage through the Purchasing Division — it is the access path to executive-branch agencies, not just Finance/OIT.",
+    "Make OIT (State CIO Daniel Urquhart) the anchor relationship; position infrastructure refresh and managed services against the enterprise consolidation and shared-services roadmap.",
+    "Lead security and identity into the State CISO's whole-of-state program, framed around resilience after the May 2025 cyber event and SLCGP-funded priorities.",
+    "Tie ISG and AI-ready infrastructure to OIT's cloud/data-center modernization, but confirm AI governance/guidance is in place before forecasting AI deals.",
+    "Forecast conservatively against Finance's cautious revenue outlook; emphasize cost-recovery and consolidation savings in the business case."
+  ],
+
+  "sources": [
+    { "label": "Alabama Office of Information Technology — About / Leadership", "url": "https://oit.alabama.gov/about/leadership/" },
+    { "label": "Alabama OIT — Introducing State CISO Chad Smith", "url": "https://oit.alabama.gov/11640/introducing-the-new-state-ciso-chad-smith/" },
+    { "label": "Alabama OIT — May 2025 Cybersecurity Event", "url": "https://oit.alabama.gov/cybereventmay2025/" },
+    { "label": "Alabama Department of Finance — Purchasing Division", "url": "https://purchasing.alabama.gov/" },
+    { "label": "Alabama Department of Finance — About Us", "url": "https://finance.alabama.gov/about/" },
+    { "label": "Alabama State Budget — FY2026 Executive Budget", "url": "https://budget.alabama.gov/" }
+  ]
+}

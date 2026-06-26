@@ -1,0 +1,80 @@
+{
+  "name": "Dallas County, Texas",
+  "slug": "dallas-county-texas",
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "County",
+  "hq": "Dallas, TX",
+  "updated": "2026-06-22",
+  "tagline": "Texas' second-most-populous county (~2.6M residents) runs centralized technology through its IT Services department — buying largely off pre-competed cooperative vehicles, including DIR, and rebuilding its security posture after a 2023 ransomware hit.",
+
+  "snapshot": [
+    { "label": "Role", "value": "County government (~2.6M pop.)" },
+    { "label": "Central IT", "value": "IT Services department" },
+    { "label": "IT budget", "value": "~$70M (recent)" },
+    { "label": "Primary vehicle", "value": "Co-op incl. DIR" }
+  ],
+
+  "overview": "Dallas County is the second-most-populous county in Texas, serving roughly 2.6 million residents across Dallas and surrounding communities. Like most large Texas counties it is governed by a five-member Commissioners Court — a County Judge elected at large plus four district commissioners — which sets the budget and approves major technology purchases. Central technology is delivered by the county's IT Services department, which supports county-wide infrastructure, the justice and public-safety systems, elections technology, health and human services, and resident-facing digital services. The county's technology priorities were reshaped by an October 2023 ransomware incident (attributed to the 'Play' group) that exposed data on roughly 200,000 individuals; the county has since increased IT funding and, in December 2024, named a permanent CIO after more than a year without one. For a Dell SLG seller, Dallas County is a large, centralized county buyer with active cybersecurity, modernization, and resilience drivers — and one that purchases heavily through cooperative contracts rather than one-off RFPs.",
+
+  "budget": {
+    "intro": "Dallas County adopts an annual all-funds operating and capital budget (recent adopted budgets have run in the ~$1.7B–$1.8B range; confirm the exact FY2026 all-funds total in the county's published budget). Technology is a distinct and growing line: the IT Services department budget was reported to have risen from roughly $58M to over $70M as the county responded to its security incident. The FY2026 adopted property tax rate is $0.215500 per $100 of assessed valuation.",
+    "stats": [
+      { "value": "~$70M", "label": "IT Services budget", "note": "Reported recent figure, up from ~$58M; confirm current-year line" },
+      { "value": "~$1.7–1.8B", "label": "County all-funds budget", "note": "Recent adopted-budget range; verify exact FY2026 total" },
+      { "value": "$0.215500", "label": "FY2026 tax rate", "note": "Per $100 assessed valuation (M&O + I&S), Tax Year 2025" }
+    ],
+    "notes": [
+      "IT spending rose materially following the October 2023 ransomware incident — security and resilience are funded priorities, not aspirations.",
+      "Exact current-year IT and all-funds totals should be confirmed against the county's published FY2026 budget documents before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Post-incident cybersecurity rebuild", "summary": "After the October 2023 'Play' ransomware incident (data on ~200K individuals exposed), the county increased IT funding and refocused on endpoint monitoring, access controls, and resilience. Security modernization is the clearest active driver — lead with it.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "IT leadership reset and governance", "summary": "A permanent CIO (Justine Tran) was named in December 2024 after a long vacancy. Expect formalized IT governance, ITIL-style service management, and a re-baselining of infrastructure — an opening for refresh and standardization conversations.", "tags": ["Leadership", "Modernization"] },
+    { "name": "Infrastructure and data-center modernization", "summary": "A large county supporting justice, elections, health, and resident services runs aging infrastructure that the new IT leadership is positioned to refresh. Server, storage, and hybrid-cloud modernization are natural ISG entry points.", "tags": ["Data Center", "Infrastructure"] },
+    { "name": "Resident-facing digital services", "summary": "The county continues to expand online services (records, payments, justice and health portals). Backend compute, storage, and identity/security underpin these — connect endpoint and infrastructure plays to the citizen-services roadmap.", "tags": ["Digital Services", "Cloud"] }
+  ],
+
+  "procurement": {
+    "intro": "Dallas County buys through its Purchasing Department, which processes thousands of purchase orders and hundreds of formal solicitations each year and posts opportunities via the BidNet platform (adopted December 2024). For technology, the county — like other Texas local governments — can buy voluntarily off DIR Cooperative Contracts and other cooperative vehicles, avoiding a full RFP. Confirm Dell's DIR and co-op coverage and register as a supplier before pursuing direct awards.",
+    "vehicles": [
+      { "name": "Dallas County Purchasing (BidNet)", "detail": "Central purchasing for the county; solicitations are posted through BidNet (live since Dec 2024). Vendors must register to receive notices and bid." },
+      { "name": "DIR Cooperative Contracts", "detail": "Texas local governments may buy IT products and services voluntarily off DIR's 650+ pre-competed co-op contracts at negotiated discounts — a fast path that avoids a county RFP." },
+      { "name": "Other cooperative purchasing", "detail": "National/local co-ops (e.g., interlocal and purchasing cooperatives) are also available to the county for technology and services — confirm which vehicle is preferred for a given category." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Clay Jenkins", "title": "Dallas County Judge", "note": "Presiding officer of the Commissioners Court; sets tone and presides over budget and major-purchase approvals — the top political relationship." },
+    { "name": "Commissioners Court", "title": "John Wiley Price, Theresa Daniel, Elba Garcia, Andrew Sommerman", "note": "Four district commissioners who, with the Judge, approve the budget and large technology contracts." },
+    { "name": "Justine Tran", "title": "Chief Information Officer (IT Services)", "note": "Named CIO Dec 2024 after a long vacancy; background includes City of Dallas tech strategy and ITIL governance. The primary technology relationship." },
+    { "name": "IT Services security leadership", "title": "Information security / CISO function", "note": "Owns the post-incident security program (monitoring, access, resilience). Confirm the current named CISO/security lead before engaging." },
+    { "name": "Dallas County Purchasing Department", "title": "Central procurement / solicitations", "note": "Owns BidNet solicitations, vendor registration, and co-op usage — the procedural path onto any deal." }
+  ],
+
+  "news": [
+    { "date": "2024-12", "title": "Dallas County names Justine Tran permanent CIO after 1+ year vacancy", "impact": "Stable IT leadership returns; expect governance, modernization, and security-program momentum — re-engage the technology buying center.", "tags": ["Leadership"] },
+    { "date": "2024-12", "title": "County moves solicitations to the BidNet platform", "impact": "All goods/services/construction solicitations now post through BidNet; vendors must register there to bid.", "tags": ["Procurement"] },
+    { "date": "2023-10", "title": "Ransomware incident ('Play') exposes data on ~200K individuals", "impact": "Triggered increased IT/security funding and a multi-year resilience focus — the anchor for cybersecurity and infrastructure plays.", "tags": ["Cybersecurity"] }
+  ],
+
+  "dellActions": [
+    "Lead with cybersecurity and resilience — the 2023 ransomware incident and subsequent funding increase make security the county's clearest active driver.",
+    "Build the relationship with CIO Justine Tran and the IT Services team; tie infrastructure refresh and standardization to the post-vacancy governance reset.",
+    "Confirm Dell's DIR Cooperative Contract and other co-op coverage so the county can buy without a full RFP, and register as a supplier in BidNet.",
+    "Connect ISG (compute, storage, hybrid cloud) and endpoint/security offers to justice, elections, health, and resident-services workloads.",
+    "Verify exact current-year IT and all-funds budget figures against the published FY2026 documents before sizing opportunities."
+  ],
+
+  "sources": [
+    { "label": "Dallas County — IT Services department", "url": "https://www.dallascounty.org/departments/ITservices/" },
+    { "label": "Dallas County — Purchasing Department", "url": "https://www.dallascounty.org/departments/purchasing/" },
+    { "label": "Dallas County — Office of Budget and Evaluation (FY2026)", "url": "https://www.dallascounty.org/departments/budget/fy2026_budget.php" },
+    { "label": "Dallas County — Notice of Adopted TY2026 Tax Rate", "url": "https://www.dallascounty.org/about-us/hot-links/notice-of-final-vote.php" },
+    { "label": "KERA — Dallas County names IT leader after more than a year without CIO", "url": "https://www.keranews.org/news/2024-12-10/dallas-county-names-it-leader-after-more-than-a-year-without-cio" },
+    { "label": "GovTech — New Dallas County CIO Brings Public- and Private-Sector Experience", "url": "https://www.govtech.com/workforce/new-dallas-county-cio-has-considerable-area-experience" },
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+  ]
+}

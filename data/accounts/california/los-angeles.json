@@ -1,0 +1,87 @@
+{
+  "state": "california",
+  "stateName": "California",
+  "type": "City",
+  "name": "Los Angeles, California",
+  "slug": "los-angeles",
+  "hq": "Los Angeles, CA",
+  "updated": "2026-06-22",
+  "tagline": "The nation's second-largest city — ~4M residents, a ~$14B budget closing a ~$1B deficit. Enterprise IT runs through the Information Technology Agency (ITA) under CIO/GM Ted Ross; the city is an early generative-AI adopter and is hardening and modernizing technology ahead of the 2028 Olympics.",
+
+  "snapshot": [
+    { "label": "Residents served", "value": "~4M (2nd-largest U.S. city)" },
+    { "label": "FY2025-26 city budget", "value": "~$14B (closed ~$1B deficit)" },
+    { "label": "Central IT", "value": "Information Technology Agency (ITA)" },
+    { "label": "Buying gate", "value": "City purchasing + Council approval" }
+  ],
+
+  "overview": "The City of Los Angeles is the second-most-populous city in the United States — roughly 4 million residents — governed by an elected Mayor and a 15-member City Council. Enterprise technology runs through the Information Technology Agency (ITA), which serves as the city's central IT department: led by General Manager and CIO Ted Ross, ITA reports around 465 employees and delivers enterprise IT and digital services to roughly 45 city departments, tens of thousands of city employees, and the public. It is important to distinguish the City of Los Angeles from the separately governed County of Los Angeles; they are distinct buyers with their own budgets, CIOs, and procurement. The defining context for FY2025-26 is fiscal stress: the city entered the year facing a roughly $1 billion deficit (driven by overspending, liability payouts, soft tax revenue, and fire recovery) and adopted a roughly $14 billion budget that closed the gap through cuts, labor agreements that ultimately averted civil-service layoffs, and use of reserves. Despite austerity, ITA is a recognized digital-government leader (repeatedly ranked a top Digital City) and is moving aggressively on generative AI and on the SmartLA 2028 program tied to the 2028 Olympic and Paralympic Games. For a Dell SLG seller this is a large municipal opportunity, but one where the message must fit a cost-pressured, efficiency-first environment and route through city purchasing and Council approval.",
+
+  "budget": {
+    "intro": "Los Angeles adopted a roughly $14 billion FY2025-26 budget that closed an initially projected ~$1 billion deficit. This is an austerity cycle: the Mayor's April proposal contemplated more than 1,600 layoffs, later pared and ultimately averted through labor agreements (voluntary unpaid days, transfers to proprietary departments) and reserve draws. Technology spend is not a single concentrated line — ITA holds the enterprise IT appropriation, but proprietary departments (DWP, Airports, Harbor) and large general-fund departments carry their own IT.",
+    "stats": [
+      { "value": "~$14B", "label": "FY2025-26 city budget", "note": "Adopted; closed an initially projected ~$1B deficit" },
+      { "value": "~$1B", "label": "Opening deficit closed", "note": "Overspending, liability payouts, soft revenue, fire recovery" },
+      { "value": "~465", "label": "ITA staff", "note": "Central IT serving ~45 departments and ~4M residents" }
+    ],
+    "notes": [
+      "FY2025-26 is a cost-pressure year — the ~$1B gap was closed with cuts, labor deals, and reserves, which favors efficiency, consolidation, and automation pitches over net-new capital.",
+      "Technology budgets are distributed: ITA owns enterprise IT, but proprietary departments (DWP, LAWA/Airports, Port of LA) and large operating departments fund their own systems — verify the owning department before forecasting.",
+      "Mid-year financial status reports from the City Administrative Officer (CAO) are the authoritative check on where the budget actually landed; confirm current figures against the CAO before sizing a deal."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Citywide generative AI rollout (Google Gemini)", "summary": "LA moved from a ~100-user pilot to deploying Google Workspace with Gemini across its computer-using workforce (reported around 27,500 staff), backed by large-scale ITA training sessions (3,000-5,000 participants) and an eight-week 'super user' program. A live lane for AI-infrastructure, data-readiness, and productivity tooling, with comparable municipal references valued over decks.", "tags": ["AI", "Productivity"] },
+    { "name": "AI governance — LA A.I. Roadmap & Safety Checklist", "summary": "ITA has published an 'L.A. A.I. Roadmap' and an 'A.I. Safety Checklist,' building responsible-AI governance, privacy, and security review into how the city adopts AI. Governance-forward posture means AI-infrastructure and data plays should lead with transparency, security, and compliance fit.", "tags": ["AI", "Governance"] },
+    { "name": "SmartLA 2028 ahead of the Olympics", "summary": "ITA convenes the Smart City effort (SmartLA 2028) across dozens of departments to modernize connectivity, mobility, IoT, and digital services before the 2028 Olympic & Paralympic Games — a multi-year program touching network, edge/IoT, and data platforms. Mega-event readiness is a durable funding rationale even in an austerity year.", "tags": ["Smart City", "Modernization"] },
+    { "name": "Cybersecurity operations & resilience", "summary": "ITA's security organization, under CISO Timothy Lee, defends against very high daily threat volumes and has modernized its SIEM and threat-prevention program. With the 2028 Games raising the regional threat profile, security operations, endpoint, identity, and risk-visibility are an active spend area.", "tags": ["Cybersecurity", "Resilience"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to the City of Los Angeles runs through city purchasing and Council oversight, not a single buying desk. The General Services Department and departmental purchasing handle solicitations, vendors must register and comply with city contractor requirements, and contracts of significant value require City Council (and often Mayoral) approval. Cooperative contracts can accelerate catalog-style buys. Confirm the owning department first, then map the city-purchasing path and any usable co-op.",
+    "vehicles": [
+      { "name": "City purchasing / General Services Department", "detail": "The central path for competitive solicitations and citywide agreements; vendors register and meet city contractor-compliance requirements (e.g., business-inclusion, living-wage, and equal-benefits programs)." },
+      { "name": "City Council / Mayoral approval", "detail": "Larger contracts require City Council approval (and frequently the Mayor's), so factor Council committee and agenda timing into any sizable deal. Smaller buys may clear at the department level." },
+      { "name": "Cooperative purchasing contracts", "detail": "The city can leverage cooperative vehicles to extend pre-competed pricing and terms — a faster route than a stand-alone city solicitation where a usable co-op contract exists. Confirm which co-ops Dell holds and which LA actively buys through for a given category." },
+      { "name": "Proprietary department procurement", "detail": "DWP, LAWA/Airports, and the Port of LA run their own procurement and IT budgets outside the general-fund process — separate buying centers to map for infrastructure and as-a-service plays." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Karen Bass", "title": "Mayor", "note": "The city's chief executive; owns the budget priorities and the labor agreements that closed the FY2025-26 deficit. The executive context for any enterprise-scale technology program." },
+    { "name": "Ted Ross", "title": "General Manager & CIO, Information Technology Agency (ITA)", "note": "Long-tenured GM/CIO leading central IT (~465 staff), the AI rollout, and SmartLA 2028. The primary enterprise-IT relationship for the city motion." },
+    { "name": "Timothy Lee", "title": "Chief Information Security Officer (CISO)", "note": "Leads the city's information-security program and security operations within ITA. The security buying-center owner; verify current status before forecasting." },
+    { "name": "Matthew W. Szabo", "title": "City Administrative Officer (CAO)", "note": "The city's top budget/finance official; authored the FY2025-26 budget summary and mid-year financial reports. The fiscal gatekeeper and the source of authoritative budget figures." },
+    { "name": "City Council (15 members)", "title": "Governing body / contract approval", "note": "Approves larger contracts and the budget through its committees (e.g., Budget, Finance). Council and committee timing gates any sizable technology deal." }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "CAO issues FY2025-26 mid-year (third) financial status report", "impact": "The authoritative mid-year check on where the budget landed after the deficit close — confirm current figures and any further restraint before sizing deals.", "tags": ["Budget"] },
+    { "date": "2025-09", "title": "Mayor Bass secures labor agreements averting all civil-service layoffs for FY2025-26", "impact": "Deficit closed without mass layoffs via voluntary unpaid days, transfers, and reserves — reinforces an efficiency-first posture; lead with cost-takeout, not net-new capital.", "tags": ["Budget", "Leadership"] },
+    { "date": "2025-05", "title": "City Council finalizes ~$14B FY2025-26 budget closing ~$1B deficit", "impact": "Confirms austerity and tighter scrutiny on new spend — frame infrastructure, consolidation, and automation as savings enablers.", "tags": ["Budget"] },
+    { "date": "2025", "title": "LA expands generative AI citywide with Google Gemini after pilot", "impact": "Workforce-wide AI adoption (~27,500 users) plus large-scale ITA training — an opening for AI-infrastructure, data-readiness, and security conversations.", "tags": ["AI"] },
+    { "date": "2025", "title": "Los Angeles ranked a top Digital City; SmartLA 2028 advances ahead of the Olympics", "impact": "Recognition for AI governance and digital services; mega-event readiness sustains modernization appetite even in a cost-pressured year.", "tags": ["Smart City", "Modernization"] }
+  ],
+
+  "dellActions": [
+    "Anchor the account on ITA under CIO/GM Ted Ross as the enterprise buying center, while separately mapping proprietary departments (DWP, LAWA, Port of LA) that run their own IT budgets and procurement.",
+    "Lead with efficiency and consolidation in an austerity year: position ISG, infrastructure refresh, and managed services as cost-takeout against a budget that just closed a ~$1B deficit — not added spend.",
+    "Tie AI-infrastructure and data-readiness to the citywide Gemini rollout and the LA A.I. Roadmap/Safety Checklist, leading with governance, privacy, and security fit and comparable municipal references.",
+    "Engage the security org (CISO Timothy Lee) on operations, endpoint, identity, and resilience hardening ahead of the 2028 Olympics and the SmartLA 2028 program.",
+    "Get the procurement path right early: confirm city-purchasing registration and contractor-compliance requirements, identify the owning department, and factor City Council/Mayoral approval and committee timing for any sizable contract."
+  ],
+
+  "sources": [
+    { "label": "City of LA ITA — Organization Overview", "url": "https://ita.lacity.gov/about/organization" },
+    { "label": "City of LA ITA — About ITA", "url": "https://ita.lacity.gov/about/ita" },
+    { "label": "Mayor Karen Bass — Releases Balanced Budget Proposal FY2025-2026", "url": "https://mayor.lacity.gov/news/mayor-bass-releases-balanced-budget-proposal-fy-2025-2026" },
+    { "label": "ABC7 — LA City Council approves revised $14 billion budget", "url": "https://abc7.com/post/los-angeles-city-council-approves-revised-14-billion-budget-now-heads-mayor-bass/16611789/" },
+    { "label": "Mayor Karen Bass — Agreements to avert all civil-service layoffs in 2025-26 budget", "url": "https://mayor.lacity.gov/news/following-months-labor-negotiations-mayor-bass-secures-agreements-avert-all-civil-service" },
+    { "label": "City Administrative Officer — 2025-26 Budget Summary Pamphlet", "url": "https://cao.lacity.gov/budget/summary/2025-26%20Budget%20Summary%20Pamphlet.FINAL.pdf" },
+    { "label": "City of LA ITA — Publishes 'Los Angeles A.I. Roadmap'", "url": "https://ita.lacity.gov/news/ita-publishes-los-angeles-ai-roadmap" },
+    { "label": "StateScoop — Generative AI creeps into Los Angeles city government", "url": "https://statescoop.com/los-angeles-maryland-google-gemini-ai/" },
+    { "label": "StateScoop — Los Angeles prepares to be 'smart' ahead of 2028 Olympics (Ted Ross)", "url": "https://statescoop.com/los-angeles-smart-city-2028-olympics-ted-ross/" },
+    { "label": "LA Cyber Lab — Timothy Lee, CISO, City of Los Angeles", "url": "https://www.lacyberlab.org/summit_speakers/timothy-lee/" }
+  ]
+}

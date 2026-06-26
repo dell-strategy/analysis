@@ -1,0 +1,83 @@
+{
+  "state": "tennessee",
+  "stateName": "Tennessee",
+  "type": "County",
+  "name": "Nashville and Davidson County, Tennessee",
+  "slug": "nashville-and-davidson-county-tennessee",
+  "hq": "Nashville, TN",
+  "updated": "2026-06-22",
+  "tagline": "Tennessee's largest local government: a consolidated city-county of ~715K residents running on a ~$3.8B annual budget, with all technology buying centralized through Metro Information Technology Services (ITS).",
+
+  "snapshot": [
+    { "label": "Structure", "value": "Consolidated city-county" },
+    { "label": "Population", "value": "~715K (Davidson County)" },
+    { "label": "FY2027 budget (proposed)", "value": "~$3.8B" },
+    { "label": "Central IT", "value": "Metro ITS" }
+  ],
+
+  "overview": "The Metropolitan Government of Nashville & Davidson County is a consolidated city-county — one government covering the City of Nashville and Davidson County — serving roughly 715,000 residents, making it Tennessee's largest local-government account. Mayor Freddie O'Connell's administration filed a proposed Fiscal Year 2027 operating budget of about $3.8 billion (filed May 1, 2026), built around grocery-tax relief, the city's largest-ever housing investment, schools, and public safety. Technology is centralized: the Metro Department of Information Technology Services (ITS) is the shared-services IT organization for the enterprise, supporting roughly 55 departments and agencies with a staff of around 170 and an operating budget reported near $64.5 million. ITS owns infrastructure, networking, cybersecurity, data, and resident-facing digital services (including Metro Public Wi-Fi and digital-inclusion programs), and it stood up a public Metro Government AI Use Registry as part of a governance-first approach to generative AI. For a Dell SLG seller, the practical map is: ITS is the central technology buying center, the Metro Finance Procurement Division runs the contracts, and Metro Nashville Public Schools (MNPS) is a large adjacent buyer with its own procurement.",
+
+  "budget": {
+    "intro": "Metro's leverage is its scale — one consolidated budget funds city and county services together. Mayor O'Connell's proposed FY2027 budget is about $3.8 billion; the centralized ITS department carries its own operating line within that, and large agencies (Schools, Police, Public Works) drive the bulk of enterprise IT demand.",
+    "stats": [
+      { "value": "~$3.8B", "label": "FY2027 budget (proposed)", "note": "Mayor O'Connell's recommended operating budget, filed May 1, 2026" },
+      { "value": "~$64.5M", "label": "Metro ITS operating budget", "note": "Reported figure for the central IT department" },
+      { "value": "~55", "label": "Departments / agencies served", "note": "Enterprise scope of Metro ITS shared services" }
+    ],
+    "notes": [
+      "FY2027 general-fund revenue is reported as roughly flat, with the budget emphasizing fiscal discipline and reserves — expect disciplined, justified IT spend rather than expansion.",
+      "Metro Nashville Public Schools is funded within the Metro budget but procures separately — treat it as a distinct, large buying center.",
+      "Budget figures move through the Council process (a Substitute Budget was filed in the June cycle); confirm final adopted numbers before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Metro Government AI Use Registry & AI governance", "summary": "Metro ITS publishes a public AI Use Registry cataloging where the government uses AI, and frames AI around drafting, editing, data analysis, and workflow automation. A governance-led posture — lead with responsible-AI infrastructure, not just tooling.", "tags": ["AI", "Governance"] },
+    { "name": "Cybersecurity & data protection", "summary": "ITS lists securing and safeguarding data and services as a core priority, with a dedicated CISO (John Griffey). Local governments remain high-value ransomware targets — endpoint, identity, resilience, and recovery are durable conversations.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "Digital inclusion & Metro Public Wi-Fi", "summary": "ITS runs Metro Public Wi-Fi plus Digital SkillsLink programs (TechTies, Digital Navigators) to close the access gap — a resident-facing modernization track tied to connectivity and device access.", "tags": ["Digital Equity", "Connectivity"] },
+    { "name": "Smart-city & regional AI/cloud talent (Nashville Innovation Alliance)", "summary": "Metro continues smart-city work with Vanderbilt's institute and benefits from the AWS-backed Nashville Innovation Alliance, expanding regional AI/cloud/cyber talent (targeting 1,000+ Tennesseans by 2027). Context for workforce-aligned infrastructure plays.", "tags": ["Smart City", "Workforce"] }
+  ],
+
+  "procurement": {
+    "intro": "Metro buys through a central Finance Procurement Division covering all ~55 departments. Vendors register and transact via the iSupplier portal; Metro also leverages cooperative purchasing and inter-local agreements to buy off pre-competed contracts. Confirm Dell's eligible cooperative vehicles and statewide options before pursuing a bid.",
+    "vehicles": [
+      { "name": "Metro Finance Procurement (iSupplier)", "detail": "Central buying for all Metro departments; vendors must register in iSupplier to receive solicitations and submit offers. The front door for direct Metro business." },
+      { "name": "Cooperative purchasing agreements", "detail": "Metro's Sourcing & Contracts team identifies and uses cooperative and inter-local agreements (e.g., national co-ops) — a route to buy off pre-competed contracts without a fresh RFP." },
+      { "name": "Tennessee state contracts", "detail": "Statewide contracts managed by Tennessee Central Procurement (General Services) are frequently available to local governments — confirm whether a given state contract is open to Metro for the item in question." },
+      { "name": "MNPS procurement", "detail": "Metro Nashville Public Schools runs its own procurement for district technology — a separate, sizable buying center adjacent to Metro ITS." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Freddie O'Connell", "title": "Mayor, Metro Nashville & Davidson County", "note": "Sets budget and policy priorities (affordability, housing, transit, safety). Top of the political structure; technology decisions flow under his administration." },
+    { "name": "Shawn Smith", "title": "Chief Information Officer / Director, Metro ITS", "note": "Started March 2026; 30+ years in city/county IT. Leads ITS shared services for ~55 agencies — the primary enterprise technology relationship." },
+    { "name": "John Griffey", "title": "Chief Information Security Officer (CISO)", "note": "Former interim CIO who resumed the CISO role; owns security policy, standards, and the cyber buying conversation." },
+    { "name": "Metro Finance Procurement Division", "title": "Central purchasing & contracts", "note": "Runs solicitations, iSupplier, cooperative agreements, and SBE/diversity programs — the contracting path for any Metro deal." },
+    { "name": "Metro Council — Budget & Finance Committee", "title": "Appropriations oversight", "note": "Reviews and amends the mayor's budget (filed a FY2027 Substitute Budget). Approves the appropriations that fund IT." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Mayor O'Connell files ~$3.8B proposed FY2027 budget", "impact": "Flat revenue and an affordability focus signal disciplined IT spend — tie proposals to efficiency, security, and service delivery, not expansion.", "tags": ["Budget"] },
+    { "date": "2026-05", "title": "Metro updates its public AI Use Registry (current as of May 2026)", "impact": "Confirms an active, governance-first AI posture — an opening for responsible-AI infrastructure and data-platform conversations.", "tags": ["AI"] },
+    { "date": "2026-03", "title": "Shawn Smith starts as Metro CIO / ITS Director", "impact": "New enterprise IT leader (30+ yrs local-gov experience) — a relationship-reset moment; align early to his priorities.", "tags": ["Leadership"] },
+    { "date": "2025-10", "title": "AWS partners with Nashville Innovation Alliance on regional AI/cloud workforce", "impact": "Regional AI/cloud/cyber talent pipeline (1,000+ Tennesseans by 2027) strengthens the case for AI-infrastructure investment in the metro.", "tags": ["Workforce", "AI"] }
+  ],
+
+  "dellActions": [
+    "Map Metro ITS as the central technology buying center under CIO Shawn Smith — build the relationship early given his March 2026 start and align to his stated priorities (reliable shared infrastructure, secure data, customer value).",
+    "Confirm Dell's path to Metro: register/verify standing in iSupplier and identify the cooperative and Tennessee state contracts Metro can buy off without a fresh RFP.",
+    "Lead cybersecurity with CISO John Griffey — endpoint, identity, resilience, and recovery resonate for a high-value local-government ransomware target.",
+    "Frame AI-infrastructure around Metro's governance-first posture (the AI Use Registry) — responsible-AI compute, data platforms, and edge tied to real workflows, not point tools.",
+    "Treat Metro Nashville Public Schools as a separate, sizable adjacent buyer with its own procurement, and watch the Council budget cycle for the final FY2027 appropriations that fund IT."
+  ],
+
+  "sources": [
+    { "label": "Nashville.gov — Mayor O'Connell files proposed FY2027 budget", "url": "https://www.nashville.gov/departments/mayor/news/mayor-oconnell-files-proposed-fiscal-year-2027-budget" },
+    { "label": "Nashville.gov — Mayor announces Shawn Smith as new CIO", "url": "https://www.nashville.gov/departments/mayor/news/mayor-freddie-oconnell-announces-shawn-smith-metro-nashvilles-new-chief-information-officer" },
+    { "label": "Nashville.gov — About Information Technology Services", "url": "https://www.nashville.gov/departments/information-technology-services/about-its" },
+    { "label": "Nashville.gov — Metro Government AI Use Registry", "url": "https://www.nashville.gov/departments/information-technology-services/information-security/artificial-intelligence/metro-ai-use-registry" },
+    { "label": "Nashville.gov — How To Do Business With Metro (Procurement)", "url": "https://www.nashville.gov/departments/finance/procurement/how-do-business-metro" },
+    { "label": "Nashville.gov — AWS partners with Nashville Innovation Alliance", "url": "https://www.nashville.gov/departments/mayor/news/aws-partners-nashville-innovation-alliance-transform-tennessees-ai-and-cloud-workforce" },
+    { "label": "GovTech — Nashville Metro's New CIO Brings Local Government Experience", "url": "https://www.govtech.com/workforce/nashville-metros-new-cio-brings-local-government-experience" }
+  ]
+}

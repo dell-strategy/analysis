@@ -1,0 +1,85 @@
+{
+  "state": "ohio",
+  "stateName": "Ohio",
+  "type": "City",
+  "name": "Cincinnati, Ohio",
+  "slug": "cincinnati-ohio",
+  "hq": "Cincinnati, OH",
+  "updated": "2026-06-22",
+  "tagline": "Ohio's third-largest city (~310K) running a council-manager government — its central IT, the Enterprise Technology Solutions (ETS) department, owns citywide infrastructure, applications, security, and the open-data platform across a $1.8B all-funds budget.",
+
+  "snapshot": [
+    { "label": "Population", "value": "~310,000" },
+    { "label": "All-funds budget (FY27)", "value": "$1.8B+" },
+    { "label": "Central IT", "value": "ETS department" },
+    { "label": "Government", "value": "Council-Manager" }
+  ],
+
+  "overview": "Cincinnati is Ohio's third-largest city (roughly 310,000 residents) and the urban core of the Cincinnati metro. It operates under a council-manager form of government: a directly elected Mayor (Aftab Pureval) and a nine-member City Council set policy, while a professional City Manager (Sheryl Long) runs day-to-day operations and the ~6,000-employee workforce. Central technology is consolidated in the Enterprise Technology Solutions (ETS) department, which owns citywide IT strategy, infrastructure, enterprise applications, cybersecurity, emergency communications, and the regional law-enforcement data systems (RCIC/CLEAR). For a Dell SLG seller, Cincinnati is a mid-market municipal account where buying decisions concentrate in ETS and the City Manager's office, purchasing runs through the city's Office of Procurement, and — like most Ohio public entities — cooperative and state contract vehicles are common paths to award.",
+
+  "budget": {
+    "intro": "Cincinnati funds a sizable enterprise: the FY2026–2027 biennial budget runs more than $1.8B all funds, with the General Fund (the discretionary pool where most IT operating dollars sit) at roughly $593M. The city closed a ~$29.5M General Fund gap in the FY27 cycle largely through vacancy savings, which tends to tighten new discretionary spend.",
+    "stats": [
+      { "value": "$1.8B+", "label": "All-funds budget", "note": "FY2026–2027 biennial; ~$1.37B operating + ~$434M capital" },
+      { "value": "~$593M", "label": "General Fund (FY27)", "note": "Discretionary operating pool; ~1/3 of the budget" },
+      { "value": "~$29.5M", "label": "FY27 GF gap closed", "note": "Largely via vacancy savings — a headwind for new discretionary IT spend" }
+    ],
+    "notes": [
+      "ETS is funded as a citywide service department; specific IT line items live in the operating budget rather than a single headline figure — confirm against the published budget documents.",
+      "Capital is buoyed by proceeds from the 2023 $1.6B Cincinnati Southern Railway sale (held in trust); ~$58M of railway revenue flows to FY27 capital, a potential source for one-time infrastructure refresh."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Data-center zoning study (IDC Overlay #89)", "summary": "In Jan 2026 the City Manager directed a zoning study on data-center impacts; Council established an Interim Development Control overlay, extended through end of 2026. Driven by AI/cloud demand — signals local sensitivity to power and land use that frames any on-prem/edge infrastructure conversation.", "tags": ["Data Center", "AI", "Policy"] },
+    { "name": "Open data & analytics (CincyInsights / OPDA)", "summary": "Cincinnati runs a mature open-data portal (Tyler Data & Insights) and an Office of Performance & Data Analytics in the City Manager's office. A data-modernization and analytics motion — storage, compute, and AI-readiness for civic data.", "tags": ["Open Data", "Analytics"] },
+    { "name": "ETS infrastructure & security modernization", "summary": "ETS's Enterprise Infrastructure & Security division owns the city data center, fiber network, Microsoft 365, and cybersecurity controls. Core refresh territory for ISG (servers/storage), endpoint, and security infrastructure.", "tags": ["Infrastructure", "Cybersecurity"] },
+    { "name": "Government restructuring (FY26)", "summary": "City Manager Long announced a 2026 reorganization (dissolving DCED, creating an Office of Strategic Growth and a new resident-services department). Org change can reshape system needs and budget owners — track which departments consolidate.", "tags": ["Transformation", "Org Change"] }
+  ],
+
+  "procurement": {
+    "intro": "Cincinnati buys through its Office of Procurement (central purchasing for ~24 departments). Most public-sector IT buys in Ohio reach award via competitive solicitation or, more commonly for commodity technology, through cooperative and state contract vehicles — confirm the path before pursuing a deal.",
+    "vehicles": [
+      { "name": "Cincinnati Office of Procurement", "detail": "Central purchasing function led by an (Interim) Chief Procurement Officer; runs ITBs and RFPs and posts opportunities via the city portal / DemandStar. The front door for direct city awards." },
+      { "name": "Ohio State Term Schedules / cooperative contracts", "detail": "Ohio public entities routinely buy IT off state and cooperative vehicles to avoid running a full RFP. Confirm Dell coverage on the relevant Ohio cooperative/state contracts that Cincinnati can leverage." },
+      { "name": "National cooperatives (e.g., Sourcewell, NASPO ValuePoint)", "detail": "Common piggyback paths for municipal technology buys. Verify which co-ops the city's procurement code permits and that Dell/partner offerings are listed." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Aftab Pureval", "title": "Mayor", "note": "Directly elected; re-elected Nov 2025 by a wide margin. Sets policy direction and budget priorities with Council — the political sponsor for major initiatives." },
+    { "name": "Sheryl Long", "title": "City Manager", "note": "18th City Manager; runs operations and ~6,000 employees, including ETS. The executive owner of citywide technology decisions and the FY26 reorg." },
+    { "name": "Sean Ware", "title": "IT Director, Enterprise Technology Solutions (ETS)", "note": "Leads ETS since Aug 2022 (30+ yrs IT); owns citywide IT strategy, infrastructure, applications, and IT governance. The primary technology relationship." },
+    { "name": "Enterprise Infrastructure & Security (ETS)", "title": "Network, data center & cybersecurity division", "note": "Owns data-center ops, fiber, M365, and security controls; no separately named CISO surfaced publicly — security sits within this division. Key buying center for ISG and security." },
+    { "name": "Office of Procurement", "title": "Central purchasing (Interim CPO: Laura Castillo)", "note": "Runs solicitations and contract awards for ~24 departments — the contracting path for any city deal." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Cincinnati adopts FY2027 budget (~$593M General Fund), closing a ~$29.5M gap", "impact": "Vacancy-driven savings tighten discretionary spend; capital is supported by railway-sale proceeds — lead with cooperative-vehicle and refresh plays over net-new discretionary asks.", "tags": ["Budget"] },
+    { "date": "2026-04", "title": "City Council extends data-center zoning restrictions (IDC Overlay #89) through end of 2026", "impact": "Local sensitivity to data-center power/land use; frame infrastructure conversations around efficiency and existing-footprint modernization.", "tags": ["Data Center", "Policy"] },
+    { "date": "2026-03", "title": "City Manager Long announces 2026 government restructuring", "impact": "Department consolidations (DCED dissolved; new Office of Strategic Growth) may shift system ownership and budget owners — re-map stakeholders.", "tags": ["Org Change"] },
+    { "date": "2026-01", "title": "City Manager directs data-center impact zoning study", "impact": "AI/cloud-driven demand prompts policy review — signals where the city's attention sits on compute and power infrastructure.", "tags": ["AI", "Policy"] },
+    { "date": "2025-11", "title": "Mayor Aftab Pureval re-elected", "impact": "Continuity at the top of city government — stable policy and budget direction for multi-year engagements.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Build the ETS relationship first — IT Director Sean Ware and the Enterprise Infrastructure & Security division are the buying center for ISG (servers/storage), endpoint, and security infrastructure refresh.",
+    "Confirm Dell coverage on Ohio state/cooperative contracts (and national co-ops the city permits) so there's a low-friction award path that avoids a full RFP.",
+    "Lead with efficiency and existing-footprint modernization, not net-new data-center expansion — the active data-center zoning restrictions and a tight FY27 General Fund both favor consolidation/refresh framing.",
+    "Tie a data and AI-readiness story to the open-data/analytics motion (CincyInsights, OPDA) — storage and compute that modernize civic data without triggering the data-center policy debate.",
+    "Track the FY26 government reorg to confirm which departments and budget owners survive consolidation before forecasting multi-department deals."
+  ],
+
+  "sources": [
+    { "label": "City of Cincinnati — Enterprise Technology Solutions (ETS), About Us", "url": "https://www.cincinnati-oh.gov/ets/about-us/" },
+    { "label": "City of Cincinnati — Office of the City Manager", "url": "https://www.cincinnati-oh.gov/manager/about-the-city-manager/" },
+    { "label": "City of Cincinnati — Office of Procurement", "url": "https://www.cincinnati-oh.gov/purchasing/" },
+    { "label": "City of Cincinnati — Budget Documents", "url": "https://www.cincinnati-oh.gov/budget/budget-documents/" },
+    { "label": "WCPO — Key items in Cincinnati's FY2027 budget", "url": "https://www.wcpo.com/news/local-news/here-are-the-key-items-in-cincinnatis-fiscal-year-2027-budget" },
+    { "label": "City of Cincinnati — IDC Overlay #89 'Data Centers' and Zoning Study", "url": "https://www.cincinnati-oh.gov/planning/projects/active/interim-development-control-overlay-89-data-centers-and-zoning-study/" },
+    { "label": "WCPO — Council extends data center regulations", "url": "https://www.wcpo.com/cincinnati-city-council-data-center-regulations-extended" },
+    { "label": "WVXU — Cincinnati plans major government restructuring", "url": "https://www.wvxu.org/politics/2026-03-09/cincinnati-government-restructuring-economic-development" },
+    { "label": "Cincinnati Open Data Portal (Tyler Data & Insights)", "url": "https://data.cincinnati-oh.gov/" },
+    { "label": "Aftab Pureval — Wikipedia (2025 re-election)", "url": "https://en.wikipedia.org/wiki/Aftab_Pureval" }
+  ]
+}

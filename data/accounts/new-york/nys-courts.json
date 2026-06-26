@@ -1,0 +1,81 @@
+{
+  "state": "new-york",
+  "stateName": "New York",
+  "type": "Court",
+  "name": "New York State Court System",
+  "slug": "nys-courts",
+  "hq": "Albany / New York City, NY",
+  "updated": "2026-06-22",
+  "tagline": "One of the largest court systems in the United States: the New York State Unified Court System runs hundreds of courts across 62 counties on a statewide technology backbone — e-filing, case management, and the data centers behind them — administered centrally by the Office of Court Administration.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Statewide judiciary (UCS/OCA)" },
+    { "label": "Scale", "value": "300+ courts, 3M+ cases/yr" },
+    { "label": "FY2027 budget ask", "value": "~$3.2B" },
+    { "label": "Buying path", "value": "OCA/UCS + NY OGS contracts" }
+  ],
+
+  "overview": "The New York State Unified Court System (UCS) is the judicial branch of New York and one of the largest court systems in the country. It is administered by the Office of Court Administration (OCA), with operations split between Albany and a headquarters presence in Lower Manhattan (25 Beaver Street). By the state's own published figures the system spans 300+ state courts plus roughly 1,300 town and village courts across 13 judicial districts and all 62 counties, with about 1,200 state-paid judges and roughly 15,500 non-judicial employees, hearing on the order of three million-plus cases a year. For a Dell SLG seller the relevant fact is that UCS runs this on a large, centrally managed technology estate — statewide network, data centers, e-filing (NYSCEF), and case-management systems supported by OCA's Division of Technology — making it a distinct enterprise IT buyer alongside the executive-branch state agencies, not a sub-unit of them. The system is independently budgeted: the Judiciary submits its own budget request to the Legislature each year rather than competing inside the Governor's executive agency lines.",
+
+  "budget": {
+    "intro": "The Judiciary is funded as its own branch and submits an annual budget directly to the Legislature, signed by the Chief Judge and Chief Administrative Judge. The FY2027 request totals roughly $3.2 billion in state operating funds — an increase of close to $200 million (about 6.7%) over the prior year — and notably carries dedicated capital dollars for technology and public-safety infrastructure. IT spend is embedded in operating and capital rather than broken out as a single public line, so figures below frame the envelope, not a discrete tech budget.",
+    "stats": [
+      { "value": "~$3.2B", "label": "FY2027 budget request", "note": "Judiciary state operating funds; up ~$200M (~6.7%) YoY" },
+      { "value": "~$3B", "label": "FY2026 request", "note": "Submission sought roughly $3B in state operating funds" },
+      { "value": "~$60M", "label": "Capital (FY2027 ask)", "note": "Capital funds cited for technology and public-safety measures" }
+    ],
+    "notes": [
+      "The Judiciary budgets independently of executive-branch agencies — the Chief Administrative Judge owns the request, which is a different buying center from the Division of the Budget / OGS-driven state agencies.",
+      "Technology spending is largely folded into operating and capital totals; treat any single 'IT budget' number with caution and confirm against the published Judiciary budget document."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "NYSCEF e-filing & digital case management", "summary": "The New York State Courts Electronic Filing system (NYSCEF) handles electronic filing across civil, criminal, family, surrogate's, appellate and other courts, with more than a million cases e-filed to date. A parallel modernization track is the Universal Case Management System (UCMS), live in Surrogate's Courts statewide and integrating with NYSCEF. Both depend on resilient compute, storage and integration infrastructure.", "tags": ["Digital Courts", "Modernization"] },
+    { "name": "Interim Policy on the Use of AI", "summary": "In October 2025 the UCS issued a first-of-its-kind Interim Policy on the Use of Artificial Intelligence, growing out of an advisory committee formed in 2024. It limits generative-AI use to UCS-approved tools and sets guardrails on fairness, accountability and security. An AI advisory committee has since issued an inaugural report — signaling demand for governed, on-prem/private AI tooling.", "tags": ["AI", "Governance"] },
+    { "name": "Cyber resilience & infrastructure hardening", "summary": "As a high-value judicial target holding sensitive case data, UCS continues to invest in cybersecurity and infrastructure resilience across its statewide network and data centers. Public reporting on any specific 2025 incident is limited; frame this as an ongoing resilience and modernization posture rather than a single named event, and confirm specifics before forecasting.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "Statewide IT consolidation under OCA", "summary": "OCA's Division of Technology centrally supports network, data center, software development and end-user technology for ~20,000 court personnel across hundreds of locations — a consolidated enterprise estate that favors standardized refresh, lifecycle and managed-services plays over fragmented court-by-court buying.", "tags": ["Infrastructure", "Consolidation"] }
+  ],
+
+  "procurement": {
+    "intro": "UCS buys through its own OCA/UCS procurement function and can also leverage New York State's centralized contracts run by the Office of General Services (OGS). Two things to confirm first: that Dell's coverage on the relevant OGS centralized IT contracts is active and correctly scoped, and how OCA's own procurement office prefers to transact for judiciary-specific needs.",
+    "vehicles": [
+      { "name": "OCA / UCS procurement", "detail": "The court system runs its own contracting and finance operations (OCA Division of Financial Operations / procurement) for judiciary-specific buys — the direct path for court-owned programs." },
+      { "name": "NY OGS centralized contracts", "detail": "OGS manages ~1,500 statewide term contracts; its IT Umbrella manufacturer-based award (Contract 22802, managed via the COMeT eProcurement tool) covers hardware, software, cloud and implementation across Lots — a primary cooperative route for IT." },
+      { "name": "Authorized-user / RFQ model", "detail": "Under the OGS IT model, authorized users (which can include the Judiciary) procure competitively at the transaction level via RFQs across Lots — clarify Dell's Lot coverage before pursuing a specific deal." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Hon. Rowan D. Wilson", "title": "Chief Judge of the State of New York", "note": "Head of the Judiciary and the Court of Appeals; sets institutional direction and co-signs the Judiciary budget. Has publicly framed AI use as needing to be 'thoughtful, careful, and principled.'" },
+    { "name": "Hon. Joseph A. Zayas", "title": "Chief Administrative Judge", "note": "Runs day-to-day administration of the courts through OCA; formed the AI advisory committee and announced the Interim AI Policy. The top administrative/operational relationship." },
+    { "name": "Christine Sisario", "title": "Chief Information Officer, UCS (Division of Technology)", "note": "Sets statewide technology priorities; oversees ~350 IT staff supporting network, cybersecurity, data centers, software development and end-user tech for ~20,000 court personnel. The central technology decision-maker." },
+    { "name": "Office of Court Administration (OCA)", "title": "Central administrative arm", "note": "Houses technology, financial operations and procurement for the whole system — the institutional buying center, distinct from executive-branch state agencies." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "Judiciary unveils ~$3.2B FY2027 budget request", "impact": "Roughly $200M increase, with capital funds cited for technology and public-safety infrastructure — a window for refresh and modernization positioning.", "tags": ["Budget"] },
+    { "date": "2026-01", "title": "AI advisory committee issues inaugural report to court leadership", "impact": "Signals continued, governed momentum on AI in the courts — demand for approved, secure, auditable tooling rather than open consumer AI.", "tags": ["AI"] },
+    { "date": "2025-10", "title": "UCS issues first-of-its-kind Interim Policy on the Use of AI", "impact": "Generative AI restricted to UCS-approved tools with fairness/security guardrails — favors private/on-prem and governed AI infrastructure over public SaaS.", "tags": ["AI", "Governance"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's coverage and Lot scope on the NY OGS IT Umbrella contract (22802 / COMeT) and clarify how OCA/UCS procurement prefers to transact for judiciary-specific buys.",
+    "Position client device, server and storage lifecycle/refresh against the consolidated OCA Division of Technology estate (~20,000 personnel, hundreds of sites) rather than court-by-court.",
+    "Lead AI-infrastructure and governed-AI conversations tied to the Interim AI Policy — UCS wants approved, secure, auditable tooling, which favors private/on-prem and data-residency-controlled designs.",
+    "Bring cyber-resilience, data-center modernization and backup/recovery messaging given the sensitivity of judicial case data; verify any specific incident publicly before referencing it.",
+    "Map the relationship triangle — CIO Christine Sisario (technology), Chief Administrative Judge Zayas (administration), and OCA financial operations/procurement — and treat UCS as a distinct enterprise account from NY executive-branch agencies."
+  ],
+
+  "sources": [
+    { "label": "NY Courts — Homepage / Unified Court System", "url": "https://www.nycourts.gov/" },
+    { "label": "NY Courts — NYSCEF (e-filing)", "url": "https://www.nycourts.gov/efile/" },
+    { "label": "NY Courts — Interim AI Policy (Oct 2025)", "url": "https://www.nycourts.gov/LegacyPDFS/press/pdfs/PR25_23.pdf" },
+    { "label": "NY Courts — Advisory Committee on AI inaugural report (PR26_02)", "url": "https://www.nycourts.gov/legacyPDFS/press/pdfs/PR26_02.pdf" },
+    { "label": "NY Courts — FY2027 Judiciary Budget", "url": "https://www.nycourts.gov/LegacyPDFS/admin/financialops/FPCM-PDFs/V2_jdbgt/FY2027_FINAL-JudiciaryBudget.pdf" },
+    { "label": "Queens Eagle — Courts unveil $3.2B budget ask", "url": "https://queenseagle.com/all/2026/1/21/courts-unveil-32-billion-budget-ask-budget-boost-to-cover-costs-of-new-judges-legal-services-and-raises" },
+    { "label": "NYS Executive Budget — Judiciary appropriations (FY2027)", "url": "https://www.budget.ny.gov/pubs/archive/fy27/ex/agencies/appropdata/Judiciary.html" },
+    { "label": "NY Courts — CIO Christine Sisario profile", "url": "https://ww2.nycourts.gov/accesstojusticecommission/tc/2023confSisario.shtml" },
+    { "label": "NY OGS — Centralized Contracts (IT Umbrella / COMeT)", "url": "https://ogs.ny.gov/comet" }
+  ]
+}

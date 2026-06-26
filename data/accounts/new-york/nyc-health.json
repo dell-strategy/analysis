@@ -1,0 +1,85 @@
+{
+  "state": "new-york",
+  "stateName": "New York",
+  "type": "City",
+  "name": "NYC Dept of Health & Mental Hygiene",
+  "slug": "nyc-health",
+  "hq": "New York, NY",
+  "updated": "2026-06-22",
+  "tagline": "One of the largest and oldest municipal public-health agencies in the U.S.: DOHMH protects the health of ~8.3M New Yorkers across disease surveillance, clinical services, vital records, environmental health, and mental hygiene — a data- and surveillance-heavy mission whose core IT runs through NYC's central technology agency (OTI).",
+
+  "snapshot": [
+    { "label": "Role", "value": "Municipal public-health agency" },
+    { "label": "Budget (FY26 exec)", "value": "~$2.3B" },
+    { "label": "Workforce", "value": "~7,000 staff" },
+    { "label": "New leadership", "value": "Commissioner appointed Jan 2026" }
+  ],
+
+  "overview": "The New York City Department of Health and Mental Hygiene (DOHMH, branded \"NYC Health\") is one of the largest and oldest municipal public-health agencies in the United States, with roots going back to 1805. It serves roughly 8.3 million residents and runs an exceptionally broad mission: communicable- and chronic-disease surveillance and outbreak response, immunizations, the City's public-health laboratory, vital records (birth/death certificates), restaurant and environmental-health inspections, school health, and mental-hygiene (behavioral-health) services. DOHMH is fundamentally data- and surveillance-intensive — its Bureau of Communicable Disease tracks 70+ reportable conditions, and it operates citywide systems for syndromic surveillance, immunization registries, electronic lab reporting, and population-health analytics. Importantly, DOHMH does not run citywide IT on its own: like all NYC agencies it sits under the Office of Technology and Innovation (OTI) for shared infrastructure, citywide contracts, cloud review, and cybersecurity (NYC Cyber Command), while maintaining its own Division of Information Technology and informatics teams for mission-specific health systems. A January 2026 mayoral transition installed a new administration and a new Health Commissioner, so leadership and priorities are still settling.",
+
+  "budget": {
+    "intro": "DOHMH is a large direct spender on a citywide health mission, but it is not a central IT buyer — its technology dollars flow through OTI's citywide vehicles and its own mission-IT division rather than a standalone procurement authority. The FY2026 Executive Budget proposed roughly $2.31 billion for DOHMH, split across a Public Health division (~$1.42B) and a Mental Hygiene division (~$775M). At Commissioner Martin's January 2026 appointment, the agency was described as having more than 7,000 employees and an annual budget of about $1.6 billion (a figure that reflects City-funded operations and excludes large pass-through/grant streams).",
+    "stats": [
+      { "value": "~$2.31B", "label": "DOHMH budget (FY26 exec)", "note": "~$1.42B Public Health + ~$775M Mental Hygiene; FY26 Executive Budget" },
+      { "value": "~7,000", "label": "Employees", "note": "Cited at the Jan 2026 Commissioner appointment; one of the largest U.S. health departments" },
+      { "value": "~$1.6B", "label": "Annual budget (City-funded)", "note": "Figure cited at Commissioner Martin's appointment; substantial federal/state grant funding sits on top" }
+    ],
+    "notes": [
+      "A large share of DOHMH funding is federal and state grants tied to specific programs (HIV, immunization, emergency preparedness); these can shift with federal public-health funding decisions and create budget volatility independent of the City line.",
+      "Mission-specific health IT is funded inside DOHMH, but shared infrastructure, citywide contracts, and cybersecurity run through OTI — confirm which entity owns a given system before forecasting.",
+      "Figures reflect the Adams-era FY2026 Executive Budget; the Mamdani administration that took office Jan 2026 may reprioritize as it issues its first executive/adopted budgets."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Data Modernization Initiative & Center for Population Health Data Science", "summary": "DOHMH stood up a Center for Population Health Data Science (launched Oct 2023) to drive its Data Modernization Initiative — building modern data infrastructure that integrates legacy systems, links public-health, healthcare, and social-service data, and enables responsible AI and advanced analytics. This is the agency's flagship data/AI workstream and the natural anchor for compute, storage, and data-platform conversations.", "tags": ["Data Platform", "AI"] },
+    { "name": "Disease surveillance & outbreak-response systems", "summary": "The Bureau of Communicable Disease tracks 70+ reportable conditions and runs citywide syndromic surveillance, electronic lab reporting, and registries — systems stressed by recent measles, mpox, and H5N1 avian-influenza vigilance. Sustained demand for resilient, scalable infrastructure and faster data ingestion/analytics.", "tags": ["Surveillance", "Resilience"] },
+    { "name": "Public Health Laboratory & informatics", "summary": "DOHMH operates the City's public-health laboratory, a high-throughput environment generating large volumes of test, genomic-sequencing, and pathogen data that feed surveillance. Lab informatics, data integration, and high-performance compute/storage are ongoing modernization needs.", "tags": ["Lab Informatics", "HPC"] },
+    { "name": "Responsible AI & data governance", "summary": "AI/advanced-analytics adoption is governed within DOHMH's data-modernization program and under NYC's citywide AI Action Plan and OTI governance. Any AI offering sold into the agency must clear responsible-AI and data-privacy gates given the sensitivity of health data.", "tags": ["AI", "Governance"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling into DOHMH means navigating two layers: NYC's citywide contracting machinery and OTI's role as the technology gatekeeper. DOHMH buys through its own Agency Chief Contracting Officer (ACCO) under the Mayor's Office of Contract Services (MOCS), but technology — especially cloud and shared infrastructure — flows through OTI's citywide/requirement contracts and must clear OTI's cloud-review and Cyber Command security gates. Confirm Dell's position on citywide and DCAS vehicles before forecasting.",
+    "vehicles": [
+      { "name": "OTI citywide / requirement IT contracts", "detail": "OTI leverages the City's buying power so agencies (including DOHMH) acquire IT goods and services through pre-established requirement and master agreements rather than each running its own solicitation — a primary path for hardware, software, and services." },
+      { "name": "DOHMH ACCO & MOCS", "detail": "DOHMH's Agency Chief Contracting Officer runs the agency's competitive bids, RFPs, and systems-integrator contracts under Mayor's Office of Contract Services oversight, including M/WBE participation — the path for mission-specific health-IT and services buys." },
+      { "name": "DCAS (Dept. of Citywide Administrative Services)", "detail": "Runs citywide goods procurement and requirements contracts many agencies buy commodity IT and equipment through — a complementary route alongside OTI-led IT contracts." },
+      { "name": "OTI cloud-review & Cyber Command security gate", "detail": "OTI reviews and must approve cloud services before agencies procure/deploy them, and NYC Cyber Command sets security standards — clear these early for any cloud or as-a-service play touching sensitive health data." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Dr. Alister Martin", "title": "Commissioner, DOHMH", "note": "Appointed by Mayor Mamdani; announced Jan 31, 2026. Emergency physician (Mass General) and Harvard Medical School faculty; founder of health-equity nonprofits. Top relationship for the agency motion; signals an affordability- and access-focused agenda." },
+    { "name": "Mayor Zohran Mamdani", "title": "Mayor of New York City (took office Jan 2026)", "note": "New administration setting health and budget priorities; expect first executive/adopted budgets to reshape DOHMH's roadmap." },
+    { "name": "DOHMH Division of Information Technology / CIO", "title": "Agency CIO & mission health-IT", "note": "Owns DOHMH's mission-specific IT, informatics, and surveillance systems. Per the agency org chart the Deputy Commissioner for IT/CIO role has been held by Beth Maldin, MPH — verify continuity under the new administration before engaging." },
+    { "name": "Center for Population Health Data Science", "title": "Chief Population Health & Data Officer", "note": "Leads the Data Modernization Initiative and AI strategy. Launched Oct 2023 with Mamta Parakh as inaugural Chief Population Health and Data Officer — confirm the current officeholder given the leadership transition." },
+    { "name": "NYC OTI / Cyber Command", "title": "Citywide tech & security gate", "note": "Owns shared infrastructure, citywide IT contracts, cloud review, and cybersecurity for DOHMH and ~100 other agencies — the technical/contractual gatekeeper for most DOHMH technology buys." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "Mayor Mamdani names Dr. Alister Martin DOHMH Commissioner", "impact": "New health leadership at the top of the agency motion (announced Jan 31, 2026); priorities still forming around affordability and access — re-engage and re-map the relationship chart early.", "tags": ["Leadership"] },
+    { "date": "2025-06", "title": "NYC adopts FY2026 budget (~$2.3B for DOHMH)", "impact": "Sets the spending baseline the new administration inherits; large grant-funded share leaves the agency exposed to federal public-health funding shifts.", "tags": ["Budget"] },
+    { "date": "2025-03", "title": "Council scrutiny of DOHMH FY26 budget and staffing", "impact": "City Council pressed on funding gaps, vacancies, and program continuity — signals demand for efficiency and modernization across operations.", "tags": ["Budget", "Operations"] },
+    { "date": "2025-02", "title": "Heightened H5N1 avian-influenza and measles vigilance", "impact": "DOHMH urged year-round flu testing and published measles readiness resources — sustained load on surveillance, lab, and data-ingestion systems.", "tags": ["Surveillance"] }
+  ],
+
+  "dellActions": [
+    "Re-engage early under the new Mamdani administration and Commissioner Martin — health priorities and the first budget are still forming, so build the relationship map before the roadmap hardens.",
+    "Anchor on the Data Modernization Initiative and Center for Population Health Data Science: lead with data-platform infrastructure, storage, and AI-ready compute (ISG) for linking public-health, healthcare, and social-service data.",
+    "Position resilient, scalable infrastructure for surveillance and the public-health lab — high-volume genomic/lab data and outbreak-response systems (measles, mpox, H5N1) need fast ingestion and HPC/storage.",
+    "Route technology buys through OTI's citywide contracts and clear OTI cloud-review and Cyber Command security gates early; confirm Dell's position on citywide and DCAS vehicles plus DOHMH's own ACCO path.",
+    "Frame around responsible-AI and data-privacy governance given the sensitivity of health data — align to NYC's AI Action Plan and DOHMH's data-governance workstreams."
+  ],
+
+  "sources": [
+    { "label": "NYC Health — About DOHMH", "url": "https://www.nyc.gov/site/doh/about/about-doh.page" },
+    { "label": "Mayor Mamdani Announces New Appointments, Including Health Commissioner (Jan 2026)", "url": "https://www.nyc.gov/mayors-office/news/2026/01/mayor-mamdani-announces-new-appointments--including-commissioner" },
+    { "label": "Healthbeat — Mamdani taps Alister Martin to lead NYC health department (Feb 2026)", "url": "https://www.healthbeat.org/newyork/2026/02/02/alister-martin-health-commissioner-mamdani/" },
+    { "label": "NYC Council — Funding gaps in FY2026 Executive Budget for DOHMH (May 2025)", "url": "https://council.nyc.gov/press/2025/05/23/2879/" },
+    { "label": "NYC Health — Center for Population Health Data Science launch (Oct 2023)", "url": "https://www.nyc.gov/site/doh/about/press/pr2023/health-department-launches-new-center-to-enhance-agency-data-analytics.page" },
+    { "label": "NYC Health — Modernizing Data and Analytics (two-year lookback)", "url": "https://www.nyc.gov/assets/doh/downloads/pdf/data/modernizing-data-two-year-lookback.pdf" },
+    { "label": "NYC Health — Data home", "url": "https://www.nyc.gov/site/doh/data/data-home.page" },
+    { "label": "NYC OTI — Vendor Resources / citywide IT contracting", "url": "https://www.nyc.gov/content/oti/pages/vendor-resources" },
+    { "label": "NYC DOHMH — Table of Organization (org chart)", "url": "https://www.nyc.gov/assets/doh/downloads/pdf/public/dohmh-orgchart.pdf" }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "name": "Mecklenburg County, North Carolina",
+  "slug": "mecklenburg-county-north-carolina",
+  "state": "north-carolina",
+  "stateName": "North Carolina",
+  "type": "County",
+  "hq": "Charlotte, NC",
+  "updated": "2026-06-22",
+  "tagline": "North Carolina's most-populous county and the seat of Charlotte (~1.16M residents): Mecklenburg runs a ~$2.6B operating budget across health, human services, justice, and land-use departments, with technology delivered centrally by Information Technology Services (ITS).",
+
+  "snapshot": [
+    { "label": "Role", "value": "Most-populous NC county (~1.16M)" },
+    { "label": "Central IT", "value": "Information Technology Services (ITS)" },
+    { "label": "FY2027 budget", "value": "~$2.6B (adopted)" },
+    { "label": "Buying gate", "value": "Board of County Commissioners approval" }
+  ],
+
+  "overview": "Mecklenburg County is the most populous county in North Carolina, home to roughly 1.16 million residents and centered on Charlotte, the state's largest city and the Southeast's banking hub. It is a large, multi-department local government whose core mission is health and human services, public health, justice and criminal-justice services, tax and assessment, land use and environmental services, and park and recreation — services largely distinct from those the City of Charlotte provides. The County operates under a council-manager form of government: an elected Board of County Commissioners sets policy and adopts the budget, and a professional County Manager (Mike Bryant, sworn in July 2025) runs day-to-day operations. Central technology is delivered by Information Technology Services (ITS), led by CIO Keith Gregg, which supplies enterprise infrastructure, application development, business-operations support, and IT security across County departments. For a Dell SLG seller, Mecklenburg is best understood as a single large local-government account, separate from the City of Charlotte, where ITS shapes technology direction but contracts are awarded centrally and material agreements must be approved by the elected Board of County Commissioners.",
+
+  "budget": {
+    "intro": "Mecklenburg County adopted a roughly $2.6B FY2027 operating budget on June 2, 2026 (effective July 1, 2026), about a 2% increase over FY2026's $2.54B, holding the property-tax rate at 49.27 cents per $100 of assessed valuation. The County does not publish a single headline IT figure, so technology spend is best tracked through the ITS department budget and capital/technology line items — and a large share of the topline funds Charlotte-Mecklenburg Schools, the Library, and Central Piedmont Community College rather than County operations, narrowing the directly technology-addressable pool.",
+    "stats": [
+      { "value": "~$2.6B", "label": "FY2027 adopted operating budget", "note": "Adopted June 2, 2026; ~2% over FY2026; effective July 1, 2026." },
+      { "value": "$2.54B", "label": "FY2026 operating budget", "note": "Prior year; +1.6% over FY2025 when adopted June 3, 2025." },
+      { "value": "49.27¢", "label": "Property tax rate (per $100)", "note": "Held flat in FY2027 after a 0.96-cent increase in FY2026." }
+    ],
+    "notes": [
+      "A large portion of the County budget flows to Charlotte-Mecklenburg Schools, Central Piedmont Community College, and the Charlotte Mecklenburg Library — confirm what sits inside County operations before sizing IT demand.",
+      "ITS is a central service provider; its technology spend is funded across the departments it serves rather than as a single visible line — map demand to the operating departments (Health & Human Services, Justice, Tax/Assessor), not just the CIO.",
+      "Treat any specific ITS or technology line figure as provisional until confirmed against the adopted FY2027 budget document."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Enterprise infrastructure & application modernization", "summary": "ITS owns enterprise infrastructure and application development across County departments. This is the natural home for ISG (compute/storage), hybrid-cloud, and lifecycle-refresh conversations tied to consolidating and modernizing a large multi-department estate — confirm current active projects before pitching.", "tags": ["Infrastructure", "Modernization"] },
+    { "name": "IT security & resiliency", "summary": "ITS lists IT security among its core service areas. Given a large public-data footprint (health, human services, tax) and the elevated ransomware threat to local governments, endpoint, identity, backup/recovery, and resilient-infrastructure messaging fit here — confirm the current security leadership and standards before engaging.", "tags": ["Cybersecurity", "Resiliency"] },
+    { "name": "AI / data adoption (emerging, governed)", "summary": "North Carolina is advancing a statewide trustworthy-AI framework (Gov. Stein's 2025 executive order, AI Leadership Council, NCDIT AI Accelerator) that shapes how NC public entities adopt AI. Position governed, secure AI infrastructure and data platforms aligned to state direction — confirm Mecklenburg's own AI policy status before assuming a roadmap exists.", "tags": ["AI", "Data"] },
+    { "name": "Digital service delivery", "summary": "ITS frames its mission as creative tools and innovative technology that engage, serve, and connect County employees, supporting business operations across departments. Client/endpoint, digital-workspace, and service-modernization plays attach to this employee- and resident-service motion.", "tags": ["Digital Workspace", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Mecklenburg County runs on the County's own procurement plus the NC statewide and cooperative vehicles layered around it. Confirm first how Dell is reached for a given buy: directly via Mecklenburg County Procurement (within the Financial Services Department), through NC statewide term contracts, or via national cooperatives — and that material awards route to the Board of County Commissioners for approval.",
+    "vehicles": [
+      { "name": "Mecklenburg County Procurement (Financial Services)", "detail": "The County's central buying function develops integrated procurement strategies and runs solicitations for goods, services, and technology — the direct path for County-specific technology buys." },
+      { "name": "Board of County Commissioners approval", "detail": "Material contracts and agreements require approval by the elected Board of County Commissioners — the formal decision gate. Time deals to the Board calendar and identify the sponsoring department." },
+      { "name": "NC statewide term contracts", "detail": "As an NC local government, Mecklenburg can leverage statewide term contracts (NC DOA Purchase & Contract for non-IT; NCDIT for IT). Confirm Dell coverage and whether a state vehicle is the cleaner pre-competed path for a given offering." },
+      { "name": "National cooperatives (e.g., NASPO ValuePoint)", "detail": "NASPO ValuePoint and similar national co-ops are open to counties and offer pre-competed contracts that avoid one-off RFPs. Verify which co-ops Mecklenburg uses and where Dell is positioned before recommending a path." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Mike Bryant", "title": "County Manager", "note": "Sworn in July 2025, succeeding Dena R. Diorio; a longtime County executive (former OMB director and deputy county manager). Chief executive over all departments including ITS — the top operational relationship for the account." },
+    { "name": "Keith Gregg", "title": "Chief Information Officer, Information Technology Services (ITS)", "note": "Joined the County as CIO in 2015; leads central IT — enterprise infrastructure, application development, and IT security. The primary technology relationship for Mecklenburg." },
+    { "name": "Michelle L. Attreed", "title": "Deputy County Manager (over ITS, Finance, Tax, HR, Assessor)", "note": "Oversees Information Technology Services alongside Finance, the Tax Collector, HR, and the Assessor — the senior executive above the CIO and a key sponsor for enterprise technology direction." },
+    { "name": "ITS — IT security leadership", "title": "County security lead (CISO-equivalent)", "note": "Owns County security posture and standards within ITS — the gate for security on cloud and infrastructure deals. Public naming is limited; confirm the current security leader before engaging." },
+    { "name": "Mecklenburg County Procurement (Financial Services)", "title": "Central procurement / contracting", "note": "Owns County solicitations and contract vehicles and routes material awards to the Board of County Commissioners — the access path onto the County's own contracts." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Board of County Commissioners adopts ~$2.6B FY2027 operating budget; tax rate held flat", "impact": "Confirms the FY2027 spending envelope (effective July 1, 2026) with no tax increase — frame technology buys around efficiency and value within a flat-rate budget.", "tags": ["Budget"] },
+    { "date": "2025-07", "title": "Mike Bryant sworn in as Mecklenburg County Manager, succeeding Dena Diorio", "impact": "New chief executive over all departments including ITS — confirm and align to his operating priorities and the enterprise-direction relationship.", "tags": ["Leadership"] },
+    { "date": "2025-06", "title": "County adopts $2.54B FY2026 operating budget with a 0.96-cent tax-rate increase", "impact": "Prior-year envelope technology buys drew from; a modest-growth, education-and-services-heavy posture.", "tags": ["Budget"] },
+    { "date": "2025-04", "title": "Board announces hiring of Mike Bryant as next County Manager", "impact": "Confirmed an internal-promotion succession ahead of Diorio's June 2025 departure — continuity at the top of County operations.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Treat Mecklenburg County as a distinct account from the City of Charlotte — anchor the relationship on ITS (Gregg, CIO) as the central technology decision center, with Deputy County Manager Attreed as the senior sponsor over ITS.",
+    "Lead ISG and hybrid-cloud conversations through the ITS enterprise-infrastructure and application-modernization remit, mapping demand back to the large operating departments (Health & Human Services, Justice, Tax/Assessor) that fund it.",
+    "Engage ITS security leadership early on endpoint, identity, and backup/recovery given the County's large public-data footprint and the elevated ransomware threat to local governments — confirm the current security lead first.",
+    "Position governed, secure AI infrastructure and data platforms aligned to North Carolina's statewide trustworthy-AI direction; confirm Mecklenburg's own AI policy status before assuming a county roadmap.",
+    "Confirm Dell's cleanest pre-competed path — County Procurement, an NC statewide term contract, or a national cooperative (e.g., NASPO ValuePoint) — and time material pursuits to the Board of County Commissioners approval calendar with a sponsoring department."
+  ],
+
+  "sources": [
+    { "label": "Mecklenburg County — Board Adopts $2.6B FY2027 Operating Budget", "url": "https://news.mecknc.gov/board-county-commissioners-adopts-26-billion-operating-budget-fy2027" },
+    { "label": "Mecklenburg County — Manager Recommends $2.5B FY2026 Operating Budget", "url": "https://news.mecknc.gov/mecklenburg-county-manager-recommends-25-billion-operating-budget-fy2026" },
+    { "label": "Mecklenburg County — Office of Management and Budget (FY2026 Adopted Budget)", "url": "https://budget.mecknc.gov/budget-overview" },
+    { "label": "Mecklenburg County — Information Technology Services (ITS)", "url": "https://it.mecknc.gov/" },
+    { "label": "Mecklenburg County — ITS CIO Keith Gregg", "url": "https://it.mecknc.gov/Keith-Gregg" },
+    { "label": "Mecklenburg County — County Manager's Office Executive Staff", "url": "https://mgr.mecknc.gov/Leadership" },
+    { "label": "Mecklenburg County — New Era: Mike Bryant Sworn in as County Manager", "url": "https://news.mecknc.gov/news/new-era-mecklenburg-county-mike-bryant-sworn-county-manager" },
+    { "label": "Mecklenburg County — Procurement (Financial Services Department)", "url": "https://fin.mecknc.gov/procurement" },
+    { "label": "NC DOA — Statewide Term Contracts", "url": "https://www.doa.nc.gov/divisions/purchase-contract/statewide-term-contracts" },
+    { "label": "NC Governor — Executive Order No. 24: Trustworthy Artificial Intelligence", "url": "https://governor.nc.gov/executive-order-no-24-advancing-trustworthy-artificial-intelligence-benefits-all-north-carolinians" }
+  ]
+}

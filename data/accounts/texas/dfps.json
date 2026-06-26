@@ -1,0 +1,82 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "State Agency",
+  "name": "Texas Dept of Family & Protective Services (DFPS)",
+  "slug": "dfps",
+  "hq": "Austin, TX",
+  "updated": "2026-06-22",
+  "tagline": "Texas' child- and adult-protective-services agency, running data-heavy case management (IMPACT) on aging foundations — and now planning a multi-year, federally co-funded replacement plus an AI, data-governance, and cyber modernization push.",
+
+  "snapshot": [
+    { "label": "Mission", "value": "Child & adult protective services" },
+    { "label": "All-funds budget", "value": "~$4.6B (FY26-27)" },
+    { "label": "Core system", "value": "IMPACT (replacement planned)" },
+    { "label": "IT shop", "value": "~270 staff + ~170 contractors" }
+  ],
+
+  "overview": "The Texas Department of Family & Protective Services (DFPS) runs the state's Child Protective Investigations, Child Protective Services, Adult Protective Services, and Statewide Intake (the abuse/neglect hotline and online reporting). It is one of the most data- and case-management-intensive agencies in Texas: caseworkers, investigators, and external Community-Based Care contractors all transact through IMPACT, the statewide case-management system whose core dates back decades. DFPS is mid-leadership-transition and mid-modernization at once — Audrey O'Neill became Commissioner in September 2025, and the agency's strategic plan, IMPACT replacement effort, and IT roadmap all push toward modern case management, stronger data governance, AI tooling, and tighter cybersecurity. For a Dell SLG seller, DFPS is a mission-driven, federally-co-funded modernization account where the buying centers are the IT division (infrastructure, end-user compute, data) and the IMPACT replacement program, reached primarily through DIR Cooperative Contracts and TX-RAMP-cleared cloud.",
+
+  "budget": {
+    "intro": "DFPS is a large human-services agency: its FY2026-27 baseline request totaled roughly $4.6B in all funds (~$3.1B state). Most of that is direct services and foster care, but the agency also funds a sizable internal IT operation and a multi-year case-management replacement that draws on both state appropriations and federal reimbursement.",
+    "stats": [
+      { "value": "~$4.6B", "label": "All-funds budget (FY26-27)", "note": "Baseline request; ~$3.1B in state funds" },
+      { "value": "~$215M", "label": "IMPACT replacement (est.)", "note": "Multi-year build (~FY28-32), partly federally reimbursable" },
+      { "value": "~$78M", "label": "Annual IT budget (reported FY23)", "note": "Per DFPS CIO; ~270 IT staff + ~170 contractors" }
+    ],
+    "notes": [
+      "The IMPACT replacement is in initiation/planning in FY2026-27, with implementation projected for roughly FY2028-2032 — a long runway DFPS funds by repurposing existing IMPACT appropriations plus federal match.",
+      "The bulk of DFPS spend is client services and foster care, not IT — size technology opportunities to the IT division and modernization programs, not the headline all-funds figure."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "IMPACT case-management replacement", "summary": "DFPS is planning a multi-year replacement of its legacy IMPACT case-management system with a federally compliant, modern platform, paired with business-process redesign and better data sharing with Community-Based Care contractors. Planning is in FY2026-27; build is projected for ~FY2028-2032. The infrastructure, data, and integration layers underneath are the seller-relevant surface.", "tags": ["Case Management", "Modernization"] },
+    { "name": "AI tooling & data governance", "summary": "The 2027-2031 strategic plan (approved June 2026) commits to integrating AI tools and strengthening data governance for accurate, secure, responsible data use. DFPS IT leadership has publicly floated an AI model usable across state agencies — an opening for AI-ready infrastructure and data-platform conversations.", "tags": ["AI", "Data"] },
+    { "name": "Cybersecurity & continuity", "summary": "The strategic plan calls out strengthening cybersecurity safeguards, mitigating operational risk, and ensuring continuity of operations — relevant given the sensitivity of child-welfare and APS case data. CISO-owned program; aligns with statewide TX-RAMP and security standards.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "Legacy debt & digital intake", "summary": "DFPS is modernizing applications dating to the 1980s-90s toward mobile and cloud-capable experiences, and expanding online/Statewide Intake reporting channels. Continual transformation of technical debt is the CIO's stated strategy — steady infrastructure-refresh and end-user-compute demand.", "tags": ["Infrastructure", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "DFPS buys IT primarily through the statewide vehicles rather than running everything as standalone RFPs. The fastest paths are DIR Cooperative Contracts (where Dell can sell hardware, software, and services without the agency re-competing) and agency solicitations for larger programs like the IMPACT replacement. Any cloud or as-a-service offering touching DFPS case data must clear TX-RAMP first.",
+    "vehicles": [
+      { "name": "DIR Cooperative Contracts", "detail": "The primary route for compute, storage, end-user devices, software, and services — pre-competed through the Texas Department of Information Resources and open to DFPS. Confirm Dell's contract coverage and scope." },
+      { "name": "Agency RFPs / IMPACT program procurement", "detail": "Large modernization efforts (notably the IMPACT replacement and its infrastructure) run through DFPS/HHS-system solicitations and exceptional-item-funded projects — track these for major build opportunities." },
+      { "name": "TX-RAMP certification", "detail": "Mandatory cloud-security gate for state data. Any cloud / as-a-service play for DFPS must hold the appropriate TX-RAMP (NIST 800-53 Low/Moderate) level before it can be sold." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Audrey O'Neill", "title": "Commissioner, DFPS", "note": "Appointed Sept 2025 (term to Aug 2027); former Deputy Commissioner of Programs and an HHSC OIG audit/inspections leader. Sets agency direction and approved the 2027-2031 strategic plan." },
+    { "name": "Drew McGrath", "title": "Chief Information Officer", "note": "Owns the IT division (~270 staff, ~170 contractors) and the modernization roadmap; has publicly discussed legacy transformation and AI. The key technology relationship." },
+    { "name": "Jennifer Bush", "title": "Chief Information Security Officer", "note": "Owns DFPS cybersecurity (CISSP/CISM/GIAC). Decision point for security, TX-RAMP alignment, and data-protection requirements." },
+    { "name": "IMPACT Modernization / Case-Management Program", "title": "Replacement program office", "note": "The buying center for the multi-year IMPACT replacement — infrastructure, data, integration, and services scope flows here." },
+    { "name": "Texas DIR", "title": "Statewide procurement & TX-RAMP", "note": "Not part of DFPS, but owns the co-op vehicles and cloud-certification gate DFPS buys through — clear these in parallel." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "DFPS 2027-2031 strategic plan emphasizes modernized case management, AI tools, and data governance", "impact": "Confirms agency direction and timing — lead with AI-ready infrastructure, data platform, and case-management modernization framing.", "tags": ["Strategy", "AI"] },
+    { "date": "2025-09", "title": "Gov. Abbott appoints Audrey O'Neill as DFPS Commissioner", "impact": "New top leadership (term to Aug 2027) after Stephanie Muth's departure — refresh the executive relationship map.", "tags": ["Leadership"] },
+    { "date": "2025-07", "title": "Stephanie Muth steps down as DFPS Commissioner; later named HHSC health commissioner", "impact": "Leadership turnover at the top; Muth's move to HHSC is a cross-agency relationship to note.", "tags": ["Leadership", "Transition"] },
+    { "date": "2024-12", "title": "DFPS files Rider 47 report on IMPACT case-management system transition", "impact": "Documents the legislative path and cost (~$215M, federally co-funded) for replacing IMPACT — anchor for the modernization opportunity.", "tags": ["Case Management", "Modernization"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's DIR Cooperative Contract coverage so DFPS can buy compute, storage, end-user devices, and services without re-competing.",
+    "Engage CIO Drew McGrath's IT division early on the IMPACT replacement's infrastructure, data, and integration layers — be at the table during FY2026-27 planning, before the FY2028+ build.",
+    "Lead an AI-ready infrastructure and data-platform conversation tied to the strategic plan's AI-tooling and data-governance commitments (and the CIO's cross-agency AI-model interest).",
+    "Work CISO Jennifer Bush on security and resilience requirements, and clear TX-RAMP early for any cloud / as-a-service offering touching sensitive case data.",
+    "Frame technology to the mission — protecting children and vulnerable adults — and size opportunities to the IT division and modernization programs, not the ~$4.6B all-funds headline."
+  ],
+
+  "sources": [
+    { "label": "DFPS — Commissioner Audrey O'Neill", "url": "https://www.dfps.texas.gov/About_DFPS/Executives/ONeill_Audrey_.asp" },
+    { "label": "Texas Tribune — Audrey O'Neill named DFPS commissioner", "url": "https://www.texastribune.org/2025/09/18/texas-family-child-protective-services-commissioner-audrey-oneill/" },
+    { "label": "Govtech Insider — DFPS plan emphasizes case management, AI and data governance", "url": "https://insider.govtech.com/texas/news/dfps-plan-emphasizes-case-management-ai-and-data-governance" },
+    { "label": "Govtech Insider — CIO discusses transformation, modernization plans for DFPS", "url": "https://insider.govtech.com/texas/news/cio-discusses-transformation-modernization-plans-for-dfps" },
+    { "label": "DFPS — Rider 47 Case Management System Transition report (Dec 2024)", "url": "https://www.dfps.texas.gov/About_DFPS/Reports_and_Presentations/Rider_Reports/documents/2024/2024-12-01_Rider%2047_Case_Management_System_Transition_Legislative.pdf" },
+    { "label": "DFPS — FY26-27 Legislative Appropriations Request", "url": "https://dfps.texas.gov/About_DFPS/Budget_and_Finance/LAR/FY26-27.pdf" },
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" },
+    { "label": "Texas DIR — TX-RAMP", "url": "https://dir.texas.gov/information-security/texas-risk-and-authorization-management-program-tx-ramp" }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "County",
+  "name": "Travis County, Texas",
+  "slug": "travis-county-texas",
+  "hq": "Austin, TX",
+  "updated": "2026-06-22",
+  "tagline": "The 5th-most-populous Texas county (~1.36M residents, Austin) runs its technology through the Information Technology Services (ITS) department on a roughly $2B county budget — and sits at the center of the state's tech-talent and AI-policy hub.",
+
+  "snapshot": [
+    { "label": "Residents", "value": "~1.36M (5th-largest TX county)" },
+    { "label": "FY26 county budget", "value": "~$2B" },
+    { "label": "Central IT", "value": "Information Technology Services (ITS)" },
+    { "label": "Buying gate", "value": "Commissioners Court" }
+  ],
+
+  "overview": "Travis County is the fifth-most-populous county in Texas, home to roughly 1.36 million residents and the City of Austin — the state capital and one of the country's most concentrated technology economies. Its central technology organization is the Information Technology Services (ITS) department, whose stated mission is to \"execute, secure, and sustain technology services that benefit Travis County residents\" — covering enterprise applications, infrastructure, end-user services, web services, and cybersecurity across county offices and departments. Governance runs through a five-member Commissioners Court (the County Judge plus four precinct Commissioners), which adopts the budget and approves contracts of size; the County Judge serves as chief administrator and Director of Emergency Management. Department-level executives carry the title \"County Executive\" (for example, the County Executive for Planning & Budget), and the Planning & Budget Office prepares the budget and integrates county-wide strategic and spending plans. For a Dell SLG seller, the practical map is: ITS is the technology buying center, the Planning & Budget Office shapes what gets funded, and Commissioners Court is the approval gate every significant deal must clear. Austin's position as a tech, semiconductor, and AI-policy center raises both the security expectations and the partnership options around the county.",
+
+  "budget": {
+    "intro": "Travis County's Commissioners Court adopted its FY2026 budget on September 23, 2025, balanced at a property-tax rate of 37.5845 cents per $100 of taxable value — a roughly 3-cent increase over FY2025, near the voter-approval rate. The county judge's office describes the Commissioners Court as overseeing a roughly $2 billion annual budget. Technology is a focused line within that, delivered through the ITS department; the fiscal year begins October 1.",
+    "stats": [
+      { "value": "~$2B", "label": "FY2026 county budget", "note": "Annual budget the Commissioners Court oversees, per the county judge's office" },
+      { "value": "37.5845¢", "label": "FY26 tax rate (per $100)", "note": "Adopted Sep 23, 2025; ~3-cent increase over FY25, near voter-approval rate" },
+      { "value": "~1.36M", "label": "Residents served", "note": "2024 Census estimate; 5th-most-populous TX county" }
+    ],
+    "notes": [
+      "The county raised its tax rate for FY2026 (effectively ~8% under truth-in-taxation calculations) — expect cost-discipline and value/TCO to stay front of mind in funding conversations.",
+      "Central Health, the county's separate hospital district, runs its own ~$1.1B FY2026 budget approved by the same Commissioners Court — a distinct entity from county ITS, so confirm which budget owns a given health-IT program.",
+      "The largest IT-adjacent spends sit with operating offices (Sheriff, District Attorney, the courts); ITS is the central path, not the only wallet — confirm which office owns a program before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "County-Wide IT Strategic Plan", "summary": "ITS describes itself as collaborating across departments on a County-Wide IT Strategic Plan, optimizing service delivery and standardizing how technology is delivered to county offices. This planning track is the entry point for consolidation, infrastructure refresh, and managed-services positioning aligned to stated county priorities.", "tags": ["Modernization", "Strategy"] },
+    { "name": "T.I.M.E. portfolio rationalization", "summary": "ITS applies a \"T.I.M.E.\" framework — deciding whether to Tolerate, Invest in, Migrate from, or Eliminate systems based on business value and performance. This is an explicit gate for application and infrastructure decisions; align refresh and as-a-service proposals to the \"invest\" and \"migrate\" categories.", "tags": ["Optimization", "Infrastructure"] },
+    { "name": "Cybersecurity & secure-access posture", "summary": "ITS commits to \"anytime, anywhere\" access to information that is \"always available, accurate, and secure,\" and the county recruits for a dedicated Chief Information Security Officer role — a recurring opportunity for endpoint protection, CJIS-aligned security for justice systems, and resilience. Confirm the current security lead before engaging.", "tags": ["Cybersecurity", "CJIS"] },
+    { "name": "AI governance under Texas TRAIGA", "summary": "Texas's Responsible Artificial Intelligence Governance Act (TRAIGA) takes effect January 1, 2026, setting a statewide framework for government AI use. As an Austin-based public entity, Travis County must align any AI tooling to this regime — an early governance gate that shapes how AI-enabled offerings can be sold in.", "tags": ["AI", "Governance"] }
+  ],
+
+  "procurement": {
+    "intro": "Travis County buys through Travis County Purchasing, with awards of size approved by Commissioners Court. As a local government it is also eligible to buy off pre-competed cooperative vehicles — most importantly the Texas DIR Cooperative Contracts — which let it acquire technology at state pricing without running a full county RFP. Confirm Dell's coverage on the right vehicles before pursuing a deal.",
+    "vehicles": [
+      { "name": "Travis County Purchasing + Commissioners Court", "detail": "Purchasing runs solicitations; Commissioners Court approval is the gate for significant awards. Texas interested-parties (Form 1295) disclosure applies to court-approved contracts." },
+      { "name": "Texas DIR Cooperative Contracts", "detail": "As a local government, Travis County can buy technology off DIR's pre-competed co-op at State of Texas pricing — the fastest compliant path that avoids a full county RFP. Verify Dell's DIR contract scope covers the products in play." },
+      { "name": "Other purchasing cooperatives", "detail": "The county also leverages national/interlocal cooperatives for goods and services — confirm which vehicle a given technology category is bought through before forecasting." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Andy Brown", "title": "Travis County Judge", "note": "Top elected executive and Commissioners Court chair; serves as chief administrator and Director of Emergency Management. Term runs through Dec 31, 2026; running for reelection in 2026 — the steady top-of-county relationship for now." },
+    { "name": "Ralph Warren", "title": "Director of Information Technology Services (ITS)", "note": "Leads central IT; former Deputy CIO at the City of Austin with two-plus decades in public-sector technology. The top technology relationship for the account." },
+    { "name": "Jessica Rio", "title": "County Executive, Planning & Budget", "note": "Leads the Planning & Budget Office, which prepares the county budget and integrates county-wide strategic and spending plans — a key relationship for funding technology programs." },
+    { "name": "ITS Information Security function", "title": "Cybersecurity / CISO", "note": "Owns the county's security posture; the county recruits for a dedicated Chief Information Security Officer. Confirm the current named security lead before pursuing security deals." },
+    { "name": "Commissioners Court", "title": "County Judge + 4 precinct Commissioners", "note": "Adopts the budget and approves contracts of size — the decision gate for any major deal." }
+  ],
+
+  "news": [
+    { "date": "2025-09", "title": "Commissioners Court adopts FY2026 budget at 37.5845¢ tax rate", "impact": "Adopted Sep 23, 2025 with a ~3-cent tax-rate increase near the voter-approval rate — a constrained, value-focused FY26 envelope; lead with cost-optimization, standardization, and TCO.", "tags": ["Budget"] },
+    { "date": "2025-09", "title": "Commissioners approve Central Health's ~$1.1B FY2026 budget", "impact": "The county's separate hospital district set a large \"Year of Access\" budget — a reminder to distinguish Central Health IT from county ITS when mapping health-related technology opportunity.", "tags": ["Budget", "Health"] },
+    { "date": "2026-01", "title": "Texas TRAIGA AI-governance law takes effect", "impact": "The Responsible Artificial Intelligence Governance Act now governs Texas government AI use — align any AI-enabled offering to the new framework before pitching the county.", "tags": ["AI", "Governance"] },
+    { "date": "2026-03", "title": "County Judge Andy Brown on the March 2026 primary ballot", "impact": "Brown is seeking reelection with his term through Dec 2026 — anchor relationships at the ITS and Planning & Budget layer that persist regardless of the November outcome.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Map the buying center precisely: ITS (Director Ralph Warren) as the technology owner, the Planning & Budget Office (County Executive Jessica Rio) for funding, and Commissioners Court as the approval gate — sequence the deal accordingly.",
+    "Confirm Dell's Texas DIR Cooperative Contract and other co-op coverage so the county can buy at state pricing without a full RFP — the fastest compliant path.",
+    "Align refresh and as-a-service proposals to the County-Wide IT Strategic Plan and the ITS \"T.I.M.E.\" framework, positioning ISG, client, and managed services in the \"invest\" and \"migrate\" categories.",
+    "Lead FY26 conversations with cost-optimization, standardization, and consolidation value — the county raised its tax rate and is managing a constrained envelope.",
+    "Engage early on security (the open CISO role, CJIS-aligned justice systems) and AI governance under Texas TRAIGA to position secure, compliant AI-infrastructure and endpoint/security offerings."
+  ],
+
+  "sources": [
+    { "label": "Travis County — Information Technology Services (ITS)", "url": "https://www.traviscountytx.gov/its" },
+    { "label": "Travis County — Office of the County Judge (Andy Brown)", "url": "https://www.traviscountytx.gov/commissioners-court/county-judge/andy-brown-bio" },
+    { "label": "Travis County — FY2026 Budget Documents", "url": "https://www.traviscountytx.gov/planning-budget/current-year" },
+    { "label": "Travis County — FY2026/TY2025 Taxpayer Impact Statement", "url": "https://www.traviscountytx.gov/planning-budget/tc-taxpayer-statement" },
+    { "label": "Travis County — Planning & Budget Office", "url": "https://www.traviscountytx.gov/planning-budget" },
+    { "label": "Central Health — Travis County approves FY2026 \"Year of Access\" budget", "url": "https://www.centralhealth.net/travis-county-commissioners-approve-central-healths-fy-2026-year-of-access-budget-expanding-care-for-residents/" },
+    { "label": "U.S. Census / Wikipedia — Travis County population", "url": "https://en.wikipedia.org/wiki/Travis_County,_Texas" },
+    { "label": "Ogletree — Texas Responsible Artificial Intelligence Governance Act (TRAIGA)", "url": "https://ogletree.com/insights-resources/blog-posts/texas-takes-a-shot-at-ai-regulation-with-responsible-artificial-intelligence-governance-act/" },
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+  ]
+}

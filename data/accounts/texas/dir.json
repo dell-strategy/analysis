@@ -1,0 +1,72 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "State Agency",
+  "name": "Texas DIR — Department of Information Resources",
+  "slug": "dir",
+  "hq": "Austin, TX",
+  "updated": "2026-06-22",
+  "tagline": "The front door to Texas public-sector IT: DIR runs the state's central technology procurement, the Cooperative Contracts most state, local, and higher-ed buyers use, and shared data-center and security services.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central IT authority" },
+    { "label": "Co-op purchases (3 yr)", "value": "$3.4B+" },
+    { "label": "Primary vehicle", "value": "DIR Co-op Contracts" },
+    { "label": "Cloud gate", "value": "TX-RAMP" }
+  ],
+
+  "overview": "The Texas Department of Information Resources (DIR) is the state's central IT agency — it sets statewide technology policy, owns the procurement vehicles most Texas public entities buy through, and delivers shared services (data center, cloud, network, security). DIR is best understood as the conduit for Texas public-sector technology rather than a large end spender: the DIR Cooperative Contracts program drove more than $3.4B in customer purchases over the last three fiscal years, and eligible state agencies, local governments, K-12, and higher-ed can buy off those pre-competed contracts without running their own RFP. DIR also operates Shared Technology Services (STS) — consolidated data-center and cloud capacity — and enforces TX-RAMP, the cloud-security certification gate. One structural change is in motion: cybersecurity functions are migrating out of DIR into the new Texas Cyber Command, a transition slated to complete by December 31, 2026.",
+
+  "budget": {
+    "intro": "DIR isn't a large direct spender — its leverage shows up as the volume flowing through its vehicles rather than its own appropriation. The state's 2026–27 biennial budget is $337.4B (largest in Texas history), and DIR's Cooperative Contracts program moved $3.4B+ in customer purchases over the last three fiscal years.",
+    "stats": [
+      { "value": "$3.4B+", "label": "Co-op purchases (3 yr)", "note": "Customer purchases via DIR Cooperative Contracts" },
+      { "value": "$337.4B", "label": "State biennial budget", "note": "2026–27; the pool DIR-vehicle buys draw from" },
+      { "value": "$135M", "label": "Texas Cyber Command", "note": "GR through 2027; cyber moving out of DIR" }
+    ],
+    "notes": [
+      "DIR funds much of its delivery through cost recovery on its vehicles and shared services, not a large general-revenue line.",
+      "The largest agency IT budgets (HHSC, TxDOT, etc.) sit with those agencies — DIR is the path, not the wallet."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Cyber functions → Texas Cyber Command", "summary": "DIR's cybersecurity operations are migrating to the new standalone Texas Cyber Command (San Antonio) by Dec 31, 2026. Re-map the security buying center and confirm which entity owns a given program before forecasting.", "tags": ["Cybersecurity", "Transition"] },
+    { "name": "TX-RAMP cloud certification", "summary": "DIR continues to run and tighten TX-RAMP. Cloud / as-a-service offerings need the right certification level to be sellable to state entities — a gate to clear early.", "tags": ["Cloud", "Compliance"] },
+    { "name": "Shared Technology Services modernization", "summary": "Consolidated data-center and cloud services are an ongoing modernization track — infrastructure refresh, hybrid cloud, and managed services across participating agencies.", "tags": ["Data Center", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to or through DIR runs on pre-competed vehicles, not one-off RFPs. Two things to confirm first: that Dell's DIR Cooperative Contracts are active and correctly scoped, and that any cloud / as-a-service offering holds the right TX-RAMP level.",
+    "vehicles": [
+      { "name": "DIR Cooperative Contracts", "detail": "The primary vehicle — pre-competed and open to state agencies, local gov, K-12, and higher-ed. $3.4B+ in purchases over the last three FYs." },
+      { "name": "Shared Technology Services (STS)", "detail": "DIR-delivered data-center, cloud, and managed services for participating agencies — a route for infrastructure and as-a-service." },
+      { "name": "TX-RAMP certification", "detail": "Mandatory gate: agencies may only use cloud services certified at the right NIST 800-53 (Low/Moderate) level. Clear this before pursuing cloud/aaS deals." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Tony Sauerhoff", "title": "State CIO & DIR Executive Director", "note": "Owns statewide tech direction; AI-forward (former Chief AI & Innovation Officer). The top relationship for the DIR motion." },
+    { "name": "DIR Chief Procurement Office", "title": "Cooperative Contracts & solicitations", "note": "Owns the contract vehicles, RFOs, and vendor onboarding — the path onto the co-op." },
+    { "name": "DIR Shared Technology Services (STS)", "title": "Data center / cloud / network services", "note": "Buying center for consolidated infrastructure and managed services." },
+    { "name": "Office of the CISO (DIR)", "title": "Security policy & TX-RAMP", "note": "Owns TX-RAMP and statewide security standards — note cyber operations are migrating to the Texas Cyber Command." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "DIR confirms cyber transition to Texas Cyber Command completes by Dec 31, 2026", "impact": "Security decision-making and budget shift to the new agency — rebuild the relationship map for the security buying center.", "tags": ["Cybersecurity"] },
+    { "date": "2026-03", "title": "Tony Sauerhoff confirmed permanent State CIO & DIR Executive Director", "impact": "Stable, AI-forward leadership at the top of the statewide motion.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's DIR Cooperative Contract coverage and reseller scope — it's the access path to the entire Texas public sector, not just DIR itself.",
+    "Lead with AI-infrastructure and ISG through STS and the co-op, tied to the statewide data-center and semiconductor buildout.",
+    "Clear TX-RAMP early for any cloud / as-a-service play that touches state data.",
+    "Track the DIR → Texas Cyber Command security migration and build the relationship with the new buying center in San Antonio."
+  ],
+
+  "sources": [
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" },
+    { "label": "Texas DIR — TX-RAMP", "url": "https://dir.texas.gov/information-security/texas-risk-and-authorization-management-program-tx-ramp" },
+    { "label": "GovTech — Texas confirms Tony Sauerhoff as State CIO, DIR Leader", "url": "https://www.govtech.com/workforce/texas-confirms-tony-sauerhoff-as-state-cio-dir-leader" }
+  ]
+}

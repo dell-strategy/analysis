@@ -1,0 +1,85 @@
+{
+  "state": "new-york",
+  "stateName": "New York",
+  "type": "Special District",
+  "name": "NY Metropolitan Transportation Authority (MTA)",
+  "slug": "mta",
+  "hq": "New York, NY",
+  "updated": "2026-06-22",
+  "tagline": "The largest public transit authority in the US: the MTA runs the NYC subway, buses, the Long Island Rail Road, Metro-North, and the region's bridges and tunnels — a sprawling OT-heavy operation now executing a record $68.4B capital program with a deep technology, signal-modernization, and cybersecurity agenda.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Largest US transit authority" },
+    { "label": "Operating budget (2026)", "value": "~$21.3B" },
+    { "label": "Capital program (2025–29)", "value": "$68.4B" },
+    { "label": "Fare system", "value": "OMNY (MetroCard retired)" }
+  ],
+
+  "overview": "The Metropolitan Transportation Authority (MTA) is a New York State public-benefit corporation and the largest public transportation provider in the United States, serving a 5,000-square-mile region in and around New York City. It operates through a family of agencies: New York City Transit (subway and buses), the Long Island Rail Road, Metro-North Railroad, MTA Bus, and MTA Bridges and Tunnels, moving millions of riders on an average weekday. For a technology seller the MTA is best understood as a vast operational-technology (OT) environment — signals, train control, tolling, power, and rolling stock — layered with a large enterprise IT and data estate across six operating agencies. The MTA carries a roughly $21.3B annual operating budget and is mid-execution on a $68.4B 2025–2029 capital program, the biggest in its history, with the bulk aimed at state-of-good-repair: signal modernization, station accessibility, substations, and rolling stock. Congestion pricing (the Manhattan Central Business District tolling program live since January 2025) is now a dedicated funding source feeding capital improvements. The MTA governs itself through a board of state- and locally-nominated members, and major contracts require board approval — a structural fact that shapes every large technology deal.",
+
+  "budget": {
+    "intro": "The MTA runs two distinct budgets: a roughly $21.3B annual operating budget (the largest of any US transit agency) and a separate multi-year capital program funded through dedicated taxes, federal aid, congestion-pricing revenue, and bonding. Technology and OT spend lives in both — enterprise IT in operating, and the heavy signal/train-control/tolling modernization in capital.",
+    "stats": [
+      { "value": "~$21.3B", "label": "Operating budget (2026)", "note": "Annual; largest of any US transit agency" },
+      { "value": "$68.4B", "label": "2025–2029 capital program", "note": "Record-size; ~90% to state-of-good-repair" },
+      { "value": "~$1.5B", "label": "Annual congestion-pricing target", "note": "Net tolling revenue dedicated to capital, supporting ~$15B in financing" }
+    ],
+    "notes": [
+      "The 2025–2029 capital plan ($68.4B) is ~25% larger than the prior 2020–2024 plan ($54.8B); funding sources include an expanded payroll mobility tax, anticipated federal funds, state and city contributions, and congestion-pricing-backed financing.",
+      "Federal funding is a real risk variable — the State Comptroller has flagged that federal actions could affect capital-program funding, so forecast against that uncertainty.",
+      "Most technology dollars are embedded in agency and capital line items (signals, tolling, rolling stock, data centers) rather than a single standalone IT appropriation."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Signal modernization (CBTC)", "summary": "The MTA is replacing decades-old fixed-block signals with Communications-Based Train Control across multiple subway lines (recent awards on the Fulton/Liberty corridors, plus ongoing Queens Boulevard and G-line work). This is the flagship OT-modernization track — compute, networking, and cybersecurity at the edge of a safety-critical system.", "tags": ["OT", "Signal Modernization", "Capital"] },
+    { "name": "OMNY fare-collection transition", "summary": "OMNY (contactless tap-and-go) has fully replaced the MetroCard, with sales of the 30-year-old card ending December 31, 2025 and 90%+ of riders already on OMNY. The system spans payments infrastructure, account-based ticketing, and the supporting data platform.", "tags": ["Payments", "Data", "Customer"] },
+    { "name": "OT / cybersecurity hardening", "summary": "The MTA runs an Operational Technology Cybersecurity Program — recognized in New York State's statewide cybersecurity strategy — focused on protecting safety-critical signals, tolling, and power systems as IT/OT converge. Asset discovery, SIEM/IDS tuning, and incident-response readiness are active workstreams.", "tags": ["Cybersecurity", "OT", "Resilience"] },
+    { "name": "IT consolidation, data & AI analytics", "summary": "Under the CTO, the MTA continues consolidating, modernizing, and standardizing its technology environment across six agencies, extending into AI analytics and data-driven operations. A clear lane for enterprise infrastructure, data platforms, and AI compute.", "tags": ["Data Center", "AI", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "The MTA procures through its own competitive process governed by NY Public Authorities Law (PAL 1209 / 1265-a) and All-Agency procurement guidelines — not a state cooperative vehicle. Large contracts require MTA Board approval, and competitive procurements appear on a monthly board-approval list. Plan for board timelines and confirm the right buying entity (HQ vs. NYC Transit vs. an agency) for any technology pursuit.",
+    "vehicles": [
+      { "name": "Competitive RFP / IFB", "detail": "The default path for goods, services, and IT — RFPs gauge market competition and are scored by selection committees on technical qualifications, price, and other factors; public works and goods follow competitive-bid rules under PAL 1209/1265-a." },
+      { "name": "MTA Board approval", "detail": "Competitive procurements above thresholds go on a monthly board-approval list and require a majority vote — a structural gate to factor into deal timelines for any large technology award." },
+      { "name": "Single-source / emergency", "detail": "Available only from a single responsible source or under emergency/critical need, with public notice of intent required — narrow exceptions, not a primary route." },
+      { "name": "Agency-level procurements", "detail": "Buys also run through individual agencies (NYC Transit, LIRR, Metro-North, Bridges & Tunnels) — confirm which entity owns the requirement before pursuing." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Janno Lieber", "title": "Chair & CEO, MTA", "note": "Top of the house since January 2022; sets strategy and is the public face of the capital program and congestion pricing. The executive relationship for any enterprise-scale motion." },
+    { "name": "Rafail Portnoy", "title": "Chief Technology Officer", "note": "CTO since 2020; owns information and operational technology across the subway and six agencies — internal tech, cybersecurity, AI analytics, and customer-facing systems. The central technology relationship." },
+    { "name": "MTA Board", "title": "Governing board (state/local nominees)", "note": "Approves major contracts and the capital program via monthly action items — the approval gate for large technology awards." },
+    { "name": "Office of the CTO — Cybersecurity / OT", "title": "Cybersecurity & OT security leadership", "note": "Runs the OT Cybersecurity Program and enterprise security; the buying center for OT/IT security as signals, tolling, and power systems modernize. Confirm the current named security lead before engaging." },
+    { "name": "MTA Construction & Development", "title": "Capital delivery (incl. CBTC)", "note": "Delivers the signal-modernization and major capital projects where most OT/infrastructure technology is embedded." }
+  ],
+
+  "news": [
+    { "date": "2025-06", "title": "MTA Board approves $68.4B 2025–2029 Capital Plan", "impact": "Record-size, state-of-good-repair-heavy plan funds years of signal, station, power, and rolling-stock work — the spending backdrop for OT and infrastructure technology pursuits.", "tags": ["Capital", "Budget"] },
+    { "date": "2025-12", "title": "MetroCard sales end; OMNY becomes the sole fare system", "impact": "Completes the multi-year fare-tech transition; 90%+ of riders on OMNY, with the supporting payments and data platform now the system of record.", "tags": ["Payments", "Data"] },
+    { "date": "2026-01", "title": "Congestion pricing marks one year, exceeding revenue targets", "impact": "Confirms a durable, dedicated capital funding stream (~$500M+ net in year one), de-risking parts of the capital program that technology work depends on.", "tags": ["Funding"] },
+    { "date": "2026-02", "title": "MTA advances CBTC signal-modernization awards with congestion-relief funding", "impact": "New Communications-Based Train Control work (incl. Fulton/Liberty corridors and cellular coverage) keeps the OT-modernization pipeline active.", "tags": ["OT", "Signal Modernization"] }
+  ],
+
+  "dellActions": [
+    "Map the MTA as an OT-heavy enterprise: lead with rugged/edge compute, networking, and data infrastructure for signal modernization (CBTC) and tolling, not just back-office IT.",
+    "Engage the Office of the CTO on IT consolidation, data platforms, and AI analytics across the six agencies — a standardization story that fits ISG and AI-infrastructure.",
+    "Bring an IT/OT cybersecurity narrative tied to the MTA's OT Cybersecurity Program and New York State's cyber strategy — asset visibility, segmentation, and resilience for safety-critical systems.",
+    "Plan for MTA Board approval timelines and confirm the buying entity (HQ vs. NYC Transit vs. agency) early; align pursuits to the $68.4B capital program's state-of-good-repair priorities.",
+    "Track federal-funding risk to the capital plan and congestion-pricing revenue — both shape which technology workstreams stay funded; forecast accordingly."
+  ],
+
+  "sources": [
+    { "label": "MTA — Board Approves 2025–2029 Capital Plan", "url": "https://www.mta.info/press-release/mta-board-approves-2025-2029-capital-plan" },
+    { "label": "MTA — Budget", "url": "https://www.mta.info/budget" },
+    { "label": "MTA — CBTC: Upgrading signal technology", "url": "https://www.mta.info/project/cbtc-signal-upgrades" },
+    { "label": "MTA — To Sunset MetroCard Sales at End of the Year (OMNY)", "url": "https://www.mta.info/press-release/mta-sunset-metrocard-sales-end-of-year" },
+    { "label": "MTA — Rafail Portnoy, Chief Technology Officer", "url": "https://www.mta.info/transparency/leadership/executive-leadership/rafail-portnoy" },
+    { "label": "MTA — Janno Lieber, Chair & CEO", "url": "https://www.mta.info/transparency/leadership/executive-leadership/janno-lieber" },
+    { "label": "MTA — All-Agency General Contract Procurement Guidelines", "url": "https://www.mta.info/document/50901" },
+    { "label": "NYS Comptroller — MTA Makes Progress Funding Capital Programs But Faces Federal Risks", "url": "https://www.osc.ny.gov/press/releases/2025/06/mta-makes-progress-funding-capital-programs-faces-risks-federal-actions" },
+    { "label": "Governor Hochul — Congestion Pricing One-Year Success", "url": "https://www.mta.info/press-release/icymi-less-traffic-better-transit-its-first-anniversary-governor-hochul-celebrates" }
+  ]
+}

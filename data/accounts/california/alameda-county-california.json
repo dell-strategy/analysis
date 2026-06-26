@@ -1,0 +1,82 @@
+{
+  "name": "Alameda County, California",
+  "slug": "alameda-county-california",
+  "state": "california",
+  "stateName": "California",
+  "type": "County",
+  "hq": "Oakland, CA",
+  "updated": "2026-06-22",
+  "tagline": "California's 7th-most-populous county (~1.6M, Oakland/East Bay) and a nationally recognized digital-government leader: a centralized Information Technology Department (ITD) runs countywide IT, security, and AI, with buying routed through the General Services Agency's procurement office.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Urban East Bay county (~1.6M)" },
+    { "label": "County budget (FY26-27)", "value": "$6.7B all-funds" },
+    { "label": "IT model", "value": "Centralized — ITD" },
+    { "label": "Recognition", "value": "#1 Digital County (1M+), 2 yrs" }
+  ],
+
+  "overview": "Alameda County is the local government for the Oakland / East Bay region — roughly 1.6 million residents, the 7th-most-populous county in California — and a top-tier urban-county technology buyer. IT is centralized in the Information Technology Department (ITD), an internal service provider of ~230 staff and a $100M+ operating budget that runs countywide cybersecurity, data governance, enterprise applications, cloud services, network infrastructure, digital services, and a 24/7 operations center supporting public safety, health, human services, property, and administrative systems. ITD is best understood as a shared-services shop delivering to the county's operating departments rather than a standalone agency with large discretionary spend — the bulk of the dollars sit with the departments it serves (Health Care Services, Social Services, Sheriff, Assessor, Registrar of Voters). Alameda has been named the nation's #1 digital county in the 1M+ population category two years running, a county that actively funds AI and modernization. For a Dell SLG seller, two things define the moment: a centralized, innovation-forward IT buying center, and a fresh leadership transition at the top of ITD that resets the relationship map.",
+
+  "budget": {
+    "intro": "Alameda County's FY2026-27 budget is $6.7B all-funds (a ~9% year-over-year increase) with a ~$4.3B general fund, presented by County Administrator Susan Muranishi on May 29, 2026. The plan closed a $91.4M funding gap without layoffs or major service cuts — by eliminating 45 vacant positions, trimming departmental expenses, and 'right-sizing' vendor contracts. ITD runs a separate operating budget of over $100M, funded largely through internal cost recovery on the departments it serves rather than a single general-revenue line.",
+    "stats": [
+      { "value": "$6.7B", "label": "County budget (FY26-27)", "note": "All-funds, ~9% increase; presented May 29, 2026" },
+      { "value": "$100M+", "label": "ITD operating budget", "note": "Central IT department, ~230 staff; funded largely via internal cost recovery" },
+      { "value": "$91.4M", "label": "Closed funding gap", "note": "Balanced via 45 vacant-position cuts and vendor-contract 'right-sizing'" }
+    ],
+    "notes": [
+      "The 'right-sizing' of vendor contracts to help close the gap means net-new discretionary IT spend will be scrutinized — lead with run-cost and efficiency cases.",
+      "ITD spend isn't a single public line item; it flows through internal service charges and the budgets of the departments it supports."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "AI-driven government services", "summary": "A recognized national leader: ITD's published CIO Goals for 2026 prioritize 'promoting AI and other new technologies in automating business processes.' Award-cited proof points include a Conversational AI Assistant for the Board of Supervisors that improved search results ~35% and a revamped budget system that halved formulation/processing time. AI is real and funded here — tie infrastructure (compute, data platform) to concrete county workflows.", "tags": ["AI", "Digital Services"] },
+    { "name": "Legacy modernization & enterprise architecture", "summary": "The 2026 CIO goals call to 'modernize legacy systems and infrastructure' and advance enterprise architecture, delivered through ITD's Project Life Cycle (PLC) on scope/schedule/budget. A durable lane for infrastructure refresh, data-center, and modernization that demonstrably lowers run-cost.", "tags": ["Modernization", "Data Center"] },
+    { "name": "Cybersecurity & data governance", "summary": "ITD owns countywide cybersecurity, data governance, and a 24/7 operations center across critical systems. The 2026 goals direct staff to 'support and promote Centralized Technology, Cybersecurity, and AI policies.' Security assessments and resilience are recurring themes — a stable entry point for endpoint, identity, and infrastructure security.", "tags": ["Cybersecurity"] },
+    { "name": "Cloud services & 24/7 operations", "summary": "ITD delivers cloud services and network infrastructure as part of its shared-services portfolio. As a centralized provider serving every county department, the pitch in a 'right-sizing' year is consolidation and lifecycle efficiency rather than greenfield expansion.", "tags": ["Cloud", "Infrastructure"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Alameda County runs through the General Services Agency (GSA) Procurement Department, the central buying office for goods and services across all county departments. The county now publishes solicitations and receives vendor responses through an OpenGov eSourcing portal, and runs a Small, Local and Emerging Business (SLEB) program that requires prime vendors to secure 20% SLEB participation unless they qualify themselves.",
+    "vehicles": [
+      { "name": "Alameda County GSA Procurement", "detail": "The central buying office for county solicitations, terms, and vendor registration — the front door for direct county business." },
+      { "name": "OpenGov eSourcing portal", "detail": "The county's online procurement platform where bids are posted and submitted; vendor registration is required to receive and respond to solicitations." },
+      { "name": "SLEB program & cooperative agreements", "detail": "Prime awards carry a 20% Small/Local/Emerging Business participation requirement; confirm Dell's California statewide LPA/CMAS coverage and any cooperative vehicles the county can buy off to shorten the cycle." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Susan S. Muranishi", "title": "County Administrator (CAO)", "note": "Longest-serving CAO in California; presents and owns the county budget and sets the cost-discipline frame ITD operates within. Top of the county administration." },
+    { "name": "Ram Gurumurthy", "title": "Interim Chief Information Officer (ITD)", "note": "Appointed interim CIO in March 2026; previously Chief Technology Officer since 2023, with the county since 2013. The central technology relationship — note a permanent CIO search is active." },
+    { "name": "ITD — Information Technology Department", "title": "Centralized county IT (~230 staff)", "note": "Owns countywide cybersecurity, data governance, cloud, network, applications, and a 24/7 operations center; the primary buying center for infrastructure and security." },
+    { "name": "General Services Agency — Procurement", "title": "Central procurement office", "note": "Owns solicitations, the OpenGov portal, vendor onboarding, and the SLEB requirement — the procedural gatekeeper for any deal." },
+    { "name": "Board of Supervisors", "title": "Five-member governing board", "note": "Adopts the budget and approves major contracts; held FY26-27 budget discussions June 22, 23, and 25, 2026." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "County Administrator presents $6.7B FY2026-27 budget closing a $91.4M gap", "impact": "Gap closed via vendor-contract 'right-sizing' and vacant-position cuts — net-new IT spend will be scrutinized; lead with efficiency and run-cost cases.", "tags": ["Budget"] },
+    { "date": "2026-03", "title": "CIO Tim Dupuis retires; Board appoints Ram Gurumurthy interim CIO", "impact": "Leadership transition at the top of ITD resets the relationship map — engage the interim CIO now and track the permanent-CIO search.", "tags": ["Leadership"] },
+    { "date": "2026-01", "title": "ITD publishes CIO Goals for 2026 (AI, modernization, centralized cyber)", "impact": "Public roadmap signaling AI automation, legacy modernization, and centralized tech/cyber/AI policy as funded priorities — anchor proposals to these stated goals.", "tags": ["Strategy", "AI"] },
+    { "date": "2025-07", "title": "Named #1 Digital County (1M+ population) for the 2nd year running", "impact": "Confirms an innovation-forward, AI-investing buyer recognized nationally — credibility to lead with advanced infrastructure and AI use cases.", "tags": ["Recognition", "AI"] }
+  ],
+
+  "dellActions": [
+    "Engage interim CIO Ram Gurumurthy and ITD as the central buying center now, and track the permanent-CIO search so the relationship survives the leadership transition.",
+    "Lead with AI infrastructure and modernization tied to ITD's published 2026 goals and award-cited wins (Conversational AI Assistant, budget-system overhaul) — this is a county that funds AI.",
+    "Frame infrastructure, data-center, and security refresh around consolidation and run-cost reduction to fit a budget that closed its gap by 'right-sizing' vendor contracts.",
+    "Register in the county's OpenGov eSourcing portal and verify Dell's California statewide LPA/CMAS coverage; plan SLEB partner participation to meet the 20% requirement.",
+    "Time the motion to the Board's FY26-27 budget cycle (discussions June 22-25, 2026) and the ITD planning calendar when priorities and funding firm up."
+  ],
+
+  "sources": [
+    { "label": "Alameda County — Information Technology Department (ITD)", "url": "https://itd.alamedacountyca.gov/" },
+    { "label": "Alameda County ITD — CIO Goals for 2026", "url": "https://itd.alamedacountyca.gov/cio-goals-for-2026/" },
+    { "label": "Local News Matters — Supervisors appoint interim IT chief Ram Gurumurthy to replace retiring Tim Dupuis", "url": "https://localnewsmatters.org/2026/03/29/alameda-county-interim-it-director-ram-gurumurthy/" },
+    { "label": "Local News Matters — County budget plan closes $91.4M gap without layoffs", "url": "https://localnewsmatters.org/2026/05/30/alameda-county-budget-plan-closes-91-4m-spending-gap-without-layoffs-service-cuts/" },
+    { "label": "Alameda County — Budget Overview", "url": "https://budget.alamedacountyca.gov/Home/Overview" },
+    { "label": "Alameda County GSA — Procurement Services / Do Business With Us", "url": "https://gsa.acgov.org/do-business-with-us/" },
+    { "label": "GovTech — Digital Counties Survey 2025 Winners Announced", "url": "https://www.govtech.com/dc/digital-counties/digital-counties-survey-2025-winners-announced" },
+    { "label": "County Administrator's Office — Susan S. Muranishi Bio", "url": "https://cao.alamedacountyca.gov/susan-s-muranishi-bio/" }
+  ]
+}

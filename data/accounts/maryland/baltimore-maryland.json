@@ -1,0 +1,77 @@
+{
+  "state": "maryland",
+  "stateName": "Maryland",
+  "type": "City",
+  "name": "Baltimore, Maryland",
+  "slug": "baltimore-maryland",
+  "hq": "Baltimore, MD",
+  "updated": "2026-06-22",
+  "tagline": "Maryland's largest city runs its technology through the Baltimore City Office of Information & Technology (BCIT) — a department that rebuilt its cyber posture after the 2019 RobbinHood ransomware attack and now leans into modernization, digital equity, and a new CIO.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Largest city in Maryland" },
+    { "label": "Central IT", "value": "BCIT" },
+    { "label": "FY2026 budget", "value": "~$4.6B" },
+    { "label": "New CIO", "value": "T.J. Mayotte (Mar 2026)" }
+  ],
+
+  "overview": "The City of Baltimore is Maryland's largest municipality, and its technology function is consolidated in the Baltimore City Office of Information & Technology (BCIT), which builds and operates the systems city agencies rely on and runs the city's digital-equity programs (skills training, free public wifi, device and connectivity access). Baltimore's IT identity is shaped by the May 2019 RobbinHood ransomware attack, which crippled most city systems for months and ran an estimated $18M+ in recovery and lost revenue; since then the city has steadily rebuilt its security posture, hired a permanent CISO, and invested in modernization. In March 2026 Mayor Brandon Scott appointed T.J. Mayotte — a 20-year technology and cybersecurity executive and former Howard County CIO — as the city's new CIO, signaling continued emphasis on cyber, service modernization, and emerging technology. For a Dell SLG seller, Baltimore is a mid-to-large municipal account where security-hardening, infrastructure refresh, endpoint/client, and digital-equity device programs are the natural entry points.",
+
+  "budget": {
+    "intro": "Baltimore's total operating budget for FY2026 (effective July 1, 2025) is roughly $4.6B, approved by the City Council in a 13-2 vote. IT is funded within that envelope and through the broader 10-year financial plan, with technology modernization and in-sourcing of contractor roles called out as priorities; the FY2027 proposed budget Mayor Scott discussed in April 2026 was around $4.9B.",
+    "stats": [
+      { "value": "~$4.6B", "label": "FY2026 city budget", "note": "Council-approved; effective July 1, 2025" },
+      { "value": "~$4.9B", "label": "FY2027 proposed", "note": "Discussed by Mayor Scott, April 2026" },
+      { "value": "~$18M+", "label": "2019 ransomware cost", "note": "Recovery plus lost/delayed revenue; reset the security baseline" }
+    ],
+    "notes": [
+      "BCIT's own appropriation sits inside the citywide budget rather than a separately published statewide IT line — confirm the current-year IT and cyber allocations in the Bureau of the Budget and Management Research (BBMR) agency-detail volumes.",
+      "FY2026 included a move to convert contractor roles in Finance and IT into city positions, projected to save roughly $1.5M annually — a signal to watch on managed-services vs. in-house posture."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Post-ransomware cyber rebuild", "summary": "After the 2019 RobbinHood attack, BCIT stood up a permanent CISO function and hardened the city's security posture. Expect continued investment in endpoint security, backup/recovery, segmentation, and resilience — a durable buying theme for this account.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "Service modernization", "summary": "The city's 10-year financial plan commits to modernizing city services and using emerging technology to improve efficiency. A refresh and consolidation track for aging infrastructure and end-user computing.", "tags": ["Modernization", "Infrastructure"] },
+    { "name": "Digital equity", "summary": "BCIT runs digital-inclusion programs — skills training, free public wifi, and device/connectivity access for residents. Device fleets and the infrastructure behind public-access programs are a fit for client and ISG.", "tags": ["Digital Equity", "Client"] },
+    { "name": "New CIO agenda", "summary": "CIO T.J. Mayotte (started March 16, 2026) brings a cybersecurity and digital-transformation background. Early-tenure leadership is the window to align on a modernization and security roadmap.", "tags": ["Leadership", "AI"] }
+  ],
+
+  "procurement": {
+    "intro": "Baltimore buys through its centralized municipal procurement process, with larger awards and contracts going before the Board of Estimates — the city's five-member spending panel — for approval. Cooperative contracts and Maryland statewide vehicles are common paths; confirm which vehicle fits before pursuing a city deal.",
+    "vehicles": [
+      { "name": "Baltimore City procurement / Board of Estimates", "detail": "The Bureau of Purchases runs solicitations; significant contracts and change orders require Board of Estimates approval. The primary path for direct city awards." },
+      { "name": "Cooperative contracts", "detail": "National cooperative vehicles (e.g., NASPO ValuePoint, Sourcewell, OMNIA) are frequently usable by Baltimore and can shorten the path for technology and client buys — verify eligibility per solicitation." },
+      { "name": "Maryland statewide contracts", "detail": "Maryland DoIT / DGS statewide master contracts may be leverageable by local entities; confirm whether a given vehicle is open to the city for the product in scope." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Brandon M. Scott", "title": "Mayor", "note": "Sets citywide priorities and appoints the CIO; has framed technology around digital equity and modernized service delivery." },
+    { "name": "T.J. Mayotte", "title": "Chief Information Officer (BCIT)", "note": "Started March 16, 2026; 20-year tech/cyber executive, former Howard County CIO. The top IT relationship for the account." },
+    { "name": "Kevin Kearney", "title": "Chief Information Security Officer", "note": "Owns the city's security program built out after the 2019 ransomware attack — the buying center for cyber and resilience." },
+    { "name": "Board of Estimates", "title": "City spending panel", "note": "Five-member board (Mayor, Comptroller, Council President, and two appointees) that approves major contracts — the gate for larger awards." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "Mayor Scott outlines ~$4.9B FY2027 proposed budget", "impact": "Sets the next-year funding envelope IT and cyber draw from; watch BBMR detail for the technology line.", "tags": ["Budget"] },
+    { "date": "2026-03", "title": "T.J. Mayotte appointed CIO of Baltimore (starts Mar 16, 2026)", "impact": "New IT leadership with a cyber and digital-transformation background — the window to align on a modernization roadmap.", "tags": ["Leadership"] },
+    { "date": "2025-06", "title": "City Council approves ~$4.6B FY2026 budget (13-2)", "impact": "Funds the current-year IT operating base; included in-sourcing of some Finance/IT contractor roles.", "tags": ["Budget"] }
+  ],
+
+  "dellActions": [
+    "Open with the new CIO (T.J. Mayotte) early in his tenure to align on the city's modernization and security roadmap before priorities harden.",
+    "Lead with cyber-resilience — endpoint security, backup/recovery, and infrastructure hardening — anchored to the post-2019-ransomware posture and the CISO relationship.",
+    "Position client devices and ISG for the service-modernization and digital-equity programs, including resident device fleets.",
+    "Map the buying path: confirm whether a cooperative or Maryland statewide vehicle fits, and plan for Board of Estimates approval on larger awards.",
+    "Track the FY2027 budget and any contractor-in-sourcing decisions for signals on managed-services vs. in-house technology posture."
+  ],
+
+  "sources": [
+    { "label": "Baltimore City — Mayor appoints T.J. Mayotte as CIO (Mar 2026)", "url": "https://www.baltimorecity.gov/mayor/news-media/press-releases/2026-03-12-mayor-brandon-m-scott-appoints-tj-mayotte-as-chief-information-officer" },
+    { "label": "Baltimore City Information & Technology (BCIT)", "url": "https://technology.baltimorecity.gov/" },
+    { "label": "Baltimore City — Mayor signs FY2026 budget", "url": "https://mayor.baltimorecity.gov/news/press-releases/2025-06-23-mayor-brandon-m-scott-signs-fy2026-baltimore-city-budget" },
+    { "label": "Bureau of the Budget and Management Research (BBMR) — budget publications", "url": "https://bbmr.baltimorecity.gov/budget-publications" },
+    { "label": "2019 Baltimore ransomware attack — overview", "url": "https://en.wikipedia.org/wiki/2019_Baltimore_ransomware_attack" }
+  ]
+}

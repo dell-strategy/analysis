@@ -1,0 +1,83 @@
+{
+  "state": "maryland",
+  "stateName": "Maryland",
+  "type": "State Agency",
+  "name": "Maryland Attorney General's Office",
+  "slug": "attorney-general",
+  "hq": "Baltimore, MD",
+  "updated": "2026-06-22",
+  "tagline": "Maryland's central legal office (OAG): it litigates for the state, runs consumer-protection and criminal divisions, and represents 40+ state agencies — a data-heavy, litigation-driven shop with steady eDiscovery, case-management, and cyber needs.",
+
+  "snapshot": [
+    { "label": "Role", "value": "State's chief legal office" },
+    { "label": "Authorized positions", "value": "~404 (FY2026)" },
+    { "label": "Personnel share", "value": "~87% of budget" },
+    { "label": "Buying path", "value": "DoIT / DGS statewide contracts" }
+  ],
+
+  "overview": "The Office of the Attorney General (OAG), led by Attorney General Anthony G. Brown, is Maryland's chief legal office. It litigates on behalf of the state, provides legal advice and counsel to the Governor and the General Assembly, and serves as in-house counsel to 40-plus state agencies (education, health, transportation, labor, and more). Its work is organized into divisions including Civil Litigation, Consumer Protection, the Criminal Division, Civil Rights, Antitrust, Securities, the Independent Investigations Division, and the Office of the Solicitor General. For a technology seller, the OAG is best understood as a litigation- and data-intensive operation rather than a large infrastructure spender: the office runs case-management and document-management systems, performs eDiscovery across high-volume litigation, and — through the Consumer Protection Division — administers Maryland's data-breach notification and data-privacy regime (including the Maryland Online Data Privacy Act, with new requirements phasing in through 2026). That mix drives recurring demand for secure storage, data processing/eDiscovery capacity, endpoint refresh for attorneys and investigators, and cyber controls protecting sensitive case data. The OAG is a relatively small agency by headcount, with roughly 404 authorized positions in FY2026 and a budget that is overwhelmingly personnel.",
+
+  "budget": {
+    "intro": "The OAG is a small, people-heavy agency — the budget is dominated by salaries for attorneys and investigators, so technology shows up as a modest contractual/operating slice rather than a large capital line. Figures below are from Maryland budget documents; treat the total as approximate and confirm against the current Fiscal Digest before forecasting.",
+    "stats": [
+      { "value": "~404", "label": "Authorized positions (FY2026)", "note": "Approx. 403.95 positions (regular + contractual) per FY2027 budget testimony" },
+      { "value": "~87%", "label": "Personnel share", "note": "Budget is overwhelmingly salaries — typical of a legal office" },
+      { "value": "-$1.8M", "label": "FY2026 GF reduction", "note": "General-fund allowance cut via statewide legislative reductions" }
+    ],
+    "notes": [
+      "Funding is a mix of general funds plus special and federal funds tied to specific units (e.g., Medicaid Fraud, consumer/securities enforcement).",
+      "Because ~87% is personnel, technology spend is a small share of the total — size opportunities to contractual services, refresh cycles, and data/eDiscovery capacity, not big infrastructure builds.",
+      "Maryland faced broad fiscal pressure in the FY2026 cycle; expect cost scrutiny and a preference for pre-competed statewide contracts over new bespoke procurements."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Case management & eDiscovery modernization", "summary": "The OAG procures and operates case-management, document-management, and eDiscovery systems, and has posted manager-level roles overseeing development, vendor RFPs, and a DevOps team. This is the core data-and-storage workload — high-volume litigation drives demand for secure processing, review, and retention capacity.", "tags": ["eDiscovery", "Data Management"] },
+    { "name": "Data privacy & breach enforcement (MODPA)", "summary": "Through Consumer Protection, the OAG administers Maryland's breach-notification regime and enforces the Maryland Online Data Privacy Act, with new processing requirements phasing in during 2026. More enforcement means more evidence/data to ingest, store, and analyze securely.", "tags": ["Consumer Protection", "Privacy"] },
+    { "name": "Cybersecurity for sensitive case data", "summary": "The office holds highly sensitive investigative, criminal, and consumer data, making endpoint security, secure storage, access controls, and resilient backup recurring needs — reinforced by Maryland's statewide push on cyber maturity.", "tags": ["Cybersecurity", "Data Protection"] },
+    { "name": "Criminal & Independent Investigations workloads", "summary": "The Criminal Division and Independent Investigations Division generate digital-evidence and forensic-data volumes (video, documents, device images) that need scalable storage and managed compute — an ISG-aligned opportunity.", "tags": ["Public Safety", "Storage"] }
+  ],
+
+  "procurement": {
+    "intro": "The OAG is not a standalone procurement authority for IT — it buys through Maryland's statewide vehicles. Selling here means being positioned on the right Department of Information Technology (DoIT) statewide contracts and the Department of General Services (DGS) Office of State Procurement vehicles, with solicitations posted on eMaryland Marketplace Advantage (eMMA).",
+    "vehicles": [
+      { "name": "Maryland DoIT statewide IT contracts", "detail": "DoIT runs master/statewide contracts for hardware and COTS software (desktops, laptops, servers, networking, security tools, databases). The primary route for OAG endpoint and infrastructure buys — confirm Dell coverage and reseller positioning." },
+      { "name": "DGS Office of State Procurement", "detail": "DGS OSP handles broader state procurement and competitive solicitations; larger services or non-IT-classified buys may route here rather than through DoIT." },
+      { "name": "eMaryland Marketplace Advantage (eMMA)", "detail": "Statewide eProcurement portal where Maryland State, county, local, school, and university solicitations are posted — the place to watch for OAG-related RFPs (e.g., eDiscovery/case-management)." },
+      { "name": "Cooperative contracts", "detail": "Cooperative vehicles (e.g., MEEC for education, and national co-ops) can supplement statewide contracts for technology products and services; verify eligibility for a given OAG buy." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Anthony G. Brown", "title": "Attorney General", "note": "Elected statewide; sets enforcement priorities (data privacy, consumer protection, civil rights). The top-of-house relationship and policy driver." },
+    { "name": "Carolyn A. Quattrocki", "title": "Chief Deputy Attorney General", "note": "Senior operational leader under the AG — a key relationship for office-wide direction and resourcing." },
+    { "name": "Deputy Attorneys General", "title": "Division leadership (Civil, Civil Rights, Criminal, etc.)", "note": "Leonard J. Howie III, Zenita Wickham Hurley, Carrie J. Williams, and Sharon S. Merriweather lead major divisions — owners of the workloads that drive eDiscovery and data needs." },
+    { "name": "OAG IT / case-management management", "title": "Technology & eDiscovery operations", "note": "Manager-level IT/DevOps roles own case-management, document-management, and eDiscovery systems and prepare related RFPs — the technical buying center to map by name." },
+    { "name": "Consumer Protection Division", "title": "Privacy & breach enforcement", "note": "Administers data-breach notifications and MODPA enforcement — a unit whose growing caseload increases data-processing and storage demand." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "MODPA data-processing requirements begin phasing in (effective after April 1, 2026)", "impact": "Heightened privacy enforcement increases the volume of data the OAG must ingest, secure, and analyze — supports a data/storage and security conversation.", "tags": ["Privacy", "Enforcement"] },
+    { "date": "2026-03", "title": "AG Brown joins coalition opposing federal SECURE Data Act that would preempt state privacy laws", "impact": "Signals the OAG intends to keep enforcing Maryland's own privacy regime — privacy/cyber workloads stay central rather than shrinking.", "tags": ["Privacy", "Policy"] },
+    { "date": "2026-01", "title": "FY2026 budget reflects ~$1.8M general-fund reduction amid statewide fiscal pressure", "impact": "Expect cost scrutiny and preference for pre-competed statewide contracts — lead with value and existing vehicles, not bespoke builds.", "tags": ["Budget"] },
+    { "date": "2025-12", "title": "Maryland data-privacy obligations (breach notice within 45 days to OAG) reinforced ahead of 2026 MODPA rollout", "impact": "More breach reporting routes to the OAG, feeding consumer-protection caseloads and the data they generate.", "tags": ["Privacy", "Consumer Protection"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's position on Maryland DoIT statewide hardware and COTS contracts so OAG endpoint refresh (attorney/investigator laptops, workstations) and server buys flow through an existing vehicle.",
+    "Lead with secure storage and data-management capacity for eDiscovery and case-management — the OAG's core, recurring data workload — and align to its document-management RFP cycle.",
+    "Position cybersecurity and resilient backup for sensitive investigative, criminal, and consumer data, tied to Maryland's statewide cyber priorities and MODPA-driven privacy obligations.",
+    "Map the OAG's IT/DevOps and division leadership (case-management owners, Consumer Protection) by name; engage early on storage/compute needs from criminal and independent-investigations digital evidence.",
+    "Frame proposals around cost-efficiency and pre-competed contracts given FY2026 fiscal pressure — avoid bespoke procurements the office is unlikely to fund."
+  ],
+
+  "sources": [
+    { "label": "Maryland OAG — About the Office (divisions & leadership)", "url": "https://oag.maryland.gov/our-office/Pages/default.aspx" },
+    { "label": "Maryland DBM — FY2027 Budget Testimony, C81C00 Office of the Attorney General", "url": "https://dbm.maryland.gov/budget/FY2027Testimony/C81C00.pdf" },
+    { "label": "Maryland General Assembly — FY2026 Operating Budget Analysis, C81C Office of the Attorney General", "url": "https://mgaleg.maryland.gov/pubs/budgetfiscal/2026fy-budget-docs-operating-C81C-Office-of-the-Attorney-General.pdf" },
+    { "label": "Maryland OAG — Security Breach Notices (consumer protection / data privacy)", "url": "https://oag.maryland.gov/resources-info/Pages/security-breach-notices.aspx" },
+    { "label": "Maryland OAG — AG Brown Opposes Federal Legislation Weakening State Privacy Protections", "url": "https://oag.maryland.gov/News/pages/Attorney-General-Brown-Opposes-Federal-Legislation-That-Would-Weaken-State-Privacy-Protections--.aspx" },
+    { "label": "Maryland DoIT — Statewide IT Contracts & Procurement", "url": "https://doit.maryland.gov/contracts/Statewide-Contracts/Pages/Statewide-Contracts.aspx" },
+    { "label": "Maryland Procurement — eMaryland Marketplace Advantage (eMMA)", "url": "https://procurement.maryland.gov/" }
+  ]
+}

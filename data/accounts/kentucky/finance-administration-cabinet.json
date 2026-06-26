@@ -1,0 +1,83 @@
+{
+  "state": "kentucky",
+  "stateName": "Kentucky",
+  "type": "State Agency",
+  "name": "Kentucky Finance & Administration Cabinet",
+  "slug": "finance-administration-cabinet",
+  "hq": "Frankfort, KY",
+  "updated": "2026-06-22",
+  "tagline": "Kentucky's central business cabinet — it houses the Commonwealth Office of Technology (COT, the statewide IT authority) and the Office of Procurement Services (statewide contracts), making it the front door for both how the Commonwealth buys technology and how it runs it.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Central finance, IT & procurement" },
+    { "label": "Central IT", "value": "Commonwealth Office of Technology (COT)" },
+    { "label": "Primary vehicle", "value": "Statewide Master Agreements + NASPO" },
+    { "label": "State CIO", "value": "Jim Barnhart (COT)" }
+  ],
+
+  "overview": "The Finance & Administration Cabinet (FAC) is the Commonwealth of Kentucky's central business and administrative arm — it manages the state budget execution, accounting, revenue, facilities, and statewide procurement. Two units inside FAC matter most to a technology seller. First, the Commonwealth Office of Technology (COT) is Kentucky's central IT organization: it sets enterprise IT policy and standards, runs the consolidated executive-branch infrastructure (data center, network, cloud, voice), and provides shared services and security across state agencies through an IT-consolidation model. Second, the Office of Procurement Services (within FAC's Office of the Controller) is the central purchasing authority for the executive branch — it owns the statewide Master Agreements and the eProcurement system most state, and many local and education, buyers transact through. FAC is therefore best understood as both the policy/operations owner (via COT) and the contracting path (via Procurement Services) for Kentucky public-sector technology. Recent themes: implementing the state's new AI-governance law (SB 4, 2025), a continued cloud-migration and IT-consolidation push under permanent CIO Jim Barnhart, and a 2026 legislative move to shift the KentuckyWired broadband network under COT/FAC.",
+
+  "budget": {
+    "intro": "FAC is a central administrative cabinet rather than a large program spender, so its leverage is structural — it executes the state budget, owns the procurement vehicles, and runs consolidated IT cost-recovery for the executive branch. Kentucky's enacted FY2026–2028 biennial budget (HB 500) is roughly $32.4B, appropriating about $15.4B General Fund in FY27 and $15.6B in FY28, with executive-branch base reductions of ~4% then ~3% — a tightening backdrop for discretionary IT spend.",
+    "stats": [
+      { "value": "~$32.4B", "label": "State biennial budget (FY26–28)", "note": "HB 500; ~$15.4B / $15.6B General Fund by year" },
+      { "value": "~4% / 3%", "label": "Executive-branch base cuts", "note": "Reductions in FY27 then FY28 — pressure on discretionary IT" },
+      { "value": "Cost recovery", "label": "COT funding model", "note": "COT bills agencies for consolidated IT/shared services rather than a single large GF line" }
+    ],
+    "notes": [
+      "COT funds much of its delivery through internal cost recovery / chargebacks to agencies for consolidated infrastructure and shared services, not one large general-revenue appropriation.",
+      "The largest agency IT budgets (e.g., Cabinet for Health & Family Services, Transportation, Education) sit with those agencies — FAC/COT is the central path and shared-services provider, not the wallet for every program system.",
+      "Specific COT line-item appropriations in HB 500 were not separately confirmed here; treat the cabinet/agency split as directional."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "AI governance under SB 4", "summary": "Kentucky's SB 4 (signed March 2025) created a risk-based AI-governance framework and an AI Governance Committee housed inside COT — setting standards, a registry of generative-AI systems, disclosure, and human-oversight requirements for state agencies. Any AI offering must fit this governance process; it is also an entry point for responsible-AI and AI-infrastructure conversations.", "tags": ["AI", "Governance"] },
+    { "name": "Cloud migration & IT consolidation", "summary": "Under permanent CIO Jim Barnhart, COT continues a multi-year executive-branch IT-consolidation and cloud-migration strategy — Barnhart led prior consolidation, cloud, and statewide microwave/infrastructure modernization efforts. Infrastructure refresh, hybrid cloud, and managed services have a clear lane.", "tags": ["Cloud", "Modernization"] },
+    { "name": "Cybersecurity & zero trust", "summary": "COT's Office of the Chief Information Security Officer (OCISO) runs statewide security policy and is advancing toward a zero-trust model for data protection across remote and consolidated operations. Note the named CISO role has shown turnover — confirm current ownership before forecasting security deals.", "tags": ["Cybersecurity", "Zero Trust"] },
+    { "name": "KentuckyWired oversight move", "summary": "2026 legislation (HB 314) advanced to move the KentuckyWired statewide fiber network and the Kentucky Communications Network Authority under COT / the Finance & Administration Cabinet, away from the Office of the Governor — potentially expanding COT's network/broadband remit. Track final enactment and the litigation/equipment backdrop.", "tags": ["Broadband", "Transition"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to or through FAC runs on the Commonwealth's central vehicles, not one-off agency RFPs. Two things to confirm first: that Dell's Kentucky statewide Master Agreement / NASPO ValuePoint participating-addendum coverage is active and correctly scoped, and which buyer is authorized for a given vehicle (COT vs. agency vs. non-executive entities). Most opportunities and vendor registration run through Kentucky's eProcurement portal.",
+    "vehicles": [
+      { "name": "Statewide Master Agreements (Office of Procurement Services)", "detail": "Central price agreements set up by FAC's Office of Procurement Services for commodities and non-professional services above agencies' small-purchase authority — the primary pre-competed path for executive-branch buys." },
+      { "name": "NASPO ValuePoint participating addenda", "detail": "Kentucky participates in NASPO ValuePoint cooperative contracts (e.g., the Dell MNWNC-109 computer-equipment master price agreement via the KY participating addendum). Note authorization limits — some addenda restrict executive-branch use to COT while opening to non-executive agencies, local government, and authorized non-profits. Confirm scope and configuration limits per addendum." },
+      { "name": "Kentucky eProcurement portal", "detail": "Mandatory vendor registration and the route for current bids, RFPs, and solicitations. Opportunities and master-agreement terms/vendor contacts are surfaced via eProcurement and the state Transparency contract search." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Holly M. Johnson", "title": "Secretary, Finance & Administration Cabinet", "note": "Beshear-appointed (since Dec 2019); the Commonwealth's chief financial officer and head of the cabinet that houses COT and Procurement Services. Top of the house for the account." },
+    { "name": "Jim Barnhart", "title": "State CIO / Executive Director, Commonwealth Office of Technology (COT)", "note": "Named permanent state CIO May 2025 after ~two decades at COT and serving as acting CIO across three administrations. Led cloud migration and IT consolidation — the primary statewide IT relationship." },
+    { "name": "David J. Carter", "title": "Deputy CIO, COT", "note": "Deputy IT leadership; has also been listed serving as Chief Information Security Officer during CISO transition. Operational counterpart across the consolidated estate." },
+    { "name": "COT Office of the CISO (OCISO)", "title": "Statewide security policy & zero trust", "note": "Owns enterprise security standards and the zero-trust push. The named CISO position has shown vacancy/turnover — confirm current owner before security forecasting." },
+    { "name": "Office of Procurement Services (FAC, Office of the Controller)", "title": "Statewide contracts & Master Agreements", "note": "Central purchasing authority for the executive branch — owns the Master Agreements, solicitations, and vendor onboarding; the contracting path onto Kentucky's vehicles." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "HB 314 advances to move KentuckyWired / KCNA under COT and the Finance & Administration Cabinet", "impact": "Would expand COT's network/broadband remit and shift oversight from the Governor's Office — re-map the broadband buying center and watch final enactment.", "tags": ["Broadband", "Transition"] },
+    { "date": "2025-05", "title": "Jim Barnhart named permanent Kentucky state CIO / COT Executive Director", "impact": "Stable, consolidation- and cloud-forward leadership at the top of the statewide IT motion after years as acting CIO — the primary relationship to build.", "tags": ["Leadership"] },
+    { "date": "2025-03", "title": "Kentucky enacts SB 4, establishing an AI-governance framework with a committee inside COT", "impact": "Creates the gate and the buying center for state AI use — align any AI / responsible-AI offering to COT's governance process and registry.", "tags": ["AI", "Governance"] },
+    { "date": "2026-04", "title": "General Assembly passes ~$32.4B FY2026–2028 biennial budget (HB 500) with executive-branch base cuts", "impact": "Tighter discretionary backdrop (~4% then ~3% base reductions) — frame technology buys around consolidation savings and modernization ROI.", "tags": ["Budget"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's Kentucky access paths first — the statewide Master Agreement coverage and the NASPO ValuePoint participating addenda (e.g., MNWNC-109) — and verify scope, authorized buyers (COT vs. non-executive), and configuration limits before forecasting.",
+    "Build the relationship with CIO Jim Barnhart's COT org and lead with cloud migration, IT consolidation, and infrastructure/ISG modernization tied to the executive-branch consolidation model.",
+    "Engage COT's AI Governance Committee on responsible-AI and AI-infrastructure plays that fit SB 4's framework and registry — position governance-ready offerings, not just product.",
+    "Align security pitches to COT/OCISO's zero-trust direction, and confirm current CISO ownership given turnover in the role before pursuing security deals.",
+    "Frame buys around budget pressure: with ~4%/3% executive-branch base cuts, lead with consolidation-driven savings, lifecycle, and as-a-service economics; track the KentuckyWired/HB 314 move for new network/broadband scope under COT."
+  ],
+
+  "sources": [
+    { "label": "Finance & Administration Cabinet — Office of the Secretary", "url": "https://finance.ky.gov/office-of-the-secretary/Pages/default.aspx" },
+    { "label": "Commonwealth Office of Technology — Executive Management Team", "url": "https://technology.ky.gov/about-the-agency/Pages/executive-management-team.aspx" },
+    { "label": "FAC — Office of Procurement Services", "url": "https://finance.ky.gov/office-of-the-controller/office-of-procurement-services/Pages/default.aspx" },
+    { "label": "GovTech — Kentucky Taps Veteran Tech Leader (Jim Barnhart) to Drive Future of IT", "url": "https://www.govtech.com/workforce/kentucky-taps-veteran-tech-leader-to-drive-future-of-it" },
+    { "label": "Kentucky Senate GOP — Senate passes SB 4 AI framework", "url": "https://kysenaterepublicans.com/press-releases/2025/3/4/senate-passes-bledsoes-bill-establishing-an-ai-framework-for-state-government-and-promoting-innovation-accountability" },
+    { "label": "Kentucky Lantern — Bill would remake KentuckyWired oversight (HB 314)", "url": "https://kentuckylantern.com/2026/01/30/advancing-bill-would-remake-leadership-overseeing-broadband-network-kentuckywired/" },
+    { "label": "KLC — General Assembly Sends Biennial Budget to Governor (HB 500)", "url": "https://www.klc.org/News/13242/general-assembly-sends-biennial-budget-to-governor" },
+    { "label": "Dell — NASPO ValuePoint, State of Kentucky", "url": "https://www.dell.com/en-us/lp/industry-emcwsca-data-storage-kentucky" }
+  ]
+}

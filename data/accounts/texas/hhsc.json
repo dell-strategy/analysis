@@ -1,0 +1,81 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "State Agency",
+  "name": "Texas Health & Human Services Commission (HHSC)",
+  "slug": "hhsc",
+  "hq": "Austin, TX",
+  "updated": "2026-06-22",
+  "tagline": "Texas's largest health-and-human-services agency and one of the state's biggest IT spenders — HHSC runs Medicaid, SNAP eligibility, and state hospitals on a sprawling, modernization-hungry application estate.",
+
+  "snapshot": [
+    { "label": "All-funds budget (26–27)", "value": "~$94B" },
+    { "label": "IT budget", "value": "~$2B" },
+    { "label": "Client-critical apps", "value": "488 (128 legacy)" },
+    { "label": "Buying path", "value": "DIR Co-op + agency RFPs" }
+  ],
+
+  "overview": "The Texas Health & Human Services Commission (HHSC) is the state's largest health-and-human-services agency — it administers Medicaid and CHIP for more than four million Texans, runs SNAP and TANF eligibility, operates state psychiatric and supported-living facilities, and regulates much of the state's health-care sector. Its 2026–27 all-funds appropriation is roughly $94B (about a quarter of the entire state budget), with Medicaid client services the dominant line. For a technology seller, the relevant story is the application estate behind that scale: HHSC has cited roughly a $2B IT footprint, 488 client-critical applications (about 128 of them legacy), and a workforce north of 50,000. A multi-year modernization push — eligibility-system overhaul, cloud migration, data, AI, and cybersecurity — is the through-line, much of it forced by federal scrutiny over Medicaid and SNAP processing delays. HHSC buys both through DIR Cooperative Contracts and via its own large competitive procurements, and the agency is under new executive leadership as of January 2026.",
+
+  "budget": {
+    "intro": "HHSC is genuinely large as both a program agency and an IT spender — unlike DIR, it owns a big direct technology budget. Its 2026–27 all-funds appropriation is roughly $94B, with Medicaid the dominant driver; the agency has separately cited an IT footprint of about $2B and requested significant additional dollars for eligibility modernization and staffing.",
+    "stats": [
+      { "value": "~$94B", "label": "All-funds budget (26–27)", "note": "Largest Article II appropriation; ~25% of the state budget" },
+      { "value": "~$2B", "label": "IT budget", "note": "Agency-cited technology footprint across 488 client-critical apps" },
+      { "value": "~$300M", "label": "Eligibility-fix request", "note": "Sought for TIERS modernization + 1,700+ staff to clear Medicaid/SNAP backlogs" }
+    ],
+    "notes": [
+      "Roughly 128 of 488 client-critical applications are legacy — about a quarter to a third of the estate flagged for modernization, with the share growing as funding lags.",
+      "Federal timeliness pressure on Medicaid and SNAP processing is the political engine behind much of the IT spend — modernization is framed as a compliance and service-delivery necessity, not a nice-to-have."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "TIERS eligibility-system modernization", "summary": "HHSC is overhauling the Texas Integrated Eligibility Redesign System (TIERS) — the platform that determines Medicaid, SNAP, and TANF eligibility — including a phased migration of dozens of applications and services into the cloud (AWS). Goals: cut contract fees, improve security and data capability, and add disaster-scale elasticity. The single biggest modernization vehicle to track.", "tags": ["Eligibility", "Cloud", "Modernization"] },
+    { "name": "Legacy application modernization", "summary": "With ~128 of 488 client-critical applications classified as legacy, HHSC is pursuing cloud adoption, automated/AI-assisted app development, and re-platforming across the estate. Infrastructure refresh, hybrid cloud, and managed services all have a lane here.", "tags": ["Modernization", "Infrastructure"] },
+    { "name": "AI and data", "summary": "HHSC stood up a Chief AI Officer / Deputy CIO for AI role (James Huang, since April 2025) and adopted the agency's first AI policy. Priorities include agentic AI, AI-assisted coding, responsible-AI governance, and stronger data capabilities to support human decision-making in benefits delivery.", "tags": ["AI", "Data"] },
+    { "name": "Cybersecurity and cloud security", "summary": "HHSC operates a CISO office aligned to NIST 800-53 and DIR standards, with focus on cloud security posture management across Azure and AWS. In March 2026 it issued a connected-medical-device security directive and is coordinating inventories with the new Texas Cyber Command.", "tags": ["Cybersecurity", "Cloud"] }
+  ],
+
+  "procurement": {
+    "intro": "HHSC buys two ways, and a seller should confirm both paths. It uses DIR Cooperative Contracts and DIR SOW solicitations for technology products and services, and it runs its own large competitive procurements (RFP/RFQ) for complex, agency-specific systems. Any purchase over $25,000 is posted to the Texas Electronic State Business Daily (ESBD).",
+    "vehicles": [
+      { "name": "DIR Cooperative Contracts", "detail": "Pre-competed statewide vehicles HHSC uses for hardware, software, and services — the fastest path for catalog-style infrastructure and licensing. Confirm Dell's DIR coverage is active and correctly scoped." },
+      { "name": "DIR SOW solicitations / agency RFPs", "detail": "For complex systems (eligibility, Medicaid enterprise, data platforms) HHSC runs scoped statements of work and full RFP/RFQ procurements rather than buying off the shelf." },
+      { "name": "Texas ESBD + TX-RAMP", "detail": "Opportunities over $25K post to the Electronic State Business Daily; any cloud / as-a-service offering touching state data must hold the right TX-RAMP certification level before it's sellable." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Stephanie Muth", "title": "Executive Commissioner, Texas HHS", "note": "Took office Jan 3, 2026; former State Medicaid Director and Chief of Staff. Early focus on fraud prevention and operational accountability — the top of the house for the account." },
+    { "name": "Sylvia Hernandez Kauffman", "title": "Chief Information Officer", "note": "Owns the technology agenda and the modernization roadmap; prior HHS Inspector General and e-Health Coordination leader. The primary IT relationship." },
+    { "name": "MacGregor Stephenson", "title": "Chief Deputy Information Officer", "note": "Deputy IT leadership — operational counterpart to the CIO across the application estate and delivery." },
+    { "name": "James Huang", "title": "Chief AI Officer / Deputy CIO for AI", "note": "Since April 2025; owns AI strategy and governance. Wants vendors to show proven demos from comparable, regulated state-agency environments." },
+    { "name": "Office of the CISO (HHSC)", "title": "Information security & cloud security", "note": "Runs security policy and cloud posture management (Azure/AWS) on NIST 800-53; coordinates with the new Texas Cyber Command on directives and inventories." }
+  ],
+
+  "news": [
+    { "date": "2026-03", "title": "HHSC issues connected-medical-device cybersecurity directive", "impact": "Healthcare facilities must inventory networked medical devices and align to FDA guidance, sharing data with Texas Cyber Command — signals active security/asset-visibility spend.", "tags": ["Cybersecurity"] },
+    { "date": "2026-01", "title": "Stephanie Muth becomes Executive Commissioner; Cecile Young retires", "impact": "New top leadership effective Jan 3, 2026 — rebuild the executive relationship map; early agenda emphasizes fraud prevention and accountability.", "tags": ["Leadership"] },
+    { "date": "2025-04", "title": "James Huang named Chief AI Officer / Deputy CIO for AI", "impact": "Dedicated AI buying center stands up — an entry point for responsible-AI, agentic-AI, and AI-assisted-development plays tied to modernization.", "tags": ["AI", "Leadership"] },
+    { "date": "2025-02", "title": "Legislature reviews HHSC's ~$94B 26–27 budget and eligibility-fix request", "impact": "Funding for TIERS modernization and 1,700+ eligibility staff is the political driver of near-term IT spend — track which line items survive appropriations.", "tags": ["Budget", "Modernization"] }
+  ],
+
+  "dellActions": [
+    "Map the new executive layer first — Stephanie Muth (Exec Commissioner, since Jan 2026) over CIO Sylvia Hernandez Kauffman — and confirm the modernization roadmap and current priorities under new leadership.",
+    "Lead with eligibility/TIERS and legacy-app modernization: position ISG infrastructure, hybrid cloud, and migration services against the ~128 legacy client-critical apps and the AWS cloud move.",
+    "Engage James Huang's AI org with proven, compliant agentic-AI and AI-infrastructure use cases from comparable regulated state agencies — he explicitly asks for demos, not decks.",
+    "Confirm Dell's DIR Cooperative Contract coverage for the catalog buys and watch the Texas ESBD for HHSC's larger RFP/SOW eligibility and data procurements.",
+    "Clear TX-RAMP early for any cloud / as-a-service offering, and align security pitches to HHSC's NIST 800-53 posture and its Texas Cyber Command coordination."
+  ],
+
+  "sources": [
+    { "label": "Texas HHSC — Legislative Appropriations Request FY2026–2027", "url": "https://www.hhs.texas.gov/sites/default/files/documents/hhsc-legislative-appropriations-request-2026-2027.pdf" },
+    { "label": "GovTech — New HHSC Chief AI Officer Talks Modernization Priorities", "url": "https://insider.govtech.com/texas/news/new-hhsc-chief-ai-officer-talks-modernization-priorities" },
+    { "label": "GovTech — State Eligibility System Embarks on 6-Year-Plus Modernization Journey", "url": "https://insider.govtech.com/texas/news/state-eligibility-system-embarks-on-a-6-year-plus-modernization-journey" },
+    { "label": "Texas Tribune — HHSC seeks $300M to fix Medicaid enrollment system", "url": "https://www.texastribune.org/2024/12/11/texas-medicaid-food-stamps-application-legislature/" },
+    { "label": "Office of the Governor — Stephanie Muth appointed HHS Executive Commissioner", "url": "https://gov.texas.gov/news/post/governor-abbott-appoints-stephanie-muth-as-executive-commissioner-of-texas-health-and-human-services" },
+    { "label": "Texas HHSC — Procurement Opportunities", "url": "https://www.hhs.texas.gov/business/contracting-hhs/procurement-opportunities" },
+    { "label": "Industrial Cyber — Texas HHSC medical-device cybersecurity directive (2026)", "url": "https://industrialcyber.co/medical/texas-orders-cybersecurity-review-of-state-agencies-for-chinese-made-medical-devices-after-federal-warnings/" }
+  ]
+}

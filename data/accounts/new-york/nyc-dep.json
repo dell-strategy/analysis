@@ -1,0 +1,81 @@
+{
+  "name": "NYC Dept of Environmental Protection (DEP)",
+  "slug": "nyc-dep",
+  "state": "new-york",
+  "stateName": "New York",
+  "type": "City",
+  "updated": "2026-06-22",
+  "hq": "New York, NY",
+  "tagline": "The largest municipal water and wastewater utility in the U.S. — DEP runs NYC's drinking-water supply, sewers, and 14 treatment plants on a sprawling OT/SCADA footprint, while citywide IT policy and procurement run through the Office of Technology and Innovation (OTI).",
+
+  "snapshot": [
+    { "label": "Role", "value": "NYC water & wastewater utility" },
+    { "label": "Operating budget (FY26)", "value": "~$1.88B" },
+    { "label": "10-yr capital program", "value": "~$33–37B" },
+    { "label": "IT/cyber policy owner", "value": "Citywide OTI" }
+  ],
+
+  "overview": "The New York City Department of Environmental Protection (DEP) manages the city's water supply, wastewater treatment, and water/sewer infrastructure — the largest municipal water utility in the U.S. It delivers more than 1 billion gallons of drinking water a day to roughly 8 million city residents (and additional upstate communities), operates about 6,600 miles of water mains and 7,400+ miles of sewers, and runs 14 wastewater treatment plants handling on the order of 1.3 billion gallons a day, plus 19 reservoirs across a multi-county watershed. DEP's technology profile is two-sided: a deep operational-technology (OT) layer — SCADA, PLCs, HMI, telemetry, and pumping/plant control across all five boroughs — sits alongside enterprise IT for billing, asset management, and customer service. Citywide IT strategy, cybersecurity policy, cloud standards, and much procurement run through the NYC Office of Technology and Innovation (OTI), but DEP retains its own substantial engineering and technology footprint, including a Bureau of Wastewater Treatment 'digital transformation' organized around SCADA support, IT/cybersecurity, asset management, and application development. For a Dell SLG seller, DEP is an OT-modernization and critical-infrastructure-security account that must be navigated alongside OTI's citywide policy and contracting layer.",
+
+  "budget": {
+    "intro": "DEP is funded primarily through the self-supporting NYC water and sewer system — water/wastewater rates set by the NYC Water Board cover operations and capital debt rather than the city's general fund. The FY2026 operating budget is roughly $1.88B, and DEP runs one of the city's largest capital programs, on the order of $33–37B over ten years with capital commitments approaching ~$3B a year.",
+    "stats": [
+      { "value": "~$1.88B", "label": "Operating budget (FY26)", "note": "DEP agency operating budget; rate-funded" },
+      { "value": "~$33–37B", "label": "10-yr capital program", "note": "Water supply, sewers, and wastewater treatment; ~$3B/yr in commitments" },
+      { "value": "+6.0%", "label": "FY2027 water rate", "note": "Proposed increase, effective ~July 1, 2026 (Water Board)" }
+    ],
+    "notes": [
+      "The water/sewer system is self-supporting: rates set by the NYC Water Board fund O&M and capital debt service, so DEP's spend tracks rate revenue and capital commitments rather than a general-fund line.",
+      "Large mandated capital work drives the program — e.g., a multi-billion-dollar Newtown Creek wastewater upgrade (~$3.2B) and ongoing state-of-good-repair across treatment plants.",
+      "Confirm current-year figures against the adopted city budget and the latest Water Board rate report — capital totals vary by document and cycle."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Bureau of Wastewater Treatment digital transformation", "summary": "DEP's wastewater bureau is modernizing around four pillars — SCADA support/development, IT support and cybersecurity, asset management, and application development — across 14 treatment plants and 90+ pumping facilities. A direct opening for OT/IT infrastructure, edge compute, and managed services.", "tags": ["OT/SCADA", "Modernization"] },
+    { "name": "Automated meter upgrade (AMR → AMI)", "summary": "DEP is upgrading 600,000+ automated meter-reading devices citywide toward an advanced metering (AMI) network for real-time usage data and leak detection (network provided by Aclara). Generates data-platform, analytics, and security workloads.", "tags": ["IoT/Metering", "Data"] },
+    { "name": "OT/IT segmentation & water-sector cybersecurity", "summary": "Proposed New York State water/wastewater cyber regulations would require separating OT systems from IT, incident-response plans, and 24-hour incident reporting — pushing utilities like DEP toward network segmentation, OT visibility, and resilience investment.", "tags": ["Cybersecurity", "Compliance"] },
+    { "name": "Asset management & resiliency", "summary": "Aging mains, sewers, and treatment assets plus stormwater/coastal resiliency mandates drive an asset-management and data-modernization track — sensors, digital records, and analytics to prioritize state-of-good-repair capital.", "tags": ["Asset Mgmt", "Resiliency"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to DEP means navigating both NYC's citywide procurement system and OTI's role as the city's IT utility. Confirm Dell's standing on the relevant citywide IT contracts and that any cloud/aaS offering meets OTI's citywide cloud and security policies before pursuing DEP-specific opportunities.",
+    "vehicles": [
+      { "name": "NYC PASSPort", "detail": "The city's central procurement and vendor system — vendors register, submit responses, and manage contracts through PASSPort. The required front door for most NYC solicitations, including DEP's." },
+      { "name": "Citywide OTI / BuyIT contracts", "detail": "OTI sets citywide IT strategy, security policy, and cloud standards and procures citywide IT services; its BuyIT procurement reforms shape how agencies buy technology. Confirm coverage and policy fit here." },
+      { "name": "DEP capital & engineering solicitations", "detail": "DEP issues its own large capital/engineering and OT-adjacent contracts via NYC procurement — a route for plant-modernization, SCADA, and infrastructure work tied to the capital program." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Lisa Garcia", "title": "Commissioner, NYC DEP", "note": "Appointed by Mayor Mamdani (early 2026); former U.S. EPA Region 2 Administrator. Sets agency priorities — the top relationship at DEP." },
+    { "name": "DEP Bureau of Wastewater Treatment (BWT)", "title": "Wastewater operations & digital transformation", "note": "Owns the SCADA / IT-cyber / asset-management / app-dev modernization across treatment plants — a primary OT buying center." },
+    { "name": "DEP technology / engineering leadership", "title": "Agency IT, OT & engineering", "note": "DEP's own IT and engineering organization runs systems, capital projects, and OT — confirm current named leads before forecasting." },
+    { "name": "NYC Office of Technology and Innovation (OTI)", "title": "Citywide IT, cloud & cybersecurity policy", "note": "Sets citywide IT strategy, security/cloud standards, and procures citywide IT services — the policy and contracting layer above DEP." }
+  ],
+
+  "news": [
+    { "date": "2026-01", "title": "Lisa Garcia named DEP Commissioner as Aggarwala steps down", "impact": "New agency leadership under Mayor Mamdani — re-map executive priorities and the relationship at the top of DEP.", "tags": ["Leadership"] },
+    { "date": "2026-05", "title": "Water Board moves on a proposed ~6% FY2027 water rate increase", "impact": "Rate revenue funds DEP's operating and capital plan — a signal of continued infrastructure investment effective ~July 1, 2026.", "tags": ["Budget"] },
+    { "date": "2026-04", "title": "New DEP Commissioner outlines infrastructure and resilience priorities", "impact": "Public priority-setting on water, resilience, and modernization — align the OT/data/security message to these themes.", "tags": ["Strategy"] },
+    { "date": "2025-12", "title": "DEP continues citywide AMR-to-AMI meter upgrade (600,000+ devices)", "impact": "Multi-year metering modernization generates data-platform, analytics, and security workloads adjacent to enterprise IT.", "tags": ["IoT/Metering"] }
+  ],
+
+  "dellActions": [
+    "Lead with critical-infrastructure security and OT/IT segmentation tied to the proposed NYS water/wastewater cyber rules — DEP must separate OT from IT, harden SCADA, and report incidents.",
+    "Position ISG infrastructure, rugged/edge compute, and storage for the wastewater bureau's digital transformation and plant modernization across the 14 treatment plants.",
+    "Build the metering/data play: AMI generates real-time data needing platforms, analytics, and secure storage — connect Dell data-infrastructure and AI to that workload.",
+    "Run a dual-thread account map — DEP's own engineering/OT buying centers plus citywide OTI policy and procurement — and confirm Dell's standing on the relevant NYC IT contracts.",
+    "Validate procurement access via PASSPort and OTI/BuyIT, and confirm any cloud/aaS offering meets OTI's citywide cloud and cybersecurity policies before pursuing DEP opportunities."
+  ],
+
+  "sources": [
+    { "label": "NYC DEP — Leadership", "url": "https://www.nyc.gov/site/dep/about/leadership.page" },
+    { "label": "NYC DEP — Proposes FY2027 Water Rate", "url": "https://www.nyc.gov/site/dep/news/26-010/department-environmental-protection-proposes-fiscal-year-2027-water-rate" },
+    { "label": "NYC DEP — Automated Meter Reader Upgrade Program", "url": "https://www.nyc.gov/site/dep/news/24-045/nyc-department-environmental-protection-launches-program-upgrade-automatic-water-meter" },
+    { "label": "NYC Office of Technology and Innovation — Cybersecurity", "url": "https://www.nyc.gov/content/oti/pages/cybersecurity" },
+    { "label": "Governor Hochul — Water-sector cybersecurity regulations & grants", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-first-nation-cybersecurity-regulations-and-grants-protect-new-york" },
+    { "label": "NYC OMB — Preliminary Ten-Year Capital Strategy FY2026–2035", "url": "https://www.nyc.gov/assets/omb/downloads/pdf/jan25/ptyp1-25.pdf" },
+    { "label": "THE CITY — Mamdani Names Environmental Protection Commissioner", "url": "https://www.thecityreporter.nyc/2026/01/27/mamdani-environmental-protection-commissioner-dep-lisa-garcia/" }
+  ]
+}

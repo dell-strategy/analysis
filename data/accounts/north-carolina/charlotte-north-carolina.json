@@ -1,0 +1,82 @@
+{
+  "state": "north-carolina",
+  "stateName": "North Carolina",
+  "type": "City",
+  "name": "Charlotte, North Carolina",
+  "slug": "charlotte-north-carolina",
+  "hq": "Charlotte, NC",
+  "updated": "2026-06-22",
+  "tagline": "North Carolina's largest city (~900K) and the Southeast's banking hub: Charlotte runs a $3.6B FY2026 budget, and its central Innovation & Technology (I&T) department drives an AI roadmap, smart-city work, and the city-run cooperative purchasing alliance.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Largest NC city (~900K residents)" },
+    { "label": "FY2026 budget", "value": "$3.6B (adopted)" },
+    { "label": "Central IT", "value": "Innovation & Technology (I&T)" },
+    { "label": "Co-op lever", "value": "Charlotte Cooperative Purchasing Alliance" }
+  ],
+
+  "overview": "The City of Charlotte is North Carolina's largest municipality, with roughly 900,000 residents and a metro economy anchored in banking and finance. The city operates under a council-manager form of government: an elected Mayor and City Council set policy, and a professional City Manager (Marcus D. Jones) runs day-to-day operations across departments. Central technology sits with the Innovation & Technology (I&T) department, led by CIO and Director Markell Storay, which owns enterprise infrastructure, applications, data and analytics, cybersecurity, and the city's smart-city and innovation programs. Charlotte is a mature, ambitious technology buyer for a municipality — it has published a Technology Strategic Plan and a 2025–2028 AI Strategic Roadmap, runs the long-standing Smart Charlotte initiative, and operates its own cooperative purchasing program (the Charlotte Cooperative Purchasing Alliance) that other public entities can buy through. For a Dell SLG seller, Charlotte is best understood as a large, self-directed local buyer with its own procurement vehicles, layered on top of North Carolina's statewide and cooperative contracts — the city's own I&T leadership, not a state agency, owns most technology decisions.",
+
+  "budget": {
+    "intro": "Charlotte adopted a $3.6B balanced FY2026 budget (effective July 1, 2025) with no property-tax increase, alongside a FY2026–2030 Capital Investment Plan. The city does not publish a single headline IT figure the way the topline budget reads, so technology spend is best tracked through the I&T department budget and capital/technology line items rather than one number — confirm current figures in the adopted budget before forecasting.",
+    "stats": [
+      { "value": "$3.6B", "label": "FY2026 adopted budget", "note": "Balanced; no property-tax increase; effective July 1, 2025." },
+      { "value": "~900K", "label": "Residents", "note": "Largest city in North Carolina; drives the scale of enterprise IT and services." },
+      { "value": "FY26–30", "label": "Capital Investment Plan", "note": "Multi-year CIP adopted with the FY2026 budget; technology and facilities capital sit here." }
+    ],
+    "notes": [
+      "Charlotte funds operations across a general fund plus enterprise funds (water, aviation/airport, etc.); some technology spend rides those enterprise budgets, not just the general fund.",
+      "Treat any specific I&T or technology line figure as provisional until confirmed against the adopted FY2026 budget document."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "AI Strategic Roadmap (2025–2028)", "summary": "I&T has published a multi-year AI Strategic Roadmap covering governance, use cases, and responsible adoption across city services. This is the live window for AI-infrastructure, data-platform, and governance positioning — map Dell's AI compute and partner stack to the roadmap's priorities.", "tags": ["AI", "Strategy"] },
+    { "name": "Data & analytics modernization", "summary": "The city has invested in data and analytics leadership (including a Chief Data/Analytics role) and lists Data & Analytics among its technology strategic priorities. A route for data-platform, storage, and analytics infrastructure tied to citywide decision-making.", "tags": ["Data", "Analytics"] },
+    { "name": "Smart Charlotte / smart-city program", "summary": "Smart Charlotte is the city's long-running smart-city initiative focused on connectivity, digital inclusion, and using operational data to improve services. Edge, networking, and IoT-adjacent infrastructure plays attach here — confirm current active projects before pitching.", "tags": ["Smart City", "Modernization"] },
+    { "name": "Cybersecurity & technology resiliency", "summary": "I&T lists technology resiliency among its strategic priorities, covering security posture and continuity for a large municipal enterprise. Security, backup/recovery, and resilient-infrastructure messaging fit here — confirm the current security leadership and standards before engaging.", "tags": ["Cybersecurity", "Resiliency"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Charlotte runs on the city's own procurement plus the state and cooperative vehicles layered around it. Confirm first how Dell is reached for a given buy: directly via City of Charlotte procurement, through the city-run Charlotte Cooperative Purchasing Alliance, or via NC statewide/cooperative contracts.",
+    "vehicles": [
+      { "name": "City of Charlotte Procurement Services", "detail": "The city's central contracting and procurement function runs solicitations (RFPs/IFBs) and manages city contracts — the direct path for Charlotte-specific technology buys." },
+      { "name": "Charlotte Cooperative Purchasing Alliance (CCPA)", "detail": "A cooperative purchasing program established and administered by the City of Charlotte; contracts are competitively solicited and awarded by the city and open to other public entities. A potential lead-state-style co-op route — confirm which categories apply." },
+      { "name": "NC statewide & IT term contracts", "detail": "As an NC public entity, Charlotte can leverage North Carolina statewide term contracts (DOA/P&C for non-IT, NCDIT for IT). Confirm Dell coverage and whether a state vehicle is the cleaner path for a given offering." },
+      { "name": "National cooperatives (e.g., NASPO ValuePoint, NCPA/Sourcewell-type)", "detail": "Large municipalities often buy off national cooperative contracts to avoid one-off RFPs. Verify which national co-ops Charlotte uses and where Dell is positioned before recommending a path." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Marcus D. Jones", "title": "City Manager, City of Charlotte", "note": "Chief executive of city operations under the council-manager form; owns department direction including I&T. Presents the annual budget to Council. Senior relationship for the enterprise motion." },
+    { "name": "Markell Storay", "title": "CIO & Director, Innovation & Technology (I&T)", "note": "Leads central IT — infrastructure, applications, data, security, and innovation. Longtime city technologist (former CTO) who succeeded Reenie Askew. The top technology relationship for Charlotte." },
+    { "name": "I&T — Data & Analytics leadership", "title": "Chief Data / Analytics officer (city)", "note": "Charlotte stood up dedicated data/analytics leadership under I&T; owns the data-platform and analytics agenda tied to the AI roadmap. Confirm the current officeholder before engaging." },
+    { "name": "I&T — Cybersecurity / security leadership", "title": "City security lead (CISO-equivalent)", "note": "Owns municipal security posture and standards within I&T — the gate for security on cloud and infrastructure deals. Public naming is limited; confirm the current security leader before engaging." },
+    { "name": "City of Charlotte — Procurement Services", "title": "Central procurement / contracting", "note": "Owns city solicitations, contract vehicles, and the Charlotte Cooperative Purchasing Alliance — the access path onto Charlotte's own contracts." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "FY2026 $3.6B budget and FY26–30 Capital Investment Plan in effect for full first year", "impact": "Confirms the spending envelope and capital plan technology buys draw from; align proposals to adopted priorities.", "tags": ["Budget"] },
+    { "date": "2025-06", "title": "Charlotte City Council unanimously adopts $3.6B FY2026 budget with no property-tax increase", "impact": "Stable, balanced fiscal posture; technology spend competes within a no-tax-increase envelope — lead with efficiency and value.", "tags": ["Budget"] },
+    { "date": "2025-05", "title": "City Manager Marcus D. Jones presents proposed FY2026 budget to Mayor and Council", "impact": "Annual budget cycle anchored by the City Manager; engage ahead of the spring proposal window to influence priorities.", "tags": ["Leadership", "Budget"] },
+    { "date": "2025-01", "title": "I&T publishes AI Strategic Roadmap (2025–2028)", "impact": "Defines the city's multi-year AI direction and governance — early window to position AI-infrastructure and responsible-AI offerings.", "tags": ["AI"] }
+  ],
+
+  "dellActions": [
+    "Confirm how Dell reaches Charlotte for each buy — direct via City Procurement Services, through the Charlotte Cooperative Purchasing Alliance, or via NC statewide/national cooperative contracts — and validate Dell's coverage on each.",
+    "Lead AI-infrastructure and data-platform positioning tied to the I&T AI Strategic Roadmap (2025–2028) and the city's Data & Analytics priorities.",
+    "Build the executive map: City Manager Marcus D. Jones for enterprise direction and CIO Markell Storay (I&T) as the primary technology relationship.",
+    "Attach networking, edge, and resilient-infrastructure plays to Smart Charlotte and the I&T technology-resiliency priority — confirm current active projects first.",
+    "Time proposals to Charlotte's budget cycle (City Manager's spring proposal, June adoption) and align to the FY26–30 Capital Investment Plan rather than mid-year asks."
+  ],
+
+  "sources": [
+    { "label": "City of Charlotte — Adopts Fiscal Year 2026 Budget", "url": "https://www.charlottenc.gov/City-News/City-of-Charlotte-Adopts-Fiscal-Year-2026-Budget" },
+    { "label": "City of Charlotte — FY2026 Adopted Budget (PDF)", "url": "https://www.charlottenc.gov/files/sharedassets/city/v/3/city-government/departments/documents/budget/fy2026/adopted-fy2026-budget.pdf" },
+    { "label": "City of Charlotte — Innovation and Technology department", "url": "https://www.charlottenc.gov/City-Government/Departments/Innovation-and-Technology" },
+    { "label": "GovTech — Charlotte, N.C., Appoints Markell Storay as City CIO", "url": "https://www.govtech.com/workforce/charlotte-n-c-appoints-markell-storay-as-city-cio" },
+    { "label": "City of Charlotte — AI Strategic Roadmap 2025–2028 (PDF)", "url": "https://www.charlottenc.gov/files/sharedassets/city/v/1/city-government/departments/documents/iampt/ai-strategic-roadmap-2025-2028-long-version.pdf" },
+    { "label": "Charlotte Cooperative Purchasing Alliance (CCPA)", "url": "http://www.charlottealliance.org/" },
+    { "label": "City of Charlotte — Contracting and Procurement (Procurement Services)", "url": "https://www.charlottenc.gov/City-Government/Departments/General-Services/Procurement-Services" }
+  ]
+}

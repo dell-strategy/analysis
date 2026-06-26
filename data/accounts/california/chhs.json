@@ -1,0 +1,86 @@
+{
+  "state": "california",
+  "stateName": "California",
+  "type": "State Agency",
+  "name": "California Health & Human Services Agency (CHHS)",
+  "slug": "chhs",
+  "hq": "Sacramento, CA",
+  "updated": "2026-06-22",
+  "tagline": "California's largest agency by spend — CHHS oversees ~12 departments (DHCS/Medi-Cal, Public Health, Social Services, and more), runs a massive health-and-human-services data footprint, and is driving the statewide Data Exchange Framework. The wallet is enormous; the buying path runs through department RFPs, statewide contracts via CDT/DGS, and CDT project oversight.",
+
+  "snapshot": [
+    { "label": "Role", "value": "State health & human services umbrella agency" },
+    { "label": "Departments", "value": "~12 (DHCS, CDPH, CDSS, DSH, others)" },
+    { "label": "Medi-Cal (DHCS)", "value": "~15M enrollees; $229.1B proposed FY2026-27" },
+    { "label": "Buying gate", "value": "Dept RFPs + CDT/DGS statewide contracts; CDT project oversight" }
+  ],
+
+  "overview": "The California Health & Human Services Agency (CalHHS / CHHS) is the cabinet-level umbrella over roughly a dozen departments and offices that administer the state's health and human services — including the Department of Health Care Services (DHCS, which runs Medi-Cal), the Department of Public Health (CDPH), the Department of Social Services (CDSS), the Department of State Hospitals (DSH), and the Center for Data Insights and Innovation (CDII). It is one of the largest organizations in U.S. state government by spend, and it carries a correspondingly large data, IT, eligibility-systems, and cybersecurity footprint. For a seller, CHHS is best understood as a federated buyer: the Agency sets policy and cross-department data strategy, but the heavy IT and modernization budgets sit inside the individual departments (DHCS above all), and most technology buys route through department-level solicitations, statewide contracts administered by the California Department of Technology (CDT) and the Department of General Services (DGS), and CDT's project-approval and oversight process for reportable IT projects. The signature cross-department program is the statewide Data Exchange Framework (DxF) — a first-of-its-kind mandate to securely exchange health and social-services data — which is hitting major compliance milestones in 2026.",
+
+  "budget": {
+    "intro": "CHHS is one of the biggest spenders in state government, but the money — and the IT money — lives in the departments. DHCS/Medi-Cal alone dominates: the Governor's proposed 2026-27 budget puts DHCS at roughly $229.1B total funds ($49.5B General Fund), and Medi-Cal covers nearly 15 million Californians (more than one in three residents). The state's overall fiscal picture improved at the May Revision but remains pressured, and Medi-Cal faces cuts tied to federal policy changes — a backdrop that favors efficiency, automation, and modernization pitches.",
+    "stats": [
+      { "value": "$229.1B", "label": "DHCS proposed budget (FY2026-27)", "note": "Governor's proposed; ~$49.5B General Fund. The largest department in the agency." },
+      { "value": "~15M", "label": "Medi-Cal enrollees", "note": "More than one in three Californians; the scale behind eligibility and data systems" },
+      { "value": "~$10B", "label": "Projected annual operating deficits", "note": "Administration estimate, 2026-27 through 2029-30; favors cost-takeout over net-new capital" }
+    ],
+    "notes": [
+      "IT spend is federated across departments — DHCS, CDPH, CDSS each run their own substantial systems and modernization. There is no single 'CHHS IT budget' line to target; verify a department's own appropriation before forecasting.",
+      "The May 2026 Revision projected positive year-end balances for 2026-27 and 2027-28, but the administration and the LAO flag structural deficits ahead — a cost-pressure environment.",
+      "Medi-Cal faces reductions tied to federal policy changes (the proposed budget cites $583.8M / $471.6M GF in 2026-27, $1.5B / $1.2B GF ongoing), which sharpens the case for efficiency and consolidation."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Data Exchange Framework (DxF)", "summary": "California's first-ever statewide mandate for secure, real-time exchange of health and social-services data. Mandatory signatories were to exchange information by January 31, 2026, and from July 1, 2026 executing the Data Sharing Agreement is a condition of certain contracts with DHCS, CalPERS, and Covered California. SB 660 (2025) stood up a new Stakeholder Advisory Committee in early 2026. Drives demand for data platforms, integration, interoperability, and security.", "tags": ["Data", "Interoperability"] },
+    { "name": "Benefits & eligibility-systems modernization", "summary": "Medi-Cal and human-services eligibility, enrollment, and case-management systems serving ~15M people are a long-running modernization track across DHCS and CDSS — an opening for infrastructure refresh, cloud, and data-platform plays. Confirm which department and which system before forecasting.", "tags": ["Modernization", "Cloud"] },
+    { "name": "Center for Data Insights and Innovation (CDII)", "summary": "CDII (established 2021) drives data access, sharing, governance, and innovation across CalHHS and administers DxF governance. The cross-agency data and analytics buying-influence center — a fit for data, AI-ready infrastructure, and analytics conversations.", "tags": ["Data", "AI"] },
+    { "name": "Cybersecurity & data protection", "summary": "Protecting health and social-services data at Medi-Cal scale (PHI, PII for one-third of the state) is a standing priority intensified by DxF data-sharing obligations. Statewide security policy and project oversight sit with CDT; departments run their own security programs — a layered security opportunity.", "tags": ["Cybersecurity", "Data"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to CHHS means working the department buying centers plus the statewide vehicles, not a single agency desk. Most technology runs through department RFPs, statewide contracts administered by CDT and DGS (including California Multiple Award Schedules), and CDT's project-approval and procurement oversight for reportable IT projects. Confirm which department owns the requirement, whether a usable statewide contract exists, and whether the project falls under CDT oversight.",
+    "vehicles": [
+      { "name": "Department RFPs / solicitations", "detail": "DHCS, CDPH, CDSS and the other departments run their own solicitations for department-specific systems and services — the primary path for most large CHHS technology buys." },
+      { "name": "CDT statewide contracts & IT procurement", "detail": "The California Department of Technology administers statewide IT procurement vehicles and pre-qualified vendor pools (e.g., eVAQ / Statewide Technology Procurement) and sets IT procurement policy departments buy under." },
+      { "name": "DGS leveraged procurement agreements (CMAS, etc.)", "detail": "The Department of General Services Procurement Division administers California Multiple Award Schedules and other leveraged agreements state and local agencies can buy through — often a faster path than a stand-alone solicitation." },
+      { "name": "CDT project approval & oversight", "detail": "Reportable IT projects require CDT review and approval and are subject to oversight — factor CDT's project-approval lifecycle and stage gates into timing for any sizable system effort." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Kim Johnson", "title": "Secretary, California Health & Human Services Agency", "note": "Appointed effective October 1, 2024 (succeeding Dr. Mark Ghaly); former Director of CDSS. The top agency-wide relationship and policy owner." },
+    { "name": "Center for Data Insights and Innovation (CDII)", "title": "Agency data, innovation & DxF governance", "note": "Drives data sharing, governance, and the Data Exchange Framework across CalHHS — the cross-department data buying-influence center. Confirm current director before engaging." },
+    { "name": "Department of Health Care Services (DHCS)", "title": "Medi-Cal — the largest department", "note": "~$229.1B proposed FY2026-27, ~15M enrollees. Holds the biggest IT and eligibility-systems budgets in the agency — the highest-value department buying center." },
+    { "name": "Chris Given", "title": "California State CIO & Director, Department of Technology (CDT)", "note": "Appointed April 2026; former Deputy Secretary for Technology & Innovation at GovOps and a lead on IRS Direct File. Owns statewide IT policy, procurement, and project oversight that CHHS buys run under." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Governor's May Revision: DHCS ~$229.1B proposed FY2026-27, with Medi-Cal cuts tied to federal changes", "impact": "Confirms the scale of the wallet and a cost-pressure posture — lead with efficiency, automation, and modernization over net-new capital.", "tags": ["Budget"] },
+    { "date": "2026-04", "title": "Chris Given appointed California State CIO and CDT Director", "impact": "New owner of statewide IT policy, procurement, and project oversight — rebuild the CDT relationship that gates CHHS technology buys.", "tags": ["Leadership"] },
+    { "date": "2026-01", "title": "DxF milestone: mandatory signatories to exchange health information by January 31, 2026", "impact": "Real-time data exchange becomes operational reality — demand for data platforms, integration, and security across CHHS departments.", "tags": ["Data"] },
+    { "date": "2026-01", "title": "SB 660 (2025) Stakeholder Advisory Committee stood up to advise on DxF", "impact": "New governance body shaping DxF implementation — a venue to track requirements for data and interoperability programs.", "tags": ["Governance"] },
+    { "date": "2025-09", "title": "Kim Johnson into her first full year as CHHS Secretary; DxF July 1, 2026 contract condition approaching", "impact": "Leadership is settled and the July 2026 Data Sharing Agreement deadline raises the stakes on data infrastructure and compliance.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Map the federated buying centers — CHHS sets cross-agency data strategy via CDII, but DHCS (Medi-Cal) holds the largest IT and eligibility-systems budgets. Pursue department-level programs, not a single agency line.",
+    "Anchor on the Data Exchange Framework: position data platforms, integration, storage, and AI-ready infrastructure against the 2026 DxF milestones and SB 660 governance — a funded, mandated, agency-wide driver.",
+    "Lead with efficiency and modernization in a structural-deficit year: frame infrastructure refresh, automation, and consolidation as cost-takeout for Medi-Cal-scale eligibility and benefits systems.",
+    "Engage the security buying centers on protecting PHI/PII for ~one-third of the state, intensified by DxF data-sharing obligations — coordinate department security teams with CDT statewide policy.",
+    "Get the procurement path right early: confirm the owning department's RFP, usable CDT/DGS statewide contracts (e.g., CMAS), and whether the effort falls under CDT project approval and oversight."
+  ],
+
+  "sources": [
+    { "label": "California Health & Human Services — About", "url": "https://www.chhs.ca.gov/about/" },
+    { "label": "Governor of California — Kim Johnson appointed CalHHS Secretary", "url": "https://www.gov.ca.gov/2024/09/06/calhhs-secretary-dr-ghaly-to-depart-cdss-director-johnson-appointed-new-secretary/" },
+    { "label": "California Data Exchange Framework (DxF)", "url": "https://dxf.chhs.ca.gov/" },
+    { "label": "CalHHS Center for Data Insights and Innovation (CDII)", "url": "https://www.cdii.ca.gov/" },
+    { "label": "DHCS — 2026-27 May Revision Highlights", "url": "https://www.dhcs.ca.gov/Budget/Documents/DHCS-FY-2026-27-May-Revise-Highlights.pdf" },
+    { "label": "DHCS — Medi-Cal Eligibility Statistics", "url": "https://www.dhcs.ca.gov/dataandstats/Pages/Medi-Cal-Eligibility-Statistics.aspx" },
+    { "label": "CDT — State CIO and Director: Chris Given", "url": "https://www.cdt.ca.gov/director/" },
+    { "label": "GovTech — California's New Technology Director (Chris Given)", "url": "https://www.govtech.com/workforce/a-state-insider-is-californias-new-technology-director" },
+    { "label": "CDT — Statewide Technology Procurement", "url": "https://www.cdt.ca.gov/project-delivery/statewide-technology-procurement/" },
+    { "label": "DGS — Procurement Division", "url": "https://www.dgs.ca.gov/pd" }
+  ]
+}

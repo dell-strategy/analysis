@@ -1,0 +1,80 @@
+{
+  "state": "florida",
+  "stateName": "Florida",
+  "type": "City",
+  "name": "Jacksonville (Duval County), Florida",
+  "slug": "jacksonville",
+  "hq": "Jacksonville, FL",
+  "updated": "2026-06-22",
+  "tagline": "The consolidated City of Jacksonville / Duval County — the largest city by land area in the continental U.S. and Florida's most-populous city (~1M residents) — runs enterprise IT through the Information Technologies Division (ITD), with an AI-forward, Microsoft/Azure-centric modernization agenda under Mayor Donna Deegan.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Consolidated city-county (~1M)" },
+    { "label": "FY25-26 operating budget", "value": "~$2B" },
+    { "label": "Central IT", "value": "Information Technologies Division (ITD)" },
+    { "label": "Governance", "value": "Strong-mayor / consolidated" }
+  ],
+
+  "overview": "Jacksonville is a consolidated city-county government: since 1968 the City of Jacksonville and Duval County have operated as a single entity, making it Florida's most-populous city (roughly 1 million residents) and the largest city by land area in the continental United States. It runs under a strong-mayor structure — Mayor Donna Deegan is the elected chief executive who proposes the budget and runs operations, with a 19-member City Council as the legislative body. Central technology is delivered by the Information Technologies Division (ITD), which sits within the Finance & Administration Department and handles centralized selection, procurement, operation, and maintenance of the city's information systems, applications, data center, network, and security. The CIO/Chief of Information Technologies is Wanyonyi Kendrick, who previously held IT leadership roles at Miami-Dade County and JEA. Jacksonville has positioned itself as a digital-government leader — it has ranked highly in the Center for Digital Government's Digital Cities survey for large cities and has been recognized by Microsoft for transparency dashboards built on Power BI and Azure — and is piloting AI in its budget process. For a Dell SLG seller, Jacksonville is a marquee local-government account: a large, modernization-minded consolidated buyer where the budget is adopted annually by Council and large IT purchases route through the city's Procurement Division.",
+
+  "budget": {
+    "intro": "Jacksonville's budget covers the consolidated city-county. Mayor Deegan's FY2025-26 budget was a roughly $2B operating plan (about a $110M increase over the prior year), holding the millage rate flat at 11.31 mills and avoiding any drawdown of reserves, paired with a $687M first-year Capital Improvement Plan within the FY2026-2030 CIP. IT is funded within departmental and capital lines and ITD's internal-service charges rather than a single published 'IT budget' figure.",
+    "stats": [
+      { "value": "~$2B", "label": "FY25-26 operating budget", "note": "Deegan administration; ~$110M increase, flat millage (11.31)" },
+      { "value": "$687M", "label": "CIP first-year (FY26)", "note": "First-year capital within the adopted FY2026-2030 Capital Improvement Plan" },
+      { "value": "11.31", "label": "Millage rate (mills)", "note": "Held flat in FY25-26; no property-tax-rate increase" }
+    ],
+    "notes": [
+      "There is no single public 'IT budget' line; technology spend is distributed across departmental operating budgets, the multi-year CIP, and ITD's internal-service charges.",
+      "The FY25-26 budget grew without a tax-rate increase or reserve drawdown, helped by new-construction property value and a one-time JEA contribution — expect continued emphasis on efficiency and value.",
+      "Budgets are proposed by the Mayor and adopted annually by the 19-member City Council, typically finalized in the fall."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "AI in the budget process", "summary": "Jacksonville has piloted an enterprise AI program (reported with C3.ai on Microsoft Azure) to analyze department budgets — flagging spending duplications, inefficiencies, and forecasting opportunities across Public Works, Public Libraries, and Parks/Recreation. Early appetite for AI creates pull-through for AI-ready infrastructure, data platforms, and governance.", "tags": ["AI", "Data"] },
+    { "name": "Digital-government & transparency platforms", "summary": "ITD has built nationally recognized transparency dashboards on Microsoft Power BI/Azure and relaunched the city website. These cloud-and-data programs anchor ongoing compute, storage, and analytics needs and underpin the city's strong Digital Cities survey showing.", "tags": ["Cloud", "Modernization"] },
+    { "name": "Cybersecurity program", "summary": "ITD runs the city-county's information-security program protecting consolidated systems and resident data. With Florida local governments a persistent ransomware target, this is a recurring buying center for endpoint, data protection, identity, resilience, and recovery.", "tags": ["Cybersecurity"] },
+    { "name": "Data-center & infrastructure operations", "summary": "ITD operates the city's centralized data center, network, and enterprise applications and is steadily modernizing toward hybrid cloud and shared services — a fit for infrastructure refresh, as-a-service, and managed offerings.", "tags": ["Data Center", "Infrastructure"] }
+  ],
+
+  "procurement": {
+    "intro": "Large Jacksonville IT buys route through the city's Procurement Division (within Finance & Administration), which solicits, awards, and manages contracts for the consolidated city-county under Chapter 126 of the Ordinance Code. Vendors register through the city's e-procurement supplier portal, and the city can use and offer cooperative ('piggyback') contracts. Confirm Dell's standing on city contracts and on State of Florida / national co-op vehicles before forecasting.",
+    "vehicles": [
+      { "name": "City of Jacksonville Procurement Division", "detail": "Central acquisition organization within Finance & Administration; issues solicitations, awards city contracts, and runs the e-procurement supplier-registration portal. The primary path for competed buys." },
+      { "name": "Cooperative / piggyback contracts", "detail": "The Chief of Procurement may use cooperative contracts where practicable and advantageous, and the city's own competed contracts can be piggybacked by other governmental entities — a faster route than a fresh RFP." },
+      { "name": "Florida state & national cooperatives", "detail": "Florida local governments commonly leverage State of Florida contracts and national co-ops (e.g., NASPO ValuePoint, Sourcewell, OMNIA Partners) — confirm Dell coverage as alternative access paths." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Donna Deegan", "title": "Mayor (elected chief executive)", "note": "Strong mayor who proposes the budget and runs operations; sets the modernization and AI-pilot agenda. The top executive sponsor for major city technology direction." },
+    { "name": "Wanyonyi Kendrick", "title": "Chief Information Officer / Chief of Information Technologies (ITD)", "note": "Leads the Information Technologies Division; prior IT leadership at Miami-Dade County and JEA. The primary technology relationship for enterprise, cloud, AI, and infrastructure conversations." },
+    { "name": "Information Technologies Division (ITD)", "title": "Central IT (within Finance & Administration)", "note": "Owns enterprise applications, data center, network, and security for the consolidated city-county — the core buying center for infrastructure and as-a-service." },
+    { "name": "Procurement Division", "title": "Central procurement (Finance & Administration)", "note": "Awards and manages city contracts and cooperative agreements; owns vendor registration and solicitations — the path onto city vehicles." },
+    { "name": "Jacksonville City Council", "title": "19-member legislative body", "note": "Adopts the annual budget and approves large contracts; district members influence priorities and procurement awards." }
+  ],
+
+  "news": [
+    { "date": "2025-07", "title": "Mayor Deegan unveils ~$2B FY25-26 budget with flat millage and no reserve drawdown", "impact": "Growth without a tax-rate increase signals emphasis on efficiency and value — lead with consolidation, refresh economics, and competitively priced contract vehicles.", "tags": ["Budget"] },
+    { "date": "2025-04", "title": "Jacksonville pilots AI (reported with C3.ai on Azure) to analyze department budgets", "impact": "Executive appetite for AI creates pull-through for AI-ready infrastructure, data platforms, and governance/security.", "tags": ["AI"] },
+    { "date": "2024-11", "title": "Jacksonville ranks among the nation's top large cities in the Center for Digital Government's Digital Cities survey", "impact": "Strong digital-government posture validates a modernization-minded buyer; confirm the latest year's exact placement.", "tags": ["Recognition"] }
+  ],
+
+  "dellActions": [
+    "Confirm Dell's standing on City of Jacksonville Procurement Division contracts and on State of Florida / national co-op vehicles (NASPO ValuePoint, Sourcewell, OMNIA) as the access paths to large buys.",
+    "Build the primary relationship with CIO Wanyonyi Kendrick and the ITD around enterprise infrastructure, data center, and hybrid-cloud modernization.",
+    "Lead with AI-ready infrastructure (compute, storage, data platforms) tied to the city's AI budget pilot and its Azure/Power BI analytics footprint — Dell as the on-prem/hybrid complement to its cloud stack.",
+    "Develop the security motion around endpoint, data protection, identity, and cyber-resilience for the consolidated city-county, given the elevated ransomware threat to Florida local governments.",
+    "Frame infrastructure refresh and as-a-service around efficiency and value, aligned to a budget that grew without a tax-rate increase, and engage Procurement early on the right contract vehicle."
+  ],
+
+  "sources": [
+    { "label": "Jacksonville Today — Jacksonville tests artificial intelligence in city budget process (CIO Wanyonyi Kendrick)", "url": "https://jaxtoday.org/2025/04/11/artificial-intelligence-jacksonville/" },
+    { "label": "Jax Daily Record — Deegan unveils $2 billion Jacksonville budget with no tax-rate increase, no drawdown of reserves", "url": "https://www.jaxdailyrecord.com/news/2025/jul/14/deegan-unveils-2-billion-operating-budget-with-no-tax-rate-increase-no-drawdown-of-reserves/" },
+    { "label": "City of Jacksonville — Procurement Division", "url": "https://www.jacksonville.gov/departments/office-of-administrative-services/procurement" },
+    { "label": "City of Jacksonville — Chief of Information Technologies / CIO (job classification, ITD ordinance authority)", "url": "https://www.governmentjobs.com/careers/jacksonvillefl/jobs/newprint/4071979" },
+    { "label": "Microsoft Customer Stories — City of Jacksonville enhances accountability and transparency with Power BI / Azure", "url": "https://www.microsoft.com/en/customers/story/23520-city-of-jacksonville-azure" },
+    { "label": "GovTech — Center for Digital Government Digital Cities survey", "url": "https://www.govtech.com/dc/digital-cities" }
+  ]
+}

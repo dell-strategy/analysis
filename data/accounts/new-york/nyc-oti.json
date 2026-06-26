@@ -1,0 +1,85 @@
+{
+  "state": "new-york",
+  "stateName": "New York",
+  "type": "City",
+  "name": "NYC Office of Technology & Innovation (OTI)",
+  "slug": "nyc-oti",
+  "hq": "New York, NY",
+  "updated": "2026-06-22",
+  "tagline": "New York City's consolidated technology agency: OTI runs citywide IT, cybersecurity (NYC Cyber Command), digital services (MyCity, 311, NYC.gov), and broadband — and sets the technical direction and contracts most of the City's ~100 agencies buy through.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Citywide central tech agency" },
+    { "label": "Operating budget (FY26)", "value": "~$743M" },
+    { "label": "Capital (IT/cyber/311)", "value": "~$203M" },
+    { "label": "New leadership", "value": "CTO appointed Feb 2026" }
+  ],
+
+  "overview": "The NYC Office of Technology & Innovation (OTI) is the City of New York's consolidated central technology agency, created in 2022 when the legacy Department of Information Technology and Telecommunications (DoITT, the prior account name \"NYC Information Technology and Telecommunications\") was reorganized and merged with the Mayor's Office of the CTO, NYC Cyber Command, the Mayor's Office of Data Analytics, the Office of Information Privacy, and the Algorithms Management and Policy Officer. OTI sets technology strategy and policy for roughly 100 City agencies and offices, runs shared IT infrastructure (data centers, networks, the Citywide Service Desk), and owns the public-facing digital layer: NYC.gov, the 311 non-emergency system, NYC Open Data, the MyCity benefits/services portal, and the Big Apple Connect broadband program. Cybersecurity for the City sits inside OTI via NYC Cyber Command, which protects and defends systems across all agencies. OTI is best understood as both a large IT operator and the technical/contractual gatekeeper for citywide technology buys — though agency procurement runs through NYC's contracting machinery (ACCOs, MOCS, DCAS) rather than a single state-style cooperative vehicle. A mayoral transition in January 2026 brought a new administration and a new technology leadership team.",
+
+  "budget": {
+    "intro": "OTI is a substantial direct IT spender and operator, not just a policy shop. For FY2026 the agency's expense budget is roughly $743M, supporting ~1,500 positions, plus about $203M in capital for IT modernization, cybersecurity, 311, and emergency-communications upgrades. Citywide capital technology investment tied to OTI runs into the high hundreds of millions to ~$1B across multi-year plans.",
+    "stats": [
+      { "value": "~$743M", "label": "OTI expense budget (FY26)", "note": "~$177M personnel / ~$566M OTPS; ~1,545 positions" },
+      { "value": "~$203M", "label": "Capital (FY26)", "note": "IT modernization, cyber, 311, emergency comms upgrades" },
+      { "value": "330K+", "label": "Big Apple Connect residents", "note": "Free internet/cable across 220 NYCHA developments; extended to June 2028" }
+    ],
+    "notes": [
+      "NYC's overall FY2026 budget is among the largest municipal budgets in the U.S.; OTI's appropriation is the IT slice, while large agencies (HRA/DSS, NYPD, Health) carry their own application budgets.",
+      "Big Apple Connect received a three-year extension in September 2025 (through June 2028), with ~$1.2M in additional provider-funded digital-literacy programming.",
+      "Figures reflect the Adams-era adopted FY2026 budget; the Mamdani administration that took office Jan 2026 may reprioritize as it issues its first executive/adopted budgets."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "MyCity portal & AI chatbot", "summary": "OTI's flagship single front-door for City services and benefits, including the first citywide AI-powered chatbot. The chatbot expanded in 2025 to pull 311 and broader government-service content; a Jobs NYC portal was added. Modernization, content, and responsible-AI governance are active workstreams.", "tags": ["Digital Services", "AI"] },
+    { "name": "NYC AI Action Plan & generative-AI governance", "summary": "OTI published the nation's first comprehensive municipal AI Action Plan (37 actions) and stood up an AI Steering Committee; by FY2025 it had initiated or completed 32 of 37 actions. Generative-AI and computer-vision guidance were advanced in 2025 with updates planned for early 2026 — a governance gate for any AI offering sold into the City.", "tags": ["AI", "Governance"] },
+    { "name": "Cybersecurity via NYC Cyber Command", "summary": "Cyber Command sits inside OTI and defends ~100+ agencies (identify/protect/detect/respond/recover), runs a vulnerability-disclosure program, and leads citywide incident response. Security infrastructure, identity, and resilience are ongoing investment areas under the City CISO.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "Broadband & digital equity", "summary": "Big Apple Connect (the nation's largest municipally subsidized broadband program, 330K+ NYCHA residents) was extended to June 2028, and OTI released its first Digital Equity Roadmap (11 initiatives) in March 2025. Council scrutiny has pushed OTI toward a broader broadband strategy beyond BAC.", "tags": ["Broadband", "Digital Equity"] }
+  ],
+
+  "procurement": {
+    "intro": "Unlike a state co-op model, NYC technology buying runs through the City's centralized contracting framework. OTI sets citywide IT direction and leverages the City's buying power through requirement/citywide contracts, while procurement mechanics flow through Agency Chief Contracting Officers (ACCOs), the Mayor's Office of Contract Services (MOCS), and DCAS. Confirm contract vehicles and OTI's cloud-review gate before forecasting.",
+    "vehicles": [
+      { "name": "OTI citywide / requirement IT contracts", "detail": "OTI leverages the City's buying power so agencies can acquire IT goods and services through pre-established requirement contracts rather than each running its own solicitation — a primary path for hardware, software, and services." },
+      { "name": "MOCS & Agency Chief Contracting Officers (ACCOs)", "detail": "The Mayor's Office of Contract Services oversees City procurement; OTI's Citywide ACCO manages competitive bids, RFPs, systems-integrator contracts, and M/WBE participation citywide and on OTI's behalf." },
+      { "name": "DCAS (Dept. of Citywide Administrative Services)", "detail": "Runs citywide goods procurement and requirements contracts many agencies buy commodity IT and equipment through — a complementary route alongside OTI-led IT contracts." },
+      { "name": "OTI cloud-review gate", "detail": "OTI reviews and must approve cloud-based services before agencies procure/deploy them — clear this technical/security review early for any cloud or as-a-service play touching City data." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Lisa Gelobter", "title": "Chief Technology Officer & OTI Commissioner", "note": "Appointed by Mayor Mamdani, announced Feb 11, 2026. Former Obama-era Chief Digital Service Officer at the U.S. Dept. of Education; founder of tEQuitable. Top relationship for the citywide tech motion; emphasizes technology for public good, service delivery, and digital equity." },
+    { "name": "Kelly Moan", "title": "Chief Information Security Officer, City of New York (NYC Cyber Command)", "note": "Leads OTI's Cyber Command across 100+ agencies. Prior NYPD CISO and a former DHS division chief. The security buying-center owner — verify continuity under the new administration." },
+    { "name": "Mayor Zohran Mamdani", "title": "Mayor of New York City (took office Jan 2026)", "note": "New administration setting tech and budget priorities; expect first executive/adopted budgets to reshape OTI's roadmap." },
+    { "name": "OTI Procurement & Vendor Management / Citywide ACCO", "title": "Citywide IT contracting", "note": "Owns competitive bids, RFPs, systems-integrator contracts, vendor onboarding, and M/WBE compliance — the path onto OTI/citywide vehicles." },
+    { "name": "Mayor's Office of Contract Services (MOCS)", "title": "Citywide procurement oversight", "note": "Sets/oversees City procurement policy and the contract pipeline that OTI and agency buys flow through." }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "Mayor Mamdani names Lisa Gelobter NYC CTO & OTI Commissioner", "impact": "New tech leadership at the top of the citywide motion (announced Feb 11, 2026); priorities still forming — re-engage and re-map the relationship chart early.", "tags": ["Leadership"] },
+    { "date": "2026-01", "title": "Mamdani administration takes office; Matt Fraser departs as CTO", "impact": "Mayoral transition resets tech priorities and budget direction; CTO seat was vacant before Gelobter's appointment.", "tags": ["Transition"] },
+    { "date": "2025-09", "title": "Big Apple Connect extended three years (through June 2028)", "impact": "Continues free internet/cable to 330K+ NYCHA residents with ~$1.2M added for digital-literacy programming — sustained broadband/digital-equity demand.", "tags": ["Broadband"] },
+    { "date": "2025-03", "title": "OTI releases first Digital Equity Roadmap; MyCity chatbot expanded to 311", "impact": "11-initiative broadband/literacy plan plus expanded AI-powered service delivery — signals continued investment in digital services and data.", "tags": ["Digital Equity", "AI"] }
+  ],
+
+  "dellActions": [
+    "Re-engage early under the new Mamdani administration and Lisa Gelobter's OTI — leadership priorities and the first budget are still forming, so build the relationship map before the roadmap hardens.",
+    "Confirm Dell's position on OTI citywide/requirement IT contracts and DCAS commodity vehicles — the access paths to ~100 agencies, not just OTI itself.",
+    "Lead with infrastructure and AI-ready compute (ISG) tied to MyCity, the AI Action Plan, and 311/digital-services modernization — and clear OTI's cloud-review and responsible-AI governance gates.",
+    "Build the security relationship with NYC Cyber Command and City CISO Kelly Moan; align to resilience, identity, and incident-response investment.",
+    "Tie hardware and connectivity offers to broadband/digital-equity demand (Big Apple Connect, Digital Equity Roadmap) extended through 2028."
+  ],
+
+  "sources": [
+    { "label": "NYC OTI — Who We Are", "url": "https://www.nyc.gov/content/oti/pages/who-we-are" },
+    { "label": "Mayor Mamdani Announces Key Appointments Including CTO (Feb 2026)", "url": "https://www.nyc.gov/mayors-office/news/2026/02/mayor-mamdani-announces-key-appointments-to-three-city-agencies-" },
+    { "label": "StateScoop — Mamdani names Lisa Gelobter as NYC CTO", "url": "https://statescoop.com/new-york-mayor-mamdani-lisa-gelobter-cto/" },
+    { "label": "NYC OTI — Cyber Command", "url": "https://www.nyc.gov/content/oti/pages/meet-the-team/cyber-command" },
+    { "label": "NYC OTI — Big Apple Connect", "url": "https://www.nyc.gov/content/oti/pages/big-apple-connect" },
+    { "label": "Mayor's Office — Big Apple Connect extended (Sep 2025)", "url": "https://www.nyc.gov/mayors-office/news/2025/09/mayor-adams-extends--big-apple-connect--program--continues-to-pr" },
+    { "label": "GovTech — NYC Releases AI Action Plan, Business-Focused AI Chatbot", "url": "https://www.govtech.com/artificial-intelligence/nyc-releases-ai-action-plan-business-focused-ai-chatbot" },
+    { "label": "citymeetings.nyc — OTI FY2026 Budget Overview (Mar 2025)", "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-10-0300-pm-committee-on-technology/chapter/oti-budget-overview-for-fiscal-year-2026/" },
+    { "label": "Wikipedia — NYC Office of Technology and Innovation", "url": "https://en.wikipedia.org/wiki/New_York_City_Office_of_Technology_and_Innovation" }
+  ]
+}

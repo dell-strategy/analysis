@@ -1,0 +1,82 @@
+{
+  "state": "utah",
+  "stateName": "Utah",
+  "type": "State Agency",
+  "name": "Utah Dept of Technology Services (DTS)",
+  "slug": "dts",
+  "hq": "Salt Lake City, UT",
+  "updated": "2026-06-22",
+  "tagline": "Utah's consolidated central IT shop — DTS delivers enterprise infrastructure, security, and digital services to nearly every executive-branch agency, making it one of the most centralized state IT models in the country.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Consolidated central IT" },
+    { "label": "Funding", "value": "Internal service fund (rates)" },
+    { "label": "Org home", "value": "Dept of Government Operations" },
+    { "label": "Posture", "value": "AI-forward, pro-human" }
+  ],
+
+  "overview": "The Utah Department of Technology Services (DTS) is the state's consolidated central IT agency and one of the most centralized models in the US — it provides enterprise technology services (infrastructure, networking, security, application development, and end-user support) to nearly all executive-branch agencies rather than letting each agency run its own IT shop. DTS is a division of the Department of Government Operations and operates under the State Chief Information Officer (CIO). Because consolidation is so deep, DTS is the buying center for most statewide technology decisions: agency CIOs and IT staff are embedded under DTS, so a seller's relationship with DTS reaches across the executive branch instead of one agency at a time. DTS is also visibly AI-forward, building enterprise AI infrastructure and governance for agencies in step with Utah's broader pro-human posture and the state's Office of Artificial Intelligence Policy (created by the 2024 AI Policy Act, SB-149). For a Dell SLG seller, DTS is the single highest-leverage relationship in Utah state government.",
+
+  "budget": {
+    "intro": "DTS is funded primarily as an internal service fund (ISF): it recovers costs by charging agencies rates for the services it delivers rather than drawing one large general-fund appropriation. The Legislature authorizes those rates each session, so the budget story is about the rate structure and the agency dollars flowing through it, not a single line item.",
+    "stats": [
+      { "value": "ISF", "label": "Funding model", "note": "Cost-recovery rates charged to agencies; legislatively authorized each session" },
+      { "value": "$31.6B", "label": "State budget (FY2027)", "note": "All-sources budget from the 2026 General Session — the pool DTS-served agency IT draws from" },
+      { "value": "Seat rate", "label": "Rate direction", "note": "DTS has moved toward consolidating rates into a user/device 'seat' model" }
+    ],
+    "notes": [
+      "As an internal service fund, DTS bills participating agencies for compute, storage, network, security, and support — confirm the relevant rate category before forecasting a deal's funding path.",
+      "Annual rate authorization runs through the Legislature's State Agency Fees and Internal Service Fund Rate Authorization bill; check the current session's bill for the latest approved rates."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Enterprise AI program", "summary": "DTS is standing up an AI program — providing infrastructure, platforms, data governance, and ethics/standards so agencies can adopt generative AI safely. It is actively evaluating and rolling out gen-AI use cases across the executive branch, aligned with Utah's pro-human AI posture.", "tags": ["AI", "Infrastructure"] },
+    { "name": "Statewide IT consolidation", "summary": "Deep consolidation is the defining DTS feature — enterprise infrastructure, networking, and shared services span nearly all executive-branch agencies. Modernization and refresh decisions are made centrally, which is where infrastructure and platform plays land.", "tags": ["Modernization", "Data Center"] },
+    { "name": "Cybersecurity & state Cyber Center", "summary": "DTS runs statewide security under the CISO, including the Utah Cyber Center, setting security standards and operating SOC/incident-response capabilities for served agencies. Security requirements gate most infrastructure and cloud purchases.", "tags": ["Cybersecurity"] },
+    { "name": "Cloud & digital services", "summary": "DTS provides hybrid cloud, hosting, and digital/online-service delivery for agencies. Cloud and as-a-service offerings flow through DTS standards and statewide cooperative contracts rather than agency-by-agency buys.", "tags": ["Cloud", "Digital Services"] }
+  ],
+
+  "procurement": {
+    "intro": "Technology buying in Utah runs through the Division of Purchasing and General Services on statewide and cooperative contracts, with DTS as the consolidated technical buyer/operator. Two access paths matter: holding the right state and cooperative contracts, and being positioned on DTS's enterprise standards and managed-services catalog.",
+    "vehicles": [
+      { "name": "Utah Division of Purchasing statewide contracts", "detail": "Central procurement authority for the state; pre-competed statewide cooperative contracts are the primary path for technology buys. The statewide contract search is the entry point for eligible entities." },
+      { "name": "NASPO ValuePoint (Utah as lead state)", "detail": "Utah's Division of Purchasing is an active NASPO ValuePoint lead state — including running Cloud and Software Solutions solicitations — giving Utah outsized influence over multi-state cooperative contracts that other states buy from." },
+      { "name": "DTS enterprise / managed services", "detail": "Because DTS is consolidated, much delivery flows through its rate-based managed services and enterprise standards. Aligning to DTS's catalog and architecture is the practical route into agency deployments." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Alan Fuller", "title": "State CIO (DTS)", "note": "Appointed State CIO in 2021; oversees IT for the executive branch through DTS. The top statewide technology relationship in Utah." },
+    { "name": "Phil Bates", "title": "State CISO", "note": "Long-tenured state CISO (since 2015); oversees the Utah Cyber Center and statewide security standards. Owns the security gate on most infrastructure/cloud deals." },
+    { "name": "DTS — under Dept of Government Operations", "title": "Consolidated central IT division", "note": "DTS sits within the Department of Government Operations; agency CIOs/IT staff are embedded under DTS, so the relationship reaches across the executive branch." },
+    { "name": "Utah Office of Artificial Intelligence Policy", "title": "AI policy & regulatory mitigation", "note": "Created by the 2024 AI Policy Act (SB-149), housed in the Dept of Commerce; shapes Utah's pro-human AI direction that DTS implements technically." },
+    { "name": "Division of Purchasing & General Services", "title": "Central procurement / NASPO lead state", "note": "Owns statewide contracts and Utah's NASPO ValuePoint lead-state solicitations — the contracting path for technology buys." }
+  ],
+
+  "news": [
+    { "date": "2026-02", "title": "Utah names members of its Pro-Human AI Task Force", "impact": "Reinforces Utah's distinctive AI posture; DTS is the technical implementer of enterprise AI infrastructure and governance — a hook for AI-infrastructure conversations.", "tags": ["AI"] },
+    { "date": "2026-01", "title": "Utah launches first state-approved AI program for prescription renewals", "impact": "Signals Utah's willingness to deploy AI in production public services, validating demand for the underlying compute and data infrastructure DTS supports.", "tags": ["AI"] },
+    { "date": "2026-01", "title": "State CISO Phil Bates recognized among GovTech Top 25 (2026)", "impact": "Stable, high-profile security leadership at DTS — confirms the CISO as a durable relationship for the security buying center.", "tags": ["Cybersecurity", "Leadership"] },
+    { "date": "2026-05", "title": "Utah leads NASPO ValuePoint Cloud and Software Solutions solicitation", "impact": "Utah's lead-state role shapes a multi-state cloud/software contract — relevant to both Utah deals and cooperative-contract positioning nationally.", "tags": ["Procurement", "Cloud"] }
+  ],
+
+  "dellActions": [
+    "Treat DTS as the single highest-leverage relationship in Utah — its deep consolidation means one DTS engagement reaches nearly the entire executive branch, not one agency.",
+    "Lead with AI infrastructure and ISG: tie compute, storage, and data-platform offerings to DTS's enterprise AI program and Utah's visible AI deployments.",
+    "Map deals to the internal-service-fund rate model — confirm which DTS rate category (and the current legislatively authorized rates) funds a given offering before forecasting.",
+    "Confirm Dell's coverage on Utah Division of Purchasing statewide contracts and relevant NASPO ValuePoint vehicles — and leverage Utah's NASPO lead-state role for cooperative-contract positioning.",
+    "Engage the CISO / Utah Cyber Center early — security standards gate most infrastructure and cloud purchases across the consolidated environment."
+  ],
+
+  "sources": [
+    { "label": "Utah DTS — About Us", "url": "https://dts.utah.gov/about-us/" },
+    { "label": "Utah DTS — Artificial Intelligence initiative", "url": "https://dts.utah.gov/what-we-are-doing/our-initiatives/artificial-intelligence/" },
+    { "label": "Utah Office of Artificial Intelligence Policy", "url": "https://ai.utah.gov/" },
+    { "label": "Utah Division of Purchasing & General Services", "url": "https://purchasing.utah.gov/" },
+    { "label": "NASPO ValuePoint — Cooperative Contracts", "url": "https://www.naspovaluepoint.org/cooperative-contracts/" },
+    { "label": "GovTech — Alan Fuller to Lead Utah Dept of Technology Services as CIO", "url": "https://www.govtech.com/workforce/alan-fuller-to-lead-utah-dept-of-technology-services-as-cio.html" },
+    { "label": "GovTech Top 25 — Phil Bates (Utah CISO)", "url": "https://www.govtech.com/top-25/phil-bates" },
+    { "label": "Utah Legislature — 2026 Budget Summary (FY2027)", "url": "https://le.utah.gov/interim/2026/pdf/00002079.pdf" }
+  ]
+}

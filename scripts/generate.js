@@ -342,6 +342,64 @@ function tocLink(id, iconName, label) {
   return `<a href="#${id}">${icon(iconName)}<span class="toc-label">${label}</span></a>`;
 }
 
+/* ---- Top Accounts directory (state breakout pages) ----------------------- */
+const ACCT_TYPE_ORDER = ['State Agency', 'Higher Ed', 'County', 'City', 'Special District', 'Court', 'K-12', 'Other'];
+const ACCT_TYPE_LABEL = {
+  'State Agency': 'State Agencies', 'Higher Ed': 'Higher Education', 'County': 'Counties',
+  'City': 'Cities', 'Special District': 'Special Districts & Authorities', 'Court': 'Courts', 'K-12': 'K-12 Districts', 'Other': 'Other',
+};
+const ACCT_TYPE_KEY = {
+  'State Agency': 'agency', 'Higher Ed': 'highered', 'County': 'county', 'City': 'city',
+  'Special District': 'district', 'Court': 'court', 'K-12': 'k12',
+};
+
+let _focused = null;
+function focusedAccounts(slug) {
+  if (_focused === null) {
+    try { _focused = readJSON('data/focused-accounts.json'); } catch (e) { _focused = {}; }
+  }
+  return _focused[slug] || null;
+}
+
+function renderAccounts(d) {
+  const accts = focusedAccounts(d.slug) || d.accounts || [];
+  if (!accts.length) return '';
+  const href = (a) => `${d.slug}/${a.slug}.html`;
+  const present = [...new Set(accts.map((a) => a.type || 'Other'))];
+  const types = ACCT_TYPE_ORDER.filter((t) => present.includes(t))
+    .concat(present.filter((t) => !ACCT_TYPE_ORDER.includes(t)));
+  const card = (a) => {
+    const tkey = ACCT_TYPE_KEY[a.type] || 'other';
+    const inner = `
+        <div class="acct-card__top">
+          <span class="acct-badge acct-badge--${tkey}">${esc(a.type || 'Account')}</span>
+          ${a.available ? icon('go', 'acct-go') : '<span class="soon-tag">soon</span>'}
+        </div>
+        <div class="acct-card__name">${esc(a.name)}</div>
+        ${a.hq ? `<div class="acct-card__hq">${icon('pin')} ${esc(a.hq)}</div>` : ''}
+        ${a.blurb ? `<div class="acct-card__blurb">${esc(a.blurb)}</div>` : ''}`;
+    return a.available
+      ? `<a class="acct-card" href="${esc(href(a))}">${inner}</a>`
+      : `<div class="acct-card is-soon">${inner}</div>`;
+  };
+  const groups = types.map((t) => {
+    const items = accts.filter((a) => (a.type || 'Other') === t);
+    return `<div class="acct-group">
+        <h3>${esc(ACCT_TYPE_LABEL[t] || t)} <span class="acct-count">${items.length}</span></h3>
+        <div class="acct-grid">${items.map(card).join('')}</div>
+      </div>`;
+  }).join('');
+  return `<section class="accounts">
+  <div class="accounts__inner">
+    <div class="accounts__head">
+      <h2>${icon('procurement')} Top Accounts in ${esc(d.name)}</h2>
+      <span class="muted">${accts.length} account${accts.length === 1 ? '' : 's'} &middot; market intel companion</span>
+    </div>
+    ${groups}
+  </div>
+</section>`;
+}
+
 function renderState(d) {
   const chips = (d.snapshot || []).map((c) =>
     `<span class="chip"><b>${esc(c.value)}</b><span>${esc(c.label)}</span></span>`).join('');
@@ -371,6 +429,8 @@ ${siteHeader('../', true)}
   </div>
 </section>
 
+${renderAccounts(d)}
+
 <div class="report-shell">
   <nav class="toc" aria-label="Sections">
     <div class="toc__label">On this page</div>
@@ -393,6 +453,65 @@ ${siteFooter('../', d.updated)}
 }
 
 /* ====================================================================== */
+/*  ACCOUNT BRIEF PAGE                                                     */
+/* ====================================================================== */
+function renderAccountBrief(a) {
+  const chips = (a.snapshot || []).map((c) =>
+    `<span class="chip"><b>${esc(c.value)}</b><span>${esc(c.label)}</span></span>`).join('');
+  const power = (a.powerStructure || []).map((b) =>
+    `<tr><td><b>${esc(b.name)}</b><br><small class="muted">${esc(b.title)}</small></td><td>${esc(b.note)}</td></tr>`).join('');
+  const pr = a.procurement || {};
+  const vehicles = (pr.vehicles || []).map((v) =>
+    `<tr><td><b>${esc(v.name)}</b></td><td>${esc(v.detail)}</td></tr>`).join('');
+  const inits = (a.initiatives || []).map((i) =>
+    `<div class="card"><div class="card__title">${esc(i.name)}</div><p style="font-size:.92rem;margin-bottom:10px">${esc(i.summary)}</p>${(i.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join(' ')}</div>`).join('');
+  const news = (a.news || []).map((n) => {
+    const dt = fmtDate(n.date);
+    const tags = (n.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join('');
+    return `<div class="tl-item"><div class="tl-date">${esc(dt.top)} ${esc(dt.yr)}</div>${tags ? `<div class="tl-tags">${tags}</div>` : ''}<div class="tl-title">${esc(n.title)}</div><div class="tl-impact">${esc(n.impact)}</div></div>`;
+  }).join('');
+  const actions = (a.dellActions || []).map((x) => `<li>${icon('check')}<span>${esc(x)}</span></li>`).join('');
+  const sources = (a.sources || []).map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`).join('');
+  const bud = a.budget;
+  const budStats = bud ? (bud.stats || []).map((s) => statTile(s, 'budget')).join('') : '';
+  const budNotes = bud ? (bud.notes || []).map((n) => `<li>${esc(n)}</li>`).join('') : '';
+  const tkey = ACCT_TYPE_KEY[a.type] || 'other';
+  const sec = (iconName, title, body) => `<section class="section"><div class="section__head"><span class="section__icon">${icon(iconName)}</span><h2>${esc(title)}</h2></div>${body}</section>`;
+  return `${head(`${a.name} | ${a.stateName} | Dell SLG Strategy Hub`, '../../assets/css/styles.css')}
+<body>
+${siteHeader('../../', false)}
+
+<section class="report-hero">
+  <div class="report-hero__inner">
+    <div class="crumbs"><a href="../../index.html">All States</a> ${icon('chevron')} <a href="../${esc(a.state)}.html">${esc(a.stateName)}</a> ${icon('chevron')} <span>${esc(a.name)}</span></div>
+    <p class="eyebrow"><span class="acct-badge acct-badge--${tkey}">${esc(a.type)}</span> &nbsp;${esc(a.stateName)} &middot; Account Intelligence</p>
+    <h1>${esc(a.name)}</h1>
+    ${a.tagline ? `<p class="tagline">${esc(a.tagline)}</p>` : ''}
+    <div class="report-hero__meta">
+      ${a.hq ? `<span class="updated-pill">${icon('pin')} ${esc(a.hq)}</span>` : ''}
+      <span class="updated-pill"><span class="dot"></span> Last updated ${esc(fmtLong(a.updated))}</span>
+    </div>
+    ${chips ? `<div class="snapshot">${chips}</div>` : ''}
+  </div>
+</section>
+
+<main class="brief">
+  ${a.overview ? sec('summary', 'Overview', `<p class="lead">${esc(a.overview)}</p>`) : ''}
+  ${bud ? sec('budget', 'Budget & Fiscal', `${bud.intro ? `<p class="lead">${esc(bud.intro)}</p>` : ''}${budStats ? `<div class="grid grid-3" style="margin:16px 0">${budStats}</div>` : ''}${budNotes ? `<ul class="muted" style="font-size:.85rem;margin:0">${budNotes}</ul>` : ''}`) : ''}
+  ${inits ? sec('initiatives', 'Initiatives & Priorities', `<div class="grid grid-2">${inits}</div>`) : ''}
+  ${vehicles ? sec('procurement', 'Procurement', `${pr.intro ? `<p class="lead">${esc(pr.intro)}</p>` : ''}<div class="card table-card" style="margin-top:14px"><table class="data-table"><thead><tr><th>Vehicle / gate</th><th>What it means for Dell</th></tr></thead><tbody>${vehicles}</tbody></table></div>`) : ''}
+  ${power ? sec('power', 'Power Structure', `<div class="card table-card"><table class="data-table"><thead><tr><th>Decision-maker</th><th>Why they matter</th></tr></thead><tbody>${power}</tbody></table></div>`) : ''}
+  ${news ? sec('news', 'News & Signals', `<div class="timeline">${news}</div>`) : ''}
+  ${actions ? `<section class="section"><div class="callout"><div class="callout__head"><span class="section__icon">${icon('bolt')}</span><h3>Where Dell Can Play</h3></div><ul class="action-list">${actions}</ul></div></section>` : ''}
+  ${sources ? `<section class="section"><div class="sources"><h3>Sources</h3><ol>${sources}</ol></div></section>` : ''}
+</main>
+
+${siteFooter('../../', a.updated)}
+</body>
+</html>`;
+}
+
+/* ====================================================================== */
 /*  MAIN                                                                   */
 /* ====================================================================== */
 function main() {
@@ -402,7 +521,7 @@ function main() {
   fs.writeFileSync(p('index.html'), renderIndex(manifest, svgRaw));
   console.log('  index.html');
 
-  let built = 0;
+  let built = 0, accts = 0;
   for (const st of manifest.states) {
     if (!st.available) continue;
     const dataPath = `data/states/${st.slug}.json`;
@@ -410,10 +529,26 @@ function main() {
       console.warn(`  ! ${st.name}: marked available but ${dataPath} is missing — skipped`);
       continue;
     }
-    fs.writeFileSync(p('states', `${st.slug}.html`), renderState(readJSON(dataPath)));
+    const d = readJSON(dataPath);
+    fs.writeFileSync(p('states', `${st.slug}.html`), renderState(d));
     console.log(`  states/${st.slug}.html`);
     built++;
+
+    // Account intelligence pages for this state's available accounts
+    for (const acct of (focusedAccounts(st.slug) || d.accounts || [])) {
+      if (!acct.available) continue;
+      const aPath = `data/accounts/${st.slug}/${acct.slug}.json`;
+      if (!fs.existsSync(p(aPath))) {
+        console.warn(`  ! ${st.slug}/${acct.slug}: marked available but ${aPath} is missing — skipped`);
+        continue;
+      }
+      const dir = p('states', st.slug);
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+      fs.writeFileSync(p('states', st.slug, `${acct.slug}.html`), renderAccountBrief(readJSON(aPath)));
+      console.log(`    states/${st.slug}/${acct.slug}.html`);
+      accts++;
+    }
   }
-  console.log(`\nDone. 1 landing page + ${built} state page(s).`);
+  console.log(`\nDone. 1 landing page + ${built} state page(s) + ${accts} account brief(s).`);
 }
 main();

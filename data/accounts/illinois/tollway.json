@@ -1,0 +1,81 @@
+{
+  "name": "Illinois Tollway (Toll Highway Authority)",
+  "slug": "tollway",
+  "state": "illinois",
+  "stateName": "Illinois",
+  "type": "Special District",
+  "hq": "Downers Grove, IL",
+  "updated": "2026-06-22",
+  "tagline": "A self-funded special district that runs 294 miles of all-electronic toll roads across northern Illinois — a tech-heavy operator whose tolling, ITS, and back-office systems make it one of the state's most technology-dependent agencies.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Toll highway operator" },
+    { "label": "System", "value": "294 miles / 12 counties" },
+    { "label": "2026 budget", "value": "$1.79B" },
+    { "label": "Funding", "value": "Self-funded (tolls + bonds)" }
+  ],
+
+  "overview": "The Illinois State Toll Highway Authority — the Illinois Tollway — is a self-supporting state special district that operates and maintains 294 miles of toll roads on five routes (I-90 Jane Addams, I-88 Reagan, I-355 Veterans, I-294/I-94 Tri-State, and the I-490/Elgin O'Hare Western Access corridor) across 12 northern Illinois counties. It is governed by an 11-member Board of Directors and run day-to-day by an Executive Director, with roughly 1,400 employees. Unlike most state agencies, the Tollway receives no general state tax revenue: it funds operations, maintenance, debt service, and capital almost entirely from toll collections and revenue bonds. That makes it unusually technology-dependent — the system is 100% all-electronic open-road tolling (cash collection ended in 2021), so I-PASS/E-ZPass transponder reads, license-plate (ANPR) cameras, the tolling back-office, intelligent transportation systems (ITS), and the operational technology (OT) along the roadway are mission-critical revenue and safety infrastructure rather than back-office IT. For a Dell SLG seller, the Tollway is a compute-, storage-, edge-, and cybersecurity-rich account whose buying is gated by board approval and the Illinois Procurement Code.",
+
+  "budget": {
+    "intro": "The Tollway's December 2025 board action set a 2026 budget of $1.79 billion in revenue covering operations, maintenance, debt service, and capital. Of that, $1.26 billion is capital and roughly $98 million is the Information Technology operating line — a sizable, self-funded technology spend that does not depend on state general revenue. A much larger commitment is queued: the proposed 15-year, $26.5B 'Driving Connections' program (2027–2042), which would be funded in part by the first toll increase since 2012.",
+    "stats": [
+      { "value": "$1.79B", "label": "2026 total budget", "note": "Board-approved Dec 2025; operations, maintenance, debt service, capital" },
+      { "value": "$1.26B", "label": "2026 capital", "note": "Includes ~$374M systemwide roadway/bridge repair; funds Move Illinois / Bridging the Future" },
+      { "value": "~$98M", "label": "2026 IT operating", "note": "Modernizing back-office systems and tolling/I-PASS support" }
+    ],
+    "notes": [
+      "Self-funded model: no general state tax revenue — capital is backed by toll income plus revenue bonds (the Tollway planned up to $1B in new bonds in 2026).",
+      "The proposed 15-year, $26.5B 'Driving Connections' plan (2027–2042) would, if board-approved, expand the multi-year capital envelope well beyond current programs.",
+      "Treat exact line items as approximate — confirm against the latest adopted budget and consulting engineers' report before forecasting."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "All-electronic / open-road tolling back office", "summary": "The Tollway runs 100% cashless open-road tolling on I-PASS/E-ZPass plus ANPR plate imaging. The transaction back-office, image processing, and customer systems are revenue-critical and continually modernized — a natural fit for high-availability compute, storage, data, and analytics infrastructure.", "tags": ["Tolling", "Data Center", "Modernization"] },
+    { "name": "ITS and roadway OT", "summary": "Intelligent transportation systems, traffic management, sensors, cameras, and roadside operational technology run the length of the 294-mile system. This edge/OT footprint drives needs in ruggedized edge compute, networking, and OT-aware security.", "tags": ["ITS", "Edge", "OT"] },
+    { "name": "IT and back-office modernization", "summary": "The 2026 budget funds modernization of back-office and business systems supporting I-PASS and open-road tolling, with an ~$98M IT operating line. Refresh cycles span servers, storage, virtualization, and data platforms.", "tags": ["Modernization", "Infrastructure"] },
+    { "name": "Cybersecurity and resilience", "summary": "As critical transportation infrastructure with 24/7 monitoring of its systems and networks, the Tollway must defend both IT and OT environments. The IT/OT convergence trend across toll and transit operators points to growing demand for segmentation, monitoring, and resilient infrastructure.", "tags": ["Cybersecurity", "OT"] }
+  ],
+
+  "procurement": {
+    "intro": "The Tollway buys under the Illinois Procurement Code, and contract awards require Board of Directors approval. Non-construction goods and services (where most IT/technology buys sit) flow through state procurement systems; construction and professional engineering follow separate IDOT/CDB and QBS rules. Vendors register and transact through the state's electronic procurement tooling.",
+    "vehicles": [
+      { "name": "Illinois Procurement Code (goods & services)", "detail": "Non-construction supplies and services — including IT hardware, software, and services — are solicited and awarded under the state procurement code and JCAR rules. This is the primary path for technology buys." },
+      { "name": "BidBuy / Illinois Procurement Gateway (IPG)", "detail": "State e-procurement platforms: vendors register and complete required forms in the IPG and respond to solicitations and notices of award posted in BidBuy." },
+      { "name": "Board of Directors approval", "detail": "Award recommendations must be approved by the 11-member Tollway Board; bidders are notified after the board acts. Board cadence and committee review shape deal timing." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Cassaundra Rouse", "title": "Executive Director", "note": "Top executive over the 294-mile system and ~1,400 staff; owns day-to-day direction and the relationship that anchors any strategic motion." },
+    { "name": "Michael Shay", "title": "Chief Information Officer", "note": "Inaugural CIO; leads Information Technology and Business Systems — the central buying center for compute, storage, data, tolling back-office, and IT modernization." },
+    { "name": "Cathy Williams", "title": "Chief Financial Officer", "note": "Oversees financial operations and the agency's ~$15B long-term financial plan; key on capital funding and bond-backed program spend." },
+    { "name": "Information security function (under IT)", "title": "Cybersecurity / CISO role", "note": "The Tollway runs 24/7 security monitoring, but a CISO is not publicly named as a separate executive — security appears to sit within IT under the CIO. Confirm the current owner directly." },
+    { "name": "Board of Directors (11 members)", "title": "Governing body", "note": "Approves contracts, budgets, and capital programs. Governor-appointed; the gate every significant award must clear." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "Tollway proposes 15-year, $26.5B 'Driving Connections' capital plan with first toll hike since 2012", "impact": "If board-approved, a multi-year capital surge (2027–2042) funded by ~45-cent passenger and ~30% commercial toll increases starting Jan 1, 2027 — a long-horizon expansion of program spend and technology demand.", "tags": ["Capital", "Funding"] },
+    { "date": "2025-12", "title": "Board approves $1.79B 2026 budget with $1.26B in capital", "impact": "Sets the spending envelope, including the ~$98M IT operating line and back-office/tolling modernization — the near-term budget Dell opportunities map to.", "tags": ["Budget"] },
+    { "date": "2025-12", "title": "2026 program advances O'Hare access via Elgin O'Hare Western Access (I-490)", "impact": "Major corridor build-out adds ITS, tolling, and roadside OT scope across new infrastructure.", "tags": ["Capital", "ITS"] }
+  ],
+
+  "dellActions": [
+    "Map the IT buying center under CIO Michael Shay and lead with high-availability compute, storage, and data infrastructure for the all-electronic tolling back office.",
+    "Position edge and ruggedized infrastructure plus OT-aware security for the 294-mile ITS and roadside operational-technology footprint.",
+    "Confirm Dell's standing on the relevant Illinois Procurement Code / BidBuy vehicles and ensure vendor registration in the IPG so awards can flow without delay.",
+    "Time engagement to the board calendar and the FY2026 IT/modernization line — and track the proposed $26.5B 'Driving Connections' plan as a multi-year pipeline if it clears the board.",
+    "Clarify who owns cybersecurity (CISO function under IT) and bring an IT/OT convergence story — segmentation, monitoring, and resilient infrastructure for critical revenue and safety systems."
+  ],
+
+  "sources": [
+    { "label": "Illinois Tollway — Executive Staff", "url": "https://agency.illinoistollway.com/about/executive-staff" },
+    { "label": "Illinois Tollway — 2026 Budget Approved (press release)", "url": "https://agency.illinoistollway.com/documents/d/guest/2026-budget-approved" },
+    { "label": "Illinois Tollway — Capital Programs", "url": "https://agency.illinoistollway.com/projects/capital-programs" },
+    { "label": "Illinois Tollway — Driving Connections", "url": "https://agency.illinoistollway.com/drivingconnections" },
+    { "label": "Illinois Tollway — Doing Business / Goods and Services", "url": "https://agency.illinoistollway.com/doing-business/goods-and-services" },
+    { "label": "WQAD — Tollway board approves $1.79B budget for 2026", "url": "https://www.wqad.com/article/travel/illinois-tollway-board-approves-179b-budget-2026-provide-in-and-out-access-to-ohare-airport/526-55ba439e-13a4-4467-ae3f-1b0fef090330" },
+    { "label": "NBC Chicago — Tollway proposes toll increases for the first time in a decade ($26.5B plan)", "url": "https://www.nbcchicago.com/news/local/illinois-tollway-proposes-toll-increases-for-the-first-time-in-a-decade/3950757/" }
+  ]
+}

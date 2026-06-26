@@ -1,0 +1,84 @@
+{
+  "state": "new-york",
+  "stateName": "New York",
+  "type": "County",
+  "name": "Suffolk County, New York",
+  "slug": "suffolk-county-new-york",
+  "hq": "Hauppauge, NY",
+  "updated": "2026-06-22",
+  "tagline": "One of New York's largest counties (~1.5M residents) on Long Island — its central IT is the Department of Information Technology (DoIT), and the account is defined by the multi-year cyber rebuild and resilience push that followed the September 2022 ransomware attack.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Large Long Island county (~1.5M)" },
+    { "label": "Central IT", "value": "Dept of Information Technology (DoIT)" },
+    { "label": "2026 budget", "value": "~$4.3B (recommended)" },
+    { "label": "Defining theme", "value": "Post-ransomware cyber rebuild" }
+  ],
+
+  "overview": "Suffolk County is one of New York State's largest counties — roughly 1.5 million residents across eastern Long Island — and a major local-government technology buyer in its own right. Central IT is delivered by the county Department of Information Technology (DoIT), led by a CIO / IT Commissioner appointed by the County Executive. The account is best understood through the lens of the September 2022 ransomware attack: the AlphV/BlackCat intrusion (traced to a Log4j exploit in the County Clerk's office in 2021) crippled police dispatch, took the county's main website offline for months, forced more than 10,000 workers off email and onto pen-and-paper, and exposed personal data on hundreds of thousands of residents and employees. A special legislative investigation found there had been no countywide CISO, no incident-response plan, and fragmented IT teams. The fallout reset the county's technology posture: under County Executive Ed Romaine (took office January 2024) the county has hired a CIO/DoIT Commissioner, funded an internal CISO plus a 24/7 virtual CISO, and pursued infrastructure modernization and cloud migration. For a Dell SLG seller, Suffolk is a cyber-resilience-and-modernization account where security, infrastructure refresh, and recovery readiness are the durable demand drivers.",
+
+  "budget": {
+    "intro": "Suffolk County is a direct spender, not a procurement conduit — its leverage is its own operating budget and capital program. County Executive Romaine presented a ~$4.3B recommended 2026 operating budget; IT and cybersecurity sit inside that as a deliberately funded priority following the 2022 attack, including funding for an internal CISO and a virtual CISO. The fully loaded cost of the ransomware recovery has been documented at roughly $25.7M, well above early estimates.",
+    "stats": [
+      { "value": "~$4.3B", "label": "2026 recommended operating budget", "note": "Presented by County Executive Romaine in fall 2025; confirm the enacted/adopted figure" },
+      { "value": "~$25.7M", "label": "Ransomware recovery cost", "note": "Documented multi-year recovery spend, far above the ~$5.4M cited in the immediate aftermath" },
+      { "value": "~1.5M", "label": "Residents served", "note": "Scale of the county DoIT supports across departments, police, and public services" }
+    ],
+    "notes": [
+      "IT and cyber funding is a named priority in recent budgets — the 2025 budget added an internal CISO plus a 24/7 virtual CISO for redundancy, a direct response to the gaps the 2022 attack exposed.",
+      "The largest functional budgets (police, health, social services) sit with those departments; DoIT is the central technology and security backbone serving them.",
+      "Figures here reflect the recommended budget and published recovery documentation — confirm the adopted 2026 totals and any IT/cyber line items against the final budget."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Post-ransomware cyber rebuild & resilience", "summary": "The central program: standing up countywide cybersecurity governance the 2022 attack found missing — an internal CISO plus a 24/7 virtual CISO for redundancy, incident-response capability, and a hardened security posture across DoIT-served departments. Security, recovery readiness, and resilience are the durable demand drivers for this account.", "tags": ["Cybersecurity", "Resilience"] },
+    { "name": "Financial/ERP system modernization to cloud (CGI Advantage)", "summary": "The county upgraded and migrated its CGI Advantage ERP financial management system to CGI Advantage Cloud (completed around April 2026), partnering with the Comptroller and County Executive's office. The county plans to integrate additional financial and administrative functions on the cloud foundation over time — an ongoing modernization track.", "tags": ["Cloud", "Modernization"] },
+    { "name": "Infrastructure modernization & cyber resilience", "summary": "Beyond the financial system, the county has committed to modernizing technology infrastructure and bolstering cyber resilience — infrastructure refresh, secure architecture, and transitioning core systems toward modern, resilient environments. A natural fit for infrastructure, security, and recovery-readiness conversations.", "tags": ["Infrastructure", "Modernization"] },
+    { "name": "DoIT governance & CISO function maturation", "summary": "The legislative post-mortem flagged fragmented IT teams and no central security leadership. Maturing DoIT governance — a named CIO/Commissioner, a standing CISO function, and consolidated security operations — is an ongoing organizational effort that shapes how and through whom technology decisions get made.", "tags": ["Governance", "Cybersecurity"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to Suffolk County runs through its centralized purchasing plus the cooperative vehicles New York local governments are allowed to use. The county's Office of Central Procurement administers commodity buys, and the county explicitly recognizes piggybacking on established cooperative contracts — most importantly NYS OGS centralized contracts — so confirm Dell's coverage on those vehicles first.",
+    "vehicles": [
+      { "name": "Suffolk County Central Procurement", "detail": "The county's Office of Central Procurement administers commodity, technology, and services purchases through centralized procedures — the direct path for county buys and the office to register and engage with." },
+      { "name": "NYS OGS centralized contracts", "detail": "Suffolk recognizes piggybacking on NYS Office of General Services centralized contracts; authorized users can issue a purchase order referencing the OGS contract. The primary cooperative vehicle to confirm Dell coverage and scope on." },
+      { "name": "Cooperative / piggyback contracts", "detail": "The county may use national and regional cooperative purchasing contracts (e.g., GSA, U.S. Communities) when Central Purchasing finds it consistent with county guidelines and in the county's best interest — an alternate route to avoid a standalone RFP." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Ed Romaine", "title": "Suffolk County Executive", "note": "Took office January 2024; set the post-attack technology and cyber agenda, including funding the CISO roles. Sets budget priorities — the top political relationship for the account." },
+    { "name": "John McCaffrey", "title": "Chief Information Officer / DoIT Commissioner", "note": "Appointed by Romaine in 2024 to lead the Department of Information Technology. Background spans IT strategy, local-government finance, and information-security management — the central technology buying relationship." },
+    { "name": "Chief Information Security Officer (CISO)", "title": "Countywide cybersecurity", "note": "A role created in direct response to the 2022 attack (internal CISO plus a 24/7 virtual CISO for redundancy). The security buying center and a funded growth area — confirm the current named officeholder." },
+    { "name": "Office of Central Procurement", "title": "County purchasing & contracts", "note": "Administers centralized procurement and cooperative/piggyback buys — the operational path onto county and OGS contracts." },
+    { "name": "Suffolk County Comptroller", "title": "Fiscal oversight & ERP owner", "note": "Co-sponsored the CGI Advantage ERP cloud migration; a stakeholder in financial-system modernization decisions." }
+  ],
+
+  "news": [
+    { "date": "2026-04", "title": "County completes CGI Advantage ERP migration to cloud", "impact": "Financial management system upgraded and moved to CGI Advantage Cloud with a stated plan to add more functions over time — signals a continuing cloud/modernization track to align infrastructure and security plays to.", "tags": ["Cloud", "Modernization"] },
+    { "date": "2025-09", "title": "Romaine presents ~$4.3B recommended 2026 operating budget", "impact": "Sets the 2026 spending envelope that IT and cyber funding sit inside; confirm adopted totals and any IT/cyber line items for forecasting.", "tags": ["Budget"] },
+    { "date": "2024-09", "title": "2025 budget funds internal CISO plus 24/7 virtual CISO", "impact": "Codifies the post-attack security posture with redundant CISO coverage — a durable, leadership-backed security buying center.", "tags": ["Cybersecurity", "Budget"] },
+    { "date": "2024-09", "title": "Legislative committee issues final report on the 2022 ransomware attack", "impact": "Documents the root causes (no CISO, no IR plan, fragmented IT) driving the rebuild — useful framing for resilience and recovery-readiness conversations.", "tags": ["Cybersecurity"] },
+    { "date": "2024-01", "title": "Ed Romaine takes office as County Executive; names John McCaffrey CIO/DoIT Commissioner", "impact": "New administration and a named central IT leader reset the relationship map — engage the new technology leadership early.", "tags": ["Leadership"] }
+  ],
+
+  "dellActions": [
+    "Lead with cybersecurity and cyber-resilience — Suffolk is the textbook post-ransomware account; tie infrastructure, security, and recovery-readiness offerings to the funded CISO function and the 2022 attack's documented gaps.",
+    "Confirm Dell coverage and scope on NYS OGS centralized contracts and engage Suffolk's Office of Central Procurement — the county explicitly buys via OGS piggyback, the highest-leverage access path.",
+    "Position Dell ISG and infrastructure refresh against the modernization track (secure architecture, resilient infrastructure) the county has committed to alongside its cloud migration.",
+    "Build the relationship map around the Romaine administration and CIO/DoIT Commissioner John McCaffrey, and identify the current CISO as the security buying center.",
+    "Track the adopted 2026 budget and any IT/cyber line items for infrastructure and security signals — and frame Dell as complementary to the in-flight CGI Advantage cloud ERP rather than a competing platform."
+  ],
+
+  "sources": [
+    { "label": "Suffolk County Government — Office of Central Procurement", "url": "https://suffolkcountyny.gov/Departments/Office-of-Central-Procurement" },
+    { "label": "Cybersecurity Dive — Suffolk County ransomware attack linked to lack of planning, ignored warnings", "url": "https://www.cybersecuritydive.com/news/suffolk-county-ignored-threat-warnings/727352/" },
+    { "label": "The Record — Ransomware that forced a NY county back to pen and paper began in 2021", "url": "https://therecord.media/suffolk-county-new-york-ransomware-investigation" },
+    { "label": "Messenger Papers — County Legislature issues final report on cyber attack", "url": "https://messengerpapers.com/2024/09/county-legislature-issues-final-report-on-cyber-attack/" },
+    { "label": "The Suffolk County News — Proposed county budget shores up cybersecurity (CISO + virtual CISO)", "url": "https://www.suffolkcountynews.net/stories/proposed-county-budget-shores-up-cybersecurity,95881" },
+    { "label": "Long Island Life & Politics — Romaine presents 2026 recommended operating budget", "url": "https://lilifepolitics.com/news/long-island-news/romaine-presents-2026-recommended-operating-budget/" },
+    { "label": "CGI — Suffolk County, NY successfully upgrades financial management system with CGI Advantage Cloud", "url": "https://www.cgi.com/us/en-us/news/cgi-advantage/suffolk-county-new-york-successfully-upgrades-financial-management-system" },
+    { "label": "NYS OGS — Centralized Contracts", "url": "https://ogs.ny.gov/procurement/ogs-centralized-contracts" }
+  ]
+}

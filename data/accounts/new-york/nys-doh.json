@@ -1,0 +1,80 @@
+{
+  "state": "new-york",
+  "stateName": "New York",
+  "type": "State Agency",
+  "name": "New York State Dept of Health",
+  "slug": "nys-doh",
+  "hq": "Albany, NY",
+  "updated": "2026-06-22",
+  "tagline": "New York's public-health and Medicaid agency — it runs one of the largest state Medicaid programs in the country and the data, claims, and eligibility systems behind it, making it one of the heaviest health-IT demand centers in state government.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Public health + Medicaid" },
+    { "label": "DOH Medicaid (FY2027)", "value": "~$40B" },
+    { "label": "Core claims system", "value": "eMedNY (MMIS)" },
+    { "label": "IT delivery", "value": "Largely via NYS ITS" }
+  ],
+
+  "overview": "The New York State Department of Health (DOH) is the state's lead agency for public health, healthcare regulation, and the Medicaid program — and by virtue of Medicaid it is one of the largest single line items in the entire state budget. DOH oversees disease surveillance, health-facility oversight, the state's vital records and registries, and the Medicaid program that covers roughly 7+ million New Yorkers. That mission rides on heavy-duty technology: the eMedNY Medicaid Management Information System (MMIS) that processes claims and payments, large public-health and health-data platforms, and the eligibility and enrollment systems New Yorkers use to access coverage. Most of DOH's enterprise IT is delivered through the consolidated NYS Office of Information Technology Services (ITS) rather than a standalone DOH IT shop, so the buying picture spans both the agency's program offices and the central ITS organization. For a Dell SLG seller, DOH is best understood as one of New York's largest health-data and Medicaid-systems buyers — a source of sustained demand for compute, storage, data platforms, security, and modernization, much of it routed through ITS and the state's centralized OGS contracts.",
+
+  "budget": {
+    "intro": "DOH's budget is dominated by Medicaid, which makes it one of the biggest spending agencies in New York. In the FY2026–27 enacted budget, DOH Medicaid is projected near $40B (state reporting cited ~16% growth, though much of that reflects a managed-care-organization tax mechanism; underlying growth was closer to ~7.5%). Technology spend is a smaller slice of that total and is largely delivered and procured through NYS ITS and OGS rather than appearing as a discrete DOH IT line.",
+    "stats": [
+      { "value": "~$40B", "label": "DOH Medicaid (FY2027)", "note": "Projected DOH Medicaid for FY2026–27; growth partly inflated by the MCO tax mechanism" },
+      { "value": "7M+", "label": "Medicaid enrollees", "note": "Approximate New Yorkers covered by Medicaid — the scale driving eligibility/claims systems" },
+      { "value": "$1.5B", "label": "New Medicaid facility funding", "note": "FY2027 enacted; hospitals (~$706M), nursing homes (~$480M), FQHCs (~$80M), assisted living (~$20M)" }
+    ],
+    "notes": [
+      "Medicaid figures are large and move with federal match and the MCO-tax mechanism — treat the ~$40B as program scale, not IT spend, and confirm against the enacted FY2027 budget bill (Health & Mental Hygiene, enacted May 28, 2026).",
+      "DOH's enterprise IT is largely delivered and funded through NYS ITS, so DOH technology demand often shows up in the ITS relationship and OGS contracts rather than as a standalone DOH appropriation line.",
+      "Health-data and Medicaid-systems work carries strict HIPAA / PHI and state security obligations — a structural factor in any data, cloud, or storage play."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Medicaid eligibility modernization (MECM)", "summary": "DOH is running a multi-year effort to modernize Medicaid eligibility and enrollment — moving toward a centrally administered, consumer-centric model and a modern Medicaid Eligibility and Client Management System (MECM). It's framed as a foundation for future DOH IT projects, which makes it a strategic platform and infrastructure opportunity.", "tags": ["Medicaid", "Modernization"] },
+    { "name": "eMedNY / MMIS claims platform", "summary": "eMedNY is the state's Medicaid Management Information System — real-time eligibility verification, claims processing, and payments at very large scale, long operated under a system-integrator contract (GDIT). Any compute, storage, data, or modernization tied to MMIS is high-value and long-lived.", "tags": ["Medicaid", "Data Systems"] },
+    { "name": "Provider Services Portal (PSP)", "summary": "DOH is rolling out an online provider enrollment portal (PSP) to modernize the provider-enrollment process — part of the broader shift from paper/legacy workflows to digital systems, with associated application, data, and infrastructure needs.", "tags": ["Modernization", "Digital Services"] },
+    { "name": "Public-health data & security platforms", "summary": "DOH runs large public-health surveillance, registry, and vital-records systems carrying sensitive PHI. Data-platform modernization, resilience, and cybersecurity for these systems are recurring demand — typically delivered through ITS and subject to state security standards.", "tags": ["Health Data", "Cybersecurity"] }
+  ],
+
+  "procurement": {
+    "intro": "Buying at DOH runs through three overlapping paths, and the right one depends on the program. Confirm Dell coverage on the statewide OGS centralized contracts first; recognize that much of DOH's enterprise IT is delivered and bought through NYS ITS; and watch for large agency-specific RFPs on the Medicaid systems (eMedNY/MMIS, MECM eligibility) where DOH procures directly.",
+    "vehicles": [
+      { "name": "OGS centralized contracts", "detail": "The NYS Office of General Services runs the statewide centralized contracts most agencies, including DOH, buy technology through — the primary vehicle to confirm Dell scope on." },
+      { "name": "NYS ITS delivery", "detail": "Because DOH's enterprise IT is largely delivered by consolidated ITS, infrastructure, data-center, cloud, and security buys for DOH often route through the ITS relationship rather than DOH alone." },
+      { "name": "DOH agency RFPs (Medicaid systems)", "detail": "Large Medicaid-systems work — MMIS/eMedNY, MECM eligibility modernization, provider portals — is often procured via dedicated DOH solicitations with system integrators; track these for infrastructure and data-platform pull-through." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Dr. James V. McDonald", "title": "Commissioner of Health (NYS DOH)", "note": "Leads the agency, public-health strategy, and Medicaid program direction — the top program relationship; sets the priorities IT investment follows." },
+    { "name": "DOH Office of Health Insurance Programs (Medicaid)", "title": "Medicaid program & systems owner", "note": "Owns the Medicaid program and the systems behind it (eMedNY/MMIS, MECM eligibility) — the buying center for the largest health-data and claims-systems work." },
+    { "name": "Dru Rai", "title": "NYS CIO & ITS Director", "note": "Runs consolidated state IT delivery for DOH and 50+ agencies under a 'singular service provider' model — much DOH enterprise IT buying flows through ITS, so this is a key cross-agency relationship." },
+    { "name": "DOH IT / health-IT leadership (via ITS)", "title": "Agency technology delivery", "note": "DOH technology is largely delivered through embedded/dedicated ITS support rather than a fully standalone DOH CIO shop — confirm the current health-IT delivery lead and reporting line before forecasting." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "FY2026–27 budget enacted; DOH Medicaid projected near $40B", "impact": "Confirms DOH as one of the largest state spending agencies and funds $1.5B in new facility money — durable scale behind Medicaid systems and health-data demand. Tie infrastructure/data plays to the funded program direction.", "tags": ["Budget", "Medicaid"] },
+    { "date": "2026-04", "title": "DOH continues Medicaid eligibility modernization (MECM) and provider-portal rollout", "impact": "Signals a multi-year platform-modernization runway across eligibility and provider enrollment — position compute, storage, data-platform, and security as the foundation layer.", "tags": ["Modernization", "Medicaid"] },
+    { "date": "2026-02", "title": "Commissioner McDonald continues to lead DOH through FY2027 budget cycle", "impact": "Stable program leadership at the top of the health and Medicaid agenda — align the account map to the Commissioner's public-health and affordability priorities.", "tags": ["Leadership"] },
+    { "date": "2026-01", "title": "FY2027 Executive Budget proposes ~$38.2B for DOH Medicaid", "impact": "Sets the starting scale later enacted near $40B — early visibility into the program's growth and the systems load it drives.", "tags": ["Budget"] }
+  ],
+
+  "dellActions": [
+    "Treat DOH as one of New York's largest health-data and Medicaid-systems buyers — target the Medicaid program office (eMedNY/MMIS, MECM eligibility) where the heaviest compute, storage, and data demand sits.",
+    "Coordinate the DOH motion with the NYS ITS account: much of DOH's enterprise IT is delivered and procured through ITS, so the highest-leverage path often runs through the central ITS relationship plus OGS contracts.",
+    "Confirm Dell coverage and scope on NYS OGS centralized contracts, and track large DOH/Medicaid RFPs (MMIS, eligibility modernization, provider portal) for infrastructure and data-platform pull-through.",
+    "Lead with secure, HIPAA/PHI-grade data platforms, storage, and cyber resilience for public-health and Medicaid systems — security and compliance are gating factors, not afterthoughts.",
+    "Build the relationship map around Commissioner McDonald's program priorities and the Medicaid systems owners, and confirm the current DOH/ITS health-IT delivery lead before forecasting."
+  ],
+
+  "sources": [
+    { "label": "NYS DOH — Office of the Commissioner", "url": "https://www.health.ny.gov/commissioner/" },
+    { "label": "NYS DOH — Continuing the Medicaid Eligibility Modernization (MECM)", "url": "https://www.health.ny.gov/health_care/medicaid/program/medicaid_modernization/" },
+    { "label": "GDIT — eMedNY System (New York MMIS)", "url": "https://www.gdit.com/perspectives/case-studies/emedny-system-elevates-medicaid-payment-efficiency-providing-healthcare/" },
+    { "label": "City & State NY — What's in the FY27 New York State budget", "url": "https://www.cityandstateny.com/policy/2026/05/heres-whats-fy-27-new-york-state-budget/413729/" },
+    { "label": "Empire Center — Healthcare Highlights in the New State Budget", "url": "https://www.empirecenter.org/publications/healthcare-highlights-in-the-new-state-budget/" },
+    { "label": "NYS Division of Budget — Health, Department of (FY2027 Appropriations)", "url": "https://www.budget.ny.gov/pubs/archive/fy27/ex/agencies/appropdata/HealthDepartmentof.html" }
+  ]
+}

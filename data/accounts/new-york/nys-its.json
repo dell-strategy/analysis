@@ -1,0 +1,82 @@
+{
+  "state": "new-york",
+  "stateName": "New York",
+  "type": "State Agency",
+  "name": "NYS Office of Information Technology Services (ITS)",
+  "slug": "nys-its",
+  "hq": "Albany, NY",
+  "updated": "2026-06-22",
+  "tagline": "New York's consolidated executive-branch IT agency — one of the largest single IT organizations in U.S. government, running enterprise infrastructure, cloud, cybersecurity, and AI as the 'singular service provider' for 50+ state agencies.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Consolidated state IT agency" },
+    { "label": "Agencies served", "value": "50+" },
+    { "label": "All-funds budget", "value": "~$1.2B" },
+    { "label": "Cloud direction", "value": "Hybrid + AWS enterprise deal" }
+  ],
+
+  "overview": "The NYS Office of Information Technology Services (ITS) is New York's consolidated executive-branch IT agency, created in 2012 to merge dozens of fragmented agency IT shops into a single enterprise organization — one of the largest consolidated public-sector IT operations in the country. ITS delivers infrastructure, networking, end-user services, application development, cybersecurity, and increasingly AI for the executive branch's 50+ agencies. Under State CIO and ITS Director Dru Rai (appointed October 2023), the agency is executing a 'singular service provider' strategy: positioning ITS as the central buyer and operator of technology for all state agencies, moving toward a Dedicated Agency service model that pairs centralized ITS support with embedded agency subject-matter experts. ITS runs a hybrid environment — it maintains the state's on-premises data center while layering in public cloud, most notably through a June 2026 enterprise agreement with AWS for cloud and AI services. For a Dell SLG seller, ITS is the dominant enterprise account in New York: it controls statewide infrastructure refresh, the on-prem data-center footprint, and the cyber and AI buildout for the bulk of state government.",
+
+  "budget": {
+    "intro": "ITS is a large direct spender and operator, not just a procurement conduit — it runs the state's enterprise infrastructure and recovers cost from served agencies. Its most recently documented all-funds appropriation is roughly $1.2B, sitting inside a state all-funds budget in the ~$260B range for FY2027. Recent budgets have grown the agency specifically to fund cybersecurity and AI and to add staff that displaces contractor spend.",
+    "stats": [
+      { "value": "~$1.2B", "label": "ITS all-funds budget", "note": "Most recently documented all-funds appropriation; confirm the enacted FY2027 figure" },
+      { "value": "+295 FTEs", "label": "Recent staffing add", "note": "Proposed ITS headcount growth (~7%+) to support cyber/AI and reduce contractor reliance" },
+      { "value": "~$260B", "label": "State all-funds budget", "note": "FY2027 scale; the pool ITS and agency IT draw from" }
+    ],
+    "notes": [
+      "ITS funds much of its delivery through cost recovery / chargeback to the agencies it serves, in addition to its appropriation — so the served-agency budgets are part of the real spend picture.",
+      "Recent budget increases have been tied explicitly to cybersecurity expansion (Joint Security Operations Center), AI initiatives, and hiring state staff in place of private contractors.",
+      "Confirm the enacted FY2027 ITS appropriation against the final budget — figures here reflect the most recently published documentation and may shift on enactment."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "AWS enterprise cloud & AI agreement", "summary": "In June 2026 ITS announced a three-year enterprise agreement making AWS cloud and AI services available to participating state agencies at below-independent-procurement cost, part of an enterprise-agreement strategy ITS credits with ~$58M in savings. ITS frames this as additive to a hybrid model — public cloud alongside the retained on-prem data center.", "tags": ["Cloud", "AI"] },
+    { "name": "'Singular service provider' / Dedicated Agency model", "summary": "Rai's strategy positions ITS as the single technology provider for all NYS agencies, transitioning to a Dedicated Agency service model that pairs centralized ITS delivery with embedded agency experts. This concentrates buying authority — the enterprise relationship is with ITS, not the individual agencies.", "tags": ["Modernization", "Operating Model"] },
+    { "name": "AI governance & adoption", "summary": "ITS appointed a Chief AI Officer (Eleonore Fournier-Tombs) and is standing up statewide AI governance and adoption alongside the state's broader AI investments (e.g., Empire AI). AI infrastructure, data, and governance tooling are an emerging demand center.", "tags": ["AI", "Governance"] },
+    { "name": "Cybersecurity expansion", "summary": "Under CISO Chris DeSain, ITS continues to expand statewide cyber operations — including the Joint Security Operations Center — protecting state employees, systems, and devices. Recent budgets have specifically funded cyber staffing and tooling.", "tags": ["Cybersecurity", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "Selling to ITS runs through two channels: New York's centralized OGS contracts (the statewide procurement backbone most agencies buy off) and ITS's own enterprise agreements. ITS's 'singular service provider' posture and its enterprise-deal strategy (e.g., the AWS agreement) mean the highest-leverage path is the central ITS enterprise relationship, not agency-by-agency selling.",
+    "vehicles": [
+      { "name": "OGS centralized contracts", "detail": "The NYS Office of General Services runs the statewide centralized contracts most agencies (including ITS) purchase technology through — the primary vehicle to confirm Dell coverage and scope on." },
+      { "name": "ITS enterprise agreements", "detail": "ITS negotiates statewide enterprise agreements (the AWS cloud/AI deal is the template) that make a vendor's offerings available across participating agencies at enterprise pricing — the strategic path to scale." },
+      { "name": "ITS as central buyer", "detail": "Because ITS is consolidating to a singular-service-provider model, infrastructure, data-center, and as-a-service buys for 50+ agencies increasingly route through ITS rather than each agency individually." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Dru Rai", "title": "NYS Chief Information Officer & ITS Director", "note": "Appointed Oct 2023; 30+ yrs in IT. Owns the statewide tech strategy and the 'singular service provider' vision — the top relationship for the ITS account." },
+    { "name": "Jenson Jacob", "title": "Executive Deputy CIO", "note": "Appointed Sept 2025; prior Chief Digital Transformation Officer. Day-to-day execution of the consolidation and delivery model." },
+    { "name": "Eleonore Fournier-Tombs", "title": "Chief AI Officer", "note": "Leads statewide AI governance and adoption — the buying center for AI strategy, data governance, and AI-infrastructure direction." },
+    { "name": "Chris DeSain", "title": "Chief Information Security Officer (CISO)", "note": "Owns statewide cybersecurity, including the Joint Security Operations Center — the security buying center and a funded growth area." },
+    { "name": "Stacy Panis", "title": "Chief of Staff", "note": "Nearly three decades across NYS agencies since ITS's 2012 creation; operational and organizational continuity." }
+  ],
+
+  "news": [
+    { "date": "2026-06", "title": "ITS announces three-year enterprise cloud & AI agreement with AWS", "impact": "Centralized cloud/AI procurement for participating agencies at enterprise pricing; reinforces hybrid model and the 'singular service provider' posture. Position Dell ISG/AI infrastructure as the on-prem and hybrid complement, not a competing silo.", "tags": ["Cloud", "AI"] },
+    { "date": "2026-02", "title": "CIO Dru Rai testifies on FY2027 budget; ITS staffing and cyber/AI priorities", "impact": "Signals continued investment in cyber, AI, and state-staff growth over contractors — durable, leadership-backed demand at the enterprise level.", "tags": ["Budget", "Leadership"] },
+    { "date": "2025-09", "title": "Jenson Jacob named Executive Deputy CIO", "impact": "Adds senior delivery leadership behind Rai's consolidation strategy — map the relationship early.", "tags": ["Leadership"] },
+    { "date": "2025-01", "title": "Proposed budget adds ~295 ITS FTEs for cyber and AI", "impact": "Headcount growth (~7%+) aimed at reducing contractor reliance and expanding cyber/AI capacity — a structurally growing enterprise buyer.", "tags": ["Budget", "Cybersecurity"] }
+  ],
+
+  "dellActions": [
+    "Treat ITS as the enterprise account for New York's executive branch — the 'singular service provider' model concentrates 50+ agencies' infrastructure and data-center buying into one relationship.",
+    "Lead with Dell ISG and AI-infrastructure for the retained on-prem data center and hybrid environment; position it as the on-prem/hybrid complement to the new AWS cloud agreement rather than a competitor to it.",
+    "Confirm Dell coverage and scope on NYS OGS centralized contracts — the statewide vehicle ITS and agencies buy through.",
+    "Engage the AI and cyber buying centers (Chief AI Officer Fournier-Tombs; CISO DeSain) tied to funded AI and Joint Security Operations Center growth.",
+    "Build the executive relationship map around Dru Rai and Jenson Jacob and track the enacted FY2027 ITS budget for infrastructure and staffing signals."
+  ],
+
+  "sources": [
+    { "label": "NYS ITS — Enterprise Cloud Services Agreement with AWS (announcement)", "url": "https://its.ny.gov/news/nys-office-information-technology-services-announces-enterprise-cloud-services-agreement" },
+    { "label": "StateScoop — New York's IT office partners with AWS, ~$58M savings", "url": "https://statescoop.com/new-yorks-it-office-partners-with-aws-for-cloud-and-ai-services-strategy-saving-taxpayers-58m/" },
+    { "label": "NYS ITS — Meet the Executive Team", "url": "https://its.ny.gov/meet-executive-team" },
+    { "label": "NYS ITS — Chris DeSain named CISO", "url": "https://its.ny.gov/press-release/nys-its-announces-chris-desain-will" },
+    { "label": "NYS ITS — Eleonore Fournier-Tombs named Chief AI Officer", "url": "https://its.ny.gov/news/new-york-state-office-information-technology-services-appoints-eleonore-fournier-tombs-chief" },
+    { "label": "GovTech — New York's proposed budget would add IT staff for cyber, AI", "url": "https://www.govtech.com/budget-finance/new-yorks-proposed-budget-would-add-it-staff-for-cyber-ai" },
+    { "label": "NYS Division of Budget — ITS Agency Appropriations, FY2027 Executive Budget", "url": "https://www.budget.ny.gov/pubs/archive/fy27/ex/agencies/appropdata/InformationTechnologyServicesOfficeof.html" }
+  ]
+}

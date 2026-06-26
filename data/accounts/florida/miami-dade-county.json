@@ -1,0 +1,80 @@
+{
+  "state": "florida",
+  "stateName": "Florida",
+  "type": "County",
+  "name": "Miami-Dade County, Florida",
+  "slug": "miami-dade-county",
+  "hq": "Miami, FL",
+  "updated": "2026-06-22",
+  "tagline": "Florida's most-populous county (~2.7M residents): a strong-mayor government whose Information Technology Department (ITD) runs enterprise IT for 26 departments, with an AI roadmap that has ranked it among the nation's leading counties for adoption.",
+
+  "snapshot": [
+    { "label": "Role", "value": "Most-populous FL county (~2.7M)" },
+    { "label": "FY25-26 budget", "value": "$12.9B" },
+    { "label": "Central IT", "value": "ITD (~900 staff)" },
+    { "label": "Governance", "value": "Strong-mayor" }
+  ],
+
+  "overview": "Miami-Dade County is the largest county in Florida and one of the largest local governments in the United States, serving roughly 2.7 million residents across Miami and 30+ municipalities. It operates under a strong-mayor / county-commission structure: Mayor Daniella Levine Cava is the elected chief executive who proposes the budget and runs day-to-day operations, with a 13-member Board of County Commissioners as the legislative body. Central technology is delivered by the Information Technology Department (ITD), which supports all 26 county departments with a staff of around 900 covering enterprise applications, network and radio systems, the data center, and cybersecurity. The county has positioned itself as a public-sector AI leader — its AI Roadmap and policy framework have drawn national recognition — and runs sizable enterprise programs (ERP / finance and supply chain, criminal-justice systems) that touch infrastructure, cloud, and security spend. For a Dell SLG seller, Miami-Dade is a marquee county account: a large, modernization-minded buyer where the budget is approved annually by the Commission and most large IT purchases route through the county's central procurement organization.",
+
+  "budget": {
+    "intro": "The Board of County Commissioners adopted a $12.9B FY2025-26 budget in the early hours of Sept. 19, 2025, after closing a roughly $402M shortfall while holding the millage rate flat (total adopted operating and debt millage of 9.5778, no property-tax-rate increase). IT is funded within departmental and capital lines rather than a single published figure; ITD's scale is best read through its ~900-person workforce and the enterprise systems it operates.",
+    "stats": [
+      { "value": "$12.9B", "label": "FY2025-26 adopted budget", "note": "Approved Sept. 18-19, 2025 by the Board of County Commissioners" },
+      { "value": "~$402M", "label": "Shortfall closed", "note": "Deficit bridged in the FY25-26 process; flat millage (9.5778)" },
+      { "value": "~900", "label": "ITD staff", "note": "IT professionals supporting all 26 county departments" }
+    ],
+    "notes": [
+      "There is no single public 'IT budget' line; technology spend is distributed across departmental operating budgets, the multi-year capital plan, and ITD's internal-service charges.",
+      "FY25-26 was a constrained cycle (large shortfall, flat tax rate) — expect scrutiny on new spend and a preference for efficiency, consolidation, and contract-vehicle pricing.",
+      "Budgets are proposed by the Mayor and adopted annually by the Commission, typically finalized in September."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "County AI Roadmap & governance", "summary": "Miami-Dade has published an AI Roadmap and AI policy (approved-tools requirement, mandatory human review) and has been recognized as a leading U.S. county for structured AI adoption. Priority use cases include an AI assistant for public-benefits applications and an HR/benefits chatbot — pull-through for AI infrastructure, data platforms, and security.", "tags": ["AI", "Data"] },
+    { "name": "Enterprise systems modernization (ERP)", "summary": "ITD operates an enterprise resource planning system for finance and supply-chain operations plus large criminal-justice systems spanning many agencies. These platforms anchor ongoing compute, storage, and data-center refresh needs.", "tags": ["Modernization", "Data Center"] },
+    { "name": "Cybersecurity program", "summary": "ITD runs a county-wide cybersecurity program protecting county systems and resident data across 26 departments. A perennial buying center for endpoint, data protection, resilience, and recovery as threats and compliance expectations rise.", "tags": ["Cybersecurity"] },
+    { "name": "Cloud & data-center operations", "summary": "ITD manages the county data center, network, and radio systems and is steadily modernizing toward hybrid cloud and shared services — a fit for infrastructure, as-a-service, and managed-services offerings.", "tags": ["Cloud", "Infrastructure"] }
+  ],
+
+  "procurement": {
+    "intro": "Large Miami-Dade IT buys route through the county's central procurement organization (historically the Internal Services Department; now branded Strategic Procurement), which awards and manages county contracts and cooperative agreements. Solicitations are posted on the county site and via BidSync, and the county also offers cooperative contracts other Florida municipalities and agencies can ride. Confirm Dell's standing on the relevant county contracts and the state/co-op vehicles before forecasting.",
+    "vehicles": [
+      { "name": "Miami-Dade central procurement (ISD / Strategic Procurement)", "detail": "Central agency for acquiring goods and services; awards county contracts and runs the vendor-registration portal. Contact: ISD-VSS@miamidade.gov / (305) 375-5773." },
+      { "name": "Miami-Dade cooperative contracts", "detail": "County-negotiated contracts that other municipalities and agencies can use, and a list of eligible (piggyback) contracts the county itself can buy from." },
+      { "name": "Florida state & national cooperatives", "detail": "Counties commonly leverage State of Florida contracts and national co-ops (e.g., NASPO ValuePoint, Sourcewell, OMNIA) — confirm Dell coverage as alternative paths to a competed RFP." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "Daniella Levine Cava", "title": "Mayor (elected chief executive)", "note": "Strong mayor who proposes the budget and runs operations; sets the AI-forward and modernization agenda. The top executive sponsor for major county technology direction." },
+    { "name": "Carladenise Edwards", "title": "Chief Administrative Officer; Interim Director, ITD", "note": "CAO took on interim leadership of the IT department in mid-2025; key executive relationship while permanent ITD leadership is settled." },
+    { "name": "Margaret Brisbane", "title": "Former CIO & ITD Director (CIO since 2021)", "note": "Built ITD's AI, ERP, and cybersecurity programs; recognized nationally. Confirm her current role — leadership has been in transition." },
+    { "name": "Lars Schmekel", "title": "Chief Information Security Officer (CISO)", "note": "Owns county-wide security policy and the cybersecurity program — the entry point for security, data-protection, and resilience conversations. Verify tenure." },
+    { "name": "Board of County Commissioners", "title": "13-member legislative body", "note": "Adopts the annual budget and approves large contracts; district commissioners influence priorities and procurement awards." }
+  ],
+
+  "news": [
+    { "date": "2025-09", "title": "Commission adopts $12.9B FY2025-26 budget, closing a ~$402M shortfall with flat millage", "impact": "Constrained cycle signals scrutiny on new spend — lead with efficiency, consolidation, and competitively priced contract vehicles.", "tags": ["Budget"] },
+    { "date": "2025-07", "title": "CAO Carladenise Edwards named interim ITD director as Margaret Brisbane transitions", "impact": "Leadership change at the top of central IT — re-map the buying center and confirm who owns each program before forecasting.", "tags": ["Leadership"] },
+    { "date": "2025-01", "title": "Miami-Dade advances 2025-26 AI Roadmap; recognized as a leading county for AI adoption", "impact": "Strong executive appetite for AI creates pull-through for AI infrastructure, data platforms, and security.", "tags": ["AI"] }
+  ],
+
+  "dellActions": [
+    "Map Dell's position on Miami-Dade county contracts and confirm Florida state / national co-op coverage (NASPO ValuePoint, Sourcewell, OMNIA) as the access paths to large buys.",
+    "Lead with AI-ready infrastructure (compute, storage, data platforms) tied to the county's published AI Roadmap and its public-benefits and HR AI use cases.",
+    "Build the security motion with the CISO around endpoint, data protection, and cyber-resilience for a 26-department enterprise.",
+    "Position infrastructure refresh and hybrid-cloud / as-a-service for the data center and ERP modernization, framed around efficiency given the constrained budget.",
+    "Engage early given IT leadership transition — develop both the Mayor's office / CAO executive sponsor and the central procurement organization."
+  ],
+
+  "sources": [
+    { "label": "Miami-Dade County — Information Technology Department Director (bio)", "url": "https://www.miamidade.gov/global/government/biographies/information-technology.page" },
+    { "label": "Miami-Dade County — Artificial Intelligence Roadmap", "url": "https://www.miamidade.gov/ai/" },
+    { "label": "CBS Miami — Miami-Dade commissioners approve $12.9 billion budget", "url": "https://www.cbsnews.com/miami/news/miami-dade-county-commissioners-approve-12-9-billion-budget/" },
+    { "label": "GovTech — Interim Director On Board at Miami-Dade County IT Department", "url": "https://www.govtech.com/workforce/interim-director-on-board-at-miami-dade-county-it-department" },
+    { "label": "Miami-Dade County — Strategic Procurement", "url": "https://www.miamidade.gov/global/strategic-procurement/home.page" },
+    { "label": "Refresh Miami — Q&A with Miami-Dade County's CIO (ITD scale, programs)", "url": "https://refreshmiami.com/news/qa-with-miami-dade-countys-new-cio/" }
+  ]
+}

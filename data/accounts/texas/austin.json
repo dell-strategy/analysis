@@ -1,0 +1,83 @@
+{
+  "state": "texas",
+  "stateName": "Texas",
+  "type": "City",
+  "name": "Austin, Texas",
+  "slug": "austin",
+  "hq": "Austin, TX",
+  "updated": "2026-06-22",
+  "tagline": "Texas's capital city and a major municipal IT buyer — Austin is centralizing technology under Austin Technology Services (formerly CTM), modernizing services with AI and a consolidated platform, and running a $6.3B city budget that includes Austin Energy and a sprawling utility-and-services enterprise.",
+
+  "snapshot": [
+    { "label": "Total city budget (FY26)", "value": "$6.3B" },
+    { "label": "Technology dept budget", "value": "~$166.8M" },
+    { "label": "IT consolidation", "value": "~661 staff, 3 phases" },
+    { "label": "Buying path", "value": "City purchasing + DIR Co-op" }
+  ],
+
+  "overview": "The City of Austin is the government of Texas's capital and fourth-largest city, serving roughly a million residents and operating a $6.3B FY2025-26 budget that spans a traditional general fund plus large enterprise utilities (Austin Energy, Austin Water, the airport, and resource recovery). For a technology seller the central organization is Austin Technology Services (ATS) — the renamed and expanded successor to the Communications & Technology Management (CTM) department — which provides IT to city departments and absorbed information security and innovation functions. The defining story of 2026 is a citywide technology consolidation: directed by City Manager T.C. Broadnax, the city is reorganizing roughly 661 IT positions from across departments under ATS in three phases through late 2027, after consultant reviews found Austin's tech spending high versus peers and flagged 200-plus redundant software tools. Austin is simultaneously a recognized digital-government leader — 7th in the 2025 Digital Cities Survey — with an active agenda in AI governance, service consolidation, cybersecurity, and a smart-city program. Austin buys through its own central purchasing process and cooperative vehicles including the Texas DIR Cooperative Contracts.",
+
+  "budget": {
+    "intro": "Austin's $6.3B FY2025-26 budget is dominated by enterprise utilities, but the general fund (~$1.5B) funds core city services. The technology department's own appropriation grew sharply: Austin Technology Services (ATS) is funded at about $166.8M for FY26, a roughly 14% increase over the prior year's ~$146.5M — a signal of the centralization push, not just normal growth.",
+    "stats": [
+      { "value": "$6.3B", "label": "Total city budget (FY26)", "note": "Adopted; amended Nov 20, 2025 after Prop Q failed. Includes Austin Energy, Austin Water, airport" },
+      { "value": "~$166.8M", "label": "ATS technology budget", "note": "~14% increase over ~$146.5M prior year; ~$111.3M in the Information & Technology Fund" },
+      { "value": "$49M-$142M", "label": "Projected annual savings", "note": "Consultant estimate from eliminating 200+ redundant software tools via consolidation" }
+    ],
+    "notes": [
+      "Within ATS, program-level allocations include roughly $91.8M for core technology services and ~$12.3M for information security; other lines cover the Combined Transportation/Emergency/Communications Center (~$34.3M) and wireless communications (~$21.1M).",
+      "The November 2025 failure of Proposition Q (which would have allowed a higher property tax rate) tightened the general fund and is part of the cost-pressure context driving IT consolidation."
+    ]
+  },
+
+  "initiatives": [
+    { "name": "Citywide technology consolidation under ATS", "summary": "Directed by City Manager T.C. Broadnax, Austin is reorganizing ~661 IT positions from across departments into Austin Technology Services in three phases (Phase 1 ~200 staff delayed to Aug 2026; Phase 2 ~220 in early 2027; Phase 3 ~241 from Austin Energy, Water, and Aviation in late 2027). The driver is a consultant finding of high tech spend and 200+ redundant tools, with $49M-$142M in projected annual savings. The single biggest structural change to track — it concentrates technology decision-making and rationalizes the application/tool estate.", "tags": ["Consolidation", "Modernization"] },
+    { "name": "AI governance and One City virtual assistant", "summary": "Austin piloted IBM's AI governance platform (emphasizing transparency, risk evaluation, and prompt accountability), tested a citywide 'One City' virtual assistant, and deployed generative AI internally for content summarization and staff productivity, with AI applied to streamline building-permit review. A live lane for responsible-AI tooling and AI infrastructure.", "tags": ["AI", "Governance"] },
+    { "name": "Service consolidation and digital experience", "summary": "The 'All Services Hub' integrated six standalone department websites into the main platform, cutting total pages ~40% and redirects from ~3,800 to under 900, with a new translation platform reaching ~87% multilingual accuracy and a 66% rise in open-data portal visits. Part of the digital-transformation agenda CIO Kerrica Laake leads.", "tags": ["Digital Services", "Data"] },
+    { "name": "Cybersecurity modernization", "summary": "Austin migrated to an in-house SIEM platform, reportedly cutting licensing costs by more than 50%, while standing up information security inside ATS. With a ~$12.3M security line and recent CISO turnover, there is active spend in security operations, tooling, and consolidation of risk visibility across the newly centralized estate.", "tags": ["Cybersecurity", "Modernization"] }
+  ],
+
+  "procurement": {
+    "intro": "Austin buys two main ways, and a seller should confirm both. It runs its own central purchasing process (open-market, informal/formal solicitations) requiring vendor registration with NIGP commodity codes, and it uses cooperative contracts — including the Texas DIR Cooperative Contracts — to buy technology at pre-negotiated statewide pricing without a separate RFP.",
+    "vehicles": [
+      { "name": "City of Austin central purchasing", "detail": "Vendors register, assign NIGP commodity codes, receive solicitation notifications, and bid on open-market or formal solicitations. Vendor support: 512-974-2018 / vendor@austintexas.gov. The path for city-specific competitive procurements." },
+      { "name": "Texas DIR Cooperative Contracts", "detail": "As a Texas local government, Austin is an eligible DIR co-op customer and can buy hardware, software, and services off pre-competed statewide contracts. Confirm Dell's DIR coverage is active and correctly scoped — the fastest catalog-style path." },
+      { "name": "Other cooperative contracts", "detail": "Austin also leverages national/cooperative purchasing vehicles (e.g., for catalog goods and services). Confirm which co-ops Dell holds and which Austin actively buys through for a given category." }
+    ]
+  },
+
+  "powerStructure": [
+    { "name": "T.C. Broadnax", "title": "City Manager", "note": "Started May 6, 2024; directing the citywide technology consolidation. The top of the house — the executive owning the centralization mandate and budget priorities." },
+    { "name": "Kerrica Laake", "title": "Chief Information Officer (Austin Technology Services)", "note": "Full-time CIO since ~2024 after serving interim; 30+ years local-government experience, prior deputy CIO and Austin Energy IT director. The primary IT relationship and owner of digital transformation." },
+    { "name": "Jeremiah Clifton", "title": "Interim Chief Information Security Officer", "note": "Elevated to interim CISO (reported early 2026) after prior CISO Brian Gardner's departure; long Austin security tenure across GRC, security architecture, and digital risk. Owns the security agenda amid CISO turnover." },
+    { "name": "Ed Van Eenoo", "title": "Chief Financial Officer", "note": "Presented the consolidation business case and savings figures to Council — the budget/finance gatekeeper for technology investment decisions." }
+  ],
+
+  "news": [
+    { "date": "2026-05", "title": "Austin advances IT consolidation under ATS after pushback; Phase 1 delayed to August 2026", "impact": "~661 IT positions reorganize across three phases through late 2027; CFO cites $49M-$142M in projected annual savings and 200+ redundant tools. Centralizes the buying center — re-map who owns technology decisions.", "tags": ["Consolidation", "Budget"] },
+    { "date": "2026-03", "title": "Jeremiah Clifton named interim CISO after Brian Gardner's departure", "impact": "Security leadership in transition inside ATS — rebuild the CISO relationship and watch for a permanent hire; active SIEM and risk-tooling spend.", "tags": ["Cybersecurity", "Leadership"] },
+    { "date": "2025-11", "title": "Council adopts amended $6.3B FY2025-26 budget after Prop Q fails", "impact": "Tighter general fund (tax rate ~52.4 cents/$100) sharpens cost pressure — the backdrop for consolidation and savings targets that touch the application/tool estate.", "tags": ["Budget"] },
+    { "date": "2025-10", "title": "Austin earns 7th place in the 2025 Digital Cities Survey", "impact": "Recognition for AI governance, service consolidation, and an in-house SIEM (50%+ licensing savings) — signals where modernization spend and appetite are concentrated.", "tags": ["Modernization", "AI"] },
+    { "date": "2025-08", "title": "ATS technology budget set at ~$166.8M for FY26 (~14% increase)", "impact": "A rising central-IT appropriation as the city consolidates — more technology spend flows through one department, an entry point for infrastructure, security, and services.", "tags": ["Budget"] }
+  ],
+
+  "dellActions": [
+    "Map the consolidation first: ATS under CIO Kerrica Laake is becoming the single technology buying center as ~661 staff centralize through late 2027 — align account coverage to ATS rather than scattered department IT, and time engagement to each phase.",
+    "Lead with infrastructure rationalization and tool consolidation: position ISG, hybrid cloud, and managed services against the consultant-flagged 200+ redundant tools and the $49M-$142M savings target — frame Dell as a consolidation enabler, not added spend.",
+    "Engage the security org during CISO transition: with interim CISO Jeremiah Clifton, a ~$12.3M security line, and an in-house SIEM move, bring security-operations, endpoint, and risk-visibility offers that fit a centralizing estate.",
+    "Bring proven AI-governance and AI-infrastructure use cases tied to Austin's IBM-governance pilot, 'One City' assistant, and permit-review automation — show comparable municipal references, not decks.",
+    "Confirm Dell's DIR Cooperative Contract coverage (Austin is an eligible DIR co-op buyer) and register/verify standing in City of Austin central purchasing with the right NIGP codes for catalog and competitive buys."
+  ],
+
+  "sources": [
+    { "label": "City of Austin — FY2025-26 amended $6.3B budget adopted", "url": "https://www.austintexas.gov/news/austin-city-council-approves-amended-fiscal-year-2025-2026-budget" },
+    { "label": "GovTech — Austin City Council increases tech department budget 14 percent", "url": "https://insider.govtech.com/texas/news/austin-city-council-approves-6-3b-budget" },
+    { "label": "Community Impact — Austin moving to consolidate technology employees, services", "url": "https://communityimpact.com/austin/central-austin/government/2026/05/11/austin-moving-to-consolidate-technology-employees-services-after-weeks-of-pushback/" },
+    { "label": "GovTech — Austin wins Digital Cities award for AI governance, modernization efforts", "url": "https://insider.govtech.com/texas/news/austin-wins-digital-cities-award-for-ai-governance-modernization-efforts" },
+    { "label": "GovTech — Austin elevates Jeremiah Clifton to interim CISO after Gardner dismissal", "url": "https://insider.govtech.com/texas/news/austin-elevates-jeremiah-clifton-to-interim-ciso-after-gardner-dismissal" },
+    { "label": "GovTech — Austin, Texas, CIO takes advisory role as interim steps in", "url": "https://www.govtech.com/pcio/austin-texas-cio-takes-advisory-role-as-interim-steps-in" },
+    { "label": "City of Austin — Central Procurement / Purchasing", "url": "https://www.austintexas.gov/purchasing" },
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" },
+    { "label": "City of Austin — Austin Technology Services department", "url": "https://www.austintexas.gov/department/information-technology" }
+  ]
+}
