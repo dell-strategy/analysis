@@ -21,6 +21,9 @@ SLG Focused Accounts.xlsx
 *.tsv
 *.zip
 
+# Local tooling / editor config (not part of the published site)
+.claude/
+
 # OS / editor cruft
 Thumbs.db
 .DS_Store
