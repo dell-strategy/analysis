@@ -3,7 +3,7 @@
   "name": "New Mexico",
   "slug": "new-mexico",
   "region": "Southwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A national-lab HPC powerhouse and a sudden hyperscale AI build-out — New Mexico pairs Sandia and Los Alamos supercomputing with Project Jupiter and Intel's Rio Rancho fabs, all in a leadership-transition year.",
 
   "snapshot": [
@@ -118,20 +118,19 @@
   },
 
   "powerStructure": [
-    { "name": "Michelle Lujan Grisham", "title": "Governor", "org": "State of New Mexico", "note": "Term-limited; 2026 was her final legislative session. Champions Project Jupiter, Intel, and emerging-tech investment. Successor takes office Jan 2027.", "ref": 5 },
+    { "name": "Michelle Lujan Grisham", "title": "Governor", "org": "State of New Mexico", "note": "Term-limited; 2026 was her final legislative session. Champions Project Jupiter, Intel, and emerging-tech investment. Open-seat race set for Nov 2026: Deb Haaland (D, former U.S. Interior Secretary) won the June 2 primary and is favored vs. Greggory Hull (R, ex-Rio Rancho mayor); successor takes office Jan 2027.", "ref": 5 },
     { "name": "Manny Barreras", "title": "Cabinet Secretary & State CIO", "org": "Department of Information Technology (DoIT)", "note": "Appointed by the Governor and Senate-confirmed in September 2024; owns statewide IT direction. Expect a transition after the 2026 election.", "ref": 2 },
     { "name": "Raja Sambandam", "title": "State Chief Information Security Officer", "org": "DoIT", "note": "Leads statewide cybersecurity; prior interim CIO. Key contact for security standards and posture.", "ref": 2 },
     { "name": "State Purchasing Division", "title": "Central Procurement Authority", "org": "General Services Department", "note": "Establishes statewide price agreements and enforces the Procurement Code — gate for state contract motions.", "ref": 3 }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Project Jupiter expands community outreach amid water scrutiny", "impact": "Oracle (confirmed tenant) details a closed-loop cooling system and an ~$165B campus plan while local water concerns grow; reaffirms the marquee southern-NM AI-infrastructure ecosystem and partner/ISG motion, with operations targeted before end of 2026.", "tags": ["Data Centers", "AI"], "ref": 13 },
+    { "date": "2026-06", "title": "Haaland wins Democratic primary for open governor's seat", "impact": "Former U.S. Interior Secretary Deb Haaland won the June 2 Democratic primary and is favored over Republican Greggory Hull in November to succeed term-limited Lujan Grisham. A new administration in January 2027 likely resets DoIT/CIO leadership and state IT priorities — build relationships now and expect a transition.", "tags": ["Leadership", "Election"], "ref": 14 },
+    { "date": "2026-06", "title": "NM Tech scraps 10,000-acre Green Data Centers / solar campus near Socorro", "impact": "New Mexico Tech and Green Data Centers mutually ended a proposed 2 GW data center + 10 GW solar project (~16 sq mi) on June 2, citing insufficient contiguous land and water concerns. Signals that not every NM AI-infrastructure mega-project will clear siting/water hurdles — focus partner motion on anchored builds like Project Jupiter and the national labs.", "tags": ["Data Centers", "AI"], "ref": 15 },
+    { "date": "2026-06", "title": "Project Jupiter expands outreach; refines jobs and water plan", "impact": "June 16 update on the Oracle/OpenAI Stargate campus in Santa Teresa: ~4,000 construction and up to ~1,500 ongoing jobs, ~$113M annual operating impact, Bloom Energy fuel-cell power, and a closed-loop non-evaporative cooling system limiting ongoing water draw. Reaffirms the marquee southern-NM AI-infrastructure ecosystem and partner/ISG motion, with first-phase operations targeted before end of 2026.", "tags": ["Data Centers", "AI"], "ref": 13 },
     { "date": "2026-04", "title": "Project Jupiter to be powered by Bloom Energy fuel cells (up to 2.45 GW)", "impact": "Confirms scale and self-contained power for the Oracle/OpenAI campus; operations targeted before end of 2026.", "tags": ["Data Centers", "AI"], "ref": 10 },
     { "date": "2026-02", "title": "Gov. Lujan Grisham and BorderPlex announce Project Jupiter in Santa Teresa", "impact": "Marquee AI-training data center (Oracle / OpenAI Stargate) anchors a southern-NM AI-infrastructure ecosystem.", "tags": ["AI Infrastructure", "Economic Dev"], "ref": 9 },
-    { "date": "2026-02", "title": "Legislature enacts ~$33.4B FY2027 budget; $270M+ for fusion/quantum", "impact": "Funds DoIT (~$113M) and seeds emerging-tech demand; Governor's final session.", "tags": ["Budget", "Emerging Tech"], "ref": 1 },
-    { "date": "2026-01", "title": "NM Tech launches Raul Deju Institute for Artificial Intelligence", "impact": "University AI/data-science/cybersecurity hub deepens the in-state research-computing market.", "tags": ["AI", "Higher Ed"], "ref": 8 },
-    { "date": "2025-12", "title": "Gov. Lujan Grisham proposed an $11.33B general-fund FY2027 budget", "impact": "$33.95B all funds, +4.6% vs FY2026; reserves at $3.4B (30% of recurring GF). Funds a statewide AI-enabled wildfire early-detection camera network, a quantum-technology benchmarking initiative, and critical technology upgrades at the Department of Public Safety.", "tags": ["Budget", "AI"], "ref": 12 },
-    { "date": "2025-12", "title": "Sandia unveils Spectra supercomputer", "impact": "New NNSA-mission machine reinforces New Mexico as a top-tier HPC buyer in-state.", "tags": ["HPC", "National Labs"], "ref": 4 }
+    { "date": "2026-02", "title": "Legislature enacts ~$33.4B FY2027 budget; $270M+ for fusion/quantum", "impact": "Funds DoIT (~$113M) and seeds emerging-tech demand; Governor's final session.", "tags": ["Budget", "Emerging Tech"], "ref": 1 }
   ],
 
   "dellActions": [
@@ -155,6 +154,8 @@
     { "label": "Source New Mexico — Project Jupiter data center developers announce new plans for generating power", "url": "https://sourcenm.com/2026/04/27/nm-project-jupiter-data-center-developers-announce-new-plans-for-generating-power/" },
     { "label": "U.S. Department of Energy / NNSA — Los Alamos launches frontier AI models on the Venado supercomputer", "url": "https://www.energy.gov/nnsa/articles/nnsas-los-alamos-national-laboratory-launches-frontier-ai-models-venado-supercomputer" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "NPR — Worries over water as a giant data center moves into the New Mexico desert (June 12, 2026)", "url": "https://www.npr.org/2026/06/12/nx-s1-5786551/worries-over-water-as-a-giant-data-center-moves-into-the-new-mexico-desert" }
+    { "label": "NPR — Worries over water as a giant data center moves into the New Mexico desert (June 12, 2026)", "url": "https://www.npr.org/2026/06/12/nx-s1-5786551/worries-over-water-as-a-giant-data-center-moves-into-the-new-mexico-desert" },
+    { "label": "Ballotpedia — New Mexico gubernatorial election, 2026 (Haaland vs. Hull; June 2 primary)", "url": "https://ballotpedia.org/New_Mexico_gubernatorial_and_lieutenant_gubernatorial_election,_2026" },
+    { "label": "MLQ.ai — New Mexico Tech scraps 10,000-acre Green Data Centers project over land constraints (June 2026)", "url": "https://mlq.ai/news/new-mexico-tech-scraps-10000-acre-green-data-centers-project-over-land-constraints/" }
   ]
 }

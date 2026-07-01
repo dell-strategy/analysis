@@ -3,7 +3,7 @@
   "name": "Arizona",
   "slug": "arizona",
   "region": "Southwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A $165B TSMC semiconductor megaproject, one of the nation's hottest data-center markets, and a governor leaning on AI to run government leaner — Arizona is a structural AI-infrastructure play.",
 
   "snapshot": [
@@ -56,7 +56,7 @@
       "dellFit": 90,
       "budgetStrength": 90,
       "tags": ["AI Infrastructure", "Semiconductors", "Economic Dev"],
-      "summary": "TSMC's North Phoenix campus has expanded from $12B to a committed ~$165B — planned for six wafer fabs, two advanced-packaging (CoWoS) facilities, and an R&D center, the largest foreign greenfield investment in U.S. history. Fab 1 is in volume production; Fab 3 broke ground in 2025 for N2/A16; and the board approved buying another 900 acres at a January 2026 state land auction. This anchors an AI-hardware supply chain in-state and is the strongest tailwind for Dell ISG and AI-infrastructure demand around it.",
+      "summary": "TSMC's North Phoenix campus has expanded from $12B to a committed ~$165B — planned for six wafer fabs, two advanced-packaging (CoWoS) facilities, and an R&D center, the largest foreign greenfield investment in U.S. history. Fab 1 is in volume production (4nm) and has swung to profitability; the second fab finished construction in April 2026 (volume production expected 2H2027); the board approved buying another 900 acres at a January 2026 state land auction; and in May 2026 the board approved a further ~$20B capital injection from the Taiwan parent to keep the North Phoenix expansion on track (reports suggest the footprint could eventually grow toward 12 fabs). Headwinds persist — water supply, H-1B labor costs, and migrating Taiwanese suppliers. This anchors an AI-hardware supply chain in-state and is the strongest tailwind for Dell ISG and AI-infrastructure demand around it.",
       "ref": 4
     },
     {
@@ -66,7 +66,7 @@
       "dellFit": 88,
       "budgetStrength": 80,
       "tags": ["Data Centers", "AI", "Power"],
-      "summary": "Arizona is a top-two U.S. data-center market alongside Texas, with Google, Microsoft, Meta, and Apple expanding around Phoenix and multi-gigawatt projects landing (the ~1.5GW Hassayampa Ranch, the up-to-3GW La Osa/Vermaland park in Pinal County). The FY2026 budget's three-year pause on data-center tax incentives signals the state is managing grid and water pressure rather than slowing growth — demand for compute, networking, and services remains very strong.",
+      "summary": "Arizona is a top-two U.S. data-center market alongside Texas, with Google, Microsoft, Meta, and Apple expanding around Phoenix and multi-gigawatt projects landing (the ~1.5GW Hassayampa Ranch). The state is now actively managing grid and water pressure: the FY2027 budget enacted a three-year pause on data-center tax incentives (no new ACA exemption applications July 1, 2026-June 30, 2029), Hobbs' April 2026 strategic energy plan warned data-center loads could require up to ~29,000 MW of new power, and community opposition forced the once-largest proposed project — La Osa near Eloy (Pinal County) — to be scaled back ~80% (from 59 buildings/~3,300 acres to ~11 buildings capped at ~1GW; a county revisit is set for Aug 26, 2026). Net: growth continues but with higher costs, longer timelines, and stricter siting — underlying demand for compute, networking, and services remains very strong.",
       "ref": 9
     },
     {
@@ -81,12 +81,12 @@
     },
     {
       "name": "AI Steering Committee & Governed AI",
-      "status": "Recommendations due 2026",
+      "status": "Initial recs expected 2026",
       "statusType": "warn",
       "dellFit": 70,
       "budgetStrength": 45,
       "tags": ["AI", "Policy", "Governance"],
-      "summary": "Hobbs launched Arizona's first AI Steering Committee (19 members, including State CIO J.R. Sloan) in May 2025 to deliver a statewide AI policy framework, governance models, and procurement guidelines, with recommendations expected in 2026. As governance lands, agencies will need auditable AI on sensitive data — an opening for governed private/on-prem AI rather than open public models.",
+      "summary": "Hobbs launched Arizona's first AI Steering Committee (19 members, including State CIO J.R. Sloan) in May 2025 to deliver a statewide AI policy framework, governance models, and procurement guidelines; initial recommendations were signaled for spring 2026 (treat exact publication date as not yet confirmed). In parallel, ADOA has rolled out statewide employee generative-AI training. As governance lands, agencies will need auditable AI on sensitive data — an opening for governed private/on-prem AI rather than open public models.",
       "ref": 5
     },
     {
@@ -119,20 +119,20 @@
 
   "powerStructure": [
     { "name": "Katie Hobbs", "title": "Governor", "org": "State of Arizona", "note": "Signed the $18.3B FY2027 budget (June 13, 2026); champions the ACE efficiency/AI agenda and is actively managing the data-center boom.", "ref": 1 },
-    { "name": "J.R. Sloan", "title": "State CIO", "org": "ADOA-ASET", "note": "Owns statewide IT direction; sits on the AI Steering Committee and has held a NASCIO Executive Committee role.", "ref": 3 },
+    { "name": "J.R. Sloan", "title": "State CIO", "org": "ADOA-ASET", "note": "Confirmed still in role June 2026; owns statewide IT direction, sits on the AI Steering Committee, and has held a NASCIO Executive Committee role.", "ref": 3 },
+    { "name": "Ryan Murray", "title": "Deputy Director & State CISO", "org": "AZ Dept. of Homeland Security / Cyber Command", "note": "Confirmed still in role June 2026; leads whole-of-state cybersecurity and the county roadshow — the cyber decision-maker as the state's compute footprint grows.", "ref": 8 },
     { "name": "AI Steering Committee", "title": "AI policy & procurement guidance", "org": "Office of the Governor", "note": "19 members across government, academia, and industry; recommendations expected in 2026.", "ref": 5 },
     { "name": "Arizona Commerce Authority", "title": "Economic development & incentives", "org": "State of Arizona", "note": "Administers data-center tax incentives (now paused 3 years) and the TSMC/chip ecosystem relationships." },
     { "name": "ADOA State Procurement Office", "title": "Central procurement", "org": "ADOA", "note": "Owns statewide IT contracts and the cooperative program — the contracting path for state and local buyers." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Hobbs signs $18.3B bipartisan FY2027 budget with 3-year data-center incentive pause", "impact": "Enacted June 13, 2026 (effective July 1); ~$1.4B in tax cuts and ~2.5% agency cuts, but signals the state is managing (not stopping) the data-center boom — demand stays strong.", "tags": ["Budget", "Data Centers"], "ref": 1 },
-    { "date": "2026-03", "title": "Hobbs launches ACE Initiative to consolidate IT and deploy AI", "impact": "Direct opening to standardize agency technology on Dell platforms and lead governed agency AI.", "tags": ["IT Consolidation", "AI"], "ref": 6 },
-    { "date": "2026-01", "title": "Gov. Hobbs proposed a $18.7B general-fund FY2027 budget", "impact": "$74.9B all funds, +4.9% vs FY2026; $1.68B rainy day fund (9.0% of GF). Includes one-time state/local cybersecurity funding and replaces the data-center tax exemption with a data-center water-usage fee.", "tags": ["Budget", "Cybersecurity", "Data Centers"], "ref": 12 },
-    { "date": "2026-01", "title": "TSMC buys 900 more acres in Phoenix at state land auction", "impact": "Confirms continued expansion of the ~$165B megaproject and a deepening in-state AI-hardware ecosystem.", "tags": ["Semiconductors"], "ref": 7 },
-    { "date": "2025-12", "title": "~1.5GW Hassayampa Ranch data-center development wins zoning approval", "impact": "Underscores the scale of AI-infrastructure capacity landing in Arizona.", "tags": ["Data Centers", "AI"], "ref": 9 },
-    { "date": "2025-09", "title": "Up-to-3GW La Osa / Vermaland data-center park announced in Pinal County (~$33B)", "impact": "Signals one of the largest planned campuses in the U.S. — sustained compute and networking demand.", "tags": ["Data Centers"], "ref": 10 },
-    { "date": "2025-05", "title": "Hobbs names Arizona's first AI Steering Committee (incl. State CIO Sloan)", "impact": "Governance and procurement guidance ahead — shapes how agencies buy and deploy AI.", "tags": ["AI", "Policy"], "ref": 5 }
+    { "date": "2026-06", "title": "Hobbs signs $18.3B bipartisan FY2027 budget with 3-year data-center incentive pause", "impact": "Enacted June 13, 2026 (effective July 1); ~$1.4B in tax cuts and ~2.5% agency cuts. The ACA stops accepting data-center tax-exemption applications July 1, 2026-June 30, 2029, but construction continues — the state is managing, not stopping, the boom; demand stays strong.", "tags": ["Budget", "Data Centers"], "ref": 1 },
+    { "date": "2026-05", "title": "La Osa (Eloy/Pinal) — once Arizona's largest proposed data-center park — scaled back ~80%", "impact": "After heavy community opposition, the developer cut the project from 59 buildings/~3,300 acres to ~11 buildings capped at ~1GW (county revisit Aug 26, 2026). Signals tougher siting/community friction, but underlying compute and networking demand persists.", "tags": ["Data Centers"], "ref": 10 },
+    { "date": "2026-05", "title": "TSMC board approves ~$20B capital injection for North Phoenix expansion; Arizona ops turn profitable", "impact": "Reinforces the ~$165B megaproject's momentum (second fab construction completed April 2026; reports of a possible 12-fab footprint) — the strongest tailwind for Dell ISG/AI-infrastructure demand in-state.", "tags": ["Semiconductors", "AI Infrastructure"], "ref": 13 },
+    { "date": "2026-04", "title": "Hobbs releases statewide strategic energy plan (Energy Promise Task Force)", "impact": "Warns proposed data-center loads could require up to ~29,000 MW of new power and could nearly triple APS/SRP demand — framing the grid/water constraints now shaping where compute can land in Arizona.", "tags": ["Energy", "Data Centers"], "ref": 14 },
+    { "date": "2026-03", "title": "Hobbs launches ACE Initiative to consolidate IT and deploy AI", "impact": "Direct opening to standardize agency technology on Dell platforms and lead governed agency AI; targets $40M-$100M in savings.", "tags": ["IT Consolidation", "AI"], "ref": 6 },
+    { "date": "2026-01", "title": "TSMC buys 900 more acres in Phoenix at state land auction", "impact": "Confirms continued expansion of the ~$165B megaproject and a deepening in-state AI-hardware ecosystem.", "tags": ["Semiconductors"], "ref": 7 }
   ],
 
   "dellActions": [
@@ -153,8 +153,10 @@
     { "label": "Wikipedia — TSMC Arizona (900-acre land auction, expansion)", "url": "https://en.wikipedia.org/wiki/TSMC_Arizona" },
     { "label": "Arizona Department of Homeland Security — Cyber Command", "url": "https://azdohs.gov/cyber" },
     { "label": "Fortune — AI data centers in Arizona (Hassayampa Ranch)", "url": "https://fortune.com/2025/12/27/ai-data-centers-arizona-hassayampa-ranch/" },
-    { "label": "Blackridge Research — Upcoming Data Centers in Arizona (La Osa / Vermaland)", "url": "https://www.blackridgeresearch.com/blog/latest-list-upcoming-data-centers-in-arizona-az-united-states-us" },
+    { "label": "KJZZ — Largest proposed Arizona data center (La Osa, Eloy) to be scaled back 80% after opposition (May 28, 2026)", "url": "https://www.kjzz.org/fronteras-desk/2026-05-28/largest-proposed-data-center-in-arizona-to-be-scaled-back-80-after-opposition" },
     { "label": "Arizona State Procurement Office — Cooperative Contracts", "url": "https://spo.az.gov/cooperative-contracts" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "AndroidHeadlines — TSMC approves $20B more for Arizona (May 2026)", "url": "https://www.androidheadlines.com/2026/05/tsmc-arizona-20-billion-investment-catch.html" },
+    { "label": "Arizona Capitol Times — Governor's office unveils state strategic energy plan (Apr 2, 2026)", "url": "https://azcapitoltimes.com/news/2026/04/02/governors-office-unveils-state-strategic-energy-plan/" }
   ]
 }

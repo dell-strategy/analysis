@@ -5,7 +5,7 @@
   "name": "Bexar County, Texas",
   "slug": "bexar-county-texas",
   "hq": "San Antonio, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The 4th-most-populous Texas county (~2M residents, San Antonio) runs its technology through Bexar County Information Technology (BCIT) on a ~$2.8B county budget — and sits inside San Antonio's deep cyber ecosystem, now anchored by the state's new Texas Cyber Command.",
 
   "snapshot": [
@@ -41,14 +41,14 @@
   "procurement": {
     "intro": "Bexar County buys through Bexar County Purchasing, with awards of size approved by Commissioners Court. As a local government it is also eligible to buy off pre-competed cooperative vehicles — most importantly the Texas DIR Cooperative Contracts — which let it acquire technology at state pricing without running a full county RFP. Confirm Dell's coverage on the right vehicles before pursuing a deal.",
     "vehicles": [
-      { "name": "Bexar County Purchasing + Commissioners Court", "detail": "Purchasing runs solicitations; Commissioners Court approval is the gate for significant awards. Texas interested-parties disclosure applies to court-approved contracts." },
+      { "name": "Bexar County Purchasing + Commissioners Court", "detail": "Purchasing runs solicitations; Commissioners Court approval is the gate for significant awards. As of Jan 2026, the county delegated contract-approval authority up to $100K to department heads (raised from $50K) to speed procurement — awards above $100K still require a court vote. Texas interested-parties disclosure applies to court-approved contracts." },
       { "name": "Texas DIR Cooperative Contracts", "detail": "As a local government, Bexar County can buy technology off DIR's pre-competed co-op at State of Texas pricing — the fastest compliant path that avoids a full county RFP. Verify Dell's DIR contract scope covers the products in play." },
       { "name": "Other purchasing cooperatives", "detail": "The county also leverages national/interlocal cooperatives for goods and services — confirm which vehicle a given technology category is bought through." }
     ]
   },
 
   "powerStructure": [
-    { "name": "Peter Sakai", "title": "Bexar County Judge", "note": "Top elected executive and Commissioners Court chair; lost the March 2026 Democratic primary to Ron Nirenberg and serves through December 2026 — a leadership transition is coming." },
+    { "name": "Peter Sakai", "title": "Bexar County Judge", "note": "Top elected executive and Commissioners Court chair; lost the March 2026 Democratic primary to Ron Nirenberg and serves through December 2026. In the Nov 2026 general election Nirenberg (D) faces Patrick Von Dohlen (R) — a leadership transition is coming; build durable relationships below the top office." },
     { "name": "David L. Smith", "title": "County Manager", "note": "Runs day-to-day county administration and budget; the CIO reports to him. A key relationship for funding and cross-department technology programs." },
     { "name": "Mark Gager", "title": "Chief Information Officer, BCIT", "note": "Leads central IT and reports to the County Manager; PMP- and Balanced-Scorecard-certified, ex-CIO/Chief Strategy Officer at BioBridge Global. The top technology relationship for the account." },
     { "name": "Commissioners Court", "title": "County Judge + 4 precinct Commissioners", "note": "Adopts the budget and approves contracts of size — the decision gate for any major deal." },
@@ -56,11 +56,12 @@
   ],
 
   "news": [
-    { "date": "2026-03", "title": "County Judge Sakai loses Democratic primary to Ron Nirenberg", "impact": "Sakai (~37.8%) lost to former San Antonio Mayor Nirenberg (~62.2%) and serves through Dec 2026 — anchor relationships at the BCIT and County Manager layer that survive the top-of-county transition.", "tags": ["Leadership"] },
-    { "date": "2026-06", "title": "Texas Cyber Command discloses breach affecting 3M+ license customers", "impact": "The new San Antonio-based Cyber Command is now operational and active in incident response — raises regional security expectations and signals partnership/standards a Dell security motion should align to.", "tags": ["Cybersecurity"] },
-    { "date": "2025-09", "title": "Commissioners Court adopts ~$2.8B FY2026 budget (no tax-rate hike)", "impact": "Flat budget with a flagged future shortfall sets a cost-conscious FY26 envelope, including a ~$45.6M BCIT line — lead with cost-optimization, consolidation, and standardization value.", "tags": ["Budget"] },
-    { "date": "2025-08", "title": "Bexar proposes $150M+ in technology funding for FY25-26", "impact": "Includes the ~$27.3M Bexar 2.0 modernization, core-infrastructure (Cisco HyperFlex) refresh, and IoT security — a concentrated window for ISG, client, and security positioning.", "tags": ["Technology", "Budget"] },
-    { "date": "2025-06", "title": "Bexar County adopts AI governance (Administrative Policy 5.3)", "impact": "BCIT directed to vet AI vendors and coordinate on sensitive-data use — an early governance gate to engage before pitching AI-enabled tooling.", "tags": ["AI", "Governance"] }
+    { "date": "2026-06", "title": "FY2027 budget crunch: county to cut, not raise taxes, amid worst revenue year since 2008", "impact": "County Manager David Smith projects property-tax revenue down ~1.5-1.7% in FY2026-27 (about 80% of the general fund) and plans to close the gap with spending cuts rather than a rate increase, holding the current $0.276331 rate; a ~$145M multi-year deficit still looms toward FY2028-29. Budget town halls ran June 24-25 with a formal proposal due this fall. Lead hard with cost-optimization, consolidation, standardization, and TCO — new-money asks will face scrutiny.", "tags": ["Budget"] },
+    { "date": "2026-01", "title": "Commissioners Court delegates contract authority up to $100K to department heads", "impact": "Raised the staff-approval threshold from $50K to $100K (enabled by the latest Texas legislative session) to speed procurement; awards above $100K still go to Commissioners Court. Smaller technology buys can now move without a court vote — map which BCIT purchases now clear at the staff level versus the court gate.", "tags": ["Procurement"] },
+    { "date": "2026-06", "title": "Texas Cyber Command discloses breach affecting 3M+ license customers", "impact": "The new San Antonio-based, UTSA-hosted Cyber Command is now operational and active in incident response (TPWD hunting/fishing license vendor breach) — raises regional security expectations and signals partnership/standards a Dell security motion should align to.", "tags": ["Cybersecurity"] },
+    { "date": "2026-05", "title": "Sakai's final State of the County: growth focus amid fiscal pressure", "impact": "In his final address (May 27), outgoing Judge Sakai framed Bexar as a 'regional powerhouse' while officials flagged food security, housing, workforce, and economic development as priorities under a projected ~2% property-tax decline / ~$145M deficit — a cost-conscious backdrop for FY27 tech planning.", "tags": ["Leadership", "Budget"] },
+    { "date": "2026-03", "title": "County Judge Sakai loses Democratic primary; Nirenberg to face Republican Von Dohlen in November", "impact": "Sakai (~37.8%) lost to former San Antonio Mayor Ron Nirenberg (~62.2%) and serves through Dec 2026; Nirenberg faces Republican Patrick Von Dohlen in the Nov 2026 general election. Anchor relationships at the BCIT and County Manager layer that survive the top-of-county transition.", "tags": ["Leadership"] },
+    { "date": "2025-09", "title": "Commissioners Court adopts ~$2.8B FY2026 budget (no tax-rate hike)", "impact": "Flat budget with a flagged future shortfall sets a cost-conscious FY26 envelope, including a ~$45.6M BCIT line — lead with cost-optimization, consolidation, and standardization value.", "tags": ["Budget"] }
   ],
 
   "dellActions": [
@@ -82,6 +83,11 @@
     { "label": "KENS5 — Bexar County Judge Race: Nirenberg ousts incumbent Sakai", "url": "https://www.kens5.com/article/news/politics/elections/2026-texas-primary-elections-results-nirenberg-sakai-bexar-county-judge-race-updates/273-cac95cfb-5bb9-4c14-b761-5a2433e15413" },
     { "label": "Govtech — Texas Governor Approves Cyber Command Coming to San Antonio", "url": "https://www.govtech.com/security/texas-governor-approves-cyber-command-coming-to-san-antonio" },
     { "label": "TPR — Texas Cyber Command detects breach affecting 3M+ license customers", "url": "https://www.tpr.org/news/2026-06-22/texas-cyber-command-detects-data-breach-affecting-more-than-3-million-hunting-fishing-license-customers" },
-    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" },
+    { "label": "KSAT — No tax raise planned in face of budget crunch, Bexar County Manager says", "url": "https://www.ksat.com/news/local/2026/05/28/no-tax-raise-planned-in-face-of-budget-crunch-bexar-county-manager-says/" },
+    { "label": "TPR — County faces budget squeeze as property tax revenue faces historic low", "url": "https://www.tpr.org/news/2026-04-28/county-faces-budget-squeeze-as-property-tax-revenue-faces-historic-low" },
+    { "label": "San Antonio Report — Bexar County hands off contract authority up to $100K to staff", "url": "https://sanantonioreport.org/bexar-county-contracts-procurement-policy-change-100k/" },
+    { "label": "San Antonio Report — Sakai: Bexar County poised to become 'regional powerhouse' (State of the County)", "url": "https://sanantonioreport.org/bexar-county-judge-peter-sakai-state-of-the-county-address/" },
+    { "label": "KENS5 — Meet the Republican candidate Ron Nirenberg will face in the Bexar County judge race", "url": "https://www.kens5.com/article/news/politics/bexar-county-judge-race-election-about-patrick-von-dohlen-ron-nirenberg-2026-issues/273-b446a49a-ccdd-4195-9548-a75e04e87fcc" }
   ]
 }

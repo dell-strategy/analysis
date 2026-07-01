@@ -3,18 +3,18 @@
   "name": "Vermont",
   "slug": "vermont",
   "region": "Northeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A new AI Economic Task Force, a centralizing 'One ADS' tech strategy, a $70M+ Workday HR/finance overhaul, and a near-complete fiber broadband buildout — small-state Vermont is consolidating how it buys and runs technology.",
 
   "snapshot": [
     { "label": "FY2026 All-Funds Budget", "value": "$9.1B" },
     { "label": "Central IT Authority", "value": "ADS" },
     { "label": "Procurement Platform", "value": "VT Buys" },
-    { "label": "AI Task Force (new)", "value": "EO 01-26" }
+    { "label": "AI Task Force (new)", "value": "EO 04-26" }
   ],
 
   "execSummary": {
-    "summary": "Vermont is a small, centralized market where most state technology decisions run through a single agency — the Agency of Digital Services (ADS), led by Secretary & CIO Denise Reilly-Hughes. Three shifts matter for a Dell seller in 2026. First, ADS is executing a multi-year 'One ADS' strategy that moves the state to a service-based (internal service fund) IT budgeting model, backed by a $15M appropriation, to consolidate fragmented systems and bill agencies for shared services. Second, Governor Scott's new AI Economic Task Force (Executive Order 01-26, May 2026), co-chaired by Reilly-Hughes, sits alongside the state's existing Council on Artificial Intelligence (Act 132 of 2022) and is tasked within 90 days with naming priority opportunities where AI can help state employees. Third, a $70M+ Workday HR/finance modernization is mid-flight — recently shifted from phased to all-at-once rollout — and Vermont's federally funded fiber broadband buildout is pushing access toward 99% statewide. Buying runs through Buildings & General Services (BGS) Office of Purchasing & Contracting and ADS vendor procurement, increasingly via the VT Buys platform and statewide IT contracts.",
+    "summary": "Vermont is a small, centralized market where most state technology decisions run through a single agency — the Agency of Digital Services (ADS), led by Secretary & CIO Denise Reilly-Hughes. Three shifts matter for a Dell seller in 2026. First, ADS is executing a multi-year 'One ADS' strategy that moves the state to a service-based (internal service fund) IT budgeting model, backed by a $15M appropriation, to consolidate fragmented systems and bill agencies for shared services. Second, Governor Scott's new AI Economic Task Force (Executive Order 04-26, signed May 18, 2026), which works with Reilly-Hughes, sits alongside the state's existing Council on Artificial Intelligence (Act 132 of 2022) and is tasked within 90 days with naming priority opportunities where AI can help state employees. Third, a $70M+ Workday HR/finance modernization is mid-flight — recently shifted from phased to all-at-once rollout — and Vermont's federally funded fiber broadband buildout is pushing access toward 99% statewide. Buying runs through Buildings & General Services (BGS) Office of Purchasing & Contracting and ADS vendor procurement, increasingly via the VT Buys platform and statewide IT contracts.",
     "opportunities": [
       "Infrastructure consolidation under 'One ADS' and the service-based IT funding model — compute, storage, networking, and lifecycle for shared state services.",
       "Governed AI enablement as the AI Economic Task Force and Council on AI define state use cases — an opening for private/on-prem AI on sensitive workloads.",
@@ -25,7 +25,7 @@
       { "value": "$9.1B", "label": "FY2026 All-Funds Budget", "note": "H.493 / Act 27; ~$2.48B General Fund", "ref": 1 },
       { "value": "$15M", "label": "Service-based IT funding", "note": "Toward 'One ADS' internal service fund model", "ref": 2 },
       { "value": "$70M+", "label": "Workday HR/finance overhaul", "note": "Now a single all-at-once rollout", "ref": 4 },
-      { "value": "EO 01-26", "label": "AI Economic Task Force", "note": "Signed May 18, 2026", "ref": 5 }
+      { "value": "EO 04-26", "label": "AI Economic Task Force", "note": "Signed May 18, 2026", "ref": 5 }
     ]
   },
 
@@ -66,7 +66,7 @@
       "dellFit": 70,
       "budgetStrength": 45,
       "tags": ["AI", "Policy", "Economic Dev"],
-      "summary": "Governor Scott's Executive Order 01-26 (May 18, 2026) created the AI Economic Task Force, co-chaired by ADS Secretary/CIO Reilly-Hughes, with working groups on Economic Acceleration, Small Business Competitiveness, and Community Resilience. Within 90 days it must name up to five priority opportunities for AI to help state employees. It complements the existing Council on Artificial Intelligence (Act 132 of 2022) that governs state AI use — an opening for governed, auditable AI.",
+      "summary": "Governor Scott's Executive Order 04-26 (May 18, 2026) created the AI Economic Task Force, working with ADS Secretary/CIO Reilly-Hughes, with working groups on Economic Acceleration, Small Business Competitiveness, and Community Resilience. Within 90 days it must name up to five priority opportunities for AI to help state employees. It complements the existing Council on Artificial Intelligence (Act 132 of 2022) that governs state AI use — an opening for governed, auditable AI.",
       "ref": 5
     },
     {
@@ -118,21 +118,21 @@
   },
 
   "powerStructure": [
-    { "name": "Phil Scott", "title": "Governor", "org": "State of Vermont", "note": "Established the AI Economic Task Force (EO 01-26); sets the administration's technology and economic agenda.", "ref": 5 },
-    { "name": "Denise Reilly-Hughes", "title": "Secretary & State CIO", "org": "Agency of Digital Services", "note": "Leads all state IT and cybersecurity; co-chairs the AI Economic Task Force. The single most important account contact.", "ref": 3 },
-    { "name": "Sarah Clark", "title": "Secretary of Administration", "org": "Agency of Administration", "note": "Oversees the budget and the $70M+ Workday HR/finance modernization.", "ref": 4 },
+    { "name": "Phil Scott", "title": "Governor", "org": "State of Vermont", "note": "Established the AI Economic Task Force (EO 04-26); sets the administration's technology and economic agenda. Filed May 28, 2026 for a sixth term (2026 is a gubernatorial election year); polls as the most popular U.S. governor and is favored — expect continuity if re-elected.", "ref": 5 },
+    { "name": "Denise Reilly-Hughes", "title": "Secretary & State CIO", "org": "Agency of Digital Services", "note": "Leads all state IT and cybersecurity; works with the AI Economic Task Force on state-employee AI opportunities. The single most important account contact.", "ref": 3 },
+    { "name": "John Toney", "title": "Chief Information Security Officer (CISO)", "org": "Agency of Digital Services", "note": "State CISO (appointed 2024; current per 2026 sources). Priorities include critical-infrastructure/water-utility protection, CISA-aligned compliance, and consolidating the state's security-tool stack — a fit for secure compute, endpoint, and vendor rationalization.", "ref": 14 },
+    { "name": "Sarah Clark", "title": "Secretary of Administration", "org": "Agency of Administration", "note": "Oversees the budget and the $70M+ Workday HR/finance (ERP) modernization.", "ref": 4 },
     { "name": "Cybersecurity Advisory Council", "title": "Statewide security governance", "org": "ADS-led", "note": "Coordinates state, local, and critical-infrastructure cyber; gateway for SLG security demand.", "ref": 6 },
     { "name": "Joint Information Technology Oversight Committee (JITOC)", "title": "Legislative IT oversight", "org": "Vermont Legislature", "note": "Reviews large IT projects (including Workday) — useful for reading project risk and direction.", "ref": 4 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Vermont enacts comprehensive privacy law (S.71) and data-broker overhaul (H.211/Act 138)", "impact": "Signed June 16, 2026; comprehensive law effective Jan 1, 2028. Raises statewide data-governance, privacy, and security requirements — a tailwind for governed data, security, and compliance-ready infrastructure.", "tags": ["Cybersecurity", "Policy", "Data"], "ref": 15 },
+    { "date": "2026-05", "title": "Gov. Scott files for a sixth term (2026 gubernatorial election year)", "impact": "Filed May 28, 2026; polls as the most popular U.S. governor and is favored. Expect continuity of the ADS/'One ADS' and AI agenda if re-elected — but budgets and leadership could shift post-election.", "tags": ["Leadership", "Politics"], "ref": 16 },
     { "date": "2026-06-16", "title": "Gov. Scott signs FY2027 budget (H.951, ~$9.33B); vetoes S.190", "impact": "Budget enacted ~$1M below the January proposal with a 'disciplined spending' posture — expect cost scrutiny on new IT spend.", "tags": ["Budget"], "ref": 12 },
     { "date": "2026-05", "title": "Gov. Scott establishes Vermont AI Economic Task Force (EO 01-26)", "impact": "New state AI agenda; ADS co-chairs and must name priority AI opportunities within 90 days (report due ~mid-Aug 2026).", "tags": ["AI", "Policy"], "ref": 5 },
     { "date": "2026-04", "title": "Vermont postpones Workday HR go-live; unified launch slips to 2028", "impact": "HR/finance components found more interconnected than expected; raises cost/risk, oversight attention, and integration/advisory openings.", "tags": ["ERP", "Modernization"], "ref": 13 },
-    { "date": "2026-01", "title": "Gov. Scott proposed a $2.53B general-fund FY2027 budget", "impact": "$9.4B all funds, -0.6% vs FY2026; reserves ~$375M (~14.8% of GF). Recommends fiscal discipline amid tighter conditions and less expected federal support.", "tags": ["Budget"], "ref": 11 },
-    { "date": "2026-01", "title": "ADS 2026 Annual Report details 'One ADS' service-based IT model", "impact": "Consolidation and internal-service-fund billing reshape how shared technology is funded.", "tags": ["ADS", "Budget"], "ref": 2 },
-    { "date": "2025-12", "title": "Cybersecurity Advisory Council moves to extend protection beyond state government", "impact": "Local and critical-infrastructure cyber demand grows; SLCGP funds in play.", "tags": ["Cybersecurity"], "ref": 6 },
-    { "date": "2025-09", "title": "VCBB outlines ~$180–229M broadband proposal; NEK Broadband wins ~$93M", "impact": "Fiber buildout pushes toward ~99% statewide access; expanding CUD digital footprint.", "tags": ["Broadband"], "ref": 7 }
+    { "date": "2026-01", "title": "ADS 2026 Annual Report details 'One ADS' service-based IT model", "impact": "Consolidation and internal-service-fund billing reshape how shared technology is funded.", "tags": ["ADS", "Budget"], "ref": 2 }
   ],
 
   "dellActions": [
@@ -156,6 +156,10 @@
     { "label": "Vermont ADS — Artificial Intelligence", "url": "https://digitalservices.vermont.gov/ai" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
     { "label": "Vermont Business Magazine — Scott signs 16 bills, vetoes S.190 (June 17, 2026)", "url": "https://vermontbiz.com/news/2026/june/17/scott-signs-16-bills-vetoes-s190-reference-based-pricing" },
-    { "label": "Vermont Public — Lawmakers scrutinize $70M IT overhaul as administration postpones rollout (Apr 8, 2026)", "url": "https://www.vermontpublic.org/local-news/2026-04-08/lawmakers-scrutinize-70m-it-overhaul-scott-administration-postpones-rollout" }
+    { "label": "Vermont Public — Lawmakers scrutinize $70M IT overhaul as administration postpones rollout (Apr 8, 2026)", "url": "https://www.vermontpublic.org/local-news/2026-04-08/lawmakers-scrutinize-70m-it-overhaul-scott-administration-postpones-rollout" },
+    { "label": "StateScoop — Securing water utilities a top priority for Vermont's new cyber chief (CISO John Toney)", "url": "https://statescoop.com/critical-infrastructure-vermont-john-toney-ciso/" },
+    { "label": "Inside Privacy (Covington) — Vermont Data Privacy Bill (S.71) Signed into Law (June 2026)", "url": "https://www.insideprivacy.com/state-privacy/vermont-data-privacy-bill-signed-into-law/" },
+    { "label": "VTDigger — Vermont Gov. Phil Scott is running for reelection (May 28, 2026)", "url": "https://vtdigger.org/2026/05/28/gov-phil-scott-is-running-for-reelection/" },
+    { "label": "Vermont Legislature — H.211 (Act 138) data-broker overhaul, bill status", "url": "https://legislature.vermont.gov/bill/status/2026/H.211" }
   ]
 }

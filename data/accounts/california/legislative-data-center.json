@@ -5,7 +5,7 @@
   "name": "California Legislative Data Center",
   "slug": "legislative-data-center",
   "hq": "Sacramento, CA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The IT engine of the California State Legislature: the Legislative Data Center is the technology arm of the Office of Legislative Counsel, running the data center, statewide networks, devices, and applications that keep the Assembly, Senate, and legislative offices operating — and the public leginfo site online.",
 
   "snapshot": [
@@ -47,16 +47,17 @@
   },
 
   "powerStructure": [
-    { "name": "Cara L. Jenkins", "title": "Legislative Counsel of California", "note": "Heads the Office of Legislative Counsel, which the LDC sits within; appointed in December 2020. The top of the parent organization — confirm tenure before outreach." },
+    { "name": "Cara L. Jenkins", "title": "Legislative Counsel of California", "note": "Heads the Office of Legislative Counsel, which the LDC sits within; serving since December 7, 2020 and re-verified current as of June 2026 (per the Office's Who We Are page). The top of the parent organization." },
     { "name": "Legislative Data Center leadership", "title": "LDC Director / IT executive", "note": "The LDC's director / senior IT leadership owns infrastructure and applications. Names are not consistently published; identify the current leader before engaging." },
     { "name": "Information Technology branch (LDC)", "title": "Systems, networking & operations", "note": "Systems analysts, programmers, software/networking specialists, and operations staff — the technical buying center for compute, storage, network, and devices." },
     { "name": "Office of Legislative Counsel — administration", "title": "Budget & contracting authority", "note": "Administrative leadership controls funding and the legislative-branch contracting process; the gatekeeper for any procurement." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Legislative-branch IT detail remains sparse in public sources", "impact": "Plan discovery-led engagement: the LDC publishes little operational/budget data, so lead with questions and verification rather than assuming an executive-branch buying motion.", "tags": ["Market Intel"] },
-    { "date": "2025-06", "title": "California enacts FY2025-26 Budget Act funding the Legislature", "impact": "The Legislature's operations (including the Office of Legislative Counsel and LDC) are funded through the annual Budget Act, but a discrete LDC technology line is not publicly itemized — confirm specifics with the Office.", "tags": ["Budget"] },
-    { "date": "2020-12", "title": "Cara L. Jenkins appointed Legislative Counsel of California", "impact": "Establishes the leadership of the parent office the LDC reports into; confirm current tenure and the LDC's own IT leadership before outreach.", "tags": ["Leadership"] }
+    { "date": "2026-06", "title": "Newsom signs balanced FY2026-27 Budget Act (AB 109 / SB 110)", "impact": "The Legislature's operations (Office of Legislative Counsel and LDC) are funded through the annual Budget Act; the FY2026-27 plan was signed June 29, 2026 with ~$30B in reserves and no deficit. A stable fiscal backdrop for legislative-branch IT — but no discrete LDC technology line is publicly itemized, so confirm any spend directly with the Office.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "Cara L. Jenkins re-verified as Legislative Counsel (no leadership change)", "impact": "As of June 2026 Jenkins remains Legislative Counsel (serving since December 2020); no publicly named LDC/IT director is listed. Identify the current LDC IT leadership directly — the public record does not surface it.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "Legislative-branch IT detail remains sparse in public sources", "impact": "Re-verified June 2026: the LDC still publishes little operational/budget/cyber data. Plan discovery-led engagement — lead with questions and verification rather than assuming an executive-branch buying motion.", "tags": ["Market Intel"] },
+    { "date": "2026-03", "title": "Statewide AI procurement EO (N-5-26) targets executive-branch buying — not the Legislature", "impact": "Newsom's March 2026 order directs CDT and DGS to add AI vendor certifications to state contracting. It governs the executive branch; the LDC is legislative-branch, so treat this as context, not a direct requirement — but expect similar scrutiny to influence norms.", "tags": ["Procurement"] }
   ],
 
   "dellActions": [
@@ -73,6 +74,9 @@
     { "label": "Office of Legislative Counsel — About Us / Who We Are", "url": "https://legislativecounsel.ca.gov/about-us" },
     { "label": "California Office of Legislative Counsel — Wikipedia", "url": "https://en.wikipedia.org/wiki/California_Office_of_Legislative_Counsel" },
     { "label": "California Legislative Information (leginfo) — public legislative site run by the LDC", "url": "https://leginfo.legislature.ca.gov/" },
-    { "label": "SB 101 — Budget Act of 2025 (legislative-branch funding)", "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB101" }
+    { "label": "Office of Legislative Counsel — Who We Are (Jenkins tenure re-verified)", "url": "https://legislativecounsel.ca.gov/about-us/who-we-are" },
+    { "label": "Governor Newsom signs balanced FY2026-27 state budget (June 29, 2026)", "url": "https://www.gov.ca.gov/2026/06/29/signedbudget/" },
+    { "label": "Governor & legislative leaders announce FY2026-27 budget agreement (June 26, 2026)", "url": "https://www.gov.ca.gov/2026/06/26/finalbudget/" },
+    { "label": "Executive Order N-5-26 — statewide AI procurement (executive branch context)", "url": "https://www.gov.ca.gov/wp-content/uploads/2026/03/3.30-FINAL-Trusted-AI-Procurement-EO-N-5-26.pdf" }
   ]
 }

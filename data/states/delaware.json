@@ -3,7 +3,7 @@
   "name": "Delaware",
   "slug": "delaware",
   "region": "Mid-Atlantic",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A small, highly centralized state with a brand-new CIO from Virginia, a cloud-first DTI moving 77% of servers off-prem, and an AI-governance framework already live — Delaware buys technology as one enterprise.",
 
   "snapshot": [
@@ -45,7 +45,8 @@
       "Figures are annual (FY27) unless noted; Delaware does not budget on a biennial cycle.",
       "ARPA money that funded prior security upgrades has expired — those costs are shifting onto the ongoing state operating budget.",
       "The corporate franchise tax funds roughly a third of the state budget; detailed franchise-revenue data trails into spring, so treat IT funding as agency-driven, not earmarked.",
-      "FY2027 (governor's proposed, per NASBO): $6.94B general fund operating, +5.4% vs FY2026, plus $150M in net new revenue measures; reserves held at $366.5M (Budget Reserve) and $469.3M (Budget Stabilization)."
+      "FY2027 (governor's proposed, per NASBO): $6.94B general fund operating, +5.4% vs FY2026, plus $150M in net new revenue measures; reserves held at $366.5M (Budget Reserve) and $469.3M (Budget Stabilization).",
+      "Enacted update: the General Assembly passed a larger FY27 operating budget than recommended — $6.996B (SB 335, +6.32% / +$416M YoY) plus a ~$146.2M one-time supplemental (SB 336) — in mid-June 2026, heading to Gov. Meyer for signature by the June 30 deadline. DTI's specific FY27 line was not separately broken out in the enacted-budget coverage; treat the ~$69M DTI request as the working figure pending final appropriation detail."
     ]
   },
 
@@ -67,7 +68,7 @@
       "dellFit": 65,
       "budgetStrength": 60,
       "tags": ["Cybersecurity", "Identity", "Web Security"],
-      "summary": "DTI secures all three branches plus the statewide K-12/charter network and is widely cited as a model state cyber program. FY27 funds a new web-security system, replacement of the legacy VPN with modern employee-verification/identity ($1.5M+), and $400K+ in admin-account hardening. Leadership has churned — longtime CSO Solomon Adote departed in 2025 — so security strategy is being reset under new CIO Osmond.",
+      "summary": "DTI secures all three branches plus the statewide K-12/charter network and is widely cited as a model state cyber program. FY27 funds a new web-security system, replacement of the legacy VPN with modern employee-verification/identity ($1.5M+), and $400K+ in admin-account hardening. Leadership has churned — longtime CSO Solomon Adote departed in 2025, with Aashish Patel named permanent CSO in September 2025 — so security strategy is being executed under new CIO Osmond.",
       "ref": 2
     },
     {
@@ -111,18 +112,19 @@
   "powerStructure": [
     { "name": "Matt Meyer", "title": "Governor", "org": "State of Delaware", "note": "In office since January 2025; FY27 'Delaware First' budget; champions AI training and broadband.", "ref": 1 },
     { "name": "Bob Osmond", "title": "Chief Information Officer", "org": "DTI", "note": "Sworn in May 8, 2026. Former Virginia Commonwealth CIO who directed ~$1.3B/yr tech procurement for 65K users; priorities are modernization, cybersecurity, digital services.", "ref": 4 },
+    { "name": "Aashish Patel", "title": "Chief Security Officer", "org": "DTI", "note": "Named permanent CSO September 2025 after serving as interim; ~30 yrs in cybersecurity/infrastructure, joined DTI 2021 as director of enterprise security ops. Owns the FY27 security agenda (web security, VPN/identity, account hardening).", "ref": 11 },
     { "name": "Jordan Schulties", "title": "Former Acting CIO / DTI CAO", "org": "DTI", "note": "Led DTI Jan–May 2026 and presented the FY27 budget request; remains a key DTI operations/budget contact.", "ref": 2 },
     { "name": "OMB — Government Support Services", "title": "Central contracting", "org": "Office of Management & Budget", "note": "Owns the statewide contract vehicles every covered agency must use." },
     { "name": "Delaware AI Commission", "title": "AI governance body", "org": "State of Delaware", "note": "Created July 2024; recommends AI guidelines and shapes responsible-adoption policy." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "General Assembly passes $6.996B FY27 operating budget", "impact": "SB 335 (operating, +6.32%) and SB 336 (~$146.2M supplemental) cleared the legislature mid-June and head to Gov. Meyer for expected signature by the June 30 deadline — locking the FY27 envelope that funds DTI cloud/security scope.", "tags": ["Budget"], "ref": 12 },
     { "date": "2026-05", "title": "Bob Osmond sworn in as Delaware CIO", "impact": "Experienced enterprise leader (ex-Virginia CIO) takes over DTI; expect a refreshed modernization and cybersecurity agenda — engage early as direction resets.", "tags": ["Leadership"], "ref": 4 },
     { "date": "2026-04", "title": "Meyer nominates Osmond as CIO", "impact": "Signals continuity toward centralized, security-forward IT modeled on Virginia's program.", "tags": ["Leadership"], "ref": 5 },
     { "date": "2026-03", "title": "Statewide AI training launches for state employees", "impact": "'Responsible AI for Public Professionals' is mandatory for executive branch; operationalizes DTI's GenAI policy and opens governed-AI adoption.", "tags": ["AI", "Workforce"], "ref": 10 },
     { "date": "2026-03", "title": "Governor announces major broadband milestone", "impact": "Federal approval to reach 4,728+ locations with $27.8M federal + ~$75M private; construction expected Fall 2026.", "tags": ["Broadband"], "ref": 7 },
-    { "date": "2026-02", "title": "DTI requests ~$8M FY27 increase (to ~$69M)", "impact": "Funds cloud infrastructure, a new web-security system, expanded portals, and VPN/identity replacement — directly buyable security and infrastructure scope.", "tags": ["Budget", "Cybersecurity"], "ref": 2 },
-    { "date": "2026-01", "title": "Meyer unveils $6.94B FY27 recommended budget", "impact": "'Delaware First' budget (+4.99%); technology listed among cost drivers. Sets the FY27 spending envelope.", "tags": ["Budget"], "ref": 1 }
+    { "date": "2026-02", "title": "DTI requests ~$8M FY27 increase (to ~$69M)", "impact": "Funds cloud infrastructure, a new web-security system, expanded portals, and VPN/identity replacement — directly buyable security and infrastructure scope.", "tags": ["Budget", "Cybersecurity"], "ref": 2 }
   ],
 
   "dellActions": [
@@ -146,6 +148,8 @@
     { "label": "State of Delaware News — Delaware Launches Statewide AI Training", "url": "https://news.delaware.gov/2026/03/19/delaware-launches-new-statewide-ai-training-for-state-employees/" },
     { "label": "DTI — Strategic Priorities", "url": "https://dti.delaware.gov/about-dti/strategic-priorities/" },
     { "label": "StateScoop — Delaware cyber chief Solomon Adote to depart", "url": "https://statescoop.com/delaware-cyber-chief-departs-after-six-years-2025/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "StateScoop — Delaware names Aashish Patel chief security officer (Sept 2025)", "url": "https://statescoop.com/delaware-chief-security-officer-aashish-patel/" },
+    { "label": "Town Square Delaware — General Assembly sends FY2027 budget to Gov. Meyer (June 2026)", "url": "https://townsquaredelaware.com/delaware-general-assembly-sends-fy2027-budget-to-governor-meyer/" }
   ]
 }

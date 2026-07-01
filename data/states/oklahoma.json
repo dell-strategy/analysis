@@ -3,7 +3,7 @@
   "name": "Oklahoma",
   "slug": "oklahoma",
   "region": "South Central",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A strongly consolidated state IT model under OMES, a new statewide AI and modernization push, and a $9B Google-led data-center boom — Oklahoma is buying technology centrally and building AI infrastructure fast.",
 
   "snapshot": [
@@ -119,20 +119,21 @@
   },
 
   "powerStructure": [
-    { "name": "Kevin Stitt", "title": "Governor", "org": "State of Oklahoma", "note": "Pushes efficiency, AI adoption, and fiscal stewardship; created the Task Force on Emerging Technologies and declares annual Cybersecurity Awareness Month." },
-    { "name": "Dan Cronin", "title": "State Chief Information Officer", "org": "OMES", "note": "Appointed Jan 6, 2025; 25+ yrs (Microsoft, Allstate, Marriott). Owns the consolidated IT model, statewide contracts, and the FY26–28 strategic plan.", "ref": 5 },
+    { "name": "Kevin Stitt", "title": "Governor", "org": "State of Oklahoma", "note": "Term-limited; cannot run again. Open-seat 2026 race — GOP primary held June 16, 2026, with a likely Aug 25 runoff and Nov 3 general; expect cabinet/leadership turnover after Jan 2027. Pushes efficiency, AI adoption, fiscal stewardship; created the Task Force on Emerging Technologies and declares annual Cybersecurity Awareness Month.", "ref": 12 },
+    { "name": "Dan Cronin", "title": "State Chief Information Officer", "org": "OMES", "note": "Appointed Jan 6, 2025; 25+ yrs (Microsoft, Allstate, Marriott). Owns the consolidated IT model, statewide contracts, and the FY26–28 strategic plan; has assumed added oversight of cybersecurity operations. Named to Constellation Research's 2026 Business Transformation 150.", "ref": 5 },
     { "name": "Tai Phan", "title": "State Chief AI & Technology Officer", "org": "OMES", "note": "First-ever role, named Nov 21, 2025; OU grad and former OMES CTO. Leads AI strategy and digital modernization across agencies.", "ref": 6 },
-    { "name": "OMES Central Purchasing", "title": "Statewide procurement authority", "org": "State of Oklahoma", "note": "Runs the Central Purchasing Act and statewide/cooperative IT contracts — the buying mechanism for the executive branch." }
+    { "name": "Daniel Langley", "title": "State Chief Information Security Officer", "org": "OMES / Cyber Command", "note": "Started ~Oct 2025; heads state IT security policy under CIO Cronin. Former Washington Technology Solutions deputy CISO and WA Lottery CISO; U.S. Army Signal Corps veteran. Leads Oklahoma Cyber Command operations.", "ref": 13 },
+    { "name": "Mark Wood", "title": "OMES Director", "org": "OMES", "note": "Appointed Dec 17, 2025 (former state Tax Commissioner, 37 yrs public accounting). Runs OMES administratively; reports to state COO David Ostrowe. Distinct from the State CIO/IT leadership, which sits under Cronin.", "ref": 14 },
+    { "name": "OMES Central Purchasing", "title": "Statewide procurement authority", "org": "State of Oklahoma", "note": "Runs the Central Purchasing Act and statewide/cooperative IT contracts — the buying mechanism for the executive branch. Using AI process intelligence (Celonis) to police off-contract and overpaying spend." }
   ],
 
   "news": [
-    { "date": "2026-04", "title": "Meta breaks ground on AI-optimized Tulsa data center (Project Anthem)", "impact": "Adds to the AI-infrastructure wave; reinforces Oklahoma as a national AI hub.", "tags": ["Data Centers", "AI"], "ref": 7 },
+    { "date": "2026-06", "title": "Open-seat governor's race: GOP primary held June 16, 2026 (Stitt term-limited)", "impact": "A new administration arrives Jan 2027, with likely cabinet/COO turnover; CIO/AI/CISO posts at OMES are appointed roles that could shift. Build relationships now and watch for post-election leadership change.", "tags": ["Leadership", "Politics"], "ref": 12 },
+    { "date": "2026-06", "title": "IREN scales its 1.6 GW Oklahoma AI campus", "impact": "IREN's ~2,000-acre Oklahoma site (1.6 GW secured) plus May 2026 acquisitions (Mirantis, Nostrum) reinforce the state as AI-infrastructure terrain — tailwind for ISG/AI-factory compute and OU/OSU research-computing demand.", "tags": ["Data Centers", "AI Infrastructure"], "ref": 15 },
+    { "date": "2026-04", "title": "Meta breaks ground on AI-optimized Tulsa data center (Project Anthem)", "impact": "$1B+ Tulsa facility (targeted ~2028) adds to the AI-infrastructure wave; reinforces Oklahoma as a national AI hub.", "tags": ["Data Centers", "AI"], "ref": 7 },
     { "date": "2026-04", "title": "Gov. Stitt signs FY2027 budget (SB 1177, ~$12.8B)", "impact": "Slightly larger budget funds agency services; technology flows centrally through OMES.", "tags": ["Budget"], "ref": 2 },
-    { "date": "2026-02", "title": "Gov. Stitt proposed an $8.12B general-revenue FY2027 budget", "impact": "$11.75B all funds, -6.7% vs FY2026; total reserves projected at $2.88B (later enacted via SB 1177 at ~$12.8B). Funds OMES to stand up a statewide call center.", "tags": ["Budget"], "ref": 11 },
-    { "date": "2025-11", "title": "Tai Phan named first State Chief AI & Technology Officer", "impact": "Formalizes statewide AI leadership; agencies need governed, auditable AI approaches.", "tags": ["AI", "Leadership"], "ref": 6 },
-    { "date": "2025-10", "title": "Statewide Cybersecurity Awareness Month + AI threat detection", "impact": "Security elevated as a standing CIO program; openings for secure compute and services.", "tags": ["Cybersecurity"], "ref": 3 },
-    { "date": "2025-08", "title": "Google announces ~$9B Oklahoma cloud/AI investment", "impact": "Stillwater campus + Pryor expansion signal the scale of AI infrastructure landing in-state.", "tags": ["Data Centers", "AI"], "ref": 7 },
-    { "date": "2025-01", "title": "Dan Cronin begins as State CIO; FY26–28 IT Strategic Plan follows", "impact": "New leadership sets a cloud-native modernization and legacy-retirement agenda at OMES.", "tags": ["Leadership", "Modernization"], "ref": 5 }
+    { "date": "2025-12", "title": "OMES leadership: Daniel Langley named State CISO (Oct); Mark Wood named OMES Director (Dec)", "impact": "New CISO under CIO Cronin runs Cyber Command/IT-security policy; new OMES Director (former Tax Commissioner) handles administration under the state COO. IT/CIO authority stays with Cronin — engage CISO on security buys.", "tags": ["Leadership", "Cybersecurity"], "ref": 13 },
+    { "date": "2025-11", "title": "Tai Phan named first State Chief AI & Technology Officer", "impact": "Formalizes statewide AI leadership; agencies need governed, auditable AI approaches.", "tags": ["AI", "Leadership"], "ref": 6 }
   ],
 
   "dellActions": [
@@ -154,6 +155,10 @@
     { "label": "Oklahoma Broadband Office — BEAD program (deployment funding)", "url": "https://oklahoma.gov/broadband/grant-programs/broadband-equity-access-and-deployment-program-.html" },
     { "label": "GovTech — Oklahoma names Dan Cronin as the state's newest CIO", "url": "https://www.govtech.com/workforce/oklahoma-names-dan-cronin-as-the-states-newest-cio" },
     { "label": "OMES — IT Procurement (statewide/mandatory statewide IT contracts)", "url": "https://oklahoma.gov/omes/divisions/information-services/about-information-services/it-procurement.html" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
+    { "label": "Ballotpedia — Oklahoma gubernatorial election, 2026 (Stitt term-limited; June 16 primary)", "url": "https://ballotpedia.org/Oklahoma_gubernatorial_election,_2026" },
+    { "label": "StateScoop — Oklahoma names Daniel Langley as new State CISO", "url": "https://statescoop.com/oklahoma-ciso-daniel-langley/" },
+    { "label": "Oklahoma Voice — Stitt appoints new OMES director (Mark Wood)", "url": "https://oklahomavoice.com/briefs/stitt-appoints-new-omes-director-to-lead-core-state-functions/" },
+    { "label": "IREN — Oklahoma 1,600 MW AI data-center campus", "url": "https://iren.com/data-centers/oklahoma" }
   ]
 }

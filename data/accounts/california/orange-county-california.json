@@ -5,7 +5,7 @@
   "stateName": "California",
   "type": "County",
   "hq": "Santa Ana, CA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "California's 3rd-most-populous county (~3.2M residents): a centralized internal IT shop, OC Information Technology (OCIT), runs technology for county agencies, with a ~$10.5B FY2026-27 budget and an active cloud-modernization push shaping near-term tech spend.",
 
   "snapshot": [
@@ -47,22 +47,24 @@
   },
 
   "powerStructure": [
-    { "name": "Michelle Aguirre", "title": "County Executive Officer (CEO)", "note": "Top of the county administration and budget; appointed June 2025, OCIT reports up through the CEO's office. Sets the spending frame every agency operates within." },
-    { "name": "KC Roestenberg", "title": "Chief Information Officer (OCIT)", "note": "Owns county IT strategy and the OCIT shared-services organization — the central technology relationship for the account. Confirm current incumbency before forecasting." },
-    { "name": "Ed Althof", "title": "Assistant CIO & Chief Technology Officer (OCIT)", "note": "Deputy/CTO who manages the department in the CIO's absence — a key technical and operational relationship in the buying center." },
-    { "name": "Andrew Alipanah", "title": "Information Security Director & County Privacy Officer (OCIT)", "note": "Owns the county Cybersecurity Program and privacy posture — the security buying-center relationship for endpoint, identity, and infrastructure-security plays." },
-    { "name": "Board of Supervisors", "title": "Five-member governing board", "note": "Adopts the county budget and approves major contracts — the body scheduled to adopt the FY2026-27 budget on June 23, 2026." }
+    { "name": "KC Roestenberg", "title": "Interim County Executive Officer (CEO)", "note": "Selected by the Board on June 23, 2026 and stepped into the role June 27, 2026, moving up from OCIT CIO after Michelle Aguirre's retirement — a ~40-year county veteran (with the county since 1982) who ran IT, so the top of the administration now has a technology background. Treat as interim pending a permanent CEO recruitment; confirm status before forecasting." },
+    { "name": "Ed Althof", "title": "Acting Chief Information Officer (OCIT)", "note": "Formerly Assistant CIO & CTO; now listed as Acting CIO on OCIT's leadership page after Roestenberg moved to Interim CEO — the central technology relationship for the account. Treat as acting; confirm whether a permanent CIO is named before mapping the org." },
+    { "name": "Andrew Alipanah", "title": "Director, Information Security (OCIT)", "note": "Owns the county Cybersecurity Program — the security buying-center relationship for endpoint, identity, and infrastructure-security plays. (Previously also referenced as County Privacy Officer; verify current scope.)" },
+    { "name": "Michelle Aguirre", "title": "County Executive Officer (CEO) — retiring", "note": "Interim CEO since June 2025; retiring effective ~June 27, 2026 after 37 years with the county, replaced by KC Roestenberg on an interim basis. Legacy relationship — rebuild the executive map under the new interim CEO." },
+    { "name": "Board of Supervisors", "title": "Five-member governing board", "note": "Adopts the county budget and approves major contracts; on June 23, 2026 it selected the new interim CEO and was scheduled to adopt the FY2026-27 budget. Vice Chair Katrina Foley led the interim-CEO selection." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "OCIT CIO KC Roestenberg selected as Interim County CEO", "impact": "The Board picked longtime CIO KC Roestenberg as interim County Executive Officer on June 23, 2026 (effective June 27), so the top of the county administration now has a technology background — a favorable but interim signal. Re-anchor executive relationships and confirm the recruitment for a permanent CEO.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "Ed Althof becomes Acting CIO as Roestenberg moves up; Aguirre retires", "impact": "With Roestenberg elevated to interim CEO, former Assistant CIO/CTO Ed Althof is now Acting CIO of OCIT — the central technology relationship for the account is in transition. CEO Michelle Aguirre is retiring (~June 27) after 37 years. Treat both roles as acting/interim and confirm before forecasting.", "tags": ["Leadership"] },
     { "date": "2026-05", "title": "County releases ~$10.5B FY2026-27 Recommended Budget", "impact": "Large, stable spending plan ($5.2B GF) released May 20, 2026, with Board adoption set for June 23 — the funding backdrop and timing anchor for the account.", "tags": ["Budget"] },
-    { "date": "2025-06", "title": "Michelle Aguirre appointed County Executive Officer", "impact": "New top of the county administration that OCIT reports up through — rebuild the executive relationship map and confirm tech priorities under the new CEO.", "tags": ["Leadership"] },
+    { "date": "2025-06", "title": "Michelle Aguirre appointed County Executive Officer", "impact": "New top of the county administration that OCIT reports up through — now superseded by the June 2026 interim-CEO transition (Aguirre retiring, Roestenberg stepping in).", "tags": ["Leadership"] },
     { "date": "2025-05", "title": "County selects Oracle Fusion Cloud Applications for finance & HR", "impact": "A major cloud-ERP modernization signals appetite to retire legacy and opens surrounding infrastructure, data, and integration work — a proof point for the next modernization conversation.", "tags": ["Cloud", "Modernization"] },
     { "date": "2025-10", "title": "OCIT advances cloud services migration solicitation", "impact": "Active cloud-migration procurement confirms the hybrid-cloud and data-center modernization track — a near-term opening for ISG and as-a-service positioning.", "tags": ["Cloud", "Procurement"] }
   ],
 
   "dellActions": [
-    "Anchor the relationship with the OCIT buying center — CIO KC Roestenberg and Assistant CIO/CTO Ed Althof — and confirm current incumbencies before mapping the org and forecasting.",
+    "Re-anchor the OCIT buying center after the June 2026 shake-up: Acting CIO Ed Althof now leads OCIT (former CIO KC Roestenberg moved up to Interim County CEO, CEO Aguirre retiring). Confirm whether the CIO and CEO roles remain acting/interim and rebuild the executive map before forecasting.",
     "Lead with hybrid-cloud and data-center modernization tied to the Oracle Fusion ERP migration and OCIT's cloud-services track — position Dell ISG, storage, and as-a-service consumption around the surrounding infrastructure.",
     "Build the security motion with Information Security Director / County Privacy Officer Andrew Alipanah around the county Cybersecurity Program — endpoint, identity, and infrastructure resilience.",
     "Verify Dell's cooperative coverage (OMNIA Partners, NASPO ValuePoint) and California CMAS/LPA scope so the county can buy without a fresh RFP; register and track solicitations through the County Procurement Office (CPO).",
@@ -75,6 +77,8 @@
     { "label": "OCIT — Orange County Cybersecurity Program", "url": "https://ocit.oc.gov/page/orange-county-cybersecurity-program" },
     { "label": "County of Orange — FY 2026-27 Recommended Budget (press release)", "url": "https://www.ocgov.com/press/county-orange-releases-fy-2026-27-recommended-budget" },
     { "label": "County of Orange — Michelle Aguirre Appointed County Executive Officer", "url": "https://www.ocgov.com/press/michelle-aguirre-appointed-orange-countys-county-executive-officer" },
+    { "label": "MyNewsLA — OC Supervisors Pick KC Roestenberg as New Interim CEO (June 23, 2026)", "url": "https://mynewsla.com/orange-county/2026/06/23/oc-supervisors-pick-kc-roestenberg-as-new-interim-ceo/" },
+    { "label": "OCIT — CIO's Corner (\"From the County Acting CIO, Ed Althof\")", "url": "https://ocit.oc.gov/cios-corner" },
     { "label": "Oracle — Orange County Picks Oracle's AI-powered Cloud Applications", "url": "https://www.oracle.com/news/announcement/orange-county-picks-oracle-ai-powered-cloud-applications-2025-05-06/" },
     { "label": "Orange County — County Procurement Office (CPO)", "url": "https://cpo.oc.gov/" }
   ]

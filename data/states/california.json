@@ -3,11 +3,11 @@
   "name": "California",
   "slug": "california",
   "region": "West",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The nation's largest state IT market enters FY2025-26 under fiscal pressure but with a new tech chief, a sweeping AI-procurement order, and the country's first frontier-AI law reshaping how California buys and governs technology.",
 
   "snapshot": [
-    { "label": "FY2025-26 Budget", "value": "$321.1B" },
+    { "label": "FY2026-27 Budget (enacted)", "value": "$351.7B" },
     { "label": "Central IT Vehicle", "value": "CMAS / DGS" },
     { "label": "Security Roadmap", "value": "Cal-Secure" },
     { "label": "AI Order (new)", "value": "EO N-5-26" }
@@ -44,7 +44,7 @@
     "notes": [
       "Figures are annual (single-year) unless noted; California does not use a biennial cycle.",
       "FY2025-26 is fiscally constrained — tie offers to mandated modernization and federal/state-funded programs rather than discretionary budget.",
-      "FY2027 (governor's proposed, per NASBO): $248.3B general fund, +4.5% vs FY2026; $348.9B total state spending (excl. federal funds). A constrained, balanced plan that limits new ongoing commitments and addresses a $2.9B shortfall, strengthening reserves to $23.0B combined ($14.4B in the rainy day BSA)."
+      "FY2026-27 (enacted): Governor Newsom signed the 2026-27 budget on June 29, 2026 — ~$351.7B total spending and ~$251.5B General Fund, balanced with no projected deficit this year or next and ~$28.8B in reserves (~$15.1B rainy-day BSA, ~$9.2B Prop 98 reserve). A constrained, balanced plan that limits new ongoing commitments — tie offers to mandated modernization and federal/state-funded programs rather than discretionary spend."
     ]
   },
 
@@ -119,20 +119,20 @@
 
   "powerStructure": [
     { "name": "Gavin Newsom", "title": "Governor", "org": "State of California", "note": "Signed EO N-5-26 (AI procurement) and SB 53 (frontier-AI law); drives the GenAI-in-government agenda." },
-    { "name": "Chris Given", "title": "State CIO & CDT Director", "org": "California Department of Technology", "note": "Appointed Apr 2026 (ex-IRS Direct File, GovOps). Priorities: legacy modernization, digital identity, AI. Senate confirmation pending.", "ref": 3 },
+    { "name": "Chris Given", "title": "State CIO & CDT Director", "org": "California Department of Technology", "note": "Appointed Apr 2026, sworn in early May 2026 (ex-IRS Direct File, GovOps). Priorities: legacy modernization, digital identity, AI. Senate confirmation still pending as of June 2026.", "ref": 3 },
+    { "name": "Vitaliy Panych", "title": "State Chief Information Security Officer", "org": "California Department of Technology — Office of Information Security", "note": "Statewide CISO leading Cal-Secure and (under EO N-5-26) reviewing federal supply-chain risk designations for AI procurement. Confirm still current before citing.", "ref": 14 },
     { "name": "Liana Bailey-Crimmins", "title": "Former State CIO & CDT Director", "org": "California Department of Technology", "note": "Led CDT 2022-spring 2026 through the state's early GenAI rollout; retired April 2026.", "ref": 2 },
     { "name": "Government Operations Agency (GovOps)", "title": "Oversight agency", "org": "State of California", "note": "Oversees CDT and DGS; co-leads GenAI executive-order implementation." },
     { "name": "DGS Procurement Division", "title": "Central procurement", "org": "Department of General Services", "note": "Administers CMAS and statewide IT agreements — the contracting gateway for state and local buyers." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Legislature passes FY2026-27 budget at the June 15 deadline; final deal in negotiation", "impact": "Builds on Newsom's May Revise; higher revenue projections add billions for K-12/community colleges, with final figures to be settled with the governor before July 1.", "tags": ["Budget"], "ref": 13 },
-    { "date": "2026-05", "title": "Newsom's May Revision eliminates the FY2026-27 deficit", "impact": "$0 deficit this year and next via a ~$1.8B General Fund reduction; ~$30B combined reserves. Constrained but balanced — tie offers to mandated modernization, not discretionary spend.", "tags": ["Budget"], "ref": 12 },
-    { "date": "2026-04", "title": "Newsom appoints Chris Given as State CIO & CDT Director", "impact": "New tech leadership with a legacy-modernization and AI mandate; relationship-building window for sellers.", "tags": ["Leadership"], "ref": 3 },
+    { "date": "2026-06", "title": "Newsom signs enacted FY2026-27 budget (~$351.7B total; ~$251.5B GF; ~$28.8B reserves)", "impact": "Balanced, no projected deficit this year or next, but constrained — limits new ongoing commitments. Anchor offers to mandated modernization and federal/state-funded programs, not discretionary spend.", "tags": ["Budget"], "ref": 13 },
+    { "date": "2026-06", "title": "CDT's 'Poppy' state AI assistant pilot runs through June 2026, with expansion planned", "impact": "CDT-built GenAI tool hosted entirely on the state's internal network — queries/documents never leave the trusted environment; ~2,600 users across 66 departments. A direct proof point and opening for governed/private on-prem AI on sensitive workloads.", "tags": ["AI", "Modernization"], "ref": 14 },
+    { "date": "2026-05", "title": "Newsom signs first-of-its-kind AI workforce-disruption executive order (May 21)", "impact": "Directs agencies to build AI labor-impact dashboards, an 'AI playbook,' and a unified social-services platform — adjacent data, analytics, and modernization demand; reinforces March EO N-5-26 procurement safeguards.", "tags": ["AI", "Policy"], "ref": 15 },
+    { "date": "2026-05", "title": "Chris Given sworn in as State CIO & CDT Director", "impact": "New tech leadership (ex-IRS Direct File, GovOps) took the oath in early May with a legacy-modernization, digital-identity, and AI mandate; Senate confirmation still pending. Relationship-building window for sellers.", "tags": ["Leadership"], "ref": 3 },
     { "date": "2026-03", "title": "EO N-5-26 establishes AI vendor-certification & procurement framework", "impact": "New compliance gate for AI buys; recommendations due ~120 days out. Favors governed, auditable AI.", "tags": ["AI", "Procurement"], "ref": 5 },
-    { "date": "2026-04", "title": "Liana Bailey-Crimmins retires as State CIO", "impact": "End of a four-year tenure that launched California's GenAI program; transition in CDT leadership.", "tags": ["Leadership"], "ref": 2 },
-    { "date": "2026-01", "title": "SB 53 frontier-AI transparency law takes effect", "impact": "Nation's first frontier-AI regulation is live; reinforces demand for transparent, governed AI.", "tags": ["AI", "Policy"], "ref": 6 },
-    { "date": "2025-06", "title": "Budget Act of 2025 signed (~$321.1B; ~$11.8B shortfall closed)", "impact": "Constrained fiscal year — tie offers to mandated modernization and federal/state-funded programs.", "tags": ["Budget"], "ref": 1 }
+    { "date": "2026-01", "title": "SB 53 frontier-AI transparency law takes effect", "impact": "Nation's first frontier-AI regulation is live; reinforces demand for transparent, governed AI.", "tags": ["AI", "Policy"], "ref": 6 }
   ],
 
   "dellActions": [
@@ -156,6 +156,8 @@
     { "label": "DGS — California Multiple Award Schedules (CMAS)", "url": "https://dgs.ca.gov/PD-CMAS" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
     { "label": "Office of the Governor — May Revision eliminates California's deficit (2026-27)", "url": "https://www.gov.ca.gov/2026/05/14/may-revise/" },
-    { "label": "EdSource — California Legislature passes 2026-27 budget", "url": "https://edsource.org/2026/california-legislature-passes-budget/760411" }
+    { "label": "Office of the Governor — Newsom signs historic balanced 2026-27 state budget (June 29, 2026)", "url": "https://www.gov.ca.gov/2026/06/29/signedbudget/" },
+    { "label": "StateScoop — Only California state employees can use Poppy, a new AI assistant designed for security", "url": "https://statescoop.com/california-poppy-state-government-ai-assistant/" },
+    { "label": "Office of the Governor — Newsom signs first-of-its-kind executive order to prepare workers and businesses for potential AI disruption (May 21, 2026)", "url": "https://www.gov.ca.gov/2026/05/21/governor-newsom-signs-first-of-its-kind-executive-order-to-prepare-workers-and-businesses-for-potential-ai-disruption/" }
   ]
 }

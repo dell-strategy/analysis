@@ -5,7 +5,7 @@
   "name": "Texas DIR — Department of Information Resources",
   "slug": "dir",
   "hq": "Austin, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The front door to Texas public-sector IT: DIR runs the state's central technology procurement, the Cooperative Contracts most state, local, and higher-ed buyers use, and shared data-center and security services.",
 
   "snapshot": [
@@ -46,13 +46,16 @@
   },
 
   "powerStructure": [
-    { "name": "Tony Sauerhoff", "title": "State CIO & DIR Executive Director", "note": "Owns statewide tech direction; AI-forward (former Chief AI & Innovation Officer). The top relationship for the DIR motion." },
-    { "name": "DIR Chief Procurement Office", "title": "Cooperative Contracts & solicitations", "note": "Owns the contract vehicles, RFOs, and vendor onboarding — the path onto the co-op." },
-    { "name": "DIR Shared Technology Services (STS)", "title": "Data center / cloud / network services", "note": "Buying center for consolidated infrastructure and managed services." },
-    { "name": "Office of the CISO (DIR)", "title": "Security policy & TX-RAMP", "note": "Owns TX-RAMP and statewide security standards — note cyber operations are migrating to the Texas Cyber Command." }
+    { "name": "Tony Sauerhoff", "title": "State CIO, DIR Executive Director & Chief AI & Innovation Officer", "note": "Confirmed permanent (interim since Jan 2026, board-selected/confirmed early 2026). AI-forward — retains the Chief AI & Innovation Officer hat and is GovRAMP board president. The top relationship for the DIR motion." },
+    { "name": "Lisa Massock", "title": "DIR Chief Procurement Officer", "note": "Owns the Cooperative Contracts, RFOs, and vendor onboarding — the path onto the co-op. (Name per DIR executive bios; verify before outreach.)" },
+    { "name": "DIR Shared Technology Services (STS)", "title": "Data center / cloud / network services", "note": "Buying center for consolidated infrastructure and managed services. Now also hosts a small vendor-focused security team created during the cyber transition." },
+    { "name": "TX-RAMP program (DIR, transferring)", "title": "Cloud-security certification gate", "note": "DIR still runs TX-RAMP (Program Manual 4.0, effective 2026) but the program's duties are slated to move to the Texas Cyber Command by Dec 31, 2026. DIR no longer lists a standalone statewide CISO — cyber ops transferred to TXCC (chief: retired Vice Adm. TJ White, San Antonio). Confirm which entity owns TX-RAMP before forecasting security deals." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "DIR launches Texas Design System — 37 reusable, WCAG 2.2 AA web components (per HB 5195)", "impact": "Statewide website-modernization push DIR now stewards; a services/experience track distinct from infrastructure — a lever for digital-modernization and accessibility offerings across agencies.", "tags": ["Modernization", "Digital Services"] },
+    { "date": "2026-05", "title": "DIR details cyber transition: employees/functions moved to Texas Cyber Command (eff. Mar 1); DIR keeps only internal + STS vendor-compliance security teams", "impact": "Prohibited-technologies program and the federal State & Local Cybersecurity Grant Program moved to TXCC. DIR retains no standalone statewide CISO — re-map the security buying center to TXCC (San Antonio) while confirming TX-RAMP ownership.", "tags": ["Cybersecurity", "Transition"] },
+    { "date": "2026-02", "title": "TX-RAMP Program Manual updated to v4.0", "impact": "Refreshed cloud-security certification requirements; re-check that any cloud / as-a-service offering meets the current TX-RAMP level before pursuing state deals.", "tags": ["Cloud", "Compliance"] },
     { "date": "2026-04", "title": "DIR confirms cyber transition to Texas Cyber Command completes by Dec 31, 2026", "impact": "Security decision-making and budget shift to the new agency — rebuild the relationship map for the security buying center.", "tags": ["Cybersecurity"] },
     { "date": "2026-03", "title": "Tony Sauerhoff confirmed permanent State CIO & DIR Executive Director", "impact": "Stable, AI-forward leadership at the top of the statewide motion.", "tags": ["Leadership"] }
   ],
@@ -65,8 +68,13 @@
   ],
 
   "sources": [
+    { "label": "Texas DIR — Cybersecurity Functions Transition to the Texas Cyber Command", "url": "https://dir.texas.gov/news/cybersecurity-functions-transition-texas-cyber-command" },
+    { "label": "GovTech Insider — DIR Outlines Cybersecurity Transition to Texas Cyber Command (May 21, 2026)", "url": "https://insider.govtech.com/texas/news/dir-outlines-cybersecurity-transition-to-texas-cyber-command" },
+    { "label": "Texas DIR — DIR Launches Texas Design System (June 9, 2026)", "url": "https://dir.texas.gov/news/dir-launches-texas-design-system-modernize-state-websites" },
+    { "label": "Texas DIR — Executive Biographies (leadership roster)", "url": "https://dir.texas.gov/about-dir/executive-biographies" },
+    { "label": "Texas DIR — TX-RAMP (Program Manual 4.0, 2026)", "url": "https://dir.texas.gov/information-security/texas-risk-and-authorization-management-program-tx-ramp" },
     { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" },
-    { "label": "Texas DIR — TX-RAMP", "url": "https://dir.texas.gov/information-security/texas-risk-and-authorization-management-program-tx-ramp" },
-    { "label": "GovTech — Texas confirms Tony Sauerhoff as State CIO, DIR Leader", "url": "https://www.govtech.com/workforce/texas-confirms-tony-sauerhoff-as-state-cio-dir-leader" }
+    { "label": "GovTech — Texas confirms Tony Sauerhoff as State CIO, DIR Leader", "url": "https://www.govtech.com/workforce/texas-confirms-tony-sauerhoff-as-state-cio-dir-leader" },
+    { "label": "Texas Cyber Command — Cybersecurity Transition (TXCC, chief TJ White)", "url": "https://www.txcc.texas.gov/cybersecurity-transition" }
   ]
 }

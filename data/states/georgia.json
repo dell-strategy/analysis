@@ -3,7 +3,7 @@
   "name": "Georgia",
   "slug": "georgia",
   "region": "Southeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A $38.5B FY2027 budget, a fast-maturing statewide AI governance program, and one of the nation's hottest data-center markets now facing a tax and energy reckoning — Georgia is reshaping how it adopts and secures technology.",
 
   "snapshot": [
@@ -111,19 +111,20 @@
 
   "powerStructure": [
     { "name": "Brian Kemp", "title": "Governor", "org": "State of Georgia", "note": "Signed the $38.5B FY2027 budget; fiscally disciplined, withheld >$300M in new spending.", "ref": 1 },
-    { "name": "Shawnzia Thomas", "title": "State CIO & GTA Executive Director", "org": "Georgia Technology Authority", "note": "Owns statewide tech direction; 2026 philosophy 'AI Governance Is Security.'", "ref": 4 },
-    { "name": "GTA Office of Artificial Intelligence", "title": "AI governance & standards", "org": "GTA", "note": "Runs the AI roadmap, GenAI Responsible Use Standard, and agency AI-plan mandate (due Dec 31, 2026).", "ref": 5 },
-    { "name": "Georgia General Assembly", "title": "Appropriations & legislation", "org": "State of Georgia", "note": "Sets the annual budget; in the 2026 session (ended April 3) several data-center tax/energy bills failed, leaving exemptions intact.", "ref": 8 },
+    { "name": "Shawnzia Thomas", "title": "State CIO & GTA Executive Director", "org": "Georgia Technology Authority", "note": "Owns statewide tech direction; 2026 philosophy 'AI Governance Is Security.' Re-verified current as of June 2026. Note: Kemp is term-limited and a new administration takes office Jan 2027, so confirm continuity going forward.", "ref": 4 },
+    { "name": "Steve Hodges", "title": "State CISO", "org": "GTA — Office of Information Security", "note": "Leads enterprise/GETS information security; re-verified current as of June 2026. Operationalizes the 'security is security' / NIST-applied-to-AI posture.", "ref": 16 },
+    { "name": "Nikhil Deshpande", "title": "Chief Digital & AI Officer", "org": "GTA", "note": "Leads digital + AI; GTA's AI office runs the AI roadmap, GenAI Responsible Use Standard, agency AI-plan mandate (due Dec 31, 2026), and the new Darwin AI governance partnership (June 2026).", "ref": 5 },
+    { "name": "Georgia General Assembly", "title": "Appropriations & legislation", "org": "State of Georgia", "note": "Sets the annual budget; in the 2026 session (ended April 3) several data-center tax/energy bills failed, leaving exemptions intact. 2026 is an election year — full legislative + gubernatorial transition possible in Jan 2027.", "ref": 8 },
     { "name": "University System of Georgia", "title": "Higher-ed system", "org": "USG", "note": "26 institutions; large independent research-computing and AI-infrastructure buyer." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "GTA selects Darwin AI to build statewide AI-governance infrastructure", "impact": "GTA's 'foundation-first' motion (Darwin Govern + LaunchPad for enterprise AI visibility, policy/compliance, and pilot-to-production workflows) reinforces the governed-AI buying culture — Dell should lead with NIST-aligned, auditable private/on-prem AI that fits within this oversight layer.", "tags": ["AI", "Governance", "Security"], "ref": 13 },
+    { "date": "2026-06", "title": "Georgia gubernatorial transition under way — Kemp term-limited", "impact": "Kemp cannot seek a third term; after the May 19 primary and June 16 GOP runoff, the Nov 3, 2026 general pits Republican Rick Jackson against Democrat Keisha Lance Bottoms. A new administration in Jan 2027 could reshape cabinet/IT priorities — track for continuity of GTA leadership and the FY2028 budget cycle.", "tags": ["Leadership", "Election"], "ref": 14 },
     { "date": "2026-05", "title": "Kemp signs $38.5B FY2027 budget; directs >$300M in withheld new spending", "impact": "Disciplined-growth budget — confirm funded scope before forecasting agency deals.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2026-03", "title": "GTA awards NTT DATA a multi-year managed-services agreement to modernize state IT", "impact": "Cross-functional IT/cybersecurity/citizen-services modernization deal (terms not disclosed) signals where GTA's enterprise transformation dollars and prime-integrator relationships are concentrating — map Dell ISG/client/security offerings into the integrator's stack.", "tags": ["IT Strategy", "Procurement", "Modernization"], "ref": 15 },
     { "date": "2026-04", "title": "Georgia 2026 session ends; data-center tax/energy bills fail, exemptions intact", "impact": "Policy cloud lifts for new data-center builds — keeps metro Atlanta a strong Dell AI-infrastructure tailwind, though energy/grid scrutiny persists.", "tags": ["Data Centers", "Legislation"], "ref": 12 },
-    { "date": "2026-03", "title": "GTA releases FY2025 Annual State IT Report", "impact": "Highlights agencywide AI licensing/training and secured broadband funding — signals where modernization dollars flow.", "tags": ["IT Strategy", "AI"], "ref": 3 },
-    { "date": "2026-01", "title": "Gov. Kemp proposed a $32.9B general-fund FY2027 budget", "impact": "$76.5B total funds ($38.5B state funds); fiscally cautious with the Revenue Shortfall Reserve 'filled' at $5.6B, a fourth $1.0B tax rebate, and an income-tax rate cut to 4.99%.", "tags": ["Budget"], "ref": 11 },
-    { "date": "2026-01", "title": "Georgia's 2026 tech philosophy framed as 'AI Governance Is Security'", "impact": "Security-first buying culture; lead with NIST-aligned, governed AI.", "tags": ["AI", "Cybersecurity"], "ref": 4 },
-    { "date": "2025-11", "title": "NTIA approves Georgia's updated BEAD final proposal (~$1.3B)", "impact": "Broadband program moves from planning into implementation via GTA.", "tags": ["Broadband"], "ref": 7 }
+    { "date": "2026-01", "title": "Georgia's 2026 tech philosophy framed as 'AI Governance Is Security'", "impact": "Security-first buying culture; lead with NIST-aligned, governed AI.", "tags": ["AI", "Cybersecurity"], "ref": 4 }
   ],
 
   "dellActions": [
@@ -146,6 +147,10 @@
     { "label": "GTA — Procurement", "url": "https://gta.georgia.gov/about-us/procurement" },
     { "label": "GTA — GTA Direct Services", "url": "https://gta.georgia.gov/services-contracts" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Georgia Watch — Lawmakers leave data center tax breaks intact, punt on energy costs (2026 session)", "url": "https://georgiawatch.org/georgia-lawmakers-leave-data-center-tax-breaks-intact-punt-on-energy-costs/" }
+    { "label": "Georgia Watch — Lawmakers leave data center tax breaks intact, punt on energy costs (2026 session)", "url": "https://georgiawatch.org/georgia-lawmakers-leave-data-center-tax-breaks-intact-punt-on-energy-costs/" },
+    { "label": "Darwin AI — Georgia Lays the Foundation for Responsible AI in State Government with Darwin AI Partnership (June 5, 2026)", "url": "https://www.darwingov.com/post/georgia-lays-the-foundation-for-responsible-ai-in-state-government-with-darwin-ai-partnership" },
+    { "label": "Ballotpedia — Georgia gubernatorial election, 2026", "url": "https://ballotpedia.org/Georgia_gubernatorial_election,_2026" },
+    { "label": "NTT DATA — NTT DATA to Power Georgia's Next-Gen Digital Government Experience (Mar 3, 2026)", "url": "https://www.nttdata.com/en-us/news/2026/ntt-data-to-power-georgias-next-gen-digital-government-experience" },
+    { "label": "GTA — Steve Hodges, State CISO / GTA Leadership", "url": "https://gta.georgia.gov/about-us/who-we-are/gta-leadership" }
   ]
 }

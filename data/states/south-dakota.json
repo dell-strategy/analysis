@@ -3,7 +3,7 @@
   "name": "South Dakota",
   "slug": "south-dakota",
   "region": "Midwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A small, highly consolidated IT shop punching far above its weight on cyber — anchored by Dakota State University, a nationally recognized NSA cyber powerhouse, and a centralized Bureau of Information & Technology that buys for nearly all of state government.",
 
   "snapshot": [
@@ -116,13 +116,12 @@
   ],
 
   "news": [
+    { "date": "2026-04", "title": "Rhoden launches $5M South Dakota Defense Institute in Rapid City", "impact": "Future Fund seeds a defense/national-security hub (plus $1M for a building in Rapid City's Innovation District) coordinating industry, the SD National Guard, the Board of Regents, and Tech Ed — operationalizing the 'next big industry' frame and a longer-run pull for secure compute and cyber/defense workforce infrastructure.", "tags": ["Strategy", "Cybersecurity", "Economic Development"], "ref": 11 },
+    { "date": "2026-04", "title": "State expands GRIT cyber-services to rural utilities; touts GRIT as a 'national model'", "impact": "SB 75 (a GRIT request) lets rural water and sanitary-sewer districts join the state's cybersecurity services initiative; at the April Digital Government Summit, Rhoden and leaders cast GRIT as a replicable national model for critical-infrastructure resilience — a widening cyber/resilience footprint that BIT helps deliver.", "tags": ["Cybersecurity", "Resilience", "Legislation"], "ref": 12 },
     { "date": "2026-06", "title": "John R. Ballard takes office as DSU's 24th president", "impact": "Leadership transition at the cyber/AI powerhouse completes — Griffiths moves to Chancellor; a new top relationship for MadLabs and the Sioux Falls Applied Research Lab.", "tags": ["Leadership", "Cyber Education"], "ref": 10 },
-    { "date": "2026-06", "title": "Neal Nachtigall named BIT Commissioner & State CIO (effective June 5)", "impact": "New, internally promoted IT leader takes over a highly consolidated estate as Mark Wixon retires — a fresh relationship to build early.", "tags": ["Leadership"], "ref": 2 },
+    { "date": "2026-06", "title": "Neal Nachtigall named BIT Commissioner & State CIO (effective June 5)", "impact": "New, internally promoted IT leader takes over a highly consolidated estate as Mark Wixon retires — a fresh relationship to build early; early agenda emphasizes AI/data (secure Microsoft Copilot rollout) to improve state operations.", "tags": ["Leadership", "AI"], "ref": 2 },
     { "date": "2026-03", "title": "Lawmakers adopt ~$7.5B FY2027 budget (+2.4%)", "impact": "Modest-growth budget with ~$10M for IT infrastructure and a cloud cyber-backup investment; FY2027 begins July 2026.", "tags": ["Budget"], "ref": 4 },
-    { "date": "2025-12", "title": "Gov. Rhoden unveils FY2027 budget", "impact": "~$7.46B proposal funds state IT, radio-network redundancy, and a cloud-based cyber backup system.", "tags": ["Budget", "Cybersecurity"], "ref": 3 },
-    { "date": "2025-12", "title": "Gov. Rhoden proposed a $2.51B general-fund FY2027 budget", "impact": "$7.44B all funds, +1.6% vs FY2026; conservative posture with a $315.2M reserve (12.5% of appropriations). GRIT task force funding hardens IT infrastructure and creates a backup to the State Radio system.", "tags": ["Budget", "Cybersecurity"], "ref": 9 },
-    { "date": "2025-11", "title": "Dakota State profiled as a national cyber-workforce leader", "impact": "Reinforces DSU's standing (all three NSA CAE designations, PhD in Cyber Operations) and the Sioux Falls Applied Research Lab opening in 2026.", "tags": ["Cyber Education"], "ref": 6 },
-    { "date": "2025-09", "title": "Rhoden calls national security South Dakota's 'next big industry'", "impact": "Sets a top-down strategic frame tying cyber, defense, and tech to the state's economic future.", "tags": ["Strategy"], "ref": 5 }
+    { "date": "2025-12", "title": "Gov. Rhoden unveils FY2027 budget", "impact": "~$7.46B proposal funds state IT, radio-network redundancy, and a cloud-based cyber backup system.", "tags": ["Budget", "Cybersecurity"], "ref": 3 }
   ],
 
   "dellActions": [
@@ -143,6 +142,9 @@
     { "label": "GovTech — Dakota State Partners With NSA, Puts $90M into Cyber Research", "url": "https://www.govtech.com/education/higher-ed/dakota-state-partners-with-nsa-puts-90m-into-cyber-research" },
     { "label": "South Dakota Bureau of Administration — Procurement Management (NASPO Contracts)", "url": "https://boa.sd.gov/central-services/procurement-management/procurement-management-naspo-contracts.aspx" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Dakota State University — Office of the President (John R. Ballard, 24th president, June 2026)", "url": "https://dsu.edu/about-dsu/office-of-the-president/" }
+    { "label": "Dakota State University — Office of the President (John R. Ballard, 24th president, June 2026)", "url": "https://dsu.edu/about-dsu/office-of-the-president/" },
+    { "label": "SDPB — Rhoden announces $5M South Dakota Defense Institute (Apr 8, 2026)", "url": "https://www.sdpb.org/politics/2026-04-08/rhoden-announces-5m-south-dakota-defense-institute" },
+    { "label": "Govly — South Dakota Advances Infrastructure Resilience (GRIT national model; Digital Government Summit, Apr 2026)", "url": "https://app.govly.com/public/signals/88086" },
+    { "label": "GovTech — South Dakota's New CIO Aims to Improve Operations With AI, Data (Nachtigall; secure Copilot)", "url": "https://www.govtech.com/workforce/south-dakotas-new-cio-aims-to-improve-operations-with-ai-data" }
   ]
 }

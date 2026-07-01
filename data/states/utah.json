@@ -3,7 +3,7 @@
   "name": "Utah",
   "slug": "utah",
   "region": "Mountain West",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The first state with a dedicated AI policy office, a fast-growing 'Silicon Slopes' data-center boom, and a centralized DTS that runs the nation's largest cloud cooperative — Utah is a digital-government bellwether.",
 
   "snapshot": [
@@ -122,19 +122,19 @@
   "powerStructure": [
     { "name": "Spencer Cox", "title": "Governor", "org": "State of Utah", "note": "Champions Utah's 'Pro-Human' AI agenda and the data-center buildout; vocal on AI policy and state authority.", "ref": 7 },
     { "name": "Alan Fuller", "title": "State CIO & DTS Director", "org": "Division of Technology Services", "note": "Leads centralized IT since 2021; drives AI-for-employees, customer experience, digital ID, and whole-of-state cyber.", "ref": 3 },
-    { "name": "Office of AI Policy", "title": "AI policy & Learning Lab", "org": "Utah Dept. of Commerce", "note": "First-in-nation AI policy office; runs the regulatory sandbox shaping agency AI adoption.", "ref": 4 },
+    { "name": "Phil Bates", "title": "State CISO", "org": "Division of Technology Services", "note": "State CISO since 2015; runs whole-of-state cyber, the Utah Cyber Center (now extending K-12/LEA support), and is folding AI into state cyber operations.", "ref": 14 },
+    { "name": "Zach Boyd", "title": "Director, Office of AI Policy", "org": "Utah Dept. of Commerce", "note": "Leads the first-in-nation AI policy office and Learning Lab regulatory sandbox that shapes how agencies adopt governed AI.", "ref": 4 },
     { "name": "Division of Purchasing & General Services", "title": "State procurement", "org": "Dept. of Government Operations", "note": "Owns cooperative contracts and the NASPO lead-state cloud cooperative — key for vehicle strategy.", "ref": 8 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Legislature's interim committee opens bill file to define/regulate large-scale data centers", "impact": "Economic Development & Workforce Services Interim Committee (chair Sen. Ann Millner) voted unanimously (Jun 18) to define large data centers in code; hearings underway, with related water/incentive bills (Owens, Cutler) drafting for the 2027 session unless Cox calls a special session — coming siting/incentive/procurement guardrails to track.", "tags": ["Data Centers", "Policy", "Legislation"], "ref": 15 },
     { "date": "2026-06", "title": "AI data-center backlash: Kevin O'Leary 'Stratos' hyperscale project scaled back ~75%; Congress watching", "impact": "Massive AI-infrastructure pipeline continues but is politically contested over water/power/community impact — siting risk to navigate alongside opportunity.", "tags": ["Data Centers", "AI"], "ref": 13 },
     { "date": "2026-05", "title": "Gov. Cox signs EO 2026-03 establishing statewide data-center development standards", "impact": "Directs agencies to protect Great Salt Lake water, ratepayers, and air quality; signals a possible Sept 2026 special session on data-center legislation — new siting/procurement guardrails.", "tags": ["Data Centers", "Policy"], "ref": 12 },
     { "date": "2026-02", "title": "MyUtah citizen portal launches publicly; Pro-Human AI Task Force members named", "impact": "DTS digital-government modernization goes live; AI governance moves from policy to execution across state services.", "tags": ["Digital Gov", "AI"], "ref": 5 },
     { "date": "2026-03", "title": "Legislature approves ~$31.6B FY2027 budget incl. $15M AI compute capacity", "impact": "Dedicated compute funding signals real state AI workloads — an opening for governed AI infrastructure.", "tags": ["Budget", "AI"], "ref": 1 },
     { "date": "2025-12", "title": "Gov. Cox unveils $10M 'Pro-Human' AI initiative at Utah's first AI Summit", "impact": "State backs AI workforce, curricula, and government deployment — agencies will need governed AI approaches.", "tags": ["AI", "Policy"], "ref": 7 },
-    { "date": "2025-12", "title": "Gov. Cox proposed a $12.1B general-fund FY2027 budget", "impact": "$30.7B all funds, +2.4% vs FY2026; rainy day funds near $1.6B. GRIT Initiative funds a unified e-permitting/information-management system and AI to modernize state services.", "tags": ["Budget", "AI"], "ref": 11 },
-    { "date": "2025-09", "title": "Silicon Slopes data-center buildout accelerates (Creekstone Delta gigasite, Nephi, Box Elder)", "impact": "Utah becomes a national AI-infrastructure hub — strong tailwind for Dell ISG/AI-infrastructure demand.", "tags": ["Data Centers", "AI"], "ref": 9 },
-    { "date": "2025-05", "title": "SB 149 amendments narrow AI disclosure rules; sandbox sunset extended to July 2027", "impact": "Utah refines its first-in-nation AI law, keeping the Learning Lab open — continued governed-AI demand.", "tags": ["AI", "Policy"], "ref": 4 }
+    { "date": "2025-12", "title": "Gov. Cox proposed a $12.1B general-fund FY2027 budget", "impact": "$30.7B all funds, +2.4% vs FY2026; rainy day funds near $1.6B. GRIT Initiative funds a unified e-permitting/information-management system and AI to modernize state services.", "tags": ["Budget", "AI"], "ref": 11 }
   ],
 
   "dellActions": [
@@ -158,6 +158,8 @@
     { "label": "@theU — University of Utah to build Utah Health AI Vault (UHAIV)", "url": "https://attheu.utah.edu/science-technology/u-to-build-out-utah-health-ai-vault-uhaiv-with-state-support/" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
     { "label": "Deseret News — Utah executive order sets higher data-center development standards (May 29, 2026)", "url": "https://www.deseret.com/utah/2026/05/29/utah-executive-order-data-center-gov-cox/" },
-    { "label": "Roll Call — Data center uproar in Utah, Congress watching (June 11, 2026)", "url": "https://rollcall.com/2026/06/11/data-center-uproar-utah-congress-watching-waiting/" }
+    { "label": "Roll Call — Data center uproar in Utah, Congress watching (June 11, 2026)", "url": "https://rollcall.com/2026/06/11/data-center-uproar-utah-congress-watching-waiting/" },
+    { "label": "GovTech — Phil Bates, Utah State CISO (bio/role)", "url": "https://www.govtech.com/top-25/phil-bates" },
+    { "label": "Fox 13 / KPCW — Utah lawmakers take first steps to regulate large-scale data centers (June 18, 2026)", "url": "https://www.kpcw.org/state-regional/2026-06-18/utah-lawmakers-take-first-steps-to-regulate-large-scale-data-centers" }
   ]
 }

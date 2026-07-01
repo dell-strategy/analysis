@@ -3,7 +3,7 @@
   "name": "Ohio",
   "slug": "ohio",
   "region": "Midwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A record two-year budget, the most aggressive data-center buildout in the Midwest, and a sudden pause on data-center tax breaks — Ohio is both the hottest AI-infrastructure market in the region and a state recalibrating how it pays for it.",
 
   "snapshot": [
@@ -107,20 +107,20 @@
   },
 
   "powerStructure": [
-    { "name": "Mike DeWine", "title": "Governor", "org": "State of Ohio", "note": "Signed HB 96 with a record 67 line-item vetoes; paused the data-center tax exemption in 2026. Term-limited (final term).", "ref": 1 },
-    { "name": "Katrina Flory", "title": "State CIO & DAS Assistant Director", "org": "DAS Office of Information Technology", "note": "Permanent CIO since June 2021; long-tenured (deputy since 2011). Owns statewide IT direction, shared services, and AI governance.", "ref": 4 },
+    { "name": "Mike DeWine", "title": "Governor", "org": "State of Ohio", "note": "Signed HB 96 with a record 67 line-item vetoes; paused the data-center tax exemption in 2026. Term-limited — open-seat race Nov. 3, 2026 (Ramaswamy R vs. Acton D); new administration in Jan. 2027 may reset cabinet.", "ref": 1 },
+    { "name": "Katrina Flory", "title": "State CIO & DAS Assistant Director", "org": "DAS Office of Information Technology", "note": "Permanent CIO since June 2021; long-tenured (deputy since 2011). Owns statewide IT direction, shared services, and AI governance (92 AI use cases approved as of mid-2026). Re-verified current June 2026.", "ref": 4 },
+    { "name": "Matthew Hemker", "title": "Interim State CISO (hedge: acting)", "org": "DAS Office of Information Technology", "note": "Deputy CISO stepped in as interim state CISO after Holly Drake departed in Dec. 2025 for the University of Central Florida. Permanent backfill not yet confirmed — treat as interim.", "ref": 16 },
     { "name": "DAS / Office of Procurement Services", "title": "Central procurement authority", "org": "State of Ohio", "note": "Approves State Term Schedule vendors and runs cooperative purchasing — the gate for most tech buys." },
-    { "name": "Joint Data Center Committee", "title": "Legislative study committee", "org": "Ohio General Assembly", "note": "Bipartisan committee weighing the future of data-center incentives — watch for tax-policy shifts affecting the buildout.", "ref": 8 }
+    { "name": "Joint Data Center Committee", "title": "Legislative study committee", "org": "Ohio General Assembly", "note": "Bipartisan committee weighing the future of data-center incentives. June 2026 reform bill (Chavez) stalled over House-Senate disagreement; no action expected until after the Nov. 3 election — watch for tax-policy shifts affecting the buildout.", "ref": 8 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Sweeping data-center bill clears Senate committee then stalls before 5-month break", "impact": "Sen. Brian Chavez's measure would cut the sales-tax exemption from 100% to 50% (75% for brownfield/bring-your-own-power projects), cap local property-tax abatements at 50%, and create a PUCO data-center rate class. It advanced through the Senate Energy Committee June 9 but stalled over House-Senate disagreement on incentives; the General Assembly is out until after the Nov. 3 election, so the moratorium and uncertainty persist into 2027.", "tags": ["Data Centers", "Tax", "Policy"], "ref": 13 },
+    { "date": "2026-06", "title": "Ohio approves a final ~$42.3M data-center tax break before moratorium; total exemptions top ~$2.17B", "impact": "The Ohio Tax Credit Authority approved one last ~$42.3M exemption for two Columbus-area projects before DeWine's pause took hold, pushing total committed data-center sales-tax breaks since 2025 to roughly $2.17B. Underscores both the scale of the central-Ohio buildout and the fiscal pressure now reshaping new-build incentives.", "tags": ["Data Centers", "Tax"], "ref": 14 },
+    { "date": "2026-06", "title": "Governor's race set: Ramaswamy (R) vs. Acton (D) for DeWine's open seat", "impact": "DeWine is term-limited; Vivek Ramaswamy (R) and Amy Acton (D) won their May 5 primaries and face off Nov. 3, 2026. A new administration in Jan. 2027 could reset cabinet leadership (incl. DAS) and the data-center/AI policy posture — a transition Dell should plan account coverage around.", "tags": ["Leadership", "Election"], "ref": 15 },
     { "date": "2026-06-04", "title": "Joint Data Center Committee grills Amazon/Google/Meta/Microsoft on NDAs, water, utility costs", "impact": "Heightened transparency pressure and scrutiny on data-center deals; tax-incentive legislation stalled over incentive terms. Watch for follow-on legislation on siting, power and water that shapes the central-Ohio buildout pipeline.", "tags": ["Data Centers", "Policy"], "ref": 12 },
     { "date": "2026-06-01", "title": "DeWine pauses Ohio's data-center sales-tax exemption (new applications)", "impact": "After the break cost ~$1.6B in 2025 (12x estimate), new exemptions are paused while the Joint Data Center Committee studies the future. Existing projects keep benefits; new-build incentive math changes.", "tags": ["Data Centers", "Tax"], "ref": 8 },
-    { "date": "2026-03", "title": "Intel confirms Ohio One first fab slips to 2030, production 2030–31", "impact": "Second major delay tempers near-term supplier demand, but site work continues and the campus still anchors Ohio's chip/AI identity.", "tags": ["Semiconductors"], "ref": 5 },
-    { "date": "2025-09", "title": "Local-government cybersecurity standards (ORC 9.64) take effect", "impact": "3,800+ subdivisions must adopt standards, assess risk, train staff, and report ransomware — broad security and backup/recovery demand.", "tags": ["Cybersecurity", "Local Gov"], "ref": 10 },
-    { "date": "2025-07", "title": "PUCO orders AEP Ohio data-center tariff (85% minimum take)", "impact": "Large data-center customers must pay for 85%+ of subscribed energy, stabilizing the grid and clearing the path for new central-Ohio builds.", "tags": ["Data Centers", "Energy"], "ref": 7 },
-    { "date": "2025-06", "title": "DeWine signs HB 96, the FY2026–27 budget (~$200B all-funds)", "impact": "Record budget with 67 line-item vetoes; sustains agency IT, broadband, and shared services spend.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-01", "title": "Ohio releases 2025 Comprehensive Cybersecurity Plan", "impact": "Statewide cyber roadmap via CyberOhio and the Ohio Cyber Integration Center frames security priorities and aggregated purchasing.", "tags": ["Cybersecurity", "Policy"], "ref": 11 }
+    { "date": "2025-12", "title": "State CISO Holly Drake departs; deputy Matthew Hemker steps in as interim", "impact": "Drake left in December 2025 to become CISO at the University of Central Florida; Deputy CISO Matthew Hemker is now interim state CISO under CIO Katrina Flory. A security-leadership transition to track when positioning ORC 9.64 local-gov and statewide security/backup engagements.", "tags": ["Cybersecurity", "Leadership"], "ref": 16 }
   ],
 
   "dellActions": [
@@ -143,6 +143,10 @@
     { "label": "Community Solutions — DAS releases policy governing use of AI", "url": "https://www.communitysolutions.com/resources/ohio-department-of-administrative-services-releases-policy-governing-use-of-ai" },
     { "label": "Clark Schaefer Hackett — New Ohio cybersecurity law for local governments", "url": "https://www.cshco.com/insights/new-ohio-cybersecurity-law-what-local-governments-need-to-know" },
     { "label": "Ohio — 2025 Comprehensive Cybersecurity Plan (CyberOhio)", "url": "https://dam.assets.ohio.gov/image/upload/v1738856928/cyber.ohio.gov/OCCP/2025_Ohio_Comprehensive_Cybersecurity_Plan-Final_-PublicVersion.pdf" },
-    { "label": "Statehouse News Bureau — Questions left unanswered after big-tech hearing on data centers in Ohio (June 4, 2026)", "url": "https://www.statenews.org/government-politics/2026-06-04/questions-left-unanswered-after-big-tech-hearing-on-data-centers-in-ohio" }
+    { "label": "Statehouse News Bureau — Questions left unanswered after big-tech hearing on data centers in Ohio (June 4, 2026)", "url": "https://www.statenews.org/government-politics/2026-06-04/questions-left-unanswered-after-big-tech-hearing-on-data-centers-in-ohio" },
+    { "label": "Ohio Capital Journal — Ohio lawmakers introduce sweeping new data center legislation (June 10, 2026)", "url": "https://ohiocapitaljournal.com/2026/06/10/ohio-lawmakers-introduce-sweeping-new-data-center-legislation/" },
+    { "label": "Signal Ohio — Two last Ohio data centers get a $42M tax break before moratorium", "url": "https://signalohio.org/ohio-approves-last-data-center-exemption-before-moratorium/" },
+    { "label": "Wikipedia — 2026 Ohio gubernatorial election (Ramaswamy vs. Acton)", "url": "https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election" },
+    { "label": "GovTech — Top Ohio cybersecurity official (Holly Drake) returning to academia; Hemker interim", "url": "https://www.govtech.com/workforce/top-ohio-cybersecurity-official-is-returning-to-academia" }
   ]
 }

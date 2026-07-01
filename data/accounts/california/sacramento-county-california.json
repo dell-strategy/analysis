@@ -5,7 +5,7 @@
   "stateName": "California",
   "type": "County",
   "hq": "Sacramento, CA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "California's capital county and a top-tier urban-county buyer: a centralized Department of Technology (DTech) runs IT for county departments and regional partners, with a ~$9B budget under cost pressure shaping near-term tech spend.",
 
   "snapshot": [
@@ -51,14 +51,14 @@
     { "name": "Rami Zakaria", "title": "Chief Information Officer (and County CISO)", "note": "Owns DTech, county IT strategy, and security policy — the central technology relationship for the account." },
     { "name": "Assistant CIO / Chief Technology Officer", "title": "DTech technology leadership", "note": "Deputy/CTO role advising the CIO; the county has run recruitment for this seat — confirm the current incumbent before mapping the buying center." },
     { "name": "Dept. of General Services — Contract & Purchasing Services", "title": "Central procurement (CAPSD)", "note": "Owns solicitations, vendor onboarding, and the cooperative/LPA pathways — the procedural gatekeeper for any deal." },
-    { "name": "Board of Supervisors", "title": "Five-member governing board", "note": "Approves the budget and major contracts; the body that adopts the final spending plan in September." }
+    { "name": "Board of Supervisors — Rosario Rodriguez (Chair, Dist. 4), Pat Hume (Vice Chair, Dist. 5)", "title": "Five-member governing board", "note": "Rodriguez chairs for 2026, Hume is vice chair. Approves the budget and major contracts and adopts the final spending plan in September. Note a District 1 transition in progress: 16-year incumbent Phil Serna is not seeking re-election; Flojaune Cofer and Eric Guerra advanced from the June 2 primary to the Nov. 3 general — a new supervisor takes that seat in early 2027." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Board leadership set for 2026; open District 1 seat heads to November runoff", "impact": "Rosario Rodriguez (Dist. 4) chairs the board and Pat Hume (Dist. 5) is vice chair for 2026. In the June 2 primary, 16-year incumbent Phil Serna's open District 1 seat drew four candidates; Flojaune Cofer and Eric Guerra advanced to the Nov. 3 general, so a new supervisor joins the board that approves county contracts in early 2027 — track the winner and the reconstituted board.", "tags": ["Leadership", "Governance"] },
     { "date": "2026-06", "title": "Board approves ~$9B FY2026-27 Recommended Budget amid deficit and cuts", "impact": "Cost pressure ($57M GF reductions, ~194.5 positions) shapes near-term IT spend toward efficiency and modernization; final adoption lands in September.", "tags": ["Budget"] },
     { "date": "2026-06", "title": "County cites ~$101M structural deficit, ~half tied to federal funding changes", "impact": "Discretionary tech spend will be tightly scrutinized — lead with run-cost reduction and consolidation cases, not net-new platforms.", "tags": ["Budget", "Funding"] },
-    { "date": "2025-09", "title": "County launches modern property tax system (TaxSys), retiring 1980s mainframe", "impact": "Proof point that the county will fund legacy retirement when the case is strong — a template for the next modernization conversation.", "tags": ["Modernization"] },
-    { "date": "2025-06", "title": "DTech publishes FY2025-26 IT Plan", "impact": "The public roadmap for county IT priorities and upcoming solicitations — a planning anchor for timing the account.", "tags": ["Strategy"] }
+    { "date": "2025-09", "title": "County launches modern property tax system (TaxSys), retiring 1980s mainframe", "impact": "Proof point that the county will fund legacy retirement when the case is strong — a template for the next modernization conversation.", "tags": ["Modernization"] }
   ],
 
   "dellActions": [
@@ -76,6 +76,9 @@
     { "label": "Sacramento County — County Launches New Property Tax System (TaxSys)", "url": "https://www.saccounty.gov/content/saccounty/us/en/articles/2025-articles/county-launches-new-property-tax-system-mails-secured-tax-bills.html" },
     { "label": "Sacramento County — FY2025-26 IT Plan (DTech)", "url": "https://technology.saccounty.gov/content/dam/technology/us/en/document/IT_Plan_2025-2026.pdf" },
     { "label": "Sacramento County — Contract & Purchasing Services (CAPSD)", "url": "https://dgs.saccounty.net/capsd/Pages/default.aspx" },
-    { "label": "GovTech / Techwire — Sacramento County CIO Rami Zakaria on Modernization & RFPs", "url": "https://insider.govtech.com/california/news/techwire-one-on-one-sacramento-county-cio-on-modernization-rfps" }
+    { "label": "GovTech / Techwire — Sacramento County CIO Rami Zakaria on Modernization & RFPs", "url": "https://insider.govtech.com/california/news/techwire-one-on-one-sacramento-county-cio-on-modernization-rfps" },
+    { "label": "Sacramento County — Board Chair and Vice Chair Elected (2026)", "url": "https://www.saccounty.gov/us/en/articles/2026-articles/chair-and-vice-chair-elected-2026.html" },
+    { "label": "CapRadio — Sacramento local election results (June 2, 2026)", "url": "https://www.capradio.org/articles/2026/06/02/heres-what-we-know-about-sacramentos-local-election-results/" },
+    { "label": "ABC10 — Phil Serna won't seek re-election, District 1 open seat", "url": "https://www.abc10.com/article/news/local/sacramento/phil-serna-wont-seek-reelection-endorses-eric-guerra-sacramento-supervisor-race/103-6b5efed4-8ab5-471f-8599-0c7fac0b815f" }
   ]
 }

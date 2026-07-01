@@ -3,7 +3,7 @@
   "name": "Pennsylvania",
   "slug": "pennsylvania",
   "region": "Mid-Atlantic",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A first-in-the-nation government AI program, a $90B+ wave of AI data-center investment, and a $1.16B broadband buildout — Pennsylvania is one of the most active SLG technology markets in the country.",
 
   "snapshot": [
@@ -108,19 +108,19 @@
 
   "powerStructure": [
     { "name": "Josh Shapiro", "title": "Governor", "org": "Commonwealth of Pennsylvania", "note": "Champions the gen-AI program and the AI data-center/energy agenda; drove the RGGI exit as an energy play.", "ref": 4 },
-    { "name": "Bry Pardoe", "title": "Commonwealth CIO", "org": "Office of Administration (OA-OIT)", "note": "Named CIO Oct 2025 (made permanent same month); former CODE PA executive director. Confirmed in role on the OA leadership page as of June 2026. Owns enterprise IT and cybersecurity direction; CTO Greg Fiedler (named March 2026) leads the Enterprise Technology Services Office under her.", "ref": 5 },
-    { "name": "Neil Weaver", "title": "Secretary of Administration", "org": "Office of Administration", "note": "Leads OA (HR, IT, records) for ~80,000 employees; public face of the AI governance push.", "ref": 4 },
+    { "name": "Bry Pardoe", "title": "Deputy Secretary for IT / Commonwealth CIO", "org": "Office of Administration (OA-OIT)", "note": "Named CIO Oct 2025 (made permanent same month); former CODE PA executive director. Confirmed on the OA leadership page as of June 2026 with the title 'Deputy Secretary for Information Technology - Chief Information Officer.' Owns enterprise IT and cybersecurity direction; CTO Greg Fiedler (named March 2026) leads the Enterprise Technology Services Office under her. Her former CODE PA role is now held by Sara Hall (named Feb 2026).", "ref": 5 },
+    { "name": "Andy Ritter", "title": "Commonwealth CISO", "org": "Office of Administration (OA-OIT)", "note": "Named permanent State CISO Feb 4, 2026 after serving interim since Oct 2025; prior deputy CISO from Jan 2024. Part of a Feb 2026 wave converting four acting IT roles to permanent (also exec deputy CIO Jim Sipe and CODE PA director Sara Hall). Owns Commonwealth cybersecurity policy — the buyer for NIST-aligned endpoint/security positioning.", "ref": 15 },
+    { "name": "Neil Weaver", "title": "Secretary of Administration", "org": "Office of Administration", "note": "Leads OA (HR, IT, records) for ~80,000 employees; confirmed as Secretary on the OA leadership page as of June 2026; public face of the AI governance push.", "ref": 4 },
     { "name": "PA Broadband Development Authority (PBDA)", "title": "Broadband program owner", "org": "Commonwealth of Pennsylvania", "note": "Administers the $1.16B BEAD program and grant awards." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "FY2026-27 budget still in negotiation ahead of June 30 deadline", "impact": "House passed its ~$53.3B version (HB 2400) in April; Senate Republicans cite spending concerns. With last year's budget 135 days late, impasse risk again compresses agency procurement timelines — confirm appropriations before forecasting.", "tags": ["Budget"], "ref": 14 },
+    { "date": "2026-06", "title": "FY2026-27 budget heads past June 30 deadline; partial appropriations signed", "impact": "House passed its version (HB 2400) 107-94 in April; Shapiro signed nine appropriations bills June 12 as a 'first step,' but Senate Republicans still cite spending concerns over the ~$53.3B plan and a final deal is expected in early July. With last year's budget 135 days late, impasse risk again compresses agency procurement timelines — confirm appropriations before forecasting.", "tags": ["Budget"], "ref": 14 },
+    { "date": "2026-06", "title": "Shapiro releases full GRID data-center incentive proposal", "impact": "June 2 plan would condition PA's 6% sales-tax exemption (and Economic Opportunity Zone benefits) on 'Governor's Responsible Infrastructure Development' standards — bring-your-own-power, 32% clean energy by 2035, 200+ construction jobs, and sustainability/water plans. Tied to budget negotiations; shapes the terms of the ~$90B data-center wave Dell ISG is targeting.", "tags": ["Data Centers", "Energy", "AI"], "ref": 16 },
     { "date": "2026-04", "title": "PA expands generative AI to 3,000+ employees across 35 agencies", "impact": "Agencies are scaling AI under a new Governing Board — demand for governed, secure AI infrastructure grows.", "tags": ["AI"], "ref": 4 },
-    { "date": "2026-02", "title": "Gov. Shapiro proposed a $53.3B general-fund FY2027 budget", "impact": "$137.22B all funds, +2.2% vs FY2026; proposes a $4.58B rainy-day draw, leaving a $3.31B reserve. Recommends environmental and community protections for responsible data-center development and calls on agencies to create guidance for safe AI use.", "tags": ["Budget", "Data Centers", "AI"], "ref": 13 },
-    { "date": "2025-11", "title": "Shapiro signs $50.1B 2025–26 budget, 135 days late", "impact": "Budget finally enacted; late cycle compresses agency procurement timelines and sets up live 2026–27 talks.", "tags": ["Budget"], "ref": 2 },
-    { "date": "2025-07", "title": "CoreWeave secures funding for $6B Lancaster AI data-center campus", "impact": "Adds to PA's national-scale AI-infrastructure footprint.", "tags": ["Data Centers", "AI"], "ref": 8 },
-    { "date": "2025-06", "title": "Amazon commits $20B to PA data centers (incl. site by Susquehanna nuclear)", "impact": "Largest private investment in state history; cements PA as an AI-infrastructure hub.", "tags": ["Data Centers", "AI"], "ref": 6 },
-    { "date": "2025-06", "title": "SB 377 (NIST standards in IT procurement) passes Senate 49-0", "impact": "Pushes a NIST cybersecurity baseline into Commonwealth IT contracting; later stalled in the House.", "tags": ["Security", "Procurement"], "ref": 9 }
+    { "date": "2026-02", "title": "PA names permanent State CISO and converts four acting IT roles", "impact": "Andy Ritter named permanent Commonwealth CISO (Feb 4) after interim service; Jim Sipe (exec deputy CIO) and Sara Hall (CODE PA director) also made permanent. OA-OIT leadership now settled under CIO Bry Pardoe — a stable, named buyer set for security and AI engagements.", "tags": ["Leadership", "Security"], "ref": 15 },
+    { "date": "2026-02", "title": "Gov. Shapiro proposed a $53.3B general-fund FY2027 budget", "impact": "$137.22B all funds; proposes a $4.58B rainy-day draw, leaving a $3.31B reserve. Recommends environmental and community protections for responsible data-center development and calls on agencies to create guidance for safe AI use.", "tags": ["Budget", "Data Centers", "AI"], "ref": 13 },
+    { "date": "2025-11", "title": "Shapiro signs $50.1B 2025–26 budget, 135 days late", "impact": "Budget finally enacted; late cycle compresses agency procurement timelines and sets up live 2026–27 talks.", "tags": ["Budget"], "ref": 2 }
   ],
 
   "dellActions": [
@@ -145,6 +145,8 @@
     { "label": "DGS — COSTARS Cooperative Purchasing", "url": "https://www.pa.gov/agencies/dgs/programs-and-services/costars" },
     { "label": "StateScoop — Pennsylvania expanded generative AI to 3,000 employees", "url": "https://statescoop.com/pennsylvania-expands-generative-ai-tools-3000-employees/" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "City & State PA — 2026-27 Pennsylvania state budget tracker", "url": "https://www.cityandstatepa.com/policy/2026/05/city-states-2026-27-pennsylvania-state-budget-tracker/412877/" }
+    { "label": "City & State PA — 2026-27 Pennsylvania state budget tracker", "url": "https://www.cityandstatepa.com/policy/2026/05/city-states-2026-27-pennsylvania-state-budget-tracker/412877/" },
+    { "label": "GovTech — Pennsylvania Names Andy Ritter as Permanent State CISO", "url": "https://www.govtech.com/workforce/pennsylvania-names-andy-ritter-as-permanent-state-ciso" },
+    { "label": "Spotlight PA — Shapiro releases full PA data center incentive proposal (GRID)", "url": "https://www.spotlightpa.org/news/2026/06/data-center-shapiro-proposal-incentives-budget-tax-exemption-pennsylvania-legislature-capitol/" }
   ]
 }

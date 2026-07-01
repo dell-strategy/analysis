@@ -3,7 +3,7 @@
   "name": "North Carolina",
   "slug": "north-carolina",
   "region": "Southeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A record-breaking AI data-center boom, a fresh AI executive order, and a first-ever statewide cybersecurity plan — all moving forward despite a still-unfinished state budget.",
 
   "snapshot": [
@@ -45,7 +45,8 @@
       "Budget figures are from the Governor's recommended budget; a full enacted FY2025-27 budget did not pass — confirm appropriations status before forecasting.",
       "Mixed units: BEAD/AWS figures are program/investment totals, not annual operating appropriations.",
       "Federal funds (BEAD, ARPA, SLCGP cyber grants) are a meaningful share of technology-adjacent dollars.",
-      "FY2027 (governor's proposed FY2026-27 biennial budget, per NASBO): $35.4B general fund, +6.5% vs proposed FY2026 ($33.3B). Maintains fiscal stability with $5.8B in reserves, including $3.7B in the Savings Reserve."
+      "FY2027 (governor's proposed FY2026-27 biennial budget, per NASBO): $35.4B general fund, +6.5% vs proposed FY2026 ($33.3B). Maintains fiscal stability with $5.8B in reserves, including $3.7B in the Savings Reserve.",
+      "UPDATE (June 30, 2026): After a year-plus impasse, the General Assembly released a ~$34B FY2026-27 full budget (largest in state history), with House votes expected the week of June 30. Stein had not yet signed/vetoed as of this refresh — treat enactment as not-yet-final. The plan funds statewide employee raises and closes certain data-center tax exemptions; confirm final passage and any line items before forecasting."
     ]
   },
 
@@ -111,19 +112,20 @@
   "powerStructure": [
     { "name": "Josh Stein", "title": "Governor", "org": "State of North Carolina", "note": "Signed Executive Order 24 on AI; champions the data-center / AI-infrastructure agenda and has pushed for a full budget.", "ref": 3 },
     { "name": "Nate Denny", "title": "Secretary of IT & State CIO", "org": "NCDIT", "note": "Senate-confirmed May 2026; sworn in April 2026. Two decades in NC public-sector IT; previously led the state's $500M+ broadband expansion.", "ref": 4 },
-    { "name": "Bernice Russell-Bond", "title": "Statewide CISO", "org": "NCDIT", "note": "Leads the doubled cybersecurity program and the 2025-2030 strategic plan; partners with the Carolina Cyber Network.", "ref": 5 },
+    { "name": "Bernice Russell-Bond", "title": "Statewide CISO", "org": "NCDIT", "note": "Leads the doubled cybersecurity program and the 2025-2030 strategic plan; partners with the Carolina Cyber Network and (2026) GovRAMP for cloud-security standards. Confirmed current June 2026.", "ref": 5 },
+    { "name": "Shannon Casucci", "title": "Chief Procurement Transformation Officer", "org": "NCDIT", "note": "Named June 24, 2026 to lead statewide IT procurement strategy — acquisition processes, vendor optimization, transparency. Former acting deputy associate CIO at the U.S. GSA. Key new contact for Dell's NCDIT contract motion.", "ref": 13 },
     { "name": "AI Leadership Council", "title": "AI governance body", "org": "State of NC", "note": "25 members co-chaired by the IT and Commerce secretaries; initial deliverables due June 30, 2026.", "ref": 3 },
     { "name": "N.C. General Assembly", "title": "Appropriations", "org": "State of NC", "note": "House/Senate deadlock over tax cuts left the FY2025-27 full budget unenacted — the key variable for spend timing.", "ref": 6 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "NC General Assembly releases ~$34B FY2026-27 budget after year-plus impasse", "impact": "Long-stalled full budget finally moved: a 634-page, $34B+ plan (largest in state history) released June 30, with House floor votes expected that week. Stein had not yet signed or vetoed as of the refresh date — hedge enactment. Includes statewide employee raises and closes certain data-center tax exemptions. Resolves much of the appropriations uncertainty that has gated large agency deals — but confirm final passage and the Governor's action before forecasting.", "tags": ["Budget"], "ref": 14 },
+    { "date": "2026-06", "title": "NCDIT names Shannon Casucci Chief Procurement Transformation Officer", "impact": "New June 24 hire (ex-U.S. GSA) leads statewide IT procurement strategy — acquisition processes, vendor optimization, transparency. A key new relationship for Dell's NCDIT Statewide IT Contract motion and the faster RFP pipeline.", "tags": ["Procurement", "Leadership"], "ref": 13 },
     { "date": "2026-06-18", "title": "NCDIT selects Tanium as statewide SecureNC endpoint/cyber platform", "impact": "Tanium is now the anointed whole-of-state endpoint-management/security tool for local govt, higher-ed and healthcare (no cost to participants; backed by statewide contract 208T). Position Dell endpoint hardware and security to integrate with — not compete against — Tanium/SecureNC.", "tags": ["Cybersecurity", "Whole-of-State"], "ref": 12 },
     { "date": "2026-05", "title": "Senate confirms Nate Denny as NCDIT Secretary & State CIO", "impact": "Tech leadership stabilizes under a broadband-experienced insider after Piccione's departure.", "tags": ["Leadership"], "ref": 4 },
     { "date": "2026-04", "title": "Gov. Stein proposed a $35.4B general-fund FY2027 budget", "impact": "Part of a proposed FY2026-27 biennial budget, +6.5% vs proposed FY2026; maintains fiscal stability with $5.8B in reserves including $3.7B in the Savings Reserve.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-04", "title": "Stein announces broadband projects to connect 93,000 locations", "impact": "BEAD dollars begin flowing; rural connectivity and connected-endpoint base expand.", "tags": ["Broadband", "Federal Funds"], "ref": 8 },
-    { "date": "2025-11", "title": "North Carolina launches AI Leadership Council", "impact": "Governance scaffolding for agency AI adoption stands up; initial deliverables (AI roadmap) due June 30, 2026; demand for governed AI grows.", "tags": ["AI", "Policy"], "ref": 3 },
-    { "date": "2025-09", "title": "Governor Stein signs Executive Order 24 on trustworthy AI", "impact": "AI Accelerator and agency oversight teams created; agencies must surface AI use cases.", "tags": ["AI", "Policy"], "ref": 3 },
-    { "date": "2025-06", "title": "Amazon to invest $10B in Richmond County AI data centers", "impact": "Largest capital project in state history; anchors NC as a top AI-infrastructure market.", "tags": ["Data Centers", "AI"], "ref": 2 }
+    { "date": "2025-11", "title": "North Carolina launches AI Leadership Council", "impact": "Governance scaffolding for agency AI adoption stands up; initial deliverables (AI roadmap) due June 30, 2026; demand for governed AI grows.", "tags": ["AI", "Policy"], "ref": 3 }
   ],
 
   "dellActions": [
@@ -146,6 +148,8 @@
     { "label": "NCDIT — Statewide IT Procurement / Statewide IT Contracts", "url": "https://it.nc.gov/resources/statewide-it-procurement/about-statewide-it-procurement" },
     { "label": "NCDIT — State of North Carolina Cybersecurity Strategic Plan 2025-2030", "url": "https://it.nc.gov/programs/cybersecurity-risk-management/state-north-carolina-cybersecurity-strategic-plan" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "StateScoop — North Carolina partners with Tanium to strengthen state cybersecurity (June 18, 2026)", "url": "https://statescoop.com/north-carolina-partners-with-tanium-to-strengthen-state-cybersecurity/" }
+    { "label": "StateScoop — North Carolina partners with Tanium to strengthen state cybersecurity (June 18, 2026)", "url": "https://statescoop.com/north-carolina-partners-with-tanium-to-strengthen-state-cybersecurity/" },
+    { "label": "NCDIT — NCDIT Names Shannon Casucci Chief Procurement Transformation Officer (June 24, 2026)", "url": "https://it.nc.gov/news/press-releases/2026/06/24/ncdit-names-shannon-casucci-chief-procurement-transformation-officer" },
+    { "label": "WRAL — NC lawmakers unveil long-awaited state budget with tax cuts, raises (June 2026)", "url": "https://www.wral.com/news/nccapitol/nc-state-budget-deal-details-raise-tax-cut-baseball-jobs-june-2026/" }
   ]
 }

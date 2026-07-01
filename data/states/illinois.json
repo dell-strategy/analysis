@@ -3,7 +3,7 @@
   "name": "Illinois",
   "slug": "illinois",
   "region": "Midwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Largest budget in state history, a centralized $1.1B IT shop under a new CIO, a first-in-nation frontier-AI law, and a data-center boom now hitting an incentive pause — Illinois is reshaping where and how it buys technology.",
 
   "snapshot": [
@@ -120,18 +120,18 @@
 
   "powerStructure": [
     { "name": "JB Pritzker", "title": "Governor", "org": "State of Illinois", "note": "Champions AI policy leadership and data-center growth; now pausing new data-center incentives over grid/cost concerns.", "ref": 8 },
-    { "name": "Brandon Ragle", "title": "Secretary & State CIO", "org": "DoIT", "note": "Appointed April 2025; 20+ year Illinois IT veteran. Owns enterprise tech strategy, ~$1.1B budget, and statewide cyber posture.", "ref": 3 },
+    { "name": "Brandon Ragle", "title": "Secretary & State CIO", "org": "DoIT", "note": "Serving since April 2025; full appointment re-announced Jan 2026 (pending Illinois Senate confirmation). 20+ year Illinois IT veteran. Owns enterprise tech strategy, ~$1.1B budget, and statewide cyber posture.", "ref": 3 },
     { "name": "Patrick Nolan", "title": "Deputy Secretary", "org": "DoIT", "note": "Assumed role June 2025; supports enterprise operations and delivery." },
+    { "name": "Jason Bowen", "title": "Chief Information Security Officer (CISO)", "org": "DoIT", "note": "Hired 2024 from Protiviti (security/privacy consulting); Army veteran, ~25 yrs private-sector security. Leads enterprise cyber and the entry point for security-hardening conversations.", "ref": 13 },
     { "name": "Chief Procurement Office (CPO-GS)", "title": "Independent procurement authority", "org": "State of Illinois", "note": "Controls IT contracting via State Purchasing Officers and the Unified Procurement Program / approved cooperatives.", "ref": 10 }
   ],
 
   "news": [
     { "date": "2026-06-16", "title": "Pritzker signs ~$55.9B FY2027 budget (largest in state history)", "impact": "8th consecutive balanced budget sustains agency tech and refresh spend; funded partly by new business/tech taxes (social-media, digital-advertising, digital-asset levies).", "tags": ["Budget"], "ref": 12 },
     { "date": "2026-06-05", "title": "Pritzker pauses new data-center tax incentives effective July 1, 2026", "impact": "Greenfield data-center economics shift; existing agreements honored. Pivot to existing campuses, modernization, and research computing.", "tags": ["Data Centers", "Policy"], "ref": 8 },
-    { "date": "2026-05", "title": "SB 315 frontier-AI safety bill passes both chambers (House 110-0); awaits governor's signature", "impact": "First-in-nation AI-audit standard heading to Pritzker (effective Jan 1, 2027 once signed); agencies favor governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
+    { "date": "2026-05", "title": "SB 315 frontier-AI safety bill clears both chambers (House 110-0, Senate 52-5, May 27); Pritzker pledges to sign", "impact": "First-in-nation independent-audit AI standard; Pritzker publicly committed to sign (not yet signed as of late June) — effective Jan 1, 2027 once enacted. Agencies favor governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
     { "date": "2026-01", "title": "Statewide ERP now tracks ~90% of the state budget", "impact": "Consolidation milestone drives secure compute/storage and cybersecurity hardening across DoIT systems.", "tags": ["Modernization", "ERP"], "ref": 9 },
     { "date": "2025-06", "title": "NASPO ValuePoint reapproved as an Illinois cooperative", "impact": "Pre-competed cooperative path reaffirmed for state and local buyers — a usable route for Dell offerings.", "tags": ["Procurement"], "ref": 10 },
-    { "date": "2025-05", "title": "Illinois passes the largest budget in state history (FY2026)", "impact": "Record ~$55.3B general-funds budget with a small surplus sustains agency tech and refresh spend.", "tags": ["Budget"], "ref": 1 },
     { "date": "2025-04", "title": "Brandon Ragle named DoIT Secretary & State CIO", "impact": "Stable, IT-veteran leadership over the ~$1.1B enterprise tech and cyber agenda.", "tags": ["Leadership"], "ref": 3 }
   ],
 
@@ -155,6 +155,8 @@
     { "label": "GovTech — Illinois ERP System Sets Standard for State Modernization", "url": "https://www.govtech.com/computing/illinois-erp-system-sets-standard-for-state-modernization.html" },
     { "label": "NASPO ValuePoint — Reapproved for Illinois government agencies", "url": "https://www.naspovaluepoint.org/press_release/naspo-valuepoint-offers-illinois-government-agencies-best-value-cooperative-contracts/" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Capitol News Illinois — Pritzker signs nearly $56B FY2027 budget with new business taxes (June 16, 2026)", "url": "https://capitolnewsillinois.com/news/pritzker-signs-nearly-56b-budget-with-new-business-taxes-as-he-seeks-3rd-term/" }
+    { "label": "Capitol News Illinois — Pritzker signs nearly $56B FY2027 budget with new business taxes (June 16, 2026)", "url": "https://capitolnewsillinois.com/news/pritzker-signs-nearly-56b-budget-with-new-business-taxes-as-he-seeks-3rd-term/" },
+    { "label": "GovTech — Illinois Hires Private-Sector Veteran (Jason Bowen) to Fill CISO Role", "url": "https://www.govtech.com/security/illinois-hires-private-sector-veteran-to-fill-ciso-role" },
+    { "label": "StateScoop — Illinois governor appoints acting CIO Brandon Ragle to full-time role", "url": "https://statescoop.com/illinois-pritzker-brandon-ragle-cio/" }
   ]
 }

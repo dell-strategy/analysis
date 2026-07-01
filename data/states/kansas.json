@@ -3,7 +3,7 @@
   "name": "Kansas",
   "slug": "kansas",
   "region": "Midwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A statewide IT-and-cybersecurity consolidation under one Executive CITO, a first-in-the-nation NIST CSF 2.0 mandate, and a Kansas City-metro data-center and battery boom — Kansas is centralizing how it buys and secures technology.",
 
   "snapshot": [
@@ -56,17 +56,17 @@
       "dellFit": 80,
       "budgetStrength": 70,
       "tags": ["Consolidation", "Cybersecurity", "OITS"],
-      "summary": "SB 291 (2024) directs OITS to technically consolidate IT services — especially cybersecurity controls — under the Executive Chief Information Technology Officer. OITS ran a statewide assessment with Gartner through 2025 and is scoping 2026 integration projects. Consolidation centralizes the buyer and creates standardization demand across compute, storage, network, and DCaaS as agencies migrate into shared services.",
+      "summary": "SB 291 (2024) directs OITS to technically consolidate IT services — especially cybersecurity controls — under the Executive Chief Information Technology Officer. HB 2574 (signed spring 2026) removed the law's original July 1, 2026 sunset, making the consolidation framework permanent. OITS ran a statewide assessment with Gartner through 2025 and is scoping 2026 integration projects. Consolidation centralizes the buyer and creates standardization demand across compute, storage, network, and DCaaS as agencies migrate into shared services.",
       "ref": 4
     },
     {
       "name": "NIST CSF 2.0 Mandate & 24/7 SOC",
-      "status": "Ramping to 2028",
-      "statusType": "warn",
+      "status": "Made permanent (2026)",
+      "statusType": "good",
       "dellFit": 75,
       "budgetStrength": 60,
       "tags": ["Cybersecurity", "Compliance", "SOC"],
-      "summary": "Kansas is the only state to require NIST Cybersecurity Framework 2.0 compliance, with each branch appointing a CISO and aligning programs by July 1, 2028. OITS stood up a $2.0M, 24/7 Security Operations Center for real-time threat detection. Recent incidents (Judicial Branch 2023, Wichita 2024) keep urgency high — an opening for secure infrastructure and managed-security offerings.",
+      "summary": "Kansas is the only state to require NIST Cybersecurity Framework 2.0 compliance, with each branch appointing a CISO and aligning programs by July 1, 2028. HB 2574 (signed spring 2026) removed the original July 1, 2026 sunset, so the consolidation and NIST mandate are now durable — it also ties executive-branch cyber compliance to the legislative budget process and creates a judicial branch technology oversight council. OITS stood up a $2.0M, 24/7 Security Operations Center for real-time threat detection. Recent incidents (Judicial Branch 2023, Wichita 2024) keep urgency high — an opening for secure infrastructure and managed-security offerings.",
       "ref": 3
     },
     {
@@ -118,20 +118,20 @@
   },
 
   "powerStructure": [
-    { "name": "Laura Kelly", "title": "Governor", "org": "State of Kansas", "note": "Directed the statewide generative-AI policy and signed the FY2026–27 budget; term-limited, with a 2026 election shaping continuity.", "ref": 5 },
-    { "name": "Jeff Maxon", "title": "Executive Chief Information Technology Officer (CITO)", "org": "OITS", "note": "Owns statewide IT direction and leads the SB 291 consolidation and IT integration initiative.", "ref": 4 },
+    { "name": "Laura Kelly", "title": "Governor", "org": "State of Kansas", "note": "Directed the statewide generative-AI policy and signed the FY2027 budget and the HB 2574 cyber bill; term-limited. The 2026 race field is set (primary Aug 4, 2026; general Nov 3) — expect an administration transition in Jan 2027 that could reshuffle cabinet/IT leadership.", "ref": 5 },
+    { "name": "Jeff Maxon", "title": "Executive Chief Information Technology Officer (CITO)", "org": "OITS", "note": "Owns statewide IT direction and leads the SB 291 consolidation and IT integration initiative; CITO since late 2023. Confirmed serving as of mid-2026.", "ref": 4 },
+    { "name": "John Godfrey", "title": "State Chief Information Security Officer (CISO)", "org": "Kansas Information Security Office (KISO), OITS", "note": "Leads KISO (~40 staff) and the 24/7 SOC; appointed Feb 2024. Central to NIST CSF 2.0 work and the HB 2574 compliance-assessment regime.", "ref": 14 },
     { "name": "Office of Procurement & Contracts", "title": "Director of Purchases", "org": "Dept. of Administration", "note": "Runs statewide buying; CITO sits on IT Procurement Negotiating Committees.", "ref": 8 },
-    { "name": "Joint Committee on Information Technology (JCIT)", "title": "Legislative oversight", "org": "Kansas Legislature", "note": "Reviews OITS plans, consolidation progress, and the SB 291 sunset (HB 2271) — useful for forecasting IT/cyber spend.", "ref": 3 }
+    { "name": "Joint Committee on Information Technology (JCIT)", "title": "Legislative oversight", "org": "Kansas Legislature", "note": "Reviews OITS plans and consolidation progress. The SB 291 sunset was resolved by HB 2574 (2026), which made the framework permanent and routes cyber-compliance review through the budget process — useful for forecasting IT/cyber spend.", "ref": 3 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "2026 governor's race field set; Kelly term-limited (primary Aug 4)", "impact": "Multi-candidate R and D primaries lock in (primary Aug 4, general Nov 3); a new administration takes office Jan 2027. Plan for a likely cabinet/IT-leadership transition — re-baseline OITS relationships and the consolidation roadmap after the election.", "tags": ["Leadership", "Election", "Transition"], "ref": 11 },
+    { "date": "2026-06", "title": "De Soto approves $700M Beale 'Project Pilot' data center; KC-metro buildout broadens", "impact": "1.14M sq ft campus next to the Panasonic plant; phase 1 construction begins 2026, completion 2027, full build-out by ~2035. Additional De Soto/Edgerton/Tonganoxie proposals (Digital Realty, DAMAC) are advancing amid local power/water pushback — a strong, near-term Dell ISG / AI Factory tailwind.", "tags": ["Data Centers", "AI Infrastructure", "Economic Dev"], "ref": 13 },
+    { "date": "2026-04", "title": "Gov. Kelly signs HB 2574 — removes SB 291 cyber sunset, makes consolidation permanent", "impact": "Eliminates the July 1, 2026 expiration of the IT/cyber consolidation framework, modifies branch CISO duties, ties executive-branch NIST CSF 2.0 compliance to the legislative budget process, and creates a judicial branch technology oversight council. De-risks the long-term OITS centralization and security-modernization runway Dell is selling into.", "tags": ["Cybersecurity", "Consolidation", "Legislation"], "ref": 12 },
     { "date": "2026-06-17", "title": "Panasonic to shift some De Soto lines to AI data-center batteries", "impact": "~$2.18B data-center-battery investment (parent ~$3B FY27–29); first cells ~late 2028/early 2029. Confirms the KC-metro as an AI-infrastructure supply cluster — tailwind for Dell ISG/data-center demand near the state.", "tags": ["Data Centers", "AI Infrastructure", "Economic Dev"], "ref": 10 },
     { "date": "2026-03", "title": "Kansas Legislature sends FY2027 budget (HB 2513) to Governor Kelly", "impact": "Sets ~$26.8B total state spending; technology spend continues to flow through OITS and agency budgets.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-12", "title": "NTIA approves Kansas $166.6M BEAD final proposal", "impact": "Funds connectivity to ~26,673 locations; expands the connected footprint for downstream public-sector compute.", "tags": ["Broadband", "Federal Funds"], "ref": 7 },
-    { "date": "2026-01", "title": "Gov. Laura Kelly proposed a $10.8B general-fund FY2027 budget", "impact": "$26.7B all funds, +1.6% vs FY2026; $1.6B general-fund ending balance (14.7%) and a $2.03B budget stabilization fund, charting a path back to structural balance.", "tags": ["Budget"], "ref": 9 },
-    { "date": "2025-11", "title": "OITS nears completion of SB 291 cybersecurity integration planning", "impact": "Three-year IT plan and 2026 consolidation projects take shape — centralizing the buyer.", "tags": ["Consolidation", "Cybersecurity"], "ref": 4 },
-    { "date": "2025-08", "title": "Meta's $1B Kansas City-area data center goes live", "impact": "Signals the scale of AI-infrastructure investment landing in the KC metro; AI-optimized capacity to follow.", "tags": ["Data Centers", "AI"], "ref": 6 },
-    { "date": "2025-07", "title": "Panasonic opens $4B De Soto EV-battery plant", "impact": "Anchors a regional battery/data-center industrial base; exploring data-center battery production by ~2029.", "tags": ["Economic Dev", "Manufacturing"], "ref": 6 }
+    { "date": "2026-01", "title": "Gov. Laura Kelly proposed a $10.8B general-fund FY2027 budget", "impact": "$26.7B all funds, +1.6% vs FY2026; $1.6B general-fund ending balance (14.7%) and a $2.03B budget stabilization fund, charting a path back to structural balance.", "tags": ["Budget"], "ref": 9 }
   ],
 
   "dellActions": [
@@ -153,6 +153,10 @@
     { "label": "Kansas Dept. of Administration — Office of Procurement and Contracts", "url": "https://admin.ks.gov/offices/procurement-contracts" },
     { "label": "Kansas Dept. of Commerce — Governor Kelly Celebrates Grand Opening of Panasonic EV Battery Facility in De Soto", "url": "https://www.kansascommerce.gov/2025/07/governor-kelly-celebrates-grand-opening-of-panasonic-ev-battery-manufacturing-facility-in-de-soto/" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Kansas Reflector — Panasonic to shift some Kansas production lines to make AI data-center batteries (June 17, 2026)", "url": "https://kansasreflector.com/2026/06/17/panasonic-to-shift-some-kansas-production-lines-to-make-ai-data-center-batteries/" }
+    { "label": "Kansas Reflector — Panasonic to shift some Kansas production lines to make AI data-center batteries (June 17, 2026)", "url": "https://kansasreflector.com/2026/06/17/panasonic-to-shift-some-kansas-production-lines-to-make-ai-data-center-batteries/" },
+    { "label": "KCUR — Who's running to replace Laura Kelly as Kansas governor? The field is officially set (June 2026)", "url": "https://www.kcur.org/podcast/up-to-date/2026-06-02/kansas-governor-candidates-2026-election" },
+    { "label": "Kansas Legislature — HB 2574 (cybersecurity; removes SB 291 sunset; judicial branch technology oversight council)", "url": "https://www.kslegislature.gov/li/b2025_26/measures/hb2574/" },
+    { "label": "Data Center Dynamics — De Soto, Kansas approves $700M data center (Beale 'Project Pilot')", "url": "https://www.datacenterdynamics.com/en/news/de-soto-kansas-approves-700m-data-center/" },
+    { "label": "GovTech — John Godfrey Takes the Reins as Kansas State CISO", "url": "https://www.govtech.com/workforce/john-godfrey-takes-the-reigns-as-kansas-state-ciso" }
   ]
 }

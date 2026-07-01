@@ -5,7 +5,7 @@
   "name": "Texas Workforce Commission (TWC)",
   "slug": "twc",
   "hq": "Austin, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Texas's workforce and unemployment agency: TWC runs unemployment benefits and tax, statewide workforce development, and vocational rehabilitation on large, data-heavy systems now in the middle of a multi-year modernization.",
 
   "snapshot": [
@@ -51,11 +51,13 @@
     { "name": "Joe Esparza", "title": "Chairman & Commissioner Representing Employers", "note": "Chairs the three-member Commission; the employer-side seat. Top of the governance structure." },
     { "name": "Alberto Treviño, III", "title": "Commissioner Representing Labor", "note": "One of three governor-appointed full-time commissioners; the labor-side seat." },
     { "name": "Brent Connett", "title": "Commissioner Representing the Public", "note": "Public-interest seat; appointed in late 2025. Rounds out the three-commissioner board that sets agency direction." },
-    { "name": "Steve Pier", "title": "Executive Director", "note": "Took the role in early 2026 (announced Jan 14, effective Feb 2, 2026); came from DIR where he was Deputy Executive Director and Deputy State CIO — strong IT-modernization background." },
+    { "name": "Steve Pier", "title": "Executive Director", "note": "Took the role in early 2026 (announced Jan 14, effective Feb 2, 2026); came from DIR where he was Deputy Executive Director and Deputy State CIO — strong IT-modernization background. Randy Townsend serves as Deputy Executive Director over Business Operations, Finance, and related divisions." },
     { "name": "Heather Hall", "title": "Chief Information Officer", "note": "CIO since 2019, with deep Texas state-agency IT experience; owns the modernization roadmap, with deputy CIOs over Applications Solutions and IT Infrastructure Services. The core technical relationship." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "TxUS UI-tax go-live still tracking to 2026, date being finalized", "impact": "As of mid-2026 TWC's TxUS UI-tax replacement (retiring UTR, UTS, QuickFile, GoAnywhere/Magnetic Media) is in final pre-launch, with the go-live date publicly described as 'still being finalized' — the cutover window is where integration, migration, and support demand peaks. Hedge on exact timing until TWC confirms a date.", "tags": ["Modernization", "Unemployment Systems"] },
+    { "date": "2026-05", "title": "TWC reviews statewide-initiative budget after ~$13M WIOA funding reduction", "impact": "A reported ~$13M cut to federal WIOA workforce dollars prompted TWC to review statewide-initiative spending — a reminder that TWC's federally-weighted funding can shift discretionary/IT priorities; confirm current appropriations before forecasting.", "tags": ["Budget", "Fiscal"] },
     { "date": "2026-01", "title": "Steve Pier named TWC Executive Director", "impact": "A new ED with a DIR / state-CIO background signals continued emphasis on IT modernization — a leadership relationship worth building early.", "tags": ["Leadership"] },
     { "date": "2025-10", "title": "TWC continues TxUS UI tax modernization rollout toward 2026 go-live", "impact": "The legacy UI tax replacement is actively progressing — infrastructure, integration, and support opportunities cluster around the transition.", "tags": ["Modernization", "Unemployment Systems"] },
     { "date": "2025-09", "title": "Brent Connett appointed Commissioner Representing the Public", "impact": "Completes the three-member Commission; confirm the governance map before engaging at the leadership level.", "tags": ["Leadership"] }
@@ -73,6 +75,8 @@
     { "label": "TWC — Commissioners", "url": "https://www.twc.texas.gov/agency/commissioners" },
     { "label": "TWC — Welcomes New Executive Director Steve Pier", "url": "https://www.twc.texas.gov/news/twc-welcomes-new-executive-director-steve-pier" },
     { "label": "TWC — Texas Unemployment System (TxUS) UI Tax Replacement", "url": "https://www.twc.texas.gov/programs/unemployment-tax/texas-unemployment-system-txus-announcement" },
+    { "label": "TWC — Executive Staff", "url": "https://www.twc.texas.gov/agency/executive-staff" },
+    { "label": "TWC — News", "url": "https://www.twc.texas.gov/news" },
     { "label": "LBB — TWC Summary of Budget Recommendations (89R, Agency 320)", "url": "https://www.lbb.texas.gov/Documents/SFC_Summary_Recs/89R/Agency_320.pdf" },
     { "label": "GovTech — TWC CIO Discusses Achievements, Plans", "url": "https://insider.govtech.com/texas/news/insider-one-on-one-texas-workforce-commission-cio-discusses-achievements-plans" }
   ]

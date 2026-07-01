@@ -3,7 +3,7 @@
   "name": "Maryland",
   "slug": "maryland",
   "region": "Mid-Atlantic",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Home to Fort Meade, NSA, and U.S. Cyber Command, Maryland pairs a deep cyber and quantum identity with an aggressive, AI-forward IT modernization push — all while closing one of the largest budget gaps in a generation.",
 
   "snapshot": [
@@ -128,13 +128,12 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Maryland counties move to curb data centers; Montgomery imposes 6-month permit moratorium", "impact": "Montgomery County Exec. Elrich signed a six-month moratorium on new data-center permits (Jun 15) and Frederick County faces a hyperscale buildout (residents pushing a Nov ballot referendum) — local power/land/water constraints are reshaping where compute can land, favoring colocation, edge, and modernization of existing state facilities over net-new build.", "tags": ["Data Center", "Infrastructure", "Policy"], "ref": 19 },
+    { "date": "2026-06", "title": "Maryland AI Implementation Workgroup's first annual report due July 1, 2026", "impact": "The Consumer Protection Workgroup on AI Implementation must deliver recommendations on regulating high-impact AI (including AI used to determine government benefits), with DoIT directed to set AI development/procurement/deployment policy — sharpens the case for governed, auditable AI infrastructure on sensitive workloads.", "tags": ["AI", "Governance"], "ref": 20 },
     { "date": "2026-06-10", "title": "Moore names Michael Boyce Senior AI Advisor (succeeding Nishant Shah)", "impact": "Former DHS AI Corps director takes the state's top AI-strategy advisory seat — continuity on the AI-forward agenda and a fresh executive relationship for governed-AI positioning.", "tags": ["AI", "Leadership"], "ref": 15 },
     { "date": "2026-05", "title": "Moore launches AI Innovation Lab inside DoIT", "impact": "Secure sandbox (six-month pilots, workforce training, security testing) for agencies to move AI from experiment to production — a path for governed, private/on-prem AI on sensitive workloads.", "tags": ["AI", "DoIT"], "ref": 12 },
     { "date": "2026-05", "title": "BPW advances Western Maryland middle-mile fiber deal; DHCD infrastructure grants released", "impact": "Exclusive state access to Western Maryland fiber (473 unserved/underserved premises, 48 anchor institutions); 43,000+ homes connected since 2023 — backdrop for edge/connectivity demand.", "tags": ["Broadband", "Infrastructure"], "ref": 16 },
-    { "date": "2026-04", "title": "Gov. Moore signs balanced ~$70.8B FY2027 budget (no new taxes)", "impact": "Signed Apr 8; closes a ~$1.5B structural deficit with the rainy day fund held at 8%. Sustains CyberMaryland, quantum/Deep Tech, and the MD TRAIN AI-workforce program — tech spend stays focused on cost-cutting modernization and high-ROI AI.", "tags": ["Budget", "AI", "Cybersecurity"], "ref": 18 },
-    { "date": "2026-04", "title": "Maryland secures $500M+ in quantum investment; IonQ HQ funded", "impact": "'Capital of Quantum' momentum — IonQ building a 100,000 sq ft UMD Discovery District HQ (doubling to 250+ staff); drives research-computing and data-center infrastructure demand.", "tags": ["Quantum", "Research"], "ref": 17 },
-    { "date": "2025-11", "title": "Maryland announces Anthropic/Percepta AI partnership for service delivery", "impact": "Multi-agency AI push for benefits and housing (SNAP, Medicaid, WIC) signals demand for governed AI infrastructure.", "tags": ["AI", "Partnership"], "ref": 11 },
-    { "date": "2025-07", "title": "DoIT releases 2025 IT Master Plan (FY2026–2028)", "impact": "Three pillars — workforce, centralization, security — frame modernization and refresh demand.", "tags": ["Modernization", "Strategy"], "ref": 3 }
+    { "date": "2026-04", "title": "Gov. Moore signs balanced ~$70.8B FY2027 budget (no new taxes)", "impact": "Signed Apr 8; closes a ~$1.5B structural deficit with the rainy day fund held at 8%. Sustains CyberMaryland, quantum/Deep Tech, and the MD TRAIN AI-workforce program — tech spend stays focused on cost-cutting modernization and high-ROI AI.", "tags": ["Budget", "AI", "Cybersecurity"], "ref": 18 }
   ],
 
   "dellActions": [
@@ -163,6 +162,8 @@
     { "label": "Office of Governor Moore — Announces Senior AI Advisor for the State of Maryland (Jun 10, 2026)", "url": "https://governor.maryland.gov/news/press-releases/governor-moore-announces-senior-ai-advisor-state-maryland" },
     { "label": "Maryland DHCD — Network Infrastructure Grant Programs (May 15, 2026)", "url": "https://news.maryland.gov/dhcd/2026/05/15/infrastructure-grant-programs/" },
     { "label": "The Quantum Insider — Maryland doubles down on quantum with IonQ HQ funding (Apr 29, 2026)", "url": "https://thequantuminsider.com/2026/04/29/maryland-doubles-down-on-quantum-with-ionq-hq-funding-and-startup-infrastructure/" },
-    { "label": "Office of Governor Moore — Signs FY2027 Budget (Apr 8, 2026)", "url": "https://governor.maryland.gov/news/press/pages/governor-moore-signs-fy-2027-budget,-delivering-historic-education-and-public-safety-investments-without-raising-taxes-or-f.aspx" }
+    { "label": "Office of Governor Moore — Signs FY2027 Budget (Apr 8, 2026)", "url": "https://governor.maryland.gov/news/press/pages/governor-moore-signs-fy-2027-budget,-delivering-historic-education-and-public-safety-investments-without-raising-taxes-or-f.aspx" },
+    { "label": "Maryland Matters — Elrich unveils six-month moratorium on Montgomery County data center permits (Jun 15, 2026)", "url": "https://marylandmatters.org/2026/06/15/elrich-unveils-six-month-moratorium-on-montgomery-county-data-center-permits/" },
+    { "label": "Maryland AI — Consumer Protection Workgroup on AI Implementation (legislation; first report due Jul 1, 2026)", "url": "https://ai.maryland.gov/ai-maryland/legislation" }
   ]
 }

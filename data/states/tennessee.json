@@ -3,7 +3,7 @@
   "name": "Tennessee",
   "slug": "tennessee",
   "region": "Southeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Home to the world's largest AI supercomputer build (xAI's Memphis 'Colossus'), a brand-new statewide AI Action Plan, and a centralized IT shop in execution mode — Tennessee is one of the country's hottest AI-infrastructure markets.",
 
   "snapshot": [
@@ -119,20 +119,19 @@
 
   "powerStructure": [
     { "name": "Bill Lee", "title": "Governor", "org": "State of Tennessee", "note": "Champions broadband expansion and the state's AI-leadership and economic-development agenda; owns the FY2026 budget." },
-    { "name": "Kristin Darby", "title": "State CIO", "org": "Strategic Technology Solutions (F&A)", "note": "Took office March 31, 2025; ex-healthcare/finance CIO. Leads ~1,200-person STS, co-chairs the AI Advisory Council, frames 2026 as 'execution.'", "ref": 11 },
+    { "name": "Kristin Darby", "title": "State CIO", "org": "Strategic Technology Solutions (F&A)", "note": "Took office March 31, 2025; ex-healthcare/finance CIO. Leads ~1,200-person STS, co-chairs the AI Advisory Council and State Cybersecurity Council, frames 2026 as 'execution.' Confirmed current — testified to Congress on state cyber funding May 21, 2026.", "ref": 11 },
     { "name": "Jim Bryson", "title": "Commissioner", "org": "Department of Finance & Administration", "note": "F&A Commissioner and co-chair of the State AI Advisory Council; STS reports up through F&A." },
     { "name": "AI Advisory Council", "title": "Statewide AI governance body", "org": "State of Tennessee", "note": "Authored the November 2025 AI Action Plan; sets the framework for state AI adoption and data/compute readiness.", "ref": 3 },
     { "name": "Central Procurement Office", "title": "Statewide procurement authority", "org": "Department of General Services", "note": "Owns the statewide contracts and Edison registration that gate most technology buys.", "ref": 9 }
   ],
 
   "news": [
-    { "date": "2026-03", "title": "Tennessee secures additional $218M federal broadband grant", "impact": "Adds to BEAD funding to reach remaining unserved Tennesseans; sustained connectivity buildout statewide.", "tags": ["Broadband", "Federal"], "ref": 10 },
+    { "date": "2026-05", "title": "State CIO Kristin Darby testifies to Congress on cyber funding, urges SLCGP renewal", "impact": "On May 21, Darby testified before the U.S. House Homeland Security cybersecurity subcommittee that ~$21M in State and Local Cybersecurity Grant Program funds have secured ~90,000 endpoints and trained 21,000+ local-government employees across Tennessee, and pressed Congress to renew the program. Signals a whole-of-state endpoint-security and managed-detection priority — a fit for Dell endpoint, lifecycle, and secure-infrastructure positioning into state and local agencies.", "tags": ["Cybersecurity", "Leadership", "Federal"], "ref": 14 },
+    { "date": "2026-05", "title": "Gov. Lee signs data-center utility-cost law (HB1847); AI data-center pushback grows", "impact": "Signed May 7 and effective ~June 1, the law requires data-center operators to bear their own electrical/infrastructure costs (and allows self-generation), shielding ratepayers as AI buildout accelerates. In parallel, local moratorium efforts (a ~150,000-signature Nashville-zoo petition; a McMinnville moratorium vote) reflect rising community resistance — shaping where and how 'AI factory' compute lands in-state.", "tags": ["Data Centers", "AI Infrastructure", "Policy"], "ref": 15 },
     { "date": "2026-05", "title": "Gov. Lee signs ~$58B FY2027 budget with $50M for AI infrastructure", "impact": "Enacts a dedicated $50M AI-infrastructure investment — moving state AI from proof-of-concept to enterprise-wide, including an 'AI data management layer' to unify siloed state data. A direct opening for governed compute, data platforms, and secure infrastructure. FY begins July 1, 2026.", "tags": ["Budget", "AI"], "ref": 13 },
+    { "date": "2026-03", "title": "Tennessee secures additional $218M federal broadband grant", "impact": "Adds to BEAD funding to reach remaining unserved Tennesseans; sustained connectivity buildout statewide.", "tags": ["Broadband", "Federal"], "ref": 10 },
     { "date": "2026-02", "title": "NTIA approves Tennessee's BEAD final proposal (~$813M)", "impact": "Unlocks a major federal broadband program; expanded last-mile and digital-opportunity activity.", "tags": ["Broadband", "Budget"], "ref": 10 },
-    { "date": "2026-01", "title": "xAI's Memphis 'Colossus' scales toward ~2GW / ~555,000 GPUs", "impact": "Cements Tennessee as a top-tier national AI-compute hub; massive infrastructure ecosystem demand.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 7 },
-    { "date": "2025-11", "title": "State AI Advisory Council adopts Tennessee's first AI Action Plan", "impact": "Sets four-pillar framework including 'Data & Compute Readiness' — an opening for governed AI infrastructure.", "tags": ["AI", "Policy"], "ref": 3 },
-    { "date": "2025-10", "title": "Oak Ridge to receive 'Lux' AI cluster (2026) and 'Discovery' exascale (2028)", "impact": "Reinforces East Tennessee as an HPC/AI research hub with adjacent compute demand.", "tags": ["HPC", "AI"], "ref": 8 },
-    { "date": "2025-03", "title": "Kristin Darby takes office as State CIO", "impact": "New, AI-forward leadership over centralized STS; shift toward execution and modernization.", "tags": ["Leadership"], "ref": 11 }
+    { "date": "2026-01", "title": "xAI's Memphis 'Colossus' scales toward ~2GW / ~555,000 GPUs", "impact": "Cements Tennessee as a top-tier national AI-compute hub; massive infrastructure ecosystem demand.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 7 }
   ],
 
   "dellActions": [
@@ -156,6 +155,8 @@
     { "label": "Tennessee ECD — BEAD Program (broadband)", "url": "https://www.tn.gov/ecd/rural-development/broadband-office/redirect-provider-resources/bead-program.html" },
     { "label": "StateScoop — Tennessee names Kristin Darby as new CIO", "url": "https://statescoop.com/tennessee-new-cio-kristin-darby-2025/" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "StateScoop — Tennessee leans on public-private collaboration and $50M for AI", "url": "https://statescoop.com/tennessee-public-private-sector-collaboration-ai/" }
+    { "label": "StateScoop — Tennessee leans on public-private collaboration and $50M for AI", "url": "https://statescoop.com/tennessee-public-private-sector-collaboration-ai/" },
+    { "label": "U.S. House Homeland Security — ICYMI: State cyber officials emphasize federal partnership (Darby testimony, May 2026)", "url": "https://homeland.house.gov/2026/05/26/icymi-state-cybersecurity-officials-emphasize-importance-of-strong-federal-partnership-as-cyber-threats-to-communities-grow/" },
+    { "label": "Tennessee Lookout — Tennessee data-center self-power / utility-cost bill (HB1847)", "url": "https://tennesseelookout.com/2026/04/28/tennessee-bill-gives-data-centers-ability-to-self-power-with-limited-regulation/" }
   ]
 }

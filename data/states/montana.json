@@ -3,7 +3,7 @@
   "name": "Montana",
   "slug": "montana",
   "region": "Mountain West",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A tech-forward governor, the nation's first 'Right to Compute' law, a historic BEAD broadband award, and a sudden gigawatt-scale data-center rush — Montana is punching above its size on technology.",
 
   "snapshot": [
@@ -61,12 +61,12 @@
     },
     {
       "name": "ConnectMT / BEAD Broadband Buildout",
-      "status": "Funded — deploying",
-      "statusType": "good",
+      "status": "Relaunching (federal rule change)",
+      "statusType": "warn",
       "dellFit": 45,
-      "budgetStrength": 85,
+      "budgetStrength": 80,
       "tags": ["Broadband", "Federal", "Rural"],
-      "summary": "NTIA approved Montana's final BEAD proposal in November 2025, awarding roughly $629M to bring service to unserved/underserved rural locations; subgrantees have four years to build. This follows a $270M ARPA round (61 projects, 2022). Dollars flow to ISPs, but the buildout strengthens SITSD's statewide network role and the digital-government surface Dell can support.",
+      "summary": "Montana's BEAD program (state remains eligible for ~$600M+) is being restructured in summer 2026 after new federal 'Benefit of the Bargain' guidance (June 6, 2026) stripped the fiber preference and made cost the primary scoring criterion, putting fiber, fixed wireless, and satellite (Starlink, Amazon Leo) on equal footing. Montana is re-opening applications (~July 7) with final federal approval targeted by December 2026 — superseding the November 2025 final-proposal approval. This follows a $270M ARPA round (61 projects, 2022). Dollars flow to ISPs, but the buildout strengthens SITSD's statewide network role and the digital-government surface Dell can support.",
       "ref": 4
     },
     {
@@ -96,7 +96,7 @@
       "dellFit": 85,
       "budgetStrength": 70,
       "tags": ["AI Infrastructure", "Data Centers", "Private Sector"],
-      "summary": "Gigawatt-scale projects are landing fast: TAC's 'Project Cardinal' near Great Falls (up to 600MW, $1-1.5B), Atlas Power and Sabey in Butte, and Quantica's 5,000-acre 'Big Sky Campus' near Broadview (500MW Phase I). Proposed loads (~2,100MW+) far exceed NorthWestern's current ~750MW average — a grid/ratepayer flashpoint, but a major private AI-infrastructure demand signal Dell can serve alongside the public sector.",
+      "summary": "Gigawatt-scale projects are landing fast: Atlas Power outside Butte (75MW live in 2026, growing), Sabey, and Quantica's 5,000-acre 'Big Sky Campus' near Broadview (Phase I construction 2026); TAC's 600MW 'Project Cardinal' near Great Falls now appears to have faltered. The flashpoint in mid-2026 is NorthWestern Energy's proposed 'large-load' tariff at the Montana PSC: customers over 50MW would face 15-year minimum contracts and PSC sign-off, and nine parties (Consumer Counsel, Missoula County and City, DEQ, environmental groups, generators) intervened by June 2026 over who pays for ~1,400MW of new load. A grid/ratepayer fight, but a major private AI-infrastructure demand signal Dell can serve alongside the public sector.",
       "ref": 8
     }
   ],
@@ -119,17 +119,20 @@
 
   "powerStructure": [
     { "name": "Greg Gianforte", "title": "Governor", "org": "State of Montana", "note": "Software entrepreneur (founded RightNow Technologies) before politics; signed the Right to Compute Act and champions a light-touch, pro-tech agenda.", "ref": 6 },
+    { "name": "Misty Ann Giles", "title": "Director, Dept. of Administration / State COO", "org": "Dept. of Administration", "note": "Cabinet director since 2021 (confirmed current as of 2026); SITSD, broadband, and central business services report up through DOA — the executive above the State CIO.", "ref": 3 },
     { "name": "Kevin Gilbertson", "title": "State CIO", "org": "SITSD / Dept. of Administration", "note": "Appointed 2021 by Gianforte; leads SITSD, drives mainframe retirement and modernization, reports quarterly to the Legislative Finance Committee.", "ref": 5 },
+    { "name": "Chris Santucci", "title": "State CISO", "org": "SITSD / Dept. of Administration", "note": "State Chief Information Security Officer (former Cybersecurity Operations Bureau Chief); ~2 years as CISO as of 2026, leads enterprise security and NIST-aligned AI risk guidance. The cyber decision-maker for whole-of-state security.", "ref": 11 },
+    { "name": "Christopher Tarabochia", "title": "Chief AI Officer", "org": "SITSD / Dept. of Administration", "note": "Montana's first Chief AI Officer (hired 2025, former Microsoft Xbox product manager); reports to State CIO Gilbertson and sets statewide AI strategy, an AI Community of Practice, and responsible-AI procurement tools. The entry point for governed/on-prem AI conversations.", "ref": 12 },
     { "name": "Daniel Zolnikov", "title": "State Senator (sponsor)", "org": "Montana Legislature", "note": "Authored SB 212 (Right to Compute) and the state's data-privacy and pro-crypto laws — the legislative voice on technology policy." },
     { "name": "Legislative Finance Committee / Fiscal Division", "title": "Appropriations & fiscal analysis", "org": "Montana Legislature", "note": "Sizes and tracks HB 2 and HB 10 IT projects via the LFC dashboard — useful for forecasting modernization spend.", "ref": 2 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Nine parties intervene in NorthWestern's data-center 'large-load' tariff at the Montana PSC", "impact": "Consumer Counsel, Missoula County/City, DEQ, generators, and environmental groups joined the proceeding over ~1,400MW of pledged data-center load; 50MW+ users would face 15-year contracts and PSC sign-off. Sets the cost-allocation rules that gate the AI-infrastructure buildout Dell can serve.", "tags": ["Data Centers", "Policy"], "ref": 13 },
+    { "date": "2026-06", "title": "Montana's BEAD broadband program restructured under new federal rules", "impact": "June 6 federal 'Benefit of the Bargain' guidance drops the fiber preference and makes price the primary criterion; Montana re-opens applications (~July 7) with federal approval targeted by December — superseding the Nov 2025 award framing.", "tags": ["Broadband", "Federal"], "ref": 4 },
     { "date": "2026-02", "title": "AI investors eye Montana for data centers as water and grid concerns mount", "impact": "Eleven developers reportedly in talks with NorthWestern; signals scale of private AI-infrastructure demand and the grid constraint shaping it.", "tags": ["Data Centers", "AI"], "ref": 8 },
-    { "date": "2025-11", "title": "NTIA approves Montana's final BEAD proposal (~$629M)", "impact": "Largest broadband award in state history; subgrantees get four years to build, expanding the digital-government surface.", "tags": ["Broadband", "Federal"], "ref": 4 },
-    { "date": "2025-11", "title": "Groups push back on Montana's 'data center boom'", "impact": "Ratepayer and water concerns surface as proposed loads (~2,100MW+) dwarf existing demand — a political constraint on the buildout.", "tags": ["Data Centers", "Policy"], "ref": 9 },
-    { "date": "2025-06", "title": "Gianforte signs ~$16.6B two-year budget (HB 2) with line-item vetoes", "impact": "Sets the 2027-biennium spending baseline that agency IT modernization runs within.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-06", "title": "Project Cardinal data center advances near Great Falls (up to 600MW)", "impact": "Anchor private AI-infrastructure project; energy supply is the gating factor.", "tags": ["Data Centers", "AI Infrastructure"], "ref": 10 },
+    { "date": "2025-11", "title": "Groups push back on Montana's 'data center boom'", "impact": "Ratepayer and water concerns surface as proposed loads dwarf existing demand — a political constraint on the buildout.", "tags": ["Data Centers", "Policy"], "ref": 9 },
+    { "date": "2025-08", "title": "Montana posts and fills its first Chief AI Officer role (SITSD)", "impact": "New CAIO (reporting to State CIO Gilbertson) sets statewide AI strategy, an AI Community of Practice, and responsible-AI procurement tools — a clear entry point for governed/on-prem AI.", "tags": ["AI", "Leadership"], "ref": 12 },
     { "date": "2025-04", "title": "Montana enacts first-in-nation Right to Compute Act (SB 212)", "impact": "Codifies a pro-compute, light-touch AI posture — favorable backdrop for private/on-prem AI adoption.", "tags": ["AI", "Policy"], "ref": 6 }
   ],
 
@@ -151,6 +154,9 @@
     { "label": "Montana Dept. of Administration — SITSD Cybersecurity", "url": "https://doa.mt.gov/SITSD/cybersecurity" },
     { "label": "Daily Montanan — Eleven data center developers in talks with NorthWestern", "url": "https://dailymontanan.com/2026/02/23/eleven-data-center-developers-in-talks-with-northwestern-group-says/" },
     { "label": "Montana Free Press — Groups push back on Montana's 'data center boom'", "url": "https://montanafreepress.org/2025/11/18/groups-push-back-on-montanas-data-center-boom/" },
-    { "label": "Montana Free Press — Great Falls data center proposal (Project Cardinal), energy supply", "url": "https://montanafreepress.org/2025/06/24/for-massive-great-falls-data-center-proposal-energy-supply-is-crucial-to-push-project-forward/" }
+    { "label": "Montana Free Press — Great Falls data center proposal (Project Cardinal), energy supply", "url": "https://montanafreepress.org/2025/06/24/for-massive-great-falls-data-center-proposal-energy-supply-is-crucial-to-push-project-forward/" },
+    { "label": "Interface — State of Montana: Revitalising Security Through A New Lens (CISO Chris Santucci)", "url": "https://interface.media/blog/executiveinsights/state-of-montana-revitalising-security-through-a-new-lens/" },
+    { "label": "GovTech — Help Wanted: Montana Seeks Its First Chief AI Officer (role under SITSD, reports to CIO)", "url": "https://www.govtech.com/workforce/help-wanted-montana-seeks-its-first-chief-ai-officer" },
+    { "label": "Montana Free Press — Who wants a say in power rates for Montana data centers? (PSC large-load tariff intervenors, June 2026)", "url": "https://montanafreepress.org/2026/06/30/who-wants-a-say-in-power-rates-for-montana-data-centers/" }
   ]
 }

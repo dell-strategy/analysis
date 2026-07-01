@@ -5,7 +5,7 @@
   "name": "Texas Dept of Public Safety (DPS)",
   "slug": "dps",
   "hq": "Austin, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Texas' statewide law-enforcement and homeland-security agency — Texas Rangers, Highway Patrol, driver license, border security, and the state fusion center — running a large field, mobile, data-center, and biometrics technology footprint.",
 
   "snapshot": [
@@ -27,7 +27,7 @@
     "notes": [
       "Border-security appropriations fund surveillance, intelligence, and field technology — a large recurring driver of DPS tech demand.",
       "The 89th Legislature created a new Homeland Security Division within DPS, reshaping where border and intelligence programs sit.",
-      "Statewide cybersecurity functions are moving from DIR to the new Texas Cyber Command (transition through Dec 31, 2026); DPS retains its own operational cyber and CJIS-security responsibilities."
+      "Statewide cybersecurity functions are moving from DIR to the new Texas Cyber Command (DIR transferred staff and functions on Mar 1, 2026; full transition due by Dec 31, 2026); DPS retains its own operational cyber and CJIS-security responsibilities."
     ]
   },
 
@@ -50,18 +50,20 @@
 
   "powerStructure": [
     { "name": "Col. Freeman F. Martin", "title": "Director, Texas DPS", "note": "Sworn in Dec 1, 2024 — the first Texas Ranger to lead DPS; previously Senior Deputy Director over Homeland Security. Sets agency direction; the top relationship for the account." },
-    { "name": "Jessica Ballew", "title": "Chief Information Officer", "note": "CIO since Sept 2024, leading technology strategy with a stated focus on innovation, interoperability, and IT modernization. The primary IT decision-maker and key relationship." },
+    { "name": "Jessica Ballew", "title": "Chief Information Officer", "note": "CIO since Sept 2024 (confirmed current June 2026), leading technology strategy with a stated focus on innovation, interoperability, and a shift toward managed services and automation. The primary IT decision-maker and key relationship." },
+    { "name": "John Kelley", "title": "Deputy CIO / Assistant Chief of Information Technology", "note": "Named deputy CIO under Ballew — second-in-command on DPS IT strategy and delivery; a key relationship for infrastructure, modernization, and managed-services decisions." },
     { "name": "Operations, Solutions & Delivery (OSD)", "title": "IT & data infrastructure service area", "note": "Manages enterprise IT and data infrastructure, statewide interoperability, the Innovation Office, Transformation (PMO), and the Enterprise Data Office — the buying center for infrastructure and modernization." },
     { "name": "DPS Cyber Security", "title": "Agency cybersecurity & CJIS security", "note": "Owns DPS network defense, risk management, and CJIS-security obligations. Note statewide cyber policy is moving to the Texas Cyber Command — DPS retains operational responsibility for its own systems." },
     { "name": "Public Safety Commission", "title": "Governing five-member board", "note": "Governor-appointed commission that oversees DPS and approves major leadership and policy decisions — the governance layer above the Director." }
   ],
 
   "news": [
-    { "date": "2026-02", "title": "Texas remains on the sidelines as digital driver's licenses expand nationwide", "impact": "Signals a likely future mobile-DL / digital-identity modernization track at DPS — an opening to position secure issuance and identity infrastructure ahead of a program.", "tags": ["Driver License", "Digital Identity"] },
+    { "date": "2026-06", "title": "DPS CIO Ballew details technology transformation: shift to managed services and internal automation", "impact": "DPS is moving away from maintaining in-house support teams for every system toward managed-services contracts, plus a new internal automation capability for admin workflows and customer-facing services — a direct opening for Dell services, ProSupport/managed offerings, and automation-ready infrastructure.", "tags": ["IT Modernization", "Managed Services", "Automation"] },
+    { "date": "2026-06", "title": "DPS ends NTTA toll-road patrol contract to preserve statewide deployment flexibility", "impact": "Director Martin's June 1 letter ends the fee-for-service tollway patrol model (expires Aug 31, 2026), reassigning troopers statewide — signals a leadership emphasis on operational flexibility and resource reallocation that reshapes where field/mobile tech demand lands.", "tags": ["Operations", "Leadership"] },
+    { "date": "2026-02", "title": "DPS 2026–2030 strategic plan leans heavily on AI, drones, and fixed cameras for surveillance", "impact": "The five-year enforcement plan expands AI tooling, drones, and Flock/fixed cameras for border and statewide monitoring and faster (even predictive) response — a sustained driver of edge/mobile compute, high-performance storage, and AI/analytics demand.", "tags": ["AI/Analytics", "Border Security", "Edge"] },
+    { "date": "2026-02", "title": "Texas remains on the sidelines as digital driver's licenses expand nationwide", "impact": "A statewide digital-ID bill (SB 215) died in the 2025 session, so no program is yet funded — but continued national momentum keeps mobile-DL / digital-identity a likely future modernization track to position ahead of.", "tags": ["Driver License", "Digital Identity"] },
     { "date": "2025-08", "title": "DPS rolls out new, harder-to-counterfeit DL/ID card design", "impact": "Active investment in driver license security and issuance — adjacent to platform, data, and fraud-prevention modernization needs.", "tags": ["Driver License"] },
-    { "date": "2025-06", "title": "SB 1 funds DPS at ~$3.8B for FY26–27 with record border-security and new Homeland Security Division", "impact": "Confirms budget capacity and a reorganized homeland-security buying center — recalibrate where border/intelligence tech decisions sit.", "tags": ["Budget", "Border Security"] },
-    { "date": "2024-12", "title": "Col. Freeman F. Martin assumes command as DPS Director", "impact": "New top-of-house leadership with a homeland-security and border background — reset the executive relationship map.", "tags": ["Leadership"] },
-    { "date": "2024-10", "title": "DPS solicits cloud-based maintenance and support for MBIS biometrics system", "impact": "Direct infrastructure, storage, and disaster-recovery opportunity around a mission-critical biometrics platform — a concrete entry point.", "tags": ["Biometrics", "Cloud"] }
+    { "date": "2025-06", "title": "SB 1 funds DPS at ~$3.8B for FY26–27 with record border-security and new Homeland Security Division", "impact": "Confirms budget capacity and a reorganized homeland-security buying center — recalibrate where border/intelligence tech decisions sit.", "tags": ["Budget", "Border Security"] }
   ],
 
   "dellActions": [
@@ -80,6 +82,11 @@
     { "label": "Texas DPS — Texas Fusion Center", "url": "https://www.dps.texas.gov/section/homeland-security/texas-fusion-center" },
     { "label": "Texas DPS — DPS Rolls Out New Driver License Design", "url": "https://www.dps.texas.gov/news/dps-rolls-out-new-driver-license-design" },
     { "label": "Biometric Update — Texas on the sidelines as digital driver's licenses expand nationwide", "url": "https://www.biometricupdate.com/202602/texas-on-the-sidelines-as-digital-drivers-licenses-expand-nationwide" },
-    { "label": "Texas DPS — Legislative Appropriations Request FY2026–27 (Vol. I)", "url": "https://www.dps.texas.gov/LBB/lar2026-27_vol1.pdf" }
+    { "label": "Texas DPS — Legislative Appropriations Request FY2026–27 (Vol. I)", "url": "https://www.dps.texas.gov/LBB/lar2026-27_vol1.pdf" },
+    { "label": "Industry Insider (GovTech) — Public Safety CIO Talks Agency Transformation and Automation", "url": "https://insider.govtech.com/texas/news/public-safety-cio-talks-agency-transformation-and-automation" },
+    { "label": "Industry Insider (GovTech) — Profiles in Government: Department of Public Safety", "url": "https://insider.govtech.com/texas/news/profiles-in-government-department-of-public-safety" },
+    { "label": "FOX 4 Dallas-Fort Worth — Texas DPS ending NTTA toll road patrols, reassigning troopers", "url": "https://www.fox4news.com/news/texas-dps-ending-ntta-toll-road-patrols-2026" },
+    { "label": "FOX 26 Houston — AI, cameras and drones: Texas DPS' 5-year enforcement plan rooted in surveillance", "url": "https://www.fox26houston.com/news/ai-cameras-drones-texas-dps-5-year-enforcement-plan-rooted-surveillance" },
+    { "label": "Texas DIR — Cybersecurity Functions Transition to the Texas Cyber Command", "url": "https://dir.texas.gov/news/cybersecurity-functions-transition-texas-cyber-command" }
   ]
 }

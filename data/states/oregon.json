@@ -3,7 +3,7 @@
   "name": "Oregon",
   "slug": "oregon",
   "region": "Pacific Northwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A record $138.9B biennial budget, a centralized EIS technology shop adopting GovRAMP for cloud, and a Hillsboro 'Silicon Forest' that is now one of the nation's hottest data-center and semiconductor markets — Oregon is buying and securing technology on a single enterprise motion.",
 
   "snapshot": [
@@ -119,18 +119,20 @@
 
   "powerStructure": [
     { "name": "Tina Kotek", "title": "Governor", "org": "State of Oregon", "note": "Created the State AI Advisory Council (EO 23-26); set the record 2025–27 budget agenda.", "ref": 4 },
-    { "name": "Terrence Woods", "title": "State Chief Information Officer", "org": "EIS / DAS", "note": "Owns statewide IT strategy and EIS; chairs the AI Advisory Council; reports to the Governor.", "ref": 3 },    { "name": "Nick Batz", "title": "Director, Oregon Broadband Office", "org": "Business Oregon", "note": "Leads the $689M BEAD deployment; rural connectivity buildout.", "ref": 8 },
+    { "name": "Terrence Woods", "title": "State Chief Information Officer", "org": "EIS / DAS", "note": "Owns statewide IT strategy and EIS; chairs the AI Advisory Council; reports to the Governor. Named StateScoop GoldenGov State Executive of the Year. Verified current June 2026.", "ref": 3 },
+    { "name": "JoLene Swint", "title": "Deputy State Chief Information Officer", "org": "EIS / DAS", "note": "Recently appointed Deputy CIO (serving as of early 2026); previously led EIS budget, PMO, shared services, and contract administration — a useful enterprise sponsor for cross-agency deals.", "ref": 13 },
+    { "name": "State Chief Information Security Officer (CISO)", "title": "State CISO / Director, Cyber Security Services", "org": "EIS / DAS", "note": "Heads EIS Cyber Security Services and owns the GovRAMP/cloud security gate (ORS 276A.300). Oregon had an open State CISO requisition posted in 2026 — treat the seat as in transition; confirm the current (possibly acting) holder before security-led engagements.", "ref": 14 },
+    { "name": "Nick Batz", "title": "Director, Oregon Broadband Office", "org": "Business Oregon", "note": "Leads the $689M BEAD deployment; rural connectivity buildout.", "ref": 8 },
     { "name": "DAS Procurement Services / State CPO", "title": "Central procurement authority", "org": "DAS", "note": "Owns Statewide Price Agreements, OregonBuys, and ORCPP — the contractual path to every state buyer." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "PUC-ordered PGE rate overhaul: data-center rates up ~29%, residential down ~1.3%", "impact": "Implementing 2025's POWER Act (HB 3546), Portland General Electric's new large-load rate class shifts grid-expansion costs onto data centers (effective ~June 10, 2026). It sharpens the total-cost-of-ownership and power-efficiency conversation for Silicon Forest operators and strengthens Dell's energy-efficient/AI-optimized infrastructure positioning, even as some Hillsboro projects sit 'dead on the vine' waiting on grid capacity.", "tags": ["Data Centers", "Policy", "Energy"], "ref": 15 },
+    { "date": "2026-02", "title": "EIS issues Updated Interim Generative AI Access & Usage Guidance", "impact": "State CIO guidance (Feb 6, 2026) restricts GenAI tools (incl. Microsoft Copilot) to Level 1/2 (non-sensitive) data and routes all AI tools/services through the IT Investment (ITI) and procurement-review process with security/privacy contract terms. Reinforces the opening for governed, private/on-prem AI on sensitive workloads and confirms AI buys flow through EIS governance.", "tags": ["AI", "Governance", "Cloud"], "ref": 16 },
     { "date": "2026-06-05", "title": "Oregon data-center property-tax moratorium (HB 4084) takes effect", "impact": "New data centers become ineligible for the Enterprise Zone tax incentive until ~90 days after the 2027 session (SIP breaks and approved projects unaffected). Operators front-loaded applications before the cutoff, pulling near-term hardware demand forward while injecting uncertainty into post-2026 Silicon Forest expansion.", "tags": ["Data Centers", "Policy"], "ref": 11 },
     { "date": "2026-06", "title": "Hillsboro 'Silicon Forest' data-center community backlash escalates", "impact": "200+ residents packed the June 2 council meeting over Enterprise Zone exemptions; recall sentiment toward the mayor. Rising local permitting friction means future capacity adds hinge on community-benefit, jobs, energy and water narratives — relevant to efficient/AI-optimized infrastructure positioning and to county/city IT accounts.", "tags": ["Data Centers", "Policy"], "ref": 12 },
     { "date": "2026-03", "title": "Hillsboro pauses adding industrial land for high-tech and data centers", "impact": "Signals land and grid capacity becoming the binding constraint on Silicon Forest growth — power/efficiency story matters to buyers.", "tags": ["Data Centers", "Policy"], "ref": 10 },
-    { "date": "2025-10", "title": "Flexential plans a sixth Hillsboro data center as the cluster expands", "impact": "Reinforces Oregon as one of the nation's hottest AI-infrastructure markets; ISG and AI-factory demand.", "tags": ["Data Centers", "AI"], "ref": 9 },
-    { "date": "2025-09", "title": "Oregon files BEAD final proposal — $689M to connect ~104,000 locations", "impact": "Largest reported share of allocation committed; expands digital-government and network modernization footprint.", "tags": ["Broadband", "Federal Funds"], "ref": 8 },
-    { "date": "2025-06", "title": "Legislature adopts $138.9B 2025–27 biennial budget (+5.9%)", "impact": "Record all-funds budget sets the two-year spending baseline for agency IT investment.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-03", "title": "State CIO Terrence Woods presents EIS 2025–27 budget to Ways & Means", "impact": "Confirms EIS priorities — governance maturity, security, and modernization — and the buying motion sellers should map to.", "tags": ["Leadership", "Budget"], "ref": 3 }
+    { "date": "2025-10", "title": "Flexential plans a sixth Hillsboro data center as the cluster expands", "impact": "Reinforces Oregon as one of the nation's hottest AI-infrastructure markets; ISG and AI-factory demand.", "tags": ["Data Centers", "AI"], "ref": 9 }
   ],
 
   "dellActions": [
@@ -153,6 +155,10 @@
     { "label": "Hillsboro News Times — One of Hillsboro's largest data center operators plans 6th facility", "url": "https://hillsboronewstimes.com/2025/10/01/one-of-hillsboros-largest-data-center-operators-plans-6th-facility/" },
     { "label": "OPB — Hillsboro will not get more industrial land for high tech, data centers after all", "url": "https://www.opb.org/article/2026/03/03/hillsboro-will-not-get-more-industrial-land-for-high-tech-data-centers/" },
     { "label": "Davis Wright Tremaine — Oregon data center tax-break moratorium (June 2026)", "url": "https://www.dwt.com/blogs/energy--environmental-law-blog/2026/06/oregon-data-center-tax-break-moratorium" },
-    { "label": "OPB — Hillsboro residents pack city council meeting over data centers (June 3, 2026)", "url": "https://www.opb.org/article/2026/06/03/data-center-hillsboro-residents-city-council-meeting/" }
+    { "label": "OPB — Hillsboro residents pack city council meeting over data centers (June 3, 2026)", "url": "https://www.opb.org/article/2026/06/03/data-center-hillsboro-residents-city-council-meeting/" },
+    { "label": "Oregon EIS — State CIO page (Terrence Woods, State CIO; JoLene Swint, Deputy State CIO)", "url": "https://www.oregon.gov/eis/pages/state-cio.aspx" },
+    { "label": "Oregon EIS — Cyber Security Services: State CISO / Guidance for State Agencies", "url": "https://www.oregon.gov/eis/cyber-security-services/pages/guidance-for-state-agencies.aspx" },
+    { "label": "OPB — PGE to increase data-center rates ~29%, cut residential ~1.3% (June 4, 2026)", "url": "https://www.opb.org/article/2026/06/04/data-centers-utility-rate-pge/" },
+    { "label": "Oregon EIS — Updated Interim Guidance on Generative AI Access and Usage (Feb 6, 2026)", "url": "https://www.oregon.gov/eis/Documents/Updated%20Interim%20Guidance%20on%20Generative%20AI%20Access%20and%20Usage%20Memo%20-%20February%206%202026.pdf" }
   ]
 }

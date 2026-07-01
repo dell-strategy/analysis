@@ -5,7 +5,7 @@
   "name": "Texas Dept of Family & Protective Services (DFPS)",
   "slug": "dfps",
   "hq": "Austin, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Texas' child- and adult-protective-services agency, running data-heavy case management (IMPACT) on aging foundations — and now planning a multi-year, federally co-funded replacement plus an AI, data-governance, and cyber modernization push.",
 
   "snapshot": [
@@ -32,7 +32,8 @@
 
   "initiatives": [
     { "name": "IMPACT case-management replacement", "summary": "DFPS is planning a multi-year replacement of its legacy IMPACT case-management system with a federally compliant, modern platform, paired with business-process redesign and better data sharing with Community-Based Care contractors. Planning is in FY2026-27; build is projected for ~FY2028-2032. The infrastructure, data, and integration layers underneath are the seller-relevant surface.", "tags": ["Case Management", "Modernization"] },
-    { "name": "AI tooling & data governance", "summary": "The 2027-2031 strategic plan (approved June 2026) commits to integrating AI tools and strengthening data governance for accurate, secure, responsible data use. DFPS IT leadership has publicly floated an AI model usable across state agencies — an opening for AI-ready infrastructure and data-platform conversations.", "tags": ["AI", "Data"] },
+    { "name": "AI tooling & data governance", "summary": "DFPS stood up an internal AI Center of Excellence that catalogued 75+ generative-AI use cases and ran a 2025 pilot to cut administrative burden (evaluation reported Feb 2026), and its strategic plan formalizes a Data Governance Program for accurate, secure, responsible data use. IT leadership has also floated an AI model controlled and trained strictly for Texas agencies — all openings for AI-ready infrastructure and data-platform conversations.", "tags": ["AI", "Data"] },
+    { "name": "Interagency data sharing (SEMARC / CGMS)", "summary": "SEMARC aggregates reportable-conduct data across DFPS, HHSC, TEA, and TJJD into a single background-check search interface; CGMS modernizes contractor oversight with a public vendor portal and a data-lakehouse foundation. Both are data-integration and platform plays underneath, relevant given ongoing federal foster-care oversight pressure on provider vetting.", "tags": ["Data", "Interoperability"] },
     { "name": "Cybersecurity & continuity", "summary": "The strategic plan calls out strengthening cybersecurity safeguards, mitigating operational risk, and ensuring continuity of operations — relevant given the sensitivity of child-welfare and APS case data. CISO-owned program; aligns with statewide TX-RAMP and security standards.", "tags": ["Cybersecurity", "Resilience"] },
     { "name": "Legacy debt & digital intake", "summary": "DFPS is modernizing applications dating to the 1980s-90s toward mobile and cloud-capable experiences, and expanding online/Statewide Intake reporting channels. Continual transformation of technical debt is the CIO's stated strategy — steady infrastructure-refresh and end-user-compute demand.", "tags": ["Infrastructure", "Modernization"] }
   ],
@@ -55,7 +56,9 @@
   ],
 
   "news": [
-    { "date": "2026-06", "title": "DFPS 2027-2031 strategic plan emphasizes modernized case management, AI tools, and data governance", "impact": "Confirms agency direction and timing — lead with AI-ready infrastructure, data platform, and case-management modernization framing.", "tags": ["Strategy", "AI"] },
+    { "date": "2026-06", "title": "Federal foster-care monitors release three reports (covering 2023-24) citing progress but persistent oversight and provider-vetting gaps", "impact": "Court-mandated remediation (>$150M spent through 2024) keeps pressure on DFPS/HHSC oversight, provider-monitoring, and case-data quality — reinforces the mission case for better data, analytics, and case-management tooling.", "tags": ["Oversight", "Case Management"] },
+    { "date": "2026-01", "title": "DFPS 2026 strategic plan details case-management replacement, AI Center of Excellence (75+ gen-AI use cases), SEMARC/CGMS data-sharing, and a formal Data Governance Program", "impact": "Concrete modernization surface — AI-ready infrastructure, data-platform/lakehouse (CGMS), cross-agency data sharing (SEMARC), and case-management framing all map to Dell offerings.", "tags": ["Strategy", "AI", "Data"] },
+    { "date": "2025-11", "title": "DFPS recruits a Director of IT Initiatives (reports to Deputy CIO) to lead the case-management modernization; CCWIS/SACWIS and PMP preferred", "impact": "New program-leadership seat forming under the CIO org — an emerging buying-center relationship to track for the IMPACT replacement.", "tags": ["Leadership", "Modernization"] },
     { "date": "2025-09", "title": "Gov. Abbott appoints Audrey O'Neill as DFPS Commissioner", "impact": "New top leadership (term to Aug 2027) after Stephanie Muth's departure — refresh the executive relationship map.", "tags": ["Leadership"] },
     { "date": "2025-07", "title": "Stephanie Muth steps down as DFPS Commissioner; later named HHSC health commissioner", "impact": "Leadership turnover at the top; Muth's move to HHSC is a cross-agency relationship to note.", "tags": ["Leadership", "Transition"] },
     { "date": "2024-12", "title": "DFPS files Rider 47 report on IMPACT case-management system transition", "impact": "Documents the legislative path and cost (~$215M, federally co-funded) for replacing IMPACT — anchor for the modernization opportunity.", "tags": ["Case Management", "Modernization"] }
@@ -73,6 +76,11 @@
     { "label": "DFPS — Commissioner Audrey O'Neill", "url": "https://www.dfps.texas.gov/About_DFPS/Executives/ONeill_Audrey_.asp" },
     { "label": "Texas Tribune — Audrey O'Neill named DFPS commissioner", "url": "https://www.texastribune.org/2025/09/18/texas-family-child-protective-services-commissioner-audrey-oneill/" },
     { "label": "Govtech Insider — DFPS plan emphasizes case management, AI and data governance", "url": "https://insider.govtech.com/texas/news/dfps-plan-emphasizes-case-management-ai-and-data-governance" },
+    { "label": "Govtech Insider — DFPS outlines broad tech modernization in 2026 strategic plan (AI CoE, SEMARC, CGMS)", "url": "https://insider.govtech.com/texas/news/dfps-outlines-broad-tech-modernization-in-2026-strategic-plan" },
+    { "label": "Govtech Insider — DFPS seeks Director to lead major system modernization (Nov 2025)", "url": "https://insider.govtech.com/texas/news/dfps-seeks-director-to-lead-major-system-modernization" },
+    { "label": "Texas Tribune — Foster-care monitor reports show progress, persistent problems (June 2026)", "url": "https://www.texastribune.org/2026/06/22/texas-foster-care-lawsuit-monitor-report/" },
+    { "label": "DFPS — IMPACT Modernization program page", "url": "https://www.dfps.texas.gov/Doing_Business/IMPACT_Modernization/" },
+    { "label": "DFPS — Executives / leadership directory", "url": "https://www.dfps.texas.gov/About_DFPS/Executives/default.asp" },
     { "label": "Govtech Insider — CIO discusses transformation, modernization plans for DFPS", "url": "https://insider.govtech.com/texas/news/cio-discusses-transformation-modernization-plans-for-dfps" },
     { "label": "DFPS — Rider 47 Case Management System Transition report (Dec 2024)", "url": "https://www.dfps.texas.gov/About_DFPS/Reports_and_Presentations/Rider_Reports/documents/2024/2024-12-01_Rider%2047_Case_Management_System_Transition_Legislative.pdf" },
     { "label": "DFPS — FY26-27 Legislative Appropriations Request", "url": "https://dfps.texas.gov/About_DFPS/Budget_and_Finance/LAR/FY26-27.pdf" },

@@ -3,7 +3,7 @@
   "name": "Louisiana",
   "slug": "louisiana",
   "region": "South Central",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Meta's $10B 'Hyperion' AI data center, a centralized IT shop consolidating every state vendor contract, and a new AI-governance and cyber posture under Governor Landry — Louisiana is rewiring itself as an AI infrastructure state.",
 
   "snapshot": [
@@ -120,18 +120,19 @@
   "powerStructure": [
     { "name": "Jeff Landry", "title": "Governor", "org": "State of Louisiana", "note": "Champions the Meta/AI investment agenda; set the restrict-and-approve AI posture and foreign-AI ban by executive order.", "ref": 2 },
     { "name": "Evelina Broussard", "title": "Chief Information Officer", "org": "Office of Technology Services (OTS)", "note": "Appointed Feb 2025; 30-yr private-sector IT veteran (Atmos Energy). Owns the centralized state technology direction.", "ref": 5 },
-    { "name": "Office of Technology Services (OTS)", "title": "Central IT organization", "org": "Division of Administration", "note": "Consolidated executive-branch IT and sole centralized customer for IT vendor contracts." },
-    { "name": "Louisiana Economic Development (LED)", "title": "Economic development agency", "org": "State of Louisiana", "note": "Structured the $10B Meta data-center deal; gateway to the AI-infrastructure buildout." }
+    { "name": "Chase Hymel", "title": "Chief Information Security Officer (CISO)", "org": "Office of Technology Services (OTS)", "note": "Enterprise IT security across the ~23 state departments OTS serves. (CISO role split from incident response in a 2022 restructuring; verify tenure.)", "ref": 15 },
+    { "name": "Dustin Glover", "title": "Chief Cyber Officer", "org": "State of Louisiana (OTS / whole-of-government)", "note": "Leads statewide cyber incident response, local-gov assistance, and coordination with GOHSEP, State Police, and National Guard (ESF-17). Long-tenured; verify current standing.", "ref": 15 },
+    { "name": "Office of Technology Services (OTS)", "title": "Central IT organization", "org": "Division of Administration", "note": "Consolidated executive-branch IT and sole centralized customer for IT vendor contracts; also administers the new SB233 interagency Data Exchange Compact." },
+    { "name": "Louisiana Economic Development (LED)", "title": "Economic development agency", "org": "State of Louisiana", "note": "Structured the $10B Meta data-center deal; now charged (June 2026 EO) with drafting ratepayer/community criteria conditioning the data-center tax exemption." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Landry signs 'Ratepayer & Community Protection' executive order conditioning data-center tax breaks", "impact": "June 25, 2026 EO makes a new attestation framework (ratepayer protection, grid resiliency, workforce, community benefit, transparency) a condition of the state Data Center Sales & Use Tax Exemption; LED to draft criteria within 90 days. Tightens — but reaffirms — the incentive engine behind Meta Hyperion and future AI builds; signals a more accountable, grid-aware data-center regime.", "tags": ["Data Centers", "Policy", "AI Infrastructure"], "ref": 13 },
+    { "date": "2026-06", "title": "Gov. Landry signs FY2027 budget bills (HB1) for July 1 start", "impact": "~$46.9B all-funds, flat/standstill plan signed late June; general fund ~$12.6B (-0.49%). Spending led by corrections, education vouchers, and health — modest net-new discretionary IT, so the motion stays centralized through OTS chargebacks.", "tags": ["Budget"], "ref": 12 },
+    { "date": "2026-06", "title": "2026 session enacts cyber, privacy, and data-sharing laws (SB75, SB386, SB233)", "impact": "SB75 sets cybersecurity standards for local-gov state aid; SB386 (LA Data Privacy Act, effective Jan 1, 2027) adds consumer data rights and data-minimization duties; SB233 stands up an interagency Data Exchange Compact administered by OTS. Together they raise demand for governed data platforms, security, and OTS-led shared services.", "tags": ["Cybersecurity", "Policy", "Data"], "ref": 14 },
     { "date": "2026-07", "title": "Tightened data-breach law takes effect (48-hour notification)", "impact": "Cuts breach notification from 60 days to 48 hours plus data-minimization/vendor-accountability rules; raises the bar for any entity handling Louisianans' data — tailwind for detection and response capabilities.", "tags": ["Cybersecurity", "Policy"], "ref": 6 },
-    { "date": "2026-06", "title": "2026 Regular Session adjourns; FY2027 budget (HB1) sent to Gov. Landry", "impact": "Roughly $46.9B–$47B operating budget heading to the governor for a July 1 fiscal-year start; a flat/standstill plan with state-employee raises — modest new IT discretionary spend.", "tags": ["Budget"], "ref": 12 },
     { "date": "2026-05", "title": "Legislature authorizes Meta's ~$3.3B equipment tax exemption", "impact": "Locks in the 20-yr sales/use tax break (incl. GPUs); confirms state commitment to the data-center economy.", "tags": ["Data Centers", "Budget"], "ref": 3 },
-    { "date": "2026-03", "title": "Meta 'Hyperion' data center scales up amid local impact reporting", "impact": "Reporting reframes the project at far larger long-run scale; reinforces the magnitude of the AI buildout in Richland Parish.", "tags": ["Data Centers", "AI"], "ref": 4 },
-    { "date": "2025-11", "title": "Louisiana first in nation approved to deploy $1.355B in BEAD broadband (GUMBO 2.0)", "impact": "~140,000 locations connected via 20 ISPs; expands edge connectivity and downstream public-sector IT demand.", "tags": ["Broadband", "Federal"], "ref": 7 },
-    { "date": "2025-10", "title": "Gov. Landry bans foreign-adversary AI (DeepSeek) from state systems", "impact": "Restrict-and-approve AI posture; agencies need governed, auditable AI — opening for private/on-prem approaches.", "tags": ["AI", "Policy"], "ref": 6 },
-    { "date": "2025-02", "title": "Evelina Broussard appointed State CIO at OTS", "impact": "Private-sector IT veteran takes the centralized state technology lead under Governor Landry.", "tags": ["Leadership"], "ref": 5 }
+    { "date": "2025-11", "title": "Louisiana first in nation approved to deploy $1.355B in BEAD broadband (GUMBO 2.0)", "impact": "~140,000 locations connected via 20 ISPs; expands edge connectivity and downstream public-sector IT demand.", "tags": ["Broadband", "Federal"], "ref": 7 }
   ],
 
   "dellActions": [
@@ -154,6 +155,9 @@
     { "label": "Louisiana DOA - Office of State Procurement (OSP)", "url": "https://doa.la.gov/doa/osp/" },
     { "label": "Connect Louisiana - GUMBO 2.0 (BEAD)", "url": "https://connect.louisiana.gov/gumbo-2" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Red River Radio — Louisiana's 2026 regular legislative session ends; bills awaiting governor's signature (June 2, 2026)", "url": "https://www.redriverradio.org/news/2026-06-02/louisianas-2026-regular-legislative-session-ends-bills-awaiting-governors-signature" }
+    { "label": "Red River Radio — Louisiana's 2026 regular legislative session ends; bills awaiting governor's signature (June 2, 2026)", "url": "https://www.redriverradio.org/news/2026-06-02/louisianas-2026-regular-legislative-session-ends-bills-awaiting-governors-signature" },
+    { "label": "Louisiana Economic Development — Louisiana Sets New National Standard for Responsible Industrial Growth (Ratepayer & Community Protection Initiative, June 2026)", "url": "https://www.opportunitylouisiana.gov/news/louisiana-sets-new-national-standard-for-responsible-industrial-growth" },
+    { "label": "GovTech — Louisiana Legislative Session Yields Cyber, Privacy Laws (SB75 / SB386 / SB233, 2026)", "url": "https://www.govtech.com/policy/louisiana-legislative-session-yields-cyber-privacy-laws" },
+    { "label": "StateScoop — Louisiana CISO takes on new role overseeing cyber incident response (Hymel CISO / Glover Chief Cyber Officer)", "url": "https://statescoop.com/louisiana-ciso-new-chief-cyber-officer/" }
   ]
 }

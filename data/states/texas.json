@@ -3,7 +3,7 @@
   "name": "Texas",
   "slug": "texas",
   "region": "South Central",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Largest state budget in Texas history, a new standalone cyber agency, and an AI-governance law now in force — Texas is reshaping how it buys and secures technology.",
 
   "snapshot": [
@@ -55,7 +55,7 @@
       "dellFit": 80,
       "budgetStrength": 75,
       "tags": ["Cybersecurity", "New Agency", "San Antonio"],
-      "summary": "HB 150 (signed June 2025) created the nation's largest state cyber agency, headquartered in San Antonio with UTSA as a partner and led by retired Navy Vice Adm. Timothy 'T.J.' White. It is absorbing DIR's cybersecurity functions in phases — a transition DIR confirmed (April 2026 notice) will complete by Dec 31, 2026 — and stands up a Cyber Threat Intelligence Center serving state and local government. Active hiring through mid-2026. A greenfield agency means greenfield infrastructure, secure compute, and services needs.",
+      "summary": "HB 150 (signed June 2025) created the nation's largest state cyber agency, headquartered in San Antonio with UTSA as a partner and led by retired Navy Vice Adm. Timothy 'T.J.' White. It is absorbing DIR's cybersecurity functions in phases — DIR transferred statewide cybersecurity employees and functions on March 1, 2026, with the transition slated to complete by Dec 31, 2026 and people/process/mission integration finalized by Feb 1, 2027 — and stands up a Cyber Threat Intelligence Center, Incident Response Unit, and Digital Forensic Lab serving state and local government. Active hiring for analysts and unit leadership through mid-2026. A greenfield agency means greenfield infrastructure, secure compute, and services needs.",
       "ref": 3
     },
     {
@@ -108,19 +108,19 @@
 
   "powerStructure": [
     { "name": "Greg Abbott", "title": "Governor", "org": "State of Texas", "note": "Made Cyber Command an emergency item; champions the semiconductor/AI agenda." },
-    { "name": "Tony Sauerhoff", "title": "State CIO & DIR Executive Director", "org": "DIR", "note": "Permanent in March 2026; former Chief AI & Innovation Officer and state CISO. Owns the statewide tech direction.", "ref": 7 },
+    { "name": "Tony Sauerhoff", "title": "State CIO & DIR Executive Director", "org": "DIR", "note": "Confirmed permanent March 2026 (interim from Jan 2026); former Chief AI & Innovation Officer and state CISO. Owns statewide tech direction as DIR sheds cybersecurity to the Cyber Command (functions transferred March 1, 2026).", "ref": 7 },
+    { "name": "Timothy 'T.J.' White (VADM, USN ret.)", "title": "Chief, Texas Cyber Command", "org": "Texas Cyber Command", "note": "Abbott appointee (term through Feb 1, 2027); former commander, U.S. Fleet Cyber Command / 10th Fleet. Leads the greenfield agency and its Threat Intelligence, Incident Response, and Forensics units.", "ref": 4 },
     { "name": "Tan Parker / Giovanni Capriglione", "title": "Legislative sponsors", "org": "Texas Legislature", "note": "Lead authors behind Cyber Command (HB 150) and AI/innovation policy." },
     { "name": "Legislative Budget Board (LBB)", "title": "Appropriations & fiscal analysis", "org": "State of Texas", "note": "Sizes program costs and staffing — useful for forecasting cyber/AI spend." }
   ],
 
   "news": [
-    { "date": "2026-06-10", "title": "Abbott directs PUC/ERCOT to make AI data centers fund their own grid costs", "impact": "Sweeping directive: PUC to act on residential transmission costs by July 31 and require data centers to fully fund grid infrastructure; PUC+ERCOT joint memo due July 17. Six 2027-session priorities (added generation, water reporting, repeal of data-center sales-tax exemptions). Signals tighter siting/cost rules ahead even as the buildout continues.", "tags": ["Data Centers", "Policy", "Energy"], "ref": 10 },
+    { "date": "2026-06", "title": "DIR launches Texas Design System to modernize state websites (HB 5195)", "impact": "New statewide, accessibility-first content library (37 components, standardized templates) mandated by HB 5195 (89R) to standardize agency website/portal modernization. Signals a fresh, DIR-led digital-services and web-modernization workstream across agencies — adjacent pull for services, hosting, and modernization engagements.", "tags": ["Digital Services", "Modernization", "DIR"], "ref": 11 },
+    { "date": "2026-06", "title": "DIR-to-Texas Cyber Command cyber transition confirmed on track", "impact": "DIR transferred statewide cybersecurity employees and functions to the Texas Cyber Command on March 1, 2026; the handover is slated to complete by Dec 31, 2026, with people/process/mission integration finalized by Feb 1, 2027. Confirm which entity owns a given security program before forecasting; TX-RAMP still administered under DIR for now.", "tags": ["Cybersecurity", "Transition", "Leadership"], "ref": 12 },
+    { "date": "2026-06", "title": "DIR 2026–2030 State Strategic Plan pushes AI, cloud, and procurement expansion", "impact": "New five-year plan prioritizes responsible AI adoption (guidance, training, pilots, sandbox), legacy-system retirement, DevSecOps, and business-driven cloud. DIR's AI training-certification program is live (57 programs certified as of May 2026). Sets the funding/procurement direction agencies will follow.", "tags": ["AI", "Cloud", "Strategy"], "ref": 14 },
+    { "date": "2026-06", "title": "Abbott directs PUC/ERCOT to make AI data centers fund their own grid costs", "impact": "Sweeping directive: PUC to act on residential transmission costs by July 31 and require data centers to fully fund grid infrastructure; PUC+ERCOT joint memo due July 17. Six 2027-session priorities (added generation, water reporting, repeal of data-center sales-tax exemptions). Signals tighter siting/cost rules ahead even as the buildout continues.", "tags": ["Data Centers", "Policy", "Energy"], "ref": 10 },
     { "date": "2026-03", "title": "Tony Sauerhoff confirmed as permanent State CIO & DIR Executive Director", "impact": "Tech direction stabilizes under an AI-forward leader; DIR continues its reorg as cyber moves to the Cyber Command.", "tags": ["Leadership"], "ref": 7 },
-    { "date": "2026-01", "title": "TRAIGA takes effect", "impact": "Government-use AI guardrails are now live; agencies need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
-    { "date": "2025-12", "title": "TI opens 300mm semiconductor fab in Sherman", "impact": "Reinforces Texas as a chip-manufacturing and AI-hardware hub.", "tags": ["Semiconductors"], "ref": 8 },
-    { "date": "2025-10", "title": "Texas Cyber Command officially launches in San Antonio", "impact": "New buyer and security mandate stands up; greenfield infrastructure and services demand.", "tags": ["Cybersecurity"], "ref": 4 },
-    { "date": "2025-10", "title": "Meta announces $1.5B El Paso AI data center (scaling toward 1GW)", "impact": "Signals the scale of AI-infrastructure investment landing in Texas.", "tags": ["Data Centers", "AI"], "ref": 8 },
-    { "date": "2025-06", "title": "TSIF receives an additional $250M (now ~$948M total)", "impact": "Sustained state backing for the semiconductor ecosystem.", "tags": ["Semiconductors", "Budget"], "ref": 8 }
+    { "date": "2026-01", "title": "TRAIGA takes effect", "impact": "Government-use AI guardrails are now live; agencies need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 }
   ],
 
   "dellActions": [
@@ -141,6 +141,10 @@
     { "label": "GovTech — Texas confirms Tony Sauerhoff as State CIO, DIR Leader", "url": "https://www.govtech.com/workforce/texas-confirms-tony-sauerhoff-as-state-cio-dir-leader" },
     { "label": "Office of the Governor — Texas Semiconductor Innovation Fund (TSIF)", "url": "https://gov.texas.gov/business/page/tsif" },
     { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" },
-    { "label": "Texas Tribune — Abbott directs PUC to make data centers fund their own power (June 10, 2026)", "url": "https://www.texastribune.org/2026/06/10/texas-greg-abbott-data-centers-regulation-sales-tax/" }
+    { "label": "Texas Tribune — Abbott directs PUC to make data centers fund their own power (June 10, 2026)", "url": "https://www.texastribune.org/2026/06/10/texas-greg-abbott-data-centers-regulation-sales-tax/" },
+    { "label": "Texas DIR — DIR Launches Texas Design System to Modernize State Websites (June 9, 2026)", "url": "https://dir.texas.gov/news/dir-launches-texas-design-system-modernize-state-websites" },
+    { "label": "Texas DIR — Cybersecurity Functions Transition to the Texas Cyber Command (April 9, 2026 notice)", "url": "https://dir.texas.gov/news/cybersecurity-functions-transition-texas-cyber-command" },
+    { "label": "Texas Cyber Command — Cybersecurity Transition to TXCC", "url": "https://www.txcc.texas.gov/cybersecurity-transition" },
+    { "label": "GovTech Insider — DIR Plan Highlights AI, Procurement and Cloud Expansion (2026–2030 SSP)", "url": "https://insider.govtech.com/texas/news/dir-plan-highlights-ai-procurement-and-cloud-expansion" }
   ]
 }

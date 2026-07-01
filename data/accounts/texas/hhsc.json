@@ -5,7 +5,7 @@
   "name": "Texas Health & Human Services Commission (HHSC)",
   "slug": "hhsc",
   "hq": "Austin, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Texas's largest health-and-human-services agency and one of the state's biggest IT spenders — HHSC runs Medicaid, SNAP eligibility, and state hospitals on a sprawling, modernization-hungry application estate.",
 
   "snapshot": [
@@ -51,14 +51,17 @@
     { "name": "Sylvia Hernandez Kauffman", "title": "Chief Information Officer", "note": "Owns the technology agenda and the modernization roadmap; prior HHS Inspector General and e-Health Coordination leader. The primary IT relationship." },
     { "name": "MacGregor Stephenson", "title": "Chief Deputy Information Officer", "note": "Deputy IT leadership — operational counterpart to the CIO across the application estate and delivery." },
     { "name": "James Huang", "title": "Chief AI Officer / Deputy CIO for AI", "note": "Since April 2025; owns AI strategy and governance. Wants vendors to show proven demos from comparable, regulated state-agency environments." },
-    { "name": "Office of the CISO (HHSC)", "title": "Information security & cloud security", "note": "Runs security policy and cloud posture management (Azure/AWS) on NIST 800-53; coordinates with the new Texas Cyber Command on directives and inventories." }
+    { "name": "Madan Gopal", "title": "Deputy CIO, Technology Strategy / Chief Technology Officer", "note": "Oversees technical strategy, the chief data architect office, enterprise architecture, solution engineering, and emerging tech; leading GenAI pilots for analytics and data governance. A key technical decision-maker below the CIO." },
+    { "name": "Office of the CISO (HHSC)", "title": "Information security & cloud security", "note": "Runs security policy and cloud posture management (Azure/AWS) on NIST 800-53; coordinates with the now-operational Texas Cyber Command (launched Sept 2025) on directives and inventories." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "HHSC IT procurement pipeline: five $5M+ solicitations moving to market", "impact": "TIERS support/dev, a video-surveillance environment (v2), Austin State Hospital lab-information-system maintenance, Take Charge Texas support, and workstation-management services are all queued — the TIERS solicitation and workstation/end-user-device deal are direct Dell infrastructure and services lanes to track on ESBD/DIR.", "tags": ["Procurement", "Modernization"] },
+    { "date": "2026-05", "title": "STEPS replaces STAIRS for Medicaid provider cost reporting", "impact": "HHSC's new State of Texas Electronic Provider System (STEPS) supersedes the legacy STAIRS platform for Medicaid cost reports and Directed Payment Program enrollment — a live example of the legacy-app modernization thesis and its data/cloud implications.", "tags": ["Modernization", "Data"] },
     { "date": "2026-03", "title": "HHSC issues connected-medical-device cybersecurity directive", "impact": "Healthcare facilities must inventory networked medical devices and align to FDA guidance, sharing data with Texas Cyber Command — signals active security/asset-visibility spend.", "tags": ["Cybersecurity"] },
+    { "date": "2026-02", "title": "Tony Sauerhoff confirmed as Texas state CIO / DIR executive director", "impact": "The statewide CIO who runs the DIR co-op HHSC buys through is now confirmed (after an interim stint from Jan 2026) — stabilizes the primary contract vehicle and AI/cyber posture that shape HHSC's catalog buys.", "tags": ["Leadership", "Procurement"] },
     { "date": "2026-01", "title": "Stephanie Muth becomes Executive Commissioner; Cecile Young retires", "impact": "New top leadership effective Jan 3, 2026 — rebuild the executive relationship map; early agenda emphasizes fraud prevention and accountability.", "tags": ["Leadership"] },
-    { "date": "2025-04", "title": "James Huang named Chief AI Officer / Deputy CIO for AI", "impact": "Dedicated AI buying center stands up — an entry point for responsible-AI, agentic-AI, and AI-assisted-development plays tied to modernization.", "tags": ["AI", "Leadership"] },
-    { "date": "2025-02", "title": "Legislature reviews HHSC's ~$94B 26–27 budget and eligibility-fix request", "impact": "Funding for TIERS modernization and 1,700+ eligibility staff is the political driver of near-term IT spend — track which line items survive appropriations.", "tags": ["Budget", "Modernization"] }
+    { "date": "2025-04", "title": "James Huang named Chief AI Officer / Deputy CIO for AI", "impact": "Dedicated AI buying center stands up — an entry point for responsible-AI, agentic-AI, and AI-assisted-development plays tied to modernization.", "tags": ["AI", "Leadership"] }
   ],
 
   "dellActions": [
@@ -76,6 +79,11 @@
     { "label": "Texas Tribune — HHSC seeks $300M to fix Medicaid enrollment system", "url": "https://www.texastribune.org/2024/12/11/texas-medicaid-food-stamps-application-legislature/" },
     { "label": "Office of the Governor — Stephanie Muth appointed HHS Executive Commissioner", "url": "https://gov.texas.gov/news/post/governor-abbott-appoints-stephanie-muth-as-executive-commissioner-of-texas-health-and-human-services" },
     { "label": "Texas HHSC — Procurement Opportunities", "url": "https://www.hhs.texas.gov/business/contracting-hhs/procurement-opportunities" },
-    { "label": "Industrial Cyber — Texas HHSC medical-device cybersecurity directive (2026)", "url": "https://industrialcyber.co/medical/texas-orders-cybersecurity-review-of-state-agencies-for-chinese-made-medical-devices-after-federal-warnings/" }
+    { "label": "Industrial Cyber — Texas HHSC medical-device cybersecurity directive (2026)", "url": "https://industrialcyber.co/medical/texas-orders-cybersecurity-review-of-state-agencies-for-chinese-made-medical-devices-after-federal-warnings/" },
+    { "label": "GovTech Industry Insider — HHSC Previews Five $5M+ Solicitations Coming Soon", "url": "https://insider.govtech.com/texas/news/hhsc-previews-five-5m-solicitations-coming-soon" },
+    { "label": "Texas HHSC — STAIRS transitions to STEPS in early 2026", "url": "https://content.govdelivery.com/accounts/TXHHSC/bulletins/3ef128f" },
+    { "label": "GovTech — Texas Confirms Tony Sauerhoff as State CIO, DIR Leader", "url": "https://www.govtech.com/workforce/texas-confirms-tony-sauerhoff-as-state-cio-dir-leader" },
+    { "label": "Texas HHSC — Deputy CIO of Technology Strategy / CTO, Madan Gopal", "url": "https://www.hhs.texas.gov/deputy-chief-information-officer-technology-strategy-madan-gopal" },
+    { "label": "Texas HHSC — Chief Information Officer, Sylvia Hernandez Kauffman", "url": "https://www.hhs.texas.gov/about/about-us/executive-teams-organizational-charts/chief-information-officer-sylvia-hernandez-kauffman" }
   ]
 }

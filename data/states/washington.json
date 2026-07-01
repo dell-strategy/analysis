@@ -3,7 +3,7 @@
   "name": "Washington",
   "slug": "washington",
   "region": "Pacific Northwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A $77.9B budget under fiscal pressure, a maturing AI-governance regime, and one of the nation's densest data-center corridors — Washington is buying carefully but modernizing aggressively.",
 
   "snapshot": [
@@ -126,13 +126,13 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "June 26 revenue forecast darkens 2027–29 outlook; ~$461M downgrade lands on the next biennium", "impact": "Even after billions in new 2026-session taxes, projected 2027–29 revenue (~$82.2B) leaves only ~2.5% budget capacity against ~4.6% inflation — analysts warn major cuts or tax hikes are likely in 2027. Discretionary IT spend stays under pressure; lead with TCO, consolidation, and grant-funded security.", "tags": ["Budget", "Risk"], "ref": 13 },
+    { "date": "2026-06", "title": "AG-led AI Task Force final report due July 1, 2026", "impact": "Expected to extend the interim NIST AI RMF / ISO 42001 recommendations with added guidance on companion-chatbot safeguards and AI energy/climate impacts — reinforcing demand for governed, auditable, private/on-prem AI in agency procurement.", "tags": ["AI", "Governance"], "ref": 8 },
     { "date": "2026-06-05", "title": "OFM Director Chapman-See warns of 'significant' 2027–29 shortfalls; orders agencies to pause new programs", "impact": "Maintenance-level budget requests due Sept 14; do not assume new 'Millionaire's Tax' revenue — discretionary IT spend tightens, lead with TCO and consolidation.", "tags": ["Budget", "Risk"], "ref": 6 },
     { "date": "2026-03", "title": "Ferguson signs SB 6231 narrowing the data-center sales-tax exemption (effective July 1, 2026)", "impact": "Keeps the break for new equipment but ends it for replacement/refresh gear — adds recurring tax cost to the 3–5 year refresh cycle for WA data centers and the vendors serving them.", "tags": ["Data Centers", "Policy"], "ref": 12 },
     { "date": "2026-03", "title": "Ferguson signs digital-replica law; pushes AI chatbot safeguards (SB 5984)", "impact": "Signals an active AI-regulation posture; agencies favor governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 3 },
     { "date": "2026-02", "title": "NTIA approves Washington's final BEAD proposal (~$1.2B)", "impact": "Broadband construction begins in 2026 — infrastructure and edge pull-through.", "tags": ["Broadband", "Federal"], "ref": 4 },
-    { "date": "2025-12", "title": "Gov. Ferguson proposed a supplemental FY2026-27 operating budget", "impact": "$39.3B FY2027 appropriation; $79.4B biennial (revenue-outlook funds), +1.5% vs the prior budget; closes a $2.3B shortfall via cuts and reserves (BSA ending balance ~$1.03B). Adds staffing and IT to implement new SNAP/Medicaid work requirements and lower SNAP error rates.", "tags": ["Budget"], "ref": 11 },
-    { "date": "2025-12", "title": "WaTech generative-AI guidelines adopted as statewide IT policy; AI Task Force interim report", "impact": "Agencies now need governed AI aligned to NIST AI RMF — opening for private/on-prem AI.", "tags": ["AI", "Policy"], "ref": 9 },
-    { "date": "2025-05", "title": "Ferguson signs $77.9B operating budget (SB 5167)", "impact": "Record budget but with a large tax package and tight fiscal outlook — buy carefully.", "tags": ["Budget"], "ref": 1 }
+    { "date": "2025-12", "title": "WaTech generative-AI guidelines adopted as statewide IT policy; AI Task Force interim report", "impact": "Agencies now need governed AI aligned to NIST AI RMF — opening for private/on-prem AI.", "tags": ["AI", "Policy"], "ref": 9 }
   ],
 
   "dellActions": [
@@ -155,6 +155,9 @@
     { "label": "WaTech — Interim Guidelines for Responsible Use of Generative AI", "url": "https://watech.wa.gov/policies/interim-guidelines-purposeful-and-responsible-use-generative-artificial-intelligence-ai-washington" },
     { "label": "WaTech — Bill Kehoe to remain as State CIO under new governor", "url": "https://watech.wa.gov/news/2025/bill-kehoe-remain-wash-state-cio-under-new-governor" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Washington State Standard — Data-center tax break close to getting zapped by WA Legislature (Mar 7, 2026)", "url": "https://washingtonstatestandard.com/2026/03/07/data-center-tax-break-close-to-getting-zapped-by-wa-legislature/" }
+    { "label": "Washington State Standard — Data-center tax break close to getting zapped by WA Legislature (Mar 7, 2026)", "url": "https://washingtonstatestandard.com/2026/03/07/data-center-tax-break-close-to-getting-zapped-by-wa-legislature/" },
+    { "label": "OFM — June revenue forecast shows mixed picture, adds to expected shortfall (June 2026)", "url": "https://ofm.wa.gov/news-publications/june-revenue-forecast-shows-mixed-picture-adds-to-expected-shortfall-in-coming-budget-cycle/" },
+    { "label": "Washington Policy Center — Washington's budget outlook darkens with latest revenue forecast (June 26, 2026)", "url": "https://www.washingtonpolicy.org/publications/detail/washingtons-budget-outlook-darkens-with-latest-revenue-forecast" },
+    { "label": "Washington State AG — Artificial Intelligence Task Force", "url": "https://www.atg.wa.gov/aitaskforce" }
   ]
 }

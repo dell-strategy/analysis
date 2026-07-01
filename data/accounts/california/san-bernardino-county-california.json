@@ -4,7 +4,7 @@
   "state": "california",
   "stateName": "California",
   "type": "County",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "hq": "San Bernardino, CA",
   "tagline": "The largest county in the contiguous U.S. by land area, serving ~2.2M residents — central IT runs through the Innovation & Technology Department (ITD), with technology buys flowing through county Purchasing and California/national cooperative contracts.",
 
@@ -48,28 +48,35 @@
 
   "powerStructure": [
     { "name": "Luther Snoke", "title": "Chief Executive Officer", "note": "Appointed permanent CEO after serving interim from 2023; runs county operations and the budget. Top executive sponsor for enterprise-scale technology priorities." },
-    { "name": "Lynn Fyhrlund", "title": "Chief Information Officer (ITD)", "note": "CIO since 2023 (formerly Milwaukee County CIO); owns enterprise IT strategy, infrastructure, and modernization. The primary technology relationship." },
-    { "name": "Innovation & Technology Department (ITD)", "title": "Central IT delivery", "note": "Delivers infrastructure, applications, data, GIS, and shared services countywide — the main buying center for enterprise infrastructure and devices." },
-    { "name": "Countywide Information Security Program / CISO", "title": "Security & threat intelligence", "note": "Owns the security program, threat-intel team, and phishing testing; confirm the current CISO by name. Owner for endpoint, identity, and resilience plays." },
+    { "name": "Lynn Fyhrlund", "title": "Chief Innovation Officer (new role)", "note": "Moved from County CIO (2023-2026, formerly Milwaukee County CIO) to the county's first-ever Chief Innovation Officer in April 2026, focusing on service delivery, data-informed decisions, and responsible AI. Still a top technology-strategy and AI relationship, but no longer the day-to-day IT/infrastructure owner." },
+    { "name": "Chief Information Officer (ITD) — successor unconfirmed", "title": "Enterprise IT lead", "note": "Following Fyhrlund's April 2026 pivot to Chief Innovation Officer, no successor CIO has been publicly named; confirm the current CIO (or acting/interim lead) of the Innovation & Technology Department before anchoring the relationship map. This is now the primary infrastructure/device buying relationship to re-establish." },
+    { "name": "Innovation & Technology Department (ITD)", "title": "Central IT delivery", "note": "Delivers infrastructure, applications, data, GIS, and shared services countywide — the main buying center for enterprise infrastructure and devices. Groups include Business Solutions Development, GIS, Computer Operations, and Telecommunication Services." },
+    { "name": "Countywide Information Security Program / CISO", "title": "Security & threat intelligence", "note": "Owns the security program, threat-intel team (added 2024), and progressive phishing testing. Robert K. Pittman Jr. has been reported as county CISO (formerly LA County) — verify he is still in the role in 2026. Owner for endpoint, identity, and resilience plays." },
     { "name": "Purchasing Department", "title": "County procurement", "note": "Runs solicitations and the ePro system; the contracting path and the gatekeeper for vehicle eligibility and competitive process." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Board adopts ~$10.9B FY2026-27 budget (near flat)", "impact": "A flat budget signals disciplined spending — lead with ROI, consolidation, and lifecycle refresh rather than net-new expansion.", "tags": ["Budget"] },
-    { "date": "2025-06", "title": "FY2025-26 budget adopted at ~$10.5B with ~$205M in new investments", "impact": "Community-investment dollars create program-tied technology demand — map proposals to funded initiatives.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "County wins record 430 NACo Achievement Awards", "impact": "Fourth straight year leading the nation's counties in program awards signals an innovation-forward, execution-heavy culture — useful credibility framing, though the awards span all departments (not IT-specific).", "tags": ["Recognition", "Innovation"] },
+    { "date": "2026-06", "title": "Board adopts ~$10.9B FY2026-27 budget (5-0) with ~$40.1M one-time tech funding", "impact": "Near-flat overall budget but ~$40.1M one-time (plus ongoing) earmarked for modernizing enterprise systems, cybersecurity, and expanding staff use of emerging tech — a concrete, program-tied opening for infrastructure, security, and AI-ready refresh.", "tags": ["Budget", "Modernization"] },
+    { "date": "2026-04", "title": "CIO Lynn Fyhrlund named county's first Chief Innovation Officer", "impact": "Leadership change: the long-time CIO relationship shifts to a broader innovation/AI mandate and no successor CIO has been publicly named. Re-map the account and identify the new (possibly acting) ITD leader before forecasting.", "tags": ["Leadership", "AI"] },
     { "date": "2025-05", "title": "County recognized in GovTech Digital Counties 2025 for AI and data", "impact": "Validates an innovation-forward IT posture — credible runway for AI-ready infrastructure and analytics conversations.", "tags": ["AI", "Recognition"] },
+    { "date": "2024-11", "title": "ITD adopts NetBrain for network automation and cyber visibility", "impact": "Real-time network mapping and security automation raise infrastructure/observability maturity — pairs with endpoint, identity, and resilient-storage plays.", "tags": ["Cybersecurity", "Modernization"] },
     { "date": "2024-01", "title": "Information security program adds Threat Intelligence team", "impact": "Security maturity is rising — an opening for endpoint security, resilient storage, and zero-trust infrastructure.", "tags": ["Cybersecurity"] }
   ],
 
   "dellActions": [
-    "Build the relationship map CEO (Snoke) → CIO/ITD (Fyhrlund) → CISO and Purchasing; treat this as a large, self-contained single-account motion.",
-    "Lead with AI-ready client and infrastructure tied to the county's existing AI/Copilot and analytics momentum — frame around productivity ROI under a flat budget.",
+    "Re-map the account after the April 2026 leadership shift: CEO (Snoke) → new/acting ITD CIO (successor unconfirmed) → CISO and Purchasing, while keeping Fyhrlund engaged in his new Chief Innovation Officer role as the AI/strategy sponsor.",
+    "Target the ~$40.1M one-time FY26-27 technology funding earmarked for enterprise-system modernization, cybersecurity, and emerging tech — tie proposals directly to those funded lines rather than a generic IT number.",
+    "Lead with AI-ready client and infrastructure tied to the county's existing AI/Copilot and analytics momentum — frame around productivity ROI under an otherwise flat budget.",
     "Confirm Dell's positioning on the vehicles the county actually buys through (county Purchasing/ePro, CMAS, and national cooperatives) before forecasting.",
     "Engage the information-security program with endpoint security, identity, and resilient/recovery storage as the threat-intel and zero-trust posture matures.",
     "Anchor proposals to funded department initiatives (data/analytics, GIS/drone, public safety) rather than a single IT line, given a near-flat overall budget."
   ],
 
   "sources": [
+    { "label": "GovTech — San Bernardino County CIO Pivots to Innovation Role (Apr 2026)", "url": "https://insider.govtech.com/california/news/san-bernardino-county-cio-pivots-to-innovation-role" },
+    { "label": "San Bernardino County — 2026-27 Recommended Budget release (tech funding detail)", "url": "https://main.sbcounty.gov/2026/05/21/san-bernardino-county-releases-2026-27-recommended-budget/" },
+    { "label": "San Bernardino County — Record 430 NACo Achievement Awards (Jun 2026)", "url": "https://main.sbcounty.gov/2026/06/25/san-bernardino-county-earns-record-430-naco-achievement-awards/" },
     { "label": "San Bernardino County — 2025-26 Adopted Budget Book", "url": "https://main.sbcounty.gov/wp-content/uploads/sites/80/2025-26-Adopted-Budget-Book.pdf" },
     { "label": "Hey SoCal — County supervisors OK $10.9B budget for 2026-27", "url": "https://heysocal.com/2026/06/12/san-bernardino-county-supervisors-ok-10-9b-budget-for-2026-27/" },
     { "label": "GovTech — Digital Counties 2025: San Bernardino Leverages AI, Data", "url": "https://insider.govtech.com/california/news/digital-counties-2025-san-bernardino-county-leverages-ai-data-to-enhance-services" },

@@ -5,7 +5,7 @@
   "stateName": "California",
   "type": "County",
   "hq": "Oakland, CA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "California's 7th-most-populous county (~1.6M, Oakland/East Bay) and a nationally recognized digital-government leader: a centralized Information Technology Department (ITD) runs countywide IT, security, and AI, with buying routed through the General Services Agency's procurement office.",
 
   "snapshot": [
@@ -18,7 +18,7 @@
   "overview": "Alameda County is the local government for the Oakland / East Bay region — roughly 1.6 million residents, the 7th-most-populous county in California — and a top-tier urban-county technology buyer. IT is centralized in the Information Technology Department (ITD), an internal service provider of ~230 staff and a $100M+ operating budget that runs countywide cybersecurity, data governance, enterprise applications, cloud services, network infrastructure, digital services, and a 24/7 operations center supporting public safety, health, human services, property, and administrative systems. ITD is best understood as a shared-services shop delivering to the county's operating departments rather than a standalone agency with large discretionary spend — the bulk of the dollars sit with the departments it serves (Health Care Services, Social Services, Sheriff, Assessor, Registrar of Voters). Alameda has been named the nation's #1 digital county in the 1M+ population category two years running, a county that actively funds AI and modernization. For a Dell SLG seller, two things define the moment: a centralized, innovation-forward IT buying center, and a fresh leadership transition at the top of ITD that resets the relationship map.",
 
   "budget": {
-    "intro": "Alameda County's FY2026-27 budget is $6.7B all-funds (a ~9% year-over-year increase) with a ~$4.3B general fund, presented by County Administrator Susan Muranishi on May 29, 2026. The plan closed a $91.4M funding gap without layoffs or major service cuts — by eliminating 45 vacant positions, trimming departmental expenses, and 'right-sizing' vendor contracts. ITD runs a separate operating budget of over $100M, funded largely through internal cost recovery on the departments it serves rather than a single general-revenue line.",
+    "intro": "Alameda County's FY2026-27 budget is $6.7B all-funds (a ~9% year-over-year increase) with a ~$4.3B general fund, presented by County Administrator Susan Muranishi on May 29, 2026 and unanimously adopted by the Board of Supervisors on June 25, 2026. The plan closed a $91.4M funding gap without layoffs or major service cuts — by eliminating 45 vacant positions, trimming departmental expenses, and 'right-sizing' vendor contracts. ITD runs a separate operating budget of over $100M, funded largely through internal cost recovery on the departments it serves rather than a single general-revenue line.",
     "stats": [
       { "value": "$6.7B", "label": "County budget (FY26-27)", "note": "All-funds, ~9% increase; presented May 29, 2026" },
       { "value": "$100M+", "label": "ITD operating budget", "note": "Central IT department, ~230 staff; funded largely via internal cost recovery" },
@@ -51,10 +51,11 @@
     { "name": "Ram Gurumurthy", "title": "Interim Chief Information Officer (ITD)", "note": "Appointed interim CIO in March 2026; previously Chief Technology Officer since 2023, with the county since 2013. The central technology relationship — note a permanent CIO search is active." },
     { "name": "ITD — Information Technology Department", "title": "Centralized county IT (~230 staff)", "note": "Owns countywide cybersecurity, data governance, cloud, network, applications, and a 24/7 operations center; the primary buying center for infrastructure and security." },
     { "name": "General Services Agency — Procurement", "title": "Central procurement office", "note": "Owns solicitations, the OpenGov portal, vendor onboarding, and the SLEB requirement — the procedural gatekeeper for any deal." },
-    { "name": "Board of Supervisors", "title": "Five-member governing board", "note": "Adopts the budget and approves major contracts; held FY26-27 budget discussions June 22, 23, and 25, 2026." }
+    { "name": "Board of Supervisors", "title": "Five-member governing board", "note": "Adopts the budget and approves major contracts; unanimously adopted the $6.7B FY26-27 budget on June 25, 2026." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Board unanimously adopts $6.7B FY2026-27 budget (June 25)", "impact": "Final budget closes the ~$91M gap without layoffs and preserves safety-net services; vendor-contract 'right-sizing' now locks in scrutiny of net-new IT spend for the fiscal year — anchor asks to efficiency and consolidation.", "tags": ["Budget"] },
     { "date": "2026-05", "title": "County Administrator presents $6.7B FY2026-27 budget closing a $91.4M gap", "impact": "Gap closed via vendor-contract 'right-sizing' and vacant-position cuts — net-new IT spend will be scrutinized; lead with efficiency and run-cost cases.", "tags": ["Budget"] },
     { "date": "2026-03", "title": "CIO Tim Dupuis retires; Board appoints Ram Gurumurthy interim CIO", "impact": "Leadership transition at the top of ITD resets the relationship map — engage the interim CIO now and track the permanent-CIO search.", "tags": ["Leadership"] },
     { "date": "2026-01", "title": "ITD publishes CIO Goals for 2026 (AI, modernization, centralized cyber)", "impact": "Public roadmap signaling AI automation, legacy modernization, and centralized tech/cyber/AI policy as funded priorities — anchor proposals to these stated goals.", "tags": ["Strategy", "AI"] },
@@ -74,6 +75,9 @@
     { "label": "Alameda County ITD — CIO Goals for 2026", "url": "https://itd.alamedacountyca.gov/cio-goals-for-2026/" },
     { "label": "Local News Matters — Supervisors appoint interim IT chief Ram Gurumurthy to replace retiring Tim Dupuis", "url": "https://localnewsmatters.org/2026/03/29/alameda-county-interim-it-director-ram-gurumurthy/" },
     { "label": "Local News Matters — County budget plan closes $91.4M gap without layoffs", "url": "https://localnewsmatters.org/2026/05/30/alameda-county-budget-plan-closes-91-4m-spending-gap-without-layoffs-service-cuts/" },
+    { "label": "Local News Matters — Alameda County approves $6.7B budget, preserving safety-net services (adopted June 25, 2026)", "url": "https://localnewsmatters.org/2026/06/29/alameda-county-6-billion-budget-approved/" },
+    { "label": "County of Alameda — Chief Information Officer job announcement (permanent CIO recruitment, open until filled)", "url": "https://www.jobapscloud.com/Alameda/sup/bulpreview.asp?b=&R1=25&R2=1849&R3=01" },
+    { "label": "Alameda County ITD — Contact (lists Ram Gurumurthy as Interim CIO)", "url": "https://itd.alamedacountyca.gov/contact/" },
     { "label": "Alameda County — Budget Overview", "url": "https://budget.alamedacountyca.gov/Home/Overview" },
     { "label": "Alameda County GSA — Procurement Services / Do Business With Us", "url": "https://gsa.acgov.org/do-business-with-us/" },
     { "label": "GovTech — Digital Counties Survey 2025 Winners Announced", "url": "https://www.govtech.com/dc/digital-counties/digital-counties-survey-2025-winners-announced" },

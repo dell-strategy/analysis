@@ -3,7 +3,7 @@
   "name": "Nevada",
   "slug": "nevada",
   "region": "West",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A statewide ransomware attack reset Nevada's security agenda, a new centralized SOC is standing up under the Governor's CIO, and northern Nevada is becoming one of the world's largest AI data-center markets.",
 
   "snapshot": [
@@ -117,21 +117,21 @@
   },
 
   "powerStructure": [
-    { "name": "Joe Lombardo", "title": "Governor", "org": "State of Nevada", "note": "Called the special session that passed the SOC bill (AB1); backs a pragmatic AI and cyber-resilience agenda.", "ref": 3 },
+    { "name": "Joe Lombardo", "title": "Governor", "org": "State of Nevada", "note": "Called the special session that passed the SOC bill (AB1); backs a pragmatic AI and cyber-resilience agenda. Won the June 9, 2026 GOP primary and faces AG Aaron Ford (D) on Nov. 3 — a competitive race, so cabinet continuity (incl. CIO) is not assured past January.", "ref": 14 },
     { "name": "Timothy Galluzi", "title": "State Chief Information Officer", "org": "Governor's Technology Office (OCIO)", "note": "Cabinet-level CIO; named to GovTech's Top 25 for 2026. Owns SOC stand-up, CORE.NV, the GovRAMP mandate, and AI direction.", "ref": 2 },
     { "name": "Michael D. Smith", "title": "Chief Technology Officer", "org": "Governor's Technology Office", "note": "Named CTO May 25, 2026; decade-plus in Nevada state IT (enterprise services, architecture). Field-delivery focus across agency partners.", "ref": 11 },
+    { "name": "Bertrum Carroll", "title": "State Chief Information Security Officer", "org": "Office of Information Security & Cyber Defense (OISCD), Governor's Technology Office", "note": "Named State CISO March 30, 2026, succeeding Bob Dehnhardt (retired May 2025). 20+ yrs private-sector infosec (Employers, SC Johnson, Johnson Controls); retired U.S. Army lieutenant colonel. Owns risk management, incident response, and security governance across the executive branch — the key relationship for the post-attack security rebuild and SOC.", "ref": 13 },
     { "name": "State Purchasing Division", "title": "Statewide procurement", "org": "Dept. of Administration", "note": "Administers NASPO ValuePoint addenda and statewide IT/cloud contracts — the buying gate; enforces the GovRAMP cloud-security path from July 1, 2026." },
     { "name": "Office of Science, Innovation & Technology (OSIT)", "title": "Broadband & innovation", "org": "Governor's Office", "note": "Administers the $416M BEAD broadband program; partner for connectivity-adjacent deals.", "ref": 8 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Lombardo wins GOP gubernatorial primary; faces AG Aaron Ford in November", "impact": "2026 is a Nevada gubernatorial election year. Incumbent Gov. Lombardo (R) advanced June 9 and meets AG Aaron Ford (D) on Nov. 3 in a competitive race — leadership continuity at the Governor's Technology Office (incl. CIO Galluzi) is not guaranteed past January; build durable agency-level relationships now.", "tags": ["Leadership", "Election"], "ref": 14 },
+    { "date": "2026-06", "title": "Northern Nevada AI data-center buildout keeps accelerating into mid-2026", "impact": "Vantage's ~$3B NV1 campus near Reno (224MW, 1M+ sq ft) opens its first building in Q2 2026 and Centra topped out its second Reno facility (RNO2) in June — sustaining the strongest tailwind for Dell ISG / AI-infrastructure demand in the state.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 15 },
+    { "date": "2026-03", "title": "Nevada names Bertrum Carroll as State CISO", "impact": "First permanent State CISO since Bob Dehnhardt's May 2025 retirement; owns risk management, incident response, and security governance across the executive branch — the new top relationship for the post-attack security rebuild and SOC stand-up.", "tags": ["Leadership", "Cybersecurity"], "ref": 13 },
     { "date": "2026-05", "title": "Nevada names Michael D. Smith as Governor's Technology Office CTO", "impact": "New enterprise-tech leader under CIO Galluzi; a fresh relationship for infrastructure, architecture, and modernization positioning.", "tags": ["Leadership"], "ref": 11 },
     { "date": "2026-03", "title": "Nevada mandates GovRAMP for cloud security (effective July 1, 2026)", "impact": "After July 2026 no new contracts execute without GovRAMP progress; FedRAMP-authorized vendors get a 30-day Fast Track — a procurement gate Dell and cloud partners must clear to sell.", "tags": ["Cybersecurity", "Procurement", "Cloud"], "ref": 12 },
-    { "date": "2025-12", "title": "Lombardo signs cybersecurity bills, including statewide SOC (AB1)", "impact": "Centralizes cyber under the CIO and authorizes school districts/underserved communities to use state cyber services.", "tags": ["Cybersecurity", "Policy"], "ref": 3 },
-    { "date": "2025-12", "title": "CIO outlines 2026 priorities: operationalize SOC, modernize CMS, advance CORE.NV", "impact": "Clear roadmap of where security and modernization dollars and decisions sit for 2026.", "tags": ["Leadership", "Modernization"], "ref": 2 },
-    { "date": "2025-11", "title": "Nevada completes 28-day recovery from statewide cyber incident; refuses ransom", "impact": "After-action validates pre-negotiated vendor agreements; ~90% data recovered, ~$1.5M response spend.", "tags": ["Cybersecurity"], "ref": 4 },
-    { "date": "2025-10", "title": "Nevada commits $327M to broadband; CORE.NV payroll/HR goes live", "impact": "Connectivity buildout advances and the ERP modernization reaches a new milestone.", "tags": ["Broadband", "ERP"], "ref": 8 },
-    { "date": "2025-08", "title": "Ransomware attack takes 60+ state agencies offline", "impact": "DMV, healthcare access, and public safety disrupted; reset the state's security agenda.", "tags": ["Cybersecurity"], "ref": 5 }
+    { "date": "2026-01", "title": "Nevada issues statewide data-classification policy", "impact": "GTO Chief Data Officer sets four data tiers as the foundation for forthcoming MFA, logging, and encryption standards — shaping cloud/security vendor requirements and a hook for governed-data and secure-infrastructure offerings.", "tags": ["Data", "Cybersecurity", "Policy"], "ref": 16 }
   ],
 
   "dellActions": [
@@ -154,6 +154,10 @@
     { "label": "Nevada State Purchasing Division — Cloud Solutions / statewide contracts", "url": "https://www.purchasing.nv.gov/statewide-contracts/cloud-solutions/" },
     { "label": "Nevada Governor's Technology Office (OCIO) — it.nv.gov", "url": "https://www.it.nv.gov/" },
     { "label": "Nevada GTO — Announces Michael D. Smith as Chief Technology Officer (May 2026)", "url": "https://www.it.nv.gov/press-releases/nevada-governors-technology-office-announces-michael-d.-smith-as-chief-technology-officer" },
-    { "label": "Nevada GTO — Nevada Mandates GovRAMP for Standardized Cloud Cybersecurity (March 2026)", "url": "https://www.it.nv.gov/press-releases/nevada-mandates-govramp-a-new-era-of-standardized-streamlined-cloud-cybersecurity-for-the-silver-state/" }
+    { "label": "Nevada GTO — Nevada Mandates GovRAMP for Standardized Cloud Cybersecurity (March 2026)", "url": "https://www.it.nv.gov/press-releases/nevada-mandates-govramp-a-new-era-of-standardized-streamlined-cloud-cybersecurity-for-the-silver-state/" },
+    { "label": "GovTech — Nevada Names Bertrum Carroll as State CISO (March 2026)", "url": "https://www.govtech.com/security/nevada-names-bertrum-carroll-as-state-ciso" },
+    { "label": "NBC News — Lombardo, Ford win Nevada governor primaries (June 2026)", "url": "https://www.nbcnews.com/politics/2026-election/lombardo-ford-nevada-governor-midterms-primary-wins-rcna348482" },
+    { "label": "Vantage Data Centers — $3B NV1 AI campus, Reno/Storey County", "url": "https://vantage-dc.com/news/vantage-data-centers-invests-3-billion-to-deliver-ai-campus-in-growing-nevada-market/" },
+    { "label": "StateScoop — Nevada unveils policy for consistent statewide data classification (Jan 2026)", "url": "https://statescoop.com/nevada-policy-consistent-statewide-data-classification/" }
   ]
 }

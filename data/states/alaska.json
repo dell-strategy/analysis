@@ -3,7 +3,7 @@
   "name": "Alaska",
   "slug": "alaska",
   "region": "Pacific / Northwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Oil-driven budgets under pressure, a $1B+ broadband buildout reaching the most remote communities in America, and an IT-and-shared-services consolidation in motion — Alaska's tech story is about connecting and modernizing a frontier government.",
 
   "snapshot": [
@@ -14,7 +14,7 @@
   ],
 
   "execSummary": {
-    "summary": "Alaska is a connectivity-and-modernization story more than a hyperscale-AI story, and that is exactly where Dell's edge and infrastructure narrative fits. The state's finances ride on volatile oil revenue and Permanent Fund earnings, so FY2026 was signed at roughly $14.7B with $122M in vetoes after the revenue outlook softened, and the FY2027 draft carries a deficit near $1.5B — budgets are tight and efficiency-driven. The dominant technology event is broadband: NIST approved more than $629M of Alaska's BEAD awards (March 2026) for 29 projects across 15 providers using fiber, wireless, and satellite to reach over 46,000 of the hardest-to-serve locations in the nation. Centrally, the Office of Information Technology (OIT) under the Department of Administration runs enterprise IT and is being folded into the AAPEX consolidation initiative, while AI governance bills remain in committee rather than enacted. For Dell, the angles are rural/remote edge compute and resilient connectivity, OIT enterprise refresh and cloud/cyber modernization, and the University of Alaska's research and Arctic-science computing.",
+    "summary": "Alaska is a connectivity-and-modernization story more than a hyperscale-AI story, and that is exactly where Dell's edge and infrastructure narrative fits. The state's finances ride on volatile oil revenue and Permanent Fund earnings: FY2026 was signed at roughly $14.7B with $122M in vetoes after the outlook softened, and although the FY2027 draft projected a ~$1.5B deficit, a Persian Gulf-driven oil-price spike (North Slope above $100/bbl spring 2026) produced an unexpected windfall — the FY2027 budget Dunleavy signed in June 2026 needed no draw from the Constitutional Budget Reserve and carried his lowest vetoes (~$90M) of his tenure. Budgets remain efficiency-driven, but the near-term fiscal picture improved. The dominant technology event is broadband: NIST approved more than $629M of Alaska's BEAD awards (March 2026) for 29 projects across 15 providers using fiber, wireless, and satellite to reach over 46,000 of the hardest-to-serve locations in the nation. Centrally, the Office of Information Technology (OIT) under the Department of Administration runs enterprise IT and is being folded into the AAPEX consolidation initiative, while AI governance bills remain in committee rather than enacted. For Dell, the angles are rural/remote edge compute and resilient connectivity, OIT enterprise refresh and cloud/cyber modernization, and the University of Alaska's research and Arctic-science computing.",
     "opportunities": [
       "Edge and remote-site infrastructure tied to the $629M+ BEAD broadband buildout — compute, storage, and networking at rural anchor institutions, clinics, and provider points of presence.",
       "OIT enterprise modernization under the AAPEX consolidation — endpoint/client refresh, server and storage lifecycle, and managed services for a consolidating central IT.",
@@ -25,7 +25,7 @@
       { "value": "~$14.7B", "label": "FY2026 budget (post-veto)", "note": "Signed June 2025; $122M vetoed", "ref": 1 },
       { "value": "$629M", "label": "BEAD deployment awards", "note": "NIST-approved March 2026", "ref": 4 },
       { "value": "46,000+", "label": "Locations to be connected", "note": "29 projects, 15 providers", "ref": 4 },
-      { "value": "~$1.5B", "label": "FY2027 projected deficit", "note": "Governor's draft, Dec 2025", "ref": 2 }
+      { "value": "$0 CBR draw", "label": "FY2027 enacted (oil windfall)", "note": "Signed June 24, 2026; closed the projected ~$1.5B deficit", "ref": 13 }
     ]
   },
 
@@ -45,7 +45,8 @@
       "Alaska's fiscal year runs July 1–June 30; figures are annual, not biennial.",
       "Budget swings track oil prices and Permanent Fund earnings — confirm the latest Department of Revenue forecast before forecasting agency spend.",
       "Most large technology dollars currently flowing into Alaska are federal broadband funds, not state IT appropriations.",
-    "FY2027 (governor's proposed, per NASBO): $5.38B unrestricted general fund, +0.6% vs FY2026; $14.16B all funds (-6.7%). A restrained 'base budget' that fully funds statutory obligations (including a full PFD) while drawing $1.5B from the Constitutional Budget Reserve, with reserves near $2.96B."
+    "FY2027 (governor's proposed, per NASBO): $5.38B unrestricted general fund, +0.6% vs FY2026; $14.16B all funds (-6.7%). A restrained 'base budget' that fully funds statutory obligations (including a full PFD) while drawing $1.5B from the Constitutional Budget Reserve.",
+      "FY2027 ENACTED (signed June 24, 2026): A Persian Gulf-driven oil-price spike (North Slope ~$67/bbl early FY, above $100/bbl mid-March to mid-June) produced a windfall that closed the projected gap. The Legislature rejected the governor's $1.5B CBR draw and his $3,800 PFD, set a $1,200 PFD, and directed much of the one-time revenue to ~$144M one-time K-12 operations plus school capital/energy costs. Dunleavy vetoed ~$90M (~$57.8M general funds) — his lowest vetoes ever — and signed without a major savings draw. Balance holds if North Slope crude averages ~$74+/bbl."
     ]
   },
 
@@ -109,21 +110,20 @@
   },
 
   "powerStructure": [
-    { "name": "Mike Dunleavy", "title": "Governor", "org": "State of Alaska", "note": "Sets the fiscal posture; vetoed $122M from FY2026 and proposed a full statutory PFD in FY2027 despite a ~$1.5B deficit.", "ref": 2 },
-    { "name": "Bill Smith", "title": "State Chief Information Officer", "org": "Office of Information Technology (DOA)", "note": "First permanent state CIO since 2018; 28+ years public/private IT. Owns enterprise IT, cloud, and cybersecurity direction.", "ref": 6 },
+    { "name": "Mike Dunleavy", "title": "Governor", "org": "State of Alaska", "note": "Sets the fiscal posture; signed the FY2027 budget June 24, 2026 with his lowest-ever vetoes (~$90M) and no CBR draw after an oil-price windfall, settling for a $1,200 PFD over his proposed $3,800.", "ref": 13 },
+    { "name": "Bill Smith", "title": "State Chief Information Officer", "org": "Office of Information Technology (DOA)", "note": "First permanent state CIO since 2018; 28+ years public/private IT. Still serving in 2026 (listed for the 2026 Alaska Digital Government Summit). Owns enterprise IT, cloud, and cybersecurity direction.", "ref": 6 },
     { "name": "Department of Administration", "title": "Home of OIT, OPPM & AAPEX", "org": "State of Alaska", "note": "Drives the IT-and-shared-services consolidation (AAPEX) reshaping how the state buys and runs technology.", "ref": 8 },
     { "name": "Alaska Broadband Office", "title": "BEAD administrator", "org": "Dept. of Commerce, Community & Economic Development", "note": "Manages the $1B+ broadband program and provider awards — the gateway to rural-connectivity opportunity." , "ref": 4 },
     { "name": "Office of Management & Budget (OMB)", "title": "Budget & fiscal planning", "org": "Office of the Governor", "note": "Publishes the 10-Year Plan and budget drafts — the place to read where money (and tech spend) is headed.", "ref": 2 }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "First Alaska BEAD-funded broadband locations begin coming online", "impact": "Construction moves to service delivery (fiber ~51%, LEO satellite ~34%, fixed wireless the rest); rural anchor and provider sites start generating edge/connectivity demand.", "tags": ["Broadband", "Rural / Edge"], "ref": 12 },
-    { "date": "2026-03", "title": "NIST approves $629M of Alaska BEAD deployment awards", "impact": "29 projects across 15 providers move toward construction; rural connectivity and edge-infrastructure demand begins to land.", "tags": ["Broadband", "Rural / Edge"], "ref": 4 },
-    { "date": "2026-01", "title": "OMB releases revised FY2027 10-Year Plan", "impact": "Reaffirms a tight, deficit-pressured outlook tied to oil and PFD policy — efficiency and modernization framing matters.", "tags": ["Budget"], "ref": 2 },
-    { "date": "2025-12", "title": "Gov. Dunleavy proposed a $5.38B general-fund FY2027 budget", "impact": "$14.16B all funds, -6.7% vs FY2026; restrained 'base budget' that draws $1.5B from the Constitutional Budget Reserve with reserves near $2.96B and a full statutory PFD.", "tags": ["Budget"], "ref": 11 },
-    { "date": "2025-12", "title": "Governor unveils FY2027 draft budget with ~$1.5B deficit", "impact": "A full statutory PFD widens the gap; expect continued cost scrutiny on agency and IT spend.", "tags": ["Budget", "Policy"], "ref": 2 },
+    { "date": "2026-06", "title": "Dunleavy signs FY2027 budget; oil windfall closes the projected deficit", "impact": "A Persian Gulf-driven oil-price spike (North Slope above $100/bbl) turned a projected ~$1.5B deficit into a balanced budget signed June 24, 2026 with no CBR draw and the lowest vetoes (~$90M) of Dunleavy's tenure. PFD set at $1,200; one-time revenue steered to K-12 operations and school capital/energy costs. Near-term fiscal pressure eases, but volatility and efficiency framing persist.", "tags": ["Budget", "Policy"], "ref": 13 },
+    { "date": "2026-06", "title": "First Alaska BEAD-funded broadband locations begin coming online", "impact": "Construction moves to service delivery (fiber ~51%, LEO satellite ~34%, fixed wireless the rest); rural anchor and provider sites start generating edge/connectivity demand. ~70% of BEAD locations targeted to be online within three years.", "tags": ["Broadband", "Rural / Edge"], "ref": 12 },
+    { "date": "2026-03", "title": "NIST approves $629M of Alaska BEAD deployment awards", "impact": "29 projects across 15 providers move toward construction; rural connectivity and edge-infrastructure demand begins to land. Alaska Communications alone took ~$124M to serve 9,000+ locations.", "tags": ["Broadband", "Rural / Edge"], "ref": 4 },
+    { "date": "2025-12", "title": "Gov. Dunleavy proposed a $5.38B general-fund FY2027 budget", "impact": "$14.16B all funds, -6.7% vs FY2026; restrained 'base budget' that draws $1.5B from the Constitutional Budget Reserve with reserves near $2.96B and a full statutory PFD. (Superseded by the June 2026 enacted budget after the oil windfall.)", "tags": ["Budget"], "ref": 11 },
     { "date": "2025-06", "title": "Dunleavy signs FY2026 budget (~$14.7B) with $122M in vetoes", "impact": "Weaker oil-revenue outlook drives cuts — sellers should lead with efficiency and consolidation value.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-04", "title": "Legislature hears AI, deepfake, and data-transfer testimony", "impact": "Signals coming AI-governance requirements (inventories, oversight) even though no bill is yet enacted.", "tags": ["AI", "Policy"], "ref": 7 }
+    { "date": "2025-04", "title": "Legislature hears AI, deepfake, and data-transfer testimony", "impact": "Signals coming AI-governance requirements (inventories, oversight) even though no bill is yet enacted (HB 306 lineage).", "tags": ["AI", "Policy"], "ref": 7 }
   ],
 
   "dellActions": [
@@ -146,6 +146,9 @@
     { "label": "Alaska OPPM — Statewide Master Agreements", "url": "https://oppm.doa.alaska.gov/alaska-centers-of-procurement-excellence/statewide-master-agreements/" },
     { "label": "GovTech — After several interim leaders, Alaska has a permanent CIO (Bill Smith)", "url": "https://www.govtech.com/people/after-several-interim-leaders-alaska-has-a-permanent-cio.html" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Alaska Business Magazine — Milestone in Broadband Expansion with Final BEAD Funding Approval", "url": "https://www.akbizmag.com/industry/telecom-tech/milestone-in-broadband-expansion-with-final-bead-funding-approval/" }
+    { "label": "Alaska Business Magazine — Milestone in Broadband Expansion with Final BEAD Funding Approval", "url": "https://www.akbizmag.com/industry/telecom-tech/milestone-in-broadband-expansion-with-final-bead-funding-approval/" },
+    { "label": "Office of the Governor — Dunleavy signs FY2027 budget (school infrastructure & energy; oil windfall, June 24, 2026)", "url": "https://gov.alaska.gov/governor-dunleavy-signs-fy-2027-budget-with-expanded-support-for-school-infrastructure-and-energy/" },
+    { "label": "Anchorage Daily News — Gov. Dunleavy vetoes nearly $90M from Alaska state budget (FY2027)", "url": "https://www.adn.com/politics/alaska-legislature/2026/06/24/gov-dunleavy-vetoes-nearly-90-million-from-alaska-state-budget/" },
+    { "label": "Alaska Beacon — Dunleavy vetoes some health and education increases (FY2027)", "url": "https://alaskabeacon.com/2026/06/25/dunleavy-vetoes-some-health-and-education-increases-approved-by-alaska-lawmakers/" }
   ]
 }

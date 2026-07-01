@@ -3,7 +3,7 @@
   "name": "South Carolina",
   "slug": "south-carolina",
   "region": "Southeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A $9B Google data-center buildout, a citizen-facing AI assistant going live, and a CIO running a 'protect, promote, pursue' AI playbook across 80+ agencies — South Carolina is modernizing fast on a centralized buying model.",
 
   "snapshot": [
@@ -56,7 +56,7 @@
       "dellFit": 90,
       "budgetStrength": 85,
       "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
-      "summary": "Google committed roughly $9B through 2027 to expand its Berkeley County campus and complete two new campuses in Dorchester County, and Meta is building an ~$800M, ~715,000-sq-ft AI-optimized data center in Aiken County. This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state, with adjacent ecosystem and supplier opportunity.",
+      "summary": "Google committed roughly $9B through 2027 to expand its Berkeley County campus and complete two new campuses in Dorchester County, and Meta is building an ~$800M, ~715,000-sq-ft AI-optimized data center in Aiken County (targeted operational spring 2027). This is the strongest tailwind for Dell AI-infrastructure and ISG demand in the state, with adjacent ecosystem and supplier opportunity. Watch policy risk: the General Assembly is moving data-center regulation (S.867 siting-permit/cost-causation regime advanced to the full Senate in April 2026) and competing House moratorium bills (H.5286, H.5526) that could affect permitting timelines for new builds.",
       "ref": 7
     },
     {
@@ -109,19 +109,20 @@
 
   "powerStructure": [
     { "name": "Henry McMaster", "title": "Governor", "org": "State of South Carolina", "note": "Sets the executive budget; champions the data-center and economic-development agenda. Term-limited — leaves office end of 2026; endorsed Lt. Gov. Pamela Evette to succeed him. Expect new administration and appointees in early 2027.", "ref": 2 },
-    { "name": "Nathan Hogue", "title": "State CIO", "org": "SC Department of Administration", "note": "Owns statewide tech direction; author of the 'three Ps' AI framework and AI Center of Excellence. Career SC IT leader since 2001.", "ref": 6 },
+    { "name": "Marcia Adams", "title": "Executive Director", "org": "SC Department of Administration", "note": "Leads the agency that houses DTO/technology and Procurement Services; reports to the governor and sets statewide administrative direction. Verified current on the Admin leadership roster, June 2026.", "ref": 13 },
+    { "name": "Nathan Hogue", "title": "Chief Information Officer (State CIO)", "org": "SC Department of Administration — Office of Technology & Information Services", "note": "Owns statewide tech direction; author of the 'three Ps' AI framework and AI Center of Excellence. Career SC IT leader since 2001. Verified current on the Admin leadership roster, June 2026 (some external bios still label him 'interim' — the official roster lists him as CIO, no interim designation).", "ref": 13 },
+    { "name": "Ben Willis", "title": "Chief Information Security Officer (State CISO)", "org": "SC Department of Administration — Division of Information Security", "note": "Leads enterprise information security across participating agencies (Deloitte-run SOC, next-gen firewalls). Verified on the Admin leadership roster, June 2026.", "ref": 13 },
     { "name": "Division of Procurement Services", "title": "Central procurement / statewide contracts", "org": "Dept. of Administration", "note": "Materials Management Office + IT Management Office own the statewide buying motion." },
     { "name": "House AI & Cybersecurity Committee", "title": "Legislative oversight", "org": "SC General Assembly", "note": "Regulations, Administrative Procedures, AI & Cybersecurity Committee — tracks AI/cyber policy.", "ref": 3 }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "FY2026-27 budget still in conference ahead of June 30 deadline", "impact": "House (~$15.4B GF) and Senate (~$15.3B GF, passed April 23) versions unresolved in conference committee as of late June; lawmakers due back June 25. No signed appropriations act yet — confirm enactment before forecasting.", "tags": ["Budget"], "ref": 12 },
+    { "date": "2026-06", "title": "Budget conference deal reached in special session; final votes pending near June 30", "impact": "A House-Senate conference committee struck a deal on the ~$13-15B-range FY2026-27 spending plan (Clemson vet school funded at ~$102M, teacher/law-enforcement raises, tax relief) after a weeks-long stalemate; both chambers still must adopt the conference report and the governor must sign. Confirm the enacted act before forecasting — the state is operating near the July 1 fiscal-year start.", "tags": ["Budget"], "ref": 16 },
+    { "date": "2026-04", "title": "S.867 'Data Center Development Act' advances to the full Senate", "impact": "Senate Agriculture & Natural Resources Committee advanced (Apr 29) a bill creating a Data Center Development Office and a tiered state siting-permit regime (60/90/120-day review by electrical load) that would require data centers to pay the full cost of new generation/transmission. Competing House moratorium bills (H.5286, H.5526) would pause new data-center approvals. A potential timing/permitting headwind for the Google/Meta buildout that anchors Dell's AI-infrastructure thesis — watch closely.", "tags": ["Data Centers", "Policy", "Regulation"], "ref": 14 },
+    { "date": "2026-06", "title": "Admin leadership roster re-verified: CIO Hogue, CISO Ben Willis, Exec Dir Marcia Adams", "impact": "No CIO turnover confirmed — Nathan Hogue remains State CIO on the official Department of Administration roster (despite some external bios labeling him 'interim'); Ben Willis is State CISO and Marcia Adams is Executive Director. Stable technology leadership for account planning.", "tags": ["Leadership"], "ref": 13 },
     { "date": "2026-05", "title": "Statewide AI report (Edition 0.1) published via SC Research Authority", "impact": "Signals a maturing, governed AI agenda across state government.", "tags": ["AI", "Policy"], "ref": 3 },
-    { "date": "2026-01", "title": "McMaster announces FY2026-27 executive budget (~$42.8B all funds)", "impact": "Sets spending priorities; budget moves through the General Assembly for July start.", "tags": ["Budget"], "ref": 2 },
-    { "date": "2026-01", "title": "Gov. McMaster proposed a $14.0B general-fund FY2027 budget", "impact": "$42.8B all funds, +9.2% vs FY2026; sets aside $1.4B across the General and Capital Reserve Funds. Proposes a new Office of Statewide Data led by a Chief Data Officer to improve data management and use across agencies.", "tags": ["Budget"], "ref": 11 },
-    { "date": "2025-12", "title": "Google confirms ~$9B SC data-center expansion through 2027", "impact": "Largest AI-infrastructure tailwind in the state; Berkeley + Dorchester campuses.", "tags": ["Data Centers", "AI"], "ref": 7 },
-    { "date": "2025-10", "title": "Meta announces ~$800M AI-optimized data center in Aiken County", "impact": "First Meta operation in SC; reinforces the state as an AI-infrastructure hub.", "tags": ["Data Centers", "AI"], "ref": 8 },
-    { "date": "2025-09", "title": "'Bradley' citizen AI assistant goes live (with Tyler Technologies)", "impact": "AI-driven service delivery raises demand for compute, data, and security backbone.", "tags": ["AI", "Citizen Services"], "ref": 4 }
+    { "date": "2026-01", "title": "Gov. McMaster proposed a $14.0B general-fund FY2027 budget", "impact": "$42.8B all funds; sets aside $1.4B across the General and Capital Reserve Funds. Proposes a new Office of Statewide Data led by a Chief Data Officer to improve data management and use across agencies.", "tags": ["Budget"], "ref": 11 },
+    { "date": "2025-12", "title": "Google confirms ~$9B SC data-center expansion through 2027", "impact": "Largest AI-infrastructure tailwind in the state; Berkeley + Dorchester campuses.", "tags": ["Data Centers", "AI"], "ref": 7 }
   ],
 
   "dellActions": [
@@ -144,6 +145,9 @@
     { "label": "Broadband Breakfast — South Carolina plans to spend a fraction of its BEAD allocation", "url": "https://broadbandbreakfast.com/south-carolina-plans-to-spend-just-10-of-original-bead-allocation/" },
     { "label": "SC Procurement — Statewide Term Contract Search / Procurement Services", "url": "https://procurement.sc.gov/contracts/search" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Post and Courier — SC budget still unresolved as fiscal year-end nears (June 2026)", "url": "https://www.postandcourier.com/politics/sc-budget-2026-session-elections-spending/article_7dd2d445-6016-4265-975c-a509ecacd536.html" }
+    { "label": "Post and Courier — SC budget still unresolved as fiscal year-end nears (June 2026)", "url": "https://www.postandcourier.com/politics/sc-budget-2026-session-elections-spending/article_7dd2d445-6016-4265-975c-a509ecacd536.html" },
+    { "label": "SC Department of Administration — Leadership roster (CIO, CISO, Executive Director)", "url": "https://admin.sc.gov/about-admin/leadership" },
+    { "label": "WRHI — SC Senate committee advances data center regulation bill (S.867) to full Senate", "url": "https://www.wrhi.com/2026/04/sc-senate-committee-advances-first-major-data-center-regulation-bill-sending-measure-to-full-senate-212196" },
+    { "label": "WLTX — SC lawmakers strike a deal on budget, ending weeks-long stalemate (2026)", "url": "https://www.wltx.com/article/news/local/south-carolinas-budget-deal-reached/101-5622aa3c-3df3-4f80-83f6-1dd27a536430" }
   ]
 }

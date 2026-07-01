@@ -5,7 +5,7 @@
   "name": "Travis County, Texas",
   "slug": "travis-county-texas",
   "hq": "Austin, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The 5th-most-populous Texas county (~1.36M residents, Austin) runs its technology through the Information Technology Services (ITS) department on a roughly $2B county budget — and sits at the center of the state's tech-talent and AI-policy hub.",
 
   "snapshot": [
@@ -48,7 +48,7 @@
   },
 
   "powerStructure": [
-    { "name": "Andy Brown", "title": "Travis County Judge", "note": "Top elected executive and Commissioners Court chair; serves as chief administrator and Director of Emergency Management. Term runs through Dec 31, 2026; running for reelection in 2026 — the steady top-of-county relationship for now." },
+    { "name": "Andy Brown", "title": "Travis County Judge", "note": "Top elected executive and Commissioners Court chair; serves as chief administrator and Director of Emergency Management. Won the March 2026 Democratic primary and is the party's nominee for the Nov 3, 2026 general election (heavily Democratic county); current term runs through Dec 31, 2026 — the steady top-of-county relationship, likely to continue." },
     { "name": "Ralph Warren", "title": "Director of Information Technology Services (ITS)", "note": "Leads central IT; former Deputy CIO at the City of Austin with two-plus decades in public-sector technology. The top technology relationship for the account." },
     { "name": "Jessica Rio", "title": "County Executive, Planning & Budget", "note": "Leads the Planning & Budget Office, which prepares the county budget and integrates county-wide strategic and spending plans — a key relationship for funding technology programs." },
     { "name": "ITS Information Security function", "title": "Cybersecurity / CISO", "note": "Owns the county's security posture; the county recruits for a dedicated Chief Information Security Officer. Confirm the current named security lead before pursuing security deals." },
@@ -56,10 +56,12 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "ITS Director Ralph Warren briefs vendors on Travis County strategic IT priorities", "impact": "Warren — ITS Director since 2020 — headlined a June 4, 2026 Industry Insider/GovTech Texas member briefing on the county's strategic IT priorities, current initiatives, and long-term goals, confirming leadership continuity at the top technology relationship. A public signal of where the ITS modernization roadmap is headed; use it to align refresh, security, and as-a-service positioning to stated priorities.", "tags": ["Leadership", "Modernization"] },
+    { "date": "2026-03", "title": "County Judge Andy Brown wins Democratic primary; nominee for November 2026", "impact": "Brown won the March 3, 2026 Democratic primary and is the party's nominee for the Nov 3, 2026 general election in a heavily Democratic county — strong continuity signal at the top of the Commissioners Court. Anchor relationships at the ITS and Planning & Budget layer that persist regardless of the November outcome.", "tags": ["Leadership"] },
+    { "date": "2025-10", "title": "Travis County FY2026 budget carries ~$112M in technology spending", "impact": "GovTech reporting details ~$112M of FY2026 technology funding — including ~$91.4M for the Technology & Operations (TOPS) service group (which houses the ITS department and information security), ~$7M for centralized computer services, and ~$11M in the Enterprise Risk Management fund for cybersecurity, risk-mitigation, and resilience systems. A concrete sizing of the county's IT and cyber wallet; use it to right-size proposals and lead with the cyber/resilience line.", "tags": ["Budget", "Cybersecurity"] },
     { "date": "2025-09", "title": "Commissioners Court adopts FY2026 budget at 37.5845¢ tax rate", "impact": "Adopted Sep 23, 2025 with a ~3-cent tax-rate increase near the voter-approval rate — a constrained, value-focused FY26 envelope; lead with cost-optimization, standardization, and TCO.", "tags": ["Budget"] },
     { "date": "2025-09", "title": "Commissioners approve Central Health's ~$1.1B FY2026 budget", "impact": "The county's separate hospital district set a large \"Year of Access\" budget — a reminder to distinguish Central Health IT from county ITS when mapping health-related technology opportunity.", "tags": ["Budget", "Health"] },
-    { "date": "2026-01", "title": "Texas TRAIGA AI-governance law takes effect", "impact": "The Responsible Artificial Intelligence Governance Act now governs Texas government AI use — align any AI-enabled offering to the new framework before pitching the county.", "tags": ["AI", "Governance"] },
-    { "date": "2026-03", "title": "County Judge Andy Brown on the March 2026 primary ballot", "impact": "Brown is seeking reelection with his term through Dec 2026 — anchor relationships at the ITS and Planning & Budget layer that persist regardless of the November outcome.", "tags": ["Leadership"] }
+    { "date": "2026-01", "title": "Texas TRAIGA AI-governance law takes effect", "impact": "The Responsible Artificial Intelligence Governance Act now governs Texas government AI use — align any AI-enabled offering to the new framework before pitching the county.", "tags": ["AI", "Governance"] }
   ],
 
   "dellActions": [
@@ -79,6 +81,9 @@
     { "label": "Central Health — Travis County approves FY2026 \"Year of Access\" budget", "url": "https://www.centralhealth.net/travis-county-commissioners-approve-central-healths-fy-2026-year-of-access-budget-expanding-care-for-residents/" },
     { "label": "U.S. Census / Wikipedia — Travis County population", "url": "https://en.wikipedia.org/wiki/Travis_County,_Texas" },
     { "label": "Ogletree — Texas Responsible Artificial Intelligence Governance Act (TRAIGA)", "url": "https://ogletree.com/insights-resources/blog-posts/texas-takes-a-shot-at-ai-regulation-with-responsible-artificial-intelligence-governance-act/" },
-    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" },
+    { "label": "GovTech / Industry Insider — Travis County Budgets $110M+ for 2026 IT Spending", "url": "https://insider.govtech.com/texas/news/travis-county-budgets-110m-for-2026-it-spending" },
+    { "label": "Industry Insider Texas — Member Briefing with Travis County (June 4, 2026; Ralph Warren)", "url": "https://events.govtech.com/Industry-Insider-Texas-Member-Briefing-6-4-2026" },
+    { "label": "Ballotpedia — Andy Brown (Travis County Judge, 2026 election)", "url": "https://ballotpedia.org/Andy_Brown_(Texas)" }
   ]
 }

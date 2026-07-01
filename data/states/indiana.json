@@ -3,7 +3,7 @@
   "name": "Indiana",
   "slug": "indiana",
   "region": "Midwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A new fiscally lean Braun administration, an IT-consolidation mandate, and one of the nation's largest AI data-center buildouts (Meta's $10B LEAP campus, SK hynix HBM packaging) are turning Indiana into a national AI-infrastructure hub.",
 
   "snapshot": [
@@ -119,19 +119,20 @@
 
   "powerStructure": [
     { "name": "Mike Braun", "title": "Governor", "org": "State of Indiana", "note": "Cost-cutting agenda; launched I-DOGE efficiency review and a statewide 5% spending cut; champions the AI/data-center economic push.", "ref": 2 },
-    { "name": "Warren Lenard", "title": "State CIO & IOT Director", "org": "Indiana Office of Technology", "note": "Appointed March 2025 from the private sector (Byrider, Finish Line); mandate to consolidate state IT at lower cost.", "ref": 6 },
-    { "name": "Indiana Economic Development Corp (IEDC)", "title": "Economic development authority", "org": "State of Indiana", "note": "Drives the LEAP district and data-center deals; administers data-center sales-tax exemptions.", "ref": 7 },
+    { "name": "Warren Lenard", "title": "State CIO & IOT Director", "org": "Indiana Office of Technology", "note": "Appointed March 2025 from the private sector (Byrider, Finish Line); mandate to consolidate state IT at lower cost. Made Microsoft Copilot available to state employees and now audits agency AI projects for data classification/governance — confirmed in role June 2026.", "ref": 6 },
+    { "name": "Hemant Jain", "title": "Chief Information Security Officer (CISO)", "org": "Indiana Office of Technology", "note": "Longtime state CISO (since 2018); leads Indiana's whole-of-state cybersecurity strategy and local-government security partnerships. Verified current June 2026.", "ref": 17 },
+    { "name": "Indiana Economic Development Corp (IEDC)", "title": "Economic development authority", "org": "State of Indiana", "note": "Drives the LEAP district and data-center deals; administers data-center sales-tax exemptions; new HB 1210 PILOT applies to projects credited after July 1, 2026.", "ref": 7 },
     { "name": "AI Task Force (SEA 150)", "title": "Legislative AI study body", "org": "Indiana General Assembly", "note": "Co-chaired by Rep. Matt Lehman; studying government AI use, privacy and security through 2027.", "ref": 10 },
     { "name": "State Budget Agency", "title": "Appropriations & fiscal analysis", "org": "State of Indiana", "note": "Owns the biennial budget and revenue forecasts — useful for sizing agency IT spend under tightened budgets.", "ref": 1 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Meta launches $115M America's Workforce Academy, piloting in Indiana for LEAP-area data-center construction", "impact": "Signals continued multi-billion-dollar Meta commitment in Boone County; sustains the AI-infrastructure demand environment around LEAP Lebanon.", "tags": ["Data Centers", "AI", "Workforce"], "ref": 13 },
+    { "date": "2026-05", "title": "Indianapolis City-County Council passes non-binding resolution urging a pause on new data-center approvals (to May 2027)", "impact": "Local-permitting and zoning friction is rising even as the state courts hyperscalers — watch for siting/timeline risk on metro-area projects.", "tags": ["Data Centers", "Policy", "Risk"], "ref": 14 },
+    { "date": "2026-05", "title": "HB 1210 enacted: data centers receiving IEDC credits after July 1, 2026 must pay local governments ~1% PILOT on equipment and electricity", "impact": "Adds a local-revenue-sharing cost to new projects but preserves the core sales-tax exemption — incentive regime stays intact for AI buildout.", "tags": ["Data Centers", "Policy", "Budget"], "ref": 15 },
+    { "date": "2026-04", "title": "Gov. Braun launches 'IN AI' initiative to make Indiana 'the most AI-ready state'", "impact": "State-backed AI-adoption push (with CICP) broadens the AI ecosystem and the governance conversation Dell can engage on private/on-prem AI.", "tags": ["AI", "Policy"], "ref": 16 },
     { "date": "2026-02", "title": "Meta breaks ground on $10B, 1GW data-center campus at LEAP Lebanon", "impact": "Anchors Indiana as national AI infrastructure; major ISG, networking and services tailwind.", "tags": ["Data Centers", "AI"], "ref": 8 },
-    { "date": "2025-05", "title": "HB 1601 signed (PL 178): data-center tax exemption expanded to quantum and advanced computing", "impact": "Sweetens incentives that keep AI/data-center investment flowing into the state.", "tags": ["Data Centers", "Policy"], "ref": 12 },
-    { "date": "2025-04", "title": "FY2026-27 biennial budget (HEA 1001) enacted with statewide 5% cut", "impact": "Cost and consolidation become the dominant procurement themes; price-disciplined buying.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-03", "title": "Gov. Braun appoints Warren Lenard as State CIO & IOT Director", "impact": "New private-sector leader with a mandate to consolidate state IT at lower cost.", "tags": ["Leadership"], "ref": 6 },
-    { "date": "2025-01", "title": "Braun launches I-DOGE and budget-discipline executive orders", "impact": "Efficiency review pressures agency spend; favors standardized, well-priced infrastructure.", "tags": ["Efficiency", "Policy"], "ref": 2 },
-    { "date": "2025-08", "title": "Indiana AI Task Force begins second year of work", "impact": "Government AI governance maturing; opening for governed, on-prem AI on sensitive data.", "tags": ["AI", "Policy"], "ref": 10 }
+    { "date": "2025-05", "title": "HB 1601 signed (PL 178): data-center tax exemption expanded to quantum and advanced computing", "impact": "Sweetens incentives that keep AI/data-center investment flowing into the state.", "tags": ["Data Centers", "Policy"], "ref": 12 }
   ],
 
   "dellActions": [
@@ -154,6 +155,11 @@
     { "label": "NIST — SK hynix (Indiana) West Lafayette CHIPS award", "url": "https://www.nist.gov/chips/sk-hynix-indiana-west-lafayette" },
     { "label": "WFYI — Indiana AI Task Force begins second year of work", "url": "https://www.wfyi.org/news/articles/indiana-task-force-on-artificial-intelligence-begins-second-year-of-work" },
     { "label": "Troyer Group — Understanding the BEAD Rollout in Indiana", "url": "https://www.troyergroup.com/bead-funding-indiana-broadband-infrastructure-map-insights/" },
-    { "label": "Tax Notes — Indiana bill expands data center tax exemption to quantum research (HB 1601)", "url": "https://www.taxnotes.com/lr/resolve/tax-notes-today-state/indiana-bill-expands-data-center-tax-exemption-to-quantum-research/7s6kf" }
+    { "label": "Tax Notes — Indiana bill expands data center tax exemption to quantum research (HB 1601)", "url": "https://www.taxnotes.com/lr/resolve/tax-notes-today-state/indiana-bill-expands-data-center-tax-exemption-to-quantum-research/7s6kf" },
+    { "label": "Indiana Public Media — Meta starts data-center workforce development program in Indiana (America's Workforce Academy)", "url": "https://www.ipm.org/news/2026-06-09/meta-starts-data-center-workforce-development-program-in-indiana" },
+    { "label": "WFYI — Indianapolis data-center zoning rules proposal", "url": "https://www.wfyi.org/wfyi-news/2026-04-23/indianapolis-data-center-zoning-rules-proposal" },
+    { "label": "Inside INdiana Business — Data centers could pay Indiana municipalities 1% (HB 1210 PILOT)", "url": "https://www.insideindianabusiness.com/articles/data-centers-could-pay-indiana-municipalities-1-of-equipment-purchases-electric-bill" },
+    { "label": "IEDC — Gov. Braun announces IN AI to grow jobs through human-centered AI", "url": "https://iedc.in.gov/events/news/details/2026/04/28/governor-braun-announces-in-ai-to-grow-jobs-and-wages-through-human-centered-ai" },
+    { "label": "Indiana Office of Technology — Meet Our Leadership Team (CISO Hemant Jain)", "url": "https://www.in.gov/iot/about/meet-our-leadership-team/" }
   ]
 }

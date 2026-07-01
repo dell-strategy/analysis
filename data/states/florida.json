@@ -3,7 +3,7 @@
   "name": "Florida",
   "slug": "florida",
   "region": "Southeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A ~$115B annual budget, a State CIO consolidating enterprise IT, a first-in-nation hyperscale data-center law, and $1.16B in broadband money landing in 2026 — Florida is centralizing how it governs and buys technology.",
 
   "snapshot": [
@@ -14,7 +14,7 @@
   ],
 
   "execSummary": {
-    "summary": "Florida runs an annual budget on a July–June fiscal year; the FY2025–26 General Appropriations Act came in near $115B after roughly $576M in line-item vetoes, and the Governor's proposed Floridians First FY2026–27 budget is about $117.4B. Three structural shifts matter for SLG sellers. First, the Florida Digital Service (FLDS) under State CIO Warren Sponholtz is consolidating enterprise IT governance, security, and procurement oversight — and 2026 legislation (SB 480) floated moving FLDS into the Governor's office as a new technology division, the latest in repeated attempts to restructure state IT. Second, Florida just enacted a first-in-the-nation hyperscale data-center law (SB 484, signed May 7, 2026) regulating power and water costs — a signal of how fast AI infrastructure is landing in the state. Third, $1.16B in federal BEAD broadband funding is moving into deployment in 2026. For Dell, the buying motion runs through DMS State Term Contracts and MyFloridaMarketPlace, with FLDS gating large IT projects.",
+    "summary": "Florida runs an annual budget on a July–June fiscal year. Gov. DeSantis signed his eighth and final FY2026–27 budget on June 29, 2026 at roughly $117.6B, after about $810M in line-item vetoes (and roughly $1.6B in total reductions counting a vetoed $750M rainy-day-fund transfer and a corrections bill). Three structural shifts matter for SLG sellers. First, the Florida Digital Service (FLDS) under State CIO Warren Sponholtz remains the central authority consolidating enterprise IT governance, security, and procurement oversight — the 2026 effort to move FLDS into the Governor's office as a new technology division (SB 480) DIED on the Senate calendar (March 13, 2026), so FLDS stays under the Department of Management Services; repeated restructuring attempts remain a watch item, especially with a new governor taking office in January 2027. Second, Florida enacted a first-in-the-nation hyperscale data-center law (SB 484, signed May 7, 2026) regulating power and water costs — a signal of how fast AI infrastructure is landing in the state. Third, $1.16B in federal BEAD broadband funding is moving into deployment in 2026 with the state's final proposal NTIA-approved and subgrant agreements being executed. For Dell, the buying motion runs through DMS State Term Contracts and MyFloridaMarketPlace, with FLDS gating large IT projects over $10M.",
     "opportunities": [
       "AI-infrastructure demand tied to university research computing (UF HiPerGator AI 2.0) and the hyperscale data-center buildout (PowerEdge, networking, services).",
       "Enterprise security and lifecycle modernization as FLDS centralizes IT governance and consolidates agency purchasing.",
@@ -22,29 +22,30 @@
       "Endpoint, client, and infrastructure refresh across a ~$115B general-government budget and 20+ agencies."
     ],
     "stats": [
+      { "value": "$117.6B", "label": "FY2026–27 Enacted", "note": "Signed June 29, 2026; after ~$810M line-item vetoes", "ref": 11 },
       { "value": "~$115B", "label": "FY2025–26 Budget", "note": "GAA after vetoes; annual cycle", "ref": 1 },
-      { "value": "$117.4B", "label": "FY2026–27 Proposed", "note": "Governor's Floridians First budget", "ref": 3 },
       { "value": "$1.16B", "label": "BEAD Broadband", "note": "Federal allocation; deployment 2026", "ref": 7 },
       { "value": "May 2026", "label": "Data-center law (SB 484)", "note": "First-in-nation hyperscale rules", "ref": 6 }
     ]
   },
 
   "budget": {
-    "intro": "Florida budgets annually on a July 1–June 30 fiscal year. The FY2025–26 General Appropriations Act totaled roughly $115.1B as passed (about $117.4B including back-of-the-bill items), reduced by ~$576M in line-item vetoes to a GAA near $114.8B. There is no single 'state IT budget' line; technology spend is distributed across agencies, with FLDS providing enterprise governance and oversight. The Governor's proposed Floridians First FY2026–27 budget was about $117.4B; the Legislature passed a roughly $114.5B FY2026–27 budget on May 29, 2026, which awaits the Governor's signature and line-item vetoes before the July 1 fiscal-year start.",
+    "intro": "Florida budgets annually on a July 1–June 30 fiscal year. Gov. DeSantis signed the FY2026–27 budget on June 29, 2026 at roughly $117.6B — his eighth and final budget before leaving office — after about $810M in line-item vetoes (and roughly $1.6B in total reductions counting a vetoed $750M general-revenue transfer to the Budget Stabilization Fund and a separate corrections bill). The Budget Stabilization Fund sits at its $5.0B constitutional limit and total reserves reach nearly $18B. There is no single 'state IT budget' line; technology spend is distributed across agencies, with FLDS providing enterprise governance and oversight. The prior FY2025–26 General Appropriations Act totaled roughly $115B after ~$576M in vetoes.",
     "stats": [
-      { "value": "~$115B", "label": "FY2025–26 GAA", "note": "After ~$576M vetoes", "ref": 1 },
-      { "value": "$117.4B", "label": "FY2026–27 proposed", "note": "Governor's recommendation", "ref": 3 },
+      { "value": "$117.6B", "label": "FY2026–27 enacted", "note": "Signed June 29, 2026", "ref": 11 },
+      { "value": "~$810M", "label": "Line-item vetoes", "note": "~$1.6B incl. fund-transfer veto", "ref": 11 },
       { "value": "$10M", "label": "FLDS project gate", "note": "Presolicitation certification threshold", "ref": 2 }
     ],
     "breakdown": [
-      { "label": "BEAD broadband deployment", "amount": 1160, "display": "$1.16B", "note": "Federal; $970M+ announced July 2025" },
-      { "label": "FY2025–26 line-item vetoes", "amount": 576, "display": "~$576M", "note": "Removed by the Governor" },
-      { "label": "Reserves (FY2026–27 proposed)", "amount": 16750, "display": "$16.75B", "note": "Governor's recommendation" }
+      { "label": "BEAD broadband deployment", "amount": 1160, "display": "$1.16B", "note": "Federal; final proposal NTIA-approved; subgrants executing" },
+      { "label": "FY2026–27 line-item vetoes", "amount": 810, "display": "~$810M", "note": "Removed by the Governor" },
+      { "label": "Total reserves (FY2026–27 enacted)", "amount": 18000, "display": "~$18B", "note": "Budget Stabilization Fund at $5.0B constitutional cap" }
     ],
     "notes": [
       "Budget figures are annual (single-year) totals; Florida does not budget biennially.",
-      "Reported FY2025–26 totals vary ($114.8B–$117.4B) depending on whether back-of-the-bill items are counted — confirm scope before forecasting.",
-      "FY2027 (governor's proposed, per NASBO): $53.2B general revenue, +5.7% vs FY2026; $117.4B all funds (+2.2%). A combined $16.8B reserve, with the Budget Stabilization Fund at its $5.0B constitutional limit; the budget hardens cybersecurity across state agencies."
+      "FY2026–27 was Gov. DeSantis's eighth and final budget before he leaves office; a new governor takes office January 2027.",
+      "Veto figures vary by framing: ~$810M in line items from the main bill (HB 5001E), or roughly $1.6B counting the vetoed $750M Budget Stabilization Fund transfer and a separate corrections bill — confirm scope before forecasting.",
+      "No standalone state IT budget line; the enacted budget continues cybersecurity hardening across agencies, but specific technology allocations are distributed and not broken out in the press materials."
     ]
   },
 
@@ -56,7 +57,7 @@
       "dellFit": 80,
       "budgetStrength": 70,
       "tags": ["IT Governance", "Procurement", "Enterprise"],
-      "summary": "FLDS, under State CIO Warren Sponholtz, is the central authority for statewide IT strategy, cybersecurity, enterprise governance, and project oversight. 2026 legislation (SB 480) strengthens FLDS authority over IT project management and procurement, adds a presolicitation certification gate for IT projects over $10M, and stands up new oversight structures — concentrating decisions and standards at the enterprise level.",
+      "summary": "FLDS, under State CIO Warren Sponholtz, is the central authority for statewide IT strategy, cybersecurity, enterprise governance, and project oversight, including a presolicitation certification gate for IT projects over $10M. The 2026 effort to restructure state IT and move FLDS into the Governor's office (SB 480) died on the Senate calendar in March 2026, so FLDS remains under DMS — but repeated restructuring attempts (SB 7026/ASSET in 2025, SB 480 in 2026) make enterprise IT governance a live watch item, especially with a gubernatorial transition due January 2027.",
       "ref": 2
     },
     {
@@ -76,7 +77,7 @@
       "dellFit": 55,
       "budgetStrength": 80,
       "tags": ["Broadband", "Federal Funds", "Rural"],
-      "summary": "Florida's $1.16B BEAD allocation moved from competitive subgrant selection (with $970M+ announced in July 2025) into NTIA-approved deployment beginning spring 2026. The program expands rural connectivity and digital-adoption infrastructure — adjacent demand for edge compute, networking, and managed services serving newly connected communities and the agencies coordinating the rollout.",
+      "summary": "Florida's $1.16B BEAD allocation moved from competitive subgrant selection (with $970M+ announced in July 2025) into NTIA-approved deployment, with the state's final proposal approved and subgrant agreements being executed in 2026. The program expands rural connectivity and digital-adoption infrastructure — adjacent demand for edge compute, networking, and managed services serving newly connected communities and the agencies coordinating the rollout.",
       "ref": 7
     },
     {
@@ -118,19 +119,18 @@
   },
 
   "powerStructure": [
-    { "name": "Ron DeSantis", "title": "Governor", "org": "State of Florida", "note": "Signed the first-in-nation hyperscale data-center law; drives the AI and fiscal-discipline agenda.", "ref": 6 },
+    { "name": "Ron DeSantis", "title": "Governor", "org": "State of Florida", "note": "Term-limited; signed his eighth and final budget June 29, 2026 (~$117.6B, ~$810M vetoes) and the first-in-nation hyperscale data-center law. A new governor takes office January 2027 — watch for IT-leadership and restructuring shifts.", "ref": 11 },
     { "name": "Warren Sponholtz", "title": "State CIO", "org": "Florida Digital Service", "note": "Leading FL IT since Aug 2024; oversees statewide strategy, cybersecurity, governance, and modernization. 2026 GoldenGov State Executive of the Year; testified before U.S. House Homeland Security Committee in May 2026.", "ref": 5 },
     { "name": "Department of Management Services (DMS)", "title": "Lead procurement agency", "org": "State of Florida", "note": "Owns State Term Contracts and MyFloridaMarketPlace — the core buying motion." },
-    { "name": "Florida Legislature (Appropriations)", "title": "Budget & IT restructuring", "org": "State of Florida", "note": "Sets the annual budget and has repeatedly weighed restructuring state IT (SB 7026 in 2025, SB 480 in 2026)." }
+    { "name": "Florida Legislature (Appropriations)", "title": "Budget & IT restructuring", "org": "State of Florida", "note": "Sets the annual budget and has repeatedly weighed restructuring state IT; both recent attempts failed (SB 7026/ASSET in 2025, SB 480 in 2026 — died on calendar March 13, 2026), leaving FLDS in place under DMS for now." }
   ],
 
   "news": [
-    { "date": "2026-05-29", "title": "Legislature passes ~$114.5B FY2026–27 budget; awaiting DeSantis signature/vetoes", "impact": "Sets the FY2026–27 buying envelope (effective July 1); includes $25M for a new USF Bellini College of AI, Cybersecurity & Computing facility. Watch for line-item vetoes before June 30.", "tags": ["Budget"], "ref": 11 },
+    { "date": "2026-06", "title": "DeSantis signs ~$117.6B FY2026–27 budget (final budget); ~$810M line-item vetoes", "impact": "Sets the FY2026–27 buying envelope effective July 1. Roughly $1.6B in total reductions counting a vetoed $750M rainy-day-fund transfer and a corrections bill; Budget Stabilization Fund at its $5.0B constitutional cap and ~$18B total reserves. Includes USF Bellini College of AI, Cybersecurity & Computing. DeSantis's eighth and final budget before a new governor takes office Jan 2027.", "tags": ["Budget"], "ref": 11 },
+    { "date": "2026-03", "title": "State-IT restructuring bill (SB 480) dies on Senate calendar", "impact": "The 2026 attempt to move FLDS out of DMS into a new Governor's-office technology division (DIGIT) failed, so FLDS stays under DMS — the buying motion and $10M project gate are unchanged. Restructuring remains a recurring risk heading into the 2027 gubernatorial transition.", "tags": ["IT Governance", "Procurement"], "ref": 12 },
     { "date": "2026-05", "title": "DeSantis signs SB 484, first-in-nation hyperscale data-center law", "impact": "Confirms scale of AI-infrastructure investment landing in Florida while adding utility/water scrutiny to siting.", "tags": ["Data Centers", "AI", "Policy"], "ref": 6 },
     { "date": "2026-03", "title": "AI 'Bill of Rights' (SB 482) passes Senate, dies in House", "impact": "AI policy remains unsettled; agencies still trend toward governed, auditable AI for sensitive workloads.", "tags": ["AI", "Policy"], "ref": 4 },
-    { "date": "2026-02", "title": "SB 480 proposes restructuring state IT under FLDS / Governor's office", "impact": "Centralizes IT governance and procurement oversight; raises the $10M project gate's profile.", "tags": ["IT Governance", "Procurement"], "ref": 2 },
-    { "date": "2025-12", "title": "Governor announces Floridians First FY2026–27 budget (~$117.4B)", "impact": "Continued spending capacity with large reserves; sets the FY2026–27 buying envelope.", "tags": ["Budget"], "ref": 3 },
-    { "date": "2025-12", "title": "Gov. DeSantis proposed a $53.2B general-revenue FY2027 budget", "impact": "$117.4B all funds, +2.2% vs FY2026; $16.8B combined reserve with the Budget Stabilization Fund at its $5.0B constitutional limit. Hardens Florida's cybersecurity framework across state agencies and funds IT projects that reduce staffing needs.", "tags": ["Budget", "Cybersecurity"], "ref": 10 },
+    { "date": "2026-04", "title": "Florida's BEAD final proposal NTIA-approved; subgrant agreements executing", "impact": "Unlocks the $1.16B allocation for deployment; adjacent edge-compute, networking, and managed-services demand as rural communities connect.", "tags": ["Broadband", "Federal Funds"], "ref": 7 },
     { "date": "2025-10", "title": "University of Florida launches HiPerGator AI 2.0 (NVIDIA DGX B200 SuperPOD)", "impact": "Reinforces Florida higher-ed as a major AI-infrastructure and research-computing buyer.", "tags": ["AI Infrastructure", "Higher Ed"], "ref": 8 }
   ],
 
@@ -153,7 +153,9 @@
     { "label": "HPCwire — UF Welcomes NVIDIA DGX Systems for HiPerGator AI 2.0", "url": "https://www.hpcwire.com/off-the-wire/uf-welcomes-24m-in-nvidia-dgx-systems-paving-way-for-next-gen-hipergator-ai-2-0/" },
     { "label": "Florida DMS — State Contracts and Agreements / State Purchasing", "url": "https://www.dms.myflorida.com/business_operations/state_purchasing/state_contracts_and_agreements" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Florida Phoenix — FY26-27 budget done, vetoes are coming (May 29, 2026)", "url": "https://floridaphoenix.com/2026/05/29/fy-26-27-budget-done-vetoes-are-coming-and-property-tax-debate-lies-ahead/" },
-    { "label": "USF — Florida Legislature agrees to a 2026-27 state budget (USF Bellini College of AI)", "url": "https://www.usf.edu/news/2026/an-update-on-the-2026-27-state-budget.aspx" }
+    { "label": "WUSF — DeSantis signs Florida's $117.6B budget; what did he veto? (June 30, 2026)", "url": "https://www.wusf.org/politics-issues/2026-06-30/desantis-signs-florida-budget-what-did-he-veto" },
+    { "label": "The Florida Senate — SB 480 (2026) bill history: died on calendar March 13, 2026", "url": "https://www.flsenate.gov/Session/Bill/2026/480" },
+    { "label": "Executive Office of the Governor — DeSantis Signs FY2026-27 Budget (June 29, 2026)", "url": "https://www.flgov.com/eog/news/press/2026/governor-ron-desantis-signs-florida-fiscal-year-2026-2027-budget-capping-eight" },
+    { "label": "CBS Miami — DeSantis vetoes $1.6 billion before signing eighth and final budget", "url": "https://www.cbsnews.com/miami/news/florida-gov-ron-desantis-veto-final-budget-june-2026/" }
   ]
 }

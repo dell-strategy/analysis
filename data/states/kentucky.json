@@ -3,7 +3,7 @@
   "name": "Kentucky",
   "slug": "kentucky",
   "region": "Southeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A disciplined new two-year budget, the nation's most comprehensive state AI-governance law now in force, and a hyperscale data-center boom landing in Louisville — Kentucky is rewiring how it adopts and secures technology.",
 
   "snapshot": [
@@ -115,12 +115,11 @@
   ],
 
   "news": [
-    { "date": "2026-06-19", "title": "EPIC releases Kentucky's first statewide data-center policy analysis for the General Assembly", "impact": "Quantifies a deep pipeline (37 existing centers; LG&E/KU ~29 projects, ~3.5 GW at ≥50% likelihood, up to ~12 GW prospective; Louisville campus ~402 MW / ~$11B lifetime). Frames where/when KY compute capacity lands and the ratepayer/cost rules lawmakers must set first.", "tags": ["Data Centers", "Policy", "Energy"], "ref": 11 },
+    { "date": "2026-06", "title": "EPIC report: data-center investment and ratepayer protection can coexist; informs interim legislative study", "impact": "At a June 4 press conference EPIC argued Kentucky can attract hyperscale load while shielding ratepayers; GOP lawmakers said the analysis will guide whether they act in the 2027 session to keep data-center infrastructure costs off other ratepayers. Signals the cost/energy rules that will gate how fast KY compute capacity scales.", "tags": ["Data Centers", "Policy", "Energy"], "ref": 13 },
+    { "date": "2026-05", "title": "Utilities report as many as 30 data centers under discussion in Kentucky", "impact": "LG&E/KU and other utilities disclose ~30 prospective projects — 11 at ≥50% likelihood totaling ~3.5 GW, up to ~12 GW potential (vs ~18.4 GW statewide summer capacity). Confirms a deep, accelerating AI-infrastructure pipeline and the strongest tailwind for Dell ISG/AI demand in the state.", "tags": ["Data Centers", "AI Infrastructure"], "ref": 12 },
     { "date": "2026-04", "title": "Legislature overrides most Beshear vetoes; ~$32B two-year budget becomes law", "impact": "FY2026–28 spending is set and disciplined; tech dollars sit inside agency budgets, not a discretionary pool.", "tags": ["Budget"], "ref": 3 },
-    { "date": "2026-04", "title": "GA finalizes disciplined, balanced two-year state budget (HB 500)", "impact": "Confirms the austere posture — modernization must be framed as efficiency and consolidation.", "tags": ["Budget"], "ref": 1 },
+    { "date": "2026-04", "title": "Data-center ratepayer-protection bill dies on final day of 2026 session", "impact": "A House-passed bill requiring utilities to keep data-center infrastructure costs off other ratepayers died at session close, leaving the cost question unresolved and pushing it to interim study — a watch item for incentive/energy policy.", "tags": ["Data Centers", "Policy"], "ref": 14 },
     { "date": "2026-01", "title": "Gov. Beshear proposed a $16.4B general-fund FY2027 budget", "impact": "$154.8B all funds across the FY2027–28 biennium, -1.9% vs FY2026; fully funds pensions and builds a ~$3.0B Budget Reserve Trust Fund. Proposes a Kentucky Cyber Resilience Task Force to detect, respond to, and recover from cyber incidents.", "tags": ["Budget", "Cybersecurity"], "ref": 10 },
-    { "date": "2025-12", "title": "AI data-center boom arrives in Kentucky; 2026 session to weigh costs", "impact": "Hyperscale AI demand grows, but energy/cost debate may shape incentives — watch for policy moves.", "tags": ["Data Centers", "AI"], "ref": 6 },
-    { "date": "2025-07", "title": "Kentucky opens BEAD Round 2 project applications (~$1.1B)", "impact": "Broadband subawards advance, expanding the connected footprint and downstream compute needs.", "tags": ["Broadband"], "ref": 7 },
     { "date": "2025-05", "title": "Jim Barnhart named permanent State CIO", "impact": "Tech direction stabilizes under a consolidation- and cloud-focused leader who owns SB 4 AI governance.", "tags": ["Leadership"], "ref": 5 }
   ],
 
@@ -143,6 +142,9 @@
     { "label": "Kentucky Finance & Administration Cabinet — State agency and local government procurement", "url": "https://finance.ky.gov/eProcurement/Pages/state-agency-and-local-government-procurement.aspx" },
     { "label": "Commonwealth Office of Technology — Office of the CISO services", "url": "https://technology.ky.gov/OCISO/Pages/services.aspx" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Kentucky Senate — EPIC releases first statewide analysis of data-center development (June 19, 2026)", "url": "https://kysenaterepublicans.com/press-releases/2026/6/19/kentucky-energy-planning-and-inventory-commission-releases-first-statewide-analysis-of-data-center-development" }
+    { "label": "Kentucky Senate — EPIC releases first statewide analysis of data-center development (June 19, 2026)", "url": "https://kysenaterepublicans.com/press-releases/2026/6/19/kentucky-energy-planning-and-inventory-commission-releases-first-statewide-analysis-of-data-center-development" },
+    { "label": "Kentucky Lantern — Utilities report as many as 30 data centers under discussion in Kentucky (May 29, 2026)", "url": "https://kentuckylantern.com/2026/05/29/utilities-report-as-many-as-30-data-centers-under-discussion-in-kentucky/" },
+    { "label": "Kentucky Lantern — Data center investment, ratepayer protections can both happen, state report argues (June 4, 2026)", "url": "https://kentuckylantern.com/2026/06/04/data-center-investment-ratepayer-protections-can-both-happen-state-report-argues/" },
+    { "label": "LPM — Kentucky data center regulations stripped from bill as legislative session closes (April 15, 2026)", "url": "https://www.lpm.org/news/2026-04-15/kentucky-data-center-regulations-stripped-from-bill-as-legislative-session-closes" }
   ]
 }

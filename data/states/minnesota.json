@@ -3,7 +3,7 @@
   "name": "Minnesota",
   "slug": "minnesota",
   "region": "Midwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A new state CIO, a sweeping data-center tax incentive driving a hyperscale buildout, and a whole-of-state cybersecurity push — Minnesota's technology agenda is in motion mid-biennium.",
 
   "snapshot": [
@@ -57,7 +57,7 @@
       "dellFit": 90,
       "budgetStrength": 80,
       "tags": ["AI Infrastructure", "Data Centers", "Economic Dev"],
-      "summary": "A 2025 law (Chapter 13) created a 'qualified large-scale data center' tier (25,000+ sq ft and $250M+ invested within 60 months) and extended the IT-equipment sales-tax exemption to 35 years, pulling a wave of hyperscale projects. Meta's ~$800M Rosemount campus is under construction. But local opposition is escalating in 2026: Minneapolis imposed a 6-month moratorium (May 22), Rosemount a 1-year moratorium on new centers, Nobles County denied a rezoning, and statewide bill SF 4298 could freeze permitting. Still the strongest tailwind for Dell AI-infrastructure demand in Minnesota — but qualify the pipeline carefully against the political headwinds.",
+      "summary": "A 2025 law (Chapter 13) created a 'qualified large-scale data center' tier (25,000+ sq ft and $250M+ invested within 60 months) and extended the IT-equipment sales-tax exemption to 35 years, pulling a wave of hyperscale projects. Meta's ~$800M Rosemount campus is under construction and slated to open later in 2026. Proposed statewide regulations/moratorium efforts stalled at the Capitol in 2026 (the Legislature adjourned without new restrictions, halted ~June 12 after union/industry pushback), so the favorable tax framework stands — but local opposition keeps spreading via city/county moratoria (Minneapolis 6-mo, Rosemount/Lonsdale/Inver Grove Heights 1-yr, Nobles County rezoning denial). Still the strongest tailwind for Dell AI-infrastructure demand in Minnesota — but siting risk is now a jurisdiction-by-jurisdiction question; qualify the pipeline locally.",
       "ref": 4
     },
     {
@@ -119,21 +119,22 @@
   },
 
   "powerStructure": [
-    { "name": "Tim Walz", "title": "Governor", "org": "State of Minnesota", "note": "Signed the FY2026-27 budget and the 2025 data-center tax law. Withdrew from the 2026 reelection race (Jan 5, 2026) but remains in office through Jan 2027 — a lame-duck posture; build relationships with MNIT career leadership and watch the Nov 2026 open-seat race.", "ref": 12 },
-    { "name": "Jon Eichten", "title": "Commissioner & State CIO", "org": "MNIT", "note": "Appointed March 16, 2026; MNIT leader since 2012 (most recently Deputy Commissioner). Owns statewide tech direction.", "ref": 3 },
+    { "name": "Tim Walz", "title": "Governor", "org": "State of Minnesota", "note": "Signed the FY2026-27 budget and the 2025 data-center tax law. Withdrew from the 2026 reelection race (Jan 5, 2026) but remains in office through Jan 2027 — a lame-duck posture. Sen. Amy Klobuchar won the DFL endorsement (May 30) to succeed him; GOP field led by House Speaker Lisa Demuth (primary Aug 11, general Nov 3). Build relationships with MNIT career leadership and prepare for a possible Jan 2027 cabinet refresh.", "ref": 12 },
+    { "name": "Jon Eichten", "title": "Commissioner & State CIO", "org": "MNIT", "note": "Appointed March 16, 2026; MNIT leader since 2012 (most recently Deputy Commissioner). Confirmed permanent and current as of June 2026. Owns statewide tech direction.", "ref": 3 },
+    { "name": "John Israel", "title": "Assistant Commissioner & State CISO", "org": "MNIT", "note": "Permanent CISO since 2023 (with MNIT since 2008); leads executive-branch cybersecurity and the Minnesota Cybersecurity Task Force / Whole-of-State plan. Primary security buyer.", "ref": 18 },
+    { "name": "Brandon Hirsch", "title": "Deputy Commissioner", "org": "MNIT", "note": "Current MNIT Deputy Commissioner (succeeding Eichten, who moved up to Commissioner). Oversees enterprise business operations and agency partner relationships.", "ref": 19 },
     { "name": "Tarek Tomes", "title": "VP for Information Technology & CIO", "org": "University of Minnesota", "note": "Led MNIT 2019-2026; became U of M's VP for IT and CIO effective Mar 16, 2026 — a warm, Dell-relevant relationship on the higher-ed side.", "ref": 15 },
     { "name": "Office of State Procurement", "title": "State contracting authority", "org": "Dept. of Administration", "note": "Establishes IT contracts and the CPV cooperative path used by state and local buyers." },
     { "name": "Minnesota Cybersecurity Task Force", "title": "Whole-of-state cyber governance", "org": "MNIT-led", "note": "Steers SLCGP/SSMI grant priorities to state and local jurisdictions." }
   ],
 
   "news": [
-    { "date": "2026-05-22", "title": "Data-center moratorium wave: Minneapolis (6-mo), Rosemount, Nobles County; statewide bill SF 4298", "impact": "Minneapolis City Council imposed a 6-month halt on large data centers (May 22); Rosemount adopted a 1-year moratorium on NEW centers (Apr, not affecting the existing Meta build); Nobles County denied a rezoning (Apr 21); statewide SF 4298 could freeze permitting. Hyperscale momentum is real but politically contested — qualify pipeline carefully.", "tags": ["Data Centers", "Policy"], "ref": 13 },
+    { "date": "2026-06", "title": "Statewide data-center regulations stall at Capitol; new local moratoria continue", "impact": "Proposed statewide rules on hyperscale data centers were halted (~June 12) after pushback from labor unions and industry; the Legislature adjourned without new restrictions, so the Chapter 13 tax framework stands. Local moratoria keep spreading (Lonsdale in May; Inver Grove Heights in late June) alongside the earlier Minneapolis/Rosemount actions. Net effect: state-level tailwind for hyperscale remains intact, but siting risk is now a city/county-by-jurisdiction question — qualify pipeline locally.", "tags": ["Data Centers", "Policy"], "ref": 16 },
+    { "date": "2026-05", "title": "Klobuchar wins DFL gubernatorial endorsement; open-seat race takes shape", "impact": "U.S. Sen. Amy Klobuchar was endorsed by the DFL on the first ballot (May 30) to succeed lame-duck Gov. Walz; GOP field led by House Speaker Lisa Demuth. Primary Aug 11, general Nov 3, 2026. A new administration takes office Jan 2027 — anchor relationships with MNIT career leadership now and prepare for a possible cabinet refresh.", "tags": ["Leadership", "Politics"], "ref": 17 },
     { "date": "2026-05", "title": "Walz signs 2026 supplemental budget; session ends May 17", "impact": "Bipartisan end-of-session deal: ~$1.2B bonding/infrastructure bill, $205M one-time for HCMC, $250M car-tab relief, $125M property-tax relief. Net +$63M GF leaves a projected ~$3.67B balance; funds multi-year legacy-IT modernization and a Governor's Council on the Future AI Economy.", "tags": ["Budget", "AI"], "ref": 14 },
     { "date": "2026-03", "title": "Jon Eichten named permanent MNIT Commissioner & State CIO", "impact": "Tech direction stabilizes under a long-tenured MNIT leader (made permanent Mar 16); re-confirm relationships and priorities with the new CIO's office.", "tags": ["Leadership"], "ref": 3 },
     { "date": "2026-03", "title": "Tarek Tomes becomes University of Minnesota VP for IT & CIO", "impact": "Former state CIO takes the U of M's top tech seat (effective Mar 16) — a warm, Dell-relevant higher-ed relationship to cultivate.", "tags": ["Leadership", "Higher Ed"], "ref": 15 },
-    { "date": "2025-12", "title": "Mayo 'Bold. Forward. Unbound.' Rochester build advances", "impact": "Marquee ~$5B health-tech program with AI, robotics, and digital infrastructure — a strong private-sector Dell account.", "tags": ["Health Tech", "AI"], "ref": 8 },
-    { "date": "2025-06", "title": "Data-center tax law (Chapter 13) signed; large-scale tier added", "impact": "35-year equipment exemption and a new large-scale tier pull hyperscale investment — but electricity exemption ends.", "tags": ["Data Centers", "Policy"], "ref": 4 },
-    { "date": "2025-06", "title": "Governor Walz signs FY2026-27 biennial budget (~$66B GF)", "impact": "Sets the mid-biennium spending frame; opportunity is execution, not a fresh appropriation.", "tags": ["Budget"], "ref": 1 }
+    { "date": "2025-12", "title": "Mayo 'Bold. Forward. Unbound.' Rochester build advances", "impact": "Marquee ~$5B health-tech program with AI, robotics, and digital infrastructure — a strong private-sector Dell account.", "tags": ["Health Tech", "AI"], "ref": 8 }
   ],
 
   "dellActions": [
@@ -159,6 +160,10 @@
     { "label": "CBS Minnesota — Tim Walz to drop out of 2026 gubernatorial race (Jan 5, 2026)", "url": "https://www.cbsnews.com/minnesota/news/tim-walz-drop-out-of-gubernatorial-race-2026/" },
     { "label": "MPR News — Minneapolis City Council imposes six-month halt on data centers (May 22, 2026)", "url": "https://www.mprnews.org/story/2026/05/22/minneapolis-city-council-imposes-six-month-halt-on-data-centers" },
     { "label": "MN House — 2026 Session Daily: end-of-session budget agreement", "url": "https://www.house.mn.gov/sessiondaily/Story/19179" },
-    { "label": "UMN Brief — Tarek Tomes named VP for Information Technology and CIO (Feb 6, 2026)", "url": "https://brief.umn.edu/awards-recognition/tarek-tomes-named-vice-president-information-technology-and-chief-information" }
+    { "label": "UMN Brief — Tarek Tomes named VP for Information Technology and CIO (Feb 6, 2026)", "url": "https://brief.umn.edu/awards-recognition/tarek-tomes-named-vice-president-information-technology-and-chief-information" },
+    { "label": "MPR News — New data center regulations in Minnesota halted after pushback from unions, industry (June 12, 2026)", "url": "https://www.mprnews.org/story/2026/06/12/new-data-center-regulations-in-minnesota-halted-after-pushback-from-unions-industry" },
+    { "label": "NBC News — Sen. Amy Klobuchar jumps into Minnesota governor's race", "url": "https://www.nbcnews.com/politics/2026-election/sen-amy-klobuchar-jumps-minnesota-governors-race-rcna252390" },
+    { "label": "GovTech — Minnesota Promotes Cybersecurity Leader John Israel to CISO", "url": "https://www.govtech.com/workforce/minnesota-promotes-cybersecurity-leader-john-israel-to-ciso" },
+    { "label": "MNIT — Executive Leadership Team", "url": "https://mn.gov/mnit/about-mnit/leadership/" }
   ]
 }

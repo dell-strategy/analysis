@@ -5,7 +5,7 @@
   "name": "Harris County, Texas",
   "slug": "harris-county",
   "hq": "Houston, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The most populous county in Texas — ~4.8M residents across the Houston metro — running its technology through Harris County Universal Services (HCUS), with Commissioners Court controlling a ~$2.8B budget and every major IT contract.",
 
   "snapshot": [
@@ -57,11 +57,12 @@
   ],
 
   "news": [
+    { "date": "2026-05", "title": "FY2026-27 budget projected to open with a $129M-$257M shortfall", "impact": "OMB's May 14, 2026 forecast shows another large deficit for the fiscal year starting Oct 1, 2026; Judge Hidalgo is pressing for efficiencies before service cuts, with the proposed budget due ~Aug 17 and adoption ~Sep 17. A second constrained year running — lead hard with cost-optimization, consolidation, and license rationalization; expect scrutiny on any new spend.", "tags": ["Budget"] },
+    { "date": "2026-05", "title": "Commissioners Court renews Flock ALPR camera contract (~$869K)", "impact": "Approved May 28, 2026 on a 4-0 vote (Hidalgo abstaining) through June 5, 2027, over heavy public-privacy opposition; court signaled it may revisit privacy protections mid-term. Confirms sustained public-safety data/surveillance investment and the data-governance/retention concerns that surround it — relevant context for storage, data-management, and security positioning.", "tags": ["Public Safety", "Procurement", "Data"] },
+    { "date": "2026-06", "title": "Judge Hidalgo proposes county-wide paid mental-health leave policy", "impact": "Brought to Commissioners Court June 2026 to direct offices to draft a mental-health leave policy for ~18,000 county employees not already covered — a workforce/HR-systems signal more than a direct IT buy, but touches HR/benefits process automation.", "tags": ["Workforce"] },
     { "date": "2025-09", "title": "Commissioners Court adopts ~$2.8B FY2026 budget", "impact": "Closed an estimated ~$200M gap on a 3-2 vote; sets the FY26 funding envelope (incl. ~$96.1M HCUS) and signals a fiscally constrained year — lead with cost-optimization and consolidation value.", "tags": ["Budget"] },
     { "date": "2025-09", "title": "County Judge Lina Hidalgo announces she won't seek reelection", "impact": "Top-of-county leadership transition lands in Dec 2026 — expect shifts in priorities and the court's balance; build relationships at the HCUS/administration layer that persist across the change.", "tags": ["Leadership"] },
-    { "date": "2025-07", "title": "Justice modernization RFI (iJIMS) closes", "impact": "RFI No. MAY71425 to replace JWEB across 100+ courts and justice agencies closed July 29, 2025 — track the follow-on solicitation for a large integrated-justice infrastructure and data opportunity.", "tags": ["Justice", "Procurement"] },
-    { "date": "2025-10", "title": "HCUS hosts inaugural Cyber Day for Cybersecurity Awareness Month", "impact": "Signals a maturing security posture and executive attention to cyber — entry point for endpoint, CJIS-aligned, and resilience conversations.", "tags": ["Cybersecurity"] },
-    { "date": "2025-04", "title": "Jesse Dickerman appointed County Administrator", "impact": "New administrative leader (4-1 vote) coordinating budget and operations — a relationship to establish for funding and cross-department technology programs.", "tags": ["Leadership"] }
+    { "date": "2025-07", "title": "Justice modernization RFI (iJIMS) closes", "impact": "RFI No. MAY71425 to replace JWEB across 100+ courts and justice agencies closed July 29, 2025 — track the follow-on solicitation for a large integrated-justice infrastructure and data opportunity.", "tags": ["Justice", "Procurement"] }
   ],
 
   "dellActions": [
@@ -82,6 +83,9 @@
     { "label": "Texas Tribune — Lina Hidalgo won't seek reelection", "url": "https://www.texastribune.org/2025/09/16/lina-hidalgo-harris-county-judge-not-running-for-reelection-2026/" },
     { "label": "KTRH — Commissioners Court appoints new County Administrator (Dickerman)", "url": "https://ktrh.iheart.com/featured/houston-texas-news/content/2025-04-22-commissioners-court-appoints-new-county-administrator/" },
     { "label": "Harris County Purchasing Department", "url": "https://purchasing.harriscountytx.gov/" },
-    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" },
+    { "label": "Community Impact — Early Harris County budget projections show $257M shortfall possibility for FY 2026-27", "url": "https://communityimpact.com/houston/spring-klein/government/2026/05/14/early-harris-county-budget-projections-show-257m-shortfall-possibility-for-fy-2026-27/" },
+    { "label": "My Neighborhood News — Harris County renews Flock camera contract after privacy debate (May 28, 2026)", "url": "https://myneighborhoodnews.com/harris-county-renews-flock-camera-contract-after-lengthy-debate-over-privacy-and-public-safety" },
+    { "label": "Houston Public Media — Hidalgo proposing mental health leave policy for all county employees (June 2026)", "url": "https://www.houstonpublicmedia.org/articles/news/harris-county/2026/06/10/554019/harris-county-employee-mental-health-leave-policy-lina-hidalgo/" }
   ]
 }

@@ -3,7 +3,7 @@
   "name": "Wisconsin",
   "slug": "wisconsin",
   "region": "Midwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A historic AI data-center buildout on the old Foxconn site, a new $111B biennial budget, and a centralized DET procurement motion — Wisconsin is becoming a national AI-infrastructure hub almost overnight.",
 
   "snapshot": [
@@ -117,7 +117,7 @@
   },
 
   "powerStructure": [
-    { "name": "Tony Evers", "title": "Governor", "org": "State of Wisconsin", "note": "Signed the $111.1B 2025–27 budget; champions AI workforce, broadband, and the data-center economic agenda.", "ref": 1 },
+    { "name": "Tony Evers", "title": "Governor", "org": "State of Wisconsin", "note": "Signed the $111.1B 2025–27 budget; champions AI workforce, broadband, and the data-center economic agenda. NOT seeking re-election — 2026 is an open-seat race (primary Aug 11, general Nov 3); a new administration takes office Jan 2027, so expect leadership turnover atop the executive branch. Build relationships at the career/agency (DET) level that will outlast the transition.", "ref": 15 },
     { "name": "Trina Zanow", "title": "State CIO & DET Administrator", "org": "DOA — Division of Enterprise Technology", "note": "25-year state veteran, former DET deputy administrator; owns statewide IT direction and shared services.", "ref": 6 },
     { "name": "Bill Brinkley", "title": "State Chief Information Security Officer", "org": "DOA — DET Security Bureau", "note": "Leads statewide cybersecurity on a NIST 800-53 Rev. 5 baseline and the whole-of-state approach.", "ref": 8 },
     { "name": "Kathy Blumenfeld", "title": "Secretary", "org": "Department of Administration", "note": "DOA leadership; Secretary approval is required on IT purchases over $150K (Exec Order 288).", "ref": 7 },
@@ -125,13 +125,12 @@
   ],
 
   "news": [
-    { "date": "2026-05", "title": "Regents name Renée Wachter Interim President of Universities of Wisconsin", "impact": "Stabilizes leadership of a ~$1.2B-modernization research/AI-infrastructure buyer after Rothman's April firing; permanent-president search underway — fresh executive relationships to build.", "tags": ["Leadership", "Higher Ed"], "ref": 12 },
-    { "date": "2026-04", "title": "Microsoft 'Fairwater' Mount Pleasant AI data center goes live ahead of schedule", "impact": "Phase 1 of 'the world's most powerful AI datacenter' is operational — anchors a regional AI supply-chain and services ecosystem now, not later.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 13 },
+    { "date": "2026-06", "title": "Microsoft declares 'Fairwater' Mount Pleasant datacenter complete and fully operational", "impact": "Microsoft announced June 23, 2026 that construction is finished and the facility is live — Brad Smith calls it 'the world's most powerful supercomputer,' with ~550 full-time staff on-site. A second adjacent facility is under construction (targeting 2028). The anchor AI-infrastructure ecosystem in southeastern Wisconsin is now operating, not planned.", "tags": ["AI Infrastructure", "Data Centers"], "ref": 13 },
+    { "date": "2026-04", "title": "Wisconsin PSC overhauls We Energies data-center tariff; ratepayers shielded from generation costs", "impact": "On Apr 24, 2026 the Public Service Commission required large data centers to pay the full cost of 'bespoke' generation, set 15-year minimum contract terms, and lowered the tariff-eligibility threshold from 500MW to 100MW. Establishes a clearer, more predictable regulatory baseline for the hyperscale buildout driving Dell AI-infrastructure demand.", "tags": ["Data Centers", "Policy", "Energy"], "ref": 14 },
+    { "date": "2026-05", "title": "Regents name Renée Wachter Interim President of Universities of Wisconsin", "impact": "Stabilizes leadership of a ~$1.2B-modernization research/AI-infrastructure buyer after Rothman's April firing; permanent-president search (chaired by Regent Ashok Rai) aims to seat a permanent president by year-end — fresh executive relationships to build.", "tags": ["Leadership", "Higher Ed"], "ref": 12 },
     { "date": "2026-01", "title": "Microsoft proposes $13.3B Mount Pleasant expansion; 15 more data-center buildings approved", "impact": "Sustained multi-billion-dollar AI-infrastructure growth and rising state/local power, permitting, and IT-ecosystem demand.", "tags": ["AI", "Data Centers"], "ref": 3 },
     { "date": "2025-12", "title": "Vantage/Oracle/OpenAI break ground on $15B+ 'Lighthouse' Stargate campus in Port Washington", "impact": "Second hyperscale anchor (~900MW) for AI-infrastructure demand near Milwaukee.", "tags": ["Data Centers", "Stargate"], "ref": 4 },
-    { "date": "2025-09", "title": "Microsoft commits additional ~$4B for a second Wisconsin data center (>$7B total)", "impact": "Doubles down on Wisconsin as a national AI-compute hub.", "tags": ["AI", "Data Centers"], "ref": 2 },
-    { "date": "2025-07", "title": "Governor Evers signs $111.1B 2025–27 biennial budget (2025 Act 15)", "impact": "Sets the two-year fiscal frame, including ~$1.2B UW System modernization.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-06", "title": "NTIA 'BEAD Restructuring Policy Notice' forces changes to Wisconsin's $1B+ broadband program", "impact": "Resets timelines and rules for rural connectivity deployment.", "tags": ["Broadband", "Policy"], "ref": 9 }
+    { "date": "2025-09", "title": "Microsoft commits additional ~$4B for a second Wisconsin data center (>$7B total)", "impact": "Doubles down on Wisconsin as a national AI-compute hub.", "tags": ["AI", "Data Centers"], "ref": 2 }
   ],
 
   "dellActions": [
@@ -155,6 +154,9 @@
     { "label": "WEDC — Governor's Task Force on Workforce and Artificial Intelligence final action plan", "url": "https://wedc.org/gov-evers-announces-governors-task-force-on-workforce-and-artificial-intelligence-releases-final-action-plan/" },
     { "label": "Wisconsin DET — Cybersecurity Grants (SLCGP)", "url": "https://det.wi.gov/Pages/Cybersecurity_Grants.aspx" },
     { "label": "Spectrum News 1 — Interim president of Universities of Wisconsin named (May 8, 2026)", "url": "https://spectrumnews1.com/wi/milwaukee/news/2026/05/08/uw-interim-president" },
-    { "label": "BizTimes — Microsoft starts bringing Mount Pleasant data center online (Apr 2026)", "url": "https://biztimes.com/microsoft-starts-bringing-mount-pleasant-data-center-online/" }
+    { "label": "BizTimes — Microsoft starts bringing Mount Pleasant data center online (Apr 2026)", "url": "https://biztimes.com/microsoft-starts-bringing-mount-pleasant-data-center-online/" },
+    { "label": "Microsoft Source — Microsoft completes construction on first datacenter facility in Mount Pleasant (Jun 23, 2026)", "url": "https://news.microsoft.com/source/2026/06/23/microsoft-completes-construction-on-first-datacenter-facility-in-mount-pleasant-wisconsin" },
+    { "label": "PSC of Wisconsin — Press release: PSC Overhauls We Energies' Data Center Tariff (Apr 24, 2026)", "url": "https://psc.wi.gov/Documents/PressReleases/04.24.2026PressRelease.PDF" },
+    { "label": "NBC News — Wisconsin Gov. Tony Evers won't run for re-election in 2026", "url": "https://www.nbcnews.com/politics/2026-election/wisconsin-gov-tony-evers-wont-run-re-election-rcna220797" }
   ]
 }

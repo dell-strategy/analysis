@@ -3,7 +3,7 @@
   "name": "Iowa",
   "slug": "iowa",
   "region": "Midwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A landmark statewide cloud migration to AWS, a hyperscale data-center boom led by Google and Microsoft, and a new generative-AI policy — Iowa is consolidating and modernizing how it runs and buys technology.",
 
   "snapshot": [
@@ -120,19 +120,19 @@
 
   "powerStructure": [
     { "name": "Kim Reynolds", "title": "Governor", "org": "State of Iowa", "note": "Announced the AWS/Cognizant IT modernization and champions data-center growth and government efficiency (DOGE task force)." },
-    { "name": "Kraig Paulsen", "title": "Director, Dept. of Management", "org": "DOM", "note": "Owns the IT consolidation and cloud-migration agenda; the executive sponsor of the AWS/Cognizant deal.", "ref": 2 },
+    { "name": "Kraig Paulsen", "title": "Director, Dept. of Management (also Director, HHS)", "org": "DOM", "note": "Owns the IT consolidation and cloud-migration agenda; executive sponsor of the AWS/Cognizant deal. On June 19, 2026 Reynolds also named him Director of HHS (dual-hatting both agencies) after the blocked HHS confirmation — watch for divided attention/bandwidth.", "ref": 14 },
     { "name": "Matthew Behrens", "title": "State Chief Information Officer", "org": "DOM-DoIT", "note": "Two-decade state IT veteran; led SOC expansion and broadband distribution. Owns statewide tech direction.", "ref": 10 },
     { "name": "Shane Dwyer", "title": "State Chief Information Security Officer", "org": "DOM-DoIT", "note": "Leads the enterprise information-security program and 24/7 SOC across state government.", "ref": 9 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Reynolds names DOM Director Kraig Paulsen to also lead HHS (June 19, 2026)", "impact": "The executive sponsor of the AWS/Cognizant IT consolidation now dual-hats DOM and Iowa's largest agency (HHS) after the prior HHS director's confirmation was blocked; outgoing director Larry Johnson stays as principal deputy. Expect Paulsen's bandwidth to be split during the Aug 3 cloud cutover — sellers should map influence to CIO Behrens and DoIT leadership, not only the director.", "tags": ["Leadership", "Procurement"], "ref": 14 },
+    { "date": "2026-06", "title": "Open-seat 2026 governor's race set: Republican Zach Lahn vs. Democrat Rob Sand", "impact": "Reynolds is not seeking reelection; the June 2 primary produced an open-seat general election (Lahn vs. State Auditor Sand). A new administration takes office Jan 2027 — confirm whether IT-modernization, cloud, and data-center priorities carry forward before forecasting multi-year motions.", "tags": ["Politics", "Transition"], "ref": 15 },
     { "date": "2026-06-16", "title": "Iowa releases AWS/Cognizant contract details: ~$419.7M vendor cost, 5,495+ servers migrating, explicit AI guardrails", "impact": "Cognizant contract runs through June 2031 (renewable to 2036); ~196 DoIT layoffs Aug 3; Cognizant needs DOM approval before deploying AI and cannot train on state data without written consent — a locked multi-year managed-services posture sellers must align to.", "tags": ["Cloud", "Modernization", "AI"], "ref": 13 },
     { "date": "2026-06-09", "title": "Gov. Reynolds announces AWS + Cognizant statewide IT modernization", "impact": "Executive-branch IT moves to AWS-managed cloud operated by Cognizant; retires dozens of data centers and thousands of servers, ~$525M projected 10-yr savings.", "tags": ["Cloud", "Modernization"], "ref": 2 },
     { "date": "2026-01", "title": "Gov. Kim Reynolds proposed a $9.67B general-fund FY2027 budget", "impact": "+1.9% vs FY2026 general-fund appropriations; $849.9M in reserve funds and a $2.70B Taxpayer Relief Fund balance. Education (56%) and health and human services (28%) dominate spending.", "tags": ["Budget"], "ref": 12 },
     { "date": "2025-07", "title": "$400M Empower Rural Iowa Broadband round (NOFA #009) opens", "impact": "Latest BEAD-supported grant round drives rural network and edge buildout across Iowa.", "tags": ["Broadband", "Grants"], "ref": 7 },
-    { "date": "2025-06", "title": "Google announces $7B Iowa expansion (Cedar Rapids + Council Bluffs)", "impact": "Major AI/cloud infrastructure investment; first Cedar Rapids building due 2026, reinforcing Iowa as a national hyperscale hub.", "tags": ["Data Centers", "AI"], "ref": 4 },
-    { "date": "2025-05", "title": "Microsoft advances sixth West Des Moines data center", "impact": "Cumulative Microsoft investment exceeds $6B; sustained hyperscale buildout in central Iowa.", "tags": ["Data Centers"], "ref": 5 },
-    { "date": "2025-04", "title": "Technology Association of Iowa stands up AI Policy Subcommittee", "impact": "Industry input begins shaping Iowa AI legislation and innovation posture.", "tags": ["AI", "Policy"], "ref": 8 }
+    { "date": "2025-06", "title": "Google announces $7B Iowa expansion (Cedar Rapids + Council Bluffs)", "impact": "Major AI/cloud infrastructure investment; first Cedar Rapids building due 2026, reinforcing Iowa as a national hyperscale hub.", "tags": ["Data Centers", "AI"], "ref": 4 }
   ],
 
   "dellActions": [
@@ -156,6 +156,8 @@
     { "label": "StateScoop — Iowa officially names Matthew Behrens statewide CIO", "url": "https://statescoop.com/iowa-cio-matthew-behrens/" },
     { "label": "Iowa DAS — State of Iowa Cooperative Purchasing Program", "url": "https://das.iowa.gov/state-employees/procurement/cooperative-purchasing-program" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "The Gazette — New Iowa IT outsourcing contracts detail costs, savings and AI rules (June 16, 2026)", "url": "https://www.thegazette.com/news/state/new-iowa-it-outsourcing-contracts-detail-costs-savings-and-ai-rules/article_b3263010-fad6-4087-b246-8a4895543685.html" }
+    { "label": "The Gazette — New Iowa IT outsourcing contracts detail costs, savings and AI rules (June 16, 2026)", "url": "https://www.thegazette.com/news/state/new-iowa-it-outsourcing-contracts-detail-costs-savings-and-ai-rules/article_b3263010-fad6-4087-b246-8a4895543685.html" },
+    { "label": "Office of the Governor — Reynolds appoints Director of Iowa HHS (Kraig Paulsen; June 19, 2026)", "url": "https://governor.iowa.gov/press-release/2026-06-19/gov-reynolds-appoints-director-iowa-department-health-and-human-services" },
+    { "label": "Iowa Capital Dispatch — Feenstra concedes to Zach Lahn in 2026 Iowa GOP gubernatorial primary (June 2, 2026)", "url": "https://iowacapitaldispatch.com/2026/06/02/rep-randy-feenstra-concedes-to-zach-lahn-in-2026-iowa-gop-gubernatorial-primary/" }
   ]
 }

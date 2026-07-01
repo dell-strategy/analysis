@@ -5,7 +5,7 @@
   "name": "San Antonio, Texas",
   "slug": "san-antonio-texas",
   "hq": "San Antonio, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The 7th-largest U.S. city and the anchor of 'Cyber City USA' — San Antonio runs city technology through its Information Technology Services Department (ITSD), sits at the center of a federal and state cyber cluster (NSA Texas, 16th Air Force/AFCYBER, the new Texas Cyber Command), and adopted a ~$4B FY2026 budget with $130M+ in technology funding.",
 
   "snapshot": [
@@ -47,18 +47,20 @@
   },
 
   "powerStructure": [
-    { "name": "Erik Walsh", "title": "City Manager", "note": "Leads city operations, organizational development, budget, fiscal policy, and contracts. The top of the house — the executive owning budget priorities and the SmartSA partnership direction." },
+    { "name": "Gina Ortiz Jones", "title": "Mayor", "note": "Elected in June 2025 as San Antonio's first new mayor in years; a former Air Force intelligence officer and ex-Under Secretary of the Air Force. Sets political priorities and joined Bloomberg Philanthropies' Mayors AI Forum in 2026, signaling an AI/technology-forward agenda. In a council-manager city the mayor drives policy direction while the City Manager runs operations." },
+    { "name": "Erik Walsh", "title": "City Manager", "note": "Leads city operations, organizational development, budget, fiscal policy, and contracts, with unilateral authority to sign contracts up to $2.5M. The top of the administrative house — the executive owning budget priorities and the SmartSA partnership direction; presented the FY2027 budget amid a projected two-year deficit." },
     { "name": "Marshall Ramsey", "title": "Chief Information Officer (ITSD)", "note": "Named CIO in May 2026, succeeding Craig Hopkins (CIO 2017-2026). Prior CIO at LA County Public Health and Santa Barbara County; UT Austin computer-science background. The primary IT relationship and owner of citywide technology and digital transformation." },
     { "name": "Shannon Lawson", "title": "Chief Information Security Officer & ARSOC Director", "note": "Reports to the CIO; also directs the Alamo Regional Security Operations Center. Prior assistant CIO/CISO for Phoenix and CISO/CTO for the State of Alaska. Owns the city's security strategy, policy, and SOC operations." },
     { "name": "Texas Cyber Command (TJ White)", "title": "State cyber agency, San Antonio HQ", "note": "Not a city office, but a major adjacent buying center and partner — the largest state-run cyber agency, HQ'd in San Antonio at UTSA, scaling staff and capabilities. Track for separate state-funded security demand in the same metro." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "City Manager Walsh presents FY2027 budget amid projected ~$158M two-year deficit; first property-tax-rate increase proposed in 33 years", "impact": "Slowed growth and a ~2.1% drop in taxable values push the city toward the maximum tax increase allowed without a vote plus early cost cuts (delayed police hires, fee increases). A tighter fiscal window pressures discretionary IT spend — lead with cost-optimization, consolidation, and as-a-service TCO framing; the budget is finalized in September.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "San Antonio advances an AI Integration Strategy and Mayor Jones joins Bloomberg's Mayors AI Forum", "impact": "Council (CCR from CM Whyte) pushes a citywide AI strategy for public services, efficiency, and public safety, under Texas's new TRAIGA AI-disclosure law; the city already pilots Microsoft Copilot and AI for contract review and translation. An opening for governed AI infrastructure, data-platform, and secure-compute positioning tied to ITSD and the Office of Innovation.", "tags": ["AI", "Smart City"] },
     { "date": "2026-05", "title": "Marshall Ramsey named San Antonio CIO, succeeding retiring Craig Hopkins", "impact": "New IT leadership over a 40+ department, 500+ facility estate. Re-introduce Dell and rebuild the top IT relationship; new CIOs often reassess platforms and partners early.", "tags": ["Leadership"] },
     { "date": "2026-03", "title": "Texas Cyber Command formally stands up in San Antonio under Vice Adm. (Ret.) T.J. White", "impact": "Largest state-run cyber agency anchors in the metro, scaling toward ~130 staff. A new state-funded security buying center adjacent to the city account — map it separately.", "tags": ["Cybersecurity"] },
-    { "date": "2025-09", "title": "Council adopts balanced ~$4B FY2026 budget with $130M+ in technology funding", "impact": "ITSD funded at ~$94M plus ~$32M citywide tech infrastructure (part of a 6-yr ~$167M modernization). Confirms multi-year infrastructure and modernization spend — an entry point for ISG, security, and services.", "tags": ["Budget"] },
-    { "date": "2025-10", "title": "Texas Cyber Command launches at UT San Antonio", "impact": "Reinforces San Antonio as 'Cyber City USA' alongside NSA Texas and AFCYBER. Frames a cyber-dense ecosystem the city participates in — useful context for security positioning.", "tags": ["Cybersecurity", "Ecosystem"] },
-    { "date": "2025-09", "title": "Shannon Lawson named San Antonio CISO and ARSOC director", "impact": "Experienced security leader (ex-Phoenix, ex-Alaska) now owns the city's security agenda and regional SOC. Build the CISO relationship for security-operations, endpoint, and risk-tooling motions.", "tags": ["Cybersecurity", "Leadership"] }
+    { "date": "2025-11", "title": "Shannon Lawson named San Antonio CISO and ARSOC director", "impact": "Experienced security leader (ex-Phoenix, ex-Alaska) now owns the city's security agenda and regional SOC. Build the CISO relationship for security-operations, endpoint, and risk-tooling motions.", "tags": ["Cybersecurity", "Leadership"] },
+    { "date": "2025-09", "title": "Council adopts balanced ~$4B FY2026 budget with $130M+ in technology funding", "impact": "ITSD funded at ~$94M plus ~$32M citywide tech infrastructure (part of a 6-yr ~$167M modernization). Confirms multi-year infrastructure and modernization spend — an entry point for ISG, security, and services.", "tags": ["Budget"] }
   ],
 
   "dellActions": [
@@ -79,6 +81,11 @@
     { "label": "Office of the Texas Governor — Abbott Signs Texas Cyber Command Into Law in San Antonio", "url": "https://gov.texas.gov/news/post/governor-abbott-signs-texas-cyber-command-into-law-in-san-antonio" },
     { "label": "AFCEA SIGNAL — NSA Texas Is Open for Cyber Business", "url": "https://www.afcea.org/signal-media/cyber-edge/nsa-texas-open-cyber-business" },
     { "label": "San Antonio Report — San Antonio's road map to becoming a Smart City (SmartSA)", "url": "https://sanantonioreport.org/san-antonio-smart-cities-roadmap/" },
-    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" },
+    { "label": "San Antonio Report — San Antonio pitches biggest tax hike allowed without a public vote (FY2027, ~$158M deficit)", "url": "https://sanantonioreport.org/san-antonio-pitches-biggest-property-tax-increase-allowed/" },
+    { "label": "KSAT — Facing deficit, San Antonio could raise property tax rate for first time in 33 years", "url": "https://www.ksat.com/news/local/2026/05/07/facing-deficit-san-antonio-could-raise-property-tax-rate-for-first-time-in-33-years/" },
+    { "label": "City of San Antonio — Councilmember Whyte requests AI Integration Strategy", "url": "https://www.sa.gov/Directory/News-Releases/Councilmember-Whyte-requests-AI-Integration-Strategy" },
+    { "label": "San Antonio Report — Mayor Gina Ortiz Jones is preparing San Antonio for AI growth (Bloomberg Mayors AI Forum)", "url": "https://sanantonioreport.org/qa-mayor-gina-ortiz-jones-san-antonio-artificial-intelligence/" },
+    { "label": "GovTech Insider — Marshall Ramsey Named CIO for City of San Antonio", "url": "https://insider.govtech.com/texas/news/marshall-ramsey-named-cio-for-city-of-san-antonio" }
   ]
 }

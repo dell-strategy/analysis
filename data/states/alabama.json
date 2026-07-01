@@ -3,7 +3,7 @@
   "name": "Alabama",
   "slug": "alabama",
   "region": "Southeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A record state budget, cybersecurity newly codified under a strengthened CIO, a fast-growing AI data-center footprint, and the nation's defense and space-command center landing at Redstone — Alabama is a rising technology buyer.",
 
   "snapshot": [
@@ -45,7 +45,7 @@
       "Figures are annual FY2026 totals; Alabama does not budget on a biennial cycle.",
       "OIT is largely chargeback-funded via a Telecommunications Revolving Fund (Act 2025-369), so IT dollars are not a single appropriated line — confirm the owning agency before forecasting.",
       "BEAD is federal pass-through funding administered by ADECA, separate from the state General Fund.",
-      "FY2027 (governor's proposed, per NASBO): $3.7B General Fund (non-earmarked), -0.8% vs FY2026; $10.5B Education Trust Fund (+5.8%). Disciplined posture with level agency funding, a 2% pay raise, and a $385.3M General Fund rainy day balance."
+      "FY2027 (signed by Gov. Ivey April 9-10, 2026, effective Oct 1, 2026): ~$3.7B General Fund and ~$10.5B Education Trust Fund (largest in state history, ~+6%), with a 2% pay raise for state workers and teachers and CHOOSE Act school-choice funding rising to ~$250M. Disciplined posture; no proration declared during Ivey's tenure."
     ]
   },
 
@@ -127,13 +127,12 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "OIT hosts Alabama's inaugural Public Sector Cybersecurity Summit (Montgomery, June 4)", "impact": "First state-run public-sector cyber summit (OIT + GovTech) signals a maturing whole-of-state security posture under CIO Urquhart and CISO Smith — a relationship and managed-security entry point.", "tags": ["Cybersecurity", "OIT"], "ref": 10 },
     { "date": "2026-06", "title": "Google announces $1.5B Jackson County data-center expansion (2026–27)", "impact": "Reinforces Alabama as a national AI-infrastructure hub; strong ISG/AI tailwind.", "tags": ["Data Centers", "AI"], "ref": 6 },
-    { "date": "2026-01", "title": "Gov. Ivey proposed a $3.7B general-fund FY2027 budget", "impact": "$3.7B non-earmarked General Fund, -0.8% vs FY2026, plus a $10.5B Education Trust Fund (+5.8%, largest in state history); disciplined posture with a 2% pay raise and a $385.3M General Fund rainy day balance.", "tags": ["Budget"], "ref": 9 },
+    { "date": "2026-05", "title": "Digi Power X signs $1.1B, 10-year Cerebras AI colocation deal in Columbiana", "impact": "40MW AI campus (15MW by Dec 2026, full 40MW by Q1 2027; up to $2.5B with renewals) adds another Alabama AI-compute site beyond the hyperscalers — pipeline for ISG/AI-infrastructure and ecosystem partners.", "tags": ["Data Centers", "AI Infrastructure"], "ref": 11 },
+    { "date": "2026-04", "title": "Gov. Ivey signs FY2027 General Fund and Education Trust Fund budgets", "impact": "Signed April 9-10, 2026 (effective Oct 1, 2026): ~$3.7B General Fund and ~$10.5B ETF (largest ever, ~+6%), with 2% pay raises and CHOOSE Act funding up to ~$250M — a stable, record spending base for state and ed-tech buyers.", "tags": ["Budget"], "ref": 9 },
     { "date": "2026-04", "title": "U.S. Space Command's first personnel arrive at Redstone Arsenal", "impact": "Phased HQ move begins (~1,400 positions); deepens Huntsville defense/space compute demand.", "tags": ["Defense", "Space"], "ref": 7 },
-    { "date": "2026-03", "title": "NTIA approves Alabama's final BEAD plan — $460M, 63 projects", "impact": "Broadband deployment to ~92,000 unserved locations via ADECA; downstream edge/connectivity work.", "tags": ["Broadband"], "ref": 8 },
-    { "date": "2026-02", "title": "Gov. Ivey forms the Technology Quality Assurance Board", "impact": "Statewide AI/emerging-tech standards (NIST AI RMF) — demand for governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 3 },
-    { "date": "2025-05", "title": "Act 2025-369 (HB207) codifies cybersecurity under OIT/CIO", "impact": "Centralizes security and tech-acquisition approval authority in OIT.", "tags": ["Cybersecurity", "Governance"], "ref": 2 },
-    { "date": "2025-05", "title": "Gov. Ivey signs record FY2026 budgets", "impact": "$3.7B General Fund and ~$10B ETF effective Oct 1, 2025 — a record general-government and ed-tech spending base.", "tags": ["Budget"], "ref": 1 }
+    { "date": "2026-03", "title": "NTIA approves Alabama's final BEAD plan — $460M, 63 projects", "impact": "Broadband deployment to ~92,000 unserved locations via ADECA; downstream edge/connectivity work.", "tags": ["Broadband"], "ref": 8 }
   ],
 
   "dellActions": [
@@ -153,6 +152,8 @@
     { "label": "Google Blog — Alabama data center investment (June 2026)", "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/" },
     { "label": "Military Times — U.S. Space Command phased HQ relocation to Alabama", "url": "https://www.militarytimes.com/news/your-military/2026/03/27/us-space-command-provides-update-on-phased-headquarters-relocation-to-alabama/" },
     { "label": "Office of the Governor — Ivey announces final BEAD approval, $460M award", "url": "https://governor.alabama.gov/newsroom/2026/03/governor-ivey-announces-approval-of-final-bead-broadband-proposal-awards-460-million-to-expand-access-to-high-speed-internet/" },
-    { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" }
+    { "label": "Alabama Reporter — Gov. Ivey signs Alabama's General Fund, Education Trust Fund bills (FY2027, April 2026)", "url": "https://www.alreporter.com/2026/04/10/gov-ivey-signs-alabamas-general-fund-education-trust-fund-bills/" },
+    { "label": "Alabama OIT / GovTech — Alabama Public Sector Cybersecurity Summit 2026 (Montgomery, June 4)", "url": "https://events.govtech.com/Alabama-Public-Sector-Cybersecurity-Summit" },
+    { "label": "Data Center Dynamics — Cerebras signs 40MW at Digi Power X data center in Alabama (May 2026)", "url": "https://www.datacenterdynamics.com/en/news/cerebras-signs-on-for-40mw-of-capacity-at-digi-power-x-data-center-in-alabama/" }
   ]
 }

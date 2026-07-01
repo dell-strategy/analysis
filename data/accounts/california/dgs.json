@@ -5,7 +5,7 @@
   "name": "California Dept of General Services (DGS)",
   "slug": "dgs",
   "hq": "Sacramento, CA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "California's central business-services agency and the gateway for how state entities buy: DGS runs statewide procurement (leveraged procurement agreements, CMAS, statewide contracts), grants delegated purchasing authority, and manages the state's fleet and real estate.",
 
   "snapshot": [
@@ -48,17 +48,21 @@
   },
 
   "powerStructure": [
-    { "name": "Ana M. Lasso", "title": "Director, DGS", "note": "Appointed by Gov. Newsom in March 2021; leads the central business-services agency. The top relationship for the DGS account." },
-    { "name": "Elizabeth Williamson", "title": "Chief Deputy Director, DGS", "note": "Appointed October 2025; second-in-command across DGS operations." },
-    { "name": "Angela Shell", "title": "Deputy Director, Procurement Division & Chief Procurement Officer", "note": "Has led PD/CPO since 2017 (reappointed 2021) — owns LPAs, CMAS, statewide contracts, and delegated authority. The core procurement relationship." },
+    { "name": "Ana M. Lasso", "title": "Director, DGS", "note": "Appointed by Gov. Newsom in March 2021; leads the central business-services agency. The top relationship for the DGS account. Confirmed on the DGS executive-staff page as of June 2026." },
+    { "name": "Elizabeth Williamson", "title": "Chief Deputy Director, DGS", "note": "Appointed October 2025. DGS lists two Chief Deputy Directors (Williamson and Jason Kenney) as of June 2026 — second-in-command tier across DGS operations." },
+    { "name": "Jason Kenney", "title": "Chief Deputy Director, DGS", "note": "Long-tenured DGS executive (prior Deputy Director, Real Estate Services); appears as a Chief Deputy Director on the current executive-staff page alongside Williamson." },
+    { "name": "Angela Shell", "title": "Deputy Director, Procurement Division & Chief Procurement Officer", "note": "Has led PD/CPO since 2017 (reappointed 2021), still current as of June 2026 — owns LPAs, CMAS, statewide contracts, and delegated authority. The core procurement relationship." },
+    { "name": "Gary Renslo", "title": "Chief Information Officer, DGS (Enterprise Technology Solutions)", "note": "DGS's own CIO — oversees the department's applications, infrastructure, and enterprise architecture (distinct from statewide CDT). Relevant for DGS's internal IT and Cal eProcure-adjacent modernization." },
     { "name": "Statewide Procurement Oversight & Consulting (SPOC)", "title": "Delegated purchasing authority unit", "note": "Formerly the Purchasing Authority Unit; accredits departments to buy on their own — shapes central vs. department-level deal flow." },
     { "name": "California Dept of Technology (CDT)", "title": "Statewide IT procurement & project authority", "note": "Separate agency, but holds authority over reportable/non-delegated IT projects — larger IT deals typically touch both DGS and CDT." }
   ],
 
   "news": [
-    { "date": "2026-01", "title": "Governor's proposed 2026-27 budget funds statewide digital services and Digital ID as a service through DGS-related revolving funds", "impact": "Signals continued investment in identity and digital-service infrastructure routed through DGS — a track to align solutions to. Confirm final figures in the May Revision and enacted budget.", "tags": ["Budget", "Digital Services"] },
-    { "date": "2025-10", "title": "Elizabeth Williamson appointed Chief Deputy Director of DGS", "impact": "New second-in-command across DGS operations — refresh the relationship map at the top of the agency.", "tags": ["Leadership"] },
-    { "date": "2026-04", "title": "DGS executive org chart updated (as of April 30, 2026) with Lasso as Director and Shell leading Procurement", "impact": "Stable senior procurement leadership — Shell's long tenure at CPO is the durable PD relationship for the account.", "tags": ["Leadership"] }
+    { "date": "2026-03", "title": "Executive Order N-5-26 directs DGS and CDT to develop AI vendor certifications for state contracting (120-day deliverable, ~late July 2026)", "impact": "Highly relevant to any AI-capable technology vendor: DGS + CDT must recommend new vendor certifications (attesting to safeguards against illegal content, harmful model bias, and civil-rights/civil-liberties impacts) that may be folded into state contracting. Watch for the recommendations landing ~late July 2026 and how they attach to LPAs/CMAS and new solicitations; align Dell AI-related products/attestations early. Recommendations are subject to gubernatorial approval before adoption.", "tags": ["AI", "Procurement", "Policy"] },
+    { "date": "2026-05", "title": "Cal eProcure modernization pushed as part of Newsom's procurement-reform agenda (EO N-30-25)", "impact": "Ongoing pressure to redesign Cal eProcure into a more e-commerce-like platform (jointly with CDT) surfaces DGS as the owner of the state's supplier-facing procurement front door. A next-gen portal build/procurement would itself be an opportunity and would reshape supplier registration, bid visibility, and LPA/CMAS search. Track for scope and any solicitation.", "tags": ["Procurement", "Modernization"] },
+    { "date": "2026-05", "title": "DGS Procurement Division continues SB/DVBE onboarding outreach (e.g., May 13, 2026 'Next Steps to Contracting with California' webinar)", "impact": "Reinforces the 25% Small Business / 3% DVBE participation goals departments must hit — relevant to partner/reseller and teaming strategy on California deals routed through DGS vehicles.", "tags": ["SB/DVBE", "Procurement"] },
+    { "date": "2026-01", "title": "Governor's proposed 2026-27 budget funds statewide digital services and Digital ID as a service through DGS-related revolving funds", "impact": "Signals continued investment in identity and digital-service infrastructure routed through DGS — a track to align solutions to. Confirm final figures in the enacted budget.", "tags": ["Budget", "Digital Services"] },
+    { "date": "2025-10", "title": "Elizabeth Williamson appointed Chief Deputy Director of DGS", "impact": "New second-in-command across DGS operations — refresh the relationship map at the top of the agency.", "tags": ["Leadership"] }
   ],
 
   "dellActions": [
@@ -75,6 +79,13 @@
     { "label": "California DGS — Apply for California Multiple Award Schedules (CMAS)", "url": "https://www.dgs.ca.gov/PD/Services/Page-Content/Procurement-Division-Services-List-Folder/Apply-for-California-Multiple-Award-Schedules-CMAS" },
     { "label": "California DGS — Executive Staff", "url": "https://www.dgs.ca.gov/About/Executive-Staff-Page" },
     { "label": "California DGS — Ana Lasso, Director", "url": "https://www.dgs.ca.gov/About/Executive-Staff-Page/Ana-Lasso" },
+    { "label": "California DGS — Angela Shell, Deputy Director/CPO, Procurement", "url": "https://www.dgs.ca.gov/About/Executive-Staff-Page/Angela-Shell" },
+    { "label": "California DGS — Gary Renslo, Chief Information Officer", "url": "https://www.dgs.ca.gov/About/Executive-Staff-Page/Gary-Renslo" },
+    { "label": "California DGS — Jason Kenney, Chief Deputy Director", "url": "https://www.dgs.ca.gov/About/Executive-Staff-Page/Jason-Kenney" },
+    { "label": "Ropes & Gray — Newsom EO N-5-26: AI vendor certification & procurement framework (Mar 30, 2026)", "url": "https://www.ropesgray.com/en/insights/alerts/2026/04/newsom-signs-executive-order-establishing-ai-vendor-certification-and-procurement-framework" },
+    { "label": "Morgan Lewis — California EO expands AI oversight through state procurement", "url": "https://www.morganlewis.com/pubs/2026/04/california-executive-order-expands-ai-oversight-through-state-procurement" },
+    { "label": "GovTech Insider — 'Let's Fix Cal eProcure' (procurement-reform / EO N-30-25)", "url": "https://insider.govtech.com/california/news/lets-fix-cal-eprocure-as-part-of-the-governors-procurement-reform-efforts" },
+    { "label": "California DGS PD — Next Steps to Contracting with California (SB/DVBE, 5/13/26)", "url": "https://www.dgs.ca.gov/PD/Events/Page-Content/Procurement-Division-Events-List-Folder/Next-Steps-to-Contracting-with-the-State-of-California-5-13-26" },
     { "label": "CDT — Statewide Technology Procurement", "url": "https://www.cdt.ca.gov/project-delivery/statewide-technology-procurement/" },
     { "label": "California Governor's Budget — ebudget.ca.gov", "url": "https://ebudget.ca.gov/budget/m/2026-27/BudgetDetail" }
   ]

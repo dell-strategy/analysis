@@ -5,7 +5,7 @@
   "name": "Fort Worth, Texas",
   "slug": "fort-worth-texas",
   "hq": "Fort Worth, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "One of the fastest-growing big cities in the US — Fort Worth runs a ~$3.1B all-funds budget and centralizes technology in its IT Solutions Department, buying through Texas cooperative contracts to serve a population pushing past 1 million.",
 
   "snapshot": [
@@ -55,10 +55,12 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Fort Worth proposes data-center regulations (noise, water, zoning, incentives); votes set for July 8 (Zoning) and Aug 11 (Council)", "impact": "City moves to govern the regional data-center boom with setbacks, closed-loop cooling mandates, and a $500M minimum-investment incentive threshold — shaping how AI/compute capacity is sited near the city, though the builds are private, not city procurement.", "tags": ["AI", "Data Center", "Ecosystem"] },
+    { "date": "2026-06", "title": "Ethics experts urge Mayor Mattie Parker to abstain from data-center votes and increase transparency", "impact": "Data-center policy becomes politically sensitive; expect closer scrutiny and slower decisions on siting and incentives around the city.", "tags": ["Ecosystem", "Policy"] },
+    { "date": "2026-05", "title": "Fort Worth pursues budget-cut plan to close ~$49M FY2027 shortfall; balanced budget due by August", "impact": "City Manager asked departments for 1% and 3% cut options — tighter scrutiny of new and recurring IT spend; lead with cost-efficiency, lifecycle value, and co-op pricing.", "tags": ["Budget"] },
     { "date": "2026-04", "title": "Fort Worth forecasts ~$49M General Fund shortfall for FY2027", "impact": "Tighter scrutiny of new and recurring IT spend; lead with cost-efficiency, lifecycle value, and co-op pricing.", "tags": ["Budget"] },
     { "date": "2026-01", "title": "Data centers and AI projects headline Fort Worth's 2026 project list", "impact": "Regional AI/data-center buildout reshapes the tech ecosystem, workforce, and infrastructure demand around the city.", "tags": ["AI", "Ecosystem"] },
-    { "date": "2025-09", "title": "City Council adopts ~$3.09B FY2026 budget; tax rate cut to $0.6700", "impact": "Defines the FY2026 spending envelope (General Fund ~$1.11B) that city technology buys draw from.", "tags": ["Budget"] },
-    { "date": "2025-01", "title": "Fort Worth expands its AI/GenAI policy and governance framework", "impact": "Formal AI governance and broad departmental adoption point to downstream AI-ready compute, data, and endpoint needs.", "tags": ["AI"] }
+    { "date": "2025-09", "title": "City Council adopts ~$3.09B FY2026 budget; tax rate cut to $0.6700", "impact": "Defines the FY2026 spending envelope (General Fund ~$1.11B) that city technology buys draw from.", "tags": ["Budget"] }
   ],
 
   "dellActions": [
@@ -74,6 +76,10 @@
     { "label": "City of Fort Worth — FY2026 Budget", "url": "https://www.fortworthtexas.gov/departments/the-fwlab/budget/fy2026" },
     { "label": "Hoodline — Fort Worth Council approves $3.09B FY2026 budget", "url": "https://hoodline.com/2025/09/fort-worth-city-council-approves-3-09-billion-budget-for-fy2026-aiming-for-steady-services-and-tax-relief-amid-population-growth/" },
     { "label": "Community Impact — Fort Worth faces $49M FY2026-27 shortfall", "url": "https://communityimpact.com/dallas-fort-worth/keller-roanoke-northeast-fort-worth/government/2026/04/08/city-of-fort-worth-faces-49m-budget-shortfall-for-fiscal-year-2026-27/" },
+    { "label": "Community Impact — Fort Worth proposes budget cuts plan amid $49M shortfall (May 2026)", "url": "https://communityimpact.com/dallas-fort-worth/keller-roanoke-northeast-fort-worth/government/2026/05/07/fort-worth-proposes-budget-cuts-plan-in-wake-of-projected-49m-shortfall/" },
+    { "label": "Fort Worth Inc. — City moves to tighten data-center rules (June 2026)", "url": "https://fortworthinc.com/real-estate/fort-worth-moves-to-tighten-rules-on-data-center-development/" },
+    { "label": "Fort Worth Report — Ethics experts: mayor should abstain from data-center votes (June 2026)", "url": "https://fortworthreport.org/2026/06/24/ethics-experts-fort-worth-mayor-should-abstain-from-data-center-votes-urge-transparency/" },
+    { "label": "Kevin Gunn — CTO, City of Fort Worth (LinkedIn)", "url": "https://www.linkedin.com/in/kevin-gunn-bb657912/" },
     { "label": "Fort Worth Inc. — How Fort Worth is using AI in city government", "url": "https://fortworthinc.com/commentary/artificial-intelligence-is-coming-to-local-government-%E2%80%94-fort/" },
     { "label": "City of Fort Worth — City Manager Jay Chapa", "url": "https://www.fortworthtexas.gov/departments/city-manager/city-manager-contacts/chapa" },
     { "label": "City of Fort Worth — Purchasing", "url": "https://www.fortworthtexas.gov/departments/finance/purchasing" },

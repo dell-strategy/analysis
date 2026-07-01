@@ -3,7 +3,7 @@
   "name": "Rhode Island",
   "slug": "rhode-island",
   "region": "Northeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A small, centralized state moving fast: a Workday ERP cutover, a post-RIBridges security rebuild, a just-released statewide AI roadmap, and $108.7M in BEAD broadband — all routed through one IT division and one purchasing office.",
 
   "snapshot": [
@@ -111,18 +111,18 @@
   "powerStructure": [
     { "name": "Daniel McKee", "title": "Governor", "org": "State of Rhode Island", "note": "Signed the $15.2B FY2027 budget June 12, 2026; issued EO 24-06 standing up the AI Task Force and DAAI Center of Excellence. Political-continuity risk: trailing in the Sept 8, 2026 Democratic primary and denied the state party endorsement June 20, 2026 — a new administration could reshuffle ETSS/IT leadership in 2027.", "ref": 5 },
     { "name": "Brian Tardiff", "title": "Chief Digital Officer & State CIO", "org": "ETSS / Dept. of Administration", "note": "Leads ETSS; called 2025 an 'unprecedented' year of project delivery.", "ref": 3 },
+    { "name": "Nathan \"Nate\" Loura", "title": "Chief Information Security Officer (CISO)", "org": "ETSS / Dept. of Administration", "note": "State CISO leading the post-RIBridges security program; 22-year RI Air National Guard veteran. Public-source LinkedIn/event listings; confirm current title directly before engaging.", "ref": 12 },
     { "name": "Scott Gausland", "title": "Lead, Data/Analytics/AI Center of Excellence", "org": "ETSS (DAAI CoE)", "note": "Runs the state's innovation hub for data, analytics, and AI projects.", "ref": 4 },
     { "name": "Jim Langevin", "title": "Chair, AI Task Force", "org": "RIC Institute for Cybersecurity & Emerging Technologies", "note": "Former U.S. Representative and cyber leader; shaped the Jan 2026 AI roadmap.", "ref": 6 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "RI Democratic Party declines to endorse McKee at June 20 convention", "impact": "Split convention vote (McKee 81, Foulkes 75, short of the 84 needed) left the gubernatorial race unendorsed — a first for a sitting governor. With Foulkes leading polls and local committees ahead of the Sept 8/9 primary, a 2027 administration change could reshuffle ETSS/DOA leadership. Relationship-continuity risk to monitor.", "tags": ["Leadership", "Politics"], "ref": 13 },
+    { "date": "2026-04", "title": "Lawmakers introduce post-RIBridges cybersecurity bill (2026-S 2638 / H 7509)", "impact": "Sen. Victoria Gu and Rep. Lauren Carson's bill would modernize the 2015 Identity Theft Protection Act — requiring risk-based security programs aligned to recognized frameworks (e.g., NIST CSF) and timely breach notification to ETSS. Status pending as of late June; if enacted, raises the compliance/security baseline for agencies and vendors.", "tags": ["Cybersecurity", "Legislation"], "ref": 14 },
     { "date": "2026-06-12", "title": "Gov. McKee signs $15.2B FY2027 budget — largest in state history", "impact": "Highest budget ever (~$900M above FY2026); includes ~$20M for IT, personnel, and resources to keep Rhode Islanders enrolled in Medicaid/SNAP amid federal changes — an eligibility-systems modernization angle. FY begins July 1, 2026.", "tags": ["Budget"], "ref": 11 },
     { "date": "2026-02", "title": "ETSS more than doubles completed projects in 2025 (114 vs. 46)", "impact": "Signals a sustained modernization wave — infrastructure, endpoint, and lifecycle demand across executive agencies.", "tags": ["Modernization"], "ref": 3 },
     { "date": "2026-01", "title": "Rhode Island releases its statewide AI roadmap", "impact": "Task Force prioritizes government AI pilots and upskilling over heavy regulation — an opening for governed, private AI.", "tags": ["AI", "Strategy"], "ref": 6 },
-    { "date": "2026-01", "title": "Gov. McKee proposes ~$14.9B FY2027 budget (incl. $19.3M IT for Medicaid/SNAP)", "impact": "Tech spend embedded in agency programs; benefit-systems IT is a funded near-term need.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2026-01", "title": "Gov. McKee proposed a $5.95B general-fund FY2027 budget", "impact": "$14.86B all funds, +3.6% vs FY2026; thin $0.8M free surplus with a $307M stabilization fund balance. Funds IT and staff to administer Medicaid and SNAP in response to OBBBA.", "tags": ["Budget"], "ref": 10 },
-    { "date": "2025-11", "title": "Workday payroll/HCM goes live, completing the ERP cutover", "impact": "Retires aging mainframe systems; downstream integration and infrastructure work follows in hyper-care.", "tags": ["ERP", "Modernization"], "ref": 3 },
-    { "date": "2025-07", "title": "Workday finance module launches", "impact": "First phase of the ERP replacement; sets the modernization baseline for FY26-27.", "tags": ["ERP"], "ref": 3 }
+    { "date": "2026-01", "title": "Gov. McKee proposes ~$14.9B FY2027 budget (incl. $19.3M IT for Medicaid/SNAP)", "impact": "Tech spend embedded in agency programs; benefit-systems IT is a funded near-term need.", "tags": ["Budget"], "ref": 1 }
   ],
 
   "dellActions": [
@@ -144,6 +144,9 @@
     { "label": "Rhode Island Division of Purchases — Master Price Agreements", "url": "https://ridop.ri.gov/master-price-agreements" },
     { "label": "Rhode Island Division of Purchases — Ocean State Procures (OSP)", "url": "https://ridop.ri.gov/ocean-state-procures-osp" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Rhode Island Current — McKee signs $15.2B FY27 budget (June 12, 2026)", "url": "https://rhodeislandcurrent.com/2026/06/12/mckee-signs-15-2b-fy27-budget-to-great-fanfare-from-lawmakers-and-advocates/" }
+    { "label": "Rhode Island Current — McKee signs $15.2B FY27 budget (June 12, 2026)", "url": "https://rhodeislandcurrent.com/2026/06/12/mckee-signs-15-2b-fy27-budget-to-great-fanfare-from-lawmakers-and-advocates/" },
+    { "label": "Nathan Loura — State of Rhode Island CISO (LinkedIn profile)", "url": "https://www.linkedin.com/in/nathan-loura-b70451103/" },
+    { "label": "Rhode Island Current — RI Dems convention split, no governor endorsement (June 22, 2026)", "url": "https://rhodeislandcurrent.com/2026/06/22/a-party-divided-ri-dems-convention-split-leaves-no-endorsements-for-governor-lg-and-ag/" },
+    { "label": "Security Boulevard — RI lawmakers introduce post-RIBridges cybersecurity bill (April 2026)", "url": "https://securityboulevard.com/2026/04/rhode-island-lawmakers-introduce-bill-to-modernize-cybersecurity-protections-after-ribridges-breach/" }
   ]
 }

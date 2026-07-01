@@ -3,7 +3,7 @@
   "name": "New Hampshire",
   "slug": "new-hampshire",
   "region": "Northeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A lean $15.9B biennial budget, a fresh 2025–2029 statewide IT strategy built around 'Digital Transformation is the Business,' and a rising wave of local-government cyberattacks — New Hampshire is modernizing under tight fiscal discipline.",
 
   "snapshot": [
@@ -115,13 +115,12 @@
   ],
 
   "news": [
-    { "date": "2026-06", "title": "NH data-center regulation bills die; no statewide framework", "impact": "Statewide data-center bills (incl. SB 439) failed and the Nottingham proposal was withdrawn amid local opposition — NH remains a small, energy-constrained market unlikely to land hyperscale AI build, keeping the Dell motion on state-government modernization and cyber rather than data-center ecosystem.", "tags": ["Data Centers", "Policy"], "ref": 9 },
+    { "date": "2026-06", "title": "NH on track to end SFY2026 with a revenue surplus", "impact": "After a $67.3M FY2025 deficit covered by the Rainy Day Fund, the state is now expected to close the fiscal year (June 30, 2026) with a General/Education Trust Fund surplus — a modest fiscal turnaround that gives more room for the FY2028–29 biennial budget (Governor's proposal due Feb 2027). Still a price-disciplined market, but a slightly more favorable backdrop for modernization and cyber spend.", "tags": ["Budget", "Fiscal"], "ref": 10 },
+    { "date": "2026-05", "title": "Data-center and AI bills stall in the legislature", "impact": "SB 439 (statewide data-center framework) was tabled 304–11 in May 2026, the HB 1265 moratorium and HB 1722 rate-class bills failed, and the 'Right to Compute' bill (HB 1124) and an AI-regulation bill (HB 1725) were sent to interim study / killed — NH lands no statewide data-center or AI framework this session, keeping the Dell motion on state-government modernization and cyber rather than data-center ecosystem.", "tags": ["Data Centers", "AI", "Policy"], "ref": 9 },
+    { "date": "2026-03", "title": "Colebrook town disconnected from state systems after email compromise", "impact": "A hacked town email account led NH to suspend Colebrook's connections to state systems (vital records, elections, DMV, dispatch) to stop lateral spread — a vivid whole-of-state cyber data point reinforcing demand for identity, email security, segmentation, and recovery at the local-to-state boundary.", "tags": ["Cybersecurity", "Whole-of-State"], "ref": 11 },
     { "date": "2025-12", "title": "IT Council ratifies 2025–2029 statewide IT strategy", "impact": "'Digital Transformation is the Business' becomes the blueprint for modernization and security spend — align Dell offerings to its goals.", "tags": ["Strategy", "Modernization"], "ref": 6 },
     { "date": "2025-11", "title": "NTIA approves New Hampshire's BEAD Final Proposal", "impact": "Unlocks federal broadband execution (~$196.6M total federal); expands the digital footprint DoIT must support and secure.", "tags": ["Broadband", "Federal Funds"], "ref": 4 },
-    { "date": "2025-10", "title": "Local cyber incidents mount across NH counties, courts, and schools", "impact": "Hillsborough, Strafford, Pelham/Hudson, and Coös County incidents harden the whole-of-state security case — resilience and recovery demand.", "tags": ["Cybersecurity"], "ref": 7 },
-    { "date": "2025-06", "title": "Governor Ayotte signs $15.9B FY2026–27 budget (HB1/HB2)", "impact": "A constrained budget with agency cuts; technology spend favors consolidation, modernization, and security over expansion.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-04", "title": "Pamela McLeod named State CISO", "impact": "New security leadership accelerates the whole-of-state cyber agenda — a fresh relationship to build early.", "tags": ["Leadership", "Cybersecurity"], "ref": 3 },
-    { "date": "2025-04", "title": "NASCIO recognizes CIO Denis Goulet for a decade of leadership", "impact": "Continuity and stability at the top of DoIT — a known, long-term decision-maker owns the statewide tech direction.", "tags": ["Leadership"], "ref": 2 }
+    { "date": "2025-06", "title": "Governor Ayotte signs $15.9B FY2026–27 budget (HB1/HB2)", "impact": "A constrained budget with agency cuts; technology spend favors consolidation, modernization, and security over expansion.", "tags": ["Budget"], "ref": 1 }
   ],
 
   "dellActions": [
@@ -141,6 +140,8 @@
     { "label": "NH DoIT — Strategic Planning (2025–2029 IT Strategy)", "url": "https://www.doit.nh.gov/strategic-planning" },
     { "label": "NH DoIT — 2026 New Hampshire Cyber Threat Assessment", "url": "https://mm.nh.gov/files/uploads/doit/documents/2026-new-hampshire-cyber-threat-assessment.pdf" },
     { "label": "NH DAS — Procurement & Support Services (Statewide Contracts)", "url": "https://apps.das.nh.gov/bidscontracts/contracts.aspx" },
-    { "label": "NHPR — As Nottingham addresses data-center backlash, what does NH law say? (June 2, 2026)", "url": "https://www.nhpr.org/nh-news/2026-06-02/nottingham-data-center-proposal-nh-stand-data-centers-laws-regulations-ai" }
+    { "label": "NHPR — As Nottingham addresses data-center backlash, what does NH law say? (June 2, 2026)", "url": "https://www.nhpr.org/nh-news/2026-06-02/nottingham-data-center-proposal-nh-stand-data-centers-laws-regulations-ai" },
+    { "label": "NHFPI — Happy New (State Fiscal) Year, New Hampshire! (SFY2026 surplus outlook, June 26, 2026)", "url": "https://nhfpi.org/blog/happy-new-state-fiscal-year-new-hampshire/" },
+    { "label": "DysruptionHub — Colebrook, New Hampshire cyber incident disrupts town services (March 2026)", "url": "https://dysruptionhub.com/colebrook-cyber-incident-new-hampshire/" }
   ]
 }

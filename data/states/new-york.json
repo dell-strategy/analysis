@@ -3,7 +3,7 @@
   "name": "New York",
   "slug": "new-york",
   "region": "Northeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A record $268.5B budget, a state-built AI supercomputer (Empire AI) running NVIDIA Blackwell, and a maturing cyber-shared-services model — New York is investing in AI infrastructure at public-university scale.",
 
   "snapshot": [
@@ -118,21 +118,21 @@
   },
 
   "powerStructure": [
-    { "name": "Kathy Hochul", "title": "Governor", "org": "State of New York", "note": "Champions Empire AI and the state's AI agenda; signed the RAISE Act and the record FY2027 budget." },
-    { "name": "Dru Rai", "title": "State CIO & ITS Director", "org": "NYS ITS", "note": "Appointed Oct 2023; leads statewide digital transformation and cyber posture.", "ref": 6 },
-    { "name": "Eleonore Fournier-Tombs", "title": "Chief AI Officer", "org": "NYS ITS", "note": "Named Jan 2026 (state's second CAIO); shapes governed-AI direction across agencies.", "ref": 6 },
+    { "name": "Kathy Hochul", "title": "Governor", "org": "State of New York", "note": "Champions Empire AI and the state's AI agenda; signed the RAISE Act and the record FY2027 budget. Won the June 23, 2026 Democratic primary uncontested; faces Bruce Blakeman (R) in the Nov 3, 2026 general election.", "ref": 15 },
+    { "name": "Dru Rai", "title": "State CIO & ITS Director", "org": "NYS ITS", "note": "Appointed Oct 2023; leads statewide digital transformation and cyber posture. Confirmed in role as of June 2026.", "ref": 6 },
+    { "name": "Eleonore Fournier-Tombs", "title": "Chief AI Officer", "org": "NYS ITS", "note": "Named Jan 2026 (state's second CAIO); shapes governed-AI direction across agencies. Her office issued the updated NYS-P24-001 AI policy (June 24, 2026).", "ref": 6 },
+    { "name": "Chris DeSain", "title": "State CISO", "org": "NYS ITS", "note": "Chief Information Security Officer since June 2022; leads state cyber defense including the JSOC, which now supports 57 state agencies, the five largest cities, and nearly every county.", "ref": 6 },
     { "name": "John B. King Jr.", "title": "SUNY Chancellor", "org": "State University of New York", "note": "SUNY/UB host Empire AI — the state's flagship AI-infrastructure buyer." },
     { "name": "Office of the State Comptroller (OSC)", "title": "Contract & fiscal oversight", "org": "State of New York", "note": "Approves large contracts (STF §112) — useful for forecasting deal timelines." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "ITS updates statewide AI acceptable-use policy (NYS-P24-001, eff. June 24, 2026)", "impact": "The Chief AI Office tightened scope, transparency, risk-assessment, and AI-inventory requirements for all state agencies and their vendors/contractors — AI must have leadership approval and human oversight. Reinforces demand for governed, auditable, private/on-prem AI; align Dell AI offerings to these accountability requirements when selling into agencies.", "tags": ["AI", "Policy", "Governance"], "ref": 14 },
+    { "date": "2026-06", "title": "Hochul wins Democratic gubernatorial primary (June 23); faces Blakeman in November", "impact": "2026 is a NY election year. Gov. Hochul advanced uncontested and faces Republican Bruce Blakeman in the Nov 3, 2026 general election. A Hochul win implies continuity for Empire AI, ITS leadership (Rai), and the state's AI/cyber agenda; plan for post-election leadership uncertainty as a downside scenario.", "tags": ["Leadership", "Election"], "ref": 15 },
     { "date": "2026-06-15", "title": "NYS ITS signs enterprise AWS cloud + AI agreement (100K+ employees)", "impact": "State steers enterprise AI/cloud workloads to a hyperscaler via a pre-negotiated, consolidated vehicle (part of an IT-consolidation effort that has saved $58M). Position Dell on-prem/hybrid infrastructure and GPU compute as complementary to — not displaced by — this AWS lane.", "tags": ["Cloud", "AI"], "ref": 12 },
-    { "date": "2026-06", "title": "Data-center moratorium bill passes legislature; awaits Hochul's signature", "impact": "The Responsible Data Center Development Act would impose a ~1-year pause on permits for new data centers above 20MW (efficiency/prevailing-wage standards above 5MW). If signed, it could stall hyperscale builds and shift demand toward smaller, efficient, modular/edge deployments — track the signature decision.", "tags": ["Data Centers", "Policy"], "ref": 13 },
+    { "date": "2026-06", "title": "Data-center moratorium bill passes legislature; awaits Hochul's signature", "impact": "The Responsible Data Center Development Act (S10642/A11560) would impose a ~1-year pause on DEC permits for new data centers above 20MW. As of June 30 Hochul has not signed and has until year-end to decide. If signed, it could stall hyperscale builds and shift demand toward smaller, efficient, modular/edge deployments — track the signature decision.", "tags": ["Data Centers", "Policy"], "ref": 13 },
     { "date": "2026-05", "title": "Hochul signs record $268.5B FY2027 budget (57 days late)", "impact": "Largest budget in state history funds a full fiscal year of agency operations and modernization; latest enactment in 16 years.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2026-01", "title": "ITS names second-ever Chief AI Officer and new Chief Digital Officer", "impact": "Signals sustained, governed-AI focus across agencies — an opening for private/on-prem AI on sensitive data.", "tags": ["AI", "Leadership"], "ref": 6 },
-    { "date": "2026-01", "title": "Empire AI announces SUNY campus partnerships to expand researcher access", "impact": "Broadens demand for AI compute across SUNY campuses (Albany, Binghamton, Buffalo, Stony Brook).", "tags": ["AI Infrastructure", "SUNY"], "ref": 9 },
-    { "date": "2025-12", "title": "Hochul signs RAISE Act (frontier-AI transparency; effective Jan 1, 2027)", "impact": "Reinforces state appetite for governed, auditable AI; targets large model developers with AG enforcement.", "tags": ["AI", "Policy"], "ref": 5 },
-    { "date": "2025-06", "title": "Empire AI launches 'Beta' on NVIDIA Blackwell ($40M)", "impact": "One of the most powerful academic AI supercomputers in the U.S.; ~11x training, ~40x inference uplift at UB.", "tags": ["AI Infrastructure", "HPC"], "ref": 4 }
+    { "date": "2026-01", "title": "ITS names second-ever Chief AI Officer and new Chief Digital Officer", "impact": "Signals sustained, governed-AI focus across agencies — an opening for private/on-prem AI on sensitive data.", "tags": ["AI", "Leadership"], "ref": 6 }
   ],
 
   "dellActions": [
@@ -156,6 +156,8 @@
     { "label": "NYS OGS — Award 22802, Information Technology Umbrella Contract (Manufacturer-Based, Dell)", "url": "https://online.ogs.ny.gov/purchase/snt/awardnotes/7360022802RFQ23-01_HowToUse.pdf" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
     { "label": "StateScoop — New York's IT office partners with AWS for cloud and AI services (June 15, 2026)", "url": "https://statescoop.com/new-yorks-it-office-partners-with-aws-for-cloud-and-ai-services-strategy-saving-taxpayers-58m/" },
-    { "label": "Bisnow — New York proposed data center moratorium awaits Hochul (June 16, 2026)", "url": "https://www.bisnow.com/new-york/news/data-center-development/new-york-proposed-data-center-moratorium-kathy-hochul-135052" }
+    { "label": "Bisnow — New York proposed data center moratorium awaits Hochul (June 16, 2026)", "url": "https://www.bisnow.com/new-york/news/data-center-development/new-york-proposed-data-center-moratorium-kathy-hochul-135052" },
+    { "label": "NYS ITS — Acceptable Use of Artificial Intelligence Technologies (NYS-P24-001; updated June 24, 2026)", "url": "https://its.ny.gov/acceptable-use-artificial-intelligence-technologies" },
+    { "label": "Ballotpedia — New York gubernatorial election, 2026 (primary June 23; general Nov 3)", "url": "https://ballotpedia.org/New_York_gubernatorial_and_lieutenant_gubernatorial_election,_2026" }
   ]
 }

@@ -3,7 +3,7 @@
   "name": "Colorado",
   "slug": "colorado",
   "region": "Mountain West",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A tighter $46.8B budget, a freshly reorganized state IT office under a brand-new CIO, and an AI law that just pivoted to a lighter touch — Colorado is resetting how it buys, governs, and secures technology.",
 
   "snapshot": [
@@ -121,18 +121,18 @@
   "powerStructure": [
     { "name": "Jared Polis", "title": "Governor", "org": "State of Colorado", "note": "Drove the AI Act reset (SB 189) and the OIT reorganization; pragmatic, efficiency-focused on technology.", "ref": 5 },
     { "name": "Sarah Tuneberg", "title": "State CIO & Executive Director, OIT", "org": "OIT", "note": "Started June 1, 2026; former Colorado Digital Service director and COVID-19 innovation lead. Owns the new operating model.", "ref": 6 },
-    { "name": "Jill Fraser", "title": "Chief Information Security Officer", "org": "OIT Information Security Office", "note": "State CISO since Feb 2024; leads the Whole-of-State cyber effort.", "ref": 9 },
+    { "name": "Jill Fraser", "title": "Chief Information Security Officer", "org": "OIT Information Security Office", "note": "State CISO since Feb 2024; also serving as interim Deputy Executive Director of Security & Infrastructure post-reorg; leads the Whole-of-State cyber effort.", "ref": 9 },
     { "name": "Joint Budget Committee (JBC)", "title": "Appropriations / Long Bill authors", "org": "Colorado General Assembly", "note": "Wrote the FY26–27 Long Bill and closed the ~$1.5B shortfall — the body that sizes agency spend." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Local data-center moratoriums spread (Denver, Jefferson County, Longmont)", "impact": "After both 2026 incentive bills failed, locals are pausing/capping projects over power, water, and pollution — but build-out continues (Flexential Parker, CoreSite Denver), keeping compute demand alive while siting gets harder.", "tags": ["Data Centers", "AI"], "ref": 12 },
+    { "date": "2026-06", "title": "Colorado AG opens ADMT & chatbot-safety pre-rulemaking (comments through July 13)", "impact": "On June 23 the AG's office began rulemaking to implement the revised AI Act (SB 26-189) and the new Chatbot Safety Act (HB 26-1263, signed July 1), both effective Jan 1, 2027 — agencies will need governed, auditable AI, an opening for private/on-prem AI on sensitive workloads.", "tags": ["AI", "Policy", "Governance"], "ref": 13 },
+    { "date": "2026-06", "title": "OIT names Casey Cook Principal Director of Enterprise Architecture; myColorado tops 2M users", "impact": "Under new CIO Sarah Tuneberg, OIT is standing up enterprise standards/governance for its new operating model (June 22) as flagship digital services scale (myColorado 2M users, June 11) — signals where the post-reorg modernization spend is heading.", "tags": ["Leadership", "IT Modernization"], "ref": 14 },
+    { "date": "2026-06", "title": "Local data-center moratoriums spread; Larimer County moves to extend its pause", "impact": "After both 2026 incentive bills failed, Denver, Jefferson County and Longmont restricted projects and Larimer County is set to extend its moratorium six months (July 13 vote) — yet build-out continues (Flexential Parker, CoreSite Denver), keeping compute demand alive while siting gets harder.", "tags": ["Data Centers", "AI"], "ref": 12 },
     { "date": "2026-06", "title": "Sarah Tuneberg becomes State CIO & OIT Executive Director", "impact": "New technology leadership takes over a reorganized office; relationships and roadmap reset.", "tags": ["Leadership"], "ref": 6 },
     { "date": "2026-05", "title": "OIT reorganizes, eliminates ~173 positions and adopts new operating model", "impact": "Leaner central IT creates capacity gaps — opening for managed services and as-a-service compute.", "tags": ["IT Modernization"], "ref": 3 },
     { "date": "2026-05", "title": "Polis signs SB 189, repealing and replacing the Colorado AI Act", "impact": "AI rules shift to a lighter ADMT/disclosure model effective Jan 1, 2027; agencies still need governed AI.", "tags": ["AI", "Policy"], "ref": 4 },
-    { "date": "2026-05", "title": "FY2026–27 $46.8B budget signed after closing a ~$1.5B shortfall", "impact": "Budget-constrained agencies must do more with less — favors efficiency and lifecycle plays.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2026-04", "title": "Colorado EDC approves $26M tax package to retain an aerospace/defense firm", "impact": "Reinforces the aerospace-defense cluster as a secure-compute and AI-infrastructure buyer.", "tags": ["Defense", "Economic Dev"], "ref": 10 },
-    { "date": "2025-10", "title": "Gov. Polis proposed a $18.5B general-fund FY2027 budget", "impact": "$50.5B all funds, +1.6% GF vs FY2026; maintains a 13% general-fund reserve while slowing Medicaid growth to 5.6%.", "tags": ["Budget"], "ref": 11 }
+    { "date": "2026-05", "title": "FY2026–27 $46.8B budget signed after closing a ~$1.5B shortfall", "impact": "Budget-constrained agencies must do more with less — favors efficiency and lifecycle plays.", "tags": ["Budget"], "ref": 1 }
   ],
 
   "dellActions": [
@@ -155,6 +155,10 @@
     { "label": "OIT — Office of Information Security", "url": "https://oit.colorado.gov/standards-policies-guides/cybersecurity-and-information-security-guide/information-security-office" },
     { "label": "Colorado Politics — Colorado awards $26M in tax incentives to keep aerospace company in state", "url": "https://www.coloradopolitics.com/2026/04/16/colorado-awards-26m-in-tax-incentives-to-keep-aerospace-company-in-state/" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "Colorado Sun — What's the status of massive data centers in Colorado? (moratoriums, projects)", "url": "https://coloradosun.com/2026/06/18/colorado-data-center-update-pollution-protests-moratoriums/" }
+    { "label": "Colorado Sun — What's the status of massive data centers in Colorado? (moratoriums, projects)", "url": "https://coloradosun.com/2026/06/18/colorado-data-center-update-pollution-protests-moratoriums/" },
+    { "label": "Colorado AG — Automated Decision-Making Technology & Chatbot Safety Rulemaking", "url": "https://coag.gov/ai/" },
+    { "label": "DataGuidance — Colorado AG requests comments on ADMT and chatbot safety rulemaking", "url": "https://www.dataguidance.com/news/colorado-ag-requests-comments-admt-and-chatbot-safety" },
+    { "label": "Colorado General Assembly — HB26-1263 Conversational AI / Chatbot Safety Act", "url": "https://leg.colorado.gov/bills/HB26-1263" },
+    { "label": "GovTech — Colorado OIT leadership / enterprise architecture and new operating model", "url": "https://oit.colorado.gov/about-us/leadership/leadership-bios" }
   ]
 }

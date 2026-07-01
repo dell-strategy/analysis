@@ -5,7 +5,7 @@
   "stateName": "Texas",
   "type": "County",
   "hq": "Dallas, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Texas' second-most-populous county (~2.6M residents) runs centralized technology through its IT Services department — buying largely off pre-competed cooperative vehicles, including DIR, and rebuilding its security posture after a 2023 ransomware hit.",
 
   "snapshot": [
@@ -32,7 +32,8 @@
 
   "initiatives": [
     { "name": "Post-incident cybersecurity rebuild", "summary": "After the October 2023 'Play' ransomware incident (data on ~200K individuals exposed), the county increased IT funding and refocused on endpoint monitoring, access controls, and resilience. Security modernization is the clearest active driver — lead with it.", "tags": ["Cybersecurity", "Resilience"] },
-    { "name": "IT leadership reset and governance", "summary": "A permanent CIO (Justine Tran) was named in December 2024 after a long vacancy. Expect formalized IT governance, ITIL-style service management, and a re-baselining of infrastructure — an opening for refresh and standardization conversations.", "tags": ["Leadership", "Modernization"] },
+    { "name": "IT leadership reset and governance", "summary": "A permanent CIO (Justine Tran, started Nov 2024) is executing a publicly described three-phase strategic plan: Phase 1 establishes enterprise architecture, tech-stack standards, and cybersecurity; Phase 2 expands and accelerates; Phase 3 optimizes and innovates. Expect formalized IT governance, ITIL-style service management, and a re-baselining of infrastructure — an opening for refresh and standardization conversations.", "tags": ["Leadership", "Modernization"] },
+    { "name": "AI and data-as-a-system-of-reference", "summary": "CIO Tran has publicly prioritized AI adoption ('an AI companion for every role that is possible') and turning county data into an organized, accessible 'system of reference.' Compute, storage, data-platform, and secure-AI infrastructure are natural entry points as this moves from vision to procurement.", "tags": ["AI", "Cloud", "Data"] },
     { "name": "Infrastructure and data-center modernization", "summary": "A large county supporting justice, elections, health, and resident services runs aging infrastructure that the new IT leadership is positioned to refresh. Server, storage, and hybrid-cloud modernization are natural ISG entry points.", "tags": ["Data Center", "Infrastructure"] },
     { "name": "Resident-facing digital services", "summary": "The county continues to expand online services (records, payments, justice and health portals). Backend compute, storage, and identity/security underpin these — connect endpoint and infrastructure plays to the citizen-services roadmap.", "tags": ["Digital Services", "Cloud"] }
   ],
@@ -47,14 +48,16 @@
   },
 
   "powerStructure": [
-    { "name": "Clay Jenkins", "title": "Dallas County Judge", "note": "Presiding officer of the Commissioners Court; sets tone and presides over budget and major-purchase approvals — the top political relationship." },
+    { "name": "Clay Jenkins", "title": "Dallas County Judge", "note": "Presiding officer of the Commissioners Court; sets tone and presides over budget and major-purchase approvals — the top political relationship. Won the March 2026 Democratic primary unopposed and is running for a fifth term; faces Republican Mike Immler in the Nov. 3, 2026 general election. Current term ends Dec. 31, 2026 — the top-of-house relationship is up for grabs this cycle." },
     { "name": "Commissioners Court", "title": "John Wiley Price, Theresa Daniel, Elba Garcia, Andrew Sommerman", "note": "Four district commissioners who, with the Judge, approve the budget and large technology contracts." },
-    { "name": "Justine Tran", "title": "Chief Information Officer (IT Services)", "note": "Named CIO Dec 2024 after a long vacancy; background includes City of Dallas tech strategy and ITIL governance. The primary technology relationship." },
+    { "name": "Justine Tran", "title": "Chief Information Officer (IT Services)", "note": "Started as CIO Nov. 19, 2024 after a long vacancy; confirmed still in role as of mid-2026. Background includes City of Dallas deputy CIO plus telecom/healthcare/automotive (Harley-Davidson). Executing a three-phase modernization plan emphasizing enterprise architecture, cybersecurity, AI, and data. The primary technology relationship." },
     { "name": "IT Services security leadership", "title": "Information security / CISO function", "note": "Owns the post-incident security program (monitoring, access, resilience). Confirm the current named CISO/security lead before engaging." },
     { "name": "Dallas County Purchasing Department", "title": "Central procurement / solicitations", "note": "Owns BidNet solicitations, vendor registration, and co-op usage — the procedural path onto any deal." }
   ],
 
   "news": [
+    { "date": "2026-03", "title": "Judge Clay Jenkins wins Democratic primary unopposed; runs for a fifth term", "impact": "Top-of-house continuity is likely but not settled — Jenkins faces Republican Mike Immler in the Nov. 3, 2026 general and his term ends Dec. 31. Track the outcome; a change at County Judge would reset the county's top political relationship and budget tone.", "tags": ["Leadership", "Election"] },
+    { "date": "2026-02", "title": "CIO Tran details three-phase modernization plan prioritizing AI, data, and cybersecurity", "impact": "Public roadmap signals near-term demand for enterprise architecture standards, secure-AI and data platforms, and infrastructure refresh — align ISG and security offers to the phase the county is entering.", "tags": ["Leadership", "AI", "Modernization"] },
     { "date": "2024-12", "title": "Dallas County names Justine Tran permanent CIO after 1+ year vacancy", "impact": "Stable IT leadership returns; expect governance, modernization, and security-program momentum — re-engage the technology buying center.", "tags": ["Leadership"] },
     { "date": "2024-12", "title": "County moves solicitations to the BidNet platform", "impact": "All goods/services/construction solicitations now post through BidNet; vendors must register there to bid.", "tags": ["Procurement"] },
     { "date": "2023-10", "title": "Ransomware incident ('Play') exposes data on ~200K individuals", "impact": "Triggered increased IT/security funding and a multi-year resilience focus — the anchor for cybersecurity and infrastructure plays.", "tags": ["Cybersecurity"] }
@@ -75,6 +78,9 @@
     { "label": "Dallas County — Notice of Adopted TY2026 Tax Rate", "url": "https://www.dallascounty.org/about-us/hot-links/notice-of-final-vote.php" },
     { "label": "KERA — Dallas County names IT leader after more than a year without CIO", "url": "https://www.keranews.org/news/2024-12-10/dallas-county-names-it-leader-after-more-than-a-year-without-cio" },
     { "label": "GovTech — New Dallas County CIO Brings Public- and Private-Sector Experience", "url": "https://www.govtech.com/workforce/new-dallas-county-cio-has-considerable-area-experience" },
-    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
+    { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" },
+    { "label": "Ballotpedia — Clay Jenkins (2026 election)", "url": "https://ballotpedia.org/Clay_Jenkins" },
+    { "label": "Ballotpedia — Dallas County, Texas, elections, 2026", "url": "https://ballotpedia.org/Dallas_County,_Texas,_elections,_2026" },
+    { "label": "The CEO Magazine — Built for Impact: Justine Tran (Dallas County CIO, three-phase/AI plan)", "url": "https://amp.theceomagazine.com/executive-interviews/public-sector/built-for-impact-justine-tran/" }
   ]
 }

@@ -5,12 +5,12 @@
   "name": "Los Angeles County, California",
   "slug": "los-angeles-county",
   "hq": "Los Angeles, CA",
-  "updated": "2026-06-22",
-  "tagline": "The nation's largest local government — ~10M residents, ~$48.8B budget, 38 departments. Enterprise IT direction sits with the Chief Information Office (CIO) in the Chief Executive Office; buying flows through the Internal Services Department (ISD) and Board of Supervisors approval.",
+  "updated": "2026-06-30",
+  "tagline": "The nation's largest local government — ~10M residents, ~$50.3B budget, 38 departments. Enterprise IT direction sits with the Chief Information Office (CIO) in the Chief Executive Office; buying flows through the Internal Services Department (ISD) and Board of Supervisors approval.",
 
   "snapshot": [
     { "label": "Residents", "value": "~10M (largest U.S. county)" },
-    { "label": "FY2025-26 budget", "value": "$48.8B adopted" },
+    { "label": "FY2026-27 budget", "value": "$50.3B adopted (June 2026)" },
     { "label": "Workforce", "value": "~110,000 employees" },
     { "label": "Buying gate", "value": "ISD procurement + Board approval >$100K" }
   ],
@@ -18,15 +18,15 @@
   "overview": "Los Angeles County is the most populous county in the United States — roughly 10 million residents, larger than most U.S. states — governed by a five-member Board of Supervisors and run day-to-day through a County Chief Executive Office (CEO) overseeing roughly three dozen departments. Enterprise technology direction lives with the County Chief Information Office (CIO), which sits inside the CEO and oversees technology, data, security, and privacy countywide; the Chief Data Office, Privacy Office, and Chief Information Security Office report up through it. Operational IT, telecom, and — critically for sellers — most procurement run through the Internal Services Department (ISD). The County is best understood as a federated buyer: the CIO sets strategy and governance, large departments (Health Services, DHS, Sheriff, DPSS, the courts-adjacent agencies) carry their own substantial IT budgets and run their own modernization, and ISD plus the Board of Supervisors gate the contracts. For a Dell SLG seller, this is one of the largest single local-government opportunities in the country, but the entry point is the procurement machinery and the department-level buying centers, not a single central IT wallet.",
 
   "budget": {
-    "intro": "The County's adopted FY2025-26 budget is $48.8B (the April 2025 Recommended Budget was $47.9B). This is an austerity cycle: facing federal and state funding pressure, the January 2025 wildfires, and the AB 218 childhood-sexual-assault settlement, the Board adopted a Supplemental Budget on September 30, 2025 imposing roughly 5.5% cuts and eliminating a net ~1,125 budgeted positions. IT spend is distributed across departments rather than concentrated in one central line.",
+    "intro": "The Board unanimously adopted a $50.3B FY2026-27 budget in late June 2026, up ~$1.5B from the prior year (the April 2026 Recommended Budget was $47.9B; the increase came largely from shifting ~$1.3B in restricted/special funds and ~$900M in new state behavioral-health money). It remains a cost-pressure cycle: the County carries a combined ~$4.8B AB 218 childhood-sexual-assault settlement liability (with ~150 new claims/month), plus federal/state funding risk. The adopted plan holds services largely intact but is roughly flat on headcount (a net ~202-position reduction to ~115,683 budgeted positions). IT spend is distributed across departments rather than concentrated in one central line.",
     "stats": [
-      { "value": "$48.8B", "label": "FY2025-26 adopted budget", "note": "Recommended Budget was $47.9B (April 2025)" },
-      { "value": "~5.5%", "label": "Supplemental cuts", "note": "Adopted Sept 30, 2025; ~1,125 net positions eliminated" },
+      { "value": "$50.3B", "label": "FY2026-27 adopted budget", "note": "Adopted June 2026; up ~$1.5B from prior year (Recommended was $47.9B in April 2026)" },
+      { "value": "~$4.8B", "label": "AB 218 settlement liability", "note": "11,000+ childhood-sexual-assault cases, ~150 new claims/month — the dominant fiscal pressure" },
       { "value": "~110,000", "label": "County employees", "note": "Scale of the ERP / payroll / HR systems the CIO oversees" }
     ],
     "notes": [
       "IT spending is federated: large departments (Health Services, Sheriff, Public Social Services) hold their own IT budgets and run their own modernization, so there is no single county-wide 'IT budget' line to target.",
-      "FY2025-26 is a cost-pressure year — wildfire recovery, litigation settlements, and federal/state funding risk are squeezing discretionary spend, which favors efficiency, automation, and consolidation pitches over net-new capital.",
+      "FY2026-27 is a cost-pressure year — the ~$4.8B AB 218 settlement liability, litigation exposure, and federal/state funding risk squeeze discretionary spend, which favors efficiency, automation, and consolidation pitches over net-new capital.",
       "Always verify a department's own appropriation before forecasting; the County is mid-transition under Measure G (2024 voter-approved) toward an elected county executive (2028) and a nine-member board (by 2032)."
     ]
   },
@@ -52,20 +52,21 @@
     { "name": "Peter Loo", "title": "County Chief Information Officer (CIO)", "note": "Made permanent CIO June 26, 2024 after years as acting CIO; 30+ years in County IT. Owns enterprise technology, data, security, and privacy strategy — the top enterprise-IT relationship." },
     { "name": "James Thurmond", "title": "Acting Chief Information Security Officer (CISO)", "note": "Leads countywide information-security strategy and governance, directing Departmental Information Security Officers (DISOs). The security buying-center owner; confirm current/permanent status before forecasting." },
     { "name": "Michael Owh", "title": "Director, Internal Services Department (ISD)", "note": "Runs the department that owns countywide procurement; former chief procurement officer for the City of LA and New York City. The procurement gatekeeper for most County buys." },
-    { "name": "Fesia Davenport", "title": "Chief Executive Officer (County CEO)", "note": "Heads the Chief Executive Office, which the CIO sits within and which builds the County budget — the executive context for any enterprise-scale program. Verify incumbency at time of engagement." },
+    { "name": "Joseph M. Nicchitta", "title": "Chief Executive Officer (County CEO)", "note": "Made permanent CEO by the Board on May 19, 2026 after serving as acting/interim CEO since October 2025; previously chief deputy CEO / COO since 2020. Succeeds Fesia Davenport, who resigned effective April 16, 2026 (health; amid a contested $2M settlement tied to Measure G). Heads the Chief Executive Office, which the CIO sits within and which builds the County budget — the executive context for any enterprise-scale program." },
     { "name": "Hilda L. Solis", "title": "Chair, Board of Supervisors (1st District, 2026)", "note": "The Board is the County's governing body and approves contracts >$100K. Board chairship rotates annually; District 1 and 3 seats are up for election in November 2026." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Board unanimously adopts $50.3B FY2026-27 budget (up ~$1.5B), services largely intact", "impact": "Bigger topline but still cost-pressured by a ~$4.8B AB 218 settlement liability and federal/state funding risk — lead with efficiency, automation, and consolidation, not net-new capital.", "tags": ["Budget"] },
+    { "date": "2026-05", "title": "Joseph M. Nicchitta named permanent County CEO; succeeds Fesia Davenport", "impact": "New executive at the top of the CEO office (where the CIO sits). Nicchitta ran the office as interim CEO from Oct 2025; Davenport resigned April 16, 2026. Re-anchor executive relationships and budget narrative to the new CEO.", "tags": ["Leadership"] },
     { "date": "2025-09", "title": "Board adopts FY2025-26 Supplemental Budget with ~5.5% cuts, ~1,125 positions eliminated", "impact": "Confirms an austerity posture — lead with efficiency, automation, and consolidation; expect tighter scrutiny on new capital.", "tags": ["Budget"] },
     { "date": "2025-06", "title": "LA County AI Professional Development Summit convenes business and IT leaders", "impact": "AI is an active, executive-sponsored priority — an opening for AI-infrastructure and data-platform conversations.", "tags": ["AI"] },
-    { "date": "2025-04", "title": "CEO unveils $47.9B FY2025-26 Recommended Budget amid 'unprecedented' pressures", "impact": "Wildfire recovery, AB 218 settlement, and federal/state funding risk frame the spending environment.", "tags": ["Budget"] },
     { "date": "2025", "title": "Regional Cyber Coalition / multi-county Threat Intelligence Sharing Platform advances", "impact": "Cyber resilience ahead of the 2026 FIFA World Cup and 2028 Olympics is a funded, regional priority — a security and infrastructure entry point.", "tags": ["Cybersecurity"] },
     { "date": "2024-06", "title": "Peter Loo confirmed as permanent County CIO", "impact": "Stable, long-tenured leadership at the top of enterprise IT — a durable relationship to build.", "tags": ["Leadership"] }
   ],
 
   "dellActions": [
-    "Map the federated buying centers — CIO/CEO for enterprise strategy, but Health Services, Sheriff, and DPSS hold large independent IT budgets. Pursue department-level programs, not a single central IT line.",
+    "Map the federated buying centers — CIO plus new CEO Joseph Nicchitta for enterprise strategy, but Health Services, Sheriff, and DPSS hold large independent IT budgets. Pursue department-level programs, not a single central IT line.",
     "Lead with efficiency and consolidation in an austerity year: position infrastructure refresh, automation (RPA), and AI-ready data platforms as cost-takeout, not net-new capital.",
     "Tie ISG / AI-infrastructure to the County's generative-AI and cloud-data-platform push and the AI Implementation Plan's 2026-27 operational phase.",
     "Engage the security buying center (CISO James Thurmond, DISOs) on cyber resilience ahead of the 2026 World Cup and 2028 Olympics, including the Regional Cyber Coalition.",
@@ -73,8 +74,12 @@
   ],
 
   "sources": [
-    { "label": "LA County CEO — 2025-2026 Budget", "url": "https://ceo.lacounty.gov/2025-2026-budget/" },
-    { "label": "LA County — 2025-26 Recommended Budget announcement", "url": "https://lacounty.gov/2025/04/14/la-county-unveils-2025-26-recommended-budget-reflecting-unprecedented-financial-challenges/" },
+    { "label": "LA County CEO — Budget", "url": "https://ceo.lacounty.gov/budget/" },
+    { "label": "Patch — LA County Approves $50.3B Budget For 2026-27 Fiscal Year", "url": "https://patch.com/california/los-angeles/la-county-approves-50-3b-budget-2026-27-fiscal-year" },
+    { "label": "Supervisor Kathryn Barger — Statement on $50.3B Final Budget", "url": "https://kathrynbarger.lacounty.gov/supervisor-kathryn-barger-issues-statement-on-50-3-billion-l-a-county-final-budget/" },
+    { "label": "LA County — Joseph M. Nicchitta Appointed Chief Executive Officer", "url": "https://lacounty.gov/2026/05/19/joseph-m-nicchitta-appointed-los-angeles-county-chief-executive-officer/" },
+    { "label": "LA County CEO — Meet Joseph M. Nicchitta", "url": "https://ceo.lacounty.gov/meet-joseph-m-nicchitta/" },
+    { "label": "LAist — Fesia Davenport's last day as county CEO", "url": "https://laist.com/news/politics/fesia-davenport-last-day-la-county-ceo" },
     { "label": "LA County CEO — Chief Information Office", "url": "https://ceo.lacounty.gov/chief-information-office/" },
     { "label": "LA County CIO — Information Security", "url": "https://ceo.lacounty.gov/security/" },
     { "label": "GovTech — L.A. County Makes Longtime Acting CIO Peter Loo Permanent", "url": "https://www.govtech.com/workforce/l-a-county-makes-longtime-acting-cio-peter-loo-permanent" },

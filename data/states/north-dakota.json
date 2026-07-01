@@ -3,7 +3,7 @@
   "name": "North Dakota",
   "slug": "north-dakota",
   "region": "Midwest / Great Plains",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "One of the most consolidated technology buyers in the country — North Dakota runs nearly the entire public sector through a single agency (NDIT) — and an energy-fueled AI data-center boom is putting the state on the national AI-infrastructure map.",
 
   "snapshot": [
@@ -118,20 +118,20 @@
 
   "powerStructure": [
     { "name": "Kelly Armstrong", "title": "Governor", "org": "State of North Dakota", "note": "Took office Dec 2024; champions energy-driven economic development and the AI data-center buildout.", "ref": 4 },
-    { "name": "Corey Mock", "title": "State CIO", "org": "NDIT", "note": "Named by Gov.-elect Armstrong, Nov 2024; former state representative and IT Committee chair. Priorities: connectivity, customer support, ND Gateway portal.", "ref": 4 },
-    { "name": "Chris Gergen", "title": "Chief Information Security Officer", "org": "NDIT", "note": "Named CISO July 2025 after serving as interim; leads the whole-of-state cyber strategy.", "ref": 7 },
+    { "name": "Corey Mock", "title": "State CIO", "org": "NDIT", "note": "Named by Gov.-elect Armstrong, Nov 2024; ND's 9th CIO and a former state representative. Appointed to the NASCIO Executive Committee (term through 2026). Priorities: connectivity, ND Gateway portal, and 2026 data-hub/data-maturity work.", "ref": 4 },
+    { "name": "Chris Gergen", "title": "Chief Information Security Officer", "org": "NDIT", "note": "Named CISO July 2025 after serving as interim; leads the whole-of-state cyber strategy. Confirmed current as of June 2026.", "ref": 7 },
+    { "name": "John Rodenbiker", "title": "Director of Cyber Operations", "org": "NDIT", "note": "Named Jan 2026 from the private sector (BCBS of ND, Doosan Bobcat, Eide Bailly); runs the state cyber operations center under CISO Gergen.", "ref": 13 },
     { "name": "Office of Management and Budget (OMB)", "title": "State Procurement & budget", "org": "State of North Dakota", "note": "Owns the State Procurement Manual and cooperative contracts; one of NDIT's 'triumvirate of back-of-house services.'", "ref": 5 },
     { "name": "North Dakota University System (NDUS)", "title": "Higher-ed governance", "org": "State Board of Higher Education", "note": "Drives research computing, including UND's UAS/autonomy and aerospace programs in Grand Forks.", "ref": 9 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "ND lawmakers create interim Artificial Intelligence & Data Center Committee ahead of 2027 session", "impact": "Announced June 25, 2026 and chaired by Rep. Jonathan Warrey (citizen members include former NDUS Chancellor Mark Hagerott); will study AI/data-center policy, power and water capacity, and possible 2027 legislation. Signals data-center growth is now a top state-policy theme — relevant context for the AI-infrastructure motion, though Gov. Armstrong has cautioned against industry-specific rules.", "tags": ["AI", "Policy", "Data Centers"], "ref": 11 },
+    { "date": "2026-06", "title": "NDIT + Dept. of Commerce launch 'Dakota BOT' AI chatbot as a statewide digital front door", "impact": "Launched June 26, 2026 across ND.gov and affiliated agency sites; an NDIT-run generative-AI citizen-service tool already resolving ~91% of queries. Demonstrates NDIT's appetite for enterprise AI and adjacent compute/data demand under the whole-of-state model.", "tags": ["AI", "Digital Government", "Leadership"], "ref": 12 },
     { "date": "2026-06-16", "title": "Applied Digital closes $1.59B notes to fund 150MW 'ELN-04' at Polaris Forge 1 (Ellendale)", "impact": "Fourth building adds 150MW of critical AI IT load at Ellendale; with the March 2026 $2.15B Harwood raise, Applied Digital has raised >$4B in one quarter — deepening ND's AI-infrastructure ecosystem and adjacency-selling opportunities.", "tags": ["Data Centers", "AI"], "ref": 10 },
     { "date": "2026-06-05", "title": "Applied Digital signs MOU to assign Polaris Forge 1 'Building 3' lease to a CoreWeave subsidiary", "impact": "Extends the ~$7B, 15-year Applied Digital–CoreWeave relationship at Ellendale; confirms hyperscaler AI demand anchoring in ND and strengthens the case for state/local digital-infrastructure investment around the campuses.", "tags": ["Data Centers", "AI"], "ref": 10 },
-    { "date": "2026-01", "title": "Northern Plains UAS Test Site advances BVLOS testing; new federal drone test sites announced", "impact": "Reinforces Grand Forks/UND as a national autonomy hub and a source of research-/edge-compute demand.", "tags": ["UAS", "Research"], "ref": 9 },
-    { "date": "2025-09", "title": "Applied Digital breaks ground on $3B Polaris Forge 2 (Harwood, 280MW)", "impact": "Signals the scale of AI-infrastructure investment landing in North Dakota; expands the ISG/AI-factory opportunity.", "tags": ["Data Centers", "AI"], "ref": 8 },
-    { "date": "2025-07", "title": "NDIT names Chris Gergen as permanent CISO", "impact": "Stabilizes leadership of the whole-of-state cyber program; a key security decision-maker to engage.", "tags": ["Leadership", "Cybersecurity"], "ref": 7 },
-    { "date": "2025-07", "title": "Applied Digital brings first 50MW online at Ellendale Polaris Forge 1; CoreWeave lease expands", "impact": "Live AI capacity (Nvidia Blackwell, liquid-cooled) demonstrates North Dakota's energy-to-AI thesis.", "tags": ["Data Centers", "AI"], "ref": 8 },
-    { "date": "2025-05", "title": "69th Legislative Assembly adjourns; raises natural-gas pipeline guarantee to $500M to power data centers", "impact": "State backs the energy infrastructure that enables further AI data-center growth.", "tags": ["Budget", "Energy"], "ref": 8 }
+    { "date": "2026-01", "title": "NDIT names John Rodenbiker Director of Cyber Operations (from private sector)", "impact": "Effective Jan 2026, Rodenbiker (ex-BCBS of ND, Doosan Bobcat, Eide Bailly) leads NDIT's cyber operations center under CISO Chris Gergen — a useful security operations contact within the centralized whole-of-state team.", "tags": ["Leadership", "Cybersecurity"], "ref": 13 },
+    { "date": "2025-09", "title": "Applied Digital breaks ground on $3B Polaris Forge 2 (Harwood, 280MW)", "impact": "Signals the scale of AI-infrastructure investment landing in North Dakota; expands the ISG/AI-factory opportunity.", "tags": ["Data Centers", "AI"], "ref": 8 }
   ],
 
   "dellActions": [
@@ -152,6 +152,9 @@
     { "label": "NDIT — North Dakota Information Technology Names Chris Gergen CISO", "url": "https://www.ndit.nd.gov/news/north-dakota-information-technology-names-chris-gergen-chief-information-security-officer" },
     { "label": "Applied Digital — Polaris Forge 2 $3B campus groundbreaking", "url": "https://ir.applieddigital.com/news-events/press-releases/detail/127/applied-digital-to-break-ground-on-3-billion-polaris-forge" },
     { "label": "Northern Plains UAS Test Site — News", "url": "https://www.npuasts.com/news" },
-    { "label": "Applied Digital — Pricing of $1.59B senior secured notes for Polaris Forge 1 expansion (June 2026)", "url": "https://ir.applieddigital.com/news-events/press-releases/detail/156/applied-digital-announces-pricing-of-1-59-billion-of" }
+    { "label": "Applied Digital — Pricing of $1.59B senior secured notes for Polaris Forge 1 expansion (June 2026)", "url": "https://ir.applieddigital.com/news-events/press-releases/detail/156/applied-digital-announces-pricing-of-1-59-billion-of" },
+    { "label": "North Dakota Monitor — ND lawmakers zero in on AI, data centers (interim committee, June 2026)", "url": "https://northdakotamonitor.com/2026/06/25/north-dakota-lawmakers-zero-in-on-ai-data-centers/" },
+    { "label": "ND Department of Commerce — North Dakota launches Dakota BOT (June 2026)", "url": "https://www.commerce.nd.gov/news/north-dakota-launches-dakota-bot-modernize-public-access-state-services" },
+    { "label": "GovTech — North Dakota's New Cyber Ops Leader Is From Private Sector (John Rodenbiker, Jan 2026)", "url": "https://www.govtech.com/workforce/north-dakotas-new-cyber-ops-leader-is-from-private-sector" }
   ]
 }

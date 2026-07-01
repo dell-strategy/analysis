@@ -3,7 +3,7 @@
   "name": "Missouri",
   "slug": "missouri",
   "region": "Midwest",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Back-to-back mega data centers — Google's $15B and Amazon's $10B, both in Montgomery County — plus a statewide AI framework due late 2026 and a consolidated central IT shop serving 15 executive departments make Missouri a national AI-infrastructure story under a cost-disciplined new administration.",
 
   "snapshot": [
@@ -121,18 +121,19 @@
   "powerStructure": [
     { "name": "Mike Kehoe", "title": "Governor", "org": "State of Missouri", "note": "First-term Republican; champions the Google data-center win and an efficiency-first budget — 'spending, not revenue, is the problem.'", "ref": 1 },
     { "name": "Kenneth Zellers", "title": "Commissioner", "org": "Office of Administration", "note": "Owns delivery of the statewide AI integration framework due Nov 30, 2026 under EO 26-02; oversees OA-ITSD and Purchasing.", "ref": 5 },
-    { "name": "John Laurent", "title": "State CIO", "org": "OA-ITSD", "note": "Appointed CIO Dec 2024; former Global VP of IT at Enterprise Holdings and Accenture consultant. Owns statewide IT direction and standards.", "ref": 1 },
+    { "name": "John Laurent", "title": "State CIO", "org": "OA-ITSD", "note": "Re-verified current as of June 2026. Appointed CIO Dec 2024; former Global VP of IT at Enterprise Holdings and Accenture consultant. Owns statewide IT direction and standards.", "ref": 15 },
+    { "name": "Shawn Ivy", "title": "State CISO", "org": "OA-ITSD Office of Cyber Security", "note": "Chief Information Security Officer; 30+ years public-service IT. Leads OCS protecting 60,000+ devices with 24x7 SecOps, incident response, IAM, and assessments — the security owner for state endpoint/infrastructure modernization.", "ref": 16 },
+    { "name": "Tim Marczewski", "title": "Director of AI and Innovation", "org": "Office of Administration", "note": "Surfaced June 2026 at the Governor's AI & Data Center Forum; a key contact for operationalizing the EO 26-02 statewide AI integration framework and governed-AI buys.", "ref": 14 },
     { "name": "OA Division of Purchasing", "title": "Central procurement authority", "org": "Office of Administration", "note": "Bids and maintains the statewide contracts and cooperative program every technology deal runs through.", "ref": 10 }
   ],
 
   "news": [
-    { "date": "2026-06-15", "title": "Amazon to invest $10B in Montgomery County data-center campus", "impact": "A second AI-scale anchor in the same county as Google's New Florence project; deepens Missouri's AI-infrastructure ecosystem and the Dell ISG/partner tailwind.", "tags": ["Data Centers", "AI"], "ref": 12 },
+    { "date": "2026-06", "title": "Gov. Kehoe hosts AI & Data Center Forum at Missouri S&T", "impact": "June 18 forum (Missouri Protoplex, Rolla) convened state leaders, industry, and academia on AI talent pipeline, workforce, and energy/environmental resources to back the Google and Amazon buildouts — signals momentum behind the EO 26-02 framework and a state push to be an AI/data-center hub. Reinforces the AI-infrastructure narrative Dell ISG can attach to.", "tags": ["AI", "Data Centers", "Workforce"], "ref": 14 },
+    { "date": "2026-06", "title": "Amazon's $10B Montgomery County campus advances on a no-rate-hike pledge", "impact": "Amazon will pay 100% of the cost to serve the new campus (no rate incentives), and Ameren/Evergy are bringing a Capacity Commitment Framework to Missouri — combined with Google's $15B, ~$25B of hyperscale AI investment now anchors central Missouri. Strongest ecosystem tailwind for Dell ISG / AI-factory and partner demand.", "tags": ["Data Centers", "AI", "Energy"], "ref": 12 },
     { "date": "2026-05", "title": "Missouri General Assembly sends ~$50.7B FY2027 budget to Governor Kehoe", "impact": "Disciplined FY2027 plan reaches the governor's desk (signing deadline end of June); sellers should expect cost-justified, efficiency-led IT buys.", "tags": ["Budget"], "ref": 13 },
     { "date": "2026-05", "title": "Google announces $15B AI data center in New Florence", "impact": "Largest-scale AI-infrastructure investment in state history; reshapes energy and economic-development agenda and creates a major ecosystem tailwind for Dell ISG.", "tags": ["Data Centers", "AI"], "ref": 6 },
     { "date": "2026-04", "title": "Missouri AI regulation bills stall amid federal-funding concerns", "impact": "State AI rules remain unsettled as lawmakers weigh risk to rural broadband funds; governed-AI guidance now flows mainly through the executive branch.", "tags": ["AI", "Policy"], "ref": 7 },
-    { "date": "2026-01", "title": "Gov. Kehoe proposed a $16.3B general-revenue FY2027 budget", "impact": "$54.5B all funds, -1.1% vs FY2026; a fiscal-discipline budget cutting $600M+ from core operations with a thin $4.7M ending balance. Reinforces Missouri's commitment to safely integrate AI into state-government operations under the Missouri GREAT initiative.", "tags": ["Budget", "AI"], "ref": 11 },
-    { "date": "2026-01", "title": "Governor Kehoe signs Executive Order 26-02 on AI", "impact": "Mandates a statewide AI integration framework by Nov 30, 2026; agencies will need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 },
-    { "date": "2026-01", "title": "NTIA approves Missouri's $814M BEAD broadband plan", "impact": "Funds fiber to 200,000+ locations while saving ~$900M of the $1.7B allocation; expands the long-term connected-government footprint.", "tags": ["Broadband"], "ref": 8 }
+    { "date": "2026-01", "title": "Governor Kehoe signs Executive Order 26-02 on AI", "impact": "Mandates a statewide AI integration framework by Nov 30, 2026; agencies will need governed, auditable AI approaches.", "tags": ["AI", "Policy"], "ref": 5 }
   ],
 
   "dellActions": [
@@ -156,6 +157,9 @@
     { "label": "Missouri OA — Cooperative Procurement Program FAQs", "url": "https://oa.mo.gov/purchasing/cooperative-procurement-program/faqs" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
     { "label": "AIwire/HPCwire — Amazon Selects Missouri for $10B Data Center Campus", "url": "https://www.hpcwire.com/aiwire/2026/06/16/amazon-selects-missouri-for-10b-data-center-campus/" },
-    { "label": "The Beacon — Missouri General Assembly sends $50.7 billion budget to governor's desk", "url": "https://thebeaconnews.org/stories/2026/05/07/missouri-lawmakers-approve-50-7-billion-budget/" }
+    { "label": "The Beacon — Missouri General Assembly sends $50.7 billion budget to governor's desk", "url": "https://thebeaconnews.org/stories/2026/05/07/missouri-lawmakers-approve-50-7-billion-budget/" },
+    { "label": "Missouri S&T News — Missouri leaders look to S&T as state prepares for AI, data center growth (June 18, 2026 forum)", "url": "https://news.mst.edu/2026/06/missouri-leaders-look-to-st-as-state-prepares-for-ai-data-center-growth/" },
+    { "label": "Missouri OA-ITSD — Chief Information Officer (John Laurent)", "url": "https://itsd.oa.mo.gov/chief-information-officer" },
+    { "label": "Missouri OA-ITSD — Information Security / Office of Cyber Security (State CISO)", "url": "https://itsd.oa.mo.gov/it-governance/information-security" }
   ]
 }

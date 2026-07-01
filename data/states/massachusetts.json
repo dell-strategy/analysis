@@ -3,7 +3,7 @@
   "name": "Massachusetts",
   "slug": "massachusetts",
   "region": "Northeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A statewide AI Hub, new sustainable high-performance compute, and the nation's densest research-university cluster make Massachusetts one of the strongest applied-AI and research-computing markets in the country.",
 
   "snapshot": [
@@ -44,7 +44,7 @@
     "notes": [
       "EOTSS operating figures sit in line item 1790-0100; the agency's central role is enterprise IT consolidation, not a single statewide IT spend number.",
       "Many AI and compute investments flow through MassTech (a quasi-public agency) and capital programs rather than the annual operating budget — confirm the funding vehicle before forecasting.",
-      "FY2027 budget not yet enacted as of late June 2026: House and Senate each passed ~$63.3B versions (House Apr; Senate May 6) and a conference committee is reconciling them; FY starts July 1, so expect a late-June/July signing. Governor's House 2 filing (Jan): $56.9B general-fund revenue, ~$89.5B all funds, building the Stabilization Fund toward a projected ~$8.7B balance."
+      "FY2027 budget not yet enacted as of June 30, 2026: House/Senate conferees reached an agreement in principle on a ~$63.4B budget (no new taxes/fees, no draw on the primary reserve) on June 29, with formal votes set for July 1; Healey filed a $7.7B one-month interim budget to bridge the fiscal-year start and has until July 11 to act. Governor's House 2 filing (Jan): $56.9B general-fund revenue, ~$89.5B all funds, building the Stabilization Fund toward a projected ~$8.7B balance."
     ]
   },
 
@@ -66,8 +66,8 @@
       "dellFit": 90,
       "budgetStrength": 80,
       "tags": ["AI Infrastructure", "HPC", "Universities"],
-      "summary": "A $31M state grant (announced May 2025) expands sustainable high-performance computing through the Massachusetts Green High Performance Computing Center, creating an AI Compute Resources (AICR) environment for universities, startups, and businesses. Combined state and university investment is projected at ~$120M over five years. MGHPCC's six members — BU, Harvard, MIT, Northeastern, UMass, and Yale — make this the strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
-      "ref": 3
+      "summary": "A $31M state grant (announced May 2025) expands sustainable high-performance computing through the Massachusetts Green High Performance Computing Center, creating an AI Compute Resources (AICR) environment for universities, startups, and businesses. In December 2025 the state selected Cambridge Computer — partnering with Dell Technologies and VAST Data — to build it in Holyoke on hundreds of NVIDIA B200/RTX GPUs powered by 100% carbon-free hydro. Combined state and university investment is projected to exceed $120M by 2030. MGHPCC's six members — BU, Harvard, MIT, Northeastern, UMass, and Yale — make this the strongest tailwind for Dell AI-infrastructure and ISG demand in the state.",
+      "ref": 17
     },
     {
       "name": "Mass Leads Act",
@@ -111,18 +111,18 @@
     { "name": "Maura Healey", "title": "Governor", "org": "Commonwealth of Massachusetts", "note": "Champions the applied-AI agenda; launched the AI Hub and signed the Mass Leads Act.", "ref": 5 },
     { "name": "Jason Snyder", "title": "Secretary of Technology Services & Security and Commonwealth CIO", "org": "EOTSS", "note": "Owns enterprise IT strategy, consolidation, and cybersecurity; former Harvard CTO. NASCIO 'Golden Gov' honoree (2025).", "ref": 9 },
     { "name": "Sabrina Mansur", "title": "Executive Director, Massachusetts AI Hub", "org": "MassTech", "note": "Inaugural director (started May 2025); 20+ years in AI and autonomous systems. Key contact for applied-AI and compute strategy.", "ref": 5 },
+    { "name": "Anthony (Tony) O'Neill", "title": "Commonwealth CISO & Chief Risk Officer", "org": "EOTSS", "note": "Named CISO in 2022; drives the state's 'whole-of-state' cyber approach and an emerging-tech/AI risk subcommittee. Owner of the security buildout Dell's secure-compute and managed services map to.", "ref": 18 },
     { "name": "MassTech (Massachusetts Technology Collaborative)", "title": "Quasi-public economic-development & innovation agency", "org": "Commonwealth of Massachusetts", "note": "Runs the AI Hub, MGHPCC relationship, and cyber grant programs — a major influence point for research-compute investment." },
     { "name": "MGHPCC", "title": "Massachusetts Green High Performance Computing Center", "org": "University consortium", "note": "Shared HPC facility for BU, Harvard, MIT, Northeastern, UMass, Yale; host of the new AI Compute Resources environment.", "ref": 3 }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "FY2027 budget in conference; House and Senate each passed ~$63.3B", "impact": "House (Apr) and Senate (May 6) versions are being reconciled by a conference committee; not yet enacted as of late June (FY starts July 1). Expect a late-June/July signing — agency IT spend timing tracks enactment.", "tags": ["Budget"], "ref": 11 },
+    { "date": "2026-06", "title": "FY2027 budget conference deal (~$63.4B); Healey files $7.7B interim budget", "impact": "House/Senate negotiators reached an agreement in principle (~$63.4B, no new taxes/fees) on June 29 with formal votes set for July 1; Healey filed a $7.7B one-month interim budget to bridge the new fiscal year while she has until July 11 to act. Agency IT spend timing tracks final enactment.", "tags": ["Budget"], "ref": 14 },
+    { "date": "2026-05", "title": "Healey debuts $25M Quantum Hub at MIT", "impact": "A $25M state investment in MIT's Quantum Systems Laboratory (announced May 28) extends the Healey emerging-tech agenda beyond AI into quantum — longer-term backdrop for research-compute and infrastructure demand tied to the university cluster.", "tags": ["AI", "Research Compute"], "ref": 15 },
+    { "date": "2026-05", "title": "State, IBM and Red Hat launch 'The Open Accelerator' AI startup program", "impact": "Applications opened May 26 (Boston Tech Week) for the inaugural cohort of The Open Accelerator, an AI-startup incubator designed with the Massachusetts AI Hub — reinforces the Hub as the front door to applied-AI demand and ecosystem buildout.", "tags": ["AI", "Economic Dev"], "ref": 16 },
+    { "date": "2025-12", "title": "Dell/Cambridge Computer/VAST selected to build AICR at MGHPCC", "impact": "On Dec 12 the state named Cambridge Computer — partnering with Dell Technologies and VAST Data — to build the AI Compute Resources environment in Holyoke: hundreds of NVIDIA B200 and RTX GPUs on Dell systems, 100% carbon-free hydro power. A landmark, public, Dell-anchored AI-infrastructure win and the strongest local reference for ISG/AI Factory pursuits.", "tags": ["AI Infrastructure", "HPC", "Dell"], "ref": 17 },
     { "date": "2026-05", "title": "Cyber Resilient Massachusetts grant cap raised from $25K to $50K", "impact": "Per-grantee cap doubled (May 18) for SOC/MDR services to municipalities, small businesses, and nonprofits via CyberTrust MA — a live, state-funded channel for endpoint, MDR, and secure-infrastructure offers.", "tags": ["Cybersecurity", "Municipal"], "ref": 12 },
-    { "date": "2026-04", "title": "Healey files $305M Mass Wins Act (incl. $75M AI/quantum, $100M defense)", "impact": "Follow-on to the 2024 Mass Leads Act; expands AI across industries plus emerging tech and defense innovation — longer-term backdrop for AI-infrastructure and research-compute demand. Pending in the legislature.", "tags": ["Economic Dev", "AI"], "ref": 13 },
-    { "date": "2026-02", "title": "Healey and Google launch 'Grow with Google' free AI training", "impact": "$2.5M Google-funded program, administered by the AI Hub, aims to train ~30,000 residents — reinforcing the state's applied-AI workforce push.", "tags": ["AI", "Workforce"], "ref": 7 },
-    { "date": "2025-08", "title": "MassTech issues RFP for a 'Data Commons Collaborative'", "impact": "Synthetic-dataset infrastructure modeled on resident data — signals demand for governed data and compute platforms.", "tags": ["AI", "Data"], "ref": 5 },
-    { "date": "2025-07", "title": "Governor Healey signs $60.9B FY2026 budget", "impact": "Budget up $3.2B over FY2025 but trimmed ~$1B from the filing — fiscal caution shapes agency IT spend.", "tags": ["Budget"], "ref": 1 },
-    { "date": "2025-05", "title": "$31M AI Hub HPC grant and AI Hub director announced at IBM Think (Boston)", "impact": "Expands sustainable high-performance compute via MGHPCC (~$120M projected over 5 yrs); names Sabrina Mansur as inaugural director.", "tags": ["AI Infrastructure", "HPC"], "ref": 3 }
+    { "date": "2026-04", "title": "Healey files $305M Mass Wins Act (incl. $75M AI/quantum, $100M defense)", "impact": "Follow-on to the 2024 Mass Leads Act; expands AI across industries plus emerging tech and defense innovation — longer-term backdrop for AI-infrastructure and research-compute demand. Pending in the legislature.", "tags": ["Economic Dev", "AI"], "ref": 13 }
   ],
 
   "dellActions": [
@@ -146,6 +146,11 @@
     { "label": "Mass.gov — Buy from a Statewide Contract (OSD / COMMBUYS)", "url": "https://www.mass.gov/buy-from-a-statewide-contract" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
     { "label": "MassCyberCenter — Cyber Resilient Massachusetts Grant Program (NOFO, May 2026)", "url": "https://masscybercenter.org/resilient-ma" },
-    { "label": "Mass.gov — Governor Healey files Mass Wins Act (Apr 2026)", "url": "https://www.mass.gov/news/governor-healey-files-mass-wins-act-to-create-jobs-lower-costs-and-attract-global-investment" }
+    { "label": "Mass.gov — Governor Healey files Mass Wins Act (Apr 2026)", "url": "https://www.mass.gov/news/governor-healey-files-mass-wins-act-to-create-jobs-lower-costs-and-attract-global-investment" },
+    { "label": "WBUR — Healey asks lawmakers to pass interim budget; FY27 conference deal (~$63.4B, Jun 2026)", "url": "https://www.wbur.org/news/2026/06/29/massachusetts-maura-healey-interim-budget" },
+    { "label": "Massachusetts AI Hub — Healey debuts Quantum Hub at MIT ($25M, May 2026)", "url": "https://aihub.masstech.org/news" },
+    { "label": "Mass.gov — State, IBM, Red Hat launch 'The Open Accelerator' (May 2026)", "url": "https://www.mass.gov/news/healey-driscoll-administration-joins-with-ibm-red-hat-to-launch-ai-accelerator-during-boston-tech-week" },
+    { "label": "MassTech — Cambridge Computer (w/ Dell & VAST) selected to build AICR (Dec 2025)", "url": "https://masstech.org/news/healey-driscoll-administration-celebrates-selection-cambridge-computer-build-landmark" },
+    { "label": "GovTech — Massachusetts CISO Anthony O'Neill profile", "url": "https://www.govtech.com/top-25/2026-top-25/anthony-oneill" }
   ]
 }

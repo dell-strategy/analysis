@@ -3,7 +3,7 @@
   "name": "Mississippi",
   "slug": "mississippi",
   "region": "Southeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A $25B AWS data-center buildout, a brand-new state Security Operations Center, and a hard-centralizing ITS — Mississippi is becoming national AI infrastructure while tightening how it buys and secures technology.",
 
   "snapshot": [
@@ -127,12 +127,11 @@
 
   "news": [
     { "date": "2026-07-01", "title": "IT Optimization Act (SB2653) and State SOC (SB2654) take effect", "impact": "Both laws are effective July 1, 2026 — the Statewide IT Optimization Program (enterprise architecture standards, shared IT, IT Optimization Fund) and a new State Security Operations Center inside ITS stand up. Greenfield cyber and consolidation/standardization openings, all routed through ITS.", "tags": ["Centralization", "Cybersecurity", "Procurement"], "ref": 7 },
-    { "date": "2026-05-28", "title": "Report: AWS data centers tied to higher Entergy Mississippi power bills", "impact": "A Synapse/Earthjustice report estimates ~$10.60/month added to residential bills (~$38M through Mar 2026); Entergy disputes it. Energy cost and grid politics are now a live backdrop to the data-center boom — watch for ratepayer/permitting friction.", "tags": ["Data Centers", "Energy"], "ref": 11 },
-    { "date": "2026-04", "title": "AWS commits to $25B total in Mississippi (Project Atlas + new campuses)", "impact": "Largest investment in state history; four sites (Ridgeland/Canton, Clinton/Hinds, Vicksburg/Warren). Warren County build expected to begin in 2026 — cements MS as national AI infrastructure and the top Dell AI-infra tailwind.", "tags": ["Data Centers", "AI"], "ref": 1 },
+    { "date": "2026-06", "title": "Data-center power-cost friction escalates: PSC declines ruling, ratepayer estimates rise", "impact": "Mississippi PSC declined to rule on a developer's grid-impact question (Jun 1) and a Mississippi Today analysis (Jun 9) detailed how AWS load could hit Entergy bills; Synapse/Earthjustice now estimate residential ratepayers have paid ~$38M through Mar 2026 (rising toward ~$74M by year-end, ~$10.60/mo). Energy economics and permitting are a live backdrop to the data-center boom — watch for friction that could slow or reshape buildout timelines.", "tags": ["Data Centers", "Energy"], "ref": 11 },
+    { "date": "2026-05", "title": "Gov. Reeves launches Mississippi Statewide AI Framework", "impact": "Announced May 21, 2026; built by the AI Workforce Readiness Council, AccelerateMS, and the Mississippi AI Network (MAIN). Sets five statewide AI priorities and 11 skill domains (incl. data privacy/security and cybersecurity awareness) from K-12 through workforce. Signals durable state-level AI and workforce momentum reinforcing the data-center/AI-infrastructure narrative; education-led, not a procurement vehicle itself.", "tags": ["AI", "Workforce", "Policy"], "ref": 13 },
+    { "date": "2026-04", "title": "AWS commits to $25B total in Mississippi (Project Atlas + new campuses)", "impact": "Largest investment in state history; four sites (Ridgeland/Canton, Clinton/Hinds, Vicksburg/Warren), including an ~$11B Madison County scale-up and ~$1B Clinton conversion. Warren County build expected to begin in 2026 — cements MS as national AI infrastructure and the top Dell AI-infra tailwind.", "tags": ["Data Centers", "AI"], "ref": 1 },
     { "date": "2026-04", "title": "Legislature enacts ~$7.36B FY2027 budget (session adjourns Apr 3)", "impact": "~3% increase incl. a $2,000 teacher pay raise and added Medicaid funding (MS FY starts July 1). A modestly growing budget frames agency IT spend; the proposal also flagged replacing the legacy youth-court case management system.", "tags": ["Budget"], "ref": 10 },
-    { "date": "2026-03", "title": "Legislature passes SB2654 (State SOC) and SB2653 (IT Optimization Act)", "impact": "SB2654 enrolled Mar 25; SB2653 enrolled Mar 10. Centralizes tech administration, kills duplicative contracts, and creates a greenfield cyber function inside ITS — both effective July 1, 2026.", "tags": ["Cybersecurity", "Centralization"], "ref": 12 },
-    { "date": "2026-02", "title": "NTIA approves Mississippi's BEAD Final Proposal", "impact": "$508M+ broadband buildout under BEAM (reaching ~93,000 households, ~$321M private match) proceeds; raises statewide digital-infrastructure demand.", "tags": ["Broadband"], "ref": 3 },
-    { "date": "2026-02", "title": "SB2625 cabinet-level CIO bill dies in committee", "impact": "State CIO remains the ITS Executive Director (Orgeron); tech authority stays centralized in ITS.", "tags": ["Leadership", "Policy"], "ref": 7 }
+    { "date": "2026-03", "title": "Legislature passes SB2654 (State SOC) and SB2653 (IT Optimization Act)", "impact": "SB2654 enrolled Mar 25; SB2653 enrolled Mar 10. Centralizes tech administration, kills duplicative contracts, and creates a greenfield cyber function inside ITS — both effective July 1, 2026.", "tags": ["Cybersecurity", "Centralization"], "ref": 12 }
   ],
 
   "dellActions": [
@@ -155,6 +154,11 @@
     { "label": "Mississippi ITS — Purchasing (IT Procurement) Learn More", "url": "https://www.its.ms.gov/services/purchasing-it-procurement-learn-more" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
     { "label": "Mississippi Today — Data centers increasing power rates (May 28, 2026)", "url": "https://mississippitoday.org/2026/05/28/data-centers-increasing-power-rates/" },
-    { "label": "Magnolia Tribune — Lawmakers agree to establish a State Security Operations Center (Mar 25, 2026)", "url": "https://magnoliatribune.com/2026/03/25/lawmakers-agree-to-establish-a-state-security-operations-center-focused-on-cybersecurity/" }
+    { "label": "Magnolia Tribune — Lawmakers agree to establish a State Security Operations Center (Mar 25, 2026)", "url": "https://magnoliatribune.com/2026/03/25/lawmakers-agree-to-establish-a-state-security-operations-center-focused-on-cybersecurity/" },
+    { "label": "Governor of Mississippi — Reeves Announces Launch of Mississippi Statewide AI Framework (May 21, 2026)", "url": "https://governorreeves.ms.gov/governor-reeves-announces-launch-of-mississippi-statewide-ai-framework/" },
+    { "label": "StateScoop — Mississippi governor launches statewide AI education framework (May 2026)", "url": "https://statescoop.com/mississippi-statewide-ai-framework-education/" },
+    { "label": "Mississippi Today — How will Amazon's data centers impact Mississippians' electric bills? (Jun 9, 2026)", "url": "https://mississippitoday.org/2026/06/09/amazon-data-centers-electric-bills/" },
+    { "label": "Mississippi Today — Developer to move forward as state declines ruling (Jun 1, 2026)", "url": "https://mississippitoday.org/2026/06/01/mississippi-ddata-center-plans/" },
+    { "label": "Mississippi ITS — Directors and Staff (CISO Jay White; ED Craig Orgeron)", "url": "https://www.its.ms.gov/about/directors-and-staff" }
   ]
 }

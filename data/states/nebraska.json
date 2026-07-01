@@ -3,7 +3,7 @@
   "name": "Nebraska",
   "slug": "nebraska",
   "region": "Plains",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A hyperscale data-center magnet (Google, Meta) and a first-in-20-years IT reorganization under a cost-cutting CIO — Nebraska is rewiring how it buys, secures, and runs technology while a budget squeeze forces every dollar to work harder.",
 
   "snapshot": [
@@ -120,18 +120,17 @@
   "powerStructure": [
     { "name": "Jim Pillen", "title": "Governor", "org": "State of Nebraska", "note": "Drives the cost-cutting mandate; backs state-level AI guardrails over a federal moratorium; signed LB 525.", "ref": 8 },
     { "name": "Matthew McCarville", "title": "State Chief Information Officer", "org": "Office of the CIO", "note": "Appointed Apr 2024 from the university system; leads the 20-year IT reorg with a cost-savings mandate. Confirmed in role per June 2026 OCIO org chart.", "ref": 9 },
-    { "name": "Bryce Bailey", "title": "State Chief Information Security Officer", "org": "Office of the CIO", "note": "Named permanent CISO late Feb 2026 (interim from Jan 27, 2026, succeeding Abby Eccher-Young); prior deputy CISO, CISA and City of Dallas cyber-recovery background. Owns the Joint Cybersecurity Operations Command Center.", "ref": 13 },
+    { "name": "Bryce Bailey", "title": "Deputy CIO & State Chief Information Security Officer", "org": "Office of the CIO", "note": "Per the June 2026 OCIO org chart, Bailey holds a dual role as Deputy CIO and CISO. Named permanent CISO late Feb 2026 (interim from Jan 27, 2026, succeeding Abby Eccher-Young); prior deputy CISO, CISA and City of Dallas cyber-recovery background. Owns the Joint Cybersecurity Operations Command Center.", "ref": 13 },
     { "name": "NITC", "title": "Statewide IT policy body", "org": "State of Nebraska", "note": "Sets IT standards and reviews major technology projects — relevant for forecasting enterprise direction.", "ref": 1 }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Pillen celebrates LB 1261, a 'transformative' energy law for large power users and data centers", "impact": "Passed 33-16; lets private companies finance and build new generation for mega-users (~1,000+ MW) and shifts that cost off public-power ratepayers. Clears a key obstacle to the Google/Meta-scale buildout and reinforces the AI-infrastructure tailwind that anchors Dell's strongest angle in the state.", "tags": ["Data Centers", "AI Infrastructure", "Energy", "Policy"], "ref": 14 },
+    { "date": "2026-06", "title": "Nebraska's first BEAD-funded household connection goes live", "impact": "NTIA and Pillen mark the first home connected under the state's BEAD broadband program (Ogallala, fixed-wireless). Signals federally funded connectivity expansion that broadens the addressable rural edge/network footprint over time.", "tags": ["Broadband", "Infrastructure"], "ref": 15 },
     { "date": "2026-04", "title": "Pillen signs LB 525 chatbot-disclosure law", "impact": "Nebraska becomes the 4th state with a chatbot law; signals a governed, transparency-first posture on AI adoption.", "tags": ["AI", "Policy"], "ref": 7 },
     { "date": "2026-03", "title": "Google-linked proposal could draw 1,000–3,000 MW in southeast Nebraska", "impact": "Underscores the scale of AI-infrastructure investment landing in the state (potential online date ~2029).", "tags": ["Data Centers", "AI"], "ref": 6 },
     { "date": "2026-02", "title": "Bryce Bailey named permanent State CISO", "impact": "Stable cyber leadership over the Joint Cybersecurity Operations Command Center stand-up; a fresh relationship for whole-of-state secure-compute and managed-services positioning.", "tags": ["Leadership", "Cybersecurity"], "ref": 13 },
-    { "date": "2026-01", "title": "Gov. Pillen proposed a $208.6M FY2027 general-fund reduction (mid-biennium)", "impact": "A conservative adjustment cutting biennium spending ~1.1%, leaving a projected $458.9M general-fund balance ($1.28B with the cash reserve, ~24% of appropriations) that exceeds the 3% minimum reserve.", "tags": ["Budget"], "ref": 12 },
-    { "date": "2025-12", "title": "Trump executive order targets state AI regulation; Nebraska reviewing impact", "impact": "Adds uncertainty to Nebraska's state-level AI rules; agencies watch how guardrails evolve.", "tags": ["AI", "Policy"], "ref": 10 },
-    { "date": "2025-07", "title": "Pillen joins 17 GOP governors opposing congressional AI moratorium", "impact": "Confirms Nebraska intends to keep regulating AI at the state level — governed adoption is the expectation.", "tags": ["AI", "Policy"], "ref": 8 },
-    { "date": "2025-06", "title": "OCIO pursues IT cost cuts amid ~$471M state deficit", "impact": "Cost-efficiency becomes the lens for all IT spend; modernization must pencil out as savings.", "tags": ["Budget", "Modernization"], "ref": 4 }
+    { "date": "2026-01", "title": "Gov. Pillen proposed a $208.6M FY2027 general-fund reduction (mid-biennium)", "impact": "A conservative adjustment cutting biennium spending ~1.1%, leaving a projected $458.9M general-fund balance ($1.28B with the cash reserve, ~24% of appropriations) that exceeds the 3% minimum reserve.", "tags": ["Budget"], "ref": 12 }
   ],
 
   "dellActions": [
@@ -155,6 +154,9 @@
     { "label": "Nebraska Examiner — How does Trump's AI executive order impact Nebraska?", "url": "https://nebraskaexaminer.com/2025/12/12/how-does-trumps-ai-executive-order-impact-nebraska/" },
     { "label": "Nebraska DAS — Materiel Division (state purchasing)", "url": "https://das.nebraska.gov/materiel/index.html" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "GovTech — Nebraska Makes Bryce Bailey Its Permanent Cybersecurity Leader", "url": "https://www.govtech.com/workforce/nebraska-makes-bryce-bailey-its-permanent-cybersecurity-leader" }
+    { "label": "GovTech — Nebraska Makes Bryce Bailey Its Permanent Cybersecurity Leader", "url": "https://www.govtech.com/workforce/nebraska-makes-bryce-bailey-its-permanent-cybersecurity-leader" },
+    { "label": "KNOP — State leaders celebrate LB 1261, call it a 'transformative' energy law for Nebraska", "url": "https://www.knopnews2.com/2026/06/03/state-leaders-celebrate-lb-1261-call-it-transformative-energy-law-nebraska/" },
+    { "label": "NTIA — Administrator Roth, Gov. Pillen Applaud Nebraska's First BEAD-Funded Household Connection", "url": "https://www.ntia.gov/press-release/2026/ntia-administrator-roth-governor-pillen-applaud-nebraska-s-first-bead-funded-household-connection" },
+    { "label": "Nebraska OCIO — Administration Org Chart (Updated June 2026)", "url": "https://cio.nebraska.gov/documents/administration-org-chart.pdf" }
   ]
 }

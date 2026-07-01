@@ -3,18 +3,18 @@
   "name": "Connecticut",
   "slug": "connecticut",
   "region": "Northeast",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A $55.8B two-year budget, a state CIO consolidating IT under DAS, and a governor who blocked sweeping AI rules in 2025 (a narrower AI law passed in 2026) and is throttling data centers over energy costs — Connecticut is a centralized, cost-conscious market that rewards governed modernization over hype.",
 
   "snapshot": [
     { "label": "2026–27 Biennial Budget", "value": "~$55.8B" },
     { "label": "Central IT Authority", "value": "DAS / BEST" },
     { "label": "Procurement Portal", "value": "CTsource" },
-    { "label": "State AI Law", "value": "PA 26-15" }
+    { "label": "State AI Law", "value": "PA 26-15 (CART Act)" }
   ],
 
   "execSummary": {
-    "summary": "Connecticut budgets on a two-year cycle; the FY2026–27 biennial budget signed in June 2025 totals roughly $55.8B (~$27.1B in FY2026, ~$28.4B in FY2027), and a FY2027 adjustment (Public Act 26-68) was signed in May 2026. For a Dell seller, three things shape the motion. First, technology is centralized: State CIO Mark Raymond runs IT for ~39 executive-branch agencies through the Department of Administrative Services' Bureau of Enterprise Systems & Technology (BEST), and IT buys above $500K route through BEST. Second, the policy posture is restraint, not acceleration — Gov. Lamont's veto threat killed the sweeping SB 2 AI bill in 2025 (a narrower AI law, Public Act 26-15, was signed June 2, 2026), and he is publicly telling new data centers to 'slow down' unless they bring their own power generation, because Connecticut's wholesale energy costs run far above the national average. Third, the real demand is unglamorous but durable: IT consolidation and shared services, a 'whole-of-state' cybersecurity push funded partly by federal grants, governed AI pilots inside agencies, and the K-12/library/municipal network (Connecticut Education Network) plus the UConn/Yale research base. Sell governed modernization and lifecycle value, not speculative AI-factory scale.",
+    "summary": "Connecticut budgets on a two-year cycle; the FY2026–27 biennial budget signed in June 2025 totals roughly $55.8B (~$27.1B in FY2026, ~$28.4B in FY2027), and a FY2027 adjustment (Public Act 26-68) was signed in late May 2026. For a Dell seller, three things shape the motion. First, technology is centralized: State CIO Mark Raymond runs IT for ~39 executive-branch agencies through the Department of Administrative Services' (DAS, led by Commissioner Michelle Gilman) Bureau of Enterprise Systems & Technology (BEST), and IT buys above $500K route through BEST. Second, the policy posture is restraint paired with governance, not acceleration — after Gov. Lamont's veto threat killed the broad SB 2 AI bill in 2025, the General Assembly passed a reworked omnibus AI bill, SB 5 (the Connecticut Artificial Intelligence Responsibility and Transparency Act, or 'CART Act'), which Lamont signed June 2, 2026 as Public Act 26-15. He is also publicly telling new data centers to 'slow down' unless they bring their own power generation, because Connecticut's electric rates rank among the nation's highest. Third, the real demand is unglamorous but durable: IT consolidation and shared services, a 'whole-of-state' cybersecurity push funded partly by federal grants, governed AI pilots inside agencies, and the K-12/library/municipal network (Connecticut Education Network) plus the UConn/Yale research base. Sell governed modernization and lifecycle value, not speculative AI-factory scale.",
     "opportunities": [
       "IT consolidation and shared services under BEST — server, storage, and infrastructure refresh as the state standardizes across ~39 agencies.",
       "'Whole-of-state' cybersecurity for state agencies and municipalities, backed by federal State & Local Cybersecurity Grant funding and 24/7 monitoring already in place.",
@@ -25,12 +25,12 @@
       { "value": "~$55.8B", "label": "2026–27 Biennial Budget", "note": "~$27.1B FY26 / ~$28.4B FY27", "ref": 2 },
       { "value": "39", "label": "Executive agencies under State CIO", "note": "IT centralized in DAS/BEST", "ref": 5 },
       { "value": ">$500K", "label": "IT buys reviewed by BEST", "note": "Central technology-procurement gate", "ref": 8 },
-      { "value": "PA 26-15", "label": "State AI law (2026)", "note": "Narrower AI law signed June 2, 2026 after the sweeping SB 2 failed in 2025", "ref": 3 }
+      { "value": "PA 26-15", "label": "State AI law (2026)", "note": "Omnibus 'CART Act' (SB 5) signed June 2, 2026 after the 2025 SB 2 failed", "ref": 3 }
     ]
   },
 
   "budget": {
-    "intro": "Connecticut appropriates on a two-year (biennial) cycle. The FY2026–27 budget signed in June 2025 totals roughly $55.8B — about $27.1B in FY2026 and $28.4B in FY2027 — and stays under the state's spending cap. There is no single published 'state IT budget' line; technology spend is distributed across agencies and centrally coordinated by DAS/BEST, with a FY2027 mid-biennium adjustment (Public Act 26-68) signed in May 2026.",
+    "intro": "Connecticut appropriates on a two-year (biennial) cycle. The FY2026–27 budget signed in June 2025 totals roughly $55.8B — about $27.1B in FY2026 and $28.4B in FY2027 — and stays under the state's spending cap. There is no single published 'state IT budget' line; technology spend is distributed across agencies and centrally coordinated by DAS/BEST, with a FY2027 mid-biennium adjustment (Public Act 26-68, ~$28.6B all funds) signed in late May 2026 — bipartisan, no tax increase, boosting town/education aid and using surplus to pay down debt.",
     "stats": [
       { "value": "~$27.1B", "label": "FY2026 appropriation", "note": "All funds (biennial budget)", "ref": 2 },
       { "value": "~$28.4B", "label": "FY2027 appropriation", "note": "Adjusted via PA 26-68", "ref": 6 },
@@ -70,13 +70,13 @@
       "ref": 7
     },
     {
-      "name": "Governed AI Adoption (narrow 2026 AI law)",
-      "status": "Cautious / no statute",
+      "name": "Governed AI Adoption (2026 CART Act)",
+      "status": "Statute enacted; governed adoption",
       "statusType": "warn",
       "dellFit": 65,
       "budgetStrength": 45,
       "tags": ["AI", "Policy", "Governance"],
-      "summary": "After the sweeping SB 2 AI-regulation bill passed the Senate 32-4 in May 2025 but died in the House under a Lamont veto threat, Connecticut enacted a narrower AI law (Public Act 26-15), signed June 2, 2026 — pairing AI chatbot self-harm-detection mandates, AI-in-hiring disclosure, an AI Academy, and a regulatory sandbox with youth online-safety protections. Agencies are piloting AI cautiously (including in education via the CIO-chaired Commission for Educational Technology). The opening is governed, auditable, private/on-prem AI for sensitive data, not open public models.",
+      "summary": "After the broad SB 2 AI-regulation bill died in 2025 under a Lamont veto threat, Connecticut enacted a reworked omnibus AI law — SB 5, the Connecticut Artificial Intelligence Responsibility and Transparency Act ('CART Act'), Public Act 26-15 — signed June 2, 2026, with provisions phasing in October 2026 through January 2028. It pairs companion-chatbot self-harm-detection protocols, AI-in-employment (AEDT) disclosure, generative-AI provenance/watermarking, frontier-model whistleblower protections, and youth online-safety limits. Agencies pilot AI cautiously ('low and slow,' humans-in-the-loop), including in education via the CIO-chaired Commission for Educational Technology. The opening is governed, auditable, private/on-prem AI for sensitive data, not open public models.",
       "ref": 3
     },
     {
@@ -86,7 +86,7 @@
       "dellFit": 40,
       "budgetStrength": 35,
       "tags": ["Data Centers", "Energy", "Economic Dev"],
-      "summary": "Unlike Sun Belt states, Connecticut is deliberately slowing hyperscale data centers: a 1.5M-sq-ft campus tied to the Millstone nuclear plant was scrubbed, and Lamont's 2026 State of the State urged new data centers to add their own generation. Wholesale energy costs run far above the U.S. average, and a 20–30 year tax-incentive program has drawn only one taker. Do not lead with AI-factory scale here — the in-state opportunity is governed enterprise AI and research computing, not hyperscale buildout.",
+      "summary": "Unlike Sun Belt states, Connecticut is deliberately slowing hyperscale data centers: a 1.5M-sq-ft campus tied to the Millstone nuclear plant was scrubbed, and the Lamont administration is advancing a 'bring your own power' framework plus a PILOT (payment-in-lieu-of-taxes) model so host towns capture revenue. Electric rates rank among the nation's highest, and a 20–30 year tax-incentive program from 2021 has drawn only one taker; legislators are even weighing rollback of those incentives. Do not lead with AI-factory scale here — the in-state opportunity is governed enterprise AI and research computing, not hyperscale buildout.",
       "ref": 4
     }
   ],
@@ -108,21 +108,21 @@
   },
 
   "powerStructure": [
-    { "name": "Ned Lamont", "title": "Governor", "org": "State of Connecticut", "note": "Cost-conscious; blocked the broad SB 2 AI bill in 2025 (a narrower AI law passed in 2026) and is throttling new data centers over energy costs. Favors targeted tech (quantum in Fairfield County, an AI center near Stamford).", "ref": 4 },
+    { "name": "Ned Lamont", "title": "Governor", "org": "State of Connecticut", "note": "Cost-conscious; blocked the broad SB 2 AI bill in 2025, then signed the reworked omnibus CART Act (SB 5 / PA 26-15) on June 2, 2026, and is throttling new data centers over energy costs. Favors targeted tech (quantum in Fairfield County, an AI center near Stamford).", "ref": 4 },
+    { "name": "Michelle Gilman", "title": "Commissioner", "org": "Department of Administrative Services (DAS)", "note": "Leads DAS — the central HR, procurement, and IT (BEST) authority — since 2022; named 2026 NASCA Vice President. Sets the administrative/procurement context in which BEST operates.", "ref": 13 },
     { "name": "Mark Raymond", "title": "State Chief Information Officer", "org": "DAS / Bureau of Enterprise Systems & Technology (BEST)", "note": "On the state leadership team since 2011; runs IT for ~39 executive agencies, the Connecticut Education Network, and chairs the Commission for Educational Technology. Owns the statewide tech direction.", "ref": 5 },
     { "name": "Gene Meltser", "title": "Chief Information Security Officer", "org": "DAS / BEST", "note": "Driving an enterprise-wide cyber consolidation — collapsing fragmented security tools into a single program and cutting investigation times from days to hours. A displacement opening for unified security/endpoint/automation platforms.", "ref": 10 },
-    { "name": "Sen. James Maroney", "title": "Lead AI legislator", "org": "Connecticut General Assembly", "note": "Lead author of Connecticut's AI legislation (SB 2 in 2025; the enacted 2026 law, PA 26-15); a national voice on state AI policy. Useful for reading where AI governance — and agency AI demand — heads next.", "ref": 3 },
+    { "name": "Sen. James Maroney", "title": "Lead AI legislator", "org": "Connecticut General Assembly", "note": "Lead author of Connecticut's AI legislation — SB 2 in 2025 and the enacted SB 5 / CART Act (PA 26-15) in 2026; a national voice on state AI policy. Useful for reading where AI governance — and agency AI demand — heads next.", "ref": 3 },
     { "name": "Office of Policy and Management (OPM)", "title": "Budget & IT strategic planning", "org": "State of Connecticut", "note": "Publishes the state IT strategic plan and the biennial budget — the source of truth for forecasting tech priorities and spend.", "ref": 1 }
   ],
 
   "news": [
-    { "date": "2026-06-02", "title": "Lamont signs AI / youth online-safety law (Public Act 26-15)", "impact": "Mandates AI chatbot self-harm detection, AI-in-hiring disclosure, an AI Academy, and a regulatory sandbox — signaling demand for AI governance, compliance, and data-privacy tooling.", "tags": ["AI", "Policy", "Legislation"], "ref": 3 },
-    { "date": "2026-05", "title": "Lamont signs FY2027 budget adjustment (Public Act 26-68)", "impact": "Mid-biennium adjustment includes $9.86M for State Police technology modernization; confirms a steady, cap-bound spending posture.", "tags": ["Budget"], "ref": 6 },
-    { "date": "2026-04", "title": "CT CISO Gene Meltser pushes a unified, outcome-driven cyber strategy", "impact": "Active consolidation of fragmented security tools into a single enterprise program — a displacement opening for unified security/endpoint/automation platforms.", "tags": ["Cybersecurity", "Leadership"], "ref": 10 },
-    { "date": "2026-02", "title": "Lamont's State of the State urges data centers to 'slow down'", "impact": "Signals Connecticut will not chase hyperscale AI buildout — frame in-state AI as governed enterprise/research workloads, not data-center scale.", "tags": ["Data Centers", "Energy"], "ref": 4 },
+    { "date": "2026-06", "title": "Lamont signs omnibus AI law SB 5 / 'CART Act' (Public Act 26-15)", "impact": "Signed June 2, 2026; phases in Oct 2026–Jan 2028 with companion-chatbot self-harm protocols, AI-in-employment (AEDT) disclosure, generative-AI provenance/watermarking, frontier-model whistleblower rules, and youth online-safety limits — signaling sustained demand for AI governance, audit, provenance, and data-privacy tooling.", "tags": ["AI", "Policy", "Legislation"], "ref": 3 },
+    { "date": "2026-05", "title": "Lamont signs bipartisan FY2027 budget adjustment (Public Act 26-68)", "impact": "~$28.6B all-funds mid-biennium adjustment (Senate 30-6, House 127-21), no tax increase; includes $9.86M for State Police technology modernization and confirms a steady, cap-bound spending posture.", "tags": ["Budget"], "ref": 6 },
+    { "date": "2026-04", "title": "CT CISO Gene Meltser pushes a unified, outcome-driven cyber strategy", "impact": "Active consolidation of fragmented security tools into a single enterprise program (including a Google-partnered AI-driven SOC) — a displacement opening for unified security/endpoint/automation platforms.", "tags": ["Cybersecurity", "Leadership"], "ref": 10 },
+    { "date": "2026-02", "title": "Lamont presses 'bring your own power' for new data centers", "impact": "State of the State and a PILOT framework signal Connecticut will not chase hyperscale AI buildout — frame in-state AI as governed enterprise/research workloads, not data-center scale.", "tags": ["Data Centers", "Energy"], "ref": 4 },
     { "date": "2025-09", "title": "CIO Mark Raymond profiled on IT consolidation and AI in education", "impact": "Reinforces shared-services strategy and cautious, governed AI adoption through the Commission for Educational Technology.", "tags": ["Leadership", "AI"], "ref": 5 },
-    { "date": "2025-06", "title": "Lamont signs ~$55.8B FY2026–27 biennial budget", "impact": "Two-year spending plan under the state cap sets the funding baseline for agency technology priorities.", "tags": ["Budget"], "ref": 2 },
-    { "date": "2025-05", "title": "Sweeping SB 2 AI bill passes Senate 32-4 but dies in the House", "impact": "No broad AI statute in 2025; a narrower AI law (Public Act 26-15) followed in June 2026 — agencies proceed with governed, auditable AI.", "tags": ["AI", "Policy"], "ref": 3 }
+    { "date": "2025-06", "title": "Lamont signs ~$55.8B FY2026–27 biennial budget", "impact": "Two-year spending plan under the state cap sets the funding baseline for agency technology priorities.", "tags": ["Budget"], "ref": 2 }
   ],
 
   "dellActions": [
@@ -143,6 +143,10 @@
     { "label": "CIS — State and Local Cybersecurity Grant Program (SLCGP)", "url": "https://www.cisecurity.org/ms-isac/slcgp" },
     { "label": "CT DAS — Procurement Programs and Services", "url": "https://portal.ct.gov/das/procurement-programs-and-services" },
     { "label": "NASBO — Summaries of FY2027 Proposed Budgets (June 2026)", "url": "https://www.nasbo.org/reports-data" },
-    { "label": "StateTech Magazine — Connecticut's CISO pushes a unified, outcome-driven cyber strategy", "url": "https://statetechmagazine.com/article/2026/04/connecticuts-ciso-pushes-unified-outcome-driven-cyber-strategy" }
+    { "label": "StateTech Magazine — Connecticut's CISO pushes a unified, outcome-driven cyber strategy", "url": "https://statetechmagazine.com/article/2026/04/connecticuts-ciso-pushes-unified-outcome-driven-cyber-strategy" },
+    { "label": "Future of Privacy Forum — SB 5 in Five: Connecticut's new AI law (CART Act)", "url": "https://fpf.org/blog/sb-5-in-five-what-to-know-about-connecticuts-new-ai-law/" },
+    { "label": "CT News Junkie — Lamont signs bipartisan 2027 budget adjustment (PA 26-68)", "url": "https://ctnewsjunkie.com/2026/05/27/lamont-signs-bipartisan-2027-budget-adjustment/" },
+    { "label": "CT DAS — Meet the Commissioner (Michelle Gilman)", "url": "https://portal.ct.gov/das/about-das/meet-the-commissioner" },
+    { "label": "Hartford Business Journal — CT considers 'bring your own power' model for data centers", "url": "https://hartfordbusiness.com/article/ct-considers-bring-your-own-power-model-for-data-center-development/" }
   ]
 }

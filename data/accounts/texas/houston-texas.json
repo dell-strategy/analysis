@@ -5,7 +5,7 @@
   "name": "Houston, Texas",
   "slug": "houston-texas",
   "hq": "Houston, TX",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The 4th-largest U.S. city (~2.3M residents) — Houston runs enterprise technology for ~22,000 employees across 23 departments through Houston Information Technology Services (HITS), on a ~$7B FY2026 budget that closed a ~$330M shortfall, and buys through its Strategic Procurement Division and Texas cooperative contracts.",
 
   "snapshot": [
@@ -47,18 +47,20 @@
   },
 
   "powerStructure": [
-    { "name": "John Whitmire", "title": "Mayor", "note": "Strong-mayor executive (sworn in Jan 2024) who sets budget priorities and proposes the annual budget; council adopts it. The FY2026 budget posture — closing a ~$330M gap without service cuts — is his agenda and shapes the spending environment IT buys sit in." },
+    { "name": "John Whitmire", "title": "Mayor", "note": "Strong-mayor executive (sworn in Jan 2024) who sets budget priorities and proposes the annual budget; council adopts it. His ~$7.5B FY2027 budget (passed June 2026) closes most of a ~$209M gap via new fees while leaving a ~$25M planned deficit — a fiscal posture that shapes the spending environment IT buys sit in." },
     { "name": "Lisa Kent", "title": "Chief Information Officer & Director, HITS", "note": "Oversees enterprise IT for nearly 22,000 employees across 23 departments. The primary IT relationship and owner of citywide technology strategy, infrastructure, and digital transformation. Confirm current title/scope before engaging." },
-    { "name": "Dr. Chris Mitchell", "title": "Chief Information Security Officer", "note": "City CISO (recognized as Cisco's Cybersecurity Defender for the Americas in 2023). Owns the city's security strategy, policy, and operations across the HITS estate — the relationship for security-operations, endpoint, identity, and resilience motions." },
+    { "name": "Dr. Chris Mitchell", "title": "Chief Information Security Officer", "note": "City CISO (Cisco Cybersecurity Defender for the Americas in 2023; received the Enterprise ORBIE at the 2026 HoustonCISO ORBIE Awards). Owns the city's security strategy, policy, and operations across the HITS estate — the relationship for security-operations, endpoint, identity, and resilience motions, sharpened by World Cup 2026 threat exposure." },
     { "name": "Houston Information Technology Services (HITS)", "title": "Central IT, infrastructure & cybersecurity", "note": "The enterprise IT organization and day-to-day buying center for infrastructure, cloud, endpoint, applications, and security across 23 departments." },
     { "name": "Strategic Procurement Division (SPD)", "title": "Citywide procurement", "note": "Owns solicitations, cooperative-contract processing, and supplier onboarding (Beacon Bid). The required path for any city technology purchase, including co-op buys." }
   ],
 
   "news": [
-    { "date": "2025-06", "title": "Houston City Council passes Mayor Whitmire's ~$7B FY2026 budget, closing a ~$330M shortfall", "impact": "Defines the FY2026 spending envelope (General Fund ~$3.03B) and signals continued cost discipline. Lead with cost-efficiency, lifecycle value, and co-op pricing for IT proposals.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "City Council passes Mayor Whitmire's ~$7.5B FY2027 budget (15-1), closing most of a ~$209M gap with new fees", "impact": "The new operating envelope: ~$7.5B all funds and a ~$3.16B General Fund (up ~$385M / 5.4% YoY), passed June 10, 2026 without a property-tax increase. It leans on a new solid-waste utility fee and a right-of-way rental fee and still carries a ~$25M planned deficit, so continued fiscal scrutiny of recurring IT spend is likely — lead with cost-efficiency, consolidation, and co-op pricing.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "Controller Chris Hollins criticizes FY2027 budget for reliance on one-time 'gimmicks' and thin reserves", "impact": "City Controller Chris Hollins publicly graded the budget poorly on transparency and warned it repeats deficit spending and pushes reserves toward minimums. Signals ongoing political tension over structural balance — expect scrutiny of new and recurring technology commitments.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "Houston activates World Cup Joint Information Center and public-safety operations for FIFA World Cup 2026", "impact": "Houston hosts seven matches at NRG (renamed 'Houston Stadium') June 14-July 4, 2026; the city activated a Joint Information Center and citywide alerting, backed by an ~$80M security plan and a ~$65M FEMA public-safety grant. A high-visibility public-safety, resilience, and cybersecurity moment for HITS and the city CISO.", "tags": ["Public Safety", "Cybersecurity"] },
+    { "date": "2026-04", "title": "City CISO Dr. Chris Mitchell receives the Enterprise ORBIE at the 2026 HoustonCISO ORBIE Awards", "impact": "Confirms the city CISO remains in seat and is a recognized senior security leader in the metro. Reinforces the security-operations, endpoint, identity, and resilience relationship at HITS.", "tags": ["Cybersecurity"] },
     { "date": "2025-06", "title": "Council approves ~$16.7B FY2026 capital improvement plan", "impact": "A multi-year infrastructure envelope separate from the operating budget — a longer-horizon entry point for infrastructure-tied technology where eligible.", "tags": ["Budget", "Infrastructure"] },
-    { "date": "2025-05", "title": "City closes shortfall via voluntary retirements, drainage settlement, and consolidations", "impact": "Roughly one-third of 2,700 eligible employees took retirement incentives; 311/water-billing and HPD HR/IT functions consolidated. Workforce and org change can reshape IT priorities and create modernization openings.", "tags": ["Budget"] },
-    { "date": "2025-04", "title": "Houston technology leaders recognized at the 2025 HoustonCISO ORBIE Awards", "impact": "Signals an active, senior municipal security community in the metro — useful context and reference network for security positioning with the city CISO.", "tags": ["Cybersecurity"] }
+    { "date": "2025-05", "title": "City closes FY2026 shortfall via voluntary retirements, drainage settlement, and consolidations", "impact": "Roughly one-third of 2,700 eligible employees took retirement incentives; 311/water-billing and HPD HR/IT functions consolidated. Workforce and org change can reshape IT priorities and create modernization openings.", "tags": ["Budget"] }
   ],
 
   "dellActions": [
@@ -78,7 +80,12 @@
     { "label": "City of Houston — Strategic Procurement Division", "url": "https://www.houstontx.gov/bizwithhou/" },
     { "label": "City of Houston — Cooperative Purchasing for Technology", "url": "https://www.houstontx.gov/council/committees/tti/20210128/Cooperative-Purchasing-Technology.pdf" },
     { "label": "City of Houston — City CISO Chris Mitchell Recognized as Cybersecurity Defender of 2023", "url": "https://www.houstontx.gov/hits/chris-mitchell-cybersecurity-defender-2023.html" },
-    { "label": "GlobeNewswire — Top Security Executives Recognized at the 2025 HoustonCISO ORBIE Awards", "url": "https://www.globenewswire.com/news-release/2025/04/24/3067830/0/en/Top-Security-Executives-Recognized-at-the-2025-HoustonCISO-ORBIE-Awards.html" },
+    { "label": "GlobeNewswire — 2026 HoustonCISO ORBIE Awards Recognize Top Security Executives (Chris Mitchell, Enterprise ORBIE)", "url": "https://www.globenewswire.com/news-release/2026/04/23/3280296/0/en/2026-houstonciso-orbie-awards-recognize-top-security-executives.html" },
+    { "label": "Houston Public Media — City of Houston passes Whitmire's $7.5 billion FY2027 budget", "url": "https://www.houstonpublicmedia.org/articles/news/city-of-houston/2026/06/10/554231/city-of-houston-passes-whitmires-7-5-billion-budget-for-fiscal-year-2027/" },
+    { "label": "Houston.org — A Look at the City of Houston's Proposed FY2027 Budget", "url": "https://houston.org/news/a-look-at-the-city-of-houstons-proposed-fy-2027-budget/" },
+    { "label": "DefenderNetwork — Controller Chris Hollins warns Houston budget relies on 'gimmicks'", "url": "https://defendernetwork.com/news/politics/controller-chris-hollins-warns-houston-budget-relies-on-gimmicks/" },
+    { "label": "FOX 26 Houston — Houston activates FIFA World Cup emergency hub, launches public safety alert system", "url": "https://www.fox26houston.com/news/houston-activates-emergency-public-safety-hub-ahead-fifa-world-cup-2026" },
+    { "label": "Houston Public Media — FEMA awards $65 million to Houston for public safety ahead of FIFA World Cup", "url": "https://www.houstonpublicmedia.org/articles/news/city-of-houston/2026/03/18/546496/fema-awards-65-million-to-houston-for-public-safety-ahead-of-fifa-world-cup/" },
     { "label": "Texas DIR — Cooperative Contracts", "url": "https://dir.texas.gov/cooperative-contracts" }
   ]
 }
