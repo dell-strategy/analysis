@@ -4,7 +4,7 @@
   "state": "new-york",
   "stateName": "New York",
   "type": "City",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "hq": "New York, NY",
   "tagline": "The largest municipal water and wastewater utility in the U.S. — DEP runs NYC's drinking-water supply, sewers, and 14 treatment plants on a sprawling OT/SCADA footprint, while citywide IT policy and procurement run through the Office of Technology and Innovation (OTI).",
 
@@ -48,16 +48,20 @@
   },
 
   "powerStructure": [
-    { "name": "Lisa Garcia", "title": "Commissioner, NYC DEP", "note": "Appointed by Mayor Mamdani (early 2026); former U.S. EPA Region 2 Administrator. Sets agency priorities — the top relationship at DEP." },
+    { "name": "Zohran Mamdani", "title": "Mayor, City of New York", "note": "Sworn in Jan 1, 2026; appoints DEP and OTI leadership and sets citywide budget/capital priorities. Administration is still defining its technology posture — track executive-budget and OTI signals." },
+    { "name": "Lisa Garcia", "title": "Commissioner, NYC DEP", "note": "Appointed by Mayor Mamdani (Jan 2026, announced/confirmed through spring); former U.S. EPA Region 2 Administrator. Sets agency priorities — the top relationship at DEP." },
+    { "name": "Lisa Gelobter", "title": "CTO & Commissioner, NYC Office of Technology and Innovation (OTI)", "note": "Appointed Feb 2026 (succeeded Matt Fraser); oversees citywide IT infrastructure, cybersecurity, cloud and data policy. Sets the standards and contracting layer above DEP — a key influence relationship." },
+    { "name": "Kelly Moan", "title": "Chief Information Security Officer (CISO), head of NYC Cyber Command", "note": "Leads citywide cyber defense across 100+ agencies within OTI. Predates the Mamdani administration — confirm she remains in role. Central for any OT/critical-infrastructure security conversation." },
     { "name": "DEP Bureau of Wastewater Treatment (BWT)", "title": "Wastewater operations & digital transformation", "note": "Owns the SCADA / IT-cyber / asset-management / app-dev modernization across treatment plants — a primary OT buying center." },
-    { "name": "DEP technology / engineering leadership", "title": "Agency IT, OT & engineering", "note": "DEP's own IT and engineering organization runs systems, capital projects, and OT — confirm current named leads before forecasting." },
-    { "name": "NYC Office of Technology and Innovation (OTI)", "title": "Citywide IT, cloud & cybersecurity policy", "note": "Sets citywide IT strategy, security/cloud standards, and procures citywide IT services — the policy and contracting layer above DEP." }
+    { "name": "DEP technology / engineering leadership", "title": "Agency IT, OT & engineering", "note": "DEP's own IT and engineering organization runs systems, capital projects, and OT — confirm current named leads before forecasting." }
   ],
 
   "news": [
-    { "date": "2026-01", "title": "Lisa Garcia named DEP Commissioner as Aggarwala steps down", "impact": "New agency leadership under Mayor Mamdani — re-map executive priorities and the relationship at the top of DEP.", "tags": ["Leadership"] },
-    { "date": "2026-05", "title": "Water Board moves on a proposed ~6% FY2027 water rate increase", "impact": "Rate revenue funds DEP's operating and capital plan — a signal of continued infrastructure investment effective ~July 1, 2026.", "tags": ["Budget"] },
-    { "date": "2026-04", "title": "New DEP Commissioner outlines infrastructure and resilience priorities", "impact": "Public priority-setting on water, resilience, and modernization — align the OT/data/security message to these themes.", "tags": ["Strategy"] },
+    { "date": "2026-06", "title": "NYC Council adopts ~$115.8B FY2027 budget (June 30) with an expanded five-year capital plan (~$117B, ~$8B in new Mamdani-administration investment)", "impact": "Sets the citywide fiscal envelope DEP's capital and OT work sits within; larger capital plan signals continued infrastructure spend — re-confirm DEP capital lines and emergency-sewer/contract levels.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "NYC Water Board adopts ~6% FY2027 water rate, effective July 1, 2026 (with Home Water Assistance credit, ~4.5% effective)", "impact": "Rate revenue funds DEP's operating and capital plan — a confirmed signal of continued infrastructure investment for the new fiscal year.", "tags": ["Budget"] },
+    { "date": "2026-02", "title": "Lisa Gelobter named NYC CTO & OTI Commissioner (succeeding Matt Fraser)", "impact": "New citywide technology, cloud and cybersecurity leadership above DEP — re-map the OTI relationship and confirm any shifts in citywide IT/security standards and procurement.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "NYS water-sector cyber rules: OT/IT separation and incident reporting; OT-focused compliance deadline Jan 1, 2027", "impact": "Near-term compliance driver for DEP — OT/IT segmentation, OT visibility, incident-response and 24-hour reporting. Grant funding available. Reinforce the critical-infrastructure-security message now.", "tags": ["Cybersecurity", "Compliance"] },
+    { "date": "2026-01", "title": "Lisa Garcia named DEP Commissioner as Aggarwala steps down", "impact": "Agency leadership under Mayor Mamdani (sworn in Jan 1, 2026) — executive priorities and the top relationship at DEP.", "tags": ["Leadership"] },
     { "date": "2025-12", "title": "DEP continues citywide AMR-to-AMI meter upgrade (600,000+ devices)", "impact": "Multi-year metering modernization generates data-platform, analytics, and security workloads adjacent to enterprise IT.", "tags": ["IoT/Metering"] }
   ],
 
@@ -76,6 +80,12 @@
     { "label": "NYC Office of Technology and Innovation — Cybersecurity", "url": "https://www.nyc.gov/content/oti/pages/cybersecurity" },
     { "label": "Governor Hochul — Water-sector cybersecurity regulations & grants", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-first-nation-cybersecurity-regulations-and-grants-protect-new-york" },
     { "label": "NYC OMB — Preliminary Ten-Year Capital Strategy FY2026–2035", "url": "https://www.nyc.gov/assets/omb/downloads/pdf/jan25/ptyp1-25.pdf" },
-    { "label": "THE CITY — Mamdani Names Environmental Protection Commissioner", "url": "https://www.thecityreporter.nyc/2026/01/27/mamdani-environmental-protection-commissioner-dep-lisa-garcia/" }
+    { "label": "THE CITY — Mamdani Names Environmental Protection Commissioner", "url": "https://www.thecityreporter.nyc/2026/01/27/mamdani-environmental-protection-commissioner-dep-lisa-garcia/" },
+    { "label": "NYC Mayor's Office — Mamdani Announces CTO & Key Appointments (Lisa Gelobter, OTI)", "url": "https://www.nyc.gov/mayors-office/news/2026/02/mayor-mamdani-announces-key-appointments-to-three-city-agencies-" },
+    { "label": "StateScoop — Mamdani names Lisa Gelobter as NYC CTO", "url": "https://statescoop.com/new-york-mayor-mamdani-lisa-gelobter-cto/" },
+    { "label": "NYC OTI — Cyber Command (CISO Kelly Moan)", "url": "https://www.nyc.gov/content/oti/pages/meet-the-team/cyber-command" },
+    { "label": "NYC Council — Fiscal Year 2027 Budget Adopted (June 30, 2026)", "url": "https://council.nyc.gov/press/2026/06/30/3166/" },
+    { "label": "NYC Mayor's Office — $124.7B FY2027 Executive Budget", "url": "https://www.nyc.gov/mayors-office/news/2026/05/mayor-zohran-mamdani-releases--124-7-billion-executive-budget-fo" },
+    { "label": "Industrial Cyber — NY water-sector cybersecurity rules & grant program", "url": "https://industrialcyber.co/utilities-energy-power-water-waste/new-york-introduces-cybersecurity-rules-2-5-million-grant-program-to-strengthen-water-infrastructure-defenses/" }
   ]
 }

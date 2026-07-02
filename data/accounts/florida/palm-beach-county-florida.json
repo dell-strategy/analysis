@@ -5,7 +5,7 @@
   "stateName": "Florida",
   "type": "County",
   "hq": "West Palm Beach, FL",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Florida's third-most-populous county (~1.5M residents, West Palm Beach) runs central IT through Information Systems Services — now branded the Office of Technology and Innovation — operating the largest county fiber network in Florida amid a fresh administrator and a CIO leadership transition.",
 
   "snapshot": [
@@ -27,7 +27,8 @@
     "notes": [
       "The county weighed cuts and new revenue options against the FY2026 budget; flat millage on rising values still expands the revenue base, but net-new IT spend competes against other priorities — co-op pricing and ROI framing matter.",
       "Capital IT costs are fully borne by the Board of County Commissioners and are not part of the ISS cost-allocation plan — map Board-funded technology capital separately from the ISS operating/cost-recovery line.",
-      "A precise ISS/OTI department operating budget was not confirmed from a current public source; anchor IT-specific spend against the adopted budget book rather than a single quoted figure."
+      "A precise ISS/OTI department operating budget was not confirmed from a current public source; anchor IT-specific spend against the adopted budget book rather than a single quoted figure.",
+      "FY2027 outlook is under acute fiscal pressure: County Administrator Joseph Abruzzo presented a proposed FY2027 budget in June 2026 with roughly $35M in cuts after the Commission directed a flat-or-lower millage, and county leaders warn a November 2026 statewide ballot measure raising the homestead exemption (to $150K in 2027, higher thereafter) could force the largest department cuts in county history — a discretionary-budget squeeze that will tighten net-new IT capital and sharpen ROI/co-op-pricing framing. Figures were still moving as of June 2026 (max-millage and property-value estimates due July 2026; final adoption September 2026) — treat as evolving."
     ]
   },
 
@@ -56,9 +57,10 @@
   ],
 
   "news": [
-    { "date": "2026-01", "title": "Longtime CIO Archie Satchell retires; Deputy CIO Mike Butler steps in as acting CIO", "impact": "A 35-year county veteran exits the CIO seat (retired Jan 16, 2026) with his deputy acting in the role — re-map the IT relationship and watch for the permanent CIO decision before forecasting large bets.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "Abruzzo pitches FY2027 budget with ~$35M in cuts; county braces for historic reductions if property-tax amendment passes", "impact": "Following a Commission directive to hold or lower the countywide millage, the County Administrator floated ~$35M in FY2027 cuts in June 2026 and warned that a November 2026 statewide ballot measure raising the homestead exemption could trigger the largest department cuts in county history (leaders cited a potential drop from ~$609M to ~$210M across 30 departments over two years). Expect a tighter discretionary/IT-capital environment — lead with ROI, consolidation, and cooperative pricing; figures were still moving (max-millage/value estimates due July, adoption in September).", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "County Administrator Abruzzo publicly disputes state CFO Ingoglia's 'wasteful spending' claims", "impact": "Abruzzo challenged the state CFO's shifting waste estimates ($344M then $444M) and offered a line-by-line budget review — signaling heavy state-vs-county fiscal scrutiny that will keep every large county expenditure, including IT, under a value-and-justification lens.", "tags": ["Budget", "Leadership"] },
+    { "date": "2026-01", "title": "Longtime CIO Archie Satchell retires; Deputy CIO Mike Butler steps in as acting CIO", "impact": "A 35-year county veteran exits the CIO seat (retired Jan 16, 2026) with his deputy acting in the role — re-map the IT relationship and watch for the permanent CIO decision before forecasting large bets. The county's OTI page still lists Butler as Deputy CIO with no permanent CIO named as of late June 2026.", "tags": ["Leadership"] },
     { "date": "2025-09", "title": "County adopts $9.6B FY2026 budget at a flat 4.5000-mill countywide rate", "impact": "Flat millage on rising values expands the revenue base, but the county is weighing cuts and new revenue — ROI and co-op pricing framing matter for net-new IT spend.", "tags": ["Budget"] },
-    { "date": "2025-06", "title": "Joseph Abruzzo selected as County Administrator, succeeding Verdenia Baker", "impact": "New chief executive over the county after nearly a decade of stable leadership — a fresh top relationship and a chance to re-pitch strategic technology priorities.", "tags": ["Leadership"] },
     { "date": "2026-04", "title": "Palm Beach State College launches $1M federally funded AI Cybersecurity Center", "impact": "Regional AI/cyber capacity and a first-of-its-kind county cyber range signal rising local demand and talent for AI-enabled security — useful context for security and AI-infrastructure conversations.", "tags": ["AI", "Cybersecurity"] }
   ],
 
@@ -78,6 +80,9 @@
     { "label": "Palm Beach County — County Administrator Joseph Abruzzo biography", "url": "https://discover.pbc.gov/administration/Pages/joseph-abruzzo-biography.aspx" },
     { "label": "GovTech — As Palm Beach County CIO Retires, His Deputy Steps In", "url": "https://www.govtech.com/workforce/as-palm-beach-county-cio-retires-his-deputy-steps-in" },
     { "label": "WPTV — Commissioners select Joseph Abruzzo as next county administrator", "url": "https://www.wptv.com/news/palm-beach-county/palm-beach-county-commissioners-select-joseph-abruzzo-to-become-next-county-administrator" },
-    { "label": "PBSC — Awarded $1M to launch AI Cybersecurity Center", "url": "https://news.pbsc.edu/stories/2026/pbsc-awarded-1-million-to-launch-cutting-edge-ai-cybersecurity-center.php" }
+    { "label": "PBSC — Awarded $1M to launch AI Cybersecurity Center", "url": "https://news.pbsc.edu/stories/2026/pbsc-awarded-1-million-to-launch-cutting-edge-ai-cybersecurity-center.php" },
+    { "label": "WFLX — Palm Beach County bracing for largest department budget cuts in history due to potential property tax cuts (Jun 2026)", "url": "https://www.wflx.com/2026/06/10/palm-beach-county-bracing-largest-department-budget-cuts-history-due-potential-property-tax-cuts/" },
+    { "label": "WLRN — Florida property tax relief proposal could cost Palm Beach County hundreds of millions in services (Jun 2026)", "url": "https://www.wlrn.org/government-politics/2026-06-11/florida-property-tax-relief-proposal-could-cost-palm-beach-county-400m-in-services" },
+    { "label": "CBS12 — Abruzzo challenges CFO Ingoglia over county 'wasted claims' calculation (Jun 2026)", "url": "https://cbs12.com/news/local/abruzzo-challenges-cfo-ingoglia-to-show-how-he-calculated-palm-beach-county-waste-claims-florida-news" }
   ]
 }

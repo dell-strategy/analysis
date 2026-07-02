@@ -5,14 +5,15 @@
   "name": "NYC Office of Technology & Innovation (OTI)",
   "slug": "nyc-oti",
   "hq": "New York, NY",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "New York City's consolidated technology agency: OTI runs citywide IT, cybersecurity (NYC Cyber Command), digital services (MyCity, 311, NYC.gov), and broadband — and sets the technical direction and contracts most of the City's ~100 agencies buy through.",
 
   "snapshot": [
     { "label": "Role", "value": "Citywide central tech agency" },
     { "label": "Operating budget (FY26)", "value": "~$743M" },
     { "label": "Capital (IT/cyber/311)", "value": "~$203M" },
-    { "label": "New leadership", "value": "CTO appointed Feb 2026" }
+    { "label": "New leadership", "value": "CTO Gelobter (appointed Feb 2026)" },
+    { "label": "FY2027 budget", "value": "OTI ~$702.6M (prelim); city budget $125.8B adopted 6/30/26" }
   ],
 
   "overview": "The NYC Office of Technology & Innovation (OTI) is the City of New York's consolidated central technology agency, created in 2022 when the legacy Department of Information Technology and Telecommunications (DoITT, the prior account name \"NYC Information Technology and Telecommunications\") was reorganized and merged with the Mayor's Office of the CTO, NYC Cyber Command, the Mayor's Office of Data Analytics, the Office of Information Privacy, and the Algorithms Management and Policy Officer. OTI sets technology strategy and policy for roughly 100 City agencies and offices, runs shared IT infrastructure (data centers, networks, the Citywide Service Desk), and owns the public-facing digital layer: NYC.gov, the 311 non-emergency system, NYC Open Data, the MyCity benefits/services portal, and the Big Apple Connect broadband program. Cybersecurity for the City sits inside OTI via NYC Cyber Command, which protects and defends systems across all agencies. OTI is best understood as both a large IT operator and the technical/contractual gatekeeper for citywide technology buys — though agency procurement runs through NYC's contracting machinery (ACCOs, MOCS, DCAS) rather than a single state-style cooperative vehicle. A mayoral transition in January 2026 brought a new administration and a new technology leadership team.",
@@ -27,7 +28,7 @@
     "notes": [
       "NYC's overall FY2026 budget is among the largest municipal budgets in the U.S.; OTI's appropriation is the IT slice, while large agencies (HRA/DSS, NYPD, Health) carry their own application budgets.",
       "Big Apple Connect received a three-year extension in September 2025 (through June 2028), with ~$1.2M in additional provider-funded digital-literacy programming.",
-      "Figures reflect the Adams-era adopted FY2026 budget; the Mamdani administration that took office Jan 2026 may reprioritize as it issues its first executive/adopted budgets."
+      "FY2026 figures reflect the Adams-era adopted budget. Under Mamdani's first budget cycle, OTI's FY2027 Preliminary Plan was ~$702.6M; the City Council adopted a $125.8B citywide FY2027 budget on June 30, 2026, with savings cited from tech modernization and reduced software-license costs — expect OTI's roadmap to be re-baselined."
     ]
   },
 
@@ -57,10 +58,12 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "City Council adopts $125.8B FY2027 budget — Mamdani's first (June 30, 2026)", "impact": "Mamdani's first adopted budget (voted 45-6) sets the new administration's spending baseline; OTI's Preliminary Plan pegged FY2027 at ~$702.6M (down from ~$743M FY26), and citywide plans cite savings from modernizing tech and cutting software-license costs. Re-baseline OTI's roadmap against the new administration's priorities.", "tags": ["Budget"] },
+    { "date": "2026-05", "title": "Scrutiny of OTI's multibillion-dollar citywide IT master contracts", "impact": "Reporting flagged OTI overspending ~$3B on two citywide IT master agreements (2018-2025), with CDW Government paid $600M+ this fiscal year (incl. a $142M Chromebook buy) under opaque delivery orders. Mamdani said in March 2026 OTI would renegotiate tech contracts; the City is negotiating two new citywide IT contracts worth ~$2B total — a major access-path event for any hardware/services seller.", "tags": ["Procurement", "Budget"] },
+    { "date": "2026-04", "title": "OTI launches 'Get Online NYC' digital-inclusion campaign", "impact": "New nyc.gov/getonline site, interactive map, and multilingual navigators point residents to free Wi-Fi, device lending, and low-cost internet across 450+ sites — extends the Digital Equity Roadmap and sustains broadband/device demand; earned NDIA's Visionary Trailblazer award.", "tags": ["Digital Equity", "Broadband"] },
+    { "date": "2026-02", "title": "Comptroller audit faults OTI's MyCity system", "impact": "Comptroller audit (released Dec 30, 2025) calls MyCity a poor ROI after $100M+ spent — limited integrated functionality, weak vendor oversight, poor portal performance, and an AI chatbot with 71% negative feedback; recommends a feasibility review. Signals openness to re-architecting citywide digital services and AI-ready platforms.", "tags": ["Digital Services", "AI"] },
     { "date": "2026-02", "title": "Mayor Mamdani names Lisa Gelobter NYC CTO & OTI Commissioner", "impact": "New tech leadership at the top of the citywide motion (announced Feb 11, 2026); priorities still forming — re-engage and re-map the relationship chart early.", "tags": ["Leadership"] },
-    { "date": "2026-01", "title": "Mamdani administration takes office; Matt Fraser departs as CTO", "impact": "Mayoral transition resets tech priorities and budget direction; CTO seat was vacant before Gelobter's appointment.", "tags": ["Transition"] },
-    { "date": "2025-09", "title": "Big Apple Connect extended three years (through June 2028)", "impact": "Continues free internet/cable to 330K+ NYCHA residents with ~$1.2M added for digital-literacy programming — sustained broadband/digital-equity demand.", "tags": ["Broadband"] },
-    { "date": "2025-03", "title": "OTI releases first Digital Equity Roadmap; MyCity chatbot expanded to 311", "impact": "11-initiative broadband/literacy plan plus expanded AI-powered service delivery — signals continued investment in digital services and data.", "tags": ["Digital Equity", "AI"] }
+    { "date": "2026-01", "title": "Mamdani administration takes office; Matt Fraser departs as CTO", "impact": "Mayoral transition resets tech priorities and budget direction; CTO seat was vacant before Gelobter's appointment.", "tags": ["Transition"] }
   ],
 
   "dellActions": [
@@ -80,6 +83,12 @@
     { "label": "Mayor's Office — Big Apple Connect extended (Sep 2025)", "url": "https://www.nyc.gov/mayors-office/news/2025/09/mayor-adams-extends--big-apple-connect--program--continues-to-pr" },
     { "label": "GovTech — NYC Releases AI Action Plan, Business-Focused AI Chatbot", "url": "https://www.govtech.com/artificial-intelligence/nyc-releases-ai-action-plan-business-focused-ai-chatbot" },
     { "label": "citymeetings.nyc — OTI FY2026 Budget Overview (Mar 2025)", "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-10-0300-pm-committee-on-technology/chapter/oti-budget-overview-for-fiscal-year-2026/" },
+    { "label": "NYC Council — Council Adopts FY2027 Budget (Jun 30, 2026)", "url": "https://council.nyc.gov/press/2026/06/30/3166/" },
+    { "label": "amNY — NYC $125.8B FY2027 budget deal (Jun 30, 2026)", "url": "https://www.amny.com/politics/nyc-budget-deal-mamdani-menin-06302026/" },
+    { "label": "NYC Council — OTI Fiscal 2027 Preliminary Plan (Mar 2026)", "url": "https://council.nyc.gov/budget/wp-content/uploads/sites/54/2026/03/Office-of-Technology-and-Innovation.pdf" },
+    { "label": "NYS Focus — NYC's Multibillion-Dollar 'Black Box' IT Contracts Face Scrutiny (May 2026)", "url": "https://nysfocus.com/2026/05/06/new-york-city-contracting-master-agreements" },
+    { "label": "NYC OTI — 'Get Online NYC' Campaign Launch (Apr 2026)", "url": "https://www.nyc.gov/content/oti/pages/press-releases/oti_launches_get_online_nyc_campaign" },
+    { "label": "NYC Comptroller — Audit of OTI's MyCity System (Dec 2025)", "url": "https://comptroller.nyc.gov/reports/audit-report-on-the-new-york-city-office-of-technology-and-innovations-mycity-system/" },
     { "label": "Wikipedia — NYC Office of Technology and Innovation", "url": "https://en.wikipedia.org/wiki/New_York_City_Office_of_Technology_and_Innovation" }
   ]
 }

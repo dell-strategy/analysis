@@ -5,7 +5,7 @@
   "name": "New York State Dept of Health",
   "slug": "nys-doh",
   "hq": "Albany, NY",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "New York's public-health and Medicaid agency — it runs one of the largest state Medicaid programs in the country and the data, claims, and eligibility systems behind it, making it one of the heaviest health-IT demand centers in state government.",
 
   "snapshot": [
@@ -49,12 +49,14 @@
 
   "powerStructure": [
     { "name": "Dr. James V. McDonald", "title": "Commissioner of Health (NYS DOH)", "note": "Leads the agency, public-health strategy, and Medicaid program direction — the top program relationship; sets the priorities IT investment follows." },
-    { "name": "DOH Office of Health Insurance Programs (Medicaid)", "title": "Medicaid program & systems owner", "note": "Owns the Medicaid program and the systems behind it (eMedNY/MMIS, MECM eligibility) — the buying center for the largest health-data and claims-systems work." },
+    { "name": "Amir Bassiri", "title": "Deputy Commissioner & State Medicaid Director (Office of Health Insurance Programs)", "note": "Runs the Medicaid program and the systems behind it (eMedNY/MMIS, MECM eligibility, NY State of Health) — the buying center for the largest health-data and claims-systems work; still in the role per 2026 state Medicaid publications." },
     { "name": "Dru Rai", "title": "NYS CIO & ITS Director", "note": "Runs consolidated state IT delivery for DOH and 50+ agencies under a 'singular service provider' model — much DOH enterprise IT buying flows through ITS, so this is a key cross-agency relationship." },
     { "name": "DOH IT / health-IT leadership (via ITS)", "title": "Agency technology delivery", "note": "DOH technology is largely delivered through embedded/dedicated ITS support rather than a fully standalone DOH CIO shop — confirm the current health-IT delivery lead and reporting line before forecasting." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "CMS issues HR1 Medicaid work-requirement rule (June 1); DOH must build 'community engagement' checks into NY State of Health", "impact": "The federal One Big Beautiful Bill (HR1) forces new eligibility logic — work/community-engagement verification for MAGI adults live by Jan 1, 2027, plus the end of 12-month continuous eligibility and Essential Plan income cuts effective July 1, 2026. That is a direct, deadline-driven load on NY State of Health and eMedNY: new data matching, verification, notices, and reporting at scale — a concrete eligibility-systems modernization and compute/data driver to align to.", "tags": ["Medicaid", "Modernization", "Data Systems"] },
+    { "date": "2026-06", "title": "DOH advancing Medicaid Systems QA (RFP #20506) as it moves from MMIS toward Medicaid Enterprise Systems (MES)", "impact": "A Quality Assurance contractor is being stood up to oversee current MMIS/eMedNY and future MES modules (contract start targeted ~Sept 2026), signaling an active multi-year MMIS-to-MES transition. QA/oversight buildout usually precedes and surrounds the module procurements where infrastructure, data-platform, and security pull-through sits — track the MES roadmap behind it.", "tags": ["Medicaid", "Procurement", "Modernization"] },
     { "date": "2026-05", "title": "FY2026–27 budget enacted; DOH Medicaid projected near $40B", "impact": "Confirms DOH as one of the largest state spending agencies and funds $1.5B in new facility money — durable scale behind Medicaid systems and health-data demand. Tie infrastructure/data plays to the funded program direction.", "tags": ["Budget", "Medicaid"] },
     { "date": "2026-04", "title": "DOH continues Medicaid eligibility modernization (MECM) and provider-portal rollout", "impact": "Signals a multi-year platform-modernization runway across eligibility and provider enrollment — position compute, storage, data-platform, and security as the foundation layer.", "tags": ["Modernization", "Medicaid"] },
     { "date": "2026-02", "title": "Commissioner McDonald continues to lead DOH through FY2027 budget cycle", "impact": "Stable program leadership at the top of the health and Medicaid agenda — align the account map to the Commissioner's public-health and affordability priorities.", "tags": ["Leadership"] },
@@ -75,6 +77,10 @@
     { "label": "GDIT — eMedNY System (New York MMIS)", "url": "https://www.gdit.com/perspectives/case-studies/emedny-system-elevates-medicaid-payment-efficiency-providing-healthcare/" },
     { "label": "City & State NY — What's in the FY27 New York State budget", "url": "https://www.cityandstateny.com/policy/2026/05/heres-whats-fy-27-new-york-state-budget/413729/" },
     { "label": "Empire Center — Healthcare Highlights in the New State Budget", "url": "https://www.empirecenter.org/publications/healthcare-highlights-in-the-new-state-budget/" },
-    { "label": "NYS Division of Budget — Health, Department of (FY2027 Appropriations)", "url": "https://www.budget.ny.gov/pubs/archive/fy27/ex/agencies/appropdata/HealthDepartmentof.html" }
+    { "label": "NYS Division of Budget — Health, Department of (FY2027 Appropriations)", "url": "https://www.budget.ny.gov/pubs/archive/fy27/ex/agencies/appropdata/HealthDepartmentof.html" },
+    { "label": "NY Health Access — HR1 'One Big Beautiful Bill' Medicaid changes; CMS work-requirement rule (June 1, 2026)", "url": "https://nyhealthaccess.org/news/100/" },
+    { "label": "NYS DOH — Medicaid Systems Quality Assurance Services (RFP #20506)", "url": "https://www.health.ny.gov/funding/rfp/20506/" },
+    { "label": "Empire Center — Budget Update Paints Less Alarming Picture of Federal Health Cuts", "url": "https://www.empirecenter.org/publications/budget-update-paints-less-alarming-picture/" },
+    { "label": "Crowell & Moring — NYDFS health-care cybersecurity enforcement / AI cyber-risk letters (2026)", "url": "https://www.crowell.com/en/insights/client-alerts/nydfs-ramps-up-health-care-cybersecurity-enforcement-with-dollar225-million-settlement" }
   ]
 }

@@ -5,7 +5,7 @@
   "name": "Florida Dept of Children & Families (DCF)",
   "slug": "dcf",
   "hq": "Tallahassee, FL",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Florida's human-services backbone: DCF runs child welfare, mental health and substance-abuse services, and the ACCESS Florida public-benefits eligibility engine — a data-heavy agency in the middle of a multi-year child-welfare system modernization.",
 
   "snapshot": [
@@ -18,16 +18,16 @@
   "overview": "The Florida Department of Children and Families (DCF) is the state's primary human-services agency, responsible for child welfare (abuse and neglect intake, investigations, and case management), mental health and substance-abuse services, and public-benefits eligibility through the ACCESS Florida program (SNAP, Temporary Cash Assistance, and Medicaid eligibility determination). It is one of Florida's most data-intensive agencies: it operates statewide eligibility and case-management systems, the MyACCESS self-service portal, and the Florida Safe Families Network (FSFN) child-welfare case system. DCF processes very high transaction volumes — by its own public figures it handles, on average, hundreds of thousands of Medicaid applications, redeterminations, and assistance requests each month. The agency is in the middle of a multi-year modernization to a federally compliant CCWIS (Comprehensive Child Welfare Information System), making it an active modernization account where data integration, cloud, and security work all surface. For a Dell SLG seller, DCF is a large, infrastructure- and modernization-driven buyer reached primarily through Florida's central procurement vehicles rather than agency-only RFPs.",
 
   "budget": {
-    "intro": "DCF is a large direct spender funded through Florida's annual General Appropriations Act, with a substantial federal match flowing through SNAP, Medicaid eligibility, and Title IV-E child-welfare funding. Governor DeSantis' FY2026–27 'Floridians First' budget proposed more than $4.8B for the Department — the proposed figure, not a final enacted appropriation, so confirm the signed General Appropriations Act before forecasting.",
+    "intro": "DCF is a large direct spender funded through Florida's annual General Appropriations Act, with a substantial federal match flowing through SNAP, Medicaid eligibility, and Title IV-E child-welfare funding. Governor DeSantis signed the $117.6B FY2026–27 budget on June 29, 2026 (after ~$1.6B in vetoes); the Governor's proposal had earmarked more than $4.8B for the Department. Confirm DCF's final line items in the enacted General Appropriations Act — including any technology appropriations and vetoes — before forecasting.",
     "stats": [
-      { "value": "$4.8B+", "label": "FY2026–27 proposed", "note": "Governor's proposed budget for DCF; not yet the enacted figure" },
+      { "value": "$4.8B+", "label": "FY2026–27 (proposed)", "note": "Governor's proposed DCF figure; the $117.6B state budget was signed June 29, 2026 — confirm DCF's enacted line items and any vetoes" },
       { "value": "Hundreds of thousands / mo", "label": "Eligibility transactions", "note": "DCF-cited monthly average of Medicaid applications, redeterminations, and assistance requests" },
       { "value": "Multi-year", "label": "CCWIS modernization", "note": "Phased child-welfare system rebuild with IV&V oversight" }
     ],
     "notes": [
       "DCF's appropriation mixes state general revenue with large federal streams (SNAP/Medicaid administration, Title IV-E) — funding for IT and modernization often rides federal cost-allocation rules.",
       "SNAP caseloads fell sharply across Florida in 2025–2026 following federal program changes (H.R. 1); shifting caseloads affect eligibility-system load and modernization priorities.",
-      "Budget figures cited here are the Governor's proposed numbers — confirm the enacted General Appropriations Act before committing to a forecast."
+      "The FY2026–27 state budget was signed June 29, 2026; the $4.8B+ cited here is the Governor's earlier proposed DCF number — confirm the enacted General Appropriations Act line items and any DCF vetoes before committing to a forecast."
     ]
   },
 
@@ -48,15 +48,17 @@
   },
 
   "powerStructure": [
-    { "name": "Taylor N. Hatch", "title": "Secretary, DCF", "note": "Appointed by Gov. DeSantis (2025), previously led the Agency for Persons with Disabilities; her Senate confirmation advanced in early 2026. The top relationship for the DCF account." },
+    { "name": "Taylor N. Hatch", "title": "Secretary, DCF — resigning (June 2026)", "note": "Confirmed by the full Senate 33-4 in March 2026, but announced her resignation on ~June 30, 2026; no successor named as of this update and her last day was not confirmed by the Governor's office. Treat the top of the DCF account as in transition and confirm the new Secretary (likely an interim/acting leader first) before engaging." },
     { "name": "Kathryn 'Kate' Williams", "title": "Deputy Secretary", "note": "Operational and policy leadership across child & family well-being, economic self-sufficiency, behavioral health, and quality/innovation — a key cross-program decision-maker." },
     { "name": "Bridget Royster", "title": "Assistant Secretary, Economic Self-Sufficiency (ESS)", "note": "Owns the ACCESS Florida / MyACCESS benefits-eligibility program — the buying center for eligibility-system and benefits-modernization work." },
     { "name": "Office of Information Technology / CIO", "title": "DCF technology leadership", "note": "Owns DCF's systems including FSFN and the CCWIS modernization; the agency CIO role has shown recent turnover, so confirm the current officeholder before engaging." }
   ],
 
   "news": [
-    { "date": "2026-03", "title": "DCF Secretary Taylor Hatch's confirmation advances to full Florida Senate", "impact": "Leadership stabilizing at the top of the agency; the Secretary's priorities set the modernization and budget agenda.", "tags": ["Leadership"] },
-    { "date": "2026-02", "title": "Governor's 'Floridians First' FY2026–27 budget proposes $4.8B+ for DCF", "impact": "Signals continued investment in modernizing the continuum of care and behavioral-health capacity — confirm the enacted appropriation before forecasting.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "DCF Secretary Taylor Hatch announces resignation; no successor named", "impact": "The top of the DCF account is now in transition just months after her confirmation — expect an interim/acting leader and a possible reset of modernization and budget priorities. Confirm the new Secretary before engaging at the executive level.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "Gov. DeSantis signs $117.6B FY2026–27 budget (June 29) after ~$1.6B in vetoes", "impact": "The enacted budget sets DCF's actual FY2026–27 funding; the Governor had proposed $4.8B+ for the Department. Confirm DCF's final technology line items and any vetoes before forecasting.", "tags": ["Budget"] },
+    { "date": "2026-03", "title": "Florida Senate confirms Taylor Hatch as DCF Secretary (33-4)", "impact": "Ended two years of unconfirmed status, but the tenure proved short-lived given her June resignation — underscoring leadership volatility at the agency.", "tags": ["Leadership"] },
+    { "date": "2026-02", "title": "Governor's 'Floridians First' FY2026–27 budget proposes $4.8B+ for DCF", "impact": "Signaled continued investment in modernizing the continuum of care and behavioral-health capacity; now superseded by the enacted budget — confirm final line items.", "tags": ["Budget"] },
     { "date": "2026-01", "title": "Florida SNAP caseloads fall to multi-year lows after federal program changes", "impact": "Shifting eligibility volumes affect ACCESS Florida system load and may reshape benefits-modernization priorities.", "tags": ["Benefits", "Policy"] },
     { "date": "2025-12", "title": "DCF reflects on 2025: CCWIS child-welfare modernization advances toward implementation", "impact": "The multi-year system rebuild is an active modernization program — a recurring surface for data, cloud, and integration infrastructure.", "tags": ["Modernization", "Child Welfare"] }
   ],
@@ -66,11 +68,14 @@
     "Engage the CCWIS modernization as the lead motion: position data-platform, storage, and integration infrastructure plus security around the phased child-welfare rebuild.",
     "Tie ACCESS Florida / MyACCESS capacity and reliability to compute, storage, and cloud infrastructure — a benefits-modernization play at very high transaction volume.",
     "Lead with cybersecurity and data protection given DCF's highly sensitive child-welfare, behavioral-health, and benefits data and cross-agency data sharing.",
-    "Map the leadership chain — Secretary Hatch, Deputy Secretary Williams, ESS Assistant Secretary Royster, and the (recently changed) CIO office — and confirm the current CIO before forecasting."
+    "Watch the leadership transition: Secretary Hatch is resigning (June 2026) with no named successor — anchor near-term relationships on the stable layer (Deputy Secretary Williams, ESS Assistant Secretary Royster, and the CIO/IT office) and confirm the new/acting Secretary and current CIO before forecasting."
   ],
 
   "sources": [
     { "label": "Florida DCF — Executive Leadership", "url": "https://www.myflfamilies.com/about/additional-services-offices/office-secretary/executive-leadership/" },
+    { "label": "Florida Phoenix — Comings, goings: healthcare secretary resigns (incl. Hatch DCF resignation)", "url": "https://floridaphoenix.com/2026/06/30/comings-goings-new-ed-commissioner-named-healthcare-secretary-resigns/" },
+    { "label": "WUSF — Senate confirms DCF, AHCA chiefs (Hatch 33-4)", "url": "https://www.wusf.org/politics-issues/2026-03-11/despite-hope-florida-scandal-senate-confirms-three-key-posts" },
+    { "label": "Executive Office of the Governor — DeSantis signs FY2026–27 budget", "url": "https://www.flgov.com/eog/news/press/2026/governor-ron-desantis-signs-florida-fiscal-year-2026-2027-budget-capping-eight" },
     { "label": "Florida Phoenix — Senate panel OKs Taylor Hatch to lead DCF", "url": "https://floridaphoenix.com/2026/02/10/senate-panel-oks-taylor-hatch-to-lead-dcf-as-senate-confirmation-process-begins/" },
     { "label": "Florida DCF — Governor's Floridians First budget for DCF (FY2026–27)", "url": "https://www.myflfamilies.com/DCF-Underscores-Governor-Ron-DeSantis-Investments-for-Families-in-Floridians-First-Budget" },
     { "label": "Florida DCF — Public Benefits & Services (ACCESS Florida)", "url": "https://www.myflfamilies.com/services/public-assistance" },

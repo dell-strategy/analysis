@@ -5,7 +5,7 @@
   "stateName": "Florida",
   "type": "County",
   "hq": "Fort Lauderdale, FL",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Florida's second-most-populous county (2M+ residents, Fort Lauderdale) runs its IT through Enterprise Technology Services (ETS) — a ~165-person shop now focused on cloud migration, GenAI governance, and cybersecurity ahead of the 2026 World Cup.",
 
   "snapshot": [
@@ -55,6 +55,8 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "FY2027 budget workshop opens amid tax uncertainty; countywide millage held at 5.6658", "impact": "June 16 workshop projects ~$1.897B in countywide property taxes but flags heavy cost pressure — BSO's ~$937M request (12% higher constitutional-officer asks), a 22% (~$11.3M) health-insurance jump, and 2026 election costs — plus a Nov. 3 statewide property-tax ballot question. Net-new IT spend stays tight into FY27; lead with co-op pricing and ROI. Recommended budget lands July 15; hearings Sept. 10 and 22.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "Commission approves $25M Motorola contract for 911 dispatch overhaul", "impact": "Approved June 9 and funded over 10 years via the state DMS 911 fee, the new NG911 system adds video/live-stream to dispatchers, better location accuracy, and automatic call rerouting; live by summer 2028. Signals a major public-safety modernization motion — an opening for resilient infrastructure, storage, and edge/compute around emergency operations.", "tags": ["Public Safety", "Modernization"] },
     { "date": "2025-09", "title": "Commission adopts $8.8B FY2026 budget and cuts millage to 5.6658", "impact": "First rate cut since 2018, ~159 positions and ~$20M recurring costs trimmed — a tighter General Fund for net-new IT spend, so co-op pricing and ROI framing matter.", "tags": ["Budget"] },
     { "date": "2025-09", "title": "Broward completes first County GenAI policy after two-year effort", "impact": "Governance is now in place — clears a path for AI pilots and AI-infrastructure conversations on a trusted, policy-backed footing.", "tags": ["AI", "Governance"] },
     { "date": "2025-03", "title": "CIO DiLullo outlines cloud migration, GenAI, and cybersecurity priorities", "impact": "Confirms the three buying centers to lead with: cloud/data-center modernization, AI automation, and security hardening.", "tags": ["Leadership", "Modernization"] },
@@ -75,6 +77,8 @@
     { "label": "Broward County — Purchasing Division", "url": "https://www.broward.org/Purchasing/Pages/Default.aspx" },
     { "label": "Broward County — County Administrator Monica Cepero", "url": "https://www.broward.org/Administrator/Pages/MonicaCepero.aspx" },
     { "label": "GovTech / Industry Insider — Broward CIO on Cybersecurity, GenAI and Cloud Migration", "url": "https://insider.govtech.com/florida/news/broward-county-cio-discusses-cybersecurity-genai-and-cloud-migration-efforts" },
-    { "label": "Broward County — Commissioners Lower Property Tax Rate in FY2026 ($8.8B budget)", "url": "https://webapps6.broward.org/newsrelease/View.aspx?intMessageId=16019" }
+    { "label": "Broward County — Commissioners Lower Property Tax Rate in FY2026 ($8.8B budget)", "url": "https://webapps6.broward.org/newsrelease/View.aspx?intMessageId=16019" },
+    { "label": "Boca Post — Broward County FY27 Budget Talks Open With Tax Uncertainty", "url": "https://bocapost.com/broward-county-news/broward-county-fy27-budget-tax-uncertainty-spirit-campus/" },
+    { "label": "CBS Miami — Broward callers to live-stream video to 911; $25M Motorola dispatch overhaul", "url": "https://www.cbsnews.com/miami/news/broward-county-911-dispatch-system-major-overhaul-2026-2028/" }
   ]
 }

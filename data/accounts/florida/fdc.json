@@ -5,7 +5,7 @@
   "name": "Florida Dept of Corrections (FDC)",
   "slug": "fdc",
   "hq": "Tallahassee, FL",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The nation's third-largest state prison system — ~80K+ inmates across 140+ facilities and ~24K staff — running a multi-year offender-management and IT modernization push with large, recurring needs in facility-security tech, networking, and infrastructure.",
 
   "snapshot": [
@@ -15,10 +15,10 @@
     { "label": "Workforce", "value": "~24K employees" }
   ],
 
-  "overview": "The Florida Department of Corrections (FDC) is the largest state agency by personnel and operates the third-largest state prison system in the United States, behind only Texas and the federal Bureau of Prisons. The department incarcerates roughly 80,000–90,000+ inmates across 140+ facilities — major institutions, annexes, work camps, work-release centers, and forestry/road camps — and supervises well over 100,000 offenders in the community through probation and parole. FDC employs about 24,000 people, the majority of them certified correctional and probation officers. For a technology seller, FDC reads as a high-volume infrastructure and security-modernization account rather than a procurement conduit: it runs its own data systems, facility-security technology, networking, and offender-management platforms, and is in the middle of a multi-year modernization of legacy systems. Leadership is in transition — long-serving Secretary Ricky Dixon announced his retirement effective June 30, 2026 — so the relationship map at the top of the agency is being rebuilt heading into FY2026-27.",
+  "overview": "The Florida Department of Corrections (FDC) is the largest state agency by personnel and operates the third-largest state prison system in the United States, behind only Texas and the federal Bureau of Prisons. The department incarcerates roughly 80,000–90,000+ inmates across 140+ facilities — major institutions, annexes, work camps, work-release centers, and forestry/road camps — and supervises well over 100,000 offenders in the community through probation and parole. FDC employs about 24,000 people, the majority of them certified correctional and probation officers. For a technology seller, FDC reads as a high-volume infrastructure and security-modernization account rather than a procurement conduit: it runs its own data systems, facility-security technology, networking, and offender-management platforms, and is in the middle of a multi-year modernization of legacy systems. Leadership has just turned over: long-serving Secretary Ricky Dixon retired effective June 30, 2026, and Governor DeSantis elevated Deputy Secretary Richard Comerford — a 40-year FDC veteran — to Secretary, so the relationship map at the top of the agency is being rebuilt heading into FY2026-27.",
 
   "budget": {
-    "intro": "FDC is a large direct spender. Its FY2026-27 request carried significant technology and facility-security line items on top of a major correctional-officer pay package, and the Governor's recommendations earmarked tens of millions specifically for IT modernization. Note the state's overall FY2026-27 budget (~$114.5B) had been sent to Governor DeSantis but not yet signed as of late June 2026 — confirm enacted figures once the budget is law and any vetoes are issued.",
+    "intro": "FDC is a large direct spender. Its FY2026-27 request carried significant technology and facility-security line items on top of a major correctional-officer pay package, and the Governor's recommendations earmarked tens of millions specifically for IT modernization. Governor DeSantis signed the ~$117.6B FY2026-27 state budget on June 29, 2026 (~$810M in line-item vetoes). Notably he vetoed HB 5403E — a bipartisan prison-upgrade plan ($50M/yr for 40 years, a 600-bed prison hospital, and bond authority for new construction) — and, tied to it, the $2/hr correctional-officer pay raise, calling the linkage a way to 'hold hostage' pay to generate debt. Re-verify which FDC IT-modernization and security-equipment line items survived the vetoes before forecasting.",
     "stats": [
       { "value": "$48M", "label": "Data-systems modernization", "note": "FY2026-27 request for ongoing modernization of FDC's data systems" },
       { "value": "$18.8M", "label": "Security equipment", "note": "FY2026-27 request — body scanners, body-worn cameras, and related security tech" },
@@ -35,7 +35,8 @@
     { "name": "OBIS modernization & CIMS rollout", "summary": "FDC is modernizing its legacy Offender-Based Information System (OBIS), including the launch of the Corrections Inmate Management System (CIMS) and foundational data infrastructure and governance for statewide analytics. A multi-year platform shift that pulls through compute, storage, data-platform, and integration needs.", "tags": ["Modernization", "Data"] },
     { "name": "Facility security technology", "summary": "Expanded body-worn camera deployment, inmate body scanners, biometric scanning (in partnership with FDLE), and contraband interdiction — including public support for FCC cellphone-jamming authority. Edge, networking, and storage at 140+ sites underpin these programs.", "tags": ["Security", "Edge"] },
     { "name": "Records & infrastructure modernization", "summary": "Enterprise records modernization (OnBase) is digitizing inmate and personnel records for security, accessibility, and compliance — part of a broader move off legacy systems toward modern, mobile-enabled platforms. Networking and IT-modernization scope across a large, distributed facility footprint.", "tags": ["Infrastructure", "Modernization"] },
-    { "name": "Intelligence & contraband detection", "summary": "FY2026-27 request to expand intelligence capabilities using modern technologies to identify and remove contraband, plus radio/tower refresh. Data, analytics, and ruggedized edge/comms infrastructure across institutions.", "tags": ["Analytics", "Networking"] }
+    { "name": "Intelligence & contraband detection", "summary": "FY2026-27 request to expand intelligence capabilities using modern technologies to identify and remove contraband, plus radio/tower refresh. Data, analytics, and ruggedized edge/comms infrastructure across institutions.", "tags": ["Analytics", "Networking"] },
+    { "name": "CLEO generative-AI platform", "summary": "FDC's custom generative-AI assistant (Corrections Large Language Environment Online), launched ~April 2025 on Microsoft Azure Government inside the agency's secure network. Modules span chat, a RAG-based policy library, legacy-mainframe data cleanup, and analytics/reporting off the data warehouse; AI also screens ~450M annual inmate-call minutes, with facial-recognition and video/voice analysis planned. Signals an active AI/data-platform agenda pulling through compute, storage, GPU, and data-management needs.", "tags": ["AI", "Data"] }
   ],
 
   "procurement": {
@@ -49,16 +50,17 @@
   },
 
   "powerStructure": [
-    { "name": "Secretary (in transition)", "title": "Agency head, FDC", "note": "Long-serving Secretary Ricky Dixon announced retirement effective June 30, 2026; a successor has been named by the Governor's office. Confirm the current Secretary and rebuild the top relationship before forecasting." },
-    { "name": "Kenneth Kicia", "title": "Chief Information Officer (FDC)", "note": "Appointed FDC CIO in early 2025 (prior Leidos VP of IT operations; former U.S. Navy officer). Owns the IT-modernization agenda — the core technology relationship." },
+    { "name": "Richard Comerford", "title": "Secretary, FDC", "note": "Elevated from Deputy Secretary by Gov. DeSantis effective ~July 1, 2026, succeeding the retired Ricky Dixon. A 40-year FDC veteran (correctional officer 1986; warden/assistant-warden roles; ran institutions for ~96K inmates). New top-of-agency relationship to build; confirm his modernization priorities." },
+    { "name": "Kenneth Kicia", "title": "Chief Information Officer (FDC)", "note": "Appointed FDC CIO Feb 2025 (succeeded Ruth Lang; prior Leidos VP of IT operations). Owns the IT-modernization and AI agenda — including the CLEO generative-AI platform on Azure Government and OBIS/CIMS. The core technology relationship; still current as of mid-2026." },
     { "name": "Office of the CIO / IT", "title": "Enterprise IT & application modernization", "note": "Owns OBIS/CIMS modernization, records digitization, and the application-resolution plan — the buying center for compute, storage, and data platforms." },
     { "name": "Security / Institutions leadership", "title": "Facility security & operations", "note": "Owns body-camera, scanner, biometric, and contraband programs across 140+ sites — the buying center for edge and networking at the institution level." },
     { "name": "DMS State Purchasing", "title": "Statewide procurement authority", "note": "Establishes State Term Contracts and runs MFMP — the contractual path onto which FDC purchases are mapped." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Secretary Ricky Dixon retires effective June 30 after ~30 years; Governor names successor", "impact": "Top-of-agency leadership change — rebuild the executive relationship map and confirm the new Secretary's modernization priorities.", "tags": ["Leadership"] },
-    { "date": "2026-05", "title": "Florida Legislature sends ~$114.5B FY2026-27 budget to Governor DeSantis", "impact": "Enacted FDC IT-modernization and security-equipment dollars hinge on signing and vetoes — confirm final figures before committing forecast.", "tags": ["Budget"] },
+    { "date": "2026-07", "title": "DeSantis elevates Deputy Secretary Richard Comerford to FDC Secretary as Ricky Dixon retires June 30", "impact": "Top-of-agency leadership change is now settled — a 40-year FDC insider takes over; build the new executive relationship and confirm his modernization/AI priorities.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "DeSantis signs ~$117.6B FY2026-27 budget (June 29) but vetoes HB 5403E prison-upgrade plan and the correctional-officer pay raise", "impact": "Major fiscal reset for FDC: the $50M/yr-for-40-years prison plan, 600-bed prison hospital, construction bonds, and $2/hr officer raise were struck — re-verify which IT-modernization and security dollars survived before forecasting.", "tags": ["Budget"] },
+    { "date": "2026-05", "title": "AI in focus: FDC's CLEO generative-AI platform expands across policy, data cleanup, and analytics", "impact": "Active AI/data-platform agenda on Azure Government (chat, RAG policy library, mainframe data cleanup, call-monitoring at ~450M min/yr) — position compute, storage, GPU, and data-management scope.", "tags": ["AI", "Modernization"] },
     { "date": "2026-02", "title": "FY2026-27 request: ~$48M data-systems modernization, $18.8M security equipment", "impact": "Sizable, technology-specific asks signal continued infrastructure and facility-security spend — align Dell ISG and edge offers.", "tags": ["Budget", "Modernization"] },
     { "date": "2025-09", "title": "FDC publicly backs FCC proposal to jam contraband cellphones in prisons", "impact": "Signals an active security-technology agenda at the institution level — networking and edge implications across facilities.", "tags": ["Security"] },
     { "date": "2025-02", "title": "FDC appoints Kenneth Kicia as Chief Information Officer", "impact": "New IT leadership owning OBIS/CIMS modernization — the key technology relationship to build.", "tags": ["Leadership"] }
@@ -66,10 +68,10 @@
 
   "dellActions": [
     "Confirm Dell's Florida DMS State Term Contract and IT enterprise-agreement coverage, and register/verify status in MyFloridaMarketPlace before pursuing FDC scopes.",
-    "Build the new relationship map post-Dixon: engage the incoming Secretary's office and CIO Kenneth Kicia around the OBIS/CIMS modernization roadmap.",
-    "Lead with ISG infrastructure — compute, storage, and data-platform — tied to the multi-year OBIS modernization and the ~$48M data-systems line.",
+    "Build the new relationship map post-Dixon: engage Secretary Richard Comerford's office and CIO Kenneth Kicia around the OBIS/CIMS modernization and CLEO AI roadmap.",
+    "Lead with ISG infrastructure — compute, storage, GPU, and data-platform — tied to the multi-year OBIS modernization, the CLEO AI/data-warehouse workload, and the ~$48M data-systems line.",
     "Position edge and networking for facility-security programs (body cameras, scanners, biometrics, radio refresh) across the 140+ site footprint.",
-    "Track the enacted FY2026-27 budget (signing and vetoes) to confirm which IT-modernization and security-equipment dollars survive before forecasting."
+    "Re-verify post-veto FY2026-27 FDC funding: with HB 5403E and the officer pay raise struck, confirm which IT-modernization and security-equipment line items survived before forecasting."
   ],
 
   "sources": [
@@ -81,6 +83,12 @@
     { "label": "WUFT — FDC supports FCC plan to jam contraband cellphones in prisons", "url": "https://www.wuft.org/public-safety/2025-09-10/fdc-supports-fcc-plan-to-jam-contraband-cellphones-in-prisons" },
     { "label": "Correctional News — Florida DOC Secretary Ricky Dixon announces retirement", "url": "https://correctionalnews.com/2026/06/01/florida-doc-secretary-ricky-dixon-announces-retirement/" },
     { "label": "Florida Phoenix — Florida lawmakers send 2026-27 budget to DeSantis", "url": "https://floridaphoenix.com/briefs/florida-lawmakers-send-2026-27-budget-to-desantis/" },
+    { "label": "Florida Politics — 40-year prison system vet Richard Comerford named Florida Corrections Secretary", "url": "https://floridapolitics.com/archives/805261-40-year-prison-system-vet-richard-comerford-named-florida-corrections-secretary/" },
+    { "label": "NorthEscambia — Former Century Correctional Warden is now Secretary of the Florida Dept. of Corrections", "url": "http://www.northescambia.com/2026/07/former-century-correctional-warden-is-now-secretary-of-the-florida-dept-of-corrections" },
+    { "label": "WGCU — DeSantis signs Florida's $117.6 billion budget. What did he veto?", "url": "https://www.wgcu.org/government-politics/2026-06-30/desantis-signs-florida-budget-what-did-he-veto" },
+    { "label": "WUSF — Why DeSantis vetoed a prison upgrade plan and correctional officer raises", "url": "https://www.wusf.org/politics-issues/2026-07-01/why-desantis-vetoed-a-prison-upgrade-plan-and-correctional-officer-raises" },
+    { "label": "Executive Office of the Governor — DeSantis signs FY2026-27 budget", "url": "https://www.flgov.com/eog/news/press/2026/governor-ron-desantis-signs-florida-fiscal-year-2026-2027-budget-capping-eight" },
+    { "label": "GovTech — Florida Corrections Uses AI to Support Staff, Modernization (CLEO)", "url": "https://www.govtech.com/artificial-intelligence/florida-corrections-uses-ai-to-support-staff-modernization" },
     { "label": "Florida DMS — State Contracts and Agreements", "url": "https://www.dms.myflorida.com/business_operations/state_purchasing/state_contracts_and_agreements" },
     { "label": "Wikipedia — Florida Department of Corrections (scale overview)", "url": "https://en.wikipedia.org/wiki/Florida_Department_of_Corrections" }
   ]

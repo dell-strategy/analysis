@@ -5,7 +5,7 @@
   "name": "NY Metropolitan Transportation Authority (MTA)",
   "slug": "mta",
   "hq": "New York, NY",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The largest public transit authority in the US: the MTA runs the NYC subway, buses, the Long Island Rail Road, Metro-North, and the region's bridges and tunnels — a sprawling OT-heavy operation now executing a record $68.4B capital program with a deep technology, signal-modernization, and cybersecurity agenda.",
 
   "snapshot": [
@@ -53,14 +53,17 @@
     { "name": "Rafail Portnoy", "title": "Chief Technology Officer", "note": "CTO since 2020; owns information and operational technology across the subway and six agencies — internal tech, cybersecurity, AI analytics, and customer-facing systems. The central technology relationship." },
     { "name": "MTA Board", "title": "Governing board (state/local nominees)", "note": "Approves major contracts and the capital program via monthly action items — the approval gate for large technology awards." },
     { "name": "Office of the CTO — Cybersecurity / OT", "title": "Cybersecurity & OT security leadership", "note": "Runs the OT Cybersecurity Program and enterprise security; the buying center for OT/IT security as signals, tolling, and power systems modernize. Confirm the current named security lead before engaging." },
-    { "name": "MTA Construction & Development", "title": "Capital delivery (incl. CBTC)", "note": "Delivers the signal-modernization and major capital projects where most OT/infrastructure technology is embedded." }
+    { "name": "MTA Construction & Development", "title": "Capital delivery (incl. CBTC)", "note": "Delivers the signal-modernization and major capital projects where most OT/infrastructure technology is embedded. Also runs the public Capital Program Dashboard (capitaldashboard.mta.info)." },
+    { "name": "Jessie Lazarus", "title": "Head of the Rolling Stock Program", "note": "Named February 2026 to build and lead a new organization directing the MTA's ~$12B rolling-stock strategy from the 2025–2029 plan (incl. the up-to-2,390-car R262 order and the $1.5B R268/Kawasaki award). A capital buying center touching onboard systems, testing, and fleet data." }
   ],
 
   "news": [
-    { "date": "2025-06", "title": "MTA Board approves $68.4B 2025–2029 Capital Plan", "impact": "Record-size, state-of-good-repair-heavy plan funds years of signal, station, power, and rolling-stock work — the spending backdrop for OT and infrastructure technology pursuits.", "tags": ["Capital", "Budget"] },
-    { "date": "2025-12", "title": "MetroCard sales end; OMNY becomes the sole fare system", "impact": "Completes the multi-year fare-tech transition; 90%+ of riders on OMNY, with the supporting payments and data platform now the system of record.", "tags": ["Payments", "Data"] },
-    { "date": "2026-01", "title": "Congestion pricing marks one year, exceeding revenue targets", "impact": "Confirms a durable, dedicated capital funding stream (~$500M+ net in year one), de-risking parts of the capital program that technology work depends on.", "tags": ["Funding"] },
-    { "date": "2026-02", "title": "MTA advances CBTC signal-modernization awards with congestion-relief funding", "impact": "New Communications-Based Train Control work (incl. Fulton/Liberty corridors and cellular coverage) keeps the OT-modernization pipeline active.", "tags": ["OT", "Signal Modernization"] }
+    { "date": "2026-06", "title": "Congestion pricing survives federal challenge; funding stream holds", "impact": "A March 2026 federal ruling found USDOT could not rescind approval, and the tolling program keeps operating — netting ~$562M in year one and backing ~$15B in capital financing. A possible Second Circuit appeal keeps some uncertainty, but the near-term funding backdrop for technology-heavy capital work is intact.", "tags": ["Funding", "Capital"] },
+    { "date": "2026-06", "title": "MTA expands CBTC signal-modernization pipeline (6th Ave / 63rd St / DeKalb)", "impact": "A two-step design-build RFP (Contract S48020) to replace fixed-block signaling with CBTC on the 6th Ave and 63rd St lines and DeKalb interlocking, plus a consultant award to support the program, keeps the flagship OT-modernization track active — edge compute, networking, and cybersecurity at a safety-critical layer.", "tags": ["OT", "Signal Modernization", "Procurement"] },
+    { "date": "2026-06", "title": "MTA advances public Capital Program Dashboard (Q2 2026 update)", "impact": "C&D's redesigned dashboard (capitaldashboard.mta.info) now covers project bundles, rolling-stock and in-house construction with budget/spend/schedule data — a data-transparency and analytics initiative that signals where capital dollars, including technology, are moving.", "tags": ["Data", "Capital"] },
+    { "date": "2026-03", "title": "MTA launches its largest-ever rolling-stock procurement (up to 2,390 R262 cars)", "impact": "An RFP for up to 2,390 R262 subway cars (replacing ~35% of the fleet, proposals due Sept 2026) plus a $1.5B R268/Kawasaki award, run through a new Rolling Stock Program, opens a multi-year fleet-modernization wave touching onboard systems, testing, and fleet data.", "tags": ["Capital", "Modernization", "OT"] },
+    { "date": "2025-12", "title": "MetroCard sales end; OMNY becomes the sole fare system", "impact": "Completes the multi-year fare-tech transition; 90%+ of riders on OMNY, with the supporting payments and data platform now the system of record. MetroCard and cash acceptance are set to sunset later in 2026 (date to be announced).", "tags": ["Payments", "Data"] },
+    { "date": "2025-06", "title": "MTA Board approves $68.4B 2025–2029 Capital Plan", "impact": "Record-size, state-of-good-repair-heavy plan funds years of signal, station, power, and rolling-stock work — the spending backdrop for OT and infrastructure technology pursuits.", "tags": ["Capital", "Budget"] }
   ],
 
   "dellActions": [
@@ -80,6 +83,13 @@
     { "label": "MTA — Janno Lieber, Chair & CEO", "url": "https://www.mta.info/transparency/leadership/executive-leadership/janno-lieber" },
     { "label": "MTA — All-Agency General Contract Procurement Guidelines", "url": "https://www.mta.info/document/50901" },
     { "label": "NYS Comptroller — MTA Makes Progress Funding Capital Programs But Faces Federal Risks", "url": "https://www.osc.ny.gov/press/releases/2025/06/mta-makes-progress-funding-capital-programs-faces-risks-federal-actions" },
-    { "label": "Governor Hochul — Congestion Pricing One-Year Success", "url": "https://www.mta.info/press-release/icymi-less-traffic-better-transit-its-first-anniversary-governor-hochul-celebrates" }
+    { "label": "Governor Hochul — Congestion Pricing One-Year Success", "url": "https://www.mta.info/press-release/icymi-less-traffic-better-transit-its-first-anniversary-governor-hochul-celebrates" },
+    { "label": "Transport Topics — Federal Judge Backs MTA in Congestion Toll Case", "url": "https://www.ttnews.com/articles/judge-backs-mta-congestion" },
+    { "label": "MTA — Congestion Relief Zone Tolling Program", "url": "https://www.mta.info/agency/bridges-and-tunnels/congestion-relief-zone/program" },
+    { "label": "MTA — Launches New Capital Program Dashboard", "url": "https://www.mta.info/press-release/mta-launches-new-capital-program-dashboard" },
+    { "label": "MTA — Capital Program Dashboard", "url": "https://capitaldashboard.mta.info/" },
+    { "label": "MTA — CBTC Contract S48020 Solicitation (6th Ave / 63rd St / DeKalb)", "url": "https://www.mta.info/document/200406" },
+    { "label": "Governor Hochul — MTA Seeking Companies to Build Up to 2,390 Subway Cars (largest order ever)", "url": "https://www.governor.ny.gov/news/governor-hochul-announces-mta-seeking-companies-build-2390-subway-cars-largest-subway-car" },
+    { "label": "MTA — Chair & CEO Lieber Appoints Jessie Lazarus to Lead New Rolling Stock Program", "url": "https://www.mta.info/press-release/mta-chair-and-ceo-janno-lieber-appoints-jessie-lazarus-lead-new-rolling-stock-program" }
   ]
 }

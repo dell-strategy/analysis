@@ -5,7 +5,7 @@
   "name": "Florida Dept of Highway Safety & Motor Vehicles (FLHSMV)",
   "slug": "flhsmv",
   "hq": "Tallahassee, FL",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Florida's driver-licensing, vehicle-titling, and public-safety agency — it runs high-volume transaction systems, owns the state's identity/credentialing motion (mobile driver's license), and operates the Florida Highway Patrol, making it an IT-heavy account spanning enterprise modernization, digital identity, and law-enforcement technology.",
 
   "snapshot": [
@@ -33,7 +33,7 @@
 
   "initiatives": [
     { "name": "Motorist Modernization (MyDMV Portal)", "summary": "FLHSMV's Office of Motorist Modernization is chartered to replace antiquated systems with flexible architecture, improve service delivery, and strengthen data quality and security. The customer-facing MyDMV Portal digitizes driver-license, registration, title, and parking-permit transactions — a multi-year enterprise-modernization track touching identity, data, and cloud.", "tags": ["Modernization", "Digital Services"] },
-    { "name": "Mobile driver's license relaunch", "summary": "After pulling the Thales-built 'Florida Smart ID' from app stores in 2024, Florida is relaunching its mDL. HB 543 (passed the House March 6, 2026) would require ISO/IEC 18013-5 and 18013-7 compliance, selective disclosure, no state tracking, and unlinkable transactions. A high-profile digital-identity and credentialing modernization to track closely.", "tags": ["Digital ID", "Security"] },
+    { "name": "Mobile driver's license relaunch", "summary": "After pulling the Thales-built 'Florida Smart ID' from app stores in 2024, Florida intends to relaunch its mDL. The 2026 legislative vehicle for a modern framework — HB 543, which would have required ISO/IEC 18013-5 and 18013-7 compliance, selective disclosure, no state tracking, and unlinkable transactions — passed both chambers but died in returning messages on March 13, 2026, so it did NOT become law this session. The app remains unavailable and the relaunch continues as an administrative/procurement effort; expect the framework to return in a future session. Still a high-profile digital-identity and credentialing modernization to track closely.", "tags": ["Digital ID", "Security"] },
     { "name": "Identity verification / fraud prevention", "summary": "FLHSMV has moved to modernize identity-proofing for online services (reporting cited an upgrade toward selfie-biometric and identity-database verification for the MyDMV Portal). Identity assurance, fraud prevention, and secure authentication are recurring needs as more transactions shift online.", "tags": ["Identity", "Cybersecurity"] },
     { "name": "Public-safety & field technology (FHP)", "summary": "Florida Highway Patrol drives demand for in-vehicle and field technology — law-enforcement software, crash-diagramming tools, radio/communications, and an FY2026-27 emphasis on aviation and fleet. A path for edge compute, ruggedized devices, storage, and secure connectivity.", "tags": ["Public Safety", "Edge"] }
   ],
@@ -57,9 +57,10 @@
   ],
 
   "news": [
-    { "date": "2026-03", "title": "Florida House passes HB 543 to relaunch the mobile driver's license", "impact": "Revives FLHSMV's mDL with ISO/IEC 18013-5/-7 compliance, selective disclosure, and strict privacy rules — a near-term digital-identity and credentialing modernization to position against. Confirm Senate passage and signature.", "tags": ["Digital ID", "Legislation"] },
-    { "date": "2025-12", "title": "FLHSMV summarizes Governor's FY2026-27 'Floridians First' budget for law enforcement", "impact": "Recommended FHP funding for career development, fleet replacement, aviation, and communications/law-enforcement software — signals where public-safety technology dollars are headed.", "tags": ["Budget", "Public Safety"] },
-    { "date": "2024-07", "title": "Florida pulls 'Florida Smart ID' mDL app from app stores for overhaul", "impact": "Reset the state's digital-ID program and set up the 2026 relaunch — context for why identity/credentialing is an active modernization track at FLHSMV.", "tags": ["Digital ID", "Modernization"] }
+    { "date": "2026-06", "title": "Governor DeSantis signs $117.6B FY2026-27 budget (June 29, 2026)", "impact": "The enacted budget (signed at Hillsborough College, with ~$810M in line-item vetoes) locks in FLHSMV/FHP operating and public-safety dollars — confirm final FHP career-development, fleet, aviation, and communications lines against the enacted GAA and watch for vetoes affecting modernization/IT.", "tags": ["Budget", "Public Safety"] },
+    { "date": "2026-03", "title": "HB 543 mDL/digital-credentialing bill dies despite passing both chambers", "impact": "The 2026 transportation bill carrying Florida's modern mobile-driver's-license framework (ISO/IEC 18013-5/-7, selective disclosure, no state tracking) passed the House (107-1) and Senate (33-0) but died in returning messages on March 13, 2026 — so it did NOT become law. The mDL relaunch stays an administrative/procurement effort; expect the framework to return in a future session.", "tags": ["Digital ID", "Legislation"] },
+    { "date": "2025-12", "title": "FLHSMV summarizes Governor's FY2026-27 'Floridians First' budget for law enforcement", "impact": "Recommended FHP funding for career development, fleet replacement, aviation, and communications/law-enforcement software — signals where public-safety technology dollars are headed; now largely reflected in the enacted June 2026 budget.", "tags": ["Budget", "Public Safety"] },
+    { "date": "2024-07", "title": "Florida pulls 'Florida Smart ID' mDL app from app stores for overhaul", "impact": "Reset the state's digital-ID program and set up the intended relaunch — context for why identity/credentialing remains an active modernization track at FLHSMV.", "tags": ["Digital ID", "Modernization"] }
   ],
 
   "dellActions": [
@@ -67,12 +68,14 @@
     "Confirm Dell's position on the relevant DMS state term contracts and alternate contract sources, and ensure VIP/MyFloridaMarketPlace registration is current so the agency can buy without friction.",
     "Lead with enterprise-modernization infrastructure (compute, storage, data platform, and secure identity/authentication) tied to MyDMV Portal and the OMM systems-replacement roadmap.",
     "Position for the public-safety mission with FHP: edge/field compute, ruggedized devices, storage for video/crash data, and secure connectivity, aligned to the FY2026-27 fleet, aviation, and communications priorities.",
-    "Track the HB 543 mDL relaunch and identity-verification work as digital-identity/security pull-through, and partner with the credentialing/identity ecosystem rather than competing with the credential issuer itself."
+    "Track the mDL relaunch and identity-verification work as digital-identity/security pull-through — note the HB 543 framework died in 2026 and will likely return next session, so the current relaunch is administrative/procurement-driven; partner with the credentialing/identity ecosystem rather than competing with the credential issuer itself."
   ],
 
   "sources": [
     { "label": "FLHSMV — Executive Director Dave Kerner approved by Governor and Cabinet (Jan 2023)", "url": "https://www.flhsmv.gov/2023/01/17/dave-kerner-approved-by-governor-desantis-and-the-cabinet-as-executive-director-of-florida-department-of-highway-safety-and-motor-vehicles/" },
     { "label": "FLHSMV — Governor's FY2026-27 'Floridians First' Budget Supports Law Enforcement (Dec 2025)", "url": "https://www.flhsmv.gov/2025/12/16/executive-director-dave-kerner-governor-desantis-floridians-first-budget-supports-law-enforcement/" },
+    { "label": "Executive Office of the Governor — DeSantis Signs FY2026-27 Budget (June 29, 2026)", "url": "https://www.flgov.com/eog/news/press/2026/governor-ron-desantis-signs-florida-fiscal-year-2026-2027-budget-capping-eight" },
+    { "label": "Florida Senate — HB 543 (2026) bill history (died in returning messages, 3/13/2026)", "url": "https://www.flsenate.gov/Session/Bill/2026/543" },
     { "label": "FLHSMV — MyDMV Portal / Motorist Modernization", "url": "https://www.flhsmv.gov/motorist-modernization/mydmvportal/" },
     { "label": "Biometric Update — Florida House passes bill to relaunch mDL program (HB 543)", "url": "https://www.biometricupdate.com/202603/florida-house-passes-bill-to-relaunch-mdl-program" },
     { "label": "Biometric Update — Florida tosses mDL program (Smart ID pulled, 2024)", "url": "https://www.biometricupdate.com/202407/florida-tosses-mdl-program-into-the-gulf" },

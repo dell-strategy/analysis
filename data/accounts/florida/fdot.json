@@ -5,7 +5,7 @@
   "name": "Florida Dept of Transportation (FDOT)",
   "slug": "fdot",
   "hq": "Tallahassee, FL",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Florida's statewide transportation agency: FDOT plans, builds, and operates the state highway system through seven districts plus Florida's Turnpike Enterprise, running a large intelligent-transportation (SunGuide), traffic-management, all-electronic tolling (SunPass), and connected-vehicle estate with a deep field, edge, and data footprint.",
 
   "snapshot": [
@@ -18,10 +18,10 @@
   "overview": "The Florida Department of Transportation (FDOT) is the state's lead transportation agency, headquartered in Tallahassee and operating through seven geographic districts plus Florida's Turnpike Enterprise (FTE). It plans, designs, builds, maintains, and operates the State Highway System and oversees aviation, rail, transit, seaports, and the statewide intelligent-transportation network. For a technology seller, FDOT is a heavily instrumented, data- and edge-rich account rather than a back-office IT shop: it runs the SunGuide advanced traffic-management software that serves as the hub of Florida's ITS network across regional Transportation Management Centers (TMCs), deploys connected-vehicle (CV) corridors, and operates one of the nation's largest all-electronic tolling systems through FTE — a 515-mile turnpike serving roughly 3M daily customers via SunPass and interoperable transponders. Technology is led by the Office of Information Technology (OIT) under the agency CIO, while statewide IT standards and most enterprise procurement sit above FDOT at the Department of Management Services (DMS) and the state's central IT body, which is itself being restructured in 2026.",
 
   "budget": {
-    "intro": "FDOT is one of Florida's largest capital agencies — its spending power shows up in the multi-year Work Program rather than a back-office IT line. The adopted Five-Year Work Program for FY2026-2030 totals roughly $32.8B, and the FY2025-26 state budget signed by Governor DeSantis directed about $15.1B to transportation, including ~$13.7B for the State Transportation Work Program. Most technology rides on these capital and operations programs (ITS, tolling, TMC operations) plus DMS enterprise vehicles, not a standalone agency IT appropriation.",
+    "intro": "FDOT is one of Florida's largest capital agencies — its spending power shows up in the multi-year Work Program rather than a back-office IT line. The adopted Five-Year Work Program for FY2026-2030 totals roughly $32.8B, and the FY2026-27 state budget signed by Governor DeSantis on June 29, 2026 directs about $15.4B to FDOT, including ~$14.4B for the State Transportation Work Program (with ~$4.9B for highway construction/maintenance and ~$1.4B for resurfacing). Most technology rides on these capital and operations programs (ITS, tolling, TMC operations) plus DMS enterprise vehicles, not a standalone agency IT appropriation.",
     "stats": [
       { "value": "$32.8B", "label": "5-yr Work Program (FY26-30)", "note": "Adopted Five-Year Work Program; capacity, resurfacing, bridge, and safety" },
-      { "value": "$15.1B", "label": "Transportation budget (FY25-26)", "note": "Signed by Governor DeSantis; ~$13.7B for the State Transportation Work Program" },
+      { "value": "~$15.4B", "label": "FDOT budget (FY26-27)", "note": "Signed by Governor DeSantis 6/29/2026; ~$14.4B for the State Transportation Work Program" },
       { "value": "~$1.35B", "label": "Annual Turnpike toll revenue", "note": "Florida's Turnpike Enterprise; self-funding entity reinvesting net tolls into infrastructure" }
     ],
     "notes": [
@@ -56,9 +56,9 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Governor DeSantis signs FY2026-27 budget (6/29): ~$15.4B for FDOT, ~$14.4B State Transportation Work Program", "impact": "Sustained record capital funding keeps ITS, tolling, and 24/7 TMC operations — the carriers for FDOT technology spend — fully funded; the Governor flagged accelerating construction (notably Central Florida / I-4), which favors field, edge, and data-infrastructure demand. Track project-level ITS/TMC line items rather than a standalone IT appropriation.", "tags": ["Budget", "Operations"] },
     { "date": "2026-04", "title": "FDOT District Six TSM&O presents connected-vehicle and operations work at FIU transportation symposium", "impact": "Reinforces active investment in CAV corridors and TMC operations across southeast Florida — keeps ITS, edge, and data infrastructure in near-term scope.", "tags": ["ITS", "Connected Vehicle"] },
     { "date": "2026-01", "title": "FDOT publishes 2026 Connected Vehicles Lessons Learned & Best Practices guidance", "impact": "Technical direction covering integration with SunGuide/SCMS/DEPOT and field-device operations signals an expanding CAV footprint — more roadside-to-cloud connectivity, security, and data-ingestion demand.", "tags": ["Connected Vehicle", "Edge"] },
-    { "date": "2025-07", "title": "FY2025-26 budget directs ~$15.1B to transportation, ~$13.7B to the State Transportation Work Program", "impact": "Sustained capital funding keeps ITS, tolling, and operations programs — the carriers for FDOT technology spend — fully funded; track project-level ITS and TMC line items.", "tags": ["Budget", "Operations"] },
     { "date": "2025-01", "title": "FDOT advances ITS/TMC operations procurement for Miami-Dade & Monroe SunGuide center", "impact": "A 24/7/365 SunGuide TMC operations solicitation spanning multiple service categories signals continued managed-operations and infrastructure demand at the regional center level.", "tags": ["ITS", "Procurement"] }
   ],
 
@@ -74,7 +74,7 @@
     { "label": "FDOT — Office of Information Technology (CIO)", "url": "https://www.fdot.gov/it/cio.shtm" },
     { "label": "FDOT — SunGuide Software / ITS", "url": "https://www.fdot.gov/traffic/its/projects-arch/sunguide.shtm" },
     { "label": "FDOT — Office of Work Program and Budget", "url": "https://www.fdot.gov/workprogram/" },
-    { "label": "FDOT — Governor DeSantis' FY2025-26 Budget Makes Strategic Investments to Keep Florida Moving", "url": "https://www.fdot.gov/info/co/news/2025/07012025" },
+    { "label": "Executive Office of the Governor — DeSantis Signs Florida FY2026-27 Budget ($117.6B; ~$14.4B state transportation work program; signed 6/29/2026)", "url": "https://www.flgov.com/eog/news/press/2026/governor-ron-desantis-signs-florida-fiscal-year-2026-2027-budget-capping-eight" },
     { "label": "FDOT District Six TSM&O — Connected Vehicles", "url": "https://sunguide.info/connected-vehicles/" },
     { "label": "FDOT — 2026 Edition Connected Vehicles Lessons Learned & Best Practices (PDF)", "url": "https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/traffic/cav-guidance-ll-bp_2026-edition.pdf" },
     { "label": "Florida's Turnpike — Leadership & Financials (515-mi system, all-electronic tolling)", "url": "https://floridasturnpike.com/about/floridas-turnpike-financials/" },

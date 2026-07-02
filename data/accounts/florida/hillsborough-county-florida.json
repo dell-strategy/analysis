@@ -5,7 +5,7 @@
   "name": "Hillsborough County, Florida",
   "slug": "hillsborough-county-florida",
   "hq": "Tampa, FL",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Florida's fourth-most-populous county and home to Tampa (~1.6M residents) — a large, fast-growing local government whose technology buying runs through a centralized Information & Innovation Office and the County's own Procurement Services department.",
 
   "snapshot": [
@@ -49,14 +49,17 @@
   "powerStructure": [
     { "name": "Bonnie M. Wise", "title": "County Administrator", "note": "Chief executive carrying out Board of County Commissioners decisions; owns budget preparation and oversees 5,200+ employees. The top executive relationship." },
     { "name": "Ramin Kouzehkanani", "title": "Chief Information & Innovation Officer", "note": "Executive-team member leading the County's central IT/innovation function; an ORBIE-recognized public-sector CIO and active in regional tech forums. The primary technology decision-maker — verify current standing." },
-    { "name": "Board of County Commissioners", "title": "Elected governing body", "note": "Sets policy and approves the budget and major contracts; the appropriations authority behind large technology buys." },
+    { "name": "Board of County Commissioners (Chair: Ken Hagan; Vice Chair: Christine Miller)", "title": "Elected governing body (7 members)", "note": "Sets policy and approves the budget and major contracts; the appropriations authority behind large technology buys. Hagan retained as 2025–2026 Chair (Nov 2025). A Nov 2026 ballot measure would expand the board to 9 seats and add a 'majority plus one' vote to appoint/remove the County Administrator — watch for governance change." },
     { "name": "Procurement Services", "title": "County purchasing & solicitations", "note": "Owns competitive solicitations, term contracts, and cooperative/piggyback authority — the gatekeeper for getting on contract." }
   ],
 
   "news": [
-    { "date": "2025-08", "title": "Florida state efficiency task force reviews Hillsborough County's ~$9B budget", "impact": "State-level scrutiny aimed at cutting waste and property taxes could pressure spending and procurement justification — frame deals around efficiency and measurable ROI.", "tags": ["Budget", "Oversight"] },
-    { "date": "2025-07", "title": "County publishes Administrator's Recommended Budget (FY26–FY27)", "impact": "Authoritative source for IT/innovation funding and capital technology projects — mine it for funded initiatives before forecasting.", "tags": ["Budget"] },
-    { "date": "2026-06", "title": "Population estimate reaches ~1.6M, ~8% growth since 2020", "impact": "Sustained growth keeps pressure on county systems and infrastructure — a durable demand signal for compute, storage, and resilient infrastructure.", "tags": ["Growth"] }
+    { "date": "2026-06", "title": "County DOGE committee publishes report flagging ~$680M in 'wasteful' spending ahead of July budget hearings", "impact": "The volunteer efficiency committee released its report independently on June 30 (hillsboroughdoge.com) after struggling to get on the commission agenda. Heightened efficiency scrutiny before FY27 budget hearings reinforces an ROI/consolidation-first sales posture — lead with lifecycle savings, not net-new spend.", "tags": ["Budget", "Oversight"] },
+    { "date": "2026-06", "title": "Nov 2026 ballot measure would expand County Commission 7→9 seats and add 'majority plus one' vote to hire/fire the County Administrator", "impact": "A pending governance change (needs 60% approval) could reshape the board and tighten control over the County Administrator, County Attorney, and Internal Auditor — the executive-relationship layer for large buys. Track outcome; no change until/unless voters approve.", "tags": ["Governance", "Leadership"] },
+    { "date": "2026-06", "title": "November property-tax relief measure could cut ~$367M in county revenue", "impact": "A potential ~$367M revenue reduction on top of DOGE cut proposals sharpens fiscal pressure on FY27 — expect tighter procurement justification and appetite for efficiency-driven technology consolidation.", "tags": ["Budget", "Fiscal"] },
+    { "date": "2026-06", "title": "County publishes Administrator's Recommended Budget (FY26–FY27); FY27 hearings set for July–September", "impact": "Authoritative source for IT/innovation funding and capital technology projects — mine it for funded initiatives before forecasting; final budget adopted by late September.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "Population estimate reaches ~1.6M, ~8% growth since 2020", "impact": "Sustained growth keeps pressure on county systems and infrastructure — a durable demand signal for compute, storage, and resilient infrastructure.", "tags": ["Growth"] },
+    { "date": "2025-08", "title": "Florida state efficiency task force reviews Hillsborough County's ~$9B budget", "impact": "State-level scrutiny aimed at cutting waste and property taxes could pressure spending and procurement justification — frame deals around efficiency and measurable ROI.", "tags": ["Budget", "Oversight"] }
   ],
 
   "dellActions": [
@@ -75,6 +78,10 @@
     { "label": "FOX 13 Tampa Bay — Florida DOGE reviewing Hillsborough County's $9 billion budget", "url": "https://www.fox13news.com/news/florida-doge-reviewing-hillsborough-countys-9-billion-budget-week" },
     { "label": "U.S. Census Bureau QuickFacts — Hillsborough County, Florida", "url": "https://www.census.gov/quickfacts/fact/table/hillsboroughcountyflorida/PST045225" },
     { "label": "FloridaCIO ORBIE Awards / Tampa Technology Summit — Ramin Kouzehkanani, Chief Information & Innovation Officer", "url": "https://eitevents.com/event_pages/tampa-technology-summit-2026/" },
-    { "label": "Florida Digital Service — Local Government Cybersecurity Grant Program", "url": "https://cybergrants.fl.gov/" }
+    { "label": "Florida Digital Service — Local Government Cybersecurity Grant Program", "url": "https://cybergrants.fl.gov/" },
+    { "label": "Bay News 9 — DOGE chairman says Hillsborough County report may be overlooked (~$680M; property-tax measure ~$367M)", "url": "https://baynews9.com/fl/tampa/news/2026/06/30/hillsborough-doge-silencing" },
+    { "label": "WUSF — Hillsborough voters will decide whether to elect school superintendent, expand county commission", "url": "https://www.wusf.org/politics-issues/2026-06-09/hillsborough-voters-will-decide-whether-to-elect-school-superintendent-expand-county-commission" },
+    { "label": "Hillsborough County — Commissioners keep Ken Hagan as 2025–2026 Board Chair (Nov 2025)", "url": "https://hcfl.gov/newsroom/2025/11/18/hillsborough-county-commissioners-keep-ken-hagan-as-2025-2026-board-chair-appoint-positions-on-boards-councils" },
+    { "label": "Hillsborough County — County Administrator's Recommended Budget FY26–FY27 (Operating)", "url": "https://assets.contentstack.io/v3/assets/blteea73b27b731f985/blt683975696ce91134/6876b2e9a9c16c7a2b9d9bca/Hillsborough_County_Recommended_Budget_Operating_FY26-FY27_WEB.pdf" }
   ]
 }

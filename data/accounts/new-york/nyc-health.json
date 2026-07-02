@@ -5,7 +5,7 @@
   "name": "NYC Dept of Health & Mental Hygiene",
   "slug": "nyc-health",
   "hq": "New York, NY",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "One of the largest and oldest municipal public-health agencies in the U.S.: DOHMH protects the health of ~8.3M New Yorkers across disease surveillance, clinical services, vital records, environmental health, and mental hygiene — a data- and surveillance-heavy mission whose core IT runs through NYC's central technology agency (OTI).",
 
   "snapshot": [
@@ -27,7 +27,7 @@
     "notes": [
       "A large share of DOHMH funding is federal and state grants tied to specific programs (HIV, immunization, emergency preparedness); these can shift with federal public-health funding decisions and create budget volatility independent of the City line.",
       "Mission-specific health IT is funded inside DOHMH, but shared infrastructure, citywide contracts, and cybersecurity run through OTI — confirm which entity owns a given system before forecasting.",
-      "Figures reflect the Adams-era FY2026 Executive Budget; the Mamdani administration that took office Jan 2026 may reprioritize as it issues its first executive/adopted budgets."
+      "The Mamdani administration adopted its first full budget — a $125.8B citywide FY2027 plan — via a June 30, 2026 handshake with the Council; it funds mental-health services DOHMH helps oversee and a $34.2M post-9/11 health-records portal. Confirm the DOHMH-specific FY2027 line as adopted budget detail publishes."
     ]
   },
 
@@ -53,14 +53,15 @@
     { "name": "Mayor Zohran Mamdani", "title": "Mayor of New York City (took office Jan 2026)", "note": "New administration setting health and budget priorities; expect first executive/adopted budgets to reshape DOHMH's roadmap." },
     { "name": "DOHMH Division of Information Technology / CIO", "title": "Agency CIO & mission health-IT", "note": "Owns DOHMH's mission-specific IT, informatics, and surveillance systems. Per the agency org chart the Deputy Commissioner for IT/CIO role has been held by Beth Maldin, MPH — verify continuity under the new administration before engaging." },
     { "name": "Center for Population Health Data Science", "title": "Chief Population Health & Data Officer", "note": "Leads the Data Modernization Initiative and AI strategy. Launched Oct 2023 with Mamta Parakh as inaugural Chief Population Health and Data Officer — confirm the current officeholder given the leadership transition." },
-    { "name": "NYC OTI / Cyber Command", "title": "Citywide tech & security gate", "note": "Owns shared infrastructure, citywide IT contracts, cloud review, and cybersecurity for DOHMH and ~100 other agencies — the technical/contractual gatekeeper for most DOHMH technology buys." }
+    { "name": "Lisa Gelobter", "title": "NYC Chief Technology Officer & OTI Commissioner", "note": "Appointed by Mayor Mamdani; announced Feb 11, 2026. Former U.S. Dept. of Education chief digital service officer (Obama era) and founder of tEQuitable; helped pioneer Shockwave/Hulu/online video. Runs OTI — shared infrastructure, citywide IT contracts, cloud review, and NYC Cyber Command — the technical/contractual gatekeeper for most DOHMH technology buys; signals a service-delivery and digital-equity emphasis." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "NYC adopts $125.8B FY2027 budget (Mamdani–Menin handshake, June 30)", "impact": "First full budget of the new administration; funds mental-health services (assertive community treatment, mobile/crisis teams) DOHMH helps oversee, plus a $34.2M post-9/11 air-quality/health-records online portal — a citywide data-portal build. Sets the fiscal frame and priorities DOHMH now operates under.", "tags": ["Budget"] },
+    { "date": "2026-02", "title": "Mayor Mamdani names Lisa Gelobter NYC CTO & OTI Commissioner", "impact": "New head of the citywide tech/cyber gatekeeper that governs DOHMH's shared infrastructure, cloud review, and Cyber Command (announced Feb 11, 2026). Re-map the OTI relationship — her service-delivery/digital-equity emphasis shapes how technology reaches DOHMH.", "tags": ["Leadership", "IT"] },
     { "date": "2026-01", "title": "Mayor Mamdani names Dr. Alister Martin DOHMH Commissioner", "impact": "New health leadership at the top of the agency motion (announced Jan 31, 2026); priorities still forming around affordability and access — re-engage and re-map the relationship chart early.", "tags": ["Leadership"] },
-    { "date": "2025-06", "title": "NYC adopts FY2026 budget (~$2.3B for DOHMH)", "impact": "Sets the spending baseline the new administration inherits; large grant-funded share leaves the agency exposed to federal public-health funding shifts.", "tags": ["Budget"] },
-    { "date": "2025-03", "title": "Council scrutiny of DOHMH FY26 budget and staffing", "impact": "City Council pressed on funding gaps, vacancies, and program continuity — signals demand for efficiency and modernization across operations.", "tags": ["Budget", "Operations"] },
-    { "date": "2025-02", "title": "Heightened H5N1 avian-influenza and measles vigilance", "impact": "DOHMH urged year-round flu testing and published measles readiness resources — sustained load on surveillance, lab, and data-ingestion systems.", "tags": ["Surveillance"] }
+    { "date": "2026-06", "title": "Sustained measles and avian-influenza surveillance load", "impact": "DOHMH tracked six confirmed NYC measles cases in 2026 (as of late June) amid rising U.S./global cases and ongoing H5N1 vigilance — continued demand on surveillance, lab, and data-ingestion systems.", "tags": ["Surveillance"] },
+    { "date": "2025-06", "title": "NYC adopts FY2026 budget (~$2.3B for DOHMH)", "impact": "Prior-administration baseline the new team inherited; large grant-funded share leaves the agency exposed to federal public-health funding shifts.", "tags": ["Budget"] }
   ],
 
   "dellActions": [
@@ -75,6 +76,11 @@
     { "label": "NYC Health — About DOHMH", "url": "https://www.nyc.gov/site/doh/about/about-doh.page" },
     { "label": "Mayor Mamdani Announces New Appointments, Including Health Commissioner (Jan 2026)", "url": "https://www.nyc.gov/mayors-office/news/2026/01/mayor-mamdani-announces-new-appointments--including-commissioner" },
     { "label": "Healthbeat — Mamdani taps Alister Martin to lead NYC health department (Feb 2026)", "url": "https://www.healthbeat.org/newyork/2026/02/02/alister-martin-health-commissioner-mamdani/" },
+    { "label": "Mayor Mamdani Announces Key Appointments, Including Chief Technology Officer / OTI (Feb 2026)", "url": "https://www.nyc.gov/mayors-office/news/2026/02/mayor-mamdani-announces-key-appointments-to-three-city-agencies-" },
+    { "label": "StateScoop — Mamdani names Lisa Gelobter NYC CTO (Feb 2026)", "url": "https://statescoop.com/new-york-mayor-mamdani-lisa-gelobter-cto/" },
+    { "label": "Mayor Mamdani & Speaker Menin — Handshake Agreement on FY2027 Budget (June 30, 2026)", "url": "https://www.nyc.gov/mayors-office/news/2026/06/mayor-mamdani--speaker-menin-reach-handshake-agreement-on-balanc" },
+    { "label": "amNY — What's in the $125.8B NYC FY2027 budget (June 30, 2026)", "url": "https://www.amny.com/politics/nyc-budget-deal-mamdani-menin-06302026/" },
+    { "label": "NYC Health — Measles (case counts / provider info, 2026)", "url": "https://www.nyc.gov/site/doh/health/health-topics/measles.page" },
     { "label": "NYC Council — Funding gaps in FY2026 Executive Budget for DOHMH (May 2025)", "url": "https://council.nyc.gov/press/2025/05/23/2879/" },
     { "label": "NYC Health — Center for Population Health Data Science launch (Oct 2023)", "url": "https://www.nyc.gov/site/doh/about/press/pr2023/health-department-launches-new-center-to-enhance-agency-data-analytics.page" },
     { "label": "NYC Health — Modernizing Data and Analytics (two-year lookback)", "url": "https://www.nyc.gov/assets/doh/downloads/pdf/data/modernizing-data-two-year-lookback.pdf" },
