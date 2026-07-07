@@ -5,7 +5,7 @@
   "name": "Maryland Dept of Information Technology (DoIT)",
   "slug": "doit",
   "hq": "Annapolis, MD",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Maryland's central IT agency: DoIT sets statewide technology and cyber policy, runs the IT Investment Fund that bankrolls major modernization projects, and houses the Maryland Digital Service, the responsible-AI office, and the state's quantum ambitions under State CIO Katie Savage.",
 
   "snapshot": [
@@ -33,7 +33,7 @@
 
   "initiatives": [
     { "name": "\"Capital of Quantum\" initiative", "summary": "Governor Moore's $1B public-private initiative (announced Jan 2025) to make Maryland a global quantum hub, anchored at the University of Maryland with IonQ and a Microsoft quantum research center in the Discovery District. Watch for downstream compute, data-center, and HPC infrastructure demand.", "tags": ["Quantum", "Economic Development", "HPC"] },
-    { "name": "Responsible AI enablement", "summary": "Flowing from the Governor's 2024 AI executive order, DoIT's Office of AI Enablement (Senior Advisor for Responsible AI Nishant Shah) runs an AI Subcabinet, a Responsible AI Policy, and a 2025 AI Enablement Strategy / Study Roadmap targeting critical domains — a path for AI-infrastructure and platform conversations.", "tags": ["AI", "Governance", "Data"] },
+    { "name": "Responsible AI enablement", "summary": "Flowing from the Governor's 2024 AI executive order, DoIT's Office of AI Enablement — now led by Senior Advisor for Responsible AI Michael Boyce (appointed June 2026, succeeding Nishant Shah) — runs an AI Subcabinet, a Responsible AI Policy, and a 2025 AI Enablement Strategy / Study Roadmap that targets 2026 enterprise adoption — a path for AI-infrastructure and platform conversations.", "tags": ["AI", "Governance", "Data"] },
     { "name": "Maryland Digital Service & modernization", "summary": "An in-house team of product managers, designers, researchers, and engineers driving website/application redesigns and discovery work — informing more agile, accurate procurements. Tied to flagship ITIF rebuilds (FMIS, payroll, integrated tax).", "tags": ["Modernization", "Digital Services"] },
     { "name": "Federated agency IT model", "summary": "Savage is pushing CIO/CISO/product-manager capacity back into individual agencies while DoIT sets standards and funds. Map the right buying center per agency rather than assuming all decisions sit centrally.", "tags": ["Org Model", "Governance"] }
   ],
@@ -49,18 +49,19 @@
 
   "powerStructure": [
     { "name": "Katie Savage", "title": "Secretary of Information Technology & State CIO", "note": "Top statewide tech relationship; sets direction, owns the ITIF, and champions the federated agency-IT model. AI- and modernization-forward." },
-    { "name": "Nishant Shah", "title": "Senior Advisor for Responsible AI", "note": "Leads the Office of AI Enablement and sits on the Governor's AI Subcabinet — the entry point for AI strategy, policy, and use-case conversations." },
-    { "name": "James Saunders", "title": "Acting State Chief Information Security Officer (SCISO)", "note": "Leads DoIT's Office of Security Management (effective May 2025); former CISO at U.S. OPM and SBA. Owns statewide security standards — confirm if confirmed to permanent role." },
+    { "name": "Michael Boyce", "title": "Senior Advisor for Responsible AI", "note": "Appointed June 2026 (succeeding Nishant Shah, who departed Jan 2026); ex-DHS AI Corps founder and White House OMB AI-policy lead. Leads the Office of AI Enablement and sits on the Governor's AI Subcabinet — the entry point for AI strategy, policy, and use-case conversations." },
+    { "name": "James Saunders", "title": "Acting State Chief Information Security Officer (SCISO)", "note": "Leads DoIT's Office of Security Management (effective May 2025); former CISO at U.S. OPM. Still shown as Acting on DoIT's leadership page as of June 2026 (Senate confirmation pending). Owns statewide security standards, incl. the new zero-trust Cybersecurity & Privacy Policy Suite." },
     { "name": "Maryland Digital Service", "title": "Product / design / engineering team", "note": "In-house delivery team shaping modernization and procurement discovery — a technical influencer on what gets bought." },
     { "name": "Dept. of General Services — Procurement", "title": "eMMA administrator", "note": "Runs the central procurement portal and many statewide vehicles; the contracting path alongside DoIT's IT contracts." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Moore names Michael Boyce Senior Advisor for Responsible AI", "impact": "New AI leadership at DoIT (ex-DHS AI Corps / White House OMB) replacing Nishant Shah — re-establish the AI-strategy relationship as Maryland shifts toward enterprise AI adoption in 2026.", "tags": ["AI", "Leadership"] },
     { "date": "2026-05", "title": "Moore signs SB85 / HB266 broadening IT Investment Fund uses", "impact": "Expands authorized ITIF spending (incl. communications sites/equipment) — re-check what modernization and infrastructure can now be funded through the fund.", "tags": ["Budget", "Legislation"] },
+    { "date": "2026-02", "title": "DoIT adopts statewide Cybersecurity & Privacy Policy Suite (zero-trust)", "impact": "Unified standards for all executive-branch agencies with an ~18-month move to zero-trust — align cloud, endpoint, and security offerings to the new controls and 2026 timeline.", "tags": ["Cybersecurity", "Zero Trust"] },
     { "date": "2026-02", "title": "Savage details plan to push IT power back to agencies", "impact": "Agencies increasingly hire their own CIOs/CISOs/product managers — map buying centers per agency, not just to DoIT central.", "tags": ["Org Model", "Leadership"] },
     { "date": "2025-07", "title": "DoIT publishes 2025 IT Master Plan", "impact": "Sets statewide modernization, AI, data, and cyber priorities — align the Dell narrative to the plan's stated tracks.", "tags": ["Strategy"] },
-    { "date": "2025-05", "title": "James Saunders named Acting State CISO", "impact": "New security leadership (ex-OPM/SBA) — rebuild the security relationship and align cloud/AI offerings to refreshed standards.", "tags": ["Cybersecurity", "Leadership"] },
-    { "date": "2025-01", "title": "Moore announces $1B \"Capital of Quantum\" initiative", "impact": "Multi-year quantum buildout with UMD/IonQ/Microsoft — watch for downstream HPC, data-center, and compute infrastructure demand.", "tags": ["Quantum", "Infrastructure"] }
+    { "date": "2025-05", "title": "James Saunders named Acting State CISO", "impact": "New security leadership (ex-OPM) — rebuild the security relationship and align cloud/AI offerings to refreshed standards.", "tags": ["Cybersecurity", "Leadership"] }
   ],
 
   "dellActions": [
@@ -75,8 +76,11 @@
     { "label": "Maryland DoIT — Secretary Katie Savage", "url": "https://doit.maryland.gov/About-DoIT/Leadership/Pages/Secretary.aspx" },
     { "label": "Maryland DoIT — 2025 IT Master Plan (PDF)", "url": "https://doit.maryland.gov/About-DoIT/Documents/Maryland-Information-Technology-Master-Plan-2025.pdf" },
     { "label": "MGA — FY2026 DoIT Operating Budget Analysis (F50, PDF)", "url": "https://mgaleg.maryland.gov/pubs/budgetfiscal/2026fy-budget-docs-operating-F50-Department-of-Information-Technology.pdf" },
-    { "label": "Maryland DoIT — Senior Advisor for Responsible AI (Nishant Shah)", "url": "https://doit.maryland.gov/About-DoIT/Leadership/Pages/Senior-Advisor-for-Responsible-AI.aspx" },
+    { "label": "Gov. Moore — Michael Boyce named Senior Advisor for Responsible AI (June 2026)", "url": "https://governor.maryland.gov/news/press-releases/governor-moore-announces-senior-ai-advisor-state-maryland" },
+    { "label": "StateScoop — Maryland names Michael Boyce responsible-AI senior advisor", "url": "https://statescoop.com/maryland-names-former-federal-ai-leader-as-states-responsible-ai-senior-advisor/" },
+    { "label": "Maryland DoIT — Senior Advisor for Responsible AI (leadership page)", "url": "https://doit.maryland.gov/About-DoIT/Leadership/Pages/Senior-Advisor-for-Responsible-AI.aspx" },
     { "label": "Maryland DoIT — Acting State CISO (James Saunders)", "url": "https://doit.maryland.gov/About-DoIT/Leadership/Pages/State-Chief-Information-Security-Officer.aspx" },
+    { "label": "Maryland DoIT — State Adopts Modernized Cybersecurity & Privacy Framework (Feb 2026)", "url": "https://doit.maryland.gov/About-DoIT/Press/pages/State-of-Maryland-Adopts-Modernized-Cybersecurity-and-Privacy-Framework.aspx" },
     { "label": "Office of Governor Moore — $1B \"Capital of Quantum\" Initiative", "url": "https://governor.maryland.gov/news/press/pages/governor-moore-announces-1-billion-capital-of-quantum-initiative.aspx" },
     { "label": "Maryland Procurement — eMaryland Marketplace Advantage (eMMA)", "url": "https://procurement.maryland.gov/" },
     { "label": "Federal News Network — Savage giving IT power back to state agencies", "url": "https://federalnewsnetwork.com/ask-the-cio/2026/02/savage-giving-specific-it-power-back-to-the-state-agencies/" }

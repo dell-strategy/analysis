@@ -5,7 +5,7 @@
   "name": "NYS Office of Information Technology Services (ITS)",
   "slug": "nys-its",
   "hq": "Albany, NY",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "New York's consolidated executive-branch IT agency — one of the largest single IT organizations in U.S. government, running enterprise infrastructure, cloud, cybersecurity, and AI as the 'singular service provider' for 50+ state agencies.",
 
   "snapshot": [
@@ -50,13 +50,15 @@
   "powerStructure": [
     { "name": "Dru Rai", "title": "NYS Chief Information Officer & ITS Director", "note": "Appointed Oct 2023; 30+ yrs in IT. Owns the statewide tech strategy and the 'singular service provider' vision — the top relationship for the ITS account." },
     { "name": "Jenson Jacob", "title": "Executive Deputy CIO", "note": "Appointed Sept 2025; prior Chief Digital Transformation Officer. Day-to-day execution of the consolidation and delivery model." },
-    { "name": "Eleonore Fournier-Tombs", "title": "Chief AI Officer", "note": "Leads statewide AI governance and adoption — the buying center for AI strategy, data governance, and AI-infrastructure direction." },
+    { "name": "Eleonore Fournier-Tombs", "title": "Chief AI Officer", "note": "Appointed Jan 2026 (succeeded Shreya Amin); ex-UN University AI researcher. Leads statewide AI governance/adoption and is refining the 'Acceptable Use of AI Technologies' policy — the buying center for AI strategy, data governance, and AI-infrastructure direction." },
     { "name": "Chris DeSain", "title": "Chief Information Security Officer (CISO)", "note": "Owns statewide cybersecurity, including the Joint Security Operations Center — the security buying center and a funded growth area." },
     { "name": "Stacy Panis", "title": "Chief of Staff", "note": "Nearly three decades across NYS agencies since ITS's 2012 creation; operational and organizational continuity." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "ITS announces three-year enterprise cloud & AI agreement with AWS", "impact": "Centralized cloud/AI procurement for participating agencies at enterprise pricing; reinforces hybrid model and the 'singular service provider' posture. Position Dell ISG/AI infrastructure as the on-prem and hybrid complement, not a competing silo.", "tags": ["Cloud", "AI"] },
+    { "date": "2026-06", "title": "ITS announces three-year enterprise cloud & AI agreement with AWS", "impact": "Announced June 15, 2026: centralized cloud/AI procurement for participating agencies at enterprise pricing, part of a consolidation strategy ITS credits with ~$58M in savings. Reinforces hybrid model and the 'singular service provider' posture. Position Dell ISG/AI infrastructure as the on-prem and hybrid complement, not a competing silo.", "tags": ["Cloud", "AI"] },
+    { "date": "2026-06", "title": "ITS touts JSOC scale at 28th Annual Cybersecurity Conference", "impact": "At the June 2, 2026 conference (2026 Cybersecurity Champion Awards), ITS cited the Joint Security Operations Center now safeguarding ~160,000 endpoints, ~4,600 applications, and billions of records, defending 57 state agencies plus the five largest cities and nearly every county. Statewide cyber remains a funded, growing buying center — align Dell endpoint, infrastructure, and security offerings.", "tags": ["Cybersecurity", "Leadership"] },
+    { "date": "2026-05", "title": "State CIO Dru Rai named to GovTech 2026 Top 25 Doers, Dreamers & Drivers", "impact": "National recognition of Rai's consolidation and cloud-agreement strategy — reinforces continuity of the top ITS relationship and the singular-service-provider direction.", "tags": ["Leadership"] },
     { "date": "2026-02", "title": "CIO Dru Rai testifies on FY2027 budget; ITS staffing and cyber/AI priorities", "impact": "Signals continued investment in cyber, AI, and state-staff growth over contractors — durable, leadership-backed demand at the enterprise level.", "tags": ["Budget", "Leadership"] },
     { "date": "2025-09", "title": "Jenson Jacob named Executive Deputy CIO", "impact": "Adds senior delivery leadership behind Rai's consolidation strategy — map the relationship early.", "tags": ["Leadership"] },
     { "date": "2025-01", "title": "Proposed budget adds ~295 ITS FTEs for cyber and AI", "impact": "Headcount growth (~7%+) aimed at reducing contractor reliance and expanding cyber/AI capacity — a structurally growing enterprise buyer.", "tags": ["Budget", "Cybersecurity"] }
@@ -77,6 +79,9 @@
     { "label": "NYS ITS — Chris DeSain named CISO", "url": "https://its.ny.gov/press-release/nys-its-announces-chris-desain-will" },
     { "label": "NYS ITS — Eleonore Fournier-Tombs named Chief AI Officer", "url": "https://its.ny.gov/news/new-york-state-office-information-technology-services-appoints-eleonore-fournier-tombs-chief" },
     { "label": "GovTech — New York's proposed budget would add IT staff for cyber, AI", "url": "https://www.govtech.com/budget-finance/new-yorks-proposed-budget-would-add-it-staff-for-cyber-ai" },
-    { "label": "NYS Division of Budget — ITS Agency Appropriations, FY2027 Executive Budget", "url": "https://www.budget.ny.gov/pubs/archive/fy27/ex/agencies/appropdata/InformationTechnologyServicesOfficeof.html" }
+    { "label": "NYS Division of Budget — ITS Agency Appropriations, FY2027 Executive Budget", "url": "https://www.budget.ny.gov/pubs/archive/fy27/ex/agencies/appropdata/InformationTechnologyServicesOfficeof.html" },
+    { "label": "NYS ITS — 2026 Cybersecurity Champion Award winners, 28th Annual Cybersecurity Conference (June 2026)", "url": "https://its.ny.gov/news/new-york-state-recognizes-2026-cybersecurity-champion-award-winners-28th-annual-cybersecurity" },
+    { "label": "GovTech — 2026 Top 25 Doers, Dreamers & Drivers: Dru Rai", "url": "https://www.govtech.com/top-25/2026-top-25/dru-rai" },
+    { "label": "StateScoop — New York replaces AI chief (Fournier-Tombs), names new chief digital officer", "url": "https://statescoop.com/new-york-state-chief-ai-officer-eleonore-fournier-tombs/" }
   ]
 }

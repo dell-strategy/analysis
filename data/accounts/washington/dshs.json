@@ -5,7 +5,7 @@
   "name": "Washington Dept of Social & Health Services (DSHS)",
   "slug": "dshs",
   "hq": "Olympia, WA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "One of Washington's largest agencies — behavioral health, long-term care, and economic services for millions of residents — running a deep, aging data and IT footprint that is mid-stream in a multi-year benefits-eligibility modernization.",
 
   "snapshot": [
@@ -53,11 +53,13 @@
     { "name": "Rich Pannkuk", "title": "CFO & Assistant Secretary, Finance, Technology and Analytics Administration", "note": "Owns the administration that houses finance and technology — the most relevant senior owner for IT, data, and analytics buying decisions at DSHS." },
     { "name": "DSHS Office of the CIO", "title": "Agency IT, data & security", "note": "Sits within Finance, Technology and Analytics. Public org materials don't clearly name the current CIO/CISO — verify the named CIO and information-security lead before mapping the security buying center." },
     { "name": "Bill Kehoe", "title": "State CIO & Director, WaTech", "note": "State CIO since 2021; OCIO duties were folded into WaTech in 2024. Owns statewide IT oversight, AI/modernization push, and the approval gates major DSHS investments must clear." },
-    { "name": "Sjan Talbot", "title": "Acting Assistant Secretary, Behavioral Health & Habilitation Administration", "note": "Leads behavioral health — the buying center behind state-hospital construction, clinical systems, and community BH data needs." }
+    { "name": "Sjan Talbot", "title": "Interim Assistant Secretary, Behavioral Health & Habilitation Administration", "note": "Still interim per the June 2026 org chart — leads behavioral health, the buying center behind state-hospital construction, clinical systems, and community BH data needs. Treat as a not-yet-permanent owner." }
   ],
 
   "news": [
-    { "date": "2026-02", "title": "DSHS org chart lists Finance, Technology and Analytics Administration under CFO Rich Pannkuk", "impact": "Confirms where IT/data/analytics ownership sits — center the technology relationship on the FTA administration, then verify the named CIO/CISO.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "DSHS discloses insider data breach affecting ~8,600 clients", "impact": "A former employee accessed client records (names, DOB, SSNs, DSHS client numbers, program-enrollment data) for reasons unrelated to their job; DSHS revoked access and is reviewing data-privacy safeguards. A concrete insider-threat and data-protection opening — position identity/access controls, data-loss prevention, monitoring, and encryption around eligibility/client data.", "tags": ["Cybersecurity", "Data"] },
+    { "date": "2026-06", "title": "June revenue forecast signals ~$2B shortfall heading into the 2027 session; Gov. Ferguson warns of significant reductions", "impact": "Renewed fiscal pressure on top of the 6% cabinet-agency cuts already taken in the 2026 supplemental — expect scrutiny on new IT spend and appetite for cost-takeout, consolidation, and managed-services framing over net-new capex.", "tags": ["Budget", "Fiscal"] },
+    { "date": "2026-03", "title": "2026 supplemental operating budget enacted (SB 5998); DSHS supplemental ask ~$378.6M GFS, mostly SNAP/long-term care/DDA", "impact": "Session closed March 12 with a balanced supplemental that leans on cuts and reserves; much of DSHS's added spend is federally driven (state assuming a larger SNAP admin share from Oct 2026). Confirm current-law numbers before forecasting.", "tags": ["Budget", "Benefits"] },
     { "date": "2025-12", "title": "First end-to-end IE&E solution milestone targeted; ACES decommissioning to begin in state FY26", "impact": "The eligibility modernization moves from build to early production — active demand for cloud, data, integration, and managed-services work.", "tags": ["Modernization", "Cloud"] },
     { "date": "2025-08", "title": "Gov. Ferguson appoints Angela Ramirez as DSHS Secretary", "impact": "New executive leadership with federal HHS background — re-establish the top relationship and read priorities for the term.", "tags": ["Leadership"] },
     { "date": "2025-06", "title": "Construction starts on new 350-bed forensic hospital at Western State Hospital (completion ~2028)", "impact": "Multi-year capital build creates facility IT, clinical-data, and secure-infrastructure demand in the state hospital system.", "tags": ["Behavioral Health", "Infrastructure"] }
@@ -73,6 +75,9 @@
 
   "sources": [
     { "label": "DSHS — Meet Our Leadership", "url": "https://www.dshs.wa.gov/office-of-the-secretary/meet-our-leadership" },
+    { "label": "DSHS — Organizational Chart (June 2026)", "url": "https://www.dshs.wa.gov/sites/default/files/os/org-charts/DSHS-Orgchart.pdf" },
+    { "label": "HIPAA Journal — Washington DSHS insider breach affects ~8,600 (2026)", "url": "https://www.hipaajournal.com/washington-dept-health-social-services-insider-breach-2026/" },
+    { "label": "Gov. Ferguson — Governor signs supplemental budgets (2026)", "url": "https://governor.wa.gov/news/2026/governor-ferguson-signs-supplemental-budgets" },
     { "label": "DSHS — Gov. Ferguson appoints Angela Ramirez secretary of DSHS", "url": "https://dshswa.medium.com/gov-ferguson-appoints-angela-ramirez-secretary-of-dshs-01dd56ded680" },
     { "label": "Washington Research Council — DSHS supplemental budget request (SNAP)", "url": "https://researchcouncil.org/dshs-supplemental-budget-request-includes-spending-to-address-federal-changes-to-snap/" },
     { "label": "Healthier Washington — Integrated Eligibility & Enrollment (IE&E) Modernization Program", "url": "https://waportal.org/health-initiatives/washington-state-health-and-human-services-enterprise-coalition/integrated-eligibility-and-enrollment-iee-modernization-program" },

@@ -5,7 +5,7 @@
   "name": "New Jersey Judiciary (Courts)",
   "slug": "courts",
   "hq": "Trenton, NJ",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "New Jersey's unified state court system — Supreme Court, Appellate Division, and 15 trial-court vicinages — run as a single statewide enterprise by the Administrative Office of the Courts (AOC), and an early mover on digital courts (eCourts), livestreaming, and AI governance.",
 
   "snapshot": [
@@ -50,10 +50,12 @@
     { "name": "Stuart Rabner", "title": "Chief Justice, Supreme Court of New Jersey", "note": "Heads the Judiciary and the Supreme Court; sets branch-wide direction including transparency and AI policy. The top of the judicial enterprise." },
     { "name": "Michael J. Blee", "title": "Acting Administrative Director of the Courts (AOC)", "note": "Appellate Division judge designated Acting Administrative Director effective April 1, 2025, succeeding Glenn A. Grant. Runs the AOC — budget, operations, and information systems. The central operational relationship." },
     { "name": "Administrative Office of the Courts (AOC)", "title": "Statewide court administration", "note": "Trenton-based hub that develops and operates the Judiciary's information systems and equips all 15 vicinages — the single statewide technology buying center for the branch." },
-    { "name": "AOC Information Technology Office", "title": "Judiciary IT / eCourts engineering", "note": "Owns eCourts, networking, end-user compute, and infrastructure for the branch. Confirm the current named technology leader directly — the Judiciary does not publicly publish a standing CIO name in budget materials." }
+    { "name": "Laks Kattalai", "title": "Chief Information Officer, New Jersey Judiciary", "note": "Named CIO effective Feb 1, 2024, succeeding longtime CIO Jack McCarthy; oversees all branch IT staff, infrastructure, operations, application services, cloud-technology adoption, data/analytics, and enterprise architecture. The named technology decision-maker for the branch — confirm still in seat. This is the core Dell IT relationship at the AOC." },
+    { "name": "AOC Information Technology Office", "title": "Judiciary IT / eCourts engineering", "note": "Under the CIO, owns eCourts, networking, end-user compute, and infrastructure for the branch and equips all 15 vicinages." }
   ],
 
   "news": [
+    { "date": "2026-05", "title": "Chief Justice Rabner's annual State Bar address: judicial vacancies down to ~19; flags AI inflating case complexity", "impact": "Rabner (still Chief Justice) notes AI is driving longer, more complex filings and heavier judicial workload — a public signal of appetite for AI-capable, governed court infrastructure and analytics capacity.", "tags": ["Leadership", "AI"] },
     { "date": "2026-05", "title": "Acting Administrative Director Blee delivers FY2027 budget testimony to Senate Budget & Appropriations", "impact": "Confirms Blee still leading the AOC in acting capacity in 2026; budget cycle is the window to align infrastructure and modernization asks.", "tags": ["Leadership", "Budget"] },
     { "date": "2025-04", "title": "Michael J. Blee begins as Acting Administrative Director of the Courts", "impact": "New operational leader at the AOC after Glenn Grant's retirement — re-introduce and rebuild the central technology relationship.", "tags": ["Leadership"] },
     { "date": "2025-03", "title": "Notice to the Bar sets exceptions for Appellate Division livestreaming", "impact": "Formalizes the expanding livestreaming program — sustained demand for streaming, media, networking, and storage capacity.", "tags": ["Digital Court", "Transparency"] },
@@ -76,6 +78,9 @@
     { "label": "NJ Courts — Judge Glenn A. Grant to Retire; Judge Blee Named Successor (Jan 2025)", "url": "https://www.njcourts.gov/press-releases/2025/01/judge-glenn-a-grant-retire-administrative-director-atlanticcape-may-vicinage" },
     { "label": "NJ Courts — Order Designating Judge Blee Acting Administrative Director (eff. Apr 1, 2025)", "url": "https://www.njcourts.gov/notices/order-judge-michael-j-blee-assigned-appellate-division-and-designated-acting-administrative" },
     { "label": "NJ Legislature — Analysis of the NJ Budget FY2025-2026, The Judiciary", "url": "https://pub.njleg.state.nj.us/publications/budget/governors-budget/2026/jud_analysis_2026.pdf" },
-    { "label": "NJ Monitor — Appeals courts to expand public access by livestreaming hearings", "url": "https://newjerseymonitor.com/briefs/appeals-courts-to-expand-public-access-by-livestreaming-hearings-and-posting-briefs-online/" }
+    { "label": "NJ Monitor — Appeals courts to expand public access by livestreaming hearings", "url": "https://newjerseymonitor.com/briefs/appeals-courts-to-expand-public-access-by-livestreaming-hearings-and-posting-briefs-online/" },
+    { "label": "NJ Courts — Laks Kattalai Named Chief Information Officer for the New Jersey Judiciary (Jan 2024)", "url": "https://www.njcourts.gov/press-releases/2024/01/laks-kattalai-named-chief-information-officer-new-jersey-judiciary" },
+    { "label": "NJ Monitor — NJ chief justice cheers low level of judicial vacancies in annual speech (May 15, 2026)", "url": "https://newjerseymonitor.com/2026/05/15/judicial-vacancies-nj-chief-justice/" },
+    { "label": "NJ Courts — Remarks of Michael J. Blee, Acting Administrative Director, Before the Senate Budget and Appropriations Committee (May 2026)", "url": "https://www.njcourts.gov/press-releases/2026/05/remarks-of-michael-j-blee-acting-administrative-director-of-courts-senate" }
   ]
 }

@@ -5,23 +5,23 @@
   "stateName": "Arizona",
   "type": "County",
   "hq": "Tucson, AZ",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Arizona's second-most-populous county and the home of metro Tucson: ~1.06M residents served across dozens of departments, with technology run centrally by the Information Technology Department (ITD).",
 
   "snapshot": [
     { "label": "Role", "value": "2nd-largest AZ county (~1.06M residents)" },
     { "label": "Central IT", "value": "Information Technology Department (ITD)" },
-    { "label": "FY2027 budget", "value": "~$1.81B (tentative)" },
+    { "label": "FY2027 budget", "value": "~$1.81B (adopted Jun 2026)" },
     { "label": "Buying gate", "value": "Board of Supervisors approval" }
   ],
 
   "overview": "Pima County is the second most populous county in Arizona, with roughly 1.06 million residents centered on the Tucson metro area and stretching across a large desert and border region of southern Arizona. It is a full-service local government spanning public health, the Sheriff and justice system, transportation and regional flood control, public works, parks, and community services. Central technology is delivered by the Information Technology Department (ITD), which designs, implements, manages, and supports the County's information, network, communication, and application systems — including enterprise infrastructure, GIS, data management and analytics, collaboration tools, and information security. For a Dell SLG seller, Pima is best understood as a single mid-to-large local-government account where technology direction is concentrated in ITD but purchasing authority is centralized: contracts are run through the County's Procurement Department under the Pima County Procurement Code, and larger or longer-term awards must be approved by the elected Board of Supervisors. ITD sits operationally under a Deputy County Administrator, so the buying center spans the IT Director/CIO, the Procurement Director, and the County Administrator's office.",
 
   "budget": {
-    "intro": "Pima County's Board of Supervisors adopted a tentative FY2027 budget of roughly $1.81 billion (about a 3.3% increase over FY2026), with final adoption scheduled for late June 2026. The County frames the plan around fiscal stability amid state cost-shifts and federal funding uncertainty, with priorities set by its Strategic Plan and the Prosperity and One Pima initiatives. ITD spending is not a single visible line item — it is funded across the departments ITD serves — so demand should be mapped to the operating departments as well as to central IT.",
+    "intro": "Pima County's Board of Supervisors adopted its final FY2027 budget on June 23, 2026 — roughly $1.81 billion in expenditures (about a 3.3% increase over FY2026), on ~$1.89B in total revenues. The County frames the plan around fiscal stability amid state cost-shifts and federal funding uncertainty, with priorities set by its Strategic Plan and the Prosperity and One Pima initiatives. Notable technology items include a $20M 'Middle Mile' broadband project extending fiber to underserved rural areas and $250K to add two ITD staff for federal/state vendor auditing. ITD spending is otherwise not a single visible line item — it is funded across the departments ITD serves — so demand should be mapped to the operating departments as well as to central IT.",
     "stats": [
-      { "value": "~$1.81B", "label": "FY2027 tentative budget", "note": "Board-adopted tentative total; ~3.3% over FY2026, final adoption late June 2026" },
-      { "value": "~$5.28", "label": "Total property tax rate", "note": "Per $100 net assessed value (tentative FY2027); no increase for general operations, with policy-driven adjustments for cost-shifts, infrastructure, and housing" },
+      { "value": "~$1.81B", "label": "FY2027 adopted budget", "note": "Final budget adopted June 23, 2026; ~3.3% over FY2026, on ~$1.89B total revenues" },
+      { "value": "~$5.28", "label": "Total property tax rate", "note": "$5.2835 per $100 net assessed value (adopted FY2027); an 8.7-cent increase to address infrastructure, affordable housing, and state cost-shifts" },
       { "value": "~1.06M", "label": "Residents served", "note": "Second-largest county in Arizona; metro Tucson and southern Arizona" }
     ],
     "notes": [
@@ -48,15 +48,17 @@
   },
 
   "powerStructure": [
-    { "name": "Jan Lesher", "title": "County Administrator", "note": "Chief executive over non-elected departmental operations; presents the budget to the Board and executes its priorities. The top of the operational chain above ITD." },
-    { "name": "Steve Holmes", "title": "Deputy County Administrator", "note": "ITD reports up through his portfolio per the County administration org chart — the executive sponsor layer above the IT Director for larger technology decisions." },
-    { "name": "Javier Baca", "title": "Director / CIO, Information Technology Department", "note": "Appointed ITD Director effective October 2022; prior CIO experience in Arizona K-12 (Sunnyside USD). The primary technology relationship for the account and champion of the Data Works model." },
+    { "name": "Jan Lesher", "title": "County Administrator (retiring Jan 2027)", "note": "Chief executive over non-elected departmental operations; presents the budget to the Board and executes its priorities. Announced in Feb 2026 that she will retire when her contract ends Jan 7, 2027; the Board has begun recruiting a successor — expect a leadership transition at the top of the operational chain above ITD." },
+    { "name": "Steve Holmes", "title": "Deputy County Administrator", "note": "ITD reports up through his portfolio per the current (June 2026) County administration org chart — the executive sponsor layer above the IT Director for larger technology decisions. One of three Deputy County Administrators (with Carmine DeBonis, Jr. and Chad Kasmar)." },
+    { "name": "Javier Baca", "title": "Director / CIO, Information Technology Department", "note": "Appointed ITD Director effective October 2022; prior CIO experience in Arizona K-12 (Sunnyside USD). Still listed as Pima County CIO per public profiles as of mid-2026, though the county org chart does not name the IT Director individually — confirm on contact. The primary technology relationship for the account and champion of the Data Works model." },
     { "name": "Pima County Procurement Department", "title": "Procurement Director & contracting", "note": "Owns solicitations, cooperative agreements, and contract administration under the Procurement Code; prepares or signs contracts and routes larger awards to the Board — the path onto the County." },
-    { "name": "Board of Supervisors", "title": "Elected approval authority", "note": "Five-member elected board that approves larger and longer-term contracts and adopts the budget. The formal buying gate — align pursuits to its calendar and a sponsoring department." }
+    { "name": "Board of Supervisors", "title": "Elected approval authority", "note": "Five-member elected board that approves larger and longer-term contracts and adopts the budget; Jennifer 'Jen' Allen chairs the Board in 2026 (Matt Heinz vice chair). The formal buying gate — align pursuits to its calendar and a sponsoring department. Note its Jan 2026 rejection of a $45M Axon AI contract signals caution on long-term AI commitments." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Board adopts ~$1.81B tentative FY2027 budget; final adoption late June", "impact": "Cost-discipline posture amid state cost-shifts and federal funding pressure — frame technology buys around efficiency, consolidation, and modernization rather than expansion.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "Board adopts final ~$1.81B FY2027 budget (June 23); funds $20M rural 'Middle Mile' broadband and two new ITD staff", "impact": "Final adoption confirms a cost-discipline posture (8.7-cent tax-rate increase for infrastructure/housing/cost-shifts). The $20M broadband build and added ITD auditing headcount show continued infrastructure and vendor-oversight investment — frame buys around efficiency, consolidation, and modernization.", "tags": ["Budget", "Infrastructure"] },
+    { "date": "2026-02", "title": "County Administrator Jan Lesher announces retirement effective Jan 7, 2027; Board to recruit successor", "impact": "A top-of-house leadership transition is coming. Deepen relationships below the administrator (ITD, Procurement, Deputy CA Steve Holmes) so pursuits survive the change, and track the successor search — the next administrator will shape technology and budget priorities.", "tags": ["Leadership"] },
+    { "date": "2026-01", "title": "Board unanimously rejects $45M Axon AI contract expansion for the Sheriff over AI concerns", "impact": "Supervisors balked at a long-term commitment tied to AI-generated police reports (Axon 'Draft One'). Signals the Board's caution on multi-year AI deals — position AI/analytics offers with governance, flexibility, and shorter commitments, and expect scrutiny of AI-heavy proposals.", "tags": ["AI", "Procurement", "Public Safety"] },
     { "date": "2026-03", "title": "Pima County Health Department deepens IT partnership for data modernization ('Data Works')", "impact": "A concrete, grant-funded data-platform initiative (Snowflake, governance, automation) signals demand for data infrastructure and analytics — an opening beyond commodity hardware.", "tags": ["Data", "Modernization"] },
     { "date": "2022-10", "title": "Javier Baca appointed ITD Director / CIO", "impact": "Establishes the central technology relationship owner; align to ITD's modernization and data-governance priorities and confirm tenure and current org structure.", "tags": ["Leadership"] }
   ],
@@ -73,7 +75,10 @@
     { "label": "Pima County — Information Technology Department", "url": "https://www.pima.gov/639/Information-Technology" },
     { "label": "Pima County — Administration Organizational Chart", "url": "https://www.pima.gov/2780/Administration-Organizational-Chart" },
     { "label": "Pima County — County Administrator (Jan Lesher)", "url": "https://www.pima.gov/382/County-Administrator" },
-    { "label": "Pima County — Board adopts final budget; keeps tax rate low (FY2027 coverage)", "url": "https://content.govdelivery.com/accounts/AZPIMA/bulletins/3e5bf88" },
+    { "label": "Pima County — Board passes $1.8B FY2027 budget (adopted June 23, 2026)", "url": "https://content.govdelivery.com/accounts/AZPIMA/bulletins/41d8865" },
+    { "label": "KOLD News 13 — Pima County Administrator Jan Lesher to retire", "url": "https://www.kold.com/2026/02/11/pima-county-administrator-jan-lesher-retire/" },
+    { "label": "KOLD News 13 — Pima County supervisors reject $45M AI contract for Sheriff's Department", "url": "https://www.kold.com/2026/01/08/pima-county-supervisors-reject-45-million-ai-contract-sheriffs-department/" },
+    { "label": "Tucson Sentinel — Allen chosen to chair Pima County Board of Supervisors in 2026", "url": "https://www.tucsonsentinel.com/opinion/report/010626_allen_pima_chair/" },
     { "label": "ASTHO — Pima County elevates collaboration with IT to advance data modernization", "url": "https://www.astho.org/communications/blog/2026/pima-county-collaboration-with-it-to-advance-data-modernization/" },
     { "label": "Pima County — Procurement Department", "url": "https://www.pima.gov/163/Procurement" },
     { "label": "Pima County — County Cooperative Agreements", "url": "https://www.pima.gov/177/County-Cooperative-Agreements--Authorize" },

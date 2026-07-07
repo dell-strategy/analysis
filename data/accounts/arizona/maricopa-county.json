@@ -5,7 +5,7 @@
   "stateName": "Arizona",
   "type": "County",
   "hq": "Phoenix, AZ",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The nation's 4th-largest county and the engine of the Phoenix metro: ~4.5M residents served across 50+ departments, with technology run centrally by the Office of Enterprise Technology (now branded Enterprise Technology & Innovation).",
 
   "snapshot": [
@@ -34,7 +34,7 @@
   "initiatives": [
     { "name": "AI governance and adoption", "summary": "OET/ETI has stood up a countywide AI usage policy, end-user training, and an AI subcommittee, and is adopting chatbots and productivity aids while managing security and data-privacy risk. An AI Governance Report (Oct 2025) tracks corrective actions. Lead with governed, secure AI infrastructure rather than point tools.", "tags": ["AI", "Governance"] },
     { "name": "Infrastructure, cloud and resilience modernization", "summary": "OET's CTO function owns enterprise architecture, disaster recovery, business continuity, cloud services, and public-safety radio. This is the natural home for ISG (compute/storage), hybrid-cloud, and DR/BCP refresh conversations.", "tags": ["Cloud", "Data Center"] },
-    { "name": "Elections technology and the new Tabulation & Election Center", "summary": "A new ~260,000-sq-ft state-of-the-art Tabulation and Election Center is under construction (groundbreaking 2025; opening Summer 2027, operational for the 2028 cycle), set to more than double tabulation capacity. A high-visibility, security-sensitive workload with infrastructure and endpoint implications.", "tags": ["Elections", "Infrastructure"] },
+    { "name": "Elections technology and the new Tabulation & Election Center", "summary": "A new ~260,000-sq-ft state-of-the-art Tabulation and Election Center is under construction (groundbreaking 2025; opening Summer 2027, operational for the 2028 cycle), set to more than double tabulation capacity. A high-visibility, security-sensitive workload with infrastructure and endpoint implications. Note: elections IT control is actively contested — a 2026 court fight between the Board of Supervisors and Recorder Justin Heap over who controls elections IT systems, servers, and staff remains unresolved on appeal, so confirm the current buying center before pursuing elections-tech deals.", "tags": ["Elections", "Infrastructure"] },
     { "name": "Cybersecurity maturity", "summary": "Under a CISO appointed in late 2024, the County continues to harden information security across 50+ departments — endpoint, identity, and data protection are recurring themes given the County's threat profile and elections exposure.", "tags": ["Cybersecurity", "Security"] }
   ],
 
@@ -52,14 +52,18 @@
     { "name": "Richard McHattie", "title": "Chief Information Officer, Office of Enterprise Technology", "note": "Leads OET/ETI and a team of 200+ supporting 50+ departments and 13,000+ employees. The primary technology relationship for the account." },
     { "name": "Shea McGrew", "title": "Chief Technology Officer, OET", "note": "Owns enterprise architecture, disaster recovery, business continuity, cloud, and wireless/public-safety radio; previously Director of Enterprise Infrastructure, Operations & Cloud. Key contact for ISG and cloud." },
     { "name": "Seema Patel", "title": "Chief Information Security Officer", "note": "CISO since October 2024 (succeeding Lester Godsey); two decades-plus of County program experience. Owns security policy, posture, and the elections/threat-exposure conversation." },
-    { "name": "Erick Lao", "title": "Deputy CIO, Customer Engagement & Workspace", "note": "Leads desktop, customer service center, and service management — the buying center for client/endpoint and digital-workspace refresh." }
+    { "name": "Erick Lao", "title": "Deputy CIO, Customer Engagement & Workspace", "note": "Leads desktop, customer service center, and service management — the buying center for client/endpoint and digital-workspace refresh." },
+    { "name": "Steve Gross", "title": "Deputy CIO, Enterprise Infrastructure & Operations", "note": "Owns data, voice/video, cloud, compute, and storage services — a core buying center for ISG (compute/storage) and hybrid-cloud within OET/ETI." },
+    { "name": "Nate Young", "title": "Deputy CIO, Elections Information Technology", "note": "Leads the dedicated elections IT team supporting secure, accurate, accessible elections. Highly relevant given the new Tabulation & Election Center build — but note control of elections IT is contested in a 2026 Board-vs-Recorder court fight (unresolved on appeal), so verify the current org line before engaging." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Elections-IT control fight escalates: appeals court pauses order returning IT systems and staff to Recorder Heap; Board votes to appeal", "impact": "After an April 2026 ruling that the Board illegally moved elections IT staff, an Arizona appeals court stayed (Purcell) the transfer of election IT systems, servers, and staff back to Recorder Justin Heap through at least the July 21 primary; the Board is appealing. Decision authority over elections technology is contested between the Board/OET and the Recorder — track both and confirm the buying center before pursuing elections-tech deals.", "tags": ["Elections", "Leadership"] },
+    { "date": "2026-06", "title": "Board approves military-compatibility permit (4-1) for Project Baccara data center near Luke AFB", "impact": "Signals continued large-scale data-center and power buildout in the West Valley (two data centers, turbine yard, gas plant, APS substation on 160 acres) — useful context for the region's compute/power demand, though this is a private development, not a County IT buy.", "tags": ["Data Center", "Infrastructure"] },
+    { "date": "2026-06", "title": "OET/ETI recognized with Enterprise Approach to GIS award at 2026 Esri Public Sector CIO Summit", "impact": "External validation of the County's enterprise GIS/data platform maturity under CIO McHattie — reinforces an enterprise-platform buying posture over point tools.", "tags": ["GIS", "Recognition"] },
     { "date": "2026-06", "title": "Maricopa County adopts ~$3.9B FY2026 budget; trims property tax rate", "impact": "Cost-discipline posture with public safety dominating spend — frame technology buys around efficiency, consolidation, and mandated-workload support.", "tags": ["Budget"] },
     { "date": "2025-10", "title": "OET/ETI publishes AI Governance Report with countywide AI policy and subcommittee", "impact": "Signals a governed AI adoption path — an opening for secure, policy-aligned AI infrastructure rather than ungoverned point tools.", "tags": ["AI", "Governance"] },
-    { "date": "2025-02", "title": "County breaks ground on new Tabulation and Election Center (opening Summer 2027)", "impact": "A multi-year, security-sensitive infrastructure build with compute, storage, and endpoint needs ahead of the 2028 cycle.", "tags": ["Elections", "Infrastructure"] },
-    { "date": "2024-10", "title": "Seema Patel named County CISO, succeeding Lester Godsey", "impact": "New security leadership — rebuild the cyber relationship map and align to her priorities across the 50+ department footprint.", "tags": ["Leadership", "Cybersecurity"] }
+    { "date": "2025-02", "title": "County breaks ground on new Tabulation and Election Center (opening Summer 2027)", "impact": "A multi-year, security-sensitive infrastructure build with compute, storage, and endpoint needs ahead of the 2028 cycle.", "tags": ["Elections", "Infrastructure"] }
   ],
 
   "dellActions": [
@@ -78,6 +82,12 @@
     { "label": "Maricopa County — AI Governance Report (Oct 2025)", "url": "https://www.maricopa.gov/DocumentCenter/View/111482/Artificial-Intelligence-Governance-Report-PDF" },
     { "label": "Maricopa County — New Tabulation and Election Center", "url": "https://www.maricopa.gov/6327/Maricopa-County-Tabulation-Election-Cent" },
     { "label": "Maricopa County — Procurement Code", "url": "https://www.maricopa.gov/685/Procurement-Code" },
-    { "label": "Maricopa County — County Manager, Jen Pokorski", "url": "https://www.maricopa.gov/313/County-Manager" }
+    { "label": "Maricopa County — County Manager, Jen Pokorski", "url": "https://www.maricopa.gov/313/County-Manager" },
+    { "label": "Maricopa County — OET/ETI Leadership (McHattie, McGrew, Patel, Gross, Young, Lao)", "url": "https://www.maricopa.gov/6110/Leadership" },
+    { "label": "Maricopa County — Elections Duties Dispute (official)", "url": "https://www.maricopa.gov/6891/Elections-Dispute" },
+    { "label": "KTAR — Maricopa County board votes to appeal election-powers ruling", "url": "https://ktar.com/arizona-election-news/appeal-election-justin-heap/5851299/" },
+    { "label": "Votebeat — Maricopa County election dispute (Heap vs. Board)", "url": "https://www.votebeat.org/arizona/2026/06/09/maricopa-county-justin-heap-board-supervisors-special-prosecutor-kent-volkmer-scanner/" },
+    { "label": "ABC15 — Supervisors approve Project Baccara data center", "url": "https://www.abc15.com/news/local-news/very-disappointed-maricopa-county-supervisors-approve-controversial-data-center" },
+    { "label": "Maricopa County — Awarded for Enterprise GIS at 2026 Esri Summit", "url": "https://www.maricopa.gov/CivicAlerts.aspx?AID=3623" }
   ]
 }

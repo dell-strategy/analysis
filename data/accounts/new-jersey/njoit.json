@@ -5,7 +5,7 @@
   "name": "New Jersey Office of Information Technology (NJOIT)",
   "slug": "njoit",
   "hq": "Trenton, NJ",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "New Jersey's central IT agency: NJOIT is the exclusive IT provider for the Executive Branch, running enterprise infrastructure, the state data center, cloud, cybersecurity, and shared services for dozens of departments and agencies — and home to the state CTO.",
 
   "snapshot": [
@@ -18,15 +18,15 @@
   "overview": "The New Jersey Office of Information Technology (NJOIT) is the state's central technology agency — under the 2007 Office of Information Technology Reorganization Act it is the exclusive government IT provider for New Jersey's Executive Branch, powering the business operations of dozens of departments and agencies in Trenton and across the state. NJOIT runs enterprise infrastructure (including the state data center), networking, cloud, cybersecurity, application development, and shared services, and sets statewide IT policy and standards; it employs 500+ technologists. For a technology seller, NJOIT is the central IT decision-maker and buying center for statewide infrastructure, while the contracting and budget mechanics run through a separate agency — the NJ Department of the Treasury's Division of Purchase & Property (DPP) and the NJSTART portal. The account sits inside a fresh leadership reset: Governor Mikie Sherrill took office in January 2026 and named Kevin Dehmer permanent Chief Technology Officer in February 2026, with an explicit mandate to modernize digital infrastructure, speed permitting and licensing, and strengthen cyber defenses against AI-driven threats.",
 
   "budget": {
-    "intro": "NJOIT's leverage is operational rather than a single large appropriation line: it runs enterprise infrastructure as a shared service across the Executive Branch and recovers much of its delivery cost from the agencies it serves. The macro pool is the state budget — Governor Sherrill's inaugural FY2027 proposal is about $60.7B — and a flagship NJOIT capital effort, the new Enterprise Data Center, is slated to come online in FY2027.",
+    "intro": "NJOIT's leverage is operational rather than a single large appropriation line: it runs enterprise infrastructure as a shared service across the Executive Branch and recovers much of its delivery cost from the agencies it serves. The macro pool is the state budget — Governor Sherrill's first budget, an about-$60.7B FY2027 Appropriations Act, was signed at the fiscal-year start (June 30, 2026) — and a flagship NJOIT capital effort, the new Enterprise Data Center, is slated to come online in FY2027.",
     "stats": [
-      { "value": "$60.7B", "label": "FY2027 proposed state budget", "note": "Sherrill's first budget; the pool agency IT and NJOIT services draw from" },
+      { "value": "$60.7B", "label": "FY2027 enacted state budget", "note": "Sherrill's first budget, signed June 30, 2026; the pool agency IT and NJOIT services draw from" },
       { "value": "500+", "label": "NJOIT technology staff", "note": "Application development, network/database engineering, security operations" },
       { "value": "FY2027", "label": "Enterprise Data Center target", "note": "New 24/7 data center for Executive-Branch IT services, expected to complete in FY2027" }
     ],
     "notes": [
       "NJOIT funds much of its delivery through chargebacks/cost recovery on enterprise and shared services rather than one large general-revenue line; agency-level IT spend lives in each department's budget.",
-      "Figures are from the Governor's FY2027 proposed budget; the enacted budget is set around the July 1 fiscal-year start and may shift.",
+      "Top-line figures reflect the enacted FY2027 Appropriations Act (signed June 30, 2026); departmental IT detail may differ from the proposed budget book.",
       "Confirm NJOIT's own FY2027 appropriation and the Enterprise Data Center funding directly in the OMB budget detail before forecasting — published top-line figures for the agency are limited."
     ]
   },
@@ -49,15 +49,16 @@
 
   "powerStructure": [
     { "name": "Kevin Dehmer", "title": "Chief Technology Officer, NJOIT", "note": "Named permanent CTO Feb 2026 by Gov. Sherrill (prior NJ Commissioner of Education). Owns central IT, the data center, modernization, permitting/licensing tech, and cyber strategy — the primary technology-strategy relationship for the account." },
-    { "name": "Office of the CISO / NJCCIC", "title": "Statewide security & threat operations", "note": "NJOIT's security leadership and the NJ Cybersecurity & Communications Integration Cell own statewide cyber policy, incident response, and threat intel — the security buying center. Confirm the current named CISO directly." },
-    { "name": "NJOIT Enterprise Services", "title": "Data center / cloud / network / shared services", "note": "The delivery organization for consolidated infrastructure and as-a-service across agencies — the buying center for ISG and managed-services plays." },
+    { "name": "Michael Geraghty", "title": "State CISO & Director, NJCCIC", "note": "Confirmed continuing under Sherrill as State CISO and Director of the NJ Cybersecurity & Communications Integration Cell (NJCCIC) — statewide cyber policy, incident response, and threat intel. Note NJCCIC sits organizationally in the Office of Homeland Security & Preparedness (NJOHSP), coordinating with NJOIT; the security buying center spans both." },
+    { "name": "NJOIT Enterprise Services", "title": "Data center / cloud / network / shared services", "note": "The delivery organization for consolidated infrastructure and as-a-service across agencies (Deputy CTO Hagen Hottmann leads Enterprise Services per the NJOIT leadership roster) — the buying center for ISG and managed-services plays. Vernon Spencer is COO; Poonam Soans is Chief Data Officer." },
     { "name": "NJ Treasury — Division of Purchase & Property (DPP)", "title": "Central procurement / NJSTART owner", "note": "Runs NJSTART and statewide term contracts — the contracting path for NJOIT buys. Confirm the current Director directly, as the role is not consistently published." },
-    { "name": "NJ Innovation Authority — AI program", "title": "NJ AI Assistant & responsible-AI partner", "note": "Co-runs the NJ AI Assistant and responsible-AI training with NJOIT — an adjacency for AI-infrastructure conversations distinct from the core IT-ops relationship." }
+    { "name": "Dave Cole", "title": "State Chief Innovation Officer, NJ Innovation Authority", "note": "Confirmed by Gov.-elect Sherrill (Jan 2026) to continue as Chief Innovation Officer leading the NJ Innovation Authority (formerly Office of Innovation), which co-runs the NJ AI Assistant and responsible-AI training with NJOIT — an adjacency for AI-infrastructure conversations distinct from the core IT-ops relationship." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "FY2027 budget moving through the Legislature ahead of the July 1 deadline", "impact": "Final appropriations — including any NJOIT data-center and modernization line items — firm up around fiscal-year start; watch the enacted budget vs. the $60.7B proposal before forecasting.", "tags": ["Budget"] },
-    { "date": "2026-03", "title": "New Jersey upgrades its AI Assistant for state workers", "impact": "NJ AI Assistant reported 1M+ prompts, 300K+ sessions, and 80%+ satisfaction across ~20,000 users — signals durable demand for AI-ready compute hosted on state infrastructure.", "tags": ["AI"] },
+    { "date": "2026-06", "title": "Sherrill signs first FY2027 budget (~$60.7B) at fiscal-year start", "impact": "Enacted FY2027 Appropriations Act firms up the pool NJOIT services draw from; confirm the agency's own appropriation and any Enterprise Data Center / modernization detail in OMB budget detail before forecasting.", "tags": ["Budget"] },
+    { "date": "2026-05", "title": "NJCCIC releases 2026 Cyber Threat Assessment", "impact": "New Jersey's statewide cyber cell (NJCCIC, under NJOHSP) publishes its annual threat assessment — reinforces AI-enabled threats and whole-of-state defense as the frame for secure-infrastructure and resilience conversations with NJOIT/NJCCIC. Verify specific findings directly.", "tags": ["Cybersecurity"] },
+    { "date": "2026-03", "title": "New Jersey upgrades its AI Assistant for state workers", "impact": "NJ AI Assistant reported 1M+ prompts, 300K+ sessions, and 80%+ satisfaction across a 70,000-member workforce — signals durable demand for AI-ready compute hosted on state infrastructure.", "tags": ["AI"] },
     { "date": "2026-02", "title": "Gov. Sherrill names Kevin Dehmer permanent state CTO (NJOIT)", "impact": "Stable owner of central IT, the data center, modernization, and cyber strategy — rebuild the NJOIT relationship map; this is the IT decision-maker, distinct from Treasury contracting.", "tags": ["Leadership", "IT"] },
     { "date": "2026-01", "title": "Sherrill administration takes office; statewide leadership reset", "impact": "New administration and IT priorities (affordability, efficiency, modernization) — re-confirm contacts and priorities across NJOIT and the technology buying centers.", "tags": ["Leadership"] }
   ],
@@ -78,6 +79,12 @@
     { "label": "NJOIT — Office of Information Technology FY2024–2025 budget response", "url": "https://pub.njleg.gov/publications/budget/governors-budget/2025/oit_response_2025.pdf" },
     { "label": "NJ AI Assistant (NJ Innovation Authority)", "url": "https://innovation.nj.gov/projects/ai-assistant/" },
     { "label": "New Jersey Upgrades its AI Assistant for State Workers (Mar 2026)", "url": "https://innovation.nj.gov/blog/2026-03-24-new_jersey_upgrades_its_ai_assistant_for_state_workers/" },
+    { "label": "Gov. Sherrill Signs FY2027 Appropriations Act (Insider NJ, Jun/Jul 2026)", "url": "https://www.insidernj.com/press-release/governor-sherrill-signs-fy-2027-appropriations-act/" },
+    { "label": "Sherrill signs record $60.7B FY2027 budget (ROI-NJ)", "url": "https://www.roi-nj.com/2026/07/01/politics/sherrill-signs-record-60-7b-budget-amid-business-concerns/" },
+    { "label": "NJCCIC 2026 Cyber Threat Assessment", "url": "https://www.cyber.nj.gov/threat-landscape/2026-cyber-threat-assessment" },
+    { "label": "About the NJCCIC (State CISO / Director Michael Geraghty)", "url": "https://www.cyber.nj.gov/connect/about-the-njccic" },
+    { "label": "Gov.-elect Sherrill: Dave Cole continues as Chief Innovation Officer (Jan 2026)", "url": "https://www.nj.gov/govelect/news/approved/20260105a.shtml" },
+    { "label": "NJOIT — Leadership roster (COO Spencer, CDO Soans, Deputy CTOs)", "url": "https://nj.gov/it/about/leadership/" },
     { "label": "NJ DPP & NJSTART eProcurement", "url": "https://www.nj.gov/treasury/purchase/" },
     { "label": "NJ Cooperative Purchasing Program (N.J.A.C. 5:34-7.29)", "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-5-34-7-29" }
   ]

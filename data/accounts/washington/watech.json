@@ -5,7 +5,7 @@
   "name": "Washington Technology Solutions (WaTech)",
   "slug": "watech",
   "hq": "Olympia, WA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Washington's consolidated central IT agency: WaTech runs the state's shared data-center, network, and cloud services, houses the Office of the CIO and the Office of Cybersecurity, and sets statewide technology, security, and AI policy.",
 
   "snapshot": [
@@ -49,17 +49,18 @@
 
   "powerStructure": [
     { "name": "Bill Kehoe", "title": "Director, WaTech & State Chief Information Officer", "note": "State CIO since August 2021 (continued under Gov. Ferguson; confirmation process in 2025). Sets statewide tech direction and is AI/modernization-forward — the top enterprise relationship for the Washington motion." },
-    { "name": "Ralph Johnson", "title": "State Chief Information Security Officer (CISO)", "note": "Leads WaTech's Office of Cybersecurity since Dec 2022; sets statewide security strategy and advises the CIO and agencies. The owner of the enterprise security buying center." },
+    { "name": "Ralph Johnson", "title": "State Chief Information Security Officer (CISO) — departing", "note": "Led WaTech's Office of Cybersecurity since Dec 2022; sets statewide security strategy and advises the CIO and agencies — owner of the enterprise security buying center. Announced his retirement (reported early July 2026) effective ~Sept 1, 2026; WaTech has said it will begin a national search for the next State CISO. Treat the security relationship as in transition and watch for an acting/interim CISO." },
     { "name": "WaTech Office of the State CIO", "title": "Statewide IT strategy, policy & enterprise architecture", "note": "Absorbed the former OCIO under SHB 1947 (2024); owns standards, the IT strategic plan, and project oversight — a key gate and buying center." },
     { "name": "WaTech shared technology services", "title": "Data center, network & cloud delivery", "note": "Delivers consolidated infrastructure and managed services to agencies and local/tribal partners — the route for infrastructure and as-a-service." },
     { "name": "Department of Enterprise Services (DES)", "title": "Statewide procurement & master contracts", "note": "Owns the master contracts and NASPO ValuePoint access most Washington public buyers use — the path onto the state's contract vehicles." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "State CIO Kehoe details AI, GIS, and digital-equity push for 2026", "impact": "Resident portal with AI chatbot, GIS for emergency/health/parcel use, and cloud/AI modernization signal demand for AI-ready compute, data platforms, and migration services.", "tags": ["AI", "Cloud"] },
+    { "date": "2026-07", "title": "State CISO Ralph Johnson announces retirement; WaTech to launch national search", "impact": "Johnson (State CISO since Dec 2022) is retiring effective ~Sept 1, 2026; WaTech has said it will begin a national search for his successor. The Office of Cybersecurity and the enterprise security relationship are in leadership transition — a new CISO is likely to reset statewide security priorities. Hedge: successor not yet named.", "tags": ["Leadership", "Cybersecurity"] },
+    { "date": "2026-06", "title": "UW students give Washington's open data an AI upgrade (WaTech)", "impact": "A WaTech-backed effort applies AI to make the state's open data more usable, reinforcing WaTech's data-platform and AI direction and the ongoing pull for data/AI tooling on state infrastructure.", "tags": ["AI", "Data"] },
+    { "date": "2026-06", "title": "State CIO Kehoe details AI, GIS, and digital-equity push for 2026", "impact": "Resident portal with AI chatbot, GIS for emergency/health/parcel use, mandatory security-awareness training, and the state's first formal AI policy (guardrails for secure AI use) signal demand for AI-ready compute, data platforms, and migration services.", "tags": ["AI", "Cloud"] },
     { "date": "2026-03", "title": "WA Legislature moves to roll back data-center sales-tax breaks (SB 6231)", "impact": "Ends exemptions for replacement servers and refurbishment-based eligibility (effective July 1, 2026); new-build exemptions preserved. Shifts the economics of data-center refresh and siting in Washington — factor into infrastructure positioning.", "tags": ["Data Center", "Policy"] },
-    { "date": "2025-12", "title": "State AI Task Force releases interim report with policy recommendations", "impact": "Eight recommendations on transparency, ethics, and rights ahead of the July 1, 2026 final report — the forming policy gate on what AI offerings will be buyable and on what terms.", "tags": ["AI", "Policy"] },
-    { "date": "2025-02", "title": "Bill Kehoe begins State CIO confirmation process under Gov. Ferguson", "impact": "Continuity in AI/modernization-forward leadership at the top of the statewide IT motion — the senior relationship to invest in.", "tags": ["Leadership"] }
+    { "date": "2025-12", "title": "State AI Task Force releases interim report with policy recommendations", "impact": "Eight recommendations on transparency, ethics, and rights ahead of the July 1, 2026 final report — the forming policy gate on what AI offerings will be buyable and on what terms.", "tags": ["AI", "Policy"] }
   ],
 
   "dellActions": [
@@ -75,6 +76,9 @@
     { "label": "WaTech — State Office of Cybersecurity", "url": "https://watech.wa.gov/cybersecurity/state-office-cybersecurity" },
     { "label": "WaTech — Bill Kehoe begins confirmation process (State CIO)", "url": "https://watech.wa.gov/watech/news/2025/state-cio-bill-kehoe-begins-confirmation-process" },
     { "label": "WaTech — State CIO advances digital equity & efficiency with AI, GIS (Jun 2026)", "url": "https://watech.wa.gov/news/2026/washington-state-cio-advances-digital-equity-and-government-efficiency-ai-gis" },
+    { "label": "GovTech — Ralph Johnson, WA State CISO since 2022, to retire (Jul 2026)", "url": "https://www.govtech.com/workforce/ralph-johnson-washington-state-ciso-since-2022-to-retire" },
+    { "label": "StateScoop — Washington state CISO announces retirement (Jul 2026)", "url": "https://statescoop.com/ralph-johnson-washington-ciso-retires/" },
+    { "label": "WaTech — News & Information (index; UW open-data AI story, Jun 2026)", "url": "https://watech.wa.gov/about/news-information" },
     { "label": "WaTech — Introduction to WaTech Allocations (Allocated Rates)", "url": "https://watech.wa.gov/introduction-watech-allocations-allocated-rates" },
     { "label": "Washington's IT Strategic Plan (2025-2028)", "url": "https://wa.gov/washingtons-it-strategic-plan" },
     { "label": "Washington AG — Artificial Intelligence Task Force (ESSB 5838)", "url": "https://www.atg.wa.gov/aitaskforce" },

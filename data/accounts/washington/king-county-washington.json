@@ -5,7 +5,7 @@
   "name": "King County, Washington",
   "slug": "king-county-washington",
   "hq": "Seattle, WA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Washington's most populous county and the Seattle metro's governing hub: King County serves ~2.3M residents and runs its enterprise technology through King County Information Technology (KCIT), a consolidated central IT department behind one of the region's largest public-sector IT budgets.",
 
   "snapshot": [
@@ -49,14 +49,15 @@
   },
 
   "powerStructure": [
-    { "name": "Girmay Zahilay", "title": "King County Executive", "note": "Sworn in November 2025 (youngest in county history), succeeding acting executive Shannon Braddock. Sets the top political and budget direction — the senior relationship for the countywide motion." },
-    { "name": "Stephen Heard", "title": "Chief Information Officer & KCIT Director", "note": "Per KCIT, oversees a ~$377M biennium budget and ~450 technology professionals serving 15,000+ employees; longtime KCIT leader (joined 2007, formerly CTO). The top enterprise IT relationship — confirm current title, as KCIT leadership has shifted recently." },
+    { "name": "Girmay Zahilay", "title": "King County Executive", "note": "Confirmed in office through June 2026; delivered his first State of the County address ('Building A More Connected King County') on June 10, 2026, and issued a March 4, 2026 governance/financial-management executive order plus an executive-office restructuring (new Chief Performance Officer with internal-audit function). Sets the top political and budget direction — the senior relationship for the countywide motion." },
+    { "name": "Stephen Heard", "title": "Chief Information Officer & KCIT Director", "note": "Confirmed current as of 2026 per KCIT; oversees a ~$377M biennium budget and ~450 technology professionals serving 15,000+ employees; longtime KCIT leader (joined 2007, formerly CTO). The top enterprise IT relationship. Tamara Davis is reported as KCIT's Chief Technology Officer / Enterprise Technology Division director — verify before engaging." },
     { "name": "KCIT — IT Governance & project review", "title": "Investment prioritization & technology project review", "note": "Owns the prioritization model and project-review gate that AI, Copilot, and modernization requests pass through — a key buying-center checkpoint." },
-    { "name": "KCIT — Information Security / CISO function", "title": "County cybersecurity & resilience", "note": "Owns the county's security strategy and the flagged information-security investments — the security buying center. Confirm the current CISO by name before engaging." },
+    { "name": "Lorre Wijelath", "title": "Chief Information Security Officer (CISO), King County", "note": "Permanent CISO since September 2023 (previously interim CISO and county privacy program manager); featured among Washington city/county CISOs to watch (April 2026). Owns the county's security strategy and the flagged information-security investments — the security buying center." },
     { "name": "King County Procurement & Payables (P&P)", "title": "Central procurement & contracting", "note": "Runs solicitations and cooperative purchasing — the path onto county contract vehicles." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Executive Zahilay delivers first State of the County; launches countywide base-budget review", "impact": "Zahilay's June 10, 2026 address ('Building A More Connected King County') set priorities around transit, homelessness, childcare (funding doubled to $500M+) and accountability, and initiated the county's first countywide base-budget review — a fiscal-discipline signal that shapes the near-term funding envelope KCIT and county tech buys draw from.", "tags": ["Leadership", "Budget"] },
     { "date": "2026-01", "title": "KCIT advances AI Innovation Fund and Copilot review for 2026", "impact": "Agencies submit AI proposals in early 2026 through KCIT's project-review process; Microsoft Copilot licensing routed the same way — a forming, gated demand signal for AI tooling and the compute behind it.", "tags": ["AI", "Policy"] },
     { "date": "2025-11", "title": "Girmay Zahilay sworn in as King County Executive", "impact": "New top leadership (youngest in county history) succeeding acting executive Braddock — rebuild the executive-level relationship map and watch for shifts in budget and tech priorities.", "tags": ["Leadership"] },
     { "date": "2025-11", "title": "King County Council adopts 2026-2027 biennial budget (~$20B)", "impact": "Adopted plan (reported near $20.16B) preserves services and adds a new sales-tax revenue stream; sets the two-year spending envelope KCIT and county tech buys draw from.", "tags": ["Budget"] },
@@ -81,6 +82,10 @@
     { "label": "King County — Procurement & Payables", "url": "https://kingcounty.gov/en/dept/executive-services/about-king-county/business-operations/finance-business-operations/procurement-payables" },
     { "label": "King County — Cooperative purchasing agreement", "url": "https://kingcounty.gov/en/dept/executive-services/about-king-county/business-operations/finance-business-operations/procurement-payables/cooperative-purchasing-agreement" },
     { "label": "King County — Girmay Zahilay sworn in as Executive", "url": "https://content.govdelivery.com/accounts/WAKING/bulletins/3fd133b" },
+    { "label": "King County — Executive Zahilay 2026 State of the County address", "url": "https://content.govdelivery.com/accounts/WAKING/bulletins/41b706d" },
+    { "label": "Governing — King County's new leader makes big changes", "url": "https://www.governing.com/politics/king-countys-new-leader-makes-big-changes" },
+    { "label": "King County Employees — Lorre Wijelath named CISO", "url": "https://kcemployees.com/2023/09/22/lorre-wijelath-named-chief-information-security-officer-ciso/" },
+    { "label": "King County — About the Executive / cabinet leadership", "url": "https://kingcounty.gov/en/dept/executive/governance-leadership/king-county-executive/cabinet-leadership" },
     { "label": "WA DES — NASPO ValuePoint / master contracts", "url": "https://des.wa.gov/purchase/washington-state-procurement-manual" }
   ]
 }

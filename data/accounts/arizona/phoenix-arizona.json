@@ -5,7 +5,7 @@
   "name": "Phoenix, Arizona",
   "slug": "phoenix-arizona",
   "hq": "Phoenix, AZ",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The 5th-largest U.S. city and Arizona's capital — Phoenix runs city technology through its Information Technology Services Department (ITS), backs a balanced FY2026-27 budget on a ~$2.29B General Fund and an $11.4B five-year capital plan, and is an active smart-city and responsible-AI adopter across traffic, water, and resident services.",
 
   "snapshot": [
@@ -55,6 +55,7 @@
 
   "news": [
     { "date": "2026-06", "title": "Phoenix City Council approves balanced FY2026-27 budget on a ~$2.29B General Fund", "impact": "Stable, surplus-backed budget with an $11.4B five-year CIP. Confirms multi-year infrastructure and capital spend capacity — an entry point for ISG, security, and services across central ITS and major departments.", "tags": ["Budget"] },
+    { "date": "2026-04", "title": "Mayor Gallego launches Phoenix Quantum Strategy at State of the City address", "impact": "New long-horizon emerging-tech and economic-development initiative, led by former NSF director Dr. Sethuraman 'Panch' Panchanathan (ASU) with GPEC convening industry and university partners around quantum computing, communications, and sensing. Near-term city procurement impact is indirect, but it signals a growth-oriented advanced-compute agenda and a credibility lane for HPC, data-infrastructure, and innovation positioning.", "tags": ["Innovation", "Smart City"] },
     { "date": "2026-02", "title": "Phoenix expands AI-assisted traffic-signal management across ~30 intersections", "impact": "Operational AI moving from pilot toward scale signals appetite for governed AI/edge/data infrastructure beyond back-office use — a credibility-forward smart-city reference lane.", "tags": ["AI", "Smart City"] },
     { "date": "2025-11", "title": "Ed Zuercher returns as Phoenix City Manager as Jeff Barton retires", "impact": "Leadership change at the top of the house. A returning, experienced City Manager resets executive priorities — align account messaging to the new administration's budget and modernization agenda.", "tags": ["Leadership"] },
     { "date": "2025-02", "title": "Mitch Kohlbecker promoted to City of Phoenix CISO", "impact": "Internal security leader (ex-deputy CISO) now owns the city's security agenda. Build the CISO relationship for endpoint, network, identity, and risk-tooling across the multi-department estate.", "tags": ["Cybersecurity", "Leadership"] },
@@ -78,6 +79,9 @@
     { "label": "GovTech — Newly Appointed Phoenix CISO Rises from City's Security Ranks", "url": "https://www.govtech.com/workforce/newly-appointed-phoenix-ciso-rises-from-citys-security-ranks" },
     { "label": "GovTech — Phoenix City Manager Appoints CIO, First Innovation Officer", "url": "https://www.govtech.com/workforce/phoenix-city-manager-appoints-cio-first-innovation-officer" },
     { "label": "City of Phoenix — City Manager Jeff Barton Announces Retirement", "url": "https://www.phoenix.gov/newsroom/city-manager-news/city-manager-jeff-barton-announces-retirement.html" },
+    { "label": "PR Newswire — Phoenix launches ambitious Quantum Strategy, taps ASU's Panchanathan to lead", "url": "https://www.prnewswire.com/news-releases/phoenix-launches-ambitious-quantum-strategy-taps-asus-panchanathan-to-lead-the-effort-302758196.html" },
+    { "label": "Axios Phoenix — Gallego wants Phoenix to be quantum computing hub", "url": "https://www.axios.com/local/phoenix/2026/04/21/gallego-state-of-the-city-quantum-computing-hub-initiative" },
+    { "label": "City of Phoenix — Mayor Kate Gallego State of the City Address (April 21, 2026)", "url": "https://www.phoenix.gov/content/dam/phoenix/mayorsite/documents/Mayor_Gallego_SOTC_Final.pdf" },
     { "label": "City of Phoenix — Procurement", "url": "https://www.phoenix.gov/administration/departments/finance/procurement.html" },
     { "label": "City of Phoenix — procurePHX Vendor Registration", "url": "https://www.phoenix.gov/administration/departments/finance/procurephx-vendor-registration.html" }
   ]

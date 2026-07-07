@@ -5,12 +5,12 @@
   "name": "New Jersey Dept of the Treasury",
   "slug": "treasury",
   "hq": "Trenton, NJ",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "New Jersey's finance and administration hub: Treasury houses the Division of Purchase & Property — the state's central procurement shop that runs NJSTART and the statewide term contracts most NJ public buyers use — plus the Office of Management and Budget.",
 
   "snapshot": [
     { "label": "Role", "value": "State finance & central procurement" },
-    { "label": "FY2027 proposed budget", "value": "$60.7B" },
+    { "label": "FY2027 budget (enacted)", "value": "$60.7B" },
     { "label": "Procurement portal", "value": "NJSTART" },
     { "label": "Central IT runs elsewhere", "value": "NJOIT" }
   ],
@@ -18,14 +18,14 @@
   "overview": "The New Jersey Department of the Treasury is the state's finance and administration backbone. It houses the Office of Management and Budget (OMB), which builds and executes the state budget, and the Division of Purchase & Property (DPP), the central procurement agency that runs the NJSTART eProcurement portal and awards the statewide term contracts that state agencies, and many counties, municipalities, schools, and authorities, buy off of. For a technology seller, Treasury is best understood as the contracting path and the budget authority rather than the primary end user of IT — central IT strategy, the state data center, cybersecurity, and the NJ AI Assistant are run by a separate agency, the NJ Office of Information Technology (NJOIT), led by the Chief Technology Officer. The account sits inside a leadership transition: Governor Mikie Sherrill took office in January 2026 with a new Treasurer (Aaron Binder) and a new CTO (Kevin Dehmer), so buying centers and priorities are being reset across both Treasury and NJOIT.",
 
   "budget": {
-    "intro": "Treasury owns the budget process through OMB, so its leverage is the whole state spending plan, not a single agency line. Governor Sherrill's inaugural FY2027 proposed budget is about $60.7B with a roughly $5.4B surplus; the bulk flows out as property-tax relief and aid to schools and local governments rather than direct state operations.",
+    "intro": "Treasury owns the budget process through OMB, so its leverage is the whole state spending plan, not a single agency line. Governor Sherrill signed her inaugural FY2027 budget into law on June 30, 2026 at about $60.7B, with a surplus of roughly $6.08B; the bulk flows out as property-tax relief and aid to schools and local governments rather than direct state operations.",
     "stats": [
-      { "value": "$60.7B", "label": "FY2027 proposed budget", "note": "Sherrill's first budget; ~$5.4B proposed surplus" },
-      { "value": "~$1.6B", "label": "Structural deficit (proposed)", "note": "Roughly halved from ~$3.0B in the FY2027 plan" },
-      { "value": "$4.2B", "label": "Property-tax relief", "note": "ANCHOR, Senior Freeze, Stay NJ — most spending is aid, not state IT" }
+      { "value": "$60.7B", "label": "FY2027 enacted budget", "note": "Sherrill's first budget, signed June 30, 2026; ~$6.08B surplus" },
+      { "value": "~$1.35B", "label": "Structural deficit (enacted)", "note": "Cut to less than half the ~$3.0B projected when Sherrill took office" },
+      { "value": "$4.1B", "label": "Property-tax relief", "note": "ANCHOR, Senior Freeze, Stay NJ — most spending is aid, not state IT" }
     ],
     "notes": [
-      "Figures are from the Governor's FY2027 proposed budget; the enacted budget is set through the legislative process around the July 1 fiscal-year start and may shift.",
+      "Figures are from the enacted FY2027 Appropriations Act signed June 30, 2026; the plan includes limited IT/modernization line items (e.g., ~$13.3M for the NJ Innovation Authority permitting dashboard/Report Card and $3M for Consumer Affairs licensing-system upgrades), but most spending is aid, not state IT.",
       "Agency-level IT spend lives in each department's budget; Treasury/DPP is the contracting vehicle and OMB the budget authority, not the wallet for most IT buys.",
       "The Sherrill administration's stated themes are affordability, fiscal discipline (cost cuts of nearly $2B), and government efficiency/transparency — a frame for modernization and automation conversations."
     ]
@@ -48,15 +48,16 @@
   },
 
   "powerStructure": [
-    { "name": "Aaron Binder", "title": "State Treasurer", "note": "Sherrill-appointed Treasurer (took office early 2026); owns the FY2027 budget message and Treasury's divisions, including Purchase & Property and OMB. Top relationship for the finance/contracting motion." },
-    { "name": "Andrea Spalla, Esq.", "title": "Assistant Treasurer (oversees Purchase & Property)", "note": "Senior Treasury official cited as overseeing divisions including Purchase & Property — a key path into the central procurement organization. Confirm current title before engagement." },
-    { "name": "Director, Division of Purchase & Property", "title": "Central procurement / NJSTART owner", "note": "Owns statewide term contracts, solicitations, and the NJSTART portal — the buying center for contracting. Confirm the current named director directly, as the role is not consistently published." },
+    { "name": "Aaron Binder", "title": "State Treasurer", "note": "Sherrill-appointed Treasurer, unanimously confirmed by the Senate and sworn in March 4, 2026 (no longer acting); owns the FY2027 budget (signed June 30, 2026) and Treasury's divisions, including Purchase & Property and OMB. Top relationship for the finance/contracting motion. Deputy Treasurer is Kavin Mistry." },
+    { "name": "Andrea Spalla, Esq.", "title": "Assistant Treasurer (oversees Purchase & Property)", "note": "Continuing Assistant Treasurer under Binder; oversees the divisions of Purchase & Property, Pension & Benefits, and Revenue & Enterprise Services — a key path into the central procurement organization. Re-confirmed current as of June 2026." },
+    { "name": "Director, Division of Purchase & Property", "title": "Central procurement / NJSTART owner", "note": "Owns statewide term contracts, solicitations, and the NJSTART portal — the buying center for contracting. The named director is not consistently published; confirm directly before engagement (Amy Davis, Esq. appears in DPP leadership per public profiles, but the title is unverified)." },
     { "name": "Kevin Dehmer", "title": "Chief Technology Officer, NJOIT", "note": "Appointed Feb 2026; runs central IT, digital infrastructure, modernization, and cybersecurity OUTSIDE Treasury. The primary technology-strategy relationship — Treasury is the contracting path, NJOIT the IT decision-maker." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "FY2027 budget moving through the Legislature ahead of the July 1 deadline", "impact": "Final appropriations and any IT/modernization line items firm up around fiscal-year start — watch the enacted budget vs. the $60.7B proposal before forecasting agency spend.", "tags": ["Budget"] },
-    { "date": "2026-03", "title": "Gov. Sherrill presents first FY2027 budget (~$60.7B); Treasurer Binder cites fiscal discipline", "impact": "Sets the affordability + efficiency frame and roughly halves the structural deficit — position modernization/automation against stated cost-cutting goals.", "tags": ["Budget", "Leadership"] },
+    { "date": "2026-06", "title": "Gov. Sherrill signs FY2027 Appropriations Act (~$60.7B) into law on June 30", "impact": "Enacted budget: ~$6.08B surplus, structural deficit cut to ~$1.35B, sixth full pension payment ($7.3B), and limited IT/modernization items (~$13.3M NJ Innovation Authority permitting/Report Card, $3M Consumer Affairs licensing upgrades). Spend is now firm — forecast against enacted figures and the stated efficiency/modernization frame.", "tags": ["Budget", "Modernization"] },
+    { "date": "2026-05", "title": "Treasurer Binder testifies to Senate Budget Committee: April revenue beat, added ~$50M in cuts", "impact": "Improved April collections plus additional spending reductions pushed the surplus toward ~$6B and the deficit under $1.5B before enactment — reinforces the disciplined-budgeting posture to position cost-saving modernization against.", "tags": ["Budget", "Leadership"] },
+    { "date": "2026-03", "title": "Gov. Sherrill presents first FY2027 budget (~$60.7B); Treasurer Binder confirmed and sworn in", "impact": "Sets the affordability + efficiency frame; Binder unanimously Senate-confirmed and sworn in March 4 — the finance/contracting relationship is now settled, not acting.", "tags": ["Budget", "Leadership"] },
     { "date": "2026-02", "title": "Sherrill appoints Kevin Dehmer as state CTO (NJOIT)", "impact": "New owner of central IT, digital modernization, and cybersecurity strategy — rebuild the NJOIT relationship map; this is the IT decision-maker, distinct from Treasury contracting.", "tags": ["Leadership", "IT"] },
     { "date": "2026-01", "title": "New Sherrill administration takes office; Aaron Binder sworn in as Treasurer", "impact": "Leadership reset across Treasury and its divisions — re-confirm contacts and priorities in Purchase & Property and OMB.", "tags": ["Leadership"] }
   ],
@@ -73,6 +74,9 @@
     { "label": "NJ Division of Purchase & Property", "url": "https://www.nj.gov/treasury/purchase/" },
     { "label": "NJSTART eProcurement portal", "url": "https://www.njstart.gov/bso/" },
     { "label": "Gov. Sherrill presents FY2027 budget", "url": "https://www.nj.gov/governor/news/2026/20260310b.shtml" },
+    { "label": "Gov. Sherrill signs FY2027 Appropriations Act (June 30, 2026)", "url": "https://www.nj.gov/governor/news/2026/approved/20260630d.shtml" },
+    { "label": "Sherrill signs record $60.7B budget (ROI-NJ)", "url": "https://www.roi-nj.com/2026/07/01/politics/sherrill-signs-record-60-7b-budget-amid-business-concerns/" },
+    { "label": "Binder testifies on April revenue + belt-tightening (ROI-NJ, May 2026)", "url": "https://www.roi-nj.com/2026/05/20/politics/sherrill-treasurer-binder-announce-april-revenue-increase-belt-tightening-measures-in-proposed-budget/" },
     { "label": "FY2027 Budget in Brief (NJ OMB)", "url": "https://www.nj.gov/treasury/omb/publications/27bib/BIB.pdf" },
     { "label": "Sherrill appoints Kevin Dehmer as state CTO (NJOIT)", "url": "https://www.nj.gov/governor/news/2026/20260202a.shtml" },
     { "label": "Aaron Binder sworn in as State Treasurer (NJ Globe)", "url": "https://newjerseyglobe.com/state-government/binder-sworn-in-as-treasurer-names-leadership-team/" },

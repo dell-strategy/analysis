@@ -5,7 +5,7 @@
   "name": "Columbus, Ohio",
   "slug": "columbus-ohio",
   "hq": "Columbus, OH",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Ohio's largest city and state capital (~910K residents), rebuilding its technology backbone after the July 2024 Rhysida ransomware attack — with cyber resilience, zero trust, and modernization now the defining IT priorities, run through the Department of Technology.",
 
   "snapshot": [
@@ -49,16 +49,16 @@
 
   "powerStructure": [
     { "name": "Andrew Ginther", "title": "Mayor, City of Columbus", "note": "Executive sponsor; his office owns the search for a permanent DoT director and sets the post-attack recovery agenda." },
-    { "name": "Pam O'Grady", "title": "Interim Director, Department of Technology", "note": "Deputy Director serving as interim DoT head after Sam Orth's retirement; the current top IT relationship." },
-    { "name": "Sam Orth", "title": "Former CIO / DoT Director (retired 2026)", "note": "Led DoT from 2016 through mid-2026; remaining in an advisory capacity through year-end — institutional context on prior strategy and the breach response." },
+    { "name": "Pam O'Grady", "title": "Interim Director, Department of Technology", "note": "Deputy Director who officially took over as interim DoT head on June 27, 2026 after Sam Orth's June 21 retirement; the current top IT relationship. Comes from a planning/governance and government-affairs background with limited hands-on IT experience per public reporting — watch for a permanent director hire." },
+    { "name": "Sam Orth", "title": "Former CIO / DoT Director (retired June 2026)", "note": "Led DoT from 2016 until retiring June 21, 2026; staying on in an advisory capacity through year-end — institutional context on prior strategy and the breach response." },
     { "name": "DoT cybersecurity / CISO function", "title": "Security leadership", "note": "Owns zero trust, segmentation, and incident response; confirm the current CISO/security lead by name before engaging the security buying center." },
     { "name": "Columbus Purchasing Office", "title": "Procurement (Finance and Management)", "note": "Owns city solicitations and vendor onboarding — the contractual path for any DoT purchase." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "CIO Sam Orth retires after nearly a decade; Pam O'Grady named interim DoT director", "impact": "Leadership transition at the top of city IT — relationship map shifts to the interim director and the mayor's successor search.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "Nearly two years on, city still hasn't released a full breach report; eight DoT staff have departed since the attack", "impact": "Persistent transparency and accountability pressure keeps cyber resilience politically charged — a tailwind for defensible, well-documented security investments as new leadership settles in.", "tags": ["Cybersecurity", "Governance"] },
+    { "date": "2026-06", "title": "DoT Director Sam Orth retires June 21; Deputy Director Pam O'Grady becomes interim director June 27", "impact": "Leadership transition at the top of city IT — the relationship map shifts to the interim director and the mayor's search for a permanent CIO/director; Orth stays on advisory through year-end.", "tags": ["Leadership"] },
     { "date": "2025-07", "title": "Columbus City Council approves ~$23M zero-trust network program", "impact": "A funded, multi-year security modernization commitment touching 20K+ devices — the anchor opportunity for security-hardened infrastructure.", "tags": ["Cybersecurity", "Budget"] },
-    { "date": "2025-07", "title": "One year after the attack, city faces scrutiny over breach response and accountability", "impact": "Public and council pressure keeps cyber resilience and transparency front-of-mind — a tailwind for credible, defensible security investments.", "tags": ["Cybersecurity", "Governance"] },
     { "date": "2024-11", "title": "City confirms Rhysida ransomware breach exposed data of ~500,000 people", "impact": "Established the scale of the incident and drove the pivot to zero trust, segmentation, and recovery spending.", "tags": ["Cybersecurity", "Breach"] }
   ],
 
@@ -74,6 +74,8 @@
     { "label": "City of Columbus — Department of Technology", "url": "https://www.columbus.gov/Government/Departments/Technology" },
     { "label": "City of Columbus — Purchasing Office", "url": "https://www.columbus.gov/Government/Departments/Finance-and-Management/Purchasing-Office" },
     { "label": "GovTech — After Nearly a Decade, Columbus CIO Sam Orth to Retire", "url": "https://www.govtech.com/workforce/after-nearly-a-decade-columbus-ohio-cio-sam-orth-to-retire" },
+    { "label": "WOSU — Columbus IT director retiring nearly two years after major cyber attack (June 2026)", "url": "https://www.wosu.org/politics-government/2026-06-22/columbus-it-director-retiring-nearly-two-years-after-major-cyber-attack-exposed-citizens-data" },
+    { "label": "10TV — Nearly 2 years after cyberattack, Columbus still has not released full report", "url": "https://www.10tv.com/article/news/local/columbus-cyberattack-report-still-not-released/530-a781061e-d141-4555-9ec6-8a11ba48e21d" },
     { "label": "WOSU — Columbus to invest $23M in zero-trust network", "url": "https://www.wosu.org/politics-government/2025-07-14/columbus-to-invest-in-23-million-zero-trust-network-one-year-after-cyber-attack-crippled-city" },
     { "label": "Cybersecurity Dive — Columbus ransomware attack compromised data of 500K", "url": "https://www.cybersecuritydive.com/news/columbus-ohio-ransomware-500k/732154/" },
     { "label": "WOSU — One year later, little accountability after ransomware attack", "url": "https://www.wosu.org/2025-07-18/one-year-later-little-details-or-accountability-shown-by-columbus-officials-after-ransomware-attack" },

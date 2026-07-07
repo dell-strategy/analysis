@@ -5,7 +5,7 @@
   "name": "Tennessee Dept of General Services",
   "slug": "general-services",
   "hq": "Nashville, TN",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The contractual front door to Tennessee public-sector buying: General Services runs the Central Procurement Office, which owns the statewide contracts and the Edison supplier portal that most state, local, and higher-ed technology purchases flow through.",
 
   "snapshot": [
@@ -55,6 +55,7 @@
   ],
 
   "news": [
+    { "date": "2026-05", "title": "State CIO Darby testifies to Congress on cyber grants; TN's $21M SLCGP has secured ~90,000 endpoints", "impact": "In May 21 House Homeland Security testimony, CIO Kristin Darby credited State & Local Cybersecurity Grant Program funding with securing roughly 90,000 endpoints and training 21,000+ local government employees, and urged Congress to reauthorize the program. Signals sustained state/local endpoint-security and modernization demand — much of which contracts through CPO statewide vehicles — and flags federal reauthorization as a funding signal to watch.", "tags": ["Cybersecurity", "Endpoint", "Federal Funding"] },
     { "date": "2026-05", "title": "Gov. Lee signs ~$58B FY2027 budget with $50M for AI infrastructure", "impact": "Enacts a dedicated AI-infrastructure line moving state AI from pilots toward enterprise-wide use — demand that will be contracted through CPO statewide vehicles. FY begins July 1, 2026.", "tags": ["Budget", "AI"] },
     { "date": "2026-01", "title": "Andy T. Kidd becomes Commissioner of General Services", "impact": "New leadership over the department that owns the Central Procurement Office and Edison — rebuild the executive relationship map and confirm procurement priorities under the new commissioner.", "tags": ["Leadership"] },
     { "date": "2025-12", "title": "Gov. Lee announces leadership transition at DGS", "impact": "Signals continuity in CPO operations (CPO Mike Perry remains) with a new commissioner above it — the contractual machinery is stable while the top changes.", "tags": ["Leadership"] },
@@ -77,6 +78,8 @@
     { "label": "Tennessee Code § 4-56-104 — Central Procurement Office / Chief Procurement Officer", "url": "https://law.justia.com/codes/tennessee/title-4/chapter-56/section-4-56-104/" },
     { "label": "Tennessee F&A — Strategic Technology Solutions (STS)", "url": "https://www.tn.gov/finance/sts.html" },
     { "label": "Tennessee F&A — Tennessee Sets Bold Course for AI Leadership (AI Action Plan, Nov 2025)", "url": "https://www.tn.gov/finance/news/2025/11/24/tennessee-sets-bold-course-for-ai-leadership.html" },
-    { "label": "StateScoop — Tennessee leans on public-private collaboration and $50M for AI", "url": "https://statescoop.com/tennessee-public-private-sector-collaboration-ai/" }
+    { "label": "StateScoop — Tennessee leans on public-private collaboration and $50M for AI", "url": "https://statescoop.com/tennessee-public-private-sector-collaboration-ai/" },
+    { "label": "U.S. House Homeland Security — ICYMI: State Cyber Officials on Federal Partnership (Darby testimony, May 2026)", "url": "https://homeland.house.gov/2026/05/26/icymi-state-cybersecurity-officials-emphasize-importance-of-strong-federal-partnership-as-cyber-threats-to-communities-grow/" },
+    { "label": "Kristin Darby — written testimony, House Homeland Security cyber subcommittee (May 21, 2026)", "url": "https://www.congress.gov/119/meeting/house/119254/witnesses/HHRG-119-HM08-Wstate-DarbyK-20260521.pdf" }
   ]
 }

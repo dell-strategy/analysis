@@ -5,7 +5,7 @@
   "name": "New Jersey Turnpike Authority",
   "slug": "new-jersey-turnpike-authority",
   "hq": "Woodbridge, NJ",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The toll-revenue-backed authority that runs the NJ Turnpike and Garden State Parkway — funding a multibillion-dollar capital program plus a long-running tolling, ITS, OT, and enterprise-IT modernization wave.",
 
   "snapshot": [
@@ -55,10 +55,12 @@
   ],
 
   "news": [
-    { "date": "2026-02", "title": "Kris Kolluri takes over as NJTA Executive Director", "impact": "New top leadership (and shared leadership with NJ TRANSIT) — reset the executive relationship map and watch for aligned tech priorities across both agencies.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "NJTA moves procurement on ~$6.7B Newark Bay (Casciano) Bridge replacement", "impact": "The Authority is pre-qualifying contractors this summer for a toll-funded, four-lane cable-stayed replacement of the Vincent R. Casciano Memorial Bridge under the Newark Bay–Hudson County Extension Program (Gov. Sherrill scaled the original ~$10.7B twin-span down to ~$6.7B, targeting 2031). A signal of sustained capital spend that pulls surrounding ITS, OT, networking, and program-controls demand.", "tags": ["Capital", "Procurement"] },
+    { "date": "2026-05", "title": "NJTA selects AECOM for 5-year general consulting engineering master services agreement", "impact": "A five-year MSA covering capital improvements, operations, and long-range planning — with explicit tolling/digital-services and program-controls scope. Confirms the modernization program has a lead consulting partner shaping technology-adjacent requirements.", "tags": ["Procurement", "Modernization"] },
+    { "date": "2026-05", "title": "NJTA solicits ERP business-administration software managed services (RFP RM-196137)", "impact": "An enterprise-software/managed-services RFP (submittals due May 11, 2026) — a direct enterprise-IT modernization signal and an entry point for infrastructure, data, and services conversations around the ERP platform.", "tags": ["IT", "Procurement"] },
+    { "date": "2026-02", "title": "Kris Kolluri takes over as NJTA Executive Director", "impact": "New top leadership (and shared leadership with NJ TRANSIT under Gov. Sherrill) — reset the executive relationship map and watch for aligned tech priorities across both agencies.", "tags": ["Leadership"] },
     { "date": "2026-01", "title": "3% toll increase takes effect on Turnpike and Parkway", "impact": "Reinforces the toll-revenue base funding the ~$2.8B budget and the multi-year capital program — supports continued IT and tolling investment.", "tags": ["Budget"] },
-    { "date": "2025-12", "title": "NJTA board approves 2026 budget tied to toll-revenue plan", "impact": "Confirms operating and capital funding for the year — a window to align proposals to the approved spend.", "tags": ["Budget"] },
-    { "date": "2024-09", "title": "NJTA awards long-term E-ZPass back-office contract to TransCore", "impact": "A multi-year, multibillion-dollar tolling-platform modernization that drives surrounding data, integration, and infrastructure demand.", "tags": ["Tolling", "Modernization"] }
+    { "date": "2025-12", "title": "NJTA board approves 2026 budget tied to toll-revenue plan", "impact": "Confirms operating and capital funding for the year — a window to align proposals to the approved spend.", "tags": ["Budget"] }
   ],
 
   "dellActions": [
@@ -77,6 +79,10 @@
     { "label": "NJBIZ — NJTA approves toll increases, $24B capital plan", "url": "https://njbiz.com/new-jersey-turnpike-authority-approves-toll-increases-24b-capital-plan/" },
     { "label": "New Jersey Monitor — Parkway, Turnpike tolls rising in 2026", "url": "https://newjerseymonitor.com/briefs/parkway-turnpike-tolls/" },
     { "label": "TransCore — NJTA affirms E-ZPass selection", "url": "https://transcore.com/new-jersey-turnpike-authority-affirms-its-selection-of-transcore-to-improve-e-zpass-services.html" },
-    { "label": "Governing — New Jersey starts transition to cashless toll collection", "url": "https://www.governing.com/transportation/new-jersey-starts-transition-to-cashless-toll-collection" }
+    { "label": "Governing — New Jersey starts transition to cashless toll collection", "url": "https://www.governing.com/transportation/new-jersey-starts-transition-to-cashless-toll-collection" },
+    { "label": "ENR — NJ Turnpike moves procurement on $6.7B bridge expansion", "url": "https://www.enr.com/articles/62802-nj-turnpike-moves-procurement-on-67b-bridge-expansion" },
+    { "label": "ROI-NJ — NJTA picks AECOM for 5-year master services agreement", "url": "https://www.roi-nj.com/2026/05/13/transportation/n-j-turnpike-authority-picks-aecom-for-5-year-master-services-agreement/" },
+    { "label": "NJTA — RFP Enterprise Resource Planning (ERP) Managed Services (RM-196137)", "url": "https://www.njta.gov/business-hub/current-solicitations/rfp-enterprise-resource-planning-erp-business-administration-software-managed-services/" },
+    { "label": "New Jersey Globe — Sherrill names Kolluri to run NJ Transit and Turnpike Authority", "url": "https://newjerseyglobe.com/governor/sherrill-says-kolluri-will-run-nj-transit-and-turnpike-authority/" }
   ]
 }

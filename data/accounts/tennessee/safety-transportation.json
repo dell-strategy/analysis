@@ -5,7 +5,7 @@
   "name": "Tennessee — Safety, Corrections & Transportation",
   "slug": "safety-transportation",
   "hq": "Nashville, TN",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A grouping of Tennessee's public-safety and transportation agencies — Safety & Homeland Security (driver services, Highway Patrol), Correction, and Transportation (TDOT) — large field, edge, data, and intelligent-transportation footprints whose IT is delivered largely through the centralized STS organization.",
 
   "snapshot": [
@@ -57,11 +57,12 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "TDOT selects Geotab as fleet data and telematics provider", "impact": "After a multi-phase pilot, TDOT chose Geotab (June 16, 2026) for fleet telematics and integrated forward-facing cameras across its vehicle fleet — a data-pipeline and video/edge program generating demand for storage, connectivity, and analytics around fleet visibility and operator safety.", "tags": ["TDOT", "Data", "Fleet"] },
+    { "date": "2026-05", "title": "State CIO Kristin Darby testifies to Congress on state/local cyber", "impact": "Before the U.S. House Homeland Security cybersecurity subcommittee (May 21, 2026), Darby cited ~$21M in SLCGP grant funding that secured nearly 90,000 endpoints across local governments and trained 21,000+ employees, and pressed for sustained federal cyber funding — reinforcing STS's endpoint-security and cyber-resilience agenda.", "tags": ["Cyber", "STS", "Leadership"] },
     { "date": "2026-05", "title": "FY2027 budget dedicates $400M to TDOT infrastructure", "impact": "One-time funds for maintenance, bridge preservation, and capacity projects expand TDOT's program — supporting context for ITS, fiber, and roadside-technology demand that procures through statewide vehicles.", "tags": ["Budget", "TDOT"] },
     { "date": "2026-04", "title": "TDOT names partner for Memphis–Blue Oval City smart-freight / autonomous pilot", "impact": "Launches a multi-year connected/autonomous freight program on I-40 — roadside infrastructure, data, and analytics needs adjacent to the West Tennessee manufacturing buildout.", "tags": ["TDOT", "Connected Vehicles"] },
     { "date": "2026-02", "title": "TDOC budget hearing details ~$8.6M tech upgrades and ~$1.7M drone/contraband program", "impact": "Concrete corrections technology spend plus a Nashville AI intelligence center — entry points for analytics compute, storage/retention, and edge devices.", "tags": ["TDOC", "Budget"] },
-    { "date": "2026-01", "title": "Senate panel advances body-worn-camera pilot for TN prison guards", "impact": "Signals a likely corrections video-capture and retention program — position storage, data management, and edge devices, accounting for public-records and retention constraints.", "tags": ["TDOC", "Video"] },
-    { "date": "2025-01", "title": "TDOT completes Phase 2 of the I-24 SMART Corridor", "impact": "Advances the AI-based integrated-corridor-management deployment; Phase 3 (ramp metering, fiber, CCTV, DMS) is an opening for edge compute, networking, storage, and analytics.", "tags": ["TDOT", "ITS"] }
+    { "date": "2026-01", "title": "Senate panel advances body-worn-camera pilot for TN prison guards", "impact": "Signals a likely corrections video-capture and retention program — position storage, data management, and edge devices, accounting for public-records and retention constraints.", "tags": ["TDOC", "Video"] }
   ],
 
   "dellActions": [
@@ -84,6 +85,9 @@
     { "label": "WSMV — Tennessee budget adds $400 million for roads, bridges and capacity", "url": "https://www.wsmv.com/2026/05/11/tennessee-budget-adds-400-million-roads-bridges-capacity-projects/" },
     { "label": "Tennessee F&A — Strategic Technology Solutions (STS)", "url": "https://www.tn.gov/finance/strategic-technology-solutions.html" },
     { "label": "GovTech — Tennessee CIO Kristin Darby on agentic AI and cloud posture", "url": "https://www.govtech.com/workforce/tennessee-cio-on-agentic-ai-govt-s-inflection-point" },
+    { "label": "Geotab — TDOT selects Geotab as fleet data and telematics provider (June 2026)", "url": "https://www.geotab.com/press-release/tennessee-contract/" },
+    { "label": "U.S. House Homeland Security — state cyber officials on federal partnership (May 2026)", "url": "https://homeland.house.gov/2026/05/26/icymi-state-cybersecurity-officials-emphasize-importance-of-strong-federal-partnership-as-cyber-threats-to-communities-grow/" },
+    { "label": "Kristin Darby — written testimony, House Homeland Security (May 21, 2026)", "url": "https://homeland.house.gov/wp-content/uploads/2026/05/05212026-CIP-Testimony.pdf" },
     { "label": "Tennessee General Services — Central Procurement Office", "url": "https://www.tn.gov/generalservices/procurement.html" }
   ]
 }

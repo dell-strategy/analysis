@@ -5,7 +5,7 @@
   "name": "North Carolina Dept of Administration",
   "slug": "doa",
   "hq": "Raleigh, NC",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "North Carolina's central business agency: through its Division of Purchase & Contract, DOA runs statewide procurement for goods and services and sets the rules most state and local buyers follow — while IT term contracts sit with NCDIT.",
 
   "snapshot": [
@@ -18,15 +18,16 @@
   "overview": "The North Carolina Department of Administration (DOA) is the state's central business and administrative agency, providing the operational backbone of state government — property and construction, motor fleet, mail, surplus, and, most relevant to technology sellers, statewide procurement. Procurement runs through DOA's Division of Purchase & Contract (P&C), the central authority that establishes and manages statewide term contracts and sets purchasing rules for state agencies, with delegated authority extending to many local and education buyers. An important boundary to understand: P&C governs non-IT statewide term contracts, while IT statewide term contracts are owned by the NC Department of Information Technology (NCDIT), the state's central IT agency. For a hardware-and-infrastructure vendor, that means most technology buying flows through NCDIT vehicles, but DOA/P&C still shapes the surrounding procurement policy, the NC eProcurement system, and cooperative purchasing. The two agencies are actively collaborating in 2026 to streamline IT acquisition — so the DOA relationship is best understood as the procurement-policy and cooperative-purchasing context around the NCDIT technology motion, not the primary IT buying center itself.",
 
   "budget": {
-    "intro": "DOA is an operational and procurement agency, not a large technology spender — its leverage is the contract and policy framework that purchases flow through, not its own appropriation. The bigger budget signal for a seller is the state's overall fiscal posture: North Carolina entered 2026 without an enacted biennial budget, with much of state government operating on a continuation of the prior budget while the General Assembly and Governor Stein worked toward a deal.",
+    "intro": "DOA is an operational and procurement agency, not a large technology spender — its leverage is the contract and policy framework that purchases flow through, not its own appropriation. The bigger budget signal for a seller is the state's overall fiscal posture, which shifted sharply at the end of June 2026: after operating on the 2023 budget for more than 1,000 days, the General Assembly released and began passing a $34.4B biennial budget (FY2025–27), sending North Carolina's first full spending plan in over three years toward Gov. Stein. That unlocks agency appropriations — including technology and modernization line items — that had been frozen under continuation. Confirm the enacted final terms before forecasting.",
     "stats": [
-      { "value": "Continuation", "label": "FY2025–27 budget status", "note": "State ran on a continuation budget into 2026 amid an enacted-budget impasse; confirm appropriations before forecasting." },
+      { "value": "$34.4B", "label": "FY2025–27 budget (enacting)", "note": "First full biennial budget in 1,000+ days; released June 30, 2026 and passed both chambers on initial votes, heading to Gov. Stein. Confirm the enacted version before forecasting." },
       { "value": "Statewide", "label": "P&C contract scope", "note": "Non-IT statewide term contracts; IT term contracts sit with NCDIT." },
       { "value": "Bronze", "label": "2025 NASPO Cronin Award", "note": "P&C recognized for procurement excellence by NASPO." }
     ],
     "notes": [
       "The largest technology budgets sit with NCDIT and with end agencies (DHHS, transportation, etc.), not with DOA — DOA shapes how those dollars are competed and contracted.",
-      "Because exact biennial appropriations were unsettled, treat specific FY figures as provisional until the enacted budget is confirmed."
+      "The June 2026 budget carries technology-relevant provisions to watch — a statewide AI framework for public schools (DPI model policy, reviewed AI-tools list and procurement guidance), DMV system/staffing expansion, and prison offender-management modernization — signaling where new agency IT dollars may flow.",
+      "Because the budget was still moving through final votes and awaiting Gov. Stein's action at end of June, treat specific FY figures as provisional until the enacted version is confirmed."
     ]
   },
 
@@ -52,15 +53,15 @@
     { "name": "David O'Neal", "title": "State Purchasing Officer (Division of Purchase & Contract)", "note": "Runs statewide procurement and the term-contract program for non-IT goods/services; reports to the Secretary. The owner of P&C contract vehicles and rules." },
     { "name": "Nate Denny", "title": "Secretary, NCDIT & State CIO", "note": "Confirmed by the NC Senate May 2026 (succeeded Teena Piccione); longtime NCDIT leader who led broadband expansion. Owns statewide IT direction — the top relationship for the technology motion." },
     { "name": "Shannon Casucci", "title": "Chief Procurement Transformation Officer, NCDIT", "note": "Named June 2026; leads NCDIT IT procurement strategy and the DOA–NCDIT acquisition-reform collaboration. A federal IT veteran (ex-GSA) — key contact for IT contracting changes." },
-    { "name": "NCDIT Office of the CISO", "title": "Statewide cybersecurity & State CISO", "note": "Owns statewide security policy and standards within NCDIT — the gate for security posture on cloud and infrastructure deals. Confirm the current State CISO before engaging." }
+    { "name": "Bernice Russell-Bond", "title": "State CISO, NCDIT", "note": "Joined NCDIT as State Chief Information Security Officer March 2025; 25+ years in cyber (ex-CISO at RTI International). Owns statewide security policy and standards — the gate for security posture on cloud and infrastructure deals." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "NC General Assembly passes first budget in 1,000+ days — $34.4B FY2025–27 plan heads to Gov. Stein", "impact": "Ends the continuation-budget freeze and unlocks agency IT/modernization appropriations (school AI framework, DMV systems, offender-management modernization); confirm enacted line items, then align pipeline to newly funded projects.", "tags": ["Budget", "AI"] },
     { "date": "2026-06", "title": "NCDIT names Shannon Casucci Chief Procurement Transformation Officer; DOA–NCDIT collaborating on IT acquisition reform", "impact": "Live procurement-reform track — engage early to shape how IT buys are competed and to keep Dell vehicles well-positioned.", "tags": ["Procurement", "Leadership"] },
     { "date": "2026-05", "title": "NC Senate confirms Nate Denny as NCDIT Secretary & State CIO", "impact": "Stable, experienced leadership atop the statewide technology motion; rebuild/confirm the top relationship.", "tags": ["Leadership"] },
-    { "date": "2026-03", "title": "Gov. Stein proclaims Procurement Month; P&C recognizes agency award honorees", "impact": "Signals procurement-modernization momentum across state agencies — useful air cover for value/transparency messaging.", "tags": ["Procurement"] },
-    { "date": "2025-09", "title": "Gov. Stein signs Executive Order No. 24 on trustworthy AI; AI Accelerator stood up in NCDIT", "impact": "AI governance and procurement standards are forming — early window for AI-infrastructure and responsible-AI positioning.", "tags": ["AI"] },
-    { "date": "2025-01", "title": "Gabriel J. Esparza sworn in as DOA Secretary in Gov. Stein's cabinet", "impact": "New agency leadership owning the procurement mission; establish the executive relationship.", "tags": ["Leadership"] }
+    { "date": "2026-03", "title": "NC PEAK Conference (Purchase & Contract + Statewide IT Procurement Office); P&C recognizes Gold Star agency honorees", "impact": "Signals procurement-modernization momentum across state agencies — useful air cover for value/transparency messaging.", "tags": ["Procurement"] },
+    { "date": "2025-09", "title": "Gov. Stein signs Executive Order No. 24 on trustworthy AI; AI Accelerator stood up in NCDIT", "impact": "AI governance and procurement standards are forming — early window for AI-infrastructure and responsible-AI positioning.", "tags": ["AI"] }
   ],
 
   "dellActions": [
@@ -78,6 +79,10 @@
     { "label": "NCDIT — Senate confirms Nate Denny as Secretary & State CIO", "url": "https://it.nc.gov/news/press-releases/2026/05/13/north-carolina-senate-confirms-nate-denny-secretary-nc-department-information-technology" },
     { "label": "NCDIT — Names Shannon Casucci Chief Procurement Transformation Officer", "url": "https://it.nc.gov/news/press-releases/2026/06/24/ncdit-names-shannon-casucci-chief-procurement-transformation-officer" },
     { "label": "NC Governor — Executive Order No. 24 on AI", "url": "https://governor.nc.gov/executive-order-no-24-advancing-trustworthy-artificial-intelligence-benefits-all-north-carolinians" },
-    { "label": "NASPO ValuePoint — Cooperative Contracts", "url": "https://www.naspovaluepoint.org/cooperative-contracts/" }
+    { "label": "NASPO ValuePoint — Cooperative Contracts", "url": "https://www.naspovaluepoint.org/cooperative-contracts/" },
+    { "label": "Carolina Public Press — NC budget agreement finally reached", "url": "https://carolinapublicpress.org/76016/nc-budget-agreement-finally-reached/" },
+    { "label": "NC Newsline — The fine print: NC's $34B budget (AI, tech provisions)", "url": "https://ncnewsline.com/2026/06/30/the-fine-print-ncs-34m-budget-includes-dei-cuts-ferry-tolls-ai-prison-funds-and-more/" },
+    { "label": "NC DOA — 2026 NC PEAK Conference", "url": "https://www.doa.nc.gov/divisions/purchase-contract/peak-conference" },
+    { "label": "NCDIT — State CISO Bernice Russell-Bond on cloud security & cyber talent", "url": "https://it.nc.gov/blog/2026/04/09/advancing-cloud-security-and-cyber-talent-ciso-bernice-russell-bond-wptf" }
   ]
 }

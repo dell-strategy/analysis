@@ -5,7 +5,7 @@
   "name": "Charlotte, North Carolina",
   "slug": "charlotte-north-carolina",
   "hq": "Charlotte, NC",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "North Carolina's largest city (~900K) and the Southeast's banking hub: Charlotte runs a $3.6B FY2026 budget, and its central Innovation & Technology (I&T) department drives an AI roadmap, smart-city work, and the city-run cooperative purchasing alliance.",
 
   "snapshot": [
@@ -25,8 +25,9 @@
       { "value": "FY26–30", "label": "Capital Investment Plan", "note": "Multi-year CIP adopted with the FY2026 budget; technology and facilities capital sit here." }
     ],
     "notes": [
+      "FY2027 update: on June 8, 2026, Council adopted a ~$4.5B FY2027 budget (9-2) with the city's first property-tax increase in years — 1.89 cents (to 29.3 cents per $100) dedicated to public safety, funding 10% raises for police and firefighters — plus a FY2027–2031 Capital Investment Plan. Refresh the topline and CIP references against the FY2027 adopted budget.",
       "Charlotte funds operations across a general fund plus enterprise funds (water, aviation/airport, etc.); some technology spend rides those enterprise budgets, not just the general fund.",
-      "Treat any specific I&T or technology line figure as provisional until confirmed against the adopted FY2026 budget document."
+      "Treat any specific I&T or technology line figure as provisional until confirmed against the adopted budget document."
     ]
   },
 
@@ -48,7 +49,8 @@
   },
 
   "powerStructure": [
-    { "name": "Marcus D. Jones", "title": "City Manager, City of Charlotte", "note": "Chief executive of city operations under the council-manager form; owns department direction including I&T. Presents the annual budget to Council. Senior relationship for the enterprise motion." },
+    { "name": "Marcus D. Jones", "title": "City Manager, City of Charlotte", "note": "Chief executive of city operations under the council-manager form; owns department direction including I&T. Presents the annual budget to Council (proposed the ~$4.5B FY2027 budget in May 2026). Senior relationship for the enterprise motion. Confirmed in role as of June 2026." },
+    { "name": "Rebecca Hefner", "title": "Deputy City Manager, City of Charlotte", "note": "Named Deputy City Manager in May 2026 (13-year city veteran); succeeds retiring Deputy City Manager Liz Babson (retirement effective Sept 2026). A senior operations relationship layered under the City Manager — confirm her portfolio/departments before engaging." },
     { "name": "Markell Storay", "title": "CIO & Director, Innovation & Technology (I&T)", "note": "Leads central IT — infrastructure, applications, data, security, and innovation. Longtime city technologist (former CTO) who succeeded Reenie Askew. The top technology relationship for Charlotte." },
     { "name": "I&T — Data & Analytics leadership", "title": "Chief Data / Analytics officer (city)", "note": "Charlotte stood up dedicated data/analytics leadership under I&T; owns the data-platform and analytics agenda tied to the AI roadmap. Confirm the current officeholder before engaging." },
     { "name": "I&T — Cybersecurity / security leadership", "title": "City security lead (CISO-equivalent)", "note": "Owns municipal security posture and standards within I&T — the gate for security on cloud and infrastructure deals. Public naming is limited; confirm the current security leader before engaging." },
@@ -56,8 +58,10 @@
   ],
 
   "news": [
-    { "date": "2026-06", "title": "FY2026 $3.6B budget and FY26–30 Capital Investment Plan in effect for full first year", "impact": "Confirms the spending envelope and capital plan technology buys draw from; align proposals to adopted priorities.", "tags": ["Budget"] },
-    { "date": "2025-06", "title": "Charlotte City Council unanimously adopts $3.6B FY2026 budget with no property-tax increase", "impact": "Stable, balanced fiscal posture; technology spend competes within a no-tax-increase envelope — lead with efficiency and value.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "Council adopts ~$4.5B FY2027 budget (9-2) with first property-tax increase in years", "impact": "Fiscal posture shifts: a 1.89-cent tax increase (to 29.3 cents) plus 10% public-safety raises signal spending priorities tilt toward public safety — technology competes harder for dollars, so lead with efficiency, consolidation, and measurable value. Refresh proposals against the FY2027–2031 CIP.", "tags": ["Budget"] },
+    { "date": "2026-05", "title": "City Manager Jones proposes $4.5B FY2027 budget; names new Deputy City Manager Rebecca Hefner", "impact": "Budget cycle anchored by the City Manager (spring proposal, June adoption) — engage ahead of the spring window. Hefner (13-year city veteran) succeeds retiring Deputy City Manager Liz Babson (Sept 2026); a new senior operations relationship to map.", "tags": ["Leadership", "Budget"] },
+    { "date": "2026-05", "title": "CIO Storay requires all I&T staff to earn AI and cloud certifications amid on-prem-to-cloud shift", "impact": "Strong buying signal: the city is actively migrating from on-premises infrastructure to cloud and upskilling staff in AI, Python, cybersecurity, and analytics. Position hybrid-cloud, AI-infrastructure, and migration/advisory plays tied to the I&T modernization and AI roadmap.", "tags": ["AI", "Cloud", "Modernization"] },
+    { "date": "2025-06", "title": "Charlotte City Council unanimously adopts $3.6B FY2026 budget with no property-tax increase", "impact": "Prior-year baseline: a balanced, no-tax-increase FY2026 envelope — useful contrast to the FY2027 tax increase when framing fiscal trajectory.", "tags": ["Budget"] },
     { "date": "2025-05", "title": "City Manager Marcus D. Jones presents proposed FY2026 budget to Mayor and Council", "impact": "Annual budget cycle anchored by the City Manager; engage ahead of the spring proposal window to influence priorities.", "tags": ["Leadership", "Budget"] },
     { "date": "2025-01", "title": "I&T publishes AI Strategic Roadmap (2025–2028)", "impact": "Defines the city's multi-year AI direction and governance — early window to position AI-infrastructure and responsible-AI offerings.", "tags": ["AI"] }
   ],
@@ -77,6 +81,10 @@
     { "label": "GovTech — Charlotte, N.C., Appoints Markell Storay as City CIO", "url": "https://www.govtech.com/workforce/charlotte-n-c-appoints-markell-storay-as-city-cio" },
     { "label": "City of Charlotte — AI Strategic Roadmap 2025–2028 (PDF)", "url": "https://www.charlottenc.gov/files/sharedassets/city/v/1/city-government/departments/documents/iampt/ai-strategic-roadmap-2025-2028-long-version.pdf" },
     { "label": "Charlotte Cooperative Purchasing Alliance (CCPA)", "url": "http://www.charlottealliance.org/" },
-    { "label": "City of Charlotte — Contracting and Procurement (Procurement Services)", "url": "https://www.charlottenc.gov/City-Government/Departments/General-Services/Procurement-Services" }
+    { "label": "City of Charlotte — Contracting and Procurement (Procurement Services)", "url": "https://www.charlottenc.gov/City-Government/Departments/General-Services/Procurement-Services" },
+    { "label": "WCNC — Charlotte City Council passes budget with tax increase, 10% raises for police, firefighters", "url": "https://www.wcnc.com/article/news/local/charlotte-city-council-passes-budget-with-tax-increase-10-raises-for-police-firefighters/275-34418af1-9789-4676-b7cb-d7583a7e5f08" },
+    { "label": "WSOC — Charlotte City Council passes 2027 operating budget", "url": "https://www.wsoctv.com/news/local/charlotte-city-council-passes-2027-operating-budget/4MF2VAQB5BEZFAO2ZVW5W7WGYE/" },
+    { "label": "Mecklenburg Times — Charlotte introduces new Deputy City Manager and Director of Housing & Neighborhood Services", "url": "https://mecktimes.com/news/2026/05/01/city-of-charlotte-introduces-new-deputy-city-manager-and-new-director-of-housing-neighborhood-services/" },
+    { "label": "GovTech — Charlotte, N.C., Requires AI, Cloud Certifications for IT Staff", "url": "https://www.govtech.com/workforce/charlotte-n-c-requires-ai-cloud-certifications-for-it-staff" }
   ]
 }

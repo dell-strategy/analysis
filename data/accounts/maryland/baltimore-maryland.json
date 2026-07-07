@@ -5,23 +5,24 @@
   "name": "Baltimore, Maryland",
   "slug": "baltimore-maryland",
   "hq": "Baltimore, MD",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Maryland's largest city runs its technology through the Baltimore City Office of Information & Technology (BCIT) — a department that rebuilt its cyber posture after the 2019 RobbinHood ransomware attack and now leans into modernization, digital equity, and a new CIO.",
 
   "snapshot": [
     { "label": "Role", "value": "Largest city in Maryland" },
     { "label": "Central IT", "value": "BCIT" },
-    { "label": "FY2026 budget", "value": "~$4.6B" },
+    { "label": "FY2027 budget", "value": "~$4.9B (adopted Jun 2026)" },
     { "label": "New CIO", "value": "T.J. Mayotte (Mar 2026)" }
   ],
 
   "overview": "The City of Baltimore is Maryland's largest municipality, and its technology function is consolidated in the Baltimore City Office of Information & Technology (BCIT), which builds and operates the systems city agencies rely on and runs the city's digital-equity programs (skills training, free public wifi, device and connectivity access). Baltimore's IT identity is shaped by the May 2019 RobbinHood ransomware attack, which crippled most city systems for months and ran an estimated $18M+ in recovery and lost revenue; since then the city has steadily rebuilt its security posture, hired a permanent CISO, and invested in modernization. In March 2026 Mayor Brandon Scott appointed T.J. Mayotte — a 20-year technology and cybersecurity executive and former Howard County CIO — as the city's new CIO, signaling continued emphasis on cyber, service modernization, and emerging technology. For a Dell SLG seller, Baltimore is a mid-to-large municipal account where security-hardening, infrastructure refresh, endpoint/client, and digital-equity device programs are the natural entry points.",
 
   "budget": {
-    "intro": "Baltimore's total operating budget for FY2026 (effective July 1, 2025) is roughly $4.6B, approved by the City Council in a 13-2 vote. IT is funded within that envelope and through the broader 10-year financial plan, with technology modernization and in-sourcing of contractor roles called out as priorities; the FY2027 proposed budget Mayor Scott discussed in April 2026 was around $4.9B.",
+    "intro": "Baltimore's total operating budget for FY2027 (effective July 1, 2026) is roughly $4.9B — a ~7.6% increase over FY2026 — passed by the City Council 14-0 and signed by Mayor Scott on June 25, 2026. The FY2027 budget carries several IT-relevant lines: ~$12.4M to replace the emergency Computer-Aided Dispatch (CAD) system, added IT-infrastructure investment framed around reducing contractor reliance by building internal capacity, broadband/public-wifi expansion to public-housing residents, and a relaunched Innovation Fund. IT is funded within this envelope and the broader 10-year financial plan.",
     "stats": [
-      { "value": "~$4.6B", "label": "FY2026 city budget", "note": "Council-approved; effective July 1, 2025" },
-      { "value": "~$4.9B", "label": "FY2027 proposed", "note": "Discussed by Mayor Scott, April 2026" },
+      { "value": "~$4.9B", "label": "FY2027 city budget", "note": "Council 14-0; signed Jun 25, 2026; effective Jul 1, 2026" },
+      { "value": "~$4.6B", "label": "FY2026 city budget", "note": "Prior year; effective July 1, 2025 (13-2 vote)" },
+      { "value": "~$12.4M", "label": "CAD replacement", "note": "FY2027 line to replace the emergency Computer-Aided Dispatch system" },
       { "value": "~$18M+", "label": "2019 ransomware cost", "note": "Recovery plus lost/delayed revenue; reset the security baseline" }
     ],
     "notes": [
@@ -34,7 +35,7 @@
     { "name": "Post-ransomware cyber rebuild", "summary": "After the 2019 RobbinHood attack, BCIT stood up a permanent CISO function and hardened the city's security posture. Expect continued investment in endpoint security, backup/recovery, segmentation, and resilience — a durable buying theme for this account.", "tags": ["Cybersecurity", "Resilience"] },
     { "name": "Service modernization", "summary": "The city's 10-year financial plan commits to modernizing city services and using emerging technology to improve efficiency. A refresh and consolidation track for aging infrastructure and end-user computing.", "tags": ["Modernization", "Infrastructure"] },
     { "name": "Digital equity", "summary": "BCIT runs digital-inclusion programs — skills training, free public wifi, and device/connectivity access for residents. Device fleets and the infrastructure behind public-access programs are a fit for client and ISG.", "tags": ["Digital Equity", "Client"] },
-    { "name": "New CIO agenda", "summary": "CIO T.J. Mayotte (started March 16, 2026) brings a cybersecurity and digital-transformation background. Early-tenure leadership is the window to align on a modernization and security roadmap.", "tags": ["Leadership", "AI"] }
+    { "name": "New CIO agenda", "summary": "CIO T.J. Mayotte (started mid-March 2026) brings a cybersecurity and digital-transformation background. Early-tenure leadership is the window to align on a modernization and security roadmap.", "tags": ["Leadership", "AI"] }
   ],
 
   "procurement": {
@@ -49,14 +50,15 @@
   "powerStructure": [
     { "name": "Brandon M. Scott", "title": "Mayor", "note": "Sets citywide priorities and appoints the CIO; has framed technology around digital equity and modernized service delivery." },
     { "name": "T.J. Mayotte", "title": "Chief Information Officer (BCIT)", "note": "Started March 16, 2026; 20-year tech/cyber executive, former Howard County CIO. The top IT relationship for the account." },
-    { "name": "Kevin Kearney", "title": "Chief Information Security Officer", "note": "Owns the city's security program built out after the 2019 ransomware attack — the buying center for cyber and resilience." },
+    { "name": "Bob Taylor", "title": "Chief Information Security Officer", "note": "Now leads the city's security program (previously Deputy CISO); succeeded Kevin Kearney, who has retired. Owns the post-2019-ransomware security posture — the buying center for cyber and resilience. Confirm current title directly, as public listings can lag." },
     { "name": "Board of Estimates", "title": "City spending panel", "note": "Five-member board (Mayor, Comptroller, Council President, and two appointees) that approves major contracts — the gate for larger awards." }
   ],
 
   "news": [
-    { "date": "2026-04", "title": "Mayor Scott outlines ~$4.9B FY2027 proposed budget", "impact": "Sets the next-year funding envelope IT and cyber draw from; watch BBMR detail for the technology line.", "tags": ["Budget"] },
-    { "date": "2026-03", "title": "T.J. Mayotte appointed CIO of Baltimore (starts Mar 16, 2026)", "impact": "New IT leadership with a cyber and digital-transformation background — the window to align on a modernization roadmap.", "tags": ["Leadership"] },
-    { "date": "2025-06", "title": "City Council approves ~$4.6B FY2026 budget (13-2)", "impact": "Funds the current-year IT operating base; included in-sourcing of some Finance/IT contractor roles.", "tags": ["Budget"] }
+    { "date": "2026-06", "title": "Mayor Scott signs ~$4.9B FY2027 budget (Council 14-0), effective July 1, 2026", "impact": "Sets the current funding envelope for IT and cyber. Notable IT lines: ~$12.4M to replace the emergency CAD system, added IT-infrastructure investment aimed at reducing contractor reliance, broadband/public-wifi expansion, and a relaunched Innovation Fund — all buying signals for infrastructure, security, and client.", "tags": ["Budget", "Modernization"] },
+    { "date": "2026-06", "title": "CISO transition: Bob Taylor now leads city security; Kevin Kearney retired", "impact": "The cyber-and-resilience buying center has a new owner (Taylor, formerly Deputy CISO). Re-map the security relationship; verify title directly as public sources can lag. Hedged pending city confirmation.", "tags": ["Leadership", "Cybersecurity"] },
+    { "date": "2026-03", "title": "T.J. Mayotte appointed CIO of Baltimore (started mid-March 2026)", "impact": "New IT leadership with a cyber and digital-transformation background (former Howard County CIO, most recently Anne Arundel County) — the window to align on a modernization roadmap.", "tags": ["Leadership"] },
+    { "date": "2025-06", "title": "City Council approves ~$4.6B FY2026 budget (13-2)", "impact": "Funded the prior-year IT operating base; included in-sourcing of some Finance/IT contractor roles.", "tags": ["Budget"] }
   ],
 
   "dellActions": [
@@ -70,7 +72,10 @@
   "sources": [
     { "label": "Baltimore City — Mayor appoints T.J. Mayotte as CIO (Mar 2026)", "url": "https://www.baltimorecity.gov/mayor/news-media/press-releases/2026-03-12-mayor-brandon-m-scott-appoints-tj-mayotte-as-chief-information-officer" },
     { "label": "Baltimore City Information & Technology (BCIT)", "url": "https://technology.baltimorecity.gov/" },
-    { "label": "Baltimore City — Mayor signs FY2026 budget", "url": "https://mayor.baltimorecity.gov/news/press-releases/2025-06-23-mayor-brandon-m-scott-signs-fy2026-baltimore-city-budget" },
+    { "label": "Baltimore City — Mayor signs FY2027 budget (Jun 25, 2026)", "url": "https://www.baltimorecity.gov/mayor/news-media/press-releases/2026-06-25-mayor-brandon-m-scott-signs-city-budget-for-fiscal-year-2027" },
+    { "label": "Baltimore City Council passes ~$4.9B FY2027 budget (citybiz)", "url": "https://www.citybiz.co/article/865594/baltimore-city-council-unanimously-passes-fy2027-4-9-billion-budget/" },
+    { "label": "GovTech — Baltimore mayor appoints T.J. Mayotte as CIO", "url": "https://www.govtech.com/workforce/baltimore-md-mayor-appoints-cio-from-neighboring-county" },
+    { "label": "Bob Taylor — CISO, City of Baltimore (The Org)", "url": "https://theorg.com/org/city-of-baltimore/org-chart/bob-taylor" },
     { "label": "Bureau of the Budget and Management Research (BBMR) — budget publications", "url": "https://bbmr.baltimorecity.gov/budget-publications" },
     { "label": "2019 Baltimore ransomware attack — overview", "url": "https://en.wikipedia.org/wiki/2019_Baltimore_ransomware_attack" }
   ]

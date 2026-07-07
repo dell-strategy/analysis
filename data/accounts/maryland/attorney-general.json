@@ -5,7 +5,7 @@
   "name": "Maryland Attorney General's Office",
   "slug": "attorney-general",
   "hq": "Baltimore, MD",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Maryland's central legal office (OAG): it litigates for the state, runs consumer-protection and criminal divisions, and represents 40+ state agencies — a data-heavy, litigation-driven shop with steady eDiscovery, case-management, and cyber needs.",
 
   "snapshot": [
@@ -50,17 +50,19 @@
 
   "powerStructure": [
     { "name": "Anthony G. Brown", "title": "Attorney General", "note": "Elected statewide; sets enforcement priorities (data privacy, consumer protection, civil rights). The top-of-house relationship and policy driver." },
-    { "name": "Carolyn A. Quattrocki", "title": "Chief Deputy Attorney General", "note": "Senior operational leader under the AG — a key relationship for office-wide direction and resourcing." },
-    { "name": "Deputy Attorneys General", "title": "Division leadership (Civil, Civil Rights, Criminal, etc.)", "note": "Leonard J. Howie III, Zenita Wickham Hurley, Carrie J. Williams, and Sharon S. Merriweather lead major divisions — owners of the workloads that drive eDiscovery and data needs." },
-    { "name": "OAG IT / case-management management", "title": "Technology & eDiscovery operations", "note": "Manager-level IT/DevOps roles own case-management, document-management, and eDiscovery systems and prepare related RFPs — the technical buying center to map by name." },
-    { "name": "Consumer Protection Division", "title": "Privacy & breach enforcement", "note": "Administers data-breach notifications and MODPA enforcement — a unit whose growing caseload increases data-processing and storage demand." }
+    { "name": "Carolyn A. Quattrocki", "title": "Chief Deputy Attorney General (Governance & Litigation)", "note": "Senior operational leader under the AG (re-verified June 2026) — a key relationship for office-wide direction and resourcing." },
+    { "name": "Deputy Attorneys General", "title": "Division leadership (four practice groups)", "note": "Carrie J. Williams (Community Safety & Public Resources), Zenita Wickham Hurley (Equity, Policy & Engagement), Sharon Stanley Merriweather (Health & Human Services, Education & Sustainability), and Leonard J. Howie III (Marketplace Support & Worker Protection) — owners of the workloads that drive eDiscovery and data needs (per 2026 Maryland Manual)." },
+    { "name": "Christian E. Barrera / Peter V. Berns", "title": "Chief of Staff / General Counsel", "note": "Office-level operational and legal leadership; the Chief of Staff is a practical entry point for administrative and resourcing questions (re-verified 2026)." },
+    { "name": "OAG IT / case-management management", "title": "Technology & eDiscovery operations", "note": "Manager-level IT/DevOps roles own case-management, document-management, and eDiscovery systems and prepare related RFPs — the technical buying center to map by name (names not publicly confirmed)." },
+    { "name": "William D. Gruhn — Consumer Protection Division", "title": "Division Chief; privacy & breach enforcement", "note": "Chief of the division that administers data-breach notifications and now enforces MODPA (enforcement live since April 1, 2026) — a unit whose growing caseload increases data-processing and storage demand." }
   ],
 
   "news": [
-    { "date": "2026-04", "title": "MODPA data-processing requirements begin phasing in (effective after April 1, 2026)", "impact": "Heightened privacy enforcement increases the volume of data the OAG must ingest, secure, and analyze — supports a data/storage and security conversation.", "tags": ["Privacy", "Enforcement"] },
+    { "date": "2026-06", "title": "AG Brown wins uncontested Democratic primary (June 23); advances to Nov 3 general vs. Republican James B. (Jim) Rutledge III", "impact": "Signals likely leadership continuity into a second term for a heavily favored incumbent in a Democratic-leaning state — the top-of-house relationship and enforcement priorities (privacy, consumer protection) should stay stable; no near-term turnover to reset account plans around.", "tags": ["Leadership", "Election"] },
+    { "date": "2026-06", "title": "Sustained multistate enforcement wave: $3.3M egg price-fixing settlement (June), $700M Google Play Store antitrust final approval (May), and a securities consent order with Middle Class United (May 22)", "impact": "A steady cadence of high-volume, multistate litigation reinforces the OAG's core eDiscovery, document-review, and secure-storage workload — the recurring data conversation, not a one-off.", "tags": ["Litigation", "eDiscovery"] },
+    { "date": "2026-04", "title": "MODPA enforcement goes live (April 1, 2026); Brown flags limited privacy staffing (reportedly ~1 dedicated attorney)", "impact": "Consumer Protection can now investigate and penalize privacy violations, growing the evidence/data it must ingest and secure — while acknowledged staffing constraints point to appetite for automation and efficient data-processing/eDiscovery tooling.", "tags": ["Privacy", "Enforcement"] },
     { "date": "2026-03", "title": "AG Brown joins coalition opposing federal SECURE Data Act that would preempt state privacy laws", "impact": "Signals the OAG intends to keep enforcing Maryland's own privacy regime — privacy/cyber workloads stay central rather than shrinking.", "tags": ["Privacy", "Policy"] },
-    { "date": "2026-01", "title": "FY2026 budget reflects ~$1.8M general-fund reduction amid statewide fiscal pressure", "impact": "Expect cost scrutiny and preference for pre-competed statewide contracts — lead with value and existing vehicles, not bespoke builds.", "tags": ["Budget"] },
-    { "date": "2025-12", "title": "Maryland data-privacy obligations (breach notice within 45 days to OAG) reinforced ahead of 2026 MODPA rollout", "impact": "More breach reporting routes to the OAG, feeding consumer-protection caseloads and the data they generate.", "tags": ["Privacy", "Consumer Protection"] }
+    { "date": "2026-01", "title": "FY2026 budget reflects ~$1.8M general-fund reduction amid statewide fiscal pressure", "impact": "Expect cost scrutiny and preference for pre-competed statewide contracts — lead with value and existing vehicles, not bespoke builds.", "tags": ["Budget"] }
   ],
 
   "dellActions": [
@@ -76,6 +78,10 @@
     { "label": "Maryland DBM — FY2027 Budget Testimony, C81C00 Office of the Attorney General", "url": "https://dbm.maryland.gov/budget/FY2027Testimony/C81C00.pdf" },
     { "label": "Maryland General Assembly — FY2026 Operating Budget Analysis, C81C Office of the Attorney General", "url": "https://mgaleg.maryland.gov/pubs/budgetfiscal/2026fy-budget-docs-operating-C81C-Office-of-the-Attorney-General.pdf" },
     { "label": "Maryland OAG — Security Breach Notices (consumer protection / data privacy)", "url": "https://oag.maryland.gov/resources-info/Pages/security-breach-notices.aspx" },
+    { "label": "Maryland Manual On-Line — Office of the Attorney General (2026 leadership roster)", "url": "https://msa.maryland.gov/msa/mdmanual/08conoff/attorney/html/06ag.html" },
+    { "label": "Ballotpedia — Maryland Attorney General election, 2026", "url": "https://ballotpedia.org/Maryland_Attorney_General_election,_2026" },
+    { "label": "NBC News — Maryland Attorney General Primary 2026 results (Brown, Rutledge III uncontested)", "url": "https://www.nbcnews.com/politics/2026-primary-elections/maryland-attorney-general-results" },
+    { "label": "Maryland OAG News — Multistate coalition egg price-fixing settlement (2026)", "url": "https://oag.maryland.gov/News/pages/Attorney-General%E2%80%AFBrown%E2%80%AFand-Multistate-Coalition-Secure-More-Than-50-Million-Eggs-and-$3.3-Million-After-Uncovering-Unlawful.aspx" },
     { "label": "Maryland OAG — AG Brown Opposes Federal Legislation Weakening State Privacy Protections", "url": "https://oag.maryland.gov/News/pages/Attorney-General-Brown-Opposes-Federal-Legislation-That-Would-Weaken-State-Privacy-Protections--.aspx" },
     { "label": "Maryland DoIT — Statewide IT Contracts & Procurement", "url": "https://doit.maryland.gov/contracts/Statewide-Contracts/Pages/Statewide-Contracts.aspx" },
     { "label": "Maryland Procurement — eMaryland Marketplace Advantage (eMMA)", "url": "https://procurement.maryland.gov/" }

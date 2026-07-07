@@ -5,7 +5,7 @@
   "name": "Illinois DoIT (Dept of Innovation & Technology)",
   "slug": "doit",
   "hq": "Springfield / Chicago, IL",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Illinois's consolidated central IT agency: DoIT runs technology delivery, shared infrastructure, statewide cybersecurity, and AI strategy for the agencies, boards, and commissions under the Governor.",
 
   "snapshot": [
@@ -32,7 +32,7 @@
 
   "initiatives": [
     { "name": "Cybersecurity & state SOC", "summary": "DoIT runs statewide cybersecurity for agencies, boards, and commissions under the Governor, including a state Security Operations Center for monitoring and rapid response, MFA enforcement, and support extended to local governments and schools. Security modernization and threat-detection tooling are an active buying track.", "tags": ["Cybersecurity", "SOC"] },
-    { "name": "Generative AI strategy & task force", "summary": "Illinois's Generative AI & Natural Language Processing Task Force (with DoIT) filed its landmark report in late 2024 / early 2025 and has an addendum due Dec 31, 2026. Expect AI governance, use-case piloting, and procurement guardrails to shape near-term technology decisions.", "tags": ["AI", "Policy"] },
+    { "name": "Generative AI strategy & governance", "summary": "DoIT is standing up an enterprise-AI operating model: Illinois named its first Chief AI Officer (Kader Sakkaria, effective June 1, 2026) and CIO Brandon Ragle has described a 'triangle' of AI governance across the Chief AI Officer, Chief Data Officer, and Chief Enterprise Architect. Early use cases are role-based with a human-in-the-loop model, and DoIT has scaled a generative-AI chatbot to tens of thousands of state users. The state's Generative AI & NLP Task Force filed its landmark report in late 2024 / early 2025 with an addendum due Dec 31, 2026 — AI governance, use-case piloting, and procurement guardrails will shape near-term technology decisions.", "tags": ["AI", "Policy"] },
     { "name": "Legacy modernization & enterprise apps", "summary": "DoIT leads consolidation and modernization of legacy state systems and enterprise applications across more than 700 technology staff. Application refresh, platform migration, and the underlying compute/storage are recurring needs.", "tags": ["Modernization", "Applications"] },
     { "name": "Shared infrastructure & cloud", "summary": "DoIT operates consolidated data-center and cloud capacity for client agencies. Infrastructure refresh, hybrid cloud, and as-a-service delivery across participating agencies are an ongoing infrastructure track.", "tags": ["Data Center", "Cloud"] }
   ],
@@ -47,14 +47,16 @@
   },
 
   "powerStructure": [
-    { "name": "Brandon Ragle", "title": "Secretary & State CIO, DoIT", "note": "Appointed by Gov. Pritzker in 2025 after serving as deputy secretary/deputy CIO and interim secretary; long-tenured state technologist. The top relationship for the statewide IT motion." },
-    { "name": "Jason Bowen", "title": "Chief Information Security Officer (State CISO)", "note": "Joined DoIT in 2024 from the private sector (Protiviti); Army veteran. Owns statewide cybersecurity strategy, the SOC, and the security buying center." },
-    { "name": "Christopher Britten", "title": "Acting Assistant Secretary, DoIT", "note": "Leads statewide solution delivery and a workforce of 700+ technology professionals — the delivery/modernization buying center." },
+    { "name": "Brandon Ragle", "title": "Secretary & State CIO, DoIT", "note": "Appointed by Gov. Pritzker in April 2025 after serving as deputy secretary/deputy CIO and interim secretary; the appointment was pending Illinois Senate confirmation and a final confirmation vote could not be independently verified as of June 2026. Long-tenured state technologist and the top relationship for the statewide IT motion; still active in the role (e.g., framing DoIT's June 2026 AI-governance structure)." },
+    { "name": "Kader Sakkaria", "title": "Chief AI Officer (State of Illinois / DoIT)", "note": "Illinois's first Chief AI Officer, effective June 1, 2026; joined from the private sector (data/AI leadership at Gallagher, prior roles at Ruffalo Noel Levitz and BMO Harris). Leads enterprise AI strategy, responsible-adoption governance, and scaling the state chatbot — a new AI buying and policy center." },
+    { "name": "Jason Bowen", "title": "Chief Information Security Officer (State CISO)", "note": "Joined DoIT in 2024 from the private sector (Protiviti); Army veteran. Verified still serving in 2026. Owns statewide cybersecurity strategy, the SOC, and the security buying center." },
+    { "name": "Christopher Britten", "title": "Acting Assistant Secretary, DoIT", "note": "Effective in the role since 2025; leads statewide solution delivery and a workforce of 700+ technology professionals — the delivery/modernization buying center." },
     { "name": "CMS — Central Management Services", "title": "Statewide contracts & shared services", "note": "Administers statewide master contracts and JPMCs; a primary contract path to DoIT-served agencies." },
     { "name": "Chief Procurement Office", "title": "Independent procurement authority", "note": "Owns solicitations, awards, and vendor compliance under the Illinois Procurement Code — the gate any new contract clears." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Illinois names first Chief AI Officer (Kader Sakkaria), effective June 1, 2026", "impact": "DoIT is formalizing enterprise-AI governance under a dedicated Chief AI Officer working with the Chief Data Officer and Chief Enterprise Architect — a new decision center for AI strategy, responsible-adoption policy, and AI-enabled use cases. Engage early on AI-ready infrastructure and governance-aligned platforms.", "tags": ["AI", "Leadership"] },
     { "date": "2026-06", "title": "Gen-AI task force addendum due to Governor and General Assembly by Dec 31, 2026", "impact": "Forthcoming AI governance and procurement guidance will shape how Illinois buys and deploys AI — position early on responsible-AI infrastructure.", "tags": ["AI", "Policy"] },
     { "date": "2025-04", "title": "Brandon Ragle appointed DoIT Secretary & State CIO", "impact": "Stable, internally promoted leadership at the top of the statewide IT motion — continuity for relationship-building.", "tags": ["Leadership"] },
     { "date": "2025-01", "title": "Illinois Generative AI & NLP Task Force releases landmark report", "impact": "First in-depth state analysis of generative AI across civil rights, labor, and consumer protection — signals AI guardrails ahead of large-scale deployment.", "tags": ["AI"] },
@@ -73,6 +75,8 @@
     { "label": "Illinois DoIT — official site", "url": "https://doit.illinois.gov/" },
     { "label": "GovTech — Brandon Ragle Named CIO, Secretary of Illinois DoIT", "url": "https://www.govtech.com/workforce/brandon-ragle-named-cio-secretary-of-illinois-doit" },
     { "label": "GovTech — Illinois Hires Private-Sector Veteran to Fill CISO Role (Jason Bowen)", "url": "https://www.govtech.com/security/illinois-hires-private-sector-veteran-to-fill-ciso-role" },
+    { "label": "StateScoop — Illinois hires its first chief AI officer (Kader Sakkaria)", "url": "https://statescoop.com/illinois-hires-its-first-chief-ai-officer/" },
+    { "label": "GovTech — Illinois' First Chief AI Officer Is From the Private Sector", "url": "https://www.govtech.com/workforce/illinois-first-chief-ai-officer-is-from-the-private-sector" },
     { "label": "Illinois DoIT — Cybersecurity initiatives", "url": "https://doit.illinois.gov/initiatives/cybersecurity.html" },
     { "label": "Illinois DoIT — State Task Force Releases Landmark Report on Generative AI", "url": "https://doit.illinois.gov/doit-news/doit-in-the-news/state-task-force-releases-landmark-report-on-the-effects-of-gene.html" },
     { "label": "Illinois CMS — Procurement", "url": "https://cms.illinois.gov/business/procurement.html" },

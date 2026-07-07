@@ -5,12 +5,12 @@
   "name": "Montgomery County, Maryland",
   "slug": "montgomery-county",
   "hq": "Rockville, MD",
-  "updated": "2026-06-22",
-  "tagline": "Maryland's largest and wealthiest county — ~1.05M residents in the DC suburbs, a ~$7.6B operating budget. Enterprise IT runs through the Department of Technology & Enterprise Business Solutions (TEBS); buying flows through the County's Office of Procurement with County Council oversight.",
+  "updated": "2026-06-30",
+  "tagline": "Maryland's largest and wealthiest county — ~1.05M residents in the DC suburbs, a ~$7.9B operating budget. Enterprise IT runs through the Department of Technology & Enterprise Business Solutions (TEBS); buying flows through the County's Office of Procurement with County Council oversight.",
 
   "snapshot": [
     { "label": "Residents", "value": "~1.05M (largest MD county)" },
-    { "label": "FY2026 operating budget", "value": "$7.6B approved" },
+    { "label": "FY2027 operating budget", "value": "$7.9B approved (May 2026)" },
     { "label": "Central IT", "value": "TEBS (~$73M dept budget)" },
     { "label": "Buying gate", "value": "Office of Procurement + Council oversight" }
   ],
@@ -18,16 +18,16 @@
   "overview": "Montgomery County is Maryland's most populous and most affluent jurisdiction — roughly 1.05 million residents in the Washington, DC suburbs — governed by an elected County Executive and an 11-member County Council, with day-to-day operations run by a Chief Administrative Officer. Enterprise technology is centralized in the Department of Technology & Enterprise Business Solutions (TEBS), which owns IT governance, enterprise systems, cybersecurity, and the County's broadband/fiber assets; the Office of Enterprise Information Security (OEIS) sits inside TEBS. Like most large local governments, the County is a partly federated buyer: TEBS sets enterprise strategy and runs shared infrastructure, while large departments (Police, Fire & Rescue, Health & Human Services, and the separately governed Montgomery County Public Schools) carry their own substantial technology needs. For a Dell SLG seller, the County is a high-value, well-funded DC-metro local-government opportunity with an unusually mature technology posture — but the entry point is TEBS plus the County's Office of Procurement and Council-approval process, not a single capital line. Note an active leadership transition: County Executive Marc Elrich is term-limited and a new executive will take office in late 2026 following the 2026 election cycle.",
 
   "budget": {
-    "intro": "The County Council approved a $7.6B FY2026 operating budget on May 22, 2025, with public education the dominant line — roughly $3.6B for Montgomery County Public Schools, about half the total. Central IT is a small share of that: TEBS's own FY2026 recommended operating budget was about $72.7M (~227 FTEs), a slight decrease from FY2025. As with most large counties, technology spend is spread across departments and capital (CIP) projects rather than concentrated in one IT appropriation.",
+    "intro": "The County Council approved a $7.9B FY2027 operating budget on May 21, 2026 (effective July 1, 2026), rejecting the County Executive's proposed property-tax-rate increase and adopting a progressive income-tax structure instead. Public education remains the dominant line — more than $3.7B for Montgomery County Public Schools, about half the total. Central IT is a small share of that: TEBS's own recommended operating budget has run about $73M (~227 FTEs). As with most large counties, technology spend is spread across departments and capital (CIP) projects rather than concentrated in one IT appropriation.",
     "stats": [
-      { "value": "$7.6B", "label": "FY2026 operating budget", "note": "Approved by Council May 22, 2025" },
-      { "value": "~$72.7M", "label": "TEBS dept budget (FY2026)", "note": "Recommended operating budget, ~227 FTEs; slight YoY decrease" },
-      { "value": "~$3.6B", "label": "MCPS share", "note": "Public schools ~half the County budget; MCPS runs its own IT" }
+      { "value": "$7.9B", "label": "FY2027 operating budget", "note": "Approved by Council May 21, 2026; effective July 1, 2026" },
+      { "value": "~$73M", "label": "TEBS dept budget", "note": "Recommended operating budget, ~227 FTEs" },
+      { "value": ">$3.7B", "label": "MCPS share (FY2027)", "note": "Public schools ~half the County budget; MCPS runs its own IT" }
     ],
     "notes": [
       "Technology spending is partly federated — large departments and the separately governed Montgomery County Public Schools run their own systems, so there is no single county-wide 'IT budget' line to target. Confirm a department's own funding before forecasting.",
-      "Infrastructure modernization tends to flow through the Capital Improvements Program (CIP) — e.g., FiberNet and technology-services projects — which is on a separate multi-year approval track from the operating budget.",
-      "A new County Executive takes office in late 2026 (Elrich is term-limited); budget priorities for FY2027 and beyond could shift with the transition. Verify the latest adopted figures at time of engagement."
+      "Infrastructure modernization tends to flow through the Capital Improvements Program (CIP) — e.g., FiberNet and technology-services projects — which is on a separate multi-year approval track from the operating budget. The FY27 Council review flagged reduced Technology Services CIP funding and warned of rising deferred-maintenance and cybersecurity risk.",
+      "A new County Executive takes office in late 2026 (Elrich is term-limited; Councilmember Will Jawando won the June 2026 Democratic primary and faces GOP nominee Esther Wells in the Nov. 3 general). Budget priorities for FY2028 and beyond could shift with the transition. Verify the latest adopted figures at time of engagement."
     ]
   },
 
@@ -49,7 +49,7 @@
   },
 
   "powerStructure": [
-    { "name": "Marc Elrich", "title": "County Executive (term-limited; leaving late 2026)", "note": "Heads the executive branch and proposes the budget. Term-limited after voter-approved two-term limits — a new executive takes office in late 2026 following the 2026 election. Verify incumbency and successor at engagement." },
+    { "name": "Marc Elrich", "title": "County Executive (term-limited; leaving late 2026)", "note": "Heads the executive branch and proposes the budget. Term-limited after voter-approved two-term limits. Councilmember Will Jawando won the June 2026 Democratic primary (rivals conceded) and faces GOP nominee Esther Wells in the Nov. 3 general election; the Democratic nominee is heavily favored in this deep-blue county. Rebuild the executive-sponsor map after the election; verify at engagement." },
     { "name": "Gail Roper", "title": "Chief Information Officer, TEBS", "note": "CIO leading TEBS since February 2020; owns IT governance, enterprise systems, security strategy, AI innovation, and broadband. The top enterprise-IT relationship for the County." },
     { "name": "Keith Young", "title": "Chief Information Security Officer (CISO), Office of Enterprise Information Security", "note": "Leads OEIS and the County's information-security program inside TEBS — the security buying-center owner. Confirm current title/status before forecasting." },
     { "name": "County Council (11 members)", "title": "Legislative branch & budget/contract oversight", "note": "Adopts the operating and capital budgets, enacts the Procurement Code, and reviews larger/noncompetitive contract actions. The Council's Government Operations (GO) committee typically handles TEBS items." },
@@ -57,9 +57,10 @@
   ],
 
   "news": [
-    { "date": "2026-06", "title": "2026 primary held for term-limited County Executive seat (Elrich leaving)", "impact": "Leadership transition ahead — a new executive takes office in late 2026, which can reset budget and technology priorities. Re-map the executive relationship after the election.", "tags": ["Leadership"] },
-    { "date": "2025-09", "title": "County releases AI Progress Report under its AI Action Plan", "impact": "AI is an active, executive-visible priority — an opening for AI-infrastructure, data-platform, and responsible-AI conversations.", "tags": ["AI"] },
-    { "date": "2025-05", "title": "Council approves $7.6B FY2026 operating budget", "impact": "Sets the FY2026 spending envelope; education (~$3.6B MCPS) dominates, with IT spread across departments and the CIP.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "Elrich signs 6-month moratorium on new data-center permits", "impact": "June 12, 2026 executive order pauses acceptance/processing of new commercial data-center permits while the Council weighs zoning-text amendments on energy, water, and noise impacts. This targets private/commercial data centers — distinct from the County's own TEBS data-center modernization — but signals a politically charged local stance on data-center growth to factor into any DC-metro siting/infrastructure conversations.", "tags": ["Data Center", "Policy"] },
+    { "date": "2026-06", "title": "Will Jawando wins Democratic primary for County Executive", "impact": "Councilmember Will Jawando won the June 2026 Democratic primary (rivals Friedson and Glass conceded) and faces GOP nominee Esther Wells in the Nov. 3 general; the Democrat is heavily favored. A new executive takes office in late 2026 (Elrich term-limited), which can reset budget and technology priorities — re-map the executive relationship after the election.", "tags": ["Leadership"] },
+    { "date": "2026-05", "title": "Council approves $7.9B FY2027 operating budget", "impact": "May 21, 2026 vote sets the FY2027 envelope (effective July 1, 2026); the Council rejected the Executive's property-tax increase and adopted a progressive income-tax structure, with MCPS funded above $3.7B. IT spend stays spread across departments and the CIP.", "tags": ["Budget"] },
+    { "date": "2025-09", "title": "County releases AI Progress Report under its AI Action Plan", "impact": "AI is an active, executive-visible priority — TEBS runs an AI Center of Excellence and resident-facing tools (e.g., the 'Monty 2.0' 311 assistant) — an opening for AI-infrastructure, data-platform, and responsible-AI conversations.", "tags": ["AI"] },
     { "date": "2025", "title": "TEBS recognized for FiberNet/broadband and data-center modernization", "impact": "Confirms an active infrastructure-modernization track (Tier IV data center, network upgrades, digital equity) — an infrastructure and network entry point.", "tags": ["Infrastructure"] }
   ],
 
@@ -68,14 +69,17 @@
     "Lead infrastructure with the data-center modernization story: position ISG, colocation/hybrid-cloud, and refresh against the Equinix Tier IV migration and FiberNet/network upgrades.",
     "Tie AI-infrastructure and data platforms to the County's AI Action Plan and 2025 AI Progress Report — responsible-AI adoption is executive-visible and funded as a priority.",
     "Get the procurement path right early: confirm Office of Procurement (Chapter 11B) routing, the eMaryland Marketplace/BidNet registration, and any usable intergovernmental cooperative-purchasing vehicle; factor Council timing for larger or noncompetitive actions.",
-    "Track the County Executive transition (Elrich is term-limited; new executive late 2026) and rebuild the executive-sponsor map after the 2026 election before forecasting large FY2027+ programs."
+    "Track the County Executive transition (Elrich term-limited; Democrat Will Jawando won the June 2026 primary and is favored in the Nov. 3 general) and rebuild the executive-sponsor map after the election before forecasting large FY2028+ programs; note the June 2026 data-center permit moratorium as a signal of local sensitivity on data-center growth."
   ],
 
   "sources": [
     { "label": "Montgomery County TEBS — Homepage", "url": "https://www.montgomerycountymd.gov/tebs/" },
     { "label": "Montgomery County TEBS — Organization Chart (CIO Gail Roper)", "url": "https://www.montgomerycountymd.gov/TEBS/orgchart.html" },
     { "label": "Montgomery County — Cybersecurity / Office of Enterprise Information Security", "url": "https://www.montgomerycountymd.gov/cybersecurity/about-us.html" },
-    { "label": "Montgomery County Council — Approves $7.6B FY2026 Operating Budget", "url": "https://www2.montgomerycountymd.gov/mcgportalapps/Press_Detail.aspx?Item_ID=47107&Dept=1" },
+    { "label": "Montgomery County Council — Approves $7.9B FY2027 Operating Budget (May 2026)", "url": "https://www.montgomerycountymd.gov/news/montgomery-county-council-votes-approve-79-billion-fiscal-year-2027-operating-budget-focused-implementing-progressive-income-tax-structure-rejecting-proposed-property-tax-rate-increase-supporting-essential-services-residents" },
+    { "label": "Montgomery County — Elrich signs data-center permit moratorium executive order (June 2026)", "url": "https://www.montgomerycountymd.gov/news/montgomery-county-executive-marc-elrich-signs-executive-order-temporarily-pause-data-center-permitting" },
+    { "label": "Maryland Matters — Elrich unveils six-month moratorium on data center permits", "url": "https://marylandmatters.org/2026/06/15/elrich-unveils-six-month-moratorium-on-montgomery-county-data-center-permits/" },
+    { "label": "Washington Post — Jawando declares victory in Democratic primary for County Executive", "url": "https://www.washingtonpost.com/dc-md-va/2026/06/26/montgomery-county-executive-election-will-jawando-declares-victory-primary/" },
     { "label": "Montgomery County — AI Action Plan", "url": "https://www.montgomerycountymd.gov/OPI/ai-action-plan.html" },
     { "label": "Montgomery County & InnovateUS — AI Upskilling launch", "url": "https://www.montgomerycountymd.gov/news/montgomery-county-innovateus-launch-ai-upskilling-boost-government-efficiency-resident-services" },
     { "label": "Montgomery County — Office of Procurement", "url": "https://www.montgomerycountymd.gov/office-procurement" },

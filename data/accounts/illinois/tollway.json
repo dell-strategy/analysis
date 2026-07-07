@@ -5,7 +5,7 @@
   "stateName": "Illinois",
   "type": "Special District",
   "hq": "Downers Grove, IL",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "A self-funded special district that runs 294 miles of all-electronic toll roads across northern Illinois — a tech-heavy operator whose tolling, ITS, and back-office systems make it one of the state's most technology-dependent agencies.",
 
   "snapshot": [
@@ -49,13 +49,16 @@
 
   "powerStructure": [
     { "name": "Cassaundra Rouse", "title": "Executive Director", "note": "Top executive over the 294-mile system and ~1,400 staff; owns day-to-day direction and the relationship that anchors any strategic motion." },
-    { "name": "Michael Shay", "title": "Chief Information Officer", "note": "Inaugural CIO; leads Information Technology and Business Systems — the central buying center for compute, storage, data, tolling back-office, and IT modernization." },
+    { "name": "Michael Shay", "title": "Chief Information Officer", "note": "Inaugural CIO (since 2022); leads Information Technology and Business Systems (130+ staff) — the central buying center for compute, storage, data, tolling back-office, and IT modernization. Named a 2025 ChicagoCIO ORBIE Award winner." },
     { "name": "Cathy Williams", "title": "Chief Financial Officer", "note": "Oversees financial operations and the agency's ~$15B long-term financial plan; key on capital funding and bond-backed program spend." },
-    { "name": "Information security function (under IT)", "title": "Cybersecurity / CISO role", "note": "The Tollway runs 24/7 security monitoring, but a CISO is not publicly named as a separate executive — security appears to sit within IT under the CIO. Confirm the current owner directly." },
-    { "name": "Board of Directors (11 members)", "title": "Governing body", "note": "Approves contracts, budgets, and capital programs. Governor-appointed; the gate every significant award must clear." }
+    { "name": "Arthur Grist", "title": "Chief of Security and Safety", "note": "Owns physical security/safety (incl. the ~$36M FY2026 security line and the Illinois State Police service agreement). Cyber is not publicly named as a separate CISO — information security appears to sit within IT under CIO Shay; confirm the current owner directly." },
+    { "name": "Arnaldo 'Arnie' Rivera", "title": "Board Chairman", "note": "Chairs the Governor-appointed board; founding executive director of the Chicago Education Alliance. Sets board cadence that gates every significant award." },
+    { "name": "Board of Directors (11 members)", "title": "Governing body", "note": "Approves contracts, budgets, and capital programs. Governor-appointed (plus the Governor and IDOT Secretary as ex-officio); the gate every significant award must clear." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Board authorizes public hearings on proposed 45-cent toll increase", "impact": "On June 18 the board voted to open a 12-county public-hearing and comment process (comments due Aug 3, 2026) ahead of a possible final vote in late summer — the procedural gate that would unlock the $26.5B 'Driving Connections' program and its long-horizon technology demand.", "tags": ["Capital", "Funding"] },
+    { "date": "2026-06", "title": "June board awards $70.4M in contracts, incl. $50.6M for active traffic management on I-294", "impact": "The Tri-State (I-294) active traffic management (ATM) award to Aldridge Electric expands ITS/roadside OT scope — sensors, cameras, dynamic signage, and edge/networking — directly relevant to Dell's edge, ITS, and OT-security positioning.", "tags": ["ITS", "OT", "Capital"] },
     { "date": "2026-06", "title": "Tollway proposes 15-year, $26.5B 'Driving Connections' capital plan with first toll hike since 2012", "impact": "If board-approved, a multi-year capital surge (2027–2042) funded by ~45-cent passenger and ~30% commercial toll increases starting Jan 1, 2027 — a long-horizon expansion of program spend and technology demand.", "tags": ["Capital", "Funding"] },
     { "date": "2025-12", "title": "Board approves $1.79B 2026 budget with $1.26B in capital", "impact": "Sets the spending envelope, including the ~$98M IT operating line and back-office/tolling modernization — the near-term budget Dell opportunities map to.", "tags": ["Budget"] },
     { "date": "2025-12", "title": "2026 program advances O'Hare access via Elgin O'Hare Western Access (I-490)", "impact": "Major corridor build-out adds ITS, tolling, and roadside OT scope across new infrastructure.", "tags": ["Capital", "ITS"] }
@@ -76,6 +79,10 @@
     { "label": "Illinois Tollway — Driving Connections", "url": "https://agency.illinoistollway.com/drivingconnections" },
     { "label": "Illinois Tollway — Doing Business / Goods and Services", "url": "https://agency.illinoistollway.com/doing-business/goods-and-services" },
     { "label": "WQAD — Tollway board approves $1.79B budget for 2026", "url": "https://www.wqad.com/article/travel/illinois-tollway-board-approves-179b-budget-2026-provide-in-and-out-access-to-ohare-airport/526-55ba439e-13a4-4467-ae3f-1b0fef090330" },
-    { "label": "NBC Chicago — Tollway proposes toll increases for the first time in a decade ($26.5B plan)", "url": "https://www.nbcchicago.com/news/local/illinois-tollway-proposes-toll-increases-for-the-first-time-in-a-decade/3950757/" }
+    { "label": "NBC Chicago — Tollway proposes toll increases for the first time in a decade ($26.5B plan)", "url": "https://www.nbcchicago.com/news/local/illinois-tollway-proposes-toll-increases-for-the-first-time-in-a-decade/3950757/" },
+    { "label": "Daily Herald — Board approves hearings on potential 45-cent toll hike (June 18, 2026)", "url": "https://www.dailyherald.com/20260618/transportation/toll-hike-coming-board-approves-hearings-on-potential-45-cent-spike-per-toll/" },
+    { "label": "DuPage Policy Journal — Tollway awards over $70M in June construction/engineering contracts", "url": "https://dupagepolicyjournal.com/illinois-tollway-awards-over-70-million-in-june-construction-and-engineering-contracts" },
+    { "label": "Illinois Tollway — Board Information (members & chair)", "url": "https://agency.illinoistollway.com/about/board-information" },
+    { "label": "Illinois Tollway — Michael Shay wins 2025 ChicagoCIO ORBIE Award", "url": "https://agency.illinoistollway.com/-/michael-shay-wins-2025-chicagocio-orbie-award" }
   ]
 }

@@ -5,7 +5,7 @@
   "name": "Arizona Dept of Administration (ADOA-ASET)",
   "slug": "adoa",
   "hq": "Phoenix, AZ",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Arizona's central IT and procurement hub: ADOA houses the ASET office (the statewide CIO function) and the State Procurement Office, so it sets technology strategy, runs statewide contracts, and gates high-risk IT projects for state agencies.",
 
   "snapshot": [
@@ -50,17 +50,18 @@
 
   "powerStructure": [
     { "name": "J.R. Sloan", "title": "State CIO / Director, ASET", "note": "Owns statewide IT strategy, governance and shared services; cloud-first and AI-forward. The top relationship for the ADOA-ASET motion." },
-    { "name": "ADOA Director", "title": "Department Director", "note": "Cabinet-level head of ADOA (a Hobbs appointee); ASET and SPO both report up through the department. Confirm the current named director before outreach." },
-    { "name": "State CISO", "title": "Chief Information Security Officer", "note": "Sets statewide security policy and standards (Ryan Murray has held the state CISO role, dual-hatted with Homeland Security). Confirm current incumbent — the security buying center to map." },
+    { "name": "Elizabeth Alvarado-Thorson", "title": "Director, Arizona Dept of Administration", "note": "Cabinet-level head of ADOA (a Hobbs appointee); named as director in 2026 state records. ASET and SPO both report up through the department." },
+    { "name": "Ryan Murray", "title": "State CISO / Deputy Director, SISPO", "note": "Leads the Statewide Information Security & Privacy Office and serves as State CISO, dual-hatted with the Arizona Dept of Homeland Security; named a 2026 GovTech Top 25 honoree. The security buying center to map." },
     { "name": "Chief Data Officer", "title": "Statewide data strategy", "note": "Co-leads the statewide data strategy with the CIO and CISO — relevant for data-readiness and AI foundations." },
     { "name": "State Procurement Administrator", "title": "Head of the State Procurement Office", "note": "Owns statewide contracts and the purchasing cooperative — the procurement path onto Arizona public-sector buys." }
   ],
 
   "news": [
+    { "date": "2026-05", "title": "Arizona wins 2026 StateScoop 50 'State IT Innovation of the Year' for its statewide AI efforts", "impact": "National recognition for the state's responsible-AI program (including a NotebookLM trial spanning 173 users across 13 agencies) — reinforces ASET's AI-forward posture and the P2000 guardrails as a buying theme.", "tags": ["AI", "Recognition"] },
     { "date": "2026-06", "title": "State Procurement Office files expedited rulemaking for ADOA-SPO procurement rules", "impact": "Procurement rule changes underway (Title 2, Ch. 7) — watch for shifts in solicitation and cooperative-purchasing terms.", "tags": ["Procurement"] },
     { "date": "2026-04", "title": "ASET's IT Authorization Committee (ITAC) reviews statewide agency IT projects, chaired by CIO J.R. Sloan", "impact": "Confirms the active project-oversight gate; ITAC approvals are a forecasting signal for agency technology buys.", "tags": ["Oversight"] },
-    { "date": "2026-02", "title": "Arizona updates statewide Generative AI policy (P2000)", "impact": "Refreshed AI guardrails emphasize data governance, security and transparency — align AI offerings to the policy.", "tags": ["AI", "Policy"] },
-    { "date": "2026-01", "title": "Hobbs enters the legislative session with several unconfirmed agency directors", "impact": "Leadership confirmation churn across agencies — verify the current ADOA director status before executive outreach.", "tags": ["Leadership"] }
+    { "date": "2026-04", "title": "Statewide cybersecurity material-weakness findings persist in Auditor General reporting", "impact": "Ongoing statewide security gaps (governance, workforce, legacy modernization) keep cyber-readiness and Zero Trust modernization a funded priority under ASET/SISPO — a durable security-modernization opening. Confirm specifics against the latest Auditor General reports.", "tags": ["Cybersecurity"] },
+    { "date": "2026-02", "title": "Arizona updates statewide Generative AI policy (P2000)", "impact": "Refreshed AI guardrails emphasize data governance, security and transparency — align AI offerings to the policy.", "tags": ["AI", "Policy"] }
   ],
 
   "dellActions": [
@@ -68,7 +69,7 @@
     "Confirm Dell's coverage on Arizona statewide contracts (SPO) and cooperative eligibility — it's the access path to state agencies plus 900+ co-op members.",
     "Lead cloud-first modernization and AI-infrastructure offerings tied to the Cloud-First Policy and the statewide data strategy / Gen AI policy guardrails.",
     "Map the ITAC/PIJ oversight process early on larger deals so agency projects clear ASET review without surprises.",
-    "Verify current named leadership (ADOA Director, State CISO) before executive outreach, given recent confirmation and personnel churn."
+    "Anchor executive outreach on the named leadership — Director Elizabeth Alvarado-Thorson (ADOA), CIO J.R. Sloan (ASET) and State CISO Ryan Murray (SISPO) — and re-verify titles before contact given ongoing appointment churn."
   ],
 
   "sources": [
@@ -77,6 +78,10 @@
     { "label": "ASET — P2000 Generative AI Policy", "url": "https://aset.az.gov/sites/default/files/2026-02/P2000%20-%20Generative%20AI%20Policy.pdf" },
     { "label": "Arizona State Procurement Office — Cooperative Contracts", "url": "https://spo.az.gov/cooperative-contracts" },
     { "label": "ADOA — Arizona Pioneers Practical Uses for Generative AI", "url": "https://doa.az.gov/news/arizona-pioneers-practical-uses-generative-ai" },
-    { "label": "GovTech — Arizona's AI Policy Is Evolving Along With the Technology", "url": "https://www.govtech.com/artificial-intelligence/arizonas-ai-policy-is-evolving-along-with-the-technology" }
+    { "label": "GovTech — Arizona's AI Policy Is Evolving Along With the Technology", "url": "https://www.govtech.com/artificial-intelligence/arizonas-ai-policy-is-evolving-along-with-the-technology" },
+    { "label": "StateScoop — Winners of the 2026 StateScoop 50 Awards", "url": "https://statescoop.com/list/announcing-the-winners-of-the-2026-statescoop-50-awards/" },
+    { "label": "ADOA — Director Elizabeth Alvarado-Thorson", "url": "https://doa.az.gov/about/leadership/elizabeth-alvarado-thorson" },
+    { "label": "ADOA — Leadership", "url": "https://doa.az.gov/about-us/leadership" },
+    { "label": "GovTech Top 25 (2026) — Ryan Murray, Arizona State CISO", "url": "https://www.govtech.com/top-25/2026-top-25/ryan-murray" }
   ]
 }

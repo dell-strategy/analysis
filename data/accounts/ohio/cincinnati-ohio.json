@@ -5,7 +5,7 @@
   "name": "Cincinnati, Ohio",
   "slug": "cincinnati-ohio",
   "hq": "Cincinnati, OH",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Ohio's third-largest city (~310K) running a council-manager government — its central IT, the Enterprise Technology Solutions (ETS) department, owns citywide infrastructure, applications, security, and the open-data platform across a $1.8B all-funds budget.",
 
   "snapshot": [
@@ -55,9 +55,9 @@
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Cincinnati adopts FY2027 budget (~$593M General Fund), closing a ~$29.5M gap", "impact": "Vacancy-driven savings tighten discretionary spend; capital is supported by railway-sale proceeds — lead with cooperative-vehicle and refresh plays over net-new discretionary asks.", "tags": ["Budget"] },
-    { "date": "2026-04", "title": "City Council extends data-center zoning restrictions (IDC Overlay #89) through end of 2026", "impact": "Local sensitivity to data-center power/land use; frame infrastructure conversations around efficiency and existing-footprint modernization.", "tags": ["Data Center", "Policy"] },
-    { "date": "2026-03", "title": "City Manager Long announces 2026 government restructuring", "impact": "Department consolidations (DCED dissolved; new Office of Strategic Growth) may shift system ownership and budget owners — re-map stakeholders.", "tags": ["Org Change"] },
+    { "date": "2026-06", "title": "Council adopts FY2027 budget update (June 18), ~$593M General Fund; ~$99.4M capital from railway proceeds; +$1.6M for police drone-first-responder expansion", "impact": "Vacancy savings and ~$20M in cuts closed the ~$29.5M gap, tightening net-new discretionary IT asks; capital is buoyed by railway proceeds (trust now ~$1.9B). The drone-first-responder line signals appetite for public-safety tech — a hook for edge compute, storage, and data-management conversations. Lead with cooperative-vehicle and refresh plays.", "tags": ["Budget", "Public Safety"] },
+    { "date": "2026-06", "title": "Government reorganization goes operational — Office of Strategic Growth and Department of Opportunity & Resident Services (DOORS) now stood up", "impact": "The DCED dissolution announced in March is now live; new departments mean new system owners and budget lines — re-map stakeholders before forecasting multi-department deals.", "tags": ["Org Change"] },
+    { "date": "2026-04", "title": "City Council extends data-center zoning restrictions (IDC Overlay #89) through end of 2026", "impact": "Local sensitivity to data-center power/land use; frame infrastructure conversations around efficiency and existing-footprint modernization. Zoning study will produce a data-center definition and possible permanent code amendments — watch for the outcome.", "tags": ["Data Center", "Policy"] },
     { "date": "2026-01", "title": "City Manager directs data-center impact zoning study", "impact": "AI/cloud-driven demand prompts policy review — signals where the city's attention sits on compute and power infrastructure.", "tags": ["AI", "Policy"] },
     { "date": "2025-11", "title": "Mayor Aftab Pureval re-elected", "impact": "Continuity at the top of city government — stable policy and budget direction for multi-year engagements.", "tags": ["Leadership"] }
   ],
@@ -76,6 +76,9 @@
     { "label": "City of Cincinnati — Office of Procurement", "url": "https://www.cincinnati-oh.gov/purchasing/" },
     { "label": "City of Cincinnati — Budget Documents", "url": "https://www.cincinnati-oh.gov/budget/budget-documents/" },
     { "label": "WCPO — Key items in Cincinnati's FY2027 budget", "url": "https://www.wcpo.com/news/local-news/here-are-the-key-items-in-cincinnatis-fiscal-year-2027-budget" },
+    { "label": "WVXU — What's in Cincinnati's FY2027 budget (June 2026)", "url": "https://www.wvxu.org/politics/2026-06-17/whats-in-cincinnati-budget" },
+    { "label": "WVXU — Understanding Cincinnati's city departments and what they do (June 2026, post-reorg)", "url": "https://www.wvxu.org/politics/2026-06-09/cincinnati-city-department-what-they-do" },
+    { "label": "Fox19 — Council gives City Manager Sheryl Long glowing performance review (Mar 2026)", "url": "https://www.fox19.com/2026/03/10/cincinnati-city-council-gives-city-manager-glowing-performance-review/" },
     { "label": "City of Cincinnati — IDC Overlay #89 'Data Centers' and Zoning Study", "url": "https://www.cincinnati-oh.gov/planning/projects/active/interim-development-control-overlay-89-data-centers-and-zoning-study/" },
     { "label": "WCPO — Council extends data center regulations", "url": "https://www.wcpo.com/cincinnati-city-council-data-center-regulations-extended" },
     { "label": "WVXU — Cincinnati plans major government restructuring", "url": "https://www.wvxu.org/politics/2026-03-09/cincinnati-government-restructuring-economic-development" },
