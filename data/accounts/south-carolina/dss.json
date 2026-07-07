@@ -5,7 +5,7 @@
   "name": "South Carolina Dept of Social Services (DSS)",
   "slug": "dss",
   "hq": "Columbia, SC",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "South Carolina's human-services backbone: SCDSS runs child welfare, SNAP/TANF and other public benefits, and child support — a high-volume, data-heavy agency mid-stream in both a court-monitored child-welfare reform and a multi-year benefits-mainframe modernization.",
 
   "snapshot": [
@@ -57,11 +57,12 @@
   ],
 
   "news": [
+    { "date": "2026-05", "title": "SC joins federal 'A Home for Every Child' foster-care initiative to recruit and retain foster homes", "impact": "Renewed child-welfare push under Catone; sustained demand for CAPSS case-management data, foster-home tracking, and reporting tied to placement goals — though the announcement itself is program, not IT.", "tags": ["Child Welfare", "Data"] },
+    { "date": "2026-04", "title": "SCDSS blocks out-of-state and online EBT transactions to curb SNAP skimming/fraud (effective Apr 28, 2026)", "impact": "Benefits fraud-prevention and payment-integrity controls (card-lock via ConnectEBT portal/app/IVR) are now an active front — a data-protection, identity, and transaction-security surface alongside the eSAM modernization.", "tags": ["Benefits", "Cybersecurity", "Data"] },
+    { "date": "2026-02", "title": "New federal SNAP work requirements (OBBBA) take effect; ABAWD age band expands to 18–64, exemptions narrowed", "impact": "Expanded work-requirement tracking and eligibility redeterminations raise workload and rules-engine complexity for the eSAM benefits system — a driver for the mainframe-modernization and integration roadmap.", "tags": ["Benefits", "Modernization"] },
     { "date": "2025-12", "title": "Director Catone presents ~$114.6M FY2027 request: child welfare, child care, and benefits-mainframe modernization", "impact": "Signals continued investment in modernization and child-welfare reform, including another installment for the eSAM mainframe — confirm the enacted appropriation before forecasting.", "tags": ["Budget", "Modernization"] },
     { "date": "2025-09", "title": "SCDSS launches video calling for SNAP quality-control interviews to meet new federal requirement", "impact": "Continued benefits-experience modernization on cloud/contact-center infrastructure — recurring demand for reliable capacity and integration.", "tags": ["Benefits", "Cloud"] },
-    { "date": "2025-05", "title": "SC Senate confirms Tony Catone as SCDSS Director", "impact": "Stable, permanent leadership at the top of the account — re-confirm priorities for the term and anchor the executive relationship.", "tags": ["Leadership"] },
-    { "date": "2024-12", "title": "SCDSS launches real-time SNAP status notifications; AWS contact-center modernization lifts timeliness to 95%+", "impact": "Benefits citizen-experience and contact-center modernization is active — an infrastructure and integration surface tied to high transaction volume.", "tags": ["Benefits", "Citizen Experience"] },
-    { "date": "2024-10", "title": "Court recognizes Michelle H. progress; SCDSS exits jurisdiction on several child-welfare measures", "impact": "Child-welfare reform advancing but ongoing — sustained demand for case-management data integrity (CAPSS), tooling, and analytics.", "tags": ["Child Welfare", "Data"] }
+    { "date": "2025-05", "title": "SC Senate confirms Tony Catone as SCDSS Director", "impact": "Stable, permanent leadership at the top of the account — re-confirm priorities for the term and anchor the executive relationship.", "tags": ["Leadership"] }
   ],
 
   "dellActions": [
@@ -77,6 +78,9 @@
     { "label": "S.C. Governor — McMaster appoints Tony Catone as SCDSS Director", "url": "https://governor.sc.gov/news/2025-03/governor-henry-mcmaster-appoints-tony-catone-next-director-sc-department-social" },
     { "label": "WIS-TV — DSS seeks funding for SC childcare, foster care improvements (FY2027)", "url": "https://www.wistv.com/2025/12/18/dss-seeks-funding-sc-childcare-foster-care-improvements/" },
     { "label": "WLTX — SC DSS requests budget funds to upgrade SNAP processing system", "url": "https://www.wltx.com/article/news/local/sc-dss-replace-old-food-stamp-computer-system/101-f1b6fe7f-52e8-43a1-a401-de509b3cf82d" },
+    { "label": "S.C. Governor — SC joins 'A Home for Every Child' (May 5, 2026)", "url": "https://governor.sc.gov/news/2026-05/gov-mcmaster-announces-south-carolinas-participation-home-every-child" },
+    { "label": "SCDSS — Strengthens fraud-prevention measures to protect SNAP recipients (Apr 2026)", "url": "https://dss.sc.gov/news/south-carolina-dss-strengthens-fraud-prevention-measures-to-protect-snap-recipients/" },
+    { "label": "SCDSS — New federal SNAP work requirements take effect in South Carolina (Feb 2026)", "url": "https://dss.sc.gov/news/new-federal-snap-work-requirements-take-effect-in-south-carolina/" },
     { "label": "AWS Public Sector Blog — How SC DSS modernized 19 contact centers with Amazon Connect", "url": "https://aws.amazon.com/blogs/publicsector/how-south-carolina-dss-modernized-19-contact-centers-to-improve-benefits-delivery-with-amazon-connect/" },
     { "label": "SCDSS — Child Welfare Transformation (Michelle H.)", "url": "https://dss.sc.gov/child-welfare-transformation/" },
     { "label": "SCDSS — Michelle H. Final Settlement Update (Oct 30, 2024)", "url": "https://dss.sc.gov/news/michelle-h-final-settlement-update-october-30-2024/" },

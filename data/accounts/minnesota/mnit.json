@@ -5,7 +5,7 @@
   "name": "Minnesota IT Services (MNIT)",
   "slug": "mnit",
   "hq": "St. Paul, MN",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Minnesota's consolidated executive-branch IT agency: MNIT builds, secures, and operates technology for the state's 70+ agencies, boards, and commissions, and runs enterprise security, networking, and shared services on a chargeback model.",
 
   "snapshot": [
@@ -35,7 +35,8 @@
     { "name": "Secure generative AI for state employees", "summary": "MNIT has stood up secure GenAI capability for the executive branch — including support for Microsoft 365 Copilot Chat in the government environment (rolled out from April 2025) and pilots of a secure AI platform (nebulaONE) for RAG, custom chatbots, and agents. No-cost responsible-AI training (via InnovateUS) has reached 1,000+ state employees. AI governance is anchored in MNIT's public AI security standard. Position infrastructure, GPU/compute, and data-platform capabilities behind responsible-AI adoption.", "tags": ["AI", "Modernization"] },
     { "name": "Whole-of-State cybersecurity", "summary": "MNIT, with the Minnesota Cybersecurity Task Force, runs the Whole-of-State Cybersecurity Plan distributing federal SLCGP plus state funding (initially ~$23.5M) to local governments, Tribal Nations, and schools, with most funding passed through to locals. MNIT's Security Operations Center and Threat & Vulnerability Management Unit deliver subsidized shared services. A statewide security buying center that reaches beyond state agencies into county/city/K-12.", "tags": ["Cybersecurity", "Whole-of-State"] },
     { "name": "Infrastructure & end-user refresh", "summary": "Recurring SAN/LAN/WAN, server, and desktop/laptop refresh funded via Master Lease (~$15M FY26 / ~$13M FY27 reported). A direct line for ISG (storage, server, networking) and CSG (client devices) into a consolidated, single-buyer environment.", "tags": ["Infrastructure", "Refresh"] },
-    { "name": "Enterprise modernization & Technology Modernization Fund", "summary": "MNIT has used the Technology Modernization Fund (TMF) to fund cross-agency modernization and digital-service projects; in 2026 the TMF shifts from accepting new proposals to delivering value from funded investments. Map active modernization projects to where infrastructure and platform refresh follow.", "tags": ["Modernization", "Digital Services"] }
+    { "name": "Enterprise modernization & Technology Modernization Fund", "summary": "MNIT has used the Technology Modernization Fund (TMF) to fund cross-agency modernization and digital-service projects; in 2026 the TMF shifts from accepting new proposals to delivering value from funded investments. Map active modernization projects to where infrastructure and platform refresh follow.", "tags": ["Modernization", "Digital Services"] },
+    { "name": "LoginMN statewide identity & access management", "summary": "MNIT is rolling out LoginMN, a login.gov-inspired constituent identity, identity-proofing, and MFA platform governed by a new Constituent Identity and Access Management Standard. Legislatively funded and tied to the state's anti-fraud push, with a reported July 1, 2027 mandate for all state digital services that collect the public's private data to move onto the platform. A statewide identity and fraud-prevention layer that Dell security and infrastructure conversations should align to.", "tags": ["Cybersecurity", "Digital Services"] }
   ],
 
   "procurement": {
@@ -48,14 +49,17 @@
   },
 
   "powerStructure": [
-    { "name": "Jon Eichten", "title": "Commissioner & State CIO, MNIT", "note": "Appointed permanent commissioner/State CIO on March 16, 2026, after serving as interim; a 14-year MNIT veteran and former deputy commissioner. The top relationship for the statewide motion." },
-    { "name": "John Israel", "title": "CISO & Assistant Commissioner, MNIT", "note": "State Chief Information Security Officer; leads executive-branch cybersecurity and the Minnesota Cybersecurity Task Force. Owns the security buying center, including Whole-of-State." },
+    { "name": "Jon Eichten", "title": "Commissioner & State CIO, MNIT", "note": "Appointed permanent commissioner/State CIO in March 2026 after serving as interim; a MNIT veteran (joined 2012) and former deputy commissioner. Confirmed current per MNIT leadership page (June 2026). The top relationship for the statewide motion." },
+    { "name": "Brandon Hirsch", "title": "Deputy Commissioner, MNIT", "note": "Oversees MNIT business operations — finance, procurement, HR, communications, and government relations — and leads MNIT's engagement with the Technology Advisory Council, Cybersecurity Task Force, Geospatial Advisory Council, and the Legislature. A key contact for procurement and enterprise-business decisions." },
+    { "name": "John Israel", "title": "Assistant Commissioner & CISO, MNIT", "note": "State Chief Information Security Officer; leads executive-branch cybersecurity and the Minnesota Cybersecurity Task Force. Owns the security buying center, including Whole-of-State. Confirmed current per MNIT leadership page (June 2026)." },
     { "name": "Jen VanDemmeltraadt", "title": "Deputy CISO", "note": "Supports statewide security operations and strategy under the CISO — a working-level security contact." },
     { "name": "Office of State Procurement (Dept. of Administration)", "title": "Statewide IT contracting", "note": "Owns master contracts and NASPO ValuePoint participating addenda — the contractual path onto state and cooperative vehicles." },
     { "name": "Minnesota Cybersecurity Task Force / Legislative Commission on Cybersecurity", "title": "Cyber strategy & oversight", "note": "Shapes Whole-of-State priorities and cyber funding decisions across state and local government." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "$75M human-services technology overhaul runs through MNIT; new Advisory Council seated", "impact": "The 2026 Legislature funded a multi-agency human-services modernization with MNIT building a statewide integration layer (the state's 'digital plumbing') alongside DCYF and DHS, and hosting the newly created Human Services Modernization Advisory Council (with formal county and Tribal roles). A large, funded program spanning identity, payments, data exchange, and security — infrastructure and platform refresh should follow.", "tags": ["Modernization", "Digital Services"] },
+    { "date": "2026-06", "title": "MNIT retires VMware and consolidates data centers as cloud migration passes halfway", "impact": "MNIT reports more than half of targeted workloads migrated to cloud, with VMware slated for retirement (reported ~mid-2026) and Enterprise Data Center 4 decommissioning by 2027 — a live virtualization transition and data-center consolidation with direct server, storage, and migration implications for ISG.", "tags": ["Infrastructure", "Cloud", "Modernization"] },
     { "date": "2026-03", "title": "Jon Eichten named permanent MNIT Commissioner & State CIO", "impact": "Stable, internally-promoted leadership at the top of the statewide IT motion, succeeding Tarek Tomes (now at the University of Minnesota). Rebuild/confirm the top relationship.", "tags": ["Leadership"] },
     { "date": "2025-04", "title": "MNIT launches secure GenAI support (Copilot Chat in M365 Gov)", "impact": "GenAI for state employees moves from pilot to supported capability — opens conversations on AI-ready infrastructure, compute, and data platforms.", "tags": ["AI"] },
     { "date": "2025-09", "title": "MNIT CISO John Israel confirmed permanent; active Whole-of-State cyber posture", "impact": "Settled security leadership and an active statewide cyber program that reaches county, city, and K-12 buyers via grant pass-through.", "tags": ["Cybersecurity", "Leadership"] }
@@ -73,6 +77,9 @@
     { "label": "MNIT — Governor Walz appoints Jon Eichten as Commissioner & State CIO", "url": "https://mn.gov/mnit/media/blog/?id=38-732208" },
     { "label": "GovTech — Minnesota elevates interim CIO Jon Eichten to permanent", "url": "https://www.govtech.com/workforce/minnesota-elevates-interim-cio-jon-eichten-to-permanent" },
     { "label": "MNIT — John Israel, CISO leadership profile", "url": "https://mn.gov/mnit/about-mnit/leadership/john-israel.jsp" },
+    { "label": "MNIT — Executive Leadership Team (Eichten, Hirsch, Israel; verified June 2026)", "url": "https://mn.gov/mnit/about-mnit/leadership/" },
+    { "label": "MN DCYF — Building a more connected human services system ($75M; MNIT integration layer & Advisory Council)", "url": "https://dcyf.mn.gov/news/building-more-connected-human-services-system-minnesotans" },
+    { "label": "MNIT — LoginMN statewide identity & access management", "url": "https://mn.gov/mnit/government/services/exec/security/loginmn.jsp" },
     { "label": "MNIT — Secure Generative AI capability launch", "url": "https://mn.gov/mnit/media/blog/?id=38-677592" },
     { "label": "MNIT — Whole-of-State Cybersecurity Plan", "url": "https://mn.gov/mnit/about-mnit/security/whole-of-state-cybersecurity-plan/" },
     { "label": "MNIT — 2025 Annual Report", "url": "https://mn.gov/mnit/about-mnit/legislative-reports/2025-annual-report.jsp" },

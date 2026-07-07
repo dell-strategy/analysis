@@ -5,7 +5,7 @@
   "name": "Indiana Office of Technology (IOT)",
   "slug": "iot",
   "hq": "Indianapolis, IN",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Indiana's central IT agency: IOT runs enterprise infrastructure, cybersecurity, and data services for state government — funded almost entirely by chargebacks to the agencies it serves, while statewide IT buying flows through IDOA's Quantity Purchase Agreements.",
 
   "snapshot": [
@@ -32,7 +32,7 @@
   },
 
   "initiatives": [
-    { "name": "IN AI / human-centered AI adoption", "summary": "Gov. Braun announced 'IN AI' on April 28, 2026 — a statewide push to make Indiana an AI-ready state, executed largely through the Central Indiana Corporate Partnership (CICP) for business adoption. Inside government, IOT has run a Microsoft Copilot pilot to evaluate productivity and data-protection. AI is a stated priority but governance and tooling are still maturing.", "tags": ["AI", "Productivity"] },
+    { "name": "IN AI / human-centered AI adoption", "summary": "Gov. Braun announced 'IN AI' on April 28, 2026 — a statewide push to make Indiana an AI-ready state, executed largely through the Central Indiana Corporate Partnership (CICP) for business adoption. Inside government, IOT ran an eight-week Microsoft Copilot pilot in fall 2025 and has since moved past piloting: it now offers Copilot Chat to all state staff who complete required training, with full M365 Copilot licenses expanding as the new fiscal year begins (July 2026). CIO Lenard has stressed training — including for cabinet secretaries — and cautioned that AI output 'can't be taken verbatim.' Governance is coordinated with the Chief Data Officer, but tooling and policy are still maturing.", "tags": ["AI", "Productivity"] },
     { "name": "Cybersecurity & data protection", "summary": "IOT owns the state's enterprise security perimeter under a long-tenured CISO and coordinates broadly through the Indiana Executive Council on Cybersecurity (IECC). Security remains a steady, board-level priority across endpoint, network, identity, and data-protection — a durable buying center.", "tags": ["Cybersecurity", "Data"] },
     { "name": "Digital services & citizen experience", "summary": "A new Chief Digital Experience Officer (2026) is leading state digital-service strategy, including the in.gov homepage chatbot as an early citizen-engagement tool. Modernizing front-door digital services is an emerging track.", "tags": ["Digital", "Modernization"] },
     { "name": "LEAP district & data-center economy", "summary": "Indiana's LEAP Innovation and Research District (Lebanon) anchors a wave of hyperscale AI data-center investment — Meta broke ground on a $10B+ campus in Feb 2026. These are private builds, not IOT projects, but they signal the state's AI-infrastructure direction and power/utility planning.", "tags": ["Data Center", "AI"] }
@@ -56,6 +56,7 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "IOT scales Microsoft Copilot statewide — Copilot Chat to all trained staff, full M365 licenses expanding as FY2027 begins", "impact": "IOT moves from a fall-2025 pilot to enterprise GenAI deployment; a live productivity/AI buying center with training, governance, and data-protection needs — position AI-ready infrastructure and secure-adoption support around it.", "tags": ["AI", "Productivity"] },
     { "date": "2026-04", "title": "Gov. Braun announces 'IN AI' to make Indiana an AI-ready state", "impact": "Statewide AI priority (business adoption via CICP) raises executive air-cover for AI; align infrastructure and productivity plays to the agenda.", "tags": ["AI"] },
     { "date": "2026-02", "title": "Meta breaks ground on $10B+ AI data-center campus at LEAP district, Lebanon", "impact": "Signals Indiana's AI-infrastructure trajectory and power/utility planning; private build, but reinforces the state's data-center economy narrative.", "tags": ["Data Center"] },
     { "date": "2026-01", "title": "New IOT leadership seats filled (CRDO, CDEO) under CIO Lenard", "impact": "Fresh leadership in relationship/delivery and digital experience — re-map the buying center and rebuild relationships early.", "tags": ["Leadership"] },
@@ -76,6 +77,7 @@
     { "label": "CIO.com — 3 perspectives on the state CIO role (Warren Lenard / IOT budget & funding)", "url": "https://www.cio.com/article/4081959/3-perspectives-on-the-state-cio-role.html" },
     { "label": "IDOA — Quantity Purchase Agreements (QPAs)", "url": "https://www.in.gov/idoa/procurement/quantity-purchase-agreements-qpas/" },
     { "label": "IEDC — Gov. Braun Announces IN AI (Apr 28, 2026)", "url": "https://iedc.in.gov/events/news/details/2026/04/28/governor-braun-announces-in-ai-to-grow-jobs-and-wages-through-human-centered-ai" },
+    { "label": "GovTech — Indiana Rolls Out GenAI for All State Staff and Leadership (Apr 2026)", "url": "https://www.govtech.com/artificial-intelligence/indiana-rolls-out-genai-for-all-state-staff-and-leadership" },
     { "label": "IEDC — Gov. Braun Breaks Ground on $10B Meta Data Center Campus at LEAP District (Feb 2026)", "url": "https://iedc.in.gov/events/news/details/2026/02/11/gov.-braun-breaks-ground-on-10b-meta-data-center-campus-at-leap-district" },
     { "label": "Indiana Capital Chronicle — Indiana agencies cut staff, contracts (Sep 2025)", "url": "https://indianacapitalchronicle.com/2025/09/22/indiana-agencies-cut-staff-contracts-as-mandatory-spending-plans-roll-in/" },
     { "label": "Indiana SBA — 2025–2027 As-Passed Budget", "url": "https://www.in.gov/sba/budget-information/budget-data/2025-2027-budget/2025-2027-as-passed-budget/" }

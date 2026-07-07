@@ -5,7 +5,7 @@
   "stateName": "Nevada",
   "type": "State Agency",
   "hq": "Carson City, NV",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Nevada's internal-services backbone: the Department of Administration runs the State Purchasing Division — the central buying authority and statewide-contract program most executive-branch agencies use — while statewide IT strategy now sits in the separate Governor's Technology Office.",
 
   "snapshot": [
@@ -35,7 +35,7 @@
     { "name": "GovRAMP cloud-security mandate", "summary": "Nevada has adopted GovRAMP as its statewide cloud third-party risk and authorization program, aligned to NIST 800-53 Rev. 5. Public reporting points to a July 2026 effective point after which new executive-branch cloud contracts require demonstrated progress on the GovRAMP path. Owned by the GTO/CIO, but a direct gate on anything cloud sold through Purchasing — clear it early.", "tags": ["Cloud", "Compliance", "Cybersecurity"] },
     { "name": "EITS → Governor's Technology Office consolidation", "summary": "The former DoA-housed EITS division transitioned in 2023 into the cabinet-level Governor's Technology Office. Statewide IT strategy, the enterprise service desk, and security now sit with the GTO/CIO, while the DoA keeps central purchasing. Map both buying centers and confirm which one owns a given program before forecasting.", "tags": ["Modernization", "Org change"] },
     { "name": "Cyber resilience & zero trust", "summary": "Following a publicly reported ransomware incident, state IT leadership has emphasized zero-trust architecture, identity and access management as the 'new firewall,' and security-by-verification. Infrastructure refresh, endpoint, and identity modernization are live themes — largely GTO-led but procured through statewide vehicles.", "tags": ["Cybersecurity", "Zero Trust"] },
-    { "name": "Responsible AI for digital services", "summary": "State IT leadership has signaled it is exploring AI to improve digital services for residents. Specifics are early-stage and not yet pinned to named programs; treat as a watch item rather than a funded buy, and hedge any AI-infrastructure framing accordingly.", "tags": ["AI", "Digital services"] }
+    { "name": "Responsible-AI policy update ('Human at the Helm')", "summary": "The GTO is revising Nevada's 2024 executive-branch AI policy through a draft update dubbed 'Human at the Helm,' developed via the AI & Emerging Technologies Working Group and the State Technology Governance Committee. A second public State AI Roundtable is set for July 7, 2026 to shape the draft before formal approval; scope includes agentic AI, data handling, public records, disclosure, security, procurement, and human accountability. Still a draft policy, not a funded buy — hedge any AI-infrastructure framing, but note AI governance (not just infrastructure) is now the near-term action.", "tags": ["AI", "Governance", "Digital services"] }
   ],
 
   "procurement": {
@@ -52,12 +52,15 @@
     { "name": "William Taylor", "title": "Administrator, State Purchasing Division", "note": "Appointed April 2025. Runs central procurement and the statewide-contract program — the most direct buying-center relationship for vehicle access." },
     { "name": "Timothy Galluzi", "title": "State CIO, Governor's Technology Office", "note": "Cabinet-level since the 2023 GTO elevation; sponsor of the GovRAMP mandate and statewide IT strategy. Lives outside the DoA but owns the IT direction Purchasing buys against." },
     { "name": "Michael D. Smith", "title": "State CTO, Governor's Technology Office", "note": "Named CTO May 2026; career Nevada IT leader (former EITS/enterprise architecture). Operations- and field-delivery focused — a key technical relationship for the statewide motion." },
-    { "name": "Bertrum Carroll", "title": "State CISO, Office of Information Security (GTO)", "note": "Leads statewide cybersecurity, enterprise risk, and the security standards behind GovRAMP — the owner to engage on any security or cloud-compliance play." }
+    { "name": "Bertrum Carroll", "title": "State CISO, Office of Information Security & Cyber Defense (GTO)", "note": "Named March 2026; retired Army lieutenant colonel with 20+ years in private-sector security. Leads the OISCD (stood up July 2025), statewide cyber risk, incident response, the SOC build-out, and the security standards behind GovRAMP — the owner to engage on any security or cloud-compliance play." },
+    { "name": "Jason Benshoof", "title": "State Chief Data Officer, Governor's Technology Office", "note": "Appointed 2024. Owns statewide data governance and led the new four-tier statewide data-classification policy (effective Feb 2026); a key relationship as data classification and AI governance shape what agencies can store in cloud." }
   ],
 
   "news": [
-    { "date": "2026-05", "title": "Michael D. Smith named Nevada State CTO (Governor's Technology Office)", "impact": "New technical leadership emphasizing operational delivery and field outcomes — refresh the GTO technical relationship map.", "tags": ["Leadership"] },
-    { "date": "2026-03", "title": "Nevada mandates GovRAMP for executive-branch cloud cybersecurity", "impact": "Cloud / as-a-service offerings must show GovRAMP (NIST 800-53 Rev. 5) progress to stay sellable — a gate to clear before the July 2026 effective point.", "tags": ["Cloud", "Compliance"] },
+    { "date": "2026-06", "title": "GTO opens draft executive-branch AI policy ('Human at the Helm') ahead of July 7 roundtable", "impact": "Nevada is updating its 2024 AI policy with rules for agentic AI, disclosure, data handling, security, and procurement — shaping how AI is bought and used across agencies. Governance, not infrastructure, is the near-term action; keep AI messaging exploratory but engage the policy process.", "tags": ["AI", "Governance"] },
+    { "date": "2026-06", "title": "GovRAMP cloud-security mandate reaches its July 1, 2026 effective date", "impact": "The 'verify once, use many' cloud gate goes live — new executive-branch cloud/as-a-service contracts now require GovRAMP (NIST 800-53 Rev. 5) progress. Confirm Dell cloud offerings are on the GovRAMP path before pursuing statewide cloud buys.", "tags": ["Cloud", "Compliance"] },
+    { "date": "2026-05", "title": "Michael D. Smith named Nevada State CTO (Governor's Technology Office)", "impact": "New technical leadership (announced May 25, 2026) emphasizing operational delivery, ITIL-based service, and field outcomes — refresh the GTO technical relationship map.", "tags": ["Leadership"] },
+    { "date": "2026-03", "title": "Nevada mandates GovRAMP for executive-branch cloud cybersecurity", "impact": "Cloud / as-a-service offerings must show GovRAMP (NIST 800-53 Rev. 5) progress to stay sellable — a gate to clear before the July 1, 2026 effective point.", "tags": ["Cloud", "Compliance"] },
     { "date": "2025-04", "title": "William Taylor appointed Administrator, State Purchasing Division", "impact": "New owner of central procurement and statewide contracts — the key buying-center relationship to (re)build.", "tags": ["Leadership", "Procurement"] },
     { "date": "2024-07", "title": "Joy Grimmer appointed Director of the Department of Administration", "impact": "Stable department leadership over the procurement and internal-services portfolio.", "tags": ["Leadership"] }
   ],
@@ -78,6 +81,10 @@
     { "label": "GovTech — Nevada Names Michael D. Smith Its Chief Technology Officer", "url": "https://www.govtech.com/workforce/nevada-names-michael-d-smith-its-chief-technology-officer" },
     { "label": "GovRAMP — Nevada Partners with GovRAMP to Standardize Cloud Security", "url": "https://govramp.org/blog/nevada-partners-with-govramp-to-standardize-cloud-security-across/" },
     { "label": "Nevada it.nv.gov — Nevada Mandates GovRAMP (press release)", "url": "https://www.it.nv.gov/press-releases/nevada-mandates-govramp-a-new-era-of-standardized-streamlined-cloud-cybersecurity-for-the-silver-state/" },
-    { "label": "Nevada Independent — What's in the 5 Nevada budget bills of the 2025 session", "url": "https://thenevadaindependent.com/article/whats-in-the-5-nevada-budget-bills-of-the-2025-legislative-session" }
+    { "label": "Nevada Independent — What's in the 5 Nevada budget bills of the 2025 session", "url": "https://thenevadaindependent.com/article/whats-in-the-5-nevada-budget-bills-of-the-2025-legislative-session" },
+    { "label": "Nevada GTO — State AI Roundtable II: 'Human at the Helm'", "url": "https://www.it.nv.gov/events/state-ai-roundtable2/" },
+    { "label": "GovRAMP — Nevada requirements effective July 1, 2026 ('verify once, use many')", "url": "https://govramp.org/blog/nevada-partners-with-govramp-to-standardize-cloud-security-across/" },
+    { "label": "GovTech — Nevada Names Bertrum Carroll as State CISO", "url": "https://www.govtech.com/security/nevada-names-bertrum-carroll-as-state-ciso" },
+    { "label": "StateScoop — Nevada unveils policy for consistent statewide data classification", "url": "https://statescoop.com/nevada-policy-consistent-statewide-data-classification/" }
   ]
 }

@@ -5,7 +5,7 @@
   "name": "Virginia — Secretary of Administration / VITA",
   "slug": "vita",
   "hq": "Richmond, VA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Virginia's central IT and technology-procurement authority: VITA runs the enterprise infrastructure, statewide IT contracts, and security program for the executive branch under the Secretary of Administration, and pioneered the state's multisourcing delivery model.",
 
   "snapshot": [
@@ -56,6 +56,7 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "VITA selects CAI for statewide local-government cybersecurity SOC vehicle", "impact": "Following a competitive RFP, VITA awarded CAI a statewide contract (announced June 24, 2026) creating a pre-qualified procurement vehicle through which Virginia localities, public bodies, and eligible institutions can buy 24/7 SOC services — threat monitoring, incident response, and MDR (CAI is teaming with the LMNTRIX platform and a Virginia DBE partner). Extends VITA's central-sourcing model down to local government and signals demand for scalable managed-security and infrastructure to underpin it; no dollar figure was disclosed.", "tags": ["Cybersecurity", "Procurement"] },
     { "date": "2026-04", "title": "Gov. Spanberger names Mike Watson Commonwealth CIO and VITA head", "impact": "Stable, security-rooted leadership at the top of the statewide motion, with a stated mandate covering cloud, AI, and digital modernization. Build the top relationship around that agenda.", "tags": ["Leadership"] },
     { "date": "2026-05", "title": "Spanberger reiterates data-center stance: 'pay their fair share,' honor signed contracts", "impact": "Signals a state posture that supports continued data-center activity while pressing on cost and accountability — track for downstream AI-infrastructure demand and policy constraints.", "tags": ["Data Center", "Policy"] },
     { "date": "2026-01", "title": "Spanberger administration takes office; Traci DeShazor confirmed as Secretary of Administration", "impact": "New cabinet leadership over the secretariat VITA reports into — re-confirm priorities and decision rights for the administrative/IT portfolio.", "tags": ["Leadership"] }
@@ -75,6 +76,7 @@
     { "label": "Virginia IT Agency — Procurement", "url": "https://www.vita.virginia.gov/procurement/" },
     { "label": "StateScoop — Virginia promotes Mike Watson to state CIO", "url": "https://statescoop.com/mike-watson-named-virginia-cio/" },
     { "label": "Governor of Virginia — Cabinet (Secretary of Administration)", "url": "https://www.governor.virginia.gov/cabinet/" },
-    { "label": "Cardinal News — Spanberger on data centers (May 2026)", "url": "https://cardinalnews.org/2026/05/28/spanberger-on-data-centers-im-not-going-to-break-a-contract-the-state-has-signed/" }
+    { "label": "Cardinal News — Spanberger on data centers (May 2026)", "url": "https://cardinalnews.org/2026/05/28/spanberger-on-data-centers-im-not-going-to-break-a-contract-the-state-has-signed/" },
+    { "label": "GlobeNewswire — VITA selects CAI for statewide local-government cybersecurity SOC (June 2026)", "url": "https://www.globenewswire.com/news-release/2026/06/24/3316908/0/en/virginia-information-technologies-agency-selects-cai-to-deliver-statewide-cybersecurity-services-to-local-governments.html" }
   ]
 }

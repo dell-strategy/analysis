@@ -5,24 +5,24 @@
   "name": "Philadelphia, Pennsylvania",
   "slug": "philadelphia",
   "hq": "Philadelphia, PA",
-  "updated": "2026-06-22",
-  "tagline": "The 6th-largest U.S. city — ~1.55M residents, a ~$6.8B FY2026 General Fund budget. Enterprise IT direction sits with the Office of Innovation & Technology (OIT) under the Parker administration; buying runs through the City's Procurement Department and cooperative contracts.",
+  "updated": "2026-06-30",
+  "tagline": "The 6th-largest U.S. city — ~1.55M residents, a ~$7.1B FY2027 operating budget adopted in June 2026. Enterprise IT direction sits with the Office of Innovation & Technology (OIT) under the Parker administration; buying runs through the City's Procurement Department and cooperative contracts.",
 
   "snapshot": [
     { "label": "Residents", "value": "~1.55M (6th-largest U.S. city)" },
-    { "label": "FY2026 City budget", "value": "~$6.8B General Fund (adopted)" },
-    { "label": "OIT FY2026 budget", "value": "~$160M proposed (General Fund)" },
+    { "label": "FY2027 City budget", "value": "~$7.1B operating (adopted June 2026)" },
+    { "label": "OIT FY2027 budget", "value": "~$158.7M proposed (General Fund)" },
     { "label": "Buying gate", "value": "Procurement Dept + cooperative contracts" }
   ],
 
   "overview": "Philadelphia is the sixth-largest city in the United States — roughly 1.55 million residents — governed by a strong-mayor system under Mayor Cherelle L. Parker and a 17-member City Council. Enterprise technology direction lives with the Office of Innovation & Technology (OIT), the City's central IT agency: it sets the citywide technology strategy, runs shared infrastructure and networks, delivers cybersecurity, and manages major technology projects for City departments. OIT is led by a Chief Information Officer who reports into the Parker administration, with a Chief Information Security Officer, Chief Data Officer, and several deputy CIOs underneath. The City is best understood as a centralized-but-departmental buyer: OIT owns enterprise infrastructure, security, and platforms, while large operational departments (Police, Fire, Revenue, Licenses & Inspections, the Water Department) carry their own systems and modernization needs. Procurement is gated centrally — competitively bid supplies and services run through the City's Procurement Department and the PHLContracts portal, with cooperative ('piggyback') contracts available to speed sourcing. For a Dell SLG seller, this is one of the largest single municipal opportunities in the Mid-Atlantic; the entry point is OIT's enterprise programs plus the Procurement Department's vehicles, not a single discretionary IT wallet.",
 
   "budget": {
-    "intro": "Philadelphia's FY2026 'One Philly 2.0' budget was approved by City Council on June 12, 2025, with adopted General Fund expenditures of roughly $6.8B (about $6.84B), built around five pillars: public safety, clean & green, economic opportunity, housing, and education. OIT's own FY2026 General Fund budget was proposed at roughly $160M, with the year-over-year increase driven primarily by expanding cybersecurity capabilities. IT spend beyond OIT is distributed across departments rather than concentrated in one line.",
+    "intro": "Philadelphia's FY2027 budget — Mayor Parker's ~$6.97B 'One Philly, One Future' proposal, adopted by City Council as a ~$7.1B operating budget in June 2026 — carries forward the administration's priorities of public safety, clean & green, housing (the H.O.M.E. Initiative), economic opportunity, and education. Council rejected Parker's proposed ride-share, hotel/short-term-rental, and retail-delivery taxes, redirecting funds to close a School District shortfall instead. OIT's own FY2027 General Fund budget was proposed at roughly $158.7M — a small (~$2M) decrease from FY2026 as one-time FY26 costs rolled off — with ~$100M in Class 200 (contracts/services) that funds enterprise-wide IT, cybersecurity, and the City's public safety radio system. IT spend beyond OIT is distributed across departments rather than concentrated in one line.",
     "stats": [
-      { "value": "~$6.8B", "label": "FY2026 General Fund (adopted)", "note": "'One Philly 2.0' budget; approved June 12, 2025" },
-      { "value": "~$160M", "label": "OIT FY2026 budget (proposed)", "note": "~$160.1M General Fund per FY26 budget testimony" },
-      { "value": "cyber", "label": "Top OIT cost driver", "note": "FY26 increase attributed largely to expanding cybersecurity" }
+      { "value": "~$7.1B", "label": "FY2027 operating budget (adopted)", "note": "'One Philly, One Future'; approved by Council June 2026" },
+      { "value": "~$158.7M", "label": "OIT FY2027 budget (proposed)", "note": "~$158.67M General Fund per FY27 testimony; slight decrease as one-time FY26 costs rolled off" },
+      { "value": "~$100M", "label": "OIT Class 200 (services)", "note": "Up ~$6.1M over FY26; funds enterprise IT, cybersecurity, public-safety radio" }
     ],
     "notes": [
       "OIT's Class 200 (contracts/services) funds enterprise-wide IT — infrastructure, network, cybersecurity, productivity platforms, mobile and telecom, software engineering and licensing, and data/geodata platforms — the lines most relevant to infrastructure and software sellers.",
@@ -32,7 +32,7 @@
   },
 
   "initiatives": [
-    { "name": "Citywide AI guidelines & responsible use", "summary": "The City is developing AI-use guidelines for employees, with OIT working alongside the Law Department, HR, and the Chief Administrative Officer. City Council held its first hearing on government AI use in October 2025, with guidelines promised in 2026 — early signal for AI-governance, data-platform, and AI-infrastructure conversations.", "tags": ["AI", "Governance"] },
+    { "name": "Citywide AI guidelines & responsible use", "summary": "The City is developing AI-use guidelines for employees, with OIT working alongside the Law Department, HR, and the Chief Administrative Officer, plus a promised cross-departmental AI governance committee. Officials targeted a framework for late-winter/early-spring 2026, but as of mid-2026 no formal guidelines had been publicly released — while operational AI use expands (SEPTA/city AI-camera transit-lane enforcement went live with fines in spring 2026; machine learning triages 311 requests). An active AI-governance, data-platform, and AI-infrastructure opening.", "tags": ["AI", "Governance"] },
     { "name": "Cybersecurity expansion", "summary": "Expanding cybersecurity capability is the stated driver of OIT's FY2026 budget increase. The CISO owns citywide security strategy across networks, programs, and infrastructure — a funded, executive-priority entry point for security and resilience plays.", "tags": ["Cybersecurity"] },
     { "name": "Digital platform modernization & secure SSO", "summary": "OIT modernized phila.gov and is re-platforming to expand login.phila.gov for secure resident Single Sign-On (SSO), advance mobile development, and meet new digital-accessibility standards taking effect in April 2026 — a modernization and infrastructure-refresh track.", "tags": ["Modernization", "Cloud"] },
     { "name": "Digital equity (DigitalEquityPHL / PHLConnectED)", "summary": "Backed by an $11.9M federal NTIA Digital Equity award (Jan 2025), the City is funding free/low-cost internet and devices, digital-skills training, Digital Navigators, and a network of eSports & Digital Access Centers in parks and rec facilities — device, connectivity, and endpoint demand at community scale.", "tags": ["Digital Equity", "Endpoints"] }
@@ -52,15 +52,16 @@
     { "name": "Melissa A. Scott", "title": "Chief Information Officer (CIO), OIT", "note": "Appointed CIO by Mayor Parker in April 2024; a longtime City technologist (Revenue, L&I, OIT) with a software-development background. The top enterprise-IT relationship. A 2024 OIT restructuring eliminated several senior roles — verify current org chart before mapping." },
     { "name": "Damian Oravez", "title": "Chief Information Security Officer (CISO), OIT", "note": "Leads citywide information-security strategy and governance — the security buying-center owner, aligned to the FY2026 cybersecurity-expansion priority." },
     { "name": "Tim Haynes", "title": "Chief Data Officer / Geographic Information Officer, OIT", "note": "Owns citywide data and geospatial platforms — the relationship for data-platform, analytics, and AI-readiness conversations." },
-    { "name": "Richard Hertz", "title": "Deputy CIO & Chief Technology Officer, OIT", "note": "Oversees technology/infrastructure direction — a key buying-center contact for infrastructure refresh and platform modernization. Confirm current title before engagement." },
+    { "name": "Richard Hertz", "title": "Deputy CIO & Chief Technology Officer, OIT", "note": "Confirmed on OIT's leadership roster (June 2026). Oversees technology/infrastructure direction — a key buying-center contact for infrastructure refresh and platform modernization." },
     { "name": "Cherelle L. Parker", "title": "Mayor of Philadelphia", "note": "Strong-mayor executive; OIT reports up through her administration and 'One Philly 2.0' frames the budget priorities. The executive context for any enterprise-scale program." }
   ],
 
   "news": [
-    { "date": "2025-06", "title": "City Council approves ~$6.8B FY2026 'One Philly 2.0' budget", "impact": "Sets the spending envelope; OIT's increase is tied largely to cybersecurity — lead security and modernization where funded.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "City Council adopts ~$7.1B FY2027 operating budget ('One Philly, One Future')", "impact": "Sets the new spending envelope; Council rejected Parker's ride-share, hotel/STR, and delivery taxes and redirected funds to schools. Refresh the budget baseline and confirm which department owns any FY27-funded requirement.", "tags": ["Budget"] },
+    { "date": "2026-04", "title": "City AI guidelines still pending as AI-camera transit-lane enforcement expands", "impact": "Operational AI use is scaling (SEPTA/city camera enforcement, ML-triaged 311) while a promised employee-use framework and governance committee remain unreleased — a live opening for AI-governance, data-platform, and AI-infrastructure conversations.", "tags": ["AI"] },
+    { "date": "2026-03", "title": "OIT FY2027 budget proposed at ~$158.7M; ~$100M Class 200 funds cyber & enterprise IT", "impact": "OIT's budget dips slightly as one-time FY26 costs roll off, but Class 200 services rise ~$6.1M and continue funding cybersecurity, enterprise IT, and the public-safety radio system — keep the CISO and infrastructure buying centers in focus.", "tags": ["Budget", "Cybersecurity"] },
     { "date": "2025-10", "title": "City Council holds first hearing on government AI use; guidelines promised", "impact": "AI governance is now an active, public priority — an opening for AI-infrastructure, data-platform, and responsible-AI conversations.", "tags": ["AI"] },
     { "date": "2025-01", "title": "City awarded $11.9M federal NTIA Digital Equity grant", "impact": "Funds devices, connectivity, digital-skills training, and eSports/Digital Access Centers — community-scale endpoint and connectivity demand outside the General Fund.", "tags": ["Digital Equity"] },
-    { "date": "2025-03", "title": "OIT FY2026 budget testimony cites cybersecurity as primary cost driver", "impact": "Confirms security as the executive-sponsored growth area in OIT's budget — prioritize the CISO and security buying center.", "tags": ["Cybersecurity"] },
     { "date": "2024-04", "title": "Mayor Parker appoints Melissa Scott as CIO; OIT restructuring follows", "impact": "New enterprise-IT leadership with a subsequent senior-staff shakeup — rebuild and re-verify the OIT relationship map.", "tags": ["Leadership"] }
   ],
 
@@ -78,6 +79,11 @@
     { "label": "Mayor Parker Appoints CIO (Melissa Scott)", "url": "https://www.phila.gov/2024-04-01-mayor-parker-appoints-chief-information-officer-cio-to-lead-citys-technology-strategy/" },
     { "label": "City Approves $6.8B 'One Philly 2.0' FY26 Budget", "url": "https://www.phila.gov/2025-06-12-city-of-philadelphia-approves-6-8-billion-one-philly-2-0-fy26-budget/" },
     { "label": "OIT FY2026 Budget Testimony (City Council)", "url": "https://phlcouncil.com/wp-content/uploads/2025/03/FY26-Budget-Hearings-Testimony_OIT.pdf" },
+    { "label": "OIT FY2027 Budget Testimony (City Council)", "url": "https://phlcouncil.com/wp-content/uploads/2026/03/OIT-FY27-Proposed-Budget-Testimony.pdf" },
+    { "label": "Mayor Parker Unveils $6.97B FY2027 'One Philly, One Future' Budget", "url": "https://www.phila.gov/2026-03-12-mayor-parker-unveils-6-97-billion-one-philly-one-future-fiscal-year-2027-budget-five-year-plan-proposal/" },
+    { "label": "City Council Approves FY2027 Operating & Capital Budgets", "url": "https://phlcouncil.com/philadelphia-city-council-approved-the-fiscal-year-2027-operating-and-capital-budgets-on-thursday-june-11/" },
+    { "label": "Parker signs ~$7.1B FY2027 budget after rejecting tax proposals (WHYY)", "url": "https://whyy.org/articles/philadelphia-mayor-cherelle-parker-signs-7-1m-budget-into-law-following-city-council-approval/" },
+    { "label": "As Philadelphia AI enforcement expands, city transparency must too (Technical.ly)", "url": "https://technical.ly/civics/philadelphia-ai-governance-rules/" },
     { "label": "City Awarded $11.9M NTIA Digital Equity Grant", "url": "https://www.phila.gov/2025-01-10-city-of-philadelphia-approved-and-recommended-for-award-of-biden-harris-digital-equity-grant-for-11-9-million/" },
     { "label": "DigitalEquityPHL — Programs and initiatives", "url": "https://www.phila.gov/programs/digitalequityphl/" },
     { "label": "City Council holds first hearing on AI use (PhillyVoice)", "url": "https://www.phillyvoice.com/philadelphia-city-council-artificial-intelligence-hearing-guidelines/" },

@@ -5,7 +5,7 @@
   "name": "Fairfax County, Virginia",
   "slug": "fairfax-county-virginia",
   "hq": "Fairfax, VA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Virginia's largest county and a wealthy DC-suburb buyer of scale: ~1.15M residents, an $11B+ all-funds budget, and a well-regarded central IT shop (DIT) that consistently ranks at the top of the Digital Counties Survey.",
 
   "snapshot": [
@@ -18,21 +18,21 @@
   "overview": "Fairfax County is the most populous jurisdiction in Virginia (~1.15M residents) and one of the wealthiest large counties in the country, anchoring the Northern Virginia / DC suburbs. It runs a council-manager structure: an elected Board of Supervisors sets policy and a professional County Executive (Bryan Hill) runs day-to-day operations across roughly 50 departments and 200+ facilities. Technology is centralized in the Department of Information Technology (DIT), led by the CIO/DIT Director, which delivers enterprise IT, networks, applications, and cybersecurity for county government (and supports Fairfax County Public Schools on an as-needed basis). DIT is a mature, award-winning shop — Fairfax placed near the top of the Center for Digital Government's Digital Counties Survey in 2025 — making this a sophisticated buyer that values modernization, security, and measurable outcomes over net-new build. For a Dell SLG seller, Fairfax is a large, creditworthy local-government account with its own competitive procurement and active cooperative-contract usage, distinct from (but adjacent to) the Commonwealth's VITA-run state motion.",
 
   "budget": {
-    "intro": "Fairfax adopted its FY2026 budget at the May 13, 2025 Board of Supervisors meeting. The all-funds plan exceeds $11B, with roughly $5.7B in the General Fund; a large share of the General Fund transfers to the public schools (~$2.93B), so the directly addressable county-operations and IT spend is a subset of the headline figure.",
+    "intro": "The Board of Supervisors adopted the FY2027 budget on May 5, 2026 (effective July 1), with a General Fund of roughly $5.9B and — for the first time in years — a real estate tax-rate cut to $1.12 per $100 (down from $1.1225). Over $3B still transfers to Fairfax County Public Schools (nearly $120M more than FY2026), so the directly addressable county-operations and IT spend is a subset of the headline figure. The prior FY2026 all-funds plan exceeded $11B.",
     "stats": [
-      { "value": "$11B+", "label": "All-funds budget (FY2026)", "note": "Total across all county funds" },
-      { "value": "$5.7B", "label": "General Fund (FY2026)", "note": "~$2.93B of which transfers to FCPS schools" },
-      { "value": "+$5M", "label": "Technology Infrastructure Services (Fund 60030)", "note": "FY2026 increase for storage/compute, cloud expansion, and app modernization" }
+      { "value": "$5.9B", "label": "General Fund (FY2027)", "note": "Over $3B transfers to FCPS schools" },
+      { "value": "$1.12", "label": "Real estate tax rate (FY2027)", "note": "Quarter-cent cut from $1.1225; adopted 8-2 on May 5, 2026" },
+      { "value": "~$10M", "label": "DIT optimization target (Technology Infrastructure Services, Fund 60030)", "note": "ITPAC backed a further ~$5M for FY2027 (toward ~$10M total) for storage/compute, cloud, security, and app modernization" }
     ],
     "notes": [
-      "Real property tax rate set at $1.1225 per $100 of assessed value for FY2026; property taxes are the dominant revenue source.",
+      "Real property tax rate cut to $1.12 per $100 of assessed value for FY2027 (from $1.1225); property taxes remain the dominant revenue source, and rising assessments mean most homeowners still see higher bills.",
       "Many IT projects are funded through one-time balances and quarterly budget reviews rather than a single line — confirm funding source per opportunity.",
       "A large portion of the General Fund flows to Fairfax County Public Schools, a separate (large) IT buyer worth mapping alongside county DIT."
     ]
   },
 
   "initiatives": [
-    { "name": "IT architecture optimization & infrastructure refresh", "summary": "The FY2026 plan adds ~$5M to Technology Infrastructure Services to expand storage and compute, modernize applications, and continue infrastructure optimization across 50+ departments and 200+ facilities — a direct fit for server, storage, and refresh motions.", "tags": ["Data Center", "Modernization"] },
+    { "name": "DIT reorganization & IT architecture optimization", "summary": "Under new CIO Matt Harrison, DIT is undergoing a significant reorganization to become a more modern, agile, secure organization — including a new Chief Director of Innovation and a countywide data/AI/BI innovation team reporting to the CIO. ITPAC backed a further ~$5M (toward ~$10M) to expand storage/compute, modernize applications, and continue infrastructure optimization across 50+ departments and 200+ facilities — a direct fit for server, storage, and refresh motions.", "tags": ["Data Center", "Modernization"] },
     { "name": "Multi-cloud & cloud governance", "summary": "DIT is pursuing cloud expansion with stronger cloud governance as part of its adaptive technology strategy. Hybrid/multi-cloud and as-a-service offerings are in scope — position Dell infrastructure and managed services around governed cloud, not lift-and-shift.", "tags": ["Cloud", "Governance"] },
     { "name": "Cybersecurity modernization & AI-driven threat detection", "summary": "The Information Security Office is building an adaptive security strategy aligned to AI, IoT, and multi-cloud — upgrading security infrastructure, deploying AI-assisted threat detection, and automating operations. Fairfax's security program is nationally recognized and a priority spend area.", "tags": ["Cybersecurity", "AI"] },
     { "name": "AI adoption & responsible-use governance", "summary": "County leadership is moving on generative AI — countywide responsible-use training/security guidance plus a regional AI Economy Action Plan (estimated $0.5M–$1.5M with the NoVA Regional Commission). AI is both an internal operations lever (Hill has cited workforce/vacancy pressure) and an economic-development theme.", "tags": ["AI", "Workforce"] }
@@ -50,16 +50,18 @@
 
   "powerStructure": [
     { "name": "Bryan J. Hill", "title": "County Executive", "note": "Top professional administrator running ~50 departments; AI-forward (NACo AI Exploratory Committee) and has cited AI to address an ~18% vacancy rate. Sets enterprise direction." },
-    { "name": "Matt Harrison", "title": "CIO & Director, Dept of Information Technology (DIT)", "note": "Appointed March 2025, started April 21, 2025, succeeding longtime CIO Greg Scott. Background: Stafford County IT Director and GEICO Technology Solutions (data/AI). The top IT relationship." },
+    { "name": "Matt Harrison", "title": "CIO & Director, Dept of Information Technology (DIT)", "note": "Appointed March 2025, started April 21, 2025, succeeding longtime CIO Greg Scott. Background: Stafford County IT Director and GEICO Technology Solutions (data/AI). Now leading a DIT reorganization (new Chief Director of Innovation / data-and-innovation team). The top IT relationship." },
     { "name": "Charlie Gore", "title": "CISO & DIT Deputy Director", "note": "Leads the Information Security Office; owns security policy, incident response, and enterprise security tooling. Succeeded longtime CISO Michael Dent (now Strategic Liaison to CIO/CISO since Aug 2025)." },
     { "name": "Dept of Procurement & Material Management", "title": "County procurement authority", "note": "Owns solicitations, awards, and cooperative-contract decisions — the gatekeeper for any county purchase and the path onto county or co-op vehicles." },
     { "name": "Board of Supervisors", "title": "Elected governing body", "note": "Adopts the budget and sets tax rates and policy; approves major contracts. The political layer above the County Executive." }
   ],
 
   "news": [
-    { "date": "2026-03", "title": "County pursues regional AI Economy Action Plan (with NoVA Regional Commission)", "impact": "Estimated $0.5M–$1.5M effort signals AI as both an internal-ops and economic-development priority — an opening for AI-infrastructure and advisory conversations.", "tags": ["AI"] },
+    { "date": "2026-05", "title": "Board adopts FY2027 budget; real estate tax rate cut to $1.12", "impact": "First tax-rate cut in years (8-2 vote, May 5, 2026) alongside a ~$5.9B General Fund and >$3B school transfer — a tighter fiscal frame; tie IT proposals to efficiency, security, and measurable ROI rather than net-new build.", "tags": ["Budget"] },
+    { "date": "2026-06", "title": "DIT reorganization underway under CIO Harrison; new Chief Director of Innovation and data/AI team", "impact": "Harrison is restructuring DIT for AI/data/BI leadership with a new executive innovation role reporting to the CIO — a fresh org chart and roadmap to map early for infrastructure, cloud, and AI-factory conversations.", "tags": ["Leadership", "AI", "Modernization"] },
+    { "date": "2026-03", "title": "County pursues regional AI Economy Action Plan (with NoVA Regional Commission)", "impact": "Estimated $0.5M–$1.5M effort (consultant selection underway) signals AI as both an internal-ops and economic-development priority — an opening for AI-infrastructure and advisory conversations.", "tags": ["AI"] },
     { "date": "2025-08", "title": "Longtime CISO Michael Dent moves to Strategic Liaison role; Charlie Gore leads ISO", "impact": "Security leadership succession completed — re-confirm the CISO relationship and current security roadmap owners.", "tags": ["Cybersecurity", "Leadership"] },
-    { "date": "2025-05", "title": "Board adopts FY2026 budget ($11B+ all funds; $1.1225 tax rate)", "impact": "Tax-rate increase and targeted IT/infrastructure investments funded — confirms budget headroom for refresh, cloud, and security spend.", "tags": ["Budget"] },
+    { "date": "2025-05", "title": "Board adopts FY2026 budget ($11B+ all funds; $1.1225 tax rate)", "impact": "Targeted IT/infrastructure investments funded — established budget headroom for refresh, cloud, and security spend (superseded by FY2027).", "tags": ["Budget"] },
     { "date": "2025-04", "title": "Matt Harrison starts as CIO/DIT Director (succeeding Greg Scott)", "impact": "New IT leadership with cloud/AI and Microsoft-modernization track record — fresh agenda; time relationship-building and roadmap discovery early.", "tags": ["Leadership"] }
   ],
 
@@ -74,7 +76,9 @@
   "sources": [
     { "label": "Fairfax County — Department of Information Technology", "url": "https://www.fairfaxcounty.gov/informationtechnology/" },
     { "label": "Fairfax County — FY2026 IT Plan", "url": "https://www.fairfaxcounty.gov/informationtechnology/it-plan" },
-    { "label": "Fairfax County — FY2026 Adopted Budget Plan (Overview)", "url": "https://www.fairfaxcounty.gov/budget/fy-2026-adopted-budget-plan-overview-volume" },
+    { "label": "Fairfax County — Board Adopts FY2027 Budget, Reduces Real Estate Tax Rate", "url": "https://www.fairfaxcounty.gov/budget/board-supervisors-adopts-fy-27-budget-reduces-real-estate-tax-rate" },
+    { "label": "Fairfax County — ITPAC FY2027 Interim Letter to County Executive (Dec 2025)", "url": "https://www.fairfaxcounty.gov/informationtechnology/sites/informationtechnology/files/assets/itpac/pdf/ITPAC-FY27-Interim-Letter-to-CEX-Dec-2025-FINAL-A-1a.pdf" },
+    { "label": "Fairfax County — Chief Director of Innovation (IT Program Director III) posting", "url": "https://www.governmentjobs.com/careers/fairfaxcounty/jobs/newprint/5186346" },
     { "label": "Fairfax County — Cooperative Purchasing", "url": "https://www.fairfaxcounty.gov/procurement/contracts/co-op" },
     { "label": "Fairfax County — Information Security Office", "url": "https://www.fairfaxcounty.gov/informationtechnology/information-security-office" },
     { "label": "GovTech — Fairfax County Names IT Veteran Matt Harrison as CIO", "url": "https://www.govtech.com/workforce/fairfax-county-va-names-it-veteran-matt-harrison-as-cio" },

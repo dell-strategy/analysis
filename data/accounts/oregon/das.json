@@ -5,13 +5,14 @@
   "name": "Oregon Dept of Administrative Services (DAS/EIS)",
   "slug": "das",
   "hq": "Salem, OR",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Oregon's central services agency: DAS runs statewide administration and, through its Enterprise Information Services (EIS) division under the State CIO, owns enterprise IT, data centers, cybersecurity, and the AI and cloud policy gates that shape how the state buys technology.",
 
   "snapshot": [
     { "label": "Role", "value": "Central services + enterprise IT" },
     { "label": "IT division", "value": "Enterprise Information Services (EIS)" },
     { "label": "State CIO", "value": "Terrence Woods" },
+    { "label": "DAS Director", "value": "Betsy Imholt" },
     { "label": "Buying platform", "value": "OregonBuys" }
   ],
 
@@ -47,17 +48,20 @@
   },
 
   "powerStructure": [
-    { "name": "DAS Director", "title": "Director, Dept of Administrative Services", "note": "Leads the central services agency; sets enterprise operating direction. Confirm the current named director before outreach." },
-    { "name": "Terrence Woods", "title": "State Chief Information Officer (DAS/EIS)", "note": "Owns statewide IT strategy, the State Data Center, security, and AI governance — the top technology relationship for the DAS/EIS motion." },
+    { "name": "Betsy Imholt", "title": "Director, Dept of Administrative Services", "note": "Leads the central services agency and serves as the state's chief operating officer; sets enterprise operating direction. Appointed DAS director in mid-2025, succeeding Berri Leslie." },
+    { "name": "Terrence Woods", "title": "State Chief Information Officer (DAS/EIS)", "note": "Owns statewide IT strategy, the State Data Center, security, and AI governance — the top technology relationship for the DAS/EIS motion. State CIO since 2018; confirmed still in seat as of June 2026." },
+    { "name": "JoLene Swint", "title": "Deputy State Chief Information Officer (DAS/EIS)", "note": "Number two in EIS; oversees budget, the program management office, shared services, and contract administration — a key operational and procurement-adjacent relationship. Confirmed current as of June 2026." },
+    { "name": "Ben Gherezgiher", "title": "State Chief Information Security Officer / Director, Cyber Security Services", "note": "Owns statewide security policy, the state SOC, GovRAMP posture, and incident response — the gate for anything touching state data. Has held the CISO/CSS role since 2022; the seat is filled (not the transition/open status previously flagged), though verify spelling and title before outreach." },
     { "name": "State Chief Data Officer", "title": "Enterprise data strategy", "note": "Owns data governance, sharing, and analytics direction — relevant for data-platform and AI-readiness conversations. Confirm current officeholder." },
-    { "name": "State Chief Information Security Officer (CISO)", "title": "Enterprise security & standards", "note": "Owns statewide security policy, GovRAMP posture, and incident response — the gate for anything touching state data." },
     { "name": "DAS Procurement Services", "title": "Statewide contracting & OregonBuys", "note": "Owns SPAs, solicitations, and vendor onboarding — the path onto the vehicles agencies buy through." }
   ],
 
   "news": [
-    { "date": "2026-06", "title": "Oregon advances State AI Action Plan and AI governance through DAS/EIS", "impact": "AI acceptable-use, procurement guardrails, and pilots are taking shape — align trusted-AI and AI-infrastructure messaging to the state's framework.", "tags": ["AI", "Governance"] },
-    { "date": "2026-03", "title": "Oregon among states adopting GovRAMP for cloud-service authorization", "impact": "Cloud/as-a-service deals should clear the appropriate authorization level early to stay sellable to state agencies.", "tags": ["Cloud", "Compliance"] },
-    { "date": "2026-01", "title": "EIS continues enterprise data-center and cybersecurity modernization under State CIO Terrence Woods", "impact": "Stable State CIO leadership keeps infrastructure refresh and security as durable buying tracks.", "tags": ["Data Center", "Cybersecurity"] }
+    { "date": "2026-05", "title": "EIS reshuffles senior leadership: three new Assistant State CIOs and a Data Center Services deputy", "impact": "EIS added ASCIOs Erinn Cartwright, Mukunda Penugonde, and Max Wagoner-Watts, and moved ASCIO Scott Emry to Deputy Director of Data Center Services — a broadened bench and a dedicated data-center lead. Refresh the EIS org map before outreach; State CIO Terrence Woods and Deputy CIO JoLene Swint remain in place.", "tags": ["Leadership", "Data Center"] },
+    { "date": "2026-05", "title": "DAS consolidates statewide IT and information-security rules under the State CIO (new OAR Chapter 128)", "impact": "A permanent administrative order renumbered identity/e-signature and state information-security rules into a single chapter under the CIO's office — organizational only, but a signal of continued centralization. Cite current rule locations when referencing Oregon security/IT standards.", "tags": ["Governance", "Cybersecurity"] },
+    { "date": "2026-02", "title": "Oregon issues updated interim Generative AI guidance restricting GenAI to lower-sensitivity data", "impact": "State-agency use of generative AI (including Microsoft Copilot and embedded AI) is limited to Level 1 (Published) and Level 2 (Limited) data unless EIS grants an exception. Align any AI offer to the state's data-classification guardrails rather than around them.", "tags": ["AI", "Governance"] },
+    { "date": "2026-02", "title": "New statewide Cyber and Information Security Policy takes effect (107-004-052)", "impact": "A unified executive-branch cyber and information-security program under the State CISO / Cyber Security Services took effect 2/17/2026 — security posture is a hard, standardized procurement gate for anything touching state data.", "tags": ["Cybersecurity", "Governance"] },
+    { "date": "2026-05", "title": "GovRAMP moves into Oregon procurement: cloud solicitations and contracts now require new security provisions", "impact": "Under GovRAMP Phase 1 (Accept), new solicitation and contract documents for cloud/hosted services must include added security provisions for agencies subject to EIS authority (ORS 276A.300). Clear the appropriate GovRAMP authorization early for any as-a-service play.", "tags": ["Cloud", "Compliance"] }
   ],
 
   "dellActions": [
@@ -72,6 +76,12 @@
     { "label": "Oregon DAS — Enterprise Information Services (EIS)", "url": "https://www.oregon.gov/das/oscio/Pages/index.aspx" },
     { "label": "Oregon DAS — Procurement Services", "url": "https://www.oregon.gov/das/procurement/pages/index.aspx" },
     { "label": "OregonBuys eProcurement", "url": "https://oregonbuys.gov/" },
-    { "label": "GovRAMP (formerly StateRAMP)", "url": "https://govramp.org/" }
+    { "label": "GovRAMP (formerly StateRAMP)", "url": "https://govramp.org/" },
+    { "label": "Oregon EIS — State CIO (Terrence Woods, Deputy CIO JoLene Swint)", "url": "https://www.oregon.gov/eis/pages/state-cio.aspx" },
+    { "label": "Oregon DAS — Leadership (Director Betsy Imholt)", "url": "https://www.oregon.gov/das/pages/leadership.aspx" },
+    { "label": "Oregon EIS — Updated Interim Guidance on Generative AI Access and Usage (Feb 6, 2026)", "url": "https://www.oregon.gov/eis/Documents/Updated%20Interim%20Guidance%20on%20Generative%20AI%20Access%20and%20Usage%20Memo%20-%20February%206%202026.pdf" },
+    { "label": "Oregon DAS — Cyber and Information Security Policy 107-004-052 (eff. 2/17/2026)", "url": "https://www.oregon.gov/das/Policies/107-004-052.pdf" },
+    { "label": "Oregon EIS — Cyber Security Services", "url": "https://www.oregon.gov/eis/cyber-security-services/pages/default.aspx" },
+    { "label": "EIS Digest — May 2026", "url": "https://content.govdelivery.com/accounts/ORDAS/bulletins/418365b" }
   ]
 }

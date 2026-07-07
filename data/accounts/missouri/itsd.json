@@ -5,7 +5,7 @@
   "name": "Missouri ITSD (OA Information Technology Services Division)",
   "slug": "itsd",
   "hq": "Jefferson City, MO",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Missouri's consolidated executive-branch IT: ITSD, inside the Office of Administration, builds, secures, and operates technology for the state's IT-consolidated executive departments — and the OA Division of Purchasing runs the statewide contracts most Missouri public buyers use.",
 
   "snapshot": [
@@ -50,15 +50,17 @@
   "powerStructure": [
     { "name": "John Laurent", "title": "State CIO, OA-ITSD", "note": "Named Missouri CIO in Dec 2024 after serving as Acting CIO (from May 2023) and Deputy CIO; previously Global VP of IT at Enterprise Holdings. The top relationship for the consolidated executive-branch IT motion." },
     { "name": "Ken Zellers", "title": "Commissioner, Office of Administration", "note": "Leads OA (ITSD's parent) and is tasked by EO 26-02 with building the statewide AI framework — a senior sponsor for AI and enterprise-modernization conversations." },
-    { "name": "ITSD Information Security office", "title": "Enterprise cybersecurity / CISO function", "note": "Owns executive-branch security policy and operations. Confirm the current CISO by name before engaging — the role has turned over in recent years; lead through the security office." },
-    { "name": "OA Division of Purchasing", "title": "Statewide IT contracting", "note": "Establishes statewide contracts, runs MissouriBUYS and the Cooperative Procurement Program — the contractual path onto state and cooperative vehicles." }
+    { "name": "Shawn Ivy", "title": "State CISO, OA-ITSD (Office of Cyber Security)", "note": "State CISO since June 2024; leads the ITSD Office of Cyber Security, which runs 24x7 security operations/incident response, IAM, and assessments across the executive branch. Publicly frames Missouri's posture as a self-reliant, dedicated-funded, layered/zero-trust program (GovTech, Oct 2025), watching AI and quantum. The security buying center — lead through his office." },
+    { "name": "Tim Marczewski", "title": "Director of AI & Innovation, Office of Administration", "note": "OA's head of AI (joined 2025; retired U.S. Army, Missouri S&T engineering alum). The operational lead on EO 26-02 delivery and OA AI tools (e.g., the 'Ask Mo' chatbot effort); moderated the June 2026 Missouri AI & Data Center Forum. A working-level sponsor for responsible-AI and AI-infrastructure conversations under Commissioner Zellers." },
+    { "name": "OA Division of Purchasing", "title": "Statewide IT contracting", "note": "Establishes statewide contracts, runs MissouriBUYS and the Cooperative Procurement Program — the contractual path onto state and cooperative vehicles. MissouriBUYS now runs on the MOVERS (Oracle Cloud ERP) platform, whose rollout is under redesign — confirm current registration/solicitation workflow." }
   ],
 
   "news": [
-    { "date": "2026-01", "title": "Gov. Kehoe signs Executive Order 26-02 directing a statewide AI framework", "impact": "OA Commissioner Zellers tasked to deliver an AI integration framework by Nov 30, 2026 — opens AI-infrastructure, secure-data-platform, and responsible-AI conversations with ITSD as the delivery arm.", "tags": ["AI", "Governance"] },
+    { "date": "2026-06", "title": "Missouri AI & Data Center Forum convenes at Missouri S&T (Jun 18)", "impact": "OA AI Director Tim Marczewski moderated and Gov. Kehoe pressed urgency on AI; the forum (OA with Economic Development, Higher Education & Workforce, Natural Resources, and the PSC) centered on building an AI talent pipeline for the data-center/AI buildout — signals OA's EO 26-02 momentum and the workforce/infrastructure context behind Missouri's AI push.", "tags": ["AI", "Workforce"] },
+    { "date": "2026-03", "title": "MOVERS statewide ERP over budget and phases halted; lawmakers weigh cuts", "impact": "Missouri's ~$250M Oracle Cloud ERP (MOVERS — which also powers MissouriBUYS), implemented with Accenture, has spent ~$110M with two phases paused for redesign after a Guidehouse review; a senator proposed cutting ~$56M pending functionality. Directly affects OA/ITSD's core financial-and-procurement platform and the buying workflow Dell relies on — track before forecasting.", "tags": ["ERP", "Procurement", "Risk"] },
+    { "date": "2026-01", "title": "Gov. Kehoe signs Executive Order 26-02 directing a statewide AI framework", "impact": "OA Commissioner Zellers tasked to deliver an AI integration framework by Nov 30, 2026 — opens AI-infrastructure, secure-data-platform, and responsible-AI conversations with ITSD as the delivery arm (OA AI Director Marczewski is the operational lead).", "tags": ["AI", "Governance"] },
     { "date": "2025-09", "title": "Missouri secures ~$15B Google data-center investment in New Florence", "impact": "Largest single private investment in state history; cements Missouri as an AI-infrastructure market and a state energy/policy priority — strong framing for AI-infrastructure positioning.", "tags": ["Data Center", "AI"] },
-    { "date": "2025-04", "title": "Gov. Kehoe signs SB 4, setting data-center cost-recovery and utility rules", "impact": "Large-load data centers must cover 100% of their power and infrastructure costs — shapes the energy economics behind Missouri's data-center boom and AI-infrastructure narrative.", "tags": ["Policy", "Energy"] },
-    { "date": "2024-12", "title": "John Laurent named permanent Missouri State CIO", "impact": "Settled leadership at the top of the consolidated IT motion after an interim period — confirm/build the top relationship.", "tags": ["Leadership"] }
+    { "date": "2025-04", "title": "Gov. Kehoe signs SB 4, setting data-center cost-recovery and utility rules", "impact": "Large-load data centers must cover 100% of their power and infrastructure costs — shapes the energy economics behind Missouri's data-center boom and AI-infrastructure narrative.", "tags": ["Policy", "Energy"] }
   ],
 
   "dellActions": [
@@ -66,7 +68,7 @@
     "Lead ISG and CSG into ITSD's consolidated infrastructure, network, and end-user refresh across the ~15 executive departments it delivers for — a single centralized buying environment.",
     "Tie AI-infrastructure and secure-data-platform value to EO 26-02's statewide AI framework; engage OA Commissioner Zellers and CIO Laurent as the framework takes shape ahead of the Nov 30, 2026 deadline.",
     "Use the Google New Florence build and SB 4 as market context to frame Missouri as an AI-infrastructure priority — without conflating private data-center investment with ITSD's own buying.",
-    "Engage ITSD's Information Security office on enterprise cybersecurity, and track SLCGP grant flow (via the Dept. of Public Safety) reaching county, city, and K-12 buyers; confirm the current CISO by name before forecasting the security buying center."
+    "Engage State CISO Shawn Ivy's ITSD Office of Cyber Security on enterprise cybersecurity (layered/zero-trust posture, AI and post-quantum readiness), and track SLCGP grant flow (via the Dept. of Public Safety) reaching county, city, and K-12 buyers."
   ],
 
   "sources": [
@@ -78,6 +80,11 @@
     { "label": "Gov. Kehoe — Missouri Secures $15 Billion Investment from Google (New Florence)", "url": "https://governor.mo.gov/press-releases/archive/missouri-secures-15-billion-investment-google-montgomery-county" },
     { "label": "Gov. Kehoe — Governor Signs SB 4 into Law", "url": "https://governor.mo.gov/press-releases/archive/governor-kehoe-signs-sb-4-law-securing-missouris-energy-future-and-economic" },
     { "label": "Missouri OA — Commissioner's Office (Ken Zellers)", "url": "https://oa.mo.gov/commissioners-office" },
-    { "label": "Missouri OA — FY2026 Budget Information", "url": "https://budplan.oa.mo.gov/budget-information/fy2026" }
+    { "label": "Missouri OA — FY2026 Budget Information", "url": "https://budplan.oa.mo.gov/budget-information/fy2026" },
+    { "label": "State of Missouri Cyber Security — About Us (CISO Shawn Ivy / Office of Cyber Security)", "url": "https://cybersecurity.mo.gov/about-us/" },
+    { "label": "GovTech — Missouri CISO Discusses Sustainable, State-Led Cybersecurity (Oct 2025)", "url": "https://www.govtech.com/security/missouri-ciso-discusses-sustainable-state-led-cybersecurity" },
+    { "label": "Missouri Independent — Lawmakers told cost is unknown to fix problem-plagued financial system (MOVERS, Mar 2026)", "url": "https://missouriindependent.com/2026/03/02/missouri-lawmakers-told-cost-is-unknown-to-fix-problem-plagued-financial-system/" },
+    { "label": "Missouri S&T News — Missouri leaders look to S&T as state prepares for AI, data center growth (Jun 2026)", "url": "https://news.mst.edu/2026/06/missouri-leaders-look-to-st-as-state-prepares-for-ai-data-center-growth/" },
+    { "label": "Jefferson City News-Tribune — Missouri has a new Head of AI (Tim Marczewski, Nov 2025)", "url": "https://www.newstribune.com/news/2025/nov/09/missouri-has-a-new-head-of-ai/" }
   ]
 }

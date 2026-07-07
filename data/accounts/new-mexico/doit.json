@@ -5,7 +5,7 @@
   "name": "New Mexico Dept of Information Technology (DoIT)",
   "slug": "doit",
   "hq": "Santa Fe, NM",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "New Mexico's central IT agency: DoIT runs enterprise services for state agencies on a cost-recovery model, houses the state's broadband office driving a $382M federal buildout, and supports the statewide cybersecurity and public-safety radio backbone.",
 
   "snapshot": [
@@ -56,6 +56,8 @@
   ],
 
   "news": [
+    { "date": "2026-05", "title": "DoIT proposes first rewrite of IT project oversight & certification rules since 2005", "impact": "Notice of Proposed Rulemaking repeals/replaces 1.12.5 NMAC (Oversight of IT Projects) and 1.12.9 NMAC (Project Certification), removing the defunct IT Commission and modernizing project plans, risk assessments, and phased funding tied to certification milestones. Reshapes the DoIT IT-review gate that Dell deals route through — watch the final rules for changed thresholds and approval steps.", "tags": ["Procurement", "Governance"] },
+    { "date": "2026-04", "title": "State fully funds DTRS public-safety radio subscriber fees through June 2027", "impact": "DoIT has covered DTRS subscriber fees since 2024 and, with new legislative funding, will do so through FY27; the system spans 100+ tower sites, ~80% statewide coverage, and 23,274 subscribers across 90+ agencies. DoIT is now working on a long-term sustainable funding plan beyond FY27 — a sustained public-safety infrastructure track.", "tags": ["Public Safety"] },
     { "date": "2026-01", "title": "NTIA approves New Mexico's $382M BEAD broadband plan", "impact": "31 grants to connect 42,500+ locations across 32 of 33 counties; construction follows contract execution by OBAE. Network/edge opportunity, not a DoIT data-center buy — map the grantees.", "tags": ["Broadband"] },
     { "date": "2025-09", "title": "DoIT submits FY27 appropriation request with 5% Enterprise Services rate increase", "impact": "Confirms continued reinvestment in the shared infrastructure estate; agency IT bills rise, reinforcing the enterprise-services motion.", "tags": ["Budget"] },
     { "date": "2025-03", "title": "Senate unanimously confirms Manny Barreras as DoIT Secretary & State CIO", "impact": "Stable top leadership; priorities center on modernizing/securing state IT and expanding the DTRS public-safety radio system.", "tags": ["Leadership"] },
@@ -77,6 +79,8 @@
     { "label": "GovTech — New Mexico Gives CISO More Reach, Independence", "url": "https://www.govtech.com/security/new-mexico-gives-ciso-more-reach-independence" },
     { "label": "NM DoIT — Senate confirms Manny Barreras", "url": "https://www.doit.nm.gov/2025/03/03/senate-unanimously-confirms-manny-barreras-as-secretary-of-department-of-information-technology/" },
     { "label": "NM GSD — Statewide Price Agreements", "url": "https://generalservices.state.nm.us/state-purchasing/statewide-price-agreements/" },
-    { "label": "NM DoIT — Broadband program", "url": "https://www.doit.nm.gov/programs/broadband/" }
+    { "label": "NM DoIT — Broadband program", "url": "https://www.doit.nm.gov/programs/broadband/" },
+    { "label": "NM DoIT — Notice of Proposed Rulemaking (1.12.5 & 1.12.9 NMAC), May 2026", "url": "https://www.doit.nm.gov/2026/05/18/notice-of-proposed-rulemaking/" },
+    { "label": "NM DoIT — New Mexico fully funds first responder radio network (Apr 2026)", "url": "https://www.doit.nm.gov/2026/04/15/new-mexico-fully-funds-first-responder-radio-network/" }
   ]
 }

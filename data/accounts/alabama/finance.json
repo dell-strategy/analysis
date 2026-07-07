@@ -5,7 +5,7 @@
   "name": "Alabama Dept of Finance (OIT)",
   "slug": "finance",
   "hq": "Montgomery, AL",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Alabama's central fiscal and administrative agency, home to the Office of Information Technology (OIT) — the state's enterprise IT authority — and the Purchasing Division that runs statewide contracts most Alabama public buyers use.",
 
   "snapshot": [
@@ -15,7 +15,7 @@
     { "label": "FY2026 General Fund", "value": "~$3.7B" }
   ],
 
-  "overview": "The Alabama Department of Finance is the state's central fiscal and administrative agency — it builds the executive budget, manages the treasury and accounting (STAARS) systems, and houses the operational divisions that run government, including the Office of Information Technology (OIT) and the Division of Purchasing. OIT, established in 2013 and led by the Secretary of Information Technology / State CIO, is Alabama's enterprise IT authority: it sets statewide IT policy, owns the IT strategic plan, and delivers shared services (network, data center, cloud, cybersecurity) to executive-branch agencies. For a Dell SLG seller, Finance/OIT is the most important single relationship in the state — it is both the enterprise standards-setter and, through the Purchasing Division, the gateway to statewide contracts that agencies, and in many cases local and education buyers, purchase against. Recent context matters: a May 2025 statewide cybersecurity event sharpened OIT's focus on identity, resilience, and whole-of-state security.",
+  "overview": "The Alabama Department of Finance is the state's central fiscal and administrative agency — it builds the executive budget, manages the treasury and accounting (STAARS) systems, and houses the operational divisions that run government, including the Office of Information Technology (OIT) and the Division of Purchasing. OIT, established in 2013 and led by the Secretary of Information Technology / State CIO, is Alabama's enterprise IT authority: it sets statewide IT policy, owns the IT strategic plan, and delivers shared services (network, data center, cloud, cybersecurity) to executive-branch agencies. For a Dell SLG seller, Finance/OIT is the most important single relationship in the state — it is both the enterprise standards-setter and, through the Purchasing Division, the gateway to statewide contracts that agencies, and in many cases local and education buyers, purchase against. Recent context matters: a May 2025 statewide cybersecurity event sharpened OIT's focus on identity, resilience, and whole-of-state security, and in Feb 2026 the state stood up a Technology Quality Assurance Board (TQAB) under OIT to govern AI and cybersecurity across executive-branch agencies.",
 
   "budget": {
     "intro": "Alabama runs two main budgets — the General Fund (non-education) and the Education Trust Fund (ETF). Finance/OIT itself is not a large direct end-spender; OIT recovers much of its cost from the agencies it serves rather than a single large general-revenue line. The figures below set the funding pool that IT buys draw from.",
@@ -35,7 +35,7 @@
     { "name": "Whole-of-state cybersecurity", "summary": "Following the May 2025 statewide cyber event, OIT and the State CISO are driving a whole-of-state security model — NIST-aligned frameworks, identity hardening, mandatory resets, and shared tooling extended to agencies and local government. A clear opening for security, identity, and resilient-infrastructure plays.", "tags": ["Cybersecurity", "Whole-of-State"] },
     { "name": "Enterprise IT consolidation & shared services", "summary": "OIT's mandate is to streamline IT statewide — consolidating network, data center, and shared platforms across executive-branch agencies to reduce duplicated cost. Position infrastructure refresh and managed/as-a-service offerings against the consolidation roadmap.", "tags": ["Consolidation", "Data Center"] },
     { "name": "Cloud & data-center modernization", "summary": "OIT delivers cloud and hosting as shared services; modernization tracks include hybrid cloud, infrastructure refresh, and resilient hosting for agency workloads. Tie ISG and AI-ready infrastructure to the enterprise hosting environment.", "tags": ["Cloud", "Modernization"] },
-    { "name": "AI & data governance (emerging)", "summary": "Like most states, Alabama is forming policy on enterprise AI use and data governance under OIT's standards authority. Treat AI as an early, relationship-building motion — confirm any governance/guidance is in place before forecasting AI-infrastructure deals.", "tags": ["AI", "Governance"] }
+    { "name": "AI & data governance (formalizing)", "summary": "Alabama's enterprise-AI governance is moving from task-force study to standing oversight: the Technology Quality Assurance Board (TQAB), formed Feb 2026 under Act 2025-369 and OIT's authority, is charged with reviewing emerging tech, setting statewide standards (NIST AI RMF), issuing agency GenAI policies, and maintaining a pre-approved GenAI tool list. Treat AI as a relationship-building motion aligned to TQAB standards — confirm any tool is on the approved path before forecasting AI-infrastructure deals.", "tags": ["AI", "Governance"] }
   ],
 
   "procurement": {
@@ -55,7 +55,9 @@
   ],
 
   "news": [
-    { "date": "2026-01", "title": "Finance Director Bill Poole presents FY2026 budget, urges conservative outlook", "impact": "Signals a flattening revenue picture; forecast IT deals against caution rather than expansion, and emphasize cost-recovery and consolidation value.", "tags": ["Budget"] },
+    { "date": "2026-04", "title": "Legislature passes ~$3.74B FY2027 General Fund (~1% up) after Poole flags ~4% receipts decline", "impact": "Tight, roughly flat funding pool for FY27 (which starts Oct 1, 2026), with the softness tied to falling interest earnings on state deposits — forecast IT against cost-recovery and consolidation savings, not expansion.", "tags": ["Budget"] },
+    { "date": "2026-02", "title": "Gov. Ivey forms Technology Quality Assurance Board (TQAB) under OIT to govern AI and cybersecurity", "impact": "Stands up statewide oversight for emerging tech — NIST AI RMF standards, agency GenAI policies, and a pre-approved GenAI tool list — under Act 2025-369, which also codified OIT's cyber-governance authority. Align AI and security offerings to TQAB standards and the approved-tool path.", "tags": ["AI", "Governance", "Cybersecurity"] },
+    { "date": "2026-01", "title": "Finance Director Bill Poole presents FY2027 budget outlook, urges conservative posture", "impact": "Signals a flattening-to-declining revenue picture (interest-earnings driven); forecast IT deals against caution rather than expansion, and emphasize cost-recovery and consolidation value.", "tags": ["Budget"] },
     { "date": "2025-05", "title": "Statewide cybersecurity event disrupts Alabama state systems; OIT mandates password resets", "impact": "Sharpened OIT focus on identity, resilience, and whole-of-state security — a durable opening for security, identity, and resilient-infrastructure offerings.", "tags": ["Cybersecurity"] },
     { "date": "2025-04", "title": "OIT names Chad Smith as State CISO", "impact": "Establishes a clear security buying-center owner driving NIST-aligned, whole-of-state strategy — map the security relationship to this office.", "tags": ["Leadership"] }
   ],
@@ -72,6 +74,10 @@
     { "label": "Alabama Office of Information Technology — About / Leadership", "url": "https://oit.alabama.gov/about/leadership/" },
     { "label": "Alabama OIT — Introducing State CISO Chad Smith", "url": "https://oit.alabama.gov/11640/introducing-the-new-state-ciso-chad-smith/" },
     { "label": "Alabama OIT — May 2025 Cybersecurity Event", "url": "https://oit.alabama.gov/cybereventmay2025/" },
+    { "label": "Gov. Ivey — Technology Quality Assurance Board formed (Feb 2026)", "url": "https://governor.alabama.gov/newsroom/2026/02/governor-ivey-forms-technology-quality-assurance-board-to-oversee-innovation-and-safeguard-statewide-it-systems/" },
+    { "label": "Alabama Reporter — Ivey establishes board to oversee emerging technology", "url": "https://www.alreporter.com/2026/02/13/gov-ivey-establishes-board-to-oversee-emerging-technology/" },
+    { "label": "Alabama Daily News — House passes $3.74B General Fund budget (FY2027)", "url": "https://aldailynews.com/house-passes-3-74-billion-general-fund-budget/" },
+    { "label": "LSA — Finance Director Bill Poole budget hearing (Jan 14, 2026)", "url": "https://alison.legislature.state.al.us/files/pdf/lsa/Fiscal/BudgetHearings/2026/Finance-2026.pdf" },
     { "label": "Alabama Department of Finance — Purchasing Division", "url": "https://purchasing.alabama.gov/" },
     { "label": "Alabama Department of Finance — About Us", "url": "https://finance.alabama.gov/about/" },
     { "label": "Alabama State Budget — FY2026 Executive Budget", "url": "https://budget.alabama.gov/" }

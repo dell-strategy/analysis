@@ -5,7 +5,7 @@
   "name": "Commonwealth of Pennsylvania (Office of Administration / OA-OIT)",
   "slug": "oa-oit",
   "hq": "Harrisburg, PA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Pennsylvania's central IT shop: OA's Office for Information Technology sets statewide technology direction, runs shared services and cyber for executive agencies, and is the public face of the state's first-in-the-nation generative-AI push.",
 
   "snapshot": [
@@ -35,7 +35,7 @@
     { "name": "Generative AI — ChatGPT Enterprise expansion", "summary": "After a first-in-the-nation OpenAI pilot (175 employees, 14 agencies) that reported ~95 min/day saved, Pennsylvania expanded ChatGPT Enterprise to 3,000+ employees across 35 agencies in early 2026, with more in training. AI is a top-of-house priority — align infrastructure, data, and endpoint plays to it.", "tags": ["AI", "Productivity"] },
     { "name": "Cybersecurity modernization", "summary": "OA is pursuing a multi-year cyber modernization strategy, reinforced in the FY2026-27 proposal, to harden state systems against ransomware and data theft. A clear lane for secure infrastructure, endpoint, and zero-trust offerings under the new CISO.", "tags": ["Cybersecurity", "Modernization"] },
     { "name": "Cloud & IT cost optimization", "summary": "OA credits ~$37M in three-year savings to right-sizing IT contracts, expanding cloud, and in-housing work. Expect ROI-driven, consolidation-minded buying — position hybrid cloud and as-a-service against measurable cost outcomes.", "tags": ["Cloud", "Cost Savings"] },
-    { "name": "Digital experience (CODE PA)", "summary": "The Commonwealth Office of Digital Experience continues a pa.gov redesign and resident-service modernization track, with new permanent leadership in 2026 — a pull-through for the data and infrastructure beneath citizen-facing services.", "tags": ["Digital Services", "Modernization"] }
+    { "name": "Digital experience (CODE PA)", "summary": "The Commonwealth Office of Digital Experience — led since Feb 2026 by Executive Director Sara Hall — marked three years (~$10M saved, five national awards) and in spring 2026 began rolling out four enterprise platforms: a centralized permits/licensing system, a grants one-stop shop, a modernized payment platform, and a single resident login. A direct pull-through for the data, identity, and infrastructure beneath citizen-facing services.", "tags": ["Digital Services", "Modernization"] }
   ],
 
   "procurement": {
@@ -56,11 +56,12 @@
   ],
 
   "news": [
-    { "date": "2026-03", "title": "Greg Fiedler appointed Commonwealth CTO", "impact": "Completes the rebuilt OIT leadership bench — engage the new CTO on architecture and infrastructure direction.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "Commonwealth CIO Bry Pardoe named to StateScoop 50 (GoldenGov) for the second straight year", "impact": "Confirms Pardoe remains the top IT decision-maker and reaffirms her stated priorities — zero-trust cyber, cloud-first legacy modernization, and shared digital infrastructure — the themes to anchor Dell's message to.", "tags": ["Leadership"] },
+    { "date": "2026-06", "title": "Code for America ranks Pennsylvania among national leaders for government AI readiness and impact", "impact": "Independent recognition (2026 Government AI Landscape Assessment) reinforces AI as a marquee statewide priority beyond the ChatGPT rollout — sustain AI-ready infrastructure and data conversations. (Exact publication month approximate.)", "tags": ["AI"] },
+    { "date": "2026-04", "title": "CODE PA marks three years; begins rolling out four enterprise platforms (permits, grants, payments, single resident login)", "impact": "New statewide citizen-service platforms are a direct pull-through for the data, identity, and infrastructure beneath them — position hybrid cloud and secure infrastructure behind the buildout.", "tags": ["Digital Services", "Modernization"] },
+    { "date": "2026-04", "title": "CISO Andy Ritter details zero-trust, IAM, and vulnerability-management strategy (StateTech Q&A)", "impact": "Names the concrete security lanes OA is investing in — align zero-trust, identity, and secure-infrastructure offerings to Ritter's roadmap.", "tags": ["Cybersecurity"] },
     { "date": "2026-02", "title": "Pennsylvania makes four interim OIT leaders permanent, including new CISO Andy Ritter", "impact": "Leadership stabilizes after late-2025 turnover; clarifies who owns delivery (Sipe) and security (Ritter) for relationship mapping.", "tags": ["Leadership"] },
-    { "date": "2026-02", "title": "Shapiro FY2026-27 proposal strengthens OA cybersecurity funding", "impact": "Multi-year cyber-modernization funding signals demand for secure infrastructure and endpoint — time security plays to the budget cycle.", "tags": ["Budget", "Cybersecurity"] },
-    { "date": "2026-01", "title": "Generative AI expanded to 3,000+ employees across 35 agencies", "impact": "AI is a marquee statewide priority — anchor infrastructure, data, and device conversations to the AI program.", "tags": ["AI"] },
-    { "date": "2025-10", "title": "Bry Pardoe named Commonwealth CIO", "impact": "New top IT decision-maker, UX/AI-oriented from CODE PA — reset the executive relationship at OA-OIT.", "tags": ["Leadership"] }
+    { "date": "2026-02", "title": "Shapiro FY2026-27 proposal strengthens OA cybersecurity funding", "impact": "Multi-year cyber-modernization funding (an added ~$10M) signals demand for secure infrastructure and endpoint — time security plays to the budget cycle.", "tags": ["Budget", "Cybersecurity"] }
   ],
 
   "dellActions": [
@@ -79,6 +80,10 @@
     { "label": "PA OA — Shapiro 2026-27 Budget Strengthens Cybersecurity", "url": "https://www.pa.gov/agencies/oa/newsroom/governor-shapiro-s-2026-27-budget-proposal-strengthens-cybersecu" },
     { "label": "PA Budget in Brief 2026-27", "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/budget/documents/publications-and-reports/commonwealthbudget/2026-27-budget-documents/2026-27%20budget%20in%20brief.final.web.v.2.pdf" },
     { "label": "PA DGS — COSTARS Cooperative Purchasing", "url": "https://www.pa.gov/agencies/dgs/programs-and-services/costars.html" },
-    { "label": "GovTech — Pennsylvania Names Andy Ritter as Permanent State CISO", "url": "https://www.govtech.com/workforce/pennsylvania-names-andy-ritter-as-permanent-state-ciso" }
+    { "label": "GovTech — Pennsylvania Names Andy Ritter as Permanent State CISO", "url": "https://www.govtech.com/workforce/pennsylvania-names-andy-ritter-as-permanent-state-ciso" },
+    { "label": "PA OA — StateScoop Ranks CIO Bry Pardoe Among Top 50 State Tech Leaders (June 2026)", "url": "https://www.pa.gov/agencies/oa/newsroom/statescoop-ranks-pennsylvania-cio-bry-pardoe-among-the-top-50-st" },
+    { "label": "PA OA — Building on Three Years of Success (CODE PA, Apr 2026)", "url": "https://www.pa.gov/agencies/oa/newsroom/building-on-three-years-of-success--the-commonwealth-office-of-d" },
+    { "label": "StateTech — Q&A: Pennsylvania's CISO on Risk Reduction, Zero Trust (Apr 2026)", "url": "https://statetechmagazine.com/article/2026/04/qa-pennsylvanias-ciso-risk-reduction-zero-trust-and-next-cybersecurity-frontier" },
+    { "label": "Code for America — Government AI Landscape Assessment (2026)", "url": "https://codeforamerica.org/explore/government-ai-landscape-assessment/" }
   ]
 }

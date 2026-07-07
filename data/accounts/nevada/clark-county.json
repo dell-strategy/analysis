@@ -5,7 +5,7 @@
   "name": "Clark County, Nevada",
   "slug": "clark-county",
   "hq": "Las Vegas, NV",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Nevada's largest local government — ~2.4M residents, the Las Vegas Strip, and Harry Reid International Airport — run day-to-day by a County Manager and a seven-member Commission. Enterprise IT direction sits with the Information Technology department and its CIO; buying flows through Purchasing & Contracts under Nevada's Local Government Purchasing Act and Commission approval.",
 
   "snapshot": [
@@ -53,10 +53,11 @@
     { "name": "Bob Leek", "title": "Chief Information Officer (CIO)", "note": "Leads the County's IT department (~200 staff) with 30+ years in public- and private-sector IT (prior roles at Multnomah County, OR and Kaiser Permanente). Owns enterprise technology strategy, AI, and security direction — the top enterprise-IT relationship." },
     { "name": "Information Technology — Security function", "title": "Cybersecurity & information security", "note": "Security strategy and operations sit within the IT department under the CIO. A separately named county CISO is not publicly confirmed — verify the current security buying-center owner before forecasting." },
     { "name": "Purchasing & Contracts Division", "title": "Procurement (NRS 332)", "note": "Owns competitive solicitations, contract preparation, and vendor onboarding for County departments — the procurement gatekeeper for most county buys." },
-    { "name": "Michael Naft", "title": "Chair, Board of County Commissioners (2026)", "note": "Elected board chair for 2026 (District A); William McCurdy II is Vice Chair. The seven-member Commission is the governing body that approves sizable contracts. Chairship rotates — verify incumbency at time of engagement." }
+    { "name": "Michael Naft", "title": "Chair, Board of County Commissioners", "note": "Elected by fellow commissioners in January 2026 to a two-year term as board chair (District A, serving since 2019); William McCurdy II is Vice Chair (confirmed in county records as of January 9, 2026). The seven-member Commission is the governing body that approves sizable contracts." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "County advances Switch data-center expansion; Commission to weigh data-center rules", "impact": "Commissioners tentatively approved another Switch data center at its southwest-valley megacomplex (June 17) and, at Commissioner Segerblom's request, set a July 2 discussion of application/approval criteria for future data centers amid AI-driven power and water demand. Signals a fast-growing data-center corridor and an emerging county policy lens on AI infrastructure — context for compute, energy-efficiency, and sustainability positioning.", "tags": ["Data Center", "AI", "Policy"] },
     { "date": "2026-01", "title": "Michael Naft elected 2026 Chair of the Clark County Commission", "impact": "Sets the governing-body leadership that approves sizable contracts for the year — refresh the Commission relationship map.", "tags": ["Leadership"] },
     { "date": "2025-05", "title": "Commission adopts ~$2.1B FY2026 operational budget; closes ~$56M gap via capital transfer", "impact": "Confirms a cost-pressure posture tied to declining sales tax — lead with efficiency, automation, and consolidation over net-new capital.", "tags": ["Budget"] },
     { "date": "2025", "title": "County advances applied-AI pilots and prepares 2026-2028 IT Strategic Plan", "impact": "AI and the next strategic-plan cycle are active, executive-sponsored priorities — an opening for AI-infrastructure and data-platform conversations.", "tags": ["AI"] },
@@ -81,6 +82,8 @@
     { "label": "Clark County — Budgets (Finance Department)", "url": "https://www.clarkcountynv.gov/government/departments/finance/financial_reporting/budget/budgets" },
     { "label": "Clark County — Purchasing & Contracts / Business Opportunities", "url": "https://www.clarkcountynv.gov/business/business_opportunities/index.php" },
     { "label": "Clark County Commission — Wikipedia (composition & chair)", "url": "https://en.wikipedia.org/wiki/Clark_County_Commission" },
-    { "label": "Fox5 Vegas — Clark County Commission votes for new chairman (Naft, 2026)", "url": "https://www.fox5vegas.com/2026/01/07/clark-county-commission-votes-new-chairman-board/" }
+    { "label": "Fox5 Vegas — Clark County Commission votes for new chairman (Naft, 2026)", "url": "https://www.fox5vegas.com/2026/01/07/clark-county-commission-votes-new-chairman-board/" },
+    { "label": "Las Vegas Review-Journal — Clark County to discuss possible regulations for future data centers (July 2, 2026)", "url": "https://www.reviewjournal.com/news/politics-and-government/clark-county/clark-county-to-discuss-possible-regulations-for-future-data-centers-3845655/" },
+    { "label": "Clark County — Official Records (County Officials as of Jan. 9, 2026: Naft Chair, McCurdy Vice Chair)", "url": "https://www.clarkcountynv.gov/adobe/assets/urn:aaid:aem:717e97ea-c0d5-4612-88da-0b0267c93881/original/as/Introductory-Section.pdf" }
   ]
 }

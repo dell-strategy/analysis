@@ -5,7 +5,7 @@
   "name": "Oklahoma Office of Management & Enterprise Services (OMES)",
   "slug": "omes",
   "hq": "Oklahoma City, OK",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Oklahoma's central back office: OMES runs the state's consolidated IT, owns Central Purchasing and the statewide contracts most public buyers use, and manages the state budget and finances — the single front door for selling technology to Oklahoma state government.",
 
   "snapshot": [
@@ -56,6 +56,8 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Term-limited Gov. Stitt heads for the exit — June 16 primary sets up a Jan 2027 transition", "impact": "Stitt cannot seek a third term and a new governor takes office in January 2027 (GOP runoff Aug 25). The recent Stitt appointees who anchor the account — OMES Director Wood and CIO Cronin — could turn over with the administration, so treat the FY26–28 IT plan, the AI office and Cyber Command priorities as continuity risks and keep relationships broad below the political layer.", "tags": ["Leadership", "Transition"] },
+    { "date": "2026-05", "title": "OMES Central Purchasing refreshes statewide contracts (incl. Microsoft SW1079M) and shifts eDiscovery to ServiceNow", "impact": "Signals an active statewide-contract award cycle plus process streamlining (updated IT stakeholder-assignment guidance) — verify Dell's category coverage and the current initiation path against this cycle. Directional per the May 2026 Central Purchasing newsletter.", "tags": ["Procurement"] },
     { "date": "2025-12", "title": "Gov. Stitt names Mark Wood OMES Director (effective Dec 17, 2025)", "impact": "New agency head over IT, procurement and budget — re-confirm the top relationship and any early priorities.", "tags": ["Leadership"] },
     { "date": "2025-11", "title": "Tai Phan named Oklahoma's first Chief AI & Technology Officer", "impact": "Establishes a dedicated AI buying center and statewide AI guardrails — engage early on responsible-AI infrastructure.", "tags": ["AI", "Leadership"] },
     { "date": "2025-10", "title": "Daniel Langley appointed State CISO over Oklahoma Cyber Command", "impact": "New security decision-maker across 180+ entities; rebuild the cybersecurity relationship map.", "tags": ["Cybersecurity", "Leadership"] },

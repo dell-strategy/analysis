@@ -5,7 +5,7 @@
   "name": "Colorado Governor's Office of Information Technology (OIT)",
   "slug": "oit",
   "hq": "Denver, CO",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Colorado's central IT agency: OIT consolidates technology procurement, infrastructure, security, applications, and broadband for the executive branch, serving the agencies that deliver SNAP, unemployment, and driver-license services. A new CIO and a major 2026 restructuring are resetting the operating model.",
 
   "snapshot": [
@@ -51,17 +51,19 @@
   "powerStructure": [
     { "name": "Sarah Tuneberg", "title": "State CIO & Executive Director, OIT", "note": "Took over June 1, 2026, succeeding David Edinger; previously OIT's deputy executive director for digital and delivery. Owns the new operating model — the top relationship for the OIT motion." },
     { "name": "David Edinger", "title": "Former State CIO & Executive Director (to mid-2026)", "note": "Led OIT from Nov 2023 and oversaw the 2026 restructuring before departing in June 2026 — context for the leadership transition." },
-    { "name": "Office of Information Security (OIT CISO)", "title": "Statewide security policy & operations", "note": "Owns executive-branch security standards and SecOps. Leadership has turned over since 2022 (Ray Yepes departed 2023) — confirm the current CISO / interim security lead before engaging." },
+    { "name": "Jill Fraser", "title": "State CISO & Interim Deputy Executive Director, Security & Infrastructure", "note": "Named State CISO Feb 2024 (interim from Sept 2023); now also holds the interim Deputy ED role over Security & Infrastructure, widening her span across security and core infrastructure. Owns executive-branch security standards and SecOps and Colorado's Whole-of-State cyber effort — the top security relationship. 2026 CTA APEX CISO-of-the-Year finalist." },
+    { "name": "Casey Cook", "title": "Principal Director of Enterprise Architecture", "note": "New role effective June 22, 2026, reporting to CIO Tuneberg; drives enterprise standards, policies, and governance for the new operating model. Joined from USDA (enterprise architecture, cloud, cybersecurity, modernization across 29 agencies). Key influencer on statewide technology standards and cloud/architecture decisions." },
     { "name": "Colorado Broadband Office (CBO)", "title": "Broadband program & BEAD stewardship", "note": "OIT-housed office running the ~$826M BEAD buildout and state broadband programs — the buying-influence center for connectivity and middle-mile infrastructure." },
     { "name": "State Purchasing & Contracts Office (SPCO)", "title": "Statewide price agreements & purchasing", "note": "Within the Office of the State Controller; owns the statewide Price Agreements many buyers use — the route onto pre-competed contracts." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "OIT names Casey Cook as first Principal Director of Enterprise Architecture (June 22, 2026)", "impact": "A new EA leader (ex-USDA) reporting to the CIO will set statewide standards, cloud, and architecture governance under the new operating model — a fresh buying-influence center for infrastructure, cloud, and modernization decisions.", "tags": ["Leadership", "Modernization"] },
+    { "date": "2026-06", "title": "myColorado surpasses 2 million users; state launches Colorado Digital ID Verifier (June 11, 2026)", "impact": "OIT's flagship resident-facing digital platform is scaling, with a new verifier for businesses and government — signals demand for identity, secure-app, and supporting infrastructure at growing volume.", "tags": ["Digital Services", "Identity"] },
     { "date": "2026-06", "title": "Sarah Tuneberg becomes State CIO & OIT Executive Director (effective June 1, 2026)", "impact": "New owner of statewide IT direction and the restructuring — rebuild the top relationship and confirm the new operating model's buying centers.", "tags": ["Leadership"] },
     { "date": "2026-05", "title": "OIT announces strategic realignment; ~173 positions eliminated", "impact": "Cost-takeout and a 'human-centered' product-delivery shift — lead with modernization that cuts technical debt and manual processes over net-new capital.", "tags": ["Transition"] },
     { "date": "2026-05", "title": "Colorado repeals/replaces its AI Act via SB 26-189; effective date moved to Jan 1, 2027", "impact": "Narrower AI rules and a delayed timeline reshape the governance backdrop for OIT's GenAI program — track requirements as they settle.", "tags": ["AI"] },
-    { "date": "2026", "title": "OIT publishes 'Version 2.0' GenAI strategy and a Statewide GenAI Policy", "impact": "Active push to scale automation and resident-facing GenAI pilots under a compliance framework — demand signal for AI-ready infrastructure and governance.", "tags": ["AI"] },
-    { "date": "2025-12", "title": "Colorado's BEAD Final Proposal approved; $420M+ in federal broadband funding unlocked", "impact": "Multi-year buildout moves to execution under OIT's Broadband Office — networking and connectivity infrastructure opportunity.", "tags": ["Broadband"] }
+    { "date": "2026", "title": "OIT publishes 'Version 2.0' GenAI strategy and a Statewide GenAI Policy", "impact": "Active push to scale automation and resident-facing GenAI pilots under a compliance framework — demand signal for AI-ready infrastructure and governance.", "tags": ["AI"] }
   ],
 
   "dellActions": [
@@ -69,7 +71,7 @@
     "Frame for cost-takeout in a restructuring year: position infrastructure refresh, consolidation, and managed services as ways to retire technical debt and manual processes, matching OIT's 2026 efficiency posture.",
     "Anchor AI-ready infrastructure to OIT's GenAI strategy and Statewide GenAI Policy, noting the delayed (Jan 1, 2027) AI-law backdrop — pair compute, data, and governance tooling to a funded, mandated program.",
     "Engage the Colorado Broadband Office on the ~$826M BEAD and middle-mile buildout for networking, connectivity, and edge infrastructure tied to a multi-year execution timeline.",
-    "Rebuild the relationship map after the leadership change: open with new State CIO Sarah Tuneberg's office, and confirm the current security (CISO) lead given turnover before pursuing cybersecurity opportunities."
+    "Rebuild the relationship map after the leadership change: open with new State CIO Sarah Tuneberg's office, engage CISO/Interim Deputy ED Jill Fraser for security and infrastructure, and connect early with new EA lead Casey Cook, who will shape statewide standards, cloud, and architecture under the new operating model."
   ],
 
   "sources": [
@@ -80,6 +82,10 @@
     { "label": "Colorado OIT — Strategic Realignment announcement", "url": "https://oit.colorado.gov/press-release/oit-announces-strategic-realignment-to-better-serve-coloradans-and-make-state" },
     { "label": "Colorado OIT — Guide to Artificial Intelligence", "url": "https://oit.colorado.gov/ai" },
     { "label": "Colorado OIT — Office of Information Security", "url": "https://oit.colorado.gov/standards-policies-guides/guide-to-cybersecurity/office-of-information-security" },
+    { "label": "Colorado OIT — Casey Cook named Principal Director of Enterprise Architecture", "url": "https://oit.colorado.gov/press-release/colorado-office-of-information-technology-welcomes-casey-cook-as-principal-director" },
+    { "label": "Colorado OIT — Jill Fraser Appointed State CISO", "url": "https://oit.colorado.gov/press-release/jill-fraser-appointed-state-of-colorado-chief-information-security-officer" },
+    { "label": "Colorado OIT — Colorado Digital ID Verifier in myColorado (2M users)", "url": "https://oit.colorado.gov/press-release/introducing-the-colorado-digital-idtm-verifier-in-mycolorador" },
+    { "label": "StateScoop — Colorado's interim security chief made permanent (Jill Fraser)", "url": "https://statescoop.com/colorado-ciso-jill-fraser-cybersecurity/" },
     { "label": "Colorado OIT — Proposed BEAD Funding Awards", "url": "https://oit.colorado.gov/press-release/state-publishes-proposed-broadband-equity-access-and-deployment-funding-awards" },
     { "label": "Colorado OIT — Colorado approved for $420M federal broadband funding", "url": "https://oit.colorado.gov/press-release/colorado-approved-for-420-million-in-federal-broadband-funding-connecting-rural" },
     { "label": "Colorado OSC — State Purchasing & Contracts Office (SPCO)", "url": "https://osc.colorado.gov/spco" },

@@ -5,7 +5,7 @@
   "name": "Louisiana Division of Administration (OTS)",
   "slug": "division-of-administration",
   "hq": "Baton Rouge, LA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Louisiana's central management and IT hub: the Division of Administration runs the state budget, the Office of State Procurement, and — through the Office of Technology Services (OTS) — the consolidated technology shared by every executive-branch agency.",
 
   "snapshot": [
@@ -51,16 +51,17 @@
   "powerStructure": [
     { "name": "Taylor Barras", "title": "Commissioner of Administration", "note": "Gov. Landry's top budget official and head of DOA; appointed 2024, continuing into 2026. Owns the state budget and the division that houses OTS and OSP." },
     { "name": "Evelina Broussard", "title": "State CIO, Office of Technology Services", "note": "Appointed CIO in March 2025 after ~three decades in private-sector IT (Atmos Energy). Top technology relationship for the state-agency motion." },
-    { "name": "OTS Information Security / CISO", "title": "Statewide security & SOC", "note": "OTS runs consolidated security operations; the CISO function owns the modernized SOC and security standards. Verify the current CISO by name before engaging." },
+    { "name": "Chase Hymel", "title": "Chief Information Security Officer (CISO), OTS", "note": "Longtime OTS enterprise security architect; became state CISO after Dustin Glover moved to the Chief Cyber Officer role. Owns consolidated security operations, the modernized SOC, and enterprise security standards across the executive-branch agencies OTS supports." },
     { "name": "Amy Vincent", "title": "Director, Office of State Procurement", "note": "Owns statewide contracts, cooperative purchasing, and procurement policy — the path onto the vehicles agencies buy through." },
-    { "name": "Chief Cyber Officer (state)", "title": "Cyber incident response & whole-of-state", "note": "Louisiana created a Chief Cyber Officer role coordinating across OTS, the Military Department, GOHSEP, and State Police — relevant for whole-of-state cyber programs." }
+    { "name": "Dustin Glover", "title": "Chief Cyber Officer (state)", "note": "Louisiana's first-ever Chief Cyber Officer and a former state CISO; coordinates whole-of-state cyber risk and incident response across OTS, the Military Department, GOHSEP, and State Police — relevant for whole-of-state cyber programs." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Louisiana enacts cyber & data-governance laws; OTS named administrator of new Statewide Data Exchange Compact", "impact": "The 2026 session (adjourned June 1) produced three notable measures: SB 233 makes OTS the administrator of a voluntary interagency Statewide Data Exchange Compact (standardized data-sharing agreements + advisory committee); SB 75 pushes national cybersecurity standards onto local governments that seek state incident help (non-compliant entities must reimburse response costs); and SB 386, the Louisiana Data Privacy Act, takes effect Jan. 1, 2027. OTS's data-governance and whole-of-state cyber mandate is expanding — align secure data-exchange, identity, and cyber-compliance offers.", "tags": ["Cybersecurity", "Data Governance", "Policy"] },
+    { "date": "2026-04", "title": "Louisiana House advances ~$47B 'standstill' FY 2026-27 budget (HB1)", "impact": "Flat funding pressures discretionary IT spend toward cost-recovery and consolidation — frame ROI and shared-services economics.", "tags": ["Budget"] },
     { "date": "2025-12", "title": "Meta's Richland Parish data center tops $875M in Louisiana contracts in year one", "impact": "Meta's ~$27B AI data center (operational target ~2030) is reshaping Louisiana's power, workforce, and digital-economy narrative — context for statewide AI-infrastructure and data-center momentum.", "tags": ["AI", "Economic Development"] },
     { "date": "2025-09", "title": "OTS issues statewide AI Acceptable Use Policy (effective Sept. 29, 2025)", "impact": "Establishes governed AI use across state agencies — sell into a governed framework, not ungated tools.", "tags": ["AI", "Policy"] },
-    { "date": "2025-03", "title": "Evelina Broussard named State CIO at OTS", "impact": "New private-sector-veteran CIO sets technology direction for the consolidated state-IT organization — re-anchor the top relationship.", "tags": ["Leadership"] },
-    { "date": "2026-04", "title": "Louisiana House advances ~$47B 'standstill' FY 2026-27 budget (HB1)", "impact": "Flat funding pressures discretionary IT spend toward cost-recovery and consolidation — frame ROI and shared-services economics.", "tags": ["Budget"] }
+    { "date": "2025-03", "title": "Evelina Broussard named State CIO at OTS", "impact": "New private-sector-veteran CIO sets technology direction for the consolidated state-IT organization — re-anchor the top relationship.", "tags": ["Leadership"] }
   ],
 
   "dellActions": [
@@ -81,6 +82,9 @@
     { "label": "Louisiana DOA — Office of the Commissioner", "url": "https://www.doa.la.gov/doa/comm/" },
     { "label": "Gov. Landry FY 2026-27 Executive Budget Overview", "url": "https://doa.louisiana.gov/media/zurhi21x/fy27-executive-budget-overview-for-house-1-23-26.pdf" },
     { "label": "Meta — Richland Parish Data Center Supports Louisiana Economy ($875M)", "url": "https://about.fb.com/news/2025/12/metas-richland-parish-data-center-supports-louisiana-economy-875-million-in-contracts/" },
-    { "label": "Palo Alto Networks — Louisiana scales security using AI-driven Cortex XSIAM", "url": "https://www.paloaltonetworks.com/customers/louisiana-scales-security-using-ai-driven-cortex-xsiam" }
+    { "label": "Palo Alto Networks — Louisiana scales security using AI-driven Cortex XSIAM", "url": "https://www.paloaltonetworks.com/customers/louisiana-scales-security-using-ai-driven-cortex-xsiam" },
+    { "label": "GovTech — Louisiana Legislative Session Yields Cyber, Privacy Laws (June 2026)", "url": "https://www.govtech.com/policy/louisiana-legislative-session-yields-cyber-privacy-laws" },
+    { "label": "Louisiana DOA — OTS Staff Directory (CIO, CISO)", "url": "https://www.doa.la.gov/doa/ots/staff-directory/" },
+    { "label": "Security Magazine — Dustin Glover named Louisiana Chief Cyber Officer", "url": "https://www.securitymagazine.com/articles/98010-dustin-glover-named-louisiana-chief-cyber-officer" }
   ]
 }

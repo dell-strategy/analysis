@@ -5,7 +5,7 @@
   "name": "Georgia Technology Authority (GTA)",
   "slug": "gta",
   "hq": "Atlanta, GA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Georgia's central IT authority: GTA sets statewide technology and security policy, runs the GETS managed-services model that delivers infrastructure to executive-branch agencies, and houses the state's Office of Information Security and Office of Artificial Intelligence.",
 
   "snapshot": [
@@ -49,12 +49,14 @@
   "powerStructure": [
     { "name": "Shawnzia A. Thomas", "title": "State CIO & GTA Executive Director", "note": "Top relationship for the Georgia statewide motion; AI- and security-forward, framing 2026 priorities as AI governance, cybersecurity, and workforce readiness." },
     { "name": "Steve Hodges", "title": "State CISO (Office of Information Security)", "note": "Leads security across the IT enterprise, GETS, and GTA; owner of the security bar every cloud/AI offering must clear." },
-    { "name": "GTA Office of Artificial Intelligence", "title": "AI policy, standards & Advisory Council", "note": "Owns AI guiding principles and the SS-25-001 generative-AI standard — the governance gate for AI deals." },
+    { "name": "Nikhil Deshpande", "title": "Chief Digital & AI Officer (Offices of Digital Services & AI)", "note": "Architects Georgia's enterprise AI and digital-services strategy; owns AI guiding principles and the SS-25-001 generative-AI standard, and is the public face of the June 2026 Darwin AI governance partnership — the governance gate for AI deals." },
     { "name": "GTA Office of Procurement Management", "title": "Technology procurement & GETS contracts", "note": "Owns GTA's contracting, endorsement, and GETS/GETS Ready vehicles — the path onto state delivery." },
     { "name": "Georgia DOAS — State Purchasing Division", "title": "Statewide contracts / IT Matrix", "note": "Establishes and administers statewide IT contracts and reseller listings; coordinate alongside GTA endorsement." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "GTA partners with Darwin AI to build statewide AI governance infrastructure", "impact": "Announced June 2026; Darwin Govern/LaunchPad give GTA one place to manage AI policy, gain enterprise visibility into where AI is used, and let agencies deploy mission-specific AI workflows under NIST-grounded guardrails — the operational layer behind SS-25-001 and a key gate any AI offering must fit.", "tags": ["AI", "Governance", "Partnership"] },
+    { "date": "2026-03", "title": "NTT DATA implements five-year integrated managed-services agreement with GTA", "impact": "Five-year deal (with a three-year extension option; value undisclosed) to modernize Georgia's IT environment, strengthen statewide cybersecurity, and simplify digital services — a major GETS-model modernization signal; map how ISG/AI-infrastructure lands through this managed-services motion.", "tags": ["Managed Services", "GETS", "Modernization"] },
     { "date": "2026-03", "title": "GTA publishes FY2025 Annual State IT Report", "impact": "Primary public source for current GETS scale, AI licensing, broadband funding, and security posture — refresh budget/scale assumptions against it.", "tags": ["Reporting", "Budget"] },
     { "date": "2026-01", "title": "State CIO Thomas frames 2026 priorities as 'AI governance is security'", "impact": "Confirms AI, cybersecurity, and workforce as top buying themes; every AI/cloud play must clear the security bar.", "tags": ["AI", "Leadership"] },
     { "date": "2025-07", "title": "GTA opens Innovation Lab using synthetic data", "impact": "A low-risk entry point for AI-infrastructure proofs of concept and emerging-tech evaluation.", "tags": ["AI", "Innovation"] },
@@ -77,6 +79,10 @@
     { "label": "GTA — Artificial Intelligence program", "url": "https://gta.georgia.gov/policies-and-programs/artificial-intelligence" },
     { "label": "GTA — Steve Hodges named State CISO", "url": "https://gta.georgia.gov/news/2023-01-09/steve-hodges-named-state-ciso" },
     { "label": "GTA — FY2025 Annual State IT Report", "url": "https://gta.georgia.gov/news/2026-03-06/fy2025-annual-state-it-report" },
+    { "label": "GovTech — Georgia Will Build Statewide AI 'Guardrails' With Darwin", "url": "https://www.govtech.com/artificial-intelligence/georgia-will-build-statewide-ai-guardrails-with-darwin" },
+    { "label": "Darwin AI — Georgia Lays Foundation for Responsible AI (partnership announcement)", "url": "https://www.darwingov.com/post/georgia-lays-the-foundation-for-responsible-ai-in-state-government-with-darwin-ai-partnership" },
+    { "label": "StateScoop — Georgia hires NTT DATA to modernize state digital infrastructure", "url": "https://statescoop.com/georgia-ntt-data-modernize-state-digital-infrastructure/" },
+    { "label": "NTT DATA — To Power Georgia's Next-Gen Digital Government Experience", "url": "https://us.nttdata.com/en/news/press-release/2026/march/ntt-data-to-power-georgias-next-gen-digital-government-experience" },
     { "label": "GovTech — Georgia's 2026 Tech Philosophy: 'AI Governance Is Security'", "url": "https://www.govtech.com/security/georgias-2026-tech-philosophy-ai-governance-is-security" },
     { "label": "Georgia.gov — Office of Artificial Intelligence", "url": "https://ai.georgia.gov/" },
     { "label": "Capgemini — State of Georgia / GETS service integrator", "url": "https://www.capgemini.com/us-en/client-story/driving-value-for-the-state-of-georgia-technology-authority/" },

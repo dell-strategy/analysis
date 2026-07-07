@@ -5,7 +5,7 @@
   "name": "Hawaii Dept of Education",
   "slug": "doe",
   "hq": "Honolulu, HI",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "The only statewide single school district in the U.S. — HIDOE runs every public school across seven islands as one organization, and its Office of Information Technology Services centralizes ed-tech, devices, networks, and security for ~165K students.",
 
   "snapshot": [
@@ -51,16 +51,18 @@
   "powerStructure": [
     { "name": "Keith T. Hayashi", "title": "Superintendent", "note": "Reappointed by the Board of Education to a four-year term (Jan. 1, 2026–Dec. 31, 2029). Leads the only statewide district — the top relationship and the owner of strategic direction." },
     { "name": "Amy Peckinpaugh", "title": "Assistant Superintendent, Office of Information Technology Services (OITS)", "note": "Appointed Jan. 2025; came from senior IT/operations leadership at Bank of Hawaii and a director role at Gartner. The CIO-equivalent and the central technology decision-maker." },
-    { "name": "Dean Uchida", "title": "Deputy Superintendent for Operations", "note": "Appointed Jan. 2025; oversees OITS and Facilities & Operations — the executive above the IT buying center." },
+    { "name": "Jesse K. Souki", "title": "Deputy Superintendent for Operations", "note": "Appointed Aug. 2025, succeeding Dean Uchida (who died unexpectedly in April 2025). Oversees OITS, Facilities & Operations, and the new Campus Operations Office — the executive above the IT buying center. Background is public-agency leadership and law (HCDA, DLNR, UH), not IT — technology decisions still run through OITS." },
     { "name": "OITS security leadership / CISO function", "title": "Cybersecurity & risk (OITS)", "note": "Security policy, student-data protection, and the E-rate/FCC pilot run through OITS. Confirm the current named security lead before mapping the security buying center." },
     { "name": "HIDOE Procurement & Contracts Branch", "title": "Solicitations & contracts (Waipahu)", "note": "Owns IFBs/RFPs via HIePRO and contract administration — the operational path onto a HIDOE deal." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Gov. Green signs FY2026–27 supplemental state budget (HB 1800 / Act 175) on June 26, 2026", "impact": "The biennium's general-fund appropriations — which drive HIDOE's capital and IT cycle — are now enacted amid federal-funding uncertainty and belt-tightening. Time refresh proposals to the enacted numbers and watch the July 15 veto deadline before forecasting district IT spend.", "tags": ["Budget", "Fiscal"] },
+    { "date": "2026-01", "title": "FCC E-rate Cybersecurity Pilot advances (second-wave commitments Jan. 2026); HIDOE cyber procurements move forward", "impact": "HIDOE has run solicitations for pilot-eligible cyber services (EDR/SIEM and DNS/email/content filtering, with a contract term starting Jan. 2026) as the FCC releases further funding commitments — a live, federally funded buying window for security-attached infrastructure. Confirm HIDOE's award status and remaining eligible categories.", "tags": ["Cybersecurity", "E-rate", "Procurement"] },
+    { "date": "2025-11", "title": "HIDOE presents multi-year technology plan to the Board of Education Finance & Infrastructure Committee", "impact": "A refreshed statewide technology roadmap (devices, network, cyber, AI) sets the standards and priorities a Dell seller must align to — read it before positioning a multi-year refresh.", "tags": ["IT Strategy", "Devices"] },
     { "date": "2025-11", "title": "Board of Education reappoints Keith Hayashi as superintendent for a four-year term (2026–2029)", "impact": "Stable, multi-year leadership at the top of the statewide district — a predictable strategic horizon for multi-year refresh and platform decisions.", "tags": ["Leadership"] },
-    { "date": "2025-01", "title": "HIDOE names Amy Peckinpaugh assistant superintendent for OITS and Dean Uchida deputy superintendent for operations", "impact": "New, private-sector-experienced IT and operations leadership reshapes the technology decision center — an opening to (re)establish the executive relationship.", "tags": ["Leadership"] },
-    { "date": "2025-07", "title": "HIDOE hosts AI in Education Summit and expands staff access to Gemini and NotebookLM", "impact": "AI is moving from pilot to staff-wide enablement — position infrastructure, identity, device, and responsible-use support around the AI rollout.", "tags": ["AI"] },
-    { "date": "2025-01", "title": "FCC selects pilot participants for the Schools & Libraries Cybersecurity Pilot (up to $200M nationally)", "impact": "Federal dollars are flowing to K-12 cyber — firewalls, endpoint, identity, and detection/response become fundable; check HIDOE's pilot/E-rate position.", "tags": ["Cybersecurity", "E-rate"] }
+    { "date": "2025-08", "title": "Jesse K. Souki named Deputy Superintendent for Operations; new Campus Operations Office established", "impact": "Souki succeeds the late Dean Uchida as the executive over OITS and operations — a reshaped operations leadership tier and a reason to re-map the executive relationship above the IT buying center.", "tags": ["Leadership"] },
+    { "date": "2025-07", "title": "HIDOE hosts AI in Education Summit and expands staff access to Gemini and NotebookLM", "impact": "AI is moving from pilot to staff-wide enablement — position infrastructure, identity, device, and responsible-use support around the AI rollout.", "tags": ["AI"] }
   ],
 
   "dellActions": [
@@ -73,7 +75,12 @@
 
   "sources": [
     { "label": "HIDOE — Board reappoints Keith Hayashi as superintendent (2025)", "url": "https://hawaiipublicschools.org/2025-board-of-education-announces-four-year-reappointment-of-keith-t-hayashi-as-superintendent/" },
-    { "label": "HIDOE — New deputy superintendent for operations & assistant superintendent for OITS (2025)", "url": "https://hawaiipublicschools.org/2025-hidoe-announces-new-deputy-superintendent-for-operations-new-assistant-superintendent-for-information-technology-services/" },
+    { "label": "HIDOE — Peckinpaugh (OITS) & Uchida named (Jan. 2025)", "url": "https://hawaiipublicschools.org/2025-hidoe-announces-new-deputy-superintendent-for-operations-new-assistant-superintendent-for-information-technology-services/" },
+    { "label": "HIDOE — Jesse Souki named Deputy Superintendent for Operations; new Campus Operations Office (Aug. 2025)", "url": "https://hawaiipublicschools.org/2025-hidoe-names-new-deputy-superintendent-for-operations-assistant-superintendent-to-lead-newly-established-campus-operations-office/" },
+    { "label": "Gov. Green signs FY2026–27 budget & issues intent-to-veto list (June 26, 2026)", "url": "https://governor.hawaii.gov/newsroom/external-office-of-the-governor-news-release-gov-green-signs-budget-and-issues-intent-to-veto-list/" },
+    { "label": "HIDOE — Board Finance & Infrastructure Committee technology plan (Nov. 13, 2025)", "url": "https://boe.hawaii.gov/wp-content/uploads/20251113_FIC_TechnologyPlan.pdf" },
+    { "label": "Funds For Learning — E-rate Cybersecurity Pilot second-wave commitments (Jan. 2026)", "url": "https://www.fundsforlearning.com/news/second-wave-of-e-rate-cyber-pilot-decisions-larger-awards-clearer-patterns/" },
+    { "label": "Hawaii Board of Education — Members & leadership", "url": "https://boe.hawaii.gov/members/" },
     { "label": "HIDOE — Organization", "url": "https://hawaiipublicschools.org/about/organization/" },
     { "label": "HIDOE — Budget", "url": "https://hawaiipublicschools.org/about/budget/" },
     { "label": "HIDOE — Artificial Intelligence (student programs)", "url": "https://hawaiipublicschools.org/student-programs/artificial-intelligence/" },

@@ -5,7 +5,7 @@
   "name": "Iowa Office of the Chief Information Officer (OCIO)",
   "slug": "ocio",
   "hq": "Des Moines, IA",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Iowa's central IT agency: the OCIO (now organized under the Department of Management as DoIT) runs enterprise shared services, statewide cybersecurity, broadband grants, and the IT master agreements most Iowa public buyers use — and it runs heavily on outsourced and managed services.",
 
   "snapshot": [
@@ -50,15 +50,17 @@
 
   "powerStructure": [
     { "name": "Matt Behrens", "title": "State Chief Information Officer (OCIO / Dept. of Management DoIT)", "note": "Named permanent CIO in 2022 after serving interim; long State of Iowa tenure overseeing the state's technology portfolio and ~200 IT staff. The top OCIO relationship; appointed by and reporting to the Governor (Senate-confirmed)." },
-    { "name": "Shane Dwyer", "title": "State Chief Information Security Officer (CISO)", "note": "Leads statewide information security operations, enterprise cyber strategy, and IT risk; active in MS-ISAC, NASCIO, and NGA. Owns the security buying center." },
+    { "name": "Shane Dwyer", "title": "State Chief Information Security Officer (CISO)", "note": "Leads statewide information security operations, enterprise cyber strategy, and IT risk; active in MS-ISAC, NASCIO, and NGA (re-verified current, mid-2026). Owns the security buying center." },
+    { "name": "Kraig Paulsen", "title": "Director, Iowa Department of Management (OCIO/DoIT's parent)", "note": "Heads DOM, the department OCIO/DoIT reports up through, so he sits above the State CIO in the org chart. In June 2026 Gov. Reynolds also named him Director of Iowa HHS at her pleasure while he continues to lead DOM — a dual-hat arrangement worth watching for bandwidth/priority effects on OCIO. Hedge: appears to remain DOM Director." },
     { "name": "OCIO / DoIT IT Vendor & Contract Management", "title": "Master agreements & vendor management", "note": "Owns the IT master agreements, vendor onboarding, and managed-services contracts (ITVM@dom.iowa.gov) — the path onto Iowa's IT vehicles." },
     { "name": "DAS Central Procurement", "title": "Statewide purchasing / IMPACS", "note": "Competes statewide master agreements and runs the cooperative purchasing program and bid portal — the central purchasing authority alongside OCIO's IT-specific vehicles." },
     { "name": "Office of the Governor (Kim Reynolds)", "title": "Appoints/confirms the CIO; sets tech priorities", "note": "The CIO serves at the Governor's pleasure with Senate confirmation; executive priorities (AI policy, broadband, cyber) shape OCIO direction." }
   ],
 
   "news": [
-    { "date": "2025-07", "title": "Empower Rural Iowa broadband round opens with up to $400M via federal BEAD", "impact": "Large multi-year broadband build continues — keep networking, infrastructure, and edge plays mapped to the program and its awardees.", "tags": ["Broadband"] },
-    { "date": "2025-03", "title": "State of Iowa Enterprise Generative AI policy takes effect (Mar 31, 2025)", "impact": "AI governance is active statewide; position AI-ready infrastructure and compliant solutions to the policy's data and human-review guardrails.", "tags": ["AI"] },
+    { "date": "2026-06", "title": "DOM Director Kraig Paulsen (OCIO's parent) also named Iowa HHS Director", "impact": "Gov. Reynolds tapped DOM Director Paulsen to lead HHS (June 19, 2026) while he continues to run DOM — a dual-hat load above the State CIO. Watch for shifted bandwidth/priorities across DOM-run IT; the CIO relationship (Behrens) is unchanged.", "tags": ["Leadership"] },
+    { "date": "2026-03", "title": "Iowa's Enterprise Generative AI policy hits its first annual review (Mar 31, 2026)", "impact": "AI governance is now a standing, reviewed policy (Iowa also enacted S.F. 2417 on conversational AI in May 2026) — position AI-ready infrastructure and compliant solutions to the policy's data and human-review guardrails.", "tags": ["AI"] },
+    { "date": "2026-01", "title": "Iowa moves BEAD to awards: Final Notice of Intent to Award (NOFA #9), ~$221M provisional", "impact": "With NTIA's Final Proposal approval (Nov 2025), Iowa announced its final intent to award (~$221M provisional; Mediacom the largest, plus a long list of rural providers) and moved toward grant execution — the multi-year build shifts from planning to deployment. Map networking, infrastructure, and edge to awardees. Figures are public estimates; confirm before forecasting.", "tags": ["Broadband"] },
     { "date": "2025-01", "title": "Iowa channels federal SLCGP cyber grants to local governments (with ISU CyIO)", "impact": "Whole-of-state security funding flows to locals — align endpoint, SOC, and resilience offerings to where grant dollars land.", "tags": ["Cybersecurity"] },
     { "date": "2024-09", "title": "OCIO continues renewing IT managed-services and master agreements (CAI, Insight, cloud)", "impact": "Iowa's outsourced delivery model runs through these vehicles — confirm Dell coverage and partner with prime managed-service vendors.", "tags": ["Procurement"] }
   ],
@@ -83,6 +85,11 @@
     { "label": "State of Iowa — Enterprise Generative AI Policy", "url": "https://dom.iowa.gov/media/785/download?inline=" },
     { "label": "GovTech — Iowa Officially Names Matt Behrens as CIO", "url": "https://www.govtech.com/workforce/interim-no-longer-iowa-officially-names-matt-behrens-as-cio" },
     { "label": "StateScoop — Iowa hires statewide CISO Shane Dwyer", "url": "https://statescoop.com/iowa-ciso-shane-dwyer/" },
-    { "label": "Iowa Homeland Security — State and Local Cybersecurity Grant Program (SLCGP)", "url": "https://homelandsecurity.iowa.gov/grants/state-and-local-cybersecurity-grant-program-slcgp" }
+    { "label": "Iowa Homeland Security — State and Local Cybersecurity Grant Program (SLCGP)", "url": "https://homelandsecurity.iowa.gov/grants/state-and-local-cybersecurity-grant-program-slcgp" },
+    { "label": "Gov. Reynolds — appoints Kraig Paulsen HHS Director (June 19, 2026)", "url": "https://governor.iowa.gov/press-release/2026-06-19/gov-reynolds-appoints-director-iowa-department-health-and-human-services" },
+    { "label": "The Gazette — Reynolds taps Paulsen to lead HHS", "url": "https://www.thegazette.com/news/state/reynolds-taps-kraig-paulsen-to-lead-iowa-hhs-after-democrats-block-directors-confirmation/article_a00c7c90-c946-46ff-977f-f7c50371b4f0.html" },
+    { "label": "Iowa DOM — Broadband Equity, Access, and Deployment (BEAD) Program", "url": "https://dom.iowa.gov/broadband/bead-program" },
+    { "label": "Iowa DOM — Notice of Intent to Award NOFA #9", "url": "https://dom.iowa.gov/media/924/download?inline=" },
+    { "label": "State of Iowa — Generative AI Policy (Agencies Sandbox)", "url": "https://dxsandbox.iowa.gov/state-iowa-generative-artificial-intelligence-ai-policy" }
   ]
 }

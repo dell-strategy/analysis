@@ -5,7 +5,7 @@
   "name": "Arkansas Division of Information Systems (DIS)",
   "slug": "dis",
   "hq": "Little Rock, AR",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Arkansas's central IT and shared-services provider: the former Division of Information Systems runs the statewide network, data-center and shared technology services, and now the centralized cybersecurity program — recently renamed the Office of State Technology (OST) under the Department of Shared Administrative Services.",
 
   "snapshot": [
@@ -57,6 +57,7 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "State Cybersecurity Office scales up: Cyber Center of Excellence and statewide incident-response taskforce", "impact": "The SCSO's Cyber Center of Excellence (a training/simulation hub for state, K-12, city and county staff) is operational with a 2025-26 annual report, and CISO Gary Vance's statewide cyber taskforce / incident-response team — a resource for under-resourced counties and municipalities — is standing up. Confirm current scope, but this is the concrete build-out of the centralized cyber program and a live opening for security training, detection/response, and resilience offerings.", "tags": ["Cybersecurity"] },
     { "date": "2026-06", "title": "Arkansas targets July 2026 cutover to SAP Ariba eProcurement", "impact": "New procurement platform changes how vendors register, list catalogs, and transact — align reseller and contract content to Ariba to stay sourceable.", "tags": ["Procurement"] },
     { "date": "2025-07", "title": "DIS rebranded Office of State Technology (OST) under Dept. of Shared Administrative Services (SAS)", "impact": "Entity names and reporting lines changed mid-transition — re-confirm the current owner of each program and contract before forecasting.", "tags": ["Reorg"] },
     { "date": "2025-06", "title": "Gov. Sanders' executive order centralizes state IT; assessment flags cyber and infrastructure gaps", "impact": "Consolidation, statewide project management, and a new cybersecurity office create openings for infrastructure and security; the ~$6M cyber spend and $65–130M savings target frame the business case.", "tags": ["Modernization", "Cybersecurity"] },
@@ -76,7 +77,11 @@
     { "label": "Arkansas SAS — Jay Harton Named Director of the Division of Information Systems", "url": "https://sas.arkansas.gov/news/jay-harton-named-director-of-the-division-of-information-systems/" },
     { "label": "GovTech — Arkansas Renames IT Division, Unifies Cybersecurity Efforts", "url": "https://www.govtech.com/computing/arkansas-renames-it-division-unifies-cybersecurity-efforts" },
     { "label": "StateScoop — Arkansas governor orders technology dept. to centralize, improve cyber", "url": "https://statescoop.com/arkansas-governor-technology-reorganization-202/" },
-    { "label": "Arkansas SAS — Cybersecurity (State Cybersecurity Office)", "url": "https://transform.ar.gov/information-systems/cybersecurity/" },
+    { "label": "Arkansas SAS — Cybersecurity (State Cybersecurity Office)", "url": "https://sas.arkansas.gov/state-technology/cybersecurity/" },
+    { "label": "Arkansas SAS — Cyber Center of Excellence", "url": "https://sas.arkansas.gov/state-technology/cybersecurity/cyber-center-of-excellence/" },
+    { "label": "Arkansas SAS — CISO Gary Vance / Cybersecurity Leadership", "url": "https://sas.arkansas.gov/state-technology/cybersecurity/ciso-gary-vance/" },
+    { "label": "Arkansas SAS — Director Jay Harton (State CTO)", "url": "https://sas.arkansas.gov/state-technology/director-jay-harton/" },
+    { "label": "Gov. Sanders — AI & Analytics Center of Excellence report (Feb 2026)", "url": "https://governor.arkansas.gov/news_post/governor-sanders-receives-report-from-arkansas-ai-and-analytics-center-of-excellence/" },
     { "label": "Arkansas SAS — Procurement / Office of State Procurement", "url": "https://sas.arkansas.gov/procurement/" },
     { "label": "Arkansas SAS — Office of State Technology AI Policy", "url": "https://sas.arkansas.gov/wp-content/uploads/Policy_AI_Artificial-Intelligence.pdf" },
     { "label": "DFA — Division of Information Systems budget (0470)", "url": "https://www.dfa.arkansas.gov/wp-content/uploads/0470_information_systems2024.pdf" },

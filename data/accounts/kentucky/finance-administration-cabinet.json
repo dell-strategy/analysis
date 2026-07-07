@@ -5,7 +5,7 @@
   "name": "Kentucky Finance & Administration Cabinet",
   "slug": "finance-administration-cabinet",
   "hq": "Frankfort, KY",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Kentucky's central business cabinet — it houses the Commonwealth Office of Technology (COT, the statewide IT authority) and the Office of Procurement Services (statewide contracts), making it the front door for both how the Commonwealth buys technology and how it runs it.",
 
   "snapshot": [
@@ -35,7 +35,7 @@
     { "name": "AI governance under SB 4", "summary": "Kentucky's SB 4 (signed March 2025) created a risk-based AI-governance framework and an AI Governance Committee housed inside COT — setting standards, a registry of generative-AI systems, disclosure, and human-oversight requirements for state agencies. Any AI offering must fit this governance process; it is also an entry point for responsible-AI and AI-infrastructure conversations.", "tags": ["AI", "Governance"] },
     { "name": "Cloud migration & IT consolidation", "summary": "Under permanent CIO Jim Barnhart, COT continues a multi-year executive-branch IT-consolidation and cloud-migration strategy — Barnhart led prior consolidation, cloud, and statewide microwave/infrastructure modernization efforts. Infrastructure refresh, hybrid cloud, and managed services have a clear lane.", "tags": ["Cloud", "Modernization"] },
     { "name": "Cybersecurity & zero trust", "summary": "COT's Office of the Chief Information Security Officer (OCISO) runs statewide security policy and is advancing toward a zero-trust model for data protection across remote and consolidated operations. Note the named CISO role has shown turnover — confirm current ownership before forecasting security deals.", "tags": ["Cybersecurity", "Zero Trust"] },
-    { "name": "KentuckyWired oversight move", "summary": "2026 legislation (HB 314) advanced to move the KentuckyWired statewide fiber network and the Kentucky Communications Network Authority under COT / the Finance & Administration Cabinet, away from the Office of the Governor — potentially expanding COT's network/broadband remit. Track final enactment and the litigation/equipment backdrop.", "tags": ["Broadband", "Transition"] }
+    { "name": "KentuckyWired now under COT/FAC (HB 314 enacted)", "summary": "HB 314 became law in March 2026 after the General Assembly overrode Gov. Beshear's veto (emergency clause; effective immediately). It moves the KentuckyWired statewide fiber network and the Kentucky Communications Network Authority (KCNA) out of the Office of the Governor and under COT / the Finance & Administration Cabinet, abolishing KCNA's separate executive-director post and placing COT's leader in charge. This materially expands COT's network/broadband remit — but note the transition is contested (Beshear called it an unconstitutional power grab) and rides atop ongoing KCNA/Accelecom litigation, so operating models and buying centers will be unsettled near-term.", "tags": ["Broadband", "Transition"] }
   ],
 
   "procurement": {
@@ -51,15 +51,16 @@
     { "name": "Holly M. Johnson", "title": "Secretary, Finance & Administration Cabinet", "note": "Beshear-appointed (since Dec 2019); the Commonwealth's chief financial officer and head of the cabinet that houses COT and Procurement Services. Top of the house for the account." },
     { "name": "Jim Barnhart", "title": "State CIO / Executive Director, Commonwealth Office of Technology (COT)", "note": "Named permanent state CIO May 2025 after ~two decades at COT and serving as acting CIO across three administrations. Led cloud migration and IT consolidation — the primary statewide IT relationship." },
     { "name": "David J. Carter", "title": "Deputy CIO, COT", "note": "Deputy IT leadership; has also been listed serving as Chief Information Security Officer during CISO transition. Operational counterpart across the consolidated estate." },
-    { "name": "COT Office of the CISO (OCISO)", "title": "Statewide security policy & zero trust", "note": "Owns enterprise security standards and the zero-trust push. The named CISO position has shown vacancy/turnover — confirm current owner before security forecasting." },
+    { "name": "COT Office of the CISO (OCISO)", "title": "Statewide security policy & zero trust", "note": "Owns enterprise security standards and the zero-trust push. As of June 2026 the named CISO seat is listed VACANT on COT's org chart, with Deputy CIO David J. Carter carrying CISO duties — confirm current owner before security forecasting." },
     { "name": "Office of Procurement Services (FAC, Office of the Controller)", "title": "Statewide contracts & Master Agreements", "note": "Central purchasing authority for the executive branch — owns the Master Agreements, solicitations, and vendor onboarding; the contracting path onto Kentucky's vehicles." }
   ],
 
   "news": [
-    { "date": "2026-01", "title": "HB 314 advances to move KentuckyWired / KCNA under COT and the Finance & Administration Cabinet", "impact": "Would expand COT's network/broadband remit and shift oversight from the Governor's Office — re-map the broadband buying center and watch final enactment.", "tags": ["Broadband", "Transition"] },
+    { "date": "2026-06", "title": "Beshear and FAC Secretary Holly Johnson sue over HB 10, which hands the Finance secretary new settlement- and contract-approval powers", "impact": "HB 10 (passed over veto) gives the FAC Secretary authority to approve/disapprove executive-branch legal settlements over $1M and certain noncompetitive contract renewals/entries in a pre-inauguration window — a procurement-adjacent control now under legal challenge. Watch whether it survives, as it touches the cabinet's contracting authority.", "tags": ["Governance", "Procurement", "Litigation"] },
+    { "date": "2026-04", "title": "General Assembly passes ~$32.4B FY2026–2028 biennial budget (HB 500) with executive-branch base cuts", "impact": "Tighter discretionary backdrop (~4% then ~3% base reductions) — frame technology buys around consolidation savings and modernization ROI.", "tags": ["Budget"] },
+    { "date": "2026-03", "title": "HB 314 enacted over Beshear's veto — KentuckyWired / KCNA move under COT and the Finance & Administration Cabinet", "impact": "Now law (emergency clause, effective immediately): abolishes KCNA's separate executive-director role and puts COT's leader over the statewide fiber network, expanding COT's broadband remit — but the contested transition and KCNA/Accelecom litigation leave operating models and buying centers unsettled near-term.", "tags": ["Broadband", "Transition"] },
     { "date": "2025-05", "title": "Jim Barnhart named permanent Kentucky state CIO / COT Executive Director", "impact": "Stable, consolidation- and cloud-forward leadership at the top of the statewide IT motion after years as acting CIO — the primary relationship to build.", "tags": ["Leadership"] },
-    { "date": "2025-03", "title": "Kentucky enacts SB 4, establishing an AI-governance framework with a committee inside COT", "impact": "Creates the gate and the buying center for state AI use — align any AI / responsible-AI offering to COT's governance process and registry.", "tags": ["AI", "Governance"] },
-    { "date": "2026-04", "title": "General Assembly passes ~$32.4B FY2026–2028 biennial budget (HB 500) with executive-branch base cuts", "impact": "Tighter discretionary backdrop (~4% then ~3% base reductions) — frame technology buys around consolidation savings and modernization ROI.", "tags": ["Budget"] }
+    { "date": "2025-03", "title": "Kentucky enacts SB 4, establishing an AI-governance framework with a committee inside COT", "impact": "Creates the gate and the buying center for state AI use — align any AI / responsible-AI offering to COT's governance process and registry.", "tags": ["AI", "Governance"] }
   ],
 
   "dellActions": [
@@ -78,6 +79,9 @@
     { "label": "Kentucky Senate GOP — Senate passes SB 4 AI framework", "url": "https://kysenaterepublicans.com/press-releases/2025/3/4/senate-passes-bledsoes-bill-establishing-an-ai-framework-for-state-government-and-promoting-innovation-accountability" },
     { "label": "Kentucky Lantern — Bill would remake KentuckyWired oversight (HB 314)", "url": "https://kentuckylantern.com/2026/01/30/advancing-bill-would-remake-leadership-overseeing-broadband-network-kentuckywired/" },
     { "label": "KLC — General Assembly Sends Biennial Budget to Governor (HB 500)", "url": "https://www.klc.org/News/13242/general-assembly-sends-biennial-budget-to-governor" },
-    { "label": "Dell — NASPO ValuePoint, State of Kentucky", "url": "https://www.dell.com/en-us/lp/industry-emcwsca-data-storage-kentucky" }
+    { "label": "Dell — NASPO ValuePoint, State of Kentucky", "url": "https://www.dell.com/en-us/lp/industry-emcwsca-data-storage-kentucky" },
+    { "label": "Kentucky Today — Legislature overrides Beshear's veto of HB 314 (KentuckyWired/KCNA to COT/FAC)", "url": "https://www.kentuckytoday.com/news/kentucky-legislature-overrides-beshears-first-veto-of-2026-session/article_94f3ac16-5173-4cb6-9ef3-be6e5698a54b.html" },
+    { "label": "Kentucky Lantern — Beshear vetoes bill remaking KentuckyWired oversight (HB 314)", "url": "https://kentuckylantern.com/2026/03/09/beshear-vetoes-bill-remaking-leadership-overseeing-broadband-network/" },
+    { "label": "Kentucky Lantern — Beshear, Finance Secretary sue over HB 10 executive-power shift (June 2026)", "url": "https://kentuckylantern.com/2026/06/01/with-new-lawsuit-beshear-tries-to-stop-ky-lawmakers-latest-moves-on-executive-power/" }
   ]
 }

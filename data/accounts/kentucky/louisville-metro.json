@@ -5,7 +5,7 @@
   "name": "Louisville/Jefferson County Metro, Kentucky",
   "slug": "louisville-metro",
   "hq": "Louisville, KY",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Kentucky's largest local government — the consolidated Louisville/Jefferson County Metro (~770K residents). Central IT runs through Metro Technology Services (MTS), and the city is moving early on enterprise AI under a new Chief AI Officer and a four-person AI office.",
 
   "snapshot": [
@@ -51,14 +51,16 @@
     { "name": "Craig Greenberg", "title": "Mayor, Louisville Metro", "note": "Strong-mayor executive; AI-forward — personally announced the first Chief AI Officer and the first AI pilot. Top of the house and the sponsor of the city's technology/AI agenda." },
     { "name": "Chris Seidt", "title": "Executive Director / CIO, Metro Technology Services (MTS)", "note": "~20-year Metro IT veteran (Smart Cities, IT Operations) and executive director since 2018. The primary enterprise IT relationship across infrastructure, apps, and security." },
     { "name": "Pamela McKnight", "title": "Chief Artificial Intelligence Officer (CAIO)", "note": "Named December 2025 from Intel; leads enterprise AI strategy and a four-person AI office. The owner of the AI buying center — engage alongside MTS." },
-    { "name": "James Meece", "title": "Cybersecurity / information-security lead, MTS", "note": "Has led Metro's cybersecurity, risk, and compliance program since 2015 and helped shape the city's AI policy. The security relationship to build before forecasting cyber deals." },
+    { "name": "James Meece", "title": "Chief Information Security Officer (CISO), MTS", "note": "Has led Metro's cybersecurity, risk, and compliance program since 2015 (title reported as CISO in 2026) and helped shape the city's AI policy; Cody Pierce is reported as deputy CISO. The security relationship to build before forecasting cyber deals." },
     { "name": "OMB Procurement Division", "title": "Central purchasing (under Metro CFO)", "note": "Procurement director is delegated buying authority and reports to the CFO within OMB — owns solicitations, cooperative approvals, and supplier onboarding; the contracting path into Metro." }
   ],
 
   "news": [
+    { "date": "2026-06", "title": "Louisville drafts data-center zoning rules — would ban hyperscale, cap facilities <500K sq ft", "impact": "The Office of Planning's June 9 draft (public comment through July 9) would restrict data centers to industrial zones, ban hyperscale, and put infrastructure costs on developers — signaling a cautious posture toward large local compute build-out and shaping where AI/data-center demand can land in the metro. Watch how it interacts with Metro's own AI/compute needs.", "tags": ["Data Center", "Policy", "AI"] },
     { "date": "2026-06", "title": "Metro Council approves amended ~$1.1B FY27 budget (22–3)", "impact": "Sets the FY27 spending envelope with public safety as the largest category; confirm final IT/AI line items against the enacted ordinance and frame buys around modernization ROI.", "tags": ["Budget"] },
+    { "date": "2026-05", "title": "GovTech profiles Louisville's \"build-internally\" modernization under CIO Seidt", "impact": "A May 26 feature highlights Metro's strategy of building internal technical capacity (private-sector hires paired with IT, a customized Workday ERP, free park Wi-Fi, and a 2026 service-delivery redesign) rather than pure buy-and-deploy — position Dell around infrastructure/lifecycle and as-a-service that augments in-house teams, not replaces them.", "tags": ["Modernization", "Leadership"] },
     { "date": "2026-01", "title": "Louisville awards first AI pilot to Govstream.ai for permitting", "impact": "First AI use case procured via RFP (~$30K cap, through spring) — signals Metro is moving from AI policy to procured deployments; an opening to position AI infrastructure and responsible-AI offerings.", "tags": ["AI", "Modernization"] },
-    { "date": "2025-12", "title": "Louisville names first Chief AI Officer (Pamela McKnight)", "impact": "Creates a dedicated AI buying center and a four-person AI office backed by a ~$2M expansion — build the relationship early alongside MTS.", "tags": ["AI", "Leadership"] }
+    { "date": "2025-12", "title": "Louisville names first Chief AI Officer (Pamela McKnight)", "impact": "Creates a dedicated AI buying center and a four-person AI office backed by a ~$2M expansion — build the relationship early alongside MTS. (Announced late 2025; formally introduced at a Jan 7, 2026 press conference.)", "tags": ["AI", "Leadership"] }
   ],
 
   "dellActions": [
@@ -77,6 +79,10 @@
     { "label": "LPM — Louisville officials approve $1.1 billion budget (FY27)", "url": "https://www.lpm.org/news/2026-06-25/louisville-officials-approve-1-1-billion-budget-with-investments-in-parks-roads-and-housing" },
     { "label": "WHAS11 — Metro Council approves amended Greenberg budget", "url": "https://www.whas11.com/article/news/local/louisville-metro-council-approves-amended-craig-greenberg-budget/417-2a7926e4-f756-43fa-8112-e3c9cc428968" },
     { "label": "Louisville Metro — OMB Procurement Policy & Manual", "url": "https://louisvilleky.gov/sites/default/files/2026-02/Procurement%20Policy%20Manual%20202602.pdf" },
-    { "label": "Louisville Metro — Smart City", "url": "https://louisvilleky.gov/government/metro-technology-services/smart-city" }
+    { "label": "Louisville Metro — Smart City", "url": "https://louisvilleky.gov/government/metro-technology-services/smart-city" },
+    { "label": "Louisville Metro — Data Centers (draft regulations & public comment)", "url": "https://louisvilleky.gov/government/office-planning/data-centers" },
+    { "label": "LPM — Louisville proposes banning 'hyperscale' data centers, seeks feedback (June 9, 2026)", "url": "https://www.lpm.org/news/2026-06-09/louisville-proposes-banning-hyperscale-data-centers-seeks-feedback" },
+    { "label": "GovTech — Building Internally: The Shift From Buying Tech to Owning It (May 26, 2026)", "url": "https://www.govtech.com/civic/building-internally-the-shift-from-buying-tech-to-owning-it" },
+    { "label": "CDO Magazine — Louisville Gets Pamela McKnight as First Chief AI Officer", "url": "https://www.cdomagazine.tech/leadership-moves/louisville-gets-pamela-mcknight-as-first-chief-ai-officer" }
   ]
 }

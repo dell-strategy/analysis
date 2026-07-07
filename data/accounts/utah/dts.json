@@ -5,7 +5,7 @@
   "name": "Utah Dept of Technology Services (DTS)",
   "slug": "dts",
   "hq": "Salt Lake City, UT",
-  "updated": "2026-06-22",
+  "updated": "2026-06-30",
   "tagline": "Utah's consolidated central IT shop — DTS delivers enterprise infrastructure, security, and digital services to nearly every executive-branch agency, making it one of the most centralized state IT models in the country.",
 
   "snapshot": [
@@ -55,10 +55,12 @@
   ],
 
   "news": [
+    { "date": "2026-06", "title": "MyUtah statewide citizen portal keeps expanding services", "impact": "DTS's consolidated digital-services platform (myutah.gov, publicly launched Feb 2026) continues adding agency services — e.g. a live air-quality dashboard (June 30) with professional-license management rolling out. Signals sustained DTS investment in shared digital-experience infrastructure that Dell platform/data offerings can underpin.", "tags": ["Digital Services", "Modernization"] },
+    { "date": "2026-06", "title": "NASPO ValuePoint Cloud & Software Solutions transitions to new 2026–2036 portfolio", "impact": "The legacy Utah-led cloud co-op contract expires Sept 15, 2026 and the new Cloud and Software Solutions (2026–2036) portfolio — awarded to ~58 suppliers with Utah as lead state — takes effect Sept 16, 2026. Confirm Dell/partner coverage on the new master agreements now; this vehicle shapes cloud/software buys well beyond Utah.", "tags": ["Procurement", "Cloud"] },
+    { "date": "2026-05", "title": "DTS reinforces GovRAMP cloud-security authorization gate for vendors", "impact": "DTS held GovRAMP office hours (May 2026) tied to cloud-security requirements in effect since July 1, 2025 — vendors selling cloud/SaaS into Utah increasingly need GovRAMP (formerly StateRAMP) authorization. A compliance gate to clear early on cloud offerings across the consolidated environment.", "tags": ["Cybersecurity", "Cloud", "Procurement"] },
     { "date": "2026-02", "title": "Utah names members of its Pro-Human AI Task Force", "impact": "Reinforces Utah's distinctive AI posture; DTS is the technical implementer of enterprise AI infrastructure and governance — a hook for AI-infrastructure conversations.", "tags": ["AI"] },
     { "date": "2026-01", "title": "Utah launches first state-approved AI program for prescription renewals", "impact": "Signals Utah's willingness to deploy AI in production public services, validating demand for the underlying compute and data infrastructure DTS supports.", "tags": ["AI"] },
-    { "date": "2026-01", "title": "State CISO Phil Bates recognized among GovTech Top 25 (2026)", "impact": "Stable, high-profile security leadership at DTS — confirms the CISO as a durable relationship for the security buying center.", "tags": ["Cybersecurity", "Leadership"] },
-    { "date": "2026-05", "title": "Utah leads NASPO ValuePoint Cloud and Software Solutions solicitation", "impact": "Utah's lead-state role shapes a multi-state cloud/software contract — relevant to both Utah deals and cooperative-contract positioning nationally.", "tags": ["Procurement", "Cloud"] }
+    { "date": "2026-01", "title": "State CISO Phil Bates recognized among GovTech Top 25 (2026)", "impact": "Stable, high-profile security leadership at DTS — confirms the CISO as a durable relationship for the security buying center.", "tags": ["Cybersecurity", "Leadership"] }
   ],
 
   "dellActions": [
