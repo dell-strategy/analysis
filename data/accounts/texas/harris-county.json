@@ -292,31 +292,37 @@
         "tag": "competitor"
       }
     ],
-    "manufacturerShare": [
-      {
-        "name": "HP",
-        "amount": 6255005
-      },
-      {
-        "name": "HPE",
-        "amount": 2630943
-      },
+    "brandFootprint": [
       {
         "name": "Dell",
-        "amount": 1025118,
-        "tag": "dell"
+        "amount": 25220970,
+        "tag": "dell",
+        "lens": "product-text"
       },
       {
         "name": "Cisco",
-        "amount": 497049
+        "amount": 12800906,
+        "lens": "product-text"
+      },
+      {
+        "name": "HP",
+        "amount": 6255005,
+        "lens": "mfr-tag"
       },
       {
         "name": "Apple",
-        "amount": 66662
+        "amount": 2654184,
+        "lens": "product-text"
+      },
+      {
+        "name": "HPE",
+        "amount": 2630943,
+        "lens": "mfr-tag"
       },
       {
         "name": "Lenovo",
-        "amount": 19977
+        "amount": 125978,
+        "lens": "product-text"
       }
     ],
     "categories": [
@@ -364,9 +370,9 @@
       }
     ],
     "notes": [
-      "\"Dell footprint — all channels\" (~$25M) uses product-name text matching, so it captures Dell gear sold THROUGH resellers — which the manufacturer tag misses entirely (SHI ~$12.4M and CDW ~$6.5M of Dell are untagged).",
-      "The panels below use narrower lenses: 'payee' = dollars paid to a company (any brand); 'manufacturer' = value of a brand's product where GovSpend tagged the maker (sparse, so it undercounts).",
-      "Dell's $2.66M payee is mostly Dell reselling other brands (Lexmark ~$1.35M); only ~$1.03M is Dell-made and tagged.",
+      "\"Dell footprint\" and \"Brand footprint\" use product-name text matching across ALL channels (direct + through resellers like SHI/CDW), so they capture equipment the manufacturer tag misses — e.g. ~$18.9M of Dell sold through resellers is untagged.",
+      "Each brand is the higher of two conservative lenses — product-name match vs. GovSpend's manufacturer tag; both undercount, so treat every figure as a floor. HP uses the tag because bare \"HP\" collides with \"horsepower\" in item text.",
+      "\"Dell vs. competitors (payee)\" is a different lens: dollars paid to each company regardless of brand. Dell's $2.66M payee is mostly Dell reselling other makers (Lexmark ~$1.35M), so payee understates Dell's true product footprint.",
       "Figures are estimates: text-matching can include minor false positives, and source contract $ are often unpublished."
     ],
     "dellFootprint": {

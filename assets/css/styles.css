@@ -505,6 +505,7 @@ a.acct-card:hover .acct-go { color: var(--c-blue); }
 .ss-cat span { font-size: .82rem; color: var(--c-muted); }
 .ss-notes { font-size: .8rem; margin: 14px 0 0; padding-left: 18px; }
 .ss-notes li { margin: 3px 0; }
+.ss-hint { font-size: .72rem; color: var(--c-muted); margin: 10px 0 0; line-height: 1.4; }
 
 /* Vendor spend bars */
 .ss-bars { display: flex; flex-direction: column; gap: 9px; }
