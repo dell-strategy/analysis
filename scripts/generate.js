@@ -85,7 +85,6 @@ function siteFooter(rootPrefix, updated, usesGovspend) {
     <div class="site-footer__meta">
       ${gs}
       ${stamp ? `<span>${stamp}</span>` : ''}
-      <span class="muted">Synthesized from public sources &middot; verify before customer use.</span>
     </div>
   </div>
 </footer>`;

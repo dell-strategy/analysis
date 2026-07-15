@@ -435,8 +435,8 @@ a.acct-card:hover .acct-go { color: var(--c-blue); }
 .site-footer a { color: #cfe0f0; }
 .site-footer__brand { display: flex; align-items: center; }
 .footer-logo { height: 52px; width: auto; display: block; margin-left: -6px; }
-.footer-govspend { display: inline-flex; align-items: center; gap: 9px; font-size: .78rem; color: #9fb3c6; justify-content: flex-end; }
-.footer-govspend .gs-logo { height: 20px; width: auto; background: #fff; padding: 5px 9px; border-radius: 7px; }
+.footer-govspend { display: inline-flex; align-items: center; gap: 11px; font-size: .82rem; color: #9fb3c6; justify-content: flex-end; }
+.footer-govspend .gs-logo { height: 34px; width: auto; background: #fff; padding: 8px 13px; border-radius: 9px; }
 .site-footer__meta { display: flex; flex-direction: column; gap: 4px; text-align: right; }
 @media (max-width: 640px) { .site-footer__meta { text-align: left; } }
 
