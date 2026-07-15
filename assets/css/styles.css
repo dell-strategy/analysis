@@ -486,6 +486,12 @@ a.acct-card:hover .acct-go { color: var(--c-blue); }
   border: 1px solid #eBD9a8; padding: 3px 10px; border-radius: var(--radius-pill);
 }
 .ss-meta { font-size: .85rem; margin: -4px 0 16px; }
+.ss-footprint { display: flex; align-items: center; gap: 20px; margin: 4px 0 20px; padding: 18px 24px; border-radius: var(--radius); color: #fff; background: linear-gradient(135deg, var(--c-blue-900), var(--c-blue-600)); box-shadow: var(--shadow-sm); }
+.ss-footprint__val { font-size: 2.25rem; font-weight: 800; letter-spacing: -.02em; line-height: 1; flex: 0 0 auto; }
+.ss-footprint__lbl { font-size: .74rem; text-transform: uppercase; letter-spacing: .05em; font-weight: 700; color: #bcd6f2; }
+.ss-footprint__break { font-size: .95rem; margin-top: 5px; color: #e6effb; }
+.ss-footprint__break b { color: #fff; font-weight: 800; }
+@media (max-width: 520px) { .ss-footprint { flex-direction: column; align-items: flex-start; gap: 8px; } .ss-footprint__val { font-size: 1.9rem; } }
 .ss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 18px; align-items: start; }
 @media (max-width: 760px) { .ss-grid { grid-template-columns: 1fr; } }
 .ss-col__title, .ss-cats .ss-col__title {
@@ -502,7 +508,7 @@ a.acct-card:hover .acct-go { color: var(--c-blue); }
 
 /* Vendor spend bars */
 .ss-bars { display: flex; flex-direction: column; gap: 9px; }
-.ss-bar { display: grid; grid-template-columns: 150px 1fr auto; align-items: center; gap: 12px; }
+.ss-bar { display: grid; grid-template-columns: 165px 1fr auto; align-items: center; gap: 12px; }
 .ss-bar__label { font-size: .86rem; font-weight: 600; color: var(--c-ink-2); }
 .ss-bar__track { height: 12px; background: var(--c-surface-2); border: 1px solid var(--c-border); border-radius: var(--radius-pill); overflow: hidden; }
 .ss-bar__fill { height: 100%; background: var(--c-border-2); border-radius: var(--radius-pill); }
@@ -511,7 +517,8 @@ a.acct-card:hover .acct-go { color: var(--c-blue); }
 .ss-bar.is-dell .ss-bar__fill { background: var(--c-blue); }
 .ss-bar.is-dell .ss-bar__label { color: var(--c-blue-700); font-weight: 800; }
 .ss-bar.is-reseller .ss-bar__fill { background: var(--c-warn); opacity: .85; }
-@media (max-width: 520px) { .ss-bar { grid-template-columns: 110px 1fr auto; } }
+.ss-bar__dell { display: block; font-size: .7rem; font-weight: 700; color: var(--c-blue-700); margin-top: 2px; }
+@media (max-width: 520px) { .ss-bar { grid-template-columns: 130px 1fr auto; } }
 
 /* Pills */
 .ss-pill { font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .03em; padding: 1px 6px; border-radius: var(--radius-pill); vertical-align: middle; }

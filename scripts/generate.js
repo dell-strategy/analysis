@@ -475,7 +475,7 @@ function renderSpendSignals(a) {
     const cls = v.tag === 'dell' ? ' is-dell' : (v.tag === 'reseller' ? ' is-reseller' : '');
     const w = Math.max(2, Math.round((v.amount || 0) / vmax * 100));
     const badge = v.tag === 'reseller' ? ' <span class="ss-pill ss-pill--reseller">reseller</span>' : '';
-    return `<div class="ss-bar${cls}"><div class="ss-bar__label">${esc(v.name)}${badge}</div><div class="ss-bar__track"><div class="ss-bar__fill" style="width:${w}%"></div></div><div class="ss-bar__val">${moneyShort(v.amount)}</div></div>`;
+    return `<div class="ss-bar${cls}"><div class="ss-bar__label">${esc(v.name)}${badge}${v.dellThru ? `<span class="ss-bar__dell">~${moneyShort(v.dellThru)} Dell</span>` : ''}</div><div class="ss-bar__track"><div class="ss-bar__fill" style="width:${w}%"></div></div><div class="ss-bar__val">${moneyShort(v.amount)}</div></div>`;
   }).join('');
   const mans = (s.manufacturerShare || []).map((m) => `<tr${m.tag === 'dell' ? ' class="is-dell-row"' : ''}><td>${esc(m.name)}</td><td class="num">${moneyShort(m.amount)}</td></tr>`).join('');
   const cats = (s.categories || []).map((c) => `<div class="ss-cat"><b>${moneyShort(c.amount)}</b><span>${esc(c.name)}</span></div>`).join('');
@@ -484,10 +484,13 @@ function renderSpendSignals(a) {
   const bids = (s.openBids || []).map((b) =>
     `<tr><td><b>${b.url ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.title)}</a>` : esc(b.title)}</b>${b.agency ? `<br><small class="muted">${esc(b.agency)}</small>` : ''}</td><td class="nowrap">${esc(fmtLong(b.dueDate))}</td></tr>`).join('');
   const notes = (s.notes || []).map((n) => `<li>${esc(n)}</li>`).join('');
+  const fp = s.dellFootprint;
+  const footprint = fp ? `<div class="ss-footprint"><div class="ss-footprint__val">${moneyShort(fp.allChannels)}</div><div class="ss-footprint__body"><div class="ss-footprint__lbl">Dell footprint &mdash; all channels${s.window ? ` (${esc(s.window)})` : ''}, est.</div><div class="ss-footprint__break">Direct <b>${moneyShort(fp.direct)}</b>${fp.viaResellers != null ? ` &middot; via resellers <b>~${moneyShort(fp.viaResellers)}</b>` : ''}${(fp.topResellers || []).length ? ` &middot; ${fp.topResellers.map((r) => `${esc(r.name)} ~${moneyShort(r.amount)}`).join(', ')}` : ''}</div></div></div>` : '';
   const col = (title, body) => body ? `<div class="ss-col"><h3 class="ss-col__title">${esc(title)}</h3>${body}</div>` : '';
   return `<section class="section ss-section">
     <div class="section__head"><span class="section__icon">${icon('budget')}</span><h2>Procurement &amp; Spend Signals</h2><span class="ss-flag">${esc(s.source || 'GovSpend')}${s.updated ? ` &middot; as of ${esc(fmtLong(s.updated))}` : ''}</span></div>
     ${meta ? `<p class="muted ss-meta">${meta}</p>` : ''}
+    ${footprint}
     <div class="ss-grid">
       ${col('Dell vs. competitors (spend, payee)', vendorRows ? `<div class="card"><div class="ss-bars">${vendorRows}</div></div>` : '')}
       ${col('Manufacturer spend (who made it)', mans ? `<div class="card table-card"><table class="data-table"><tbody>${mans}</tbody></table></div>` : '')}

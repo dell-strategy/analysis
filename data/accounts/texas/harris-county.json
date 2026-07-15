@@ -257,12 +257,14 @@
       {
         "name": "SHI",
         "amount": 148396835,
-        "tag": "reseller"
+        "tag": "reseller",
+        "dellThru": 12376165
       },
       {
         "name": "CDW",
         "amount": 20910558,
-        "tag": "reseller"
+        "tag": "reseller",
+        "dellThru": 6504548
       },
       {
         "name": "Presidio",
@@ -362,10 +364,26 @@
       }
     ],
     "notes": [
-      "Two lenses, by design: 'payee' = dollars paid to each company; 'manufacturer' = value of each brand's product regardless of who sold it.",
-      "Dell payee spend is $2.66M direct, but only ~$1.03M is Dell-made — the rest is Dell reselling other brands (Lexmark ~$1.35M, Adobe, VMware). As a hardware maker, Dell ranks #3 here behind HP ($6.3M) and HPE ($2.6M).",
-      "GovSpend's manufacturer tag is sparsely/inconsistently populated, so maker figures undercount — especially gear bought through resellers (SHI/CDW), whose line items mostly carry no manufacturer.",
-      "SHI is the largest IT payee (~$148M / 3-yr) but that is largely software/untagged here; source contract $ are often unpublished."
-    ]
+      "\"Dell footprint — all channels\" (~$25M) uses product-name text matching, so it captures Dell gear sold THROUGH resellers — which the manufacturer tag misses entirely (SHI ~$12.4M and CDW ~$6.5M of Dell are untagged).",
+      "The panels below use narrower lenses: 'payee' = dollars paid to a company (any brand); 'manufacturer' = value of a brand's product where GovSpend tagged the maker (sparse, so it undercounts).",
+      "Dell's $2.66M payee is mostly Dell reselling other brands (Lexmark ~$1.35M); only ~$1.03M is Dell-made and tagged.",
+      "Figures are estimates: text-matching can include minor false positives, and source contract $ are often unpublished."
+    ],
+    "dellFootprint": {
+      "allChannels": 25220970,
+      "direct": 2656137,
+      "viaResellers": 22564833,
+      "method": "product-name text match (dell, poweredge, optiplex, precision, latitude, powerstore, wyse, isilon)",
+      "topResellers": [
+        {
+          "name": "SHI",
+          "amount": 12376165
+        },
+        {
+          "name": "CDW",
+          "amount": 6504548
+        }
+      ]
+    }
   }
 }
