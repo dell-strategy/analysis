@@ -484,7 +484,7 @@ function renderSpendSignals(a) {
     const w = Math.max(2, Math.round((b.amount || 0) / bfmax * 100));
     return `<div class="ss-bar${cls}"><div class="ss-bar__label">${esc(b.name)}</div><div class="ss-bar__track"><div class="ss-bar__fill" style="width:${w}%"></div></div><div class="ss-bar__val">${moneyShort(b.amount)}</div></div>`;
   }).join('');
-  const cats = (s.categories || []).map((c) => `<div class="ss-cat"><b>${moneyShort(c.amount)}</b><span>${esc(c.name)}</span></div>`).join('');
+  const cats = (s.categories || []).slice().sort((x, y) => (y.amount || 0) - (x.amount || 0)).map((c) => `<div class="ss-cat"><b>${moneyShort(c.amount)}</b><span>${esc(c.name)}</span></div>`).join('');
   const contracts = (s.expiringContracts || []).map((c) =>
     `<tr><td><b>${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>` : esc(c.title)}</b>${c.vendor ? `<br><small class="muted">${esc(c.vendor)}</small>` : ''}</td><td class="nowrap">${esc(fmtLong(c.endDate))}</td></tr>`).join('');
   const bids = (s.openBids || []).map((b) =>
@@ -501,7 +501,7 @@ function renderSpendSignals(a) {
       ${col('Dell vs. competitors (spend, payee)', vendorRows ? `<div class="card"><div class="ss-bars">${vendorRows}</div></div>` : '')}
       ${col('Brand footprint — all channels (est.)', brandRows ? `<div class="card"><div class="ss-bars">${brandRows}</div><p class="ss-hint">Higher of two conservative lenses: product-name match &middot; manufacturer tag. Both undercount &mdash; treat as floors.</p></div>` : '')}
     </div>
-    ${cats ? `<div class="ss-col ss-col--full"><h3 class="ss-col__title">Top categories</h3><div class="card"><div class="ss-cat-grid">${cats}</div></div></div>` : ''}
+    ${cats ? `<div class="ss-col ss-col--full"><h3 class="ss-col__title">Top IT categories</h3><div class="card"><div class="ss-cat-grid">${cats}</div></div></div>` : ''}
     <div class="ss-grid">
       ${col('Expiring contracts (re-compete)', contracts ? `<div class="card table-card"><table class="data-table"><thead><tr><th>Contract</th><th>Expires</th></tr></thead><tbody>${contracts}</tbody></table></div>` : '')}
       ${col('Open bids / RFPs', bids ? `<div class="card table-card"><table class="data-table"><thead><tr><th>Solicitation</th><th>Due</th></tr></thead><tbody>${bids}</tbody></table></div>` : '')}

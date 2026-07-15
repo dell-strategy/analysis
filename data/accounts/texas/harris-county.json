@@ -328,11 +328,27 @@
     "categories": [
       {
         "name": "Software",
-        "amount": 71773797
+        "amount": 72059973
       },
       {
         "name": "Technical services",
         "amount": 44936027
+      },
+      {
+        "name": "Computers",
+        "amount": 9204986
+      },
+      {
+        "name": "Networking equipment",
+        "amount": 5649396
+      },
+      {
+        "name": "Data storage",
+        "amount": 2618577
+      },
+      {
+        "name": "IT security software",
+        "amount": 2529326
       }
     ],
     "expiringContracts": [
