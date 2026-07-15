@@ -486,13 +486,17 @@ a.acct-card:hover .acct-go { color: var(--c-blue); }
   border: 1px solid #eBD9a8; padding: 3px 10px; border-radius: var(--radius-pill);
 }
 .ss-meta { font-size: .85rem; margin: -4px 0 16px; }
-.ss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 6px; }
+.ss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 18px; align-items: start; }
 @media (max-width: 760px) { .ss-grid { grid-template-columns: 1fr; } }
 .ss-col__title, .ss-cats .ss-col__title {
   font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
   color: var(--c-muted); margin: 0 0 10px;
 }
-.ss-cats { margin: 14px 0 6px; }
+.ss-col--full { margin: 0 0 18px; }
+.ss-cat-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+.ss-cat { flex: 1 1 200px; background: var(--c-surface-2); border: 1px solid var(--c-border); border-radius: var(--radius-sm); padding: 13px 15px; }
+.ss-cat b { display: block; font-size: 1.2rem; font-weight: 800; letter-spacing: -.01em; color: var(--c-blue-900); }
+.ss-cat span { font-size: .82rem; color: var(--c-muted); }
 .ss-notes { font-size: .8rem; margin: 14px 0 0; padding-left: 18px; }
 .ss-notes li { margin: 3px 0; }
 
@@ -503,6 +507,7 @@ a.acct-card:hover .acct-go { color: var(--c-blue); }
 .ss-bar__track { height: 12px; background: var(--c-surface-2); border: 1px solid var(--c-border); border-radius: var(--radius-pill); overflow: hidden; }
 .ss-bar__fill { height: 100%; background: var(--c-border-2); border-radius: var(--radius-pill); }
 .ss-bar__val { font-size: .84rem; font-weight: 700; color: var(--c-ink); font-variant-numeric: tabular-nums; }
+.ss-bar.is-dell { background: var(--c-info-bg); border-radius: var(--radius-sm); padding: 6px 10px; margin: 0 -10px; box-shadow: inset 3px 0 0 var(--c-blue); }
 .ss-bar.is-dell .ss-bar__fill { background: var(--c-blue); }
 .ss-bar.is-dell .ss-bar__label { color: var(--c-blue-700); font-weight: 800; }
 .ss-bar.is-reseller .ss-bar__fill { background: var(--c-warn); opacity: .85; }

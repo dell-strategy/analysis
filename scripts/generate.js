@@ -474,12 +474,11 @@ function renderSpendSignals(a) {
   const vendorRows = vs.map((v) => {
     const cls = v.tag === 'dell' ? ' is-dell' : (v.tag === 'reseller' ? ' is-reseller' : '');
     const w = Math.max(2, Math.round((v.amount || 0) / vmax * 100));
-    const badge = v.tag === 'dell' ? '<span class="ss-pill ss-pill--dell">Dell</span>'
-      : (v.tag === 'reseller' ? '<span class="ss-pill ss-pill--reseller">reseller</span>' : '');
-    return `<div class="ss-bar${cls}"><div class="ss-bar__label">${esc(v.name)} ${badge}</div><div class="ss-bar__track"><div class="ss-bar__fill" style="width:${w}%"></div></div><div class="ss-bar__val">${moneyShort(v.amount)}</div></div>`;
+    const badge = v.tag === 'reseller' ? ' <span class="ss-pill ss-pill--reseller">reseller</span>' : '';
+    return `<div class="ss-bar${cls}"><div class="ss-bar__label">${esc(v.name)}${badge}</div><div class="ss-bar__track"><div class="ss-bar__fill" style="width:${w}%"></div></div><div class="ss-bar__val">${moneyShort(v.amount)}</div></div>`;
   }).join('');
   const mans = (s.manufacturerShare || []).map((m) => `<tr><td>${esc(m.name)}</td><td class="num">${moneyShort(m.amount)}</td></tr>`).join('');
-  const cats = (s.categories || []).map((c) => `<span class="chip"><b>${moneyShort(c.amount)}</b><span>${esc(c.name)}</span></span>`).join('');
+  const cats = (s.categories || []).map((c) => `<div class="ss-cat"><b>${moneyShort(c.amount)}</b><span>${esc(c.name)}</span></div>`).join('');
   const contracts = (s.expiringContracts || []).map((c) =>
     `<tr><td><b>${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>` : esc(c.title)}</b>${c.vendor ? `<br><small class="muted">${esc(c.vendor)}</small>` : ''}</td><td class="nowrap">${esc(fmtLong(c.endDate))}</td></tr>`).join('');
   const bids = (s.openBids || []).map((b) =>
@@ -490,10 +489,10 @@ function renderSpendSignals(a) {
     <div class="section__head"><span class="section__icon">${icon('budget')}</span><h2>Procurement &amp; Spend Signals</h2><span class="ss-flag">${esc(s.source || 'GovSpend')}${s.updated ? ` &middot; as of ${esc(fmtLong(s.updated))}` : ''}</span></div>
     ${meta ? `<p class="muted ss-meta">${meta}</p>` : ''}
     <div class="ss-grid">
-      ${col('Dell vs. competitors (spend, payee)', vendorRows ? `<div class="ss-bars">${vendorRows}</div>` : '')}
+      ${col('Dell vs. competitors (spend, payee)', vendorRows ? `<div class="card"><div class="ss-bars">${vendorRows}</div></div>` : '')}
       ${col('Manufacturer share (who made it)', mans ? `<div class="card table-card"><table class="data-table"><tbody>${mans}</tbody></table></div>` : '')}
     </div>
-    ${cats ? `<div class="ss-cats"><h3 class="ss-col__title">Top categories</h3><div class="snapshot">${cats}</div></div>` : ''}
+    ${cats ? `<div class="ss-col ss-col--full"><h3 class="ss-col__title">Top categories</h3><div class="card"><div class="ss-cat-grid">${cats}</div></div></div>` : ''}
     <div class="ss-grid">
       ${col('Expiring contracts (re-compete)', contracts ? `<div class="card table-card"><table class="data-table"><thead><tr><th>Contract</th><th>Expires</th></tr></thead><tbody>${contracts}</tbody></table></div>` : '')}
       ${col('Open bids / RFPs', bids ? `<div class="card table-card"><table class="data-table"><thead><tr><th>Solicitation</th><th>Due</th></tr></thead><tbody>${bids}</tbody></table></div>` : '')}
