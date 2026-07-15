@@ -477,7 +477,7 @@ function renderSpendSignals(a) {
     const badge = v.tag === 'reseller' ? ' <span class="ss-pill ss-pill--reseller">reseller</span>' : '';
     return `<div class="ss-bar${cls}"><div class="ss-bar__label">${esc(v.name)}${badge}</div><div class="ss-bar__track"><div class="ss-bar__fill" style="width:${w}%"></div></div><div class="ss-bar__val">${moneyShort(v.amount)}</div></div>`;
   }).join('');
-  const mans = (s.manufacturerShare || []).map((m) => `<tr><td>${esc(m.name)}</td><td class="num">${moneyShort(m.amount)}</td></tr>`).join('');
+  const mans = (s.manufacturerShare || []).map((m) => `<tr${m.tag === 'dell' ? ' class="is-dell-row"' : ''}><td>${esc(m.name)}</td><td class="num">${moneyShort(m.amount)}</td></tr>`).join('');
   const cats = (s.categories || []).map((c) => `<div class="ss-cat"><b>${moneyShort(c.amount)}</b><span>${esc(c.name)}</span></div>`).join('');
   const contracts = (s.expiringContracts || []).map((c) =>
     `<tr><td><b>${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>` : esc(c.title)}</b>${c.vendor ? `<br><small class="muted">${esc(c.vendor)}</small>` : ''}</td><td class="nowrap">${esc(fmtLong(c.endDate))}</td></tr>`).join('');
@@ -490,7 +490,7 @@ function renderSpendSignals(a) {
     ${meta ? `<p class="muted ss-meta">${meta}</p>` : ''}
     <div class="ss-grid">
       ${col('Dell vs. competitors (spend, payee)', vendorRows ? `<div class="card"><div class="ss-bars">${vendorRows}</div></div>` : '')}
-      ${col('Manufacturer share (who made it)', mans ? `<div class="card table-card"><table class="data-table"><tbody>${mans}</tbody></table></div>` : '')}
+      ${col('Manufacturer spend (who made it)', mans ? `<div class="card table-card"><table class="data-table"><tbody>${mans}</tbody></table></div>` : '')}
     </div>
     ${cats ? `<div class="ss-col ss-col--full"><h3 class="ss-col__title">Top categories</h3><div class="card"><div class="ss-cat-grid">${cats}</div></div></div>` : ''}
     <div class="ss-grid">

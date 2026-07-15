@@ -518,6 +518,7 @@ a.acct-card:hover .acct-go { color: var(--c-blue); }
 .ss-pill--dell { color: #fff; background: var(--c-blue); }
 .ss-pill--reseller { color: var(--c-warn); background: var(--c-warn-bg); }
 
+.ss-section .data-table tr.is-dell-row td { color: var(--c-blue-700); font-weight: 800; background: var(--c-info-bg); }
 /* Right-aligned numeric cells */
 .ss-section .data-table td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
 .ss-section .data-table td.nowrap { white-space: nowrap; color: var(--c-muted); font-size: .85rem; }

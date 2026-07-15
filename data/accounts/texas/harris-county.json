@@ -292,28 +292,29 @@
     ],
     "manufacturerShare": [
       {
-        "name": "Microsoft",
-        "amount": 46414829
-      },
-      {
-        "name": "Oracle",
-        "amount": 11314686
-      },
-      {
         "name": "HP",
         "amount": 6255005
       },
       {
-        "name": "Hewlett Packard Enterprise",
+        "name": "HPE",
         "amount": 2630943
       },
       {
-        "name": "VMware",
-        "amount": 1538189
+        "name": "Dell",
+        "amount": 1025118,
+        "tag": "dell"
       },
       {
-        "name": "Dell",
-        "amount": null
+        "name": "Cisco",
+        "amount": 497049
+      },
+      {
+        "name": "Apple",
+        "amount": 66662
+      },
+      {
+        "name": "Lenovo",
+        "amount": 19977
       }
     ],
     "categories": [
@@ -361,9 +362,10 @@
       }
     ],
     "notes": [
-      "Vendor = payee of record; much Dell hardware flows through resellers (SHI ~$148M / 3-yr), so Dell direct ($2.66M) understates true footprint.",
-      "Manufacturer tags are partially populated — Dell is absent from the top makers here despite heavy SHI volume; a pull-through gap worth probing.",
-      "Source contract $ often unpublished; the open-bids agency filter is still being tightened to core County of Harris (this pilot swept in HCDE)."
+      "Two lenses, by design: 'payee' = dollars paid to each company; 'manufacturer' = value of each brand's product regardless of who sold it.",
+      "Dell payee spend is $2.66M direct, but only ~$1.03M is Dell-made — the rest is Dell reselling other brands (Lexmark ~$1.35M, Adobe, VMware). As a hardware maker, Dell ranks #3 here behind HP ($6.3M) and HPE ($2.6M).",
+      "GovSpend's manufacturer tag is sparsely/inconsistently populated, so maker figures undercount — especially gear bought through resellers (SHI/CDW), whose line items mostly carry no manufacturer.",
+      "SHI is the largest IT payee (~$148M / 3-yr) but that is largely software/untagged here; source contract $ are often unpublished."
     ]
   }
 }
