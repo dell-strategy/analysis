@@ -454,7 +454,7 @@ ${siteFooter('../', d.updated)}
 /* ====================================================================== */
 /*  ACCOUNT BRIEF PAGE                                                     */
 /* ====================================================================== */
-/* GovSpend "Procurement & Spend Signals" — renders on any account that has a
+/* GovSpend "Spend Signals" — renders on any account that has a
    spendSignals block (data sourced from the GovSpend connector). */
 function moneyShort(n) {
   if (n == null || isNaN(n)) return '—';
@@ -494,7 +494,7 @@ function renderSpendSignals(a) {
   const footprint = fp ? `<div class="ss-footprint"><div class="ss-footprint__val">${moneyShort(fp.allChannels)}</div><div class="ss-footprint__body"><div class="ss-footprint__lbl">Dell footprint &mdash; all channels${s.window ? ` (${esc(s.window)})` : ''}, est.</div><div class="ss-footprint__break">Direct <b>${moneyShort(fp.direct)}</b>${fp.viaResellers != null ? ` &middot; via resellers <b>~${moneyShort(fp.viaResellers)}</b>` : ''}${(fp.topResellers || []).length ? ` &middot; ${fp.topResellers.map((r) => `${esc(r.name)} ~${moneyShort(r.amount)}`).join(', ')}` : ''}</div></div></div>` : '';
   const col = (title, body) => body ? `<div class="ss-col"><h3 class="ss-col__title">${esc(title)}</h3>${body}</div>` : '';
   return `<section class="section ss-section">
-    <div class="section__head"><span class="section__icon">${icon('budget')}</span><h2>Procurement &amp; Spend Signals</h2><span class="ss-flag">${esc(s.source || 'GovSpend')}${s.updated ? ` &middot; as of ${esc(fmtLong(s.updated))}` : ''}</span></div>
+    <div class="section__head"><span class="section__icon">${icon('budget')}</span><h2>Spend Signals</h2><span class="ss-flag">${esc(s.source || 'GovSpend')}${s.updated ? ` &middot; as of ${esc(fmtLong(s.updated))}` : ''}</span></div>
     ${meta ? `<p class="muted ss-meta">${meta}</p>` : ''}
     ${footprint}
     <div class="ss-grid">
