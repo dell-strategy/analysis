@@ -455,10 +455,8 @@ ${siteFooter('../', d.updated)}
 /* ====================================================================== */
 /*  ACCOUNT BRIEF PAGE                                                     */
 /* ====================================================================== */
-/* GovSpend "Procurement & Spend Signals" — INTERNAL build only.
-   Renders only when SLG_INTERNAL=1 so it never ships to the public site. */
-const INTERNAL = process.env.SLG_INTERNAL === '1' || process.env.SLG_INTERNAL === 'true';
-
+/* GovSpend "Procurement & Spend Signals" — renders on any account that has a
+   spendSignals block (data sourced from the GovSpend connector). */
 function moneyShort(n) {
   if (n == null || isNaN(n)) return '—';
   const a = Math.abs(n);
@@ -470,7 +468,7 @@ function moneyShort(n) {
 
 function renderSpendSignals(a) {
   const s = a.spendSignals;
-  if (!INTERNAL || !s) return '';
+  if (!s) return '';
   const meta = [s.entity, s.window].filter(Boolean).map(esc).join(' &middot; ');
   const vs = (s.vendorSpend || []).slice().sort((x, y) => (y.amount || 0) - (x.amount || 0));
   const vmax = Math.max(1, ...vs.map((v) => v.amount || 0));
@@ -490,7 +488,7 @@ function renderSpendSignals(a) {
   const notes = (s.notes || []).map((n) => `<li>${esc(n)}</li>`).join('');
   const col = (title, body) => body ? `<div class="ss-col"><h3 class="ss-col__title">${esc(title)}</h3>${body}</div>` : '';
   return `<section class="section ss-section">
-    <div class="section__head"><span class="section__icon">${icon('budget')}</span><h2>Procurement &amp; Spend Signals</h2><span class="ss-flag">Internal &middot; ${esc(s.source || 'GovSpend')}${s.updated ? ` &middot; as of ${esc(fmtLong(s.updated))}` : ''}</span></div>
+    <div class="section__head"><span class="section__icon">${icon('budget')}</span><h2>Procurement &amp; Spend Signals</h2><span class="ss-flag">${esc(s.source || 'GovSpend')}${s.updated ? ` &middot; as of ${esc(fmtLong(s.updated))}` : ''}</span></div>
     ${meta ? `<p class="muted ss-meta">${meta}</p>` : ''}
     <div class="ss-grid">
       ${col('Dell vs. competitors (spend, payee)', vendorRows ? `<div class="ss-bars">${vendorRows}</div>` : '')}
@@ -557,7 +555,7 @@ ${siteHeader('../../', false)}
   ${sources ? `<section class="section"><div class="sources"><h3>Sources</h3><ol>${sources}</ol></div></section>` : ''}
 </main>
 
-${siteFooter('../../', a.updated, INTERNAL && !!a.spendSignals)}
+${siteFooter('../../', a.updated, !!a.spendSignals)}
 </body>
 </html>`;
 }
