@@ -91,6 +91,7 @@ small { font-size: .8125rem; }
   gap: 16px; padding: 12px 28px; max-width: var(--maxw); margin: 0 auto;
 }
 .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand__logo { height: 46px; width: auto; display: block; margin: -2px 0 -2px -6px; }
 .brand__mark {
   width: 38px; height: 38px; border-radius: 10px; flex: 0 0 auto;
   display: grid; place-items: center; color: #fff;
@@ -433,7 +434,9 @@ a.acct-card:hover .acct-go { color: var(--c-blue); }
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 28px; }
 .site-footer a { color: #cfe0f0; }
 .site-footer__brand { display: flex; align-items: center; }
-.footer-logo { width: 210px; height: auto; display: block; }
+.footer-logo { height: 52px; width: auto; display: block; margin-left: -6px; }
+.footer-govspend { display: inline-flex; align-items: center; gap: 9px; font-size: .78rem; color: #9fb3c6; justify-content: flex-end; }
+.footer-govspend .gs-logo { height: 20px; width: auto; background: #fff; padding: 5px 9px; border-radius: 7px; }
 .site-footer__meta { display: flex; flex-direction: column; gap: 4px; text-align: right; }
 @media (max-width: 640px) { .site-footer__meta { text-align: left; } }
 
@@ -473,3 +476,43 @@ a.acct-card:hover .acct-go { color: var(--c-blue); }
   .card, .stat { box-shadow: none; }
   .section { page-break-inside: avoid; }
 }
+
+/* ---- Procurement & Spend Signals (INTERNAL build only) ------------------- */
+.ss-section .section__head { flex-wrap: wrap; gap: 8px 12px; }
+.ss-flag {
+  margin-left: auto; align-self: center;
+  font-size: .68rem; font-weight: 800; letter-spacing: .02em; text-transform: uppercase;
+  color: var(--c-warn); background: var(--c-warn-bg);
+  border: 1px solid #eBD9a8; padding: 3px 10px; border-radius: var(--radius-pill);
+}
+.ss-meta { font-size: .85rem; margin: -4px 0 16px; }
+.ss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 6px; }
+@media (max-width: 760px) { .ss-grid { grid-template-columns: 1fr; } }
+.ss-col__title, .ss-cats .ss-col__title {
+  font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  color: var(--c-muted); margin: 0 0 10px;
+}
+.ss-cats { margin: 14px 0 6px; }
+.ss-notes { font-size: .8rem; margin: 14px 0 0; padding-left: 18px; }
+.ss-notes li { margin: 3px 0; }
+
+/* Vendor spend bars */
+.ss-bars { display: flex; flex-direction: column; gap: 9px; }
+.ss-bar { display: grid; grid-template-columns: 150px 1fr auto; align-items: center; gap: 12px; }
+.ss-bar__label { font-size: .86rem; font-weight: 600; color: var(--c-ink-2); }
+.ss-bar__track { height: 12px; background: var(--c-surface-2); border: 1px solid var(--c-border); border-radius: var(--radius-pill); overflow: hidden; }
+.ss-bar__fill { height: 100%; background: var(--c-border-2); border-radius: var(--radius-pill); }
+.ss-bar__val { font-size: .84rem; font-weight: 700; color: var(--c-ink); font-variant-numeric: tabular-nums; }
+.ss-bar.is-dell .ss-bar__fill { background: var(--c-blue); }
+.ss-bar.is-dell .ss-bar__label { color: var(--c-blue-700); font-weight: 800; }
+.ss-bar.is-reseller .ss-bar__fill { background: var(--c-warn); opacity: .85; }
+@media (max-width: 520px) { .ss-bar { grid-template-columns: 110px 1fr auto; } }
+
+/* Pills */
+.ss-pill { font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .03em; padding: 1px 6px; border-radius: var(--radius-pill); vertical-align: middle; }
+.ss-pill--dell { color: #fff; background: var(--c-blue); }
+.ss-pill--reseller { color: var(--c-warn); background: var(--c-warn-bg); }
+
+/* Right-aligned numeric cells */
+.ss-section .data-table td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+.ss-section .data-table td.nowrap { white-space: nowrap; color: var(--c-muted); font-size: .85rem; }

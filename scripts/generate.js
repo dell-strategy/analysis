@@ -65,25 +65,25 @@ function siteHeader(rootPrefix, showBack) {
   return `<header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="${rootPrefix}index.html" style="text-decoration:none">
-      <span class="brand__mark">SLG</span>
-      <span>
-        <span class="brand__title">SLG Strategy Hub</span><br>
-        <span class="brand__sub">State &amp; Local Government Intelligence</span>
-      </span>
+      <img class="brand__logo" src="${rootPrefix}assets/img/SLG-Strategy-Team_F_Chevron_dark-bg-web.png" alt="SLG Strategy Team — State, Local &amp; Government">
     </a>
     ${showBack ? `<div class="header-actions"><a class="btn btn--ghost" href="${rootPrefix}index.html">${icon('chevron')} All States</a></div>` : ''}
   </div>
 </header>`;
 }
 
-function siteFooter(rootPrefix, updated) {
+function siteFooter(rootPrefix, updated, usesGovspend) {
   const stamp = updated ? `Last updated ${esc(fmtLong(updated))}.` : '';
+  const gs = usesGovspend
+    ? `<span class="footer-govspend">Includes data from <img class="gs-logo" src="${rootPrefix}assets/img/govspend-web.png" alt="GovSpend"></span>`
+    : '';
   return `<footer class="site-footer">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <img class="footer-logo" src="${rootPrefix}assets/img/SLG-Strategy_B_Wordmark_on-dark.png" alt="SLG Strategy — State, Local &amp; Gov't" width="210">
+      <img class="footer-logo" src="${rootPrefix}assets/img/SLG-Strategy-Team_F_Chevron_dark-bg-web.png" alt="SLG Strategy Team — State, Local &amp; Government">
     </div>
     <div class="site-footer__meta">
+      ${gs}
       ${stamp ? `<span>${stamp}</span>` : ''}
       <span class="muted">Synthesized from public sources &middot; verify before customer use.</span>
     </div>
@@ -455,6 +455,56 @@ ${siteFooter('../', d.updated)}
 /* ====================================================================== */
 /*  ACCOUNT BRIEF PAGE                                                     */
 /* ====================================================================== */
+/* GovSpend "Procurement & Spend Signals" — INTERNAL build only.
+   Renders only when SLG_INTERNAL=1 so it never ships to the public site. */
+const INTERNAL = process.env.SLG_INTERNAL === '1' || process.env.SLG_INTERNAL === 'true';
+
+function moneyShort(n) {
+  if (n == null || isNaN(n)) return '—';
+  const a = Math.abs(n);
+  if (a >= 1e9) return '$' + (n / 1e9).toFixed(2).replace(/\.?0+$/, '') + 'B';
+  if (a >= 1e6) return '$' + (n / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
+  if (a >= 1e3) return '$' + Math.round(n / 1e3) + 'K';
+  return '$' + Math.round(n);
+}
+
+function renderSpendSignals(a) {
+  const s = a.spendSignals;
+  if (!INTERNAL || !s) return '';
+  const meta = [s.entity, s.window].filter(Boolean).map(esc).join(' &middot; ');
+  const vs = (s.vendorSpend || []).slice().sort((x, y) => (y.amount || 0) - (x.amount || 0));
+  const vmax = Math.max(1, ...vs.map((v) => v.amount || 0));
+  const vendorRows = vs.map((v) => {
+    const cls = v.tag === 'dell' ? ' is-dell' : (v.tag === 'reseller' ? ' is-reseller' : '');
+    const w = Math.max(2, Math.round((v.amount || 0) / vmax * 100));
+    const badge = v.tag === 'dell' ? '<span class="ss-pill ss-pill--dell">Dell</span>'
+      : (v.tag === 'reseller' ? '<span class="ss-pill ss-pill--reseller">reseller</span>' : '');
+    return `<div class="ss-bar${cls}"><div class="ss-bar__label">${esc(v.name)} ${badge}</div><div class="ss-bar__track"><div class="ss-bar__fill" style="width:${w}%"></div></div><div class="ss-bar__val">${moneyShort(v.amount)}</div></div>`;
+  }).join('');
+  const mans = (s.manufacturerShare || []).map((m) => `<tr><td>${esc(m.name)}</td><td class="num">${moneyShort(m.amount)}</td></tr>`).join('');
+  const cats = (s.categories || []).map((c) => `<span class="chip"><b>${moneyShort(c.amount)}</b><span>${esc(c.name)}</span></span>`).join('');
+  const contracts = (s.expiringContracts || []).map((c) =>
+    `<tr><td><b>${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>` : esc(c.title)}</b>${c.vendor ? `<br><small class="muted">${esc(c.vendor)}</small>` : ''}</td><td class="nowrap">${esc(fmtLong(c.endDate))}</td></tr>`).join('');
+  const bids = (s.openBids || []).map((b) =>
+    `<tr><td><b>${b.url ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.title)}</a>` : esc(b.title)}</b>${b.agency ? `<br><small class="muted">${esc(b.agency)}</small>` : ''}</td><td class="nowrap">${esc(fmtLong(b.dueDate))}</td></tr>`).join('');
+  const notes = (s.notes || []).map((n) => `<li>${esc(n)}</li>`).join('');
+  const col = (title, body) => body ? `<div class="ss-col"><h3 class="ss-col__title">${esc(title)}</h3>${body}</div>` : '';
+  return `<section class="section ss-section">
+    <div class="section__head"><span class="section__icon">${icon('budget')}</span><h2>Procurement &amp; Spend Signals</h2><span class="ss-flag">Internal &middot; ${esc(s.source || 'GovSpend')}${s.updated ? ` &middot; as of ${esc(fmtLong(s.updated))}` : ''}</span></div>
+    ${meta ? `<p class="muted ss-meta">${meta}</p>` : ''}
+    <div class="ss-grid">
+      ${col('Dell vs. competitors (spend, payee)', vendorRows ? `<div class="ss-bars">${vendorRows}</div>` : '')}
+      ${col('Manufacturer share (who made it)', mans ? `<div class="card table-card"><table class="data-table"><tbody>${mans}</tbody></table></div>` : '')}
+    </div>
+    ${cats ? `<div class="ss-cats"><h3 class="ss-col__title">Top categories</h3><div class="snapshot">${cats}</div></div>` : ''}
+    <div class="ss-grid">
+      ${col('Expiring contracts (re-compete)', contracts ? `<div class="card table-card"><table class="data-table"><thead><tr><th>Contract</th><th>Expires</th></tr></thead><tbody>${contracts}</tbody></table></div>` : '')}
+      ${col('Open bids / RFPs', bids ? `<div class="card table-card"><table class="data-table"><thead><tr><th>Solicitation</th><th>Due</th></tr></thead><tbody>${bids}</tbody></table></div>` : '')}
+    </div>
+    ${notes ? `<ul class="muted ss-notes">${notes}</ul>` : ''}
+  </section>`;
+}
+
 function renderAccountBrief(a) {
   const chips = (a.snapshot || []).map((c) =>
     `<span class="chip"><b>${esc(c.value)}</b><span>${esc(c.label)}</span></span>`).join('');
@@ -476,6 +526,7 @@ function renderAccountBrief(a) {
   const budStats = bud ? (bud.stats || []).map((s) => statTile(s, 'budget')).join('') : '';
   const budNotes = bud ? (bud.notes || []).map((n) => `<li>${esc(n)}</li>`).join('') : '';
   const tkey = ACCT_TYPE_KEY[a.type] || 'other';
+  const spend = renderSpendSignals(a);
   const sec = (iconName, title, body) => `<section class="section"><div class="section__head"><span class="section__icon">${icon(iconName)}</span><h2>${esc(title)}</h2></div>${body}</section>`;
   return `${head(`${a.name} | ${a.stateName} | Dell SLG Strategy Hub`, '../../assets/css/styles.css')}
 <body>
@@ -499,14 +550,14 @@ ${siteHeader('../../', false)}
   ${a.overview ? sec('summary', 'Overview', `<p class="lead">${esc(a.overview)}</p>`) : ''}
   ${bud ? sec('budget', 'Budget & Fiscal', `${bud.intro ? `<p class="lead">${esc(bud.intro)}</p>` : ''}${budStats ? `<div class="grid grid-3" style="margin:16px 0">${budStats}</div>` : ''}${budNotes ? `<ul class="muted" style="font-size:.85rem;margin:0">${budNotes}</ul>` : ''}`) : ''}
   ${inits ? sec('initiatives', 'Initiatives & Priorities', `<div class="grid grid-2">${inits}</div>`) : ''}
-  ${vehicles ? sec('procurement', 'Procurement', `${pr.intro ? `<p class="lead">${esc(pr.intro)}</p>` : ''}<div class="card table-card" style="margin-top:14px"><table class="data-table"><thead><tr><th>Vehicle / gate</th><th>What it means for Dell</th></tr></thead><tbody>${vehicles}</tbody></table></div>`) : ''}
+  ${vehicles ? sec('procurement', 'Procurement', `${pr.intro ? `<p class="lead">${esc(pr.intro)}</p>` : ''}<div class="card table-card" style="margin-top:14px"><table class="data-table"><thead><tr><th>Vehicle / gate</th><th>What it means for Dell</th></tr></thead><tbody>${vehicles}</tbody></table></div>`) : ''}${spend}
   ${power ? sec('power', 'Power Structure', `<div class="card table-card"><table class="data-table"><thead><tr><th>Decision-maker</th><th>Why they matter</th></tr></thead><tbody>${power}</tbody></table></div>`) : ''}
   ${news ? sec('news', 'News & Signals', `<div class="timeline">${news}</div>`) : ''}
   ${actions ? `<section class="section"><div class="callout"><div class="callout__head"><span class="section__icon">${icon('bolt')}</span><h3>Where Dell Can Play</h3></div><ul class="action-list">${actions}</ul></div></section>` : ''}
   ${sources ? `<section class="section"><div class="sources"><h3>Sources</h3><ol>${sources}</ol></div></section>` : ''}
 </main>
 
-${siteFooter('../../', a.updated)}
+${siteFooter('../../', a.updated, INTERNAL && !!a.spendSignals)}
 </body>
 </html>`;
 }
