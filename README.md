@@ -39,6 +39,31 @@ index.html, states/*.html # GENERATED — do not edit by hand
 2. In `data/states.json`, set that state's `"available": true`.
 3. Run `node scripts/generate.js`. The state becomes blue/clickable on the map.
 
+## National report: 50-State Budget Shifts
+
+`reports/budget-shifts.html` compares each state's prior and current budget and
+shows which program areas gained or lost funding. It is generated from
+`data/budget-shifts.json`, which is built from NASBO's published surveys:
+
+```
+scripts/nasbo/raw/*.pdf            # NASBO source reports (Fiscal Survey, State Expenditure Report)
+scripts/nasbo/extract_nasbo.py     # PDF -> raw/fiscal_survey.json + raw/ser.json
+scripts/nasbo/extract_strategies.py# PDF -> raw/strategies.json (cut-strategy X-grids, needs pdfplumber)
+scripts/nasbo/build_budget_shifts.py # merge -> data/budget-shifts.json
+```
+
+To refresh when NASBO publishes a new edition (Fiscal Survey: ~June and
+~December; State Expenditure Report: ~November):
+
+1. Download the new full-report PDF into `scripts/nasbo/raw/` (links in
+   `data/budget-shifts.json` sources; archive at nasbo.org → Reports & Data).
+2. Update the page indexes / filenames at the top of the extract scripts if the
+   edition changed, then run the three scripts in order (needs `pypdf` and
+   `pdfplumber`: `pip install pypdf pdfplumber`).
+3. Check the printed sanity counts (every table should say 50/50; the strategy
+   grids validate against NASBO's own TOTAL rows), bump `updated`, then
+   `node scripts/generate.js`.
+
 ## Notes
 
 - **No build tooling, no CDNs.** Output is plain static HTML so it works on

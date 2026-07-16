@@ -131,11 +131,22 @@ function feature(iconName, title, body) {
   </div>`;
 }
 
-function renderIndex(manifest, svgRaw) {
+function renderIndex(manifest, svgRaw, hasBudgetShifts) {
   const states = manifest.states;
   const live = states.filter((s) => s.available).length;
   const map = buildMapSvg(svgRaw, states);
   const options = buildStateOptions(states);
+  const nationalReports = hasBudgetShifts ? `
+  <div class="panel national-reports">
+    <div class="national-reports__inner">
+      <div class="national-reports__text">
+        <span class="browse-bar__label">National reports</span>
+        <h3>50-State Budget Shifts</h3>
+        <p class="muted">Prior vs. current budgets for every state — which program areas gained or lost funding, and which states are cutting. Sourced from NASBO enacted-budget and expenditure surveys.</p>
+      </div>
+      <a class="btn btn--primary" href="reports/budget-shifts.html">Open report ${icon('go')}</a>
+    </div>
+  </div>` : '';
 
   return `${head('Dell SLG Strategy Hub | Interactive State Map', 'assets/css/styles.css')}
 <body>
@@ -174,7 +185,7 @@ ${options}
     </div>
     <p class="browse-bar__hint">Choose a state, or click any state on the map above.</p>
   </div>
-
+${nationalReports}
   <div class="features">
     ${feature('budget', 'Budget & fiscal', 'Where the money is — IT budgets, fiscal cycles, and funding news that affects buying power.')}
     ${feature('initiatives', 'Initiatives & policy', 'Modernization, AI, and cyber programs — scored for Dell fit and budget strength.')}
@@ -184,6 +195,291 @@ ${options}
 
 ${siteFooter('', '')}
 <script src="assets/js/map.js"></script>
+</body>
+</html>`;
+}
+
+/* ====================================================================== */
+/*  BUDGET SHIFTS REPORT (50-state, NASBO-sourced)                         */
+/* ====================================================================== */
+function fmtM(n) {
+  if (n == null) return '&mdash;';
+  if (n >= 1e6) return '$' + (n / 1e6).toFixed(2) + 'T';
+  return n >= 1000
+    ? '$' + (n / 1000).toFixed(n >= 100000 ? 0 : 1) + 'B'
+    : '$' + Math.round(n) + 'M';
+}
+function fmtPct(v, digits) {
+  if (v == null) return '<span class="muted">&mdash;</span>';
+  const cls = v > 0 ? 'delta-pos' : (v < 0 ? 'delta-neg' : 'delta-flat');
+  const s = (v > 0 ? '+' : '') + v.toFixed(digits == null ? 1 : digits) + '%';
+  return `<span class="${cls}">${s}</span>`;
+}
+function median(arr) {
+  const a = arr.filter((v) => v != null).sort((x, y) => x - y);
+  if (!a.length) return null;
+  const m = Math.floor(a.length / 2);
+  return a.length % 2 ? a[m] : (a[m - 1] + a[m]) / 2;
+}
+
+function renderBudgetShifts(bs, manifest) {
+  const codeBySlug = {};
+  for (const st of manifest.states) codeBySlug[st.slug] = st.code;
+  const entries = Object.entries(bs.states)
+    .map(([slug, s]) => ({ slug, ...s }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  const n = bs.national;
+
+  /* -- headline numbers ---------------------------------------------------- */
+  const gf26Delta = (n.gfFy2026Enacted / n.gfFy2025 - 1) * 100;
+  const cutting26 = entries.filter((s) => (s.pctChange.fy2026Enacted || 0) < 0);
+  const cutting27 = entries.filter((s) => s.pctChange.fy2027Proposed != null && s.pctChange.fy2027Proposed < 0);
+  const targeted26 = entries.filter((s) => s.strategiesFy2026.includes('targetedCuts'));
+  const freeze26 = entries.filter((s) => s.strategiesFy2026.includes('hiringFreeze'));
+
+  /* -- state-by-state general fund table ----------------------------------- */
+  const CHIP_SHORT = {
+    acrossBoardCuts: 'Across-the-board',
+    targetedCuts: 'Targeted cuts',
+    hiringFreeze: 'Hiring freeze',
+    layoffs: 'Layoffs',
+    furloughs: 'Furloughs',
+  };
+  const rows = entries.map((s) => {
+    const chips = s.strategiesFy2026
+      .filter((k) => CHIP_SHORT[k])
+      .map((k) => `<span class="strat-chip">${esc(CHIP_SHORT[k])}</span>`).join('');
+    const my = s.midYearFy2026 && s.midYearFy2026.netChange != null ? s.midYearFy2026.netChange : null;
+    const mid = my != null
+      ? `<span class="${my < 0 ? 'delta-neg' : 'delta-pos'}">${my < 0 ? '−' : '+'}$${Math.abs(my) >= 1000 ? (Math.abs(my) / 1000).toFixed(1) + 'B' : Math.round(Math.abs(my)) + 'M'}</span>`
+      : '<span class="muted">&mdash;</span>';
+    return `<tr>
+      <td class="rowhead"><b><a href="../states/${esc(s.slug)}.html">${esc(s.name)}</a></b></td>
+      <td class="num" data-label="FY2025">${fmtM(s.generalFund.fy2025Prelim != null ? s.generalFund.fy2025Prelim : s.generalFund.fy2025)}</td>
+      <td class="num" data-label="FY2026 enacted">${fmtM(s.generalFund.fy2026Enacted)}</td>
+      <td class="num" data-label="FY26 &Delta;">${fmtPct(s.pctChange.fy2026Enacted)}</td>
+      <td class="num" data-label="FY27 proposed &Delta;">${fmtPct(s.pctChange.fy2027Proposed)}</td>
+      <td class="num" data-label="Mid-year FY26">${mid}</td>
+      <td data-label="FY26 actions">${chips ? `<span class="chip-wrap">${chips}</span>` : '<span class="muted">&mdash;</span>'}</td>
+    </tr>`;
+  }).join('');
+
+  /* -- program-area cards --------------------------------------------------- */
+  const funcCards = Object.entries(bs.functionLabels).map(([key, label]) => {
+    const vals = entries
+      .map((s) => ({ name: s.name, slug: s.slug, f: s.functions[key] }))
+      .filter((x) => x.f && x.f.pct2025 && x.f.pct2025.total != null);
+    const med = median(vals.map((x) => x.f.pct2025.total));
+    const sorted = vals.slice().sort((a, b) => b.f.pct2025.total - a.f.pct2025.total);
+    const rowCells = (x) => {
+      const gf = x.f.pct2025.gf;
+      return `<a class="ft-name" href="../states/${esc(x.slug)}.html">${esc(x.name)}</a>` +
+        `<span class="ft-num">${fmtPct(x.f.pct2025.total)}</span>` +
+        `<span class="ft-num ft-sub">${gf != null ? (gf > 0 ? '+' : '') + gf.toFixed(1) + '%' : '&mdash;'}</span>` +
+        `<span class="ft-num ft-sub">${x.f.fy2025Total != null ? fmtM(x.f.fy2025Total) : '&mdash;'}</span>`;
+    };
+    const top = sorted.slice(0, 4).map(rowCells).join('');
+    const bottom = sorted.slice(-4).reverse().map(rowCells).join('');
+    const note = (bs.functionNarratives || {})[key];
+    return `<div class="card func-card">
+      <div class="func-card__head"><h3>${esc(label)}</h3><span class="func-card__med">median ${fmtPct(med)}</span></div>
+      ${note ? `<p class="func-card__note">${esc(note)}</p>` : ''}
+      <div class="func-table">
+        <span class="ft-h"></span><span class="ft-h">Total &Delta;</span><span class="ft-h">GF &Delta;</span><span class="ft-h">FY25 $</span>
+        <span class="ft-group delta-pos-h">Adding most</span>
+        ${top}
+        <span class="ft-group delta-neg-h">Cutting most</span>
+        ${bottom}
+      </div>
+    </div>`;
+  }).join('');
+
+  /* -- where the money goes: FY2025 spending mix + debt service ------------- */
+  const MIX_KEYS = [
+    ['k12', 'K-12'], ['higherEd', 'Higher Ed'], ['medicaid', 'Medicaid'],
+    ['corrections', 'Corrections'], ['transportation', 'Transportation'], ['allOther', 'All Other'],
+  ];
+  const mixLegend = MIX_KEYS.map(([k, l]) =>
+    `<span class="mix-key"><span class="mix-swatch mix-seg--${k}"></span>${l}</span>`).join('');
+  const mixRows = entries.filter((s) => s.mix).map((s) => {
+    const segs = MIX_KEYS.map(([k, l]) => {
+      const v = s.mix[k] || 0;
+      return `<span class="mix-seg mix-seg--${k}" style="width:${v}%" title="${esc(l)} ${v}% of ${esc(s.name)} FY2025 spending"></span>`;
+    }).join('');
+    const ds = s.debtServiceFy2025;
+    const dsPct = ds && ds.total && s.totalFy2025 ? (ds.total / s.totalFy2025 * 100).toFixed(1) : null;
+    const debt = ds && ds.total != null
+      ? `<span title="FY2025 debt service${dsPct ? ` — ${dsPct}% of total spending` : ''}">${fmtM(ds.total)}</span>`
+      : '<span class="muted">&mdash;</span>';
+    return `<div class="mix-row">
+      <a class="mix-row__name" href="../states/${esc(s.slug)}.html">${esc(s.name)}</a>
+      <div class="mix-bar">${segs}</div>
+      <span class="mix-row__debt">${debt}</span>
+    </div>`;
+  }).join('');
+
+  /* -- capital programs ------------------------------------------------------ */
+  const capOrder = Object.entries(bs.capitalNational || {})
+    .sort((a, b) => (b[1].fy2025Total || 0) - (a[1].fy2025Total || 0));
+  const capTotal = capOrder.reduce((t, [, v]) => t + (v.fy2025Total || 0), 0);
+  const capCards = capOrder.map(([key, nat]) => {
+    const share = capTotal ? (nat.fy2025Total / capTotal * 100).toFixed(1) : null;
+    const states = entries
+      .filter((s) => s.capitalPrograms[key] && s.capitalPrograms[key].fy2025Total)
+      .sort((a, b) => b.capitalPrograms[key].fy2025Total - a.capitalPrograms[key].fy2025Total)
+      .slice(0, 4)
+      .map((s) => {
+        const c = s.capitalPrograms[key];
+        return `<a class="ft-name" href="../states/${esc(s.slug)}.html">${esc(s.name)}</a>` +
+          `<span class="ft-num">${fmtM(c.fy2025Total)}</span>` +
+          `<span class="ft-num ft-sub">${c.pct2025 != null ? (c.pct2025 > 0 ? '+' : '') + c.pct2025.toFixed(1) + '%' : '&mdash;'}</span>`;
+      }).join('');
+    return `<div class="card func-card">
+      <div class="func-card__head"><h3>${esc(nat.label)}</h3><span class="func-card__med">${fmtM(nat.fy2025Total)}${share ? ` &middot; ${share}% of capital` : ''}${nat.pct2025 != null ? ` &middot; ${(nat.pct2025 > 0 ? '+' : '') + nat.pct2025.toFixed(1)}%` : ''}</span></div>
+      <div class="func-table func-table--3">
+        <span class="ft-h"></span><span class="ft-h">FY25 $</span><span class="ft-h">YoY &Delta;</span>
+        <span class="ft-group delta-pos-h">Biggest FY2025 programs</span>
+        ${states}
+      </div>
+    </div>`;
+  }).join('');
+
+  /* -- strategy matrix ------------------------------------------------------ */
+  const stratBlock = (title, field, note) => {
+    const counts = {};
+    for (const s of entries) for (const k of s[field]) (counts[k] = counts[k] || []).push(s.slug);
+    const rows2 = Object.keys(bs.strategyLabels)
+      .filter((k) => counts[k] && counts[k].length)
+      .sort((a, b) => counts[b].length - counts[a].length)
+      .map((k) => `<tr><td class="rowhead"><b>${esc(bs.strategyLabels[k])}</b> <span class="muted" style="font-weight:400">&middot; ${counts[k].length} state${counts[k].length === 1 ? '' : 's'}</span></td>
+        <td data-label="Where"><span class="chip-wrap">${counts[k].map((slug) => `<a class="code-chip" href="../states/${esc(slug)}.html">${esc(codeBySlug[slug] || slug)}</a>`).join('')}</span></td></tr>`).join('');
+    return `<div class="card table-card bsr-table bsr-stack" style="margin-bottom:18px">
+      <div class="card__title">${icon('budget')} ${esc(title)}</div>
+      ${note ? `<p class="muted" style="font-size:.85rem;margin:0 16px 10px">${esc(note)}</p>` : ''}
+      <table class="data-table"><thead><tr><th>Strategy</th><th>Where</th></tr></thead><tbody>${rows2}</tbody></table>
+    </div>`;
+  };
+
+  /* -- Dell angle ------------------------------------------------------------ */
+  const k12Adders = entries
+    .filter((s) => s.functions.k12 && s.functions.k12.pct2025 && s.functions.k12.pct2025.total > 0)
+    .sort((a, b) => b.functions.k12.pct2025.total - a.functions.k12.pct2025.total).slice(0, 5);
+  const capAdders = entries
+    .filter((s) => s.functions.capital && s.functions.capital.pct2025 && s.functions.capital.pct2025.total > 0)
+    .sort((a, b) => b.functions.capital.pct2025.total - a.functions.capital.pct2025.total).slice(0, 5);
+  const dellAngle = [
+    `Flat is the new up: with 50-state general fund growth at ${gf26Delta.toFixed(1)}% for FY2026 and ${cutting26.length} states spending less than last year, lead with consolidation, lifecycle extension, and cost-takeout economics &mdash; not net-new programs.`,
+    `${targeted26.length} states enacted targeted cuts and ${freeze26.length} are freezing hiring or eliminating vacant positions for FY2026 &mdash; position automation, managed services, and AI-assisted operations as the answer to "do more with fewer people."`,
+    `Growth pockets remain: K-12 spending is still rising fastest in ${k12Adders.map((s) => s.name).join(', ')}; capital programs are growing in ${capAdders.map((s) => s.name).join(', ')}.`,
+    `Mid-year FY2026 actions are already underway in ${entries.filter((s) => s.midYearFy2026 && s.midYearFy2026.netChange != null && s.midYearFy2026.netChange < 0).length} states that trimmed budgets after enactment &mdash; expect procurement slowdowns and re-scoping in those states; protect renewals early.`,
+  ].map((t) => `<li>${icon('go')}<span>${t}</span></li>`).join('');
+
+  const notes = (n.notes || []).map((x) => `<li>${esc(x)}</li>`).join('');
+  const sources = (bs.sources || []).map((s, i) =>
+    `<li id="src-${i + 1}"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`).join('');
+
+  const toc = [
+    tocLink('summary', 'summary', 'Summary'),
+    tocLink('statewide', 'budget', 'General Fund by State'),
+    tocLink('programs', 'initiatives', 'Program Areas'),
+    tocLink('mix', 'budget', 'Where the Money Goes'),
+    tocLink('capital', 'procurement', 'Capital Programs'),
+    tocLink('strategies', 'bolt', 'Cut Strategies'),
+    tocLink('method', 'news', 'Methodology'),
+  ].join('\n      ');
+
+  return `${head('50-State Budget Shifts | Dell SLG Strategy Hub', '../assets/css/styles.css')}
+<body>
+${siteHeader('../', true)}
+
+<section class="report-hero">
+  <div class="report-hero__inner">
+    <div class="crumbs"><a href="../index.html">All States</a> ${icon('chevron')} <span>50-State Budget Shifts</span></div>
+    <p class="eyebrow">${icon('budget')} National Report &middot; SLG Market Intelligence</p>
+    <h1>50-State Budget Shifts</h1>
+    <p class="tagline">Who's adding, who's cutting: prior-year vs. current state budgets, by state and program area &mdash; from enacted FY2026 budgets and governors' FY2027 proposals.</p>
+    <div class="report-hero__meta">
+      <span class="updated-pill"><span class="dot"></span> Last updated ${esc(fmtLong(bs.updated))}</span>
+    </div>
+  </div>
+</section>
+
+<div class="report-shell">
+  <nav class="toc" aria-label="Sections">
+    <div class="toc__label">On this page</div>
+      ${toc}
+  </nav>
+  <main class="report-main">
+
+  <section class="section" id="summary">
+    ${sectionHead('summary', 'Executive Summary')}
+    <div class="grid grid-4">
+      ${statTile({ value: fmtM(n.gfFy2026Enacted).replace('&mdash;', ''), label: 'FY2026 enacted general fund (50 states)', note: (gf26Delta > 0 ? '+' : '') + gf26Delta.toFixed(1) + '% vs. FY2025 — essentially flat' }, 'budget')}
+      ${statTile({ value: String(cutting26.length) + ' states', label: 'Enacted FY2026 general fund below FY2025', note: 'Nominal decline, before inflation' }, 'bolt')}
+      ${statTile({ value: String(targeted26.length) + ' states', label: 'Targeted cuts in enacted FY2026 budgets', note: String(freeze26.length) + ' states also freezing hiring / cutting vacancies' }, 'initiatives')}
+      ${statTile({ value: String(cutting27.length) + ' states', label: 'Governors proposing FY2027 general fund cuts', note: 'Spring 2026 recommended budgets' }, 'calendar')}
+    </div>
+    <div class="summary-prose"><p>After three years of record growth, state budgets have shifted into belt-tightening. Enacted FY2026 general fund spending across the 50 states is essentially flat versus FY2025, and nearly half the states enacted nominal spending cuts. Governors' FY2027 proposals continue the squeeze. But the picture is uneven by program area: K-12, Medicaid, and capital programs kept growing in most states through FY2025, while higher education and corrections flattened. This report shows, state by state, where funding was added and where it was cut &mdash; and which budget-management levers each state is pulling.</p></div>
+    <div class="highlight-panel">
+      <div class="highlight-panel__head">${icon('bolt')} What it means for Dell sellers</div>
+      <ul class="opp-list">${dellAngle}</ul>
+    </div>
+  </section>
+
+  <section class="section" id="statewide">
+    ${sectionHead('budget', 'General Fund, State by State')}
+    <p class="lead">General fund expenditures: FY2025 (preliminary actual, the fall-survey basis for the FY26 change), FY2026 enacted, and the governor's FY2027 proposal. Mid-year shows net post-enactment FY2026 spending changes reported to NASBO (supplementals net of cuts).</p>
+    <div class="card table-card bsr-table bsr-stack" style="margin-top:16px">
+      <table class="data-table">
+        <thead><tr><th>State</th><th class="num">FY2025</th><th class="num">FY2026 enacted</th><th class="num">FY26 &Delta;</th><th class="num">FY27 proposed &Delta;</th><th class="num">Mid-year FY26</th><th>FY26 actions</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="programs">
+    ${sectionHead('initiatives', 'Program Areas: Added vs. Cut')}
+    <p class="lead">Total-fund spending change in FY2025 (latest 50-state actuals/estimates, all fund sources) by program area &mdash; the categories NASBO tracks across every state. "GF" shows the state's own general fund change &mdash; the cleaner policy signal, since total-fund swings often reflect federal aid timing (e.g., the K-12 ESSER expiration).</p>
+    <div class="func-grid">${funcCards}</div>
+  </section>
+
+  <section class="section" id="mix">
+    ${sectionHead('budget', 'Where the Money Goes')}
+    <p class="lead">Each state's FY2025 spending mix across NASBO's six program areas (all fund sources), with FY2025 debt service alongside. States that spend a bigger share on Medicaid or K-12 have less discretionary room when budgets tighten &mdash; hover any bar segment for exact shares.</p>
+    <div class="card mix-card">
+      <div class="mix-legend">${mixLegend}<span class="mix-key mix-key--debt">right column: FY2025 debt service</span></div>
+      ${mixRows}
+    </div>
+  </section>
+
+  <section class="section" id="capital">
+    ${sectionHead('procurement', 'Capital Programs')}
+    <p class="lead">${esc((bs.functionNarratives || {}).capital || 'State capital spending by program area, FY2025.')}</p>
+    <div class="func-grid">${capCards}</div>
+  </section>
+
+  <section class="section" id="strategies">
+    ${sectionHead('procurement', 'Budget-Management Strategies')}
+    <p class="lead">The levers each state is pulling &mdash; from NASBO's survey of enacted FY2026 budgets and governors' FY2027 recommendations. Targeted cuts and hiring freezes are the strongest "do more with less" buying signals.</p>
+    ${stratBlock('Enacted FY2026 budgets', 'strategiesFy2026', null)}
+    ${stratBlock("Governors' FY2027 recommendations", 'strategiesFy2027', 'Proposed, not enacted — legislatures may change these.')}
+  </section>
+
+  <section class="section" id="method">
+    ${sectionHead('news', 'Methodology & Caveats')}
+    <ul class="muted" style="font-size:.88rem">${notes}
+      <li>General fund figures exclude federal funds and other/dedicated funds; program-area figures are all-funds unless noted. Dollar figures are millions, as reported to NASBO by state budget offices.</li>
+      <li>Program-area detail runs through FY2025 (NASBO's latest State Expenditure Report); statewide general fund figures run through enacted FY2026 and proposed FY2027.</li>
+      <li>Spending mix, debt service, and capital-by-program figures are FY2025 estimates from the State Expenditure Report (Tables 4, 29, and 33&ndash;39); capital "programs" are construction/infrastructure outlays, not operating budgets. Program-area commentary is condensed from NASBO's chapter narratives.</li>
+    </ul>
+    <div class="sources"><h3>Sources</h3><ol>${sources}</ol></div>
+  </section>
+
+  </main>
+</div>
+
+${siteFooter('../', bs.updated)}
+<script src="../assets/js/nav.js"></script>
 </body>
 </html>`;
 }
@@ -573,9 +869,17 @@ ${siteFooter('../../', a.updated, !!a.spendSignals)}
 function main() {
   const manifest = readJSON('data/states.json');
   const svgRaw = read('templates/us-map.svg');
+  const hasBudgetShifts = fs.existsSync(p('data/budget-shifts.json'));
 
-  fs.writeFileSync(p('index.html'), renderIndex(manifest, svgRaw));
+  fs.writeFileSync(p('index.html'), renderIndex(manifest, svgRaw, hasBudgetShifts));
   console.log('  index.html');
+
+  if (hasBudgetShifts) {
+    const bs = readJSON('data/budget-shifts.json');
+    if (!fs.existsSync(p('reports'))) fs.mkdirSync(p('reports'), { recursive: true });
+    fs.writeFileSync(p('reports', 'budget-shifts.html'), renderBudgetShifts(bs, manifest));
+    console.log('  reports/budget-shifts.html');
+  }
 
   let built = 0, accts = 0;
   for (const st of manifest.states) {

@@ -1,0 +1,444 @@
+{
+ "fy2026_enacted": {
+  "Alabama": [],
+  "Alaska": [
+   "targetedCuts",
+   "hiringFreeze",
+   "reduceLocalAid",
+   "reorganizeAgencies",
+   "rainyDayFund",
+   "priorYearBalance",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "Arizona": [
+   "fundTransfers",
+   "medicaidChanges",
+   "other"
+  ],
+  "Arkansas": [
+   "hiringFreeze",
+   "reorganizeAgencies",
+   "medicaidChanges"
+  ],
+  "California": [
+   "acrossBoardCuts",
+   "targetedCuts",
+   "hiringFreeze",
+   "rainyDayFund",
+   "fundTransfers",
+   "deferredPayments",
+   "revenueIncrease"
+  ],
+  "Colorado": [
+   "acrossBoardCuts",
+   "targetedCuts",
+   "fundTransfers"
+  ],
+  "Connecticut": [
+   "targetedCuts",
+   "fundTransfers",
+   "priorYearBalance",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "Delaware": [
+   "hiringFreeze"
+  ],
+  "Florida": [
+   "targetedCuts",
+   "hiringFreeze",
+   "rainyDayFund",
+   "fundTransfers"
+  ],
+  "Georgia": [],
+  "Hawaii": [
+   "targetedCuts",
+   "hiringFreeze",
+   "priorYearBalance"
+  ],
+  "Idaho": [
+   "acrossBoardCuts"
+  ],
+  "Illinois": [],
+  "Indiana": [
+   "acrossBoardCuts",
+   "targetedCuts",
+   "fundTransfers"
+  ],
+  "Iowa": [],
+  "Kansas": [
+   "targetedCuts"
+  ],
+  "Kentucky": [],
+  "Louisiana": [
+   "targetedCuts",
+   "hiringFreeze",
+   "reorganizeAgencies",
+   "other"
+  ],
+  "Maine": [
+   "fundTransfers",
+   "priorYearBalance",
+   "medicaidChanges"
+  ],
+  "Maryland": [
+   "acrossBoardCuts",
+   "targetedCuts",
+   "earlyRetirement",
+   "hiringFreeze",
+   "pensionAdjustments",
+   "reduceLocalAid",
+   "rainyDayFund",
+   "fundTransfers",
+   "priorYearBalance",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "Massachusetts": [
+   "targetedCuts",
+   "hiringFreeze",
+   "fundTransfers",
+   "priorYearBalance",
+   "deferredPayments",
+   "revenueIncrease",
+   "other"
+  ],
+  "Michigan": [
+   "targetedCuts",
+   "hiringFreeze"
+  ],
+  "Minnesota": [
+   "targetedCuts",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "Mississippi": [],
+  "Missouri": [
+   "targetedCuts",
+   "hiringFreeze",
+   "other"
+  ],
+  "Montana": [],
+  "Nebraska": [
+   "targetedCuts",
+   "hiringFreeze",
+   "pensionAdjustments",
+   "reduceLocalAid",
+   "reorganizeAgencies",
+   "fundTransfers",
+   "priorYearBalance",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "Nevada": [],
+  "New Hampshire": [
+   "acrossBoardCuts",
+   "targetedCuts",
+   "layoffs",
+   "hiringFreeze",
+   "reorganizeAgencies",
+   "deferredPayments",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "New Jersey": [
+   "acrossBoardCuts",
+   "benefitCuts",
+   "pensionAdjustments",
+   "reduceLocalAid",
+   "fundTransfers",
+   "priorYearBalance",
+   "revenueIncrease"
+  ],
+  "New Mexico": [],
+  "New York": [
+   "priorYearBalance",
+   "other"
+  ],
+  "North Carolina": [
+   "hiringFreeze",
+   "medicaidChanges"
+  ],
+  "North Dakota": [],
+  "Ohio": [],
+  "Oklahoma": [
+   "targetedCuts",
+   "rainyDayFund",
+   "fundTransfers",
+   "priorYearBalance",
+   "other"
+  ],
+  "Oregon": [
+   "targetedCuts",
+   "hiringFreeze",
+   "reorganizeAgencies",
+   "fundTransfers",
+   "other"
+  ],
+  "Pennsylvania": [
+   "targetedCuts",
+   "hiringFreeze",
+   "rainyDayFund",
+   "revenueIncrease",
+   "other"
+  ],
+  "Rhode Island": [
+   "targetedCuts",
+   "fundTransfers",
+   "priorYearBalance",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "South Carolina": [],
+  "South Dakota": [
+   "targetedCuts"
+  ],
+  "Tennessee": [
+   "other"
+  ],
+  "Texas": [],
+  "Utah": [],
+  "Vermont": [
+   "targetedCuts",
+   "fundTransfers",
+   "priorYearBalance"
+  ],
+  "Virginia": [],
+  "Washington": [
+   "targetedCuts",
+   "hiringFreeze",
+   "pensionAdjustments",
+   "reorganizeAgencies",
+   "fundTransfers",
+   "revenueIncrease"
+  ],
+  "West Virginia": [
+   "targetedCuts",
+   "reorganizeAgencies"
+  ],
+  "Wisconsin": [],
+  "Wyoming": []
+ },
+ "fy2027_recommended": {
+  "Alabama": [],
+  "Alaska": [
+   "eliminateVacancies",
+   "rainyDayFund"
+  ],
+  "Arizona": [
+   "eliminateVacancies",
+   "reorganizeAgencies",
+   "privatization",
+   "fundTransfers",
+   "priorYearBalance",
+   "revenueIncrease",
+   "medicaidChanges",
+   "other"
+  ],
+  "Arkansas": [
+   "eliminateVacancies"
+  ],
+  "California": [
+   "salaryReductions",
+   "pensionAdjustments",
+   "rainyDayFund",
+   "medicaidChanges",
+   "other"
+  ],
+  "Colorado": [
+   "targetedCuts",
+   "layoffs",
+   "eliminateVacancies",
+   "pensionAdjustments",
+   "rainyDayFund",
+   "fundTransfers",
+   "medicaidChanges"
+  ],
+  "Connecticut": [
+   "acrossBoardCuts",
+   "targetedCuts",
+   "reorganizeAgencies",
+   "fundTransfers",
+   "revenueIncrease"
+  ],
+  "Delaware": [
+   "targetedCuts",
+   "benefitCuts",
+   "eliminateVacancies",
+   "pensionAdjustments",
+   "revenueIncrease"
+  ],
+  "Florida": [
+   "targetedCuts",
+   "eliminateVacancies",
+   "other"
+  ],
+  "Georgia": [],
+  "Hawaii": [
+   "targetedCuts",
+   "priorYearBalance"
+  ],
+  "Idaho": [
+   "targetedCuts",
+   "eliminateVacancies",
+   "fundTransfers"
+  ],
+  "Illinois": [
+   "revenueIncrease"
+  ],
+  "Indiana": [
+   "eliminateVacancies",
+   "fundTransfers"
+  ],
+  "Iowa": [],
+  "Kansas": [
+   "targetedCuts",
+   "fundTransfers"
+  ],
+  "Kentucky": [],
+  "Louisiana": [
+   "eliminateVacancies"
+  ],
+  "Maine": [
+   "rainyDayFund",
+   "fundTransfers",
+   "priorYearBalance",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "Maryland": [
+   "targetedCuts",
+   "pensionAdjustments",
+   "reduceLocalAid",
+   "rainyDayFund",
+   "fundTransfers",
+   "priorYearBalance",
+   "medicaidChanges"
+  ],
+  "Massachusetts": [
+   "targetedCuts",
+   "hiringFreeze",
+   "fundTransfers",
+   "priorYearBalance",
+   "deferredPayments",
+   "medicaidChanges"
+  ],
+  "Michigan": [
+   "targetedCuts"
+  ],
+  "Minnesota": [],
+  "Mississippi": [],
+  "Missouri": [
+   "targetedCuts",
+   "layoffs",
+   "benefitCuts",
+   "hiringFreeze",
+   "eliminateVacancies",
+   "priorYearBalance",
+   "deferredPayments",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "Montana": [],
+  "Nebraska": [
+   "targetedCuts",
+   "eliminateVacancies",
+   "pensionAdjustments",
+   "reduceLocalAid",
+   "reorganizeAgencies",
+   "fundTransfers",
+   "priorYearBalance",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "Nevada": [],
+  "New Hampshire": [
+   "acrossBoardCuts",
+   "targetedCuts",
+   "layoffs",
+   "hiringFreeze",
+   "fundTransfers",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "New Jersey": [
+   "targetedCuts",
+   "benefitCuts",
+   "pensionAdjustments",
+   "fundTransfers",
+   "priorYearBalance",
+   "revenueIncrease"
+  ],
+  "New Mexico": [
+   "medicaidChanges"
+  ],
+  "New York": [
+   "priorYearBalance",
+   "revenueIncrease"
+  ],
+  "North Carolina": [],
+  "North Dakota": [],
+  "Ohio": [],
+  "Oklahoma": [
+   "targetedCuts",
+   "fundTransfers",
+   "priorYearBalance",
+   "other"
+  ],
+  "Oregon": [
+   "targetedCuts",
+   "eliminateVacancies",
+   "fundTransfers",
+   "priorYearBalance",
+   "revenueIncrease",
+   "other"
+  ],
+  "Pennsylvania": [
+   "targetedCuts",
+   "eliminateVacancies",
+   "pensionAdjustments",
+   "rainyDayFund",
+   "fundTransfers",
+   "revenueIncrease"
+  ],
+  "Rhode Island": [
+   "revenueIncrease"
+  ],
+  "South Carolina": [],
+  "South Dakota": [
+   "targetedCuts"
+  ],
+  "Tennessee": [
+   "targetedCuts",
+   "other"
+  ],
+  "Texas": [],
+  "Utah": [],
+  "Vermont": [
+   "targetedCuts",
+   "eliminateVacancies",
+   "fundTransfers",
+   "priorYearBalance"
+  ],
+  "Virginia": [],
+  "Washington": [
+   "targetedCuts",
+   "layoffs",
+   "hiringFreeze",
+   "rainyDayFund",
+   "revenueIncrease",
+   "medicaidChanges"
+  ],
+  "West Virginia": [
+   "acrossBoardCuts",
+   "targetedCuts",
+   "benefitCuts",
+   "pensionAdjustments",
+   "priorYearBalance",
+   "medicaidChanges"
+  ],
+  "Wisconsin": [],
+  "Wyoming": []
+ }
+}

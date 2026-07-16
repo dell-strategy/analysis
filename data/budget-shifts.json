@@ -1,0 +1,8855 @@
+{
+ "updated": "2026-07-16",
+ "title": "50-State Budget Shifts",
+ "functionLabels": {
+  "k12": "K-12 Education",
+  "higherEd": "Higher Education",
+  "medicaid": "Medicaid",
+  "corrections": "Corrections",
+  "transportation": "Transportation",
+  "allOther": "All Other",
+  "capital": "Capital (all program areas)"
+ },
+ "strategyLabels": {
+  "acrossBoardCuts": "Across-the-board cuts",
+  "targetedCuts": "Targeted cuts",
+  "layoffs": "Layoffs",
+  "furloughs": "Furloughs",
+  "earlyRetirement": "Early retirement",
+  "salaryReductions": "Salary reductions",
+  "benefitCuts": "Employee benefit cuts",
+  "hiringFreeze": "Hiring freeze / vacancy elimination",
+  "eliminateVacancies": "Eliminating vacant positions",
+  "pensionAdjustments": "Pension / OPEB adjustments",
+  "reduceLocalAid": "Reduce local aid",
+  "reorganizeAgencies": "Agency reorganization",
+  "privatization": "Privatization",
+  "rainyDayFund": "Rainy day fund draw",
+  "fundTransfers": "Other fund transfers",
+  "priorYearBalance": "Prior-year fund balance",
+  "deferredPayments": "Deferred payments",
+  "revenueIncrease": "Revenue increases",
+  "medicaidChanges": "Medicaid program changes",
+  "other": "Other"
+ },
+ "functionNarratives": {
+  "k12": "Total K-12 spending was nearly flat (+0.8%) in FY2025: state funds grew 4.6% (median +6.0%) while federal funds fell 15.9% as temporary pandemic education aid wound down. Federal dollars are still 15.6% of K-12 spending vs. 13.6% pre-pandemic \u2014 more decline is coming.",
+  "higherEd": "Total higher-ed spending rose 3.9% in FY2025; general fund support grew 2.6% after +7.6% in FY2024, as states propped up affordability and institutions facing enrollment declines (public FTE enrollment fell in 41 states over the past decade).",
+  "medicaid": "The fastest-growing category: +8.4% total in FY2025 with state funds up 13.2%, as the expired enhanced federal match shifted costs onto states amid provider rate increases and rising long-term-care, pharmacy, and behavioral-health costs.",
+  "corrections": "Total corrections spending rose 4.0% in FY2025 (general fund +4.1%). It is the most general-fund-reliant category (84.7% GF), and pay raises for recruitment and retention were a priority in many states' FY2025 budgets.",
+  "transportation": "+7.0% total in FY2025 after +15.5% in FY2024 \u2014 second-fastest growth behind Medicaid, powered by IIJA federal dollars and states steering surpluses to infrastructure. Over 60% is funded from earmarked revenues like motor-fuel taxes.",
+  "allOther": "+6.3% in FY2025. The catch-all for most state agencies \u2014 CHIP, behavioral health, public health, child welfare, courts, constitutional officers \u2014 still normalizing after CARES/ARPA-driven swings.",
+  "capital": "Capital spending grew 5.9% in FY2025 (state funds +10.7%; federal funds \u22120.9% as ARPA winds down). Transportation is ~63% of all state capital outlays; higher education is the next largest at ~10%."
+ },
+ "capitalLabels": {
+  "transportation": "Transportation",
+  "allOther": "All Other",
+  "higherEd": "Higher Education",
+  "environment": "Environmental",
+  "k12": "K-12 Construction",
+  "housing": "Housing",
+  "corrections": "Corrections"
+ },
+ "capitalNational": {
+  "transportation": {
+   "label": "Transportation",
+   "fy2025Total": 117893,
+   "pct2025": 6.3
+  },
+  "allOther": {
+   "label": "All Other",
+   "fy2025Total": 27497,
+   "pct2025": 14.2
+  },
+  "higherEd": {
+   "label": "Higher Education",
+   "fy2025Total": 19422,
+   "pct2025": 7.6
+  },
+  "environment": {
+   "label": "Environmental",
+   "fy2025Total": 9011,
+   "pct2025": -27.7
+  },
+  "k12": {
+   "label": "K-12 Construction",
+   "fy2025Total": 5286,
+   "pct2025": 21.5
+  },
+  "housing": {
+   "label": "Housing",
+   "fy2025Total": 4904,
+   "pct2025": 41.0
+  },
+  "corrections": {
+   "label": "Corrections",
+   "fy2025Total": 2413,
+   "pct2025": -11.4
+  }
+ },
+ "national": {
+  "gfFy2024": 1236124,
+  "gfFy2025": 1278627,
+  "gfFy2026Enacted": 1276553,
+  "gfFy2027Proposed": 1326425,
+  "notes": [
+   "Fiscal 2026 general fund totals include Pennsylvania's proposed (not enacted) budget; the state had not enacted a FY2026 budget at NASBO's fall reporting deadline.",
+   "Fiscal 2027 figures are governors' recommended budgets, not enacted appropriations. Virginia did not report a FY2027 proposal.",
+   "States with biennial budgets (e.g., Texas) show large alternating year-over-year swings; compare across the full biennium."
+  ]
+ },
+ "states": {
+  "alabama": {
+   "name": "Alabama",
+   "generalFund": {
+    "fy2024": 12763,
+    "fy2025": 13504,
+    "fy2025Prelim": 14155,
+    "fy2026Enacted": 13667,
+    "fy2026Estimated": 14329,
+    "fy2027Proposed": 14167
+   },
+   "pctChange": {
+    "fy2025": 5.8,
+    "fy2026Enacted": -3.4,
+    "fy2026Estimated": 6.1,
+    "fy2027Proposed": -1.1
+   },
+   "rainyDayFy2026": 3221,
+   "midYearFy2026": {
+    "netChange": 446.7,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 11679,
+     "fy2025Gf": 6902,
+     "pct2024": {
+      "gf": 0.7,
+      "ff": -15.5,
+      "total": -6.8
+     },
+     "pct2025": {
+      "gf": 7.9,
+      "ff": 19.5,
+      "total": 11.4
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 8087,
+     "fy2025Gf": 2643,
+     "pct2024": {
+      "gf": -2.2,
+      "ff": 17.7,
+      "total": 1.7
+     },
+     "pct2025": {
+      "gf": 2.6,
+      "ff": -11.6,
+      "total": -2.2
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 9199,
+     "fy2025Gf": 931,
+     "pct2024": {
+      "gf": 18.3,
+      "ff": -8.5,
+      "total": -2.5
+     },
+     "pct2025": {
+      "gf": 6.6,
+      "ff": 3.2,
+      "total": 4.1
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1061,
+     "fy2025Gf": 891,
+     "pct2024": {
+      "gf": 17.1,
+      "ff": 21.4,
+      "total": 17.3
+     },
+     "pct2025": {
+      "gf": 3.5,
+      "ff": -20.6,
+      "total": 2.7
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2218,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 4.7,
+      "ff": 23.8,
+      "total": 15.1
+     },
+     "pct2025": {
+      "gf": -15.6,
+      "ff": 12.2,
+      "total": 3.0
+     }
+    },
+    "allOther": {
+     "fy2025Total": 11670,
+     "fy2025Gf": 4288,
+     "pct2024": {
+      "gf": -17.8,
+      "ff": -30.3,
+      "total": -21.7
+     },
+     "pct2025": {
+      "gf": 59.4,
+      "ff": 58.1,
+      "total": 59.3
+     }
+    },
+    "capital": {
+     "fy2025Total": 1400,
+     "fy2025Gf": 113,
+     "pct2024": {
+      "gf": 453.8,
+      "ff": 30.7,
+      "total": -5.6
+     },
+     "pct2025": {
+      "gf": 56.9,
+      "ff": 2.1,
+      "total": -9.3
+     }
+    }
+   },
+   "mix": {
+    "k12": 26.6,
+    "higherEd": 18.4,
+    "medicaid": 20.9,
+    "corrections": 2.4,
+    "transportation": 5.1,
+    "allOther": 26.6
+   },
+   "totalFy2025": 43914,
+   "debtServiceFy2025": {
+    "gf": 101,
+    "of": 12,
+    "total": 113
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 758,
+     "pct2025": 1.6
+    },
+    "allOther": {
+     "fy2025Total": 204,
+     "pct2025": 7.4
+    },
+    "higherEd": {
+     "fy2025Total": 52,
+     "pct2025": -69.9
+    },
+    "environment": {
+     "fy2025Total": 21,
+     "pct2025": -41.7
+    },
+    "k12": {
+     "fy2025Total": 328,
+     "pct2025": -13.2
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 37,
+     "pct2025": 76.2
+    }
+   }
+  },
+  "alaska": {
+   "name": "Alaska",
+   "generalFund": {
+    "fy2024": 6464,
+    "fy2025": 5531,
+    "fy2025Prelim": 6441,
+    "fy2026Enacted": 5993,
+    "fy2026Estimated": 5776,
+    "fy2027Proposed": 5502
+   },
+   "pctChange": {
+    "fy2025": -14.4,
+    "fy2026Enacted": -7.0,
+    "fy2026Estimated": 4.4,
+    "fy2027Proposed": -4.7
+   },
+   "rainyDayFy2026": 3158,
+   "midYearFy2026": {
+    "netChange": 426.8,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze",
+    "reduceLocalAid",
+    "reorganizeAgencies",
+    "rainyDayFund",
+    "priorYearBalance",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "strategiesFy2027": [
+    "hiringFreeze",
+    "rainyDayFund"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 1902,
+     "fy2025Gf": 1532,
+     "pct2024": {
+      "gf": 1.6,
+      "ff": -8.0,
+      "total": -0.8
+     },
+     "pct2025": {
+      "gf": 6.8,
+      "ff": -36.5,
+      "total": -3.3
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 1001,
+     "fy2025Gf": 358,
+     "pct2024": {
+      "gf": 15.9,
+      "ff": -11.8,
+      "total": 9.0
+     },
+     "pct2025": {
+      "gf": 6.9,
+      "ff": 10.7,
+      "total": 7.6
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 3060,
+     "fy2025Gf": 742,
+     "pct2024": {
+      "gf": 16.6,
+      "ff": -1.2,
+      "total": 2.8
+     },
+     "pct2025": {
+      "gf": 5.9,
+      "ff": 11.8,
+      "total": 10.3
+     }
+    },
+    "corrections": {
+     "fy2025Total": 530,
+     "fy2025Gf": 504,
+     "pct2024": {
+      "gf": 3.2,
+      "ff": -41.2,
+      "total": 1.7
+     },
+     "pct2025": {
+      "gf": 7.9,
+      "ff": 0.0,
+      "total": 7.7
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2165,
+     "fy2025Gf": 320,
+     "pct2024": {
+      "gf": 3.9,
+      "ff": 14.8,
+      "total": 11.9
+     },
+     "pct2025": {
+      "gf": 26.1,
+      "ff": -8.0,
+      "total": 0.5
+     }
+    },
+    "allOther": {
+     "fy2025Total": 7167,
+     "fy2025Gf": 2801,
+     "pct2024": {
+      "gf": -21.7,
+      "ff": 11.8,
+      "total": -14.1
+     },
+     "pct2025": {
+      "gf": 1.1,
+      "ff": 62.2,
+      "total": 19.1
+     }
+    },
+    "capital": {
+     "fy2025Total": 3617,
+     "fy2025Gf": 337,
+     "pct2024": {
+      "gf": -35.5,
+      "ff": 36.8,
+      "total": 13.3
+     },
+     "pct2025": {
+      "gf": -30.7,
+      "ff": 25.5,
+      "total": 14.5
+     }
+    }
+   },
+   "mix": {
+    "k12": 12.0,
+    "higherEd": 6.3,
+    "medicaid": 19.3,
+    "corrections": 3.3,
+    "transportation": 13.7,
+    "allOther": 45.3
+   },
+   "totalFy2025": 15824,
+   "debtServiceFy2025": {
+    "gf": 135,
+    "of": 58,
+    "total": 193
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 1658,
+     "pct2025": -10.4
+    },
+    "allOther": {
+     "fy2025Total": 1434,
+     "pct2025": 71.5
+    },
+    "higherEd": {
+     "fy2025Total": 25,
+     "pct2025": -34.2
+    },
+    "environment": {
+     "fy2025Total": 335,
+     "pct2025": 8.1
+    },
+    "k12": {
+     "fy2025Total": 58,
+     "pct2025": 3.6
+    },
+    "housing": {
+     "fy2025Total": 99,
+     "pct2025": 57.1
+    },
+    "corrections": {
+     "fy2025Total": 7,
+     "pct2025": -12.5
+    }
+   }
+  },
+  "arizona": {
+   "name": "Arizona",
+   "generalFund": {
+    "fy2024": 17317,
+    "fy2025": 16055,
+    "fy2025Prelim": 16245,
+    "fy2026Enacted": 17571,
+    "fy2026Estimated": 17804,
+    "fy2027Proposed": 18668
+   },
+   "pctChange": {
+    "fy2025": -7.3,
+    "fy2026Enacted": 8.2,
+    "fy2026Estimated": 10.9,
+    "fy2027Proposed": 4.9
+   },
+   "rainyDayFy2026": 1625,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "fundTransfers",
+    "medicaidChanges",
+    "other"
+   ],
+   "strategiesFy2027": [
+    "hiringFreeze",
+    "reorganizeAgencies",
+    "privatization",
+    "fundTransfers",
+    "priorYearBalance",
+    "revenueIncrease",
+    "medicaidChanges",
+    "other"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 10771,
+     "fy2025Gf": 8204,
+     "pct2024": {
+      "gf": 9.8,
+      "ff": -0.6,
+      "total": 7.3
+     },
+     "pct2025": {
+      "gf": 2.0,
+      "ff": -8.7,
+      "total": -0.4
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 9752,
+     "fy2025Gf": 914,
+     "pct2024": {
+      "gf": 5.2,
+      "ff": 0.3,
+      "total": 4.6
+     },
+     "pct2025": {
+      "gf": -3.3,
+      "ff": 53.6,
+      "total": 4.0
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 18618,
+     "fy2025Gf": 2535,
+     "pct2024": {
+      "gf": 2.0,
+      "ff": -14.2,
+      "total": -10.5
+     },
+     "pct2025": {
+      "gf": 22.8,
+      "ff": -9.0,
+      "total": -0.6
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1668,
+     "fy2025Gf": 1454,
+     "pct2024": {
+      "gf": 5.4,
+      "ff": -16.7,
+      "total": 5.2
+     },
+     "pct2025": {
+      "gf": -0.5,
+      "ff": -46.7,
+      "total": -0.9
+     }
+    },
+    "transportation": {
+     "fy2025Total": 5484,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 22.6,
+      "ff": 20.2,
+      "total": 30.0
+     },
+     "pct2025": {
+      "gf": -9.1,
+      "ff": 0.0,
+      "total": -11.3
+     }
+    },
+    "allOther": {
+     "fy2025Total": 27272,
+     "fy2025Gf": 3138,
+     "pct2024": {
+      "gf": -29.3,
+      "ff": 24.7,
+      "total": -24.8
+     },
+     "pct2025": {
+      "gf": -37.0,
+      "ff": -96.1,
+      "total": -45.1
+     }
+    },
+    "capital": {
+     "fy2025Total": 3501,
+     "fy2025Gf": 594,
+     "pct2024": {
+      "gf": 71.9,
+      "ff": -12.7,
+      "total": 3.5
+     },
+     "pct2025": {
+      "gf": -55.9,
+      "ff": 7.0,
+      "total": -18.8
+     }
+    }
+   },
+   "mix": {
+    "k12": 14.6,
+    "higherEd": 13.3,
+    "medicaid": 25.3,
+    "corrections": 2.3,
+    "transportation": 7.5,
+    "allOther": 37.1
+   },
+   "totalFy2025": 73565,
+   "debtServiceFy2025": {
+    "gf": 96,
+    "of": 513,
+    "total": 609
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 2995,
+     "pct2025": -15.5
+    },
+    "allOther": {
+     "fy2025Total": 53,
+     "pct2025": 96.3
+    },
+    "higherEd": {
+     "fy2025Total": 126,
+     "pct2025": -64.8
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": -100.0
+    },
+    "k12": {
+     "fy2025Total": 323,
+     "pct2025": -9.3
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 4,
+     "pct2025": -66.7
+    }
+   }
+  },
+  "arkansas": {
+   "name": "Arkansas",
+   "generalFund": {
+    "fy2024": 6202,
+    "fy2025": 6312,
+    "fy2025Prelim": 6312,
+    "fy2026Enacted": 6494,
+    "fy2026Estimated": 6494,
+    "fy2027Proposed": 7015
+   },
+   "pctChange": {
+    "fy2025": 1.8,
+    "fy2026Enacted": 2.9,
+    "fy2026Estimated": 2.9,
+    "fy2027Proposed": 8.0
+   },
+   "rainyDayFy2026": 1815,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "hiringFreeze",
+    "reorganizeAgencies",
+    "medicaidChanges"
+   ],
+   "strategiesFy2027": [
+    "hiringFreeze"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 4807,
+     "fy2025Gf": 2606,
+     "pct2024": {
+      "gf": 8.6,
+      "ff": 2.5,
+      "total": 6.9
+     },
+     "pct2025": {
+      "gf": 2.5,
+      "ff": -9.2,
+      "total": -0.7
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 3147,
+     "fy2025Gf": 825,
+     "pct2024": {
+      "gf": -0.8,
+      "ff": -67.4,
+      "total": -2.1
+     },
+     "pct2025": {
+      "gf": -32.8,
+      "ff": -13.8,
+      "total": -32.7
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 9327,
+     "fy2025Gf": 1326,
+     "pct2024": {
+      "gf": 11.3,
+      "ff": -12.2,
+      "total": -7.5
+     },
+     "pct2025": {
+      "gf": 6.6,
+      "ff": 2.4,
+      "total": 3.4
+     }
+    },
+    "corrections": {
+     "fy2025Total": 518,
+     "fy2025Gf": 453,
+     "pct2024": {
+      "gf": -2.1,
+      "ff": -100.0,
+      "total": -2.5
+     },
+     "pct2025": {
+      "gf": 3.4,
+      "ff": null,
+      "total": 3.4
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2304,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 8.5,
+      "ff": -15.7,
+      "total": -2.3
+     },
+     "pct2025": {
+      "gf": -9.3,
+      "ff": 29.2,
+      "total": 5.6
+     }
+    },
+    "allOther": {
+     "fy2025Total": 12437,
+     "fy2025Gf": 954,
+     "pct2024": {
+      "gf": 6.5,
+      "ff": -0.6,
+      "total": 5.6
+     },
+     "pct2025": {
+      "gf": 1.2,
+      "ff": 1.8,
+      "total": 1.2
+     }
+    },
+    "capital": {
+     "fy2025Total": 1435,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": -75.0,
+      "ff": -37.8,
+      "total": 9.6
+     },
+     "pct2025": {
+      "gf": -100.0,
+      "ff": 76.4,
+      "total": 29.9
+     }
+    }
+   },
+   "mix": {
+    "k12": 14.8,
+    "higherEd": 9.7,
+    "medicaid": 28.7,
+    "corrections": 1.6,
+    "transportation": 7.1,
+    "allOther": 38.2
+   },
+   "totalFy2025": 32540,
+   "debtServiceFy2025": {
+    "gf": 0,
+    "of": 250,
+    "total": 250
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 1296,
+     "pct2025": 32.0
+    },
+    "allOther": {
+     "fy2025Total": 120,
+     "pct2025": 13.2
+    },
+    "higherEd": {
+     "fy2025Total": 14,
+     "pct2025": 27.3
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 5,
+     "pct2025": -16.7
+    }
+   }
+  },
+  "california": {
+   "name": "California",
+   "generalFund": {
+    "fy2024": 205670,
+    "fy2025": 229231,
+    "fy2025Prelim": 233577,
+    "fy2026Enacted": 228366,
+    "fy2026Estimated": 237662,
+    "fy2027Proposed": 248330
+   },
+   "pctChange": {
+    "fy2025": 11.5,
+    "fy2026Enacted": -2.2,
+    "fy2026Estimated": 3.7,
+    "fy2027Proposed": 4.5
+   },
+   "rainyDayFy2026": 15704,
+   "midYearFy2026": {
+    "netChange": 3669.1,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "acrossBoardCuts",
+    "targetedCuts",
+    "hiringFreeze",
+    "rainyDayFund",
+    "fundTransfers",
+    "deferredPayments",
+    "revenueIncrease"
+   ],
+   "strategiesFy2027": [
+    "salaryReductions",
+    "pensionAdjustments",
+    "rainyDayFund",
+    "medicaidChanges",
+    "other"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 89680,
+     "fy2025Gf": 81622,
+     "pct2024": {
+      "gf": 12.1,
+      "ff": 3.0,
+      "total": 10.3
+     },
+     "pct2025": {
+      "gf": 10.6,
+      "ff": 4.8,
+      "total": 9.5
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 30199,
+     "fy2025Gf": 22793,
+     "pct2024": {
+      "gf": 6.0,
+      "ff": 1.7,
+      "total": 8.3
+     },
+     "pct2025": {
+      "gf": 6.9,
+      "ff": 5.6,
+      "total": 3.4
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 179100,
+     "fy2025Gf": 37436,
+     "pct2024": {
+      "gf": 37.6,
+      "ff": 6.1,
+      "total": 16.4
+     },
+     "pct2025": {
+      "gf": 16.3,
+      "ff": 13.8,
+      "total": 14.7
+     }
+    },
+    "corrections": {
+     "fy2025Total": 17715,
+     "fy2025Gf": 13633,
+     "pct2024": {
+      "gf": -1.3,
+      "ff": 4.0,
+      "total": -1.3
+     },
+     "pct2025": {
+      "gf": -4.2,
+      "ff": 5.7,
+      "total": -4.2
+     }
+    },
+    "transportation": {
+     "fy2025Total": 32982,
+     "fy2025Gf": 3855,
+     "pct2024": {
+      "gf": 19.1,
+      "ff": 54.6,
+      "total": 29.4
+     },
+     "pct2025": {
+      "gf": 57.4,
+      "ff": -29.2,
+      "total": 26.1
+     }
+    },
+    "allOther": {
+     "fy2025Total": 160607,
+     "fy2025Gf": 74238,
+     "pct2024": {
+      "gf": 0.7,
+      "ff": 2.1,
+      "total": 0.9
+     },
+     "pct2025": {
+      "gf": 4.9,
+      "ff": 38.9,
+      "total": 14.0
+     }
+    },
+    "capital": {
+     "fy2025Total": 11315,
+     "fy2025Gf": 773,
+     "pct2024": {
+      "gf": -84.3,
+      "ff": 120.5,
+      "total": 48.1
+     },
+     "pct2025": {
+      "gf": 74.5,
+      "ff": -48.9,
+      "total": 6.3
+     }
+    }
+   },
+   "mix": {
+    "k12": 17.6,
+    "higherEd": 5.9,
+    "medicaid": 35.1,
+    "corrections": 3.5,
+    "transportation": 6.5,
+    "allOther": 31.5
+   },
+   "totalFy2025": 510283,
+   "debtServiceFy2025": {
+    "gf": 5515,
+    "of": 1834,
+    "total": 7349
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 9890,
+     "pct2025": 8.7
+    },
+    "allOther": {
+     "fy2025Total": 1393,
+     "pct2025": 108.2
+    },
+    "higherEd": {
+     "fy2025Total": 29,
+     "pct2025": -96.3
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": -100.0
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 3,
+     "pct2025": -96.9
+    }
+   }
+  },
+  "colorado": {
+   "name": "Colorado",
+   "generalFund": {
+    "fy2024": 16873,
+    "fy2025": 18586,
+    "fy2025Prelim": 18436,
+    "fy2026Enacted": 17284,
+    "fy2026Estimated": 18210,
+    "fy2027Proposed": 18881
+   },
+   "pctChange": {
+    "fy2025": 10.1,
+    "fy2026Enacted": -6.2,
+    "fy2026Estimated": -2.0,
+    "fy2027Proposed": 3.7
+   },
+   "rainyDayFy2026": 2963,
+   "midYearFy2026": {
+    "netChange": 164.2,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "acrossBoardCuts",
+    "targetedCuts",
+    "fundTransfers"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "layoffs",
+    "hiringFreeze",
+    "pensionAdjustments",
+    "rainyDayFund",
+    "fundTransfers",
+    "medicaidChanges"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 7877,
+     "fy2025Gf": 4530,
+     "pct2024": {
+      "gf": 7.0,
+      "ff": 0.2,
+      "total": 6.0
+     },
+     "pct2025": {
+      "gf": 7.5,
+      "ff": -17.1,
+      "total": 4.1
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 7347,
+     "fy2025Gf": 1876,
+     "pct2024": {
+      "gf": 5.3,
+      "ff": 0.0,
+      "total": 10.0
+     },
+     "pct2025": {
+      "gf": 10.5,
+      "ff": 3.8,
+      "total": 9.7
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 15722,
+     "fy2025Gf": 4828,
+     "pct2024": {
+      "gf": 14.3,
+      "ff": -4.6,
+      "total": 2.4
+     },
+     "pct2025": {
+      "gf": 15.0,
+      "ff": 11.0,
+      "total": 12.7
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1227,
+     "fy2025Gf": 805,
+     "pct2024": {
+      "gf": 10.5,
+      "ff": 0.0,
+      "total": 10.5
+     },
+     "pct2025": {
+      "gf": 4.7,
+      "ff": 0.0,
+      "total": 4.7
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2065,
+     "fy2025Gf": 1,
+     "pct2024": {
+      "gf": 0.3,
+      "ff": 0.5,
+      "total": 0.4
+     },
+     "pct2025": {
+      "gf": 24.8,
+      "ff": 3.4,
+      "total": 14.8
+     }
+    },
+    "allOther": {
+     "fy2025Total": 12023,
+     "fy2025Gf": 4174,
+     "pct2024": {
+      "gf": 2.8,
+      "ff": 5.4,
+      "total": 3.3
+     },
+     "pct2025": {
+      "gf": 7.0,
+      "ff": 1.3,
+      "total": 5.8
+     }
+    },
+    "capital": {
+     "fy2025Total": 778,
+     "fy2025Gf": 351,
+     "pct2024": {
+      "gf": 187.0,
+      "ff": 140.9,
+      "total": -10.5
+     },
+     "pct2025": {
+      "gf": -0.6,
+      "ff": 11.3,
+      "total": 19.5
+     }
+    }
+   },
+   "mix": {
+    "k12": 17.0,
+    "higherEd": 15.9,
+    "medicaid": 34.0,
+    "corrections": 2.7,
+    "transportation": 4.5,
+    "allOther": 26.0
+   },
+   "totalFy2025": 46260,
+   "debtServiceFy2025": {
+    "gf": 369,
+    "of": 479,
+    "total": 0
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 1,
+     "pct2025": 0.0
+    },
+    "allOther": {
+     "fy2025Total": 260,
+     "pct2025": -15.3
+    },
+    "higherEd": {
+     "fy2025Total": 457,
+     "pct2025": 77.1
+    },
+    "environment": {
+     "fy2025Total": 3,
+     "pct2025": -62.5
+    },
+    "k12": {
+     "fy2025Total": 4,
+     "pct2025": -33.3
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 54,
+     "pct2025": -25.0
+    }
+   }
+  },
+  "connecticut": {
+   "name": "Connecticut",
+   "generalFund": {
+    "fy2024": 22315,
+    "fy2025": 23481,
+    "fy2025Prelim": 23434,
+    "fy2026Enacted": 24036,
+    "fy2026Estimated": 24379,
+    "fy2027Proposed": 25470
+   },
+   "pctChange": {
+    "fy2025": 5.2,
+    "fy2026Enacted": 2.6,
+    "fy2026Estimated": 3.8,
+    "fy2027Proposed": 4.5
+   },
+   "rainyDayFy2026": 4565,
+   "midYearFy2026": {
+    "netChange": 500.0,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "fundTransfers",
+    "priorYearBalance",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "strategiesFy2027": [
+    "acrossBoardCuts",
+    "targetedCuts",
+    "reorganizeAgencies",
+    "fundTransfers",
+    "revenueIncrease"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 6894,
+     "fy2025Gf": 5177,
+     "pct2024": {
+      "gf": 2.1,
+      "ff": 0.8,
+      "total": 1.8
+     },
+     "pct2025": {
+      "gf": 5.7,
+      "ff": -20.1,
+      "total": 6.1
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 3956,
+     "fy2025Gf": 883,
+     "pct2024": {
+      "gf": -4.9,
+      "ff": -11.2,
+      "total": -7.4
+     },
+     "pct2025": {
+      "gf": 2.8,
+      "ff": 0.0,
+      "total": 3.6
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 11152,
+     "fy2025Gf": 5957,
+     "pct2024": {
+      "gf": 12.2,
+      "ff": -3.3,
+      "total": 4.4
+     },
+     "pct2025": {
+      "gf": 5.7,
+      "ff": 6.4,
+      "total": 6.0
+     }
+    },
+    "corrections": {
+     "fy2025Total": 856,
+     "fy2025Gf": 768,
+     "pct2024": {
+      "gf": 0.8,
+      "ff": -77.4,
+      "total": -7.6
+     },
+     "pct2025": {
+      "gf": 5.7,
+      "ff": -28.6,
+      "total": 3.5
+     }
+    },
+    "transportation": {
+     "fy2025Total": 5492,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 9.3,
+      "ff": 8.8,
+      "total": 18.3
+     },
+     "pct2025": {
+      "gf": 34.4,
+      "ff": 17.2,
+      "total": 11.2
+     }
+    },
+    "allOther": {
+     "fy2025Total": 16943,
+     "fy2025Gf": 10640,
+     "pct2024": {
+      "gf": -9.0,
+      "ff": -2.8,
+      "total": -4.8
+     },
+     "pct2025": {
+      "gf": 4.6,
+      "ff": 14.1,
+      "total": 4.8
+     }
+    },
+    "capital": {
+     "fy2025Total": 4548,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 11.3,
+      "total": 21.5
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": 24.4,
+      "total": 0.1
+     }
+    }
+   },
+   "mix": {
+    "k12": 15.2,
+    "higherEd": 8.7,
+    "medicaid": 24.6,
+    "corrections": 1.9,
+    "transportation": 12.1,
+    "allOther": 37.4
+   },
+   "totalFy2025": 45293,
+   "debtServiceFy2025": {
+    "gf": 2497,
+    "of": 859,
+    "total": 3356
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 2102,
+     "pct2025": -9.5
+    },
+    "allOther": {
+     "fy2025Total": 801,
+     "pct2025": -13.0
+    },
+    "higherEd": {
+     "fy2025Total": 172,
+     "pct2025": 32.3
+    },
+    "environment": {
+     "fy2025Total": 238,
+     "pct2025": -45.2
+    },
+    "k12": {
+     "fy2025Total": 711,
+     "pct2025": 107.3
+    },
+    "housing": {
+     "fy2025Total": 476,
+     "pct2025": 42.5
+    },
+    "corrections": {
+     "fy2025Total": 48,
+     "pct2025": -17.2
+    }
+   }
+  },
+  "delaware": {
+   "name": "Delaware",
+   "generalFund": {
+    "fy2024": 6232,
+    "fy2025": 6925,
+    "fy2025Prelim": 6925,
+    "fy2026Enacted": 7261,
+    "fy2026Estimated": 7218,
+    "fy2027Proposed": 7496
+   },
+   "pctChange": {
+    "fy2025": 11.1,
+    "fy2026Enacted": 4.8,
+    "fy2026Estimated": 4.2,
+    "fy2027Proposed": 3.8
+   },
+   "rainyDayFy2026": 367,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "hiringFreeze"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "benefitCuts",
+    "hiringFreeze",
+    "pensionAdjustments",
+    "revenueIncrease"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 4021,
+     "fy2025Gf": 2327,
+     "pct2024": {
+      "gf": 8.3,
+      "ff": -5.4,
+      "total": 5.7
+     },
+     "pct2025": {
+      "gf": 10.3,
+      "ff": -23.2,
+      "total": 7.5
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 607,
+     "fy2025Gf": 384,
+     "pct2024": {
+      "gf": 11.8,
+      "ff": 10.1,
+      "total": 14.2
+     },
+     "pct2025": {
+      "gf": 8.8,
+      "ff": 1.1,
+      "total": 2.0
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 3242,
+     "fy2025Gf": 1081,
+     "pct2024": {
+      "gf": 11.7,
+      "ff": -4.5,
+      "total": 0.3
+     },
+     "pct2025": {
+      "gf": 3.0,
+      "ff": -4.2,
+      "total": -1.8
+     }
+    },
+    "corrections": {
+     "fy2025Total": 489,
+     "fy2025Gf": 477,
+     "pct2024": {
+      "gf": 8.8,
+      "ff": 100.0,
+      "total": 8.0
+     },
+     "pct2025": {
+      "gf": 9.7,
+      "ff": -50.0,
+      "total": 9.4
+     }
+    },
+    "transportation": {
+     "fy2025Total": 1257,
+     "fy2025Gf": 5,
+     "pct2024": {
+      "gf": 13.6,
+      "ff": 1.2,
+      "total": 4.3
+     },
+     "pct2025": {
+      "gf": 5.3,
+      "ff": 9.0,
+      "total": 6.5
+     }
+    },
+    "allOther": {
+     "fy2025Total": 7859,
+     "fy2025Gf": 2651,
+     "pct2024": {
+      "gf": 2.2,
+      "ff": 15.3,
+      "total": 3.9
+     },
+     "pct2025": {
+      "gf": 16.6,
+      "ff": 6.4,
+      "total": 15.1
+     }
+    },
+    "capital": {
+     "fy2025Total": 1001,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 1.2,
+      "total": -0.8
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": 9.0,
+      "total": 2.5
+     }
+    }
+   },
+   "mix": {
+    "k12": 23.0,
+    "higherEd": 3.5,
+    "medicaid": 18.6,
+    "corrections": 2.8,
+    "transportation": 7.2,
+    "allOther": 45.0
+   },
+   "totalFy2025": 17475,
+   "debtServiceFy2025": {
+    "gf": 252,
+    "of": 265,
+    "total": 517
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 721,
+     "pct2025": 0.0
+    },
+    "allOther": {
+     "fy2025Total": 30,
+     "pct2025": -23.1
+    },
+    "higherEd": {
+     "fy2025Total": 2,
+     "pct2025": -93.9
+    },
+    "environment": {
+     "fy2025Total": 16,
+     "pct2025": 128.6
+    },
+    "k12": {
+     "fy2025Total": 232,
+     "pct2025": 31.1
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 0,
+     "pct2025": null
+    }
+   }
+  },
+  "florida": {
+   "name": "Florida",
+   "generalFund": {
+    "fy2024": 55017,
+    "fy2025": 51886,
+    "fy2025Prelim": 53190,
+    "fy2026Enacted": 55301,
+    "fy2026Estimated": 56398,
+    "fy2027Proposed": 54317
+   },
+   "pctChange": {
+    "fy2025": -5.7,
+    "fy2026Enacted": 4.0,
+    "fy2026Estimated": 8.7,
+    "fy2027Proposed": -3.7
+   },
+   "rainyDayFy2026": 4870,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze",
+    "rainyDayFund",
+    "fundTransfers"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "hiringFreeze",
+    "other"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 19856,
+     "fy2025Gf": 15137,
+     "pct2024": {
+      "gf": 8.0,
+      "ff": -6.2,
+      "total": 4.0
+     },
+     "pct2025": {
+      "gf": 8.1,
+      "ff": -44.3,
+      "total": -5.1
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 9414,
+     "fy2025Gf": 6911,
+     "pct2024": {
+      "gf": 0.0,
+      "ff": -92.1,
+      "total": -13.4
+     },
+     "pct2025": {
+      "gf": 4.4,
+      "ff": 28.3,
+      "total": 4.7
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 33808,
+     "fy2025Gf": 10916,
+     "pct2024": {
+      "gf": -0.6,
+      "ff": 1.7,
+      "total": 0.8
+     },
+     "pct2025": {
+      "gf": 21.9,
+      "ff": -28.4,
+      "total": -10.2
+     }
+    },
+    "corrections": {
+     "fy2025Total": 4361,
+     "fy2025Gf": 4104,
+     "pct2024": {
+      "gf": 17.9,
+      "ff": 0.0,
+      "total": 17.5
+     },
+     "pct2025": {
+      "gf": 7.9,
+      "ff": 0.0,
+      "total": 7.8
+     }
+    },
+    "transportation": {
+     "fy2025Total": 15530,
+     "fy2025Gf": 130,
+     "pct2024": {
+      "gf": 69.1,
+      "ff": 38.3,
+      "total": 62.8
+     },
+     "pct2025": {
+      "gf": -30.6,
+      "ff": -1.3,
+      "total": -22.4
+     }
+    },
+    "allOther": {
+     "fy2025Total": 35936,
+     "fy2025Gf": 12734,
+     "pct2024": {
+      "gf": 0.6,
+      "ff": 33.5,
+      "total": 9.7
+     },
+     "pct2025": {
+      "gf": -20.3,
+      "ff": 14.5,
+      "total": -7.7
+     }
+    },
+    "capital": {
+     "fy2025Total": 21193,
+     "fy2025Gf": 2116,
+     "pct2024": {
+      "gf": -4.2,
+      "ff": 7.5,
+      "total": 13.4
+     },
+     "pct2025": {
+      "gf": -45.3,
+      "ff": -37.4,
+      "total": -14.9
+     }
+    }
+   },
+   "mix": {
+    "k12": 16.7,
+    "higherEd": 7.9,
+    "medicaid": 28.4,
+    "corrections": 3.7,
+    "transportation": 13.1,
+    "allOther": 30.2
+   },
+   "totalFy2025": 118905,
+   "debtServiceFy2025": {
+    "gf": 51,
+    "of": 1173,
+    "total": 1224
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 14526,
+     "pct2025": -1.1
+    },
+    "allOther": {
+     "fy2025Total": 2156,
+     "pct2025": -19.3
+    },
+    "higherEd": {
+     "fy2025Total": 724,
+     "pct2025": -28.2
+    },
+    "environment": {
+     "fy2025Total": 3091,
+     "pct2025": -48.6
+    },
+    "k12": {
+     "fy2025Total": 560,
+     "pct2025": 11.3
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 136,
+     "pct2025": 325.0
+    }
+   }
+  },
+  "georgia": {
+   "name": "Georgia",
+   "generalFund": {
+    "fy2024": 35685,
+    "fy2025": 36266,
+    "fy2025Prelim": 36266,
+    "fy2026Enacted": 35948,
+    "fy2026Estimated": 41674,
+    "fy2027Proposed": 36610
+   },
+   "pctChange": {
+    "fy2025": 1.6,
+    "fy2026Enacted": -0.9,
+    "fy2026Estimated": 14.9,
+    "fy2027Proposed": -12.2
+   },
+   "rainyDayFy2026": null,
+   "midYearFy2026": {
+    "netChange": 5725.7,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 16945,
+     "fy2025Gf": 13490,
+     "pct2024": {
+      "gf": 7.7,
+      "ff": 16.2,
+      "total": 9.4
+     },
+     "pct2025": {
+      "gf": 10.1,
+      "ff": -45.2,
+      "total": -7.2
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 12634,
+     "fy2025Gf": 4132,
+     "pct2024": {
+      "gf": 3.8,
+      "ff": -4.9,
+      "total": 1.9
+     },
+     "pct2025": {
+      "gf": 4.0,
+      "ff": 0.8,
+      "total": 1.5
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 17899,
+     "fy2025Gf": 4216,
+     "pct2024": {
+      "gf": 40.9,
+      "ff": -14.1,
+      "total": 0.9
+     },
+     "pct2025": {
+      "gf": -6.3,
+      "ff": 6.5,
+      "total": 1.7
+     }
+    },
+    "corrections": {
+     "fy2025Total": 2504,
+     "fy2025Gf": 2479,
+     "pct2024": {
+      "gf": 8.9,
+      "ff": -14.3,
+      "total": 10.8
+     },
+     "pct2025": {
+      "gf": 17.0,
+      "ff": -33.3,
+      "total": 13.4
+     }
+    },
+    "transportation": {
+     "fy2025Total": 5456,
+     "fy2025Gf": 3668,
+     "pct2024": {
+      "gf": 17.2,
+      "ff": 3.5,
+      "total": 11.7
+     },
+     "pct2025": {
+      "gf": 8.5,
+      "ff": -24.6,
+      "total": -4.0
+     }
+    },
+    "allOther": {
+     "fy2025Total": 19505,
+     "fy2025Gf": 10056,
+     "pct2024": {
+      "gf": 23.5,
+      "ff": -45.0,
+      "total": -6.9
+     },
+     "pct2025": {
+      "gf": 9.4,
+      "ff": -37.6,
+      "total": -3.5
+     }
+    },
+    "capital": {
+     "fy2025Total": 1317,
+     "fy2025Gf": 1317,
+     "pct2024": {
+      "gf": null,
+      "ff": null,
+      "total": 137.3
+     },
+     "pct2025": {
+      "gf": -13.8,
+      "ff": null,
+      "total": -40.9
+     }
+    }
+   },
+   "mix": {
+    "k12": 22.6,
+    "higherEd": 16.9,
+    "medicaid": 23.9,
+    "corrections": 3.3,
+    "transportation": 7.3,
+    "allOther": 26.0
+   },
+   "totalFy2025": 74942,
+   "debtServiceFy2025": {
+    "gf": 1183,
+    "of": 13,
+    "total": 1197
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "allOther": {
+     "fy2025Total": 458,
+     "pct2025": -35.6
+    },
+    "higherEd": {
+     "fy2025Total": 400,
+     "pct2025": -37.1
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": -100.0
+    },
+    "k12": {
+     "fy2025Total": 287,
+     "pct2025": 30.5
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 172,
+     "pct2025": -73.4
+    }
+   }
+  },
+  "hawaii": {
+   "name": "Hawaii",
+   "generalFund": {
+    "fy2024": 10722,
+    "fy2025": 10888,
+    "fy2025Prelim": 10851,
+    "fy2026Enacted": 11257,
+    "fy2026Estimated": 11199,
+    "fy2027Proposed": 11338
+   },
+   "pctChange": {
+    "fy2025": 1.6,
+    "fy2026Enacted": 3.7,
+    "fy2026Estimated": 2.9,
+    "fy2027Proposed": 1.2
+   },
+   "rainyDayFy2026": 1619,
+   "midYearFy2026": {
+    "netChange": -144.7,
+    "revenueShortfall": "No"
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze",
+    "priorYearBalance"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "priorYearBalance"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 3566,
+     "fy2025Gf": 3055,
+     "pct2024": {
+      "gf": -8.3,
+      "ff": 26.1,
+      "total": -3.7
+     },
+     "pct2025": {
+      "gf": 23.5,
+      "ff": -20.3,
+      "total": 15.9
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 788,
+     "fy2025Gf": 639,
+     "pct2024": {
+      "gf": 19.4,
+      "ff": null,
+      "total": 17.2
+     },
+     "pct2025": {
+      "gf": -7.9,
+      "ff": null,
+      "total": -3.4
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 3202,
+     "fy2025Gf": 804,
+     "pct2024": {
+      "gf": -0.6,
+      "ff": 1.2,
+      "total": 0.7
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": 0.0,
+      "total": 0.0
+     }
+    },
+    "corrections": {
+     "fy2025Total": 325,
+     "fy2025Gf": 299,
+     "pct2024": {
+      "gf": 24.1,
+      "ff": 50.0,
+      "total": 25.2
+     },
+     "pct2025": {
+      "gf": -15.5,
+      "ff": -85.7,
+      "total": -19.2
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2106,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 12.4,
+      "ff": 14.3,
+      "total": 11.0
+     },
+     "pct2025": {
+      "gf": 8.3,
+      "ff": 21.4,
+      "total": 13.2
+     }
+    },
+    "allOther": {
+     "fy2025Total": 10093,
+     "fy2025Gf": 6134,
+     "pct2024": {
+      "gf": 7.1,
+      "ff": -9.3,
+      "total": 6.3
+     },
+     "pct2025": {
+      "gf": -6.4,
+      "ff": 8.2,
+      "total": -6.5
+     }
+    },
+    "capital": {
+     "fy2025Total": 1569,
+     "fy2025Gf": 51,
+     "pct2024": {
+      "gf": null,
+      "ff": 42.1,
+      "total": 23.5
+     },
+     "pct2025": {
+      "gf": 155.0,
+      "ff": 20.5,
+      "total": -1.8
+     }
+    }
+   },
+   "mix": {
+    "k12": 17.8,
+    "higherEd": 3.9,
+    "medicaid": 15.9,
+    "corrections": 1.6,
+    "transportation": 10.5,
+    "allOther": 50.3
+   },
+   "totalFy2025": 20080,
+   "debtServiceFy2025": {
+    "gf": 1055,
+    "of": 247,
+    "total": 1302
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 813,
+     "pct2025": 21.0
+    },
+    "allOther": {
+     "fy2025Total": 587,
+     "pct2025": -25.5
+    },
+    "higherEd": {
+     "fy2025Total": 149,
+     "pct2025": 22.1
+    },
+    "environment": {
+     "fy2025Total": 20,
+     "pct2025": 33.3
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 0,
+     "pct2025": null
+    }
+   }
+  },
+  "idaho": {
+   "name": "Idaho",
+   "generalFund": {
+    "fy2024": 5110,
+    "fy2025": 5392,
+    "fy2025Prelim": 5348,
+    "fy2026Enacted": 5624,
+    "fy2026Estimated": 5624,
+    "fy2027Proposed": 5540
+   },
+   "pctChange": {
+    "fy2025": 5.5,
+    "fy2026Enacted": 5.2,
+    "fy2026Estimated": 4.3,
+    "fy2027Proposed": -1.5
+   },
+   "rainyDayFy2026": 2188,
+   "midYearFy2026": {
+    "netChange": -116.2,
+    "revenueShortfall": "Yes"
+   },
+   "strategiesFy2026": [
+    "acrossBoardCuts"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "hiringFreeze",
+    "fundTransfers"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 3429,
+     "fy2025Gf": 2685,
+     "pct2024": {
+      "gf": 11.0,
+      "ff": -50.6,
+      "total": -5.3
+     },
+     "pct2025": {
+      "gf": 10.2,
+      "ff": -12.4,
+      "total": 7.1
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 1031,
+     "fy2025Gf": 634,
+     "pct2024": {
+      "gf": 14.9,
+      "ff": -74.3,
+      "total": 7.7
+     },
+     "pct2025": {
+      "gf": 0.8,
+      "ff": 168.4,
+      "total": 4.0
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 4705,
+     "fy2025Gf": 837,
+     "pct2024": {
+      "gf": 12.2,
+      "ff": -4.1,
+      "total": 0.5
+     },
+     "pct2025": {
+      "gf": 22.6,
+      "ff": 11.8,
+      "total": 15.2
+     }
+    },
+    "corrections": {
+     "fy2025Total": 451,
+     "fy2025Gf": 396,
+     "pct2024": {
+      "gf": 6.7,
+      "ff": -78.6,
+      "total": 3.7
+     },
+     "pct2025": {
+      "gf": 7.5,
+      "ff": 100.0,
+      "total": 8.2
+     }
+    },
+    "transportation": {
+     "fy2025Total": 1061,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 20.2,
+      "ff": 41.8,
+      "total": 28.0
+     },
+     "pct2025": {
+      "gf": -10.7,
+      "ff": -0.2,
+      "total": -6.5
+     }
+    },
+    "allOther": {
+     "fy2025Total": 5429,
+     "fy2025Gf": 773,
+     "pct2024": {
+      "gf": -6.5,
+      "ff": -23.3,
+      "total": -14.5
+     },
+     "pct2025": {
+      "gf": 147.8,
+      "ff": 120.5,
+      "total": 136.1
+     }
+    },
+    "capital": {
+     "fy2025Total": 1579,
+     "fy2025Gf": 29,
+     "pct2024": {
+      "gf": 8.7,
+      "ff": 31.6,
+      "total": 12.9
+     },
+     "pct2025": {
+      "gf": 16.0,
+      "ff": 20.9,
+      "total": 84.2
+     }
+    }
+   },
+   "mix": {
+    "k12": 21.3,
+    "higherEd": 6.4,
+    "medicaid": 29.2,
+    "corrections": 2.8,
+    "transportation": 6.6,
+    "allOther": 33.7
+   },
+   "totalFy2025": 16106,
+   "debtServiceFy2025": {
+    "gf": 0,
+    "of": 187,
+    "total": 187
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 716,
+     "pct2025": -2.6
+    },
+    "allOther": {
+     "fy2025Total": 831,
+     "pct2025": 823.3
+    },
+    "higherEd": {
+     "fy2025Total": 20,
+     "pct2025": -16.7
+    },
+    "environment": {
+     "fy2025Total": 4,
+     "pct2025": 0.0
+    },
+    "k12": {
+     "fy2025Total": 1,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 7,
+     "pct2025": 75.0
+    }
+   }
+  },
+  "illinois": {
+   "name": "Illinois",
+   "generalFund": {
+    "fy2024": 53184,
+    "fy2025": 55331,
+    "fy2025Prelim": 55285,
+    "fy2026Enacted": 56259,
+    "fy2026Estimated": 56562,
+    "fy2027Proposed": 57304
+   },
+   "pctChange": {
+    "fy2025": 4.0,
+    "fy2026Enacted": 1.8,
+    "fy2026Estimated": 2.2,
+    "fy2027Proposed": 1.3
+   },
+   "rainyDayFy2026": 2518,
+   "midYearFy2026": null,
+   "strategiesFy2026": [],
+   "strategiesFy2027": [
+    "revenueIncrease"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 14641,
+     "fy2025Gf": 10807,
+     "pct2024": {
+      "gf": 5.9,
+      "ff": -2.8,
+      "total": 3.0
+     },
+     "pct2025": {
+      "gf": 4.4,
+      "ff": -20.5,
+      "total": -3.3
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 2956,
+     "fy2025Gf": 2564,
+     "pct2024": {
+      "gf": 1.1,
+      "ff": 115.5,
+      "total": 4.5
+     },
+     "pct2025": {
+      "gf": 3.3,
+      "ff": -66.9,
+      "total": -0.9
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 26537,
+     "fy2025Gf": 5305,
+     "pct2024": {
+      "gf": 37.5,
+      "ff": 15.0,
+      "total": 22.3
+     },
+     "pct2025": {
+      "gf": 16.7,
+      "ff": 3.5,
+      "total": 8.4
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1905,
+     "fy2025Gf": 1893,
+     "pct2024": {
+      "gf": 5.5,
+      "ff": -100.0,
+      "total": 4.1
+     },
+     "pct2025": {
+      "gf": 3.2,
+      "ff": null,
+      "total": 3.2
+     }
+    },
+    "transportation": {
+     "fy2025Total": 8396,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": -4.2,
+      "ff": -8.5,
+      "total": -1.7
+     },
+     "pct2025": {
+      "gf": 12.7,
+      "ff": 27.1,
+      "total": 11.2
+     }
+    },
+    "allOther": {
+     "fy2025Total": 97632,
+     "fy2025Gf": 30008,
+     "pct2024": {
+      "gf": 22.3,
+      "ff": -22.4,
+      "total": 18.4
+     },
+     "pct2025": {
+      "gf": 10.7,
+      "ff": 15.2,
+      "total": 11.2
+     }
+    },
+    "capital": {
+     "fy2025Total": 7316,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 66.7,
+      "total": 13.5
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": 42.6,
+      "total": 15.2
+     }
+    }
+   },
+   "mix": {
+    "k12": 9.6,
+    "higherEd": 1.9,
+    "medicaid": 17.5,
+    "corrections": 1.3,
+    "transportation": 5.5,
+    "allOther": 64.2
+   },
+   "totalFy2025": 152066,
+   "debtServiceFy2025": {
+    "gf": 1762,
+    "of": 0,
+    "total": 1762
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 5827,
+     "pct2025": 10.2
+    },
+    "allOther": {
+     "fy2025Total": 1478,
+     "pct2025": 39.7
+    },
+    "higherEd": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "environment": {
+     "fy2025Total": 11,
+     "pct2025": 120.0
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 0,
+     "pct2025": null
+    }
+   }
+  },
+  "indiana": {
+   "name": "Indiana",
+   "generalFund": {
+    "fy2024": 22078,
+    "fy2025": 22974,
+    "fy2025Prelim": 22856,
+    "fy2026Enacted": 22925,
+    "fy2026Estimated": 23101,
+    "fy2027Proposed": 23147
+   },
+   "pctChange": {
+    "fy2025": 4.1,
+    "fy2026Enacted": 0.3,
+    "fy2026Estimated": 0.6,
+    "fy2027Proposed": 0.2
+   },
+   "rainyDayFy2026": 1863,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "acrossBoardCuts",
+    "targetedCuts",
+    "fundTransfers"
+   ],
+   "strategiesFy2027": [
+    "hiringFreeze",
+    "fundTransfers"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 11725,
+     "fy2025Gf": 10589,
+     "pct2024": {
+      "gf": -18.2,
+      "ff": -2.6,
+      "total": -15.8
+     },
+     "pct2025": {
+      "gf": 1.9,
+      "ff": -51.5,
+      "total": -7.8
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 2934,
+     "fy2025Gf": 1924,
+     "pct2024": {
+      "gf": -7.3,
+      "ff": 375.0,
+      "total": -6.8
+     },
+     "pct2025": {
+      "gf": -8.8,
+      "ff": 3142.1,
+      "total": 14.5
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 20502,
+     "fy2025Gf": 4417,
+     "pct2024": {
+      "gf": 30.2,
+      "ff": 0.6,
+      "total": 8.1
+     },
+     "pct2025": {
+      "gf": 9.5,
+      "ff": 3.7,
+      "total": 5.5
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1037,
+     "fy2025Gf": 976,
+     "pct2024": {
+      "gf": -43.7,
+      "ff": -28.6,
+      "total": -43.6
+     },
+     "pct2025": {
+      "gf": 8.4,
+      "ff": -20.0,
+      "total": 8.1
+     }
+    },
+    "transportation": {
+     "fy2025Total": 1660,
+     "fy2025Gf": 199,
+     "pct2024": {
+      "gf": -17.9,
+      "ff": 26.1,
+      "total": 0.7
+     },
+     "pct2025": {
+      "gf": -42.8,
+      "ff": -58.4,
+      "total": -51.0
+     }
+    },
+    "allOther": {
+     "fy2025Total": 9256,
+     "fy2025Gf": 3368,
+     "pct2024": {
+      "gf": -19.8,
+      "ff": 13.3,
+      "total": -9.4
+     },
+     "pct2025": {
+      "gf": -45.2,
+      "ff": 16.2,
+      "total": -21.0
+     }
+    },
+    "capital": {
+     "fy2025Total": 787,
+     "fy2025Gf": 726,
+     "pct2024": {
+      "gf": -57.7,
+      "ff": null,
+      "total": -51.9
+     },
+     "pct2025": {
+      "gf": -28.4,
+      "ff": null,
+      "total": -32.8
+     }
+    }
+   },
+   "mix": {
+    "k12": 24.9,
+    "higherEd": 6.2,
+    "medicaid": 43.5,
+    "corrections": 2.2,
+    "transportation": 3.5,
+    "allOther": 19.6
+   },
+   "totalFy2025": 47114,
+   "debtServiceFy2025": {
+    "gf": 177,
+    "of": 83,
+    "total": 260
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 20,
+     "pct2025": -39.4
+    },
+    "allOther": {
+     "fy2025Total": 651,
+     "pct2025": -32.5
+    },
+    "higherEd": {
+     "fy2025Total": 66,
+     "pct2025": 17.9
+    },
+    "environment": {
+     "fy2025Total": 30,
+     "pct2025": -66.7
+    },
+    "k12": {
+     "fy2025Total": 2,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 18,
+     "pct2025": -35.7
+    }
+   }
+  },
+  "iowa": {
+   "name": "Iowa",
+   "generalFund": {
+    "fy2024": 8560,
+    "fy2025": 8949,
+    "fy2025Prelim": 8940,
+    "fy2026Enacted": 9418,
+    "fy2026Estimated": 9407,
+    "fy2027Proposed": 9666
+   },
+   "pctChange": {
+    "fy2025": 4.5,
+    "fy2026Enacted": 5.3,
+    "fy2026Estimated": 5.1,
+    "fy2027Proposed": 2.8
+   },
+   "rainyDayFy2026": 849,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 5237,
+     "fy2025Gf": 4233,
+     "pct2024": {
+      "gf": 9.9,
+      "ff": -15.7,
+      "total": 4.8
+     },
+     "pct2025": {
+      "gf": 7.2,
+      "ff": -2.9,
+      "total": 5.6
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 8137,
+     "fy2025Gf": 818,
+     "pct2024": {
+      "gf": 5.2,
+      "ff": 11.8,
+      "total": 5.7
+     },
+     "pct2025": {
+      "gf": 2.0,
+      "ff": 4.9,
+      "total": 2.2
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 9780,
+     "fy2025Gf": 1690,
+     "pct2024": {
+      "gf": 16.6,
+      "ff": 18.1,
+      "total": 17.6
+     },
+     "pct2025": {
+      "gf": 16.4,
+      "ff": 1.7,
+      "total": 6.8
+     }
+    },
+    "corrections": {
+     "fy2025Total": 556,
+     "fy2025Gf": 442,
+     "pct2024": {
+      "gf": 7.3,
+      "ff": 0.0,
+      "total": 7.3
+     },
+     "pct2025": {
+      "gf": 4.5,
+      "ff": 0.0,
+      "total": 4.5
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2206,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 3.3,
+      "ff": 10.2,
+      "total": 5.6
+     },
+     "pct2025": {
+      "gf": -5.7,
+      "ff": -24.8,
+      "total": -12.3
+     }
+    },
+    "allOther": {
+     "fy2025Total": 7106,
+     "fy2025Gf": 1789,
+     "pct2024": {
+      "gf": 19.5,
+      "ff": -24.3,
+      "total": -2.5
+     },
+     "pct2025": {
+      "gf": 9.3,
+      "ff": 10.3,
+      "total": 9.7
+     }
+    },
+    "capital": {
+     "fy2025Total": 1408,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 14.3,
+      "total": 4.5
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": -30.3,
+      "total": -15.1
+     }
+    }
+   },
+   "mix": {
+    "k12": 15.9,
+    "higherEd": 24.6,
+    "medicaid": 29.6,
+    "corrections": 1.7,
+    "transportation": 6.7,
+    "allOther": 21.5
+   },
+   "totalFy2025": 33022,
+   "debtServiceFy2025": {
+    "gf": 0,
+    "of": 71,
+    "total": 71
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 1281,
+     "pct2025": -18.6
+    },
+    "allOther": {
+     "fy2025Total": 42,
+     "pct2025": -22.2
+    },
+    "higherEd": {
+     "fy2025Total": 31,
+     "pct2025": 72.2
+    },
+    "environment": {
+     "fy2025Total": 30,
+     "pct2025": 150.0
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 24,
+     "pct2025": 1100.0
+    }
+   }
+  },
+  "kansas": {
+   "name": "Kansas",
+   "generalFund": {
+    "fy2024": 9365,
+    "fy2025": 10315,
+    "fy2025Prelim": 10315,
+    "fy2026Enacted": 11372,
+    "fy2026Estimated": 10927,
+    "fy2027Proposed": 10801
+   },
+   "pctChange": {
+    "fy2025": 10.1,
+    "fy2026Enacted": 10.3,
+    "fy2026Estimated": 5.9,
+    "fy2027Proposed": -1.2
+   },
+   "rainyDayFy2026": 1976,
+   "midYearFy2026": {
+    "netChange": 297.5,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "fundTransfers"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 6628,
+     "fy2025Gf": 4760,
+     "pct2024": {
+      "gf": 1.5,
+      "ff": -0.2,
+      "total": 1.2
+     },
+     "pct2025": {
+      "gf": 4.0,
+      "ff": -27.3,
+      "total": -1.1
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 4817,
+     "fy2025Gf": 1280,
+     "pct2024": {
+      "gf": 13.1,
+      "ff": 28.7,
+      "total": 15.2
+     },
+     "pct2025": {
+      "gf": 15.0,
+      "ff": 25.5,
+      "total": 16.3
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 6456,
+     "fy2025Gf": 1927,
+     "pct2024": {
+      "gf": 6.6,
+      "ff": -3.4,
+      "total": -0.1
+     },
+     "pct2025": {
+      "gf": 32.0,
+      "ff": 10.6,
+      "total": 18.2
+     }
+    },
+    "corrections": {
+     "fy2025Total": 627,
+     "fy2025Gf": 587,
+     "pct2024": {
+      "gf": 9.4,
+      "ff": -33.3,
+      "total": 8.6
+     },
+     "pct2025": {
+      "gf": 13.5,
+      "ff": -16.7,
+      "total": 13.2
+     }
+    },
+    "transportation": {
+     "fy2025Total": 1990,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": -14.8,
+      "ff": -15.5,
+      "total": -18.1
+     },
+     "pct2025": {
+      "gf": -29.4,
+      "ff": 30.2,
+      "total": -15.0
+     }
+    },
+    "allOther": {
+     "fy2025Total": 7462,
+     "fy2025Gf": 1760,
+     "pct2024": {
+      "gf": 8.1,
+      "ff": -18.0,
+      "total": -2.4
+     },
+     "pct2025": {
+      "gf": 74.7,
+      "ff": -9.3,
+      "total": 46.6
+     }
+    },
+    "capital": {
+     "fy2025Total": 1850,
+     "fy2025Gf": 119,
+     "pct2024": {
+      "gf": -47.0,
+      "ff": -14.8,
+      "total": -19.2
+     },
+     "pct2025": {
+      "gf": -3.3,
+      "ff": 39.3,
+      "total": -3.1
+     }
+    }
+   },
+   "mix": {
+    "k12": 23.7,
+    "higherEd": 17.2,
+    "medicaid": 23.1,
+    "corrections": 2.2,
+    "transportation": 7.1,
+    "allOther": 26.7
+   },
+   "totalFy2025": 27980,
+   "debtServiceFy2025": {
+    "gf": 143,
+    "of": 317,
+    "total": 460
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 1080,
+     "pct2025": -26.2
+    },
+    "allOther": {
+     "fy2025Total": 102,
+     "pct2025": -22.1
+    },
+    "higherEd": {
+     "fy2025Total": 636,
+     "pct2025": 111.3
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 5,
+     "pct2025": 0.0
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 26,
+     "pct2025": 188.9
+    }
+   }
+  },
+  "kentucky": {
+   "name": "Kentucky",
+   "generalFund": {
+    "fy2024": 14296,
+    "fy2025": 15868,
+    "fy2025Prelim": 15870,
+    "fy2026Enacted": 16967,
+    "fy2026Estimated": 16761,
+    "fy2027Proposed": 16439
+   },
+   "pctChange": {
+    "fy2025": 11.0,
+    "fy2026Enacted": 6.9,
+    "fy2026Estimated": 5.6,
+    "fy2027Proposed": -1.9
+   },
+   "rainyDayFy2026": 3764,
+   "midYearFy2026": {
+    "netChange": -156.0,
+    "revenueShortfall": "Yes"
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 7335,
+     "fy2025Gf": 5727,
+     "pct2024": {
+      "gf": -0.5,
+      "ff": 6.0,
+      "total": 1.2
+     },
+     "pct2025": {
+      "gf": 10.7,
+      "ff": -23.0,
+      "total": 1.3
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 13466,
+     "fy2025Gf": 1507,
+     "pct2024": {
+      "gf": 8.0,
+      "ff": 22.0,
+      "total": 9.2
+     },
+     "pct2025": {
+      "gf": 11.9,
+      "ff": 2.7,
+      "total": 10.9
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 20307,
+     "fy2025Gf": 2563,
+     "pct2024": {
+      "gf": 31.1,
+      "ff": 5.1,
+      "total": 9.8
+     },
+     "pct2025": {
+      "gf": 17.8,
+      "ff": 9.9,
+      "total": 11.6
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1137,
+     "fy2025Gf": 880,
+     "pct2024": {
+      "gf": 25.9,
+      "ff": -71.0,
+      "total": 19.2
+     },
+     "pct2025": {
+      "gf": 4.7,
+      "ff": 77.8,
+      "total": 6.0
+     }
+    },
+    "transportation": {
+     "fy2025Total": 3151,
+     "fy2025Gf": 66,
+     "pct2024": {
+      "gf": -3.2,
+      "ff": 10.0,
+      "total": 1.1
+     },
+     "pct2025": {
+      "gf": 5.0,
+      "ff": -11.6,
+      "total": -0.9
+     }
+    },
+    "allOther": {
+     "fy2025Total": 11836,
+     "fy2025Gf": 5188,
+     "pct2024": {
+      "gf": -23.4,
+      "ff": 3.6,
+      "total": -15.6
+     },
+     "pct2025": {
+      "gf": 49.6,
+      "ff": -4.6,
+      "total": 30.5
+     }
+    },
+    "capital": {
+     "fy2025Total": 2481,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": null,
+      "total": 14.9
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": null,
+      "total": 131.9
+     }
+    }
+   },
+   "mix": {
+    "k12": 12.8,
+    "higherEd": 23.5,
+    "medicaid": 35.5,
+    "corrections": 2.0,
+    "transportation": 5.5,
+    "allOther": 20.7
+   },
+   "totalFy2025": 57231,
+   "debtServiceFy2025": {
+    "gf": 546,
+    "of": 379,
+    "total": 924
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 45,
+     "pct2025": 55.2
+    },
+    "allOther": {
+     "fy2025Total": 1108,
+     "pct2025": 280.8
+    },
+    "higherEd": {
+     "fy2025Total": 1083,
+     "pct2025": 77.8
+    },
+    "environment": {
+     "fy2025Total": 10,
+     "pct2025": 100.0
+    },
+    "k12": {
+     "fy2025Total": 49,
+     "pct2025": 157.9
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 186,
+     "pct2025": 59.0
+    }
+   }
+  },
+  "louisiana": {
+   "name": "Louisiana",
+   "generalFund": {
+    "fy2024": 13803,
+    "fy2025": 13653,
+    "fy2025Prelim": 13027,
+    "fy2026Enacted": 12213,
+    "fy2026Estimated": 12667,
+    "fy2027Proposed": 12605
+   },
+   "pctChange": {
+    "fy2025": -1.1,
+    "fy2026Enacted": -6.2,
+    "fy2026Estimated": -7.2,
+    "fy2027Proposed": -0.5
+   },
+   "rainyDayFy2026": 1375,
+   "midYearFy2026": {
+    "netChange": 453.5,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze",
+    "reorganizeAgencies",
+    "other"
+   ],
+   "strategiesFy2027": [
+    "hiringFreeze"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 7426,
+     "fy2025Gf": 4278,
+     "pct2024": {
+      "gf": 7.4,
+      "ff": -2.7,
+      "total": 3.3
+     },
+     "pct2025": {
+      "gf": 1.6,
+      "ff": -5.8,
+      "total": -1.3
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 3815,
+     "fy2025Gf": 1414,
+     "pct2024": {
+      "gf": 11.0,
+      "ff": -21.6,
+      "total": 11.4
+     },
+     "pct2025": {
+      "gf": 4.6,
+      "ff": 127.6,
+      "total": 8.5
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 17586,
+     "fy2025Gf": 2096,
+     "pct2024": {
+      "gf": 22.4,
+      "ff": 0.1,
+      "total": 4.6
+     },
+     "pct2025": {
+      "gf": 12.1,
+      "ff": 1.5,
+      "total": 4.0
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1227,
+     "fy2025Gf": 1153,
+     "pct2024": {
+      "gf": 0.3,
+      "ff": 150.0,
+      "total": 4.3
+     },
+     "pct2025": {
+      "gf": 11.0,
+      "ff": 20.0,
+      "total": 7.6
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2843,
+     "fy2025Gf": 136,
+     "pct2024": {
+      "gf": 24.9,
+      "ff": 33.4,
+      "total": 31.2
+     },
+     "pct2025": {
+      "gf": 26.5,
+      "ff": -0.2,
+      "total": 10.6
+     }
+    },
+    "allOther": {
+     "fy2025Total": 15438,
+     "fy2025Gf": 3950,
+     "pct2024": {
+      "gf": -15.5,
+      "ff": -8.1,
+      "total": -13.0
+     },
+     "pct2025": {
+      "gf": 18.3,
+      "ff": 60.2,
+      "total": 32.9
+     }
+    },
+    "capital": {
+     "fy2025Total": 2581,
+     "fy2025Gf": 176,
+     "pct2024": {
+      "gf": 24.3,
+      "ff": 36.5,
+      "total": 43.6
+     },
+     "pct2025": {
+      "gf": 23.1,
+      "ff": -1.7,
+      "total": 12.4
+     }
+    }
+   },
+   "mix": {
+    "k12": 15.4,
+    "higherEd": 7.9,
+    "medicaid": 36.4,
+    "corrections": 2.5,
+    "transportation": 5.9,
+    "allOther": 31.9
+   },
+   "totalFy2025": 48335,
+   "debtServiceFy2025": {
+    "gf": 577,
+    "of": 229,
+    "total": 805
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 1908,
+     "pct2025": 3.9
+    },
+    "allOther": {
+     "fy2025Total": 304,
+     "pct2025": 57.5
+    },
+    "higherEd": {
+     "fy2025Total": 343,
+     "pct2025": 69.0
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 26,
+     "pct2025": -59.4
+    }
+   }
+  },
+  "maine": {
+   "name": "Maine",
+   "generalFund": {
+    "fy2024": 5076,
+    "fy2025": 5513,
+    "fy2025Prelim": 5513,
+    "fy2026Enacted": 5808,
+    "fy2026Estimated": 5896,
+    "fy2027Proposed": 6038
+   },
+   "pctChange": {
+    "fy2025": 8.6,
+    "fy2026Enacted": 5.3,
+    "fy2026Estimated": 7.0,
+    "fy2027Proposed": 2.4
+   },
+   "rainyDayFy2026": 1030,
+   "midYearFy2026": {
+    "netChange": 87.8,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "fundTransfers",
+    "priorYearBalance",
+    "medicaidChanges"
+   ],
+   "strategiesFy2027": [
+    "rainyDayFund",
+    "fundTransfers",
+    "priorYearBalance",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 2333,
+     "fy2025Gf": 1850,
+     "pct2024": {
+      "gf": 5.7,
+      "ff": 6.1,
+      "total": 5.8
+     },
+     "pct2025": {
+      "gf": 6.2,
+      "ff": -4.9,
+      "total": 3.9
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 451,
+     "fy2025Gf": 413,
+     "pct2024": {
+      "gf": 0.7,
+      "ff": 70.0,
+      "total": -0.7
+     },
+     "pct2025": {
+      "gf": 3.4,
+      "ff": 11.8,
+      "total": 3.4
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 5118,
+     "fy2025Gf": 1375,
+     "pct2024": {
+      "gf": 25.0,
+      "ff": 0.6,
+      "total": 7.7
+     },
+     "pct2025": {
+      "gf": 15.3,
+      "ff": 11.1,
+      "total": 12.5
+     }
+    },
+    "corrections": {
+     "fy2025Total": 257,
+     "fy2025Gf": 243,
+     "pct2024": {
+      "gf": 10.5,
+      "ff": 0.0,
+      "total": 10.4
+     },
+     "pct2025": {
+      "gf": 9.9,
+      "ff": 0.0,
+      "total": 9.8
+     }
+    },
+    "transportation": {
+     "fy2025Total": 1212,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 15.6,
+      "ff": 9.6,
+      "total": 11.7
+     },
+     "pct2025": {
+      "gf": 18.1,
+      "ff": 25.5,
+      "total": 18.6
+     }
+    },
+    "allOther": {
+     "fy2025Total": 5151,
+     "fy2025Gf": 1604,
+     "pct2024": {
+      "gf": -8.2,
+      "ff": -13.6,
+      "total": -9.3
+     },
+     "pct2025": {
+      "gf": 11.4,
+      "ff": 11.9,
+      "total": 11.4
+     }
+    },
+    "capital": {
+     "fy2025Total": 759,
+     "fy2025Gf": 16,
+     "pct2024": {
+      "gf": 228.6,
+      "ff": 12.8,
+      "total": 26.3
+     },
+     "pct2025": {
+      "gf": -30.4,
+      "ff": 29.0,
+      "total": 17.9
+     }
+    }
+   },
+   "mix": {
+    "k12": 16.1,
+    "higherEd": 3.1,
+    "medicaid": 35.2,
+    "corrections": 1.8,
+    "transportation": 8.3,
+    "allOther": 35.5
+   },
+   "totalFy2025": 14522,
+   "debtServiceFy2025": {
+    "gf": 183,
+    "of": 0,
+    "total": 183
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 669,
+     "pct2025": 21.6
+    },
+    "allOther": {
+     "fy2025Total": 82,
+     "pct2025": -4.7
+    },
+    "higherEd": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "environment": {
+     "fy2025Total": 1,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 2,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 5,
+     "pct2025": -37.5
+    }
+   }
+  },
+  "maryland": {
+   "name": "Maryland",
+   "generalFund": {
+    "fy2024": 27397,
+    "fy2025": 27433,
+    "fy2025Prelim": 27572,
+    "fy2026Enacted": 27011,
+    "fy2026Estimated": 27996,
+    "fy2027Proposed": 27817
+   },
+   "pctChange": {
+    "fy2025": 0.1,
+    "fy2026Enacted": -2.0,
+    "fy2026Estimated": 2.1,
+    "fy2027Proposed": -0.6
+   },
+   "rainyDayFy2026": 2050,
+   "midYearFy2026": {
+    "netChange": 985.9,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "acrossBoardCuts",
+    "targetedCuts",
+    "earlyRetirement",
+    "hiringFreeze",
+    "pensionAdjustments",
+    "reduceLocalAid",
+    "rainyDayFund",
+    "fundTransfers",
+    "priorYearBalance",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "pensionAdjustments",
+    "reduceLocalAid",
+    "rainyDayFund",
+    "fundTransfers",
+    "priorYearBalance",
+    "medicaidChanges"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 12347,
+     "fy2025Gf": 7870,
+     "pct2024": {
+      "gf": 11.7,
+      "ff": -8.0,
+      "total": 3.5
+     },
+     "pct2025": {
+      "gf": 6.9,
+      "ff": 6.7,
+      "total": 15.2
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 9467,
+     "fy2025Gf": 3003,
+     "pct2024": {
+      "gf": 11.1,
+      "ff": 4.0,
+      "total": 12.3
+     },
+     "pct2025": {
+      "gf": 1.3,
+      "ff": 8.4,
+      "total": 1.5
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 15158,
+     "fy2025Gf": 5044,
+     "pct2024": {
+      "gf": 9.0,
+      "ff": -2.2,
+      "total": 1.7
+     },
+     "pct2025": {
+      "gf": 11.7,
+      "ff": 2.5,
+      "total": 5.9
+     }
+    },
+    "corrections": {
+     "fy2025Total": 2224,
+     "fy2025Gf": 2064,
+     "pct2024": {
+      "gf": 10.2,
+      "ff": -20.8,
+      "total": 12.3
+     },
+     "pct2025": {
+      "gf": 8.9,
+      "ff": -5.3,
+      "total": 6.9
+     }
+    },
+    "transportation": {
+     "fy2025Total": 6482,
+     "fy2025Gf": 51,
+     "pct2024": {
+      "gf": 16.3,
+      "ff": -6.2,
+      "total": 10.2
+     },
+     "pct2025": {
+      "gf": 13.9,
+      "ff": 7.5,
+      "total": 12.5
+     }
+    },
+    "allOther": {
+     "fy2025Total": 25263,
+     "fy2025Gf": 9425,
+     "pct2024": {
+      "gf": -12.3,
+      "ff": -15.0,
+      "total": -13.0
+     },
+     "pct2025": {
+      "gf": -3.7,
+      "ff": 3.8,
+      "total": -0.9
+     }
+    },
+    "capital": {
+     "fy2025Total": 6350,
+     "fy2025Gf": 150,
+     "pct2024": {
+      "gf": -43.2,
+      "ff": -11.1,
+      "total": -7.7
+     },
+     "pct2025": {
+      "gf": -84.9,
+      "ff": 29.5,
+      "total": 2.5
+     }
+    }
+   },
+   "mix": {
+    "k12": 17.4,
+    "higherEd": 13.3,
+    "medicaid": 21.4,
+    "corrections": 3.1,
+    "transportation": 9.1,
+    "allOther": 35.6
+   },
+   "totalFy2025": 70941,
+   "debtServiceFy2025": {
+    "gf": 397,
+    "of": 1125,
+    "total": 1522
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 3168,
+     "pct2025": 17.8
+    },
+    "allOther": {
+     "fy2025Total": 710,
+     "pct2025": -32.6
+    },
+    "higherEd": {
+     "fy2025Total": 366,
+     "pct2025": -24.1
+    },
+    "environment": {
+     "fy2025Total": 594,
+     "pct2025": -34.8
+    },
+    "k12": {
+     "fy2025Total": 931,
+     "pct2025": 48.7
+    },
+    "housing": {
+     "fy2025Total": 554,
+     "pct2025": 49.3
+    },
+    "corrections": {
+     "fy2025Total": 27,
+     "pct2025": -55.7
+    }
+   }
+  },
+  "massachusetts": {
+   "name": "Massachusetts",
+   "generalFund": {
+    "fy2024": 48986,
+    "fy2025": 51876,
+    "fy2025Prelim": 52295,
+    "fy2026Enacted": 49611,
+    "fy2026Estimated": 51501,
+    "fy2027Proposed": 52555
+   },
+   "pctChange": {
+    "fy2025": 5.9,
+    "fy2026Enacted": -5.1,
+    "fy2026Estimated": -0.7,
+    "fy2027Proposed": 2.0
+   },
+   "rainyDayFy2026": 8324,
+   "midYearFy2026": {
+    "netChange": 1894.2,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze",
+    "fundTransfers",
+    "priorYearBalance",
+    "deferredPayments",
+    "revenueIncrease",
+    "other"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "hiringFreeze",
+    "fundTransfers",
+    "priorYearBalance",
+    "deferredPayments",
+    "medicaidChanges"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 12980,
+     "fy2025Gf": 8090,
+     "pct2024": {
+      "gf": 11.8,
+      "ff": 9.9,
+      "total": 11.2
+     },
+     "pct2025": {
+      "gf": 5.6,
+      "ff": -18.6,
+      "total": -2.6
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 2115,
+     "fy2025Gf": 1919,
+     "pct2024": {
+      "gf": 12.5,
+      "ff": 0.0,
+      "total": 7.7
+     },
+     "pct2025": {
+      "gf": 9.2,
+      "ff": -14.3,
+      "total": 9.6
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 25641,
+     "fy2025Gf": 10525,
+     "pct2024": {
+      "gf": 1.5,
+      "ff": -11.6,
+      "total": -5.4
+     },
+     "pct2025": {
+      "gf": 21.3,
+      "ff": 4.8,
+      "total": 13.2
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1802,
+     "fy2025Gf": 1699,
+     "pct2024": {
+      "gf": 2.4,
+      "ff": -11.5,
+      "total": 1.5
+     },
+     "pct2025": {
+      "gf": 1.5,
+      "ff": 82.6,
+      "total": 2.1
+     }
+    },
+    "transportation": {
+     "fy2025Total": 6073,
+     "fy2025Gf": 723,
+     "pct2024": {
+      "gf": 11.2,
+      "ff": 12.7,
+      "total": 8.4
+     },
+     "pct2025": {
+      "gf": 3.8,
+      "ff": 15.0,
+      "total": 2.5
+     }
+    },
+    "allOther": {
+     "fy2025Total": 40598,
+     "fy2025Gf": 17202,
+     "pct2024": {
+      "gf": 2.3,
+      "ff": 15.3,
+      "total": 5.5
+     },
+     "pct2025": {
+      "gf": 10.3,
+      "ff": -5.5,
+      "total": 6.7
+     }
+    },
+    "capital": {
+     "fy2025Total": 4317,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 13.3,
+      "total": 6.9
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": 15.0,
+      "total": 3.9
+     }
+    }
+   },
+   "mix": {
+    "k12": 14.6,
+    "higherEd": 2.4,
+    "medicaid": 28.7,
+    "corrections": 2.0,
+    "transportation": 6.8,
+    "allOther": 45.5
+   },
+   "totalFy2025": 89209,
+   "debtServiceFy2025": {
+    "gf": 2590,
+    "of": 154,
+    "total": 2744
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 2279,
+     "pct2025": 0.2
+    },
+    "allOther": {
+     "fy2025Total": 1166,
+     "pct2025": 5.5
+    },
+    "higherEd": {
+     "fy2025Total": 183,
+     "pct2025": 15.8
+    },
+    "environment": {
+     "fy2025Total": 233,
+     "pct2025": -21.3
+    },
+    "k12": {
+     "fy2025Total": 11,
+     "pct2025": 0.0
+    },
+    "housing": {
+     "fy2025Total": 392,
+     "pct2025": 58.1
+    },
+    "corrections": {
+     "fy2025Total": 53,
+     "pct2025": -13.1
+    }
+   }
+  },
+  "michigan": {
+   "name": "Michigan",
+   "generalFund": {
+    "fy2024": 15542,
+    "fy2025": 15760,
+    "fy2025Prelim": 15381,
+    "fy2026Enacted": 14115,
+    "fy2026Estimated": 13903,
+    "fy2027Proposed": 13609
+   },
+   "pctChange": {
+    "fy2025": 1.4,
+    "fy2026Enacted": -8.2,
+    "fy2026Estimated": -11.8,
+    "fy2027Proposed": -2.1
+   },
+   "rainyDayFy2026": 2226,
+   "midYearFy2026": {
+    "netChange": -211.8,
+    "revenueShortfall": "Yes"
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 20980,
+     "fy2025Gf": 161,
+     "pct2024": {
+      "gf": 8.2,
+      "ff": -8.8,
+      "total": 5.0
+     },
+     "pct2025": {
+      "gf": 0.4,
+      "ff": -33.3,
+      "total": -5.0
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 3083,
+     "fy2025Gf": 2034,
+     "pct2024": {
+      "gf": -1.9,
+      "ff": 33.3,
+      "total": -1.8
+     },
+     "pct2025": {
+      "gf": 10.1,
+      "ff": -86.5,
+      "total": 1.8
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 25892,
+     "fy2025Gf": 4514,
+     "pct2024": {
+      "gf": 24.0,
+      "ff": 0.6,
+      "total": 6.4
+     },
+     "pct2025": {
+      "gf": 15.4,
+      "ff": -0.5,
+      "total": 4.1
+     }
+    },
+    "corrections": {
+     "fy2025Total": 2533,
+     "fy2025Gf": 2420,
+     "pct2024": {
+      "gf": 18.4,
+      "ff": -72.6,
+      "total": 2.9
+     },
+     "pct2025": {
+      "gf": 9.4,
+      "ff": -74.3,
+      "total": 5.9
+     }
+    },
+    "transportation": {
+     "fy2025Total": 6714,
+     "fy2025Gf": 188,
+     "pct2024": {
+      "gf": -0.3,
+      "ff": 2.1,
+      "total": -0.1
+     },
+     "pct2025": {
+      "gf": -22.4,
+      "ff": 18.4,
+      "total": -17.6
+     }
+    },
+    "allOther": {
+     "fy2025Total": 21799,
+     "fy2025Gf": 5559,
+     "pct2024": {
+      "gf": 5.5,
+      "ff": 10.9,
+      "total": 7.4
+     },
+     "pct2025": {
+      "gf": -33.9,
+      "ff": 16.9,
+      "total": -13.9
+     }
+    },
+    "capital": {
+     "fy2025Total": 3436,
+     "fy2025Gf": 465,
+     "pct2024": {
+      "gf": -3.7,
+      "ff": -14.9,
+      "total": -11.1
+     },
+     "pct2025": {
+      "gf": -31.0,
+      "ff": 16.8,
+      "total": -13.3
+     }
+    }
+   },
+   "mix": {
+    "k12": 25.9,
+    "higherEd": 3.8,
+    "medicaid": 32.0,
+    "corrections": 3.1,
+    "transportation": 8.3,
+    "allOther": 26.9
+   },
+   "totalFy2025": 81001,
+   "debtServiceFy2025": {
+    "gf": 7,
+    "of": 346,
+    "total": 353
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 3062,
+     "pct2025": -11.0
+    },
+    "allOther": {
+     "fy2025Total": 0,
+     "pct2025": -100.0
+    },
+    "higherEd": {
+     "fy2025Total": 371,
+     "pct2025": 5.4
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 3,
+     "pct2025": -75.0
+    }
+   }
+  },
+  "minnesota": {
+   "name": "Minnesota",
+   "generalFund": {
+    "fy2024": 35282,
+    "fy2025": 34002,
+    "fy2025Prelim": 35498,
+    "fy2026Enacted": 32991,
+    "fy2026Estimated": 35575,
+    "fy2027Proposed": 34751
+   },
+   "pctChange": {
+    "fy2025": -3.6,
+    "fy2026Enacted": -7.1,
+    "fy2026Estimated": 4.6,
+    "fy2027Proposed": -2.3
+   },
+   "rainyDayFy2026": 3527,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 14430,
+     "fy2025Gf": 12701,
+     "pct2024": {
+      "gf": 18.4,
+      "ff": -13.8,
+      "total": 14.0
+     },
+     "pct2025": {
+      "gf": 4.4,
+      "ff": 0.7,
+      "total": 4.0
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 2494,
+     "fy2025Gf": 2121,
+     "pct2024": {
+      "gf": 14.6,
+      "ff": 25.0,
+      "total": 15.2
+     },
+     "pct2025": {
+      "gf": 10.9,
+      "ff": 60.0,
+      "total": 13.8
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 20903,
+     "fy2025Gf": 7520,
+     "pct2024": {
+      "gf": 18.8,
+      "ff": 2.4,
+      "total": 8.4
+     },
+     "pct2025": {
+      "gf": 13.5,
+      "ff": 6.5,
+      "total": 9.3
+     }
+    },
+    "corrections": {
+     "fy2025Total": 930,
+     "fy2025Gf": 878,
+     "pct2024": {
+      "gf": 16.0,
+      "ff": -57.1,
+      "total": 14.2
+     },
+     "pct2025": {
+      "gf": 14.8,
+      "ff": 33.3,
+      "total": 15.5
+     }
+    },
+    "transportation": {
+     "fy2025Total": 8548,
+     "fy2025Gf": 882,
+     "pct2024": {
+      "gf": 5.5,
+      "ff": 20.9,
+      "total": 6.7
+     },
+     "pct2025": {
+      "gf": 30.7,
+      "ff": 307.2,
+      "total": 57.5
+     }
+    },
+    "allOther": {
+     "fy2025Total": 24804,
+     "fy2025Gf": 11450,
+     "pct2024": {
+      "gf": 40.6,
+      "ff": -22.4,
+      "total": 19.7
+     },
+     "pct2025": {
+      "gf": 4.2,
+      "ff": 40.2,
+      "total": 12.5
+     }
+    },
+    "capital": {
+     "fy2025Total": 1031,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": null,
+      "total": 2.9
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": null,
+      "total": 32.2
+     }
+    }
+   },
+   "mix": {
+    "k12": 20.0,
+    "higherEd": 3.5,
+    "medicaid": 29.0,
+    "corrections": 1.3,
+    "transportation": 11.9,
+    "allOther": 34.4
+   },
+   "totalFy2025": 72110,
+   "debtServiceFy2025": {
+    "gf": 559,
+    "of": 924,
+    "total": 1483
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 350,
+     "pct2025": -4.1
+    },
+    "allOther": {
+     "fy2025Total": 335,
+     "pct2025": 64.2
+    },
+    "higherEd": {
+     "fy2025Total": 134,
+     "pct2025": 106.2
+    },
+    "environment": {
+     "fy2025Total": 185,
+     "pct2025": 43.4
+    },
+    "k12": {
+     "fy2025Total": 1,
+     "pct2025": 0.0
+    },
+    "housing": {
+     "fy2025Total": 7,
+     "pct2025": 75.0
+    },
+    "corrections": {
+     "fy2025Total": 19,
+     "pct2025": 58.3
+    }
+   }
+  },
+  "mississippi": {
+   "name": "Mississippi",
+   "generalFund": {
+    "fy2024": 6668,
+    "fy2025": 7018,
+    "fy2025Prelim": 7030,
+    "fy2026Enacted": 7141,
+    "fy2026Estimated": 7142,
+    "fy2027Proposed": 8314
+   },
+   "pctChange": {
+    "fy2025": 5.3,
+    "fy2026Enacted": 1.6,
+    "fy2026Estimated": 1.8,
+    "fy2027Proposed": 16.4
+   },
+   "rainyDayFy2026": 704,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 5220,
+     "fy2025Gf": 2921,
+     "pct2024": {
+      "gf": 3.2,
+      "ff": 0.3,
+      "total": 2.2
+     },
+     "pct2025": {
+      "gf": 10.1,
+      "ff": 24.2,
+      "total": 14.8
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 4875,
+     "fy2025Gf": 996,
+     "pct2024": {
+      "gf": 4.0,
+      "ff": 5.1,
+      "total": 4.1
+     },
+     "pct2025": {
+      "gf": 5.4,
+      "ff": 1.8,
+      "total": 6.5
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 6893,
+     "fy2025Gf": 575,
+     "pct2024": {
+      "gf": 50.3,
+      "ff": 6.0,
+      "total": 13.5
+     },
+     "pct2025": {
+      "gf": 9.9,
+      "ff": 0.8,
+      "total": 2.8
+     }
+    },
+    "corrections": {
+     "fy2025Total": 458,
+     "fy2025Gf": 424,
+     "pct2024": {
+      "gf": 2.4,
+      "ff": null,
+      "total": 2.9
+     },
+     "pct2025": {
+      "gf": 8.6,
+      "ff": -50.0,
+      "total": 8.3
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2426,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 12.2,
+      "ff": 9.0,
+      "total": 9.8
+     },
+     "pct2025": {
+      "gf": 96.0,
+      "ff": -1.4,
+      "total": 45.2
+     }
+    },
+    "allOther": {
+     "fy2025Total": 12097,
+     "fy2025Gf": 2125,
+     "pct2024": {
+      "gf": 15.7,
+      "ff": 5.6,
+      "total": 9.5
+     },
+     "pct2025": {
+      "gf": 47.2,
+      "ff": 69.5,
+      "total": 57.1
+     }
+    },
+    "capital": {
+     "fy2025Total": 2290,
+     "fy2025Gf": 28,
+     "pct2024": {
+      "gf": -28.2,
+      "ff": 11.2,
+      "total": 1.8
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": 6.1,
+      "total": 66.3
+     }
+    }
+   },
+   "mix": {
+    "k12": 16.3,
+    "higherEd": 15.2,
+    "medicaid": 21.6,
+    "corrections": 1.4,
+    "transportation": 7.6,
+    "allOther": 37.8
+   },
+   "totalFy2025": 31969,
+   "debtServiceFy2025": {
+    "gf": 417,
+    "of": 16,
+    "total": 433
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 1554,
+     "pct2025": 58.6
+    },
+    "allOther": {
+     "fy2025Total": 417,
+     "pct2025": 110.6
+    },
+    "higherEd": {
+     "fy2025Total": 271,
+     "pct2025": 54.0
+    },
+    "environment": {
+     "fy2025Total": 28,
+     "pct2025": 115.4
+    },
+    "k12": {
+     "fy2025Total": 2,
+     "pct2025": 100.0
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 18,
+     "pct2025": 100.0
+    }
+   }
+  },
+  "missouri": {
+   "name": "Missouri",
+   "generalFund": {
+    "fy2024": 14562,
+    "fy2025": 15718,
+    "fy2025Prelim": 14129,
+    "fy2026Enacted": 15737,
+    "fy2026Estimated": 16507,
+    "fy2027Proposed": 16741
+   },
+   "pctChange": {
+    "fy2025": 7.9,
+    "fy2026Enacted": 11.4,
+    "fy2026Estimated": 5.0,
+    "fy2027Proposed": 1.4
+   },
+   "rainyDayFy2026": 956,
+   "midYearFy2026": {
+    "netChange": 341.5,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze",
+    "other"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "layoffs",
+    "benefitCuts",
+    "hiringFreeze",
+    "priorYearBalance",
+    "deferredPayments",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 8211,
+     "fy2025Gf": 4141,
+     "pct2024": {
+      "gf": 4.3,
+      "ff": -2.8,
+      "total": 2.1
+     },
+     "pct2025": {
+      "gf": 5.7,
+      "ff": -24.0,
+      "total": -2.9
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 1391,
+     "fy2025Gf": 1230,
+     "pct2024": {
+      "gf": 1.2,
+      "ff": -21.7,
+      "total": -1.0
+     },
+     "pct2025": {
+      "gf": 9.1,
+      "ff": -41.6,
+      "total": 5.2
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 16592,
+     "fy2025Gf": 3405,
+     "pct2024": {
+      "gf": 1.0,
+      "ff": 4.4,
+      "total": 3.2
+     },
+     "pct2025": {
+      "gf": -15.0,
+      "ff": 12.7,
+      "total": 3.0
+     }
+    },
+    "corrections": {
+     "fy2025Total": 938,
+     "fy2025Gf": 873,
+     "pct2024": {
+      "gf": 7.5,
+      "ff": -96.2,
+      "total": 1.4
+     },
+     "pct2025": {
+      "gf": 5.2,
+      "ff": 50.0,
+      "total": 5.3
+     }
+    },
+    "transportation": {
+     "fy2025Total": 3623,
+     "fy2025Gf": 485,
+     "pct2024": {
+      "gf": 19.5,
+      "ff": -24.5,
+      "total": 16.5
+     },
+     "pct2025": {
+      "gf": 10.1,
+      "ff": 36.6,
+      "total": 11.2
+     }
+    },
+    "allOther": {
+     "fy2025Total": 10414,
+     "fy2025Gf": 3995,
+     "pct2024": {
+      "gf": 34.3,
+      "ff": 10.9,
+      "total": 26.0
+     },
+     "pct2025": {
+      "gf": -17.6,
+      "ff": 3.9,
+      "total": -10.8
+     }
+    },
+    "capital": {
+     "fy2025Total": 399,
+     "fy2025Gf": 193,
+     "pct2024": {
+      "gf": -16.1,
+      "ff": 50.0,
+      "total": -0.9
+     },
+     "pct2025": {
+      "gf": -54.2,
+      "ff": -11.1,
+      "total": -36.7
+     }
+    }
+   },
+   "mix": {
+    "k12": 19.9,
+    "higherEd": 3.4,
+    "medicaid": 40.3,
+    "corrections": 2.3,
+    "transportation": 8.8,
+    "allOther": 25.3
+   },
+   "totalFy2025": 41169,
+   "debtServiceFy2025": {
+    "gf": 92,
+    "of": 466,
+    "total": 558
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 56,
+     "pct2025": 43.6
+    },
+    "allOther": {
+     "fy2025Total": 295,
+     "pct2025": -47.6
+    },
+    "higherEd": {
+     "fy2025Total": 9,
+     "pct2025": -57.1
+    },
+    "environment": {
+     "fy2025Total": 34,
+     "pct2025": 1033.3
+    },
+    "k12": {
+     "fy2025Total": 5,
+     "pct2025": 25.0
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 0,
+     "pct2025": null
+    }
+   }
+  },
+  "montana": {
+   "name": "Montana",
+   "generalFund": {
+    "fy2024": 3339,
+    "fy2025": 3708,
+    "fy2025Prelim": 3705,
+    "fy2026Enacted": 3385,
+    "fy2026Estimated": 3388,
+    "fy2027Proposed": 3735
+   },
+   "pctChange": {
+    "fy2025": 11.1,
+    "fy2026Enacted": -8.6,
+    "fy2026Estimated": -8.6,
+    "fy2027Proposed": 10.3
+   },
+   "rainyDayFy2026": 558,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 1452,
+     "fy2025Gf": 607,
+     "pct2024": {
+      "gf": 0.8,
+      "ff": -24.5,
+      "total": -6.8
+     },
+     "pct2025": {
+      "gf": 11.2,
+      "ff": 4.3,
+      "total": 9.5
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 499,
+     "fy2025Gf": 291,
+     "pct2024": {
+      "gf": 4.1,
+      "ff": 0.0,
+      "total": 4.1
+     },
+     "pct2025": {
+      "gf": -35.4,
+      "ff": -23.1,
+      "total": -35.2
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 2487,
+     "fy2025Gf": 424,
+     "pct2024": {
+      "gf": 13.7,
+      "ff": -6.9,
+      "total": -2.8
+     },
+     "pct2025": {
+      "gf": 12.1,
+      "ff": 5.4,
+      "total": 6.9
+     }
+    },
+    "corrections": {
+     "fy2025Total": 307,
+     "fy2025Gf": 272,
+     "pct2024": {
+      "gf": 14.8,
+      "ff": 100.0,
+      "total": 15.1
+     },
+     "pct2025": {
+      "gf": 5.0,
+      "ff": 550.0,
+      "total": 8.9
+     }
+    },
+    "transportation": {
+     "fy2025Total": 1256,
+     "fy2025Gf": 64,
+     "pct2024": {
+      "gf": 4.4,
+      "ff": 8.3,
+      "total": 6.4
+     },
+     "pct2025": {
+      "gf": 5.5,
+      "ff": 2.8,
+      "total": 4.1
+     }
+    },
+    "allOther": {
+     "fy2025Total": 4496,
+     "fy2025Gf": 1203,
+     "pct2024": {
+      "gf": 19.7,
+      "ff": -41.3,
+      "total": -9.3
+     },
+     "pct2025": {
+      "gf": 9.4,
+      "ff": 9.0,
+      "total": 9.3
+     }
+    },
+    "capital": {
+     "fy2025Total": 0,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": null,
+      "total": null
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": null,
+      "total": null
+     }
+    }
+   },
+   "mix": {
+    "k12": 13.8,
+    "higherEd": 4.8,
+    "medicaid": 23.7,
+    "corrections": 2.9,
+    "transportation": 12.0,
+    "allOther": 42.8
+   },
+   "totalFy2025": 10495,
+   "debtServiceFy2025": {
+    "gf": 152,
+    "of": 0,
+    "total": 0
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "allOther": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "higherEd": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 0,
+     "pct2025": null
+    }
+   }
+  },
+  "nebraska": {
+   "name": "Nebraska",
+   "generalFund": {
+    "fy2024": 5315,
+    "fy2025": 5475,
+    "fy2025Prelim": 5475,
+    "fy2026Enacted": 5485,
+    "fy2026Estimated": 5390,
+    "fy2027Proposed": 5292
+   },
+   "pctChange": {
+    "fy2025": 3.0,
+    "fy2026Enacted": 0.2,
+    "fy2026Estimated": -1.5,
+    "fy2027Proposed": -1.8
+   },
+   "rainyDayFy2026": 821,
+   "midYearFy2026": {
+    "netChange": -94.5,
+    "revenueShortfall": "Yes"
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze",
+    "pensionAdjustments",
+    "reduceLocalAid",
+    "reorganizeAgencies",
+    "fundTransfers",
+    "priorYearBalance",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "hiringFreeze",
+    "pensionAdjustments",
+    "reduceLocalAid",
+    "reorganizeAgencies",
+    "fundTransfers",
+    "priorYearBalance",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 2556,
+     "fy2025Gf": 1326,
+     "pct2024": {
+      "gf": 24.8,
+      "ff": 6.5,
+      "total": 19.1
+     },
+     "pct2025": {
+      "gf": 6.0,
+      "ff": 7.4,
+      "total": 6.4
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 4183,
+     "fy2025Gf": 926,
+     "pct2024": {
+      "gf": 7.0,
+      "ff": 12.5,
+      "total": 8.0
+     },
+     "pct2025": {
+      "gf": 9.8,
+      "ff": 6.7,
+      "total": 9.3
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 4023,
+     "fy2025Gf": 1288,
+     "pct2024": {
+      "gf": 11.8,
+      "ff": -5.3,
+      "total": 0.0
+     },
+     "pct2025": {
+      "gf": 5.2,
+      "ff": -2.3,
+      "total": 0.3
+     }
+    },
+    "corrections": {
+     "fy2025Total": 637,
+     "fy2025Gf": 529,
+     "pct2024": {
+      "gf": 6.3,
+      "ff": 133.3,
+      "total": 7.0
+     },
+     "pct2025": {
+      "gf": 4.3,
+      "ff": -28.6,
+      "total": 3.9
+     }
+    },
+    "transportation": {
+     "fy2025Total": 1343,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 32.4,
+      "ff": 8.7,
+      "total": 20.4
+     },
+     "pct2025": {
+      "gf": -4.0,
+      "ff": 14.9,
+      "total": 4.7
+     }
+    },
+    "allOther": {
+     "fy2025Total": 7484,
+     "fy2025Gf": 1406,
+     "pct2024": {
+      "gf": 4.3,
+      "ff": 7.6,
+      "total": 4.8
+     },
+     "pct2025": {
+      "gf": 21.7,
+      "ff": -6.0,
+      "total": 17.5
+     }
+    },
+    "capital": {
+     "fy2025Total": 1768,
+     "fy2025Gf": 25,
+     "pct2024": {
+      "gf": -26.5,
+      "ff": 11.7,
+      "total": 5.0
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": 4.1,
+      "total": 1.1
+     }
+    }
+   },
+   "mix": {
+    "k12": 12.6,
+    "higherEd": 20.7,
+    "medicaid": 19.9,
+    "corrections": 3.1,
+    "transportation": 6.6,
+    "allOther": 37.0
+   },
+   "totalFy2025": 20225,
+   "debtServiceFy2025": {
+    "gf": 0,
+    "of": 156,
+    "total": 156
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 1258,
+     "pct2025": 4.0
+    },
+    "allOther": {
+     "fy2025Total": 101,
+     "pct2025": -14.4
+    },
+    "higherEd": {
+     "fy2025Total": 367,
+     "pct2025": -5.4
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 42,
+     "pct2025": 31.2
+    }
+   }
+  },
+  "nevada": {
+   "name": "Nevada",
+   "generalFund": {
+    "fy2024": 5383,
+    "fy2025": 6633,
+    "fy2025Prelim": 6662,
+    "fy2026Enacted": 6660,
+    "fy2026Estimated": 6987,
+    "fy2027Proposed": 6395
+   },
+   "pctChange": {
+    "fy2025": 23.2,
+    "fy2026Enacted": 0.0,
+    "fy2026Estimated": 5.3,
+    "fy2027Proposed": -8.5
+   },
+   "rainyDayFy2026": 1295,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 6660,
+     "fy2025Gf": 1930,
+     "pct2024": {
+      "gf": 0.4,
+      "ff": 3.2,
+      "total": 0.9
+     },
+     "pct2025": {
+      "gf": 9.7,
+      "ff": -57.7,
+      "total": -2.3
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 1179,
+     "fy2025Gf": 781,
+     "pct2024": {
+      "gf": 11.6,
+      "ff": -25.0,
+      "total": 11.5
+     },
+     "pct2025": {
+      "gf": -1.5,
+      "ff": 0.0,
+      "total": -1.5
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 7916,
+     "fy2025Gf": 1508,
+     "pct2024": {
+      "gf": -9.5,
+      "ff": -0.9,
+      "total": -3.2
+     },
+     "pct2025": {
+      "gf": 51.0,
+      "ff": 35.9,
+      "total": 39.7
+     }
+    },
+    "corrections": {
+     "fy2025Total": 482,
+     "fy2025Gf": 437,
+     "pct2024": {
+      "gf": 2.9,
+      "ff": null,
+      "total": 2.9
+     },
+     "pct2025": {
+      "gf": 34.1,
+      "ff": null,
+      "total": 34.6
+     }
+    },
+    "transportation": {
+     "fy2025Total": 1119,
+     "fy2025Gf": 1,
+     "pct2024": {
+      "gf": 9.6,
+      "ff": 45.7,
+      "total": 35.6
+     },
+     "pct2025": {
+      "gf": -31.4,
+      "ff": -6.7,
+      "total": -21.3
+     }
+    },
+    "allOther": {
+     "fy2025Total": 3665,
+     "fy2025Gf": 1492,
+     "pct2024": {
+      "gf": 60.6,
+      "ff": -7.8,
+      "total": 27.4
+     },
+     "pct2025": {
+      "gf": 0.2,
+      "ff": -46.7,
+      "total": -16.3
+     }
+    },
+    "capital": {
+     "fy2025Total": 496,
+     "fy2025Gf": 92,
+     "pct2024": {
+      "gf": null,
+      "ff": 43.8,
+      "total": 151.2
+     },
+     "pct2025": {
+      "gf": -47.7,
+      "ff": 13.0,
+      "total": 60.5
+     }
+    }
+   },
+   "mix": {
+    "k12": 31.7,
+    "higherEd": 5.6,
+    "medicaid": 37.7,
+    "corrections": 2.3,
+    "transportation": 5.3,
+    "allOther": 17.4
+   },
+   "totalFy2025": 21021,
+   "debtServiceFy2025": {
+    "gf": 0,
+    "of": 87,
+    "total": 87
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 49,
+     "pct2025": 1533.3
+    },
+    "allOther": {
+     "fy2025Total": 353,
+     "pct2025": 69.7
+    },
+    "higherEd": {
+     "fy2025Total": 27,
+     "pct2025": -60.9
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 67,
+     "pct2025": 139.3
+    }
+   }
+  },
+  "new-hampshire": {
+   "name": "New Hampshire",
+   "generalFund": {
+    "fy2024": 1981,
+    "fy2025": 2010,
+    "fy2025Prelim": 2010,
+    "fy2026Enacted": 1958,
+    "fy2026Estimated": 1958,
+    "fy2027Proposed": 1971
+   },
+   "pctChange": {
+    "fy2025": 1.5,
+    "fy2026Enacted": -2.6,
+    "fy2026Estimated": -2.6,
+    "fy2027Proposed": 0.6
+   },
+   "rainyDayFy2026": 245,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "acrossBoardCuts",
+    "targetedCuts",
+    "layoffs",
+    "hiringFreeze",
+    "reorganizeAgencies",
+    "deferredPayments",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "strategiesFy2027": [
+    "acrossBoardCuts",
+    "targetedCuts",
+    "layoffs",
+    "hiringFreeze",
+    "fundTransfers",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 1665,
+     "fy2025Gf": 21,
+     "pct2024": {
+      "gf": 11.5,
+      "ff": -5.7,
+      "total": 7.1
+     },
+     "pct2025": {
+      "gf": 1.9,
+      "ff": -6.6,
+      "total": -0.1
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 174,
+     "fy2025Gf": 170,
+     "pct2024": {
+      "gf": 18.8,
+      "ff": null,
+      "total": 22.8
+     },
+     "pct2025": {
+      "gf": -4.0,
+      "ff": null,
+      "total": -10.3
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 2824,
+     "fy2025Gf": 986,
+     "pct2024": {
+      "gf": 12.1,
+      "ff": -13.5,
+      "total": -3.7
+     },
+     "pct2025": {
+      "gf": 8.7,
+      "ff": 15.2,
+      "total": 12.3
+     }
+    },
+    "corrections": {
+     "fy2025Total": 202,
+     "fy2025Gf": 191,
+     "pct2024": {
+      "gf": 3.6,
+      "ff": -30.0,
+      "total": 4.4
+     },
+     "pct2025": {
+      "gf": 12.6,
+      "ff": -85.7,
+      "total": 6.9
+     }
+    },
+    "transportation": {
+     "fy2025Total": 750,
+     "fy2025Gf": 9,
+     "pct2024": {
+      "gf": -3.7,
+      "ff": -1.9,
+      "total": -2.8
+     },
+     "pct2025": {
+      "gf": -8.0,
+      "ff": 11.7,
+      "total": -1.7
+     }
+    },
+    "allOther": {
+     "fy2025Total": 3232,
+     "fy2025Gf": 633,
+     "pct2024": {
+      "gf": 26.5,
+      "ff": -12.0,
+      "total": 6.6
+     },
+     "pct2025": {
+      "gf": 4.7,
+      "ff": -5.1,
+      "total": 0.4
+     }
+    },
+    "capital": {
+     "fy2025Total": 176,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 65.2,
+      "total": 29.4
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": -34.2,
+      "total": -45.2
+     }
+    }
+   },
+   "mix": {
+    "k12": 18.8,
+    "higherEd": 2.0,
+    "medicaid": 31.9,
+    "corrections": 2.3,
+    "transportation": 8.5,
+    "allOther": 36.5
+   },
+   "totalFy2025": 8847,
+   "debtServiceFy2025": {
+    "gf": 85,
+    "of": 34,
+    "total": 119
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 134,
+     "pct2025": -47.5
+    },
+    "allOther": {
+     "fy2025Total": 28,
+     "pct2025": -20.0
+    },
+    "higherEd": {
+     "fy2025Total": 4,
+     "pct2025": -76.5
+    },
+    "environment": {
+     "fy2025Total": 6,
+     "pct2025": -14.3
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 4,
+     "pct2025": -42.9
+    }
+   }
+  },
+  "new-jersey": {
+   "name": "New Jersey",
+   "generalFund": {
+    "fy2024": 55126,
+    "fy2025": 57153,
+    "fy2025Prelim": 57664,
+    "fy2026Enacted": 57687,
+    "fy2026Estimated": 58654,
+    "fy2027Proposed": 59644
+   },
+   "pctChange": {
+    "fy2025": 3.7,
+    "fy2026Enacted": 0.0,
+    "fy2026Estimated": 2.6,
+    "fy2027Proposed": 1.7
+   },
+   "rainyDayFy2026": 0,
+   "midYearFy2026": {
+    "netChange": 967.0,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "acrossBoardCuts",
+    "benefitCuts",
+    "pensionAdjustments",
+    "reduceLocalAid",
+    "fundTransfers",
+    "priorYearBalance",
+    "revenueIncrease"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "benefitCuts",
+    "pensionAdjustments",
+    "fundTransfers",
+    "priorYearBalance",
+    "revenueIncrease"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 23084,
+     "fy2025Gf": 21069,
+     "pct2024": {
+      "gf": 5.9,
+      "ff": 10.9,
+      "total": 6.3
+     },
+     "pct2025": {
+      "gf": 5.8,
+      "ff": 47.9,
+      "total": 8.4
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 8364,
+     "fy2025Gf": 3954,
+     "pct2024": {
+      "gf": 10.8,
+      "ff": -76.5,
+      "total": 6.9
+     },
+     "pct2025": {
+      "gf": 9.5,
+      "ff": -74.0,
+      "total": 8.7
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 24297,
+     "fy2025Gf": 6975,
+     "pct2024": {
+      "gf": 17.5,
+      "ff": -2.5,
+      "total": 3.9
+     },
+     "pct2025": {
+      "gf": 6.3,
+      "ff": 5.9,
+      "total": 6.1
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1555,
+     "fy2025Gf": 1391,
+     "pct2024": {
+      "gf": 4.1,
+      "ff": -41.2,
+      "total": 0.9
+     },
+     "pct2025": {
+      "gf": 1.3,
+      "ff": 111.7,
+      "total": 5.9
+     }
+    },
+    "transportation": {
+     "fy2025Total": 8360,
+     "fy2025Gf": 2180,
+     "pct2024": {
+      "gf": -7.0,
+      "ff": 17.8,
+      "total": 5.0
+     },
+     "pct2025": {
+      "gf": 14.5,
+      "ff": 7.2,
+      "total": 9.2
+     }
+    },
+    "allOther": {
+     "fy2025Total": 35502,
+     "fy2025Gf": 21337,
+     "pct2024": {
+      "gf": 8.0,
+      "ff": -7.9,
+      "total": 3.9
+     },
+     "pct2025": {
+      "gf": 10.3,
+      "ff": 41.0,
+      "total": 17.2
+     }
+    },
+    "capital": {
+     "fy2025Total": 8208,
+     "fy2025Gf": 2545,
+     "pct2024": {
+      "gf": -14.9,
+      "ff": 0.5,
+      "total": -2.6
+     },
+     "pct2025": {
+      "gf": 25.3,
+      "ff": 0.4,
+      "total": 10.0
+     }
+    }
+   },
+   "mix": {
+    "k12": 22.8,
+    "higherEd": 8.3,
+    "medicaid": 24.0,
+    "corrections": 1.5,
+    "transportation": 8.3,
+    "allOther": 35.1
+   },
+   "totalFy2025": 101162,
+   "debtServiceFy2025": {
+    "gf": 4394,
+    "of": 0,
+    "total": 4394
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 6681,
+     "pct2025": 7.8
+    },
+    "allOther": {
+     "fy2025Total": 497,
+     "pct2025": -29.7
+    },
+    "higherEd": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "environment": {
+     "fy2025Total": 571,
+     "pct2025": 34.0
+    },
+    "k12": {
+     "fy2025Total": 87,
+     "pct2025": 50.0
+    },
+    "housing": {
+     "fy2025Total": 358,
+     "pct2025": 732.6
+    },
+    "corrections": {
+     "fy2025Total": 14,
+     "pct2025": -54.8
+    }
+   }
+  },
+  "new-mexico": {
+   "name": "New Mexico",
+   "generalFund": {
+    "fy2024": 13087,
+    "fy2025": 13786,
+    "fy2025Prelim": 13794,
+    "fy2026Enacted": 13625,
+    "fy2026Estimated": 13844,
+    "fy2027Proposed": 13534
+   },
+   "pctChange": {
+    "fy2025": 5.3,
+    "fy2026Enacted": -1.2,
+    "fy2026Estimated": 0.4,
+    "fy2027Proposed": -2.2
+   },
+   "rainyDayFy2026": 4054,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [
+    "medicaidChanges"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 4921,
+     "fy2025Gf": 4336,
+     "pct2024": {
+      "gf": 9.0,
+      "ff": 12.2,
+      "total": 8.7
+     },
+     "pct2025": {
+      "gf": 2.3,
+      "ff": 0.0,
+      "total": -0.4
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 4267,
+     "fy2025Gf": 1396,
+     "pct2024": {
+      "gf": 10.8,
+      "ff": -2.2,
+      "total": 7.7
+     },
+     "pct2025": {
+      "gf": -2.6,
+      "ff": 0.0,
+      "total": -2.9
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 9396,
+     "fy2025Gf": 1602,
+     "pct2024": {
+      "gf": 5.7,
+      "ff": -0.4,
+      "total": 0.7
+     },
+     "pct2025": {
+      "gf": 5.8,
+      "ff": 4.3,
+      "total": 4.6
+     }
+    },
+    "corrections": {
+     "fy2025Total": 410,
+     "fy2025Gf": 389,
+     "pct2024": {
+      "gf": -5.6,
+      "ff": -75.0,
+      "total": -6.1
+     },
+     "pct2025": {
+      "gf": -2.9,
+      "ff": 1300.0,
+      "total": -2.1
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2132,
+     "fy2025Gf": 23,
+     "pct2024": {
+      "gf": 65.9,
+      "ff": 140.2,
+      "total": 92.2
+     },
+     "pct2025": {
+      "gf": -26.5,
+      "ff": -0.6,
+      "total": -14.3
+     }
+    },
+    "allOther": {
+     "fy2025Total": 8521,
+     "fy2025Gf": 2673,
+     "pct2024": {
+      "gf": -10.6,
+      "ff": -5.4,
+      "total": -8.8
+     },
+     "pct2025": {
+      "gf": 25.8,
+      "ff": 49.7,
+      "total": 31.8
+     }
+    },
+    "capital": {
+     "fy2025Total": 1861,
+     "fy2025Gf": 317,
+     "pct2024": {
+      "gf": 83.8,
+      "ff": 7.2,
+      "total": 24.5
+     },
+     "pct2025": {
+      "gf": -43.1,
+      "ff": 64.9,
+      "total": -11.9
+     }
+    }
+   },
+   "mix": {
+    "k12": 16.6,
+    "higherEd": 14.4,
+    "medicaid": 31.7,
+    "corrections": 1.4,
+    "transportation": 7.2,
+    "allOther": 28.7
+   },
+   "totalFy2025": 29647,
+   "debtServiceFy2025": {
+    "gf": 0,
+    "of": 338,
+    "total": 338
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 866,
+     "pct2025": -4.1
+    },
+    "allOther": {
+     "fy2025Total": 318,
+     "pct2025": -29.8
+    },
+    "higherEd": {
+     "fy2025Total": 105,
+     "pct2025": -69.1
+    },
+    "environment": {
+     "fy2025Total": 139,
+     "pct2025": -32.5
+    },
+    "k12": {
+     "fy2025Total": 3,
+     "pct2025": -96.6
+    },
+    "housing": {
+     "fy2025Total": 395,
+     "pct2025": 303.1
+    },
+    "corrections": {
+     "fy2025Total": 35,
+     "pct2025": 40.0
+    }
+   }
+  },
+  "new-york": {
+   "name": "New York",
+   "generalFund": {
+    "fy2024": 97867,
+    "fy2025": 105031,
+    "fy2025Prelim": 105031,
+    "fy2026Enacted": 125512,
+    "fy2026Estimated": 126295,
+    "fy2027Proposed": 127844
+   },
+   "pctChange": {
+    "fy2025": 7.3,
+    "fy2026Enacted": 19.5,
+    "fy2026Estimated": 20.2,
+    "fy2027Proposed": 1.2
+   },
+   "rainyDayFy2026": 9756,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "priorYearBalance",
+    "other"
+   ],
+   "strategiesFy2027": [
+    "priorYearBalance",
+    "revenueIncrease"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 47404,
+     "fy2025Gf": 33034,
+     "pct2024": {
+      "gf": 10.2,
+      "ff": -1.3,
+      "total": 7.9
+     },
+     "pct2025": {
+      "gf": 6.5,
+      "ff": 2.5,
+      "total": 5.3
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 13837,
+     "fy2025Gf": 3284,
+     "pct2024": {
+      "gf": 6.3,
+      "ff": -21.1,
+      "total": 5.5
+     },
+     "pct2025": {
+      "gf": 7.2,
+      "ff": 19.5,
+      "total": 7.7
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 88992,
+     "fy2025Gf": 30395,
+     "pct2024": {
+      "gf": 13.7,
+      "ff": 6.4,
+      "total": 9.0
+     },
+     "pct2025": {
+      "gf": 7.4,
+      "ff": -7.2,
+      "total": -1.6
+     }
+    },
+    "corrections": {
+     "fy2025Total": 3393,
+     "fy2025Gf": 2967,
+     "pct2024": {
+      "gf": 0.7,
+      "ff": 160.0,
+      "total": 1.4
+     },
+     "pct2025": {
+      "gf": 10.4,
+      "ff": -46.2,
+      "total": 9.7
+     }
+    },
+    "transportation": {
+     "fy2025Total": 13033,
+     "fy2025Gf": 656,
+     "pct2024": {
+      "gf": 22.3,
+      "ff": 13.3,
+      "total": -0.5
+     },
+     "pct2025": {
+      "gf": -1.7,
+      "ff": 2.9,
+      "total": 8.9
+     }
+    },
+    "allOther": {
+     "fy2025Total": 74812,
+     "fy2025Gf": 27510,
+     "pct2024": {
+      "gf": -7.1,
+      "ff": 29.3,
+      "total": 4.3
+     },
+     "pct2025": {
+      "gf": -0.4,
+      "ff": 9.4,
+      "total": 4.6
+     }
+    },
+    "capital": {
+     "fy2025Total": 16975,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 27.5,
+      "total": 4.9
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": -7.7,
+      "total": 15.4
+     }
+    }
+   },
+   "mix": {
+    "k12": 19.6,
+    "higherEd": 5.7,
+    "medicaid": 36.9,
+    "corrections": 1.4,
+    "transportation": 5.4,
+    "allOther": 31.0
+   },
+   "totalFy2025": 241471,
+   "debtServiceFy2025": {
+    "gf": 0,
+    "of": 3775,
+    "total": 3775
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 7284,
+     "pct2025": 18.2
+    },
+    "allOther": {
+     "fy2025Total": 4076,
+     "pct2025": 15.8
+    },
+    "higherEd": {
+     "fy2025Total": 1605,
+     "pct2025": 7.1
+    },
+    "environment": {
+     "fy2025Total": 1831,
+     "pct2025": 4.4
+    },
+    "k12": {
+     "fy2025Total": 213,
+     "pct2025": -46.8
+    },
+    "housing": {
+     "fy2025Total": 1548,
+     "pct2025": 57.5
+    },
+    "corrections": {
+     "fy2025Total": 418,
+     "pct2025": 7.2
+    }
+   }
+  },
+  "north-carolina": {
+   "name": "North Carolina",
+   "generalFund": {
+    "fy2024": 29216,
+    "fy2025": 31267,
+    "fy2025Prelim": 31267,
+    "fy2026Enacted": 31870,
+    "fy2026Estimated": 33274,
+    "fy2027Proposed": 35436
+   },
+   "pctChange": {
+    "fy2025": 7.0,
+    "fy2026Enacted": 1.9,
+    "fy2026Estimated": 6.4,
+    "fy2027Proposed": 6.5
+   },
+   "rainyDayFy2026": 3650,
+   "midYearFy2026": {
+    "netChange": 1355.0,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "hiringFreeze",
+    "medicaidChanges"
+   ],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 15807,
+     "fy2025Gf": 11834,
+     "pct2024": {
+      "gf": -2.3,
+      "ff": -17.1,
+      "total": -6.1
+     },
+     "pct2025": {
+      "gf": 10.9,
+      "ff": -31.1,
+      "total": 1.4
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 12016,
+     "fy2025Gf": 6136,
+     "pct2024": {
+      "gf": 10.5,
+      "ff": -35.0,
+      "total": -1.9
+     },
+     "pct2025": {
+      "gf": 13.6,
+      "ff": 1.3,
+      "total": 10.7
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 33187,
+     "fy2025Gf": 4893,
+     "pct2024": {
+      "gf": 32.3,
+      "ff": 35.4,
+      "total": 34.5
+     },
+     "pct2025": {
+      "gf": 17.8,
+      "ff": 26.6,
+      "total": 24.1
+     }
+    },
+    "corrections": {
+     "fy2025Total": 2349,
+     "fy2025Gf": 1429,
+     "pct2024": {
+      "gf": -0.5,
+      "ff": -100.0,
+      "total": -1.3
+     },
+     "pct2025": {
+      "gf": 9.7,
+      "ff": null,
+      "total": 9.7
+     }
+    },
+    "transportation": {
+     "fy2025Total": 8197,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 11.4,
+      "ff": -6.8,
+      "total": 1.6
+     },
+     "pct2025": {
+      "gf": 2.2,
+      "ff": 24.6,
+      "total": 6.7
+     }
+    },
+    "allOther": {
+     "fy2025Total": 11683,
+     "fy2025Gf": 7008,
+     "pct2024": {
+      "gf": 23.0,
+      "ff": -55.9,
+      "total": 11.7
+     },
+     "pct2025": {
+      "gf": 26.1,
+      "ff": 604.1,
+      "total": 58.7
+     }
+    },
+    "capital": {
+     "fy2025Total": 9764,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": -16.7,
+      "ff": -6.8,
+      "total": 0.4
+     },
+     "pct2025": {
+      "gf": -100.0,
+      "ff": 24.6,
+      "total": 14.8
+     }
+    }
+   },
+   "mix": {
+    "k12": 19.0,
+    "higherEd": 14.4,
+    "medicaid": 39.9,
+    "corrections": 2.8,
+    "transportation": 9.8,
+    "allOther": 14.0
+   },
+   "totalFy2025": 83238,
+   "debtServiceFy2025": {
+    "gf": 0,
+    "of": 471,
+    "total": 471
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 7117,
+     "pct2025": 12.0
+    },
+    "allOther": {
+     "fy2025Total": 507,
+     "pct2025": -43.2
+    },
+    "higherEd": {
+     "fy2025Total": 1542,
+     "pct2025": 73.5
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": -100.0
+    },
+    "k12": {
+     "fy2025Total": 542,
+     "pct2025": 67.3
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 56,
+     "pct2025": 27.3
+    }
+   }
+  },
+  "north-dakota": {
+   "name": "North Dakota",
+   "generalFund": {
+    "fy2024": 3291,
+    "fy2025": 2485,
+    "fy2025Prelim": 2485,
+    "fy2026Enacted": 3128,
+    "fy2026Estimated": 3128,
+    "fy2027Proposed": 3128
+   },
+   "pctChange": {
+    "fy2025": -24.5,
+    "fy2026Enacted": 25.9,
+    "fy2026Estimated": 25.9,
+    "fy2027Proposed": 0.0
+   },
+   "rainyDayFy2026": 939,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 1515,
+     "fy2025Gf": 797,
+     "pct2024": {
+      "gf": 15.4,
+      "ff": -4.6,
+      "total": 10.0
+     },
+     "pct2025": {
+      "gf": 3.8,
+      "ff": -28.6,
+      "total": -3.8
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 1942,
+     "fy2025Gf": 504,
+     "pct2024": {
+      "gf": 2.1,
+      "ff": 14.3,
+      "total": 3.5
+     },
+     "pct2025": {
+      "gf": 21.6,
+      "ff": 53.1,
+      "total": 25.5
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 1583,
+     "fy2025Gf": 580,
+     "pct2024": {
+      "gf": 5.6,
+      "ff": -16.7,
+      "total": -9.3
+     },
+     "pct2025": {
+      "gf": 15.5,
+      "ff": 10.0,
+      "total": 12.1
+     }
+    },
+    "corrections": {
+     "fy2025Total": 180,
+     "fy2025Gf": 99,
+     "pct2024": {
+      "gf": 11.0,
+      "ff": 20.0,
+      "total": 11.7
+     },
+     "pct2025": {
+      "gf": -15.6,
+      "ff": 408.3,
+      "total": 17.6
+     }
+    },
+    "transportation": {
+     "fy2025Total": 935,
+     "fy2025Gf": 2,
+     "pct2024": {
+      "gf": 16.4,
+      "ff": 13.7,
+      "total": 14.8
+     },
+     "pct2025": {
+      "gf": 18.0,
+      "ff": -23.7,
+      "total": -6.6
+     }
+    },
+    "allOther": {
+     "fy2025Total": 1698,
+     "fy2025Gf": 918,
+     "pct2024": {
+      "gf": -45.0,
+      "ff": -19.5,
+      "total": -35.3
+     },
+     "pct2025": {
+      "gf": 6.2,
+      "ff": -16.8,
+      "total": -4.5
+     }
+    },
+    "capital": {
+     "fy2025Total": 1016,
+     "fy2025Gf": 39,
+     "pct2024": {
+      "gf": -2.6,
+      "ff": -5.3,
+      "total": 4.0
+     },
+     "pct2025": {
+      "gf": 2.6,
+      "ff": -5.0,
+      "total": 11.2
+     }
+    }
+   },
+   "mix": {
+    "k12": 19.3,
+    "higherEd": 24.7,
+    "medicaid": 20.2,
+    "corrections": 2.3,
+    "transportation": 11.9,
+    "allOther": 21.6
+   },
+   "totalFy2025": 7853,
+   "debtServiceFy2025": {
+    "gf": 5,
+    "of": 2,
+    "total": 7
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 573,
+     "pct2025": -14.2
+    },
+    "allOther": {
+     "fy2025Total": 179,
+     "pct2025": 894.4
+    },
+    "higherEd": {
+     "fy2025Total": 186,
+     "pct2025": 0.0
+    },
+    "environment": {
+     "fy2025Total": 64,
+     "pct2025": 73.0
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 14,
+     "pct2025": 180.0
+    }
+   }
+  },
+  "ohio": {
+   "name": "Ohio",
+   "generalFund": {
+    "fy2024": 35585,
+    "fy2025": 30172,
+    "fy2025Prelim": 31066,
+    "fy2026Enacted": 30828,
+    "fy2026Estimated": 31655,
+    "fy2027Proposed": 31404
+   },
+   "pctChange": {
+    "fy2025": -15.2,
+    "fy2026Enacted": -0.8,
+    "fy2026Estimated": 4.9,
+    "fy2027Proposed": -0.8
+   },
+   "rainyDayFy2026": 3979,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 16013,
+     "fy2025Gf": 10256,
+     "pct2024": {
+      "gf": 12.8,
+      "ff": -1.1,
+      "total": 9.5
+     },
+     "pct2025": {
+      "gf": 3.7,
+      "ff": -31.1,
+      "total": -5.0
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 3383,
+     "fy2025Gf": 2980,
+     "pct2024": {
+      "gf": 5.4,
+      "ff": -35.7,
+      "total": 4.9
+     },
+     "pct2025": {
+      "gf": 3.9,
+      "ff": 3.7,
+      "total": 6.9
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 43357,
+     "fy2025Gf": 7766,
+     "pct2024": {
+      "gf": 24.0,
+      "ff": 1.7,
+      "total": 7.6
+     },
+     "pct2025": {
+      "gf": 13.7,
+      "ff": 9.9,
+      "total": 11.1
+     }
+    },
+    "corrections": {
+     "fy2025Total": 2775,
+     "fy2025Gf": 2513,
+     "pct2024": {
+      "gf": 3.5,
+      "ff": 14.3,
+      "total": 5.4
+     },
+     "pct2025": {
+      "gf": 5.0,
+      "ff": -18.8,
+      "total": 6.3
+     }
+    },
+    "transportation": {
+     "fy2025Total": 5190,
+     "fy2025Gf": 75,
+     "pct2024": {
+      "gf": 56.9,
+      "ff": 17.3,
+      "total": 41.0
+     },
+     "pct2025": {
+      "gf": 4.9,
+      "ff": -1.3,
+      "total": 3.1
+     }
+    },
+    "allOther": {
+     "fy2025Total": 33987,
+     "fy2025Gf": 5826,
+     "pct2024": {
+      "gf": 5.3,
+      "ff": -15.3,
+      "total": 1.1
+     },
+     "pct2025": {
+      "gf": 3.3,
+      "ff": 1.6,
+      "total": 3.0
+     }
+    },
+    "capital": {
+     "fy2025Total": 5134,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 19.5,
+      "total": 19.2
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": 3.6,
+      "total": 23.4
+     }
+    }
+   },
+   "mix": {
+    "k12": 15.3,
+    "higherEd": 3.2,
+    "medicaid": 41.4,
+    "corrections": 2.7,
+    "transportation": 5.0,
+    "allOther": 32.5
+   },
+   "totalFy2025": 104702,
+   "debtServiceFy2025": {
+    "gf": 1288,
+    "of": 313,
+    "total": 1601
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 2710,
+     "pct2025": 0.1
+    },
+    "allOther": {
+     "fy2025Total": 1223,
+     "pct2025": 156.9
+    },
+    "higherEd": {
+     "fy2025Total": 330,
+     "pct2025": 43.5
+    },
+    "environment": {
+     "fy2025Total": 298,
+     "pct2025": 18.7
+    },
+    "k12": {
+     "fy2025Total": 363,
+     "pct2025": 5.5
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 209,
+     "pct2025": 37.5
+    }
+   }
+  },
+  "oklahoma": {
+   "name": "Oklahoma",
+   "generalFund": {
+    "fy2024": 10471,
+    "fy2025": 10590,
+    "fy2025Prelim": 10590,
+    "fy2026Enacted": 10381,
+    "fy2026Estimated": 10381,
+    "fy2027Proposed": 9887
+   },
+   "pctChange": {
+    "fy2025": 1.1,
+    "fy2026Enacted": -2.0,
+    "fy2026Estimated": -2.0,
+    "fy2027Proposed": -4.8
+   },
+   "rainyDayFy2026": 1776,
+   "midYearFy2026": {
+    "netChange": 2.0,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "rainyDayFund",
+    "fundTransfers",
+    "priorYearBalance",
+    "other"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "fundTransfers",
+    "priorYearBalance",
+    "other"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 5019,
+     "fy2025Gf": 2782,
+     "pct2024": {
+      "gf": 42.8,
+      "ff": 12.1,
+      "total": 34.0
+     },
+     "pct2025": {
+      "gf": -12.8,
+      "ff": -25.6,
+      "total": -15.9
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 3506,
+     "fy2025Gf": 540,
+     "pct2024": {
+      "gf": -1.4,
+      "ff": 2.8,
+      "total": -0.7
+     },
+     "pct2025": {
+      "gf": -15.4,
+      "ff": 13.3,
+      "total": -10.1
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 11571,
+     "fy2025Gf": 1220,
+     "pct2024": {
+      "gf": 43.7,
+      "ff": -6.5,
+      "total": 5.9
+     },
+     "pct2025": {
+      "gf": 28.3,
+      "ff": 1.2,
+      "total": 10.3
+     }
+    },
+    "corrections": {
+     "fy2025Total": 606,
+     "fy2025Gf": 549,
+     "pct2024": {
+      "gf": 4.7,
+      "ff": 0.0,
+      "total": 4.7
+     },
+     "pct2025": {
+      "gf": 0.2,
+      "ff": 100.0,
+      "total": 0.3
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2855,
+     "fy2025Gf": 30,
+     "pct2024": {
+      "gf": 22.8,
+      "ff": 26.7,
+      "total": 25.0
+     },
+     "pct2025": {
+      "gf": 24.5,
+      "ff": 21.6,
+      "total": 35.5
+     }
+    },
+    "allOther": {
+     "fy2025Total": 6975,
+     "fy2025Gf": 2811,
+     "pct2024": {
+      "gf": -3.8,
+      "ff": -81.6,
+      "total": -43.3
+     },
+     "pct2025": {
+      "gf": 20.7,
+      "ff": 153.8,
+      "total": 43.6
+     }
+    },
+    "capital": {
+     "fy2025Total": 0,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": null,
+      "total": null
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": null,
+      "total": null
+     }
+    }
+   },
+   "mix": {
+    "k12": 16.4,
+    "higherEd": 11.5,
+    "medicaid": 37.9,
+    "corrections": 2.0,
+    "transportation": 9.4,
+    "allOther": 22.8
+   },
+   "totalFy2025": 30532,
+   "debtServiceFy2025": {
+    "gf": 0,
+    "of": 0,
+    "total": 0
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "allOther": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "higherEd": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 0,
+     "pct2025": null
+    }
+   }
+  },
+  "oregon": {
+   "name": "Oregon",
+   "generalFund": {
+    "fy2024": 16355,
+    "fy2025": 17026,
+    "fy2025Prelim": 17022,
+    "fy2026Enacted": 18288,
+    "fy2026Estimated": 18382,
+    "fy2027Proposed": 19132
+   },
+   "pctChange": {
+    "fy2025": 4.1,
+    "fy2026Enacted": 7.4,
+    "fy2026Estimated": 8.0,
+    "fy2027Proposed": 4.1
+   },
+   "rainyDayFy2026": 3166,
+   "midYearFy2026": {
+    "netChange": 198.6,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze",
+    "reorganizeAgencies",
+    "fundTransfers",
+    "other"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "hiringFreeze",
+    "fundTransfers",
+    "priorYearBalance",
+    "revenueIncrease",
+    "other"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 7919,
+     "fy2025Gf": 4625,
+     "pct2024": {
+      "gf": 0.4,
+      "ff": 1.9,
+      "total": 0.7
+     },
+     "pct2025": {
+      "gf": 4.7,
+      "ff": -17.0,
+      "total": 1.1
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 2470,
+     "fy2025Gf": 1312,
+     "pct2024": {
+      "gf": 25.0,
+      "ff": -2.1,
+      "total": 29.0
+     },
+     "pct2025": {
+      "gf": 4.0,
+      "ff": 2.1,
+      "total": 2.4
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 18167,
+     "fy2025Gf": 3036,
+     "pct2024": {
+      "gf": 36.3,
+      "ff": 4.8,
+      "total": 12.4
+     },
+     "pct2025": {
+      "gf": 14.3,
+      "ff": 10.3,
+      "total": 11.5
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1534,
+     "fy2025Gf": 1398,
+     "pct2024": {
+      "gf": 9.3,
+      "ff": 69.2,
+      "total": 10.6
+     },
+     "pct2025": {
+      "gf": 5.5,
+      "ff": -27.3,
+      "total": 5.4
+     }
+    },
+    "transportation": {
+     "fy2025Total": 3228,
+     "fy2025Gf": 49,
+     "pct2024": {
+      "gf": 5.0,
+      "ff": 41.1,
+      "total": 5.4
+     },
+     "pct2025": {
+      "gf": 25.4,
+      "ff": -15.2,
+      "total": 24.2
+     }
+    },
+    "allOther": {
+     "fy2025Total": 30497,
+     "fy2025Gf": 6307,
+     "pct2024": {
+      "gf": 5.9,
+      "ff": -4.9,
+      "total": 3.6
+     },
+     "pct2025": {
+      "gf": 12.5,
+      "ff": -3.4,
+      "total": 9.3
+     }
+    },
+    "capital": {
+     "fy2025Total": 850,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": null,
+      "total": 32.8
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": null,
+      "total": 6.1
+     }
+    }
+   },
+   "mix": {
+    "k12": 12.4,
+    "higherEd": 3.9,
+    "medicaid": 28.5,
+    "corrections": 2.4,
+    "transportation": 5.1,
+    "allOther": 47.8
+   },
+   "totalFy2025": 63812,
+   "debtServiceFy2025": {
+    "gf": 505,
+    "of": 170,
+    "total": 675
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 12,
+     "pct2025": 50.0
+    },
+    "allOther": {
+     "fy2025Total": 254,
+     "pct2025": -5.6
+    },
+    "higherEd": {
+     "fy2025Total": 237,
+     "pct2025": -10.6
+    },
+    "environment": {
+     "fy2025Total": 60,
+     "pct2025": 30.4
+    },
+    "k12": {
+     "fy2025Total": 2,
+     "pct2025": -33.3
+    },
+    "housing": {
+     "fy2025Total": 241,
+     "pct2025": 39.3
+    },
+    "corrections": {
+     "fy2025Total": 44,
+     "pct2025": 18.9
+    }
+   }
+  },
+  "pennsylvania": {
+   "name": "Pennsylvania",
+   "generalFund": {
+    "fy2024": 44864,
+    "fy2025": 47823,
+    "fy2025Prelim": 47904,
+    "fy2026Enacted": null,
+    "fy2026Estimated": 50543,
+    "fy2027Proposed": 53262
+   },
+   "pctChange": {
+    "fy2025": 6.6,
+    "fy2026Enacted": null,
+    "fy2026Estimated": 5.7,
+    "fy2027Proposed": 5.4
+   },
+   "rainyDayFy2026": null,
+   "midYearFy2026": {
+    "netChange": 390.0,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze",
+    "rainyDayFund",
+    "revenueIncrease",
+    "other"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "hiringFreeze",
+    "pensionAdjustments",
+    "rainyDayFund",
+    "fundTransfers",
+    "revenueIncrease"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 22791,
+     "fy2025Gf": 17172,
+     "pct2024": {
+      "gf": 5.4,
+      "ff": 41.2,
+      "total": 11.6
+     },
+     "pct2025": {
+      "gf": 8.9,
+      "ff": -0.3,
+      "total": 6.9
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 2635,
+     "fy2025Gf": 2209,
+     "pct2024": {
+      "gf": 3.0,
+      "ff": -100.0,
+      "total": -0.4
+     },
+     "pct2025": {
+      "gf": 6.8,
+      "ff": null,
+      "total": 4.6
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 49511,
+     "fy2025Gf": 14283,
+     "pct2024": {
+      "gf": 11.5,
+      "ff": -6.6,
+      "total": -0.1
+     },
+     "pct2025": {
+      "gf": 7.5,
+      "ff": 13.2,
+      "total": 10.9
+     }
+    },
+    "corrections": {
+     "fy2025Total": 3670,
+     "fy2025Gf": 3355,
+     "pct2024": {
+      "gf": 9.0,
+      "ff": -14.0,
+      "total": 8.6
+     },
+     "pct2025": {
+      "gf": 7.4,
+      "ff": 235.1,
+      "total": 10.1
+     }
+    },
+    "transportation": {
+     "fy2025Total": 11639,
+     "fy2025Gf": 3,
+     "pct2024": {
+      "gf": 8.3,
+      "ff": 12.4,
+      "total": 9.5
+     },
+     "pct2025": {
+      "gf": 0.7,
+      "ff": 25.1,
+      "total": 6.3
+     }
+    },
+    "allOther": {
+     "fy2025Total": 38325,
+     "fy2025Gf": 10883,
+     "pct2024": {
+      "gf": 7.1,
+      "ff": 3.2,
+      "total": 6.0
+     },
+     "pct2025": {
+      "gf": 6.2,
+      "ff": 3.1,
+      "total": 5.7
+     }
+    },
+    "capital": {
+     "fy2025Total": 6235,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 31.8,
+      "total": 20.9
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": 25.0,
+      "total": 17.8
+     }
+    }
+   },
+   "mix": {
+    "k12": 17.7,
+    "higherEd": 2.0,
+    "medicaid": 38.5,
+    "corrections": 2.9,
+    "transportation": 9.1,
+    "allOther": 29.8
+   },
+   "totalFy2025": 128571,
+   "debtServiceFy2025": {
+    "gf": 1351,
+    "of": 169,
+    "total": 1520
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 4866,
+     "pct2025": 20.6
+    },
+    "allOther": {
+     "fy2025Total": 843,
+     "pct2025": 16.8
+    },
+    "higherEd": {
+     "fy2025Total": 385,
+     "pct2025": -6.6
+    },
+    "environment": {
+     "fy2025Total": 66,
+     "pct2025": 4.8
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 75,
+     "pct2025": 19.0
+    }
+   }
+  },
+  "rhode-island": {
+   "name": "Rhode Island",
+   "generalFund": {
+    "fy2024": 5236,
+    "fy2025": 5536,
+    "fy2025Prelim": 5598,
+    "fy2026Enacted": 5809,
+    "fy2026Estimated": 5825,
+    "fy2027Proposed": 5955
+   },
+   "pctChange": {
+    "fy2025": 5.7,
+    "fy2026Enacted": 3.8,
+    "fy2026Estimated": 5.2,
+    "fy2027Proposed": 2.2
+   },
+   "rainyDayFy2026": 355,
+   "midYearFy2026": {
+    "netChange": 15.6,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "fundTransfers",
+    "priorYearBalance",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "strategiesFy2027": [
+    "revenueIncrease"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 2047,
+     "fy2025Gf": 1597,
+     "pct2024": {
+      "gf": 4.2,
+      "ff": 8.8,
+      "total": 2.6
+     },
+     "pct2025": {
+      "gf": 6.9,
+      "ff": -28.1,
+      "total": -1.6
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 1579,
+     "fy2025Gf": 315,
+     "pct2024": {
+      "gf": 5.2,
+      "ff": 9.1,
+      "total": 4.8
+     },
+     "pct2025": {
+      "gf": 10.8,
+      "ff": 50.0,
+      "total": 13.2
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 3383,
+     "fy2025Gf": 1303,
+     "pct2024": {
+      "gf": -2.3,
+      "ff": -17.5,
+      "total": -12.3
+     },
+     "pct2025": {
+      "gf": 12.0,
+      "ff": 10.4,
+      "total": 11.0
+     }
+    },
+    "corrections": {
+     "fy2025Total": 323,
+     "fy2025Gf": 304,
+     "pct2024": {
+      "gf": -8.0,
+      "ff": 1050.0,
+      "total": -0.7
+     },
+     "pct2025": {
+      "gf": 20.3,
+      "ff": -87.0,
+      "total": 11.8
+     }
+    },
+    "transportation": {
+     "fy2025Total": 1081,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 24.9,
+      "ff": -10.9,
+      "total": 1.6
+     },
+     "pct2025": {
+      "gf": 65.9,
+      "ff": 19.0,
+      "total": 39.1
+     }
+    },
+    "allOther": {
+     "fy2025Total": 6154,
+     "fy2025Gf": 2079,
+     "pct2024": {
+      "gf": 11.6,
+      "ff": 5.2,
+      "total": 9.5
+     },
+     "pct2025": {
+      "gf": 13.8,
+      "ff": 26.9,
+      "total": 18.6
+     }
+    },
+    "capital": {
+     "fy2025Total": 1347,
+     "fy2025Gf": 10,
+     "pct2024": {
+      "gf": 30.0,
+      "ff": 0.3,
+      "total": 18.3
+     },
+     "pct2025": {
+      "gf": -23.1,
+      "ff": 18.4,
+      "total": 66.7
+     }
+    }
+   },
+   "mix": {
+    "k12": 14.1,
+    "higherEd": 10.8,
+    "medicaid": 23.2,
+    "corrections": 2.2,
+    "transportation": 7.4,
+    "allOther": 42.2
+   },
+   "totalFy2025": 14567,
+   "debtServiceFy2025": {
+    "gf": 239,
+    "of": 16,
+    "total": 255
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 632,
+     "pct2025": 38.9
+    },
+    "allOther": {
+     "fy2025Total": 456,
+     "pct2025": 185.0
+    },
+    "higherEd": {
+     "fy2025Total": 148,
+     "pct2025": 72.1
+    },
+    "environment": {
+     "fy2025Total": 34,
+     "pct2025": -15.0
+    },
+    "k12": {
+     "fy2025Total": 44,
+     "pct2025": 10.0
+    },
+    "housing": {
+     "fy2025Total": 15,
+     "pct2025": -37.5
+    },
+    "corrections": {
+     "fy2025Total": 17,
+     "pct2025": 750.0
+    }
+   }
+  },
+  "south-carolina": {
+   "name": "South Carolina",
+   "generalFund": {
+    "fy2024": 13659,
+    "fy2025": 13831,
+    "fy2025Prelim": 13831,
+    "fy2026Enacted": 14136,
+    "fy2026Estimated": 14152,
+    "fy2027Proposed": 14879
+   },
+   "pctChange": {
+    "fy2025": 1.3,
+    "fy2026Enacted": 2.2,
+    "fy2026Estimated": 2.3,
+    "fy2027Proposed": 5.1
+   },
+   "rainyDayFy2026": 1953,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 7883,
+     "fy2025Gf": 4531,
+     "pct2024": {
+      "gf": 9.9,
+      "ff": 6.4,
+      "total": 8.8
+     },
+     "pct2025": {
+      "gf": 10.6,
+      "ff": -22.3,
+      "total": 1.1
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 8092,
+     "fy2025Gf": 1672,
+     "pct2024": {
+      "gf": 11.5,
+      "ff": -22.5,
+      "total": 10.5
+     },
+     "pct2025": {
+      "gf": 5.2,
+      "ff": 37.7,
+      "total": 5.9
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 10984,
+     "fy2025Gf": 1910,
+     "pct2024": {
+      "gf": 48.8,
+      "ff": 13.6,
+      "total": 22.4
+     },
+     "pct2025": {
+      "gf": 9.7,
+      "ff": 2.3,
+      "total": 4.5
+     }
+    },
+    "corrections": {
+     "fy2025Total": 970,
+     "fy2025Gf": 830,
+     "pct2024": {
+      "gf": 1.5,
+      "ff": 100.0,
+      "total": 3.0
+     },
+     "pct2025": {
+      "gf": 0.2,
+      "ff": -14.3,
+      "total": -0.2
+     }
+    },
+    "transportation": {
+     "fy2025Total": 3643,
+     "fy2025Gf": 372,
+     "pct2024": {
+      "gf": -0.6,
+      "ff": 24.9,
+      "total": 6.9
+     },
+     "pct2025": {
+      "gf": 26.5,
+      "ff": 3.2,
+      "total": 18.6
+     }
+    },
+    "allOther": {
+     "fy2025Total": 10206,
+     "fy2025Gf": 4910,
+     "pct2024": {
+      "gf": 15.0,
+      "ff": -53.4,
+      "total": -16.5
+     },
+     "pct2025": {
+      "gf": -8.3,
+      "ff": 22.6,
+      "total": -0.4
+     }
+    },
+    "capital": {
+     "fy2025Total": 3238,
+     "fy2025Gf": 78,
+     "pct2024": {
+      "gf": 5.8,
+      "ff": 23.5,
+      "total": 28.6
+     },
+     "pct2025": {
+      "gf": -28.4,
+      "ff": 5.1,
+      "total": 17.0
+     }
+    }
+   },
+   "mix": {
+    "k12": 18.9,
+    "higherEd": 19.4,
+    "medicaid": 26.3,
+    "corrections": 2.3,
+    "transportation": 8.7,
+    "allOther": 24.4
+   },
+   "totalFy2025": 41778,
+   "debtServiceFy2025": {
+    "gf": 144,
+    "of": 0,
+    "total": 144
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 1840,
+     "pct2025": 4.9
+    },
+    "allOther": {
+     "fy2025Total": 410,
+     "pct2025": 2.2
+    },
+    "higherEd": {
+     "fy2025Total": 847,
+     "pct2025": 60.4
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 102,
+     "pct2025": 155.0
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 39,
+     "pct2025": -11.4
+    }
+   }
+  },
+  "south-dakota": {
+   "name": "South Dakota",
+   "generalFund": {
+    "fy2024": 2361,
+    "fy2025": 2441,
+    "fy2025Prelim": 2441,
+    "fy2026Enacted": 2470,
+    "fy2026Estimated": 2546,
+    "fy2027Proposed": 2521
+   },
+   "pctChange": {
+    "fy2025": 3.4,
+    "fy2026Enacted": 1.2,
+    "fy2026Estimated": 4.3,
+    "fy2027Proposed": -1.0
+   },
+   "rainyDayFy2026": 492,
+   "midYearFy2026": {
+    "netChange": 38.3,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 1002,
+     "fy2025Gf": 727,
+     "pct2024": {
+      "gf": 8.3,
+      "ff": 73.6,
+      "total": 26.2
+     },
+     "pct2025": {
+      "gf": 3.6,
+      "ff": -36.1,
+      "total": -11.4
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 926,
+     "fy2025Gf": 349,
+     "pct2024": {
+      "gf": 2.5,
+      "ff": 12.2,
+      "total": 2.2
+     },
+     "pct2025": {
+      "gf": -2.1,
+      "ff": 8.9,
+      "total": -0.4
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 1928,
+     "fy2025Gf": 566,
+     "pct2024": {
+      "gf": 19.7,
+      "ff": 23.8,
+      "total": 22.5
+     },
+     "pct2025": {
+      "gf": 24.1,
+      "ff": 28.9,
+      "total": 27.4
+     }
+    },
+    "corrections": {
+     "fy2025Total": 159,
+     "fy2025Gf": 153,
+     "pct2024": {
+      "gf": -20.2,
+      "ff": 733.3,
+      "total": -14.7
+     },
+     "pct2025": {
+      "gf": -51.2,
+      "ff": -96.0,
+      "total": -54.4
+     }
+    },
+    "transportation": {
+     "fy2025Total": 1150,
+     "fy2025Gf": 1,
+     "pct2024": {
+      "gf": 3.5,
+      "ff": 22.6,
+      "total": 14.3
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": 15.3,
+      "total": 9.3
+     }
+    },
+    "allOther": {
+     "fy2025Total": 1706,
+     "fy2025Gf": 596,
+     "pct2024": {
+      "gf": -2.0,
+      "ff": 39.0,
+      "total": 9.8
+     },
+     "pct2025": {
+      "gf": 5.5,
+      "ff": -37.5,
+      "total": -10.2
+     }
+    },
+    "capital": {
+     "fy2025Total": 127,
+     "fy2025Gf": 41,
+     "pct2024": {
+      "gf": 7.7,
+      "ff": 294.7,
+      "total": 57.7
+     },
+     "pct2025": {
+      "gf": 192.9,
+      "ff": -82.7,
+      "total": -17.0
+     }
+    }
+   },
+   "mix": {
+    "k12": 14.6,
+    "higherEd": 13.5,
+    "medicaid": 28.1,
+    "corrections": 2.3,
+    "transportation": 16.7,
+    "allOther": 24.8
+   },
+   "totalFy2025": 6871,
+   "debtServiceFy2025": {
+    "gf": 8,
+    "of": 29,
+    "total": 37
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 46,
+     "pct2025": 170.6
+    },
+    "allOther": {
+     "fy2025Total": 74,
+     "pct2025": -43.5
+    },
+    "higherEd": {
+     "fy2025Total": 5,
+     "pct2025": 400.0
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 2,
+     "pct2025": -50.0
+    }
+   }
+  },
+  "tennessee": {
+   "name": "Tennessee",
+   "generalFund": {
+    "fy2024": 21396,
+    "fy2025": 21839,
+    "fy2025Prelim": 23126,
+    "fy2026Enacted": 25788,
+    "fy2026Estimated": 25815,
+    "fy2027Proposed": 25587
+   },
+   "pctChange": {
+    "fy2025": 2.1,
+    "fy2026Enacted": 11.5,
+    "fy2026Estimated": 18.2,
+    "fy2027Proposed": -0.9
+   },
+   "rainyDayFy2026": 2186,
+   "midYearFy2026": {
+    "netChange": 97.9,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "other"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "other"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 9059,
+     "fy2025Gf": 7243,
+     "pct2024": {
+      "gf": 22.1,
+      "ff": -7.0,
+      "total": 13.1
+     },
+     "pct2025": {
+      "gf": 2.7,
+      "ff": -32.6,
+      "total": -6.3
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 6580,
+     "fy2025Gf": 2963,
+     "pct2024": {
+      "gf": -2.9,
+      "ff": -7.1,
+      "total": -2.9
+     },
+     "pct2025": {
+      "gf": -10.6,
+      "ff": 1.1,
+      "total": -10.5
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 18669,
+     "fy2025Gf": 6128,
+     "pct2024": {
+      "gf": 17.2,
+      "ff": 1.8,
+      "total": 6.5
+     },
+     "pct2025": {
+      "gf": 34.0,
+      "ff": 10.2,
+      "total": 18.3
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1426,
+     "fy2025Gf": 1391,
+     "pct2024": {
+      "gf": 15.5,
+      "ff": 100.0,
+      "total": 15.6
+     },
+     "pct2025": {
+      "gf": 3.6,
+      "ff": 550.0,
+      "total": 4.4
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2860,
+     "fy2025Gf": 113,
+     "pct2024": {
+      "gf": 13.5,
+      "ff": 4.5,
+      "total": 9.5
+     },
+     "pct2025": {
+      "gf": -17.1,
+      "ff": 21.3,
+      "total": -0.9
+     }
+    },
+    "allOther": {
+     "fy2025Total": 20138,
+     "fy2025Gf": 6381,
+     "pct2024": {
+      "gf": 42.9,
+      "ff": -0.4,
+      "total": 18.6
+     },
+     "pct2025": {
+      "gf": -7.4,
+      "ff": 82.8,
+      "total": 25.7
+     }
+    },
+    "capital": {
+     "fy2025Total": 2723,
+     "fy2025Gf": 487,
+     "pct2024": {
+      "gf": -18.5,
+      "ff": 2.5,
+      "total": -16.9
+     },
+     "pct2025": {
+      "gf": -72.3,
+      "ff": 22.9,
+      "total": -33.3
+     }
+    }
+   },
+   "mix": {
+    "k12": 15.4,
+    "higherEd": 11.2,
+    "medicaid": 31.8,
+    "corrections": 2.4,
+    "transportation": 4.9,
+    "allOther": 34.3
+   },
+   "totalFy2025": 58732,
+   "debtServiceFy2025": {
+    "gf": 250,
+    "of": 0,
+    "total": 250
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 2093,
+     "pct2025": -5.3
+    },
+    "allOther": {
+     "fy2025Total": 375,
+     "pct2025": 5.0
+    },
+    "higherEd": {
+     "fy2025Total": 177,
+     "pct2025": -84.0
+    },
+    "environment": {
+     "fy2025Total": 62,
+     "pct2025": -80.7
+    },
+    "k12": {
+     "fy2025Total": 5,
+     "pct2025": -50.0
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 11,
+     "pct2025": -85.1
+    }
+   }
+  },
+  "texas": {
+   "name": "Texas",
+   "generalFund": {
+    "fy2024": 85865,
+    "fy2025": 76193,
+    "fy2025Prelim": 98913,
+    "fy2026Enacted": 95884,
+    "fy2026Estimated": 117396,
+    "fy2027Proposed": 81574
+   },
+   "pctChange": {
+    "fy2025": -11.3,
+    "fy2026Enacted": -3.1,
+    "fy2026Estimated": 54.1,
+    "fy2027Proposed": -30.5
+   },
+   "rainyDayFy2026": 28502,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 41547,
+     "fy2025Gf": 19731,
+     "pct2024": {
+      "gf": 50.7,
+      "ff": 1.1,
+      "total": 41.5
+     },
+     "pct2025": {
+      "gf": -17.1,
+      "ff": -3.6,
+      "total": -15.4
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 21708,
+     "fy2025Gf": 8887,
+     "pct2024": {
+      "gf": 7.3,
+      "ff": -4.1,
+      "total": 3.6
+     },
+     "pct2025": {
+      "gf": 3.0,
+      "ff": -0.4,
+      "total": 1.9
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 53600,
+     "fy2025Gf": 14395,
+     "pct2024": {
+      "gf": -4.3,
+      "ff": -22.8,
+      "total": -16.3
+     },
+     "pct2025": {
+      "gf": 13.5,
+      "ff": 11.5,
+      "total": 12.3
+     }
+    },
+    "corrections": {
+     "fy2025Total": 4944,
+     "fy2025Gf": 2971,
+     "pct2024": {
+      "gf": -53.1,
+      "ff": 4985.5,
+      "total": 11.4
+     },
+     "pct2025": {
+      "gf": 54.5,
+      "ff": -33.0,
+      "total": 3.3
+     }
+    },
+    "transportation": {
+     "fy2025Total": 22765,
+     "fy2025Gf": 773,
+     "pct2024": {
+      "gf": 34.9,
+      "ff": 19.8,
+      "total": 30.4
+     },
+     "pct2025": {
+      "gf": 18.7,
+      "ff": 12.0,
+      "total": 16.9
+     }
+    },
+    "allOther": {
+     "fy2025Total": 2056,
+     "fy2025Gf": 74,
+     "pct2024": {
+      "gf": -36.1,
+      "ff": -48.9,
+      "total": -18.8
+     },
+     "pct2025": {
+      "gf": 78.4,
+      "ff": -28.9,
+      "total": -8.1
+     }
+    },
+    "capital": {
+     "fy2025Total": 24901,
+     "fy2025Gf": 625,
+     "pct2024": {
+      "gf": 99.0,
+      "ff": 24.8,
+      "total": 41.6
+     },
+     "pct2025": {
+      "gf": 1.6,
+      "ff": 15.0,
+      "total": 19.5
+     }
+    }
+   },
+   "mix": {
+    "k12": 28.3,
+    "higherEd": 14.8,
+    "medicaid": 36.6,
+    "corrections": 3.4,
+    "transportation": 15.5,
+    "allOther": 1.4
+   },
+   "totalFy2025": 146620,
+   "debtServiceFy2025": {
+    "gf": 1302,
+    "of": 2328,
+    "total": 3630
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 17862,
+     "pct2025": 15.4
+    },
+    "allOther": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "higherEd": {
+     "fy2025Total": 5938,
+     "pct2025": 52.5
+    },
+    "environment": {
+     "fy2025Total": 25,
+     "pct2025": 56.2
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 685,
+     "pct2025": -36.0
+    },
+    "corrections": {
+     "fy2025Total": 391,
+     "pct2025": 2.6
+    }
+   }
+  },
+  "utah": {
+   "name": "Utah",
+   "generalFund": {
+    "fy2024": 13674,
+    "fy2025": 12657,
+    "fy2025Prelim": 12657,
+    "fy2026Enacted": 11839,
+    "fy2026Estimated": 11826,
+    "fy2027Proposed": 12110
+   },
+   "pctChange": {
+    "fy2025": -7.4,
+    "fy2026Enacted": -6.5,
+    "fy2026Estimated": -6.6,
+    "fy2027Proposed": 2.4
+   },
+   "rainyDayFy2026": 1332,
+   "midYearFy2026": {
+    "netChange": -13.0,
+    "revenueShortfall": "No"
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 6735,
+     "fy2025Gf": 5687,
+     "pct2024": {
+      "gf": 18.1,
+      "ff": -3.5,
+      "total": 14.9
+     },
+     "pct2025": {
+      "gf": 10.0,
+      "ff": -26.2,
+      "total": 5.4
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 3180,
+     "fy2025Gf": 2050,
+     "pct2024": {
+      "gf": 18.4,
+      "ff": 20.0,
+      "total": 18.4
+     },
+     "pct2025": {
+      "gf": -8.2,
+      "ff": -25.0,
+      "total": -8.3
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 3564,
+     "fy2025Gf": 453,
+     "pct2024": {
+      "gf": -11.3,
+      "ff": -32.4,
+      "total": -26.0
+     },
+     "pct2025": {
+      "gf": 5.1,
+      "ff": 1.7,
+      "total": 2.9
+     }
+    },
+    "corrections": {
+     "fy2025Total": 719,
+     "fy2025Gf": 704,
+     "pct2024": {
+      "gf": 3.1,
+      "ff": 100.0,
+      "total": 3.3
+     },
+     "pct2025": {
+      "gf": 33.2,
+      "ff": 150.0,
+      "total": 33.6
+     }
+    },
+    "transportation": {
+     "fy2025Total": 3643,
+     "fy2025Gf": 1204,
+     "pct2024": {
+      "gf": -8.6,
+      "ff": 4.7,
+      "total": -6.2
+     },
+     "pct2025": {
+      "gf": 36.9,
+      "ff": 46.0,
+      "total": 38.7
+     }
+    },
+    "allOther": {
+     "fy2025Total": 10653,
+     "fy2025Gf": 2560,
+     "pct2024": {
+      "gf": 31.8,
+      "ff": 41.0,
+      "total": 35.1
+     },
+     "pct2025": {
+      "gf": -0.3,
+      "ff": 35.2,
+      "total": 13.1
+     }
+    },
+    "capital": {
+     "fy2025Total": 3955,
+     "fy2025Gf": 1765,
+     "pct2024": {
+      "gf": 16.0,
+      "ff": 16.4,
+      "total": -7.2
+     },
+     "pct2025": {
+      "gf": -22.3,
+      "ff": 41.2,
+      "total": 11.8
+     }
+    }
+   },
+   "mix": {
+    "k12": 23.6,
+    "higherEd": 11.2,
+    "medicaid": 12.5,
+    "corrections": 2.5,
+    "transportation": 12.8,
+    "allOther": 37.4
+   },
+   "totalFy2025": 28493,
+   "debtServiceFy2025": {
+    "gf": 70,
+    "of": 373,
+    "total": 443
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 3016,
+     "pct2025": 21.3
+    },
+    "allOther": {
+     "fy2025Total": 702,
+     "pct2025": 13.2
+    },
+    "higherEd": {
+     "fy2025Total": 204,
+     "pct2025": -48.9
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 33,
+     "pct2025": 0.0
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 0,
+     "pct2025": null
+    }
+   }
+  },
+  "vermont": {
+   "name": "Vermont",
+   "generalFund": {
+    "fy2024": 2401,
+    "fy2025": 2629,
+    "fy2025Prelim": 2629,
+    "fy2026Enacted": 2502,
+    "fy2026Estimated": 2548,
+    "fy2027Proposed": 2533
+   },
+   "pctChange": {
+    "fy2025": 9.5,
+    "fy2026Enacted": -4.8,
+    "fy2026Estimated": -3.1,
+    "fy2027Proposed": -0.6
+   },
+   "rainyDayFy2026": 390,
+   "midYearFy2026": {
+    "netChange": 46.6,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "fundTransfers",
+    "priorYearBalance"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "hiringFreeze",
+    "fundTransfers",
+    "priorYearBalance"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 2781,
+     "fy2025Gf": 200,
+     "pct2024": {
+      "gf": 9.2,
+      "ff": 11.0,
+      "total": 9.4
+     },
+     "pct2025": {
+      "gf": 5.5,
+      "ff": -6.9,
+      "total": 4.1
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 207,
+     "fy2025Gf": 27,
+     "pct2024": {
+      "gf": 18.5,
+      "ff": -72.0,
+      "total": 1.2
+     },
+     "pct2025": {
+      "gf": -81.3,
+      "ff": 2385.7,
+      "total": 22.5
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 2193,
+     "fy2025Gf": 732,
+     "pct2024": {
+      "gf": 12.0,
+      "ff": -1.2,
+      "total": 3.4
+     },
+     "pct2025": {
+      "gf": 6.8,
+      "ff": 4.4,
+      "total": 5.3
+     }
+    },
+    "corrections": {
+     "fy2025Total": 220,
+     "fy2025Gf": 159,
+     "pct2024": {
+      "gf": 15.4,
+      "ff": -54.5,
+      "total": 11.2
+     },
+     "pct2025": {
+      "gf": -20.3,
+      "ff": 1060.0,
+      "total": 5.8
+     }
+    },
+    "transportation": {
+     "fy2025Total": 783,
+     "fy2025Gf": 9,
+     "pct2024": {
+      "gf": 9.1,
+      "ff": 10.5,
+      "total": 9.7
+     },
+     "pct2025": {
+      "gf": 0.3,
+      "ff": -6.9,
+      "total": -3.7
+     }
+    },
+    "allOther": {
+     "fy2025Total": 2777,
+     "fy2025Gf": 1292,
+     "pct2024": {
+      "gf": 31.1,
+      "ff": -21.6,
+      "total": 2.7
+     },
+     "pct2025": {
+      "gf": 12.6,
+      "ff": 20.2,
+      "total": 15.5
+     }
+    },
+    "capital": {
+     "fy2025Total": 489,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 8.3,
+      "total": 8.8
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": -9.1,
+      "total": -3.6
+     }
+    }
+   },
+   "mix": {
+    "k12": 31.0,
+    "higherEd": 2.3,
+    "medicaid": 24.5,
+    "corrections": 2.5,
+    "transportation": 8.7,
+    "allOther": 31.0
+   },
+   "totalFy2025": 8961,
+   "debtServiceFy2025": {
+    "gf": 78,
+    "of": 0,
+    "total": 78
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 405,
+     "pct2025": -9.0
+    },
+    "allOther": {
+     "fy2025Total": 43,
+     "pct2025": 26.5
+    },
+    "higherEd": {
+     "fy2025Total": 3,
+     "pct2025": -66.7
+    },
+    "environment": {
+     "fy2025Total": 32,
+     "pct2025": 88.2
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 5,
+     "pct2025": 400.0
+    },
+    "corrections": {
+     "fy2025Total": 1,
+     "pct2025": 0.0
+    }
+   }
+  },
+  "virginia": {
+   "name": "Virginia",
+   "generalFund": {
+    "fy2024": 31042,
+    "fy2025": 36552,
+    "fy2025Prelim": 36552,
+    "fy2026Enacted": 32918,
+    "fy2026Estimated": 33780,
+    "fy2027Proposed": null
+   },
+   "pctChange": {
+    "fy2025": 17.8,
+    "fy2026Enacted": -9.9,
+    "fy2026Estimated": -7.6,
+    "fy2027Proposed": null
+   },
+   "rainyDayFy2026": 4169,
+   "midYearFy2026": {
+    "netChange": 867.2,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 12853,
+     "fy2025Gf": 9671,
+     "pct2024": {
+      "gf": 7.7,
+      "ff": 3.3,
+      "total": 6.7
+     },
+     "pct2025": {
+      "gf": 7.1,
+      "ff": -25.2,
+      "total": 0.2
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 11148,
+     "fy2025Gf": 3805,
+     "pct2024": {
+      "gf": 13.7,
+      "ff": -9.0,
+      "total": 10.0
+     },
+     "pct2025": {
+      "gf": 5.4,
+      "ff": 28.8,
+      "total": 4.1
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 24334,
+     "fy2025Gf": 7386,
+     "pct2024": {
+      "gf": 0.1,
+      "ff": -5.6,
+      "total": -3.7
+     },
+     "pct2025": {
+      "gf": 18.7,
+      "ff": 9.3,
+      "total": 12.7
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1883,
+     "fy2025Gf": 1688,
+     "pct2024": {
+      "gf": -2.5,
+      "ff": -91.4,
+      "total": -6.5
+     },
+     "pct2025": {
+      "gf": 8.2,
+      "ff": 1014.3,
+      "total": 12.6
+     }
+    },
+    "transportation": {
+     "fy2025Total": 10875,
+     "fy2025Gf": 721,
+     "pct2024": {
+      "gf": 26.4,
+      "ff": -96.9,
+      "total": 4.9
+     },
+     "pct2025": {
+      "gf": -3.5,
+      "ff": 3151.0,
+      "total": 12.1
+     }
+    },
+    "allOther": {
+     "fy2025Total": 28312,
+     "fy2025Gf": 9677,
+     "pct2024": {
+      "gf": 7.4,
+      "ff": 27.4,
+      "total": 11.1
+     },
+     "pct2025": {
+      "gf": 9.6,
+      "ff": -23.6,
+      "total": 3.1
+     }
+    },
+    "capital": {
+     "fy2025Total": 1679,
+     "fy2025Gf": 519,
+     "pct2024": {
+      "gf": 141.8,
+      "ff": 8.5,
+      "total": 34.4
+     },
+     "pct2025": {
+      "gf": 40.3,
+      "ff": 78.4,
+      "total": -13.7
+     }
+    }
+   },
+   "mix": {
+    "k12": 14.4,
+    "higherEd": 12.5,
+    "medicaid": 27.2,
+    "corrections": 2.1,
+    "transportation": 12.2,
+    "allOther": 31.7
+   },
+   "totalFy2025": 89405,
+   "debtServiceFy2025": {
+    "gf": 1001,
+    "of": 36,
+    "total": 1037
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 444,
+     "pct2025": -5.3
+    },
+    "allOther": {
+     "fy2025Total": 345,
+     "pct2025": 9.9
+    },
+    "higherEd": {
+     "fy2025Total": 833,
+     "pct2025": -25.0
+    },
+    "environment": {
+     "fy2025Total": 21,
+     "pct2025": -19.2
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 36,
+     "pct2025": 38.5
+    }
+   }
+  },
+  "washington": {
+   "name": "Washington",
+   "generalFund": {
+    "fy2024": 32398,
+    "fy2025": 35612,
+    "fy2025Prelim": 35612,
+    "fy2026Enacted": 35537,
+    "fy2026Estimated": 35846,
+    "fy2027Proposed": 36487
+   },
+   "pctChange": {
+    "fy2025": 9.9,
+    "fy2026Enacted": -0.2,
+    "fy2026Estimated": 0.7,
+    "fy2027Proposed": 1.8
+   },
+   "rainyDayFy2026": 1625,
+   "midYearFy2026": {
+    "netChange": 1248.0,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "hiringFreeze",
+    "pensionAdjustments",
+    "reorganizeAgencies",
+    "fundTransfers",
+    "revenueIncrease"
+   ],
+   "strategiesFy2027": [
+    "targetedCuts",
+    "layoffs",
+    "hiringFreeze",
+    "rainyDayFund",
+    "revenueIncrease",
+    "medicaidChanges"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 19221,
+     "fy2025Gf": 15930,
+     "pct2024": {
+      "gf": 8.1,
+      "ff": -14.3,
+      "total": 4.5
+     },
+     "pct2025": {
+      "gf": 8.5,
+      "ff": -29.5,
+      "total": 3.7
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 10922,
+     "fy2025Gf": 2370,
+     "pct2024": {
+      "gf": 5.4,
+      "ff": -50.9,
+      "total": 2.7
+     },
+     "pct2025": {
+      "gf": 13.9,
+      "ff": -60.7,
+      "total": 14.2
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 21867,
+     "fy2025Gf": 6924,
+     "pct2024": {
+      "gf": 18.7,
+      "ff": -2.9,
+      "total": 4.3
+     },
+     "pct2025": {
+      "gf": 12.5,
+      "ff": 11.2,
+      "total": 11.7
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1794,
+     "fy2025Gf": 1415,
+     "pct2024": {
+      "gf": -5.2,
+      "ff": 1930.8,
+      "total": 11.3
+     },
+     "pct2025": {
+      "gf": 2.0,
+      "ff": 26.9,
+      "total": 6.9
+     }
+    },
+    "transportation": {
+     "fy2025Total": 4854,
+     "fy2025Gf": 2,
+     "pct2024": {
+      "gf": 79.4,
+      "ff": -9.3,
+      "total": 23.2
+     },
+     "pct2025": {
+      "gf": 11.7,
+      "ff": 15.9,
+      "total": 4.1
+     }
+    },
+    "allOther": {
+     "fy2025Total": 23034,
+     "fy2025Gf": 8954,
+     "pct2024": {
+      "gf": -1.9,
+      "ff": -15.2,
+      "total": -4.6
+     },
+     "pct2025": {
+      "gf": 16.8,
+      "ff": -9.8,
+      "total": 11.5
+     }
+    },
+    "capital": {
+     "fy2025Total": 6668,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": 104.8,
+      "total": 17.0
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": 0.3,
+      "total": 15.5
+     }
+    }
+   },
+   "mix": {
+    "k12": 23.5,
+    "higherEd": 13.4,
+    "medicaid": 26.8,
+    "corrections": 2.2,
+    "transportation": 5.9,
+    "allOther": 28.2
+   },
+   "totalFy2025": 81692,
+   "debtServiceFy2025": {
+    "gf": 1467,
+    "of": 848,
+    "total": 2315
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 3042,
+     "pct2025": 3.9
+    },
+    "allOther": {
+     "fy2025Total": 1521,
+     "pct2025": 46.1
+    },
+    "higherEd": {
+     "fy2025Total": 643,
+     "pct2025": 32.6
+    },
+    "environment": {
+     "fy2025Total": 918,
+     "pct2025": -2.1
+    },
+    "k12": {
+     "fy2025Total": 376,
+     "pct2025": 26.6
+    },
+    "housing": {
+     "fy2025Total": 129,
+     "pct2025": 92.5
+    },
+    "corrections": {
+     "fy2025Total": 39,
+     "pct2025": 116.7
+    }
+   }
+  },
+  "west-virginia": {
+   "name": "West Virginia",
+   "generalFund": {
+    "fy2024": 6339,
+    "fy2025": 5973,
+    "fy2025Prelim": 5973,
+    "fy2026Enacted": 5808,
+    "fy2026Estimated": 6130,
+    "fy2027Proposed": 5909
+   },
+   "pctChange": {
+    "fy2025": -5.8,
+    "fy2026Enacted": -2.8,
+    "fy2026Estimated": 2.6,
+    "fy2027Proposed": -3.6
+   },
+   "rainyDayFy2026": 1397,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [
+    "targetedCuts",
+    "reorganizeAgencies"
+   ],
+   "strategiesFy2027": [
+    "acrossBoardCuts",
+    "targetedCuts",
+    "benefitCuts",
+    "pensionAdjustments",
+    "priorYearBalance",
+    "medicaidChanges"
+   ],
+   "functions": {
+    "k12": {
+     "fy2025Total": 3054,
+     "fy2025Gf": 2202,
+     "pct2024": {
+      "gf": 9.9,
+      "ff": 20.8,
+      "total": 12.6
+     },
+     "pct2025": {
+      "gf": 3.8,
+      "ff": -26.1,
+      "total": -4.3
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 2235,
+     "fy2025Gf": 446,
+     "pct2024": {
+      "gf": 3.6,
+      "ff": -23.4,
+      "total": 2.7
+     },
+     "pct2025": {
+      "gf": 6.0,
+      "ff": 20.4,
+      "total": 6.3
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 5194,
+     "fy2025Gf": 347,
+     "pct2024": {
+      "gf": 16.5,
+      "ff": -11.3,
+      "total": -6.3
+     },
+     "pct2025": {
+      "gf": 6.5,
+      "ff": 1.3,
+      "total": 2.4
+     }
+    },
+    "corrections": {
+     "fy2025Total": 570,
+     "fy2025Gf": 415,
+     "pct2024": {
+      "gf": 8.7,
+      "ff": null,
+      "total": 8.7
+     },
+     "pct2025": {
+      "gf": 11.5,
+      "ff": null,
+      "total": 11.5
+     }
+    },
+    "transportation": {
+     "fy2025Total": 2306,
+     "fy2025Gf": 7,
+     "pct2024": {
+      "gf": 5.7,
+      "ff": 22.2,
+      "total": 6.8
+     },
+     "pct2025": {
+      "gf": 24.6,
+      "ff": 0.0,
+      "total": 20.7
+     }
+    },
+    "allOther": {
+     "fy2025Total": 13659,
+     "fy2025Gf": 1410,
+     "pct2024": {
+      "gf": 52.1,
+      "ff": -40.2,
+      "total": 39.0
+     },
+     "pct2025": {
+      "gf": 4.8,
+      "ff": 5.7,
+      "total": 4.8
+     }
+    },
+    "capital": {
+     "fy2025Total": 376,
+     "fy2025Gf": 89,
+     "pct2024": {
+      "gf": 33.3,
+      "ff": 25.0,
+      "total": -78.1
+     },
+     "pct2025": {
+      "gf": -14.4,
+      "ff": 35.0,
+      "total": 2.5
+     }
+    }
+   },
+   "mix": {
+    "k12": 11.3,
+    "higherEd": 8.3,
+    "medicaid": 19.2,
+    "corrections": 2.1,
+    "transportation": 8.5,
+    "allOther": 50.6
+   },
+   "totalFy2025": 27018,
+   "debtServiceFy2025": {
+    "gf": 161,
+    "of": 181,
+    "total": 342
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 188,
+     "pct2025": -8.7
+    },
+    "allOther": {
+     "fy2025Total": 97,
+     "pct2025": -19.2
+    },
+    "higherEd": {
+     "fy2025Total": 68,
+     "pct2025": 209.1
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 4,
+     "pct2025": 33.3
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 19,
+     "pct2025": 18.8
+    }
+   }
+  },
+  "wisconsin": {
+   "name": "Wisconsin",
+   "generalFund": {
+    "fy2024": 22897,
+    "fy2025": 21496,
+    "fy2025Prelim": 21496,
+    "fy2026Enacted": 22723,
+    "fy2026Estimated": 22735,
+    "fy2027Proposed": 23006
+   },
+   "pctChange": {
+    "fy2025": -6.1,
+    "fy2026Enacted": 5.7,
+    "fy2026Estimated": 5.8,
+    "fy2027Proposed": 1.2
+   },
+   "rainyDayFy2026": null,
+   "midYearFy2026": {
+    "netChange": 47.7,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 10881,
+     "fy2025Gf": 8948,
+     "pct2024": {
+      "gf": 6.0,
+      "ff": 49.1,
+      "total": 12.0
+     },
+     "pct2025": {
+      "gf": 3.4,
+      "ff": -28.8,
+      "total": -2.6
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 9004,
+     "fy2025Gf": 2081,
+     "pct2024": {
+      "gf": 16.4,
+      "ff": 4.0,
+      "total": 13.5
+     },
+     "pct2025": {
+      "gf": 4.5,
+      "ff": 6.1,
+      "total": 4.9
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 15815,
+     "fy2025Gf": 4683,
+     "pct2024": {
+      "gf": 17.9,
+      "ff": -5.6,
+      "total": 4.0
+     },
+     "pct2025": {
+      "gf": 4.8,
+      "ff": 7.3,
+      "total": 6.1
+     }
+    },
+    "corrections": {
+     "fy2025Total": 1786,
+     "fy2025Gf": 1626,
+     "pct2024": {
+      "gf": 19.7,
+      "ff": 50.0,
+      "total": 19.7
+     },
+     "pct2025": {
+      "gf": 7.0,
+      "ff": 0.0,
+      "total": 6.9
+     }
+    },
+    "transportation": {
+     "fy2025Total": 4241,
+     "fy2025Gf": 192,
+     "pct2024": {
+      "gf": 8.3,
+      "ff": -7.4,
+      "total": 3.0
+     },
+     "pct2025": {
+      "gf": 8.4,
+      "ff": 11.9,
+      "total": 9.4
+     }
+    },
+    "allOther": {
+     "fy2025Total": 26897,
+     "fy2025Gf": 3589,
+     "pct2024": {
+      "gf": 12.2,
+      "ff": -34.7,
+      "total": 0.0
+     },
+     "pct2025": {
+      "gf": 0.8,
+      "ff": 15.0,
+      "total": 3.2
+     }
+    },
+    "capital": {
+     "fy2025Total": 0,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": null,
+      "ff": null,
+      "total": null
+     },
+     "pct2025": {
+      "gf": null,
+      "ff": null,
+      "total": null
+     }
+    }
+   },
+   "mix": {
+    "k12": 15.9,
+    "higherEd": 13.1,
+    "medicaid": 23.0,
+    "corrections": 2.6,
+    "transportation": 6.2,
+    "allOther": 39.2
+   },
+   "totalFy2025": 68622,
+   "debtServiceFy2025": {
+    "gf": 454,
+    "of": 357,
+    "total": 811
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "allOther": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "higherEd": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 0,
+     "pct2025": null
+    }
+   }
+  },
+  "wyoming": {
+   "name": "Wyoming",
+   "generalFund": {
+    "fy2024": 1807,
+    "fy2025": 2242,
+    "fy2025Prelim": 1962,
+    "fy2026Enacted": 1962,
+    "fy2026Estimated": 2314,
+    "fy2027Proposed": 2079
+   },
+   "pctChange": {
+    "fy2025": 24.1,
+    "fy2026Enacted": 0.0,
+    "fy2026Estimated": 3.2,
+    "fy2027Proposed": -10.2
+   },
+   "rainyDayFy2026": 1721,
+   "midYearFy2026": {
+    "netChange": null,
+    "revenueShortfall": null
+   },
+   "strategiesFy2026": [],
+   "strategiesFy2027": [],
+   "functions": {
+    "k12": {
+     "fy2025Total": 1050,
+     "fy2025Gf": 0,
+     "pct2024": {
+      "gf": 15.3,
+      "ff": 0.0,
+      "total": 15.3
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": 0.0,
+      "total": 0.0
+     }
+    },
+    "higherEd": {
+     "fy2025Total": 419,
+     "fy2025Gf": 404,
+     "pct2024": {
+      "gf": 17.7,
+      "ff": -100.0,
+      "total": 17.0
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": 0.0,
+      "total": 0.0
+     }
+    },
+    "medicaid": {
+     "fy2025Total": 765,
+     "fy2025Gf": 265,
+     "pct2024": {
+      "gf": 5.5,
+      "ff": 7.1,
+      "total": 6.4
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": 0.0,
+      "total": 0.0
+     }
+    },
+    "corrections": {
+     "fy2025Total": 171,
+     "fy2025Gf": 136,
+     "pct2024": {
+      "gf": 25.7,
+      "ff": null,
+      "total": 25.7
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": null,
+      "total": 0.0
+     }
+    },
+    "transportation": {
+     "fy2025Total": 188,
+     "fy2025Gf": 39,
+     "pct2024": {
+      "gf": 27.8,
+      "ff": 3.8,
+      "total": 23.7
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": 0.0,
+      "total": 0.0
+     }
+    },
+    "allOther": {
+     "fy2025Total": 2995,
+     "fy2025Gf": 810,
+     "pct2024": {
+      "gf": -3.1,
+      "ff": -2.9,
+      "total": -3.0
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": 0.0,
+      "total": 0.0
+     }
+    },
+    "capital": {
+     "fy2025Total": 185,
+     "fy2025Gf": 107,
+     "pct2024": {
+      "gf": 0.9,
+      "ff": null,
+      "total": 0.5
+     },
+     "pct2025": {
+      "gf": 0.0,
+      "ff": null,
+      "total": 0.0
+     }
+    }
+   },
+   "mix": {
+    "k12": 18.8,
+    "higherEd": 7.5,
+    "medicaid": 13.7,
+    "corrections": 3.1,
+    "transportation": 3.4,
+    "allOther": 53.6
+   },
+   "totalFy2025": 5588,
+   "debtServiceFy2025": {
+    "gf": 0,
+    "of": 0,
+    "total": 0
+   },
+   "capitalPrograms": {
+    "transportation": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "allOther": {
+     "fy2025Total": 78,
+     "pct2025": 0.0
+    },
+    "higherEd": {
+     "fy2025Total": 105,
+     "pct2025": 0.0
+    },
+    "environment": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "k12": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "housing": {
+     "fy2025Total": 0,
+     "pct2025": null
+    },
+    "corrections": {
+     "fy2025Total": 2,
+     "pct2025": 0.0
+    }
+   }
+  }
+ },
+ "sources": [
+  {
+   "label": "NASBO, The Fiscal Survey of States: Fall 2025 (enacted FY2026 budgets; FY2024-25 actuals)",
+   "url": "https://higherlogicdownload.s3.amazonaws.com/NASBO/9d2d2db1-c943-4f1b-b750-0fca152d64c2/UploadedImages/Fiscal%20Survey/NASBO_Fall_2025_Fiscal_Survey_Full_Report_S.pdf"
+  },
+  {
+   "label": "NASBO, The Fiscal Survey of States: Spring 2026 (governors' recommended FY2027 budgets; FY2026 estimates)",
+   "url": "https://higherlogicdownload.s3.amazonaws.com/NASBO/9d2d2db1-c943-4f1b-b750-0fca152d64c2/UploadedImages/Fiscal%20Survey/Spring_2026_Fiscal_Survey_Full_Report_S.pdf"
+  },
+  {
+   "label": "NASBO, 2025 State Expenditure Report (spending by program area, FY2023-2025)",
+   "url": "https://higherlogicdownload.s3.amazonaws.com/NASBO/9d2d2db1-c943-4f1b-b750-0fca152d64c2/UploadedImages/SER%20Archive/2025_SER/2025_NASBO_State_Expenditure_Report_S.pdf"
+  },
+  {
+   "label": "NASBO Fiscal Survey of States (report hub)",
+   "url": "https://www.nasbo.org/reports-data/fiscal-survey-of-states"
+  }
+ ]
+}

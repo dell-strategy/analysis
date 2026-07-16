@@ -1,0 +1,2723 @@
+{
+ "fy2024_actual": {
+  "Alabama": {
+   "revenues": 14127,
+   "expenditures": 12763,
+   "endingBalance": 3076,
+   "rainyDayFund": 2682
+  },
+  "Alaska": {
+   "revenues": 3105,
+   "expenditures": 6464,
+   "endingBalance": -256,
+   "rainyDayFund": 2557
+  },
+  "Arizona": {
+   "revenues": 16811,
+   "expenditures": 17317,
+   "endingBalance": 2590,
+   "rainyDayFund": 1477
+  },
+  "Arkansas": {
+   "revenues": 6901,
+   "expenditures": 6202,
+   "endingBalance": 698,
+   "rainyDayFund": 1815
+  },
+  "California": {
+   "revenues": 193206,
+   "expenditures": 205670,
+   "endingBalance": 41978,
+   "rainyDayFund": 48171
+  },
+  "Colorado": {
+   "revenues": 17251,
+   "expenditures": 16873,
+   "endingBalance": 3154,
+   "rainyDayFund": 3154
+  },
+  "Connecticut": {
+   "revenues": 22716,
+   "expenditures": 22315,
+   "endingBalance": 401,
+   "rainyDayFund": 4105
+  },
+  "Delaware": {
+   "revenues": 6349,
+   "expenditures": 6232,
+   "endingBalance": 3156,
+   "rainyDayFund": 329
+  },
+  "Florida": {
+   "revenues": 50170,
+   "expenditures": 55017,
+   "endingBalance": 16405,
+   "rainyDayFund": 4140
+  },
+  "Georgia": {
+   "revenues": 36442,
+   "expenditures": 35685,
+   "endingBalance": 16944,
+   "rainyDayFund": 5466
+  },
+  "Hawaii": {
+   "revenues": 10636,
+   "expenditures": 10722,
+   "endingBalance": 1593,
+   "rainyDayFund": 1516
+  },
+  "Idaho": {
+   "revenues": 5381,
+   "expenditures": 5110,
+   "endingBalance": 320,
+   "rainyDayFund": 2156
+  },
+  "Illinois": {
+   "revenues": 52589,
+   "expenditures": 53184,
+   "endingBalance": 4672,
+   "rainyDayFund": 1940
+  },
+  "Indiana": {
+   "revenues": 21912,
+   "expenditures": 22078,
+   "endingBalance": 665,
+   "rainyDayFund": 1886
+  },
+  "Iowa": {
+   "revenues": 9756,
+   "expenditures": 8560,
+   "endingBalance": 2053,
+   "rainyDayFund": 961
+  },
+  "Kansas": {
+   "revenues": 10140,
+   "expenditures": 9365,
+   "endingBalance": 3221,
+   "rainyDayFund": 1687
+  },
+  "Kentucky": {
+   "revenues": 15677,
+   "expenditures": 14296,
+   "endingBalance": 15,
+   "rainyDayFund": 5226
+  },
+  "Louisiana": {
+   "revenues": 14045,
+   "expenditures": 13803,
+   "endingBalance": 595,
+   "rainyDayFund": 1058
+  },
+  "Maine": {
+   "revenues": 5353,
+   "expenditures": 5076,
+   "endingBalance": 322,
+   "rainyDayFund": 968
+  },
+  "Maryland": {
+   "revenues": 24863,
+   "expenditures": 27397,
+   "endingBalance": 1060,
+   "rainyDayFund": 2411
+  },
+  "Massachusetts": {
+   "revenues": 48652,
+   "expenditures": 48986,
+   "endingBalance": 15004,
+   "rainyDayFund": 8524
+  },
+  "Michigan": {
+   "revenues": 13765,
+   "expenditures": 15542,
+   "endingBalance": 2149,
+   "rainyDayFund": 1997
+  },
+  "Minnesota": {
+   "revenues": 30308,
+   "expenditures": 35282,
+   "endingBalance": 11806,
+   "rainyDayFund": 6425
+  },
+  "Mississippi": {
+   "revenues": 7707,
+   "expenditures": 6668,
+   "endingBalance": 11,
+   "rainyDayFund": 642
+  },
+  "Missouri": {
+   "revenues": 13429,
+   "expenditures": 14562,
+   "endingBalance": 4801,
+   "rainyDayFund": 928
+  },
+  "Montana": {
+   "revenues": 3322,
+   "expenditures": 3339,
+   "endingBalance": 1039,
+   "rainyDayFund": 522
+  },
+  "Nebraska": {
+   "revenues": 7156,
+   "expenditures": 5315,
+   "endingBalance": 1843,
+   "rainyDayFund": 913
+  },
+  "Nevada": {
+   "revenues": 6010,
+   "expenditures": 5383,
+   "endingBalance": 1497,
+   "rainyDayFund": 1174
+  },
+  "New Hampshire": {
+   "revenues": 2087,
+   "expenditures": 1981,
+   "endingBalance": 74,
+   "rainyDayFund": 293
+  },
+  "New Jersey": {
+   "revenues": 52433,
+   "expenditures": 55126,
+   "endingBalance": 9140,
+   "rainyDayFund": 322
+  },
+  "New Mexico": {
+   "revenues": 13190,
+   "expenditures": 13087,
+   "endingBalance": 3164,
+   "rainyDayFund": 3164
+  },
+  "New York": {
+   "revenues": 100968,
+   "expenditures": 97867,
+   "endingBalance": 46331,
+   "rainyDayFund": 6256
+  },
+  "North Carolina": {
+   "revenues": 33694,
+   "expenditures": 29216,
+   "endingBalance": 2104,
+   "rainyDayFund": 4750
+  },
+  "North Dakota": {
+   "revenues": 2675,
+   "expenditures": 3291,
+   "endingBalance": 1210,
+   "rainyDayFund": 915
+  },
+  "Ohio": {
+   "revenues": 28687,
+   "expenditures": 35585,
+   "endingBalance": 2142,
+   "rainyDayFund": 3787
+  },
+  "Oklahoma": {
+   "revenues": 9560,
+   "expenditures": 10471,
+   "endingBalance": 3582,
+   "rainyDayFund": 2029
+  },
+  "Oregon": {
+   "revenues": 11949,
+   "expenditures": 16355,
+   "endingBalance": 3609,
+   "rainyDayFund": 2668
+  },
+  "Pennsylvania": {
+   "revenues": 45473,
+   "expenditures": 44864,
+   "endingBalance": 6632,
+   "rainyDayFund": 6374
+  },
+  "Rhode Island": {
+   "revenues": 5419,
+   "expenditures": 5236,
+   "endingBalance": 326,
+   "rainyDayFund": 347
+  },
+  "South Carolina": {
+   "revenues": 13708,
+   "expenditures": 13659,
+   "endingBalance": 6020,
+   "rainyDayFund": 1164
+  },
+  "South Dakota": {
+   "revenues": 2426,
+   "expenditures": 2361,
+   "endingBalance": 81,
+   "rainyDayFund": 242
+  },
+  "Tennessee": {
+   "revenues": 23899,
+   "expenditures": 21396,
+   "endingBalance": 2171,
+   "rainyDayFund": 2050
+  },
+  "Texas": {
+   "revenues": 83785,
+   "expenditures": 85865,
+   "endingBalance": 31790,
+   "rainyDayFund": 21016
+  },
+  "Utah": {
+   "revenues": 11461,
+   "expenditures": 13674,
+   "endingBalance": 1359,
+   "rainyDayFund": 1187
+  },
+  "Vermont": {
+   "revenues": 2329,
+   "expenditures": 2401,
+   "endingBalance": 158,
+   "rainyDayFund": 307
+  },
+  "Virginia": {
+   "revenues": 32582,
+   "expenditures": 31042,
+   "endingBalance": 2990,
+   "rainyDayFund": 4693
+  },
+  "Washington": {
+   "revenues": 31100,
+   "expenditures": 32398,
+   "endingBalance": 4002,
+   "rainyDayFund": 1769
+  },
+  "West Virginia": {
+   "revenues": 5711,
+   "expenditures": 6339,
+   "endingBalance": 2215,
+   "rainyDayFund": 1256
+  },
+  "Wisconsin": {
+   "revenues": 21330,
+   "expenditures": 22897,
+   "endingBalance": 4622,
+   "rainyDayFund": 1899
+  },
+  "Wyoming": {
+   "revenues": 1434,
+   "expenditures": 1807,
+   "endingBalance": 0,
+   "rainyDayFund": 1496
+  },
+  "District of Columbia": {
+   "revenues": 11598,
+   "expenditures": 12298,
+   "endingBalance": 4923,
+   "rainyDayFund": 606
+  },
+  "Guam": {
+   "revenues": 1059,
+   "expenditures": 970,
+   "endingBalance": 187,
+   "rainyDayFund": 59
+  },
+  "Puerto Rico": {
+   "revenues": 13419,
+   "expenditures": 13419,
+   "endingBalance": 0,
+   "rainyDayFund": 1268
+  },
+  "U.S. Virgin Islands": {
+   "revenues": 741,
+   "expenditures": 1156,
+   "endingBalance": 11,
+   "rainyDayFund": 3
+  }
+ },
+ "fy2025_prelim": {
+  "Alabama": {
+   "revenues": 14563,
+   "expenditures": 14155,
+   "endingBalance": 2148,
+   "rainyDayFund": 2750
+  },
+  "Alaska": {
+   "revenues": 2572,
+   "expenditures": 6441,
+   "endingBalance": -289,
+   "rainyDayFund": 2730
+  },
+  "Arizona": {
+   "revenues": 17241,
+   "expenditures": 16245,
+   "endingBalance": 2421,
+   "rainyDayFund": 1545
+  },
+  "Arkansas": {
+   "revenues": 6526,
+   "expenditures": 6312,
+   "endingBalance": 215,
+   "rainyDayFund": 1815
+  },
+  "California": {
+   "revenues": 211187,
+   "expenditures": 233577,
+   "endingBalance": 35146,
+   "rainyDayFund": 35891
+  },
+  "Colorado": {
+   "revenues": 17114,
+   "expenditures": 18436,
+   "endingBalance": 2334,
+   "rainyDayFund": 2334
+  },
+  "Connecticut": {
+   "revenues": 23814,
+   "expenditures": 23434,
+   "endingBalance": 380,
+   "rainyDayFund": 4327
+  },
+  "Delaware": {
+   "revenues": 6694,
+   "expenditures": 6925,
+   "endingBalance": 2925,
+   "rainyDayFund": 349
+  },
+  "Florida": {
+   "revenues": 50558,
+   "expenditures": 53190,
+   "endingBalance": 13773,
+   "rainyDayFund": 4441
+  },
+  "Georgia": {
+   "revenues": 37220,
+   "expenditures": 36266,
+   "endingBalance": 14636,
+   "rainyDayFund": 5583
+  },
+  "Hawaii": {
+   "revenues": 11267,
+   "expenditures": 10851,
+   "endingBalance": 2009,
+   "rainyDayFund": 1568
+  },
+  "Idaho": {
+   "revenues": 5547,
+   "expenditures": 5348,
+   "endingBalance": 420,
+   "rainyDayFund": 2172
+  },
+  "Illinois": {
+   "revenues": 53998,
+   "expenditures": 55285,
+   "endingBalance": 5456,
+   "rainyDayFund": 2357
+  },
+  "Indiana": {
+   "revenues": 22665,
+   "expenditures": 22856,
+   "endingBalance": 676,
+   "rainyDayFund": 1826
+  },
+  "Iowa": {
+   "revenues": 9131,
+   "expenditures": 8940,
+   "endingBalance": 2063,
+   "rainyDayFund": 930
+  },
+  "Kansas": {
+   "revenues": 10022,
+   "expenditures": 10315,
+   "endingBalance": 2933,
+   "rainyDayFund": 1890
+  },
+  "Kentucky": {
+   "revenues": 15804,
+   "expenditures": 15870,
+   "endingBalance": 519,
+   "rainyDayFund": 4812
+  },
+  "Louisiana": {
+   "revenues": 12239,
+   "expenditures": 13027,
+   "endingBalance": 1,
+   "rainyDayFund": 1227
+  },
+  "Maine": {
+   "revenues": 5605,
+   "expenditures": 5513,
+   "endingBalance": 156,
+   "rainyDayFund": 1030
+  },
+  "Maryland": {
+   "revenues": 25716,
+   "expenditures": 27572,
+   "endingBalance": 271,
+   "rainyDayFund": 2185
+  },
+  "Massachusetts": {
+   "revenues": 50376,
+   "expenditures": 52295,
+   "endingBalance": 13086,
+   "rainyDayFund": 8227
+  },
+  "Michigan": {
+   "revenues": 14135,
+   "expenditures": 15381,
+   "endingBalance": 903,
+   "rainyDayFund": 2149
+  },
+  "Minnesota": {
+   "revenues": 31067,
+   "expenditures": 35498,
+   "endingBalance": 7464,
+   "rainyDayFund": 3527
+  },
+  "Mississippi": {
+   "revenues": 7600,
+   "expenditures": 7030,
+   "endingBalance": 6,
+   "rainyDayFund": 673
+  },
+  "Missouri": {
+   "revenues": 13431,
+   "expenditures": 14129,
+   "endingBalance": 4323,
+   "rainyDayFund": 955
+  },
+  "Montana": {
+   "revenues": 3461,
+   "expenditures": 3705,
+   "endingBalance": 769,
+   "rainyDayFund": 522
+  },
+  "Nebraska": {
+   "revenues": 6159,
+   "expenditures": 5475,
+   "endingBalance": 792,
+   "rainyDayFund": 877
+  },
+  "Nevada": {
+   "revenues": 6012,
+   "expenditures": 6662,
+   "endingBalance": 1168,
+   "rainyDayFund": 1244
+  },
+  "New Hampshire": {
+   "revenues": 1884,
+   "expenditures": 2010,
+   "endingBalance": 0,
+   "rainyDayFund": 245
+  },
+  "New Jersey": {
+   "revenues": 54764,
+   "expenditures": 57664,
+   "endingBalance": 8306,
+   "rainyDayFund": 0
+  },
+  "New Mexico": {
+   "revenues": 13700,
+   "expenditures": 13794,
+   "endingBalance": 3473,
+   "rainyDayFund": 3474
+  },
+  "New York": {
+   "revenues": 111535,
+   "expenditures": 105031,
+   "endingBalance": 56916,
+   "rainyDayFund": 8756
+  },
+  "North Carolina": {
+   "revenues": 34559,
+   "expenditures": 31267,
+   "endingBalance": 891,
+   "rainyDayFund": 3622
+  },
+  "North Dakota": {
+   "revenues": 2429,
+   "expenditures": 2485,
+   "endingBalance": 1351,
+   "rainyDayFund": 939
+  },
+  "Ohio": {
+   "revenues": 30012,
+   "expenditures": 31066,
+   "endingBalance": 1119,
+   "rainyDayFund": 3943
+  },
+  "Oklahoma": {
+   "revenues": 9835,
+   "expenditures": 10590,
+   "endingBalance": 2894,
+   "rainyDayFund": 1776
+  },
+  "Oregon": {
+   "revenues": 15674,
+   "expenditures": 17022,
+   "endingBalance": 2019,
+   "rainyDayFund": 2923
+  },
+  "Pennsylvania": {
+   "revenues": 46050,
+   "expenditures": 47904,
+   "endingBalance": 2894,
+   "rainyDayFund": 7491
+  },
+  "Rhode Island": {
+   "revenues": 5624,
+   "expenditures": 5598,
+   "endingBalance": 230,
+   "rainyDayFund": 353
+  },
+  "South Carolina": {
+   "revenues": 14859,
+   "expenditures": 13831,
+   "endingBalance": 6604,
+   "rainyDayFund": 1442
+  },
+  "South Dakota": {
+   "revenues": 2604,
+   "expenditures": 2441,
+   "endingBalance": 169,
+   "rainyDayFund": 323
+  },
+  "Tennessee": {
+   "revenues": 24015,
+   "expenditures": 23126,
+   "endingBalance": 2405,
+   "rainyDayFund": 2150
+  },
+  "Texas": {
+   "revenues": 83599,
+   "expenditures": 98913,
+   "endingBalance": 10727,
+   "rainyDayFund": 24282
+  },
+  "Utah": {
+   "revenues": 11963,
+   "expenditures": 12657,
+   "endingBalance": 718,
+   "rainyDayFund": 1187
+  },
+  "Vermont": {
+   "revenues": 2838,
+   "expenditures": 2629,
+   "endingBalance": 257,
+   "rainyDayFund": 328
+  },
+  "Virginia": {
+   "revenues": 33576,
+   "expenditures": 36552,
+   "endingBalance": 13,
+   "rainyDayFund": 4750
+  },
+  "Washington": {
+   "revenues": 32033,
+   "expenditures": 35612,
+   "endingBalance": 1448,
+   "rainyDayFund": 1250
+  },
+  "West Virginia": {
+   "revenues": 5519,
+   "expenditures": 5973,
+   "endingBalance": 1806,
+   "rainyDayFund": 1347
+  },
+  "Wisconsin": {
+   "revenues": 22363,
+   "expenditures": 21496,
+   "endingBalance": 4606,
+   "rainyDayFund": 1991
+  },
+  "Wyoming": {
+   "revenues": 1481,
+   "expenditures": 1962,
+   "endingBalance": 0,
+   "rainyDayFund": 1721
+  },
+  "District of Columbia": {
+   "revenues": 14077,
+   "expenditures": 14846,
+   "endingBalance": 4154,
+   "rainyDayFund": 956
+  },
+  "Guam": {
+   "revenues": 1069,
+   "expenditures": 1005,
+   "endingBalance": 152,
+   "rainyDayFund": 88
+  },
+  "Puerto Rico": {
+   "revenues": 13634,
+   "expenditures": 9283,
+   "endingBalance": 4351,
+   "rainyDayFund": 1249
+  },
+  "U.S. Virgin Islands": {
+   "revenues": 802,
+   "expenditures": 1074,
+   "endingBalance": 2,
+   "rainyDayFund": 14
+  }
+ },
+ "fy2026_enacted": {
+  "Alabama": {
+   "revenues": 14451,
+   "expenditures": 13667,
+   "endingBalance": 1726,
+   "rainyDayFund": 3221
+  },
+  "Alaska": {
+   "revenues": 2330,
+   "expenditures": 5993,
+   "endingBalance": 135,
+   "rainyDayFund": 3158
+  },
+  "Arizona": {
+   "revenues": 17772,
+   "expenditures": 17571,
+   "endingBalance": 1386,
+   "rainyDayFund": 1625
+  },
+  "Arkansas": {
+   "revenues": 6679,
+   "expenditures": 6494,
+   "endingBalance": 185,
+   "rainyDayFund": 1815
+  },
+  "California": {
+   "revenues": 205674,
+   "expenditures": 228366,
+   "endingBalance": 22513,
+   "rainyDayFund": 15704
+  },
+  "Colorado": {
+   "revenues": 17975,
+   "expenditures": 17284,
+   "endingBalance": 2963,
+   "rainyDayFund": 2963
+  },
+  "Connecticut": {
+   "revenues": 24345,
+   "expenditures": 24036,
+   "endingBalance": 309,
+   "rainyDayFund": 4565
+  },
+  "Delaware": {
+   "revenues": 6783,
+   "expenditures": 7261,
+   "endingBalance": 2448,
+   "rainyDayFund": 367
+  },
+  "Florida": {
+   "revenues": 50803,
+   "expenditures": 55301,
+   "endingBalance": 9274,
+   "rainyDayFund": 4870
+  },
+  "Georgia": {
+   "revenues": 35948,
+   "expenditures": 35948,
+   "endingBalance": 14636,
+   "rainyDayFund": null
+  },
+  "Hawaii": {
+   "revenues": 10409,
+   "expenditures": 11257,
+   "endingBalance": 1710,
+   "rainyDayFund": 1619
+  },
+  "Idaho": {
+   "revenues": 5929,
+   "expenditures": 5624,
+   "endingBalance": 440,
+   "rainyDayFund": 2188
+  },
+  "Illinois": {
+   "revenues": 55297,
+   "expenditures": 56259,
+   "endingBalance": 5673,
+   "rainyDayFund": 2518
+  },
+  "Indiana": {
+   "revenues": 22993,
+   "expenditures": 22925,
+   "endingBalance": 745,
+   "rainyDayFund": 1863
+  },
+  "Iowa": {
+   "revenues": 8492,
+   "expenditures": 9418,
+   "endingBalance": 1613,
+   "rainyDayFund": 849
+  },
+  "Kansas": {
+   "revenues": 10061,
+   "expenditures": 11372,
+   "endingBalance": 1622,
+   "rainyDayFund": 1976
+  },
+  "Kentucky": {
+   "revenues": 15748,
+   "expenditures": 16967,
+   "endingBalance": 25,
+   "rainyDayFund": 3764
+  },
+  "Louisiana": {
+   "revenues": 12290,
+   "expenditures": 12213,
+   "endingBalance": 0,
+   "rainyDayFund": 1375
+  },
+  "Maine": {
+   "revenues": 5611,
+   "expenditures": 5808,
+   "endingBalance": 96,
+   "rainyDayFund": 1030
+  },
+  "Maryland": {
+   "revenues": 25384,
+   "expenditures": 27011,
+   "endingBalance": 321,
+   "rainyDayFund": 2050
+  },
+  "Massachusetts": {
+   "revenues": 51693,
+   "expenditures": 49611,
+   "endingBalance": 15168,
+   "rainyDayFund": 8324
+  },
+  "Michigan": {
+   "revenues": 13597,
+   "expenditures": 14115,
+   "endingBalance": 386,
+   "rainyDayFund": 2226
+  },
+  "Minnesota": {
+   "revenues": 31825,
+   "expenditures": 32991,
+   "endingBalance": 6693,
+   "rainyDayFund": 3527
+  },
+  "Mississippi": {
+   "revenues": 7627,
+   "expenditures": 7141,
+   "endingBalance": 339,
+   "rainyDayFund": 704
+  },
+  "Missouri": {
+   "revenues": 13562,
+   "expenditures": 15737,
+   "endingBalance": 2383,
+   "rainyDayFund": 956
+  },
+  "Montana": {
+   "revenues": 3499,
+   "expenditures": 3385,
+   "endingBalance": 883,
+   "rainyDayFund": 558
+  },
+  "Nebraska": {
+   "revenues": 7070,
+   "expenditures": 5485,
+   "endingBalance": 341,
+   "rainyDayFund": 821
+  },
+  "Nevada": {
+   "revenues": 6032,
+   "expenditures": 6660,
+   "endingBalance": 630,
+   "rainyDayFund": 1295
+  },
+  "New Hampshire": {
+   "revenues": 1765,
+   "expenditures": 1958,
+   "endingBalance": -55,
+   "rainyDayFund": 245
+  },
+  "New Jersey": {
+   "revenues": 56342,
+   "expenditures": 57687,
+   "endingBalance": 6704,
+   "rainyDayFund": 0
+  },
+  "New Mexico": {
+   "revenues": 13706,
+   "expenditures": 13625,
+   "endingBalance": 4054,
+   "rainyDayFund": 4054
+  },
+  "New York": {
+   "revenues": 115563,
+   "expenditures": 125512,
+   "endingBalance": 44919,
+   "rainyDayFund": 9756
+  },
+  "North Carolina": {
+   "revenues": 34587,
+   "expenditures": 31870,
+   "endingBalance": 2461,
+   "rainyDayFund": 3650
+  },
+  "North Dakota": {
+   "revenues": 2428,
+   "expenditures": 3128,
+   "endingBalance": 699,
+   "rainyDayFund": 939
+  },
+  "Ohio": {
+   "revenues": 30581,
+   "expenditures": 30828,
+   "endingBalance": 837,
+   "rainyDayFund": 3979
+  },
+  "Oklahoma": {
+   "revenues": 9325,
+   "expenditures": 10381,
+   "endingBalance": 1838,
+   "rainyDayFund": 1776
+  },
+  "Oregon": {
+   "revenues": 16612,
+   "expenditures": 18288,
+   "endingBalance": 308,
+   "rainyDayFund": 3166
+  },
+  "Pennsylvania": {
+   "revenues": null,
+   "expenditures": null,
+   "endingBalance": null,
+   "rainyDayFund": null
+  },
+  "Rhode Island": {
+   "revenues": 5767,
+   "expenditures": 5809,
+   "endingBalance": 1,
+   "rainyDayFund": 355
+  },
+  "South Carolina": {
+   "revenues": 14185,
+   "expenditures": 14136,
+   "endingBalance": 5628,
+   "rainyDayFund": 1953
+  },
+  "South Dakota": {
+   "revenues": 2470,
+   "expenditures": 2470,
+   "endingBalance": 0,
+   "rainyDayFund": 492
+  },
+  "Tennessee": {
+   "revenues": 24022,
+   "expenditures": 25788,
+   "endingBalance": 72,
+   "rainyDayFund": 2186
+  },
+  "Texas": {
+   "revenues": 86959,
+   "expenditures": 95884,
+   "endingBalance": -1400,
+   "rainyDayFund": 28502
+  },
+  "Utah": {
+   "revenues": 11547,
+   "expenditures": 11839,
+   "endingBalance": 423,
+   "rainyDayFund": 1332
+  },
+  "Vermont": {
+   "revenues": 2406,
+   "expenditures": 2502,
+   "endingBalance": 13,
+   "rainyDayFund": 390
+  },
+  "Virginia": {
+   "revenues": 32952,
+   "expenditures": 32918,
+   "endingBalance": 47,
+   "rainyDayFund": 4169
+  },
+  "Washington": {
+   "revenues": 32703,
+   "expenditures": 35537,
+   "endingBalance": 268,
+   "rainyDayFund": 1625
+  },
+  "West Virginia": {
+   "revenues": 5323,
+   "expenditures": 5808,
+   "endingBalance": 1322,
+   "rainyDayFund": 1397
+  },
+  "Wisconsin": {
+   "revenues": 21960,
+   "expenditures": 22723,
+   "endingBalance": 2193,
+   "rainyDayFund": null
+  },
+  "Wyoming": {
+   "revenues": 1481,
+   "expenditures": 1962,
+   "endingBalance": 0,
+   "rainyDayFund": 1721
+  },
+  "District of Columbia": {
+   "revenues": 13639,
+   "expenditures": 15033,
+   "endingBalance": 2761,
+   "rainyDayFund": 992
+  },
+  "Guam": {
+   "revenues": 1000,
+   "expenditures": 974,
+   "endingBalance": 127,
+   "rainyDayFund": 88
+  },
+  "Puerto Rico": {
+   "revenues": 13039,
+   "expenditures": 13039,
+   "endingBalance": 0,
+   "rainyDayFund": 1249
+  },
+  "U.S. Virgin Islands": {
+   "revenues": 948,
+   "expenditures": 1146,
+   "endingBalance": 48,
+   "rainyDayFund": 11
+  }
+ },
+ "gf_pct_change_fall": {
+  "Alabama": {
+   "fy2024": -5.1,
+   "fy2025": 10.9,
+   "fy2026": -3.4
+  },
+  "Alaska": {
+   "fy2024": -15.3,
+   "fy2025": -0.4,
+   "fy2026": -7.0
+  },
+  "Arizona": {
+   "fy2024": 10.5,
+   "fy2025": -6.2,
+   "fy2026": 8.2
+  },
+  "Arkansas": {
+   "fy2024": 3.0,
+   "fy2025": 1.8,
+   "fy2026": 2.9
+  },
+  "California": {
+   "fy2024": 5.4,
+   "fy2025": 13.6,
+   "fy2026": -2.2
+  },
+  "Colorado": {
+   "fy2024": -11.3,
+   "fy2025": 9.3,
+   "fy2026": -6.2
+  },
+  "Connecticut": {
+   "fy2024": 0.2,
+   "fy2025": 5.0,
+   "fy2026": 2.6
+  },
+  "Delaware": {
+   "fy2024": 6.3,
+   "fy2025": 11.1,
+   "fy2026": 4.8
+  },
+  "Florida": {
+   "fy2024": 12.2,
+   "fy2025": -3.3,
+   "fy2026": 4.0
+  },
+  "Georgia": {
+   "fy2024": 16.5,
+   "fy2025": 1.6,
+   "fy2026": -0.9
+  },
+  "Hawaii": {
+   "fy2024": 2.1,
+   "fy2025": 1.2,
+   "fy2026": 3.7
+  },
+  "Idaho": {
+   "fy2024": 11.5,
+   "fy2025": 4.7,
+   "fy2026": 5.2
+  },
+  "Illinois": {
+   "fy2024": 6.0,
+   "fy2025": 4.0,
+   "fy2026": 1.8
+  },
+  "Indiana": {
+   "fy2024": 2.2,
+   "fy2025": 3.5,
+   "fy2026": 0.3
+  },
+  "Iowa": {
+   "fy2024": 4.2,
+   "fy2025": 4.4,
+   "fy2026": 5.3
+  },
+  "Kansas": {
+   "fy2024": 7.3,
+   "fy2025": 10.1,
+   "fy2026": 10.3
+  },
+  "Kentucky": {
+   "fy2024": -1.2,
+   "fy2025": 11.0,
+   "fy2026": 6.9
+  },
+  "Louisiana": {
+   "fy2024": -3.4,
+   "fy2025": -5.6,
+   "fy2026": -6.2
+  },
+  "Maine": {
+   "fy2024": 14.2,
+   "fy2025": 8.6,
+   "fy2026": 5.3
+  },
+  "Maryland": {
+   "fy2024": -2.1,
+   "fy2025": 0.6,
+   "fy2026": -2.0
+  },
+  "Massachusetts": {
+   "fy2024": 8.7,
+   "fy2025": 6.8,
+   "fy2026": -5.1
+  },
+  "Michigan": {
+   "fy2024": -7.9,
+   "fy2025": -1.0,
+   "fy2026": -8.2
+  },
+  "Minnesota": {
+   "fy2024": 29.5,
+   "fy2025": 0.6,
+   "fy2026": -7.1
+  },
+  "Mississippi": {
+   "fy2024": 5.1,
+   "fy2025": 5.4,
+   "fy2026": 1.6
+  },
+  "Missouri": {
+   "fy2024": 16.3,
+   "fy2025": -3.0,
+   "fy2026": 11.4
+  },
+  "Montana": {
+   "fy2024": -30.0,
+   "fy2025": 11.0,
+   "fy2026": -8.6
+  },
+  "Nebraska": {
+   "fy2024": 3.1,
+   "fy2025": 3.0,
+   "fy2026": 0.2
+  },
+  "Nevada": {
+   "fy2024": 12.9,
+   "fy2025": 23.8,
+   "fy2026": 0.0
+  },
+  "New Hampshire": {
+   "fy2024": -7.3,
+   "fy2025": 1.5,
+   "fy2026": -2.6
+  },
+  "New Jersey": {
+   "fy2024": 7.4,
+   "fy2025": 4.6,
+   "fy2026": 0.0
+  },
+  "New Mexico": {
+   "fy2024": 30.1,
+   "fy2025": 5.4,
+   "fy2026": -1.2
+  },
+  "New York": {
+   "fy2024": 8.2,
+   "fy2025": 7.3,
+   "fy2026": 19.5
+  },
+  "North Carolina": {
+   "fy2024": 9.2,
+   "fy2025": 7.0,
+   "fy2026": 1.9
+  },
+  "North Dakota": {
+   "fy2024": 25.9,
+   "fy2025": -24.5,
+   "fy2026": 25.9
+  },
+  "Ohio": {
+   "fy2024": 31.4,
+   "fy2025": -12.7,
+   "fy2026": -0.8
+  },
+  "Oklahoma": {
+   "fy2024": 17.2,
+   "fy2025": 1.1,
+   "fy2026": -2.0
+  },
+  "Oregon": {
+   "fy2024": 18.2,
+   "fy2025": 4.1,
+   "fy2026": 7.4
+  },
+  "Pennsylvania": {
+   "fy2024": 10.0,
+   "fy2025": 6.8,
+   "fy2026": null
+  },
+  "Rhode Island": {
+   "fy2024": 3.2,
+   "fy2025": 6.9,
+   "fy2026": 3.8
+  },
+  "South Carolina": {
+   "fy2024": 16.1,
+   "fy2025": 1.3,
+   "fy2026": 2.2
+  },
+  "South Dakota": {
+   "fy2024": 5.9,
+   "fy2025": 3.4,
+   "fy2026": 1.2
+  },
+  "Tennessee": {
+   "fy2024": 24.4,
+   "fy2025": 8.1,
+   "fy2026": 11.5
+  },
+  "Texas": {
+   "fy2024": 40.3,
+   "fy2025": 15.2,
+   "fy2026": -3.1
+  },
+  "Utah": {
+   "fy2024": 17.0,
+   "fy2025": -7.4,
+   "fy2026": -6.5
+  },
+  "Vermont": {
+   "fy2024": 14.5,
+   "fy2025": 9.5,
+   "fy2026": -4.8
+  },
+  "Virginia": {
+   "fy2024": -2.2,
+   "fy2025": 17.8,
+   "fy2026": -9.9
+  },
+  "Washington": {
+   "fy2024": 4.5,
+   "fy2025": 9.9,
+   "fy2026": -0.2
+  },
+  "West Virginia": {
+   "fy2024": 12.3,
+   "fy2025": -5.8,
+   "fy2026": -2.8
+  },
+  "Wisconsin": {
+   "fy2024": 11.9,
+   "fy2025": -6.1,
+   "fy2026": 5.7
+  },
+  "Wyoming": {
+   "fy2024": 0.0,
+   "fy2025": 8.6,
+   "fy2026": 0.0
+  },
+  "District of Columbia": {
+   "fy2024": 5.9,
+   "fy2025": 20.7,
+   "fy2026": 1.3
+  },
+  "Guam": {
+   "fy2024": 12.1,
+   "fy2025": 3.6,
+   "fy2026": -3.1
+  },
+  "Puerto Rico": {
+   "fy2024": 8.9,
+   "fy2025": -30.8,
+   "fy2026": 40.5
+  },
+  "U.S. Virgin Islands": {
+   "fy2024": -8.3,
+   "fy2025": -7.1,
+   "fy2026": 6.8
+  }
+ },
+ "_spring_pages": [
+  35,
+  36,
+  37,
+  38,
+  38
+ ],
+ "fy2025_actual": {
+  "Alabama": {
+   "revenues": 14513,
+   "expenditures": 13504,
+   "endingBalance": 2747,
+   "rainyDayFund": 2754
+  },
+  "Alaska": {
+   "revenues": 2686,
+   "expenditures": 5531,
+   "endingBalance": -102,
+   "rainyDayFund": 2959
+  },
+  "Arizona": {
+   "revenues": 16460,
+   "expenditures": 16055,
+   "endingBalance": 1367,
+   "rainyDayFund": 1545
+  },
+  "Arkansas": {
+   "revenues": 6679,
+   "expenditures": 6312,
+   "endingBalance": 368,
+   "rainyDayFund": 1815
+  },
+  "California": {
+   "revenues": 215451,
+   "expenditures": 229231,
+   "endingBalance": 55951,
+   "rainyDayFund": 50225
+  },
+  "Colorado": {
+   "revenues": 17181,
+   "expenditures": 18586,
+   "endingBalance": 2408,
+   "rainyDayFund": 2408
+  },
+  "Connecticut": {
+   "revenues": 23891,
+   "expenditures": 23481,
+   "endingBalance": 410,
+   "rainyDayFund": 4827
+  },
+  "Delaware": {
+   "revenues": 6694,
+   "expenditures": 6925,
+   "endingBalance": 2925,
+   "rainyDayFund": 349
+  },
+  "Florida": {
+   "revenues": 50747,
+   "expenditures": 51886,
+   "endingBalance": 15292,
+   "rainyDayFund": 4441
+  },
+  "Georgia": {
+   "revenues": 37220,
+   "expenditures": 36266,
+   "endingBalance": 14636,
+   "rainyDayFund": 5583
+  },
+  "Hawaii": {
+   "revenues": 11267,
+   "expenditures": 10888,
+   "endingBalance": 2121,
+   "rainyDayFund": 1568
+  },
+  "Idaho": {
+   "revenues": 5536,
+   "expenditures": 5392,
+   "endingBalance": 314,
+   "rainyDayFund": 1195
+  },
+  "Illinois": {
+   "revenues": 53998,
+   "expenditures": 55331,
+   "endingBalance": 5456,
+   "rainyDayFund": 2357
+  },
+  "Indiana": {
+   "revenues": 22868,
+   "expenditures": 22974,
+   "endingBalance": 676,
+   "rainyDayFund": 1826
+  },
+  "Iowa": {
+   "revenues": 8942,
+   "expenditures": 8949,
+   "endingBalance": 1882,
+   "rainyDayFund": 891
+  },
+  "Kansas": {
+   "revenues": 10022,
+   "expenditures": 10315,
+   "endingBalance": 2933,
+   "rainyDayFund": 1890
+  },
+  "Kentucky": {
+   "revenues": 15801,
+   "expenditures": 15868,
+   "endingBalance": 506,
+   "rainyDayFund": 4812
+  },
+  "Louisiana": {
+   "revenues": 13598,
+   "expenditures": 13653,
+   "endingBalance": 577,
+   "rainyDayFund": 1227
+  },
+  "Maine": {
+   "revenues": 5722,
+   "expenditures": 5513,
+   "endingBalance": 156,
+   "rainyDayFund": 1030
+  },
+  "Maryland": {
+   "revenues": 25716,
+   "expenditures": 27433,
+   "endingBalance": 270,
+   "rainyDayFund": 2531
+  },
+  "Massachusetts": {
+   "revenues": 50892,
+   "expenditures": 51876,
+   "endingBalance": 14020,
+   "rainyDayFund": 8524
+  },
+  "Michigan": {
+   "revenues": 13926,
+   "expenditures": 15760,
+   "endingBalance": 315,
+   "rainyDayFund": 2157
+  },
+  "Minnesota": {
+   "revenues": 32044,
+   "expenditures": 34002,
+   "endingBalance": 10273,
+   "rainyDayFund": 5395
+  },
+  "Mississippi": {
+   "revenues": 7643,
+   "expenditures": 7018,
+   "endingBalance": 7,
+   "rainyDayFund": 678
+  },
+  "Missouri": {
+   "revenues": 13431,
+   "expenditures": 15718,
+   "endingBalance": 4320,
+   "rainyDayFund": 955
+  },
+  "Montana": {
+   "revenues": 3459,
+   "expenditures": 3708,
+   "endingBalance": 769,
+   "rainyDayFund": 520
+  },
+  "Nebraska": {
+   "revenues": 6159,
+   "expenditures": 5475,
+   "endingBalance": 793,
+   "rainyDayFund": 877
+  },
+  "Nevada": {
+   "revenues": 6018,
+   "expenditures": 6633,
+   "endingBalance": 1505,
+   "rainyDayFund": 1244
+  },
+  "New Hampshire": {
+   "revenues": 1864,
+   "expenditures": 2010,
+   "endingBalance": 0,
+   "rainyDayFund": 225
+  },
+  "New Jersey": {
+   "revenues": 54778,
+   "expenditures": 57153,
+   "endingBalance": 8626,
+   "rainyDayFund": 0
+  },
+  "New Mexico": {
+   "revenues": 13624,
+   "expenditures": 13786,
+   "endingBalance": 3181,
+   "rainyDayFund": 3181
+  },
+  "New York": {
+   "revenues": 111535,
+   "expenditures": 105031,
+   "endingBalance": 56916,
+   "rainyDayFund": 8756
+  },
+  "North Carolina": {
+   "revenues": 34559,
+   "expenditures": 31267,
+   "endingBalance": 891,
+   "rainyDayFund": 3623
+  },
+  "North Dakota": {
+   "revenues": 2429,
+   "expenditures": 2485,
+   "endingBalance": 1351,
+   "rainyDayFund": 939
+  },
+  "Ohio": {
+   "revenues": 30012,
+   "expenditures": 30172,
+   "endingBalance": 2013,
+   "rainyDayFund": 3943
+  },
+  "Oklahoma": {
+   "revenues": 9834,
+   "expenditures": 10590,
+   "endingBalance": 2893,
+   "rainyDayFund": 1776
+  },
+  "Oregon": {
+   "revenues": 15674,
+   "expenditures": 17026,
+   "endingBalance": 2166,
+   "rainyDayFund": 2923
+  },
+  "Pennsylvania": {
+   "revenues": 46408,
+   "expenditures": 47823,
+   "endingBalance": 4155,
+   "rainyDayFund": 7473
+  },
+  "Rhode Island": {
+   "revenues": 5612,
+   "expenditures": 5536,
+   "endingBalance": 242,
+   "rainyDayFund": 298
+  },
+  "South Carolina": {
+   "revenues": 14859,
+   "expenditures": 13831,
+   "endingBalance": 6604,
+   "rainyDayFund": 1442
+  },
+  "South Dakota": {
+   "revenues": 2604,
+   "expenditures": 2441,
+   "endingBalance": 169,
+   "rainyDayFund": 323
+  },
+  "Tennessee": {
+   "revenues": 24512,
+   "expenditures": 21839,
+   "endingBalance": 3548,
+   "rainyDayFund": 2150
+  },
+  "Texas": {
+   "revenues": 86076,
+   "expenditures": 76193,
+   "endingBalance": 36184,
+   "rainyDayFund": 24841
+  },
+  "Utah": {
+   "revenues": 11945,
+   "expenditures": 12657,
+   "endingBalance": 626,
+   "rainyDayFund": 1189
+  },
+  "Vermont": {
+   "revenues": 2565,
+   "expenditures": 2629,
+   "endingBalance": 257,
+   "rainyDayFund": 328
+  },
+  "Virginia": {
+   "revenues": 33576,
+   "expenditures": 36552,
+   "endingBalance": 13,
+   "rainyDayFund": 4750
+  },
+  "Washington": {
+   "revenues": 32033,
+   "expenditures": 35612,
+   "endingBalance": 1448,
+   "rainyDayFund": 1250
+  },
+  "West Virginia": {
+   "revenues": 5519,
+   "expenditures": 5973,
+   "endingBalance": 1806,
+   "rainyDayFund": 1347
+  },
+  "Wisconsin": {
+   "revenues": 22363,
+   "expenditures": 21496,
+   "endingBalance": 4606,
+   "rainyDayFund": 1991
+  },
+  "Wyoming": {
+   "revenues": 1776,
+   "expenditures": 2242,
+   "endingBalance": 70,
+   "rainyDayFund": 1626
+  },
+  "District of Columbia": {
+   "revenues": 12780,
+   "expenditures": 11684,
+   "endingBalance": 4825,
+   "rainyDayFund": 947
+  },
+  "Guam": {
+   "revenues": 1085,
+   "expenditures": 999,
+   "endingBalance": 287,
+   "rainyDayFund": 78
+  },
+  "Puerto Rico": {
+   "revenues": 13634,
+   "expenditures": 11967,
+   "endingBalance": 1667,
+   "rainyDayFund": 1251
+  },
+  "U.S. Virgin Islands": {
+   "revenues": 798,
+   "expenditures": 1074,
+   "endingBalance": 37,
+   "rainyDayFund": 14
+  }
+ },
+ "fy2026_estimated": {
+  "Alabama": {
+   "revenues": 14589,
+   "expenditures": 14329,
+   "endingBalance": 1848,
+   "rainyDayFund": 2791
+  },
+  "Alaska": {
+   "revenues": 2693,
+   "expenditures": 5776,
+   "endingBalance": 66,
+   "rainyDayFund": 2986
+  },
+  "Arizona": {
+   "revenues": 16995,
+   "expenditures": 17804,
+   "endingBalance": 558,
+   "rainyDayFund": 1621
+  },
+  "Arkansas": {
+   "revenues": 6828,
+   "expenditures": 6494,
+   "endingBalance": 334,
+   "rainyDayFund": 1815
+  },
+  "California": {
+   "revenues": 224447,
+   "expenditures": 237662,
+   "endingBalance": 53451,
+   "rainyDayFund": 41290
+  },
+  "Colorado": {
+   "revenues": 17111,
+   "expenditures": 18210,
+   "endingBalance": 1643,
+   "rainyDayFund": 1643
+  },
+  "Connecticut": {
+   "revenues": 24508,
+   "expenditures": 24379,
+   "endingBalance": 129,
+   "rainyDayFund": 4585
+  },
+  "Delaware": {
+   "revenues": 6857,
+   "expenditures": 7218,
+   "endingBalance": 2564,
+   "rainyDayFund": 367
+  },
+  "Florida": {
+   "revenues": 51540,
+   "expenditures": 56398,
+   "endingBalance": 10413,
+   "rainyDayFund": 4870
+  },
+  "Georgia": {
+   "revenues": 36770,
+   "expenditures": 41674,
+   "endingBalance": 9732,
+   "rainyDayFund": null
+  },
+  "Hawaii": {
+   "revenues": 10408,
+   "expenditures": 11199,
+   "endingBalance": 1879,
+   "rainyDayFund": 1625
+  },
+  "Idaho": {
+   "revenues": 5512,
+   "expenditures": 5624,
+   "endingBalance": 32,
+   "rainyDayFund": 1197
+  },
+  "Illinois": {
+   "revenues": 55226,
+   "expenditures": 56562,
+   "endingBalance": 4676,
+   "rainyDayFund": 2518
+  },
+  "Indiana": {
+   "revenues": 23605,
+   "expenditures": 23101,
+   "endingBalance": 1202,
+   "rainyDayFund": 2196
+  },
+  "Iowa": {
+   "revenues": 8111,
+   "expenditures": 9407,
+   "endingBalance": 1220,
+   "rainyDayFund": 849
+  },
+  "Kansas": {
+   "revenues": 10224,
+   "expenditures": 10927,
+   "endingBalance": 2231,
+   "rainyDayFund": 1976
+  },
+  "Kentucky": {
+   "revenues": 15589,
+   "expenditures": 16761,
+   "endingBalance": 72,
+   "rainyDayFund": 3764
+  },
+  "Louisiana": {
+   "revenues": 12507,
+   "expenditures": 12667,
+   "endingBalance": 870,
+   "rainyDayFund": 1240
+  },
+  "Maine": {
+   "revenues": 5749,
+   "expenditures": 5896,
+   "endingBalance": 155,
+   "rainyDayFund": 778
+  },
+  "Maryland": {
+   "revenues": 26915,
+   "expenditures": 27996,
+   "endingBalance": 303,
+   "rainyDayFund": 2171
+  },
+  "Massachusetts": {
+   "revenues": 49879,
+   "expenditures": 51501,
+   "endingBalance": 12398,
+   "rainyDayFund": 8144
+  },
+  "Michigan": {
+   "revenues": 13907,
+   "expenditures": 13903,
+   "endingBalance": 319,
+   "rainyDayFund": 1817
+  },
+  "Minnesota": {
+   "revenues": 33591,
+   "expenditures": 35575,
+   "endingBalance": 8323,
+   "rainyDayFund": 3772
+  },
+  "Mississippi": {
+   "revenues": 7552,
+   "expenditures": 7142,
+   "endingBalance": 0,
+   "rainyDayFund": 704
+  },
+  "Missouri": {
+   "revenues": 13150,
+   "expenditures": 16507,
+   "endingBalance": 2270,
+   "rainyDayFund": 955
+  },
+  "Montana": {
+   "revenues": 3499,
+   "expenditures": 3388,
+   "endingBalance": 879,
+   "rainyDayFund": 520
+  },
+  "Nebraska": {
+   "revenues": 6950,
+   "expenditures": 5390,
+   "endingBalance": 448,
+   "rainyDayFund": 821
+  },
+  "Nevada": {
+   "revenues": 6032,
+   "expenditures": 6987,
+   "endingBalance": 622,
+   "rainyDayFund": 1295
+  },
+  "New Hampshire": {
+   "revenues": 1765,
+   "expenditures": 1958,
+   "endingBalance": -55,
+   "rainyDayFund": 225
+  },
+  "New Jersey": {
+   "revenues": 56473,
+   "expenditures": 58654,
+   "endingBalance": 7259,
+   "rainyDayFund": 0
+  },
+  "New Mexico": {
+   "revenues": 13746,
+   "expenditures": 13844,
+   "endingBalance": 3337,
+   "rainyDayFund": 3337
+  },
+  "New York": {
+   "revenues": 119740,
+   "expenditures": 126295,
+   "endingBalance": 52037,
+   "rainyDayFund": 9756
+  },
+  "North Carolina": {
+   "revenues": 34709,
+   "expenditures": 33274,
+   "endingBalance": 1138,
+   "rainyDayFund": 3691
+  },
+  "North Dakota": {
+   "revenues": 2602,
+   "expenditures": 3128,
+   "endingBalance": 943,
+   "rainyDayFund": 939
+  },
+  "Ohio": {
+   "revenues": 30575,
+   "expenditures": 31655,
+   "endingBalance": 898,
+   "rainyDayFund": 3985
+  },
+  "Oklahoma": {
+   "revenues": 9841,
+   "expenditures": 10381,
+   "endingBalance": 2353,
+   "rainyDayFund": 1776
+  },
+  "Oregon": {
+   "revenues": 17054,
+   "expenditures": 18382,
+   "endingBalance": 805,
+   "rainyDayFund": 3142
+  },
+  "Pennsylvania": {
+   "revenues": 48032,
+   "expenditures": 50543,
+   "endingBalance": 0,
+   "rainyDayFund": 7819
+  },
+  "Rhode Island": {
+   "revenues": 5823,
+   "expenditures": 5825,
+   "endingBalance": 97,
+   "rainyDayFund": 303
+  },
+  "South Carolina": {
+   "revenues": 14681,
+   "expenditures": 14152,
+   "endingBalance": 6109,
+   "rainyDayFund": 1953
+  },
+  "South Dakota": {
+   "revenues": 2463,
+   "expenditures": 2546,
+   "endingBalance": 14,
+   "rainyDayFund": 315
+  },
+  "Tennessee": {
+   "revenues": 24403,
+   "expenditures": 25815,
+   "endingBalance": 1667,
+   "rainyDayFund": 2186
+  },
+  "Texas": {
+   "revenues": 85290,
+   "expenditures": 117396,
+   "endingBalance": 1162,
+   "rainyDayFund": 27400
+  },
+  "Utah": {
+   "revenues": 11441,
+   "expenditures": 11826,
+   "endingBalance": 256,
+   "rainyDayFund": 1284
+  },
+  "Vermont": {
+   "revenues": 2476,
+   "expenditures": 2548,
+   "endingBalance": 0,
+   "rainyDayFund": 464
+  },
+  "Virginia": {
+   "revenues": 36089,
+   "expenditures": 33780,
+   "endingBalance": 2322,
+   "rainyDayFund": 4201
+  },
+  "Washington": {
+   "revenues": 32761,
+   "expenditures": 35846,
+   "endingBalance": 581,
+   "rainyDayFund": 1000
+  },
+  "West Virginia": {
+   "revenues": 5323,
+   "expenditures": 6130,
+   "endingBalance": 1091,
+   "rainyDayFund": 1440
+  },
+  "Wisconsin": {
+   "revenues": 22686,
+   "expenditures": 22735,
+   "endingBalance": 3004,
+   "rainyDayFund": null
+  },
+  "Wyoming": {
+   "revenues": 1777,
+   "expenditures": 2314,
+   "endingBalance": 69,
+   "rainyDayFund": 1626
+  },
+  "District of Columbia": {
+   "revenues": 12422,
+   "expenditures": 12090,
+   "endingBalance": 5157,
+   "rainyDayFund": 988
+  },
+  "Guam": {
+   "revenues": 1046,
+   "expenditures": 1041,
+   "endingBalance": 232,
+   "rainyDayFund": 88
+  },
+  "Puerto Rico": {
+   "revenues": 13039,
+   "expenditures": 13039,
+   "endingBalance": 0,
+   "rainyDayFund": 1219
+  },
+  "U.S. Virgin Islands": {
+   "revenues": 915,
+   "expenditures": 1131,
+   "endingBalance": 22,
+   "rainyDayFund": 13
+  }
+ },
+ "fy2027_recommended": {
+  "Alabama": {
+   "revenues": 14701,
+   "expenditures": 14167,
+   "endingBalance": 1551,
+   "rainyDayFund": 3144
+  },
+  "Alaska": {
+   "revenues": 2728,
+   "expenditures": 5502,
+   "endingBalance": -1143,
+   "rainyDayFund": 1843
+  },
+  "Arizona": {
+   "revenues": 18502,
+   "expenditures": 18668,
+   "endingBalance": 392,
+   "rainyDayFund": 1664
+  },
+  "Arkansas": {
+   "revenues": 7015,
+   "expenditures": 7015,
+   "endingBalance": 0,
+   "rainyDayFund": 1815
+  },
+  "California": {
+   "revenues": 230406,
+   "expenditures": 248330,
+   "endingBalance": 32506,
+   "rainyDayFund": 22961
+  },
+  "Colorado": {
+   "revenues": 18834,
+   "expenditures": 18881,
+   "endingBalance": 1666,
+   "rainyDayFund": 1666
+  },
+  "Connecticut": {
+   "revenues": 25796,
+   "expenditures": 25470,
+   "endingBalance": 326,
+   "rainyDayFund": 4698
+  },
+  "Delaware": {
+   "revenues": 7098,
+   "expenditures": 7496,
+   "endingBalance": 2167,
+   "rainyDayFund": 380
+  },
+  "Florida": {
+   "revenues": 51669,
+   "expenditures": 54317,
+   "endingBalance": 7757,
+   "rainyDayFund": 4988
+  },
+  "Georgia": {
+   "revenues": 36610,
+   "expenditures": 36610,
+   "endingBalance": 9732,
+   "rainyDayFund": null
+  },
+  "Hawaii": {
+   "revenues": 10581,
+   "expenditures": 11338,
+   "endingBalance": 1122,
+   "rainyDayFund": 1678
+  },
+  "Idaho": {
+   "revenues": 5679,
+   "expenditures": 5540,
+   "endingBalance": 26,
+   "rainyDayFund": 1197
+  },
+  "Illinois": {
+   "revenues": 56055,
+   "expenditures": 57304,
+   "endingBalance": 4700,
+   "rainyDayFund": 2694
+  },
+  "Indiana": {
+   "revenues": 23135,
+   "expenditures": 23147,
+   "endingBalance": 397,
+   "rainyDayFund": 1900
+  },
+  "Iowa": {
+   "revenues": 8499,
+   "expenditures": 9666,
+   "endingBalance": 857,
+   "rainyDayFund": 850
+  },
+  "Kansas": {
+   "revenues": 10158,
+   "expenditures": 10801,
+   "endingBalance": 1588,
+   "rainyDayFund": 2035
+  },
+  "Kentucky": {
+   "revenues": 16010,
+   "expenditures": 16439,
+   "endingBalance": 592,
+   "rainyDayFund": 2969
+  },
+  "Louisiana": {
+   "revenues": 12617,
+   "expenditures": 12605,
+   "endingBalance": 12,
+   "rainyDayFund": 1384
+  },
+  "Maine": {
+   "revenues": 5906,
+   "expenditures": 6038,
+   "endingBalance": 9,
+   "rainyDayFund": 694
+  },
+  "Maryland": {
+   "revenues": 27341,
+   "expenditures": 27817,
+   "endingBalance": 108,
+   "rainyDayFund": 2182
+  },
+  "Massachusetts": {
+   "revenues": 51017,
+   "expenditures": 52555,
+   "endingBalance": 10860,
+   "rainyDayFund": 8244
+  },
+  "Michigan": {
+   "revenues": 13310,
+   "expenditures": 13609,
+   "endingBalance": 20,
+   "rainyDayFund": 1871
+  },
+  "Minnesota": {
+   "revenues": 33744,
+   "expenditures": 34751,
+   "endingBalance": 7443,
+   "rainyDayFund": 3772
+  },
+  "Mississippi": {
+   "revenues": 7532,
+   "expenditures": 8314,
+   "endingBalance": 0,
+   "rainyDayFund": null
+  },
+  "Missouri": {
+   "revenues": 13650,
+   "expenditures": 16741,
+   "endingBalance": 266,
+   "rainyDayFund": 927
+  },
+  "Montana": {
+   "revenues": 3365,
+   "expenditures": 3735,
+   "endingBalance": 509,
+   "rainyDayFund": 520
+  },
+  "Nebraska": {
+   "revenues": 7184,
+   "expenditures": 5292,
+   "endingBalance": 459,
+   "rainyDayFund": 821
+  },
+  "Nevada": {
+   "revenues": 6206,
+   "expenditures": 6395,
+   "endingBalance": 507,
+   "rainyDayFund": 1347
+  },
+  "New Hampshire": {
+   "revenues": 1809,
+   "expenditures": 1971,
+   "endingBalance": 0,
+   "rainyDayFund": 250
+  },
+  "New Jersey": {
+   "revenues": 57979,
+   "expenditures": 59644,
+   "endingBalance": 5365,
+   "rainyDayFund": 0
+  },
+  "New Mexico": {
+   "revenues": 13613,
+   "expenditures": 13534,
+   "endingBalance": 3393,
+   "rainyDayFund": 3393
+  },
+  "New York": {
+   "revenues": 126103,
+   "expenditures": 127844,
+   "endingBalance": 47142,
+   "rainyDayFund": 10756
+  },
+  "North Carolina": {
+   "revenues": 34720,
+   "expenditures": 35436,
+   "endingBalance": 502,
+   "rainyDayFund": 3752
+  },
+  "North Dakota": {
+   "revenues": 2473,
+   "expenditures": 3128,
+   "endingBalance": 406,
+   "rainyDayFund": 939
+  },
+  "Ohio": {
+   "revenues": 30802,
+   "expenditures": 31404,
+   "endingBalance": 258,
+   "rainyDayFund": 3985
+  },
+  "Oklahoma": {
+   "revenues": 9779,
+   "expenditures": 9887,
+   "endingBalance": 2244,
+   "rainyDayFund": 1776
+  },
+  "Oregon": {
+   "revenues": 18879,
+   "expenditures": 19132,
+   "endingBalance": 370,
+   "rainyDayFund": 3413
+  },
+  "Pennsylvania": {
+   "revenues": 50831,
+   "expenditures": 53262,
+   "endingBalance": 0,
+   "rainyDayFund": 3307
+  },
+  "Rhode Island": {
+   "revenues": 6043,
+   "expenditures": 5955,
+   "endingBalance": 1,
+   "rainyDayFund": 307
+  },
+  "South Carolina": {
+   "revenues": 14814,
+   "expenditures": 14879,
+   "endingBalance": 4956,
+   "rainyDayFund": 1406
+  },
+  "South Dakota": {
+   "revenues": 2521,
+   "expenditures": 2521,
+   "endingBalance": 0,
+   "rainyDayFund": 315
+  },
+  "Tennessee": {
+   "revenues": 24506,
+   "expenditures": 25587,
+   "endingBalance": 2,
+   "rainyDayFund": 2206
+  },
+  "Texas": {
+   "revenues": 88105,
+   "expenditures": 81574,
+   "endingBalance": 4658,
+   "rainyDayFund": 28480
+  },
+  "Utah": {
+   "revenues": 11902,
+   "expenditures": 12110,
+   "endingBalance": 46,
+   "rainyDayFund": 1284
+  },
+  "Vermont": {
+   "revenues": 2537,
+   "expenditures": 2533,
+   "endingBalance": 0,
+   "rainyDayFund": 375
+  },
+  "Virginia": {
+   "revenues": null,
+   "expenditures": null,
+   "endingBalance": null,
+   "rainyDayFund": null
+  },
+  "Washington": {
+   "revenues": 33622,
+   "expenditures": 36487,
+   "endingBalance": 54,
+   "rainyDayFund": 1026
+  },
+  "West Virginia": {
+   "revenues": 5493,
+   "expenditures": 5909,
+   "endingBalance": 676,
+   "rainyDayFund": 1470
+  },
+  "Wisconsin": {
+   "revenues": 23243,
+   "expenditures": 23006,
+   "endingBalance": 2448,
+   "rainyDayFund": null
+  },
+  "Wyoming": {
+   "revenues": 1868,
+   "expenditures": 2079,
+   "endingBalance": 96,
+   "rainyDayFund": 1290
+  },
+  "District of Columbia": {
+   "revenues": 11297,
+   "expenditures": 11609,
+   "endingBalance": 4845,
+   "rainyDayFund": 1006
+  },
+  "Guam": {
+   "revenues": 1079,
+   "expenditures": 1021,
+   "endingBalance": 232,
+   "rainyDayFund": 95
+  },
+  "Puerto Rico": {
+   "revenues": 13181,
+   "expenditures": 13181,
+   "endingBalance": 0,
+   "rainyDayFund": 1219
+  },
+  "U.S. Virgin Islands": {
+   "revenues": 919,
+   "expenditures": 919,
+   "endingBalance": 22,
+   "rainyDayFund": 13
+  }
+ },
+ "gf_pct_change_spring": {
+  "Alabama": {
+   "fy2025": 5.8,
+   "fy2026": 6.1,
+   "fy2027": -1.1
+  },
+  "Alaska": {
+   "fy2025": -14.4,
+   "fy2026": 4.4,
+   "fy2027": -4.7
+  },
+  "Arizona": {
+   "fy2025": -7.3,
+   "fy2026": 10.9,
+   "fy2027": 4.9
+  },
+  "Arkansas": {
+   "fy2025": 1.8,
+   "fy2026": 2.9,
+   "fy2027": 8.0
+  },
+  "California": {
+   "fy2025": 11.5,
+   "fy2026": 3.7,
+   "fy2027": 4.5
+  },
+  "Colorado": {
+   "fy2025": 10.1,
+   "fy2026": -2.0,
+   "fy2027": 3.7
+  },
+  "Connecticut": {
+   "fy2025": 5.2,
+   "fy2026": 3.8,
+   "fy2027": 4.5
+  },
+  "Delaware": {
+   "fy2025": 11.1,
+   "fy2026": 4.2,
+   "fy2027": 3.8
+  },
+  "Florida": {
+   "fy2025": -5.7,
+   "fy2026": 8.7,
+   "fy2027": -3.7
+  },
+  "Georgia": {
+   "fy2025": 1.6,
+   "fy2026": 14.9,
+   "fy2027": -12.2
+  },
+  "Hawaii": {
+   "fy2025": 1.6,
+   "fy2026": 2.9,
+   "fy2027": 1.2
+  },
+  "Idaho": {
+   "fy2025": 5.5,
+   "fy2026": 4.3,
+   "fy2027": -1.5
+  },
+  "Illinois": {
+   "fy2025": 4.0,
+   "fy2026": 2.2,
+   "fy2027": 1.3
+  },
+  "Indiana": {
+   "fy2025": 4.1,
+   "fy2026": 0.6,
+   "fy2027": 0.2
+  },
+  "Iowa": {
+   "fy2025": 4.5,
+   "fy2026": 5.1,
+   "fy2027": 2.8
+  },
+  "Kansas": {
+   "fy2025": 10.1,
+   "fy2026": 5.9,
+   "fy2027": -1.2
+  },
+  "Kentucky": {
+   "fy2025": 11.0,
+   "fy2026": 5.6,
+   "fy2027": -1.9
+  },
+  "Louisiana": {
+   "fy2025": -1.1,
+   "fy2026": -7.2,
+   "fy2027": -0.5
+  },
+  "Maine": {
+   "fy2025": 8.6,
+   "fy2026": 7.0,
+   "fy2027": 2.4
+  },
+  "Maryland": {
+   "fy2025": 0.1,
+   "fy2026": 2.1,
+   "fy2027": -0.6
+  },
+  "Massachusetts": {
+   "fy2025": 5.9,
+   "fy2026": -0.7,
+   "fy2027": 2.0
+  },
+  "Michigan": {
+   "fy2025": 1.4,
+   "fy2026": -11.8,
+   "fy2027": -2.1
+  },
+  "Minnesota": {
+   "fy2025": -3.6,
+   "fy2026": 4.6,
+   "fy2027": -2.3
+  },
+  "Mississippi": {
+   "fy2025": 5.3,
+   "fy2026": 1.8,
+   "fy2027": 16.4
+  },
+  "Missouri": {
+   "fy2025": 7.9,
+   "fy2026": 5.0,
+   "fy2027": 1.4
+  },
+  "Montana": {
+   "fy2025": 11.1,
+   "fy2026": -8.6,
+   "fy2027": 10.3
+  },
+  "Nebraska": {
+   "fy2025": 3.0,
+   "fy2026": -1.5,
+   "fy2027": -1.8
+  },
+  "Nevada": {
+   "fy2025": 23.2,
+   "fy2026": 5.3,
+   "fy2027": -8.5
+  },
+  "New Hampshire": {
+   "fy2025": 1.5,
+   "fy2026": -2.6,
+   "fy2027": 0.6
+  },
+  "New Jersey": {
+   "fy2025": 3.7,
+   "fy2026": 2.6,
+   "fy2027": 1.7
+  },
+  "New Mexico": {
+   "fy2025": 5.3,
+   "fy2026": 0.4,
+   "fy2027": -2.2
+  },
+  "New York": {
+   "fy2025": 7.3,
+   "fy2026": 20.2,
+   "fy2027": 1.2
+  },
+  "North Carolina": {
+   "fy2025": 7.0,
+   "fy2026": 6.4,
+   "fy2027": 6.5
+  },
+  "North Dakota": {
+   "fy2025": -24.5,
+   "fy2026": 25.9,
+   "fy2027": 0.0
+  },
+  "Ohio": {
+   "fy2025": -15.2,
+   "fy2026": 4.9,
+   "fy2027": -0.8
+  },
+  "Oklahoma": {
+   "fy2025": 1.1,
+   "fy2026": -2.0,
+   "fy2027": -4.8
+  },
+  "Oregon": {
+   "fy2025": 4.1,
+   "fy2026": 8.0,
+   "fy2027": 4.1
+  },
+  "Pennsylvania": {
+   "fy2025": 6.6,
+   "fy2026": 5.7,
+   "fy2027": 5.4
+  },
+  "Rhode Island": {
+   "fy2025": 5.7,
+   "fy2026": 5.2,
+   "fy2027": 2.2
+  },
+  "South Carolina": {
+   "fy2025": 1.3,
+   "fy2026": 2.3,
+   "fy2027": 5.1
+  },
+  "South Dakota": {
+   "fy2025": 3.4,
+   "fy2026": 4.3,
+   "fy2027": -1.0
+  },
+  "Tennessee": {
+   "fy2025": 2.1,
+   "fy2026": 18.2,
+   "fy2027": -0.9
+  },
+  "Texas": {
+   "fy2025": -11.3,
+   "fy2026": 54.1,
+   "fy2027": -30.5
+  },
+  "Utah": {
+   "fy2025": -7.4,
+   "fy2026": -6.6,
+   "fy2027": 2.4
+  },
+  "Vermont": {
+   "fy2025": 9.5,
+   "fy2026": -3.1,
+   "fy2027": -0.6
+  },
+  "Virginia": {
+   "fy2025": 17.8,
+   "fy2026": -7.6,
+   "fy2027": null
+  },
+  "Washington": {
+   "fy2025": 9.9,
+   "fy2026": 0.7,
+   "fy2027": 1.8
+  },
+  "West Virginia": {
+   "fy2025": -5.8,
+   "fy2026": 2.6,
+   "fy2027": -3.6
+  },
+  "Wisconsin": {
+   "fy2025": -6.1,
+   "fy2026": 5.8,
+   "fy2027": 1.2
+  },
+  "Wyoming": {
+   "fy2025": 24.1,
+   "fy2026": 3.2,
+   "fy2027": -10.2
+  },
+  "District of Columbia": {
+   "fy2025": -5.0,
+   "fy2026": 3.5,
+   "fy2027": -4.0
+  },
+  "Guam": {
+   "fy2025": 3.0,
+   "fy2026": 4.2,
+   "fy2027": -1.9
+  },
+  "Puerto Rico": {
+   "fy2025": -10.8,
+   "fy2026": 9.0,
+   "fy2027": 1.1
+  },
+  "U.S. Virgin Islands": {
+   "fy2025": -7.1,
+   "fy2026": 5.4,
+   "fy2027": -18.8
+  }
+ },
+ "fy2026_midyear_actions": {
+  "Alabama": {
+   "netChange": 446.7,
+   "revenueShortfall": null
+  },
+  "Alaska": {
+   "netChange": 426.8,
+   "revenueShortfall": null
+  },
+  "Arizona": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Arkansas": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "California": {
+   "netChange": 3669.1,
+   "revenueShortfall": null
+  },
+  "Colorado": {
+   "netChange": 164.2,
+   "revenueShortfall": null
+  },
+  "Connecticut": {
+   "netChange": 500.0,
+   "revenueShortfall": null
+  },
+  "Delaware": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Florida": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Georgia": {
+   "netChange": 5725.7,
+   "revenueShortfall": null
+  },
+  "Hawaii": {
+   "netChange": -144.7,
+   "revenueShortfall": "No"
+  },
+  "Idaho": {
+   "netChange": -116.2,
+   "revenueShortfall": "Yes"
+  },
+  "Indiana": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Iowa": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Kansas": {
+   "netChange": 297.5,
+   "revenueShortfall": null
+  },
+  "Kentucky": {
+   "netChange": -156.0,
+   "revenueShortfall": "Yes"
+  },
+  "Louisiana": {
+   "netChange": 453.5,
+   "revenueShortfall": null
+  },
+  "Maine": {
+   "netChange": 87.8,
+   "revenueShortfall": null
+  },
+  "Maryland": {
+   "netChange": 985.9,
+   "revenueShortfall": null
+  },
+  "Massachusetts": {
+   "netChange": 1894.2,
+   "revenueShortfall": null
+  },
+  "Michigan": {
+   "netChange": -211.8,
+   "revenueShortfall": "Yes"
+  },
+  "Minnesota": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Mississippi": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Missouri": {
+   "netChange": 341.5,
+   "revenueShortfall": null
+  },
+  "Montana": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Nebraska": {
+   "netChange": -94.5,
+   "revenueShortfall": "Yes"
+  },
+  "Nevada": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "New Hampshire": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "New Jersey": {
+   "netChange": 967.0,
+   "revenueShortfall": null
+  },
+  "New Mexico": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "New York": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "North Carolina": {
+   "netChange": 1355.0,
+   "revenueShortfall": null
+  },
+  "North Dakota": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Ohio": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Oklahoma": {
+   "netChange": 2.0,
+   "revenueShortfall": null
+  },
+  "Oregon": {
+   "netChange": 198.6,
+   "revenueShortfall": null
+  },
+  "Pennsylvania": {
+   "netChange": 390.0,
+   "revenueShortfall": null
+  },
+  "Rhode Island": {
+   "netChange": 15.6,
+   "revenueShortfall": null
+  },
+  "South Carolina": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "South Dakota": {
+   "netChange": 38.3,
+   "revenueShortfall": null
+  },
+  "Tennessee": {
+   "netChange": 97.9,
+   "revenueShortfall": null
+  },
+  "Texas": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Utah": {
+   "netChange": -13.0,
+   "revenueShortfall": "No"
+  },
+  "Vermont": {
+   "netChange": 46.6,
+   "revenueShortfall": null
+  },
+  "Virginia": {
+   "netChange": 867.2,
+   "revenueShortfall": null
+  },
+  "Washington": {
+   "netChange": 1248.0,
+   "revenueShortfall": null
+  },
+  "West Virginia": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Wisconsin": {
+   "netChange": 47.7,
+   "revenueShortfall": null
+  },
+  "Wyoming": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "District of Columbia": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "Guam": {
+   "netChange": 26.6,
+   "revenueShortfall": null
+  },
+  "Puerto Rico": {
+   "netChange": null,
+   "revenueShortfall": null
+  },
+  "U.S. Virgin Islands": {
+   "netChange": null,
+   "revenueShortfall": null
+  }
+ }
+}
