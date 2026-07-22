@@ -1,0 +1,957 @@
+{
+ "updated": "2026-07-17",
+ "description": "Official published state budget documents (current + prior enacted) for the phase-2 agency-level budget analysis. Compiled via web research from official .gov sources; 'verified' = URL fetch-confirmed at compile time.",
+ "fiscalContext": "As of July 2026 most states' FY2027 began Jul 1, 2026. 'current' = most recent enacted budget (FY2027 or the biennium containing it); exceptions noted (Michigan FY2027 passed but unsigned; South Carolina on continuing resolution).",
+ "states": {
+  "alabama": {
+   "state": "Alabama",
+   "budgetOffice": "Alabama Executive Budget Office (Department of Finance)",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Oct 1, 2026 - Sep 30, 2027) General Fund and Education Trust Fund appropriation acts enacted spring 2026",
+   "current": {
+    "label": "FY27 Enacted GF & ETF Appropriation Bills (portal; direct PDFs: Enacted-FY27-GF-Appropriation-Bill.pdf and Enacted-FY27-ETF-Appropriation-Bill.pdf)",
+    "url": "https://budget.alabama.gov/appropriation_bills/",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY26 Appropriation Bills - GF Act 2025-251 and ETF Act 2025-270 (signed PDFs)",
+    "url": "https://budget.alabama.gov/fy26-appropriation-bills/",
+    "verified": true
+   },
+   "notes": "Alabama splits its operating budget into two acts: State General Fund and Education Trust Fund. Both FY27 enacted PDFs verified: https://budget.alabama.gov/wp-content/uploads/2026/04/Enacted-FY27-GF-Appropriation-Bill.pdf and https://budget.alabama.gov/wp-content/uploads/2026/04/Enacted-FY27-ETF-Appropriation-Bill.pdf. Acts contain line-item appropriations by agency, but PDFs are scanned images (not text-extractable without OCR). EBO also posts comparison spreadsheets alongside the bills and quarterly agency spending reports at budget.alabama.gov/reports/."
+  },
+  "alaska": {
+   "state": "Alaska",
+   "budgetOffice": "Alaska Office of Management and Budget (OMB); Legislative Finance Division for enacted reports",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Jul 2026 - Jun 2027) enacted Jun 2026; OMB enacted fiscal summary dated 6/24/2026, Legislative Finance enacted reports posted 6/26/2026",
+   "current": {
+    "label": "FY2027 Enacted budget page, Alaska OMB",
+    "url": "https://omb.alaska.gov/fiscal-year-2027-enacted/",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": false
+   },
+   "prior": {
+    "label": "FY2026 Enacted budget (via OMB Budget Reports archive)",
+    "url": "https://omb.alaska.gov/budget-reports/",
+    "verified": false
+   },
+   "notes": "omb.alaska.gov confirmed via search results (incl. enacted fiscal summary PDF https://omb.alaska.gov/ombfiles/27_budget/PDFs/FY2027_Fiscal_Summary_6-24-2026_Enacted.pdf), but the site serves an incomplete TLS certificate chain that blocked automated fetch verification. Verified alternative: Legislative Finance Division https://legfin.akleg.gov/ confirms FY27 Enacted Operating/Capital/Supplemental Budget Reports posted 06.26.2026, agency-level enacted operating reports at lba.akleg.gov/BudgetReports/LY2026/Operating/SelectBudget.php. Best agency-level detail: Legislative Finance enacted operating budget reports by department."
+  },
+  "arizona": {
+   "state": "Arizona",
+   "budgetOffice": "Joint Legislative Budget Committee (JLBC); executive side is OSPB",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Jul 2026 - Jun 2027) General Appropriations Act SB1847 signed Jun 13, 2026 ($18.3B)",
+   "current": {
+    "label": "JLBC Current Year (FY 2027) budget page - FY2027 budget bills as enacted (SB1847 GAA)",
+    "url": "https://www.azjlbc.gov/current-year/",
+    "format": "portal",
+    "agencyDetail": "partial",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY 2026 Appropriations Report (JLBC, Aug 2025) - full agency-by-agency detail",
+    "url": "https://www.azjlbc.gov/26ar/fy2026approprpt.pdf",
+    "verified": true
+   },
+   "notes": "The definitive agency-detail document is JLBC's annual Appropriations Report; the FY2027 edition is NOT yet published as of Jul 2026 (expect ~Aug-Sep 2026 at azjlbc.gov/27ar/). Until then the current-year page hosts the enacted budget bills (agency line items in the GAA). FY2026 Appropriations Report PDF confirmed (>10MB); per-agency chapter PDFs also available under azjlbc.gov/26AR/."
+  },
+  "arkansas": {
+   "state": "Arkansas",
+   "budgetOffice": "Arkansas Department of Finance and Administration, Office of Budget; enacted via General Assembly (arkleg.state.ar.us)",
+   "cycle": "annual",
+   "fyNote": "FY2027 Revenue Stabilization Act (HB1100, 2026 fiscal session) passed Apr 28-29, 2026 and signed by Gov. Sanders; $6.7B general revenue",
+   "current": {
+    "label": "HB1100 (2026 fiscal session) - Revenue Stabilization Law amendment allocating FY2027 general revenue",
+    "url": "https://www.arkleg.state.ar.us/Home/FTPDocument?path=%2FBills%2F2026F%2FPublic%2FHB1100.pdf",
+    "format": "pdf",
+    "agencyDetail": "partial",
+    "verified": true
+   },
+   "prior": {
+    "label": "2025-2026 Revenue Stabilization Law Allocations schedule (FY2026 RSA enacted via SB637/HB2003, 2025 regular session)",
+    "url": "https://arkleg.state.ar.us/Home/FTPDocument?path=/Assembly/Meeting+Attachments/005/27469/B+++RSA+Allocations.pdf",
+    "verified": false
+   },
+   "notes": "Arkansas has no single unified enacted budget document. The RSA distributes general revenue by fund/agency (general revenue only, ~$6.7B of total spending); individual agency appropriation acts are passed separately. DFA Office of Budget page (https://www.dfa.arkansas.gov/office/budget/, verified) hosts Annual Operations Plans, agency actual expenditures, and Funded Budget by Fund Source - best executive-side agency detail."
+  },
+  "california": {
+   "state": "California",
+   "budgetOffice": "California Department of Finance (ebudget.ca.gov)",
+   "cycle": "annual",
+   "fyNote": "FY2026-27 Budget Act (AB 109) signed Jun 29, 2026",
+   "current": {
+    "label": "California State Budget 2026-27 - Enacted Budget Summary (Dept of Finance)",
+    "url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/FullBudgetSummary.pdf",
+    "format": "pdf",
+    "agencyDetail": "partial",
+    "verified": true
+   },
+   "prior": {
+    "label": "California State Budget 2025-26 - Enacted Budget Summary",
+    "url": "https://ebudget.ca.gov/2025-26/pdf/Enacted/BudgetSummary/FullBudgetSummary.pdf",
+    "verified": true
+   },
+   "notes": "Both enacted summary PDFs verified. Summary organizes by policy area; full department-by-department appropriation detail lives in the ebudget.ca.gov Enacted Budget Detail web pages (JS SPA at ebudget.ca.gov/budget/2026-27EN/) - best agency-level source. Budget agreement covers 2026-27 and 2027-28 GF years but enactment is annual. ~$30B reserves preserved."
+  },
+  "colorado": {
+   "state": "Colorado",
+   "budgetOffice": "Joint Budget Committee (JBC), Colorado General Assembly",
+   "cycle": "annual",
+   "fyNote": "FY2026-27 Long Bill (HB26-1410) signed May 8, 2026, Session Laws Chapter 436",
+   "current": {
+    "label": "HB26-1410, 2026-27 Long Appropriations Bill (bill page with enacted session-law PDF)",
+    "url": "https://leg.colorado.gov/bills/HB26-1410",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "SB25-206, 2025-26 Long Appropriations Bill (signed Apr 28, 2025, Chapter 476)",
+    "url": "https://leg.colorado.gov/bills/sb25-206",
+    "verified": true
+   },
+   "notes": "The Long Bill appropriates by department with line-item detail - best agency-level source. Companion narrative: FY 2026-27 Long Bill Narrative (https://content.leg.colorado.gov/sites/default/files/26LBNarrative.pdf) and Summary Tables; JBC also publishes an annual Appropriations Report each summer. FY2026-27 package comprised 65 bills (HB26-1348 through 1412)."
+  },
+  "connecticut": {
+   "state": "Connecticut",
+   "budgetOffice": "Office of Policy and Management (OPM); Office of Fiscal Analysis (OFA) publishes the enacted budget book",
+   "cycle": "biennial",
+   "fyNote": "FY2026-27 biennium enacted Jun 2025 (PA 25-168); FY2027 midterm adjustments (PA 26-68) signed May 26, 2026",
+   "current": {
+    "label": "OFA Connecticut State Budget FY 26 - FY 27 (enacted biennial budget book, Aug 2025)",
+    "url": "https://www.cga.ct.gov/ofa/Documents/year/BB/2025BB-20250827_FY%2026%20and%20FY%2027%20Connecticut%20Budget.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": false
+   },
+   "prior": {
+    "label": "OFA Connecticut State Budget FY 24 - FY 25 (enacted biennial budget book for PA 23-204)",
+    "url": "https://www.cga.ct.gov/ofa/Documents/year/BB/2023BB-20231005_FY%2024%20and%20FY%2025%20Connecticut%20Budget.pdf",
+    "verified": false
+   },
+   "notes": "cga.ct.gov serves an incomplete TLS chain blocking automated fetch; URLs from official CGA site search listings, naming pattern consistent across years. Enactment verified via Governor's press release (portal.ct.gov): PA 26-68 FY2027 adjustments signed May 26, 2026. OFA has a DRAFT 'FY 27 Connecticut Budget Revisions' book dated 7/8/2026 reflecting PA 26-68 - final version will be the best current agency-level source once posted. OFA budget books contain full agency-level appropriations."
+  },
+  "delaware": {
+   "state": "Delaware",
+   "budgetOffice": "Delaware Office of Management and Budget (budget.delaware.gov)",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Jul 2026 - Jun 2027) Operating Budget Act (SB 335) signed Jun 30, 2026 (~$6.99B); plus One-Time Supplemental SB 336 and Grant-in-Aid SB 337",
+   "current": {
+    "label": "OMB Fiscal Year 2027 Budget page (links enacted SB 335 Operating Budget Act, SB 336 supplemental, HB 500 bond bill, SB 337 grant-in-aid, plus Governor's recommended operating budget book)",
+    "url": "https://budget.delaware.gov/budget/fy2027/index.shtml",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "OMB Fiscal Year 2026 Budget page (enacted FY2026 Operating Budget Act, HB 225)",
+    "url": "https://budget.delaware.gov/budget/fy2026/index.shtml",
+    "verified": true
+   },
+   "notes": "Both portal pages fetch-verified. Enacted Operating Budget Act (SB 335) contains department/agency line-item appropriations; Governor's Recommended Operating Budget book (https://budget.delaware.gov/budget/fy2027/documents/operating/budget-book.pdf) has richest agency narratives but reflects January recommendation, not final enacted numbers. One-time supplemental (~$146M) in SB 336."
+  },
+  "florida": {
+   "state": "Florida",
+   "budgetOffice": "Florida Legislature (flsenate.gov); executive side is EOG Office of Policy and Budget",
+   "cycle": "annual",
+   "fyNote": "FY2026-27 General Appropriations Act HB 5001E (2026 special session) approved Jun 29, 2026 with line-item vetoes, Chapter 2026-232; $113.6B after vetoes",
+   "current": {
+    "label": "HB 5001E (2026E) - General Appropriations Act 2026-27, bill page with enrolled text (HTML and PDF)",
+    "url": "https://www.flsenate.gov/Session/Bill/2026E/5001E",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "SB 2500 (2025) - General Appropriations Act 2025-26, Chapter 2025-198, signed Jun 30, 2025 ($115.1B)",
+    "url": "https://www.flsenate.gov/Session/Bill/2025/2500",
+    "verified": true
+   },
+   "notes": "Both bill pages fetch-verified. The GAA is a full line-item document (specific appropriations numbered by agency/program) - excellent agency detail. FY2026-27 GAA passed in special session (E suffix). Governor's line-item vetoes reduced the passed $114.5B to $113,575,226,021 enacted. Also see flsenate.gov/Session/Appropriations/2026 for conference reports and summaries."
+  },
+  "georgia": {
+   "state": "Georgia",
+   "budgetOffice": "Governor's Office of Planning and Budget (OPB)",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Jul 2026 - Jun 2027) Appropriations Act HB 974 signed May 12, 2026 ($38.5B); Georgia also passes an Amended FY2026 act (HB 973) each session",
+   "current": {
+    "label": "HB 974 - FY 2027 Appropriations Bill (as enacted, OPB PDF)",
+    "url": "https://opb.georgia.gov/document/appropriations-bills-current-year/hb-974-fy-2027-appropriations-bill/download",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "HB 68 - FY 2026 Appropriations Bill (original, 2025 session, OPB PDF)",
+    "url": "https://opb.georgia.gov/document/appropriations-bills-prior-years/hb-68-fy-2026-appropriations-bill/download",
+    "verified": true
+   },
+   "notes": "All three PDFs resolve (incl. HB 973 AFY2026 at https://opb.georgia.gov/document/appropriations-bills-current-year/hb-973-afy-2026-appropriations-bill/download). Georgia appropriations acts are organized by agency and program with dollar amounts - strong agency detail. Portal for all years: https://opb.georgia.gov/budget-information/budget-documents/appropriations-bills. Gov. Kemp withheld some appropriated funds at signing per news reports."
+  },
+  "hawaii": {
+   "state": "Hawaii",
+   "budgetOffice": "Hawaii Department of Budget and Finance",
+   "cycle": "biennial",
+   "fyNote": "FY2026-27 biennium (Act 250 SLH 2025) as amended by FY2027 supplemental, HB1800 = Act 175 SLH 2026, signed Jun 26 2026",
+   "current": {
+    "label": "HB1800 CD1 - Supplemental Appropriations Act of 2026 (Act 175, SLH 2026), FY2027 supplemental budget",
+    "url": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=HB&billnumber=1800&year=2026",
+    "format": "html",
+    "agencyDetail": "yes",
+    "verified": false
+   },
+   "prior": {
+    "label": "HB300 - General Appropriations Act of 2025 (Act 250, SLH 2025), FY2026-27 biennium budget",
+    "url": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=HB&billnumber=300&year=2025",
+    "verified": false
+   },
+   "notes": "capitol.hawaii.gov returns HTTP 403 to automated fetching; enactment of HB1800 as Act 175 SLH 2026 (signed Jun 26 2026, $10.63B GF / $20.31B all-means FY2027) verified via Governor's official news release (governor.hawaii.gov). Appropriations acts contain agency detail by department/program ID. Dept of Budget and Finance portal (budget.hawaii.gov/budget/) hosts the FY2027 Executive Supplemental Budget (proposed, program-level detail) and was verified fetchable."
+  },
+  "idaho": {
+   "state": "Idaho",
+   "budgetOffice": "Idaho Legislative Services Office, Budget & Policy Analysis Division (executive budget office: Division of Financial Management)",
+   "cycle": "annual",
+   "fyNote": "FY2027 appropriations enacted during 2026 legislative session; Legislative Fiscal Report compiled May 2026",
+   "current": {
+    "label": "2026 Legislative Fiscal Report (Sine Die report) - FY2027 appropriations",
+    "url": "https://legislature.idaho.gov/wp-content/uploads/budget/publications/Legislative-Fiscal-Report/2026/Legislative%20Fiscal%20Report.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "2025 Legislative Fiscal Report - FY2026 appropriations",
+    "url": "https://legislature.idaho.gov/wp-content/uploads/budget/publications/Legislative-Fiscal-Report/2025/Legislative%20Fiscal%20Report.pdf",
+    "verified": true
+   },
+   "notes": "LFR is the definitive enacted-appropriations document: agency-by-agency, by decision unit and fund source, with 3-year comparisons. The 2026 Legislative Budget Book (Jan 2026) contains requests/recommendations, not enacted figures. LFR index: https://legislature.idaho.gov/lso/bpa/pubs/lfr/"
+  },
+  "illinois": {
+   "state": "Illinois",
+   "budgetOffice": "Governor's Office of Management and Budget (GOMB)",
+   "cycle": "annual",
+   "fyNote": "FY2027 budget passed Jun 1 2026, enacted as Public Act 104-0464 (appropriations) and PA 104-0466 (BIMP), signed with minor line-item vetoes; ~$55.9B GF",
+   "current": {
+    "label": "FY27 Enacted Budget Financial Walkdown (GOMB, 6/15/2026)",
+    "url": "https://budget.illinois.gov/content/dam/soi/en/web/budget/documents/budget-book/fy2027-budget/FY27%20Enacted%20Budget%20Financial%20Walkdown%206.15.pdf",
+    "format": "pdf",
+    "agencyDetail": "partial",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY26 Enacted Budget Financial Walkdown (GOMB)",
+    "url": "https://budget.illinois.gov/content/dam/soi/en/web/budget/documents/budget-book/fy2026-budget/FY26_Enacted_Budget_Financial_Walkdown.pdf",
+    "verified": true
+   },
+   "notes": "Walkdowns are fund-level summaries. Best agency-level detail: GOMB's 'Enacted Appropriations by Line Item' Excel files on https://budget.illinois.gov/budget-books.html (FY25 Final/FY26 Enacted line-item XLS posted; FY27 line-item file expected but not yet posted as of Jul 2026), or Public Act 104-0464 full text on ilga.gov. The prominent 'Fiscal Year 2027 Operating Budget' PDF on budget.illinois.gov is the Governor's PROPOSED budget (Feb 2026) - do not confuse with enacted."
+  },
+  "indiana": {
+   "state": "Indiana",
+   "budgetOffice": "Indiana State Budget Agency",
+   "cycle": "biennial",
+   "fyNote": "FY2026-27 biennium, HEA 1001-2025 passed Apr 25 2025 ($23.0B FY26 / $23.2B FY27 all funds); FY2027 is year 2 of the biennium",
+   "current": {
+    "label": "2025-2027 As-Passed Budget (HEA 1001-2025), State Budget Agency",
+    "url": "https://www.in.gov/sba/budget-information/budget-data/2025-2027-budget/2025-2027-as-passed-budget/",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "2023-2025 As-Passed Budget (HEA 1001-2023)",
+    "url": "https://www.in.gov/sba/budget-information/budget-data/2023-2025-budget/2023-2025-as-passed-budget/",
+    "verified": true
+   },
+   "notes": "As-Passed Budget portal includes Agency Summary (appropriations by individual agency), functional-category detail, and full detailed budget data in Excel - best agency detail. Also 'List of Appropriations' (Whole Budget Report) PDF at in.gov/sba. Next biennial budget (FY2028-29) enacted spring 2027."
+  },
+  "iowa": {
+   "state": "Iowa",
+   "budgetOffice": "Legislative Services Agency, Fiscal Services Division (executive budget office: Iowa Department of Management)",
+   "cycle": "annual",
+   "fyNote": "FY2027 budget (~$9.65B General Fund) enacted end of 2026 session (adjourned early May 2026)",
+   "current": {
+    "label": "Appropriation Bill Analysis (NOBA) - 2026 Session / FY2027 enacted appropriations acts, LSA Fiscal Services",
+    "url": "https://www.legis.iowa.gov/publications/information/appropriationBillAnalysis",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY2026 Appropriations Acts - LSA Fiscal Analysis (end-of-session report, July 2025)",
+    "url": "https://www.legis.iowa.gov/docs/publications/FR/1543049.pdf",
+    "verified": true
+   },
+   "notes": "Iowa splits the budget across ~10 subcommittee appropriations acts; the NOBA portal hosts LSA's final analysis of each enacted FY2027 act with agency-level dollar detail. The consolidated FY2027 'Appropriations Acts Fiscal Analysis' (equivalent of the July 2025 FY2026 edition) was not yet posted as of mid-Jul 2026; LSA Budget Unit Briefs dated Jul 1 2026 are available. Prior-year PDF verified (5.5MB) though text not machine-extractable."
+  },
+  "kansas": {
+   "state": "Kansas",
+   "budgetOffice": "Kansas Division of the Budget",
+   "cycle": "annual",
+   "fyNote": "FY2027 appropriations approved by 2025 Legislature (two-year budget, SB 125) and revised by 2026 Legislature; FY2027 Comparison Report posted Jul 9 2026",
+   "current": {
+    "label": "FY 2027 Comparison Report (Division of the Budget, posted 07.09.2026)",
+    "url": "https://budget.kansas.gov/wp-content/uploads/FY2027_Comparison_Report-07.09.2026.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY 2026 Comparison Report (posted 07.16.2025)",
+    "url": "https://budget.kansas.gov/wp-content/uploads/FY2026_Comparison_Report-07.16.2025.pdf",
+    "verified": true
+   },
+   "notes": "Comparison Report is the standard Kansas enacted-budget document: approved amounts by agency vs. governor's recommendations. Kansas began legislature-led budgeting in 2025 and approved FY2026 plus most FY2027 amounts in one bill, with 2026-session revisions. Index: https://budget.kansas.gov/comparison-reports/. Both PDFs verified (4.1MB/4.4MB) though image-heavy, not machine-extractable."
+  },
+  "kentucky": {
+   "state": "Kentucky",
+   "budgetOffice": "Office of State Budget Director (OSBD)",
+   "cycle": "biennial",
+   "fyNote": "FY2027-28 (2026-2028) biennium: HB 500 (executive branch, ~$31B) enacted Apr 14 2026 as Acts Ch. 168, after partial override of line-item vetoes; companion bills HB 503 (legislative) and HB 504 (judicial)",
+   "current": {
+    "label": "HB 500 (2026 RS) - Executive Branch Budget, 2026-2028 biennium, Acts Chapter 168",
+    "url": "https://apps.legislature.ky.gov/law/acts/26RS/documents/0168.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "2024-2026 Budget of the Commonwealth - Budget Bills volume (OSBD; HB 6 2024, Acts Ch. 175)",
+    "url": "https://osbd.ky.gov/Publications/Documents/Budget%20Documents/2024-2026%20Budget%20of%20the%20Commonwealth/2024-2026%20Budget%20of%20the%20Commonwealth%20-%20Budget%20Bills.pdf",
+    "verified": true
+   },
+   "notes": "OSBD had NOT yet published the enacted '2026-2028 Budget of the Commonwealth' volumes as of Jul 2026, so the act text (Ch. 168, 125 pp., appropriations by cabinet/agency/fund) is the best current source. Once published, the Budget of the Commonwealth Operating Budget Vol. I will be the best agency-detail document. Bill record: https://apps.legislature.ky.gov/record/26rs/hb500.html"
+  },
+  "louisiana": {
+   "state": "Louisiana",
+   "budgetOffice": "Division of Administration, Office of Planning and Budget",
+   "cycle": "annual",
+   "fyNote": "FY2027 (FY2026-2027): HB1 (2026 RS) signed Jun 18 2026 with line-item vetoes, becomes Act No. 3",
+   "current": {
+    "label": "HB1 Enrolled (Act 3 of 2026 RS) - General Appropriations Act, FY2026-2027",
+    "url": "https://legis.la.gov/legis/ViewDocument.aspx?d=1478641",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "State Budget FY 2025-2026 (Office of Planning and Budget)",
+    "url": "https://www.doa.la.gov/media/05ndglek/state_budget_fy26.pdf",
+    "verified": true
+   },
+   "notes": "HB1 appropriates by schedule/department/agency and means of finance - full agency detail. OPB's consolidated 'State Budget FY27' document not yet posted as of Jul 2026. House Fiscal Division's 'FY 2027 Statewide Budget Tracker' (house.louisiana.gov/housefiscal/current-budget-info) gives by-department comparisons. Bill page: https://legis.la.gov/legis/BillInfo.aspx?s=26RS&b=HB1&sbi=y"
+  },
+  "maine": {
+   "state": "Maine",
+   "budgetOffice": "Office of Fiscal and Program Review, Maine State Legislature (executive budget office: Bureau of the Budget, DAFS)",
+   "cycle": "biennial",
+   "fyNote": "FY2026-27 biennium enacted 2025 (two-part budget: continuing-services LD 210 signed Mar 2025, plus Part 2), amended by 2026 supplemental; document reflects 132nd Legislature 2nd Regular Session FINAL",
+   "current": {
+    "label": "2026-2027 Appropriations & Allocations - All Funds (132nd Legislature, 2nd Regular Session, FINAL)",
+    "url": "https://legislature.maine.gov/doc/12522",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "2024-2025 Appropriations & Allocations - All Funds",
+    "url": "https://legislature.maine.gov/doc/11913",
+    "verified": true
+   },
+   "notes": "OFPR's Total State Budget page (https://legislature.maine.gov/ofpr/total-state-budget-information/9304) indexes these all-funds appropriations/allocations listings by department. Both PDFs verified (1.7MB/1.6MB) though text not machine-extractable. Next biennial budget (FY2028-29) due in the 2027 session."
+  },
+  "maryland": {
+   "state": "Maryland",
+   "budgetOffice": "Maryland Department of Budget and Management (DBM)",
+   "cycle": "annual",
+   "fyNote": "FY2027 budget (SB 282, Chapter 4 of 2026) finalized by General Assembly Apr 13 2026, signed May 7 2026; $71.3B all funds / $28.3B GF",
+   "current": {
+    "label": "Chapter 4 of 2026 (Senate Bill 282) - Budget Bill, Fiscal Year 2027 (enacted)",
+    "url": "https://mgaleg.maryland.gov/2026RS/Chapters_noln/CH_4_sb0282e.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY 2026 Fiscal Digest - Approved Operating Budget (DBM)",
+    "url": "https://dbm.maryland.gov/budget/Pages/operbudget/2026-FiscalDigest.aspx",
+    "verified": true
+   },
+   "notes": "Chapter 4 PDF resolves but exceeds 10MB automated-fetch limit; it is the enacted budget bill with agency-by-agency appropriations. DBM's FY2027 Fiscal Digest (consolidated approved operating budget) NOT yet posted as of mid-Jul 2026. DBM's FY2027 'Operating Budget Detail by Agency' books are the PROPOSED (Jan 2026) versions — GovSpend has these as MARYLAND BUDGET V1/V2 PDFs."
+  },
+  "massachusetts": {
+   "state": "Massachusetts",
+   "budgetOffice": "Executive Office for Administration and Finance (budget.digital.mass.gov budget summary site)",
+   "cycle": "annual",
+   "fyNote": "FY2027 GAA passed Legislature Jul 1, 2026; signed by Gov. Healey Jul 9, 2026 with no vetoes ($63.4B)",
+   "current": {
+    "label": "FY2027 Enacted Budget (General Appropriations Act) - Budget Summary site",
+    "url": "https://budget.digital.mass.gov/summary/fy27/enacted",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY2026 Enacted Budget (GAA) - Budget Summary site",
+    "url": "https://budget.digital.mass.gov/summary/fy26/enacted",
+    "verified": true
+   },
+   "notes": "Budget summary site has Statewide Summary and Line Item Summary (line-item appropriations by agency) - best source for agency detail. mass.gov pages return 403 to automated fetchers; malegislature.gov/Budget/FY2027/FinalBudget had not yet posted the GAA text as of Jul 17, 2026 even though the budget is signed."
+  },
+  "michigan": {
+   "state": "Michigan",
+   "budgetOffice": "State Budget Office (Michigan DTMB); appropriations acts via Michigan Legislature",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Oct 2026-Sep 2027) NOT yet enacted: $75.2B budget (SB 878 general omnibus + HB 5630 school aid) passed Legislature Jul 3, 2026, presented to Governor Jul 14, 2026, no Public Act number as of Jul 17, 2026. Latest enacted = FY2026 (Oct 2025)",
+   "current": {
+    "label": "FY2026 General Omnibus - HB 4706, Public Act 22 of 2025 (approved Oct 7, 2025), bill page with enrolled text",
+    "url": "https://legislature.mi.gov/Bills/Bill?ObjectName=2025-HB-4706",
+    "format": "html",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY2025 General Omnibus - SB 747, Public Act 121 of 2024 (approved Jul 24, 2024, with line-item vetoes)",
+    "url": "https://www.legislature.mi.gov/Bills/Bill?ObjectName=2024-SB-0747",
+    "verified": true
+   },
+   "notes": "Enrolled omnibus acts contain part 1 line-item appropriations by department. FY2026 education omnibus is SB 166 (PA 15 of 2025). SBO's 'Final Signed Budget Bills' page (https://www.michigan.gov/budget/budget-documents/final-signed-budget-bills) is the best one-stop portal but michigan.gov returns 403 to automated fetchers. Track FY2027 signing at https://www.legislature.mi.gov/Bills/Bill?ObjectName=2026-SB-0878."
+  },
+  "minnesota": {
+   "state": "Minnesota",
+   "budgetOffice": "Minnesota Management and Budget (MMB)",
+   "cycle": "biennial",
+   "fyNote": "FY2026-27 biennium (Jul 2025-Jun 2027) enacted Jun 2025 (Jun 9, 2025 one-day special session); no new biennial budget expected until 2027",
+   "current": {
+    "label": "FY2026-27 Current Enacted Budget portal with Enacted Budget Books by agency",
+    "url": "https://mn.gov/mmb/budget/current-budget/current-enacted-budget/",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY2024-25 Enacted Budget (MMB previous enacted budget page)",
+    "url": "https://mn.gov/mmb/budget/current-budget/previous-enacted-budget/fy2024-2025/index.jsp",
+    "verified": false
+   },
+   "notes": "Agency detail excellent: per-agency enacted budget book PDFs at mn.gov/mmb-stat/documents/budget/2026-27-biennial-budget-books/enacted-budget/[agency].pdf (same pattern for 2024-25). Prior-page .jsp URLs trigger a bot challenge on automated fetch (page exists; confirmed via search), but underlying agency PDFs fetch fine - verified education.pdf resolves."
+  },
+  "mississippi": {
+   "state": "Mississippi",
+   "budgetOffice": "Legislative Budget Office (Joint Legislative Budget Committee)",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Jul 2026-Jun 2027) appropriations enacted 2026 regular session; $7.37B General Fund plus $1.85B state support special funds",
+   "current": {
+    "label": "State of Mississippi Budget Bulletin, Fiscal Year 2027",
+    "url": "https://www.lbo.ms.gov/pdfs/fy27_bulletin.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "State of Mississippi Budget Bulletin, Fiscal Year 2026",
+    "url": "https://www.lbo.ms.gov/pdfs/fy26_bulletin.pdf",
+    "verified": true
+   },
+   "notes": "Both PDFs resolve (1.7MB / 1.9MB). Budget Bulletin lists appropriations agency by agency with fund sources - best agency-detail source. Governor line-item vetoed HB 1924 and SB 3071 (2026 session). DFA also posts annual appropriation bulletins at https://www.dfa.ms.gov/annual-state-appropriation-budget-bulletins. FY2026 budget was finalized in a May 2025 special session."
+  },
+  "missouri": {
+   "state": "Missouri",
+   "budgetOffice": "Office of Administration, Division of Budget and Planning",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Jul 2026-Jun 2027) appropriation bills signed by Gov. Kehoe, effective Jul 1, 2026",
+   "current": {
+    "label": "FY2027 Appropriation Bills (HB 2-13 operating + HB 17-20 supplemental) with signed letters, bill text, fact sheets",
+    "url": "https://budplan.oa.mo.gov/appropriation-bills-fiscal-year-2027",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY2026 Appropriation Bills (signed by Gov. Kehoe, effective Jul 1, 2025)",
+    "url": "https://budplan.oa.mo.gov/budget-information/fy2026/appropriation-bills",
+    "verified": true
+   },
+   "notes": "Each appropriation bill covers a department or cluster (DESE, Higher Ed, Revenue, Transportation, Social Services, etc.), so agency detail is inherent. Page also posts 'Fiscal Year 2027 Totals by Department' and a veto list - the Totals by Department doc is the quickest agency-level rollup."
+  },
+  "montana": {
+   "state": "Montana",
+   "budgetOffice": "Legislative Fiscal Division (enacted-budget reporting); Governor's Office of Budget and Program Planning publishes the executive budget",
+   "cycle": "biennial",
+   "fyNote": "2027 biennium (FY2026-27, Jul 2025-Jun 2027) enacted via HB 2 in the 2025 session; legislature meets odd years, next budget in 2027 session",
+   "current": {
+    "label": "LFD Legislative Fiscal Report, 2027 Biennium (post-session enacted budget), via Budget & Revenue portal",
+    "url": "https://www.legmt.gov/lfd/budget-revenue/",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "LFD Fiscal Report, 2025 Biennium (Jul 2023) - Section A (Sections A-F cover all agencies)",
+    "url": "https://archive.legmt.gov/content/Publications/fiscal/2025-Biennium/Fiscal-Reports-July-2023/Section-A-Fiscal-Report_July23.pdf",
+    "verified": true
+   },
+   "notes": "Best agency detail: 2027-biennium Fiscal Report section PDFs (agency-by-agency, program-by-program HB 2 appropriations), e.g. Vol 1 statewide summary https://archive.legmt.gov/content/Publications/fiscal/2027-Biennium/Budget-and-Revenue/Fiscal-Reports/Vol-1-FR-27Bi.pdf (verified) and Section-A/B/C-FR-27Bi.pdf. Governor's (proposed) budget lives at budget.mt.gov/Budgets/."
+  },
+  "nebraska": {
+   "state": "Nebraska",
+   "budgetOffice": "Nebraska Legislative Fiscal Office",
+   "cycle": "biennial",
+   "fyNote": "FY2025-26/FY2026-27 biennium enacted May 2025 (LB 261 mainline appropriations, approved May 21, 2025); mid-biennium adjustments enacted 2026 session",
+   "current": {
+    "label": "State of Nebraska Biennial Budget FY2025-26 and FY2026-27, as revised by the 2026 session (LFO final report)",
+    "url": "https://nebraskalegislature.gov/pdf/reports/fiscal/2026budget_final.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "State of Nebraska Biennial Budget FY2023-24 and FY2024-25 (LFO report, post-2024 session)",
+    "url": "https://nebraskalegislature.gov/pdf/reports/fiscal/2024budget.pdf",
+    "verified": true
+   },
+   "notes": "Both PDFs resolve (3.6MB / 2.6MB). LFO biennial budget reports include agency-by-agency, program-level appropriations - best agency-detail source. Original as-enacted 2025 version also available (2025budget.pdf). Executive-side docs at das.nebraska.gov/budget; note 2024budget_final.pdf does NOT exist - the 2024-session file is 2024budget.pdf."
+  },
+  "nevada": {
+   "state": "Nevada",
+   "budgetOffice": "Legislative Counsel Bureau, Fiscal Analysis Division (Appropriations Report); Governor's Finance Office publishes the legislatively approved budget",
+   "cycle": "biennial",
+   "fyNote": "2025-27 biennium (FY2026 Jul 2025-Jun 2026, FY2027 Jul 2026-Jun 2027) enacted Jun 2025, 83rd Session; next budget in 2027 session",
+   "current": {
+    "label": "Nevada Legislative Appropriations Report, 2025-2027 Biennium (Revised Mar 10, 2026)",
+    "url": "https://epubs.nsla.nv.gov/statepubs/epubs/173861-2025-2027-Revised.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "Nevada Legislative Appropriations Report, 2023-2025 Biennium (82nd Session)",
+    "url": "https://www.leg.state.nv.us/Division/fiscal/Appropriation%20Reports/2023AppropriationsReport/2023_82nd_AppropriationsReport.pdf",
+    "verified": true
+   },
+   "notes": "Appropriations Report summarizes agency budgets by governmental function with Governor-recommended vs legislatively approved comparisons - best agency detail. GFO's NEBS220 '2026-27 Legislatively Approved Biennial Budget' (https://budget.nv.gov/uploadedFiles/budgetnvgov/content/Budgets/2026-27%20Legislatively%20Approved%20Biennial%20Budget.pdf) gives account-level detail. Index: https://www.leg.state.nv.us/division/fiscal/Appropriation%20Reports/index.html. Both PDFs verified (4MB / 3.9MB)."
+  },
+  "new-hampshire": {
+   "state": "New Hampshire",
+   "budgetOffice": "Office of Legislative Budget Assistant (LBA); NH Dept. of Administrative Services Budget Office for agency detail",
+   "cycle": "biennial",
+   "fyNote": "FY2026-27 biennium enacted Jun 2025 (HB 1 operating budget + HB 2 trailer, chaptered final versions dated 7/1/25); next budget in 2027 session",
+   "current": {
+    "label": "FY2026-2027 Operating Budget page - HB 1 and HB 2 chaptered final versions plus comparative reports",
+    "url": "https://gc.nh.gov/lba/budget/fy2026_2027_budget.aspx",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY2024-2025 Operating Budget page - HB 1/HB 2 final versions (PDF and Excel)",
+    "url": "https://gc.nh.gov/lba/budget/fy2024_2025_budget.aspx",
+    "verified": true
+   },
+   "notes": "HB 1 final version contains line-item appropriations by agency/accounting unit (also downloadable as Excel - unusually convenient for analysis). DAS agency operating budget portal (https://www.das.nh.gov/budget/2026-2027AgencyOperatingBudget.aspx) supplements. Enacted totals ~$15.9B all funds for the biennium."
+  },
+  "new-jersey": {
+   "state": "New Jersey",
+   "budgetOffice": "Department of the Treasury, Office of Management and Budget (OMB)",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Jul 2026-Jun 2027) Appropriations Act signed by Gov. Sherrill Jun 30, 2026 - $60.7B state funds + $30.5B federal",
+   "current": {
+    "label": "FY2027 Appropriations Act (advance law, A5327/S5327, 358 pp., posted by OMB)",
+    "url": "https://www.nj.gov/treasury/omb/publications/27budget/S5327.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY2026 Appropriations Handbook (full), OMB",
+    "url": "https://www.nj.gov/treasury/omb/publications/26approp/FY2026AppropriationsHandbook-Full.pdf",
+    "verified": true
+   },
+   "notes": "Appropriations Act is organized by department with line-item appropriations. OMB's Appropriations Handbook (the cleaner agency-detail compilation) for FY2027 not yet posted as of Jul 17, 2026 - FY2026 handbook is the latest. OMB publications index at https://www.nj.gov/treasury/omb/ (archives to 1987). Both PDFs verified (4.4MB / 2.5MB). Gov. Sherrill's first budget."
+  },
+  "new-mexico": {
+   "state": "New Mexico",
+   "budgetOffice": "NM Department of Finance and Administration, State Budget Division (legislative counterpart: Legislative Finance Committee)",
+   "cycle": "annual",
+   "fyNote": "FY2027 enacted via General Appropriation Act of 2026 (HB2), signed Mar 11, 2026",
+   "current": {
+    "label": "FY2027 State of New Mexico Budget Overview - Complete Report (State Budget Division, Mar 2026, 238 pp)",
+    "url": "https://www.nmdfa.state.nm.us/wp-content/uploads/2026/03/FY27-Budget-Overview-Complete-Report.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "General Appropriation Act of 2025 (HB2, 2025 Regular Session - FY2026 enacted budget, session-law text, 288 pp)",
+    "url": "https://www.nmlegis.gov/Sessions/25%20Regular/final/HB0002.pdf",
+    "verified": true
+   },
+   "notes": "Both PDFs fetched and confirmed. GAA of 2026 authorizes ~$11.1B recurring general fund (+3.1% over FY26); ~100 line-item vetoes cutting $34.65M nonrecurring. The GAA appropriates per agency, and the DFA FY27 Budget Overview presents agency-by-agency operating budgets. LFC 2026 Post-Session Fiscal Review also covers it."
+  },
+  "new-york": {
+   "state": "New York",
+   "budgetOffice": "New York State Division of the Budget (DOB)",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Apr 1, 2026 - Mar 31, 2027) enacted May 2026; NY fiscal year runs April-March",
+   "current": {
+    "label": "FY 2027 Enacted Budget publications portal (Financial Plan, Capital Plan, Aid to Localities, appropriation bills)",
+    "url": "https://www.budget.ny.gov/pubs/archive/fy27/en/index.html",
+    "format": "portal",
+    "agencyDetail": "partial",
+    "verified": false
+   },
+   "prior": {
+    "label": "FY 2026 Enacted Budget publications portal (enacted May 2025)",
+    "url": "https://www.budget.ny.gov/pubs/archive/fy26/en/index.html",
+    "verified": false
+   },
+   "notes": "budget.ny.gov reset every automated fetch attempt (ECONNRESET), so URLs could not be fetch-verified; they follow DOB's standard archive structure, confirmed by search-index hits incl. DOB's own press page. Key direct PDFs: fy27fp-en.pdf (Enacted Financial Plan), fy27cp-en.pdf (Capital Plan). FY27 all-funds ~$268.5B. Full agency-level appropriation detail is in the enacted appropriation bills (State Operations, Aid to Localities) linked from the portal."
+  },
+  "north-carolina": {
+   "state": "North Carolina",
+   "budgetOffice": "NC Office of State Budget and Management (OSBM); NCGA Fiscal Research Division",
+   "cycle": "biennial",
+   "fyNote": "2025-27 biennium; comprehensive Current Operations Appropriations Act of 2026 (S257, SL 2026-41) ratified Jul 2, 2026, became law Jul 7, 2026",
+   "current": {
+    "label": "Current Operations Appropriations Act of 2026 - S.L. 2026-41 / Senate Bill 257 (634 pp)",
+    "url": "https://www.ncleg.gov/Sessions/2025/Bills/Senate/PDF/S257v8.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "2023 Appropriations Act - S.L. 2023-134 / House Bill 259 (2023-25 biennium, 625 pp)",
+    "url": "https://www.ncleg.gov/Sessions/2023/Bills/House/PDF/H259v7.pdf",
+    "verified": true
+   },
+   "notes": "Both PDFs fetched and confirmed. Quirk: NC failed to enact a comprehensive budget in 2025 and ran FY2025-26 on the recurring base budget plus stopgap mini-budgets; the full 2025-27 act only became law Jul 7, 2026. Best agency-level dollar detail: OSBM's Certified Budget page (per-agency certified budgets for FY2025-26 and FY2026-27; fetch-verified): https://www.osbm.nc.gov/budget/certified-budget"
+  },
+  "north-dakota": {
+   "state": "North Dakota",
+   "budgetOffice": "ND Office of Management and Budget (OMB); ND Legislative Council",
+   "cycle": "biennial",
+   "fyNote": "2025-27 biennium enacted spring 2025 (69th Legislative Assembly); ~$20.3B total appropriations",
+   "current": {
+    "label": "2025-27 Approved State Budget / Legislative Appropriations book (OMB, 14.5MB)",
+    "url": "https://www.omb.nd.gov/sites/www/files/documents/financial-transparency/state-budgets/appropbook2025-27.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "2023-25 Approved State Budget / Legislative Appropriations book (OMB)",
+    "url": "https://www.omb.nd.gov/sites/www/files/documents/financial-transparency/state-budgets/appropbook2023-25.pdf",
+    "verified": true
+   },
+   "notes": "2023-25 book fetch-verified; 2025-27 book exceeds 10MB fetch cap but URL resolves and OMB archive page (fetch-verified) lists it. Excellent alternative with deep agency detail: Legislative Council 'State Budget Actions for the 2025-27 Biennium' (Jul 2025, 508 pp; fetched): https://ndlegis.gov/sites/default/files/fiscal/2025-27/docs/2025-27-state-budget-actions.pdf. GovSpend also has the enacted 2025-27 book indexed."
+  },
+  "ohio": {
+   "state": "Ohio",
+   "budgetOffice": "Ohio Office of Budget and Management (OBM); budget documents published by Ohio Legislative Service Commission (LSC)",
+   "cycle": "biennial",
+   "fyNote": "FY2026-27 biennium main operating budget (HB 96, 136th GA) signed Jun 30, 2025; GRF $44.42B FY26 / $46.08B FY27",
+   "current": {
+    "label": "HB 96 Appropriation Spreadsheet - All Operating Bills As Enacted, FY2026-FY2027 (LSC)",
+    "url": "https://www.lsc.ohio.gov/assets/legislation/136/hb96/en0/files/hb96-appropriation-spreadsheet-all-operating-bills-as-enacted-136th-general-assembly.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": false
+   },
+   "prior": {
+    "label": "HB 33 Appropriation Spreadsheet As Enacted, FY2024-FY2025 (LSC, 135th GA, signed Jul 2023)",
+    "url": "https://www.lsc.ohio.gov/assets/legislation/135/hb33/en0/files/hb33-appropriation-spreadsheet-as-enacted-135th-general-assembly.pdf",
+    "verified": false
+   },
+   "notes": "lsc.ohio.gov fails automated fetch with incomplete TLS cert chain, so content could not be pulled; URLs come from LSC's own indexed site and standard path structure. The appropriation spreadsheets are the best agency detail available for Ohio - line-item by agency/fund/ALI for both years. HB 96 landing: https://www.legislature.ohio.gov/legislation/136/hb96"
+  },
+  "oklahoma": {
+   "state": "Oklahoma",
+   "budgetOffice": "OMES publishes the executive budget; enacted General Appropriations Act published by the Oklahoma Legislature",
+   "cycle": "annual",
+   "fyNote": "FY2027 General Appropriations Act (SB 1177) - agreement Apr 1, 2026 (earliest in recent history), signed by Gov. Stitt Apr 2026; $12.8B",
+   "current": {
+    "label": "Enrolled SB 1177 (2026) - FY2027 General Appropriations Act (40 pp)",
+    "url": "https://www.oklegislature.gov/cf_pdf/2025-26%20ENR/SB/SB1177%20ENR.PDF",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "Enrolled HB 2766 (2025) - FY2026 General Appropriations Act ($11.59B, 35 pp)",
+    "url": "https://www.oklegislature.gov/cf_pdf/2025-26%20ENR/HB/HB2766%20ENR.PDF",
+    "verified": true
+   },
+   "notes": "Both enrolled PDFs fetched and confirmed. The GA act appropriates agency by agency but covers only appropriated funds (~$12.8B of a larger all-funds budget). For all-funds agency detail see OMES FY2027 Executive Budget and Historical Data volumes: https://oklahoma.gov/content/dam/ok/en/omes/documents/bud27.pdf and bud27hd.pdf"
+  },
+  "oregon": {
+   "state": "Oregon",
+   "budgetOffice": "Oregon Legislative Fiscal Office (LFO); executive side is DAS Chief Financial Office",
+   "cycle": "biennial",
+   "fyNote": "2025-27 biennium Legislatively Adopted Budget (2025 session); $138.9B total funds / $37.3B General Fund",
+   "current": {
+    "label": "2025-27 Budget Highlights (LFO, Oct 2025)",
+    "url": "https://www.oregonlegislature.gov/lfo/Documents/2025-27%20Budget%20Highlights.pdf",
+    "format": "pdf",
+    "agencyDetail": "partial",
+    "verified": true
+   },
+   "prior": {
+    "label": "2023-25 Budget Highlights (LFO, Sep 2023)",
+    "url": "https://www.oregonlegislature.gov/lfo/Documents/2023-25%20Budget%20Highlights.pdf",
+    "verified": true
+   },
+   "notes": "Both PDFs fetched and confirmed. Budget Highlights summarizes by program area; the fullest agency-by-agency detail is LFO's companion '2025-27 Legislatively Adopted Budget Detailed Analysis' (same LFO Documents directory): https://www.oregonlegislature.gov/lfo/Documents/2025-27%20Legislatively%20Adopted%20Budget%20Detailed%20Analysis.pdf"
+  },
+  "pennsylvania": {
+   "state": "Pennsylvania",
+   "budgetOffice": "PA Office of the Budget",
+   "cycle": "annual",
+   "fyNote": "FY2026-27 enacted (signed by Gov. Shapiro Jul 12, 2026, ~2 weeks past deadline); $50.85B General Fund",
+   "current": {
+    "label": "Commonwealth Budget portal - 2026-27 Enacted Budget (incl. 'Enacted Budget General Fund Appropriation' line-item document)",
+    "url": "https://www.pa.gov/agencies/budget/publications-and-reports/commonwealth-budget",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "2025-26 Enacted Budget (signed Nov 12, 2025 after ~130-day impasse) - same Commonwealth Budget portal, 2025-26 section",
+    "url": "https://www.pa.gov/agencies/budget/publications-and-reports/commonwealth-budget",
+    "verified": true
+   },
+   "notes": "Portal fetch-verified: budgets 2026-27 back to 1969-70; the per-year 'Enacted Budget General Fund Appropriation' tracking run gives line-item agency detail (best source). Signing Jul 12, 2026 confirmed via pa.gov press release. PA has a pattern of late budgets (FY2025-26 was ~5 months late). NASBO's fall survey used PA's proposed FY2026 figures for this reason."
+  },
+  "rhode-island": {
+   "state": "Rhode Island",
+   "budgetOffice": "RI OMB - Budget Office (executive); enacted-budget reference published by House Fiscal Advisory Staff (RI General Assembly)",
+   "cycle": "annual",
+   "fyNote": "FY2027 enacted Jun 2026 (House passed 65-10 Jun 5; signed by Gov. McKee); $15.2B",
+   "current": {
+    "label": "FY 2027 Budget as Enacted (House Fiscal Advisory Staff, 967 pp)",
+    "url": "https://www.rilegislature.gov/housefiscalreport/2020/FY%202027%20Budget%20as%20Enacted.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY 2026 Budget as Enacted (House Fiscal Advisory Staff, 927 pp; $14.3B, became law without governor's signature)",
+    "url": "https://www.rilegislature.gov/housefiscalreport/2020/FY%202026%20Budget%20as%20Enacted.pdf",
+    "verified": true
+   },
+   "notes": "Both PDFs fetched and confirmed. These volumes carry full agency/program-level detail - best RI enacted-budget source. FY2027 includes phased-in millionaire's tax and new inspector general's office. Quick-reference: 'FY 2027 Budget as Enacted - Budget at a Glance' on the same rilegislature.gov path."
+  },
+  "south-carolina": {
+   "state": "South Carolina",
+   "budgetOffice": "SC Executive Budget Office (Dept of Administration); enacted appropriations acts published by SC Legislature (scstatehouse.gov)",
+   "cycle": "annual",
+   "fyNote": "FY2026-27 NOT enacted as of Jul 17, 2026 - H.5126 stalled in conference; state operating on continuing resolution at FY2025-26 levels. Most recent enacted = FY2025-26 (H.4025, ratified May 28, 2025)",
+   "current": {
+    "label": "FY 2025-26 General Appropriations Act - H.4025 (ratified May 28, 2025; line-item vetoes Jun 2025) - version index page",
+    "url": "https://www.scstatehouse.gov/sess126_2025-2026/appropriations2025/gab4025.php",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY 2024-25 General Appropriations Act - H.5100 (ratified Jun 26, 2024) - version index page",
+    "url": "https://www.scstatehouse.gov/sess125_2023-2024/appropriations2024/gab5100.php",
+    "verified": true
+   },
+   "notes": "Both pages fetch-verified (ratified version's index breaks Part IA out agency by agency with dollar amounts). FY2026-27 quirk: the ~$15.5B H.5126 deadlocked in conference over property-tax relief and earmarks; fiscal year began Jul 1, 2026 under a continuing resolution, legislators returned Jul 14, 2026. Track pending act: https://www.scstatehouse.gov/sess126_2025-2026/appropriations2026/gab5126.php"
+  },
+  "south-dakota": {
+   "state": "South Dakota",
+   "budgetOffice": "Bureau of Finance and Management (budget dev); General Appropriations Act published by SD Legislature/LRC",
+   "cycle": "annual",
+   "fyNote": "FY2027 General Appropriations Act passed Mar 12, 2026; signed by Gov. Rhoden Mar 30, 2026 (~$7.5B total)",
+   "current": {
+    "label": "FY2027 General Appropriations Act - HB 1326, 2026 Session",
+    "url": "https://sdlegislature.gov/Session/Bill/27361",
+    "format": "html",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "FY2026 General Appropriations Act - SB 220, 2025 Session (signed Mar 31, 2025)",
+    "url": "https://sdlegislature.gov/Session/Bill/26286",
+    "verified": true
+   },
+   "notes": "Bill pages are a JS SPA; verified via the legislature's public API (both confirmed 'Signed by the Governor'). GAA text PDF at https://mylrc.sdlegislature.gov/api/Documents/306741.pdf (1.1MB). The GAA lists per-department dollar amounts (general/federal/other funds + FTE). Deeper program-level detail in BFM's Governor's Budget Report FY2027 (https://bfm.sd.gov/budget/FY2027/SD_Rec_2027_entire.pdf, recommended not enacted); BFM posts no post-enactment budget book."
+  },
+  "tennessee": {
+   "state": "Tennessee",
+   "budgetOffice": "Department of Finance and Administration, Division of Budget",
+   "cycle": "annual",
+   "fyNote": "FY2026-2027 (Jul 2026-Jun 2027); appropriations act passed Apr 2026 (~$58.3B)",
+   "current": {
+    "label": "The Budget, Fiscal Year 2026-2027 (Volume 1)",
+    "url": "https://www.tn.gov/content/dam/tn/finance/budget/documents/budget-archive/budget-documents/2027BudgetDocumentVol1.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "The Budget, Fiscal Year 2025-2026 (Volume 1)",
+    "url": "https://www.tn.gov/content/dam/tn/finance/budget/documents/budget-archive/budget-documents/2026BudgetDocumentVol1.pdf",
+    "verified": true
+   },
+   "notes": "Vol 1 is the governor's budget document (Feb 2026) with full agency/program-level detail; the enacted appropriations act passed April 2026 with modest changes. Program-level expenditure detail also in Vol 3 (2027BudgetDocumentVol3.pdf). Portal: https://www.tn.gov/finance/fa/fa-budget-information/current-budget.html. Both PDFs verified."
+  },
+  "texas": {
+   "state": "Texas",
+   "budgetOffice": "Legislative Budget Board",
+   "cycle": "biennial",
+   "fyNote": "FY2026-27 biennium GAA (SB 1, 89th Legislature) enacted June 2025 (~$338B all funds)",
+   "current": {
+    "label": "General Appropriations Act, 2026-27 Biennium (SB 1, 89th Legislature)",
+    "url": "https://www.lbb.texas.gov/Documents/GAA/General_Appropriations_Act_2026_2027.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "General Appropriations Act, 2024-25 Biennium (HB 1, 88th Legislature)",
+    "url": "https://www.lbb.texas.gov/Documents/GAA/General_Appropriations_Act_2024_2025.pdf",
+    "verified": true
+   },
+   "notes": "Both GAA PDFs resolve but exceed 10MB fetch limit; 2026-27 link confirmed on verified lbb.texas.gov homepage. GAA has strategy-level appropriations for every agency by article. Companion summary with agency tables: Fiscal Size-Up 2026-27 (https://www.lbb.texas.gov/Documents/Publications/Fiscal_SizeUp/9046_Fiscal_Size-up_26-27_Biennium.pdf). FY2028-29 budget written in 2027 session."
+  },
+  "utah": {
+   "state": "Utah",
+   "budgetOffice": "Office of the Legislative Fiscal Analyst",
+   "cycle": "annual",
+   "fyNote": "FY2027 appropriations enacted in 2026 General Session (Mar 2026); ~$31.6B total, $12.4B state funds",
+   "current": {
+    "label": "Budget Summary - 2026 General Session (FY2027 appropriations)",
+    "url": "https://le.utah.gov/interim/2026/pdf/00002073.pdf",
+    "format": "pdf",
+    "agencyDetail": "partial",
+    "verified": true
+   },
+   "prior": {
+    "label": "Budget Summary - 2025 General Session (FY2026 appropriations)",
+    "url": "https://le.utah.gov/interim/2025/pdf/00001971.pdf",
+    "verified": true
+   },
+   "notes": "Budget Summary is subcommittee/agency-area level; best agency-level detail is COBI (https://cobi.utah.gov/) and the 'Budget of the State of Utah' report + appropriations bills, linked from https://budget.utah.gov/products/budgeting/."
+  },
+  "vermont": {
+   "state": "Vermont",
+   "budgetOffice": "Legislative Joint Fiscal Office / Dept. of Finance & Management (act published by VT General Assembly)",
+   "cycle": "annual",
+   "fyNote": "FY2027 'Big Bill' (H.951) signed Jun 16, 2026 as Act 144 (~$9.3B)",
+   "current": {
+    "label": "Act 144 of 2026 (H.951) - FY2027 Appropriations Act, As Enacted",
+    "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT144/ACT144%20As%20Enacted.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "Act 27 of 2025 (H.493) - FY2026 Appropriations Act, As Enacted",
+    "url": "https://legislature.vermont.gov/Documents/2026/Docs/ACTS/ACT027/ACT027%20As%20Enacted.pdf",
+    "verified": true
+   },
+   "notes": "legislature.vermont.gov and ljfo.vermont.gov fail TLS cert validation in WebFetch; both act PDFs verified via direct HTTPS HEAD (200, application/pdf). Big Bill Sec. B lists appropriations by department/fund. JFO 'Big Bill web reports' on ljfo.vermont.gov (FY 2027 page) give the cleanest agency-level tables."
+  },
+  "virginia": {
+   "state": "Virginia",
+   "budgetOffice": "Department of Planning and Budget; enacted act hosted on the General Assembly's LIS budget portal",
+   "cycle": "biennial",
+   "fyNote": "2026-2028 biennium (FY2027-FY2028) appropriation act HB 30 - passed Jun 22, 2026; governor's 14 amendments adopted Jun 29, 2026 (final)",
+   "current": {
+    "label": "HB 30 (Chapter) - 2026-2028 Biennium Appropriation Act, 2026 Special Session I",
+    "url": "https://budget.lis.virginia.gov/bill/2026/2/HB30/Chapter/",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "HB 6001 (Chapter 2, 2024 Special Session I) - 2024-2026 Biennium Appropriation Act",
+    "url": "https://budget.lis.virginia.gov/bill/2024/2/HB6001/Chapter/",
+    "verified": true
+   },
+   "notes": "Enactment was late and contentious: finalized Jun 29, 2026 after a months-long impasse (Spanberger's first budget). Chapter version verified showing item-level appropriations by agency for FY2027/FY2028; PDF at https://budget.lis.virginia.gov/get/budget/5311/HB30/. Prior 2024-26 act amended by Ch. 725 (2025) and Ch. 7 (2026 'caboose'). DPB's budget document is the introduced, not enacted, version."
+  },
+  "washington": {
+   "state": "Washington",
+   "budgetOffice": "Office of Financial Management (with fiscal.wa.gov, the legislative fiscal site)",
+   "cycle": "biennial",
+   "fyNote": "FY2027 is year 2 of the 2025-27 biennium: operating budget ESSB 5167 enacted Apr 2025 (partial veto May 2025), amended by 2026 supplemental (ESSB 5998, ~$80.2B NGF-O) enacted Mar 2026",
+   "current": {
+    "label": "2025-27 Enacted Budgets (operating: ESSB 5167, as amended by 2026 supplemental)",
+    "url": "https://ofm.wa.gov/budget/state-budget-2025-27/enacted/",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "2023-25 Enacted Budgets (operating: ESSB 5187, enacted 2023)",
+    "url": "https://ofm.wa.gov/budget/state-budgets/2023-25-enacted-budgets",
+    "verified": true
+   },
+   "notes": "Both OFM pages verified. Agency-level appropriations in the operating budget bill text (https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bills/Senate%20Passed%20Legislature/5167-S.PL.pdf) and fiscal.wa.gov agency reports; 2026 supplemental conference summary at https://fiscal.wa.gov/statebudgets/2026proposals/Documents/co/oprConfSummary.pdf."
+  },
+  "west-virginia": {
+   "state": "West Virginia",
+   "budgetOffice": "West Virginia State Budget Office (Department of Revenue)",
+   "cycle": "annual",
+   "fyNote": "FY2027 (Jul 2026-Jun 2027) Budget Bill SB 250 enacted in 2026 regular session (~$5.91B base General Revenue + Lottery)",
+   "current": {
+    "label": "Legislature's Enrolled FY 2027 Budget Bill (SB 250)",
+    "url": "https://budget.wv.gov/approvedbudget/Documents/sb250%20sub1%20enr.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "Legislature's Enrolled FY 2026 Budget Bill (HB 2026)",
+    "url": "https://budget.wv.gov/approvedbudget/Documents/hb2026%20sub1%20enr.pdf",
+    "verified": true
+   },
+   "notes": "Both PDFs verified (~1.2MB each), listed on https://budget.wv.gov/approvedbudget along with governor's veto letters. Budget bills are line-item by agency/account/fund. Executive Budget (recommended) documents at budget.wv.gov/executivebudget."
+  },
+  "wisconsin": {
+   "state": "Wisconsin",
+   "budgetOffice": "Legislative Fiscal Bureau (analysis) / DOA Division of Executive Budget and Finance",
+   "cycle": "biennial",
+   "fyNote": "2025-27 biennium (FY2026 + FY2027) enacted as 2025 Wisconsin Act 15, signed Jul 3, 2025 (with partial vetoes)",
+   "current": {
+    "label": "2025-27 Biennial Budget (2025 Act 15) - LFB budget page with enacted-budget summaries",
+    "url": "https://docs.legis.wisconsin.gov/misc/lfb/budget/2025_27_biennial_budget/",
+    "format": "portal",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "2023-25 Biennial Budget (2023 Act 19) - LFB budget page",
+    "url": "https://docs.legis.wisconsin.gov/misc/lfb/budget/2023_25_biennial_budget/",
+    "verified": true
+   },
+   "notes": "Both LFB pages verified. Best agency-level dollar detail: 'Summary of Provisions - 2025 Act 15 (by Agency)' (https://docs.legis.wisconsin.gov/misc/lfb/budget/2025_27_biennial_budget/201_summary_of_provisions_2025_act_15_july_2025_by_agency) and the Act 15 Chapter 20 appropriation schedule (https://docs.legis.wisconsin.gov/2025/related/acts/15). No FY2027-only document exists; next budget (2027-29) enacted mid-2027."
+  },
+  "wyoming": {
+   "state": "Wyoming",
+   "budgetOffice": "Dept. of Administration & Information, Budget Division (State Budget Department); bill via Legislative Service Office",
+   "cycle": "biennial",
+   "fyNote": "2027-2028 biennium (Jul 2026-Jun 2028) budget bill passed Mar 2, 2026 (~$9.98B total funds, $3.4B general funds)",
+   "current": {
+    "label": "2026 Budget Session appropriations bill - SF0001, Senate Enrolled Act No. 27 (2027-28 biennium)",
+    "url": "https://wyoleg.gov/2026/Enroll/SF0001.pdf",
+    "format": "pdf",
+    "agencyDetail": "yes",
+    "verified": true
+   },
+   "prior": {
+    "label": "2024 Budget Session appropriations bill - HB0001 Enrolled Act (2025-26 biennium)",
+    "url": "https://wyoleg.gov/2024/Enroll/HB0001.pdf",
+    "verified": true
+   },
+   "notes": "Both enrolled-act PDFs verified via HTTPS HEAD (420KB / 309KB). The budget bill appropriates agency-by-agency (Section 2). Supporting doc: 2026 Budget Bill Status Report https://wyoleg.gov/2026/2026_Budget_Bill_Status_Report.pdf. The Budget Division's '2027-2028 Wyoming State Budget Book' is linked from https://sbd.wyo.gov/home/wyoming-state-budget (hosted on Google Drive). 2025-26 biennium modified by 2025 supplemental."
+  }
+ }
+}

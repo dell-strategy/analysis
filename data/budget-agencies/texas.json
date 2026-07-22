@@ -1,0 +1,604 @@
+{
+ "state": "Texas",
+ "updated": "2026-07-17",
+ "cycle": "biennial",
+ "basis": "All Funds appropriations by agency (LBB Fiscal Size-Up 2026-27 Biennium, per-article 'Appropriations by Agency, All Funds' figures)",
+ "priorLabel": "FY2024-25 biennium, estimated/budgeted (GAA, HB 1, 88th Legislature; incl. HB 500 supplemental)",
+ "currentLabel": "FY2026-27 biennium, appropriated (GAA, SB 1, 89th Legislature, enacted Jun 2025)",
+ "unit": "dollars",
+ "sources": [
+  {
+   "label": "LBB, Fiscal Size-Up 2026-27 Biennium (Dec 2025), Figures 47, 121, 146, 220, 235, 264, 298, 314, 344",
+   "url": "https://www.lbb.texas.gov/Documents/Publications/Fiscal_SizeUp/9046_Fiscal_Size-up_26-27_Biennium.pdf"
+  },
+  {
+   "label": "General Appropriations Act, 2026-27 Biennium (SB 1, 89th Legislature)",
+   "url": "https://www.lbb.texas.gov/Documents/GAA/General_Appropriations_Act_2026_2027.pdf"
+  }
+ ],
+ "notes": [
+  "Prior column is LBB's 2024-25 estimated/budgeted spending (not the originally enacted 2024-25 GAA); fiscal 2025 includes supplemental appropriations from HB 500, 89th Legislature, so one-time supplemental items show as large decreases into 2026-27.",
+  "Covers all agency rows in the nine per-article summary tables (Articles I-VIII and X). Excludes statewide employee benefits and debt service line items, interagency-contract deductions, Article IX general provisions, and SB 5 (2nd Called Session, 2025) disaster funding; agency sums therefore run about 3 percent below the published GAA all-funds totals ($347.5B in 2024-25 and $338.2B in 2026-27).",
+  "Teacher Retirement System of Texas (state retirement/TRS-Care contributions) is included as an agency; other benefit lines (Optional Retirement Program, group insurance, Social Security) are excluded.",
+  "SB 3070 (2025) abolished the Texas Lottery Commission and moved its functions into the Texas Department of Licensing and Regulation; LBB shows both biennia under TDLR.",
+  "Article I swings reflect one-time 2024-25 items: Trusteed Programs (Governor) -$9.1B (broadband/economic development funds), ERS -$2.0B (one-time pension contribution), Facilities Commission -$2.1B.",
+  "Some agency groups in Article III are aggregates (General Academic Institutions, Health-related Institutions, Texas A&M Service Agencies, two-year college systems), matching LBB's presentation."
+ ],
+ "agencies": [
+  {
+   "name": "Texas Commission on the Arts",
+   "prior": 34200000,
+   "current": 39800000
+  },
+  {
+   "name": "Office of the Attorney General",
+   "prior": 1578100000,
+   "current": 1469600000
+  },
+  {
+   "name": "Bond Review Board",
+   "prior": 3200000,
+   "current": 2800000
+  },
+  {
+   "name": "Cancer Prevention and Research Institute of Texas",
+   "prior": 594900000,
+   "current": 600100000
+  },
+  {
+   "name": "Comptroller of Public Accounts",
+   "prior": 770100000,
+   "current": 768300000
+  },
+  {
+   "name": "Fiscal Programs within the Office of the Comptroller of Public Accounts",
+   "prior": 4146700000,
+   "current": 4460000000
+  },
+  {
+   "name": "Dementia Prevention and Research Institute of Texas",
+   "prior": 0,
+   "current": 600000000
+  },
+  {
+   "name": "Commission on State Emergency Communications",
+   "prior": 143500000,
+   "current": 134900000
+  },
+  {
+   "name": "Texas Emergency Services Retirement System",
+   "prior": 5100000,
+   "current": 8600000
+  },
+  {
+   "name": "Employees Retirement System of Texas",
+   "prior": 2066300000,
+   "current": 27500000
+  },
+  {
+   "name": "Texas Ethics Commission",
+   "prior": 8100000,
+   "current": 8900000
+  },
+  {
+   "name": "Texas Facilities Commission",
+   "prior": 2585100000,
+   "current": 488500000
+  },
+  {
+   "name": "Texas Public Finance Authority",
+   "prior": 4400000,
+   "current": 4900000
+  },
+  {
+   "name": "Office of the Governor",
+   "prior": 35700000,
+   "current": 33500000
+  },
+  {
+   "name": "Trusteed Programs within the Office of the Governor",
+   "prior": 10795000000,
+   "current": 1723100000
+  },
+  {
+   "name": "Texas Historical Commission",
+   "prior": 448200000,
+   "current": 171300000
+  },
+  {
+   "name": "Department of Information Resources",
+   "prior": 1659300000,
+   "current": 1737100000
+  },
+  {
+   "name": "Texas State Library and Archives Commission",
+   "prior": 93300000,
+   "current": 80100000
+  },
+  {
+   "name": "Pension Review Board",
+   "prior": 3600000,
+   "current": 2900000
+  },
+  {
+   "name": "State Preservation Board",
+   "prior": 372500000,
+   "current": 35000000
+  },
+  {
+   "name": "State Office of Risk Management",
+   "prior": 108200000,
+   "current": 116500000
+  },
+  {
+   "name": "Secretary of State",
+   "prior": 180700000,
+   "current": 142400000
+  },
+  {
+   "name": "Texas Veterans Commission",
+   "prior": 144800000,
+   "current": 173800000
+  },
+  {
+   "name": "Department of Family and Protective Services",
+   "prior": 5051400000,
+   "current": 4918800000
+  },
+  {
+   "name": "Department of State Health Services",
+   "prior": 3331300000,
+   "current": 2367700000
+  },
+  {
+   "name": "Health and Human Services Commission",
+   "prior": 95327100000,
+   "current": 98208600000
+  },
+  {
+   "name": "Texas Education Agency",
+   "prior": 77165600000,
+   "current": 89974600000
+  },
+  {
+   "name": "Education Programs – Comptroller of Public Accounts",
+   "prior": 0,
+   "current": 1000000000
+  },
+  {
+   "name": "Texas Permanent School Fund Corporation",
+   "prior": 115600000,
+   "current": 119600000
+  },
+  {
+   "name": "Texas School for the Blind and Visually Impaired",
+   "prior": 71800000,
+   "current": 74100000
+  },
+  {
+   "name": "Texas School for the Deaf",
+   "prior": 119900000,
+   "current": 84900000
+  },
+  {
+   "name": "General Academic Institutions",
+   "prior": 10408900000,
+   "current": 9543800000
+  },
+  {
+   "name": "Health-related Institutions",
+   "prior": 4239100000,
+   "current": 4383100000
+  },
+  {
+   "name": "Texas A&M Service Agencies",
+   "prior": 5247800000,
+   "current": 3903500000
+  },
+  {
+   "name": "Texas Higher Education Coordinating Board",
+   "prior": 3428800000,
+   "current": 3303700000
+  },
+  {
+   "name": "Higher Education Funds",
+   "prior": 5022900000,
+   "current": 5391100000
+  },
+  {
+   "name": "Article III, Special Provisions",
+   "prior": 0,
+   "current": 850000000
+  },
+  {
+   "name": "Public Community/Junior Colleges",
+   "prior": 2402300000,
+   "current": 2458400000
+  },
+  {
+   "name": "Lamar State Colleges",
+   "prior": 152200000,
+   "current": 170400000
+  },
+  {
+   "name": "Texas State Technical Colleges",
+   "prior": 288400000,
+   "current": 393000000
+  },
+  {
+   "name": "Teacher Retirement System of Texas",
+   "prior": 13468900000,
+   "current": 8200200000
+  },
+  {
+   "name": "Supreme Court of Texas",
+   "prior": 124500000,
+   "current": 107400000
+  },
+  {
+   "name": "Court of Criminal Appeals",
+   "prior": 41900000,
+   "current": 47000000
+  },
+  {
+   "name": "First Court of Appeals District, Houston",
+   "prior": 11600000,
+   "current": 13000000
+  },
+  {
+   "name": "Second Court of Appeals District, Fort Worth",
+   "prior": 9400000,
+   "current": 10600000
+  },
+  {
+   "name": "Third Court of Appeals District, Austin",
+   "prior": 8000000,
+   "current": 9000000
+  },
+  {
+   "name": "Fourth Court of Appeals District, San Antonio",
+   "prior": 9200000,
+   "current": 11100000
+  },
+  {
+   "name": "Fifth Court of Appeals District, Dallas",
+   "prior": 16500000,
+   "current": 18600000
+  },
+  {
+   "name": "Sixth Court of Appeals District, Texarkana",
+   "prior": 4000000,
+   "current": 4500000
+  },
+  {
+   "name": "Seventh Court of Appeals District, Amarillo",
+   "prior": 5300000,
+   "current": 5900000
+  },
+  {
+   "name": "Eighth Court of Appeals District, El Paso",
+   "prior": 4000000,
+   "current": 4800000
+  },
+  {
+   "name": "Ninth Court of Appeals District, Beaumont",
+   "prior": 5200000,
+   "current": 6200000
+  },
+  {
+   "name": "Tenth Court of Appeals District, Waco",
+   "prior": 4200000,
+   "current": 4700000
+  },
+  {
+   "name": "Eleventh Court of Appeals District, Eastland",
+   "prior": 4100000,
+   "current": 4700000
+  },
+  {
+   "name": "Twelfth Court of Appeals District, Tyler",
+   "prior": 4200000,
+   "current": 4700000
+  },
+  {
+   "name": "Thirteenth Court of Appeals District, Corpus Christi–Edinburg",
+   "prior": 8000000,
+   "current": 9000000
+  },
+  {
+   "name": "Fourteenth Court of Appeals District, Houston",
+   "prior": 12000000,
+   "current": 13600000
+  },
+  {
+   "name": "Fifteenth Court of Appeals District, Austin",
+   "prior": 2300000,
+   "current": 6900000
+  },
+  {
+   "name": "Office of Court Administration, Texas Judicial Council",
+   "prior": 336900000,
+   "current": 382600000
+  },
+  {
+   "name": "Office of Capital and Forensic Writs",
+   "prior": 6500000,
+   "current": 8700000
+  },
+  {
+   "name": "Office of the State Prosecuting Attorney",
+   "prior": 1000000,
+   "current": 1500000
+  },
+  {
+   "name": "State Law Library",
+   "prior": 2700000,
+   "current": 3100000
+  },
+  {
+   "name": "State Commission on Judicial Conduct",
+   "prior": 5600000,
+   "current": 4700000
+  },
+  {
+   "name": "Judiciary Section, Comptroller’s Department",
+   "prior": 402100000,
+   "current": 484200000
+  },
+  {
+   "name": "Texas Alcoholic Beverage Commission",
+   "prior": 128300000,
+   "current": 120800000
+  },
+  {
+   "name": "Texas Department of Criminal Justice",
+   "prior": 10163700000,
+   "current": 9752600000
+  },
+  {
+   "name": "Texas Commission on Fire Protection",
+   "prior": 6300000,
+   "current": 7900000
+  },
+  {
+   "name": "Texas Commission on Jail Standards",
+   "prior": 4100000,
+   "current": 4400000
+  },
+  {
+   "name": "Texas Juvenile Justice Department",
+   "prior": 1167500000,
+   "current": 954700000
+  },
+  {
+   "name": "Texas Commission on Law Enforcement",
+   "prior": 26900000,
+   "current": 39500000
+  },
+  {
+   "name": "Texas Military Department",
+   "prior": 2467800000,
+   "current": 2083100000
+  },
+  {
+   "name": "Texas Department of Public Safety",
+   "prior": 4148300000,
+   "current": 3790900000
+  },
+  {
+   "name": "Texas Department of Agriculture",
+   "prior": 1887900000,
+   "current": 1927500000
+  },
+  {
+   "name": "Texas Animal Health Commission",
+   "prior": 39900000,
+   "current": 43900000
+  },
+  {
+   "name": "Texas Commission on Environmental Quality",
+   "prior": 837000000,
+   "current": 921200000
+  },
+  {
+   "name": "Texas General Land Office and Texas Veterans Land Board",
+   "prior": 4840500000,
+   "current": 2434600000
+  },
+  {
+   "name": "Texas Low-level Radioactive Waste Disposal Compact Commission",
+   "prior": 1000000,
+   "current": 1000000
+  },
+  {
+   "name": "Texas Parks and Wildlife Department",
+   "prior": 1547600000,
+   "current": 1113400000
+  },
+  {
+   "name": "Railroad Commission of Texas",
+   "prior": 632300000,
+   "current": 461500000
+  },
+  {
+   "name": "Texas State Soil and Water Conservation Board",
+   "prior": 166700000,
+   "current": 164500000
+  },
+  {
+   "name": "Texas Water Development Board",
+   "prior": 3316300000,
+   "current": 455300000
+  },
+  {
+   "name": "Texas Department of Housing and Community Affairs",
+   "prior": 1277900000,
+   "current": 912100000
+  },
+  {
+   "name": "Texas Department of Motor Vehicles",
+   "prior": 793300000,
+   "current": 542900000
+  },
+  {
+   "name": "Texas Department of Transportation",
+   "prior": 40803600000,
+   "current": 39924300000
+  },
+  {
+   "name": "Texas Workforce Commission",
+   "prior": 6106500000,
+   "current": 6083600000
+  },
+  {
+   "name": "State Office of Administrative Hearings",
+   "prior": 25700000,
+   "current": 25800000
+  },
+  {
+   "name": "Texas Behavioral Health Executive Council",
+   "prior": 11000000,
+   "current": 12400000
+  },
+  {
+   "name": "Texas Board of Chiropractic Examiners",
+   "prior": 2400000,
+   "current": 2500000
+  },
+  {
+   "name": "Texas State Board of Dental Examiners",
+   "prior": 9700000,
+   "current": 10400000
+  },
+  {
+   "name": "Texas Funeral Service Commission",
+   "prior": 4300000,
+   "current": 4300000
+  },
+  {
+   "name": "Texas Board of Professional Geoscientists",
+   "prior": 1400000,
+   "current": 1400000
+  },
+  {
+   "name": "Health Professions Council",
+   "prior": 3300000,
+   "current": 4500000
+  },
+  {
+   "name": "Office of Injured Employee Counsel",
+   "prior": 21000000,
+   "current": 21200000
+  },
+  {
+   "name": "Texas Department of Insurance",
+   "prior": 301700000,
+   "current": 277400000
+  },
+  {
+   "name": "Office of Public Insurance Counsel",
+   "prior": 3100000,
+   "current": 4500000
+  },
+  {
+   "name": "Texas Department of Licensing and Regulation",
+   "prior": 817700000,
+   "current": 809800000
+  },
+  {
+   "name": "Texas Medical Board",
+   "prior": 44900000,
+   "current": 48000000
+  },
+  {
+   "name": "Texas Board of Nursing",
+   "prior": 30800000,
+   "current": 34700000
+  },
+  {
+   "name": "Texas Optometry Board",
+   "prior": 1200000,
+   "current": 1100000
+  },
+  {
+   "name": "Texas State Board of Pharmacy",
+   "prior": 30800000,
+   "current": 31000000
+  },
+  {
+   "name": "Executive Council of Physical Therapy and Occupational Therapy Examiners",
+   "prior": 3700000,
+   "current": 3900000
+  },
+  {
+   "name": "Texas State Board of Plumbing Examiners",
+   "prior": 8900000,
+   "current": 9100000
+  },
+  {
+   "name": "Texas Racing Commission",
+   "prior": 18400000,
+   "current": 18900000
+  },
+  {
+   "name": "Texas State Securities Board",
+   "prior": 18500000,
+   "current": 19100000
+  },
+  {
+   "name": "Public Utility Commission of Texas",
+   "prior": 5070500000,
+   "current": 5082400000
+  },
+  {
+   "name": "Office of Public Utility Counsel",
+   "prior": 6900000,
+   "current": 10400000
+  },
+  {
+   "name": "Texas Board of Veterinary Medical Examiners",
+   "prior": 6800000,
+   "current": 5900000
+  },
+  {
+   "name": "Senate",
+   "prior": 103800000,
+   "current": 105900000
+  },
+  {
+   "name": "House of Representatives",
+   "prior": 131300000,
+   "current": 134900000
+  },
+  {
+   "name": "Legislative Budget Board",
+   "prior": 32100000,
+   "current": 32900000
+  },
+  {
+   "name": "Texas Legislative Council",
+   "prior": 106200000,
+   "current": 107800000
+  },
+  {
+   "name": "Commission on Uniform State Laws",
+   "prior": 300000,
+   "current": 300000
+  },
+  {
+   "name": "Sunset Advisory Commission",
+   "prior": 7200000,
+   "current": 7300000
+  },
+  {
+   "name": "State Auditor’s Office",
+   "prior": 46200000,
+   "current": 47000000
+  },
+  {
+   "name": "Legislative Reference Library",
+   "prior": 4300000,
+   "current": 4300000
+  }
+ ]
+}

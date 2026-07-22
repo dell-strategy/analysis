@@ -1,0 +1,191 @@
+{
+ "state": "Florida",
+ "updated": "2026-07-21",
+ "cycle": "annual",
+ "basis": "All funds (general revenue + state and federal trust funds), enrolled General Appropriations Act line items rolled up to department/agency totals (pre-veto)",
+ "priorLabel": "FY2025-26 (SB 2500, Ch. 2025-198, enacted 2025)",
+ "currentLabel": "FY2026-27 (HB 5001E, Ch. 2026-232, enacted Jun 2026)",
+ "unit": "dollars",
+ "sources": [
+  {
+   "label": "Florida Senate, SB 2500 Enrolled (FY2025-26 GAA)",
+   "url": "https://www.flsenate.gov/Session/Bill/2025/2500/BillText/er/PDF"
+  },
+  {
+   "label": "Florida Senate, HB 5001E Enrolled (FY2026-27 GAA)",
+   "url": "https://www.flsenate.gov/Session/Bill/2026E/5001E/BillText/er/PDF"
+  },
+  {
+   "label": "Florida Legislature EDR, Fiscal Analysis in Brief 2025 (FY2025-26)",
+   "url": "https://edr.state.fl.us/content/revenues/reports/fiscal-analysis-in-brief/FiscalAnalysisinBrief2025.pdf"
+  }
+ ],
+ "notes": [
+  "Amounts are enrolled (as-passed) GAA totals before line-item vetoes: FY2025-26 sums to $115.14B (post-veto/supplemental effective ~$114.8B per Fiscal Analysis in Brief); FY2026-27 sums to $114.46B (post-veto $113.58B, ~$0.89B vetoed).",
+  "All-funds basis; roughly 44% is general revenue and the rest state/federal trust funds (incl. ~$36B federal Medicaid and other trust funds), so federal policy can swing agency totals independent of state GR.",
+  "Education (Sections 1-2) spans early learning, K-12 FEFP, colleges, and universities. Administered Funds is a statewide lump-sum entity (pay/benefit adjustments, contingencies); its drop in FY2026-27 reflects one-time items, not an agency cut.",
+  "Justice Administration covers state attorneys, public defenders, and related offices; the Gaming Control Commission is budgeted within Legal Affairs/Attorney General."
+ ],
+ "agencies": [
+  {
+   "name": "Education, Dept. of (incl. universities/colleges)",
+   "prior": 31580559614,
+   "current": 31999580602
+  },
+  {
+   "name": "Agency for Health Care Administration",
+   "prior": 36530359632,
+   "current": 38053576122
+  },
+  {
+   "name": "Agency for Persons with Disabilities",
+   "prior": 1287921295,
+   "current": 1394038618
+  },
+  {
+   "name": "Children and Families, Dept. of",
+   "prior": 4860256939,
+   "current": 4861636602
+  },
+  {
+   "name": "Elder Affairs, Dept. of",
+   "prior": 506919440,
+   "current": 513398788
+  },
+  {
+   "name": "Health, Dept. of",
+   "prior": 4131667608,
+   "current": 4165362487
+  },
+  {
+   "name": "Veterans' Affairs, Dept. of",
+   "prior": 239949922,
+   "current": 240791728
+  },
+  {
+   "name": "Corrections, Dept. of",
+   "prior": 3804239446,
+   "current": 4050994123
+  },
+  {
+   "name": "Florida Commission on Offender Review",
+   "prior": 15257749,
+   "current": 17667097
+  },
+  {
+   "name": "Justice Administration (state attorneys/public defenders)",
+   "prior": 1334142792,
+   "current": 1412449842
+  },
+  {
+   "name": "Juvenile Justice, Dept. of",
+   "prior": 756494713,
+   "current": 813897140
+  },
+  {
+   "name": "Law Enforcement, Dept. of (FDLE)",
+   "prior": 539010510,
+   "current": 569483551
+  },
+  {
+   "name": "Legal Affairs / Attorney General",
+   "prior": 385757824,
+   "current": 360374288
+  },
+  {
+   "name": "Agriculture and Consumer Services, Dept. of",
+   "prior": 3403609231,
+   "current": 2882149219
+  },
+  {
+   "name": "Environmental Protection, Dept. of",
+   "prior": 2595356064,
+   "current": 2457492783
+  },
+  {
+   "name": "Fish and Wildlife Conservation Commission",
+   "prior": 568975488,
+   "current": 587893334
+  },
+  {
+   "name": "Transportation, Dept. of",
+   "prior": 15137941936,
+   "current": 13251739013
+  },
+  {
+   "name": "Administered Funds (statewide)",
+   "prior": 510238889,
+   "current": 213470802
+  },
+  {
+   "name": "Business and Professional Regulation, Dept. of",
+   "prior": 299501927,
+   "current": 306717657
+  },
+  {
+   "name": "Citrus, Dept. of",
+   "prior": 35160647,
+   "current": 39564201
+  },
+  {
+   "name": "Commerce, Dept. of",
+   "prior": 1553159657,
+   "current": 1323714471
+  },
+  {
+   "name": "Financial Services, Dept. of",
+   "prior": 731660509,
+   "current": 665960567
+  },
+  {
+   "name": "Governor, Executive Office of the",
+   "prior": 387183455,
+   "current": 271726572
+  },
+  {
+   "name": "Highway Safety and Motor Vehicles, Dept. of",
+   "prior": 623924280,
+   "current": 669840708
+  },
+  {
+   "name": "Legislative Branch",
+   "prior": 252485971,
+   "current": 258374455
+  },
+  {
+   "name": "Lottery, Dept. of the",
+   "prior": 234345810,
+   "current": 240150952
+  },
+  {
+   "name": "Management Services, Dept. of",
+   "prior": 872198665,
+   "current": 841294349
+  },
+  {
+   "name": "Military Affairs, Dept. of",
+   "prior": 130684919,
+   "current": 109556986
+  },
+  {
+   "name": "Public Service Commission",
+   "prior": 31574646,
+   "current": 32202022
+  },
+  {
+   "name": "Revenue, Dept. of",
+   "prior": 857671826,
+   "current": 845062418
+  },
+  {
+   "name": "State, Dept. of",
+   "prior": 144199132,
+   "current": 178591909
+  },
+  {
+   "name": "Judicial Branch (State Court System)",
+   "prior": 795240322,
+   "current": 832762004
+  }
+ ]
+}

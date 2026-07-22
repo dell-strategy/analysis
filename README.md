@@ -50,7 +50,16 @@ scripts/nasbo/raw/*.pdf            # NASBO source reports (Fiscal Survey, State 
 scripts/nasbo/extract_nasbo.py     # PDF -> raw/fiscal_survey.json + raw/ser.json
 scripts/nasbo/extract_strategies.py# PDF -> raw/strategies.json (cut-strategy X-grids, needs pdfplumber)
 scripts/nasbo/build_budget_shifts.py # merge -> data/budget-shifts.json
+scripts/nasbo/state-budget-sources.json # 50-state inventory of official enacted budget documents (phase-2 input)
 ```
+
+**Phase 2 — agency-level budget shifts.** `data/budget-agencies/<slug>.json`
+holds per-agency prior-vs-current enacted appropriations for a state (see
+`new-hampshire.json` for the schema; amounts in dollars, one consistent basis
+per state, sources + validation notes required). When the file exists, the
+state's page automatically gains an "Agency budget shifts" table in its Budget
+section on the next `node scripts/generate.js`. Extraction scripts live next to
+the NASBO pipeline (e.g. `scripts/nasbo/build_agency_nh.py`).
 
 To refresh when NASBO publishes a new edition (Fiscal Survey: ~June and
 ~December; State Expenditure Report: ~November):

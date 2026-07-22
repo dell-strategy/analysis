@@ -1,0 +1,283 @@
+{
+ "state": "Georgia",
+ "updated": "2026-07-21",
+ "cycle": "annual",
+ "basis": "State funds (state general funds + dedicated state funds), enacted appropriations acts, department section totals",
+ "priorLabel": "FY2026 enacted (HB 68, 2025 session)",
+ "currentLabel": "FY2027 enacted (HB 974, signed May 12, 2026)",
+ "unit": "dollars",
+ "sources": [
+  {
+   "label": "GA OPB, HB 974 - FY 2027 Appropriations Bill (enacted, House Budget and Research Office PDF)",
+   "url": "https://opb.georgia.gov/document/appropriations-bills-current-year/hb-974-fy-2027-appropriations-bill/download"
+  },
+  {
+   "label": "GA OPB, HB 68 - FY 2026 Appropriations Bill (Senate Budget and Evaluation Office tracking PDF, Conference Committee column)",
+   "url": "https://opb.georgia.gov/document/appropriations-bills-prior-years/hb-68-fy-2026-appropriations-bill/download"
+  }
+ ],
+ "notes": [
+  "FY2027 amounts are department 'State Funds' section totals extracted from the enacted HB 974 bill text; they sum exactly to the act's statewide state-funds total of $38,499,917,737 (~$38.5B).",
+  "FY2026 amounts are 'Section Total - Final / TOTAL STATE FUNDS' from the Conference Committee (final passed) column of the HB 68 tracking document; Gov. Kemp's signing withholdings are not reflected. Sections sum to $37,761,687,325.",
+  "Georgia State Financing and Investment Commission drops to $0 because FY2026 carried $715.7M in one-time cash capital projects that were not repeated in FY2027; bond-funded capital flows through the General Obligation Debt Sinking Fund.",
+  "State Properties Commission is funded entirely with other (non-state) funds in both years, hence $0/$0.",
+  "Georgia also enacts an Amended FY2026 act (HB 973) each session; the prior column here is the ORIGINAL FY2026 act, not as amended."
+ ],
+ "agencies": [
+  {
+   "name": "Georgia Senate",
+   "prior": 18015468,
+   "current": 20900914
+  },
+  {
+   "name": "Georgia House of Representatives",
+   "prior": 26664595,
+   "current": 29346056
+  },
+  {
+   "name": "Georgia General Assembly Joint Offices",
+   "prior": 23364111,
+   "current": 23678433
+  },
+  {
+   "name": "Audits and Accounts, Department of",
+   "prior": 47905532,
+   "current": 49982226
+  },
+  {
+   "name": "Appeals, Court of",
+   "prior": 27677694,
+   "current": 28591932
+  },
+  {
+   "name": "Judicial Council",
+   "prior": 26262541,
+   "current": 28918289
+  },
+  {
+   "name": "Juvenile Courts",
+   "prior": 9810645,
+   "current": 10264012
+  },
+  {
+   "name": "Prosecuting Attorneys",
+   "prior": 131005428,
+   "current": 142917582
+  },
+  {
+   "name": "Superior Courts",
+   "prior": 103428047,
+   "current": 114876122
+  },
+  {
+   "name": "Supreme Court",
+   "prior": 19622337,
+   "current": 20153455
+  },
+  {
+   "name": "Accounting Office, State",
+   "prior": 8434126,
+   "current": 8427503
+  },
+  {
+   "name": "Administrative Services, Department of",
+   "prior": 21323123,
+   "current": 20628368
+  },
+  {
+   "name": "Agriculture, Department of",
+   "prior": 70606640,
+   "current": 73086911
+  },
+  {
+   "name": "Banking and Finance, Department of",
+   "prior": 15414266,
+   "current": 15560356
+  },
+  {
+   "name": "Behavioral Health and Developmental Disabilities, Department of",
+   "prior": 1712144114,
+   "current": 1700939966
+  },
+  {
+   "name": "Community Affairs, Department of",
+   "prior": 57498299,
+   "current": 58124064
+  },
+  {
+   "name": "Community Health, Department of",
+   "prior": 5553191485,
+   "current": 5843880911
+  },
+  {
+   "name": "Community Supervision, Department of",
+   "prior": 232862212,
+   "current": 226685890
+  },
+  {
+   "name": "Corrections, Department of",
+   "prior": 1695298277,
+   "current": 1728754328
+  },
+  {
+   "name": "Defense, Department of",
+   "prior": 12466401,
+   "current": 11951619
+  },
+  {
+   "name": "Driver Services, Department of",
+   "prior": 86415442,
+   "current": 86154079
+  },
+  {
+   "name": "Early Care and Learning, Department of (Bright from the Start)",
+   "prior": 640395675,
+   "current": 671498117
+  },
+  {
+   "name": "Economic Development, Department of",
+   "prior": 38416004,
+   "current": 37959043
+  },
+  {
+   "name": "Education, Department of",
+   "prior": 13701947205,
+   "current": 14182486173
+  },
+  {
+   "name": "Employees' Retirement System of Georgia",
+   "prior": 80436844,
+   "current": 64997668
+  },
+  {
+   "name": "Forestry Commission, State",
+   "prior": 54010299,
+   "current": 55378473
+  },
+  {
+   "name": "Governor, Office of the",
+   "prior": 63573254,
+   "current": 69623246
+  },
+  {
+   "name": "Human Services, Department of",
+   "prior": 1059937900,
+   "current": 1165794109
+  },
+  {
+   "name": "Insurance, Office of the Commissioner of",
+   "prior": 172606128,
+   "current": 118808742
+  },
+  {
+   "name": "Investigation, Georgia Bureau of",
+   "prior": 260647384,
+   "current": 284577122
+  },
+  {
+   "name": "Juvenile Justice, Department of",
+   "prior": 395229317,
+   "current": 386555596
+  },
+  {
+   "name": "Labor, Department of",
+   "prior": 8930190,
+   "current": 11696679
+  },
+  {
+   "name": "Law, Department of",
+   "prior": 49495901,
+   "current": 47624603
+  },
+  {
+   "name": "Natural Resources, Department of",
+   "prior": 181105001,
+   "current": 194432864
+  },
+  {
+   "name": "Pardons and Paroles, State Board of",
+   "prior": 21407799,
+   "current": 20774173
+  },
+  {
+   "name": "State Properties Commission",
+   "prior": 0,
+   "current": 0
+  },
+  {
+   "name": "Public Defender Council, Georgia",
+   "prior": 82937857,
+   "current": 91900476
+  },
+  {
+   "name": "Public Health, Department of",
+   "prior": 435017588,
+   "current": 428597892
+  },
+  {
+   "name": "Public Safety, Department of",
+   "prior": 256072312,
+   "current": 254159397
+  },
+  {
+   "name": "Public Service Commission",
+   "prior": 13180213,
+   "current": 13113560
+  },
+  {
+   "name": "Regents, University System of Georgia Board of",
+   "prior": 3600383387,
+   "current": 3856339958
+  },
+  {
+   "name": "Revenue, Department of",
+   "prior": 243463186,
+   "current": 223591808
+  },
+  {
+   "name": "Secretary of State",
+   "prior": 35895388,
+   "current": 35328484
+  },
+  {
+   "name": "Student Finance Commission, Georgia",
+   "prior": 1394811214,
+   "current": 1429124299
+  },
+  {
+   "name": "Teachers Retirement System",
+   "prior": 62000,
+   "current": 26000
+  },
+  {
+   "name": "Technical College System of Georgia",
+   "prior": 538302828,
+   "current": 564137184
+  },
+  {
+   "name": "Transportation, Department of",
+   "prior": 2696305327,
+   "current": 2860861548
+  },
+  {
+   "name": "Veterans Service, Department of",
+   "prior": 33144535,
+   "current": 40336821
+  },
+  {
+   "name": "Workers' Compensation, State Board of",
+   "prior": 21730780,
+   "current": 21026691
+  },
+  {
+   "name": "Georgia State Financing and Investment Commission",
+   "prior": 715736336,
+   "current": 0
+  },
+  {
+   "name": "General Obligation Debt Sinking Fund",
+   "prior": 1067094690,
+   "current": 1125343995
+  }
+ ]
+}

@@ -1,0 +1,454 @@
+{
+ "state": "New Hampshire",
+ "updated": "2026-07-17",
+ "cycle": "biennial",
+ "basis": "All funds, legislative appropriations (HB 1 operating budget expenditure line items, TYPE=E)",
+ "priorLabel": "FY2024-25 biennium (enacted 2023)",
+ "currentLabel": "FY2026-27 biennium (enacted Jun 2025, chaptered final)",
+ "unit": "dollars",
+ "sources": [
+  {
+   "label": "NH LBA, HB 1 Final FY2026-27 (Excel, chaptered 7/22/25)",
+   "url": "https://gc.nh.gov/lba/budget/fy2026_2027_budget.aspx"
+  },
+  {
+   "label": "NH LBA, HB 1 Final FY2024-25 (Excel)",
+   "url": "https://gc.nh.gov/lba/budget/fy2024_2025_budget.aspx"
+  }
+ ],
+ "notes": [
+  "Amounts are biennium totals of legislative appropriations, all fund sources. Funding-source (TYPE=F) rows mirror expenditure totals, providing an internal consistency check.",
+  "Departments new or reorganized between biennia show as large swings; NH reorganized several agencies in the 2026-27 budget."
+ ],
+ "agencies": [
+  {
+   "name": "Administrative Services Dept.",
+   "prior": 316331420,
+   "current": 298445831,
+   "years": {
+    "fy2024": 153991857,
+    "fy2025": 162339563,
+    "fy2026": 142674714,
+    "fy2027": 155771117
+   }
+  },
+  {
+   "name": "Agricult, Markets & Food Dept.",
+   "prior": 17470044,
+   "current": 19684996,
+   "years": {
+    "fy2024": 8745918,
+    "fy2025": 8724126,
+    "fy2026": 9779405,
+    "fy2027": 9905591
+   }
+  },
+  {
+   "name": "Banking Dept.",
+   "prior": 15126136,
+   "current": 17451615,
+   "years": {
+    "fy2024": 7304418,
+    "fy2025": 7821718,
+    "fy2026": 8570287,
+    "fy2027": 8881328
+   }
+  },
+  {
+   "name": "Bus & Econ Affairs Dept.",
+   "prior": 63616729,
+   "current": 78236581,
+   "years": {
+    "fy2024": 29953384,
+    "fy2025": 33663345,
+    "fy2026": 39030895,
+    "fy2027": 39205686
+   }
+  },
+  {
+   "name": "Community College System of NH",
+   "prior": 124660000,
+   "current": 137000000,
+   "years": {
+    "fy2024": 61130000,
+    "fy2025": 63530000,
+    "fy2026": 68500000,
+    "fy2027": 68500000
+   }
+  },
+  {
+   "name": "Corrections Dept.",
+   "prior": 314667435,
+   "current": 329148350,
+   "years": {
+    "fy2024": 155661587,
+    "fy2025": 159005848,
+    "fy2026": 163688864,
+    "fy2027": 165459486
+   }
+  },
+  {
+   "name": "Dept. of Energy",
+   "prior": 97633125,
+   "current": 99346631,
+   "years": {
+    "fy2024": 48585849,
+    "fy2025": 49047276,
+    "fy2026": 49421011,
+    "fy2027": 49925620
+   }
+  },
+  {
+   "name": "Development Disabilities Cncl",
+   "prior": 1548181,
+   "current": 1589419,
+   "years": {
+    "fy2024": 768734,
+    "fy2025": 779447,
+    "fy2026": 757753,
+    "fy2027": 831666
+   }
+  },
+  {
+   "name": "Education Dept.",
+   "prior": 3070280575,
+   "current": 3177692364,
+   "years": {
+    "fy2024": 1530071747,
+    "fy2025": 1540208828,
+    "fy2026": 1582659533,
+    "fy2027": 1595032831
+   }
+  },
+  {
+   "name": "Employment Security Dept.",
+   "prior": 102427395,
+   "current": 108742442,
+   "years": {
+    "fy2024": 50850920,
+    "fy2025": 51576475,
+    "fy2026": 54031353,
+    "fy2027": 54711089
+   }
+  },
+  {
+   "name": "Environmental Services Dept.",
+   "prior": 577693485,
+   "current": 714722847,
+   "years": {
+    "fy2024": 289158154,
+    "fy2025": 288535331,
+    "fy2026": 391934223,
+    "fy2027": 322788624
+   }
+  },
+  {
+   "name": "Executive Council",
+   "prior": 622862,
+   "current": 697394,
+   "years": {
+    "fy2024": 305333,
+    "fy2025": 317529,
+    "fy2026": 346829,
+    "fy2027": 350565
+   }
+  },
+  {
+   "name": "Executive Dept.",
+   "prior": 6854792,
+   "current": 7172840,
+   "years": {
+    "fy2024": 3418162,
+    "fy2025": 3436630,
+    "fy2026": 3574052,
+    "fy2027": 3598788
+   }
+  },
+  {
+   "name": "Fish and Game Dept.",
+   "prior": 78888667,
+   "current": 90404346,
+   "years": {
+    "fy2024": 39192227,
+    "fy2025": 39696440,
+    "fy2026": 46003873,
+    "fy2027": 44400473
+   }
+  },
+  {
+   "name": "Health and Human Svcs Dept.",
+   "prior": 6368860455,
+   "current": 7035084953,
+   "years": {
+    "fy2024": 3131354024,
+    "fy2025": 3237506431,
+    "fy2026": 3462982489,
+    "fy2027": 3572102464
+   }
+  },
+  {
+   "name": "Information Technology Dept.",
+   "prior": 265292939,
+   "current": 279988716,
+   "years": {
+    "fy2024": 132212704,
+    "fy2025": 133080235,
+    "fy2026": 137515258,
+    "fy2027": 142473458
+   }
+  },
+  {
+   "name": "Insurance Dept.",
+   "prior": 29097371,
+   "current": 30961050,
+   "years": {
+    "fy2024": 14707004,
+    "fy2025": 14390367,
+    "fy2026": 15319679,
+    "fy2027": 15641371
+   }
+  },
+  {
+   "name": "Judicial Branch",
+   "prior": 237975103,
+   "current": 263932095,
+   "years": {
+    "fy2024": 117222913,
+    "fy2025": 120752190,
+    "fy2026": 130802874,
+    "fy2027": 133129221
+   }
+  },
+  {
+   "name": "Judicial Council",
+   "prior": 75259754,
+   "current": 82950010,
+   "years": {
+    "fy2024": 37626143,
+    "fy2025": 37633611,
+    "fy2026": 39566742,
+    "fy2027": 43383268
+   }
+  },
+  {
+   "name": "Justice Dept.",
+   "prior": 93004373,
+   "current": 115857416,
+   "years": {
+    "fy2024": 45738863,
+    "fy2025": 47265510,
+    "fy2026": 57982391,
+    "fy2027": 57875025
+   }
+  },
+  {
+   "name": "Labor Dept.",
+   "prior": 22522320,
+   "current": 24483580,
+   "years": {
+    "fy2024": 11115011,
+    "fy2025": 11407309,
+    "fy2026": 12079793,
+    "fy2027": 12403787
+   }
+  },
+  {
+   "name": "Legislative Branch",
+   "prior": 41583916,
+   "current": 44378498,
+   "years": {
+    "fy2024": 20791958,
+    "fy2025": 20791958,
+    "fy2026": 22189249,
+    "fy2027": 22189249
+   }
+  },
+  {
+   "name": "Liquor Commission",
+   "prior": 179639030,
+   "current": 186871468,
+   "years": {
+    "fy2024": 88350136,
+    "fy2025": 91288894,
+    "fy2026": 92796810,
+    "fy2027": 94074658
+   }
+  },
+  {
+   "name": "Lottery Commission",
+   "prior": 31768448,
+   "current": 32575725,
+   "years": {
+    "fy2024": 16574907,
+    "fy2025": 15193541,
+    "fy2026": 16012388,
+    "fy2027": 16563337
+   }
+  },
+  {
+   "name": "Military Affrs & Vet Svcs Dept.",
+   "prior": 79203719,
+   "current": 84741193,
+   "years": {
+    "fy2024": 39480629,
+    "fy2025": 39723090,
+    "fy2026": 42178882,
+    "fy2027": 42562311
+   }
+  },
+  {
+   "name": "Natural & Cultural Resrcs Dept.",
+   "prior": 132874014,
+   "current": 131062649,
+   "years": {
+    "fy2024": 65999100,
+    "fy2025": 66874914,
+    "fy2026": 65144870,
+    "fy2027": 65917779
+   }
+  },
+  {
+   "name": "Pease Development Authority",
+   "prior": 1621660,
+   "current": 1989506,
+   "years": {
+    "fy2024": 798113,
+    "fy2025": 823547,
+    "fy2026": 970251,
+    "fy2027": 1019255
+   }
+  },
+  {
+   "name": "Police Stds & Training Council",
+   "prior": 12162791,
+   "current": 12978496,
+   "years": {
+    "fy2024": 6039442,
+    "fy2025": 6123349,
+    "fy2026": 6614508,
+    "fy2027": 6363988
+   }
+  },
+  {
+   "name": "Prof Licensure & Cert Office",
+   "prior": 30181285,
+   "current": 28750508,
+   "years": {
+    "fy2024": 14913338,
+    "fy2025": 15267947,
+    "fy2026": 14109118,
+    "fy2027": 14641390
+   }
+  },
+  {
+   "name": "Public Employee Labor Rel Brd",
+   "prior": 1065766,
+   "current": 1621871,
+   "years": {
+    "fy2024": 536658,
+    "fy2025": 529108,
+    "fy2026": 825918,
+    "fy2027": 795953
+   }
+  },
+  {
+   "name": "Retirement System",
+   "prior": 26635720,
+   "current": 38726989,
+   "years": {
+    "fy2024": 13003442,
+    "fy2025": 13632278,
+    "fy2026": 19255013,
+    "fy2027": 19471976
+   }
+  },
+  {
+   "name": "Revenue Administration Dept.",
+   "prior": 54617710,
+   "current": 58243981,
+   "years": {
+    "fy2024": 26914226,
+    "fy2025": 27703484,
+    "fy2026": 28909102,
+    "fy2027": 29334879
+   }
+  },
+  {
+   "name": "Safety Dept.",
+   "prior": 503223863,
+   "current": 536206661,
+   "years": {
+    "fy2024": 250806275,
+    "fy2025": 252417588,
+    "fy2026": 266418222,
+    "fy2027": 269788439
+   }
+  },
+  {
+   "name": "State Dept.",
+   "prior": 25265706,
+   "current": 26629006,
+   "years": {
+    "fy2024": 12484065,
+    "fy2025": 12781641,
+    "fy2026": 13171840,
+    "fy2027": 13457166
+   }
+  },
+  {
+   "name": "Tax and Land Appeals Board",
+   "prior": 2074286,
+   "current": 2951738,
+   "years": {
+    "fy2024": 1035870,
+    "fy2025": 1038416,
+    "fy2026": 1450134,
+    "fy2027": 1501604
+   }
+  },
+  {
+   "name": "Transportation Dept.",
+   "prior": 1539305539,
+   "current": 1596204895,
+   "years": {
+    "fy2024": 757414237,
+    "fy2025": 781891302,
+    "fy2026": 802943504,
+    "fy2027": 793261391
+   }
+  },
+  {
+   "name": "Treasury Dept.",
+   "prior": 231093441,
+   "current": 496425013,
+   "years": {
+    "fy2024": 114253485,
+    "fy2025": 116839956,
+    "fy2026": 241717016,
+    "fy2027": 254707997
+   }
+  },
+  {
+   "name": "University System of NH",
+   "prior": 190000000,
+   "current": 164000000,
+   "years": {
+    "fy2024": 95000000,
+    "fy2025": 95000000,
+    "fy2026": 87000000,
+    "fy2027": 77000000
+   }
+  },
+  {
+   "name": "Veterans Home",
+   "prior": 85413137,
+   "current": 103375473,
+   "years": {
+    "fy2024": 42285281,
+    "fy2025": 43127856,
+    "fy2026": 50918278,
+    "fy2027": 52457195
+   }
+  }
+ ]
+}

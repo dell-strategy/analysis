@@ -1,0 +1,1116 @@
+{
+ "state": "Ohio",
+ "updated": "2026-07-21",
+ "cycle": "biennial",
+ "basis": "All fund groups (GRF + federal + dedicated/other), LSC appropriation spreadsheets, main operating budget bill only",
+ "priorLabel": "FY2024-25 biennium (HB 33, enacted Jul 2023)",
+ "currentLabel": "FY2026-27 biennium (HB 96, enacted Jun 2025)",
+ "unit": "dollars",
+ "sources": [
+  {
+   "label": "Ohio LSC, H.B. 96 Appropriation Spreadsheet, As Enacted (136th G.A., July 2026 edition)",
+   "url": "https://www.lsc.ohio.gov/assets/legislation/136/hb96/en0/files/hb96-appropriation-spreadsheet-all-operating-bills-as-enacted-136th-general-assembly.pdf"
+  },
+  {
+   "label": "Ohio LSC, H.B. 33 Appropriation Spreadsheet, As Enacted (135th G.A.)",
+   "url": "https://www.lsc.ohio.gov/assets/legislation/135/hb33/en0/files/hb33-appropriation-spreadsheet-as-enacted-135th-general-assembly.pdf"
+  }
+ ],
+ "notes": [
+  "Amounts are biennium totals across all fund groups from LSC's agency summary tables for the main operating budget bill; separate transportation, BWC, and Industrial Commission budget bills are excluded (Dept. of Transportation figures here reflect only its main-operating-bill share).",
+  "FY2024 and FY2025 are final appropriations as enacted in HB 33. Per the July 2026 LSC edition of the HB 96 spreadsheet, FY2026 amounts are actual expenditures and FY2027 amounts are final appropriations.",
+  "Department of Behavioral Health was named Department of Mental Health and Addiction Services in HB 33 (same agency, code MHA). Department of Children and Youth was newly created in the FY2024-25 biennium.",
+  "Ohio Department of Medicaid totals include federal Medicaid reimbursement (roughly two-thirds of the agency's all-funds total)."
+ ],
+ "agencies": [
+  {
+   "name": "Accountancy Board of Ohio",
+   "prior": 3695101,
+   "current": 3230613,
+   "years": {
+    "fy2024": 1868885,
+    "fy2025": 1826216,
+    "fy2026": 1555082,
+    "fy2027": 1675531
+   }
+  },
+  {
+   "name": "Adjutant General's Department",
+   "prior": 121028197,
+   "current": 122056420,
+   "years": {
+    "fy2024": 59937885,
+    "fy2025": 61090312,
+    "fy2026": 59608533,
+    "fy2027": 62447887
+   }
+  },
+  {
+   "name": "Attorney General's Office",
+   "prior": 869111964,
+   "current": 964211128,
+   "years": {
+    "fy2024": 437672732,
+    "fy2025": 431439232,
+    "fy2026": 474828469,
+    "fy2027": 489382659
+   }
+  },
+  {
+   "name": "Board of Embalmers and Funeral Directors",
+   "prior": 2891264,
+   "current": 2918587,
+   "years": {
+    "fy2024": 1444500,
+    "fy2025": 1446764,
+    "fy2026": 1455587,
+    "fy2027": 1463000
+   }
+  },
+  {
+   "name": "Board of Motor Vehicle Repair",
+   "prior": 1403332,
+   "current": 1591747,
+   "years": {
+    "fy2024": 698657,
+    "fy2025": 704675,
+    "fy2026": 769943,
+    "fy2027": 821804
+   }
+  },
+  {
+   "name": "Board of Nursing",
+   "prior": 28486312,
+   "current": 28481003,
+   "years": {
+    "fy2024": 14559156,
+    "fy2025": 13927156,
+    "fy2026": 13639578,
+    "fy2027": 14841425
+   }
+  },
+  {
+   "name": "Board of Pharmacy",
+   "prior": 35909600,
+   "current": 38621899,
+   "years": {
+    "fy2024": 18635300,
+    "fy2025": 17274300,
+    "fy2026": 18249229,
+    "fy2027": 20372670
+   }
+  },
+  {
+   "name": "Board of Psychology",
+   "prior": 1504978,
+   "current": 1875319,
+   "years": {
+    "fy2024": 747489,
+    "fy2025": 757489,
+    "fy2026": 863597,
+    "fy2027": 1011722
+   }
+  },
+  {
+   "name": "Board of Tax Appeals",
+   "prior": 4231000,
+   "current": 3724110,
+   "years": {
+    "fy2024": 2085000,
+    "fy2025": 2146000,
+    "fy2026": 1564110,
+    "fy2027": 2160000
+   }
+  },
+  {
+   "name": "Broadcast Educational Media Commission",
+   "prior": 21288600,
+   "current": 20091843,
+   "years": {
+    "fy2024": 10643700,
+    "fy2025": 10644900,
+    "fy2026": 10363674,
+    "fy2027": 9728169
+   }
+  },
+  {
+   "name": "Capitol Square Review and Advisory Board",
+   "prior": 27205812,
+   "current": 22756087,
+   "years": {
+    "fy2024": 13652906,
+    "fy2025": 13552906,
+    "fy2026": 10292046,
+    "fy2027": 12464041
+   }
+  },
+  {
+   "name": "Casino Control Commission",
+   "prior": 34605000,
+   "current": 41147182,
+   "years": {
+    "fy2024": 17102000,
+    "fy2025": 17503000,
+    "fy2026": 18597440,
+    "fy2027": 22549742
+   }
+  },
+  {
+   "name": "Commission on Service and Volunteerism",
+   "prior": 29170859,
+   "current": 24994581,
+   "years": {
+    "fy2024": 14566066,
+    "fy2025": 14604793,
+    "fy2026": 10341975,
+    "fy2027": 14652606
+   }
+  },
+  {
+   "name": "Commissioners of the Sinking Fund",
+   "prior": 2178565000,
+   "current": 1869180353,
+   "years": {
+    "fy2024": 1131327500,
+    "fy2025": 1047237500,
+    "fy2026": 956855353,
+    "fy2027": 912325000
+   }
+  },
+  {
+   "name": "Controlling Board",
+   "prior": 15000000,
+   "current": 10000000,
+   "years": {
+    "fy2024": 7500000,
+    "fy2025": 7500000,
+    "fy2026": 0,
+    "fy2027": 10000000
+   }
+  },
+  {
+   "name": "Counselor, Social Worker, and Marriage and Family Therapist Board",
+   "prior": 4340000,
+   "current": 4270518,
+   "years": {
+    "fy2024": 2150000,
+    "fy2025": 2190000,
+    "fy2026": 1979143,
+    "fy2027": 2291375
+   }
+  },
+  {
+   "name": "Court of Claims",
+   "prior": 9389609,
+   "current": 14449624,
+   "years": {
+    "fy2024": 4602502,
+    "fy2025": 4787107,
+    "fy2026": 9128736,
+    "fy2027": 5320888
+   }
+  },
+  {
+   "name": "Department of Administrative Services",
+   "prior": 1933452442,
+   "current": 1668088824,
+   "years": {
+    "fy2024": 961843404,
+    "fy2025": 971609038,
+    "fy2026": 863742661,
+    "fy2027": 804346163
+   }
+  },
+  {
+   "name": "Department of Behavioral Health",
+   "prior": 2359417061,
+   "current": 2336117284,
+   "years": {
+    "fy2024": 1214043851,
+    "fy2025": 1145373210,
+    "fy2026": 1084178152,
+    "fy2027": 1251939132
+   }
+  },
+  {
+   "name": "Department of Children and Youth",
+   "prior": 4510780715,
+   "current": 4968993151,
+   "years": {
+    "fy2024": 2246394994,
+    "fy2025": 2264385721,
+    "fy2026": 2376681323,
+    "fy2027": 2592311828
+   }
+  },
+  {
+   "name": "Department of Commerce",
+   "prior": 553091230,
+   "current": 731694408,
+   "years": {
+    "fy2024": 278089502,
+    "fy2025": 275001728,
+    "fy2026": 402834830,
+    "fy2027": 328859578
+   }
+  },
+  {
+   "name": "Department of Development",
+   "prior": 3908377442,
+   "current": 2969787421,
+   "years": {
+    "fy2024": 2501249095,
+    "fy2025": 1407128347,
+    "fy2026": 2259523177,
+    "fy2027": 710264244
+   }
+  },
+  {
+   "name": "Department of Developmental Disabilities",
+   "prior": 9717141181,
+   "current": 11108837520,
+   "years": {
+    "fy2024": 4579438068,
+    "fy2025": 5137703113,
+    "fy2026": 5358695340,
+    "fy2027": 5750142180
+   }
+  },
+  {
+   "name": "Department of Education and Workforce",
+   "prior": 30324976107,
+   "current": 30140968847,
+   "years": {
+    "fy2024": 15871328139,
+    "fy2025": 14453647968,
+    "fy2026": 14840901963,
+    "fy2027": 15300066884
+   }
+  },
+  {
+   "name": "Department of Rehabilitation and Correction",
+   "prior": 4676028000,
+   "current": 5038912703,
+   "years": {
+    "fy2024": 2315593000,
+    "fy2025": 2360435000,
+    "fy2026": 2443358534,
+    "fy2027": 2595554169
+   }
+  },
+  {
+   "name": "Department of Taxation",
+   "prior": 6206511472,
+   "current": 6955038110,
+   "years": {
+    "fy2024": 2987360694,
+    "fy2025": 3219150778,
+    "fy2026": 3717748465,
+    "fy2027": 3237289645
+   }
+  },
+  {
+   "name": "Department of Youth Services",
+   "prior": 544828000,
+   "current": 568277170,
+   "years": {
+    "fy2024": 272023800,
+    "fy2025": 272804200,
+    "fy2026": 270757205,
+    "fy2027": 297519965
+   }
+  },
+  {
+   "name": "Elections Commission",
+   "prior": 1267000,
+   "current": 507748,
+   "years": {
+    "fy2024": 625000,
+    "fy2025": 642000,
+    "fy2026": 507748,
+    "fy2027": 0
+   }
+  },
+  {
+   "name": "Employee Benefits Funds",
+   "prior": 4223398637,
+   "current": 4954347819,
+   "years": {
+    "fy2024": 2095108812,
+    "fy2025": 2128289825,
+    "fy2026": 2564732162,
+    "fy2027": 2389615657
+   }
+  },
+  {
+   "name": "Environmental Review Appeals Commission",
+   "prior": 1395000,
+   "current": 1487801,
+   "years": {
+    "fy2024": 694000,
+    "fy2025": 701000,
+    "fy2026": 722801,
+    "fy2027": 765000
+   }
+  },
+  {
+   "name": "Ethics Commission",
+   "prior": 5624200,
+   "current": 6459755,
+   "years": {
+    "fy2024": 2804100,
+    "fy2025": 2820100,
+    "fy2026": 3185820,
+    "fy2027": 3273935
+   }
+  },
+  {
+   "name": "Higher Educational Facility Commission",
+   "prior": 25000,
+   "current": 22340,
+   "years": {
+    "fy2024": 12500,
+    "fy2025": 12500,
+    "fy2026": 6827,
+    "fy2027": 15513
+   }
+  },
+  {
+   "name": "Joint Committee on Agency Rule Review",
+   "prior": 1230000,
+   "current": 1165742,
+   "years": {
+    "fy2024": 610000,
+    "fy2025": 620000,
+    "fy2026": 595742,
+    "fy2027": 570000
+   }
+  },
+  {
+   "name": "Joint Legislative Ethics Committee",
+   "prior": 1746000,
+   "current": 1858103,
+   "years": {
+    "fy2024": 873000,
+    "fy2025": 873000,
+    "fy2026": 985103,
+    "fy2027": 873000
+   }
+  },
+  {
+   "name": "Joint Medicaid Oversight Committee",
+   "prior": 999000,
+   "current": 134847,
+   "years": {
+    "fy2024": 408000,
+    "fy2025": 591000,
+    "fy2026": 134847,
+    "fy2027": 0
+   }
+  },
+  {
+   "name": "Judiciary/Supreme Court",
+   "prior": 449514760,
+   "current": 470104292,
+   "years": {
+    "fy2024": 221032141,
+    "fy2025": 228482619,
+    "fy2026": 224825204,
+    "fy2027": 245279088
+   }
+  },
+  {
+   "name": "Lake Erie Commission",
+   "prior": 2581000,
+   "current": 4223343,
+   "years": {
+    "fy2024": 983000,
+    "fy2025": 1598000,
+    "fy2026": 2011343,
+    "fy2027": 2212000
+   }
+  },
+  {
+   "name": "Legislative Service Commission",
+   "prior": 82814000,
+   "current": 78242341,
+   "years": {
+    "fy2024": 42032000,
+    "fy2025": 40782000,
+    "fy2026": 35530341,
+    "fy2027": 42712000
+   }
+  },
+  {
+   "name": "Liquor Control Commission",
+   "prior": 2453000,
+   "current": 2341005,
+   "years": {
+    "fy2024": 1227200,
+    "fy2025": 1225800,
+    "fy2026": 1099270,
+    "fy2027": 1241735
+   }
+  },
+  {
+   "name": "Lottery Commission",
+   "prior": 870607079,
+   "current": 965028708,
+   "years": {
+    "fy2024": 427378841,
+    "fy2025": 443228238,
+    "fy2026": 511559267,
+    "fy2027": 453469441
+   }
+  },
+  {
+   "name": "New African Immigrants Commission",
+   "prior": 500000,
+   "current": 422786,
+   "years": {
+    "fy2024": 250000,
+    "fy2025": 250000,
+    "fy2026": 172786,
+    "fy2027": 250000
+   }
+  },
+  {
+   "name": "Occupational Therapy, Physical Therapy, and Athletic Trainers Board",
+   "prior": 2748494,
+   "current": 2744649,
+   "years": {
+    "fy2024": 1330747,
+    "fy2025": 1417747,
+    "fy2026": 1309790,
+    "fy2027": 1434859
+   }
+  },
+  {
+   "name": "Office of Budget and Management",
+   "prior": 64092798,
+   "current": 75761296,
+   "years": {
+    "fy2024": 33251399,
+    "fy2025": 30841399,
+    "fy2026": 42045987,
+    "fy2027": 33715309
+   }
+  },
+  {
+   "name": "Office of Ohio Consumers' Counsel",
+   "prior": 12626534,
+   "current": 13480465,
+   "years": {
+    "fy2024": 6313267,
+    "fy2025": 6313267,
+    "fy2026": 6508435,
+    "fy2027": 6972030
+   }
+  },
+  {
+   "name": "Office of the Auditor of State",
+   "prior": 217167696,
+   "current": 243478129,
+   "years": {
+    "fy2024": 104957067,
+    "fy2025": 112210629,
+    "fy2026": 117232675,
+    "fy2027": 126245454
+   }
+  },
+  {
+   "name": "Office of the Governor",
+   "prior": 7763596,
+   "current": 8522954,
+   "years": {
+    "fy2024": 3881798,
+    "fy2025": 3881798,
+    "fy2026": 4207888,
+    "fy2027": 4315066
+   }
+  },
+  {
+   "name": "Office of the Inspector General",
+   "prior": 5669000,
+   "current": 5868010,
+   "years": {
+    "fy2024": 2766000,
+    "fy2025": 2903000,
+    "fy2026": 2885010,
+    "fy2027": 2983000
+   }
+  },
+  {
+   "name": "Office of the Ohio Public Defender",
+   "prior": 481322400,
+   "current": 525527587,
+   "years": {
+    "fy2024": 237942700,
+    "fy2025": 243379700,
+    "fy2026": 266324346,
+    "fy2027": 259203241
+   }
+  },
+  {
+   "name": "Ohio Air Quality Development Authority",
+   "prior": 2735000,
+   "current": 6448711,
+   "years": {
+    "fy2024": 1316000,
+    "fy2025": 1419000,
+    "fy2026": 1675711,
+    "fy2027": 4773000
+   }
+  },
+  {
+   "name": "Ohio Architects Board and Ohio Landscape Architects Board",
+   "prior": 1334938,
+   "current": 1343007,
+   "years": {
+    "fy2024": 667469,
+    "fy2025": 667469,
+    "fy2026": 653006,
+    "fy2027": 690001
+   }
+  },
+  {
+   "name": "Ohio Arts Council",
+   "prior": 54905000,
+   "current": 56810139,
+   "years": {
+    "fy2024": 27347000,
+    "fy2025": 27558000,
+    "fy2026": 28333938,
+    "fy2027": 28476201
+   }
+  },
+  {
+   "name": "Ohio Athletic Commission",
+   "prior": 699000,
+   "current": 650918,
+   "years": {
+    "fy2024": 354000,
+    "fy2025": 345000,
+    "fy2026": 278923,
+    "fy2027": 371995
+   }
+  },
+  {
+   "name": "Ohio Chemical Dependency Professionals Board",
+   "prior": 1924674,
+   "current": 2417803,
+   "years": {
+    "fy2024": 925837,
+    "fy2025": 998837,
+    "fy2026": 900541,
+    "fy2027": 1517262
+   }
+  },
+  {
+   "name": "Ohio Civil Rights Commission",
+   "prior": 22154600,
+   "current": 22715013,
+   "years": {
+    "fy2024": 10749800,
+    "fy2025": 11404800,
+    "fy2026": 11270772,
+    "fy2027": 11444241
+   }
+  },
+  {
+   "name": "Ohio Commission on Hispanic/Latino Affairs",
+   "prior": 1219000,
+   "current": 1328648,
+   "years": {
+    "fy2024": 604000,
+    "fy2025": 615000,
+    "fy2026": 794978,
+    "fy2027": 533670
+   }
+  },
+  {
+   "name": "Ohio Commission on Minority Health",
+   "prior": 14612000,
+   "current": 15944801,
+   "years": {
+    "fy2024": 7289000,
+    "fy2025": 7323000,
+    "fy2026": 7609857,
+    "fy2027": 8334944
+   }
+  },
+  {
+   "name": "Ohio Deaf and Blind Education Services",
+   "prior": 67093117,
+   "current": 71700804,
+   "years": {
+    "fy2024": 33351800,
+    "fy2025": 33741317,
+    "fy2026": 34830495,
+    "fy2027": 36870309
+   }
+  },
+  {
+   "name": "Ohio Department of Aging",
+   "prior": 288637572,
+   "current": 262170080,
+   "years": {
+    "fy2024": 173019487,
+    "fy2025": 115618085,
+    "fy2026": 130598971,
+    "fy2027": 131571109
+   }
+  },
+  {
+   "name": "Ohio Department of Agriculture",
+   "prior": 361952848,
+   "current": 311270335,
+   "years": {
+    "fy2024": 176886174,
+    "fy2025": 185066674,
+    "fy2026": 136681635,
+    "fy2027": 174588700
+   }
+  },
+  {
+   "name": "Ohio Department of Health",
+   "prior": 1872894887,
+   "current": 1782494883,
+   "years": {
+    "fy2024": 1026100193,
+    "fy2025": 846794694,
+    "fy2026": 792762852,
+    "fy2027": 989732031
+   }
+  },
+  {
+   "name": "Ohio Department of Higher Education",
+   "prior": 6074349198,
+   "current": 6091000218,
+   "years": {
+    "fy2024": 3047674094,
+    "fy2025": 3026675104,
+    "fy2026": 3061280309,
+    "fy2027": 3029719909
+   }
+  },
+  {
+   "name": "Ohio Department of Insurance",
+   "prior": 93454372,
+   "current": 104034041,
+   "years": {
+    "fy2024": 46366669,
+    "fy2025": 47087703,
+    "fy2026": 51283728,
+    "fy2027": 52750313
+   }
+  },
+  {
+   "name": "Ohio Department of Job And Family Services",
+   "prior": 5371222837,
+   "current": 5166976306,
+   "years": {
+    "fy2024": 2694753066,
+    "fy2025": 2676469771,
+    "fy2026": 2028581262,
+    "fy2027": 3138395044
+   }
+  },
+  {
+   "name": "Ohio Department of Medicaid",
+   "prior": 75531843067,
+   "current": 82002729380,
+   "years": {
+    "fy2024": 36188201898,
+    "fy2025": 39343641169,
+    "fy2026": 40112177367,
+    "fy2027": 41890552013
+   }
+  },
+  {
+   "name": "Ohio Department of Natural Resources",
+   "prior": 1250167352,
+   "current": 1294712863,
+   "years": {
+    "fy2024": 623768520,
+    "fy2025": 626398832,
+    "fy2026": 607946897,
+    "fy2027": 686765966
+   }
+  },
+  {
+   "name": "Ohio Department of Public Safety",
+   "prior": 2125759708,
+   "current": 1978659472,
+   "years": {
+    "fy2024": 1051394707,
+    "fy2025": 1074365001,
+    "fy2026": 879697309,
+    "fy2027": 1098962163
+   }
+  },
+  {
+   "name": "Ohio Department of Transportation",
+   "prior": 654247500,
+   "current": 151568676,
+   "years": {
+    "fy2024": 632747500,
+    "fy2025": 21500000,
+    "fy2026": 86404040,
+    "fy2027": 65164636
+   }
+  },
+  {
+   "name": "Ohio Department of Veterans Service",
+   "prior": 294965424,
+   "current": 209923381,
+   "years": {
+    "fy2024": 178743291,
+    "fy2025": 116222133,
+    "fy2026": 100406106,
+    "fy2027": 109517275
+   }
+  },
+  {
+   "name": "Ohio Environmental Protection Agency",
+   "prior": 540440037,
+   "current": 495433041,
+   "years": {
+    "fy2024": 268702169,
+    "fy2025": 271737868,
+    "fy2026": 236250674,
+    "fy2027": 259182367
+   }
+  },
+  {
+   "name": "Ohio Expositions Commission",
+   "prior": 225201000,
+   "current": 141373602,
+   "years": {
+    "fy2024": 112545000,
+    "fy2025": 112656000,
+    "fy2026": 120343602,
+    "fy2027": 21030000
+   }
+  },
+  {
+   "name": "Ohio Facilities Construction Commission",
+   "prior": 966684841,
+   "current": 646352046,
+   "years": {
+    "fy2024": 619629013,
+    "fy2025": 347055828,
+    "fy2026": 357868224,
+    "fy2027": 288483822
+   }
+  },
+  {
+   "name": "Ohio History Connection",
+   "prior": 42041000,
+   "current": 54144334,
+   "years": {
+    "fy2024": 21277000,
+    "fy2025": 20764000,
+    "fy2026": 30248807,
+    "fy2027": 23895527
+   }
+  },
+  {
+   "name": "Ohio House of Representatives",
+   "prior": 63467328,
+   "current": 70208516,
+   "years": {
+    "fy2024": 31733664,
+    "fy2025": 31733664,
+    "fy2026": 32514852,
+    "fy2027": 37693664
+   }
+  },
+  {
+   "name": "Ohio Housing Finance Agency",
+   "prior": 34295230,
+   "current": 37521858,
+   "years": {
+    "fy2024": 16861741,
+    "fy2025": 17433489,
+    "fy2026": 17036858,
+    "fy2027": 20485000
+   }
+  },
+  {
+   "name": "Ohio Judicial Conference",
+   "prior": 3713962,
+   "current": 4379732,
+   "years": {
+    "fy2024": 1808853,
+    "fy2025": 1905109,
+    "fy2026": 2089702,
+    "fy2027": 2290030
+   }
+  },
+  {
+   "name": "Ohio Public Works Commission",
+   "prior": 557109989,
+   "current": 546599815,
+   "years": {
+    "fy2024": 278914821,
+    "fy2025": 278195168,
+    "fy2026": 266278315,
+    "fy2027": 280321500
+   }
+  },
+  {
+   "name": "Ohio Senate",
+   "prior": 40920594,
+   "current": 41556221,
+   "years": {
+    "fy2024": 20460297,
+    "fy2025": 20460297,
+    "fy2026": 18095924,
+    "fy2027": 23460297
+   }
+  },
+  {
+   "name": "Ohio State Chiropractic Board",
+   "prior": 1186736,
+   "current": 1221873,
+   "years": {
+    "fy2024": 592868,
+    "fy2025": 593868,
+    "fy2026": 582856,
+    "fy2027": 639017
+   }
+  },
+  {
+   "name": "Ohio Veterinary Medical Licensing Board",
+   "prior": 1452000,
+   "current": 1238656,
+   "years": {
+    "fy2024": 734000,
+    "fy2025": 718000,
+    "fy2026": 563845,
+    "fy2027": 674811
+   }
+  },
+  {
+   "name": "Opportunities for Ohioans with Disabilities",
+   "prior": 663062370,
+   "current": 678321897,
+   "years": {
+    "fy2024": 318639787,
+    "fy2025": 344422583,
+    "fy2026": 330899525,
+    "fy2027": 347422372
+   }
+  },
+  {
+   "name": "Pension Subsidies",
+   "prior": 71866000,
+   "current": 80282691,
+   "years": {
+    "fy2024": 35683000,
+    "fy2025": 36183000,
+    "fy2026": 40130391,
+    "fy2027": 40152300
+   }
+  },
+  {
+   "name": "Petroleum Underground Storage Tank Release Compensation Board",
+   "prior": 3255500,
+   "current": 3577280,
+   "years": {
+    "fy2024": 1616900,
+    "fy2025": 1638600,
+    "fy2026": 1667188,
+    "fy2027": 1910092
+   }
+  },
+  {
+   "name": "Public Utilities Commission of Ohio",
+   "prior": 160648148,
+   "current": 160475706,
+   "years": {
+    "fy2024": 80243854,
+    "fy2025": 80404294,
+    "fy2026": 74577035,
+    "fy2027": 85898671
+   }
+  },
+  {
+   "name": "Secretary of State",
+   "prior": 110357815,
+   "current": 106337376,
+   "years": {
+    "fy2024": 64587537,
+    "fy2025": 45770278,
+    "fy2026": 53675905,
+    "fy2027": 52661471
+   }
+  },
+  {
+   "name": "Speech and Hearing Professionals Board",
+   "prior": 1299922,
+   "current": 1346775,
+   "years": {
+    "fy2024": 647461,
+    "fy2025": 652461,
+    "fy2026": 681375,
+    "fy2027": 665400
+   }
+  },
+  {
+   "name": "State Board of Career Colleges and Schools",
+   "prior": 1118000,
+   "current": 1159269,
+   "years": {
+    "fy2024": 551000,
+    "fy2025": 567000,
+    "fy2026": 565290,
+    "fy2027": 593979
+   }
+  },
+  {
+   "name": "State Board of Deposit",
+   "prior": 3376800,
+   "current": 2947422,
+   "years": {
+    "fy2024": 1688400,
+    "fy2025": 1688400,
+    "fy2026": 1259022,
+    "fy2027": 1688400
+   }
+  },
+  {
+   "name": "State Board of Education",
+   "prior": 30386000,
+   "current": 31261154,
+   "years": {
+    "fy2024": 15086000,
+    "fy2025": 15300000,
+    "fy2026": 14386282,
+    "fy2027": 16874872
+   }
+  },
+  {
+   "name": "State Board of Registration for Professional Engineers and Surveyors",
+   "prior": 2515898,
+   "current": 2577177,
+   "years": {
+    "fy2024": 1233994,
+    "fy2025": 1281904,
+    "fy2026": 1111247,
+    "fy2027": 1465930
+   }
+  },
+  {
+   "name": "State Cosmetology and Barber Board",
+   "prior": 10905216,
+   "current": 11638267,
+   "years": {
+    "fy2024": 5418707,
+    "fy2025": 5486509,
+    "fy2026": 5797201,
+    "fy2027": 5841066
+   }
+  },
+  {
+   "name": "State Dental Board",
+   "prior": 3970994,
+   "current": 4480630,
+   "years": {
+    "fy2024": 1979497,
+    "fy2025": 1991497,
+    "fy2026": 2108372,
+    "fy2027": 2372258
+   }
+  },
+  {
+   "name": "State Employment Relations Board",
+   "prior": 9121277,
+   "current": 9140079,
+   "years": {
+    "fy2024": 4584128,
+    "fy2025": 4537149,
+    "fy2026": 4346084,
+    "fy2027": 4793995
+   }
+  },
+  {
+   "name": "State Library Board",
+   "prior": 49754856,
+   "current": 48726288,
+   "years": {
+    "fy2024": 24877428,
+    "fy2025": 24877428,
+    "fy2026": 24132413,
+    "fy2027": 24593875
+   }
+  },
+  {
+   "name": "State Medical Board of Ohio",
+   "prior": 28106794,
+   "current": 28877154,
+   "years": {
+    "fy2024": 13791789,
+    "fy2025": 14315005,
+    "fy2026": 13985929,
+    "fy2027": 14891225
+   }
+  },
+  {
+   "name": "State Racing Commission",
+   "prior": 66620994,
+   "current": 66348255,
+   "years": {
+    "fy2024": 33310497,
+    "fy2025": 33310497,
+    "fy2026": 33394756,
+    "fy2027": 32953499
+   }
+  },
+  {
+   "name": "State Revenue Distributions",
+   "prior": 18295660054,
+   "current": 20168212264,
+   "years": {
+    "fy2024": 8915020315,
+    "fy2025": 9380639739,
+    "fy2026": 10125056156,
+    "fy2027": 10043156108
+   }
+  },
+  {
+   "name": "Treasurer of State",
+   "prior": 66811370,
+   "current": 108182504,
+   "years": {
+    "fy2024": 33405465,
+    "fy2025": 33405905,
+    "fy2026": 70981478,
+    "fy2027": 37201026
+   }
+  },
+  {
+   "name": "Veterans' Organizations",
+   "prior": 5576000,
+   "current": 5514000,
+   "years": {
+    "fy2024": 2788000,
+    "fy2025": 2788000,
+    "fy2026": 2726000,
+    "fy2027": 2788000
+   }
+  },
+  {
+   "name": "Vision Professionals Board",
+   "prior": 1228368,
+   "current": 1308075,
+   "years": {
+    "fy2024": 608684,
+    "fy2025": 619684,
+    "fy2026": 639929,
+    "fy2027": 668146
+   }
+  }
+ ]
+}

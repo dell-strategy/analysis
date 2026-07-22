@@ -1,0 +1,147 @@
+{
+ "state": "Missouri",
+ "updated": "2026-07-17",
+ "cycle": "annual",
+ "basis": "All funds (general revenue + federal + other), total operating appropriations by department, final after-veto; excludes capital improvements and public debt",
+ "priorLabel": "FY2026 enacted (final after veto)",
+ "currentLabel": "FY2027 enacted (signed Jun 2026, effective Jul 1, 2026, final after veto)",
+ "unit": "dollars",
+ "sources": [
+  {
+   "label": "MO Division of Budget & Planning, FY2027 Totals by Department (appropriation bills portal)",
+   "url": "https://budplan.oa.mo.gov/appropriation-bills-fiscal-year-2027"
+  },
+  {
+   "label": "MO Division of Budget & Planning, FY2026 Totals by Department (appropriation bills portal)",
+   "url": "https://budplan.oa.mo.gov/budget-information/fy2026/appropriation-bills"
+  }
+ ],
+ "notes": [
+  "Both columns are taken from the FY2027 Totals by Department document (FY 2026 Final vs. FY 2027 Final After Veto); FY2026 figures cross-verified against the FY2026 Totals by Department document, matching exactly for every department.",
+  "Operating budget only. Capital improvements ($993M FY2026, $848M FY2027) and public debt (zero both years) are excluded; department sums tie exactly to the published Total Operating Budget lines ($50.83B FY2026, $49.84B FY2027).",
+  "American Rescue Plan Act (HB 20) is a separate wind-down appropriation bill (-$1.49B YoY); Economic Development's -$1.89B drop is mostly one-time federal funds rolling off; Public Safety's +$846M is driven by federal funds (+$870M).",
+  "Employee Benefits (HB 5) and Real Estate (HB 13) are statewide appropriations administered through the Office of Administration, not standalone departments."
+ ],
+ "agencies": [
+  {
+   "name": "Elementary and Secondary Education",
+   "prior": 8630865463,
+   "current": 8424731193
+  },
+  {
+   "name": "Higher Ed and Workforce Development",
+   "prior": 1419907258,
+   "current": 1395688410
+  },
+  {
+   "name": "Revenue",
+   "prior": 917056348,
+   "current": 906999125
+  },
+  {
+   "name": "Transportation",
+   "prior": 3564927863,
+   "current": 3957854651
+  },
+  {
+   "name": "Office of Administration",
+   "prior": 767270370,
+   "current": 680902375
+  },
+  {
+   "name": "Employee Benefits",
+   "prior": 1708572983,
+   "current": 1809441763
+  },
+  {
+   "name": "Agriculture",
+   "prior": 73133039,
+   "current": 59379026
+  },
+  {
+   "name": "Natural Resources",
+   "prior": 1230063669,
+   "current": 1490263528
+  },
+  {
+   "name": "Conservation",
+   "prior": 240930141,
+   "current": 251537641
+  },
+  {
+   "name": "Economic Development",
+   "prior": 2225996760,
+   "current": 338058775
+  },
+  {
+   "name": "Commerce and Insurance",
+   "prior": 86497910,
+   "current": 88410373
+  },
+  {
+   "name": "Labor and Industrial Relations",
+   "prior": 352013662,
+   "current": 323884491
+  },
+  {
+   "name": "Public Safety",
+   "prior": 1232815948,
+   "current": 2078697634
+  },
+  {
+   "name": "National Guard",
+   "prior": 55158649,
+   "current": 56521823
+  },
+  {
+   "name": "Corrections",
+   "prior": 1043613331,
+   "current": 1056990809
+  },
+  {
+   "name": "Mental Health",
+   "prior": 4376271419,
+   "current": 4488647259
+  },
+  {
+   "name": "Health and Senior Services",
+   "prior": 2337806425,
+   "current": 2147306160
+  },
+  {
+   "name": "Social Services",
+   "prior": 16994175469,
+   "current": 18157301767
+  },
+  {
+   "name": "Elected Officials",
+   "prior": 318300219,
+   "current": 343488724
+  },
+  {
+   "name": "Judiciary",
+   "prior": 315813455,
+   "current": 306417412
+  },
+  {
+   "name": "Public Defender",
+   "prior": 84105326,
+   "current": 93581822
+  },
+  {
+   "name": "General Assembly",
+   "prior": 50442803,
+   "current": 50622803
+  },
+  {
+   "name": "Real Estate",
+   "prior": 146529443,
+   "current": 157453271
+  },
+  {
+   "name": "American Rescue Plan Act",
+   "prior": 2657225892,
+   "current": 1172110223
+  }
+ ]
+}

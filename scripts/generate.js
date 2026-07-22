@@ -222,7 +222,8 @@ function median(arr) {
   return a.length % 2 ? a[m] : (a[m - 1] + a[m]) / 2;
 }
 
-function renderBudgetShifts(bs, manifest) {
+function renderBudgetShifts(bs, manifest, agencyData) {
+  agencyData = agencyData || {};
   const codeBySlug = {};
   for (const st of manifest.states) codeBySlug[st.slug] = st.code;
   const entries = Object.entries(bs.states)
@@ -253,8 +254,11 @@ function renderBudgetShifts(bs, manifest) {
     const mid = my != null
       ? `<span class="${my < 0 ? 'delta-neg' : 'delta-pos'}">${my < 0 ? '−' : '+'}$${Math.abs(my) >= 1000 ? (Math.abs(my) / 1000).toFixed(1) + 'B' : Math.round(Math.abs(my)) + 'M'}</span>`
       : '<span class="muted">&mdash;</span>';
+    const drill = agencyData[s.slug]
+      ? ` <a class="code-chip" href="../states/${esc(s.slug)}.html#budget" title="Agency-level budget shifts available">agencies</a>`
+      : '';
     return `<tr>
-      <td class="rowhead"><b><a href="../states/${esc(s.slug)}.html">${esc(s.name)}</a></b></td>
+      <td class="rowhead"><b><a href="../states/${esc(s.slug)}.html">${esc(s.name)}</a></b>${drill}</td>
       <td class="num" data-label="FY2025">${fmtM(s.generalFund.fy2025Prelim != null ? s.generalFund.fy2025Prelim : s.generalFund.fy2025)}</td>
       <td class="num" data-label="FY2026 enacted">${fmtM(s.generalFund.fy2026Enacted)}</td>
       <td class="num" data-label="FY26 &Delta;">${fmtPct(s.pctChange.fy2026Enacted)}</td>
@@ -263,6 +267,37 @@ function renderBudgetShifts(bs, manifest) {
       <td data-label="FY26 actions">${chips ? `<span class="chip-wrap">${chips}</span>` : '<span class="muted">&mdash;</span>'}</td>
     </tr>`;
   }).join('');
+
+  /* -- agency drill-down summary (phase-2 states) ---------------------------- */
+  const drillSlugs = Object.keys(agencyData).sort((a, b) =>
+    (agencyData[a].state || a).localeCompare(agencyData[b].state || b));
+  const drillRows = drillSlugs.map((slug) => {
+    const as = agencyData[slug];
+    const rows = (as.agencies || []).map((a) => ({ ...a, change: (a.current || 0) - (a.prior || 0) }));
+    const totP = rows.reduce((t, a) => t + (a.prior || 0), 0);
+    const totC = rows.reduce((t, a) => t + (a.current || 0), 0);
+    const pct = totP ? (totC / totP - 1) * 100 : null;
+    const up = rows.slice().sort((x, y) => y.change - x.change)[0];
+    const down = rows.slice().sort((x, y) => x.change - y.change)[0];
+    const mv = (a, sign) => a ? `${esc(a.name)} <span class="${sign < 0 ? 'delta-neg' : 'delta-pos'}">${a.change < 0 ? '−' : '+'}${moneyShort(Math.abs(a.change))}</span>` : '&mdash;';
+    return `<tr>
+      <td class="rowhead"><b><a href="../states/${esc(slug)}.html#budget">${esc(as.state)}</a></b><br><small class="muted">${esc(as.priorLabel || 'prior')} &rarr; ${esc(as.currentLabel || 'current')}</small></td>
+      <td class="num" data-label="Statewide">${moneyShort(totP)} &rarr; ${moneyShort(totC)} ${pct != null ? fmtPct(pct) : ''}</td>
+      <td data-label="Biggest increase">${mv(up, 1)}</td>
+      <td data-label="Biggest cut">${down && down.change < 0 ? mv(down, -1) : '<span class="muted">none</span>'}</td>
+    </tr>`;
+  }).join('');
+  const drillSection = drillSlugs.length ? `
+  <section class="section" id="agencies">
+    ${sectionHead('power', 'Agency Drill-Downs')}
+    <p class="lead">For ${drillSlugs.length} states so far, we've parsed the actual enacted budget documents to agency level &mdash; every agency's prior vs. current funding, validated against each document's own totals. Each state's page carries the full table; the biggest movers are below. <b>Bases differ by state</b> (all funds vs. state funds vs. general fund; annual vs. biennial) &mdash; compare within a state, not across states.</p>
+    <div class="card table-card bsr-table bsr-stack" style="margin-top:16px">
+      <table class="data-table">
+        <thead><tr><th>State (drill in)</th><th class="num">Statewide</th><th>Biggest increase</th><th>Biggest cut</th></tr></thead>
+        <tbody>${drillRows}</tbody>
+      </table>
+    </div>
+  </section>` : '';
 
   /* -- program-area cards --------------------------------------------------- */
   const funcCards = Object.entries(bs.functionLabels).map(([key, label]) => {
@@ -381,12 +416,13 @@ function renderBudgetShifts(bs, manifest) {
   const toc = [
     tocLink('summary', 'summary', 'Summary'),
     tocLink('statewide', 'budget', 'General Fund by State'),
+    drillSlugs.length ? tocLink('agencies', 'power', 'Agency Drill-Downs') : '',
     tocLink('programs', 'initiatives', 'Program Areas'),
     tocLink('mix', 'budget', 'Where the Money Goes'),
     tocLink('capital', 'procurement', 'Capital Programs'),
     tocLink('strategies', 'bolt', 'Cut Strategies'),
     tocLink('method', 'news', 'Methodology'),
-  ].join('\n      ');
+  ].filter(Boolean).join('\n      ');
 
   return `${head('50-State Budget Shifts | Dell SLG Strategy Hub', '../assets/css/styles.css')}
 <body>
@@ -436,6 +472,7 @@ ${siteHeader('../', true)}
       </table>
     </div>
   </section>
+${drillSection}
 
   <section class="section" id="programs">
     ${sectionHead('initiatives', 'Program Areas: Added vs. Cut')}
@@ -478,7 +515,7 @@ ${siteHeader('../', true)}
   </main>
 </div>
 
-${siteFooter('../', bs.updated)}
+${siteFooter('../', bs.updated, true)}
 <script src="../assets/js/nav.js"></script>
 </body>
 </html>`;
@@ -550,7 +587,43 @@ function renderBudget(d) {
     <div class="barlist">${bars}</div>
   </div>` : ''}
   ${notes ? `<ul class="muted" style="font-size:.85rem;margin-top:14px">${notes}</ul>` : ''}
+  ${renderAgencyShifts(d.agencyShifts)}
 </section>`;
+}
+
+/* Agency-level budget shifts (data/budget-agencies/<slug>.json, phase-2) */
+function renderAgencyShifts(as) {
+  if (!as || !(as.agencies || []).length) return '';
+  const rows = as.agencies
+    .map((a) => ({ ...a, change: (a.current || 0) - (a.prior || 0) }))
+    .sort((x, y) => Math.abs(y.change) - Math.abs(x.change));
+  const shown = rows.slice(0, 12);
+  const totP = rows.reduce((t, a) => t + (a.prior || 0), 0);
+  const totC = rows.reduce((t, a) => t + (a.current || 0), 0);
+  const totPct = totP ? ((totC / totP - 1) * 100) : null;
+  const tr = (a) => {
+    const pct = a.prior ? (a.change / a.prior * 100) : null;
+    return `<tr>
+      <td class="rowhead"><b>${esc(a.name)}</b></td>
+      <td class="num" data-label="${esc(as.priorLabel || 'Prior')}">${moneyShort(a.prior)}</td>
+      <td class="num" data-label="${esc(as.currentLabel || 'Current')}">${moneyShort(a.current)}</td>
+      <td class="num" data-label="&Delta; $"><span class="${a.change < 0 ? 'delta-neg' : 'delta-pos'}">${a.change < 0 ? '−' : '+'}${moneyShort(Math.abs(a.change)).replace('$', '$')}</span></td>
+      <td class="num" data-label="&Delta; %">${pct != null ? fmtPct(pct) : '<span class="muted">&mdash;</span>'}</td>
+    </tr>`;
+  };
+  const srcs = (as.sources || []).map((s) =>
+    `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(' &middot; ');
+  const notes = (as.notes || []).map((n) => `<li>${esc(n)}</li>`).join('');
+  return `<div class="card table-card bsr-table bsr-stack" style="margin-top:18px">
+    <div class="card__title">${icon('budget')} Agency budget shifts &mdash; ${esc(as.priorLabel || 'prior')} vs. ${esc(as.currentLabel || 'current')}</div>
+    <p class="muted" style="font-size:.85rem;margin:0 16px 10px">${esc(as.basis || '')} Statewide: ${moneyShort(totP)} &rarr; ${moneyShort(totC)}${totPct != null ? ` (${(totPct > 0 ? '+' : '') + totPct.toFixed(1)}%)` : ''}. Top ${shown.length} movers of ${rows.length} agencies.</p>
+    <table class="data-table">
+      <thead><tr><th>Agency</th><th class="num">Prior</th><th class="num">Current</th><th class="num">&Delta; $</th><th class="num">&Delta; %</th></tr></thead>
+      <tbody>${shown.map(tr).join('')}</tbody>
+    </table>
+    ${notes ? `<ul class="muted" style="font-size:.8rem;margin:10px 16px">${notes}</ul>` : ''}
+    ${srcs ? `<p class="muted" style="font-size:.78rem;margin:6px 16px 14px">Source: ${srcs}</p>` : ''}
+  </div>`;
 }
 
 function renderInitiatives(d) {
@@ -874,10 +947,18 @@ function main() {
   fs.writeFileSync(p('index.html'), renderIndex(manifest, svgRaw, hasBudgetShifts));
   console.log('  index.html');
 
+  // agency-level drill-down data (phase 2), keyed by state slug
+  const agencyData = {};
+  if (fs.existsSync(p('data/budget-agencies'))) {
+    for (const f of fs.readdirSync(p('data/budget-agencies'))) {
+      if (f.endsWith('.json')) agencyData[f.slice(0, -5)] = readJSON(`data/budget-agencies/${f}`);
+    }
+  }
+
   if (hasBudgetShifts) {
     const bs = readJSON('data/budget-shifts.json');
     if (!fs.existsSync(p('reports'))) fs.mkdirSync(p('reports'), { recursive: true });
-    fs.writeFileSync(p('reports', 'budget-shifts.html'), renderBudgetShifts(bs, manifest));
+    fs.writeFileSync(p('reports', 'budget-shifts.html'), renderBudgetShifts(bs, manifest, agencyData));
     console.log('  reports/budget-shifts.html');
   }
 
@@ -890,6 +971,7 @@ function main() {
       continue;
     }
     const d = readJSON(dataPath);
+    if (agencyData[st.slug]) d.agencyShifts = agencyData[st.slug];
     fs.writeFileSync(p('states', `${st.slug}.html`), renderState(d));
     console.log(`  states/${st.slug}.html`);
     built++;

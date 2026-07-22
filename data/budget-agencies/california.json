@@ -1,0 +1,82 @@
+{
+ "state": "California",
+ "updated": "2026-07-21",
+ "cycle": "annual",
+ "basis": "Total state funds (General Fund + special funds + selected bond funds) per DOF Schedule 9 agency totals; excludes federal funds",
+ "priorLabel": "FY2025-26 (2025 Budget Act, enacted Jun 2025)",
+ "currentLabel": "FY2026-27 (2026 Budget Act, AB 109, enacted Jun 2026)",
+ "unit": "dollars",
+ "sources": [
+  {
+   "label": "CA DOF, 2026-27 Enacted Budget Summary Schedules (Schedule 9)",
+   "url": "https://ebudget.ca.gov/2026-27/pdf/Enacted/BudgetSummary/SummarySchedules.pdf"
+  },
+  {
+   "label": "CA DOF, 2025-26 Enacted Budget Summary Schedules (Schedule 9)",
+   "url": "https://ebudget.ca.gov/2025-26/pdf/Enacted/BudgetSummary/SummarySchedules.pdf"
+  }
+ ],
+ "notes": [
+  "Each figure is the enacted budget-year column of Schedule 9 (Comparative Statement of Expenditures) from that year's Budget Act edition, so both columns are as-enacted. Agency totals sum exactly to the published enacted totals: $321.05B (2025-26) and $351.71B (2026-27) state funds.",
+  "Federal funds are excluded (shown separately in Schedule 9); including them, total spending is $495.6B (2025-26) and $538.9B (2026-27).",
+  "Business & Consumer Services and Housing & Homelessness became separate agencies in the 2026-27 budget; they are combined here to match the prior-year BCSH structure (2026-27 split: Business & Consumer Services $1.33B, Housing & Homelessness $2.24B).",
+  "Education combines TK-12 and Higher Education; DOF's Schedule 9 reports them as a single Education agency."
+ ],
+ "agencies": [
+  {
+   "name": "Health and Human Services",
+   "prior": 132610539000,
+   "current": 145157974000
+  },
+  {
+   "name": "Education (K-12 and Higher Education)",
+   "prior": 105411641000,
+   "current": 120763118000
+  },
+  {
+   "name": "Corrections and Rehabilitation",
+   "prior": 17515888000,
+   "current": 18586419000
+  },
+  {
+   "name": "Transportation",
+   "prior": 17966056000,
+   "current": 18035785000
+  },
+  {
+   "name": "Legislative, Judicial, and Executive",
+   "prior": 13290281000,
+   "current": 12185451000
+  },
+  {
+   "name": "General Government (incl. tax relief, statewide expenditures)",
+   "prior": 14244518000,
+   "current": 12173970000
+  },
+  {
+   "name": "Natural Resources",
+   "prior": 7879073000,
+   "current": 8661002000
+  },
+  {
+   "name": "Government Operations",
+   "prior": 2912210000,
+   "current": 5400825000
+  },
+  {
+   "name": "Environmental Protection",
+   "prior": 4256612000,
+   "current": 4881871000
+  },
+  {
+   "name": "Business, Consumer Services & Housing (incl. Housing & Homelessness)",
+   "prior": 2784717000,
+   "current": 3564094000
+  },
+  {
+   "name": "Labor and Workforce Development",
+   "prior": 2178946000,
+   "current": 2299288000
+  }
+ ]
+}

@@ -1,0 +1,731 @@
+{
+ "state": "Connecticut",
+ "updated": "2026-07-21",
+ "cycle": "biennial",
+ "basis": "All appropriated funds, gross appropriations (OFA enacted budget books, legislative FY columns of subcommittee summary tables)",
+ "priorLabel": "FY2024-25 biennium (enacted Jun 2023)",
+ "currentLabel": "FY2026-27 biennium (enacted Jun 2025)",
+ "unit": "dollars",
+ "sources": [
+  {
+   "label": "CT OFA, Connecticut State Budget FY 26 - FY 27 (Aug 2025)",
+   "url": "https://www.cga.ct.gov/ofa/Documents/year/BB/2025BB-20250827_FY%2026%20and%20FY%2027%20Connecticut%20Budget.pdf"
+  },
+  {
+   "label": "CT OFA, Connecticut State Budget FY 24 - FY 25 (Oct 2023)",
+   "url": "https://www.cga.ct.gov/ofa/Documents/year/BB/2023BB-20231005_FY%2024%20and%20FY%2025%20Connecticut%20Budget.pdf"
+  }
+ ],
+ "notes": [
+  "Gross appropriations summed across all appropriated funds (General Fund, Special Transportation Fund, and 11 smaller funds) from OFA subcommittee summary tables. Parsed totals reconcile exactly to the books' fund-summary appendices: FY24 $25.265B, FY25 $26.189B, FY26 $27.287B, FY27 $28.741B. Unallocated lapses/holdbacks (about -$0.15B/yr) are budgeted separately and excluded.",
+  "The FY 26-27 book predates the May 2026 FY 2027 revisions (PA 26-68); figures are the original biennium enactment.",
+  "Connecticut budgets employee fringe benefits centrally under 'State Comptroller - Fringe Benefits' and debt service under 'Debt Service - State Treasurer'; operating-agency lines therefore understate all-in agency cost.",
+  "Structural changes between biennia: Council on Environmental Quality is newly itemized in FY 26-27 (previously within DEEP); Office of Workforce Strategy appears only in FY 24-25."
+ ],
+ "agencies": [
+  {
+   "name": "Agricultural Experiment Station",
+   "prior": 18332245,
+   "current": 19188158,
+   "years": {
+    "fy2024": 9114444,
+    "fy2025": 9217801,
+    "fy2026": 9594079,
+    "fy2027": 9594079
+   }
+  },
+  {
+   "name": "Attorney General",
+   "prior": 77974663,
+   "current": 83322604,
+   "years": {
+    "fy2024": 38721560,
+    "fy2025": 39253103,
+    "fy2026": 41626302,
+    "fy2027": 41696302
+   }
+  },
+  {
+   "name": "Auditors of Public Accounts",
+   "prior": 29310373,
+   "current": 33006743,
+   "years": {
+    "fy2024": 14270002,
+    "fy2025": 15040371,
+    "fy2026": 15853688,
+    "fy2027": 17153055
+   }
+  },
+  {
+   "name": "Commission on Human Rights and Opportunities",
+   "prior": 16241191,
+   "current": 18390532,
+   "years": {
+    "fy2024": 8067109,
+    "fy2025": 8174082,
+    "fy2026": 9217787,
+    "fy2027": 9172745
+   }
+  },
+  {
+   "name": "Commission on Women, Children, Seniors, Equity and Opportunity",
+   "prior": 2076688,
+   "current": 2475783,
+   "years": {
+    "fy2024": 1046820,
+    "fy2025": 1029868,
+    "fy2026": 1187850,
+    "fy2027": 1287933
+   }
+  },
+  {
+   "name": "Connecticut State Colleges and Universities",
+   "prior": 863508937,
+   "current": 981194755,
+   "years": {
+    "fy2024": 423348995,
+    "fy2025": 440159942,
+    "fy2026": 478957063,
+    "fy2027": 502237692
+   }
+  },
+  {
+   "name": "Connecticut Technical Education and Career System",
+   "prior": 380298216,
+   "current": 415032238,
+   "years": {
+    "fy2024": 188795875,
+    "fy2025": 191502341,
+    "fy2026": 207516119,
+    "fy2027": 207516119
+   }
+  },
+  {
+   "name": "Council on Environmental Quality",
+   "prior": 0,
+   "current": 0,
+   "years": {
+    "fy2024": 0,
+    "fy2025": 0,
+    "fy2026": 0,
+    "fy2027": 0
+   }
+  },
+  {
+   "name": "Debt Service - State Treasurer",
+   "prior": 7007032648,
+   "current": 7041682060,
+   "years": {
+    "fy2024": 3461544120,
+    "fy2025": 3545488528,
+    "fy2026": 3424277245,
+    "fy2027": 3617404815
+   }
+  },
+  {
+   "name": "Department of Administrative Services",
+   "prior": 448465419,
+   "current": 519473342,
+   "years": {
+    "fy2024": 222024699,
+    "fy2025": 226440720,
+    "fy2026": 259716421,
+    "fy2027": 259756921
+   }
+  },
+  {
+   "name": "Department of Aging and Disability Services",
+   "prior": 71247731,
+   "current": 76102642,
+   "years": {
+    "fy2024": 34505988,
+    "fy2025": 36741743,
+    "fy2026": 37981321,
+    "fy2027": 38121321
+   }
+  },
+  {
+   "name": "Department of Agriculture",
+   "prior": 16704691,
+   "current": 17406204,
+   "years": {
+    "fy2024": 8522448,
+    "fy2025": 8182243,
+    "fy2026": 8553102,
+    "fy2027": 8853102
+   }
+  },
+  {
+   "name": "Department of Banking",
+   "prior": 59308816,
+   "current": 61407752,
+   "years": {
+    "fy2024": 29177346,
+    "fy2025": 30131470,
+    "fy2026": 30687300,
+    "fy2027": 30720452
+   }
+  },
+  {
+   "name": "Department of Children and Families",
+   "prior": 1618919054,
+   "current": 1635640780,
+   "years": {
+    "fy2024": 807937133,
+    "fy2025": 810981921,
+    "fy2026": 812375775,
+    "fy2027": 823265005
+   }
+  },
+  {
+   "name": "Department of Consumer Protection",
+   "prior": 47417447,
+   "current": 45749506,
+   "years": {
+    "fy2024": 23664833,
+    "fy2025": 23752614,
+    "fy2026": 22500205,
+    "fy2027": 23249301
+   }
+  },
+  {
+   "name": "Department of Correction",
+   "prior": 1401218773,
+   "current": 1525403135,
+   "years": {
+    "fy2024": 695529606,
+    "fy2025": 705689167,
+    "fy2026": 758099803,
+    "fy2027": 767303332
+   }
+  },
+  {
+   "name": "Department of Developmental Services",
+   "prior": 2999417047,
+   "current": 3190793230,
+   "years": {
+    "fy2024": 1487733212,
+    "fy2025": 1511683835,
+    "fy2026": 1562227724,
+    "fy2027": 1628565506
+   }
+  },
+  {
+   "name": "Department of Economic and Community Development",
+   "prior": 126086481,
+   "current": 139141104,
+   "years": {
+    "fy2024": 62160384,
+    "fy2025": 63926097,
+    "fy2026": 68672637,
+    "fy2027": 70468467
+   }
+  },
+  {
+   "name": "Department of Education",
+   "prior": 6540291996,
+   "current": 7120366974,
+   "years": {
+    "fy2024": 3158342367,
+    "fy2025": 3381949629,
+    "fy2026": 3526761252,
+    "fy2027": 3593605722
+   }
+  },
+  {
+   "name": "Department of Emergency Services and Public Protection",
+   "prior": 461644262,
+   "current": 467748043,
+   "years": {
+    "fy2024": 227832031,
+    "fy2025": 233812231,
+    "fy2026": 233924650,
+    "fy2027": 233823393
+   }
+  },
+  {
+   "name": "Department of Energy and Environmental Protection",
+   "prior": 184797614,
+   "current": 189688548,
+   "years": {
+    "fy2024": 91566085,
+    "fy2025": 93231529,
+    "fy2026": 94186564,
+    "fy2027": 95501984
+   }
+  },
+  {
+   "name": "Department of Housing",
+   "prior": 233989561,
+   "current": 274732431,
+   "years": {
+    "fy2024": 119233239,
+    "fy2025": 114756322,
+    "fy2026": 130554195,
+    "fy2027": 144178236
+   }
+  },
+  {
+   "name": "Department of Mental Health and Addiction Services",
+   "prior": 1481499968,
+   "current": 1579630932,
+   "years": {
+    "fy2024": 737194514,
+    "fy2025": 744305454,
+    "fy2026": 788620716,
+    "fy2027": 791010216
+   }
+  },
+  {
+   "name": "Department of Motor Vehicles",
+   "prior": 155009645,
+   "current": 155841910,
+   "years": {
+    "fy2024": 77135514,
+    "fy2025": 77874131,
+    "fy2026": 77570955,
+    "fy2027": 78270955
+   }
+  },
+  {
+   "name": "Department of Public Health",
+   "prior": 271871247,
+   "current": 285591932,
+   "years": {
+    "fy2024": 120311689,
+    "fy2025": 151559558,
+    "fy2026": 140330147,
+    "fy2027": 145261785
+   }
+  },
+  {
+   "name": "Department of Revenue Services",
+   "prior": 132847218,
+   "current": 119506092,
+   "years": {
+    "fy2024": 66023674,
+    "fy2025": 66823544,
+    "fy2026": 59703562,
+    "fy2027": 59802530
+   }
+  },
+  {
+   "name": "Department of Social Services",
+   "prior": 9069394611,
+   "current": 10567415822,
+   "years": {
+    "fy2024": 4470247490,
+    "fy2025": 4599147121,
+    "fy2026": 5043203361,
+    "fy2027": 5524212461
+   }
+  },
+  {
+   "name": "Department of Transportation",
+   "prior": 1866538235,
+   "current": 1994693809,
+   "years": {
+    "fy2024": 901174061,
+    "fy2025": 965364174,
+    "fy2026": 993548048,
+    "fy2027": 1001145761
+   }
+  },
+  {
+   "name": "Department of Veterans' Affairs",
+   "prior": 54418765,
+   "current": 58710450,
+   "years": {
+    "fy2024": 27074493,
+    "fy2025": 27344272,
+    "fy2026": 29284392,
+    "fy2027": 29426058
+   }
+  },
+  {
+   "name": "Division of Criminal Justice",
+   "prior": 127339260,
+   "current": 135259141,
+   "years": {
+    "fy2024": 63219027,
+    "fy2025": 64120233,
+    "fy2026": 67250627,
+    "fy2027": 68008514
+   }
+  },
+  {
+   "name": "Elections Enforcement Commission",
+   "prior": 8419176,
+   "current": 8513092,
+   "years": {
+    "fy2024": 4185420,
+    "fy2025": 4233756,
+    "fy2026": 4257796,
+    "fy2027": 4255296
+   }
+  },
+  {
+   "name": "Freedom of Information Commission",
+   "prior": 4398330,
+   "current": 4567626,
+   "years": {
+    "fy2024": 2186521,
+    "fy2025": 2211809,
+    "fy2026": 2283813,
+    "fy2027": 2283813
+   }
+  },
+  {
+   "name": "Governor's Office",
+   "prior": 9249434,
+   "current": 9475467,
+   "years": {
+    "fy2024": 4603631,
+    "fy2025": 4645803,
+    "fy2026": 4734840,
+    "fy2027": 4740627
+   }
+  },
+  {
+   "name": "Insurance Department",
+   "prior": 70703760,
+   "current": 67534510,
+   "years": {
+    "fy2024": 35175324,
+    "fy2025": 35528436,
+    "fy2026": 33767255,
+    "fy2027": 33767255
+   }
+  },
+  {
+   "name": "Judicial Department",
+   "prior": 1204214235,
+   "current": 1295289048,
+   "years": {
+    "fy2024": 593903824,
+    "fy2025": 610310411,
+    "fy2026": 644979995,
+    "fy2027": 650309053
+   }
+  },
+  {
+   "name": "Labor Department",
+   "prior": 181215078,
+   "current": 180895200,
+   "years": {
+    "fy2024": 88586149,
+    "fy2025": 92628929,
+    "fy2026": 89006350,
+    "fy2027": 91888850
+   }
+  },
+  {
+   "name": "Legislative Management",
+   "prior": 178979537,
+   "current": 192660424,
+   "years": {
+    "fy2024": 86724492,
+    "fy2025": 92255045,
+    "fy2026": 93416883,
+    "fy2027": 99243541
+   }
+  },
+  {
+   "name": "Lieutenant Governor's Office",
+   "prior": 1518219,
+   "current": 1823842,
+   "years": {
+    "fy2024": 753374,
+    "fy2025": 764845,
+    "fy2026": 911921,
+    "fy2027": 911921
+   }
+  },
+  {
+   "name": "Military Department",
+   "prior": 12794964,
+   "current": 13802330,
+   "years": {
+    "fy2024": 6374666,
+    "fy2025": 6420298,
+    "fy2026": 6742315,
+    "fy2027": 7060015
+   }
+  },
+  {
+   "name": "Office of Consumer Counsel",
+   "prior": 9185929,
+   "current": 9269750,
+   "years": {
+    "fy2024": 4574848,
+    "fy2025": 4611081,
+    "fy2026": 4634875,
+    "fy2027": 4634875
+   }
+  },
+  {
+   "name": "Office of Early Childhood",
+   "prior": 698091014,
+   "current": 860545176,
+   "years": {
+    "fy2024": 321936324,
+    "fy2025": 376154690,
+    "fy2026": 417537918,
+    "fy2027": 443007258
+   }
+  },
+  {
+   "name": "Office of Governmental Accountability",
+   "prior": 6029852,
+   "current": 7980517,
+   "years": {
+    "fy2024": 3000691,
+    "fy2025": 3029161,
+    "fy2026": 4003262,
+    "fy2027": 3977255
+   }
+  },
+  {
+   "name": "Office of Health Strategy",
+   "prior": 36397044,
+   "current": 36434782,
+   "years": {
+    "fy2024": 18168206,
+    "fy2025": 18228838,
+    "fy2026": 18591228,
+    "fy2027": 17843554
+   }
+  },
+  {
+   "name": "Office of Higher Education",
+   "prior": 67788311,
+   "current": 93642913,
+   "years": {
+    "fy2024": 30980674,
+    "fy2025": 36807637,
+    "fy2026": 38531867,
+    "fy2027": 55111046
+   }
+  },
+  {
+   "name": "Office of Policy and Management",
+   "prior": 1418135131,
+   "current": 1548028366,
+   "years": {
+    "fy2024": 682282770,
+    "fy2025": 735852361,
+    "fy2026": 722782183,
+    "fy2027": 825246183
+   }
+  },
+  {
+   "name": "Office of State Ethics",
+   "prior": 3899280,
+   "current": 4129124,
+   "years": {
+    "fy2024": 1935050,
+    "fy2025": 1964230,
+    "fy2026": 2069345,
+    "fy2027": 2059779
+   }
+  },
+  {
+   "name": "Office of the Behavioral Health Advocate",
+   "prior": 1733000,
+   "current": 1752000,
+   "years": {
+    "fy2024": 857000,
+    "fy2025": 876000,
+    "fy2026": 876000,
+    "fy2027": 876000
+   }
+  },
+  {
+   "name": "Office of the Chief Medical Examiner",
+   "prior": 21534289,
+   "current": 23126650,
+   "years": {
+    "fy2024": 10716755,
+    "fy2025": 10817534,
+    "fy2026": 11563325,
+    "fy2027": 11563325
+   }
+  },
+  {
+   "name": "Office of the Healthcare Advocate",
+   "prior": 8063089,
+   "current": 8414514,
+   "years": {
+    "fy2024": 4007229,
+    "fy2025": 4055860,
+    "fy2026": 4257257,
+    "fy2027": 4157257
+   }
+  },
+  {
+   "name": "Office of Workforce Strategy",
+   "prior": 0,
+   "current": 0,
+   "years": {
+    "fy2024": 0,
+    "fy2025": 0,
+    "fy2026": 0,
+    "fy2027": 0
+   }
+  },
+  {
+   "name": "Psychiatric Security Review Board",
+   "prior": 744480,
+   "current": 784426,
+   "years": {
+    "fy2024": 369378,
+    "fy2025": 375102,
+    "fy2026": 392213,
+    "fy2027": 392213
+   }
+  },
+  {
+   "name": "Public Defender Services Commission",
+   "prior": 175410732,
+   "current": 204665700,
+   "years": {
+    "fy2024": 85918615,
+    "fy2025": 89492117,
+    "fy2026": 100441966,
+    "fy2027": 104223734
+   }
+  },
+  {
+   "name": "Reserve for Salary Adjustments",
+   "prior": 75648054,
+   "current": 235449545,
+   "years": {
+    "fy2024": 19727000,
+    "fy2025": 55921054,
+    "fy2026": 29033635,
+    "fy2027": 206415910
+   }
+  },
+  {
+   "name": "Secretary of the State",
+   "prior": 26278588,
+   "current": 32854464,
+   "years": {
+    "fy2024": 13074001,
+    "fy2025": 13204587,
+    "fy2026": 17044732,
+    "fy2027": 15809732
+   }
+  },
+  {
+   "name": "State Comptroller",
+   "prior": 72394940,
+   "current": 97790126,
+   "years": {
+    "fy2024": 36700507,
+    "fy2025": 35694433,
+    "fy2026": 48895063,
+    "fy2027": 48895063
+   }
+  },
+  {
+   "name": "State Comptroller - Fringe Benefits",
+   "prior": 7226708245,
+   "current": 7570622921,
+   "years": {
+    "fy2024": 3571038071,
+    "fy2025": 3655670174,
+    "fy2026": 3655476198,
+    "fy2027": 3915146723
+   }
+  },
+  {
+   "name": "State Comptroller - Miscellaneous",
+   "prior": 52653081,
+   "current": 71702106,
+   "years": {
+    "fy2024": 9007526,
+    "fy2025": 43645555,
+    "fy2026": 0,
+    "fy2027": 71702106
+   }
+  },
+  {
+   "name": "State Library",
+   "prior": 21588074,
+   "current": 21126092,
+   "years": {
+    "fy2024": 10735589,
+    "fy2025": 10852485,
+    "fy2026": 10553900,
+    "fy2027": 10572192
+   }
+  },
+  {
+   "name": "State Treasurer",
+   "prior": 7764120,
+   "current": 7805820,
+   "years": {
+    "fy2024": 3855957,
+    "fy2025": 3908163,
+    "fy2026": 3902910,
+    "fy2027": 3902910
+   }
+  },
+  {
+   "name": "Teachers' Retirement Board",
+   "prior": 3167582230,
+   "current": 3605114416,
+   "years": {
+    "fy2024": 1580055512,
+    "fy2025": 1587526718,
+    "fy2026": 1844045333,
+    "fy2027": 1761069083
+   }
+  },
+  {
+   "name": "University of Connecticut",
+   "prior": 435803432,
+   "current": 521678876,
+   "years": {
+    "fy2024": 216165868,
+    "fy2025": 219637564,
+    "fy2026": 268185002,
+    "fy2027": 253493874
+   }
+  },
+  {
+   "name": "University of Connecticut Health Center",
+   "prior": 225635343,
+   "current": 282764919,
+   "years": {
+    "fy2024": 111566977,
+    "fy2025": 114068366,
+    "fy2026": 143483275,
+    "fy2027": 139281644
+   }
+  },
+  {
+   "name": "Workers' Compensation Claims - Administrative Services",
+   "prior": 212892441,
+   "current": 207743880,
+   "years": {
+    "fy2024": 106420501,
+    "fy2025": 106471940,
+    "fy2026": 103871940,
+    "fy2027": 103871940
+   }
+  },
+  {
+   "name": "Workers' Compensation Commission",
+   "prior": 47012863,
+   "current": 44932064,
+   "years": {
+    "fy2024": 23414388,
+    "fy2025": 23598475,
+    "fy2026": 22466032,
+    "fy2027": 22466032
+   }
+  }
+ ]
+}

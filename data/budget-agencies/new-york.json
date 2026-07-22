@@ -1,0 +1,418 @@
+{
+ "state": "New York",
+ "updated": "2026-07-21",
+ "cycle": "annual",
+ "basis": "State Operating Funds cash disbursements by agency (each year's own Enacted Budget Financial Plan, as-enacted projection for its budget year)",
+ "priorLabel": "FY2026 (Apr 2025-Mar 2026, FY26 Enacted Budget Financial Plan)",
+ "currentLabel": "FY2027 (Apr 2026-Mar 2027, FY27 Enacted Budget Financial Plan, Jun 2026)",
+ "unit": "dollars",
+ "sources": [
+  {
+   "label": "NY DOB, FY 2027 Enacted Budget Financial Plan (Cash Disbursements by Function, State Operating Funds)",
+   "url": "https://www.budget.ny.gov/pubs/archive/fy27/en/fy27fp-en.pdf"
+  },
+  {
+   "label": "NY DOB, FY 2026 Enacted Budget Financial Plan (Cash Disbursements by Function, State Operating Funds)",
+   "url": "https://www.budget.ny.gov/pubs/archive/fy26/en/fy26fp-en.pdf"
+  }
+ ],
+ "notes": [
+  "Amounts are cash disbursement projections from each fiscal year's own Enacted Budget Financial Plan (FY2026 column of the FY26 plan; FY2027 column of the FY27 plan), not appropriations. Converted from thousands to dollars.",
+  "Each agency figure is the agency's total State Operating Funds disbursement (local assistance + state operations + agency general state charges components as printed on the agency line).",
+  "Non-agency functional rows are included as printed so the list reconciles exactly to the plan totals: General State Charges, Long-Term Debt Service, Miscellaneous, and local government assistance lines (Aid and Incentives for Municipalities, County-Wide Shared Services Initiative, Miscellaneous Financial Assistance, Municipalities with VLT Facilities, Small Government Assistance).",
+  "Agency sums reconcile exactly to the printed TOTAL STATE OPERATING FUNDS SPENDING rows: $146,103,252,000 (FY2026) and $161,125,566,000 (FY2027).",
+  "NY fiscal year runs April-March. All Funds spending is larger (~$268.5B FY2027); this dataset uses the State Operating Funds basis, which excludes federal operating aid and capital projects funds."
+ ],
+ "agencies": [
+  {
+   "name": "Agriculture and Markets, Department of",
+   "prior": 108325000,
+   "current": 168734000
+  },
+  {
+   "name": "Alcoholic Beverage Control, Division of",
+   "prior": 86913000,
+   "current": 133556000
+  },
+  {
+   "name": "Economic Development, Department of",
+   "prior": 69790000,
+   "current": 68949000
+  },
+  {
+   "name": "Empire State Development Corporation",
+   "prior": 175810000,
+   "current": 192868000
+  },
+  {
+   "name": "Financial Services, Department of",
+   "prior": 437465000,
+   "current": 479762000
+  },
+  {
+   "name": "Olympic Regional Development Authority",
+   "prior": 10854000,
+   "current": 10554000
+  },
+  {
+   "name": "Public Service Department",
+   "prior": 133852000,
+   "current": 133353000
+  },
+  {
+   "name": "Adirondack Park Agency",
+   "prior": 6386000,
+   "current": 6389000
+  },
+  {
+   "name": "Environmental Conservation, Department of",
+   "prior": 351588000,
+   "current": 363307000
+  },
+  {
+   "name": "Parks, Recreation and Historic Preservation, Office of",
+   "prior": 277775000,
+   "current": 309380000
+  },
+  {
+   "name": "Motor Vehicles, Department of",
+   "prior": 93193000,
+   "current": 89693000
+  },
+  {
+   "name": "Transportation, Department of",
+   "prior": 5728274000,
+   "current": 6057746000
+  },
+  {
+   "name": "Waterfront Commission",
+   "prior": 4799000,
+   "current": 5503000
+  },
+  {
+   "name": "Aging, Office for the",
+   "prior": 236908000,
+   "current": 251152000
+  },
+  {
+   "name": "Health, Department of",
+   "prior": 39197958000,
+   "current": 43660000000
+  },
+  {
+   "name": "Medicaid Inspector General, Office of the",
+   "prior": 20143000,
+   "current": 28923000
+  },
+  {
+   "name": "Children and Family Services, Office of",
+   "prior": 3411107000,
+   "current": 5554145000
+  },
+  {
+   "name": "Housing and Community Renewal, Division of",
+   "prior": 191376000,
+   "current": 274126000
+  },
+  {
+   "name": "Human Rights, Division of",
+   "prior": 31653000,
+   "current": 30555000
+  },
+  {
+   "name": "Labor, Department of",
+   "prior": 152517000,
+   "current": 173024000
+  },
+  {
+   "name": "National and Community Service",
+   "prior": 869000,
+   "current": 793000
+  },
+  {
+   "name": "Temporary and Disability Assistance, Office of",
+   "prior": 3477935000,
+   "current": 2860151000
+  },
+  {
+   "name": "Addiction Services and Supports, Office of",
+   "prior": 866493000,
+   "current": 923461000
+  },
+  {
+   "name": "Developmental Disabilities, State Council on",
+   "prior": 1500000,
+   "current": 1500000
+  },
+  {
+   "name": "Justice Center",
+   "prior": 41729000,
+   "current": 41884000
+  },
+  {
+   "name": "Mental Health, Office of",
+   "prior": 4896539000,
+   "current": 5277861000
+  },
+  {
+   "name": "People with Developmental Disabilities, Office for",
+   "prior": 6726435000,
+   "current": 6196882000
+  },
+  {
+   "name": "Correction, Commission of",
+   "prior": 6659000,
+   "current": 6851000
+  },
+  {
+   "name": "Corrections and Community Supervision, Department of",
+   "prior": 3169659000,
+   "current": 3124401000
+  },
+  {
+   "name": "Criminal Justice Services, Division of",
+   "prior": 631998000,
+   "current": 676818000
+  },
+  {
+   "name": "Homeland Security and Emergency Services, Division of",
+   "prior": 175286000,
+   "current": 246814000
+  },
+  {
+   "name": "Indigent Legal Services, Office of",
+   "prior": 424633000,
+   "current": 406803000
+  },
+  {
+   "name": "Judicial Conduct, Commission on",
+   "prior": 9330000,
+   "current": 9330000
+  },
+  {
+   "name": "Judicial Nomination, Commission on",
+   "prior": 30000,
+   "current": 30000
+  },
+  {
+   "name": "Judicial Screening Committees, New York State",
+   "prior": 38000,
+   "current": 38000
+  },
+  {
+   "name": "Military and Naval Affairs, Division of",
+   "prior": 539731000,
+   "current": 689191000
+  },
+  {
+   "name": "Prosecutorial Conduct, Commission on",
+   "prior": 3000000,
+   "current": 3000000
+  },
+  {
+   "name": "State Police, Division of",
+   "prior": 970549000,
+   "current": 995979000
+  },
+  {
+   "name": "Statewide Financial System",
+   "prior": 35267000,
+   "current": 36384000
+  },
+  {
+   "name": "Victim Services, Office of",
+   "prior": 119494000,
+   "current": 108465000
+  },
+  {
+   "name": "City University of New York",
+   "prior": 2306857000,
+   "current": 2396665000
+  },
+  {
+   "name": "Higher Education Services Corporation, New York State",
+   "prior": 718897000,
+   "current": 717414000
+  },
+  {
+   "name": "State University of New York",
+   "prior": 9560961000,
+   "current": 10760811000
+  },
+  {
+   "name": "Arts, Council on the",
+   "prior": 90074000,
+   "current": 90141000
+  },
+  {
+   "name": "Education, Department of",
+   "prior": 41701094000,
+   "current": 44139898000
+  },
+  {
+   "name": "Budget, Division of the",
+   "prior": 41288000,
+   "current": 41433000
+  },
+  {
+   "name": "Civil Service, Department of",
+   "prior": 48413000,
+   "current": 57539000
+  },
+  {
+   "name": "Deferred Compensation Board",
+   "prior": 909000,
+   "current": 1315000
+  },
+  {
+   "name": "Elections, State Board of",
+   "prior": 46518000,
+   "current": 144063000
+  },
+  {
+   "name": "Employee Relations, Office of",
+   "prior": 11894000,
+   "current": 13982000
+  },
+  {
+   "name": "Ethics and Lobbying, Independent Commission on",
+   "prior": 8825000,
+   "current": 8825000
+  },
+  {
+   "name": "Gaming Commission, New York State",
+   "prior": 235406000,
+   "current": 270496000
+  },
+  {
+   "name": "General Services, Office of",
+   "prior": 162367000,
+   "current": 185789000
+  },
+  {
+   "name": "Information Technology Services, Office of",
+   "prior": 787523000,
+   "current": 787513000
+  },
+  {
+   "name": "Inspector General, Office of the",
+   "prior": 11591000,
+   "current": 11752000
+  },
+  {
+   "name": "Labor Management Committees",
+   "prior": 40127000,
+   "current": 40972000
+  },
+  {
+   "name": "Prevention of Domestic Violence, Office for",
+   "prior": 12956000,
+   "current": 13549000
+  },
+  {
+   "name": "Public Employment Relations Board",
+   "prior": 5894000,
+   "current": 6467000
+  },
+  {
+   "name": "State, Department of",
+   "prior": 241955000,
+   "current": 272005000
+  },
+  {
+   "name": "Tax Appeals, Division of",
+   "prior": 4232000,
+   "current": 3882000
+  },
+  {
+   "name": "Taxation and Finance, Department of",
+   "prior": 384036000,
+   "current": 388871000
+  },
+  {
+   "name": "Veterans’ Services, Department of",
+   "prior": 23235000,
+   "current": 21833000
+  },
+  {
+   "name": "Welfare Inspector General, Office of",
+   "prior": 822000,
+   "current": 836000
+  },
+  {
+   "name": "Workers' Compensation Board",
+   "prior": 221986000,
+   "current": 229651000
+  },
+  {
+   "name": "Audit and Control, Department of",
+   "prior": 210003000,
+   "current": 229094000
+  },
+  {
+   "name": "Executive Chamber",
+   "prior": 25703000,
+   "current": 26946000
+  },
+  {
+   "name": "Judiciary",
+   "prior": 4016085000,
+   "current": 4364317000
+  },
+  {
+   "name": "Law, Department of",
+   "prior": 344654000,
+   "current": 360275000
+  },
+  {
+   "name": "Legislature",
+   "prior": 303546000,
+   "current": 317176000
+  },
+  {
+   "name": "Lieutenant Governor, Office of the",
+   "prior": 1246000,
+   "current": 283000
+  },
+  {
+   "name": "Aid and Incentives for Municipalities",
+   "prior": 779772000,
+   "current": 883941000
+  },
+  {
+   "name": "County-Wide Shared Services Initiative",
+   "prior": 15000000,
+   "current": 5000000
+  },
+  {
+   "name": "Miscellaneous Financial Assistance",
+   "prior": 40565000,
+   "current": 850065000
+  },
+  {
+   "name": "Municipalities with VLT Facilities",
+   "prior": 30119000,
+   "current": 30119000
+  },
+  {
+   "name": "Small Government Assistance",
+   "prior": 218000,
+   "current": 218000
+  },
+  {
+   "name": "General State Charges",
+   "prior": 8769416000,
+   "current": 10272098000
+  },
+  {
+   "name": "Long-Term Debt Service",
+   "prior": 1579241000,
+   "current": 3213933000
+  },
+  {
+   "name": "Miscellaneous",
+   "prior": 495964000,
+   "current": 368044000
+  }
+ ]
+}

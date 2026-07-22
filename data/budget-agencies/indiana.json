@@ -1,0 +1,1115 @@
+{
+ "state": "Indiana",
+ "updated": "2026-07-21",
+ "cycle": "biennial",
+ "basis": "General Fund (state) appropriations only, as-passed budget detailed data (operating and construction GF lines; dedicated, federal, and local funds excluded)",
+ "priorLabel": "FY2024-25 biennium (HEA 1001-2023, enacted 2023)",
+ "currentLabel": "FY2026-27 biennium (HEA 1001-2025, enacted Apr 2025)",
+ "unit": "dollars",
+ "sources": [
+  {
+   "label": "Indiana State Budget Agency, 2025-2027 As-Passed Budget - Detailed Budget Data (Excel)",
+   "url": "https://www.in.gov/sba/budget-information/budget-data/2025-2027-budget/2025-2027-as-passed-budget/"
+  },
+  {
+   "label": "Indiana State Budget Agency, 2023-2025 As-Passed Budget - Detailed Budget Data (Excel)",
+   "url": "https://www.in.gov/sba/budget-information/budget-data/2023-2025-budget/2023-2025-as-passed-budget/"
+  }
+ ],
+ "notes": [
+  "Amounts are biennium totals of state General Fund appropriations from the SBA detailed as-passed budget data; dedicated, federal, and local fund lines are excluded. FY2026+FY2027 GF total computed here is $46.20B, matching the published ~$46.2B ($23.0B FY26 / $23.2B FY27) General Fund biennium.",
+  "The FY2024-25 file lists each correctional facility and state psychiatric hospital as its own agency; the FY2026-27 budget consolidates them into single appropriations (State Correctional Facility Operations; State Psychiatric Hospital Operations). Prior-biennium facility amounts are rolled into Department of Correction and Division of Mental Health for comparability.",
+  "Agencies abolished or defunded between biennia (e.g., Workforce Cabinet, Integrated Public Safety Commission, Indiana Charter School Board) show current = 0; Utility Regulatory Commission and Utility Consumer Counselor moved onto General Fund in FY2026-27 (previously dedicated-funded), so prior = 0 on this basis."
+ ],
+ "agencies": [
+  {
+   "name": "Adjutant General",
+   "prior": 33417818,
+   "current": 27498876,
+   "years": {
+    "fy2024": 16708909,
+    "fy2025": 16708909,
+    "fy2026": 13749438,
+    "fy2027": 13749438
+   }
+  },
+  {
+   "name": "Arts Commission",
+   "prior": 10395953,
+   "current": 6901592,
+   "years": {
+    "fy2024": 5197761,
+    "fy2025": 5198192,
+    "fy2026": 3450796,
+    "fy2027": 3450796
+   }
+  },
+  {
+   "name": "Attorney General",
+   "prior": 64555976,
+   "current": 61046528,
+   "years": {
+    "fy2024": 32540488,
+    "fy2025": 32015488,
+    "fy2026": 30523264,
+    "fy2027": 30523264
+   }
+  },
+  {
+   "name": "Auditor of State",
+   "prior": 118266670,
+   "current": 117403336,
+   "years": {
+    "fy2024": 59133335,
+    "fy2025": 59133335,
+    "fy2026": 58701668,
+    "fy2027": 58701668
+   }
+  },
+  {
+   "name": "Ball State University",
+   "prior": 344280265,
+   "current": 328395197,
+   "years": {
+    "fy2024": 171646020,
+    "fy2025": 172634245,
+    "fy2026": 169250180,
+    "fy2027": 159145017
+   }
+  },
+  {
+   "name": "Bureau of Motor Vehicles",
+   "prior": 61235328,
+   "current": 58568556,
+   "years": {
+    "fy2024": 30409772,
+    "fy2025": 30825556,
+    "fy2026": 29284278,
+    "fy2027": 29284278
+   }
+  },
+  {
+   "name": "Civil Rights Commission",
+   "prior": 5807956,
+   "current": 5302562,
+   "years": {
+    "fy2024": 2903533,
+    "fy2025": 2904423,
+    "fy2026": 2651281,
+    "fy2027": 2651281
+   }
+  },
+  {
+   "name": "Commission for Higher Education",
+   "prior": 836835918,
+   "current": 832103652,
+   "years": {
+    "fy2024": 418417959,
+    "fy2025": 418417959,
+    "fy2026": 416051826,
+    "fy2027": 416051826
+   }
+  },
+  {
+   "name": "Commission on Uniform State Laws",
+   "prior": 200000,
+   "current": 200000,
+   "years": {
+    "fy2024": 100000,
+    "fy2025": 100000,
+    "fy2026": 100000,
+    "fy2027": 100000
+   }
+  },
+  {
+   "name": "Court of Appeals",
+   "prior": 30076822,
+   "current": 28582480,
+   "years": {
+    "fy2024": 15033411,
+    "fy2025": 15043411,
+    "fy2026": 14291240,
+    "fy2027": 14291240
+   }
+  },
+  {
+   "name": "Criminal Justice Institute",
+   "prior": 110921588,
+   "current": 53829650,
+   "years": {
+    "fy2024": 55860794,
+    "fy2025": 55060794,
+    "fy2026": 26914825,
+    "fy2027": 26914825
+   }
+  },
+  {
+   "name": "Department of Administration",
+   "prior": 213181725,
+   "current": 91097898,
+   "years": {
+    "fy2024": 112381548,
+    "fy2025": 100800177,
+    "fy2026": 45550007,
+    "fy2027": 45547891
+   }
+  },
+  {
+   "name": "Department of Agriculture",
+   "prior": 22120552,
+   "current": 21774524,
+   "years": {
+    "fy2024": 11060276,
+    "fy2025": 11060276,
+    "fy2026": 11187262,
+    "fy2027": 10587262
+   }
+  },
+  {
+   "name": "Department of Child Services",
+   "prior": 1929120735,
+   "current": 2164984894,
+   "years": {
+    "fy2024": 976878288,
+    "fy2025": 952242447,
+    "fy2026": 1126242447,
+    "fy2027": 1038742447
+   }
+  },
+  {
+   "name": "Department of Correction",
+   "prior": 1881367805,
+   "current": 1983432432,
+   "years": {
+    "fy2024": 942664578,
+    "fy2025": 938703227,
+    "fy2026": 1004051935,
+    "fy2027": 979380497
+   }
+  },
+  {
+   "name": "Department of Education",
+   "prior": 18934275714,
+   "current": 19707719780,
+   "years": {
+    "fy2024": 9366387857,
+    "fy2025": 9567887857,
+    "fy2026": 9703859890,
+    "fy2027": 10003859890
+   }
+  },
+  {
+   "name": "Department of Environmental Management",
+   "prior": 86073585,
+   "current": 77256542,
+   "years": {
+    "fy2024": 45412247,
+    "fy2025": 40661338,
+    "fy2026": 38628271,
+    "fy2027": 38628271
+   }
+  },
+  {
+   "name": "Department of Homeland Security",
+   "prior": 97619904,
+   "current": 88026410,
+   "years": {
+    "fy2024": 51884952,
+    "fy2025": 45734952,
+    "fy2026": 44013205,
+    "fy2027": 44013205
+   }
+  },
+  {
+   "name": "Department of Labor",
+   "prior": 9254304,
+   "current": 6931354,
+   "years": {
+    "fy2024": 4627152,
+    "fy2025": 4627152,
+    "fy2026": 3465677,
+    "fy2027": 3465677
+   }
+  },
+  {
+   "name": "Department of Local Government Finance",
+   "prior": 11147628,
+   "current": 8841296,
+   "years": {
+    "fy2024": 6116314,
+    "fy2025": 5031314,
+    "fy2026": 4420648,
+    "fy2027": 4420648
+   }
+  },
+  {
+   "name": "Department of Natural Resources",
+   "prior": 180401087,
+   "current": 123350484,
+   "years": {
+    "fy2024": 105837063,
+    "fy2025": 74564024,
+    "fy2026": 61675242,
+    "fy2027": 61675242
+   }
+  },
+  {
+   "name": "Department of Revenue",
+   "prior": 171000674,
+   "current": 162450640,
+   "years": {
+    "fy2024": 85500337,
+    "fy2025": 85500337,
+    "fy2026": 81225320,
+    "fy2027": 81225320
+   }
+  },
+  {
+   "name": "Department of Transportation",
+   "prior": 90900000,
+   "current": 90000000,
+   "years": {
+    "fy2024": 45900000,
+    "fy2025": 45000000,
+    "fy2026": 45000000,
+    "fy2027": 45000000
+   }
+  },
+  {
+   "name": "Department of Veterans' Affairs",
+   "prior": 11974378,
+   "current": 11124480,
+   "years": {
+    "fy2024": 5974689,
+    "fy2025": 5999689,
+    "fy2026": 5562240,
+    "fy2027": 5562240
+   }
+  },
+  {
+   "name": "Department of Workforce Development",
+   "prior": 116228321,
+   "current": 80695432,
+   "years": {
+    "fy2024": 55738658,
+    "fy2025": 60489663,
+    "fy2026": 40347716,
+    "fy2027": 40347716
+   }
+  },
+  {
+   "name": "Distressed Unit Appeal Board",
+   "prior": 8783974,
+   "current": 2000000,
+   "years": {
+    "fy2024": 4391987,
+    "fy2025": 4391987,
+    "fy2026": 1000000,
+    "fy2027": 1000000
+   }
+  },
+  {
+   "name": "Division of Aging Administration",
+   "prior": 123567240,
+   "current": 111145208,
+   "years": {
+    "fy2024": 61783620,
+    "fy2025": 61783620,
+    "fy2026": 55572604,
+    "fy2027": 55572604
+   }
+  },
+  {
+   "name": "Division of Disability & Rehabilitation Services",
+   "prior": 113320108,
+   "current": 108308714,
+   "years": {
+    "fy2024": 57660054,
+    "fy2025": 55660054,
+    "fy2026": 54154357,
+    "fy2027": 54154357
+   }
+  },
+  {
+   "name": "Division of Family Resources",
+   "prior": 310290044,
+   "current": 297571950,
+   "years": {
+    "fy2024": 154614613,
+    "fy2025": 155675431,
+    "fy2026": 148785975,
+    "fy2027": 148785975
+   }
+  },
+  {
+   "name": "Division of Mental Health",
+   "prior": 729262299,
+   "current": 699727248,
+   "years": {
+    "fy2024": 366480384,
+    "fy2025": 362781915,
+    "fy2026": 349863624,
+    "fy2027": 349863624
+   }
+  },
+  {
+   "name": "Education Employment Relations Board",
+   "prior": 2541262,
+   "current": 2454438,
+   "years": {
+    "fy2024": 1249452,
+    "fy2025": 1291810,
+    "fy2026": 1227219,
+    "fy2027": 1227219
+   }
+  },
+  {
+   "name": "Family and Social Services Administration",
+   "prior": 39951024,
+   "current": 37953472,
+   "years": {
+    "fy2024": 19975512,
+    "fy2025": 19975512,
+    "fy2026": 18976736,
+    "fy2027": 18976736
+   }
+  },
+  {
+   "name": "Governor's Council for Developmental Disabilities",
+   "prior": 900000,
+   "current": 0,
+   "years": {
+    "fy2024": 450000,
+    "fy2025": 450000,
+    "fy2026": 0,
+    "fy2027": 0
+   }
+  },
+  {
+   "name": "Governor's Office",
+   "prior": 6780000,
+   "current": 6441000,
+   "years": {
+    "fy2024": 3390000,
+    "fy2025": 3390000,
+    "fy2026": 3220500,
+    "fy2027": 3220500
+   }
+  },
+  {
+   "name": "House of Representatives",
+   "prior": 51412852,
+   "current": 50264798,
+   "years": {
+    "fy2024": 24957695,
+    "fy2025": 26455157,
+    "fy2026": 25132399,
+    "fy2027": 25132399
+   }
+  },
+  {
+   "name": "Housing and Community Development Authority",
+   "prior": 28219890,
+   "current": 1158896,
+   "years": {
+    "fy2024": 26609945,
+    "fy2025": 1609945,
+    "fy2026": 579448,
+    "fy2027": 579448
+   }
+  },
+  {
+   "name": "Indiana Archives and Records Administration",
+   "prior": 5105047,
+   "current": 4855474,
+   "years": {
+    "fy2024": 2549534,
+    "fy2025": 2555513,
+    "fy2026": 2427737,
+    "fy2027": 2427737
+   }
+  },
+  {
+   "name": "Indiana Board of Tax Review",
+   "prior": 3670552,
+   "current": 3487024,
+   "years": {
+    "fy2024": 1835276,
+    "fy2025": 1835276,
+    "fy2026": 1743512,
+    "fy2027": 1743512
+   }
+  },
+  {
+   "name": "Indiana Charter School Board",
+   "prior": 1079991,
+   "current": 0,
+   "years": {
+    "fy2024": 538239,
+    "fy2025": 541752,
+    "fy2026": 0,
+    "fy2027": 0
+   }
+  },
+  {
+   "name": "Indiana Destination Development Corporation",
+   "prior": 57425850,
+   "current": 21358560,
+   "years": {
+    "fy2024": 28704240,
+    "fy2025": 28721610,
+    "fy2026": 10679280,
+    "fy2027": 10679280
+   }
+  },
+  {
+   "name": "Indiana Economic Development Corporation",
+   "prior": 860748614,
+   "current": 148185212,
+   "years": {
+    "fy2024": 505374307,
+    "fy2025": 355374307,
+    "fy2026": 74092606,
+    "fy2027": 74092606
+   }
+  },
+  {
+   "name": "Indiana Election Division",
+   "prior": 14859527,
+   "current": 14678116,
+   "years": {
+    "fy2024": 7429559,
+    "fy2025": 7429968,
+    "fy2026": 7339058,
+    "fy2027": 7339058
+   }
+  },
+  {
+   "name": "Indiana Gaming Commission",
+   "prior": 650000,
+   "current": 650000,
+   "years": {
+    "fy2024": 325000,
+    "fy2025": 325000,
+    "fy2026": 325000,
+    "fy2027": 325000
+   }
+  },
+  {
+   "name": "Indiana Lobby Registration Commission",
+   "prior": 886485,
+   "current": 872525,
+   "years": {
+    "fy2024": 434230,
+    "fy2025": 452255,
+    "fy2026": 419402,
+    "fy2027": 453123
+   }
+  },
+  {
+   "name": "Indiana Public Retirement System",
+   "prior": 2445075378,
+   "current": 2457282918,
+   "years": {
+    "fy2024": 1206642333,
+    "fy2025": 1238433045,
+    "fy2026": 1233190854,
+    "fy2027": 1224092064
+   }
+  },
+  {
+   "name": "Indiana School for the Blind and Visually Impaired",
+   "prior": 31183362,
+   "current": 28199194,
+   "years": {
+    "fy2024": 15591681,
+    "fy2025": 15591681,
+    "fy2026": 14099597,
+    "fy2027": 14099597
+   }
+  },
+  {
+   "name": "Indiana School for the Deaf",
+   "prior": 38139966,
+   "current": 34879218,
+   "years": {
+    "fy2024": 19032483,
+    "fy2025": 19107483,
+    "fy2026": 17439609,
+    "fy2027": 17439609
+   }
+  },
+  {
+   "name": "Indiana State Fair Board",
+   "prior": 17493014,
+   "current": 4948624,
+   "years": {
+    "fy2024": 10228089,
+    "fy2025": 7264925,
+    "fy2026": 2474312,
+    "fy2027": 2474312
+   }
+  },
+  {
+   "name": "Indiana State Museum and Historic Sites Corporation",
+   "prior": 34754967,
+   "current": 21231556,
+   "years": {
+    "fy2024": 21403932,
+    "fy2025": 13351035,
+    "fy2026": 10615778,
+    "fy2027": 10615778
+   }
+  },
+  {
+   "name": "Indiana State Police",
+   "prior": 567678781,
+   "current": 583276022,
+   "years": {
+    "fy2024": 295097149,
+    "fy2025": 272581632,
+    "fy2026": 289138011,
+    "fy2027": 294138011
+   }
+  },
+  {
+   "name": "Indiana State University",
+   "prior": 184235454,
+   "current": 174896774,
+   "years": {
+    "fy2024": 91371774,
+    "fy2025": 92863680,
+    "fy2026": 89429897,
+    "fy2027": 85466877
+   }
+  },
+  {
+   "name": "Indiana University",
+   "prior": 1315497923,
+   "current": 1253287938,
+   "years": {
+    "fy2024": 651712335,
+    "fy2025": 663785588,
+    "fy2026": 652211305,
+    "fy2027": 601076633
+   }
+  },
+  {
+   "name": "Integrated Public Safety Commission",
+   "prior": 6866908,
+   "current": 0,
+   "years": {
+    "fy2024": 5909308,
+    "fy2025": 957600,
+    "fy2026": 0,
+    "fy2027": 0
+   }
+  },
+  {
+   "name": "Ivy Tech Community College",
+   "prior": 618422717,
+   "current": 594093533,
+   "years": {
+    "fy2024": 306955419,
+    "fy2025": 311467298,
+    "fy2026": 301568969,
+    "fy2027": 292524564
+   }
+  },
+  {
+   "name": "Kankakee River Basin Commission",
+   "prior": 158974,
+   "current": 151026,
+   "years": {
+    "fy2024": 79487,
+    "fy2025": 79487,
+    "fy2026": 75513,
+    "fy2027": 75513
+   }
+  },
+  {
+   "name": "Law Enforcement Training Academy",
+   "prior": 14582036,
+   "current": 8665934,
+   "years": {
+    "fy2024": 4791018,
+    "fy2025": 9791018,
+    "fy2026": 4332967,
+    "fy2027": 4332967
+   }
+  },
+  {
+   "name": "Legislative Council and the Legislative Services Agency",
+   "prior": 56382105,
+   "current": 56991971,
+   "years": {
+    "fy2024": 26761024,
+    "fy2025": 29621081,
+    "fy2026": 28073308,
+    "fy2027": 28918663
+   }
+  },
+  {
+   "name": "Lieutenant Governor",
+   "prior": 14406228,
+   "current": 9969814,
+   "years": {
+    "fy2024": 7203114,
+    "fy2025": 7203114,
+    "fy2026": 4984907,
+    "fy2027": 4984907
+   }
+  },
+  {
+   "name": "Management and Performance Hub",
+   "prior": 18872705,
+   "current": 18650020,
+   "years": {
+    "fy2024": 9056905,
+    "fy2025": 9815800,
+    "fy2026": 9325010,
+    "fy2027": 9325010
+   }
+  },
+  {
+   "name": "Maumee River Basin Commission",
+   "prior": 903700,
+   "current": 193516,
+   "years": {
+    "fy2024": 651850,
+    "fy2025": 251850,
+    "fy2026": 96758,
+    "fy2027": 96758
+   }
+  },
+  {
+   "name": "Office of Administrative Law Proceedings",
+   "prior": 3815494,
+   "current": 4986270,
+   "years": {
+    "fy2024": 2046820,
+    "fy2025": 1768674,
+    "fy2026": 2493135,
+    "fy2027": 2493135
+   }
+  },
+  {
+   "name": "Office of Early Childhood and Out-of-School Learning",
+   "prior": 125888794,
+   "current": 279723670,
+   "years": {
+    "fy2024": 57565527,
+    "fy2025": 68323267,
+    "fy2026": 139861835,
+    "fy2027": 139861835
+   }
+  },
+  {
+   "name": "Office of Energy Development",
+   "prior": 2573622,
+   "current": 2520052,
+   "years": {
+    "fy2024": 1284121,
+    "fy2025": 1289501,
+    "fy2026": 1260026,
+    "fy2027": 1260026
+   }
+  },
+  {
+   "name": "Office of Entrepreneurship and Innovation",
+   "prior": 0,
+   "current": 2000000,
+   "years": {
+    "fy2024": 0,
+    "fy2025": 0,
+    "fy2026": 1000000,
+    "fy2027": 1000000
+   }
+  },
+  {
+   "name": "Office of Environmental Adjudication",
+   "prior": 892252,
+   "current": 0,
+   "years": {
+    "fy2024": 457626,
+    "fy2025": 434626,
+    "fy2026": 0,
+    "fy2027": 0
+   }
+  },
+  {
+   "name": "Office of Management and Budget",
+   "prior": 1949892,
+   "current": 8852398,
+   "years": {
+    "fy2024": 974946,
+    "fy2025": 974946,
+    "fy2026": 7926199,
+    "fy2027": 926199
+   }
+  },
+  {
+   "name": "Office of Medicaid Policy and Planning",
+   "prior": 8280039915,
+   "current": 10081798040,
+   "years": {
+    "fy2024": 3903646727,
+    "fy2025": 4376393188,
+    "fy2026": 4974799020,
+    "fy2027": 5106999020
+   }
+  },
+  {
+   "name": "Office of Technology",
+   "prior": 14200000,
+   "current": 10000000,
+   "years": {
+    "fy2024": 7100000,
+    "fy2025": 7100000,
+    "fy2026": 5000000,
+    "fy2027": 5000000
+   }
+  },
+  {
+   "name": "Office of the Inspector General and the State Ethics Commission",
+   "prior": 3139037,
+   "current": 2987182,
+   "years": {
+    "fy2024": 1566836,
+    "fy2025": 1572201,
+    "fy2026": 1493591,
+    "fy2027": 1493591
+   }
+  },
+  {
+   "name": "Office of the Public Access Counselor",
+   "prior": 714191,
+   "current": 678780,
+   "years": {
+    "fy2024": 356938,
+    "fy2025": 357253,
+    "fy2026": 339390,
+    "fy2027": 339390
+   }
+  },
+  {
+   "name": "Parole Division",
+   "prior": 32962112,
+   "current": 39708982,
+   "years": {
+    "fy2024": 16475519,
+    "fy2025": 16486593,
+    "fy2026": 19854491,
+    "fy2027": 19854491
+   }
+  },
+  {
+   "name": "Professional Licensing Agency",
+   "prior": 20097988,
+   "current": 19632182,
+   "years": {
+    "fy2024": 9765261,
+    "fy2025": 10332727,
+    "fy2026": 9816091,
+    "fy2027": 9816091
+   }
+  },
+  {
+   "name": "Prosecuting Attorneys' Council",
+   "prior": 16973510,
+   "current": 12911034,
+   "years": {
+    "fy2024": 8486755,
+    "fy2025": 8486755,
+    "fy2026": 6455517,
+    "fy2027": 6455517
+   }
+  },
+  {
+   "name": "Public Defender",
+   "prior": 17664410,
+   "current": 16781192,
+   "years": {
+    "fy2024": 8832205,
+    "fy2025": 8832205,
+    "fy2026": 8390596,
+    "fy2027": 8390596
+   }
+  },
+  {
+   "name": "Public Defender Commission",
+   "prior": 68147622,
+   "current": 64740240,
+   "years": {
+    "fy2024": 34073811,
+    "fy2025": 34073811,
+    "fy2026": 32370120,
+    "fy2027": 32370120
+   }
+  },
+  {
+   "name": "Public Defender Council",
+   "prior": 4393332,
+   "current": 4173666,
+   "years": {
+    "fy2024": 2196666,
+    "fy2025": 2196666,
+    "fy2026": 2086833,
+    "fy2027": 2086833
+   }
+  },
+  {
+   "name": "Purdue University",
+   "prior": 902764494,
+   "current": 864169508,
+   "years": {
+    "fy2024": 442610493,
+    "fy2025": 460154001,
+    "fy2026": 453440822,
+    "fy2027": 410728686
+   }
+  },
+  {
+   "name": "Secretary of State",
+   "prior": 21526862,
+   "current": 16738578,
+   "years": {
+    "fy2024": 10763431,
+    "fy2025": 10763431,
+    "fy2026": 8369289,
+    "fy2027": 8369289
+   }
+  },
+  {
+   "name": "Senate",
+   "prior": 35719400,
+   "current": 33933430,
+   "years": {
+    "fy2024": 17169700,
+    "fy2025": 18549700,
+    "fy2026": 16511215,
+    "fy2027": 17422215
+   }
+  },
+  {
+   "name": "St. Joseph River Basin Commission",
+   "prior": 209948,
+   "current": 199450,
+   "years": {
+    "fy2024": 104974,
+    "fy2025": 104974,
+    "fy2026": 99725,
+    "fy2027": 99725
+   }
+  },
+  {
+   "name": "State Board of Accounts",
+   "prior": 40612862,
+   "current": 39912858,
+   "years": {
+    "fy2024": 19606095,
+    "fy2025": 21006767,
+    "fy2026": 19956429,
+    "fy2027": 19956429
+   }
+  },
+  {
+   "name": "State Board of Animal Health",
+   "prior": 18761723,
+   "current": 28834852,
+   "years": {
+    "fy2024": 9344297,
+    "fy2025": 9417426,
+    "fy2026": 14417426,
+    "fy2027": 14417426
+   }
+  },
+  {
+   "name": "State Budget Agency",
+   "prior": 1025241606,
+   "current": 862722016,
+   "years": {
+    "fy2024": 497596803,
+    "fy2025": 527644803,
+    "fy2026": 412178836,
+    "fy2027": 450543180
+   }
+  },
+  {
+   "name": "State Department of Health",
+   "prior": 74647167,
+   "current": 158251614,
+   "years": {
+    "fy2024": 34864654,
+    "fy2025": 39782513,
+    "fy2026": 79125807,
+    "fy2027": 79125807
+   }
+  },
+  {
+   "name": "State Department of Toxicology",
+   "prior": 5520052,
+   "current": 5520052,
+   "years": {
+    "fy2024": 2760026,
+    "fy2025": 2760026,
+    "fy2026": 2760026,
+    "fy2027": 2760026
+   }
+  },
+  {
+   "name": "State Employees' Appeals Commission",
+   "prior": 384512,
+   "current": 365286,
+   "years": {
+    "fy2024": 192256,
+    "fy2025": 192256,
+    "fy2026": 182643,
+    "fy2027": 182643
+   }
+  },
+  {
+   "name": "State Library",
+   "prior": 22426517,
+   "current": 8480786,
+   "years": {
+    "fy2024": 10211166,
+    "fy2025": 12215351,
+    "fy2026": 4240393,
+    "fy2027": 4240393
+   }
+  },
+  {
+   "name": "State Personnel Department",
+   "prior": 9036566,
+   "current": 8601646,
+   "years": {
+    "fy2024": 4516953,
+    "fy2025": 4519613,
+    "fy2026": 4300823,
+    "fy2027": 4300823
+   }
+  },
+  {
+   "name": "Supreme Court",
+   "prior": 400006944,
+   "current": 406978136,
+   "years": {
+    "fy2024": 197888106,
+    "fy2025": 202118838,
+    "fy2026": 203398780,
+    "fy2027": 203579356
+   }
+  },
+  {
+   "name": "Tax Court",
+   "prior": 1933258,
+   "current": 1836596,
+   "years": {
+    "fy2024": 966629,
+    "fy2025": 966629,
+    "fy2026": 918298,
+    "fy2027": 918298
+   }
+  },
+  {
+   "name": "Treasurer of State",
+   "prior": 42872802,
+   "current": 24665814,
+   "years": {
+    "fy2024": 18917110,
+    "fy2025": 23955692,
+    "fy2026": 22332907,
+    "fy2027": 2332907
+   }
+  },
+  {
+   "name": "University of Southern Indiana",
+   "prior": 138073233,
+   "current": 129362506,
+   "years": {
+    "fy2024": 68528014,
+    "fy2025": 69545219,
+    "fy2026": 67805803,
+    "fy2027": 61556703
+   }
+  },
+  {
+   "name": "Utility Consumer Counselor",
+   "prior": 0,
+   "current": 17437830,
+   "years": {
+    "fy2024": 0,
+    "fy2025": 0,
+    "fy2026": 8718915,
+    "fy2027": 8718915
+   }
+  },
+  {
+   "name": "Utility Regulatory Commission",
+   "prior": 0,
+   "current": 22130138,
+   "years": {
+    "fy2024": 0,
+    "fy2025": 0,
+    "fy2026": 11065069,
+    "fy2027": 11065069
+   }
+  },
+  {
+   "name": "Vincennes University",
+   "prior": 125607328,
+   "current": 116536180,
+   "years": {
+    "fy2024": 64603847,
+    "fy2025": 61003481,
+    "fy2026": 59666109,
+    "fy2027": 56870071
+   }
+  },
+  {
+   "name": "White River State Park Development Commission",
+   "prior": 5526840,
+   "current": 1612162,
+   "years": {
+    "fy2024": 4010960,
+    "fy2025": 1515880,
+    "fy2026": 806081,
+    "fy2027": 806081
+   }
+  },
+  {
+   "name": "Worker's Compensation Board",
+   "prior": 4284817,
+   "current": 4076126,
+   "years": {
+    "fy2024": 2139488,
+    "fy2025": 2145329,
+    "fy2026": 2038063,
+    "fy2027": 2038063
+   }
+  },
+  {
+   "name": "Workforce Cabinet",
+   "prior": 29488000,
+   "current": 0,
+   "years": {
+    "fy2024": 17244000,
+    "fy2025": 12244000,
+    "fy2026": 0,
+    "fy2027": 0
+   }
+  },
+  {
+   "name": "World War Memorial Commission",
+   "prior": 5906007,
+   "current": 2638754,
+   "years": {
+    "fy2024": 2952012,
+    "fy2025": 2953995,
+    "fy2026": 1319377,
+    "fy2027": 1319377
+   }
+  }
+ ]
+}
